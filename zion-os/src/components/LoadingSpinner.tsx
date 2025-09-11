@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 "use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
@@ -7,6 +13,7 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     medium: "w-8 h-8";
     large: "w-12 h-12";
   }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -19,15 +26,41 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     medium: "w-8 h-8",;
     large: "w-12 h-12";
   };
+<<<<<<< HEAD
+
+  return (;
+    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   class_name?: string;
+<<<<<<< HEAD
+"use client";
+interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
+  className?: string;
+}
+export /**
+ * LoadingSpinner - Function description
+ */
+function LoadingSpinner() {
+  const size_classes = {
+    small: "w - 4 h - 4",
+    medium: "w - 8 h - 8",
+    large: "w - 12 h - 12";
+  }
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;

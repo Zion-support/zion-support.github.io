@@ -1,4 +1,39 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
+}</select> </>)
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+}</select> </>) 
+}</div> </div> <PdfExportButton targetRef= {
+  targetRef
+}fileName= {
+  `resume-$ {
+  activeData.name.replace (/\s+/g, '-') .toLowerCase ()
+}.pdf`
+}/> </div> </div>)
+}if (!user) {
+  return {
+  redirect: {
+}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
+  name: 'Your Name', contact: {
+  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
+}
+export default function ResumePreviewPage({
+  initialData
+  versions = []
+}: ResumePreviewPageProps) {
+  initialData,
+  versions = [],
+}: ResumePreviewPageProps) {;
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(
+    versions[0]?.id |'current'
+  );  const targetRef = useRef<HTMLDivElement>(null);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }, [selectedVersionId, initialData, versions]);
   return (
@@ -13,12 +48,30 @@
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const activeData = useMemo(() => {
+    if (selectedVersionId === 'current') return initialData;
+    const found = versions.find(v => v.id === selectedVersionId);
+    return found?.data |initialData;
+  }, [selectedVersionId, initialData, versions]);
+
+import { GetServerSideProps } from 'next';
+import React, { useMemo, useRef, useState } from 'react';
+import PdfExportButton from '../../components/ui/PdfExportButton';
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
+import { createServerClient } from '../../utils/supabase/server';
+
+=======
+=======
+=======
 =======
             onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
           >;
             <option value='light'>Light</option>;
             <option value='dark'>Dark</option>          </select>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {versions && versions.length > 0 && (;
             <>;
@@ -38,6 +91,32 @@
             </>;
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { GetServerSideProps } from 'next',
+import React, { useMemo, useRef, useState } from 'react',
+import PdfExportButton from '../../components/ui/PdfExportButton',
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
+import { createServerClient } from '../../utils/supabase/server',
+export type ResumePreviewPageProps = {
+  initialData: ResumeData,
+  versions?: Array<{ id: string, label: string, data: ResumeData }>
+},
+export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
+
+<<<<<<< HEAD
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
+  const targetRef = useRef<HTMLDivElement>(null),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const activeData = useMemo(() => {
+    if (selectedVersionId === 'current') return initialData,
+    const found = versions.find(v => v.id === selectedVersionId),
+    return found?.data || initialData
+  }, [selectedVersionId, initialData, versions]);
+
+=======
 import { GetServerSideProps } from 'next';
 import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
@@ -54,6 +133,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [selectedVersionId, initialData, versions]),
   return (
     <div className="relative">
@@ -61,8 +141,27 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
         <div className="flex items-center gap-3">
           <label className="text-sm">Theme</label>
           <select
+<<<<<<< HEAD
+
+
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+<<<<<<< HEAD
+            value={theme  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onChange={(e) => setTheme(e.target.value as 'light' | 'dark')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
             value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
             <option value='light'>Light</option>
@@ -70,45 +169,92 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
               <select
+<<<<<<< HEAD
+
+      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
+
+<<<<<<< HEAD
+                  <option value={v.id} key={v.id}>{v.label}</option>
+                ))}
+              </select>
+            </>
+          )}
+<PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
+=======
+=======
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
                 className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
               >
                 <option value="current">Current</option>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {versions.map(v => (
 
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto">
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  // Simple auth guard for talent users, adjust with real roles when available
+  const supabase = createServerClient();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Simple auth guard for talent users, adjust with real roles when available
   const supabase = createServerClient();
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const user = await (supabase as any).auth.getUser?.();
   if (!user) {
     return {
       redirect: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        destination: '/auth',
+        permanent: false}}
+  }
+// Placeholder: fetch resume data for the logged-in user and versions if any
+=======
 
         destination: '/auth',
         permanent: false}}
   }
 
   // Placeholder: fetch resume data for the logged-in user and versions if any
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const initialData: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
@@ -116,14 +262,40 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {
+title: 'Senior AI Engineer'
+=======
 
       {
         title: 'Senior AI Engineer'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         company: 'Zion AI'
         start: '2023'
         end: 'Present'
         location: 'Remote'
         bullets: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        </div>;
+      </div>;
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData && activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />;
+      <div className='mx-auto'>;
+        <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
+      </div>;
+    </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -138,7 +310,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
       </div>
@@ -153,11 +328,448 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
   );
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
+  const user = await (supabase as any).auth && auth.getUser?.();
+<<<<<<< HEAD
+=======
+=======
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
   const user = await (supabase as any).auth && auth.getUser?.();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
+
+  if (!user) {
+    return {
+      redirect: {
+        destination: '/auth',
+        permanent: false,
+      },
+    };  }
+
+  // Placeholder: fetch resume data for the logged-in user and versions if any
+  const initialData: ResumeData = {
+    name: 'Your Name',
+    contact: {
+      email: 'you@example.com',
+      phone: '+1 555-123-4567',
+      location: 'City, Country',
+      website: 'https://example.com',
+    },
+    summary:
+      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
+    skills: [
+      'AI Engineering',
+      'Prompt Design',
+      'TypeScript',
+      'Node.js',
+      'Next.js',
+    ],
+    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [
+      {
+        title: 'Senior AI Engineer',
+        company: 'Zion AI',
+        start: '2023',
+        end: 'Present',
+        location: 'Remote',
+        bullets: [
+          'Built multi-agent automation systems improving throughput by 40%.',
+          'Designed AI-driven dashboards and PDF export workflows.',
+        ],
+      },
+    ],
+    education: [
+      {
+        institution: 'University of Example',
+        degree: 'B.Sc. Computer Science',
+        start: '2016',
+        end: '2020',
+      },
+    ],
+    certifications: [
+      'AWS Certified Solutions Architect – Associate',
+      'TensorFlow Developer Certificate',
+    ],
+    portfolio: [
+      {
+        title: 'Agentic Resume Builder',
+        description:
+          'Automated resume generation using LLMs and vector search.',
+        link: 'https://example.com',
+      },
+      {
+        title: 'AI Marketplace',
+        description: 'Talent dashboard with export features.',
+      },
+    ],;
+  };
+
+  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
+
+return { props: { initialData, versions } };
+};
+
+}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                  <option value={v.id} key={v.id}>{v.label}</option>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </select>;
+            </>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </div>
+      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
+      <div className="mx-auto">
+        <ResumePreview ref={targetRef} data={activeData} theme={theme} />
+      </div>
+    </div>
+
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  // Simple auth guard for talent users, adjust with real roles when available;
+  const supabase = createServerClient();
+  const user = await (supabase as any).auth.getUser?.();
+
+  if (!user) {;
+    return {;
+      redirect: {;
+        destination: '/auth',;
+        permanent: false,;
+      },;
+    };  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  // Placeholder: fetch resume data for the logged-in user and versions if any;
+  const initialData: ResumeData = {;
+    name: 'Your Name',;
+    contact: {;
+      email: 'you@example && example.com',;
+      phone: '+1 555-123-4567',;
+      location: 'City, Country',;
+      website: 'https://example && example.com',;
+    },;
+    summary:;
+      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',;
+    skills: [;
+      'AI Engineering',;
+      'Prompt Design',;
+      'TypeScript',;
+      'Node && Node.js',;
+      'Next && Next.js',;
+    ],;
+    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [;
+      {;
+        title: 'Senior AI Engineer',;
+        company: 'Zion AI',;
+        start: '2023',;
+        end: 'Present',;
+        location: 'Remote',;
+        bullets: [;
+          'Built multi-agent automation systems improving throughput by 40%.',;
+          'Designed AI-driven dashboards and PDF export workflows.',;
+        ],;
+      },;
+    ],;
+    education: [;
+      {;
+        institution: 'University of Example',;
+        degree: 'B && B.Sc. Computer Science',;
+        start: '2016',;
+        end: '2020',;
+      },;
+    ],;
+    certifications: [;
+      'AWS Certified Solutions Architect – Associate',;
+      'TensorFlow Developer Certificate',;
+    ],;
+    portfolio: [;
+      {;
+        title: 'Agentic Resume Builder',;
+        description:;
+          'Automated resume generation using LLMs and vector search.',;
+        link: 'https://example && example.com',;
+      },;
+      {;
+        title: 'AI Marketplace',;
+        description: 'Talent dashboard with export features.',;
+      },;
+    ],;
+  };
+<<<<<<< HEAD
+  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
+return { props: { initialData, versions } }
+}
+
+          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
+    education: [
+      { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],
+    certifications: ['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],
+    portfolio: [
+      { title: 'Agentic Resume Builder', description: 'Automated resume generation using LLMs and vector search.', link: 'https://example.com' },
+      { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},
+  const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
+  return { props: { initialData, versions } }
+
+};
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
+return { props: { initialData, versions } }
+}
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
+}</select> </>);
+}</div> </div> <PdfExportButton target_ref= {
+  target_ref;
+}file_name= {
+  `resume-$ {
+  active_data.name.replace (/\s+/g, '-') .toLowerCase ();
+}.pdf`;
+}/> </div> </div>);
+}// Check condition
+if ( {) {
+  $2
+}
+  return {
+  redirect: {
+}//Placeholder: fetch resume data for the logged - in user and versions if any const initial_data: ResumeData = {
+  name: 'Your Name', contact: {
+  email: 'you@example.com', phone: '+1 555 - 123 - 4567', location: 'City, Country', website: 'https://example.com';
+}
+;
+export default /**
+ * ResumePreviewPage - Function description
+ */
+function ResumePreviewPage() {
+  const [theme, set_theme] = useState<'light' | 'dark'>('light');
+  const [selectedVersionId, setSelectedVersionId] = useState < string>(
+    versions[0]?.id || 'current');  const target_ref = useRef < HTMLDivElement>(null);
+;
+  const active_data = useMemo (() => {
+    // Check condition
+if (return initial_data) {
+  $2
+}
+    const found = versions.find (v => v.id === selectedVersionId);
+    return found?.data || initial_data;
+  }, [selectedVersionId, initial_data, versions]);
+;
+  return (
+    <div className='relative'>;
+      <div className='flex items - center justify - between mb - 4'>;
+        <div className='flex items - center gap - 3'>;
+          <label className='text - sm'>Theme</label>;
+          <select;
+            value={theme}
+            on_change={e => set_theme (e.target.value as 'light' | 'dark')}
+            className='border border - gray - 300 dark:border - gray - 700 rounded px - 2 py - 1 bg - white dark:bg - black';
+          >;
+            <option value='light'>Light</option>;
+            <option value='dark'>Dark</option>          </select>;
+          {versions.length > 0 && (
+            <>;
+              <label className='text - sm ml - 4'>Version</label>;
+              <select;
+                value={selectedVersionId}
+                on_change={e => setSelectedVersionId (e.target.value)}
+                className='border border - gray - 300 dark:border - gray - 700 rounded px - 2 py - 1 bg - white dark:bg - black';
+              >;
+                <option value='current'>Current</option>;
+                {versions.map (v => (
+                  <option value={v.id} key={v.id}>;
+                    {v.label}
+                  </option>                ))}
+              </select>;
+            </>)}
+        </div>;
+      </div>;
+      <PdfExportButton;
+        target_ref={target_ref}
+        file_name={`resume-${active_data.name.replace (/\s+/g, '-').toLowerCase ()}.pdf`}
+      />;
+      <div className='mx - auto'>;
+        <ResumePreview ref={target_ref} data={active_data} theme={theme} />;
+      </div>;
+    </div>);
+;
+<<<<<<< HEAD
+                value={selectedVersionId  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSelectedVersionId(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+              >
+                <option value="current">Current</option>
+                {versions.map(v => (
+                  <option value={v.id} key={v.id}>
+                    {v.label}
+                  </option>                ))}
+              </select>
+            </>
+          )}
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
+        <ResumePreview ref={targetRef} data={activeData} theme={theme} />
+      </div>
+    </div>
+  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
+  const user = await (supabase as any).auth.get_user?.();
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return {
+      redirect: {
+        destination: '/auth',
+        permanent: false,
+      },
+    }  }
+  // Placeholder: fetch resume data for the logged - in user and versions if any;
+  const initial_data: ResumeData = {
+    name: 'Your Name',
+    contact: {
+      email: 'you@example.com',
+      phone: '+1 555 - 123 - 4567',
+      location: 'City, Country',
+      website: 'https://example.com',
+    },
+    summary:;
+      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud - native systems.',
+    skills: [;
+      'AI Engineering',
+      'Prompt Design',
+      'TypeScript',
+      'Node.js',
+      'Next.js',
+    ],
+    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [;
+      {
+        title: 'Senior AI Engineer',
+        company: 'Zion AI',
+        start: '2023',
+        end: 'Present',
+        location: 'Remote',
+<<<<<<< HEAD
+<<<<<<< HEAD
+bullets: [;
+=======
+        bullets: [;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        bullets: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          'Built multi - agent automation systems improving throughput by 40%.',
+          'Designed AI - driven dashboards and PDF export workflows.',
+        ],
+      },
+    ],
+    education: [;
+      {
+        institution: 'University of Example',
+        degree: 'B.Sc. Computer Science',
+        start: '2016',
+        end: '2020',
+      },
+    ],
+    certifications: [;
+      'AWS Certified Solutions Architect – Associate',
+      'TensorFlow Developer Certificate',
+    ],
+    portfolio: [;
+      {
+        title: 'Agentic Resume Builder',
+        description:;
+          'Automated resume generation using LLMs and vector search.',
+        link: 'https://example.com',
+      },
+      {
+        title: 'AI Marketplace',
+        description: 'Talent dashboard with export features.',
+      },
+    ],
+  }
+;
+  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
+;
+return { props: { initial_data, versions } }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+
+
+
+                  <option value={v.id} key={v.id}>{v.label}</option>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </select>;
+            </>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
+        <ResumePreview ref={targetRef} data={activeData} theme={theme} />
+      </div>
+    </div>
+  );
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
+  const user = await (supabase as any).auth.getUser?.();
 
   if (!user) {
     return {
@@ -250,7 +862,6 @@ return { props: { initialData, versions } };
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-
   )
   } catch (error) {
     console.error("Error:", error);
@@ -262,34 +873,29 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   // Simple auth guard for talent users, adjust with real roles when available;
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.();
-
   if (!user) {;
     return {;
       redirect: {;
-        destination: '/auth',;
-        permanent: false,;
-      },;
-    };  }
-
+        destination: '/auth';
+        permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
   // Placeholder: fetch resume data for the logged-in user and versions if any;
   const initialData: ResumeData = {;
-    name: 'Your Name',;
-    contact: {;
-      email: 'you@example && example.com',;
-      phone: '+1 555-123-4567',;
-      location: 'City, Country',;
-      website: 'https://example && example.com',;
-    },;
-    summary:;
-      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',;
-    skills: [;
-      'AI Engineering',;
-      'Prompt Design',;
-      'TypeScript',;
-      'Node && Node.js',;
-      'Next && Next.js',;
-    ],;
-    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [;
+    name: 'Your Name';
+    contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },;
+    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',;
+    skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],;
+    technologies: ['OpenAISupabasePostgresVercelDocker'],;
+    experience: [;
       {;
         title: 'Senior AI Engineer',;
         company: 'Zion AI',;
@@ -297,198 +903,34 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
         end: 'Present',;
         location: 'Remote',;
         bullets: [;
-          'Built multi-agent automation systems improving throughput by 40%.',;
-          'Designed AI-driven dashboards and PDF export workflows.',;
-        ],;
-      },;
-    ],;
+          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}],;
     education: [;
-      {;
-        institution: 'University of Example',;
-        degree: 'B && B.Sc. Computer Science',;
-        start: '2016',;
-        end: '2020',;
-      },;
-    ],;
-    certifications: [;
-      'AWS Certified Solutions Architect – Associate',;
-      'TensorFlow Developer Certificate',;
-    ],;
+      { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],;
+    certifications: ['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],;
     portfolio: [;
-      {;
-        title: 'Agentic Resume Builder',;
-        description:;
-          'Automated resume generation using LLMs and vector search.',;
-        link: 'https://example && example.com',;
-      },;
-      {;
-        title: 'AI Marketplace',;
-        description: 'Talent dashboard with export features.',;
-      },;
-    ],;
-  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
-return { props: { initialData, versions } }
+      { title: 'Agentic Resume Builder', description: 'Automated resume generation using LLMs and vector search.', link: 'https://example.com' },;
+      { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},;
+  const versions = [] as Array<{ id: string, label: string, data: ResumeData }>;
+  return { props: { initialData, versions }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
-}</select> </>);
-}</div> </div> <PdfExportButton target_ref= {
-  target_ref;
-}file_name= {
-  `resume-$ {
-  active_data.name.replace (/\s+/g, '-') .toLowerCase ();
-}.pdf`;
-}/> </div> </div>);
-}// Check condition
-if ( {) {
-  $2
-}
-  return {
-  redirect: {
-}//Placeholder: fetch resume data for the logged - in user and versions if any const initial_data: ResumeData = {
-  name: 'Your Name', contact: {
-  email: 'you@example.com', phone: '+1 555 - 123 - 4567', location: 'City, Country', website: 'https://example.com';
-}
-;
-export default /**
- * ResumePreviewPage - Function description
- */
-function ResumePreviewPage() {
-  const [theme, set_theme] = useState<'light' | 'dark'>('light');
-  const [selectedVersionId, setSelectedVersionId] = useState < string>(
-    versions[0]?.id || 'current');  const target_ref = useRef < HTMLDivElement>(null);
-;
-  const active_data = useMemo (() => {
-    // Check condition
-if (return initial_data) {
-  $2
-}
-    const found = versions.find (v => v.id === selectedVersionId);
-    return found?.data || initial_data;
-  }, [selectedVersionId, initial_data, versions]);
-;
-  return (
-    <div className='relative'>;
-      <div className='flex items - center justify - between mb - 4'>;
-        <div className='flex items - center gap - 3'>;
-          <label className='text - sm'>Theme</label>;
-          <select;
-            value={theme}
-            on_change={e => set_theme (e.target.value as 'light' | 'dark')}
-            className='border border - gray - 300 dark:border - gray - 700 rounded px - 2 py - 1 bg - white dark:bg - black';
-          >;
-            <option value='light'>Light</option>;
-            <option value='dark'>Dark</option>          </select>;
-          {versions.length > 0 && (
-            <>;
-              <label className='text - sm ml - 4'>Version</label>;
-              <select;
-                value={selectedVersionId}
-                on_change={e => setSelectedVersionId (e.target.value)}
-                className='border border - gray - 300 dark:border - gray - 700 rounded px - 2 py - 1 bg - white dark:bg - black';
-              >;
-                <option value='current'>Current</option>;
-                {versions.map (v => (
-                  <option value={v.id} key={v.id}>;
-                    {v.label}
-                  </option>                ))}
-              </select>;
-            </>)}
-        </div>;
-      </div>;
-      <PdfExportButton;
-        target_ref={target_ref}
-        file_name={`resume-${active_data.name.replace (/\s+/g, '-').toLowerCase ()}.pdf`}
-      />;
-      <div className='mx - auto'>;
-        <ResumePreview ref={target_ref} data={active_data} theme={theme} />;
-      </div>;
-    </div>);
-;
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
-  const user = await (supabase as any).auth.get_user?.();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return {
-      redirect: {
-        destination: '/auth',
-        permanent: false,
-      },
-    }  }
-  // Placeholder: fetch resume data for the logged - in user and versions if any;
-  const initial_data: ResumeData = {
-    name: 'Your Name',
-    contact: {
-      email: 'you@example.com',
-      phone: '+1 555 - 123 - 4567',
-      location: 'City, Country',
-      website: 'https://example.com',
-    },
-    summary:;
-      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud - native systems.',
-    skills: [;
-      'AI Engineering',
-      'Prompt Design',
-      'TypeScript',
-      'Node.js',
-      'Next.js',
-    ],
-    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [;
-      {
-        title: 'Senior AI Engineer',
-        company: 'Zion AI',
-        start: '2023',
-        end: 'Present',
-        location: 'Remote',
-        bullets: [;
-          'Built multi - agent automation systems improving throughput by 40%.',
-          'Designed AI - driven dashboards and PDF export workflows.',
-        ],
-      },
-    ],
-    education: [;
-      {
-        institution: 'University of Example',
-        degree: 'B.Sc. Computer Science',
-        start: '2016',
-        end: '2020',
-      },
-    ],
-    certifications: [;
-      'AWS Certified Solutions Architect – Associate',
-      'TensorFlow Developer Certificate',
-    ],
-    portfolio: [;
-      {
-        title: 'Agentic Resume Builder',
-        description:;
-          'Automated resume generation using LLMs and vector search.',
-        link: 'https://example.com',
-      },
-      {
-        title: 'AI Marketplace',
-        description: 'Talent dashboard with export features.',
-      },
-    ],
-  }
-;
-  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
-;
-return { props: { initial_data, versions } }
-}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 };
 
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

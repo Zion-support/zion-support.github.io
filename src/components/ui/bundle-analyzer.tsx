@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+import React, { useState, useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import { AlertTriangle, Package, Zap } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface BundleInfo {
+  totalSize: number;
+  gzippedSize: number;
+  chunkCount: number;
+  loadTime: number;
+  cacheHitRate: number
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -10,7 +36,11 @@ totalSize: number;
 
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
+<<<<<<< HEAD
+    if (!show) return
+=======
     if (!show) return;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsVisible(true)
     collectBundleInfo()
   }, [])
@@ -31,6 +61,30 @@ interface BundleInfo {
 interface ChunkInfo {
   name: string;
   size: number;
+<<<<<<< HEAD
+  loadTime: number;
+  cached: boolean
+export function BundleAnalyzer() {
+
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
+  }
+    const show =
+      process.env.NODE_ENV === 'development' |
+    const show =
+      process.env.NODE_ENV === 'development' |
+    const show = null;
+      process.env.NODE_ENV === 'development' ||
+      localStorage.getItem('bundle-analyzer') === 'true'
+    setShouldShow(show)
+    if (!show) return;
+    setIsVisible(true)
+    collectBundleInfo()
+  }, [])
+=======
   load_time: number;
   cached: boolean;
 export /**
@@ -46,6 +100,7 @@ if ( {) {
 }
     return null;
   }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
   const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
   const [is_visible, setIsVisible] = useState (false);
@@ -68,14 +123,66 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      // Get performance entries for script resources
+      const resourceEntries = performance.getEntriesByType(
+        'resource'
+      ) as PerformanceResourceTiming[]
+      const scriptEntries = resourceEntries.filter(
+        entry =>
+          entry.name.includes('/_next/static/') &&
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+      )
+      // Calculate bundle information
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = []
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize |entry.encodedBodySize |0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
+        chunkData.push({
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
+        })
+      })
+      // Estimate gzipped size (roughly 70% of original)
+      const gzippedSize = totalSize * 0.7
+      const cacheHitRate = null;
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
+      setBundleInfo({
+        totalSize
+        gzippedSize
+        chunkCount: chunkData.length
+        loadTime: totalLoadTime / chunkData.length
+        cacheHitRate: cacheHitRate * 100
+      })
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+<<<<<<< HEAD
+<<<<<<< HEAD
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
@@ -117,6 +224,10 @@ if (return) {
       });
       set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction ('Failed to collect bundle info:', { data: error });
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsCollecting(false)
     }
@@ -145,6 +256,14 @@ if (return) {
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -158,7 +277,14 @@ interface BundleInfo {;
   gzippedSize: number,;
   chunkCount: number,;
   loadTime: number,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   cacheHitRate: number;
 }
 ;
@@ -258,19 +384,41 @@ export function BundleAnalyzer() {;
     return null;
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+      <div className='fixed bottom-20 right-4 z-50'>;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
           className='bg-background/80 backdrop-blur-sm'        >
           <Package className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -280,7 +428,10 @@ export function BundleAnalyzer() {;
 
 
           Bundle Analyzer
+<<<<<<< HEAD
+=======
         </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     )
           className='bg-background/80 backdrop-blur-sm'>;
@@ -301,6 +452,10 @@ export function BundleAnalyzer() {;
             </CardTitle>
             <div className="flex gap-2">
               <Button
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant='ghost'
                 size='sm'
                 onClick={collectBundleInfo}
@@ -313,6 +468,13 @@ export function BundleAnalyzer() {;
                 size='sm'
                 onClick={toggleAnalyzer}
                 className='h-6 w-6 p-0'              >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant="ghost"
                 size="sm"
                 onClick={collectBundleInfo}
@@ -330,7 +492,10 @@ export function BundleAnalyzer() {;
 
 
                 ✕
+<<<<<<< HEAD
+=======
               </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </CardHeader>
@@ -369,7 +534,26 @@ export function BundleAnalyzer() {;
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
+                <div className='space-y-1'>
+                  {chunks.map((chunk, index) => (
+                    <div
+                      key={chunk.name}
+                      className='flex justify-between items-center text-xs'
+                    >
+                      <div className='flex items-center gap-2 flex-1 min-w-0'>
+                        <span className='w-4 text-muted-foreground'>
+                          {index + 1}.
+                        </span>
+                        <span className='truncate' title={chunk.name}>                          {chunk.name}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='h-6 w-6 p-0'>;
   // Check condition
 if ( {) {
@@ -432,8 +616,16 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -441,14 +633,27 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                      <Badge className={getSizeColor(chunk.size)} variant="outline">
+
+                        {formatSize(chunk.size)}
+=======
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
                         {formatSize(chunk.size)}
                       </Badge>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                   ))}
 
@@ -465,6 +670,45 @@ if ( {) {
 
             </>
           ) : (
+<<<<<<< HEAD
+}
+                      <Badge className={getSizeColor(chunk.size)} variant="outline">
+                        {formatSize(chunk.size)}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {bundleInfo.totalSize > 1000000 && (
+                <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs">
+                  <AlertTriangle className="w-3 h-3 text-yellow-600" />
+                  <span>Bundle size is large. Consider code splitting.</span>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className='text-xs text-muted-foreground'>
+              {isCollecting
+                ? 'Analyzing bundle...'
+                : 'Click refresh to analyze'}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  )
+} 
+
+}
+}
+<<<<<<< HEAD
+            <div className="text-xs text-muted-foreground">
+              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
+            </div>;
+          )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 } 
 
@@ -472,12 +716,20 @@ if ( {) {
 
 
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         
@@ -562,4 +814,12 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Slider } from '@/components/ui/slider'
+import { Switch } from '@/components/ui/switch'
+import { Input } from '@/components/ui/input'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -49,6 +60,17 @@ import { Slider } from '@/components / ui / slider';
 import { Switch } from '@/components / ui / switch';
 import { Input } from '@/components / ui / input';
 import {
+<<<<<<< HEAD
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+import { X, Filter } from 'lucide-react'
+
+
+=======
   Select,
   SelectContent,
   SelectItem,
@@ -65,6 +87,7 @@ import { X, Filter } from 'lucide-react';
 } from '@/components / ui / sheet';
 import { Badge } from '@/components / ui / badge';
 import { Label } from '@/components / ui / label';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
 export /**
@@ -197,16 +220,77 @@ import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Slider } from "@/components/ui/slider",
+import { Switch } from "@/components/ui/switch",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  type: 'jobs' | 'talents'
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const addFilter = (filter: string) => {    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  }
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+  type: "jobs" | "talents"
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Slider } from "@/components/ui/slider",;
+import { Switch } from "@/components/ui/switch",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { X, Filter } from 'lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
+import { Badge } from "@/components/ui/badge",;
+import { Label } from "@/components/ui/label",;
+interface BrowseFiltersProps {;
+  type: "jobs" | "talents";
+}
+;
+export function BrowseFilters({ type }: BrowseFiltersProps) {;
+  const [activeFilters, setActiveFilters] = useState<string[]>([]),;
+  const addFilter = (filter: string) => {;
+    if (!activeFilters.includes(filter)) {;
+      setActiveFilters([...activeFilters, filter]);
+    }
+  },
+  
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  },
+  
+  
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -222,8 +306,20 @@ interface BrowseFiltersProps {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
+                  <>
+              <div className='py-6 space-y-6'>
+                {type === 'jobs' ? (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <div className='py-6 space-y-6'>
+                {type === 'jobs' ? (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
@@ -238,7 +334,17 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <div className='space-y-2'>
+                      <Label>Experience Level</Label>
+                    <div className='space-y-2'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <div className='space-y-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     
                     <div className="space-y-2">
 
@@ -261,6 +367,10 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
                       <Slider
@@ -270,6 +380,12 @@ interface BrowseFiltersProps {
                         step={1}
                         className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
@@ -288,11 +404,24 @@ interface BrowseFiltersProps {
                     </div>
                   </>
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='space-y-2'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <div className='space-y-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <div className="space-y-2">
 
                   <Label>Location</Label>
+<<<<<<< HEAD
+                <div className='space-y-2'>
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Select>
                     <SelectTrigger>
                       <SelectValue placeholder="Select location" />
@@ -305,7 +434,18 @@ interface BrowseFiltersProps {
                     </SelectContent>
                   </Select>
                 </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='space-y-2'>
+                  <div className="flex gap-4 items-center">
+                    <Input placeholder="Min" type="number" className="w-full" />
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+=======
+                <div className='space-y-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <div className="space-y-2">
 
@@ -317,11 +457,53 @@ interface BrowseFiltersProps {
                     <Input placeholder="Max" type="number" className="w-full" />
                   </div>
                 </div>
+<<<<<<< HEAD
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
                 <div className='space-y-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <div className="space-y-2">
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <Label>Salary Range</Label>
+                  <div className='flex gap-4 items-center'>
+                    <Input placeholder='Min' type='number' className='w-full' />
+                    <Input placeholder='Max' type='number' className='w-full' />
+                  </div>
+                </div>
+                <div className='space-y-2'>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
+                  </div>
+                </div>
+                <div className='flex items-center justify-between'>
+                  <Switch />
+                </div>
+              </div>
+                <Button variant="outline" className="w-full">Reset</Button>
+                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+            <SelectTrigger className="w-[120px] h-8">
+              <SelectValue placeholder="Sort By" />
+ursor/fix-website-loading-errors-and-merge-6662
+                  <Label>Skills</Label>
+                  <div className='grid grid-cols-2 gap-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
 
@@ -361,22 +543,82 @@ interface BrowseFiltersProps {
                 <div className="flex items-center justify-between">
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div className='space-y-2'>
+                
+                <div className="space-y-2">
+                  <Label>Salary Range</Label>
+                  <div className="flex gap-4 items-center">
+                    <Input placeholder="Min" type="number" className="w-full" />
+                    <span>to</span>
+                    <Input placeholder="Max" type="number" className="w-full" />
+                  </div>
+                </div>
+                <div className='space-y-2'>
+                
+                <div className="space-y-2">
+                  <Label>Skills</Label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
+                  </div>
+                </div>
+                <div className='flex items-center justify-between'>
+                
+                <div className="flex items-center justify-between">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+              
+              
+=======
+
+
               
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <Select>
+            <SelectTrigger className='w-[120px] h-8'>
+              <SelectValue placeholder='Sort By' />
+          
+=======
+
+
           
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -387,6 +629,29 @@ interface BrowseFiltersProps {
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {activeFilters.map(filter => (
+            <Badge
+              key={filter}
+              variant='secondary'
+              className='flex items-center gap-1'
+            >
+              {filter}
+              <X
+                className='h-3 w-3 cursor-pointer'
+                onClick={() => removeFilter(filter)}              />
+            </Badge>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
@@ -508,9 +773,47 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+          {active_filters.map (filter => (
+            <Badge;
+              key={filter}
+              variant='secondary';
+              className='flex items - center gap - 1';
+            >;
+              {filter}
+              <X;
+                className='h - 3 w - 3 cursor - pointer';
+                on_click={() => remove_filter (filter)}              />;
+            </Badge>))}
+        </div>;
+      </div>;
+    </div>);
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

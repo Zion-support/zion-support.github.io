@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD:src/pages/Profile.tsx
+=======
+=======
 import { useEffect } from 'react';
 import { useAuth } from "../hooks/useAuth";
 import { Button } from "../components/ui/button";
@@ -61,5 +65,26 @@ export default function Profile() {
       </div>
       
     </>)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/pages/Profile.tsx
+;
+const Profile = () =>: any {
+  return (
+    <div className="min - h-screen bg - gray - 50">;
+      <div className="container mx - auto px - 4 py - 8">;
+        <h1 className="text - 3xl font - bold text - gray - 900 mb - 4">;
+          Profile;
+        </h1>;
+        <p className="text - gray - 600">;
+          This is a placeholder profile page.;
+        </p>;
+      </div>;
+    </div>);
+}
+;
+<<<<<<< HEAD:src/pages/Profile.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/pages/Profile.tsx
 export default Profile;

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,6 +24,10 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   page: number;
@@ -33,6 +42,15 @@ export default /**
  * Pagination - Function description
  */
 function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  page: number,
+  page_size: number,
+  total: number,
+};
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   page: number,
   page_size: number,
@@ -60,6 +78,10 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 
 };
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Pagination(): any ({;
   page,;
   pageSize,;
@@ -73,9 +95,15 @@ export default function Pagination(): any ({;
 };
 export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
   const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
+<<<<<<< HEAD
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+export type PaginationProps = {;
+=======
 =======
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export type PaginationProps = {
   page: number;
@@ -84,6 +112,20 @@ export type PaginationProps = {
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
+<<<<<<< HEAD
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   page,
   pageSize,
   total,
@@ -100,7 +142,14 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -129,8 +178,17 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 }  }
     if (p >= 1 && p <= totalPages) onChange(p)
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -138,12 +196,26 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
         Next
       </EnhancedButton>
     </div>
+<<<<<<< HEAD
+
+
 );
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -152,8 +224,16 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Pagination: React.FC<PaginationProps> = ({ ;
   currentPage,;
   totalPages,;
@@ -228,6 +308,16 @@ const Pagination: React.FC < PaginationProps> = ({
   class_name = '' ;
 }) => {
   const getPageNumbers = () =>: any {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const pages = [];
+    const maxVisiblePages = 5;
+    } else {;
+      const startPage = Math && Math.max(1, currentPage - 2);
+      const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const pages = [];
     const maxVisiblePages = 5;
@@ -236,21 +326,40 @@ const Pagination: React.FC < PaginationProps> = ({
       const startPage = Math && Math.max(1, currentPage - 2);
       const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
 }
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       for (let i = startPage; i <= endPage; i++) {;
         pages && pages.push(i);
 }
       if (endPage < totalPages) {;
         if (endPage < totalPages - 1) {;
           pages && pages.push('...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
         pages && pages.push(totalPages);
 }
@@ -276,11 +385,23 @@ const Pagination: React.FC < PaginationProps> = ({
       )}
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {getPageNumbers().map((page, index) => {;
+          if (page === '...') {;
+            return (
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {getPageNumbers().map((page, index) => {;
           if (page === '...') {;
             return (
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
@@ -292,13 +413,27 @@ const Pagination: React.FC < PaginationProps> = ({
             <Link
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isCurrentPage
                   ? 'bg-blue-600 text-white border border-blue-600'
                   : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900'
 }`}>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {pageNumber}
             </Link>;
           );
@@ -406,22 +541,62 @@ if ( {) {
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 export default Pagination;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  );
+
+}
+  );
+=======
+<<<<<<< HEAD
+        Next
+      </EnhancedButton>
+    </div>
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
   );
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

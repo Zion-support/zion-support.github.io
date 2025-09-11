@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       req && req.body || {};
 
@@ -21,6 +26,10 @@
       return res && res.status(201).json({
         partner: {
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           id: partner && partner.id,
           name: partner && partner.name,
           status: partner && partner.status,
@@ -30,16 +39,77 @@
         },
         apiKey: apiKey && apiKey.key,
         dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
 
     return res && res.status(500).json({ error: "Failed to create partner" });
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
+  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
+  try {
+    const { partner, apiKey } = await createPartner({
+      name;
+      entityType;
+      pointOfContact;
+      useCaseType;
+      brand});
+    return res.status(201).json({
+      partner: {
+        id: partner.id, name: partner.name,
+        status: partner.status, entityType: partner.entityType,
+        useCaseType: partner.useCaseType,
+        createdAt: partner.createdAt
+    },
+    apiKey: apiKey.key,
+      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to create partner" })
+  };
+}
+=======
+
+  }
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import type { NextApiRequest, NextApiResponse } from './next';
+import { create_partner  } from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "POST");
+    return res.status (405).json ({ error: "Method Not Allowed" });
+    const { name, entity_type, pointOfContact, useCaseType, brand } =;
+      req.body || {}
+    // Check condition
+if ( {) {
+  $2
+=======
 
   }
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       return res.status (400).json ({ error: "Missing required fields" });
     }
@@ -103,7 +173,10 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
 
@@ -151,7 +224,24 @@ export default async function handler(
     return res.status(500).json({ error: "Failed to create partner" });
 
   }
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+}
+
+}
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

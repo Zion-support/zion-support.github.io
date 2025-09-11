@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg',;
+  text?: string,;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
   text?: string;
 interface LoadingSpinnerProps {;
@@ -13,6 +24,10 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   }
   return (
     <div className={`flex items-center gap-3 ${className}`}>
+<<<<<<< HEAD
+      <svg 
+
+=======
       <svg
         className={`animate-spin ${sizeClasses[size]} text-current`}
         viewBox=&quot;0 0 24 24&quot;
@@ -50,18 +65,29 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
           className="opacity-75" 
           fill="currentColor" 
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
     </div>
   )
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   class_name?: string;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
   text?: string,;

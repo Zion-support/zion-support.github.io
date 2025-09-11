@@ -1,6 +1,13 @@
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -10,7 +17,14 @@ import {Button} from "@/components/ui/button";
 export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState("");
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
@@ -21,8 +35,58 @@ import { Button } from "@/components/ui/button",
 
 
 export function ITServicePricingTable() {
+<<<<<<< HEAD
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortConfig, setSortConfig] = useState<{
+<<<<<<< HEAD
+
+import { useState, useMemo } from "react";
+import {
+  onsiteServicePricing
+  CountryPricing
+} from "@/data/onsiteServicePricing";
+import { Input } from "@/components/ui/input";
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "@/components/ui/table";
+
+import { Globe, Search, ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {useState, useMemo} from "react";
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Globe, Search, ArrowUpDown} from "lucide-react";
+import {Button} from "@/components/ui/button";
+export function ITServicePricingTable() {;
+  const [searchQuery, setSearchQuery] = useState("");
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Globe, Search, ArrowUpDown } from "lucide-react",
+import { Button } from "@/components/ui/button",
+export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
+    key: keyof CountryPricing;
+direction: "ascending" | "descending"
+  }>({
+
+    key: "country"
+    direction: "ascending"
+  });
+  const sortedData = useMemo(() => {
+=======
+=======
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [sortConfig, setSortConfig] = useState<{
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { useState, useMemo  } from './react';
 import {
@@ -51,14 +115,31 @@ function ITServicePricingTable() {
     direction: "ascending" | "descending"
   }>({
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    let filteredData = [...onsiteServicePricing],
+    
+
+
+=======
     key: "country"
     direction: "ascending"
   });
   const sortedData = useMemo(() => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let filteredData = [...onsiteServicePricing];
     let filteredData = [...onsiteServicePricing],
     
     // Filter by search query
+<<<<<<< HEAD
+<<<<<<< HEAD
+let filteredData = [...onsiteServicePricing];
+// Filter by search query
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
@@ -68,7 +149,14 @@ function ITServicePricingTable() {
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key: "country",
     direction: "ascending",
   });
@@ -92,7 +180,10 @@ if ( {) {
   $2
 }
         return sort_config.direction === "ascending" ? -1 : 1;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       // Check condition
 if ( {) {
@@ -100,7 +191,12 @@ if ( {) {
 }
         return sort_config.direction === "ascending" ? 1 : -1;
       }
+<<<<<<< HEAD
+      return 0;
+    });
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -115,17 +211,25 @@ export function ITServicePricingTable() {;
   }>({;
     key: "country",;
     direction: "ascending"}),;
+<<<<<<< HEAD
+  const sortedData = useMemo(() => {;
+    let filteredData = [...onsiteServicePricing];
+=======
 
   const sortedData = useMemo(() => {;
     let filteredData = [...onsiteServicePricing];
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Filter by search query;
     if (searchQuery) {;
       filteredData = filteredData && filteredData.filter(item => ;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Sort data;
     filteredData && filteredData.sort((a, b) => {;
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
@@ -136,7 +240,33 @@ export function ITServicePricingTable() {;
       }
       return 0;
     });
+<<<<<<< HEAD
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+  const handleSort = (key: keyof CountryPricing) => {;
+    setSortConfig({;
+      key,;
+      direction: ;
+        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === "ascending" ;
+          ? "descending" ;
+          : "ascending"});
+  };
 
+      return 0
+    }),
+    
+    return filteredData
+  }, [onsiteServicePricing, searchQuery, sortConfig]),
+<<<<<<< HEAD
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1;
+      }
+      return 0;
+    });
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
   const handleSort = (key: keyof CountryPricing) => {
@@ -153,21 +283,104 @@ export function ITServicePricingTable() {;
     
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
+<<<<<<< HEAD
+<<<<<<< HEAD
+direction: 
+=======
       direction: 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      direction: 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
           : "ascending"})
   },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   return (
+
+import { useState, useMemo } from "react",;
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { Input } from "@/components/ui/input",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Globe, Search, ArrowUpDown } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+;
+export function ITServicePricingTable() {;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [sortConfig, setSortConfig] = useState<{;
+    key:keyof CountryPricing,;
+    direction:"ascending" | "descending";
+  }>({;
+    key:"country",;
+    direction:"ascending"}),;
+;
+  const sortedData = useMemo(() => {;
+    let filteredData = [...onsiteServicePricing],;
+    ;
+    // Filter by search query;
+    if (searchQuery) {;
+      filteredData = filteredData.filter(item => ;
+        item.country.toLowerCase().includes(searchQuery.toLowerCase());
+      ),;
+    }
+    ;
+    // Sort data;
+    filteredData.sort((a, b) => {;
+      if (a[sortConfig.key] < b[sortConfig.key]) {;
+        return sortConfig.direction === "ascending" ? -1 :1,;
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {;
+        return sortConfig.direction === "ascending" ? 1 :-1,;
+      }
+      return 0,;
+    }),;
+    ;
+    return filteredData,;
+  }, [onsiteServicePricing, searchQuery, sortConfig]),;
+;
+  const handleSort = (key:keyof CountryPricing) => {;
+    setSortConfig({;
+      key,;
+      direction:;
+        sortConfig.key === key && sortConfig.direction === "ascending" ;
+          ? "descending" ;
+          :"ascending"}),;
+  },;
+;
+  return (;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
+      <div className="flex items-center mb-6">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Input
             placeholder="Search by country..."
             value={searchQuery}
@@ -227,6 +440,17 @@ export function ITServicePricingTable() {;
                   No countries match your search
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
+=======
+          <Input
+            placeholder="Search by country..."
+            value={searchQuery}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+            onChange={(e) => setSearchQuery(e && e.target.value)}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -275,23 +499,39 @@ export function ITServicePricingTable() {;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+<<<<<<< HEAD
+            onChange={(e) => setSearchQuery(e && e.target.value)}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Input;
             placeholder="Search by country...";
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white";
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
+;
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="rounded-md border border-zion-blue-light overflow-hidden">;
         <Table>;
           <TableHeader className="bg-zion-blue">;
             <TableRow>;
               <TableHead className="text-zion-cyan font-medium">;
+<<<<<<< HEAD
+                <Button ;
+                  variant="ghost" ;
+=======
                 <Button
                   variant="ghost" 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light";
                 >;
@@ -300,8 +540,13 @@ export function ITServicePricingTable() {;
                 </Button>;
               </TableHead>;
               <TableHead className="text-right text-zion-cyan font-medium">;
+<<<<<<< HEAD
+                <Button ;
+                  variant="ghost" ;
+=======
                 <Button
                   variant="ghost" 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onClick={() => handleSort("pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light";
                 >;
@@ -312,6 +557,19 @@ export function ITServicePricingTable() {;
             </TableRow>;
           </TableHeader>;
           <TableBody className="bg-zion-blue-dark">;
+<<<<<<< HEAD
+            {sortedData.length > 0 ? (;
+              sortedData.map((item) => (;
+                <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">;
+                  <TableCell className="flex items-center space-x-2">;
+                    <Globe className="h-4 w-4 text-zion-purple" />;
+                    <span className="text-white">{item.country}</span>;
+                  </TableCell>;
+                  <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>;
+                </TableRow>;
+              ));
+            ) :(;
+=======
             {sortedData && sortedData.length > 0 ? (;
               sortedData && sortedData.map((item) => (;
                 <TableRow key={item && item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">;
@@ -323,11 +581,45 @@ export function ITServicePricingTable() {;
                 </TableRow>;
               ));
             ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TableRow>;
                 <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
+<<<<<<< HEAD
+  ),;}
+ const sortedData = useMemo ( () => {
+  let filteredData = [...onsiteServicePricing];
+filteredData = filteredData.filter (item => item.country.toLowerCase () .includes (searchQuery.toLowerCase () ) 
+}return 0;
+});
+}, [onsiteServicePricing, searchQuery, sortConfig]);
+sortConfig.key === key && sortConfig.direction === "ascending" ? "descending" : "ascending" 
+}) 
+};
+/> <Input className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white" /> </div> </div> <div className="rounded-md border border-zion-blue-light overflow-hidden"> <Table> <TableHeader className="bg-zion-blue"> <TableRow> <TableHead className="text-zion-cyan font-medium" > <Button className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light" > <span>Country</span> <ArrowUpDown className="h-4 w-4" /> </Button> </TableHead> <TableHead className="text-right text-zion-cyan font-medium" > <Button className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light" > <span>Price Per Incident</span> <ArrowUpDown className="h-4 w-4" /> </Button> </TableHead> </TableRow> </TableHeader> <TableBody className="bg-zion-blue-dark"> {
+  sortedData.length > 0 ? (sortedData.map ( (item) => (<TableRow key= {
+  item.country 
+}className="border-b border-zion-blue-light hover:bg-zion-blue/50"> <TableCell className="flex items-center space-x-2"> <Globe className="h-4 w-4 text-zion-purple" /> <span className="text-white"> {
+  item.country 
+}</span> </TableCell> <TableCell className="text-right font-medium text-white">$ {
+  item.pricePerIncident.toFixed (2) 
+}</TableCell> </TableRow>) ) ) : (<TableRow> <TableCell colSpan= {
+  2 
+}className="text-center py-10 text-zion-slate-light"> No countries match your search </TableCell> </TableRow>) 
+}</TableBody> </Table> </div> </div>) 
+}
+            )}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -339,6 +631,7 @@ export function ITServicePricingTable() {;
     </div>;
   );
 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
@@ -423,3 +716,7 @@ export function ITServicePricingTable() {;
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

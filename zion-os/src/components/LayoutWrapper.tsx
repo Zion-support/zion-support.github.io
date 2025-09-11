@@ -1,16 +1,34 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
 "use client";
 import { useWalkthroughTarget } from "./OnboardingWalkthrough";
 import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
 import { useAuth } from "@/contexts/AuthContext",;
 import Link from "next/link",;
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
   const { user, isAuthenticated, logout } = useAuth();
+<<<<<<< HEAD
+
+
+  return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
   return (;
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -21,7 +39,15 @@ export /**
 function LayoutWrapper() {
   const { user, is_authenticated, logout } = use_auth ();
   return (
+<<<<<<< HEAD
+"use client";
+import { useWalkthroughTarget } from "./OnboardingWalkthrough";
+import { useAuth } from "@/contexts/AuthContext";
+import Link from "next/link";
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -55,10 +81,29 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 >;
                   Dashboard;
                 </Link>;
+
+                <div className="flex items - center gap - 3">;
+                  <span className="text - sm text - zinc - 400">;
+                    Welcome, {user?.name || user?.email}
+
+<<<<<<< HEAD
+
+                    Welcome, {user?.name || user?.email}
+
+                <div className="flex items - center gap - 3">;
+                  <span className="text - sm text - zinc - 400">;
+                    Welcome, {user?.name || user?.email}
                 <div className="flex items-center gap-3">;
                   <span className="text-sm text-zinc-400">;
                     Welcome, {user?.name |user?.email}
                     Welcome, {user?.name || user?.email}
+=======
+=======
+
+                    Welcome, {user?.name || user?.email}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </span>;
                   <button;
                     on_click={logout}

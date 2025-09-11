@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+
+
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+"use client",
+import { useState, useEffect, useRef  } from './react';,
+import Link from './next / link';,
+export /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+  const [isSearchOpen, setIsSearchOpen] = useState (false),
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -12,6 +47,8 @@ export function Navigation() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
+<<<<<<< HEAD
+=======
 =======
 "use client",
 import { useState, useEffect, useRef  } from './react';,
@@ -35,6 +72,7 @@ export function Navigation() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -212,7 +250,24 @@ export function Navigation() {;
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+          </div>)}
+
+
 ;
+
+<<<<<<< HEAD
+;
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -289,8 +344,25 @@ export function Navigation() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </nav>;
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

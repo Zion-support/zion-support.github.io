@@ -21,6 +21,8 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
     // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
@@ -83,17 +85,18 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company
+                <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  Subject
                 </label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
-                  placeholder="Your company name"
+                  placeholder="What's this about?"
                 />
               </div>
               <div>

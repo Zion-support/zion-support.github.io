@@ -93,5 +93,15 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
+<<<<<<< HEAD
+:temp_broken_files/utils/env-polyfill.ts
+}"}// Ensure process is available globally '"
 }
 }// Ensure process is available globally '"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
+=======
+
+}
+}// Ensure process is available globally '"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

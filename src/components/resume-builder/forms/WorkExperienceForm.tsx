@@ -1,3 +1,102 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { Input } from '@/components/ui/input'
+import { Checkbox } from '@/components/ui/checkbox'
+import { format } from 'date-fns'
+import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,;
+  FormMessage;
+} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
+
+import { Loader2, Edit, Trash2 } from 'lucide-react'
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Card, CardContent  } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+// Define schema for form validation
+
+const workExperienceSchema = z.object({
+  company_name: z.string().min(1, 'Company name is required')
+  role_title: z.string().min(1, 'Job title is required')
+  start_date: z.string().min(1, 'Start date is required')
+  end_date: z.string().optional()
+  is_current: z.boolean().default(false)
+  description: z.string().optional()
+  location: z.string().optional()
+})
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>
+interface WorkExperienceFormProps {
+  resumeId: string
+  workExperiences: WorkExperience[]
+  onComplete: () => void
+  onBack: () => void
+export function WorkExperienceForm({
+  resumeId
+  workExperiences
+  onComplete
+  onBack
+}: WorkExperienceFormProps) {
+  const {
+    addWorkExperience
+    updateWorkExperience
+    deleteWorkExperience
+    isLoading
+  } = useResume()
+  const [editingId, setEditingId] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  // Helper function to format dates to string
+  const formatDateValue = (dateValue: string | Date | undefined): string => {
+    if (!dateValue) return ''
+    if (typeof dateValue === 'string') return dateValue
+    return format(dateValue, 'yyyy-MM-dd')
+  }
+  const form = useForm<WorkExperienceFormValues>({
+    resolver: zodResolver(workExperienceSchema)
+    defaultValues: {
+      company_name: ''
+      role_title: ''
+      start_date: format(new Date(), 'yyyy-MM-dd')
+      is_current: false
+      description: ''
+      location: ''
+    }
+  })
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
+    try {
+      setError(null)
+      let success
+      const experienceData: WorkExperience = {
+        company_name: data.company_name, // Required field
+        role_title: data.role_title, // Required field
+        start_date: data.start_date, // Required field
+        end_date: data.is_current ? undefined : data.end_date |undefined
+        is_current: data.is_current
+        description: data.description
+        location: data.location
+      }
+      if (editingId) {
+        success = await updateWorkExperience(editingId, experienceData)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       // Check condition
 if ( {) {
@@ -7,14 +106,46 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      if (success) {
+        form.reset({
+          company_name: ''
+          role_title: ''
+          start_date: format(new Date(), 'yyyy-MM-dd')
+          is_current: false
+          description: ''
+          location: ''
+        })
+        setEditingId(null)
+      }
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+    }
+  }
+  const handleEdit = (work: WorkExperience) => {
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -29,6 +160,58 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  const handleDelete = async (id: string,) => {
+    if (confirm('Are you sure you want to delete this work experience?')) {
+      await deleteWorkExperience(id)
+    }
+  }
+  const handleEnhanceDescription = (enhancedContent: string) => {
+    form.setValue('description', enhancedContent)
+  }
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { format } from 'date-fns',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { WorkExperience } from '@/types/resume',;
+import { Loader2, Edit, Trash2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
+// Define schema for form validation;
+const workExperienceSchema = z.object({;
+  company_name: z.string().min(1, 'Company name is required'),;
+  role_title: z.string().min(1, 'Job title is required'),;
+  start_date: z.string().min(1, 'Start date is required'),;
+  end_date: z.string().optional(),;
+  is_current: z.boolean().default(false),;
+  description: z.string().optional(),;
+  location: z.string().optional()}),;
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
+interface WorkExperienceFormProps {;
+  resumeId: string,;
+  workExperiences: WorkExperience[],;
+  onComplete: () => void,;
+  onBack: () => void;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
@@ -101,13 +284,38 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 }
       await deleteWorkExperience (id);
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { format } from 'date-fns',;
+ursor/fix-website-loading-errors-and-merge-6662
+=======
   },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -123,7 +331,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
+<<<<<<< HEAD
+=======
 import {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Form,;
   FormControl,;
   FormField,;
@@ -246,10 +457,18 @@ export function WorkExperienceForm(): any ({;
     }
   };
 
+<<<<<<< HEAD
+  const handleEnhanceDescription = (enhancedContent: string) => {
+    form.setValue('description', enhancedContent)
+  },
+
+  },
+=======
   const handleEnhanceDescription = (enhancedContent: string) => {;
     form && form.setValue('description', enhancedContent);
   };
   return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-6'>;
       <div>;
         <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;
@@ -273,6 +492,55 @@ export function WorkExperienceForm(): any ({;
                       {typeof work && work.start_date === 'string';
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      -{' '}
+                      {work && work.is_current;
+                        ? 'Present';
+                        : work && work.end_date;
+                          ? typeof work && work.end_date === 'string';
+                            ? work && work.end_date;
+                            : format(work && work.end_date, 'MMM yyyy');
+                          : ''}
+                    </p>;
+                    {work && work.location && (;
+                      <p className='text-xs text-muted-foreground'>;
+                        {work && work.location}
+                      </p>;
+                    )}
+                  </div>;
+                  <div className='flex gap-2'>;
+                    <Button
+                      variant='ghost'
+                      size='icon'
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
+        <p className="text-muted-foreground">
+          Add your work history to showcase your professional experience.
+        </p>
+      </div>
+      {workExperiences.length > 0 && (
+        <div className='space-y-4'>
+          <h3 className='text-md font-medium'>Added Experience</h3>
+          {workExperiences.map(work => (
+            <Card key={work.id} className='bg-muted/40'>
+              <CardContent className='pt-6'>
+                <div className='flex justify-between'>                  <div>
+                    <h4 className='font-medium'>{work.role_title}</h4>
+                    <p className='text-sm text-muted-foreground'>
+                      {work.company_name}
+                    </p>
+                    <p className='text-xs text-muted-foreground mt-1'>
+                      {typeof work.start_date === 'string'
+                        ? work.start_date
+                        : format(work.start_date, 'MMM yyyy')}{' '}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       -{' '}
                       {work.is_current
                         ? 'Present'
@@ -298,13 +566,43 @@ export function WorkExperienceForm(): any ({;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      variant='ghost'
+                      size='icon'
+                      onClick={() => handleEdit(work)}
+                      aria-label='Edit experience'                    >
+                      <Edit className='h-4 w-4' />
+                    </Button>
+                    <Button
+                      variant='ghost'
+                      size='icon'
+                      onClick={() => handleDelete(work.id!)}
+                      aria-label='Delete experience'                    >
+                      <Trash2 className='h-4 w-4' />
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleEdit(work)}
+                      aria-label="Edit experience"
+                    >
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button
+=======
                     <Button
 
                       variant="ghost"
@@ -315,24 +613,54 @@ export function WorkExperienceForm(): any ({;
                     </Button>;
                     <Button
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       variant="ghost"
                       size="icon"
                       onClick={() => handleDelete(work.id!)}
                       aria-label="Delete experience"
                     >
                       <Trash2 className="h-4 w-4" />
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Button>
                   </div>
                 </div>
                 {work.description && (
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
 
                 )}
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+        </div>;
+                  <p className='text-sm mt-3 line-clamp-2'>
+                    {work.description}
+                  </p>
+                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
+
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
+
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+=======
           ))}
         </div>;
       )}
@@ -343,6 +671,7 @@ export function WorkExperienceForm(): any ({;
         <h3 className="text-md font-medium mb-4">
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
@@ -358,6 +687,13 @@ export function WorkExperienceForm(): any ({;
             className='space-y-4'>;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               <FormField
+<<<<<<< HEAD
+                control={form.control}
+                name='company_name'
+                render={({ field }: { field: any }) => (                  <FormItem>
+                name='company_name'
+                render={({ field }: { field: any }) => (                  <FormItem>
+=======
 
     <div className='space - y-6'>;
       <div>;
@@ -440,13 +776,17 @@ export function WorkExperienceForm(): any ({;
                     </FormControl>;
                     <FormMessage />;
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 control={form.control}
 
                 name="company_name"
                 render={({ field }: { field: any }) => (
                   <FormItem>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Google, Microsoft, etc." {...field} />
@@ -454,7 +794,22 @@ export function WorkExperienceForm(): any ({;
                     <FormMessage />
                   </FormItem>
                 )}
+<<<<<<< HEAD
+              />
+ursor/fix-website-loading-errors-and-merge-6662
+              />;
 
+                control={form && form.control}
+                name='role_title'
+                render={({ field }: { field: any }) => (                  <FormItem>
+              />
+              <FormField
+                control={form.control}
+                name='role_title'
+                render={({ field }: { field: any }) => (                  <FormItem>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
 
               <FormField
@@ -469,12 +824,18 @@ export function WorkExperienceForm(): any ({;
               />;
               <FormField;
                 control={form.control}
+<<<<<<< HEAD
+                name="role_title"
+                render={({ field }: { field: any }) => (
+                  <FormItem>
+=======
 
                 name="role_title"
                 render={({ field }: { field: any }) => (
                   <FormItem>
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
@@ -482,6 +843,13 @@ export function WorkExperienceForm(): any ({;
                     <FormMessage />
                   </FormItem>
                 )}
+<<<<<<< HEAD
+              />
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               />;
             </div>;
@@ -490,10 +858,42 @@ export function WorkExperienceForm(): any ({;
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               <FormField
+<<<<<<< HEAD
+                control={form.control}
+                name='start_date'
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="start_date"
+                render={({ field }: { field: any }) => (
+                  <FormItem>
+                    <FormLabel>Start Date</FormLabel>
+                    <FormControl>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <FormField
+                control={form.control}
+                name='start_date'
+                  <FormItem>
+                    <FormLabel>Start Date</FormLabel>
+                    <FormControl>
+                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className='space-y-4'>
+                <FormField
+                  control={form.control}
+                  name='is_current'
+                  render={({ field }: { field: any }) => (
+                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
+=======
 
                 control={form.control}
                 name="start_date"
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 render={({ field }: { field: any }) => (
                   <FormItem>
@@ -512,6 +912,16 @@ export function WorkExperienceForm(): any ({;
                     <FormMessage />
                   </FormItem>
 
+<<<<<<< HEAD
+              />
+
+
+
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input 
                         type="date" 
                         {...field} 
@@ -524,6 +934,38 @@ export function WorkExperienceForm(): any ({;
 
 
                 )}
+<<<<<<< HEAD
+              />
+
+              <div className='space-y-4'>;
+                <FormField
+                  name='is_current'
+                  render={({ field }: { field: any }) => (
+                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
+                  control={form.control}
+                  name='is_current'
+                  render={({ field }: { field: any }) => (
+                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
+                  name="is_current"
+                  render={({ field }: { field: any }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>I currently work here</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                {!form.watch('is_current') && (
+                  <FormField
+                    control={form.control}
+                    name='end_date'
+=======
               />;
 
               <div className='space-y-4'>;
@@ -560,18 +1002,30 @@ export function WorkExperienceForm(): any ({;
                             {...field}
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />;
                 {!form.watch('is_current') && (;
                   <FormField;
                     control={form.control}
                     name="end_date"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
+<<<<<<< HEAD
+                          <Input
+                            type='date'
+                            {...field}
+                            value={field.value |''}                          />
+                            value={field.value || ''}                          />
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             value={field.value || ''}                          />
 
                           <Input 
@@ -579,8 +1033,62 @@ export function WorkExperienceForm(): any ({;
                             {...field} 
                             value={field.value || ''} 
                           />
+<<<<<<< HEAD
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
+              </div>
+            </div>
+            <FormField
+              control={form.control}
+              name='location'
+                <FormItem>
+                  <FormLabel>Location (Optional)</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder='San Francisco, CA (Remote)'                      {...field}
+                    />
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='description'
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel className='flex justify-between'>
+                    <span>Job Description</span>
+                    <AIEnhancementButton
+                      currentContent={field.value |''}
+                      enhancementType='work-description'
+                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
+                      onEnhanced={handleEnhanceDescription}
+                    />
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder='Describe your responsibilities and accomplishments...'
+                      className='min-h-[100px]'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {error && (
+              <Alert variant='destructive'>
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+            <div className='flex justify-between pt-2'>
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -588,6 +1096,15 @@ export function WorkExperienceForm(): any ({;
                         </FormControl>;
                         <FormMessage />;
                       </FormItem>;
+<<<<<<< HEAD
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   />;
                 )}
@@ -597,6 +1114,13 @@ export function WorkExperienceForm(): any ({;
               </div>;
             </div>;
 
+<<<<<<< HEAD
+              </div>
+            </div>
+            <FormField
+              control={form.control}
+              name='location'
+=======
             <FormField
               control={form && form.control}
               name='location'
@@ -652,10 +1176,42 @@ export function WorkExperienceForm(): any ({;
                         <FormMessage />;
                       </FormItem>)}
                   />)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
             <FormField;
               control={form.control}
+<<<<<<< HEAD
+              name="location"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel>Location (Optional)</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder='San Francisco, CA (Remote)'                      {...field}
+                    />
+                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='description'
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel className='flex justify-between'>
+                    <span>Job Description</span>
+                    <AIEnhancementButton
+                      currentContent={field.value |''}
+                      enhancementType='work-description'
+                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
+                      onEnhanced={handleEnhanceDescription}
+                    />
+                  </FormLabel>
+                  <FormControl>
+=======
 
             />;
 
@@ -677,6 +1233,7 @@ export function WorkExperienceForm(): any ({;
                     />;
                   </FormLabel>;
                   <FormControl>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Textarea
                       placeholder='Describe your responsibilities and accomplishments...'
                       className='min-h-[100px]'
@@ -715,6 +1272,22 @@ export function WorkExperienceForm(): any ({;
               )}
 
 
+<<<<<<< HEAD
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {error && (
+              <Alert variant='destructive'>
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+            <div className='flex justify-between pt-2'>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
             <FormField;
               control={form.control}
@@ -738,16 +1311,40 @@ export function WorkExperienceForm(): any ({;
                     />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
+                </FormItem>;
+              )}
+=======
 
                 </FormItem>;
               )}
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
               <Button
+<<<<<<< HEAD
+                type="button"
+                variant="outline"
+                onClick={() => {
+                  if (editingId) {
+                    setEditingId(null)
+                    setEditingId(null)
+                    form.reset({
+                      company_name: ''
+                      role_title: ''
+                      start_date: format(new Date(), 'yyyy-MM-dd')
+                      is_current: false
+                      description: ''
+                      location: ''
+                    })
+
+              <Button
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 type='button'
                 variant='outline'
                 onClick={() => {
@@ -759,13 +1356,36 @@ export function WorkExperienceForm(): any ({;
 
 
                     form.reset({
+<<<<<<< HEAD
+                    setEditingId(null),
+                    setEditingId(null),
+=======
+                    <Button
+                    setEditingId(null),
+                    setEditingId(null),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    form.reset({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
+                      location: ''})
+<<<<<<< HEAD
+                      location: '',
+                    })
+ursor/fix-website-loading-errors-and-merge-6662
+                  } else {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   } else {
                     onBack()
             />;
@@ -793,17 +1413,41 @@ export function WorkExperienceForm(): any ({;
                     });
                   } else {;
                     onBack();
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      location: ''})
+                      location: '',
+                    })
+                      location: ''})
+                  } else {
+                    onBack()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
+<<<<<<< HEAD
+=======
+
+              </Button>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -811,12 +1455,35 @@ export function WorkExperienceForm(): any ({;
 
 
                   {editingId ? 'Update' : 'Add'} Experience
+<<<<<<< HEAD
+=======
                 </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {!editingId && workExperiences.length > 0 && (
                   <Button type="button" onClick={onComplete}>
                     Next
                   </Button>
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              </div>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </div>
+  )
+}> {'
+  editingId ? 'Cancel': 'Back'
+}</Button> Next </Button>)
+}</div> </div> </form> </Form> </div> </div>)
+}'"  )
+}
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Button>;
 
@@ -852,3 +1519,65 @@ export function WorkExperienceForm(): any ({;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+                    setEditingId (null);
+                    form.reset ({
+                      company_name: '',
+                      role_title: '',
+                      start_date: format (new Date (), 'yyyy - MM - dd'),
+                      is_current: false,
+                      description: '',
+                      location: '',
+                    });
+                  } else {
+                    on_back ();
+                  }
+                }}
+              >;
+                {editing_id ? 'Cancel' : 'Back'}
+              </Button>;
+              <div className='flex gap - 2'>;
+                <Button type='submit' disabled={is_loading}>;
+                  {is_loading && (
+                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {editing_id ? 'Update' : 'Add'} Experience;
+                </Button>;
+                {!editing_id && work_experiences.length > 0 && (
+                  <Button type='button' on_click={on_complete}>;
+                    Next;
+                  </Button>)}
+              </div>;
+            </div>;
+          </form>;
+        </Form>;
+      </div>;
+<<<<<<< HEAD
+;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+      ...work;
+      start_date: formatDateValue(work.start_date),
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
+  };
+
+
+
+    </div>);
+}> {';
+  editing_id ? 'Cancel': 'Back';
+}</Button> Next </Button>);
+}</div> </div> </form> </Form> </div> </div>);
+}'"  );
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

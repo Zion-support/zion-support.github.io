@@ -1,3 +1,109 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setSubmitSuccess(true);
+    
+    // Reset form after success
+    setTimeout(() => {
+      setSubmitSuccess(false);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    }, 5000);
+  };
+
+  const contactMethods = [
+    {
+      title: "General Inquiries",
+      description: "Get in touch with our team for general questions about our services and solutions.",
+      email: "info@ziontechgroup.com",
+      phone: "+1 (302) 464-0950"
+    },
+    {
+      title: "Sales & Business Development",
+      description: "Discuss how our AI solutions can transform your business operations.",
+      email: "sales@ziontechgroup.com",
+      phone: "+1 (302) 464-0951"
+    },
+    {
+      title: "Research Collaboration",
+      description: "Explore research partnerships and academic collaborations.",
+      email: "research@ziontechgroup.com",
+      phone: "+1 (302) 464-0952"
+    },
+    {
+      title: "Technical Support",
+      description: "Get technical assistance for our AI platforms and solutions.",
+      email: "support@ziontechgroup.com",
+      phone: "+1 (302) 464-0953"
+    }
+  ];
+
+  const officeLocations = [
+    {
+      city: "Delaware, USA",
+      address: "Main Headquarters",
+      description: "Our primary research and development facility"
+    },
+    {
+      city: "San Francisco, CA",
+      address: "AI Innovation Center",
+      description: "West Coast research and client services"
+    },
+    {
+      city: "London, UK",
+      address: "European Operations",
+      description: "European market expansion and research"
+    }
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return (
+    <div className="min-h-screen bg-white">
+
+
+      {/* Hero Section */}
+
+<<<<<<< HEAD
+=======
+=======
 
 import Link from 'next/link';
 export default function ContactPage() {
@@ -7,6 +113,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
           <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
@@ -18,12 +125,23 @@ export default function ContactPage() {
         </div>;
       </section>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Form & Info */}
       <section className=&quot;py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
           <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
             {/* Contact Form */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
               <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
               <form className=&quot;space - y-6 & quot;>;
@@ -117,12 +235,26 @@ export default function ContactPage() {
                   <textarea;
                     id=&quot;message & quot;
                     name=&quot;message";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ></textarea>;
                 </div>;
                 <button;
@@ -190,7 +322,14 @@ export default function ContactPage() {
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
@@ -216,9 +355,16 @@ export default function ContactPage() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+import Link from 'next/link';
+export default function ContactPage() {
+  return (;
+    <div className=&quot;min-h-screen bg-white&quot;>
+=======
 =======
 import Link from 'next/link';
 export default function ContactPage() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -423,6 +569,25 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+
+            {/* Office Locations */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Office Locations
+              </h2>
+              <div className="space-y-4">
+                {officeLocations.map((office, index) => (
+                  <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-lg p-4">
+                    <h3 className="text-white font-medium mb-1">{office.city}</h3>
+                    <p className="text-blue-400 text-sm mb-1">{office.address}</p>
+                    <p className="text-gray-300 text-sm">{office.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>

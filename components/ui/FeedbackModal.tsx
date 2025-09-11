@@ -1,5 +1,12 @@
 import { useState } from 'react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type FeedbackContext = { actionType?: string, metadata?: any };
+export default function FeedbackModal({
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
@@ -11,10 +18,27 @@ import { useState } from 'react';
 export type FeedbackContext = { actionType?: string, metadata?: any };
 export default function FeedbackModal({
 
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isOpen;
   onClose;
   defaultContext;
   defaultKind = 'general';
+<<<<<<< HEAD
+<<<<<<< HEAD
+  userHeaders}: {;
+  isOpen: boolean,;
+  onClose: (submitted: boolean) => void,;
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>
+}) {
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   userHeaders}: {;
   isOpen: boolean,;
@@ -24,14 +48,26 @@ export default function FeedbackModal({
   defaultKind?: 'general' | 'bug' | 'feature';
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function submit() {;
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -45,13 +81,27 @@ export default function FeedbackModal({
           kind,;
           context: defaultContext || {},;
         }),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
@@ -59,13 +109,24 @@ export default function FeedbackModal({
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setLoading(false);
     onClose(true)
   }
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
@@ -73,16 +134,38 @@ export default function FeedbackModal({
           {[1,2,3,4,5].map(n => (
 
 
+<<<<<<< HEAD
+
+            <button
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
             <button
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              className={;
+                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
               aria-label={`${n} stars`}
             >;
@@ -241,10 +324,21 @@ function submit() {
             </label>;
           </div>;
         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            disabled={loading || rating < 1}
+            className='px-3 py-2 rounded bg-gray-900 text-white'>;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             disabled={loading || rating < 1}
             className='px-3 py-2 rounded bg-gray-900 text-white'>;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {loading ? 'Submitting…' : 'Submit'}
           </button>        </div>;
       </div>;
@@ -256,7 +350,14 @@ function submit() {
               aria-label={`${n} stars`}
             >★</button>
           ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <div className="text-sm">;
           <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>;
@@ -276,16 +377,29 @@ function submit() {
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -376,6 +490,183 @@ function submit() {
   )
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export type FeedbackContext = { actionType?: string; metadata?: any }
+export default function FeedbackModal({
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
+  isOpen: boolean;
+  onClose: (submitted: boolean) => void;
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({;
+  isOpen;
+  onClose;
+  defaultContext;
+  defaultKind = 'general';
+  userHeaders}: {
+  isOpen: boolean
+  onClose: (submitted: boolean) => void
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>
+}) {
+  const [rating, setRating] = useState<number>(0);
+  const [hover, setHover] = useState<number>(0);
+  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
+  const [comment, setComment] = useState('');
+  const [loading, setLoading] = useState(false);
+  if (!isOpen) return null;
+  async function submit() {
+    if (rating < 1) return onClose(false);
+    setLoading(true);
+    try {
+      await fetch('/api/feedback', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
+        body: JSON.stringify({
+          rating
+          comment
+          kind
+          context: defaultContext |{}
+        })
+      });
+    setLoading(false);
+    onClose(true);
+
+    } catch {}
+
+    } catch {}
+    setLoading(false);
+    onClose(true);
+  }
+
+  }
+  return (
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>
+      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
+        <div className='text-lg font-medium'>Was this helpful?</div>
+        <div className='flex gap-2'>
+          {[1, 2, 3, 4, 5].map(n => (            <button    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
+        <div className="text-lg font-medium">Was this helpful?</div>
+        <div className="flex gap-2">
+          {[1,2,3,4,5].map(n => (
+
+            <button
+
+              key={n}
+              onMouseEnter={() => setHover(n)}
+              onMouseLeave={() => setHover(0)}
+              onClick={() => setRating(n)}
+              className={
+                hover >= n |rating >= n ? 'text-yellow-500' : 'text-gray-300'
+              }
+              aria-label={`${n} stars`}
+            >
+              ★
+            </button>
+          ))}
+        </div>
+        <div className='text-sm'>
+          <label className='block mb-1'>Optional comment</label>
+          <textarea
+            value={comment}
+            onChange={e => setComment(e.target.value)}
+            className='w-full border rounded p-2'
+            rows={3}
+          />
+        </div>
+        <div className='text-sm'>
+          <label className='block mb-1'>Also</label>
+          <div className='flex gap-3'>
+            <label className='inline-flex items-center gap-1'>
+              <input
+                type='radio'
+                checked={kind === 'general'}
+                onChange={() => setKind('general')}
+              />
+              General
+            </label>
+            <label className='inline-flex items-center gap-1'>
+              <input
+                type='radio'
+                checked={kind === 'bug'}
+                onChange={() => setKind('bug')}
+              />
+              Report a bug
+            </label>
+            <label className='inline-flex items-center gap-1'>
+              <input
+                type='radio'
+                checked={kind === 'feature'}
+                onChange={() => setKind('feature')}
+              />
+              Suggest a feature
+            </label>
+          </div>
+        </div>
+        <div className='flex justify-end gap-2'>
+          <button
+            onClick={() => onClose(false)}
+            className='px-3 py-2 rounded border'
+          >
+            Later
+          </button>
+          <button
+            onClick={submit}
+            disabled={loading |rating < 1}
+            className='px-3 py-2 rounded bg-gray-900 text-white'
+          >
+            {loading ? 'Submitting…' : 'Submit'}
+          </button>        </div>
+      </div>
+    </div>
+  );
+}              aria-label={`${n} stars`}
+            >★</button>
+          ))}
+        </div>
+        <div className="text-sm">
+          <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>
+          <textarea value={comment} onChange={(e)=>setComment(e.target.value)} className="w-full border rounded p-2" rows={3} />
+        </div>
+        <div className="text-sm">
+          <label className="block mb-1" htmlFor="input-Also">Also</label>
+          <div className="flex gap-3">
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
+            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
+          </div>
+        </div>
+        <div className="flex justify-end gap-2">
+          <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
+          <button onClick={submit} disabled={loading |rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+        </div>
+      </div>
+    </div>
+);
+}
+  );
+
+}
+  );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
 =======
@@ -385,3 +676,4 @@ function submit() {
   );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

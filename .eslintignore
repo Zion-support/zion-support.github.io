@@ -1,49 +1,23 @@
-*.log
-logs/
-automation/logs/
-
-# Ignore generated files
-**/*.generated.*
-*.backup.*
-*.disabled.*
-*.corrupted.*
-*.broken.*
-zion.app/recovered-content/**
-
-# Netlify functions (serverless functions with different linting rules)
-netlify/functions/
-
-# Large disabled or external workspaces
-zion-os.disabled/
-zion-os/
-zion-website/
-
-# Test files and build artifacts
-tests/
-**/*.test.*
-**/*.spec.*
-.next/
-out/
-dist/
-build/
-coverage/
-
-# Node modules and dependencies
-node_modules/
-
-# Configuration files that may have different syntax
-*.config.*
-vite.config.*
-vitest.config.*
-jest.config.*
-
-# Token and deployment files
-token/
-scripts/
-automation/
-backups/
-data-disabled/
-pages.disabled_current/
-src.pages.disabled_build/
-src.corrupted.*/
+backup-problematic-files/
+backup/
+cache/
+clean-build/
+temp_conflicts/
+temp_broken_files/
 temp_backup/
+zion-os/
+zion-ai-assistant/
+test-*.js
+test-*.cjs
+ultimate-*.js
+ultimate-*.cjs
+tools/
+tests/
+**/backup-problematic-files/**
+**/backup/**
+**/temp_*/**
+**/zion-*/**
+**/test-*/**
+**/ultimate-*/**
+**/tools/**
+**/tests/**

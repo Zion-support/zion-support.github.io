@@ -2,6 +2,8 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+<<<<<<< HEAD
+=======
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
@@ -49,8 +51,16 @@ const supabaseConfig: SupabaseConfig = {
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
 export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -67,9 +77,33 @@ export const supabase = createSupabaseClient(supabaseConfig);
       });
     });
   });
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  });
+};
+
+<<<<<<< HEAD
+        single: () => null
+      })
+    })
+  })
+}
+  });
+};
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
         single: () => null
       })
     })
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

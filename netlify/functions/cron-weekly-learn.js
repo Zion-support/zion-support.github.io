@@ -1,6 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+exports.handler = async function() {
+  try {
+    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
+    const summary = {
+      updatedAt: Date.now()
+      totals: {
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -59,7 +81,14 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 ;
     const owner = process.env.GITHUB_OWNER;
@@ -76,18 +105,41 @@ if ( {) {
         owner,
         repo,
         path: 'data / learn / insights - weekly.json',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return map
       }, {})
     },
@@ -99,7 +151,10 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const owner = process.env.GITHUB_OWNER,
@@ -116,3 +171,74 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
+
+};      }
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
+        return map
+      }, {})
+    }
+    const owner = process.env.GITHUB_OWNER
+    const repo = process.env.GITHUB_REPO
+    const token = process.env.GITHUB_TOKEN
+    const content = JSON.stringify(summary, null, 2)
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+}      },
+      top_badges: Object.values (users).reduce ((map, u) => {
+        (u.badges || []).for_each ((b) => { map[b] = (map[b] || 0) + 1 }),
+        return map;
+      }, {});
+    },
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    const content = JSON.stringify (summary, null, 2),
+    // Check condition
+if ( {) {
+  $2
+}
+<<<<<<< HEAD
+},
+=======
+<<<<<<< HEAD
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+},
+
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+
+},
+
+<<<<<<< HEAD
+},
+},
+
+},
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

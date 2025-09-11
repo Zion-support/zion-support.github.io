@@ -1,7 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
+  Brain
+  Network
+  Cloud
+  Shield
+  Zap
+  Target
+  Users
+  BarChart3
+  ArrowRight
+  CheckCircle
+  Star
+  Award
+  Clock
+  Globe
+=======
+
+import React from './react';
+import Link from './next / link';
+import { motion  } from './framer-motion';
+import {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain,
   Network,
   Cloud,
@@ -15,11 +43,18 @@ import {
   Star,
   Award,
   Clock,
+<<<<<<< HEAD
+  Globe,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+const serviceCategories = [
+=======
   Globe,
 } from './lucide-react';
 import Layout from "../components / Layout";
 ;
 const service_categories = [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "AI Services",
     description:;
@@ -101,7 +136,17 @@ const service_categories = [;
     color: "from - indigo - 500 to - purple - 600",
   },
 ];
+<<<<<<< HEAD
+;
+const stats = [;
+<<<<<<< HEAD
 const stats = [
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const stats = [
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
@@ -111,7 +156,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const serviceCategories = [
   {
     title: 'AI Services',
@@ -162,7 +210,11 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600'
   }
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const stats = [
   { number: '500+', label: 'Projects Completed' },
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -173,34 +225,84 @@ origin/automation-improvements-final
   { number: "99.9%", label: "Uptime Guarantee" }
   { number: "24/7", label: "Support Available" }
   { number: "50+", label: "Countries Served" }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+];
+const benefits = [
+;
+const benefits = [;
+  {
+<<<<<<< HEAD
+=======
 ];
 const benefits = [
   {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Expert Team",
     description: "Experienced professionals with deep industry knowledge",
     icon: Users,
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Expert Team"
     description: "Experienced professionals with deep industry knowledge"
     icon: Users
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
   {
 
+  {
+=======
+
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Cutting - Edge Technology",
     description: "Latest technologies and innovative solutions",
     icon: Target,
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Scalable Solutions"
     description: "Solutions that grow with your business"
     icon: Globe
   }
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Proven Results",
     description: "Track record of successful implementations",
     icon: Award,
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -220,13 +322,50 @@ const benefits = [
     description: 'Track record of successful implementations',
     icon: Award
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
   }
 ];
 export default function ServicesOverviewPage() {
+<<<<<<< HEAD
+
+];
+<<<<<<< HEAD
+export default function ServicesOverviewPage() {
+  return (
+    <Layout
+      title="Services Overview - Zion Tech Group"
+      description="Comprehensive overview of our technology services and solutions designed to transform your business."
+      keywords="services, technology solutions, AI, IT, micro SAAS, security, automation, analytics"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+
+          
+
+
+
+          
+origin/automation-improvements-final
+=======
+=======
 =======
 
 class ErrorBoundary extends React.Component {
@@ -354,15 +493,28 @@ const serviceCategories = [;
     color: "from-indigo-500 to-purple-600",;
   },;
 ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           
 
+=======
+<<<<<<< HEAD
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -371,6 +523,10 @@ const serviceCategories = [;
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Our{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   Services
@@ -380,24 +536,50 @@ const serviceCategories = [;
                 Comprehensive technology services designed to transform your
                 business operations, enhance security, and drive innovation
                 across all technology domains.
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
 origin/automation-improvements-final
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
           </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -411,7 +593,10 @@ origin/automation-improvements-final
                 </span>;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default /**
  * ServicesOverviewPage - Function description
@@ -445,12 +630,22 @@ function ServicesOverviewPage() {
                 </span>;
               </h1>;
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Comprehensive technology services designed to transform your;
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </motion.div>;
           </div>;
         </section>;
@@ -463,36 +658,68 @@ function ServicesOverviewPage() {
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.number}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+                  </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
 origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className="text-center">;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
@@ -504,14 +731,21 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Service Categories */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -519,16 +753,40 @@ origin/automation-improvements-final
                 Service Categories
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+
+                We offer a comprehensive range of technology services to meet all your business needs.
+
+
+
+                We offer a comprehensive range of technology services to meet all your business needs.
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 We offer a comprehensive range of technology services to meet
                 all your business needs.
                 We offer a comprehensive range of technology services to meet all your business needs.
 origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+
+                We offer a comprehensive range of technology services to meet all your business needs.
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                   <div className="text - gray - 600 font - medium">{stat.label}</div>;
                 </motion.div>))}
@@ -555,34 +813,80 @@ origin/automation-improvements-final
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {service_categories.map ((category, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <div
+                    className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}
+                  >
+                    <category.icon className="w-16 h-16 text-white" />
+                  </div>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
                   
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 =======
 
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
 
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -596,19 +900,49 @@ origin/automation-improvements-final
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
+<<<<<<< HEAD
+=======
                     
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Services:</h4>
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/automation-improvements-final
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+=======
 origin/automation-improvements-final
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -619,6 +953,67 @@ origin/automation-improvements-final
                 all your business needs.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {serviceCategories && serviceCategories.map((category, index) => (;
+                <motion&& motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
+                  <div
+                    className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
+                    <category && category.icon className="w-16 h-16 text-white" />;
+                  </div>;
+                  <div className="p-6">;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
+                      {category && category.title}
+                    </h3>;
+                    <p className="text-gray-600 mb-4 leading-relaxed">;
+                      {category && category.description}
+                    </p>;
+                    <div className="space-y-2 mb-6">;
+                      <h4 className="font-semibold text-gray-900 text-sm">;
+                        Key Services:;
+                      </h4>;
+                      <ul className="space-y-1">;
+                        {category && category.services.map((service, idx) => (;
+                          <li
+                            key={idx}
+                            className="flex items-center text-sm text-gray-600">;
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
+                            {service}
+                          </li>;
+                        ))}
+<<<<<<< HEAD
+                      </ul>
+                    </div>
+
+                    
+
+
+origin/automation-improvements-final
+=======
+
+                      </ul>;
+                    </div>;
+
+
+=======
+                    
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
                     
 >>>>>>> origin/automation-improvements-final
@@ -628,6 +1023,7 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -637,18 +1033,34 @@ origin/automation-improvements-final
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div>;
+          </div>;
+        </section>;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -656,6 +1068,27 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                We deliver exceptional results through innovation, expertise
+
+
+
+<<<<<<< HEAD
+                and unwavering commitment to your success.
+
+                We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
+
+                We deliver exceptional results through innovation, expertise
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                and unwavering commitment to your success.
+                We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 We deliver exceptional results through innovation, expertise,
                 We deliver exceptional results through innovation, expertise
                 and unwavering commitment to your success.
@@ -666,7 +1099,10 @@ origin/automation-improvements-final
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 overflow - hidden group";
                 >;
                   <div;
@@ -728,16 +1164,28 @@ origin/automation-improvements-final
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />
                   </div>
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
@@ -746,13 +1194,28 @@ origin/automation-improvements-final
                   </h3>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
 origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -763,7 +1226,10 @@ origin/automation-improvements-final
                 and unwavering commitment to your success.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
@@ -784,29 +1250,55 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Let's discuss how our comprehensive services can help you
                 achieve your business goals.
                 Let's discuss how our comprehensive services can help you
                 achieve your business goals.
                 Let's discuss how our comprehensive services can help you achieve your business goals.
 origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+
+                Let's discuss how our comprehensive services can help you achieve your business goals.
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Business?;
@@ -816,7 +1308,10 @@ origin/automation-improvements-final
                 achieve your business goals.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">;
@@ -825,6 +1320,19 @@ origin/automation-improvements-final
                 </Link>;
                 <Link
                   href="/case-studies"
+<<<<<<< HEAD
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  View Case Studies
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>;
+  );
+=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Case Studies;
                 </Link>;
@@ -836,6 +1344,7 @@ origin/automation-improvements-final
     </Layout>;
   );
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="text - center";
                 >;
                   <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">;
@@ -884,5 +1393,8 @@ origin/automation-improvements-final
         </section>;
       </div>;
     </Layout>);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

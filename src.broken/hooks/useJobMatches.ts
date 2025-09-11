@@ -1,4 +1,5 @@
-// Hook for useJobMatches,
-export const useUseJobMatches: unknown = $2;
+// Hook for useJobMatches,;
+export const useUseJobMatches: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

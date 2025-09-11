@@ -1,8 +1,37 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -18,21 +47,48 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+<<<<<<< HEAD
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
     const { title, category, keyFeatures, targetAudience } = await req.json();
     if (!title |!category) {
       return new Response(
+<<<<<<< HEAD
+        JSON.stringify({
+          error: "Missing required fields: title and category are required"
+=======
+    const { title, category, keyFeatures, targetAudience } = await req.json();
+    if (!title |!category) {
+      return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });
         {
           status: 400
@@ -47,8 +103,93 @@ serve(async (req) => {
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    const { title, category, keyFeatures, targetAudience } = await req.json(),;
+    if (!title || !category) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "Missing required fields: title and category are required";
+        }),;
+        {;
+          status: 400,;
+          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+
+    const { title, category, keyFeatures, targetAudience } = await req && req.json();
+    if (!title || !category) {
+      return new Response(
+        JSON && JSON.stringify({ 
+          error: "Missing required fields: title and category are required" 
+=======
+        JSON && JSON.stringify({ 
+          error: "Missing required fields: title and category are required" 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        });
+        {
+          status: 400
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    const { title, category, key_features, target_audience } = await req.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (
+        JSON.stringify ({
+          error: "Missing required fields: title and category are required";
+        });
+        {
+          status: 400,
+          headers: { ...cors_headers, "Content - Type": "application / json" }
+
+    const { title, category, keyFeatures, targetAudience } = await req.json(),
+
+    if (!title || !category) {
+      return new Response(
+        JSON.stringify({ 
+          error: "Missing required fields: title and category are required" 
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       );
     }
@@ -65,7 +206,27 @@ serve(async (req) => {
 
     
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        }
+      )
+    }
+
+    const configuration = new Configuration({
+      apiKey: Deno.env.get('OPENAI_API_KEY')});
+    const openai = new OpenAIApi(configuration);
+    const prompt = `Generate an optimized marketplace listing for the following product:
+Title: ${title}
+Category: ${category}
+Key Features: ${keyFeatures |"Not specified"}
+Target Audience: ${targetAudience |"General users"}
+    
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
@@ -73,17 +234,110 @@ serve(async (req) => {
     const prompt = `Generate an optimized marketplace listing for the following product:;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+        }
+      );
+    }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const configuration = new Configuration ({
+      api_key: Deno.env.get ('OPENAI_API_KEY')});
+    const openai = new OpenAIApi (configuration);
+;
+    const prompt = `Generate an optimized marketplace listing for the following product:;
+Title: ${title}
+Category: ${category}
+Key Features: ${key_features || "Not specified"}
+Target Audience: ${target_audience || "General users"}
+Please create:;
+1. A compelling, SEO - friendly description (100 - 150 words) that highlights benefits and use cases;
+2. A list of 5 - 7 relevant tags for the listing;
+3. A suggested price range based on the category and features;
+4. A bulleted list of 3 - 5 key selling points;
+
+<<<<<<< HEAD
+
+
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+=======
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }];
+      temperature: 0 && 0.7});
+<<<<<<< HEAD
+    const responseText = completion && completion.choices[0].message && message.content;
+=======
+
+    const responseText = completion && completion.choices[0].message && message.content;
+    
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    // Parse the JSON from the AI response
+    let parsedResponse;
+    try {
+      // Extract the JSON content if it's wrapped in markdown code blocks
+<<<<<<< HEAD
+      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+                        responseText && responseText.match(/({[\s\S]*})/) ||
+
+      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+                        responseText && responseText.match(/({[\s\S]*})/) ||
+=======
+
+      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+                        responseText && responseText.match(/({[\s\S]*})/) ||
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                        [null, responseText];
+      const jsonString = jsonMatch[1].trim();
+      parsedResponse = JSON && JSON.parse(jsonString)
+    } catch (error) {
+<<<<<<< HEAD
+      console && console.error("Failed to parse AI response as JSON:", error);
+      console && console.log("Raw response:", responseText);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
@@ -96,6 +350,25 @@ Format the response as a JSON object with the following structure: {
       temperature: 0.7});
     const responseText = completion.choices[0].message.content;
 
+<<<<<<< HEAD
+Format the response as a JSON object with the following structure:
+{
+  "description": "The optimized description here...",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "suggestedPrice": { "min": number, "max": number },
+  "keyPoints": ["point1", "point2", "point3"]
+}`,
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.7}),
+
+    const responseText = completion.choices[0].message.content,
+    
+    // Parse the JSON from the AI response
+    let parsedResponse,
+=======
 
 
     const completion = await openai && openai.chat.completions && completions.create({
@@ -107,24 +380,45 @@ Format the response as a JSON object with the following structure: {
     
     // Parse the JSON from the AI response
     let parsedResponse;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) |
                         responseText.match(/({[\s\S]*})/) |
                         [null, responseText];
       const jsonString = jsonMatch[1].trim();
+<<<<<<< HEAD
+      parsedResponse = JSON.parse(jsonString)
+    } catch (error) {
+      console.error("Failed to parse AI response as JSON:", error);
+      console.log("Raw response:", responseText);
+=======
+=======
       parsedResponse = JSON && JSON.parse(jsonString)
     } catch (error) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       console && console.error("Failed to parse AI response as JSON:", error);
       console && console.log("Raw response:", responseText);
       
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
@@ -140,17 +434,50 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         keyPoints: []
       }
     }
     return new Response(
+<<<<<<< HEAD
+<<<<<<< HEAD
+      JSON && JSON.stringify({ 
+        generated: parsedResponse
+      JSON.stringify({
+=======
 
       JSON && JSON.stringify({ 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      JSON && JSON.stringify({ 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         generated: parsedResponse
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+    )
+  } catch (error) {
+    console.error("Error in AI listing generator:", error);
+    return new Response(
+      JSON.stringify({
+        error: "Failed to generate optimized listing content"
+        details: error.message
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   "suggested_price": { "min": number, "max": number }
   "key_points": ["point1", "point2", "point3"];
@@ -203,10 +530,24 @@ Format the response as a JSON object with the following structure: {
         error: "Failed to generate optimized listing content",
         details: error && error.message 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+    )
+  }
+});
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
     console.error ("Error in AI listing generator:", error);
 ;
@@ -224,6 +565,167 @@ Format the response as a JSON object with the following structure: {
   }
 });
 
+<<<<<<< HEAD
+;
+
+=======
+      JSON.stringify({
+        generated: parsedResponse
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      }),
+      { 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+  } catch (error) {
+    console.error("Error in AI listing generator:", error),
+    
+    return new Response(
+      JSON.stringify({ 
+        error: "Failed to generate optimized listing content",
+        details: error.message 
+      }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+      }
+    )
+Key Features: ${keyFeatures || "Not specified"}
+Target Audience: ${targetAudience || "General users"}
+;
+Please create:;
+1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases;
+2. A list of 5-7 relevant tags for the listing;
+3. A suggested price range based on the category and features;
+4. A bulleted list of 3-5 key selling points;
+Format the response as a JSON object with the following structure:;
+{;
+  "description": "The optimized description here...",;
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],;
+  "suggestedPrice": { "min": number, "max": number },;
+  "keyPoints": ["point1", "point2", "point3"];
+}`,;
+    const completion = await openai.chat.completions.create({;
+      model: "gpt-4o-mini",;
+      messages: [{ role: "user", content: prompt }],;
+      temperature: 0.7}),;
+    const responseText = completion.choices[0].message.content,;
+    // Parse the JSON from the AI response;
+    let parsedResponse,;
+    try {;
+      // Extract the JSON content if it's wrapped in markdown code blocks;
+      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) ||;
+                        responseText.match(/({[\s\S]*})/) ||;
+                        [null, responseText],;
+      const jsonString = jsonMatch[1].trim(),;
+      parsedResponse = JSON.parse(jsonString);
+    } catch (error) {;
+      console.error("Failed to parse AI response as JSON:", error),;
+      // // // console.log("Raw response:", responseText),;
+      // Provide a fallback structured response;
+      parsedResponse = {;
+        description: "An error occurred while generating the optimized description. Please try again.",;
+        tags: [],;
+        suggestedPrice: { min: 0, max: 0 },;
+        keyPoints: [];
+      }
+    }
+;
+    return new Response(;
+      JSON.stringify({;
+        generated: parsedResponse;
+      }),;
+      {;
+        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+      }
+    );
+  } catch (error) {;
+    console.error("Error in AI listing generator:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error: "Failed to generate optimized listing content",;
+        details: error.message;
+      }),;
+      {;
+        status: 500,;
+        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+      }
+    );
+      });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+  "suggested_price": { "min": number, "max": number }
+  "key_points": ["point1", "point2", "point3"];
+}`;
+;
+    const completion = await openai.chat.completions.create ({
+      model: "gpt - 4o - mini",
+      messages: [{ role: "user", content: prompt }];
+      temperature: 0.7});
+;
+    const response_text = completion.choices[0].message.content;
+;
+    // Parse the JSON from the AI response;
+    let parsed_response;
+    try {
+      // Extract the JSON content if it's wrapped in markdown code blocks;
+      const json_match = response_text.match (/```(?:json)?\s*([\s\S]*?)\s*```/) ||;
+                        response_text.match (/({[\s\S]*})/) ||;
+                        [null, response_text];
+;
+      const json_string = json_match[1].trim ();
+      parsed_response = JSON.parse (json_string);
+    } catch (error) {
+      console.error ("Failed to parse AI response as JSON:", error);
+      console.log ("Raw response:", response_text);
+;
+      // Provide a fallback structured response;
+      parsed_response = {
+        description: "An error occurred while generating the optimized description. Please try again.";
+        tags: [],
+        suggested_price: { min: 0, max: 0 }
+        key_points: [];
+      }
+    }
+    return new Response (
+      JSON.stringify ({
+        generated: parsed_response;
+      });
+      {
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
+    );
+  } catch (error) {
+    console && console.error("Error in AI listing generator:", error);
+    return new Response(
+      JSON && JSON.stringify({ 
+        error: "Failed to generate optimized listing content",
+        details: error && error.message 
+      });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+    console.error ("Error in AI listing generator:", error);
+;
+    return new Response (
+      JSON.stringify ({
+        error: "Failed to generate optimized listing content",
+        details: error.message;
+      });
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
+    );
+  }
+});
+      JSON.stringify({
+        generated: parsedResponse
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }),
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
@@ -243,3 +745,157 @@ Format the response as a JSON object with the following structure: {
 
   }
 });
+<<<<<<< HEAD
+;
+
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
+import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;
+;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin":"*",;
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
+;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers:corsHeaders }),;
+  }
+;
+  try {;
+    const { title, category, keyFeatures, targetAudience } = await req.json(),;
+;
+    if (!title || !category) {;
+      return new Response(;
+        JSON.stringify({ ;
+          error:"Missing required fields:title and category are required" ;
+        }),;
+        { ;
+          status:400, ;
+          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+        }
+      ),;
+    }
+;
+    const configuration = new Configuration({;
+      apiKey:Deno.env.get('OPENAI_API_KEY')}),;
+    const openai = new OpenAIApi(configuration),;
+;
+    const prompt = `Generate an optimized marketplace listing for the following product:;
+    ;
+Title:${title}
+Category:${category}
+Key Features:${keyFeatures || "Not specified"}
+Target Audience:${targetAudience || "General users"}
+;
+Please create:;
+1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases;
+2. A list of 5-7 relevant tags for the listing;
+3. A suggested price range based on the category and features;
+4. A bulleted list of 3-5 key selling points;
+;
+Format the response as a JSON object with the following structure:;
+{;
+  "description":"The optimized description here...",;
+  "tags":["tag1", "tag2", "tag3", "tag4", "tag5"],;
+  "suggestedPrice":{ "min":number, "max":number },;
+  "keyPoints":["point1", "point2", "point3"];
+}`,;
+;
+    const completion = await openai.chat.completions.create({;
+      model:"gpt-4o-mini",;
+      messages:[{ role:"user", content:prompt }],;
+      temperature:0.7}),;
+;
+    const responseText = completion.choices[0].message.content,;
+    ;
+    // Parse the JSON from the AI response;
+    let parsedResponse,;
+    try {;
+      // Extract the JSON content if it's wrapped in markdown code blocks;
+      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || ;
+                        responseText.match(/({[\s\S]*})/) ||;
+                        [null, responseText],;
+      ;
+      const jsonString = jsonMatch[1].trim(),;
+      parsedResponse = JSON.parse(jsonString),;
+    } catch (error) {;
+      console.error("Failed to parse AI response as JSON:", error),;
+      // // // console.log("Raw response:", responseText),;
+      ;
+      // Provide a fallback structured response;
+      parsedResponse = {;
+        description:"An error occurred while generating the optimized description. Please try again.",;
+        tags:[],;
+        suggestedPrice:{ min:0, max:0 },;
+        keyPoints:[];
+      },;
+    }
+;
+    return new Response(;
+      JSON.stringify({ ;
+        generated:parsedResponse;
+      }),;
+      { ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;
+  } catch (error) {;
+    console.error("Error in AI listing generator:", error),;
+    ;
+    return new Response(;
+      JSON.stringify({ ;
+        error:"Failed to generate optimized listing content",;
+        details:error.message ;
+      }),;
+      { ;
+        status:500, ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;  }
+}),;
+ 
+}try {
+  const {
+  title, category, keyFeatures, targetAudience 
+}= await req.json ();
+return new Response (JSON.stringify ({
+  
+}) 
+}const prompt = `Generate an optimized marketplace listing for the following product: Please create: 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases 2. A list of 5-7 relevant tags for the listing 3. A suggested price range based on the category and features 4. A bulleted list of 3-5 key selling points Format the response as a JSON object with the following structure: "keyPoints": ["point1", "point2", "point3"] 
+}`;
+const responseText = completion.choices[0].message.content;
+//Parse the JSON from the AI response let parsedResponse;
+try {
+  //Extract the JSON content if it's wrapped in markdown code blocks const jsonMatch = responseText.match (/``` (?:json) ?\s* ([\s\S]*?) \s*```/) || [\s\S]* 
+}) /) || [null, responseText];
+//Provide a fallback structured response parsedResponse = {
+  description: "An error occurred while generating the optimized description. Please try again.";
+tags: [];
+suggestedPrice: {
+  min: 0, max: 0 
+};
+}
+}return new Response (return new Response (JSON.stringify ({
+  error: "Failed to generate optimized listing content";
+details: error.message 
+});
+{
+  status: 500;
+headers: {
+  ...corsHeaders, "Content-Type" : "application/json" 
+}
+}) 
+}
+});
+  }
+});
+  }
+});
+=======
+
+  }
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

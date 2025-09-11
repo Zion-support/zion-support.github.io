@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+export interface EnhancedRealMicroSaasService {
+	id: string;
+	title: string;
+	category: string;
+}
 
+export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [];
+export const injectedAdditionalServices: EnhancedRealMicroSaasService[] = [];
+export const serviceCategories: string[] = [];
+=======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 tagline: string;
 price: string;
 period: string;
@@ -24,6 +42,78 @@ category: 'AI & Machine Learning';
 'Cloud Computing';
 'Data Analytics' ];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+name: string;
+tagline: string;
+price: string;
+period: string;
+description: string;
+features: string[];
+popular: boolean;
+icon: string;
+category: string;
+}export const microSaasServices: MicroSaasService[] = [ {;
+  id: 'ai-content-generator';
+name: 'AI Content Generator';
+tagline: 'Generate high-quality content with AI';
+price: '$29';
+period: '/month';
+popular: true;
+icon: '🤖';
+category: 'AI & Machine Learning';
+}];
+'All';
+'AI & Machine Learning';
+'Cybersecurity';
+'Cloud Computing';
+'Data Analytics' ];
+
+export interface MicroSaasService {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'quantum-futuristic' | 'blockchain-futuristic' | 'space-futuristic' | 'iot-futuristic' | 'ar-futuristic' | 'autonomous-futuristic' | 'biotech-futuristic' | 'energy-futuristic' | 'transportation-futuristic' | 'quantum-security-futuristic' | 'enterprise-futuristic',
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   // Revolutionary Quantum AI Services
   {
@@ -73,6 +163,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 89
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'autonomous-ai-factory',
     name: 'Autonomous AI Factory',
     tagline: 'Complete autonomous manufacturing system powered by AI with zero human intervention',
@@ -119,6 +213,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 156
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum-cybersecurity-fortress',
     name: 'Quantum Cybersecurity Fortress',
     tagline: 'Future-proof cybersecurity using quantum-resistant encryption and AI threat detection',
@@ -165,6 +263,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 234
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'biomedical-ai-research-platform',
     name: 'Biomedical AI Research Platform',
     tagline: 'Cutting-edge AI platform for biomedical research and drug discovery acceleration',
@@ -211,6 +313,15 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 145
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true, implementationDetails: 'Advanced financial optimization platform with quantum computing algorithms for portfolio optimization and risk assessment. Includes real-time market data integration and compliance monitoring.',
+    launchDate: '2024-01-25', customers: 95,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum-finance-optimizer',
     name: 'Quantum Finance Optimizer',
     tagline: 'Revolutionary financial optimization using quantum computing for 50x faster calculations',
@@ -264,6 +375,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'AI-powered space exploration and satellite management platform. Enables autonomous space missions with real-time decision making, orbital optimization, and predictive maintenance for satellite constellations.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Autonomous space missionsSatellite management',
       'Orbital optimizationPredictive maintenance',
       'Space debris trackingMission planning',
@@ -310,6 +425,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Fully autonomous supply chain and logistics optimization platform powered by AI. Reduces delivery times by 40%, cuts costs by 35%, and provides real-time visibility across the entire supply chain.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Supply chain optimizationRoute optimization',
       'Inventory managementDemand forecasting',
       'Real-time trackingAutomated scheduling',
@@ -356,6 +475,15 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Quantum-powered energy optimization platform for smart grids and renewable energy systems. Reduces energy costs by 25%, improves grid stability by 40%, and optimizes renewable energy integration.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true, implementationDetails: 'Advanced energy optimization platform with quantum computing algorithms for smart grid optimization and renewable energy integration. Includes IoT sensors and real-time monitoring capabilities.',
+    launchDate: '2024-02-10', customers: 120,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Smart grid optimizationRenewable energy integration',
       'Demand responseEnergy storage optimization',
       'Grid stability managementPredictive maintenance',
@@ -402,6 +530,15 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Advanced climate modeling and prediction platform using AI and quantum computing. Provides 95% accuracy in weather forecasting, climate change modeling, and extreme event prediction up to 30 days in advance.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true, implementationDetails: 'Advanced climate prediction platform with AI-powered modeling and quantum computing for complex climate simulations. Includes satellite data integration and real-time monitoring.',
+    launchDate: '2024-02-05', customers: 85,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Climate modelingWeather forecasting',
       'Extreme event predictionClimate change analysis',
       'Risk assessmentData visualization',
@@ -442,6 +579,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   },
   // AI & Machine Learning Services
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai-content-factory-pro',
     name: 'AI Content Factory Pro',
     tagline: 'Generate unlimited high-quality content with AI',
@@ -489,6 +630,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   },
   // New Revolutionary Services
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum-ai-cognitive-platform',
     name: 'Quantum AI Cognitive Platform',
     tagline: 'World\'s First Quantum-Enhanced AI with Human-Like Reasoning',
@@ -535,6 +680,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 89
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'autonomous-manufacturing-ai',
     name: 'Autonomous Manufacturing AI Platform',
     tagline: 'Self-Learning Manufacturing Systems with Zero Downtime',
@@ -581,6 +730,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 567
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Post-Quantum Era Security with AI Threat Detection',
@@ -627,6 +780,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 234
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'space-technology-platform',
     name: 'Space Technology Platform',
     tagline: 'Cutting-Edge Space Exploration and Satellite Management',
@@ -673,6 +830,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 67
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'biotech-ai-platform',
     name: 'Biotech AI Platform',
     tagline: 'AI-Powered Drug Discovery and Biotech Research',
@@ -719,6 +880,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 89
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum-financial-trading',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum-Enhanced Algorithmic Trading and Risk Management',
@@ -765,6 +930,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 56
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent Data Analysis with Predictive Insights',
@@ -811,6 +980,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 890
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'api-documentation-generator',
     name: 'API Documentation Generator',
     tagline: 'Automated API Documentation with AI-Powered Insights',
@@ -857,6 +1030,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 1450
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'customer-service-ai',
     name: 'Customer Service AI Platform',
     tagline: 'Intelligent Customer Support with 24/7 Availability',
@@ -903,6 +1080,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 980
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'database-performance-monitor',
     name: 'Database Performance Monitor',
     tagline: 'Real-Time Database Optimization and Performance Monitoring',
@@ -949,6 +1130,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 420
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'cloud-cost-optimizer',
     name: 'Cloud Cost Optimizer',
     tagline: 'Intelligent Cloud Cost Management and Optimization',
@@ -995,6 +1180,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 720
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'seo-automation-platform',
     name: 'SEO Automation Platform',
     tagline: 'AI-Powered SEO Optimization and Automation',
@@ -1082,6 +1271,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Next-generation cybersecurity platform using quantum-resistant encryption, AI threat detection, and autonomous security response for enterprise-grade protection.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum-resistant encryptionAI threat detection',
       'Autonomous incident responseZero-trust architecture',
       'Behavioral analyticsThreat intelligence',
@@ -1153,6 +1346,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous energy platform with AI optimization, renewable energy management, and smart grid optimization. Includes demand response automation and sustainability tracking.',
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     launchDate: '2024-03-15',
     customers: 180,
     rating: 4.7,
@@ -1206,6 +1403,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 89
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'autonomous-ai-agents',
     name: 'Autonomous AI Agents Platform',
     tagline: 'Self-learning AI agents that work 24/7',
@@ -1252,6 +1453,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 156
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'space-tech-analytics',
     name: 'Space Technology Analytics Platform',
     tagline: 'Satellite data intelligence for Earth observation',
@@ -1298,6 +1503,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 67
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'metaverse-development-studio',
     name: 'Metaverse Development Studio',
     tagline: 'Build immersive 3D worlds and experiences',
@@ -1344,6 +1553,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 134
   },
   {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'biomedical-ai-platform',
     name: 'Biomedical AI Platform',
     tagline: 'AI-powered medical diagnostics and research',
@@ -1397,6 +1610,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Revolutionary quantum computing platform for financial modeling, risk assessment, and algorithmic trading with quantum advantage over classical computing methods.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum portfolio optimizationRisk assessment algorithms',
       'Algorithmic trading signalsMarket prediction models',
       'Real-time analyticsQuantum machine learning',
@@ -1443,6 +1660,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Revolutionary neural interface platform enabling direct brain-computer communication for medical applications, human augmentation, and research purposes with advanced AI interpretation.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Brain signal processingNeural pattern recognition',
       'Medical device controlCommunication assistance',
       'Research data collectionAI interpretation',
@@ -1489,6 +1710,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Revolutionary quantum internet infrastructure providing unhackable communication, quantum key distribution, and ultra-secure data transmission with global coverage.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum key distributionUnhackable communication',
       'Global network coverageQuantum repeaters',
       'Real-time encryptionNetwork monitoring',
@@ -1535,6 +1760,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Revolutionary space mining platform for asteroid resource identification, mining operations management, and space resource logistics with AI-powered optimization.',
     features: [
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Asteroid identificationResource assessment',
       'Mining operationsLogistics management',
       'AI optimizationReal-time monitoring',
@@ -1568,6 +1797,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     },
     realImplementation: true,
     implementationDetails: 'Production space mining platform with real asteroid identification, resource assessment, and mining operations management.',
+<<<<<<< HEAD
+    launchDate: '2025-06-30', customers: 180,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     launchDate: '2024-01-01',
     customers: 3,
     rating: 5.0,
@@ -1616,6 +1849,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 73
   },
   {
+<<<<<<< HEAD
+    launchDate: '2025-07-15', customers: 95,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'it-managed-service-desk',
     name: 'IT Managed Service Desk',
     tagline: '24/7 IT helpdesk with AI triage and automated remediation',
@@ -1657,6 +1894,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 38
   },
   {
+<<<<<<< HEAD
+    trialDays: 21, setupTime: '1 week',
+    category: 'Cybersecurity', realService: true,
+    technology: ['EDR agentsSigma rulesOpenSearchServerless pipelinesNext.jsNode.js'], integrations: ['CrowdStrikeOktaAWS CloudTrailGoogle WorkspaceMicrosoft 365'],
+    useCases: ['MDRThreat detectionCompliance monitoring'], roi: 'Reduce mean time to detect/respond by 55% in 60 days.',
+    competitors: ['Arctic WolfCrowdStrike Falcon CompleteRapid7 MDR'], marketSize: '$5.5B MDR market',
+    growthRate: '20% CAGR', variant: 'cyberpunk',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Collectors + correlation engine + response runners with playbook library.',
+    launchDate: '2025-05-22', customers: 60,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'soc-as-a-service',
     name: 'SOC-as-a-Service',
     tagline: 'Managed detection and response with AI correlation and playbooks',
@@ -1698,6 +1949,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 34
   },
   {
+<<<<<<< HEAD
+    trialDays: 14, setupTime: '90 minutes',
+    category: 'Analytics & Business Intelligence', realService: true,
+    technology: ['dbtSnowflakeBigQueryNext.jsNode.jsKafka'], integrations: ['SnowflakeBigQuerydbt CloudLookerMetabase'],
+    useCases: ['Cost reductionPerformance tuningData governance'], roi: 'Save 20–40% on warehouse costs within 60 days.',
+    competitors: ['Select StarLightupMonte Carlo'], marketSize: '$3.1B data observability',
+    growthRate: '22% CAGR', variant: 'holographic',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Warehouse API collectors + rule engine + advisor UI with CI hooks.',
+    launchDate: '2025-04-28', customers: 75,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'snowflake-bigquery-optimizer',
     name: 'Snowflake/BigQuery Optimizer',
     tagline: 'Cut data warehouse spend and speed up queries automatically',
@@ -1739,6 +2004,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 29
   },
   {
+<<<<<<< HEAD
+    launchDate: '2025-03-12', customers: 140,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'email-deliverability-guardian',
     name: 'Email Deliverability Guardian',
     tagline: 'Improve inbox placement with automatic DMARC, DKIM, SPF and warm-ups',
@@ -1780,6 +2049,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 51
   },
   {
+<<<<<<< HEAD
+    trialDays: 14, setupTime: '45 minutes',
+    category: 'AI & Machine Learning', realService: true,
+    technology: ['Next.jsNode.jsOpenAISegment'], integrations: ['ShopifyBigCommerceWooCommerceKlaviyo'],
+    useCases: ['On-site personalizationBundlingCart recovery'], roi: 'Lift conversion 8–20% within 45 days.',
+    competitors: ['NostoRebuyDynamic Yield'], marketSize: '$5.8B personalization',
+    growthRate: '23% CAGR', variant: 'holographic-advanced',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Client SDK + server rules + AI policy engine and dashboard.',
+    launchDate: '2025-07-10', customers: 210,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ecommerce-conversion-ai',
     name: 'E-commerce Conversion AI',
     tagline: 'Personalized on-site experiences to boost AOV and CVR',
@@ -1821,6 +2104,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 88
   },
   {
+<<<<<<< HEAD
+    launchDate: '2025-05-05', customers: 320,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'sales-intelligence-prospector',
     name: 'Sales Intelligence Prospector',
     tagline: 'LLM-powered prospecting with verified signals and auto-research',
@@ -1862,6 +2149,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 141
   },
   {
+<<<<<<< HEAD
+    trialDays: 14, setupTime: '20 minutes',
+    category: 'AI & Machine Learning', realService: true,
+    technology: ['Next.jsNode.jsOpenAIAzure OpenAI'], integrations: ['SalesforceHubSpotDocuSignHelloSign'],
+    useCases: ['Contract reviewRisk analysisRedlining'], roi: 'Cut review time 70% and reduce risk exposure.',
+    competitors: ['IroncladSpotDraftJuro'], marketSize: '$3.4B CLM',
+    growthRate: '18% CAGR', variant: 'quantum-advanced',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Clause extractors + risk models + redline generator with playbook admin.',
+    launchDate: '2025-02-01', customers: 185,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'contract-review-ai',
     name: 'Contract Review AI',
     tagline: 'Flag risky clauses and generate redlines in seconds',
@@ -1903,6 +2204,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 76
   },
   {
+<<<<<<< HEAD
+    trialDays: 7, setupTime: '15 minutes',
+    category: 'Content Creation', realService: true,
+    technology: ['FFmpegWhisperOpenAINext.js'], integrations: ['YouTubeTikTokInstagramVimeo'],
+    useCases: ['Shorts generationPodcast highlightsCourse clips'], roi: 'Produce 5x more content in the same time.',
+    competitors: ['Opus ClipDescriptKapwing'], marketSize: '$7B creator tooling',
+    growthRate: '14% CAGR', variant: 'holographic-matrix',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Media pipeline + captioning + templating with export connectors.',
+    launchDate: '2025-03-30', customers: 260,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'video-highlights-generator',
     name: 'Video Highlights Generator',
     tagline: 'Auto-generate shorts, chapters, and captions from long videos',
@@ -1944,6 +2259,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 119
   },
   {
+<<<<<<< HEAD
+    trialDays: 14, setupTime: '1 day',
+    category: 'Analytics & Business Intelligence', realService: true,
+    technology: ['Next.jsOpenAIPostgreSQLRedis'], integrations: ['Search ConsoleGA4AirtableSheets'],
+    useCases: ['Landing page scaleLong-tail SEOData-driven content'], roi: 'Grow organic traffic 30–120% in 90 days.',
+    competitors: ['PageFactoryJetOctopusSurfer SEO'], marketSize: '$80B SEO market',
+    growthRate: '8% CAGR', variant: 'quantum-matrix',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Template engine + dedupe + link graph + freshness scheduler.',
+    launchDate: '2025-06-05', customers: 170,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'programmatic-seo-engine',
     name: 'Programmatic SEO Engine',
     tagline: 'Generate 1,000s of high-quality pages from your data',
@@ -1985,6 +2314,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 64
   },
   {
+<<<<<<< HEAD
+    trialDays: 7, setupTime: '15 minutes',
+    category: 'Cloud & Infrastructure', realService: true,
+    technology: ['PlaywrightNode.jsNext.jsTimeseries DB'], integrations: ['PagerDutyOpsgenieSlackTeams'],
+    useCases: ['SLA reportingSLO managementUser journey checks'], roi: 'Reduce incidents reaching customers by 30% in first quarter.',
+    competitors: ['ChecklyDatadog SyntheticsNew Relic Synthetics'], marketSize: '$2.7B observability',
+    growthRate: '15% CAGR', variant: 'quantum',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Playwright runner + scheduler + alerting + status site generator.',
+    launchDate: '2025-05-18', customers: 110,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'synthetic-uptime-sla',
     name: 'Synthetic Uptime & SLA Monitor',
     tagline: 'Proactive synthetic checks with user journeys and SLOs',
@@ -2026,6 +2369,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 40
   },
   {
+<<<<<<< HEAD
+    trialDays: 14, setupTime: '2 hours',
+    category: 'Cloud & Infrastructure', realService: true,
+    technology: ['KubernetesOPANext.jsNode.js'], integrations: ['GitHubGitLabArgo CDFlux'],
+    useCases: ['Policy enforcementCost and reliability guardrailsAdmission control'], roi: 'Prevent misconfigurations and reduce outages by 25%.',
+    competitors: ['KomodorFairwindsDatree'], marketSize: '$2B K8s tooling',
+    growthRate: '19% CAGR', variant: 'quantum-cyberpunk',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Admission controller + policy packs + CI comments and dashboards.',
+    launchDate: '2025-04-10', customers: 90,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'kubernetes-guardrails',
     name: 'Kubernetes Guardrails',
     tagline: 'Policy-as-code for safer, faster cluster operations',
@@ -2067,6 +2424,14 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 37
   },
   {
+<<<<<<< HEAD
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Runbook DSL + connectors + co-pilot with approval flows.',
+    launchDate: '2025-05-27', customers: 130,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'incident-runbook-ai',
     name: 'Incident Runbook AI',
     tagline: 'Generate and execute incident runbooks with context-aware steps',
@@ -2108,6 +2473,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 59
   },
   {
+<<<<<<< HEAD
+    trialDays: 7, setupTime: '20 minutes',
+    category: 'Analytics & Business Intelligence', realService: true,
+    technology: ['axe-corePlaywrightNext.jsNode.js'], integrations: ['GitHubGitLabBitbucketVercelNetlify'],
+    useCases: ['Continuous accessibilityCompliance reportingQuality gates'], roi: 'Reduce a11y regressions by 70% after integration.',
+    competitors: ['Deque axe DevToolsLighthouse CI'], marketSize: '$1.8B accessibility services',
+    growthRate: '11% CAGR', variant: 'holographic-neural',
+    contactInfo: {
+       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' 
+    },
+    realImplementation: true, implementationDetails: 'Headless checks + report UI + CI integrations with budgets.',
+    launchDate: '2025-01-22', customers: 85,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'accessibility-compliance-scanner',
     name: 'Accessibility Compliance Scanner',
     tagline: 'Continuous WCAG/ADA scanning with fix suggestions and diffs',
@@ -2155,6 +2534,69 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
+<<<<<<< HEAD
+// Service categories
+export const serviceCategories = [
+  'AllAI & Enterprise Automation',
+  'Quantum AI & BiotechAI & Cybersecurity',
+  'Quantum AI & FinanceAI & Supply Chain',
+  'Quantum AI & ClimateAI & Manufacturing',
+  'Quantum AI & HealthcareAI & Logistics',
+  'Quantum AI & EnergyAI & Education',
+  'Quantum AI & CybersecurityAI & Marketing',
+  'Quantum AI & ResearchAI & Legal Services',
+  'Quantum AI & Autonomous VehiclesAI & Real Estate',
+  'Quantum AI & CyberneticsQuantum AI & Space Technology',
+  // ADDITIONAL INNOVATIVE CATEGORIES
+  'AI & Content CreationAI & Customer Service',
+  'AI & Sales AutomationAI & Data Analytics',
+  'AI & HR TechAI & Market Research',
+  'AI & Video ProductionAI & SEO',
+  'AI & BlockchainAI & IoT',
+  'AI & Machine LearningQuantum Computing & AI',
+  'Quantum Finance & TradingQuantum Technology',
+  'Autonomous ManufacturingAutonomous Systems',
+  'Quantum CybersecuritySpace Technology & Aerospace',
+  'Metaverse & VR/ARMetaverse & Virtual Reality',
+  'Biomedical AINeural Technology',
+  'Blockchain & DeFiEdge Computing & IoT',
+  'Manufacturing & Industry 4.0Cybersecurity & Privacy',
+  'Healthcare & BiotechnologyFinancial Technology',
+  'Financial Technology & TradingEnergy & Sustainability',
+  'IoT & Smart CitiesClimate Technology',
+  'Robotics & AutomationAgriculture & Food Tech'
+];
+
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+
+
+<<<<<<< HEAD
+export const getServicesByCategory = (category: string) => {
+  if (category === 'All') return allEnhancedRealMicroSaasServices;
+  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
+};
+export const getPopularServices = () => {
+  return allEnhancedRealMicroSaasServices.filter(service => service.popular)
+};
+export const getServicesByPriceRange = (min: number, max: number) => {
+  return allEnhancedRealMicroSaasServices.filter(service => {
+    const price = parseInt(service.price.replace('$', ''));
+    return price >= min && (max === Infinity ? true : price <= max)
+  })
+};
+export const serviceCategories = [
+  'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI';
+  'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
+  'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
+];
+;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -2218,9 +2660,19 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
+<<<<<<< HEAD
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

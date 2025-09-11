@@ -1,4 +1,5 @@
-// Hook for useInfiniteScroll,
-export const useUseInfiniteScroll: unknown = $2;
+// Hook for useInfiniteScroll,;
+export const useUseInfiniteScroll: unknown = () => {;
+  // TODO: Implement hook logic,;
   return {}
-},
+};

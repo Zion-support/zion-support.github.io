@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_backup/_app.tsx
 export default function App({ Component, pageProps }: AppProps) {
 	const renderedRef = useRef(false);
 	return (
@@ -34,3 +35,11 @@ export default function App({ Component, pageProps }: AppProps) {
 		</SiteLayout>
 	)
 }
+=======
+import type { AppProps } from 'next/app'
+import '../styles/globals.css'
+
+export default function App({ Component, pageProps }: AppProps) {
+	return <Component {...pageProps} />
+}
+>>>>>>> origin/chore/standardize-pages-router:pages/_app.tsx

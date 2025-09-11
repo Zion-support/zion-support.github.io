@@ -1,11 +1,62 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+  BookOpen, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Menu,
   X,
   ChevronDown,
@@ -36,8 +87,74 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+  BookOpen, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,;
+  MessageCircle,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, 
+  BookOpen, MessageCircle 
+
+<<<<<<< HEAD
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -246,6 +363,18 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
+<<<<<<< HEAD
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+=======
         name: 'AI Business Intelligence'
         href: '/autonomous-business-intelligence-network'
         description: 'Self-evolving BI'
@@ -269,6 +398,7 @@ const serviceCategories = [
       { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   
   componentDidCatch(error, errorInfo) {
@@ -307,6 +437,41 @@ import { motion, AnimatePresence } from 'framer-motion';
     description: 'Healthcare innovation',
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        name: 'AI Business Intelligence'
+        href: '/autonomous-business-intelligence-network'
+        description: 'Self-evolving BI'
+        price: '$1,299/month'
+      }
+    ]
+  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' }
+      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' }
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' }
+      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+    ]
+  }
+        name: 'AI Business Intelligence',
+        href: '/autonomous-business-intelligence-network',
+        description: 'Self-evolving BI',
+        price: '$1,299/month',
+      },
+    ],
+  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
+      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' };
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
+      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+    ]
+  }
+
+];
+
+];
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
@@ -336,7 +501,14 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
   { name: 'Careers', href: '/careers', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 
 const companyLinks = [
@@ -352,21 +524,43 @@ const companyLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigationItems = [
     {
       name: 'AI Services'
@@ -375,9 +569,18 @@ const UltraAdvancedNavigation2026 = () => {
       color: 'from-blue-500 to-cyan-500'
       description: 'Autonomous AI systems and consciousness interfaces'
       subItems: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const companyLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'About Us', href: '/about', icon: Users },;
@@ -531,6 +734,47 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' },;
         { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' },;
         { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
+<<<<<<< HEAD
+      ];
+    };
+      name: 'Enterprise IT',;
+      href: '/services?category=enterprise',;
+      icon: Zap,;
+      color: 'from-green-500 to-emerald-500',;
+      description: 'Enterprise solutions and infrastructure',;
+      subItems: [;
+        {;
+          name: 'Cloud Solutions',;
+          href: '/services?category=cloud',;
+          description: 'Cloud infrastructure and services',;
+        },;
+        {;
+          name: 'Cybersecurity',;
+          href: '/services?category=security',;
+          description: 'Advanced security solutions',;
+        },;
+        {;
+          name: 'Data Analytics',;
+          href: '/services?category=analytics',;
+          description: 'Business intelligence and analytics',;
+        },;
+        {;
+          name: 'DevOps',;
+          href: '/services?category=devops',;
+          description: 'Development and operations',;
+        },;
+      ],;
+    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },;
+        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },;
+        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
       ]
     }
       name: 'Enterprise IT'
@@ -566,6 +810,7 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name: 'DevOps',
           href: '/services?category=devops',
           description: 'Development and operations',
@@ -574,7 +819,10 @@ const UltraAdvancedNavigation2026 = () => {;
     },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
         { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
@@ -582,19 +830,40 @@ const UltraAdvancedNavigation2026 = () => {;
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
+      ];
+    }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
         { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
         { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
@@ -691,6 +960,20 @@ const UltraAdvancedNavigation2026 = () => {;
           description: 'Business intelligence and analytics'
         }
         {
+<<<<<<< HEAD
+          name: 'DevOps'
+          href: '/services?category=devops'
+          description: 'Development and operations'
+        }
+      ]
+    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' }
+        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' }
+        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' }
+        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
+      ]
+    }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name: 'DevOps',
           href: '/services?category=devops',
           description: 'Development and operations',
@@ -705,6 +988,11 @@ const UltraAdvancedNavigation2026 = () => {;
 
   ];
 
+<<<<<<< HEAD
+  ];
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -800,13 +1088,27 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'AI Creative', href: '/services?category = ai - creative', description: 'Creative AI and content generation' }
       ];
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Quantum Tech',
       href: '/services?category = quantum',
       icon: Atom,
       color: 'from - purple - 500 to - indigo - 500',
       description: 'Quantum computing and space technology',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       sub_items: [;
         {
           name: 'Quantum Space Tech',
@@ -835,13 +1137,27 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'Quantum Security', href: '/services?category = quantum - security', description: 'Quantum encryption and security' }
       ];
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Metaverse',
       href: '/services?category = metaverse',
       icon: Globe,
       color: 'from - pink - 500 to - rose - 500',
       description: 'Virtual worlds and digital reality',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       sub_items: [;
         {
           name: 'Metaverse Platforms',
@@ -870,18 +1186,35 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'Consciousness Interface', href: '/services?category = consciousness - interface', description: 'Brain - computer interfaces' }
       ];
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Enterprise IT',
       href: '/services?category = enterprise',
       icon: Zap,
       color: 'from - green - 500 to - emerald - 500',
       description: 'Enterprise solutions and infrastructure',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+            {/* Logo */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             {/* Logo */}
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       sub_items: [;
         {
           name: 'Cloud Solutions',
@@ -945,12 +1278,26 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   Revolutionary Technology Solutions;
                 </div>              </div>;
             </Link>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
               {navigation_items.map (item => (
                 <div key={item.name} className='relative group'>            {/* Logo */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
@@ -959,7 +1306,14 @@ const UltraAdvancedNavigation2026 = () =>: any {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -990,6 +1344,20 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </div>              </div>;
             </Link>;
             {/* Desktop Navigation */}
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+                  {/* Dropdown Menu */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">
+                  <button
+                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
@@ -1000,6 +1368,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     }
                     className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
                   >
+<<<<<<< HEAD
+                    <item.icon className="w-5 h-5" />
+=======
                     <item.icon className='w-5 h-5' />
                     <span className='font-medium'>{item.name}</span>
                     <ChevronDown
@@ -1007,10 +1378,153 @@ const UltraAdvancedNavigation2026 = () =>: any {
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`}
                     />                  </button>                    <item.icon className="w-5 h-5" />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span className="font-medium">{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
+<<<<<<< HEAD
+                    />                  </button>                    <item && item.icon className="w-5 h-5" />;
+                    <span className="font-medium">{item && item.name}</span>;
+                    <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item && item.name ? 'rotate-180' : ''
+                    }`} />;
+                  </button>
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+            <Link href="/" className="flex items - center space - x-3 group">;
+              <div className="relative">;
+                <div className="w - 12 h - 12 bg - gradient - to - br from - purple - 500 via - pink - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
+                  <Rocket className="w - 6 h - 6 text - white" />;
+                </div>;
+                <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 via - pink - 500 to - cyan - 500 rounded - 2xl blur - xl opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text - xs text - gray - 400">Revolutionary Technology Solutions</div>;
+              </div>;
+            </Link>;
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items - center space - x-8'>;
+              {navigation_items.map (item => (
+                <div key={item.name} className='relative group'>;
+                    on_click={() =>;
+                      setActiveDropdown (
+                        active_dropdown === item.name ? null : item.name);
+                    }
+                    className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2';
+                  >;
+                    <item.icon className='w - 5 h - 5' />;
+                    <span className='font - medium'>{item.name}</span>;
+                    <ChevronDown;
+                      className={`w - 4 h - 4 transition - transform duration - 200 ${
+                        active_dropdown === item.name ? 'rotate - 180' : '';
+                      }`}
+                    />                  </button>                    <item.icon className="w - 5 h - 5" />;
+                    <span className="font - medium">{item.name}</span>;
+                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${
+                      active_dropdown === item.name ? 'rotate - 180' : '';
+                    }`} />;
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>;
+                    {active_dropdown === item.name && (
+                      <motion.div;
+                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden'
+                      >
+                        <div className='p-4'>
+                          <div className='flex items-center space-x-3 mb-4'>
+                            <div
+                              className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}
+                            >
+                              <item.icon className='w-5 h-5 text-white' />
+                            </div>
+                            <div>
+                              <h3 className='text-white font-semibold'>
+                                {item.name}
+                              </h3>;
+                              <p className='text - gray - 400 text - sm'>;
+                                {item.description}
+                              className={`w-10 h-10 bg-gradient-to-br ${item && item.color} rounded-xl flex items-center justify-center`}>;
+                              <item && item.icon className='w-5 h-5 text-white' />;
+                            </div>;
+                            <div>;
+                              <h3 className='text-white font-semibold'>;
+                                {item && item.name}
+                              </h3>;
+                              <p className='text-gray-400 text-sm'>;
+                                {item && item.description}
+                              </p>;
+                            </div>;
+                          </div>;
+                          <div className='space-y-2'>;
+                            {item && item.subItems.map(subItem => (;
+                              <Link
+                                key={subItem && subItem.name}
+                                href={subItem && subItem.href}
+                                className='block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group'
+                                onClick={() => setActiveDropdown(null)}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
+                      >
+                        <div className="p-4">
+                          <div className="flex items-center space-x-3 mb-4">
+                            <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
+                              <item.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-white font-semibold">{item.name}</h3>
+                              <p className="text-gray-400 text-sm">{item.description}</p>
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            {item.subItems.map((subItem) => (
+                              >;
+                                <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>;
+                                  {subItem && subItem.name}
+                                </div>;
+                                <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>                                  {subItem && subItem.description}                      >;
+                        <div className="p-4">;
+                          <div className="flex items-center space-x-3 mb-4">;
+                            <div className={`w-10 h-10 bg-gradient-to-br ${item && item.color} rounded-xl flex items-center justify-center`}>;
+                              <item && item.icon className="w-5 h-5 text-white" />;
+                            </div>;
+                            <div>;
+                              <h3 className="text-white font-semibold">{item && item.name}</h3>;
+                              <p className="text-gray-400 text-sm">{item && item.description}</p>;
+                            </div>;
+                          </div>;
+                          <div className="space-y-2">;
+                            {item && item.subItems.map((subItem) => (;
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
+                                  {subItem.name}
+                                </div>
+                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
+
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -1024,18 +1538,30 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                 href={subItem && subItem.href}
                                 className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
                                 onClick={() => setActiveDropdown(null)}
+<<<<<<< HEAD
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
                               >
                                 <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
                                   {subItem.name}
                                 </div>
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                                   {subItem.description}
                                 </div>
                               </Link>
                             ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </div>;
                           <Link
                             href={item.href}
@@ -1051,12 +1577,45 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </div>
               ))}
 
+<<<<<<< HEAD
+
+                          <Link
+                            href={item && item.href}
+                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
+
+
+<<<<<<< HEAD
+<Link
+                            href={item && item.href}
+                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                          <Link
+                            href={item && item.href}
+                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
+                            View All {item && item.name}
+                          </Link>;
+                        </div>;
+                      </motion && motion.div>;
+                    )}
+                  </AnimatePresence>;
+                </div>;
+              ))}
+
+
+
+              {/* Quick Links */}
+<<<<<<< HEAD
+=======
+=======
               {/* Quick Links */}
               <div className='flex items-center space-x-6'>
                 <Link
                   href='/services'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <Link
@@ -1067,10 +1626,39 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 <Link
                   href='/contact'
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex items-center space-x-6">
                 <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
                   All Services
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+              {/* Quick Links */}
+              <div className='flex items-center space-x-6'>
+                <Link
+                  href='/services'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                >
+
+                  All Services
+                </Link>
+                <Link
+                  href='/pricing'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                >
+                  Pricing
+                </Link>
+                <Link
+                  href='/contact'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                >                  Contact                  All Services
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Link>
                 <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
                   Pricing
@@ -1167,8 +1755,16 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </Link>;
               </div>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                 <Phone className="w-4 h-4" />
@@ -1178,13 +1774,33 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 href="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
+<<<<<<< HEAD
+<<<<<<< HEAD
+                Get Started
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                Get Started
+=======
 
                 Get Started
               </Link>
             </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Link>;
             </div>;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              </Link>
+            </div>
+
+<<<<<<< HEAD
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
 =======
               </Link>
             </div>
@@ -1207,6 +1823,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
               ) : (
                 <Menu className='w-6 h-6' />
               )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -1215,10 +1832,50 @@ const UltraAdvancedNavigation2026 = () =>: any {
       </nav>
 
 
+<<<<<<< HEAD
+
+
+            {/* Mobile Menu Button */}
+            <button;
+              on_click={() => setIsOpen (!is_open)}
+              className='lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200';
+            >;
+              {is_open ? (
+                <X className='w - 6 h - 6' />) : (
+                <Menu className='w - 6 h - 6' />)}            </button>              className="lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200";
+            >;
+              {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </button>;
           </div>;
         </div>;
       </nav>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+=======
 
 
 =======
@@ -1226,22 +1883,45 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {is_open && (
           <motion.div;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+            onClick={() => setIsOpen(false)}
+          >;
+            <motion&& motion.div
+
+=======
             transition={{ duration: 0.2 }}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
@@ -1249,12 +1929,36 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
           >
             <motion.div
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200";
+                >;
+                  <X className="w-6 h-6" />;
+                </button>;
+              </div>;
+              {/* Mobile Navigation Items */}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-3">;
@@ -1268,6 +1972,83 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
               {/* Mobile Navigation Items */}
+<<<<<<< HEAD
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                        className={`w-8 h-8 bg-gradient-to-br ${item && item.color} rounded-lg flex items-center justify-center`}>;
+                        <item && item.icon className='w-4 h-4 text-white' />;
+                      </div>;
+                      <span className='font-medium'>{item && item.name}</span>;
+                    </Link>;
+<<<<<<< HEAD
+              <div className="space-y-4">
+                {navigationItems.map((item) => (
+                  <div key={item.name} className="border-b border-gray-700/50 pb-4">
+                    <Link
+                      href={item.href}
+                      className="flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}>
+                        <item.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-medium">{item.name}</span>
+                    </Link>
+                    {/* Mobile Sub-items */}
+                    <div className="mt-3 ml-11 space-y-2">
+                      {item.subItems.slice(0, 3).map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+            onClick={() => setIsOpen(false)}
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+
+            onClick={() => setIsOpen(false)}
+
+          >
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto'
+              onClick={e => e.stopPropagation()}
+            >
+              {/* Mobile Menu Header */}
+              <div className='flex items-center justify-between mb-8'>
+                <div className='flex items-center space-x-3'>
+                  <div className='w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>
+                    <Rocket className='w-5 h-5 text-white' />
+                  </div>
+                  <span className='text-white font-bold text-lg'>Menu</span>
+                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className='p-2 text-gray-300 hover:text-white transition-colors duration-200'
+                >
+                  <X className='w-6 h-6' />                </button>
+              </div>
+              {/* Mobile Navigation Items */}            >
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                    <Rocket className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-white font-bold text-lg">Menu</span>
+                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              {/* Mobile Navigation Items */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='space-y-4'>
                 {navigationItems.map(item => (
                   <div
@@ -1294,6 +2075,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
                           className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
                           onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
+                          onClick={() => setIsOpen(false)}
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
                         className={`w-8 h-8 bg-gradient-to-br ${item && item.color} rounded-lg flex items-center justify-center`}>;
                         <item && item.icon className='w-4 h-4 text-white' />;
                       </div>;
@@ -1302,6 +2090,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         >
                           {subItem.name}
                         </Link>
@@ -1309,9 +2098,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     </div>
                   </div>
                 ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+=======
 
                 {/* Quick Links */}
                 <div className='space-y-3 pt-4'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Link
                     href='/services'
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">;
@@ -1325,8 +2122,21 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/pricing";
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium";
 
+<<<<<<< HEAD
+                <div className="space-y-3 pt-4">
+<<<<<<< HEAD
+
+                {/* Quick Links */}
+                <div className='space-y-3 pt-4'>
+                  <Link
+                    href='/services'
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 =======
                 <div className="space-y-3 pt-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Link
                     href="/services"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
@@ -1337,16 +2147,36 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   <Link
                     href="/pricing"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={() => setIsOpen(false)}
                   >;
                     Pricing;
                   </Link>;
                   <Link
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    href="/contact"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    onClick={() => setIsOpen(false)}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Contact;
                   </Link>;
@@ -1365,19 +2195,41 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     <MapPin className='w-4 h-4' />;
                     <span className='text-sm'>{contactInfo && contactInfo.address}</span>                  </div>;
                 </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Get Started Button - Mobile */}
                 <div className='pt-4'>;
                   <Link
                     href='/contact'
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="pt-6 border-t border-gray-700/50 space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Phone className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.phone}</span>
                   </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Mail className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.email}</span>
@@ -1398,7 +2250,14 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </div>;
                 </div>;
                 {/* Get Started Button - Mobile */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden'            on_click={() => setIsOpen (false)}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden";
             on_click={() => setIsOpen (false)}
           >;
@@ -1536,17 +2395,28 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     href="/contact";
                     className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - center font - medium rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200";
                   >;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Get Started Today;
                   </Link>;
                 </div>;
               </div>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         )}
 
         )}
       </AnimatePresence>
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="h-20"></div>
     </>
@@ -1556,6 +2426,40 @@ const UltraAdvancedNavigation2026 = () =>: any {
 export default UltraAdvancedNavigation2026;
 
 
+<<<<<<< HEAD
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>;
+    </>;
+  );
+};
+export default UltraAdvancedNavigation2026;    </>;
+                <div className="pt-4">
+                  <Link
+                    href="/contact"
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Get Started Today
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+=======
+        )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        )}
+      </AnimatePresence>
+
+
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
             </motion.div>;
           </motion.div>)}
@@ -1573,12 +2477,41 @@ export default UltraAdvancedNavigation2026;
 =======
 
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+};
+
+export default UltraAdvancedNavigation2026;    </>
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

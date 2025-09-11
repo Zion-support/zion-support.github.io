@@ -1,14 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+"use client",;
+export default function BlockchainWeb3Page() {;
+  return (;
+
+=======
 "use client";
 export default function BlockchainWeb3Page() {return (;
 "use client",;
 export default function BlockchainWeb3Page() {;
   return (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 export default /**
  * BlockchainWeb3Page - Function description
@@ -20,7 +38,12 @@ function BlockchainWeb3Page() {
         <h1 className="text - 4xl font - bold">Blockchain & Web3 Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
+<<<<<<< HEAD
+"use client";
+export default function BlockchainWeb3Page() {return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",;
 export default function BlockchainWeb3Page() {;
   return (;
@@ -228,6 +251,11 @@ export default function BlockchainWeb3Page() {;
         </div>;
       </div>;
       {/* Pricing Tiers */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 <div className="space - y-6">;
         <h2 className="text - 2xl font - semibold text - center">Service Packages</h2>;
@@ -280,6 +308,7 @@ export default function BlockchainWeb3Page() {;
         </div>;
       </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - orange - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Build the Future?</h2>;

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+import {Star} from 'lucide-react';
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -20,6 +27,10 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 import {Star} from 'lucide-react';
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 interface PerformanceData {
   domContentLoaded: number,
@@ -28,7 +39,14 @@ interface PerformanceData {
   first_paint: number,
   firstContentfulPaint: number,
   resource_count: number,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   memory: {
     used: number
     total: number
@@ -38,7 +56,14 @@ interface PerformanceData {
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Extend the Window interface to include performance;
 declare global {
   interface Window {
@@ -81,7 +106,14 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   navigation_start: number,
 }
 // Define Performance types if not available;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -155,10 +187,20 @@ interface PerformanceEntry {;
   start_time: number;
   duration: number;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface PerformanceNavigationTiming extends PerformanceEntry {;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface PerformanceNavigationTiming extends PerformanceEntry {;
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   readonly connectEnd: number;
   readonly connectStart: number;
   readonly domComplete: number;
@@ -188,8 +230,16 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {;
   useEffect(() => {;
     // Only run on client side;
@@ -225,17 +275,36 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     };
     // Measure performance after page load;
     if (document && document.readyState === 'complete') {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return () => {;
+      window && window.removeEventListener('load', measurePerformance);
+    };
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     return () => {;
       window && window.removeEventListener('load', measurePerformance);
     };
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [onPerformanceData]);
   return null;
 }
@@ -307,39 +376,82 @@ interface PerformanceMetrics {fcp?: number;
   cls?: number;
   ttfb?: number;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const observer = new PerformanceObserver((list) => {;const entries = list && list.getEntries();
       entries && entries.forEach((entry) => {;
         switch (entry && entry.entryType) {;
 case 'paint': if (entry && entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry && entry.startTime }));'            }
             break;
           case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry && entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry && entry.processingStart - entry && entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev && prev.cls || 0) + (entry as any).value ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }));
 }
             break;
           case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart }));'            break;'        }});
 });
     // Observe different types of performance entries;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {;
+observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     try {;
 observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
       observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {setIsVisible(true);
 }, 3000);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return () => {;
+      observer && observer.disconnect();
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return () => {;
       observer && observer.disconnect();
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       clearTimeout(timer);
 }
 }, []);
   if (!isVisible) return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {;
 if (value <= thresholds && thresholds.good) return 'text-green-600;
     if (value <= thresholds && thresholds.poor) return 'text-yellow-600;
@@ -348,15 +460,30 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {;
     if (value <= thresholds && thresholds.good) return 'Good;
     if (value <= thresholds && thresholds.poor) return 'Needs Improvement;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return 'Poor;
 };';
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
           </div>;
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {metrics && metrics.lcp && (;
 <div className="flex justify-between>            <span className="text-gray-600">LCP: </span>"            <span className={getScoreColor(metrics && metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math && Math.round(metrics && metrics.lcp)}ms ({getScoreText(metrics && metrics.lcp, { good: 2500, poor: 4000 })})</span>;
           </div>;
@@ -371,7 +498,14 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
         )}
         {metrics && metrics.ttfb && (;
 <div className="flex justify-between>            <span className="text-gray-600">TTFB: </span>"            <span className={getScoreColor(metrics && metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math && Math.round(metrics && metrics.ttfb)}ms ({getScoreText(metrics && metrics.ttfb, { good: 800, poor: 1800 })})</span>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         )}
 const PerformanceMonitor: React.FC = () => {
@@ -465,6 +599,19 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
+<<<<<<< HEAD
+
+    </div>);
+}
+export default PerformanceMonitor;
+;
+
+<<<<<<< HEAD
+};
+export default PerformanceMonitor;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
@@ -472,4 +619,17 @@ export default PerformanceMonitor;
 };
 export default PerformanceMonitor;
 
+<<<<<<< HEAD
+}
+}
+=======
+=======
+
+};
+export default PerformanceMonitor;
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

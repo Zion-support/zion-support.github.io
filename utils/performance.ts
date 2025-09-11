@@ -1,6 +1,10 @@
 
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
@@ -8,7 +12,14 @@ export const measure_performance = (): PerformanceMetrics | null => {
 }
     return null;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint_entries = performance.getEntriesByType ('paint');
@@ -18,6 +29,50 @@ export const measure_performance = (): PerformanceMetrics | null => {
       return acc + (entry as any).value;
     }, 0);
 
+<<<<<<< HEAD
+  observer.observe(img);
+};
+
+// Preload critical resources
+export const preloadResource = (href: string, as: string): void => {
+  if (typeof window === 'undefined') return;
+
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);
+};
+
+// Prefetch resources for better navigation
+export const prefetchResource = (href: string): void => {
+  if (typeof window === 'undefined') return;
+
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.href = href;
+  document.head.appendChild(link);
+};
+
+// Bundle size analyzer
+export const analyzeBundleSize = (): void => {
+  if (process.env.NODE_ENV !== 'development') return;
+
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      console.log('Bundle Analysis:', {
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalTime: navigation.loadEventEnd - navigation.fetchStart
+      });
+    }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
     return {
       fcp: fcp ? fcp.startTime : undefined
       lcp: lcp ? lcp.startTime : undefined
@@ -27,6 +82,7 @@ export const measure_performance = (): PerformanceMetrics | null => {
     }
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -36,12 +92,26 @@ export const measure_performance = (): PerformanceMetrics | null => {
       cls: cls,
       ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.warn('Error measuring performance:', error);
     return null;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 
@@ -58,6 +128,17 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export const getPerformanceScore = (metrics: PerformanceMetrics): {
+};
+
+export const getPerformanceScore = (metrics: PerformanceMetrics): {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -76,10 +157,16 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
+<<<<<<< HEAD
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
+<<<<<<< HEAD
+=======
 
   }
   const scores = {
@@ -92,6 +179,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   const poorCount = Object.values(scores).filter(score => score === 'poor').length;
   const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     overall = 'poor';
@@ -103,10 +191,31 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return { overall, scores }
+}
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+  return { overall, scores }
+}
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return { overall, scores };
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
+
+
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return { overall, scores }
 }
@@ -115,6 +224,10 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -133,6 +246,15 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+};
+
+};
+
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -140,6 +262,15 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 =======
   return { overall, scores }
 }
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+};
+=======
+  return { overall, scores }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
   console.group (`🚀 ${label}`);
@@ -161,3 +292,8 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   console.group_end ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,7 +1,11 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -341,10 +345,28 @@ export const real2027Q3Additions = [
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
+<<<<<<< HEAD
+
+
+
+export const real2027Q3Additions = [
+  {
+
+
+  }
+];
+=======
+
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
   }
 ];
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const real2027Q3Additions = [
   {
 
@@ -353,6 +375,10 @@ export const real2027Q3Additions = [
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -672,6 +698,10 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -695,6 +725,12 @@ export const real2027Q3Additions = [;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
 
 
+<<<<<<< HEAD
+  }
+];
+;
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
@@ -703,6 +739,7 @@ export const real2027Q3Additions = [;
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;

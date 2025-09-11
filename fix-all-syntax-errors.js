@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 console && console.log('🔧 Fixing all syntax errors...');
@@ -13,34 +15,68 @@ const fixAccessibility = () => {
     fs && fs.writeFileSync('pages/accessibility && accessibility.tsx', content);
     console && console.log('✅ Fixed accessibility && accessibility.tsx');
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix api && api.tsx
 const fixApi = () => {
   try {
     let content = fs && fs.readFileSync('pages/api && api.tsx', 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Ensure proper closing structure
     if (!content.includes('export default')) {;
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    fs && fs.writeFileSync('pages/api && api.tsx', content);
+    console && console.log('✅ Fixed api && api.tsx');
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
     fs && fs.writeFileSync('pages/api && api.tsx', content);
     console && console.log('✅ Fixed api && api.tsx');
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix careers && careers.tsx
 const fixCareers = () => {
@@ -53,13 +89,27 @@ const fixCareers = () => {
     );
     fs && fs.writeFileSync('pages/careers && careers.tsx', content);
     console && console.log('✅ Fixed careers && careers.tsx');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix support && support.tsx
 const fixSupport = () => {
@@ -72,13 +122,27 @@ const fixSupport = () => {
     );
     fs && fs.writeFileSync('pages/support && support.tsx', content);
     console && console.log('✅ Fixed support && support.tsx');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix webinars && webinars.tsx
 const fixWebinars = () => {
@@ -91,7 +155,14 @@ const fixWebinars = () => {
     );
     fs && fs.writeFileSync('pages/webinars && webinars.tsx', content);
     console && console.log('✅ Fixed webinars && webinars.tsx');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message);
@@ -99,11 +170,22 @@ const fixWebinars = () => {
   }
 }
 // Main execution
+<<<<<<< HEAD
+<<<<<<< HEAD
+const main = () => {
+  console && console.log('Starting comprehensive syntax fixes...');
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const main = () => {
   console && console.log('Starting comprehensive syntax fixes...');
   
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fixes = [
     fixAccessibility
     fixApi
@@ -238,11 +320,21 @@ const main = () =>: any {
       success_count++;
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
   
 
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (successCount > 0) {
     console && console.log('\n📝 Adding fixed files...');
     try {

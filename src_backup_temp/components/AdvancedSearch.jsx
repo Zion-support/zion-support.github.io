@@ -65,6 +65,7 @@ export function AdvancedSearch("props": "any) {;
             "default": return 'bg-zion-slate/10 border-zion-slate/20';
         "}
     };
+    return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>;
     return (
         <div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
       {/* Search Input */}
@@ -72,16 +73,21 @@ export function AdvancedSearch("props": "any) {;
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
           <Search className="h-5 w-5 text-zion-slate-light" />;
         </div>;
-
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} onFocus={() => setShowSuggestions(true)} placeholder="Search for services, technologies, or solutions..." className="block w-full pl-10 pr-12 py-3 border border-zion-slate-light rounded-lg bg-white "dark": "bg-zion-slate "focus":ring-2 "focus":ring-zion-cyan "focus":border-transparent transition-all duration-200 text-zion-slate placeholder-zion-slate-light"/>;
-
         <div className="absolute inset-y-0 right-0 flex items-center pr-3">;
           <button onClick={() => setIsExpanded(!isExpanded)"} className="p-2 text-zion-slate-light "hover": "text-zion-slate transition-colors" title="Advanced Filters">;
             <Filter className="h-5 w-5" />;
           </button>;
         </div>;
       </div>;
-
+      {/* Advanced Filters */"}
+      {isExpanded && (<div className="mt-4 p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">;
+          <div className="flex items-center justify-between mb-3">;
+            <h3 className="text-sm font-medium text-zion-slate">Filter by Category</h3>;
+            {selectedFilters.length > 0 && (<button onClick={clearFilters"} className="text-xs text-zion-cyan "hover": "text-zion-cyan-light transition-colors">;
+                Clear All;
+              </button>)"}
+          </div>;
       {/* Advanced Filters */}
       {isExpanded && (<div className="mt-4 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">
           <div className="flex items-center justify-between mb-3">
@@ -90,7 +96,6 @@ export function AdvancedSearch("props": "any) {;
                 Clear All
               </button>)}
           </div>
-
           <div className="flex flex-wrap gap-2">;
             {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category);
                     ? 'bg-zion-cyan text-white border-zion-cyan';
@@ -143,5 +148,4 @@ export function AdvancedSearch("props": "any) {;
         </div>)}
     </div>)}
 ;
-
 export default AdvancedSearch;

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect() {
+
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+export default function ContractBuilderRedirect() {;
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+export default function ContractBuilderRedirect() {;
+  const router = useRouter();
+  useEffect(() => {;
+    router && router.replace('/automation/contract-builder');
+  }, [router]);
+  return null;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 
 
 =======
@@ -16,12 +44,20 @@ export default function ContractBuilderRedirect() {;
   return null;
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
@@ -31,8 +67,11 @@ export default function ContractBuilderRedirect() {
   }, [router]);
   return null
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect} from 'react';
 import {use_router} from 'next / router';
 export default /**
@@ -44,7 +83,27 @@ function ContractBuilderRedirect() {
 router.replace ('/automation / contract - builder');
   }, [router]);
   return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+}
 
+}
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect(req, res) {
+  try {
+  const router = useRouter();
+  useEffect(() => {;
+    router.replace('/automation/contract-builder');
+  }, [router]);
+  return null;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -52,5 +111,13 @@ router.replace ('/automation / contract - builder');
 }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
