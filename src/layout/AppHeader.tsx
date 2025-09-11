@@ -1,15 +1,15 @@
 
 import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
-import Link from 'next/link';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
-import { Container } from '@/components/Container';
-import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { ModeToggle } from '@/components/ModeToggle';
+import Menu from 'lucide-react/dist/esm/icons/menu';
+import X from 'lucide-react/dist/esm/icons/x';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Sidebar } from '@/components/Sidebar';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

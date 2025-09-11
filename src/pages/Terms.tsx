@@ -1,9 +1,8 @@
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import TermsOfService from "@/legal/TermsOfService";
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
 
-export default function Terms() {
+const Terms: React.FC = () => {
   return (
     <>
       <SEO 
