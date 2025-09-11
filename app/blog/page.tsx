@@ -60,6 +60,28 @@ export default function BlogPage() {
 	  },
 	  // New posts (2025-09)
 	  {
+	    id: 'ai-architecture-cost-governance-2025',
+	    title: 'AI Architecture & Cost Governance in 2025',
+	    excerpt:
+	      'Guardrails, observability, and budgets that keep systems reliable and affordable.',
+	    date: '2025-09-11',
+	    readTime: '8 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'startup-pricing-strategy-2025',
+	    title: 'Startup Pricing Strategy 2025: From Free to $1M ARR',
+	    excerpt:
+	      'Validate willingness to pay, package value, and scale pricing with confidence.',
+	    date: '2025-09-11',
+	    readTime: '7 min read',
+	    category: 'Growth',
+	    featured: false,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
 	    id: 'ai-content-strategy-2025',
 	    title: 'AI Content Strategy 2025: From Idea to Distribution',
 	    excerpt:
