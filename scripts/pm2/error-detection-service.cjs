@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -7,7 +6,6 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-<<<<<<< HEAD
     this.errorTypes = {
       syntax: [],
       typescript: [],
@@ -22,25 +20,6 @@ class ErrorDetectionService {}
   log(level, message, data = null) {
     const timestamp = new Date().toISOString();
     const logEntry = {
-=======
-        this.errorTypes = {}
-      "syntax": [],
-      "typescript": [],
-      "eslint": [],
-      "build": [],
-      "dependency": [],
-      "configuration": [];
-    };
-    this.fixAttempts = new Map();
-    this.isRunning = false};
-  log(level, message, data = null) {}
-    const timestamp = new Date().toISOString();
-    const logEntry = {}
-      timestamp,
-      level,
-      message,
-      data,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -66,7 +45,6 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
       // Keep the process alive
       setInterval(() => {
         if (!this.isRunning) {
@@ -81,22 +59,6 @@ class ErrorDetectionService {}
   ensureDirectories() {
     const dirs = [
       'logs/pm2',
-=======
-            // Keep the process alive;
-      setInterval(() => {}
-        if (!this.isRunning) {}
-          this.performFullScan()};
-      }, this.scanInterval)} catch (error) {}
-      this.log('error', 'Failed to start Error Detection Service', error);
-      process.exit(1)};
-  };
-  ensureDirectories() {}
-    const dirs = ['logs/pm2',]
-      'error-reports',
-      'backups',
-      'temp'
-    ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -117,7 +79,6 @@ class ErrorDetectionService {}
         this.scanForESLintErrors(),
         this.scanForBuildErrors(),
         this.scanForDependencyErrors(),
-<<<<<<< HEAD
         this.scanForConfigurationErrors()
       ]);
       // Generate comprehensive report
@@ -262,135 +223,6 @@ class ErrorDetectionService {}
     try {
       const configFiles = [
         'package.json',
-=======        this.scanForConfigurationErrors();
-      ]);
-      // Generate comprehensive report;
-      await this.generateErrorReport();
-      // Trigger fixes if auto-fix is enabled;
-      if (this.autoFix) {}
-        await this.triggerErrorFixes()};
-      this.log('info', 'Full project error scan completed')} catch (error) {}
-      this.log('error', 'Error during full scan', error)} finally {}
-      this.isRunning = false};
-  };
-  clearErrorData() {}
-    Object.keys(this.errorTypes).forEach(key => {})
-      this.errorTypes[key] = []})};
-  async scanForSyntaxErrors() {}
-    this.log('info', 'Scanning for syntax errors...');
-    try {}
-      const sourceFiles = this.findSourceFiles();
-      let syntaxErrors = 0;
-      for (const file of sourceFiles) {}
-        try {}
-          // Try to parse the file;
-          const content = fs.readFileSync(file, 'utf8');
-          // Check for common syntax issues;
-          if (this.hasSyntaxIssues(content, file)) {}
-            this.errorTypes.syntax.push({})
-              file,
-              "type": 'syntax',
-              "severity": 'high',
-              "description": 'Syntax parsing error detected',
-              "line": this.extractLineNumber(content),
-              "content": content.substring(0, 200) // First 200 chars for context;
-            }
-});
-            syntaxErrors++};
-        } catch (error) {}
-          this.errorTypes.syntax.push({})
-            file,
-            "type": 'syntax',
-            "severity": 'critical',
-            "description": 'File cannot be parsed',
-            "error": error.message;
-          }
-});
-          syntaxErrors++};
-      };
-      this.log('info', `Syntax scan completed. Found ${syntaxErrors} syntax errors`)} catch (error) {`}
-      this.log('error', 'Error during syntax scan', error)};
-  };
-  async scanForTypeScriptErrors() {}
-    this.log('info', 'Scanning for TypeScript errors...');
-    try {}
-      // Run TypeScript compiler check;
-      const result = this.runTypeScriptCheck();
-      if (result.errors && result.errors.length > 0) {}
-        this.errorTypes.typescript = result.errors.map(error => ({})
-          "file": error.file,
-          "type": 'typescript',
-          "severity": this.categorizeTypeScriptSeverity(error),
-          "description": error.message,
-          "line": error.line,
-          "column": error.column,
-          "code": error.code;
-        }))};
-      this.log('info', `TypeScript scan completed. Found ${this.errorTypes.typescript.length} errors`)} catch (error) {`}
-      this.log('error', 'Error during TypeScript scan', error)};
-  };
-  async scanForESLintErrors() {}
-    this.log('info', 'Scanning for ESLint errors...');
-    try {}
-      // Run ESLint check;
-      const result = this.runESLintCheck();
-      if (result.errors && result.errors.length > 0) {}
-        this.errorTypes.eslint = result.errors.map(error => ({})
-          "file": error.filePath,
-          "type": 'eslint',
-          "severity": error.severity,
-          "description": error.message,
-          "line": error.line,
-          "column": error.column,
-          "ruleId": error.ruleId,
-          "fixable": error.fix;
-        }))};
-      this.log('info', `ESLint scan completed. Found ${this.errorTypes.eslint.length} errors`)} catch (error) {`}
-      this.log('error', 'Error during ESLint scan', error)};
-  };
-  async scanForBuildErrors() {}
-    this.log('info', 'Scanning for build errors...');
-    try {}
-      // Try to build the project;
-      const result = this.runBuildCheck();
-      if (result.errors && result.errors.length > 0) {}
-        this.errorTypes.build = result.errors.map(error => ({})
-          "file": error.file || 'build',
-          "type": 'build',
-          "severity": 'high',
-          "description": error.message,
-          "phase": error.phase || 'unknown'
-        }))};
-      this.log('info', `Build scan completed. Found ${this.errorTypes.build.length} errors`)} catch (error) {`}
-      this.log('error', 'Error during build scan', error)};
-  };
-  async scanForDependencyErrors() {}
-    this.log('info', 'Scanning for dependency errors...');
-    try {}
-      // Check for dependency issues;
-      const result = this.runDependencyCheck();
-      if (result.errors && result.errors.length > 0) {}
-        this.errorTypes.dependency = result.errors.map(error => ({})
-          "package": error.package,
-          "type": 'dependency',
-          "severity": error.severity,
-          "description": error.message,
-          "version": error.version,
-          "resolution": error.resolution;
-        }))};
-      this.log('info', `Dependency scan completed. Found ${this.errorTypes.dependency.length} errors`)} catch (error) {`}
-      this.log('error', 'Error during dependency scan', error)};
-  };
-  async scanForConfigurationErrors() {}
-    this.log('info', 'Scanning for configuration errors...');
-    try {}
-      const configFiles = ['package.json',]
-        'tsconfig.json',
-        'eslint.config.js',
-        'vite.config.ts',
-        'tailwind.config.js'
-      ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -421,95 +253,12 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-<<<<<<< HEAD
-    sourceDirs.forEach(dir => {
-      const fullPath = path.join(this.projectRoot, dir);
-      if (fs.existsSync(fullPath)) {
-        this.walkDirectory(fullPath, extensions, files);
-      }
-    });
-    return files;
-  }
-  walkDirectory(dir, extensions, files) {
-    const items = fs.readdirSync(dir);
-    items.forEach(item => {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        this.walkDirectory(fullPath, extensions, files);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (extensions.includes(ext)) {
-          files.push(fullPath);
-        }
-      }
-    });
-  }
-  hasSyntaxIssues(content, filename) {
-    // Check for common syntax issues
-    const issues = [];
-    // Check for unterminated strings
-    const stringRegex = /(["'`])((?:(?!\1)[^\\]|\\.)*\1)/g;
-    const matches = content.match(stringRegex);
-    if (matches && matches.length > 0) {
-      // Count quotes to check for balance
-      const singleQuotes = (content.match(/'/g) || []).length;
-      const doubleQuotes = (content.match(/"/g) || []).length;
-      const backticks = (content.match(/`/g) || []).length;
-      if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {
-        return true;
-      }
-    }
-    // Check for unterminated comments
-=======
-    sourceDirs.forEach(dir => {})
-      const fullPath = path.join(this.projectRoot, dir);
-      if (fs.existsSync(fullPath)) {}
-        this.walkDirectory(fullPath, extensions, files)};
-    }
-});
-    return files};
-  walkDirectory(dir, extensions, files) {}
-    const items = fs.readdirSync(dir);
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {}
-        this.walkDirectory(fullPath, extensions, files)} else if (stat.isFile()) {}
-        const ext = path.extname(item);
-        if (extensions.includes(ext)) {}
-          files.push(fullPath)};
-      };
-    })};
-  hasSyntaxIssues(content, filename) {}
-    // Check for common syntax issues;
-    const issues = [];
-    // Check for unterminated strings;
-    const stringRegex = /(["'"])((?:(?!\1)[^\\]|\\.)*\1)/g;
-    const matches = content.match(stringRegex);
-    if (matches && matches.length > 0) {}
-      // Count quotes to check for balance;
-      const singleQuotes = (content.match(/'/g) || []).length;
-      const doubleQuotes = (content.match(/"/g) || []).length;
-      const backticks = (content.match(/"/g) || []).length;
-      if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
-        return true};
-    };
-    // Check for unterminated comments;
-    const commentRegex = /\/\*[\s\S]*?\*\//g;
-    const blockComments = content.match(commentRegex) || [];
-    const openComments = (content.match(/\/\*/g) || []).length;
-    const closeComments = (content.match(/\*\//g) || []).length;
-<<<<<<< HEAD
     if (openComments !== closeComments) {
       return true;
     }
     // Check for missing semicolons in certain contexts
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -522,7 +271,6 @@ class ErrorDetectionService {}
           !line.includes('function') && !line.includes('class') && !line.includes('const') &&
           !line.includes('let') && !line.includes('var') && !line.includes('import') &&
           !line.includes('export') && !line.includes('return') && !line.includes('if') &&
-<<<<<<< HEAD
           !line.includes('for') && !line.includes('while') && !line.includes('switch')) {
         // This might be a missing semicolon
         return true;
@@ -730,8 +478,6 @@ class ErrorDetectionService {}
     };
     // Calculate totals
     Object.keys(this.errorTypes).forEach(type => {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           !line.includes('for') && !line.includes('while') && !line.includes('switch')) {}
         // This might be a missing semicolon;
         return true};
@@ -916,7 +662,6 @@ class ErrorDetectionService {}
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
-<<<<<<< HEAD
       this.errorTypes[type].forEach(error => {
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++;
@@ -1006,9 +751,6 @@ class ErrorDetectionService {}
     this.log('info', 'Starting file watching for real-time error detection...');
     const watcher = chokidar.watch([
       'src/**/*.{js,jsx,ts,tsx}',
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -1088,7 +830,6 @@ class ErrorDetectionService {}
       'utils/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}',
       'types/**/*.{js,jsx,ts,tsx}'
-<<<<<<< HEAD
     ], {
       ignored: /node_modules|\.git|\.next|dist|build/,
       persistent: true
@@ -1162,8 +903,6 @@ service.start().catch(error => {
   service.log('error', 'Failed to start service', error);
   process.exit(1);
 });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     ], {}
       "ignored": /node_modules|\.git|\.next|dist|build/,
       "persistent": true;
@@ -1233,8 +972,4 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

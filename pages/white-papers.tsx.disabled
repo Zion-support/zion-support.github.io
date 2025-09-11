@@ -1,5 +1,4 @@
 <:pages/white-papers.tsx.backup
-=======
 import React from 'react';
 
 import React, { useState } from 'react';
@@ -7,7 +6,6 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-=======const whitePapers = [;
   {}
     id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide","
@@ -83,17 +81,6 @@ import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
                 </motion.div>
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </MainLayout>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }

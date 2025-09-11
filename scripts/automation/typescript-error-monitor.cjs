@@ -637,7 +637,3 @@ if (require.main === module) {
     console.error('TypeScript error monitor "failed": ', error);
     process.exit(1)})}
 ;
-<<<<<<< HEAD
-module.exports = TypeScriptErrorMonitor
-=======
-module.exports = TypeScriptErrorMonitor

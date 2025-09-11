@@ -1,7 +1,3 @@
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/main
-=======>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 console.log('\n🎉 Ultimate syntax fix completed!');
 console.log('🎉 Final syntax cleanup completed!');
   fixFile(filePath) {
@@ -147,42 +143,4 @@ if (require.main === module) {
 }
 
 module.exports = FinalSyntaxCleanup;
-<<<<<<< HEAD=======
-=======
-<<<<<<< HEAD
-  async run() {
-    const directories = ['pages','components','src']
-    for (const dir of directories) {
-      if (fs.existsSync(dir)) {
-        await this.fixDirectory(dir)
-      }
-    if (this.fixedFiles.length > 0) {
-      this.fixedFiles.forEach(file => )
-    }
-    if (this.errors.length > 0) {
-      this.errors.forEach(({ file, error }) => )
-    }
-    // Save report
-    const report = {
-      "timestamp": new Date().toISOString();
-      fixedFiles: this.fixedFiles;
-      errors: this.errors;
-      summary: {totalFixed: this.fixedFiles.length,"totalErrors": this.errors.length}
-    fs.writeFileSync('final-syntax-cleanup-report.json', JSON.stringify(report, null, 2))
-    }
-// Run the cleanup
-const cleanup = new FinalSyntaxCleanup()
-cleanup.run().catch(console.error)
-=======}
-console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD
 console.log('🎉 Final syntax cleanup completed!');
-=======
-console.log('🎉 Final syntax cleanup completed!');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

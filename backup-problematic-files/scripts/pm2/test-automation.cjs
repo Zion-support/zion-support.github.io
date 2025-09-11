@@ -6,138 +6,26 @@ const path = require('path');
     } catch (error) {}
       this.log(`Test execution failed: ${error.message}`);
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      this.log('Tests completed successfully');
-      this.log(`Test output: ${result}`);
-      return { success: true, output: result };
-    } catch (error) {}
-      this.log(`Test execution failed: ${error.message}`);==============
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       // Extract coverage percentage (simplified);
       const coverageMatch = result.match(/(\d+)%/);
       const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
       
       this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      // Extract coverage percentage (simplified);
-      const coverageMatch = result.match(/(\d+)%/);
-      const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
-      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.log(`Test report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
-<<<<<<< HEAD
-<<<<<<< HEAD
     try {}
       const report = await this.generateReport();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-    try {}
-      const report = await this.generateReport();
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
     try {}
       const report = await this.generateReport();
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    try {}
-      const report = await this.generateReport();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (report.testResults.success) {}
         this.log('Test automation completed successfully');
       } else {}
@@ -155,46 +43,9 @@ const path = require('path');
 if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
-<<<<<<< HEAD
-};
-=======
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-module.exports = TestAutomation;module.exports = TestAutomation;
-module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 module.exports = TestAutomation;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = TestAutomation;module.exports = TestAutomation;
-=======
+module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-module.exports = TestAutomation;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

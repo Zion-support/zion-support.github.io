@@ -3,7 +3,6 @@
  * Intelligent Error Recovery System;
  * Automatically detects and recovers from various types of errors;
  */
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -19,8 +18,4 @@ const { execSync } = require('child_process')
             const buildCheck = execSync('npm run build', { "cwd": this.projectRoot, "encoding"})
                 "type"
                 "severity"
-            execSync('npm run "lint")
-<<<<<<< HEAD
-            execSync('npm run "lint")
-=======
             execSync('npm run "lint")

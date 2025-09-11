@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -27,7 +26,3 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
-<<<<<<< HEAD
-      this.log(` Fatal "error"`)
-=======
-      this.log(` Fatal "error"`)

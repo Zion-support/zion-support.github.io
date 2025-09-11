@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -8,7 +7,3 @@ if (require.main === module) {}
       // Process is healthy;
     };
   }, 60000)};
-<<<<<<< HEAD
-module.exports = ImprovedPM2SyncAutomation;
-=======
-module.exports = ImprovedPM2SyncAutomation;

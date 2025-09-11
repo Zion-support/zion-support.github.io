@@ -132,8 +132,4 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "targeted-merge-report.json")
     this.log("� Targeted Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%")
 this.log("� Detailed report saved "to": ${reportPath}")
-<<<<<<< HEAD
   console.error(" Fatal "error")
-=======
-  console.error(" Fatal "error")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

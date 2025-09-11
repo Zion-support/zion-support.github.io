@@ -156,8 +156,4 @@ this.log(`� Report "generated"`)
   this.log(" Starting Config Error Fixer...")
   this.log("� No configuration issues found!")
         return { "success": true, "issues": [], "fixed"}
-<<<<<<< HEAD
       this.log("� Config Error Fixer completed!")
-=======
-      this.log("� Config Error Fixer completed!")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

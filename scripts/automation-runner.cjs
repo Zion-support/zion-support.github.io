@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -25,16 +24,3 @@ function main() {}
 	run('node scripts/seo-optimizer.cjs || true');
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
-<<<<<<< HEAD
-		process.exitCode = 1} else {
-		}
-}
-		process.exitCode = 1} else {}
-		console.log('\nAutomation runner completed successfully.')};
-};
-main();
-=======
-		process.exitCode = 1} else {}
-		console.log('\nAutomation runner completed successfully.')};
-};
-main();
