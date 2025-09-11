@@ -42,6 +42,8 @@ import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { verifiedRealServices2025Batch3 } from '../data/verified-real-services-2025-batch3';
 
+import { realAdditions2025Q3 } from '../data/real-additions-2025-q3';
+
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -156,6 +158,9 @@ export default function Home() {
     ...verifiedRealServices2025Batch3,
     ...innovative2025Services,
     ...emergingTech2025Services
+
+    ...realAdditions2025Q3
+
   ];
 
   const featuredOffers = professionalServices.slice(0, 3);

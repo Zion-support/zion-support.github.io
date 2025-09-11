@@ -51,6 +51,8 @@ import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batc
 
 import { verifiedRealServices2025Batch3 } from '../../data/verified-real-services-2025-batch3';
 
+import { realAdditions2025Q3 } from '../../data/real-additions-2025-q3';
+
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
@@ -106,6 +108,8 @@ function getAllServices(): Service[] {
 
 		.concat(verifiedRealServices2025Batch3 as unknown as Service[]);
 
+		.concat(realAdditions2025Q3 as unknown as Service[]);
+
 }
 
 function toSlug(value: string): string {
@@ -130,13 +134,11 @@ export async function getStaticPaths() {
 	const slugs = new Set<string>();
 
 	for (const s of services) {
-		// Prefer explicit link under /services/* when available
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
 		if (fromLink) {
 			slugs.add(fromLink);
 			continue;
 		}
-		// Fall back to normalized id or name to provide a stable URL under /services/*
 		if (s.id) slugs.add(toSlug(s.id));
 		else if (s.name) slugs.add(toSlug(s.name));
 	}
@@ -233,7 +235,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							</ul>
 						</Card>
 
-						{/* Use Cases & Integrations */}
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
@@ -277,7 +278,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							</div>
 						</Card>
 
-						{/* Market Position & ROI */}
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Market & ROI</h3>
 							<div className="space-y-3 text-sm text-gray-300">
@@ -295,3 +295,4 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	);
 }
+
