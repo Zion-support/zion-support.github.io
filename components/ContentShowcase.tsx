@@ -172,36 +172,36 @@ export default function ContentShowcase({
 // Predefined content collections for easy use
 export const featuredContent = [
   {
-    title: "AI Productivity Automation 2025",
-    description: "Transform your business with 300% productivity gains and 40% cost reduction",
-    href: "/blog/ai-productivity-automation-2025",
-    icon: "🤖",
+    title: "AI Productivity Revolution 2025",
+    description: "10x your team's output with proven AI strategies that deliver 300% productivity gains",
+    href: "/blog/ai-2025-productivity-revolution",
+    icon: "🚀",
     readTime: "15 min read",
     category: "AI & Automation",
     isNew: true
   },
   {
-    title: "Startup Pricing Strategy 2025",
-    description: "Validate willingness to pay and scale with confidence using data-driven strategies",
-    href: "/blog/startup-pricing-strategy-2025",
+    title: "AI Startup Funding 2025",
+    description: "Master the AI funding landscape with insider strategies and pitch templates",
+    href: "/blog/ai-startup-funding-2025",
     icon: "💰",
+    readTime: "18 min read",
+    category: "Growth & Funding",
+    isNew: true
+  },
+  {
+    title: "AI Retail Transformation",
+    description: "300% revenue growth case study: How AI transformed a major retail chain",
+    href: "/case-studies/ai-retail-transformation-2025",
+    icon: "🛍️",
     readTime: "12 min read",
-    category: "Growth Strategy",
+    category: "Case Study",
     isNew: true
   },
   {
-    title: "Healthcare AI Success Story",
-    description: "95% accuracy in medical diagnosis with 80% faster processing times",
-    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-    icon: "🏥",
-    readTime: "Case Study",
-    category: "Healthcare",
-    isNew: true
-  },
-  {
-    title: "AI Implementation Playbook",
-    description: "Complete 150-page guide to successful AI deployment with templates and checklists",
-    href: "/resources/ai-implementation-playbook-2025",
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete 200-page playbook with templates, checklists, and case studies",
+    href: "/resources/ai-implementation-master-guide-2026",
     icon: "📚",
     readTime: "Free Download",
     category: "Resources",
@@ -211,57 +211,57 @@ export const featuredContent = [
 
 export const trendingContent = [
   {
-    title: "AI Go-To-Market 2025",
-    description: "From zero to traction: positioning, pricing, and distribution strategies",
-    href: "/blog/ai-go-to-market-2025",
-    icon: "📈",
+    title: "AI Productivity Revolution 2025",
+    description: "10x your team's output with proven AI strategies that deliver 300% productivity gains",
+    href: "/blog/ai-2025-productivity-revolution",
+    icon: "🚀",
+    readTime: "15 min read",
+    category: "AI & Automation",
+    isTrending: true
+  },
+  {
+    title: "AI Startup Funding 2025",
+    description: "Master the AI funding landscape with insider strategies and pitch templates",
+    href: "/blog/ai-startup-funding-2025",
+    icon: "💰",
+    readTime: "18 min read",
+    category: "Growth & Funding",
+    isTrending: true
+  },
+  {
+    title: "AI Retail Transformation",
+    description: "300% revenue growth case study: How AI transformed a major retail chain",
+    href: "/case-studies/ai-retail-transformation-2025",
+    icon: "🛍️",
     readTime: "12 min read",
-    category: "Growth & Marketing",
-    isTrending: true
-  },
-  {
-    title: "LLM Guardrails in Production",
-    description: "Safety without blocking delivery - practical implementation guide",
-    href: "/blog/llm-guardrails-in-production-2025",
-    icon: "🛡️",
-    readTime: "8 min read",
-    category: "AI Engineering",
-    isTrending: true
-  },
-  {
-    title: "Edge AI: Privacy by Design",
-    description: "On-device intelligence for instant, compliant customer experiences",
-    href: "/blog/edge-ai-privacy-by-design-2025",
-    icon: "🔐",
-    readTime: "7 min read",
-    category: "AI & Privacy",
+    category: "Case Study",
     isTrending: true
   }
 ];
 
 export const latestContent = [
   {
-    title: "AI Customer Support Automation",
-    description: "Resolve faster, cut costs, and improve satisfaction with intelligent automation",
-    href: "/blog/ai-customer-support-automation-2025",
-    icon: "🎧",
-    readTime: "9 min read",
-    category: "Customer Experience"
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete 200-page playbook with templates, checklists, and case studies",
+    href: "/resources/ai-implementation-master-guide-2026",
+    icon: "📚",
+    readTime: "Free Download",
+    category: "Resources"
   },
   {
-    title: "AI Governance in Practice",
-    description: "Controls that reduce risk without blocking delivery",
-    href: "/blog/ai-governance-in-practice-2025",
-    icon: "⚖️",
-    readTime: "9 min read",
-    category: "AI Governance"
-  },
-  {
-    title: "Cloud-Native Architecture Blueprint",
-    description: "Build scalable, resilient applications with modern cloud-native patterns",
-    href: "/blog/cloud-native-architecture-2025",
-    icon: "☁️",
+    title: "AI Productivity Revolution 2025",
+    description: "10x your team's output with proven AI strategies that deliver 300% productivity gains",
+    href: "/blog/ai-2025-productivity-revolution",
+    icon: "🚀",
     readTime: "15 min read",
-    category: "Cloud & DevOps"
+    category: "AI & Automation"
+  },
+  {
+    title: "AI Startup Funding 2025",
+    description: "Master the AI funding landscape with insider strategies and pitch templates",
+    href: "/blog/ai-startup-funding-2025",
+    icon: "💰",
+    readTime: "18 min read",
+    category: "Growth & Funding"
   }
 ];
