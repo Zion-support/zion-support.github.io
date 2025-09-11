@@ -1,28 +1,4 @@
 const nextConfig = {
-  assetPrefix,
-  poweredByHeader: false,
-  trailingSlash: false,
-  reactStrictMode: true,
-  images: {
-    domains: ["localhost"],
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  async redirects() {
-    return [
-      { source: '/zion/gitbook', destination: '/docs/gitbook', permanent: true },
-    ];
-  },
-  webpack: (config) => {
-    // Support TS path alias '@/...' by mapping it to the project root
-    config.resolve = config.resolve || {};
-    config.resolve.alias = config.resolve.alias || {};
-    config.resolve.alias['@'] = path.resolve(__dirname);
-=======
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
   productionBrowserSourceMaps: false, // Disable for faster builds
@@ -1044,3 +1020,35 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 };
+=======
+	reactStrictMode: true,
+	trailingSlash: true,
+	output: 'export',
+	assetPrefix,
+	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+	images: {
+		// Using unoptimized to support static hosting/CDN without Next Image optimization
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	typescript: {
+		// Allow builds to pass even if there are type errors; CI can run type-check separately
+		ignoreBuildErrors: true
+	},
+	async redirects() {
+		return [
+			{ source: '/ai-customer-success-platform', destination: '/services/ai-customer-success-platform', permanent: true },
+			{ source: '/ai-sales-intelligence-platform', destination: '/services/ai-sales-intelligence-platform', permanent: true },
+			{ source: '/ai-financial-planning-platform', destination: '/services/ai-financial-planning-platform', permanent: true },
+			{ source: '/ai-powered-decision-engine', destination: '/services/ai-powered-decision-engine', permanent: true },
+			{ source: '/intelligent-content-automation-platform', destination: '/services/intelligent-content-automation-platform', permanent: true },
+			{ source: '/intelligent-hr-analytics-platform', destination: '/services/intelligent-hr-analytics-platform', permanent: true },
+			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
+			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
+		];
+	}
+};
+
+module.exports = nextConfig;

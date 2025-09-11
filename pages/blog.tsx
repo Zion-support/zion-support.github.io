@@ -1,5 +1,3 @@
-}
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -152,3 +150,5 @@ export default function BlogPage() {
     </>
   );
 }
+=======
+export default function Blog(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Blog</h1><p>Articles coming soon.</p></main>);}
