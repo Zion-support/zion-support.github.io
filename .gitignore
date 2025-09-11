@@ -30,3 +30,6 @@ core
 .npm-cache/
 core
 *.core
+
+core
+*.core
