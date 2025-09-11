@@ -115,6 +115,28 @@ export default function BlogPage() {
     },
     // New posts (2025-09)
     {
+      id: 'ai-cost-optimization-2025',
+      title: 'AI Cost Optimization in 2025: Ship Faster, Spend Less',
+      excerpt:
+        'Practical techniques to reduce LLM and vector costs without hurting outcomes.',
+      date: '2025-09-11',
+      readTime: '9 min read',
+      category: 'AI Engineering',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'startup-sales-playbook-2025',
+      title: 'Startup Sales Playbook 2025: From First Meetings to Revenue',
+      excerpt:
+        'Cadences, scripts, and minimal tooling to land your first 100 customers.',
+      date: '2025-09-11',
+      readTime: '10 min read',
+      category: 'Growth',
+      featured: false,
+      image: '/api/placeholder/600/400',
+    },
+    {
       id: 'ai-agents-in-enterprise-2025',
       title: 'AI Agents in the Enterprise: Practical Playbooks for 2025',
       excerpt:
