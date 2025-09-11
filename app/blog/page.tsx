@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -29,16 +30,6 @@ export default function BlogPage() {
       date: '2025-01-10',
       readTime: '15 min read',
       category: 'Cloud & DevOps',
-      featured: false,
-      image: '/api/placeholder/600/400'
-    },
-    {
-      id: 'blockchain-business-applications',
-      title: 'Blockchain Beyond Crypto: Real Business Applications',
-      excerpt: 'Exploring practical blockchain applications in supply chain, healthcare, and finance that are driving real business value.',
-      date: '2025-01-08',
-      readTime: '10 min read',
-      category: 'Blockchain',
       featured: false,
       image: '/api/placeholder/600/400'
     },
@@ -167,7 +158,9 @@ export default function BlogPage() {
   );
 }
 
-function FeaturedPostCard({ post }: { post: any }) {
+import type { FC } from 'react';
+
+const FeaturedPostCard: FC<{ post: any }> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`} className="group">
       <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -195,9 +188,9 @@ function FeaturedPostCard({ post }: { post: any }) {
       </article>
     </Link>
   );
-}
+};
 
-function PostCard({ post }: { post: any }) {
+const PostCard: FC<{ post: any }> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`} className="group">
       <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -225,4 +218,4 @@ function PostCard({ post }: { post: any }) {
       </article>
     </Link>
   );
-}
+};

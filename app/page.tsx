@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -158,12 +159,28 @@ export default function HomePage() {
               icon='🤖'
             />
             <ContentPreviewCard
+              title='Cloud Migration Best Practices'
+              description='A practical roadmap to move fast without breaking reliability or budgets.'
+              href='/blog/cloud-migration-best-practices'
+              category='Cloud & DevOps'
+              readTime='15 min read'
+              icon='☁️'
+            />
+            <ContentPreviewCard
               title='Success Stories & Case Studies'
-              description='Real results from real clients. See how we\'ve helped businesses achieve remarkable outcomes.'
+              description="Real results from real clients. See how we've helped businesses achieve remarkable outcomes."
               href='/case-studies'
               category='Case Studies'
               readTime='15+ stories'
               icon='📊'
+            />
+            <ContentPreviewCard
+              title='Cybersecurity Trends 2025'
+              description='The critical security priorities leaders are acting on this year.'
+              href='/blog/cybersecurity-2025-trends'
+              category='Security'
+              readTime='7 min read'
+              icon='🔒'
             />
             <ContentPreviewCard
               title='Free Resources & Guides'
