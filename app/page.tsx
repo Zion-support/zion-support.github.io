@@ -100,6 +100,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest Articles */}
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Latest Articles</h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Fresh insights from our team on AI, cloud, and automation.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <Card
+              title='Practical AI Agents for Small Businesses'
+              href='/blog/ai-agents-for-smbs'
+              description='Deploy lightweight agents to automate support, outreach, and back-office tasks.'
+              icon='🧠'
+            />
+            <Card
+              title='Cloud Cost Optimization in 2025: Proven Playbook'
+              href='/blog/cloud-cost-optimization-2025'
+              description='Cut 20–40% of spend without sacrificing performance or developer velocity.'
+              icon='💸'
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
