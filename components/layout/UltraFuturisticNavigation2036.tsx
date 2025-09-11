@@ -43,7 +43,7 @@ import EnhancedSearch from '../EnhancedSearch';
         name: 'IT Solutions', 
         href: '/it-services', 
         description: 'Enterprise IT infrastructure',
-        icon: <Cpu className="w-4 h-4" />
+        icon: <Play className="w-4 h-4" />
       },
       { 
         name: 'Specialized Solutions', 
@@ -74,6 +74,13 @@ import EnhancedSearch from '../EnhancedSearch';
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete services overview',
         icon: <Calculator className="w-4 h-4" />,
+        featured: true
+      },
+      { 
+        name: 'Innovative 2037 Services', 
+        href: '/innovative-2037-services-showcase', 
+        description: 'Cutting-edge 2037 services',
+        icon: <Sparkles className="w-4 h-4" />,
         featured: true
       },
       { 
@@ -188,6 +195,14 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
+
+  // Handle keyboard navigation
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setActiveDropdown(null);
+      setMobileMenuOpen(false);
+    }
   }, []);
 
   return (

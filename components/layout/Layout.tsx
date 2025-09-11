@@ -14,6 +14,9 @@ import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
 import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
+import ThemeToggle from '../ThemeToggle';
+import LoadingSpinner from '../LoadingSpinner';
+import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
 
 const Layout: React.FC = () => {
   // Temporarily simplified to avoid build issues
