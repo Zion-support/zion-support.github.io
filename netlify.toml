@@ -286,6 +286,7 @@ VITE_LEGACY_BUILD = "false"
 
 [[scheduled.functions]]
   name = "fast-front-promoter"
+<<<<<<< HEAD
   schedule = "*/5 * * * *" # every 5 minutes
 >>>>>>> origin/chore/netlify-automation-futuristic
 =======
@@ -296,3 +297,10 @@ VITE_LEGACY_BUILD = "false"
   node_bundler = "esbuild"
   included_files = ["automation/**", "pages/**", "styles/**"] 
 >>>>>>> origin/chore/netlify-automations-futuristic-home
+=======
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "hyper-fast-orchestrator"
+  schedule = "*/3 * * * *" # every 3 minutes for ultra-fast refresh
+>>>>>>> origin/chore/new-automations-futuristic-front

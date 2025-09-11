@@ -47,6 +47,7 @@ export default function AutomationHub() {
             <a className="text-cyan-300 underline" href="/.netlify/functions/marketing-and-features-promo" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+<<<<<<< HEAD
             <h2 className="text-xl font-bold">Fast Orchestrator</h2>
             <p className="text-white/70">Runs every minute to refresh front and homepage content; commits and pushes to main.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
@@ -125,6 +126,11 @@ export default function AutomationHub() {
             <h2 className="text-xl font-bold">Marketing Scheduler</h2>
             <p className="text-white/70">LinkedIn and Instagram automations via Netlify scheduler.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/marketing-scheduler" target="_blank" rel="noopener">Run on Netlify</a>
+=======
+            <h2 className="text-xl font-bold">Hyper-Fast Orchestrator</h2>
+            <p className="text-white/70">Runs every 3 minutes to refresh homepage/front content and sync to main.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
+>>>>>>> origin/chore/new-automations-futuristic-front
           </li>
         </ul>
       </main>

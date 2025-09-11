@@ -329,6 +329,7 @@ export default function Home() {
 =======
         {/* Intelligent Docs & Topics */}
         <section className="mx-auto max-w-7xl px-6 pb-20">
+<<<<<<< HEAD
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Intelligent Docs & Topics</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Autonomous documentation and knowledge mapping generated directly from the codebase.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -345,6 +346,27 @@ export default function Home() {
               <p className="mt-1 text-sm text-white/75">Builds a live topics map from pages and docs; publishes JSON + Markdown.</p>
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
             </a>
+=======
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Engine — New Tools</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Now powered by scheduled cloud functions — no GitHub Actions required. Live homepage promos, health checks, and link integrity run automatically.</p>
+                     <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: 'Frontpage Enhancer', desc: 'Auto‑advertises features and refreshes homepage content hourly.', href: '/.netlify/functions/frontpage-enhancer' },
+              { title: 'Link & Health Scheduler', desc: 'Runs link checks, health scans, and sitemap updates every 6h.', href: '/.netlify/functions/link-and-health-scheduler' },
+              { title: 'Marketing & Features Promo', desc: 'Regenerates homepage promos and deep links every 2h.', href: '/.netlify/functions/marketing-and-features-promo' },
+              { title: 'Front Enhancer (fast)', desc: 'Runs front improvements every 10 minutes.', href: '/.netlify/functions/front-enhancer' },
+              { title: 'Homepage Advertiser', desc: 'Pushes fresh highlights every 15 minutes.', href: '/.netlify/functions/homepage_advertiser' },
+              { title: 'Cloud Orchestrator', desc: 'Coordinates broader agents on a 4h cadence.', href: '/.netlify/functions/cloud_orchestrator' },
+              { title: 'Hyper-Fast Orchestrator', desc: 'Refreshes homepage/front every 3 minutes and syncs.', href: '/.netlify/functions/hyper-fast-orchestrator' },
+            ].map((tool) => (
+              <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">{tool.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{tool.desc}</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+              </a>
+            ))}
+>>>>>>> origin/chore/new-automations-futuristic-front
           </div>
         </section>
 
