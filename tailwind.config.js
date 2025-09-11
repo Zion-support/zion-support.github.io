@@ -1,84 +1,150 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: "class",
+export default {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}'
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
         primary: {
-          50: '#eff6ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        gray: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
-          950: '#030712'
-        }
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Zion brand colors
+        'zion-blue-dark': '#172d67',
+        'zion-blue': '#1e3a8a',
+        'zion-blue-light': '#2e73ea',
+        'zion-purple': '#8c15e9',
+        'zion-purple-dark': '#6b21a8',
+        'zion-purple-light': '#a855f7',
+        'zion-cyan': '#22ddd2',
+        'zion-cyan-light': '#67e8e0',
+        'zion-slate': '#475569',
+        'zion-slate-dark': '#334155',
+        'zion-slate-light': '#94a3b8',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'orbitron': ['Orbitron', 'monospace'],
+      },
+      screens: {
+        xs: "475px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1920px",
+      },
+      spacing: {
+        18: "4.5rem",
+        88: "22rem",
+        128: "32rem",
+        "8xl": "88rem",
+        "9xl": "96rem",
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 2s infinite',
         'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'bounce-slow': 'bounce 3s infinite',
-        'spin-slow': 'spin 8s linear infinite'
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'gradient': 'gradient 8s ease infinite',
+        'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
+        'spin-slow': 'spin 3s linear infinite',
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' }
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
+        glow: {
+          "0%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
+          "100%": { boxShadow: "0 0 30px rgba(147, 51, 234, 0.6)" },
         },
-        scaleIn: {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' }
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' }
-        }
+        wave: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
-      spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
-        '128': '32rem'
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      borderRadius: {
-        '4xl': '2rem',
-        '5xl': '2.5rem'
+      fontSize: {
+        "responsive-xs": ["0.75rem", { lineHeight: "1rem" }],
+        "responsive-sm": ["0.875rem", { lineHeight: "1.25rem" }],
+        "responsive-lg": ["1.125rem", { lineHeight: "1.75rem" }],
+        "responsive-xl": ["1.25rem", { lineHeight: "1.75rem" }],
+        "responsive-2xl": ["1.5rem", { lineHeight: "2rem" }],
+        "responsive-3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "responsive-4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+        "responsive-5xl": ["3rem", { lineHeight: "1" }],
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      minHeight: {
+        'screen-90': '90vh',
+        'screen-95': '95vh',
+      },
+      zIndex: {
+        '60': '60',
+        '70': '70',
+        '80': '80',
+        '90': '90',
+        '100': '100',
+      },
+      backdropBlur: {
+        'xs': '2px',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
-      }
-    }
+        'neon': '0 0 20px rgba(34, 221, 210, 0.5)',
+        'neon-purple': '0 0 20px rgba(168, 85, 247, 0.5)',
+        'inner-glow': 'inset 0 0 20px rgba(34, 221, 210, 0.2)',
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
+      scale: {
+        '102': '1.02',
+        '103': '1.03',
+      },
+      rotate: {
+        '135': '135deg',
+        '225': '225deg',
+      },
+      skew: {
+        '12': '12deg',
+        '-12': '-12deg',
+      },
+      blur: {
+        '4xl': '72px',
+        '5xl': '96px',
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
-  ]
-};
+  plugins: [],
+}

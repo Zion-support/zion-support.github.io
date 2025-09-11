@@ -1,89 +1,52 @@
 #!/bin/bash
 
-# Comprehensive script to resolve all remaining merge conflicts
-set -e
-
-echo "🔧 Starting comprehensive conflict resolution..."
-echo "⏰ Started at: $(date)"
-echo "---"
+echo "🔧 Resolving all merge conflicts in the codebase..."
 
 # Function to resolve conflicts in a file
 resolve_conflicts() {
     local file="$1"
+    echo "Processing: $file"
     
-    echo "🔧 Resolving conflicts in $file..."
+    # Remove all merge conflict markers and keep the HEAD version
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> .*/d' "$file"
     
-    # Check if file has merge conflicts
-    if grep -q "/d' "$file"
-            sed -i '/
-        elif [[ "$file" == "tsconfig.json" || "$file" == "vite.config.ts" || "$file" == "tailwind.config.ts" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            # For config files, keep main version
-            sed -i '/
-            sed -i '/
-        elif [[ "$file" == "src/App.tsx" ]]; then
-            echo "🚀 App.tsx detected, using our clean resolved version..."
-            # We already resolved this file, so we'll keep our version
-            sed -i '/
-            sed -i '/
-        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # For regular files, try to merge both versions
-            sed -i '/
-            sed -i '/
-        fi
-        
-        echo "✅ Resolved conflicts in $file"
-    else
-        echo "✅ No conflicts found in $file"
-    fi
+    # Remove any empty lines that might be left
+    sed -i '/^[[:space:]]*$/d' "$file"
+    
+    echo "✅ Resolved conflicts in: $file"
 }
 
-# Get list of conflicted files
-echo "📋 Checking for conflicted files..."
-CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+# Find all files with merge conflicts
+echo "🔍 Searching for files with merge conflicts..."
+conflict_files=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
 
-if [ -z "$CONFLICTED_FILES" ]; then
-    echo "🎉 No merge conflicts found!"
+if [ -z "$conflict_files" ]; then
+    echo "✅ No merge conflicts found!"
     exit 0
 fi
 
-echo "📋 Found conflicted files:"
-echo "$CONFLICTED_FILES"
-echo ""
+echo "📋 Found files with conflicts:"
+echo "$conflict_files"
 
-# Resolve conflicts in each file
-for file in $CONFLICTED_FILES; do
+# Process each file
+for file in $conflict_files; do
     if [ -f "$file" ]; then
         resolve_conflicts "$file"
-    else
-        echo "⚠️  File $file not found, skipping..."
     fi
 done
 
-# Handle special cases
 echo ""
-echo "🔧 Handling special cases..."
+echo "🎉 All merge conflicts have been resolved!"
+echo "📝 Files processed:"
+echo "$conflict_files"
 
-# Remove tsconfig.tsbuildinfo if it's conflicted
-if [ -f "tsconfig.tsbuildinfo" ]; then
-    echo "🗑️  Removing conflicted tsconfig.tsbuildinfo..."
-    rm -f tsconfig.tsbuildinfo
-fi
+# Check if there are any remaining conflicts
+remaining_conflicts=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
 
-echo ""
-echo "🔍 Checking for remaining conflicts..."
-REMAINING_CONFLICTS=$(git diff --name-only --diff-filter=U)
-
-if [ -z "$REMAINING_CONFLICTS" ]; then
-    echo "🎉 All conflicts resolved successfully!"
-    echo "💾 Committing resolved conflicts..."
-    git add .
-    git commit -m "Resolve all remaining merge conflicts - $(date)"
-    echo "✅ Conflicts resolved and committed!"
+if [ -z "$remaining_conflicts" ]; then
+    echo "✅ Verification: No remaining conflicts found!"
 else
-    echo "⚠️  Some conflicts remain unresolved:"
-    echo "$REMAINING_CONFLICTS"
-    echo "Please resolve these manually."
-    exit 1
+    echo "❌ Warning: Some conflicts may still exist in:"
+    echo "$remaining_conflicts"
 fi

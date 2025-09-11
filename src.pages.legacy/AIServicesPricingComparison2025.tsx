@@ -1,0 +1,256 @@
+import React, { useState } from "react";
+  Search,;
+  Filter} from "lucide-react";
+
+const AIServicesPricingComparison2025: React.FC = () => {};
+}
+  const [searchTerm, setSearchTerm] = useState("");,
+}
+  const categories = [];
+
+  const pricingComparison = [],;
+      competitors: [,;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+},;
+        {};
+}
+    return matchesCategory && matchesSearch});,
+}
+  const containerVariants = {},;
+    visible: {};
+      transition: {,staggerChildren: 0.1}
+}
+}
+
+  const itemVariants = {},;
+    visible: {};
+duration: 0.5,"        ease: "easeOut"}
+}
+}
+
+  return (;
+    <>;
+      <Helmet>;
+        <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>";
+        <meta name = "description" content="Compare Zion Tech Group"s AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."  />";
+        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing"  />";
+        <div>Broken JSX</div>
+      </Helmet>;
+";
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,;
+        {/* comment */}";
+        <section className="relative py-20 px-4 overflow-hidden">";
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>";
+          <div className="relative max-w-7xl mx-auto text-center">;
+            <div>Broken JSX</div>
+              className="text-5xl md: text-7xl font-bold text-white mb-6">;
+              AI Services Pricing";
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">;
+                Comparison 2025,;
+              </span>;
+            </motion.h1>,;
+            <div>Broken JSX</div>
+              className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
+              See how Zion Tech Group"s AI autonomous platforms deliver superior value,;
+              better ROI, and advanced features compared to traditional solutions.;
+            </motion.p>;
+          </div>;
+        </section>;
+        {/* comment */}";
+        <section className="bg-gradient-to-r from-green-600 to-blue-600 py-8 px-4">";
+          <div className="max-w-7xl mx-auto text-center text-white">";
+            <h2 className="text-2xl font-bold mb-4">Get Expert Pricing Analysis</h2>";
+            <div className="flex flex-col md: flex-row justify-center items-center gap-6 text-lg">";
+              <div className="flex items-center gap-2">;
+                <span>📞 +1 302 464 0950</span>;
+              </div>";
+              <div className="flex items-center gap-2">;
+                <span>✉️ kleber@ziontechgroup.com</span>;
+              </div>";
+              <div className="flex items-center gap-2">;
+                <span>📍 364 E Main St STE 1008 Middletown DE 19709</span>;
+              </div>;
+        </section>;
+,;
+        {/* comment */}";
+        <section className="py-20 px-4">";
+          <div className="max-w-7xl mx-auto">;
+            {/* comment */}";
+            <div className="mb-12">";
+              <div className="flex flex-col md: flex-row gap-4 mb-8">";
+                <div className="flex-1 relative">";
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />";
+                  <div>Broken JSX</div>
+                    placeholder="Search services..."">;
+                    value="{searchTerm}
+                    onChange="{(e)" => setSearchTerm(e.target.value)}";
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-green-500" />;
+                </div>",;
+                <div>Broken JSX</div>
+                  onChange="{(e)" => setActiveCategory(e.target.value)}";
+                  className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-green-500">;
+                  {};
+                    <option key="{category.id}" value="{category.id}">;
+                      {category.icon} {category.name}
+
+                    </option>;
+                  ))}
+
+                </select>;
+              </div>;
+            {/* comment */}
+;
+            <div>Broken JSX</div>
+              className="space-y-8">;
+              {};
+                    <h3 className="text-3xl font-bold text-white mb-2">{service.service}</h3>";
+                    <p className="text-gray-400">{service.category}</p>;
+                  </div>;
+";
+                  <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,;
+                    {/* comment */}";
+                    <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">";
+                      <div className="text-center mb-6">";
+                        <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>";
+                        <div className="{};
+                          ${service.zionPrice.toLocaleString()}
+
+                        </div>";
+                        <div className=""text-sm" text-gray-300 mb-4"}>One-time setup</div>";
+                        <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">;
+                          {service.roi}
+
+                        </div>;
+";
+                      <div className="space-y-3 mb-6">";
+                        <h5 className="font-semibold text-white mb-3">Features: </h5>,;
+                        {};
+                          <div key="{index}" className="flex items-center gap-2">";
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />";
+                            <span className="text-gray-300 text-sm">{feature}</span>;
+                          </div>;
+                        ))}
+
+                      </div>;
+";
+                      <div className="text-center">";
+                        <div>Broken JSX</div>
+                          className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-3 px-4 rounded-lg hover: from-green-600 hover:to-blue-700 transition-all duration-300 font-semibold block">;
+                          Learn More,;
+                        </a>;
+                      </div>;
+,;
+                    {/* comment */}
+;
+                    {};
+                      <div key="{index}" className="bg-white/5 border border-gray-600 rounded-lg p-6">";
+                        <div className="text-center mb-6">";
+                          <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>";
+                          <div className="{};
+                            ${competitor.price.toLocaleString()}
+
+                          </div>";
+                          <div className=""text-sm" text-gray-300 mb-4"}>Annual subscription</div>";
+                          <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">;
+                            Higher Cost,;
+                          </div>;
+";
+                        <div className="space-y-3 mb-6">";
+                          <h5 className="font-semibold text-white mb-3">Limited Features: </h5>,;
+                          {};
+                            <div key="{index}" className="flex items-center gap-2">";
+                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0"  />";
+                              <span className="text-gray-400 text-sm">{feature}</span>;
+                            </div>;
+                          ))}
+
+                        </div>;
+";
+                        <div className="space-y-3 mb-6">";
+                          <h5 className="font-semibold text-red-400 mb-3">Missing: </h5>,;
+                          {};
+                            <div key="{index}" className="flex items-center gap-2">";
+                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0"  />";
+                              <span className="text-gray-400 text-sm">{feature}</span>;
+                            </div>;
+                          ))}
+
+                        </div>;
+                    ))}
+
+                  </div>;
+";
+                  <div className="mt-8 text-center">";
+                    <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">";
+                      <h4 className="text-xl font-bold text-white mb-3">Why Choose Zion Tech Group?</h4>";
+                      <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">";
+                        <div className="flex items-center gap-2 justify-center">";
+                          <TrendingUp className="w-4 h-4 text-green-400"  />",;
+                          <span className="text-gray-300">Better ROI: {service.roi}</span>;
+                        </div>";
+                        <div className="flex items-center gap-2 justify-center">";
+                          <Zap className="w-4 h-4 text-blue-400"  />";
+                          <span className="text-gray-300">Faster Setup: {service.setupTime}</span>;
+                        </div>";
+                        <div className="flex items-center gap-2 justify-center">";
+                          <Shield className="w-4 h-4 text-purple-400"  />";
+                          <span className="text-gray-300">Advanced AI Features</span>;
+                        </div>;
+                </motion.div>;
+              ))}
+
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* comment */}";
+        <section className="py-20 px-4">";
+          <div className="max-w-4xl mx-auto text-center">;
+            <div>Broken JSX</div>
+            >";
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+                Ready to Save Money & Get Better Results?;
+              </h2>";
+              <p className="text-xl text-gray-300 mb-8">,;
+                Our AI autonomous platforms deliver superior value, better ROI, and advanced features,;
+compared to traditional solutions. Get started today and transform your business.;
+              </p>";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";
+                <div>Broken JSX</div>
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
+                  Get Custom Quote,;
+                </a>";
+                <div>Broken JSX</div>
+                  className="px-8 py-4 border-2 border-green-500 text-green-400 font-semibold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300">;
+                >,;
+Call: +1 302 464 0950,;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  )}
+
+");
+export default AIServicesPricingComparison2025;"}}}}}}}}}}}}}}

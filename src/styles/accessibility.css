@@ -37,10 +37,25 @@
   scroll-behavior: auto !important;
 }
 
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-delay: 0s !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.01ms !important;
+}
+
 /* Focus indicators */
 *:focus {
-  outline: 3px solid #06b6d4 !important;
+  outline: 2px solid #3b82f6 !important;
   outline-offset: 2px !important;
+}
+
+.high-contrast *:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
 }
 
 /* Skip links */
@@ -73,118 +88,79 @@
   border: 0;
 }
 
-/* Font scaling */
-.accessibility-enhanced {
-  font-size: calc(1rem * var(--font-scale, 1));
+/* High contrast for images */
+.high-contrast img {
+  filter: contrast(200%) brightness(150%);
 }
 
-/* High contrast focus */
-.high-contrast *:focus {
+/* High contrast for form elements */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
+}
+
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
   outline: 3px solid var(--accent) !important;
   outline-offset: 2px !important;
 }
 
-/* Reduced motion for specific elements */
-.reduced-motion .animate-pulse {
-  animation: none !important;
+/* High contrast for buttons */
+.high-contrast button {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
+  font-weight: bold !important;
 }
 
+.high-contrast button:hover,
+.high-contrast button:focus {
+  background-color: var(--accent) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* High contrast for links */
+.high-contrast a {
+  color: var(--accent) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+.high-contrast a:hover,
+.high-contrast a:focus {
+  background-color: var(--accent) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Reduced motion for animations */
+.reduced-motion .animate-spin,
+.reduced-motion .animate-pulse,
 .reduced-motion .animate-bounce {
   animation: none !important;
 }
 
-.reduced-motion .animate-spin {
-  animation: none !important;
+.reduced-motion .transition-all,
+.reduced-motion .transition-transform,
+.reduced-motion .transition-opacity {
+  transition: none !important;
 }
 
-/* Better contrast for text */
-.text-slate-300 {
-  color: #cbd5e1 !important;
-}
-
-.text-slate-400 {
-  color: #94a3b8 !important;
-}
-
-/* Ensure sufficient color contrast */
-.bg-slate-800 {
-  background-color: #1e293b !important;
-}
-
-.bg-slate-900 {
-  background-color: #0f172a !important;
-}
-
-/* Button accessibility */
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-button:disabled:hover {
-  transform: none !important;
-}
-
-/* Link accessibility */
-a:not([href]) {
-  cursor: default;
-}
-
-a:not([href]):focus {
-  outline: none;
-}
-
-/* Form accessibility */
-input:invalid {
-  border-color: #ef4444;
-}
-
-input:invalid:focus {
-  outline-color: #ef4444;
-}
-
-/* Loading states */
-.loading {
+/* Focus trap for modals */
+.focus-trap {
   position: relative;
-  overflow: hidden;
 }
 
-.loading::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  animation: loading 1.5s infinite;
+.focus-trap:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-@keyframes loading {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-/* Reduced motion loading */
-.reduced-motion .loading::after {
-  animation: none;
-}
-
-/* High contrast loading */
-.high-contrast .loading::after {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent),
-    transparent
-  );
+/* High contrast focus trap */
+.high-contrast .focus-trap:focus-within {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }

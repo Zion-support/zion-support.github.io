@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -203,7 +202,6 @@ npm config set strict-ssl false  # Only if needed</div>
         }
       });
     }
-
     // Check if we're online periodically
     function checkOnlineStatus() {
       fetch('/online-check')
@@ -223,7 +221,6 @@ npm config set strict-ssl false  # Only if needed</div>
           statusBox.classList.add('offline');
         });
     }
-
     // Check immediately and then every 30 seconds
     checkOnlineStatus();
     setInterval(checkOnlineStatus, 30000);
