@@ -751,13 +751,13 @@ export default function HomePage() {
             </div>
 
             <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-left'>
-              <div className='text-3xl mb-4'>💰</div>
-              <h3 className='text-xl font-bold mb-3'>Startup Funding in AI Era</h3>
+              <div className='text-3xl mb-4'>🏢</div>
+              <h3 className='text-xl font-bold mb-3'>Enterprise AI Implementation 2025</h3>
               <p className='text-sm opacity-90 mb-4'>
-                Navigate the new funding landscape and position your AI startup for success.
+                Complete strategic roadmap for enterprise AI adoption, governance, and success.
               </p>
               <Link
-                href='/blog/startup-funding-ai-era-2025'
+                href='/blog/enterprise-ai-implementation-2025'
                 className='text-white text-sm font-medium hover:underline'
               >
                 Read Article →
