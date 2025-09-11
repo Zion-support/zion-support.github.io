@@ -354,6 +354,7 @@ export default function Home() {
    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 >>>>>>> origin/chore/gh-actions-autonomous-docs-topics
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <section className="py-16 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
@@ -423,20 +424,28 @@ export default function Home() {
 /* AUTO-GENERATED: HOME_UPDATER_END */}
 <<<<<<< HEAD
 =======
+=======
+            <Link href="/main/front"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Front Systems Hub — deep features & map</span></a></Link>
+  
+>>>>>>> origin/chore/netlify-cloud-automations-and-futuristic-homepage
             <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Hub — live agents & reports</span></a></Link>
   
             <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
   
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
   
+<<<<<<< HEAD
             <Link href="/features"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Features — modules, templates, effects</span></a></Link>
+=======
+            <a href="/.netlify/functions/homepage-scheduler" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Cloud Automations — Netlify scheduled runner</span></a>
+>>>>>>> origin/chore/netlify-cloud-automations-and-futuristic-homepage
   
             <Link href="/capabilities"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Capabilities — what it can do</span></a></Link>
   
             <Link href="/benefits"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Benefits — outcomes & value</span></a></Link>
   
-   </div>
-   </section>
+    </div>
+    </section>
   {/* AUTO-GENERATED: HOME_UPDATER_END */}
 >>>>>>> origin/chore/futuristic-home-and-netlify-automations
 =======
