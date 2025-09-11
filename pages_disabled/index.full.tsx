@@ -4808,6 +4808,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 }
 </main>
     </>
+<<<<<<< HEAD:pages/index.tsx
             <section className="py-16 bg-slate-900/50">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -4973,6 +4974,8 @@ origin/automation-improvements-final
       </div>
 
     </MainLayout>
+=======
+>>>>>>> origin/chore/stabilize-build-minimal-index:pages_disabled/index.full.tsx
   );
 }
 <<<<<<< HEAD

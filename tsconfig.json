@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+<<<<<<< HEAD
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -24,6 +25,26 @@
     "src/main.tsx",
     "src/App.tsx",
     "vite.config.ts"
+=======
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "pages",
+    "components",
+    "types",
+    ".next/types/**/*.ts"
+>>>>>>> origin/chore/stabilize-build-minimal-index
   ],
   "exclude": [
     "node_modules",
