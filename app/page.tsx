@@ -305,6 +305,20 @@ export default function HomePage() {
             </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-platform-engineering-2025' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🧩</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Platform Engineering in 2025</h3>
+                <p className='text-sm opacity-90'>Guardrails and reference patterns to ship AI safely at scale.</p>
+              </div>
+            </Link>
+            <Link href='/blog/customer-stories-automation-roi' className='group'>
+              <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🏆</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>Customer Stories: Automation ROI</h3>
+                <p className='text-sm opacity-90'>3 case studies with clear, measurable business outcomes.</p>
+              </div>
+            </Link>
             <Link href='/blog/enterprise-rag-2025-blueprint' className='group'>
               <div className='bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
                 <div className='text-3xl mb-2'>📚</div>
@@ -342,6 +356,20 @@ export default function HomePage() {
           </div>
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <Link href='/blog/ai-platform-engineering-2025' className='group'>
+              <div className='rounded-lg border border-indigo-200 bg-indigo-50 p-6 hover:bg-indigo-100 transition-colors'>
+                <div className='text-sm font-medium text-indigo-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-indigo-900 group-hover:underline'>AI Platform Engineering in 2025</h3>
+                <p className='text-indigo-800 mt-2'>Governance, guardrails, and cost controls for production AI platforms.</p>
+              </div>
+            </Link>
+            <Link href='/blog/customer-stories-automation-roi' className='group'>
+              <div className='rounded-lg border border-amber-200 bg-amber-50 p-6 hover:bg-amber-100 transition-colors'>
+                <div className='text-sm font-medium text-amber-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-amber-900 group-hover:underline'>Customer Stories: Automation ROI</h3>
+                <p className='text-amber-800 mt-2'>Support, finance, and ops wins with time-to-value and payback.</p>
+              </div>
+            </Link>
             <Link href='/blog/enterprise-rag-2025-blueprint' className='group'>
               <div className='rounded-lg border border-blue-200 bg-blue-50 p-6 hover:bg-blue-100 transition-colors'>
                 <div className='text-sm font-medium text-blue-700 mb-1'>New</div>

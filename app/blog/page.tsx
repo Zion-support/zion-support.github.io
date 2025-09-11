@@ -4,6 +4,28 @@ import Link from 'next/link';
 export default function BlogPage() {
 	const blogPosts = [
 	  {
+	    id: 'ai-platform-engineering-2025',
+	    title: 'AI Platform Engineering in 2025: Reliable, Governed, Cost-Aware',
+	    excerpt:
+	      'Foundations, guardrails, and patterns to ship AI features safely at scale.',
+	    date: '2025-09-11',
+	    readTime: '9 min read',
+	    category: 'AI Engineering',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'customer-stories-automation-roi',
+	    title: 'Customer Stories: Real ROI from AI Automation',
+	    excerpt:
+	      'Three concise case studies across support, finance, and operations with measurable ROI.',
+	    date: '2025-09-11',
+	    readTime: '7 min read',
+	    category: 'Case Studies',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
 	    id: 'enterprise-rag-architecture-2025',
 	    title: 'Enterprise RAG Architecture 2025: Reliable, Governed, and Cost-Aware',
 	    excerpt:
