@@ -81,6 +81,17 @@ export default function BlogPage() {
       image: '/api/placeholder/600/400',
     },
     {
+      id: 'blockchain-business-applications',
+      title: 'Blockchain Beyond Crypto: Real Business Applications',
+      excerpt:
+        'Exploring practical blockchain applications in supply chain, healthcare, and finance that are driving real business value.',
+      date: '2025-01-08',
+      readTime: '10 min read',
+      category: 'Blockchain',
+      featured: false,
+      image: '/api/placeholder/600/400',
+    },
+    {
       id: 'cybersecurity-2025-trends',
       title: 'Cybersecurity Trends Every Business Should Know in 2025',
       excerpt:
@@ -144,6 +155,28 @@ export default function BlogPage() {
       date: '2025-09-11',
       readTime: '7 min read',
       category: 'MLOps',
+      featured: false,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'agentic-workflows-2025',
+      title: 'Agentic Workflows in 2025: Practical Patterns for Production',
+      excerpt:
+        'Guardrails, budgets, approvals, and observability to safely ship agentic systems.',
+      date: '2025-09-11',
+      readTime: '10 min read',
+      category: 'AI Engineering',
+      featured: true,
+      image: '/api/placeholder/600/400',
+    },
+    {
+      id: 'data-engineering-modern-stack',
+      title: 'Modern Data Engineering Stack: 2025 Reference',
+      excerpt:
+        'An opinionated blueprint for reliable, affordable pipelines: ingestion to governance.',
+      date: '2025-09-11',
+      readTime: '8 min read',
+      category: 'Data Engineering',
       featured: false,
       image: '/api/placeholder/600/400',
     },
