@@ -19,67 +19,56 @@ function isLocalStorageAvailable(): boolean {
   }
 }
 
-export function createSafeStorage(): SafeStorage {
-  const isAvailable = isLocalStorageAvailable();
-  
-  if (!isAvailable) {
-    return {
-      getItem: () => null,
-      setItem: () => false,
-      removeItem: () => false,
-      clear: () => false,
-      key: () => null,
-      length: 0,
-    };
+export const safeStorage: SafeStorage = {
+  getItem: (key: string) => {
+    if (!isLocalStorageAvailable()) return null;
+    try {
+      return window.localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  },
+  setItem: (key: string, value: string) => {
+    if (!isLocalStorageAvailable()) return false;
+    try {
+      window.localStorage.setItem(key, value);
+      return true;
+    } catch {
+      return false;
+    }
+  },
+  removeItem: (key: string) => {
+    if (!isLocalStorageAvailable()) return false;
+    try {
+      window.localStorage.removeItem(key);
+      return true;
+    } catch {
+      return false;
+    }
+  },
+  clear: () => {
+    if (!isLocalStorageAvailable()) return false;
+    try {
+      window.localStorage.clear();
+      return true;
+    } catch {
+      return false;
+    }
+  },
+  key: (index: number) => {
+    if (!isLocalStorageAvailable()) return null;
+    try {
+      return window.localStorage.key(index);
+    } catch {
+      return null;
+    }
+  },
+  get length() {
+    if (!isLocalStorageAvailable()) return 0;
+    try {
+      return window.localStorage.length;
+    } catch {
+      return 0;
+    }
   }
-
-  return {
-    getItem: (key: string) => {
-      try {
-        return window.localStorage.getItem(key);
-      } catch {
-        return null;
-      }
-    },
-    setItem: (key: string, value: string) => {
-      try {
-        window.localStorage.setItem(key, value);
-        return true;
-      } catch {
-        return false;
-      }
-    },
-    removeItem: (key: string) => {
-      try {
-        window.localStorage.removeItem(key);
-        return true;
-      } catch {
-        return false;
-      }
-    },
-    clear: () => {
-      try {
-        window.localStorage.clear();
-        return true;
-      } catch {
-        return false;
-      }
-    },
-    key: (index: number) => {
-      try {
-        return window.localStorage.key(index);
-      } catch {
-        return null;
-      }
-    },
-    get length() {
-      try {
-        return window.localStorage.length;
-      } catch {
-        return 0;
-      }
-    },
-  };
-}
-
-export const safeStorage = createSafeStorage();
+};

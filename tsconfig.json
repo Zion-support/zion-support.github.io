@@ -1,33 +1,80 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
     "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    "incremental": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*",
+        "./pages/*"
+      ],
+      "@/components/*": [
+        "./src/components/*",
+        "./components/*"
+      ],
+      "@/lib/*": [
+        "./src/lib/*",
+        "./lib/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*",
+        "./utils/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*",
+        "./styles/*"
+      ],
+      "@/types/*": [
+        "./src/types/*",
+        "./types/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*",
+        "./hooks/*"
+      ],
+      "@/contexts/*": [
+        "./src/contexts/*",
+        "./contexts/*"
+      ],
+      "@/store/*": [
+        "./src/store/*",
+        "./store/*"
+      ],
+      "@/config/*": [
+        "./src/config/*",
+        "./config/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ]
     }
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.jsx"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist"
+    "node_modules"
   ]
 }

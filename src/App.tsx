@@ -6,11 +6,9 @@ import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
 import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { ErrorMonitorProvider } from './components/ErrorMonitor';
-import { performanceMonitor } from './utils/performance';
-import usePerformance from './hooks/usePerformance';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { ErrorBoundary as CustomErrorBoundary } from './components/ErrorMonitor';
 
 // Loading component
 const LoadingSpinnerComponent = () => (
