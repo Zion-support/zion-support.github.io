@@ -48,11 +48,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎯 Revolutionary AI Tools Suite: 8 Powerful Tools Now Available!
+                🎯 Revolutionary AI Tools Suite: 10 Powerful Tools Now Available!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
                 Transform your AI journey with our comprehensive suite of tools: AI Readiness Assessment, ROI Calculator, 
-                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, Cost Optimizer, Security Assessment, and Strategy Planner. 
+                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, Cost Optimizer, Security Assessment, Strategy Planner, Analytics Dashboard, and Training Simulator. 
                 Get personalized insights and recommendations to maximize your AI success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -105,6 +105,64 @@ export default function HomePage() {
                 >
                   Download Free Guide
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Training Simulator Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-600 to-green-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🎓 INTERACTIVE LEARNING</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎓 AI Training Simulator: Learn ML by Doing
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Master machine learning concepts through hands-on experience. Train models with different datasets, algorithms, and parameters in our interactive simulator. 
+                Perfect for learning, experimentation, and understanding AI fundamentals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Link
+                  href="/tools/ai-training-simulator"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  🎓 Start Training
+                </Link>
+                <Link
+                  href="/tools/ai-analytics-dashboard"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  📊 View Analytics
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  🎯 Get Training
+                </Link>
+              </div>
+              
+              {/* Simulator Features Preview */}
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">📊</div>
+                  <h3 className="text-sm font-semibold mb-1">Interactive Datasets</h3>
+                  <p className="text-xs opacity-90">Real-world datasets for hands-on learning</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🧠</div>
+                  <h3 className="text-sm font-semibold mb-1">Multiple Algorithms</h3>
+                  <p className="text-xs opacity-90">Compare different ML algorithms</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">⚙️</div>
+                  <h3 className="text-sm font-semibold mb-1">Parameter Tuning</h3>
+                  <p className="text-xs opacity-90">Learn hyperparameter optimization</p>
+                </div>
               </div>
             </div>
           </div>
