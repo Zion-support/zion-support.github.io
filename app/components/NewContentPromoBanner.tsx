@@ -18,6 +18,36 @@ const newContentItems = [
     new: true
   },
   {
+    title: "Real-Time Voice Agents: Architectures, Guardrails, ROI",
+    description: "Low-latency agents with streaming evals, safety policies, and observability",
+    url: "/blog/ai-2025-realtime-agents-observability",
+    type: "Blog Post",
+    category: "Agents",
+    icon: "🎙️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Enterprise GenAI Security Blueprint 2025",
+    description: "Pragmatic controls for leakage, prompt injection, and compliance",
+    url: "/blog/ai-2025-genai-security-blueprint",
+    type: "Blog Post",
+    category: "Security",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AIOps Agents: 41% MTTR Reduction",
+    description: "Runbook automation, incident correlation, SLO-aware remediation",
+    url: "/case-studies/ai-2025-it-ops-automation-impact",
+    type: "Case Study",
+    category: "AIOps",
+    icon: "🧰",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Agent Cost Optimization 2025",
     description: "Model routing, caching, batching, and evals to cut spend 35–55%",
     url: "/blog/ai-2025-agent-cost-optimization",
