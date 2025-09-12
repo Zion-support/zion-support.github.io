@@ -12,6 +12,7 @@ import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -197,6 +198,65 @@ const HomePage = memo(function HomePage() {
             }} 
           />
         </Suspense>
+
+      {/* Mega Content Promotion Banner - Top */}
+      <section className="py-12 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+              <span className="text-sm font-medium">🚀 MEGA CONTENT UPDATE</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              🎉 50+ New AI Resources Just Released!
+            </h2>
+            <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto leading-relaxed">
+              Discover our most comprehensive content library yet: AI Breakthrough Innovations 2025, 
+              $200M Manufacturing Success Case Study, AI Implementation Master Guide 2026, plus exclusive 
+              sustainability guides and robotics automation insights. Everything you need to succeed with AI in 2025.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Link
+                href="/content-showcase"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
+                aria-label="Explore all new content and resources"
+              >
+                🎯 Explore All 50+ Resources
+              </Link>
+              <Link
+                href="/blog/ai-2025-breakthrough-innovations"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
+                aria-label="Read the latest breakthrough innovations article"
+              >
+                📖 Read Featured Article
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl mb-2">🚀</div>
+                <div className="text-sm font-medium">AI Innovations</div>
+                <div className="text-xs opacity-75">15+ articles</div>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl mb-2">💰</div>
+                <div className="text-sm font-medium">Case Studies</div>
+                <div className="text-xs opacity-75">20+ stories</div>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl mb-2">📚</div>
+                <div className="text-sm font-medium">Free Guides</div>
+                <div className="text-xs opacity-75">10+ resources</div>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-2xl mb-2">🎥</div>
+                <div className="text-sm font-medium">Videos</div>
+                <div className="text-xs opacity-75">5+ tutorials</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -224,6 +284,22 @@ const HomePage = memo(function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Content Discovery Widget */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              🔍 Discover Amazing Content
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our comprehensive library of AI articles, case studies, and resources. 
+              Use our interactive discovery tool to find exactly what you need.
+            </p>
+          </div>
+          <InteractiveContentDiscovery />
         </div>
       </section>
 
