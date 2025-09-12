@@ -79,7 +79,7 @@ export default function BlogPost() {
                 <span className="text-purple-600 font-bold text-sm">ZT</span>
               </div>
               <span>Zion Tech Group</span>
->>>>>>> cursor/create-and-deploy-new-content-ce90
+>>>>>>> cursor/create-and-deploy-new-content-7ae3
             </div>
             <span>12 min read</span>
             <span>•</span>
@@ -852,7 +852,7 @@ export default function BlogPost() {
           </div>
         </div>
       </article>
->>>>>>> cursor/create-and-deploy-new-content-ce90
+>>>>>>> cursor/create-and-deploy-new-content-7ae3
     </div>
   );
 }
