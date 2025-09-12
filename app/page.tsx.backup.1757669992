@@ -1785,6 +1785,34 @@ export default function HomePage() {
               scalable, performant, and future-proof solutions.
             </p>
           </div>
+<<<<<<< HEAD
+
+          {/* Tech Stack Grid */}
+          <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16'>
+            {[
+              { name: 'Next.js', icon: '⚛️', color: 'from-blue-500 to-blue-600' },
+              { name: 'React', icon: '⚛️', color: 'from-cyan-500 to-cyan-600' },
+              { name: 'TypeScript', icon: '🔷', color: 'from-blue-600 to-blue-700' },
+              { name: 'Tailwind CSS', icon: '🎨', color: 'from-teal-500 to-teal-600' },
+              { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-600' },
+              { name: 'Python', icon: '🐍', color: 'from-yellow-500 to-yellow-600' },
+              { name: 'AWS', icon: '☁️', color: 'from-orange-500 to-orange-600' },
+              { name: 'Docker', icon: '🐳', color: 'from-blue-500 to-blue-600' },
+              { name: 'Kubernetes', icon: '⚙️', color: 'from-blue-600 to-blue-700' },
+              { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-700 to-blue-800' },
+              { name: 'Redis', icon: '🔴', color: 'from-red-500 to-red-600' },
+              { name: 'GraphQL', icon: '🔺', color: 'from-pink-500 to-pink-600' }
+            ].map((tech, index) => (
+              <div key={tech.name} className='group text-center p-4 bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20'>
+                <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  <span className='text-xl'>{tech.icon}</span>
+                </div>
+                <div className='text-sm font-medium text-white group-hover:text-blue-300 transition-colors duration-300'>
+                  {tech.name}
+                </div>
+              </div>
+            ))}
+=======
           {/* New Content Promo */}
           <div className='mb-10 grid grid-cols-1 md:grid-cols-2 gap-6'>
             <Link href='/blog/ai-product-roadmap-2025' className='group'>
@@ -1808,10 +1836,25 @@ export default function HomePage() {
                 <p className='text-purple-800 mt-2'>Practical controls for prompts, tools, retrieval, and outputs in production.</p>
               </div>
             </Link>
+>>>>>>> origin/backup-main-20250911-205354
           </div>
 
           {/* Performance Metrics */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+<<<<<<< HEAD
+            <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
+              <div className='text-3xl font-bold text-green-400 mb-2'>&lt; 100ms</div>
+              <div className='text-gray-300'>Average Response Time</div>
+            </div>
+            <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>99.9%</div>
+              <div className='text-gray-300'>Uptime Guarantee</div>
+            </div>
+            <div className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10'>
+              <div className='text-3xl font-bold text-purple-400 mb-2'>A+</div>
+              <div className='text-gray-300'>Security Rating</div>
+            </div>
+=======
             <Card
               title='Startup Go-To-Market in 2025: From 0 to 500 Customers'
               href='/blog/startup-go-to-market-2025'
@@ -1842,6 +1885,7 @@ export default function HomePage() {
               description='Layered defenses to keep AI systems safe in production.'
               icon='🛡️'
             />
+>>>>>>> origin/backup-main-20250911-205354
           </div>
         </div>
       </section>
