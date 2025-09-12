@@ -8,6 +8,16 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Agents in Production 2025",
+    description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
+    url: "/blog/ai-2025-production-agent-patterns",
+    type: "Blog Post",
+    category: "Engineering",
+    icon: "🧭",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI 2025: Breakthrough Innovations",
     description: "Discover revolutionary AI innovations transforming industries",
     url: "/blog/ai-2025-breakthrough-innovations",
