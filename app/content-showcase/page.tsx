@@ -5,6 +5,24 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Ethics & Governance 2025: Building Responsible AI Systems",
+      description: "Master AI ethics and governance in 2025. Learn about responsible AI implementation, ethical frameworks, compliance requirements, and governance best practices.",
+      href: "/blog/ai-2025-ethics-governance",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "18 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
@@ -21,28 +39,19 @@ export default function ContentShowcasePage() {
       category: "AI Predictions",
       readTime: "28 min read",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
-    },
-    {
-      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
-      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
-      href: "/blog/ai-multimodal-applications-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "12 min read",
-      date: "Jan 28, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Cybersecurity Transformation: 99.8% Threat Detection Success",
+      description: "How a Fortune 500 financial services company achieved 99.8% threat detection accuracy and 75% reduction in security incidents through AI-powered cybersecurity transformation.",
+      href: "/case-studies/ai-cybersecurity-transformation-2025",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      result: "99.8% Detection",
+      date: "Jan 30, 2025"
+    },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
       description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
@@ -60,21 +69,12 @@ export default function ContentShowcasePage() {
       category: "Retail AI",
       result: "300% Growth",
       date: "Feb 03, 2025"
-    },
-    {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
       href: "/resources/ai-implementation-master-guide-2025",
       icon: "📚",
