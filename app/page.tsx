@@ -257,7 +257,6 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE CONTENT HUB BANNER - NEW */}
         <AI2025UltimateContentHubBanner />
-        
         {/* AI 2026-2030 FUTURE PREDICTIONS PROMOTION BANNER - REVOLUTIONARY */}
         <AI2026_2030FuturePredictionsPromotionBanner />
         
