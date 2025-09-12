@@ -32,6 +32,7 @@ import AI2026BreakthroughContentShowcase from '../components/AI2026BreakthroughC
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -130,6 +131,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 BREAKTHROUGH CONTENT PROMOTION BANNER */}
+        <AI2026BreakthroughContentPromotionBanner />
+        
+        {/* AI 2026 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2026BreakthroughContentShowcase />
+        
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
         
