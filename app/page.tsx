@@ -105,6 +105,23 @@ import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 
+// New 2029-2030 Content Components
+import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
+import AI2030FuturePredictionsPromotionBanner from '../components/AI2030FuturePredictionsPromotionBanner';
+import QuantumComputingSolutionsPromotionBanner from '../components/QuantumComputingSolutionsPromotionBanner';
+import EnterpriseAutomationMasteryPromotionBanner from '../components/EnterpriseAutomationMasteryPromotionBanner';
+
+// New AI 2033-2034 Revolutionary Content Components
+import AI2033BreakthroughPromotionBanner from '../components/AI2033BreakthroughPromotionBanner';
+import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughContentShowcase';
+import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
+import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
+
+// New 2026 Content Components
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
