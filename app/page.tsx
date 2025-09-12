@@ -15,6 +15,9 @@ import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import TrendingContentWidget from '../components/TrendingContentWidget';
+import FeaturedContentCarousel from '../components/FeaturedContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -39,8 +42,10 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-        {/* Mega Content Drop Banner */}
+        {/* Enhanced Content Promotion Banner */}
+        <EnhancedContentPromotionBanner />
+        
+        {/* Revolutionary Content Update Banner - Top Priority */}
         <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +65,20 @@ export default function HomePage() {
                 <Link
                   href="/content-showcase"
                   className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-=======
+                >
+                  🎯 Explore All New Content
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+                >
+                  📚 Download Master Guide (200+ pages)
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Content Promotion Banner */}
         <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,12 +98,10 @@ export default function HomePage() {
                 <Link
                   href="/content-showcase"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
->>>>>>> cursor/create-and-deploy-new-content-fe5c
                 >
                   🎯 Explore All New Content
                 </Link>
                 <Link
-<<<<<<< HEAD
                   href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
                 >
@@ -125,18 +141,6 @@ export default function HomePage() {
                     <h3 className="text-sm font-semibold mb-1">Master Guide 2026</h3>
                     <p className="text-xs opacity-90">200+ pages free</p>
                   </div>
-=======
-                  href="/blog/ai-2025-quantum-computing-breakthrough"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  ⚡ Read Quantum AI Article
-                </Link>
-                <Link
-                  href="/case-studies/ai-quantum-financial-optimization-2025"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  💰 View $2.3B Case Study
->>>>>>> cursor/create-and-deploy-new-content-fe5c
                 </Link>
               </div>
             </div>
@@ -1318,6 +1322,201 @@ export default function HomePage() {
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
 
+<<<<<<< HEAD
+=======
+      {/* Interactive Content Discovery Widget */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              🔍 Discover Your Perfect Content
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Use our intelligent content discovery system to find exactly what you need. 
+              Filter by category, type, and more to get personalized recommendations.
+            </p>
+          </div>
+          
+          <InteractiveContentDiscovery
+            content={[
+              {
+                id: "1",
+                title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
+                description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
+                href: "/blog/ai-2025-advanced-automation",
+                icon: "🤖",
+                category: "ai-automation",
+                type: "Article",
+                readTime: "25 min read",
+                publishDate: "2025-01-15",
+                author: "Zion Tech Group",
+                tags: ["AI Automation", "Enterprise", "Implementation", "ROI"],
+                featured: true,
+                trending: true,
+                views: 15420,
+                likes: 892
+              },
+              {
+                id: "2",
+                title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
+                description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
+                href: "/blog/ai-2025-cybersecurity-threats",
+                icon: "🛡️",
+                category: "cybersecurity",
+                type: "Article",
+                readTime: "22 min read",
+                publishDate: "2025-01-12",
+                author: "Zion Tech Group",
+                tags: ["Cybersecurity", "AI Threats", "Defense", "Security"],
+                featured: true,
+                trending: true,
+                views: 12850,
+                likes: 756
+              },
+              {
+                id: "3",
+                title: "AI Healthcare Diagnosis Success 2025: 95% Accuracy Case Study",
+                description: "Discover how a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times with AI-powered medical imaging.",
+                href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+                icon: "🏥",
+                category: "case-studies",
+                type: "Case Study",
+                readTime: "15 min read",
+                publishDate: "2025-01-10",
+                author: "Zion Tech Group",
+                tags: ["Healthcare", "AI Success", "Case Study", "Medical AI"],
+                featured: true,
+                trending: false,
+                views: 9870,
+                likes: 634
+              },
+              {
+                id: "4",
+                title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+                description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
+                href: "/resources/ai-implementation-master-guide-2026",
+                icon: "📚",
+                category: "resources",
+                type: "Free Download",
+                readTime: "200+ pages",
+                publishDate: "2025-01-08",
+                author: "Zion Tech Group",
+                tags: ["Master Guide", "Implementation", "Templates", "Free Download"],
+                featured: true,
+                trending: true,
+                views: 25600,
+                likes: 1845
+              },
+              {
+                id: "5",
+                title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies",
+                description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions.",
+                href: "/blog/ai-2025-breakthrough-innovations",
+                icon: "🚀",
+                category: "trends",
+                type: "Article",
+                readTime: "25 min read",
+                publishDate: "2025-01-05",
+                author: "Zion Tech Group",
+                tags: ["AI Innovations", "Technology", "Future", "Breakthrough"],
+                featured: false,
+                trending: true,
+                views: 18900,
+                likes: 1123
+              },
+              {
+                id: "6",
+                title: "AI Workforce Transformation 2025: Complete Reskilling Guide",
+                description: "Learn how to transform your workforce for the AI era. Complete reskilling strategies, implementation guides, and real-world success stories.",
+                href: "/blog/ai-workforce-transformation-2025",
+                icon: "👥",
+                category: "ai-automation",
+                type: "Article",
+                readTime: "18 min read",
+                publishDate: "2025-01-03",
+                author: "Zion Tech Group",
+                tags: ["Workforce", "Reskilling", "AI Training", "Transformation"],
+                featured: false,
+                trending: false,
+                views: 7650,
+                likes: 456
+              }
+            ]}
+            maxItems={12}
+            showFilters={true}
+            showSearch={true}
+            autoRefresh={true}
+            refreshInterval={30000}
+          />
+        </div>
+      </section>
+
+      {/* Interactive Content Elements */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              🚀 Interactive Content Experience
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our content through interactive widgets and discover what's trending, 
+              featured, and most relevant to your interests.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Featured Content Carousel */}
+            <div className="lg:col-span-2">
+              <FeaturedContentCarousel />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Trending Content Widget */}
+            <div className="lg:col-span-1">
+              <TrendingContentWidget />
+            </div>
+            
+            {/* Content Stats Widget */}
+            <div className="lg:col-span-2">
+              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">📊 Content Statistics</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-indigo-600 mb-2">50+</div>
+                    <div className="text-sm text-gray-600">Total Articles</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600 mb-2">25+</div>
+                    <div className="text-sm text-gray-600">Case Studies</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
+                    <div className="text-sm text-gray-600">Implementation Guides</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
+                    <div className="text-sm text-gray-600">Webinars</div>
+                  </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <Link
+                    href="/content-showcase"
+                    className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                  >
+                    Explore All Content
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/create-and-deploy-new-content-d46f
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
