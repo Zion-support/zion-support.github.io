@@ -92,11 +92,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: LLM Optimization Masterclass, AI Automation Guide & $2.8B Unicorn Success!
+                🎉 NEW: AI Trends 2025 Analysis, Manufacturing Transformation & Interactive ROI Calculator!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: LLM Optimization Masterclass (10x performance gains), AI Automation Enterprise Transformation (300-500% efficiency), 
-                Global Tech Unicorn Success Story ($2.8B value creation), plus advanced implementation strategies. 
+                Just released: Comprehensive AI Trends 2025 Analysis, Manufacturing Giant $2.1B Transformation Case Study, 
+                Interactive AI ROI Calculator, plus quantum AI breakthroughs and neural interface innovations. 
                 Get expert insights on the cutting-edge AI technologies transforming 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,16 +107,22 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-llm-optimization-masterclass"
+                  href="/blog/ai-2025-comprehensive-trends-analysis"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read LLM Masterclass
+                  Read AI Trends 2025
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-global-tech-unicorn-transformation"
+                  href="/case-studies/ai-2025-manufacturing-giant-transformation"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $2.8B Success Story
+                  View $2.1B Success Story
+                </Link>
+                <Link
+                  href="/tools/ai-roi-calculator"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  Try ROI Calculator
                 </Link>
               </div>
             </div>
@@ -245,6 +251,64 @@ export default function HomePage() {
                     Get Expert Consultation →
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trending Content Widget */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What's Trending Now
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the most popular and engaging content our community is reading right now.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+              <TrendingContentWidget />
+            </Suspense>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">🔥 Hot Topics</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
+                    <span className="font-medium text-gray-900">AI Trends 2025</span>
+                    <span className="text-sm text-red-600 font-medium">+2.3k views</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
+                    <span className="font-medium text-gray-900">Manufacturing AI</span>
+                    <span className="text-sm text-orange-600 font-medium">+1.8k views</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                    <span className="font-medium text-gray-900">ROI Calculator</span>
+                    <span className="text-sm text-yellow-600 font-medium">+3.1k views</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                    <span className="font-medium text-gray-900">LLM Optimization</span>
+                    <span className="text-sm text-green-600 font-medium">+4.2k views</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 Pro Tip</h3>
+                <p className="text-sm text-gray-700 mb-4">
+                  Start with our AI ROI Calculator to understand your potential returns, 
+                  then dive into our case studies for real-world implementation insights.
+                </p>
+                <Link
+                  href="/tools/ai-roi-calculator"
+                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm"
+                >
+                  Try the Calculator →
+                </Link>
               </div>
             </div>
           </div>
