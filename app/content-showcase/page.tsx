@@ -5,6 +5,24 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI Industry Disruption Analysis 2025: How AI is Reshaping Every Sector",
+      description: "Comprehensive analysis of how AI is disrupting every industry in 2025. Real impact data, case studies, and actionable insights for business leaders across all sectors.",
+      href: "/blog/ai-industry-disruption-analysis-2025",
+      icon: "🏭",
+      category: "AI Analysis",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Trends 2025: Comprehensive Guide to the Future of Artificial Intelligence",
+      description: "Discover the 15 most important AI trends shaping 2025. From multimodal AI to edge computing, get expert insights on breakthrough technologies and business opportunities.",
+      href: "/blog/ai-trends-2025-comprehensive-guide",
+      icon: "🔮",
+      category: "AI Predictions",
+      readTime: "28 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI 2025: Year Ahead Predictions",
       description: "Discover our expert predictions for AI in 2025. From breakthrough technologies to enterprise adoption trends, get insights that will shape your AI strategy.",
       href: "/blog/ai-2025-year-ahead-predictions",
@@ -44,6 +62,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI in 18 Months",
+      description: "How a Fortune 500 manufacturing company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details and lessons learned.",
+      href: "/case-studies/ai-transformation-fortune-500-success-2025",
+      icon: "🏆",
+      category: "Fortune 500 Success",
+      result: "$50M Savings",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Manufacturing Automation Success: 40% Cost Reduction Achieved",
       description: "How a Fortune 500 manufacturing company transformed their operations with AI automation, achieving unprecedented cost savings and efficiency gains while maintaining the highest quality standards.",
       href: "/case-studies/ai-manufacturing-automation-success-2025",
@@ -73,6 +100,15 @@ export default function ContentShowcasePage() {
   ];
 
   const newResources = [
+    {
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Complete 200+ page resource with proven strategies, templates, checklists, and best practices for successful AI implementation in any organization.",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 30, 2025"
+    },
     {
       title: "AI Multimodal Implementation Guide 2025",
       description: "Everything you need to successfully implement multimodal AI in your organization. This comprehensive guide includes practical strategies, checklists, templates, and real-world case studies.",
