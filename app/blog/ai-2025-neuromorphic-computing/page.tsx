@@ -165,7 +165,7 @@ export default function AINeuromorphicComputing2025() {
               <div className="bg-white rounded-lg p-4">
                 <code className="text-sm text-gray-800">
                   # Spiking Neural Network Example<br/>
-                  if membrane_potential > threshold:<br/>
+                  if membrane_potential &gt; threshold:<br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;fire_spike()<br/>
                   &nbsp;&nbsp;&nbsp;&nbsp;membrane_potential = reset_value<br/>
                   else:<br/>

@@ -24,6 +24,63 @@ interface EnhancedContentPromotionBannerProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const featuredContent: ContentItem[] = [
+    {
+      id: 'ai-advanced-automation',
+      title: 'AI Advanced Automation 2025: Complete Implementation Guide',
+      description: 'Master advanced AI automation with our comprehensive guide. Learn strategies that deliver 300%+ ROI and 60% cost reduction.',
+      href: '/blog/ai-2025-advanced-automation',
+      icon: '🤖',
+      category: 'AI Automation',
+      readTime: '22 min read',
+      isNew: true
+    },
+    {
+      id: 'generative-agents-production',
+      title: 'Generative AI Agents in Production 2025',
+      description: 'Deploy and manage AI agents in production environments. Achieve 99.9% uptime and 400%+ ROI with proven strategies.',
+      href: '/blog/ai-2025-generative-agents-in-production',
+      icon: '🧠',
+      category: 'AI Agents',
+      readTime: '28 min read',
+      isTrending: true
+    },
+    {
+      id: 'cybersecurity-breakthrough',
+      title: '$50M Cybersecurity Transformation Success',
+      description: 'How a Fortune 500 company achieved 99.8% threat detection accuracy and $50M in security cost savings.',
+      href: '/case-studies/ai-cybersecurity-transformation-breakthrough-2025',
+      icon: '🛡️',
+      category: 'Case Study',
+      type: 'Success Story',
+      isNew: true
+    },
+    {
+      id: 'ai-implementation-guide',
+      title: 'AI Implementation Master Guide 2026',
+      description: 'Download our 200+ page comprehensive guide with templates, checklists, and proven strategies for AI success.',
+      href: '/resources/ai-implementation-master-guide-2026',
+      icon: '📚',
+      category: 'Free Resource',
+      type: '200+ Pages',
+      isNew: true
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentContent = featuredContent[currentIndex];
+=======
+=======
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
 export default function EnhancedContentPromotionBanner({
   title,
   subtitle,
@@ -83,6 +140,11 @@ export default function EnhancedContentPromotionBanner({
   };
 
   const styles = getVariantStyles();
+<<<<<<< HEAD
+>>>>>>> 94c34cf87ce80fe1dec962245ab12c3fa6ded719
+
+  if (!isVisible) return null;
+=======
 =======
   type: 'article' | 'case-study' | 'resource';
   readTime?: string;
@@ -155,11 +217,15 @@ const getTypeLabel = (type: string) => {
       return 'Content';
   }
 };
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
 
 export default function EnhancedContentPromotionBanner() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+=======
     <section className={`py-20 ${styles.container} text-white relative overflow-hidden ${className}`}>
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,6 +319,7 @@ export default function EnhancedContentPromotionBanner() {
           </Link>
 =======
     <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -375,7 +442,103 @@ export default function EnhancedContentPromotionBanner() {
               Download Resources
             </Link>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+<<<<<<< HEAD
+=======
+    <section className={`py-20 ${styles.container} text-white relative overflow-hidden ${className}`}>
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6`}>
+            <span className={`text-sm font-medium ${styles.badgeText}`}>{subtitle}</span>
+          </div>
+          
+          <h2 className={`text-4xl md:text-6xl font-bold mb-6 ${styles.title}`}>
+            {title}
+          </h2>
+          
+          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.description}`}>
+            {description}
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/content-showcase"
+              className={`px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg ${styles.button}`}
+            >
+              🎯 Explore All Content
+            </Link>
+            <Link
+              href="/blog"
+              className={`px-10 py-4 rounded-lg font-semibold transition-colors text-lg ${styles.buttonOutline}`}
+            >
+              📚 Read Latest Articles
+            </Link>
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayedContent.map((item, index) => (
+            <Link key={index} href={item.href} className="group">
+              <div className={`${styles.card} p-6 rounded-xl transition-all duration-300 border border-white border-opacity-20`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className={`text-lg font-semibold mb-2 ${styles.cardText}`}>
+                  {item.title}
+                </h3>
+                <p className={`text-sm mb-3 ${styles.cardSubtext}`}>
+                  {item.description}
+                </p>
+                <div className="flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    {item.isNew && (
+                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        NEW
+                      </span>
+                    )}
+                    {item.isTrending && (
+                      <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        TRENDING
+                      </span>
+                    )}
+                    <span className={styles.cardSubtext}>{item.category}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {item.readTime && (
+                      <span className={styles.cardSubtext}>{item.readTime}</span>
+                    )}
+                    {item.type && (
+                      <>
+                        <span className={styles.cardSubtext}>•</span>
+                        <span className={styles.cardSubtext}>{item.type}</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Additional CTA */}
+        <div className="text-center mt-12">
+          <Link
+            href="/resources"
+            className={`px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4 ${styles.button}`}
+          >
+            📋 Download Free Resources
+          </Link>
+          <Link
+            href="/case-studies"
+            className={`px-8 py-3 rounded-lg font-semibold transition-colors inline-block ${styles.buttonOutline}`}
+          >
+            📊 View Case Studies
+          </Link>
+>>>>>>> 94c34cf87ce80fe1dec962245ab12c3fa6ded719
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d918
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
         </div>
       </div>
     </section>

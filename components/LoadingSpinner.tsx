@@ -25,8 +25,23 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           fill="none"
           viewBox="0 0 24 24"
         >
-          {text}
-        </motion.p>
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          />
+        </svg>
+      </div>
+      {text && (
+        <p className="mt-2 text-sm text-gray-600">{text}</p>
       )}
       
       {/* Accessibility: Screen reader only text */}
@@ -44,15 +59,10 @@ export const SkeletonLoader: React.FC<{ className?: string }> = ({ className = '
 export const PageLoader: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center bg-black">
     <div className="text-center">
-      <LoadingSpinner size="lg" color="primary" text="Loading Zion Tech Group..." />
-      <motion.div
-        className="mt-8 text-gray-400"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-      >
+      <LoadingSpinner size="lg" text="Loading Zion Tech Group..." />
+      <div className="mt-8 text-gray-400">
         <p className="text-lg">Pioneering the future of technology...</p>
-      </motion.div>
+      </div>
     </div>
   </div>
 );
@@ -60,7 +70,7 @@ export const PageLoader: React.FC = () => (
 // Inline loading component
 export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
   <div className="inline-flex items-center space-x-2">
-    <LoadingSpinner size="sm" color="primary" showText={false} />
+    <LoadingSpinner size="sm" />
     <span className="text-sm text-gray-400">{text}</span>
   </div>
 );
@@ -68,7 +78,7 @@ export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' 
 // Button loading state
 export const ButtonLoader: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => (
   <div className="inline-flex items-center space-x-2">
-    <LoadingSpinner size="sm" color="white" showText={false} />
+    <LoadingSpinner size="sm" />
     <span className="text-sm">Processing...</span>
   </div>
 );

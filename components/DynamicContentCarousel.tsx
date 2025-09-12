@@ -242,7 +242,7 @@ export default function DynamicContentCarousel() {
 
   const currentItem = contentItems[currentIndex];
   const featuredItems = contentItems.filter(item => item.isFeatured);
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
 
   return (
     <section className={`py-16 bg-gradient-to-r from-gray-50 to-blue-50 ${className}`}>
@@ -528,7 +528,7 @@ export default function DynamicContentCarousel() {
                         {getTypeLabel(item.type)}
                       </span>
                     </div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {item.title}
@@ -592,7 +592,7 @@ export default function DynamicContentCarousel() {
             </div>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
       </div>
     </section>
   );

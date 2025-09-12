@@ -163,9 +163,9 @@ export default function AICybersecurityTransformation2025() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">Response Times:</h4>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• < 30 seconds for critical threats</li>
-                    <li>• < 2 minutes for containment</li>
-                    <li>• < 5 minutes for full response</li>
+                    <li>• &lt; 30 seconds for critical threats</li>
+                    <li>• &lt; 2 minutes for containment</li>
+                    <li>• &lt; 5 minutes for full response</li>
                     <li>• 24/7 automated monitoring</li>
                   </ul>
                 </div>

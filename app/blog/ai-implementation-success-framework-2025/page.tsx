@@ -172,7 +172,7 @@ export default function AIImplementationSuccessFramework2025() {
                 <ul className="text-gray-700 text-sm space-y-1">
                   <li>• 99.9% model accuracy</li>
                   <li>• 99.5% system uptime</li>
-                  <li>• < 100ms response time</li>
+                  <li>• &lt; 100ms response time</li>
                   <li>• 100% compliance with regulations</li>
                 </ul>
               </div>

@@ -98,7 +98,7 @@ export default function ResourcesPage() {
 
   const featuredResources = resources.filter(resource => resource.featured);
   const regularResources = resources.filter(resource => !resource.featured);
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
 
 export default function Resources() {
   return (
@@ -452,7 +452,7 @@ export default function Resources() {
             <p className='text-sm text-gray-500 mt-4'>
               No spam. Unsubscribe anytime. We respect your privacy.
             </p>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
           </div>
         </section>
 

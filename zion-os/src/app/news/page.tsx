@@ -1,26 +1,10 @@
+import { newsArticles } from "./data";
+
 export default function NewsPage() {
+<<<<<<< HEAD
   const articles = [
     {
 <<<<<<< HEAD
-      emoji: "🛡️",
-      title: "Zion OS 1.4: Security & Compliance Pack",
-      excerpt:
-        "Enterprise-grade compliance templates, audit trails, and security hardening for regulated deployments.",
-      date: "Sep 12, 2025",
-      href: "/news/zion-os-1-4-security-compliance",
-      gradient: "from-rose-600 to-red-600",
-    },
-    {
-      emoji: "💼",
-      title: "Customer Story: 50% Infra Cost Reduction",
-      excerpt:
-        "A global enterprise cut infrastructure spend by 50% with Zion OS orchestration and analytics.",
-      date: "Sep 12, 2025",
-      href: "/news/enterprise-infra-cost-reduction-50-percent",
-      gradient: "from-emerald-600 to-teal-600",
-    },
-    {
-=======
       emoji: "⚡",
       title: "Zion OS 1.4: Performance & Accessibility Upgrades",
       excerpt:
@@ -66,7 +50,26 @@ export default function NewsPage() {
       gradient: "from-rose-600 to-red-600",
     },
     {
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+=======
+      emoji: "🛡️",
+      title: "Zion OS 1.4: Security & Compliance Pack",
+      excerpt:
+        "Enterprise-grade compliance templates, audit trails, and security hardening for regulated deployments.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-4-security-compliance",
+      gradient: "from-rose-600 to-red-600",
+    },
+    {
+      emoji: "💼",
+      title: "Customer Story: 50% Infra Cost Reduction",
+      excerpt:
+        "A global enterprise cut infrastructure spend by 50% with Zion OS orchestration and analytics.",
+      date: "Sep 12, 2025",
+      href: "/news/enterprise-infra-cost-reduction-50-percent",
+      gradient: "from-emerald-600 to-teal-600",
+    },
+    {
+>>>>>>> 94c34cf87ce80fe1dec962245ab12c3fa6ded719
       emoji: "🧠",
       title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
       excerpt:
@@ -136,6 +139,7 @@ export default function NewsPage() {
     },
     {
 <<<<<<< HEAD
+=======
       emoji: "🧠",
       title: "ZionGPT Core v2: Context Windows 10x and Tools API",
       excerpt:
@@ -145,8 +149,7 @@ export default function NewsPage() {
       gradient: "from-fuchsia-600 to-purple-600",
     },
     {
-=======
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> 94c34cf87ce80fe1dec962245ab12c3fa6ded719
       emoji: "🏪",
       title: "Marketplace Suite: Jobs, Proposals, and Escrow Go GA",
       excerpt:
@@ -165,6 +168,11 @@ export default function NewsPage() {
       gradient: "from-rose-600 to-red-600",
     },
   ];
+=======
+  const articles = [...newsArticles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
@@ -172,33 +180,42 @@ export default function NewsPage() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-4">News & Announcements</h1>
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
-            Product releases, academy updates, ecosystem news, and partner highlights.
+            Stay updated with the latest developments, product launches, and
+            success stories from the Zion ecosystem.
           </p>
         </div>
       </section>
 
-      <section className="pb-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
-            <a
-              key={index}
-              href={article.href}
-              className="group rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/50 hover:border-white/20 transition-all"
-            >
-              <div className={`h-2 bg-gradient-to-r ${article.gradient}`} />
-              <div className="p-6">
-                <div className="text-3xl mb-3">{article.emoji}</div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:underline">
-                  {article.title}
-                </h3>
-                <p className="text-white/70 mb-4">{article.excerpt}</p>
-                <div className="text-white/50 text-sm">{article.date}</div>
-              </div>
-            </a>
-          ))}
+      <section className="pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {articles.map((article, index) => (
+              <a
+                key={index}
+                href={article.href}
+                className="group block rounded-2xl overflow-hidden border border-white/10 bg-zinc-800/50 hover:border-white/30 transition-all duration-300 hover:scale-105"
+              >
+                <div className={`h-2 bg-gradient-to-r ${article.gradient}`} />
+                <div className="p-6">
+                  <div className="text-3xl mb-3">{article.emoji}</div>
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-white">
+                    {article.title}
+                  </h3>
+                  <p className="text-white/70 mb-4 text-sm leading-relaxed">
+                    {article.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-white/50">
+                    <span>{article.date}</span>
+                    <span className="group-hover:text-white transition-colors">
+                      Read more →
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </div>
   );
 }
-
