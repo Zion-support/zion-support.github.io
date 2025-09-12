@@ -1,35 +1,36 @@
-
+import React from 'react';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Heart, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
+import { useAppDispatch } from "@/store/hooks";
+import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
 
 export interface TalentCardProps {
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
 }
 
-export function TalentCard({
+const TalentCardComponent = ({
   talent,
   onViewProfile,
   onRequestHire,
-  isSaved,
-  onToggleSave,
   isAuthenticated
 }: TalentCardProps) {
   const navigate = useNavigate();
   const location = useLocation();
   const { toast } = useToast();
+  const dispatch = useAppDispatch();
   
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    navigate(`/talent/${talent.id}`);
+    router.push(`/talent/${talent.id}`);
     
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
@@ -62,6 +63,13 @@ export function TalentCard({
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved);
     }
+
+    dispatch(addToWishlist({ id: talent.id, type: 'talent', data: talent }));
+    fetch(`${getApiUrl()}/wishlist`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: talent.id, type: 'talent' })
+    }).catch(() => {});
   };
 
   // Extract skills - limit to 5 for display
@@ -79,10 +87,11 @@ export function TalentCard({
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
-                <img 
-                  src={talent.profile_picture_url} 
-                  alt={talent.full_name} 
-                  className="w-full h-full object-cover" 
+                <img
+                  src={talent.profile_picture_url}
+                  alt={talent.full_name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -104,10 +113,11 @@ export function TalentCard({
               <Button
                 variant="ghost"
                 size="sm"
+                aria-label="save-to-wishlist"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
               >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
+                <Heart className={`h-5 w-5 ${isSaved ? 'fill-red-500 text-red-500' : ''}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
@@ -192,4 +202,7 @@ export function TalentCard({
       </div>
     </Card>
   );
-}
+};
+
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard';

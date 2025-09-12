@@ -1,0 +1,15 @@
+Starting systematic merge process for open pull requests...
+Created merge branch: systematic-merge-20250911-191007
+Fetching open pull requests...
+Found 1 open pull requests
+Processing in batches of 10...
+
+=== Final Merge Summary ===
+Total batches processed: 0
+Total successful merges: 0
+Total failed merges: 0
+
+Current branch: systematic-merge-20250911-191007
+To merge to main: git checkout main && git merge systematic-merge-20250911-191007
+To push this branch: git push origin systematic-merge-20250911-191007
+To continue resolving conflicts: git status

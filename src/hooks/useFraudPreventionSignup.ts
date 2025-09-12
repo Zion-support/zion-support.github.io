@@ -3,18 +3,20 @@ import { useState, useCallback } from 'react';
 import { checkSignupPatterns } from '@/services/fraud/signupCheck';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
+import api from '@/lib/api';
 
 export function useFraudPreventionSignup() {
+
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   
   // Get the user's IP address (in a real app, you'd do this server-side)
   const getIP = async (): Promise<string | undefined> => {
     try {
-      const response = await fetch('https://api.ipify.org?format=json');
+      const response = await apiClient('https://api.ipify.org?format=json');
       const data = await response.json();
       return data.ip;
     } catch (error) {
-      console.error('Error getting IP:', error);
+      logErrorToProduction('Error getting IP:', { data: error });
       return undefined;
     }
   };
@@ -29,9 +31,10 @@ export function useFraudPreventionSignup() {
       const fraudCheck = await checkSignupPatterns(email, ipAddress);
       
       if (fraudCheck.isSuspicious) {
-        console.log('Suspicious signup detected:', fraudCheck.reasons);
+        logInfo('Suspicious signup detected:', { data:  { data: fraudCheck.reasons } });
         
         // Create a fraud flag for admin review
+        if (!supabase) throw new Error('Supabase client not initialized');
         const { error } = await supabase.from('fraud_flags').insert({
           user_email: email,
           content_type: 'signup',
@@ -45,7 +48,7 @@ export function useFraudPreventionSignup() {
         });
         
         if (error) {
-          console.error('Error creating fraud flag:', error);
+          logErrorToProduction('Error creating fraud flag:', { data: error });
         }
         
         // Depending on how strict we want to be, we could block the signup
@@ -69,7 +72,7 @@ export function useFraudPreventionSignup() {
       // No suspicious patterns found
       return true;
     } catch (error) {
-      console.error('Error in fraud check:', error);
+      logErrorToProduction('Error in fraud check:', { data: error });
       // On error, allow the signup but log the error
       return true;
     } finally {
