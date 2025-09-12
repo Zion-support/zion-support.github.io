@@ -17,7 +17,7 @@ const EnhancedContentPromotionBanner = lazy(() => import('../components/Enhanced
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
 const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
-const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
+const NewContentPromotionBanner = lazy(() => import('../components/NewContentPromotionBanner'));
 const TrendingContentWidget = lazy(() => import('../components/TrendingContentWidget'));
 const EnhancedNewsletterSignup = lazy(() => import('../components/EnhancedNewsletterSignup'));
 
@@ -113,6 +113,11 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content Promotion Banner */}
+        <Suspense fallback={<LoadingSpinner size="md" text="Loading new content..." />}>
+          <NewContentPromotionBanner />
+        </Suspense>
         
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
