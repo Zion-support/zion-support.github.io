@@ -1,14 +1,33 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
+import InteractiveContentDiscovery from '../../components/InteractiveContentDiscovery';
 
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "28 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025: Neural Interface Revolution - Brain-Computer Integration",
+      description: "Explore the revolutionary neural interface technologies of 2025. Discover how brain-computer interfaces are transforming healthcare, communication, and human-AI interaction.",
+      href: "/blog/ai-2025-neural-interface-revolution",
+      icon: "🧠",
+      category: "Neural AI",
+      readTime: "32 min read",
+      date: "Jan 31, 2025"
+    },
+    {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🧠",
+      icon: "🚀",
       category: "AI Innovations",
       readTime: "25 min read",
       date: "Jan 30, 2025"
@@ -44,6 +63,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Space Exploration Breakthrough 2025: $2B Mission Success",
+      description: "How AI-powered autonomous spacecraft achieved unprecedented success in deep space exploration, reducing mission costs by 80% while increasing scientific discoveries by 300%.",
+      href: "/case-studies/ai-space-exploration-breakthrough-2025",
+      icon: "🚀",
+      category: "Space AI",
+      result: "$2B Mission Value",
+      date: "Feb 01, 2025"
+    },
+    {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
       description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
       href: "/case-studies/ai-transformation-fortune-500-success-2025",
@@ -74,13 +102,13 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across all industries.",
+      href: "/resources/ai-2025-implementation-master-guide",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Feb 01, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
@@ -99,6 +127,24 @@ export default function ContentShowcasePage() {
       category: "Security",
       type: "Free Download",
       date: "Feb 06, 2025"
+    },
+    {
+      title: "Quantum AI Implementation Guide 2025: Next-Gen Computing",
+      description: "Complete guide to implementing quantum-enhanced AI systems. Includes quantum algorithm selection, hardware requirements, and real-world applications.",
+      href: "/resources/quantum-ai-implementation-guide-2025",
+      icon: "⚛️",
+      category: "Quantum AI",
+      type: "Free Download",
+      date: "Feb 02, 2025"
+    },
+    {
+      title: "Neural Interface Development Guide: Brain-Computer Integration",
+      description: "Comprehensive guide to developing neural interface applications. Covers signal processing, AI integration, and ethical considerations.",
+      href: "/resources/neural-interface-development-guide-2025",
+      icon: "🧠",
+      category: "Neural AI",
+      type: "Free Download",
+      date: "Feb 03, 2025"
     }
   ];
 
@@ -213,6 +259,11 @@ export default function ContentShowcasePage() {
               </Link>
             </div>
           </div>
+        </section>
+
+        {/* Interactive Content Discovery */}
+        <section className="mb-16">
+          <InteractiveContentDiscovery />
         </section>
 
         {/* Content Categories */}
