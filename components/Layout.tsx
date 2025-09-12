@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Navigation from './Navigation';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Navigation />
       <main>
         {children}
       </main>

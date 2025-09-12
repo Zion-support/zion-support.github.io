@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// A type that safely handles all possible reference types without relying on React
+export type SafeRef<T> =
+  | { current: T | null }
+  | ((instance: T | null) => void)
+  | null;
+
+=======
+>>>>>>> origin/backup-critical-fixes-20250824-224408
+// Type definitions for ref-types;
+interface ref-types {;
+  // TODO: Add proper type definitions;
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/backup-critical-fixes-20250824-224408
