@@ -31,11 +31,31 @@
     "noImplicitReturns": false,
     "allowJs": true,
     "incremental": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "typeRoots": [
       "./node_modules/@types"
+    ],
+    "noEmit": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
     ]
   },
-  "include": ["app", "components", "lib", "types"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "app",
+    "components",
+    "lib",
+    "types",
+    ".next/types/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

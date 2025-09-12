@@ -51,9 +51,10 @@ const Navigation: React.FC = () => {
       href: '/resources',
       icon: <BookOpen className="w-4 h-4" />,
       dropdown: [
+        { name: 'AI Implementation Checklist 2025', href: '/resources/ai-implementation-checklist-2025', icon: <BookOpen className="w-4 h-4" />, badge: 'New' },
         { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
-        { name: 'Case Studies', href: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
-        { name: 'Blog', href: '/blog', icon: <BookOpen className="w-4 h-4" /> },
+        { name: 'Case Studies', href: '/case-studies', icon: <BarChart3 className="w-4 h-4" />, badge: 'New' },
+        { name: 'Blog', href: '/blog', icon: <BookOpen className="w-4 h-4" />, badge: 'New' },
         { name: 'News', href: '/news', icon: <Globe className="w-4 h-4" /> },
       ]
     },
@@ -138,12 +139,19 @@ const Navigation: React.FC = () => {
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-all duration-200 group/item"
+                              className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-all duration-200 group/item"
                             >
-                              <div className="text-cyan-400 group-hover/item:text-cyan-300">
-                                {dropdownItem.icon}
+                              <div className="flex items-center space-x-3">
+                                <div className="text-cyan-400 group-hover/item:text-cyan-300">
+                                  {dropdownItem.icon}
+                                </div>
+                                <span>{dropdownItem.name}</span>
                               </div>
-                              <span>{dropdownItem.name}</span>
+                              {dropdownItem.badge && (
+                                <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                                  {dropdownItem.badge}
+                                </span>
+                              )}
                             </Link>
                           ))}
                         </div>
@@ -220,11 +228,18 @@ const Navigation: React.FC = () => {
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="flex items-center space-x-3 text-gray-400 hover:text-gray-200 transition-colors duration-200 py-1"
+                          className="flex items-center justify-between text-gray-400 hover:text-gray-200 transition-colors duration-200 py-1"
                           onClick={() => setIsOpen(false)}
                         >
-                          {dropdownItem.icon}
-                          <span className="text-sm">{dropdownItem.name}</span>
+                          <div className="flex items-center space-x-3">
+                            {dropdownItem.icon}
+                            <span className="text-sm">{dropdownItem.name}</span>
+                          </div>
+                          {dropdownItem.badge && (
+                            <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                              {dropdownItem.badge}
+                            </span>
+                          )}
                         </Link>
                       ))}
                     </div>
