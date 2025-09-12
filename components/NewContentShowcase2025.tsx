@@ -1,189 +1,118 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Clock, Users } from 'lucide-react';
 
-export default function NewContentShowcase2025() {
-  const featuredContent = [
+const NewContentShowcase2025: React.FC = () => {
+  const newContent = [
     {
-      title: "The Multimodal AI Revolution",
-      description: "Explore how multimodal AI is transforming industries by combining text, vision, audio, and other modalities.",
-      type: "Blog Post",
-      readTime: "15 min",
-      url: "/blog/ai-2025-multimodal-revolution",
-      category: "AI Innovation",
-      featured: true
+      title: "AI Services 2025",
+      description: "Comprehensive AI solutions including automation, content generation, analytics, and cybersecurity",
+      href: "/ai-services-2025",
+      category: "AI Services",
+      icon: "🤖",
+      badge: "NEW",
+      badgeColor: "bg-purple-500"
     },
     {
-      title: "AI Financial Services Breakthrough",
-      description: "How a Fortune 500 company achieved $50M revenue increase using AI-powered automation.",
-      type: "Case Study",
-      readTime: "12 min",
-      url: "/case-studies/ai-2025-financial-services-breakthrough",
-      category: "Success Story",
-      featured: true
+      title: "Quantum Computing Solutions",
+      description: "Revolutionary quantum solutions for finance, healthcare, security, and research",
+      href: "/quantum-computing-solutions",
+      category: "Quantum Tech",
+      icon: "⚛️",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-indigo-500"
     },
     {
-      title: "Ultimate AI Implementation Guide",
-      description: "Complete step-by-step guide to successfully implementing AI in your organization.",
-      type: "Master Guide",
-      readTime: "25 min",
-      url: "/resources/ai-2025-implementation-master-guide-ultimate",
-      category: "Implementation",
-      featured: true
+      title: "AI Implementation Guide 2025",
+      description: "Complete step-by-step guide to successful AI adoption in your organization",
+      href: "/ai-implementation-guide-2025",
+      category: "Guide",
+      icon: "📚",
+      badge: "ESSENTIAL",
+      badgeColor: "bg-blue-500"
     }
   ];
 
-  const stats = [
-    { label: "New Articles", value: "150+", icon: Star },
-    { label: "Case Studies", value: "45+", icon: Users },
-    { label: "Resources", value: "80+", icon: Clock }
-  ];
-
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-32 bg-gradient-to-b from-blue-100/50 to-transparent"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            🚀 Fresh AI Content for 2025
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+            🚀 Revolutionary New Content Just Released!
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, case studies, and implementation guides 
-            from our team of AI experts. Stay ahead of the curve with cutting-edge content.
+          <p className="text-lg text-slate-600 max-w-4xl mx-auto">
+            Discover our latest groundbreaking content: AI Services 2025, Quantum Computing Solutions, 
+            and the ultimate AI Implementation Guide. Everything you need to stay ahead of the technology curve.
           </p>
         </div>
 
-        {/* Stats */}
+        {/* Content Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <stat.icon className="w-8 h-8 text-blue-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+          {newContent.map((content, index) => (
+            <div key={index} className="group">
+              <Link href={content.href} className="block">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-slate-200 group-hover:border-blue-300 group-hover:scale-105">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{content.icon}</div>
+                    <span className={`${content.badgeColor} text-white text-xs px-3 py-1 rounded-full font-medium animate-pulse`}>
+                      {content.badge}
+                    </span>
+                  </div>
+                  <span className="inline-block bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-xs px-2 py-1 rounded-full mb-3">
                     {content.category}
                   </span>
-                  <span className="text-sm text-gray-500 flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {content.readTime}
-                  </span>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {content.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {content.description}
+                  </p>
+                  <div className="mt-4 flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700">
+                    Explore Now
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {content.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-blue-600">
-                    {content.type}
-                  </span>
-                  <Link 
-                    href={content.url}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business with AI?
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of companies already using our AI solutions to drive 
-            innovation, increase efficiency, and achieve breakthrough results.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services/ai-consulting"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center justify-center"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              href="/content-showcase"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold inline-flex items-center justify-center"
-            >
-              Explore All Content
-            </Link>
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+              Join thousands of businesses already using our cutting-edge AI and quantum solutions 
+              to drive innovation and achieve unprecedented growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/content-showcase"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+              >
+                Explore All Content
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                Get Expert Consultation
+              </Link>
+            </div>
           </div>
         </div>
-
-        {/* Additional Content Links */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Link 
-            href="/blog"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Latest Blog Posts
-            </h4>
-            <p className="text-sm text-gray-600">
-              Stay updated with the latest AI trends and insights
-            </p>
-          </Link>
-          
-          <Link 
-            href="/case-studies"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Success Stories
-            </h4>
-            <p className="text-sm text-gray-600">
-              Real-world AI implementations and their results
-            </p>
-          </Link>
-          
-          <Link 
-            href="/resources"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Implementation Guides
-            </h4>
-            <p className="text-sm text-gray-600">
-              Step-by-step guides and best practices
-            </p>
-          </Link>
-          
-          <Link 
-            href="/webinars"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Webinars & Events
-            </h4>
-            <p className="text-sm text-gray-600">
-              Live sessions with AI experts and thought leaders
-            </p>
-          </Link>
-        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default NewContentShowcase2025;

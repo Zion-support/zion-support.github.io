@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import { ArrowLeft, Calendar, Clock, User, Heart, Brain, Award, TrendingUp } from 'lucide-react';
 
 export default function AINeuralInterfaceHealthcare2025() {

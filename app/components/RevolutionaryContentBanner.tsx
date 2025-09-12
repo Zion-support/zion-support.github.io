@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function RevolutionaryContentBanner() {
   const [currentFeature, setCurrentFeature] = useState(0);

@@ -2,7 +2,7 @@ import React from 'react';
 =======
 =======
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Cybersecurity Threats 2025: Complete Defense Guide',

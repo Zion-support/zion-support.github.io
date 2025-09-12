@@ -6,7 +6,7 @@ import {
   ArrowRight, Calendar, Target, CheckCircle, BarChart3,
   Clock, Globe, Award, Lightbulb, Rocket
 } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Transformation Success: Global Tech Giant Achieves 400% ROI - Case Study',

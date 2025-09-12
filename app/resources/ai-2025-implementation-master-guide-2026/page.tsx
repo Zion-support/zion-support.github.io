@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import { Download, BookOpen, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function AIImplementationMasterGuide2026() {

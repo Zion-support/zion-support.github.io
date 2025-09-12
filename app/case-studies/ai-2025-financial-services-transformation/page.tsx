@@ -1,7 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import SEO from '../../components/SEO';
+import { Link } from 'react-router-dom';
 
 export default function AIFinancialServicesTransformation2025() {
   return (

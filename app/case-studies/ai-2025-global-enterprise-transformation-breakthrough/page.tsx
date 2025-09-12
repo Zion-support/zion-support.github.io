@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 <<<<<<< HEAD
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 =======
 import { Metadata } from 'next';
 

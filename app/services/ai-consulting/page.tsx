@@ -1,7 +1,7 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 import { CheckCircle, ArrowRight, Brain, Zap, Target, Users, Award, Clock, Shield, Globe } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIConsulting() {
   return (
