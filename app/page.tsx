@@ -9,6 +9,7 @@ import ContentShowcase, { featuredContent, trendingContent, latestContent } from
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -71,6 +72,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner variant="featured" maxItems={3} />
+
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
 
@@ -86,8 +90,8 @@ export default function HomePage() {
               🚀 Fresh AI Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our latest breakthrough content: AI Breakthrough Trends 2025, AI Startup Funding Masterclass, 
-              Enterprise Security Guide, and the complete AI Implementation Master Guide. Expert insights to accelerate your success.
+              Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Enterprise AI Transformation Success Stories, 
+              and the complete AI Implementation Playbook. Expert insights to accelerate your success.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link

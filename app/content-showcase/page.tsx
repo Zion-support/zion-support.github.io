@@ -75,41 +75,41 @@ import SEO from '../../components/SEO';
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2025-year-end-summary" className="group">
+            <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                <h3 className="text-lg font-semibold mb-2">AI 2025: Year-End Summary</h3>
-                <p className="text-sm opacity-90 mb-3">Comprehensive review of breakthrough innovations and trends</p>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
+                <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
                 <div className="flex items-center text-xs opacity-75">
-                  <span>25 min read</span>
+                  <span>28 min read</span>
                   <span className="mx-2">•</span>
-                  <span>Trending</span>
+                  <span>NEW</span>
                 </div>
               </div>
             </Link>
             
-            <Link href="/blog/ai-productivity-automation-2025" className="group">
+            <Link href="/case-studies/ai-enterprise-transformation-breakthrough-2025" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
-                <h3 className="text-lg font-semibold mb-2">AI Productivity Automation 2025</h3>
-                <p className="text-sm opacity-90 mb-3">Complete implementation guide with 300% productivity gains</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>22 min read</span>
-                  <span className="mx-2">•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/case-studies/ai-manufacturing-automation-success-2025" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
-                <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
-                <p className="text-sm opacity-90 mb-3">40% cost reduction and 60% faster processing</p>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+                <h3 className="text-lg font-semibold mb-2">Enterprise AI: $50M Success</h3>
+                <p className="text-sm opacity-90 mb-3">Fortune 500 company achieves unprecedented growth</p>
                 <div className="flex items-center text-xs opacity-75">
                   <span>Case Study</span>
                   <span className="mx-2">•</span>
-                  <span>New</span>
+                  <span>NEW</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/resources/ai-2025-complete-implementation-playbook" className="group">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
+                <h3 className="text-lg font-semibold mb-2">AI Implementation Playbook</h3>
+                <p className="text-sm opacity-90 mb-3">250+ page guide with templates and frameworks</p>
+                <div className="flex items-center text-xs opacity-75">
+                  <span>Free Download</span>
+                  <span className="mx-2">•</span>
+                  <span>NEW</span>
                 </div>
               </div>
             </Link>
@@ -168,38 +168,38 @@ import SEO from '../../components/SEO';
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2025-year-end-summary" className="group">
+            <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
               <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center relative">
-                  <div className="text-6xl">📊</div>
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    TRENDING
+                <div className="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center relative">
+                  <div className="text-6xl">🚀</div>
+                  <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    NEW
                   </div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                      AI Trends
+                    <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                      AI Innovations
                     </span>
-                    <span className="text-gray-500 text-sm">25 min read</span>
+                    <span className="text-gray-500 text-sm">28 min read</span>
                     <span className="text-gray-500 text-sm">•</span>
-                    <span className="text-gray-500 text-sm">Dec 28, 2025</span>
+                    <span className="text-gray-500 text-sm">Jan 15, 2025</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                    AI 2025: The Year That Changed Everything
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                    AI 2025: Breakthrough Innovations That Will Transform Everything
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
-                    A comprehensive look at the breakthrough innovations, enterprise transformations, 
-                    and paradigm shifts that defined artificial intelligence in 2025.
+                    Discover the revolutionary AI innovations of 2025 that are reshaping industries. 
+                    From quantum AI to autonomous systems, explore the technologies defining the future.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span className="text-blue-600 font-bold text-xs">ZT</span>
+                      <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span className="text-purple-600 font-bold text-xs">ZT</span>
                       </div>
                       <span className="text-sm text-gray-600">Zion Tech Group</span>
                     </div>
-                    <span className="text-blue-600 font-medium group-hover:underline">
+                    <span className="text-purple-600 font-medium group-hover:underline">
                       Read Article →
                     </span>
                   </div>
