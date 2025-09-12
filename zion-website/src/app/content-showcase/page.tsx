@@ -16,6 +16,36 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Sovereign AI Roadmap 2025",
+      description: "Residency, isolation, and policy gateways for sovereign AI without slowing delivery.",
+      href: "/blog/sovereign-ai-roadmap-2025",
+      icon: "🏛️",
+      category: "Governance",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Evaluation Pipelines & Infra 2025",
+      description: "Offline datasets, canary cohorts, and inline evals baked into CI/CD and runtime.",
+      href: "/blog/eval-pipelines-infra-2025",
+      icon: "🧪",
+      category: "Evaluation",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Foundation Model Cost Optimization: 38% Spend Reduction",
+      description: "Case study: quantization, distillation, caching, and dynamic routing cut spend by 38%.",
+      href: "/case-studies/foundation-models-cost-optimization-impact",
+      icon: "💸",
+      category: "Case Study",
+      readTime: "9 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Enterprise GenAI Security Blueprint 2025",
       description: "Practical controls for data leakage, prompt injection, model abuse, and compliance-by-design.",
       href: "/blog/ai-2025-genai-security-blueprint",

@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '40',
+      title: 'Sovereign AI Roadmap 2025: Residency & Control',
+      description: 'Build sovereign AI with regional data planes, policy gateways, and eval pipelines.',
+      href: '/blog/sovereign-ai-roadmap-2025',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '41',
+      title: 'Evaluation Pipelines & Infra 2025',
+      description: 'Ship reliable AI fast with offline datasets, canaries, and inline evals in runtime.',
+      href: '/blog/eval-pipelines-infra-2025',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: '42',
+      title: 'Foundation Model Cost Optimization: 38% Spend Reduction',
+      description: 'Case study: quantization, distillation, caching, and dynamic routing cut spend by 38%.',
+      href: '/case-studies/foundation-models-cost-optimization-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '31',
       title: 'Agentic Vendor Management 2025: From Intake to Renewal',
       description: 'Automate diligence, smarter negotiations, and renewal guardrails with agentic workflows.',

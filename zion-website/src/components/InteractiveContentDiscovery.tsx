@@ -28,6 +28,45 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '40',
+      title: 'Sovereign AI Roadmap 2025: Residency & Control',
+      description: 'Residency, isolation, policy gateways, and eval pipelines for sovereign AI.',
+      href: '/blog/sovereign-ai-roadmap-2025',
+      type: 'blog',
+      category: 'Governance',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Sovereign AI', 'Residency', 'Compliance', 'Policy'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '41',
+      title: 'Evaluation Pipelines & Infra 2025',
+      description: 'Offline datasets, canary cohorts, and inline evals built into CI/CD.',
+      href: '/blog/eval-pipelines-infra-2025',
+      type: 'blog',
+      category: 'Evaluation',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Evaluation', 'Observability', 'Reliability', 'CI/CD'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '42',
+      title: 'Foundation Model Cost Optimization: 38% Spend Reduction',
+      description: 'Case study: quantization, distillation, caching, and routing cut spend by 38%.',
+      href: '/case-studies/foundation-models-cost-optimization-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Optimization', 'Quantization', 'Distillation', 'Caching'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '31',
       title: 'Agentic Vendor Management 2025: From Intake to Renewal',
       description: 'Automate diligence, negotiations, and renewals with agentic workflows and policy‑as‑code.',
