@@ -100,6 +100,16 @@ function Header() {
                   📚 AI 2031 Ultimate Master Guide (BREAKTHROUGH)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/ai-2025-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 AI 2025 Breakthrough Revolution (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 10,000% ROI Global Success (BREAKTHROUGH)
+                </Link>
+                <Link href="/blog/ai-2025-ultimate-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Ultimate Implementation Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2025-advanced-ai-architecture" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🏗️ Advanced AI Architecture (NEW)
                 </Link>
