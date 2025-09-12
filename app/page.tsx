@@ -62,16 +62,15 @@ import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
-<<<<<<< HEAD
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
-import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
-=======
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
->>>>>>> cursor/create-and-deploy-new-content-e5f9
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
+import AI2029ContentShowcase from '../components/AI2029ContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -88,11 +87,20 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2029 CONTENT PROMOTION BANNER */}
+        <AI2029ContentPromotionBanner />
+        
+        {/* AI 2029 CONTENT SHOWCASE */}
+        <AI2029ContentShowcase />
+        
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
         
         {/* AI 2028 CONTENT SHOWCASE */}
         <AI2028ContentShowcase />
+        
+        {/* NEW CONTENT 2028 PROMOTION BANNER */}
+        <NewContent2028PromotionBanner />
         
         {/* AI 2027 CONTENT PROMOTION BANNER */}
         <AI2027ContentPromotionBanner />
