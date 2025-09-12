@@ -19,6 +19,8 @@ import UltraContentPromotionBanner2025 from '../components/UltraContentPromotion
 import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
 import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
+import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
+import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -157,6 +159,12 @@ export default function HomePage() {
         {/* AI 2030 CONTENT SHOWCASE */}
         <AI2030ContentShowcase />
 >>>>>>> a093a8a78ef4b354df7ee2583253201b7a0b9a36
+        
+        {/* AI 2031 CONTENT PROMOTION BANNER */}
+        <AI2031ContentPromotionBanner />
+        
+        {/* AI 2031 CONTENT SHOWCASE */}
+        <AI2031ContentShowcase />
         
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
