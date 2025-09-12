@@ -10,7 +10,7 @@ import ContentShowcase, { featuredContent, trendingContent, latestContent } from
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
-import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
@@ -40,6 +40,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Content Promotion Banner */}
+        <NewContentPromotionBanner />
+        
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
