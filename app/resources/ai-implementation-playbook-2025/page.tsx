@@ -6,28 +6,22 @@ export default function AIImplementationPlaybook2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-<<<<<<< HEAD
         title="AI Implementation Playbook 2025: Complete 150-Page Guide to Successful AI Deployment"
         description="Download our comprehensive AI implementation playbook with step-by-step guides, templates, checklists, and real-world case studies for successful AI deployment in 2025."
         keywords="AI implementation, AI deployment guide, AI playbook, AI strategy, AI roadmap, AI best practices"
         title="AI Implementation Playbook 2025: Complete Step-by-Step Guide"
         description="Download our comprehensive AI implementation playbook with 150+ actionable steps, templates, and frameworks. Transform your business with proven AI strategies."
         keywords="AI implementation, AI playbook, AI strategy, AI transformation, AI guide, AI checklist, AI framework"
-=======
         title="AI Implementation Playbook 2025: Complete Guide to Successful AI Deployment"
         description="Download our comprehensive 150-page AI implementation playbook. Step-by-step guide to successful AI deployment with proven frameworks, templates, and real-world case studies."
         keywords="AI implementation, AI deployment, AI playbook, AI guide, AI strategy, 2025"
->>>>>>> origin/cursor/create-and-deploy-new-content-9462
         url="/resources/ai-implementation-playbook-2025"
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<<<<<<< HEAD
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9462
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
@@ -42,7 +36,6 @@ export default function AIImplementationPlaybook2025() {
             <span className="text-sm text-gray-600">January 2025</span>
           </div>
           
-<<<<<<< HEAD
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-4 py-2 mb-4">
             <span className="text-sm font-medium">📋 FREE DOWNLOAD</span>
           </div>
@@ -124,7 +117,6 @@ export default function AIImplementationPlaybook2025() {
                 </ul>
               </div>
             </div>
-=======
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             AI Implementation Playbook 2025: Complete Guide to Successful AI Deployment
           </h1>
@@ -145,7 +137,6 @@ export default function AIImplementationPlaybook2025() {
             <span>150 pages</span>
             <span>•</span>
             <span>Free Download</span>
->>>>>>> origin/cursor/create-and-deploy-new-content-9462
           </div>
         </div>
 
@@ -250,7 +241,6 @@ export default function AIImplementationPlaybook2025() {
             <div className="bg-green-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Technical Frameworks</h3>
               <ul className="text-gray-700 space-y-2 text-sm">
-<<<<<<< HEAD
                 <li>• 15 implementation checklists</li>
                 <li>• 20 project templates</li>
                 <li>• Vendor evaluation scorecards</li>
@@ -374,7 +364,6 @@ export default function AIImplementationPlaybook2025() {
                 <li>• Go-live preparation checklist</li>
                 <li>• Post-implementation review template</li>
                 <li>• Continuous improvement plan</li>
-=======
                 <li>• Data Quality Assessment Checklist</li>
                 <li>• Model Performance Evaluation Framework</li>
                 <li>• Security and Compliance Checklist</li>
@@ -402,12 +391,10 @@ export default function AIImplementationPlaybook2025() {
                 <li>• Best Practices Documentation</li>
                 <li>• Success Story Template</li>
                 <li>• Failure Analysis Framework</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-9462
               </ul>
             </div>
           </div>
 
-<<<<<<< HEAD
         {/* Table of Contents */}
         <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">📚 Table of Contents</h3>
@@ -478,9 +465,7 @@ export default function AIImplementationPlaybook2025() {
             </div>
           </div>
         </div>
-=======
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Case Studies</h2>
->>>>>>> origin/cursor/create-and-deploy-new-content-9462
 
           <div className="space-y-6 mb-8">
             <div className="bg-white border border-gray-200 rounded-lg p-6">
