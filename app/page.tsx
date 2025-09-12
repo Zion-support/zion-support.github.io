@@ -237,6 +237,9 @@ import UltimateContentPromotionBanner from '../components/UltimateContentPromoti
 // AI 2025 Revolutionary Breakthrough Components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025RevolutionaryBreakthroughContentShowcase from '../components/AI2025RevolutionaryBreakthroughContentShowcase';
+import AI2025UltimateBreakthroughContentShowcase from '../components/AI2025UltimateBreakthroughContentShowcase';
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
 // New 2026 Ultimate Content Components
 import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
@@ -354,9 +357,12 @@ export default function HomePage() {
         
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
+        <AI2025UltimateBreakthroughPromotionBanner />
         
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2025RevolutionaryBreakthroughContentShowcase />
+        <AI2025UltimateBreakthroughContentShowcase />
+        <AI2025InteractiveContentDiscoveryWidget />
         
         {/* AI 2040 ULTIMATE PROMOTION BANNER - ULTIMATE CONTENT */}
         <AI2040UltimatePromotionBanner />
