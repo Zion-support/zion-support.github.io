@@ -45,6 +45,17 @@ const NewContentPromoBanner = ({
       category: 'Agents'
     },
     {
+      id: '13',
+      title: 'Operationalizing AI Governance 2025',
+      description: 'Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.',
+      href: '/blog/ai-2025-operationalizing-ai-governance',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
       id: '9',
       title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
       description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
