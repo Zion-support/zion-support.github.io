@@ -16,102 +16,32 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "Privacy-Preserving AI in Production (2025)",
-      description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
-      href: "/blog/ai-2025-privacy-preserving-ai",
+      title: "Enterprise GenAI Security Blueprint 2025",
+      description: "Practical controls for data leakage, prompt injection, model abuse, and compliance-by-design.",
+      href: "/blog/ai-2025-genai-security-blueprint",
       icon: "🔒",
-      category: "Privacy",
-      readTime: "17 min read",
+      category: "AI Security",
+      readTime: "15 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "Data Quality for RAG in Production (2025)",
-      description: "Operator guide: curate, chunk, index, evaluate, and govern knowledge for reliable RAG.",
-      href: "/blog/ai-2025-data-quality-rag",
-      icon: "🧠",
-      category: "RAG",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Agents for IT Operations 2025: Incident Response and SLO Automation",
-      description: "AIOps agents for triage, diagnostics, remediation, and SLO-aware controls reduce toil.",
-      href: "/blog/ai-2025-agents-for-it-ops",
-      icon: "🛠️",
-      category: "Observability",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "IT Ops Automation with AI Agents: 41% MTTR Reduction",
-      description: "Case study: Automated runbooks and intelligent triage reduced MTTR by 41% at a SaaS platform.",
-      href: "/case-studies/ai-2025-it-ops-automation-impact",
-      icon: "📉",
-      category: "Case Study",
-      readTime: "10 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Running AI Agents on Kubernetes: Reliability, Cost, and Observability",
-      description: "Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.",
-      href: "/blog/ai-2025-agents-on-kubernetes",
-      icon: "☸️",
-      category: "Agents",
-      readTime: "19 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Real-Time Agents 2025: Observability, Safety, and SLAs",
-      description: "Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.",
-      href: "/blog/ai-2025-realtime-agents-observability",
-      icon: "🛰️",
-      category: "Agents",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Retail Demand Forecasting: 32% Stockouts Reduction",
-      description: "Global retailer cut stockouts by 32% and waste by 18% via AI-driven demand forecasting.",
-      href: "/case-studies/ai-2025-retail-demand-forecasting",
+      title: "Agent Marketplaces in 2025: Strategy & Governance",
+      description: "How to launch enterprise agent marketplaces with reference architectures, monetization, and safety.",
+      href: "/blog/ai-2025-agent-marketplaces-strategy",
       icon: "🛒",
-      category: "Case Study",
-      readTime: "12 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Operationalizing AI Governance 2025",
-      description: "Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.",
-      href: "/blog/ai-2025-operationalizing-ai-governance",
-      icon: "📜",
-      category: "Governance",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Generative AI Evaluation 2025: Reliable Metrics and Methods",
-      description: "Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.",
-      href: "/blog/ai-2025-genai-evaluation",
-      icon: "📏",
-      category: "Evaluation",
+      category: "Strategy",
       readTime: "18 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "AI Governance 2025: Best Practices for Responsible AI",
-      description: "A concise playbook for practical AI governance across policy, risk, compliance, and engineering.",
-      href: "/blog/ai-2025-ai-governance-best-practices",
-      icon: "🛡️",
-      category: "Governance",
-      readTime: "16 min read",
+      title: "AI Agent Observability in 2025: Telemetry, Tracing, Guardrails",
+      description: "Blueprint for end-to-end agent observability with telemetry, tracing, evaluations, and policy guardrails.",
+      href: "/blog/ai-2025-ai-agent-observability",
+      icon: "📈",
+      category: "Reliability",
+      readTime: "19 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -132,6 +62,16 @@ export default function ContentShowcase() {
       icon: "🎯",
       category: "Advanced AI",
       readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Operational Excellence with AI Agents (2025)",
+      description: "Agentic workflows that cut MTTR by 41% and lift OTIF by 6 points.",
+      href: "/blog/ai-2025-operational-excellence-agents",
+      icon: "⚙️",
+      category: "Operations",
+      readTime: "16 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -203,6 +143,16 @@ export default function ContentShowcase() {
       category: "Case Study",
       readTime: "15 min read",
       date: "Jan 28, 2025",
+      featured: true
+    },
+    {
+      title: "Operations Excellence Impact: 41% MTTR Reduction",
+      description: "Agentic ops automated runbooks, reduced expedites by 27%, +6 pts OTIF.",
+      href: "/case-studies/ai-2025-operations-excellence-impact",
+      icon: "📊",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
       featured: true
     },
     {

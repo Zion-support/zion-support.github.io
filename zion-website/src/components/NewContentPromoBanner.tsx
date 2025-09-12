@@ -34,6 +34,72 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '31',
+      title: 'Agentic Vendor Management 2025: From Intake to Renewal',
+      description: 'Automate diligence, smarter negotiations, and renewal guardrails with agentic workflows.',
+      href: '/blog/ai-2025-agentic-vendor-management',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
+    },
+    {
+      id: '32',
+      title: 'Agentic Vendor Management: 32% Faster Cycle Time',
+      description: 'Case study: Automated intake, risk, and negotiation cut cycle time by 32% and exceptions by 21%.',
+      href: '/case-studies/ai-2025-vendor-management-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '16',
+      title: 'Agent Marketplaces in 2025: Strategy & Governance',
+      description: 'Strategy, reference architectures, monetization, and safety for enterprise agent marketplaces.',
+      href: '/blog/ai-2025-agent-marketplaces-strategy',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Strategy'
+    },
+    {
+      id: '15',
+      title: 'AI Agent Observability in 2025: Telemetry & Guardrails',
+      description: 'End-to-end visibility for agents with structured telemetry, distributed tracing, inline evals, and policy guardrails.',
+      href: '/blog/ai-2025-ai-agent-observability',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: '26',
+      title: 'Agentic Supply Planning 2025: Forecasting-to-Fulfillment with AI',
+      description: 'Design agentic workflows across demand sensing, planning, and fulfillment to cut expedites and boost OTIF.',
+      href: '/blog/ai-2025-agentic-supply-planning',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '27',
+      title: 'Agentic Supply Planning: 27% Expedites Cut, +6 pts OTIF',
+      description: 'Case study: Agentic planning tied forecasting to fulfillment, reducing expedites and improving service.',
+      href: '/case-studies/ai-2025-agentic-supply-planning-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',
@@ -108,84 +174,29 @@ const NewContentPromoBanner = ({
       featured: true,
       readTime: '19 min read',
       date: 'Sep 12, 2025',
-      category: 'Agents'
+      category: 'Reliability'
     },
     {
-      id: '16',
-      title: 'LLM Safety Evaluations 2025: From Offline to Production',
-      description: 'Blueprint for safety evals: red teaming, canaries, policy-as-code, and live feedback loops.',
-      href: '/blog/ai-2025-safety-evaluations-production',
+      id: '28',
+      title: 'Operational Excellence with AI Agents (2025)',
+      description: 'Guide to agentic workflows that cut MTTR by 41% and improve OTIF by 6 points.',
+      href: '/blog/ai-2025-operational-excellence-agents',
       type: 'blog',
       featured: true,
       readTime: '16 min read',
       date: 'Sep 12, 2025',
-      category: 'AI Safety'
+      category: 'Operations'
     },
     {
-      id: '17',
-      title: 'Autonomous Warehouse Orchestration: 38% Throughput Lift',
-      description: 'Case study: Multi-agent orchestration boosted throughput by 38% and cut errors 27%.',
-      href: '/case-studies/ai-2025-warehouse-automation',
+      id: '29',
+      title: 'Operations Excellence Impact: 41% MTTR Reduction',
+      description: 'Case study: Agentic ops automated runbooks, reduced expedites 27%, +6 pts OTIF.',
+      href: '/case-studies/ai-2025-operations-excellence-impact',
       type: 'case-study',
       featured: true,
-      readTime: '11 min read',
+      readTime: '10 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
-    },
-    {
-      id: '13',
-      title: 'Real-Time Agents 2025: Observability, Safety, and SLAs',
-      description: 'Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.',
-      href: '/blog/ai-2025-realtime-agents-observability',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Agents'
-    },
-    {
-      id: '14',
-      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
-      description: 'Case study: Global retailer cut stockouts by 32% and waste by 18% via AI forecasting.',
-      href: '/case-studies/ai-2025-retail-demand-forecasting',
-      type: 'case-study',
-      featured: true,
-      readTime: '12 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: '15',
-      title: 'Operationalizing AI Governance 2025',
-      description: 'Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.',
-      href: '/blog/ai-2025-operationalizing-ai-governance',
-      type: 'blog',
-      featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '9',
-      title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
-      description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
-      href: '/blog/ai-2025-genai-evaluation',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Evaluation'
-    },
-    {
-      id: '10',
-      title: 'AI Governance 2025: Best Practices for Responsible AI',
-      description: 'A concise playbook for practical AI governance across policy, risk, compliance, and engineering.',
-      href: '/blog/ai-2025-ai-governance-best-practices',
-      type: 'blog',
-      featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
     },
     {
       id: '1',
