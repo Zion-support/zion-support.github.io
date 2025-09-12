@@ -91,6 +91,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
         <NewContent2025UltimatePromotionBanner />
         
@@ -120,6 +121,9 @@ export default function HomePage() {
         
         {/* AI 2027 CONTENT SHOWCASE */}
         <AI2027ContentShowcase />
+        
+        {/* NEW CONTENT 2027 PROMOTION BANNER */}
+        <NewContent2027PromotionBanner />
         
         {/* ULTIMATE CONTENT 2026 PROMOTION BANNER */}
         <UltimateContent2026PromotionBanner />
