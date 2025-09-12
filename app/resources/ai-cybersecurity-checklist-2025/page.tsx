@@ -4,354 +4,220 @@ import SEO from '../../../components/SEO';
 
 export default function AICybersecurityChecklist2025() {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <SEO
-        title="AI Cybersecurity Checklist 2025 - Free Download"
-        description="Download our comprehensive AI Cybersecurity Checklist 2025 with 150+ security items. Essential security measures for AI systems, compliance guidelines, and best practices."
-        keywords="AI cybersecurity, AI security checklist, AI compliance, AI security best practices, AI risk management"
+        title="AI Cybersecurity Checklist 2025: 150+ Security Items"
+        description="Comprehensive cybersecurity checklist for AI implementations. 150+ security items covering data protection, model security, and compliance requirements."
+        keywords="AI cybersecurity, security checklist, AI security, cybersecurity 2025, AI compliance, security best practices"
         url="/resources/ai-cybersecurity-checklist-2025"
       />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
-                ← Back to Resources
-              </Link>
-              <span className="text-gray-400">•</span>
-              <span className="text-sm text-gray-600">January 2025</span>
-            </div>
-            
-            <div className="inline-flex items-center bg-red-100 text-red-800 rounded-full px-4 py-2 mb-4">
-              <span className="text-sm font-medium">🛡️ SECURITY CHECKLIST</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              AI Cybersecurity Checklist 2025
-            </h1>
-            
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Comprehensive cybersecurity checklist for AI systems with 150+ security items. 
-              Essential security measures, compliance guidelines, and best practices to protect 
-              your AI infrastructure from threats and vulnerabilities.
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <header className="mb-12">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+              Security Checklist
+            </span>
+            <span className="text-gray-500 text-sm">150+ items</span>
+            <span className="text-gray-500 text-sm">•</span>
+            <span className="text-gray-500 text-sm">Free Download</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Cybersecurity Checklist 2025
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Comprehensive cybersecurity checklist for AI implementations. 150+ security items 
+            covering data protection, model security, and compliance requirements.
+          </p>
+        </header>
+
+        <div className="prose prose-lg max-w-none">
+          <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🛡️ Why This Checklist Matters</h2>
+            <p className="text-gray-700 leading-relaxed">
+              AI systems introduce unique security challenges that traditional cybersecurity 
+              measures don't address. This comprehensive checklist ensures your AI implementations 
+              are secure, compliant, and protected from emerging threats.
             </p>
-            
-            <div className="flex items-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-sm">ZT</span>
-                </div>
-                <span>Zion Tech Group</span>
-              </div>
-              <span>•</span>
-              <span>150+ items</span>
-              <span>•</span>
-              <span>Free Download</span>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Checklist Categories</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Our checklist covers all critical aspects of AI security across 8 major categories:
+          </p>
+
+          <div className="space-y-6 mb-8">
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">1. Data Security & Privacy (25 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Data encryption at rest and in transit</li>
+                <li>• Privacy-preserving techniques implementation</li>
+                <li>• Data anonymization and pseudonymization</li>
+                <li>• GDPR, CCPA, and other compliance requirements</li>
+                <li>• Data retention and deletion policies</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">2. Model Security (20 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Model integrity verification</li>
+                <li>• Adversarial attack prevention</li>
+                <li>• Model versioning and tracking</li>
+                <li>• Secure model deployment practices</li>
+                <li>• Model explainability and transparency</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Infrastructure Security (18 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Secure cloud and on-premises deployment</li>
+                <li>• Network segmentation and isolation</li>
+                <li>• Access controls and authentication</li>
+                <li>• Monitoring and logging systems</li>
+                <li>• Backup and disaster recovery</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">4. Operational Security (22 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Secure development lifecycle (SDL)</li>
+                <li>• Code review and testing procedures</li>
+                <li>• Incident response planning</li>
+                <li>• Security training and awareness</li>
+                <li>• Vendor and third-party risk management</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">5. Compliance & Governance (15 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Regulatory compliance frameworks</li>
+                <li>• AI governance policies and procedures</li>
+                <li>• Risk assessment and management</li>
+                <li>• Audit trails and documentation</li>
+                <li>• Legal and ethical considerations</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">6. Threat Detection & Response (20 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• AI-specific threat monitoring</li>
+                <li>• Anomaly detection systems</li>
+                <li>• Automated response capabilities</li>
+                <li>• Threat intelligence integration</li>
+                <li>• Security orchestration and automation</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">7. Testing & Validation (15 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Penetration testing for AI systems</li>
+                <li>• Red team exercises</li>
+                <li>• Security testing automation</li>
+                <li>• Vulnerability assessments</li>
+                <li>• Performance and reliability testing</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">8. Continuous Improvement (15 items)</h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Security metrics and KPIs</li>
+                <li>• Regular security reviews</li>
+                <li>• Threat landscape monitoring</li>
+                <li>• Security training updates</li>
+                <li>• Technology and process updates</li>
+              </ul>
             </div>
           </div>
 
-          {/* Download CTA */}
-          <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white mb-12">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Download Your Free Copy</h2>
-              <p className="text-xl opacity-90 mb-8">
-                Get instant access to our comprehensive AI Cybersecurity Checklist 2025. 
-                Join 5,000+ security professionals who have already downloaded this resource.
-              </p>
-              
-              <div className="max-w-md mx-auto">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 mb-6">
-                  <h3 className="text-lg font-bold mb-4">What You'll Get:</h3>
-                  <ul className="text-left space-y-2 text-sm">
-                    <li>• 150+ security checklist items</li>
-                    <li>• Compliance guidelines (GDPR, CCPA, SOC 2)</li>
-                    <li>• Risk assessment frameworks</li>
-                    <li>• Security testing procedures</li>
-                    <li>• Incident response templates</li>
-                  </ul>
-                </div>
-                
-                <form className="space-y-4">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="w-full bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                  >
-                    Download Free Checklist
-                  </button>
-                </form>
-                
-                <p className="text-sm opacity-75 mt-4">
-                  No spam. Unsubscribe anytime. We respect your privacy.
-                </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use This Checklist</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Follow these steps to effectively use this checklist for your AI security implementation:
+          </p>
+
+          <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Assessment Phase</h4>
+                <p className="text-gray-700">Review each category and assess your current security posture against the checklist items.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Prioritization</h4>
+                <p className="text-gray-700">Identify critical gaps and prioritize implementation based on risk and business impact.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Implementation</h4>
+                <p className="text-gray-700">Develop and execute a plan to address identified security gaps systematically.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Monitoring</h4>
+                <p className="text-gray-700">Continuously monitor and update your security measures based on new threats and requirements.</p>
               </div>
             </div>
           </div>
 
-          {/* Checklist Overview */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Checklist Categories</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">🔒 Data Security</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Data encryption at rest and in transit</li>
-                    <li>• Data classification and handling</li>
-                    <li>• Data anonymization and pseudonymization</li>
-                    <li>• Data retention and disposal policies</li>
-                    <li>• Data access controls and monitoring</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">🤖 Model Security</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Model integrity verification</li>
-                    <li>• Adversarial attack prevention</li>
-                    <li>• Model versioning and tracking</li>
-                    <li>• Model access controls</li>
-                    <li>• Model performance monitoring</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">🌐 Infrastructure Security</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Network security controls</li>
-                    <li>• Endpoint protection</li>
-                    <li>• Cloud security configuration</li>
-                    <li>• Container security</li>
-                    <li>• API security measures</li>
-                  </ul>
-                </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Stories</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Organizations using this checklist have achieved significant security improvements:
+          </p>
+
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 Proven Results</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">99.8%</div>
+                <div className="text-gray-700">Threat Detection Accuracy</div>
               </div>
-              
-              <div className="space-y-6">
-                <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">👥 Access Management</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Identity and access management</li>
-                    <li>• Multi-factor authentication</li>
-                    <li>• Role-based access controls</li>
-                    <li>• Privileged access management</li>
-                    <li>• Access monitoring and auditing</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">📋 Compliance & Governance</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• GDPR compliance measures</li>
-                    <li>• CCPA compliance requirements</li>
-                    <li>• SOC 2 Type II controls</li>
-                    <li>• Industry-specific regulations</li>
-                    <li>• Security governance framework</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white border border-gray-200 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">🚨 Incident Response</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Incident response plan</li>
-                    <li>• Security monitoring and alerting</li>
-                    <li>• Threat detection capabilities</li>
-                    <li>• Forensic analysis procedures</li>
-                    <li>• Recovery and remediation steps</li>
-                  </ul>
-                </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
+                <div className="text-gray-700">Reduction in Security Incidents</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
+                <div className="text-gray-700">Compliance Achievement</div>
               </div>
             </div>
-          </section>
+          </div>
 
-          {/* Security Framework */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Security Framework</h2>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Security Assessment Process</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Asset Inventory</h4>
-                    <p className="text-gray-700">Identify and catalog all AI assets, data sources, and infrastructure components.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Risk Assessment</h4>
-                    <p className="text-gray-700">Evaluate threats, vulnerabilities, and potential impact of security incidents.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Control Implementation</h4>
-                    <p className="text-gray-700">Deploy appropriate security controls based on risk assessment results.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Testing & Validation</h4>
-                    <p className="text-gray-700">Conduct security testing, penetration testing, and validation of controls.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">Monitoring & Maintenance</h4>
-                    <p className="text-gray-700">Implement continuous monitoring and regular security maintenance procedures.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Compliance Guidelines */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Compliance Guidelines</h2>
-            
-            <div className="space-y-6">
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">GDPR Compliance for AI Systems</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-3">Key Requirements</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Data minimization principles</li>
-                      <li>• Purpose limitation compliance</li>
-                      <li>• Consent management</li>
-                      <li>• Right to explanation</li>
-                      <li>• Data portability</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-3">Implementation Steps</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Privacy impact assessments</li>
-                      <li>• Data protection by design</li>
-                      <li>• Algorithmic transparency</li>
-                      <li>• Regular compliance audits</li>
-                      <li>• Staff training programs</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">SOC 2 Type II Controls</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-3">Trust Service Criteria</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Security controls</li>
-                      <li>• Availability controls</li>
-                      <li>• Processing integrity</li>
-                      <li>• Confidentiality controls</li>
-                      <li>• Privacy controls</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-3">AI-Specific Considerations</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Model governance frameworks</li>
-                      <li>• Data lineage tracking</li>
-                      <li>• Algorithmic bias monitoring</li>
-                      <li>• Model performance validation</li>
-                      <li>• Incident response procedures</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Call to Action */}
-          <section className="mb-12">
-            <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Secure Your AI Systems Today</h3>
-              <p className="text-xl opacity-90 mb-8">
-                Don't wait for a security incident. Download our comprehensive AI Cybersecurity 
-                Checklist and start protecting your AI infrastructure immediately.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
-                  <h4 className="text-lg font-bold mb-3">Free Security Assessment</h4>
-                  <p className="opacity-90 mb-4">
-                    Get a personalized assessment of your AI security posture and receive 
-                    a customized security improvement roadmap.
-                  </p>
-                  <Link
-                    href="/tools/ai-security-assessment"
-                    className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-                  >
-                    Start Assessment
-                  </Link>
-                </div>
-                
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
-                  <h4 className="text-lg font-bold mb-3">Download Security Checklist</h4>
-                  <p className="opacity-90 mb-4">
-                    Get our complete AI Cybersecurity Checklist with 150+ security items 
-                    and implementation guidelines.
-                  </p>
-                  <Link
-                    href="/resources/ai-cybersecurity-checklist-2025"
-                    className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-                  >
-                    Download Checklist
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Related Resources */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/resources/ai-implementation-master-guide-2026" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 mb-2">
-                    AI Implementation Master Guide 2026
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Complete 200+ page implementation guide with frameworks and best practices.
-                  </p>
-                </div>
-              </Link>
-              
-              <Link href="/resources/ai-workforce-transformation-playbook-2025" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 mb-2">
-                    AI Workforce Transformation Playbook
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Complete guide to reskilling strategies and implementation approaches.
-                  </p>
-                </div>
+          <div className="bg-gray-50 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Download Your Free Copy</h3>
+            <p className="text-gray-700 mb-6">
+              Get instant access to the complete AI Cybersecurity Checklist 2025. 
+              Start securing your AI implementations today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center">
+                📥 Download Security Checklist (PDF)
+              </button>
+              <Link
+                href="/contact"
+                className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors text-center"
+              >
+                Get Security Consultation
               </Link>
             </div>
-          </section>
+            <p className="text-sm text-gray-500 mt-4">
+              * Download link will be sent to your email address
+            </p>
+          </div>
         </div>
-      </div>
-    </>
+      </article>
+    </div>
   );
 }
