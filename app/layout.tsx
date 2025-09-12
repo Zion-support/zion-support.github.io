@@ -89,6 +89,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Ultimate Trends (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 1200% ROI Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2026-advanced-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Advanced Technology Showcase
                 </Link>
@@ -179,6 +189,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Ultimate Trends (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 1200% ROI Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/mega-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Mega Content Showcase 2026
                 </Link>
