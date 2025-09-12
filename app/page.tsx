@@ -103,6 +103,8 @@ import LatestContent2025PromotionBanner from '../components/LatestContent2025Pro
 import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import ComprehensiveContentDiscovery2026 from '../components/ComprehensiveContentDiscovery2026';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
 // New 2029-2030 Content Components
@@ -143,6 +145,9 @@ export default function HomePage() {
         {/* AI 2029 BREAKTHROUGH PROMOTION BANNER */}
         <AI2029BreakthroughPromotionBanner />
         
+        {/* NEW CONTENT PROMOTION BANNER 2026 */}
+        <NewContentPromotionBanner2026 />
+        
         {/* AI 2029 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2029BreakthroughContentShowcase />
         
@@ -152,6 +157,9 @@ export default function HomePage() {
             <AI2026ContentDiscoveryWidget />
           </div>
         </div>
+        
+        {/* COMPREHENSIVE CONTENT DISCOVERY 2026 */}
+        <ComprehensiveContentDiscovery2026 />
         
         {/* NEW CONTENT NAVIGATION 2026 */}
         <NewContentNavigation2026 />
