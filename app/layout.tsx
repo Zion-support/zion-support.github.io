@@ -92,11 +92,20 @@ function Header() {
                 <Link href="/ai-2026-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Technology Showcase
                 </Link>
+                <Link href="/blog/ai-2026-generative-ai-enterprise-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚀 Generative AI Enterprise Revolution (NEW)
+                </Link>
+                <Link href="/blog/ai-2026-autonomous-systems-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🤖 Autonomous Systems Breakthrough (NEW)
+                </Link>
                 <Link href="/blog/ai-2026-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📈 Revolutionary Trends & Predictions
                 </Link>
                 <Link href="/resources/ai-2026-complete-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 Master Implementation Guide
+                </Link>
+                <Link href="/resources/ai-2026-implementation-toolkit-ultimate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
                 </Link>
                 <Link href="/resources/ai-2026-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🛠️ Implementation Toolkit
@@ -109,6 +118,9 @@ function Header() {
                 </Link>
                 <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Automation Revolution
+                </Link>
+                <Link href="/case-studies/ai-2026-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 Fortune 500: 800% ROI Breakthrough (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Enterprise Success (800% ROI)

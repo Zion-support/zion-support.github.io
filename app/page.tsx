@@ -76,6 +76,39 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT HIGHLIGHT BANNER */}
+        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-12">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-6">
+              🚀 NEW CONTENT ALERT
+            </div>
+            <h2 className="text-4xl font-bold mb-4">
+              Latest AI 2026 Content Now Available
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Discover our newest blog posts, case studies, and implementation guides. 
+              Everything you need to stay ahead in the AI revolution.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Link href="/blog/ai-2026-generative-ai-enterprise-revolution" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                📝 Generative AI Revolution
+              </Link>
+              <Link href="/blog/ai-2026-autonomous-systems-breakthrough" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                🤖 Autonomous Systems
+              </Link>
+              <Link href="/case-studies/ai-2026-fortune-500-transformation-breakthrough" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                🏆 800% ROI Case Study
+              </Link>
+              <Link href="/resources/ai-2026-implementation-toolkit-ultimate" className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                🛠️ Ultimate Toolkit
+              </Link>
+            </div>
+            <Link href="/ultimate-content-showcase-2026" className="inline-flex items-center bg-white/20 backdrop-blur-sm px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-colors">
+              View All New Content →
+            </Link>
+          </div>
+        </div>
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
