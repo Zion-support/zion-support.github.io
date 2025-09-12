@@ -53,9 +53,35 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import NewContent2026AdvancedPromotionBanner from '../components/NewContent2026AdvancedPromotionBanner';
+import AI2026ROICalculator from '../components/AI2026ROICalculator';
+import ContentDiscovery2026 from '../components/ContentDiscovery2026';
+import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
+import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
+import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
+import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
+import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
+import AI2029ContentShowcase from '../components/AI2029ContentShowcase';
+import NewContent2029PromotionBanner from '../components/NewContent2029PromotionBanner';
+import NewContent2029Showcase from '../components/NewContent2029Showcase';
+import AI2030VisionBanner from '../components/AI2030VisionBanner';
+import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
+import FutureInnovationHub from '../components/FutureInnovationHub';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -72,6 +98,69 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2029 PROMOTION BANNER */}
+        <NewContent2029PromotionBanner />
+        
+        {/* NEW CONTENT 2029 SHOWCASE */}
+        <NewContent2029Showcase />
+        
+        {/* AI 2030 VISION BANNER */}
+        <AI2030VisionBanner />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE */}
+        <RevolutionaryTechShowcase />
+        
+        {/* FUTURE INNOVATION HUB */}
+        <FutureInnovationHub />
+        
+        {/* AI 2029 CONTENT PROMOTION BANNER */}
+        <AI2029ContentPromotionBanner />
+        
+        {/* AI 2029 CONTENT SHOWCASE */}
+        <AI2029ContentShowcase />
+        
+        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* FORTUNE 500 SUCCESS BANNER 2025 */}
+        <Fortune500SuccessBanner2025 />
+        
+        {/* REVOLUTIONARY AI 2025 PROMOTION BANNER */}
+        <RevolutionaryAI2025PromotionBanner />
+        
+        {/* REVOLUTIONARY AI 2025 SHOWCASE */}
+        <RevolutionaryAI2025Showcase />
+        
+        {/* AI 2028 CONTENT PROMOTION BANNER */}
+        <AI2028ContentPromotionBanner />
+        
+        {/* AI 2028 CONTENT SHOWCASE */}
+        <AI2028ContentShowcase />
+        
+        {/* NEW CONTENT 2028 PROMOTION BANNER */}
+        <NewContent2028PromotionBanner />
+        
+        {/* NEW CONTENT 2028 SHOWCASE */}
+        <NewContent2028Showcase />
+        
+        {/* AI 2027 CONTENT PROMOTION BANNER */}
+        <AI2027ContentPromotionBanner />
+        
+        {/* AI 2027 CONTENT SHOWCASE */}
+        <AI2027ContentShowcase />
+        
+        {/* ULTIMATE CONTENT 2026 PROMOTION BANNER */}
+        <UltimateContent2026PromotionBanner />
+        
+        {/* FORTUNE 500 SUCCESS BANNER */}
+        <Fortune500SuccessBanner />
+        
+        {/* NEW CONTENT 2026 ADVANCED PROMOTION BANNER */}
+        <NewContent2026AdvancedPromotionBanner />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
+        <UltimateContentPromotionBanner2026 />
+        
         {/* LATEST CONTENT 2026 PROMOTION BANNER */}
         <LatestContent2026PromotionBanner />
         
@@ -80,6 +169,12 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
+        
+        {/* NEW CONTENT 2026 SHOWCASE */}
+        <NewContent2026Showcase />
+        
+        {/* NEW CONTENT 2027 SHOWCASE */}
+        <NewContent2027Showcase />
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
@@ -107,6 +202,16 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
+        
+        {/* AI 2026 ROI CALCULATOR */}
+        <div className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <AI2026ROICalculator />
+          </div>
+        </div>
+        
+        {/* CONTENT DISCOVERY 2026 */}
+        <ContentDiscovery2026 />
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
@@ -165,6 +270,9 @@ export default function HomePage() {
             <EnhancedSearch2026 />
           </div>
         </section>
+        
+        {/* Enhanced Content Showcase 2025 */}
+        <EnhancedContentShowcase2025 />
         
         {/* Content Recommendation Widget */}
         <section className="py-16 bg-white">
