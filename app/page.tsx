@@ -71,6 +71,44 @@ import NewContent2025RevolutionaryBanner from '../components/NewContent2025Revol
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
 
 // New 2026 Content Components
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+
+// New 2029 Breakthrough Content Components
+import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
+import AI2029BreakthroughContentShowcase from '../components/AI2029BreakthroughContentShowcase';
+
+// New 2028 Breakthrough Content Components
+import AI2028BreakthroughPromotionBanner from '../components/AI2028BreakthroughPromotionBanner';
+import AI2028BreakthroughContentShowcase from '../components/AI2028BreakthroughContentShowcase';
+import EnhancedContentDiscovery2028 from '../components/EnhancedContentDiscovery2028';
+import AI2028ROICalculator from '../components/AI2028ROICalculator';
+import AI2028NewsletterSignup from '../components/AI2028NewsletterSignup';
+
+// New 2027 Breakthrough Content Components
+import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
+import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
+import QuantumComputingBreakthroughShowcase from '../components/QuantumComputingBreakthroughShowcase';
+import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomationMasteryShowcase';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+
+// Revolutionary Content Showcase
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+
+// New 2025 Content Components
+import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
+import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
+import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
+import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
+import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
+import LatestContent2025PromotionBanner from '../components/LatestContent2025PromotionBanner';
+import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
+>>>>>>> cursor/create-and-deploy-new-content-81e3
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
@@ -142,6 +180,12 @@ export default function HomePage() {
         
         {/* ENHANCED CONTENT DISCOVERY WIDGET 2026 */}
         <EnhancedContentDiscoveryWidget2026 />
+        
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
         
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
