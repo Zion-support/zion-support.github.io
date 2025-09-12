@@ -5,6 +5,7 @@ interface ContentItem {
   title: string;
   description: string;
   href: string;
+<<<<<<< HEAD
   icon: string;
   category: string;
   readTime?: string;
@@ -82,8 +83,83 @@ export default function EnhancedContentPromotionBanner({
   };
 
   const styles = getVariantStyles();
+=======
+  type: 'article' | 'case-study' | 'resource';
+  readTime?: string;
+  isNew?: boolean;
+  isTrending?: boolean;
+  icon: string;
+}
 
+const featuredContent: ContentItem[] = [
+  {
+    title: "AI 2025 Advanced Architecture Patterns",
+    description: "Master advanced AI architecture patterns for scalable, production-ready systems",
+    href: "/blog/ai-2025-advanced-ai-architecture",
+    type: "article",
+    readTime: "25 min read",
+    isNew: true,
+    icon: "🏗️"
+  },
+  {
+    title: "AI Automation Trends 2025",
+    description: "Discover the revolutionary AI automation trends transforming businesses",
+    href: "/blog/ai-2025-automation-trends",
+    type: "article",
+    readTime: "22 min read",
+    isTrending: true,
+    icon: "🤖"
+  },
+  {
+    title: "$200M Manufacturing Success Case Study",
+    description: "How a Fortune 500 manufacturer achieved unprecedented results with autonomous AI",
+    href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+    type: "case-study",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "💰"
+  },
+  {
+    title: "AI Implementation Master Guide 2026",
+    description: "200+ page comprehensive guide with frameworks and templates",
+    href: "/resources/ai-implementation-master-guide-2026",
+    type: "resource",
+    readTime: "200+ pages",
+    isNew: true,
+    icon: "📖"
+  }
+];
+
+const getTypeColor = (type: string) => {
+  switch (type) {
+    case 'article':
+      return 'bg-blue-100 text-blue-800';
+    case 'case-study':
+      return 'bg-green-100 text-green-800';
+    case 'resource':
+      return 'bg-purple-100 text-purple-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
+
+const getTypeLabel = (type: string) => {
+  switch (type) {
+    case 'article':
+      return 'Article';
+    case 'case-study':
+      return 'Case Study';
+    case 'resource':
+      return 'Resource';
+    default:
+      return 'Content';
+  }
+};
+>>>>>>> cursor/create-and-deploy-new-content-d918
+
+export default function EnhancedContentPromotionBanner() {
   return (
+<<<<<<< HEAD
     <section className={`py-20 ${styles.container} text-white relative overflow-hidden ${className}`}>
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,6 +251,131 @@ export default function EnhancedContentPromotionBanner({
           >
             📊 View Case Studies
           </Link>
+=======
+    <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 2025</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            🚀 Revolutionary AI Content Update
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover our latest breakthrough content: Advanced AI Architecture, Automation Trends, 
+            $200M Manufacturing Success Case Study, and comprehensive implementation guides. 
+            Get expert insights on the technologies transforming 2025 and beyond.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/content-showcase"
+              className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              🎯 Explore All New Content
+            </Link>
+            <Link
+              href="/blog/ai-2025-advanced-ai-architecture"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg" 
+            >
+              📖 Read Latest Article
+            </Link>
+          </div>
+        </div>
+
+        {/* Featured Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredContent.map((item, index) => (
+            <Link key={index} href={item.href} className="group">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <div className="flex flex-col items-end gap-1">
+                    {item.isNew && (
+                      <span className="bg-green-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+                        NEW
+                      </span>
+                    )}
+                    {item.isTrending && (
+                      <span className="bg-orange-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+                        TRENDING
+                      </span>
+                    )}
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${getTypeColor(item.type)}`}>
+                      {getTypeLabel(item.type)}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm opacity-90 mb-3 leading-relaxed">
+                  {item.description}
+                </p>
+                <div className="flex items-center justify-between text-xs opacity-75">
+                  <span>{item.readTime}</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Additional Content Preview */}
+        <div className="mt-12 text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 max-w-4xl mx-auto">
+            <h3 className="text-xl font-bold mb-4">More Fresh Content This Week</h3>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🌱</span>
+                <div>
+                  <div className="font-semibold">AI Sustainability & Green Tech</div>
+                  <div className="opacity-75">Building eco-friendly AI systems</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🤖</span>
+                <div>
+                  <div className="font-semibold">AI Robotics & Automation</div>
+                  <div className="opacity-75">The future of intelligent machines</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🛡️</span>
+                <div>
+                  <div className="font-semibold">AI Cybersecurity Checklist</div>
+                  <div className="opacity-75">150+ security items for secure AI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/blog"
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4"
+            >
+              View All Articles
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block mr-4"
+            >
+              Browse Case Studies
+            </Link>
+            <Link
+              href="/resources"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block"
+            >
+              Download Resources
+            </Link>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-d918
         </div>
       </div>
     </section>

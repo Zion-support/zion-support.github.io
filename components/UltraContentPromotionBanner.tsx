@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Clock, User, TrendingUp, Download } from 'lucide-react';
+import { ArrowRight, Star, Clock, TrendingUp, Download, BookOpen } from 'lucide-react';
 
 interface ContentItem {
   title: string;
@@ -14,6 +14,8 @@ interface ContentItem {
   isNew?: boolean;
   isTrending?: boolean;
   isPopular?: boolean;
+  result?: string;
+  pages?: string;
 }
 
 interface UltraContentPromotionBannerProps {
@@ -21,12 +23,12 @@ interface UltraContentPromotionBannerProps {
   subtitle: string;
   description: string;
   content: ContentItem[];
-  variant?: 'featured' | 'trending' | 'new' | 'popular';
+  variant?: 'featured' | 'trending' | 'new' | 'resources';
   maxItems?: number;
   className?: string;
 }
 
-const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = ({
+export default function UltraContentPromotionBanner({
   title,
   subtitle,
   description,
@@ -34,38 +36,66 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
   variant = 'featured',
   maxItems = 6,
   className = ''
-}) => {
+}: UltraContentPromotionBannerProps) {
   const getVariantStyles = () => {
     switch (variant) {
+      case 'featured':
+        return {
+          gradient: 'from-purple-600 via-pink-600 to-red-600',
+          accent: 'purple',
+          icon: '✨'
+        };
       case 'trending':
         return {
           gradient: 'from-orange-600 via-red-600 to-pink-600',
-          accent: 'from-orange-500 to-red-500',
-          text: 'text-orange-600',
-          border: 'border-orange-400'
+          accent: 'orange',
+          icon: '🔥'
         };
       case 'new':
         return {
-          gradient: 'from-green-600 via-emerald-600 to-teal-600',
-          accent: 'from-green-500 to-emerald-500',
-          text: 'text-green-600',
-          border: 'border-green-400'
+          gradient: 'from-blue-600 via-indigo-600 to-purple-600',
+          accent: 'blue',
+          icon: '🚀'
         };
-      case 'popular':
+      case 'resources':
         return {
-          gradient: 'from-purple-600 via-indigo-600 to-blue-600',
-          accent: 'from-purple-500 to-indigo-500',
-          text: 'text-purple-600',
-          border: 'border-purple-400'
+          gradient: 'from-green-600 via-teal-600 to-cyan-600',
+          accent: 'green',
+          icon: '📚'
         };
       default:
         return {
-          gradient: 'from-indigo-600 via-purple-600 to-pink-600',
-          accent: 'from-indigo-500 to-purple-500',
-          text: 'text-indigo-600',
-          border: 'border-indigo-400'
+          gradient: 'from-gray-600 via-blue-600 to-purple-600',
+          accent: 'gray',
+          icon: '📄'
         };
     }
+  };
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      'AI Automation': 'bg-blue-100 text-blue-800',
+      'Cybersecurity': 'bg-red-100 text-red-800',
+      'Case Study': 'bg-green-100 text-green-800',
+      'Master Guide': 'bg-purple-100 text-purple-800',
+      'AI Innovations': 'bg-yellow-100 text-yellow-800',
+      'Workforce': 'bg-indigo-100 text-indigo-800',
+      'Privacy': 'bg-gray-100 text-gray-800',
+      'Sustainability': 'bg-emerald-100 text-emerald-800',
+      'Customer Service': 'bg-pink-100 text-pink-800',
+      'AI Safety': 'bg-orange-100 text-orange-800',
+      'Security': 'bg-red-100 text-red-800',
+      'Tools': 'bg-cyan-100 text-cyan-800',
+      'Templates': 'bg-violet-100 text-violet-800'
+    };
+    return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+  };
+
+  const getStatusBadge = (item: ContentItem) => {
+    if (item.isNew) return { text: 'NEW', color: 'bg-green-500 text-white' };
+    if (item.isTrending) return { text: 'TRENDING', color: 'bg-orange-500 text-white' };
+    if (item.isPopular) return { text: 'POPULAR', color: 'bg-blue-500 text-white' };
+    return null;
   };
 
   const styles = getVariantStyles();
@@ -73,33 +103,8 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
 
   return (
     <section className={`py-20 bg-gradient-to-r ${styles.gradient} text-white relative overflow-hidden ${className}`}>
-      {/* Animated Background */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-30"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: 8 + i * 0.5,
-              repeat: Infinity,
-              delay: i * 0.2,
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +113,7 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
-            <span className="text-sm font-medium">{subtitle}</span>
+            <span className="text-sm font-medium">{styles.icon} {subtitle}</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             {title}
@@ -116,168 +121,114 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             {description}
           </p>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/content-showcase"
-              className="group bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg transform hover:scale-105"
-            >
-              <span className="flex items-center gap-2">
-                🎯 Explore All Content
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-            <Link
-              href="/resources"
-              className="group border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 text-lg transform hover:scale-105"
-            >
-              <span className="flex items-center gap-2">
-                📚 Download Resources
-                <Download className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-          </div>
         </motion.div>
 
-        {/* Content Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
-          {displayContent.map((item, index) => (
-            <motion.div
-              key={item.href}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10, scale: 1.02 }}
-            >
-              <Link href={item.href} className="group block">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
-                  {/* Badge */}
-                  <div className="flex items-center gap-2 mb-4">
-                    {item.isNew && (
-                      <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                        NEW
-                      </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {displayContent.map((item, index) => {
+            const statusBadge = getStatusBadge(item);
+            
+            return (
+              <motion.div
+                key={item.href}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+              >
+                <Link href={item.href} className="group block">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
+                    {statusBadge && (
+                      <div className="flex justify-end mb-4">
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusBadge.color}`}>
+                          {statusBadge.text}
+                        </span>
+                      </div>
                     )}
-                    {item.isTrending && (
-                      <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                        TRENDING
+                    
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </div>
+                    
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                        {item.category}
                       </span>
-                    )}
-                    {item.isPopular && (
-                      <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                        POPULAR
-                      </span>
-                    )}
-                    <span className="bg-white bg-opacity-20 text-white px-2 py-1 rounded-full text-xs font-medium">
-                      {item.category}
-                    </span>
-                  </div>
-
-                  {/* Icon */}
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {item.icon}
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-yellow-300 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm opacity-90 mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
-
-                  {/* Meta Info */}
-                  <div className="flex items-center justify-between text-xs opacity-75">
-                    <div className="flex items-center gap-3">
                       {item.readTime && (
-                        <div className="flex items-center gap-1">
+                        <span className="text-xs text-white opacity-75 flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          <span>{item.readTime}</span>
-                        </div>
-                      )}
-                      {item.type && (
-                        <span className="bg-white bg-opacity-20 px-2 py-1 rounded">
-                          {item.type}
+                          {item.readTime}
                         </span>
                       )}
                     </div>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    
+                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:underline">
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-white text-sm opacity-90 mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-xs text-white opacity-75">
+                        {item.type && (
+                          <span className="flex items-center gap-1">
+                            <Download className="w-3 h-3" />
+                            {item.type}
+                          </span>
+                        )}
+                        {item.result && (
+                          <span className="flex items-center gap-1">
+                            <TrendingUp className="w-3 h-3" />
+                            {item.result}
+                          </span>
+                        )}
+                        {item.pages && (
+                          <span className="flex items-center gap-1">
+                            <BookOpen className="w-3 h-3" />
+                            {item.pages}
+                          </span>
+                        )}
+                      </div>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+                </Link>
+              </motion.div>
+            );
+          })}
+        </div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="text-center mt-12"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">25+</div>
-              <div className="text-sm opacity-90">New Articles</div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">15+</div>
-              <div className="text-sm opacity-90">Case Studies</div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">10+</div>
-              <div className="text-sm opacity-90">Free Resources</div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">50K+</div>
-              <div className="text-sm opacity-90">Downloads</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
-        >
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated with Our Latest Content</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Get weekly updates on AI trends, implementation guides, and exclusive content 
-              delivered straight to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/newsletter"
-                className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Subscribe to Newsletter
-              </Link>
-              <Link
-                href="/blog"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Read Latest Articles
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/content-showcase"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              🎯 Explore All Content
+            </Link>
+            <Link
+              href="/blog"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+            >
+              📖 Read Latest Articles
+            </Link>
+            <Link
+              href="/resources"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+            >
+              📋 Download Resources
+            </Link>
           </div>
         </motion.div>
       </div>
     </section>
   );
-};
-
-export default UltraContentPromotionBanner;
+}
