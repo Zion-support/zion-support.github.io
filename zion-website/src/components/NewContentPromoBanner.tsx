@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '18',
+      title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
+      description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
+      href: '/blog/ai-2025-agents-on-kubernetes',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
       id: '16',
       title: 'LLM Safety Evaluations 2025: From Offline to Production',
       description: 'Blueprint for safety evals: red teaming, canaries, policy-as-code, and live feedback loops.',

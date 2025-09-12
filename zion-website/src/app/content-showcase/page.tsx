@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Running AI Agents on Kubernetes: Reliability, Cost, and Observability",
+      description: "Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.",
+      href: "/blog/ai-2025-agents-on-kubernetes",
+      icon: "☸️",
+      category: "Agents",
+      readTime: "19 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Real-Time Agents 2025: Observability, Safety, and SLAs",
       description: "Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.",
       href: "/blog/ai-2025-realtime-agents-observability",
