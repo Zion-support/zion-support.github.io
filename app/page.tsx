@@ -45,25 +45,64 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Revolutionary AI Content Update: 20+ New Resources Just Released!
+                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations, Sustainability & Green Tech, 
-                Robotics & Automation, plus new case studies and implementation guides. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough content: AI Multimodal Revolution, Neural Interfaces, 
+                Quantum Machine Learning, Autonomous Systems, Ethical Governance, plus new case studies 
+                and implementation guides. Get expert insights on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/content-showcase"
                   className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore New Content
+                  Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-multimodal-revolution"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Read Latest Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New AI Breakthroughs Banner */}
+        <section className="py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🧠 AI BREAKTHROUGHS 2025</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 Revolutionary AI Technologies: Multimodal, Neural Interfaces & Quantum AI
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Explore the cutting-edge AI technologies reshaping 2025: Multimodal AI systems that understand 
+                vision, audio, and text; Neural interfaces connecting minds to machines; Quantum machine learning 
+                solving impossible problems. Get expert insights on the future of AI.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-multimodal-revolution"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Multimodal AI Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-neural-interfaces"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Explore Neural Interfaces
+                </Link>
+                <Link
+                  href="/blog/ai-2025-quantum-machine-learning"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Learn Quantum AI
                 </Link>
               </div>
             </div>
@@ -210,6 +249,44 @@ export default function HomePage() {
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
                 >
                   Join Webinar
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies & Resources Banner */}
+        <section className="py-6 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">📊 SUCCESS STORIES & RESOURCES</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                💰 $200M Manufacturing Success + Free AI Implementation Guide
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover real success stories: $200M manufacturing savings, 40% cost reduction, 60% faster processing. 
+                Plus download our free 200+ page AI Implementation Master Guide with frameworks, templates, and case studies.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  className="bg-white text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  View $200M Success Story
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
+                >
+                  Download Free Guide
+                </Link>
+                <Link
+                  href="/case-studies"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
+                >
+                  Browse All Case Studies
                 </Link>
               </div>
             </div>

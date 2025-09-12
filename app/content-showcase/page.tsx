@@ -5,44 +5,71 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
-      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
-      href: "/blog/ai-2025-quantum-computing-breakthrough",
-      icon: "⚛️",
-      category: "Quantum AI",
-      readTime: "22 min read",
-      date: "Jan 30, 2025"
+      title: "AI Multimodal Revolution 2025: Beyond Text to Vision, Audio, and Beyond",
+      description: "Discover how multimodal AI is revolutionizing industries in 2025. From vision-language models to audio synthesis, explore the future of AI that understands and generates across multiple modalities.",
+      href: "/blog/ai-2025-multimodal-revolution",
+      icon: "🎭",
+      category: "Multimodal AI",
+      readTime: "25 min read",
+      date: "Jan 28, 2025"
     },
     {
-      title: "AI Workforce Transformation 2025: Complete Reskilling Guide",
-      description: "Master AI workforce transformation with our comprehensive reskilling guide. Learn strategies, new job roles, and how to prepare your team for the AI-driven future of work.",
-      href: "/blog/ai-2025-workforce-transformation",
-      icon: "👥",
-      category: "Workforce",
-      readTime: "18 min read",
-      date: "Jan 30, 2025"
+      title: "AI Neural Interfaces 2025: The Future of Brain-Computer Interaction",
+      description: "Explore the revolutionary world of neural interfaces in 2025. From brain-computer interfaces to thought-controlled devices, discover how AI is bridging the gap between mind and machine.",
+      href: "/blog/ai-2025-neural-interfaces",
+      icon: "🧠",
+      category: "Neural Interfaces",
+      readTime: "28 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Quantum Machine Learning 2025: The Next Frontier of Computing",
+      description: "Discover how quantum computing is revolutionizing machine learning in 2025. From quantum neural networks to quantum advantage in optimization, explore the future of quantum AI.",
+      href: "/blog/ai-2025-quantum-machine-learning",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "30 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Autonomous Systems 2025: The Future of Self-Operating Technology",
+      description: "Explore the revolutionary world of autonomous AI systems in 2025. From self-driving vehicles to autonomous manufacturing, discover how AI is creating truly independent systems.",
+      href: "/blog/ai-2025-autonomous-systems",
+      icon: "🤖",
+      category: "Autonomous Systems",
+      readTime: "32 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Ethical Governance 2025: Building Responsible AI Systems",
+      description: "Navigate the complex landscape of AI ethics and governance in 2025. Learn how to build responsible AI systems, implement ethical frameworks, and ensure compliance with evolving regulations.",
+      href: "/blog/ai-2025-ethical-governance",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "35 min read",
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🧠",
+      icon: "🚀",
       category: "AI Innovations",
       readTime: "25 min read",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Trends 2025: 15 Predictions That Will Shape the Future of Technology",
-      description: "Discover the most important AI trends and predictions for 2025. From AGI breakthroughs to quantum AI, explore what's coming next in artificial intelligence.",
-      href: "/blog/ai-2025-trends-predictions",
-      icon: "🔮",
-      category: "AI Predictions",
-      readTime: "28 min read",
       date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Autonomous Manufacturing Success: $200M Savings Case Study",
+      description: "How a Fortune 500 manufacturing company achieved $200M in annual savings, 40% cost reduction, and 60% faster processing times through autonomous AI systems.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      icon: "🏭",
+      category: "Manufacturing",
+      result: "$200M Savings",
+      date: "Jan 28, 2025"
+    },
     {
       title: "AI Cybersecurity Transformation Breakthrough: 99.8% Threat Detection Success",
       description: "How a Fortune 500 financial services company achieved 99.8% threat detection accuracy and 85% reduction in security incidents through AI-powered cybersecurity transformation.",
@@ -53,34 +80,34 @@ export default function ContentShowcasePage() {
       date: "Jan 30, 2025"
     },
     {
-      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
-      description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
-      href: "/case-studies/ai-transformation-fortune-500-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
+      title: "AI Sustainability Transformation: 60% Energy Reduction Success",
+      description: "How a major corporation achieved 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives and green technology optimization.",
+      href: "/case-studies/ai-sustainability-transformation-2025",
+      icon: "🌱",
+      category: "Sustainability",
+      result: "60% Energy Reduction",
+      date: "Jan 28, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
-      icon: "📚",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Blueprint",
+      description: "The most comprehensive AI implementation guide available. Everything you need to successfully implement AI in your organization, from initial strategy to full deployment and optimization.",
+      href: "/resources/ai-implementation-master-guide-2026",
+      icon: "📖",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Cybersecurity Checklist 2025: 150+ Security Items",
+      description: "Comprehensive cybersecurity checklist for AI implementations. 150+ security items covering data protection, model security, and compliance requirements.",
+      href: "/resources/ai-cybersecurity-checklist-2025",
+      icon: "🛡️",
+      category: "Security",
+      type: "Free Download",
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Workforce Transformation Playbook 2025: Complete Reskilling Guide",
@@ -89,16 +116,7 @@ export default function ContentShowcasePage() {
       icon: "👥",
       category: "Workforce",
       type: "Free Download",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "Quantum AI Implementation Guide 2025: Revolutionary Applications",
-      description: "Complete guide to implementing quantum AI solutions with practical frameworks, use cases, and step-by-step implementation strategies.",
-      href: "/resources/quantum-ai-implementation-guide-2025",
-      icon: "⚛️",
-      category: "Quantum AI",
-      type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Jan 28, 2025"
     }
   ];
 
