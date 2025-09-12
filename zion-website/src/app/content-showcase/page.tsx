@@ -26,6 +26,16 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "LLM Inference Cost Reduction: 38% Savings (2025)",
+      description: "Case study: Quantization, KV cache, and batching cut cost by 38% and improved p95 by 27%.",
+      href: "/case-studies/ai-2025-llm-inference-cost-reduction",
+      icon: "💸",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "LLM Inference Optimization on GPUs (2025)",
       description: "Quantization, KV cache, batching, and parallelism to cut latency and cost.",
       href: "/blog/ai-2025-llm-inference-optimization-gpus",

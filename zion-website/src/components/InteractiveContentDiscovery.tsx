@@ -41,6 +41,19 @@ function InteractiveContentDiscovery() {
       difficulty: 'intermediate'
     },
     {
+      id: 'CS-llm-cost-2025',
+      title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
+      description: 'Case study: Quantization, KV cache tuning, and smart batching cut cost by 38% and p95 by 27%.',
+      href: '/case-studies/ai-2025-llm-inference-cost-reduction',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Inference', 'Optimization', 'Quantization', 'Batching'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '51',
       title: 'AI Ethics and Responsible Development: A Framework',
       description: 'Practical framework for fairness, transparency, and accountability without slowing delivery.',
@@ -183,6 +196,7 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
