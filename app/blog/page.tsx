@@ -2,57 +2,81 @@ import Link from 'next/link';
 
 const posts = [
   {
+    id: 'ai-automation-2025-comprehensive-guide',
+    title: 'AI Automation 2025: Complete Implementation Guide',
+    description: 'Master AI automation with our comprehensive guide covering strategy, implementation, ROI measurement, and real-world case studies.',
+    href: '/blog/ai-automation-2025-comprehensive-guide',
+    date: '2025-01-28',
+    tags: ['AI', 'Automation', 'Strategy'],
+    category: 'AI & Automation',
+    readTime: '15 min read',
+    excerpt: 'Transform your business operations with intelligent automation. This comprehensive guide covers everything from strategy to implementation.',
+    featured: true,
+  },
+  {
+    id: 'ai-cost-optimization-advanced-2025',
+    title: 'Advanced AI Cost Optimization 2025',
+    description: 'Discover advanced strategies to reduce AI infrastructure costs by 40-60% while maintaining performance. Real-world techniques and tools.',
+    href: '/blog/ai-cost-optimization-advanced-2025',
+    date: '2025-01-28',
+    tags: ['AI', 'Cost Optimization', 'Engineering'],
+    category: 'AI Engineering',
+    readTime: '12 min read',
+    excerpt: 'Master AI cost optimization with advanced strategies, tools, and techniques. Reduce AI infrastructure costs by 40-60% while maintaining performance.',
+    featured: true,
+  },
+  {
+    id: 'ai-copilots-for-engineering',
     title: 'AI Copilots for Engineering Teams',
-    description:
-      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    description: 'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
     href: '/blog/ai-copilots-for-engineering',
     date: '2025-09-11',
     tags: ['AI', 'DevEx', 'Productivity'],
+    category: 'AI & Development',
+    readTime: '9 min read',
+    excerpt: 'Deploy secure, repo-aware copilots that speed reviews and cut toil for engineering teams.',
+    featured: false,
   },
   {
+    id: 'ai-agents-for-smbs',
     title: 'Practical AI Agents for Small Businesses',
-    description:
-      'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
+    description: 'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
     href: '/blog/ai-agents-for-smbs',
     date: '2025-09-11',
     tags: ['AI', 'Automation', 'Agents'],
+    category: 'AI & Automation',
+    readTime: '11 min read',
+    excerpt: 'Deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely for small businesses.',
+    featured: false,
   },
   {
+    id: 'cloud-cost-optimization-2025',
     title: 'Cloud Cost Optimization in 2025: Proven Playbook',
-    description:
-      'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    description: 'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
     href: '/blog/cloud-cost-optimization-2025',
     date: '2025-09-11',
     tags: ['Cloud', 'FinOps', 'DevOps'],
+    category: 'Cloud & DevOps',
+    readTime: '13 min read',
+    excerpt: 'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    featured: false,
   },
   {
+    id: 'ai-customer-support-playbooks',
     title: 'AI-Powered Customer Support Playbooks',
-    description:
-      'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    description: 'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
     href: '/blog/ai-customer-support-playbooks',
     date: '2025-09-11',
     tags: ['AI', 'CX', 'Automation'],
-  },
-  {
-    title: 'AI Infrastructure Cost Controls That Actually Work',
-    description:
-      'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
-    href: '/blog/ai-infra-cost-controls',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'AI'],
-  },
-  {
-    title: 'Enterprise RAG Blueprint: From Pilot to Production',
-    description:
-      'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
-    href: '/blog/enterprise-rag-blueprint',
-    date: '2025-09-11',
-    tags: ['RAG', 'LLM', 'Architecture'],
+    category: 'AI & Customer Experience',
+    readTime: '10 min read',
+    excerpt: 'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    featured: false,
   },
 ];
 
-	const featuredPosts = blogPosts.filter(post => post.featured);
-	const regularPosts = blogPosts.filter(post => !post.featured);
+	const featuredPosts = posts.filter(post => post.featured);
+	const regularPosts = posts.filter(post => !post.featured);
 
 	return (
 		<div className='min-h-screen bg-white'>

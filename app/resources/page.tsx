@@ -4,6 +4,17 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   const resources = [
     {
+      id: 'ai-implementation-playbook-2025',
+      title: 'AI Implementation Playbook 2025',
+      description: 'The definitive guide to successful AI implementation. Complete 50-page playbook with templates, checklists, and frameworks.',
+      category: 'AI Implementation',
+      type: 'Playbook',
+      downloadCount: '3,200+',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
+    {
       id: 'ai-implementation-checklist-2025',
       title: 'AI Implementation Checklist 2025',
       description: 'A comprehensive step-by-step guide to successfully implementing AI in your organization. Avoid common pitfalls and maximize your AI ROI.',
