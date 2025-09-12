@@ -14,8 +14,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Promo Banner */}
         <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-center">
-            <a href="/news/autonomous-deployments" className="font-medium hover:underline">
-              New: Zion OS v1.2 with Autonomous Deployments → Read the announcement
+            <a href="/news/ai-marketplace-accelerator-1-5" className="font-medium hover:underline">
+              New: Zion OS 1.5 — AI Marketplace Accelerator → Read the announcement
             </a>
           </div>
         </div>

@@ -1,6 +1,15 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "🚀",
+      title: "Zion OS 1.5: AI Marketplace Accelerator",
+      excerpt:
+        "Launch production marketplaces in hours with presets, seed data, and agent workflows.",
+      date: "Sep 12, 2025",
+      href: "/news/ai-marketplace-accelerator-1-5",
+      gradient: "from-indigo-600 to-blue-600",
+    },
+    {
       emoji: "⚡",
       title: "Zion OS 1.4: Performance & Accessibility Upgrades",
       excerpt:

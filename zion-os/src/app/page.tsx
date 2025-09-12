@@ -172,6 +172,14 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/news/ai-marketplace-accelerator-1-5" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-indigo-600 to-blue-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🚀</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">AI Marketplace Accelerator</h3>
+                <p className="text-white/70">Launch production marketplaces in hours with presets and seed data.</p>
+              </div>
+            </a>
             <a href="/news/ziongpt-core-v2" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
               <div className="p-6">
