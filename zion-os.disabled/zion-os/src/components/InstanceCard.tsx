@@ -1,5 +1,7 @@
 "use client";
+
 import { useState } from "react";
+
 interface InstanceCardProps {
   instance: {
     id: string;
@@ -16,8 +18,10 @@ interface InstanceCardProps {
     };
   };
 }
+
 export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+
   const getVerticalColor = (vertical: string) => {
     switch (vertical) {
       case 'HEALTH': return 'bg-red-500/20 text-red-400 border-red-500/30';
@@ -27,6 +31,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
+
   const getGovernanceColor = (governance: string) => {
     switch (governance) {
       case 'DAO_FULL': return 'bg-green-500/20 text-green-400 border-green-500/30';
@@ -34,6 +39,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
+
   const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -41,6 +47,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       day: 'numeric'
     });
   };
+
   return (
     <div className="card group hover:scale-105 transition-all duration-200 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
       <div className="flex items-start justify-between mb-4">
@@ -61,6 +68,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           <span className="text-white font-bold text-sm">Z</span>
         </div>
       </div>
+
       <div className="space-y-3">
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-400">Domain:</span>
@@ -73,15 +81,18 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           <span className="text-gray-400">Created:</span>
           <span>{formatDate(instance.createdAt)}</span>
         </div>
+
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-400">Deployments:</span>
           <span className="font-semibold">{instance._count.deployments}</span>
         </div>
+
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-400">Features:</span>
           <span className="font-semibold">{instance._count.features}</span>
         </div>
       </div>
+
       {isExpanded && (
         <div className="mt-6 pt-6 border-t border-white/10 animate-fade-in">
           <div className="grid grid-cols-2 gap-4 text-sm">
@@ -109,6 +120,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           </div>
         </div>
       )}
+
       <div className="mt-4 pt-4 border-t border-white/10">
         <div className="flex items-center justify-between text-xs text-gray-400">
           <span>Click to {isExpanded ? 'collapse' : 'expand'}</span>
