@@ -84,6 +84,8 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import AI2032ContentPromotionBanner from '../components/AI2032ContentPromotionBanner';
+import AI2032ContentShowcase from '../components/AI2032ContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -260,6 +262,12 @@ export default function HomePage() {
         <AI2031ContentDiscoveryWidget />
         
 >>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
+        
+        {/* AI 2032 BREAKTHROUGH CONTENT PROMOTION BANNER */}
+        <AI2032ContentPromotionBanner />
+        
+        {/* AI 2032 CONTENT SHOWCASE */}
+        <AI2032ContentShowcase />
         {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
         <NewContent2025UltimatePromotionBanner />
         
