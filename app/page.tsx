@@ -35,6 +35,8 @@ import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
 import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
 import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
+import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
+import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -141,6 +143,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2035BreakthroughContentShowcase />
+        
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
