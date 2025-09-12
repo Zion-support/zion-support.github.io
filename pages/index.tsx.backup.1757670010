@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import Head from 'next/head';
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-white"></div>
+      <Head></Head>
+        <title>Zion — Latest Autonomous Content</title>
+        <meta name="description" content="Fresh updates published by autonomous agents." />
+      
+        <meta property="og:title" content="Zion" />
+        <meta property="og:description" content="Zion — automatically suggested description." />
+        <meta name="twitter:card" content="summary_large_image" /></Head>
+=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -141,6 +154,7 @@ export default function HomePage() {
         <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
+>>>>>>> origin/backup-merged-branches-20250824-010351
 
           {/* Technology & Infrastructure Deep Dive */}
           <section className="mx-auto max-w-7xl px-6 pb-16"></section>

@@ -6,6 +6,8 @@ export type ServiceVariant =
   | 'neural'
   | 'quantum-holographic'
   | 'quantum-advanced'
+<<<<<<< HEAD
+=======
   | 'quantum-ai-advanced'
   | 'quantum-ai-enterprise'
   | 'quantum-ai-finance'
@@ -151,6 +153,7 @@ export type ServiceVariant =
   | 'ai-education-enterprise'
   
   // Holographic variants
+>>>>>>> origin/backup-merged-branches-20250824-010351
   | 'holographic-advanced'
   | 'neural-quantum'
   | 'quantum-cyberpunk'
@@ -238,7 +241,24 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
+<<<<<<< HEAD
+  | 'manufacturing-futuristic'
+  | 'retail-futuristic'
+  | 'fintech-futuristic'
+  | 'customer-futuristic'
+  | 'ecommerce-futuristic'
+  | 'real-estate-futuristic'
+  | 'logistics-futuristic'
+  | 'quantum-security-futuristic'
+  | 'energy-futuristic'
+  | 'transportation-futuristic'
+  | 'education-futuristic'
+  | 'real-estate-futuristic'
+  | 'industrial-futuristic'
+  | 'neural-futuristic';
+=======
   | 'neuromorphic-futuristic'
   | 'dna-futuristic'
   | 'photonic-futuristic'
   | 'robotics-futuristic';
+>>>>>>> origin/backup-merged-branches-20250824-010351
