@@ -57,6 +57,8 @@ import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import AI2026ROICalculator from '../components/AI2026ROICalculator';
+import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -111,6 +113,16 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
+        
+        {/* AI 2026 ROI CALCULATOR */}
+        <div className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <AI2026ROICalculator />
+          </div>
+        </div>
+        
+        {/* CONTENT DISCOVERY 2026 */}
+        <ContentDiscovery2026 />
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
