@@ -21,6 +21,8 @@ import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBa
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
 import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
+import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import NewContent2025Showcase from '../components/NewContent2025Showcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
@@ -53,6 +55,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 CONTENT PROMOTION BANNER */}
+        <AI2026ContentPromotionBanner />
+        
+        {/* AI 2026 CONTENT SHOWCASE */}
+        <AI2026ContentShowcase />
+        
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
