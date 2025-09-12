@@ -6,50 +6,26 @@ export default function ContentShowcase() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-<<<<<<< HEAD
-        title="Content Showcase - Latest AI & Tech Resources | Zion Tech Group"
-        description="Explore our comprehensive collection of AI articles, case studies, and resources. Stay ahead with expert insights on AI, cybersecurity, sustainability, and emerging technologies."
-        keywords="AI content, tech resources, case studies, blog articles, AI guides, technology insights, expert analysis"
-=======
         title="Content Showcase - Latest AI & Tech Insights 2025"
         description="Explore our comprehensive library of AI insights, case studies, and resources. Fresh content covering AI trends, implementation guides, and success stories for 2025."
         keywords="AI content, tech insights, case studies, resources, AI trends 2025, implementation guides, success stories"
->>>>>>> cursor/create-and-deploy-new-content-6fbd
         url="/content-showcase"
       />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-<<<<<<< HEAD
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">📚 CONTENT SHOWCASE</span>
+        <header className="text-center mb-16">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🚀 FRESH CONTENT</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Latest AI & Tech Content
+            Content Showcase
           </h1>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover our comprehensive collection of expert insights, case studies, and resources. 
-            Stay ahead with the latest trends in AI, cybersecurity, sustainability, and emerging technologies.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover our latest AI insights, case studies, and resources. From cutting-edge 
+            research to real-world success stories, find everything you need to accelerate 
+            your AI transformation in 2025.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
-            >
-              📚 Browse All Articles
-            </Link>
-            <Link
-              href="/resources"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
-            >
-              📋 Download Resources
-            </Link>
-          </div>
-        </div>
+        </header>
 
         {/* Featured Content */}
         <section className="mb-16">
