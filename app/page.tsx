@@ -189,41 +189,41 @@ export default function HomePage() {
           </div>
 
           <div className='grid md:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-2025-multimodal-revolution' className='group'>
+            <Link href='/blog/ai-2025-advanced-robotics' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>Multimodal AI Revolution</h3>
-                <p className='text-sm opacity-90 mb-3'>The future of human-computer interaction with voice, vision, and gesture recognition</p>
+                <h3 className='text-lg font-semibold mb-2'>Advanced Robotics & AI Integration</h3>
+                <p className='text-sm opacity-90 mb-3'>Humanoid robots and autonomous systems revolutionizing industries with cognitive capabilities</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
+                  <span>18 min read</span>
                   <span className='mx-2'>•</span>
                   <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/blog/ai-2025-robotics-automation' className='group'>
+            <Link href='/blog/ai-2025-neural-interfaces' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚙️</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Robotics & Automation</h3>
-                <p className='text-sm opacity-90 mb-3'>Intelligent machines and collaborative robots transforming industries</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧠</div>
+                <h3 className='text-lg font-semibold mb-2'>Neural Interfaces & BCI</h3>
+                <p className='text-sm opacity-90 mb-3'>Direct brain-computer communication enabling human enhancement and thought-controlled devices</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>15 min read</span>
+                  <span>20 min read</span>
                   <span className='mx-2'>•</span>
                   <span className='bg-blue-500 px-2 py-1 rounded-full'>Hot</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/case-studies/ai-sustainability-transformation-2025' className='group'>
+            <Link href='/case-studies/ai-2025-autonomous-vehicles-success' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Sustainability Success</h3>
-                <p className='text-sm opacity-90 mb-3'>Net-zero emissions achieved with 40% cost reduction - real case study</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚗</div>
+                <h3 className='text-lg font-semibold mb-2'>Autonomous Vehicles Success</h3>
+                <p className='text-sm opacity-90 mb-3'>95% reduction in accidents, $2.3T market value created through AI-powered transportation</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Case Study</span>
                   <span className='mx-2'>•</span>
-                  <span className='bg-purple-500 px-2 py-1 rounded-full'>Award Winner</span>
+                  <span className='bg-purple-500 px-2 py-1 rounded-full'>Featured</span>
                 </div>
               </div>
             </Link>
