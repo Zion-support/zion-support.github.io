@@ -1,5 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Brain, Rocket, Shield, Globe, Zap, Users, Target, Database, Lock, Cpu, Network, BarChart3 } from 'lucide-react';
 
 export const metadata = {
@@ -169,7 +168,6 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Optimization</h3>
               <p className="text-gray-600">We continuously improve and scale your AI systems</p>
-=======
 
 export default function ServicesPage() {
   const serviceCategories = [
@@ -372,7 +370,6 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Contact Information Section */}
@@ -417,7 +414,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-=======
 
         {/* CTA Section */}
         <div className="mt-20 text-center">

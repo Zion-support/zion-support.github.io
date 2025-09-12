@@ -1,150 +1,170 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
-
-export const metadata = {
-  title: 'AI Sustainability Transformation: Global Manufacturing Giant Achieves Carbon Neutrality',
-  description: 'How a Fortune 500 manufacturing company used AI to achieve carbon neutrality, reduce emissions by 60%, and save $2.3B annually through sustainable transformation.',
-  keywords: 'AI sustainability, carbon neutrality, manufacturing transformation, green tech, sustainable business, climate solutions'
-};
+import Link from 'next/link';
 
 export default function AISustainabilityTransformation2025() {
   return (
-    <ErrorBoundary>
+    <div className="min-h-screen bg-white">
       <SEO
-        title="AI Sustainability Transformation: Global Manufacturing Giant Achieves Carbon Neutrality"
-        description="How a Fortune 500 manufacturing company used AI to achieve carbon neutrality, reduce emissions by 60%, and save $2.3B annually through sustainable transformation."
-        keywords="AI sustainability, carbon neutrality, manufacturing transformation, green tech, sustainable business, climate solutions"
+        title="AI Sustainability Transformation: 60% Energy Reduction Case Study"
+        description="Discover how a Fortune 500 company achieved 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives. Complete implementation guide included."
+        keywords="AI sustainability, green tech, energy reduction, carbon neutrality, AI case study, environmental AI"
         url="/case-studies/ai-sustainability-transformation-2025"
       />
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🌱 SUCCESS STORY - JANUARY 2025</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI Sustainability Transformation:
-                <span className="text-green-600 block">Global Manufacturing Giant Achieves Carbon Neutrality</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Discover how a Fortune 500 manufacturing company leveraged AI-powered solutions to achieve 
-                complete carbon neutrality, reduce emissions by 60%, and generate $2.3B in annual savings 
-                through sustainable business transformation.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-                <span>📅 January 27, 2025</span>
-                <span>⏱️ 15 min read</span>
-                <span>🏭 Manufacturing</span>
-                <span>🌍 Sustainability</span>
-              </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="mb-12">
+          <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">🌱 SUSTAINABILITY SUCCESS</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Sustainability Transformation: 60% Energy Reduction Case Study
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            How a Fortune 500 manufacturing company leveraged AI to achieve unprecedented sustainability 
+            results: 60% energy reduction, carbon neutrality, and $12M annual savings while maintaining 
+            operational excellence.
+          </p>
+          <div className="flex items-center gap-4 text-sm text-gray-500">
+            <span>By Zion Tech Group</span>
+            <span>•</span>
+            <span>January 10, 2025</span>
+            <span>•</span>
+            <span>Case Study</span>
+          </div>
+        </div>
+
+        {/* Key Results Banner */}
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-2xl mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">🎯 Key Results Achieved</h2>
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-4xl font-bold mb-2">60%</div>
+              <div className="text-sm opacity-90">Energy Reduction</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">100%</div>
+              <div className="text-sm opacity-90">Carbon Neutral</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">$12M</div>
+              <div className="text-sm opacity-90">Annual Savings</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">18</div>
+              <div className="text-sm opacity-90">Months ROI</div>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Executive Summary */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Challenge</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• 2.8M tons annual CO₂ emissions</li>
-                    <li>• $850M annual energy costs</li>
-                    <li>• Regulatory compliance pressure</li>
-                    <li>• Stakeholder sustainability demands</li>
-                    <li>• Complex global supply chain</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Solution</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• AI-powered carbon tracking system</li>
-                    <li>• Smart energy management platform</li>
-                    <li>• Predictive maintenance algorithms</li>
-                    <li>• Supply chain optimization</li>
-                    <li>• Renewable energy integration</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Results */}
-            <div className="grid md:grid-cols-4 gap-6 mb-12">
-              <div className="text-center p-6 bg-green-50 rounded-xl">
-                <div className="text-3xl font-bold text-green-600 mb-2">60%</div>
-                <p className="text-sm text-gray-600">Emissions Reduction</p>
-              </div>
-              <div className="text-center p-6 bg-blue-50 rounded-xl">
-                <div className="text-3xl font-bold text-blue-600 mb-2">$2.3B</div>
-                <p className="text-sm text-gray-600">Annual Savings</p>
-              </div>
-              <div className="text-center p-6 bg-purple-50 rounded-xl">
-                <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
-                <p className="text-sm text-gray-600">Carbon Neutral</p>
-              </div>
-              <div className="text-center p-6 bg-orange-50 rounded-xl">
-                <div className="text-3xl font-bold text-orange-600 mb-2">18</div>
-                <p className="text-sm text-gray-600">Months ROI</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Company Background */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Company Background</h2>
+        {/* Company Overview */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Overview</h2>
+          <div className="bg-gray-50 p-8 rounded-xl mb-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Manufacturing Leader</h3>
-                <p className="text-gray-600 mb-6">
-                  A Fortune 500 manufacturing company with operations spanning 45 countries, 
-                  180 facilities, and a workforce of 85,000 employees. The company produces 
-                  industrial equipment, automotive components, and consumer goods for global markets.
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">The Challenge</h3>
+                <p className="text-gray-700 mb-4">
+                  Global Manufacturing Corp, a Fortune 500 company with 50+ facilities worldwide, 
+                  faced mounting pressure to reduce their environmental footprint while maintaining 
+                  competitive operational efficiency.
                 </p>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Annual Revenue:</span>
-                    <span className="font-semibold">$28.5B</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Facilities:</span>
-                    <span className="font-semibold">180</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Countries:</span>
-                    <span className="font-semibold">45</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Employees:</span>
-                    <span className="font-semibold">85,000</span>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>High energy consumption across 50+ facilities</li>
+                  <li>Regulatory pressure for carbon reduction</li>
+                  <li>Rising energy costs impacting profitability</li>
+                  <li>Stakeholder demand for sustainability initiatives</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">The Opportunity</h3>
+                <p className="text-gray-700 mb-4">
+                  With AI technology maturing and sustainability becoming a business imperative, 
+                  the company saw an opportunity to transform their operations while achieving 
+                  significant cost savings.
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>AI-powered energy optimization potential</li>
+                  <li>Predictive maintenance for efficiency gains</li>
+                  <li>Smart grid integration opportunities</li>
+                  <li>Carbon tracking and reporting automation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Strategy */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Strategy</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            The transformation was implemented in three strategic phases, each building on the previous 
+            phase's success and learnings.
+          </p>
+
+          <div className="space-y-8">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Phase 1: Foundation & Assessment (Months 1-6)</h3>
+                  <p className="text-gray-700 mb-4">
+                    Established baseline metrics, implemented IoT sensors across facilities, and developed 
+                    AI models for energy consumption prediction and optimization.
+                  </p>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">Key Activities:</h4>
+                    <ul className="list-disc list-inside text-blue-800 text-sm space-y-1">
+                      <li>Comprehensive energy audit across all facilities</li>
+                      <li>IoT sensor deployment for real-time monitoring</li>
+                      <li>AI model development for energy optimization</li>
+                      <li>Baseline carbon footprint measurement</li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Sustainability Challenges</h3>
-                <div className="space-y-4">
-                  <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded-r">
-                    <h4 className="font-semibold text-red-800">Carbon Footprint</h4>
-                    <p className="text-sm text-red-700">2.8M tons CO₂ annually across operations</p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Phase 2: AI Implementation (Months 7-12)</h3>
+                  <p className="text-gray-700 mb-4">
+                    Deployed AI-powered energy management systems, implemented predictive maintenance, 
+                    and launched smart grid integration for optimal energy sourcing.
+                  </p>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-2">Key Activities:</h4>
+                    <ul className="list-disc list-inside text-green-800 text-sm space-y-1">
+                      <li>AI energy management system deployment</li>
+                      <li>Predictive maintenance implementation</li>
+                      <li>Smart grid integration and optimization</li>
+                      <li>Real-time energy monitoring dashboards</li>
+                    </ul>
                   </div>
-                  <div className="p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-r">
-                    <h4 className="font-semibold text-yellow-800">Energy Costs</h4>
-                    <p className="text-sm text-yellow-700">$850M annual energy expenditure</p>
-                  </div>
-                  <div className="p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r">
-                    <h4 className="font-semibold text-orange-800">Regulatory Pressure</h4>
-                    <p className="text-sm text-orange-700">Multiple jurisdictions requiring emissions reporting</p>
-                  </div>
-                  <div className="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r">
-                    <h4 className="font-semibold text-blue-800">Supply Chain Complexity</h4>
-                    <p className="text-sm text-blue-700">15,000+ suppliers across 6 continents</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Phase 3: Optimization & Scale (Months 13-18)</h3>
+                  <p className="text-gray-700 mb-4">
+                    Fine-tuned AI models based on real-world data, expanded successful initiatives across 
+                    all facilities, and achieved carbon neutrality through renewable energy integration.
+                  </p>
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-900 mb-2">Key Activities:</h4>
+                    <ul className="list-disc list-inside text-purple-800 text-sm space-y-1">
+                      <li>AI model optimization and fine-tuning</li>
+                      <li>Organization-wide rollout of successful initiatives</li>
+                      <li>Renewable energy integration and carbon offsetting</li>
+                      <li>Sustainability reporting and certification</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -152,211 +172,174 @@ export default function AISustainabilityTransformation2025() {
           </div>
         </section>
 
-        {/* AI Solution Implementation */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Solution Implementation</h2>
-            
-            {/* Phase 1 */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Phase 1: Carbon Intelligence Platform (Months 1-6)</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-green-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-green-800 mb-4">🔍 Smart Monitoring System</h4>
-                  <ul className="space-y-2 text-green-700">
-                    <li>• Real-time emissions tracking across all facilities</li>
-                    <li>• IoT sensor network with 50,000+ data points</li>
-                    <li>• Satellite imagery for supply chain monitoring</li>
-                    <li>• Predictive analytics for emission forecasting</li>
-                  </ul>
-                </div>
-                <div className="bg-blue-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-blue-800 mb-4">📊 Data Integration Hub</h4>
-                  <ul className="space-y-2 text-blue-700">
-                    <li>• Unified dashboard for all sustainability metrics</li>
-                    <li>• Automated reporting for regulatory compliance</li>
-                    <li>• Machine learning for pattern recognition</li>
-                    <li>• Real-time alerts for emission anomalies</li>
-                  </ul>
-                </div>
-              </div>
+        {/* AI Technologies Used */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">AI Technologies & Solutions</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            The transformation leveraged cutting-edge AI technologies specifically designed for 
+            sustainability and energy optimization.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning Energy Optimization</h3>
+              <p className="text-gray-700 mb-4">
+                Advanced ML models that predict energy consumption patterns and automatically 
+                adjust systems for optimal efficiency.
+              </p>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Real-time energy consumption prediction</li>
+                <li>Automated system optimization</li>
+                <li>Anomaly detection and alerting</li>
+                <li>Continuous learning and improvement</li>
+              </ul>
             </div>
 
-            {/* Phase 2 */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Phase 2: Energy Optimization (Months 7-12)</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-purple-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-purple-800 mb-4">⚡ Smart Grid Management</h4>
-                  <ul className="space-y-2 text-purple-700">
-                    <li>• AI-driven energy consumption optimization</li>
-                    <li>• Renewable energy integration (solar, wind, hydro)</li>
-                    <li>• Battery storage optimization</li>
-                    <li>• Demand response automation</li>
-                  </ul>
-                </div>
-                <div className="bg-orange-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-orange-800 mb-4">🔧 Predictive Maintenance</h4>
-                  <ul className="space-y-2 text-orange-700">
-                    <li>• Equipment failure prediction using ML</li>
-                    <li>• Maintenance scheduling optimization</li>
-                    <li>• Energy efficiency monitoring</li>
-                    <li>• Performance degradation alerts</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="text-4xl mb-4">🔮</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Maintenance AI</h3>
+              <p className="text-gray-700 mb-4">
+                AI-powered predictive maintenance that prevents equipment failures and optimizes 
+                maintenance schedules for maximum efficiency.
+              </p>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Equipment failure prediction</li>
+                <li>Optimal maintenance scheduling</li>
+                <li>Energy efficiency optimization</li>
+                <li>Reduced downtime and costs</li>
+              </ul>
             </div>
 
-            {/* Phase 3 */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Phase 3: Supply Chain Transformation (Months 13-18)</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-indigo-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-indigo-800 mb-4">🚚 Logistics Optimization</h4>
-                  <ul className="space-y-2 text-indigo-700">
-                    <li>• Route optimization for reduced emissions</li>
-                    <li>• Load consolidation algorithms</li>
-                    <li>• Electric vehicle fleet management</li>
-                    <li>• Supplier sustainability scoring</li>
-                  </ul>
-                </div>
-                <div className="bg-teal-50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-teal-800 mb-4">♻️ Circular Economy Integration</h4>
-                  <ul className="space-y-2 text-teal-700">
-                    <li>• Waste reduction through AI analytics</li>
-                    <li>• Material recycling optimization</li>
-                    <li>• Product lifecycle management</li>
-                    <li>• Resource recovery maximization</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Smart Grid Integration</h3>
+              <p className="text-gray-700 mb-4">
+                Intelligent grid management that optimizes energy sourcing from renewable sources 
+                and manages peak demand periods.
+              </p>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Renewable energy optimization</li>
+                <li>Peak demand management</li>
+                <li>Grid stability enhancement</li>
+                <li>Cost optimization through smart sourcing</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Carbon Tracking & Reporting</h3>
+              <p className="text-gray-700 mb-4">
+                Automated carbon footprint tracking and reporting system that provides real-time 
+                insights and compliance reporting.
+              </p>
+              <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                <li>Real-time carbon footprint tracking</li>
+                <li>Automated compliance reporting</li>
+                <li>Carbon offset recommendations</li>
+                <li>Sustainability dashboard and analytics</li>
+              </ul>
             </div>
           </div>
         </section>
 
         {/* Results & Impact */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Results & Impact</h2>
-            
-            {/* Environmental Impact */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">🌍 Environmental Impact</h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <div className="text-4xl font-bold text-green-600 mb-2">1.68M</div>
-                  <p className="text-sm text-gray-600">Tons CO₂ Reduced Annually</p>
-                  <p className="text-xs text-green-600 mt-2">Equivalent to 365,000 cars off the road</p>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            The AI sustainability transformation delivered exceptional results across multiple dimensions, 
+            proving that environmental responsibility and business success go hand in hand.
+          </p>
+
+          <div className="space-y-8">
+            <div className="bg-green-50 border-l-4 border-green-500 p-6">
+              <h3 className="text-xl font-semibold text-green-900 mb-4">🌱 Environmental Impact</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">60%</span>
+                      <span className="text-gray-700">Reduction in energy consumption</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">100%</span>
+                      <span className="text-gray-700">Carbon neutral operations achieved</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">45%</span>
+                      <span className="text-gray-700">Reduction in water usage</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">80%</span>
+                      <span className="text-gray-700">Waste reduction through optimization</span>
+                    </li>
+                  </ul>
                 </div>
-                <div className="text-center p-6 bg-blue-50 rounded-xl">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
-                  <p className="text-sm text-gray-600">Renewable Energy Usage</p>
-                  <p className="text-xs text-blue-600 mt-2">Up from 12% baseline</p>
-                </div>
-                <div className="text-center p-6 bg-purple-50 rounded-xl">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                  <p className="text-sm text-gray-600">Carbon Neutrality Achieved</p>
-                  <p className="text-xs text-purple-600 mt-2">18 months ahead of target</p>
+                <div>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">2.3M</span>
+                      <span className="text-gray-700">Tons CO2 emissions avoided annually</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">85%</span>
+                      <span className="text-gray-700">Renewable energy usage</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">95%</span>
+                      <span className="text-gray-700">Waste recycling rate achieved</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-green-600 font-bold">ISO 14001</span>
+                      <span className="text-gray-700">Environmental management certification</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* Financial Impact */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">💰 Financial Impact</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Cost Savings</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Energy Costs:</span>
-                      <span className="font-semibold text-green-600">-$520M/year</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Maintenance:</span>
-                      <span className="font-semibold text-green-600">-$180M/year</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Waste Reduction:</span>
-                      <span className="font-semibold text-green-600">-$95M/year</span>
-                    </div>
-                    <div className="flex justify-between border-t pt-2">
-                      <span className="text-gray-900 font-semibold">Total Annual Savings:</span>
-                      <span className="font-bold text-green-600">$2.3B</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Revenue Impact</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">New Green Products:</span>
-                      <span className="font-semibold text-blue-600">+$1.2B</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Sustainability Premium:</span>
-                      <span className="font-semibold text-blue-600">+$450M</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Tax Incentives:</span>
-                      <span className="font-semibold text-blue-600">+$280M</span>
-                    </div>
-                    <div className="flex justify-between border-t pt-2">
-                      <span className="text-gray-900 font-semibold">Total Revenue Growth:</span>
-                      <span className="font-bold text-blue-600">$1.93B</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Operational Impact */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">⚙️ Operational Impact</h3>
-              <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6">
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">💰 Business Impact</h3>
+              <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Efficiency Improvements</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      <span className="text-gray-600">45% reduction in energy consumption</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                      <span className="text-gray-600">60% improvement in equipment uptime</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-600">35% reduction in waste generation</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                      <span className="text-gray-600">25% improvement in supply chain efficiency</span>
-                    </div>
-                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">$12M</span>
+                      <span className="text-gray-700">Annual cost savings achieved</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">18</span>
+                      <span className="text-gray-700">Months to achieve full ROI</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">35%</span>
+                      <span className="text-gray-700">Reduction in operational costs</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">25%</span>
+                      <span className="text-gray-700">Increase in operational efficiency</span>
+                    </li>
+                  </ul>
                 </div>
-                
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Employee Engagement</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      <span className="text-gray-600">92% employee satisfaction with green initiatives</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                      <span className="text-gray-600">15% increase in retention rates</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-600">40% improvement in safety metrics</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                      <span className="text-gray-600">28% boost in innovation index</span>
-                    </div>
-                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">40%</span>
+                      <span className="text-gray-700">Reduction in maintenance costs</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">90%</span>
+                      <span className="text-gray-700">Reduction in equipment downtime</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">15%</span>
+                      <span className="text-gray-700">Increase in customer satisfaction</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="text-blue-600 font-bold">$50M</span>
+                      <span className="text-gray-700">Additional revenue from sustainability initiatives</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -364,190 +347,144 @@ export default function AISustainabilityTransformation2025() {
         </section>
 
         {/* Lessons Learned */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Key Lessons Learned</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">✅ Success Factors</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Executive leadership commitment to sustainability goals</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Phased implementation approach reducing risk</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Comprehensive change management program</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Cross-functional team collaboration</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Real-time data visibility and transparency</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">⚠️ Challenges Overcome</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Legacy system integration complexity</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Supplier sustainability data collection</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Employee training and adoption</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Regulatory compliance across jurisdictions</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
-                    <span className="text-gray-600">Initial ROI demonstration to stakeholders</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            The successful implementation of AI-powered sustainability transformation provided valuable 
-            insights for other organizations considering similar initiatives.
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned & Best Practices</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            The transformation journey provided valuable insights that can guide other organizations 
+            embarking on similar sustainability initiatives.
           </p>
 
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 mb-8">
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Success Factors:</h4>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-3">
-                <span className="text-green-600 font-bold">✓</span>
-                <span><strong>Executive Commitment:</strong> Strong leadership support and clear sustainability vision</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-600 font-bold">✓</span>
-                <span><strong>Phased Approach:</strong> Gradual implementation reduces risk and ensures adoption</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-600 font-bold">✓</span>
-                <span><strong>Data Foundation:</strong> Comprehensive data collection and monitoring systems</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-600 font-bold">✓</span>
-                <span><strong>Employee Engagement:</strong> Training and involvement of all stakeholders</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-600 font-bold">✓</span>
-                <span><strong>Technology Integration:</strong> Seamless integration with existing systems</span>
-              </li>
-            </ul>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Building on the success of the initial transformation, GMC has developed a comprehensive 
-            roadmap for continued sustainability innovation and improvement.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Short-term Goals (2025-2026)</h4>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Achieve net-positive environmental impact</li>
-                <li>• Expand renewable energy to 100%</li>
-                <li>• Implement circular economy principles</li>
-                <li>• Develop sustainable product lines</li>
+          <div className="space-y-6">
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+              <h3 className="text-lg font-semibold text-yellow-900 mb-3">🎯 Key Success Factors</h3>
+              <ul className="list-disc list-inside text-yellow-800 space-y-2">
+                <li><strong>Leadership Commitment:</strong> Strong executive support and clear sustainability vision</li>
+                <li><strong>Data Foundation:</strong> Comprehensive data collection and IoT infrastructure</li>
+                <li><strong>Change Management:</strong> Effective communication and employee engagement</li>
+                <li><strong>Technology Integration:</strong> Seamless integration with existing systems</li>
+                <li><strong>Continuous Monitoring:</strong> Real-time tracking and continuous optimization</li>
               </ul>
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Long-term Vision (2027-2030)</h4>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Become carbon negative across operations</li>
-                <li>• Lead industry in sustainable manufacturing</li>
-                <li>• Influence supplier sustainability practices</li>
-                <li>• Develop next-generation green technologies</li>
+
+            <div className="bg-red-50 border-l-4 border-red-500 p-6">
+              <h3 className="text-lg font-semibold text-red-900 mb-3">⚠️ Challenges Overcome</h3>
+              <ul className="list-disc list-inside text-red-800 space-y-2">
+                <li><strong>Data Quality:</strong> Initial data inconsistencies required significant cleanup</li>
+                <li><strong>System Integration:</strong> Legacy systems required careful integration planning</li>
+                <li><strong>Change Resistance:</strong> Employee training and change management were crucial</li>
+                <li><strong>Regulatory Compliance:</strong> Complex sustainability reporting requirements</li>
+                <li><strong>Technology Learning Curve:</strong> Team required extensive AI training</li>
+              </ul>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-500 p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-3">✅ Best Practices</h3>
+              <ul className="list-disc list-inside text-green-800 space-y-2">
+                <li><strong>Start Small:</strong> Pilot programs before organization-wide rollout</li>
+                <li><strong>Measure Everything:</strong> Comprehensive baseline and ongoing metrics</li>
+                <li><strong>Partner Wisely:</strong> Choose technology partners with proven expertise</li>
+                <li><strong>Invest in Training:</strong> Continuous learning and skill development</li>
+                <li><strong>Celebrate Success:</strong> Recognize and reward sustainability achievements</li>
               </ul>
             </div>
           </div>
+        </section>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
-
-          <p className="text-gray-700 leading-relaxed mb-8">
-            GMC's AI-powered sustainability transformation demonstrates that environmental responsibility 
-            and business success are not mutually exclusive. By leveraging AI technologies strategically, 
-            organizations can achieve ambitious sustainability goals while improving operational efficiency 
-            and creating long-term value.
+        {/* Implementation Guide */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Guide</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Ready to start your own AI sustainability transformation? Follow this step-by-step guide 
+            based on our proven methodology.
           </p>
 
-          <div className="bg-green-50 rounded-lg p-6 mb-8">
-            <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Takeaways:</h4>
-            <ul className="space-y-2 text-gray-700">
-              <li>• AI can drive significant environmental improvements while maintaining profitability</li>
-              <li>• Phased implementation reduces risk and ensures sustainable change</li>
-              <li>• Executive commitment and employee engagement are critical success factors</li>
-              <li>• Technology integration must be seamless and user-friendly</li>
-              <li>• Sustainability transformation creates competitive advantage and customer value</li>
-            </ul>
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-xl">
+            <h3 className="text-2xl font-bold mb-6">🚀 Your Sustainability Transformation Roadmap</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold mb-3">Phase 1: Foundation</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>✓ Conduct energy audit</li>
+                  <li>✓ Establish baseline metrics</li>
+                  <li>✓ Deploy IoT sensors</li>
+                  <li>✓ Develop AI strategy</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-3">Phase 2: Implementation</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>✓ Deploy AI systems</li>
+                  <li>✓ Train your team</li>
+                  <li>✓ Monitor progress</li>
+                  <li>✓ Optimize continuously</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-3">Phase 3: Scale & Optimize</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>✓ Rollout organization-wide</li>
+                  <li>✓ Achieve carbon neutrality</li>
+                  <li>✓ Report on success</li>
+                  <li>✓ Plan next initiatives</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </article>
+        </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Sustainability Strategy?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Learn how AI can help your organization achieve carbon neutrality and drive sustainable growth.
+        <section className="mb-16">
+          <div className="bg-gray-900 text-white p-8 rounded-2xl text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Sustainability?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join the growing number of companies achieving remarkable sustainability results with AI. 
+              Our experts can help you develop and implement a comprehensive sustainability transformation strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/services/ai-automation" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Explore AI Solutions
-              </a>
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Schedule Consultation
-              </a>
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Get Expert Consultation
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Download Implementation Guide
+              </Link>
             </div>
           </div>
         </section>
 
         {/* Related Case Studies */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Related Case Studies</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Manufacturing Revolution</h3>
-                <p className="text-gray-600 mb-4">How AI transformed production efficiency and reduced costs by 40%.</p>
-                <a href="/case-studies/ai-2025-global-manufacturing-ai-transformation-success" className="text-blue-600 hover:text-blue-800 font-medium">Read Case Study →</a>
+        <section className="mt-16 pt-8 border-t border-gray-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+              <div className="bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                  AI Autonomous Manufacturing Success
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  $200M savings through autonomous AI systems in manufacturing
+                </p>
               </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Services AI</h3>
-                <p className="text-gray-600 mb-4">Banking transformation with AI achieving 300% efficiency gains.</p>
-                <a href="/case-studies/ai-2025-financial-services-ai-transformation-success" className="text-blue-600 hover:text-blue-800 font-medium">Read Case Study →</a>
+            </Link>
+            
+            <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
+              <div className="bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                  AI Financial Services Transformation
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  $50M cost savings and 300% efficiency gains in financial services
+                </p>
               </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Retail Transformation</h3>
-                <p className="text-gray-600 mb-4">Global retail giant's AI-powered customer experience revolution.</p>
-                <a href="/case-studies/ai-2025-global-retail-transformation-success" className="text-blue-600 hover:text-blue-800 font-medium">Read Case Study →</a>
-              </div>
-            </div>
+            </Link>
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
