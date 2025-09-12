@@ -1070,6 +1070,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner />
+
       {/* Interactive Content Discovery */}
       <InteractiveContentDiscovery />
 
