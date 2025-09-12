@@ -18,6 +18,36 @@ const newContentItems = [
     new: true
   },
   {
+    title: "Real-Time Voice Agents in 2025",
+    description: "Low-latency architectures, guardrails, and ROI for production",
+    url: "/blog/ai-2025-realtime-voice-agents",
+    type: "Blog Post",
+    category: "Agents",
+    icon: "🎙️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance Claims Automation: 55% OPEX Reduction",
+    description: "Tier-1 insurer automates FNOL, triage, and fraud checks",
+    url: "/case-studies/ai-insurance-claims-automation-success-2025",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📄",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Evaluation Checklist 2025",
+    description: "Operational evals for safety, latency, cost, and reliability",
+    url: "/resources/ai-evaluation-checklist-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "✅",
+    featured: false,
+    new: true
+  },
+  {
     title: "AI Model Evaluation Playbook 2025",
     description: "Production-ready evals for LLM apps and agent systems",
     url: "/blog/ai-2025-model-evaluation-playbook",
