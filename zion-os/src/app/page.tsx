@@ -172,28 +172,28 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/news/zion-os-1-4-security-compliance" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🛡️</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.4: Security & Compliance</h3>
+                <p className="text-white/70">Compliance templates, audit trails, and security hardening.</p>
+              </div>
+            </a>
+            <a href="/news/enterprise-infra-cost-reduction-50-percent" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">💼</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Customer Story: 50% Cost Reduction</h3>
+                <p className="text-white/70">Policy‑based scaling and orchestration delivered savings.</p>
+              </div>
+            </a>
             <a href="/news/zion-os-1-3-agents-rag" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🧠</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3: Agent Workflows + RAG</h3>
-                <p className="text-white/70">Autonomous workflows, built‑in RAG, and analytics dashboards.</p>
-              </div>
-            </a>
-            <a href="/news/case-study-resume-ai-38-percent-faster" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">📈</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Case Study: 38% Faster Hiring</h3>
-                <p className="text-white/70">Resume AI cut time‑to‑hire while improving conversion.</p>
-              </div>
-            </a>
-            <a href="/news/zion-os-1-0-launch" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🚀</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.0 Launches</h3>
-                <p className="text-white/70">One‑click deployment of AI‑powered digital economies.</p>
+                <p className="text-white/70">Autonomous workflows and built‑in RAG.</p>
               </div>
             </a>
           </div>

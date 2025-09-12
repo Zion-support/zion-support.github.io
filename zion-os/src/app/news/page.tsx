@@ -1,6 +1,24 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "🛡️",
+      title: "Zion OS 1.4: Security & Compliance Pack",
+      excerpt:
+        "Enterprise-grade compliance templates, audit trails, and security hardening for regulated deployments.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-4-security-compliance",
+      gradient: "from-rose-600 to-red-600",
+    },
+    {
+      emoji: "💼",
+      title: "Customer Story: 50% Infra Cost Reduction",
+      excerpt:
+        "A global enterprise cut infrastructure spend by 50% with Zion OS orchestration and analytics.",
+      date: "Sep 12, 2025",
+      href: "/news/enterprise-infra-cost-reduction-50-percent",
+      gradient: "from-emerald-600 to-teal-600",
+    },
+    {
       emoji: "🧠",
       title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
       excerpt:
