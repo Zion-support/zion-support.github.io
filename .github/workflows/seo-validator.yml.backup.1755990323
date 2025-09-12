@@ -6,7 +6,12 @@ on:
     - cron: '*/10 * * * *'
 
 permissions:
+<<<<<<< HEAD
+  contents: write
+  actions: read
+=======
   contents: read
+>>>>>>> origin/cursor/fix-github-actions-errors-987b
 
 jobs:
   main:
@@ -27,8 +32,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-        run: echo "Workflow completed successfully"
-========
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

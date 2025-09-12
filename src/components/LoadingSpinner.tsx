@@ -1,173 +1,223 @@
-import React from 'react';';';
-import { motion } from 'framer-motion';';';
-import { Brain, Zap, Globe, Rocket } from 'lucide-react';
-
-interface LoadingSpinnerProps {
-';
-  message?: string;';';
-  message?: "string;
-  size?: 'sm' | 'md' | 'lg';
-;
-"}
-;
-const "LoadingSpinner": "React.FC<LoadingSpinnerProps> = ({;
-  message = "Loading..."",;
-  size = 'md';
-}) => {;
-  const sizeClasses = {;
-    "sm": 'w-8 h-8',;
-    "md": 'w-16 h-16',;
-    "lg": 'w-24 h-24';
-  };
-;
-  const textSizeClasses = {;
-    "sm": 'text-sm',;
-    "md": 'text-base',;
-    "lg": 'text-lg';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Globe, Rocket } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface LoadingSpinnerProps {
-
-  message?: string;
-  size?: 'sm' | 'md' | 'lg';
-
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'ripple';
+  color?: 'primary' | 'secondary' | 'white' | 'custom';
+  customColor?: string;
+  className?: string;
+  text?: string;
+  showText?: boolean;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  message = "Loading...", 
-  size = 'md' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-24 h-24'
-  };
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12',
+};
 
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
-  };
+const colorClasses = {
+  primary: 'text-zion-purple',
+  secondary: 'text-zion-cyan',
+  white: 'text-white',
+  custom: '',
+};
 
-  const icons = [Brain, Zap, Globe, Rocket];
-  const [currentIcon, setCurrentIcon] = React.useState<any>(0);
+export function LoadingSpinner({
+  size = 'md',
+  variant = 'default',
+  color = 'primary',
+  customColor,
+  className,
+  text,
+  showText = false,
+}: LoadingSpinnerProps) {
+  const sizeClass = sizeClasses[size];
+  const colorClass = color === 'custom' ? '' : colorClasses[color];
+  const finalColor = customColor || colorClass;
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIcon((prev) => (prev + 1) % icons.length);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [icons.length]);
-
-  const CurrentIcon = icons[currentIcon];
-        {/* Spinner */"}
-        <div className="relative">;
-          <motion.div;
-            className={`${sizeClasses[size]} border-4 border-cyan-200 border-t-cyan-500 rounded-full`}
-            animate={{ "rotate": "360 "}}
-            transition={{ "duration": "1", "repeat": "Infinity", "ease": "linear" }}
-          />;
-          <motion.div;
-            className="absolute inset-0 flex items-center justify-center";
-            animate={{ "scale": "[1", 1.2, 1] }}
-            transition={{ "duration": "2", "repeat": "Infinity "}}
-          >;
-            <CurrentIcon className={`${sizeClasses[size]} text-cyan-500`} />;
-          </motion.div>;
-        </div>;
-        {/* Message */}
-        <motion.div;
-          initial={{ "opacity": "0 "}}
-          animate={{ "opacity": "1 "}}
-          transition={{ "delay": "0.5 "}}
-          className="text-center";
-        >;
-          <div className={`${textSizeClasses[size]} text-cyan-600 "dark": "text-cyan-400 font-medium mb-2`"}>;
-
-  return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-      <div className="flex flex-col items-center space-y-6">
-        {/* Spinner */}
-        <div className="relative">
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'pulse':
+        return (
           <motion.div
-            className={`${sizeClasses[size]} border-4 border-cyan-200 border-t-cyan-500 rounded-full`}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            className={cn('rounded-full bg-current', sizeClass, finalColor, className)}
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [1, 0.5, 1],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           />
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <CurrentIcon className={`${sizeClasses[size]} text-cyan-500`} />
-          </motion.div>
-        </div>
+        );
 
-        {/* Message */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="text-center"
-        >
-          <div className={`${textSizeClasses[size]} text-cyan-600 dark:text-cyan-400 font-medium mb-2`}>
-            {message}
-          </div>
-          
-          {/* Dots */}
-          <div className="flex space-x-1 justify-center">
+      case 'dots':
+        return (
+          <div className={cn('flex space-x-1', className)}>
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="w-2 h-2 bg-cyan-500 rounded-full"
-                animate={{ scale: [1, 1.5, 1] }}
-                transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                className={cn('rounded-full bg-current', sizeClass, finalColor)}
+                animate={{
+                  y: [0, -10, 0],
+                  opacity: [0.3, 1, 0.3],
+                }}
+                transition={{
+                  duration: 1.4,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                  ease: "easeInOut",
+                }}
               />
             ))}
           </div>
-        </motion.div>
+        );
 
-        {/* Progress Bar */}
-        <div className="w-48 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+      case 'bars':
+        return (
+          <div className={cn('flex space-x-1', className)}>
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className={cn('bg-current rounded-sm', finalColor)}
+                style={{
+                  width: size === 'sm' ? '2px' : size === 'md' ? '3px' : size === 'lg' ? '4px' : '6px',
+                  height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px',
+                }}
+                animate={{
+                  scaleY: [1, 2, 1],
+                  opacity: [0.3, 1, 0.3],
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  delay: i * 0.1,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'ripple':
+        return (
+          <div className={cn('relative', sizeClass, className)}>
+            <motion.div
+              className={cn('absolute inset-0 rounded-full border-2 border-current', finalColor)}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [1, 0, 1],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className={cn('absolute inset-0 rounded-full border-2 border-current', finalColor)}
+              animate={{
+                scale: [1, 1.8, 1],
+                opacity: [0.5, 0, 0.5],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                delay: 0.5,
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+        );
+
+      default:
+        return (
           <motion.div
-            className="h-full bg-gradient-to-r from-cyan-500 to-blue-500"
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className={cn('border-2 border-current border-t-transparent rounded-full', sizeClass, finalColor, className)}
+            animate={{
+              rotate: 360,
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear",
+            }}
           />
-        </div>
-      </div>
+        );
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center space-y-3">
+      {renderSpinner()}
+      
+      {showText && text && (
+        <motion.p
+          className="text-sm text-zion-slate-light text-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
+          {text}
+        </motion.p>
+      )}
     </div>
-    );
-};
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</any>
-</LoadingSpinnerProps>
-</motion>
-</motion>
-</any>
-</LoadingSpinnerProps>
-export default LoadingSpinner;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</LoadingSpinnerProps>;
-</motion>;
-</motion>;
-</any>;
-</LoadingSpinnerProps>;
-export default LoadingSpinner;
-const React from "react"; import { motion } from "framer-motion"; import { Brain,Zap,Globe,Rocket } from "lucide-react"; ; interface LoadingSpinnerProps {; message?: string; import React from "react"; import { motion } from "framer-motion"; import { Brain,Zap,Globe,Rocket } from "lucide-react"; interface LoadingSpinnerProps { message?: string;";"; size?: "sm" | "md" | "lg"} const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ message = "Loading.",size = "md" }) => { const sizeClasses = { sm: "w-8 h-8",md: "w-16 h-16",lg: "w-24 h-24" }; const textSizeClasses = { sm: "text-sm",md: "text-base",lg: "text-lg" }; ; const icons = [Brain,Zap,Globe,Rocket]; const [currentIcon,setCurrentIcon] = React.useState<any>(0); ; React.useEffect(() => {; const interval = setInterval(() => {; setCurrentIcon((prev) => (prev + 1) % icons.length)},1000); ; return () => clearInterval(interval)},[icons.length]); ; const CurrentIcon = icons[currentIcon]; return ( <div className="min-h-screen bg-white"> <div className="flex flex-col items-center space-y-6"> {} <div className="relative">; <motion.div; className={`${sizeClasses[size]} border-4 border-cyan-200 border-t-cyan-500 rounded-full`} animate={{ rotate: 360 }} transition={{ duration: 1,repeat: Infinity,ease: "linear" }} />; <motion.div; className="absolute inset-0 flex items-center justify-center"; animate={{ scale: [1,1.2,1] }} transition={{ duration: 2,repeat: Infinity }} >; <CurrentIcon className={`${sizeClasses[size]} text-cyan-500`} />; </motion.div>; </div>; {} <motion.div; initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-center"; >; <div className={`${textSizeClasses[size]} text-cyan-600 dark:text-cyan-400 font-medium mb-2`}>; {message} </div>; {} <div className="flex space-x-1 justify-center">; {[0,1,2].map((i) => (; <motion.div; key={i} className="w-2 h-2 bg-cyan-500 rounded-full"; animate={{ scale: [1,1.5,1] }} transition={{ duration: 1,repeat: Infinity,delay: i * 0.2 }} />; ))} </div>; </motion.div>; {} <div className="w-48 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">; <motion.div; className="h-full bg-gradient-to-r from-cyan-500 to-blue-500"; initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 3,repeat: Infinity,ease: "easeInOut" }} />; </div>; </div>; </div>; )}; ; </motion>; </motion>; </motion>; </motion>; </motion>; </any>; </LoadingSpinnerProps>; </motion>; </motion>; </any>; </LoadingSpinnerProps>; export default LoadingSpinner; </motion> </motion> </any> </LoadingSpinnerProps> </motion> </any> </LoadingSpinnerProps> export default LoadingSpinner; ;";";'"`'"`
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import _React from 'react'; import { motion } from 'framer-motion'; import { Brain,Zap,Globe,Rocket } from 'lucide-react'; ; interface LoadingSpinnerProps {; message?: string; import _React from 'react'; import { motion } from 'framer-motion'; import { Brain,Zap,Globe,Rocket } from 'lucide-react'; interface LoadingSpinnerProps { message?: string;';'; size?: 'sm' | 'md' | 'lg'} const LoadingSpinner: _React.FC<LoadingSpinnerProps> = ({ message = "Loading...",size = 'md' }) => { const sizeClasses = { sm: 'w-8 h-8,md: 'w-16 h-16,lg: 'w-24 h-24' };; const textSizeClasses = { sm: 'text-sm,md: 'text-base,lg: 'text-lg' };; ; const icons = [Brain,Zap,Globe,Rocket]; const [currentIcon,setCurrentIcon] = _React.useState<any>(0); ; _React.useEffect(() => {; const interval = setInterval(() => {; setCurrentIcon((prev) => (prev + 1) % icons.length)},1000); ; return () => clearInterval(interval)},[icons.length]); ; const CurrentIcon = icons[currentIcon]; return ( <div className="min-h-screen bg-white"> <div className="flex flex-col items-center space-y-6"> {} <div className="relative">; <motion.div; className={`${sizeClasses[size]} border-4 border-cyan-200 border-t-cyan-500 rounded-full`} animate={{ rotate: 360 }} transition={{ duration: 1,repeat: Infinity,ease: "linear" }} />; <motion.div; className="absolute inset-0 flex items-center justify-center"; animate={{ scale: [1,1.2,1] }} transition={{ duration: 2,repeat: Infinity }} >; <CurrentIcon className={`${sizeClasses[size]} text-cyan-500`} />; </motion.div>; </div>; {} <motion.div; initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-center"; >; <div className={`${textSizeClasses[size]} text-cyan-600 dark:text-cyan-400 font-medium mb-2`}>; {message} </div>; {} <div className="flex space-x-1 justify-center">; {[0,1,2].map((i) => (; <motion.div; key={i} className="w-2 h-2 bg-cyan-500 rounded-full"; animate={{ scale: [1,1.5,1] }} transition={{ duration: 1,repeat: Infinity,delay: i * 0.2 }} />; ))} </div>; </motion.div>; {} <div className="w-48 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">; <motion.div; className="h-full bg-gradient-to-r from-cyan-500 to-blue-500"; initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ duration: 3,repeat: Infinity,ease: "easeInOut" }} />; </div>; </div>; </div>; )}; ; </motion>; </motion>; </motion>; </motion>; </motion>; </any>; </LoadingSpinnerProps>; </motion>; </motion>; </any>; </LoadingSpinnerProps>; export default LoadingSpinner; </motion> </motion> </any> </LoadingSpinnerProps> </motion> </any> </LoadingSpinnerProps> export default LoadingSpinner; ;';';
+  );
+}
+
+// Specialized loading components for common use cases
+export function PageLoader({ text = "Loading page..." }: { text?: string }) {
+  return (
+    <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center">
+      <LoadingSpinner
+        size="xl"
+        variant="ripple"
+        color="primary"
+        text={text}
+        showText={true}
+      />
+    </div>
+  );
+}
+
+export function CardLoader({ text = "Loading..." }: { text?: string }) {
+  return (
+    <div className="flex items-center justify-center p-8">
+      <LoadingSpinner
+        size="lg"
+        variant="pulse"
+        color="secondary"
+        text={text}
+        showText={true}
+      />
+    </div>
+  );
+}
+
+export function ButtonLoader({ size = 'sm' }: { size?: 'sm' | 'md' | 'lg' }) {
+  return (
+    <LoadingSpinner
+      size={size}
+      variant="default"
+      color="white"
+      className="inline-block"
+    />
+  );
+}
+
+export function InlineLoader({ size = 'sm' }: { size?: 'sm' | 'md' | 'lg' }) {
+  return (
+    <LoadingSpinner
+      size={size}
+      variant="dots"
+      color="primary"
+      className="inline-block"
+    />
+  );
+}

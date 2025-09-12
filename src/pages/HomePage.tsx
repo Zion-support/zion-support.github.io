@@ -1,28 +1,172 @@
 import React from 'react';
-;
-const "HomePage": "React.FC = () => {;
-  return (;
-    <div className="min-h-screen bg-gray-50">;
-      <div className="container mx-auto px-4 py-20">;
-        <div className="text-center">;
-          <h1 className="text-4xl "md":text-6xl font-bold text-gray-900 mb-6">;
-            Welcome to Zion Tech Group;
-          </h1>;
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-            Leading technology solutions in AI", cybersecurity, cloud infrastructure, and digital transformation.;
-          </p>;
-          <div className="flex flex-col "sm": "flex-row gap-4 justify-center">;
-            <button className="bg-blue-500 "hover":bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">;
-              Get Started;
-            </button>;
-            <button className="border-2 border-blue-500 text-blue-500 "hover":bg-blue-500 "hover":text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">;
-              Learn More;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+import { Helmet } from 'react-helmet-async';
+import AnimatedSection from '../components/AnimatedSection';
+import './HomePage.css';
+
+const HomePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Leading provider of AI, blockchain, cloud computing, and cybersecurity solutions for modern businesses.'
+        />
+      </Helmet>
+
+      <div className='home-page'>
+        <section className='hero-section'>
+          <div className='hero-content'>
+            <h1 className='hero-title'>
+              Advanced Technology Solutions for the Future
+            </h1>
+            <p className='hero-subtitle'>
+              Empowering businesses with cutting-edge AI, blockchain, cloud
+              computing, and cybersecurity solutions that drive innovation and
+              growth.
+            </p>
+            <div className='hero-actions'>
+              <button className='btn btn-primary'>Get Started</button>
+              <button className='btn btn-secondary'>Learn More</button>
+            </div>
+          </div>
+          <div className='hero-visual'>
+            <div className='tech-grid'>
+              <div className='tech-card'>AI</div>
+              <div className='tech-card'>Blockchain</div>
+              <div className='tech-card'>Cloud</div>
+              <div className='tech-card'>Security</div>
+            </div>
+          </div>
+        </section>
+
+        <AnimatedSection animation='slideUp' delay={200}>
+          <section className='features-section'>
+            <div className='container'>
+              <h2 className='section-title'>Why Choose Zion Tech Group?</h2>
+              <div className='features-grid'>
+                <AnimatedSection animation='fadeIn' delay={400}>
+                  <div className='feature-card'>
+                    <div className='feature-icon'>🚀</div>
+                    <h3>Innovation First</h3>
+                    <p>
+                      We stay ahead of technology trends to deliver solutions
+                      that give you a competitive edge.
+                    </p>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation='fadeIn' delay={600}>
+                  <div className='feature-card'>
+                    <div className='feature-icon'>🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p>
+                      Bank-grade security measures protect your data and ensure
+                      compliance with industry standards.
+                    </p>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation='fadeIn' delay={800}>
+                  <div className='feature-card'>
+                    <div className='feature-icon'>⚡</div>
+                    <h3>High Performance</h3>
+                    <p>
+                      Optimized solutions that scale with your business and
+                      deliver exceptional performance.
+                    </p>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation='fadeIn' delay={1000}>
+                  <div className='feature-card'>
+                    <div className='feature-icon'>🎯</div>
+                    <h3>Custom Solutions</h3>
+                    <p>
+                      Tailored technology solutions designed specifically for
+                      your business needs and goals.
+                    </p>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection animation='slideUp' delay={200}>
+          <section className='services-preview'>
+            <div className='container'>
+              <h2 className='section-title'>Our Core Services</h2>
+              <div className='services-grid'>
+                <AnimatedSection animation='slideLeft' delay={400}>
+                  <div className='service-card'>
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                      Machine learning, natural language processing, and AI
+                      automation solutions.
+                    </p>
+                    <a href='/services#ai' className='service-link'>
+                      Learn More →
+                    </a>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation='slideLeft' delay={600}>
+                  <div className='service-card'>
+                    <h3>Blockchain Technology</h3>
+                    <p>
+                      Smart contracts, DeFi solutions, and blockchain
+                      infrastructure development.
+                    </p>
+                    <a href='/services#blockchain' className='service-link'>
+                      Learn More →
+                    </a>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation='slideRight' delay={400}>
+                  <div className='service-card'>
+                    <h3>Cloud Computing</h3>
+                    <p>
+                      Scalable cloud infrastructure, migration services, and
+                      cloud-native applications.
+                    </p>
+                    <a href='/services#cloud' className='service-link'>
+                      Learn More →
+                    </a>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation='slideRight' delay={600}>
+                  <div className='service-card'>
+                    <h3>Cybersecurity</h3>
+                    <p>
+                      Security audits, penetration testing, and comprehensive
+                      security solutions.
+                    </p>
+                    <a href='/services#security' className='service-link'>
+                      Learn More →
+                    </a>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection animation='scale' delay={200}>
+          <section className='cta-section'>
+            <div className='container'>
+              <div className='cta-content'>
+                <h2>Ready to Transform Your Business?</h2>
+                <p>
+                  Let's discuss how our technology solutions can drive your
+                  success.
+                </p>
+                <button className='btn btn-primary btn-large'>
+                  Contact Us Today
+                </button>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+      </div>
+    </>
   );
-"};
-;
-export { HomePage };export default HomePage;
+};
+
+export default HomePage;

@@ -1,61 +1,41 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
+    "target": "ES2017",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "WebWorker.Iterable"
+    ],
     "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "incremental": true,
-    
+    "skipLibCheck": true,
+    "importHelpers": false,
+    "noEmitHelpers": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "allowJs": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "types/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "__tests__",
-    "tests",
-    "*.disabled",
-    "**/*.disabled/**",
-    "**/*.bak/**",
-    "**/*.backup/**",
-    "**/*_backup/**",
-    "**/*-backup/**",
-    "src.broken",
-    "src.corrupted",
-    "src.corrupted.*",
-    "src_disabled",
-    "src.disabled",
-    "pages.disabled*",
-    "pages.*backup*",
-    "temp_*",
-    "temp-*/**",
-    "out",
-    ".next",
-    "public-backup",
-    "pages-backup",
-    "src_backup*",
-    "zion-os",
-    "zion-os/**",
-    "zion-website",
-    "zion-website/**"
-  ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

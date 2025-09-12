@@ -1,518 +1,302 @@
-import React, { useState, useEffect, useCallback } from 'react';
-export default PerformanceOptimizer;import {   
-export default function Page(props: any) {
-,
-    {
-      id: 'code-splitting',
-      title: 'Implement Code Splitting',
-      description: 'Split JavaScript bundles to reduce initial load time',
-      impact: 'high',
-      category: 'javascript',
-      implemented: fals e},
-    {
-      id: 'css-optimization',
-      title: 'Optimize CSS Delivery',
-      description: 'Inline critical CSS and defer non-critical styles',
-      impact: 'medium',
-      category: 'css',
-      implemented: fals e},
-    {
-      id: 'font-optimization',
-      title: 'Optimize Font Loading',
-      description: 'Use font-display: swap and preload critical fonts',
-      impact: 'medium',
-      category: 'fonts',
-      implemented: fals e},
-    {
-      id: 'caching',
-      title: 'Implement Caching Strategy',
-      description: 'Set up proper cache headers for static assets',
-      impact: 'high',
-      category: 'caching',
-      implemented: fals e},
-    {
-      id: 'server-optimization',
-      title: 'Server Response Optimization',
-      description: 'Optimize server response time and enable compression',
-      impact: 'medium',
-      category: 'server',
-      implemented: fals e},
-import {;
-export default function Page(props: any) {;
-,;
-    {;
-      id: 'code-splitting',;
-      title: 'Implement Code Splitting',;
-      description: 'Split JavaScript bundles to reduce initial load time',;
-      impact: 'high',;
-      category: 'javascript',;
-      implemented: fals e},;
-    {;
-      id: 'css-optimization',;
-      title: 'Optimize CSS Delivery',;
-      description: 'Inline critical CSS and defer non-critical styles',;
-      impact: 'medium',;
-      category: 'css',;
-      implemented: fals e},;
-    {;
-      id: 'font-optimization',;
-      title: 'Optimize Font Loading',;
-      description: 'Use font-display: swap and preload critical fonts',;
-      impact: 'medium',;
-      category: 'fonts',;
-      implemented: fals e},;
-    {;
-      id: 'caching',;
-      title: 'Implement Caching Strategy',;
-      description: 'Set up proper cache headers for static assets',;
-      impact: 'high',;
-      category: 'caching',;
-      implemented: fals e},;
-    {;
-      id: 'server-optimization',;
-      title: 'Server Response Optimization',;
-      description: 'Optimize server response time and enable compression',;
-      impact: 'medium',;
-      category: 'server',;
-      implemented: fals e},;
-    const newResourceMetrics: ResourceMetric s = {
-      totalResources: resource s.length,
-      totalSize: resource s.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
-      images: resource s.filter(r => r.initiatorType === 'img').length,
-      scripts: resource s.filter(r => r.initiatorType === 'script').length,
-      stylesheets: resource s.filter(r => r.initiatorType === 'link').length,
-      fonts: resource s.filter(r => r.initiatorType === 'font').length
-;
-    const newResourceMetrics: ResourceMetric s = {;
-      totalResources: resource s.length,;
-      totalSize: resource s.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),;
-      images: resource s.filter(r => r.initiatorType === 'img').length,;
-      scripts: resource s.filter(r => r.initiatorType === 'script').length,;
-      stylesheets: resource s.filter(r => r.initiatorType === 'link').length,;
-      fonts: resource s.filter(r => r.initiatorType === 'font').length;
-    if(isMonitoring) {;
-// Optimize images;
-    const optimizeImages = ("props": "any) => {;
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-// TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(isMonitoring) {
-// Optimize images
-    const optimizeImages = (props: any) => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        "}
-        if(!img.decoding) {;        }
-        if(!img.decoding) {
-          img.decoding = 'async';
-        }
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { LoadingSpinner } from '@/components/ui/loading-spinner';
+
+// Lazy Image Component with Intersection Observer
+interface LazyImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  placeholder?: string;
+  threshold?: number;
+  rootMargin?: string;
+}
+
+export function LazyImage({ 
+  src, 
+  alt, 
+  className = '', 
+  placeholder = '/images/placeholder.jpg',
+  threshold = 0.1,
+  rootMargin = '50px'
+}: LazyImageProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [imageSrc, setImageSrc] = useState(placeholder);
+
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setIsInView(true);
+        setImageSrc(src);
       }
-    );
-    };
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    // Set up intersection observer for lazy loading
-    const observer = new IntersectionObserver((entries) => {';
-        entries.forEach(entry => {';';
-          if (entry.isIntersecting) {';';';
-            const target = entry.target as HTMLElement;';';';';
-            if(target.dataset.src) {';';';';';
-              target.style.backgroundImage = `url(${target.dataset.src})`;',';';';';
-    ';';';';';        });
-      },;
-      { "rootMargin": '50px'   }
-        }
-    );
-;
-    // Observe lazy load elements;return ("
-    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
-      <div className="flex items-center justify-between mb-6">"
-        <div className="flex items-center gap-3">"
-          <Activity className="w-6 h-6 text-zion-cyan"   />"
-          <h2 className="text-xl font-bold text-white">
-            Performance Optimizer
-          </h2>
+    });
+  }, [src]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold,
+      rootMargin,
+    });
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [handleIntersection, threshold, rootMargin]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    // Fallback to placeholder on error
+    setImageSrc(placeholder);
+    setIsLoaded(true);
+  };
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      <img
+        ref={imageRef}
+        src={imageSrc}
+        alt={alt}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`w-full h-full object-cover transition-opacity duration-500 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+      
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-zion-blue-dark/20 flex items-center justify-center">
+          <LoadingSpinner size="md" variant="pulse" />
         </div>
-        <button';
-          onClick={() => setIsMonitoring(!isMonitoring)}';';
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring'';';
-              ? 'bg-red-500 hover: b g-red-600 text-white''';';
-              : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
-          }`}';
-        >';';          {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
-        </button>;
-      </div>;
-      {/* Performance Score */}";
-      <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-6 mb-8">";
-        <div className="bg-white/5 rounded-lg p-4">";
-          <div className="flex items-center justify-between mb-4">";
-            <h3 className="text-lg font-semibold text-white">;
-              Performance Score;
-            {getScoreIcon(metrics.score)"}
-          </div>";
-          <div className="text-center">;
-            <div`;
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring'
-              ? 'bg-red-500 hover: b g-red-600 text-white''
-              : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
-          }`}
-        >
-          {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
-        </button>
-      </div>
-      {/* Performance Score */}"
-      <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">"
-        <div className="bg-white/5 rounded-lg p-4">"
-          <div className="flex items-center justify-between mb-4">"
-            <h3 className="text-lg font-semibold text-white">
-              Performance Score
-            {getScoreIcon(metrics.score)}
-          </div>"
-          <div className="text-center">
-            <div`
-              className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
-            >
-              {Math.round(metrics.score)}
-            </div>";
-            <div className="text-sm text-gray-400 mt-1">out of 100</div>;
-          </div>;
-        </div>;
-";
-        <div className="bg-white/5 rounded-lg p-4">";
-          <div className="flex items-center gap-2 mb-4">";
-            <TrendingUp className="w-5 h-5 text-zion-cyan"   />";
-            <h3 className="text-lg font-semibold text-white">;
-              Real-time Metrics;
-          </div>";
-          <div className="space-y-2 text-sm">";
-            <div className="flex justify-between">";
-              <span className="text-gray-300">"FCP": "</span>;
-              <span className={getMetricStatus(metrics.fcp", 1800)}>;
-                {Math.round(metrics.fcp)}ms;
-              </span>;
-            </div>";
-            <div className="flex justify-between">";
-              <span className="text-gray-300">"LCP": "</span>;
-              <span className={getMetricStatus(metrics.lcp", 2500)}>;
-                {Math.round(metrics.lcp)}ms;
-              </span>;
-            </div>";
-            <div className="flex justify-between">";
-              <span className="text-gray-300">"FID": "</span>;
-              <span className={getMetricStatus(metrics.fid", 100)}>;
-                {Math.round(metrics.fid)}ms;
-              </span>;
-            </div>";
-            <div className="flex justify-between">";
-              <span className="text-gray-300">"CLS": "</span>;
-              <span className={getMetricStatus(metrics.cls", 0.1)}>;              }`}
-            >"
-              <div className="flex items-start justify-between">"
-                <div className="flex-1">"
-                  <div className="flex items-center gap-2 mb-2">"
-                    <h4 className="font-medium text-white">
-                      {suggestion.title}
-                    </h4>';
-                    <span`';';
-                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high''';';
-                          ? 'bg-red-500/20 text-red-300''';';
-                          : suggestion.impact === 'medium''';';
-                            ? 'bg-yellow-500/20 text-yellow-300''';';
-                            : 'bg-blue-500/20 text-blue-300'`                    </h4>;
-                    <span`;
-                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high'';
-                          ? 'bg-red-500/20 text-red-300'';
-                          : "suggestion.impact === 'medium'';
-                            ? 'bg-yellow-500/20 text-yellow-300'';
-                            : 'bg-blue-500/20 text-blue-300'`;
-                      }`}                  </p>";
-                  <div className="flex items-center gap-4 text-xs text-gray-400">";
-                    <span className="capitalize">{suggestion.category}</span>;
-                    <span>•</span>;
-                    <span > Estimated improvement: 1 5 - 25%</span>;
-                  </div>;
-                </div>;
-                <button;
-                  onClick={() => toggleSuggestion(suggestion.id)}`;
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${suggestion.implemented';
-                      ? 'bg-green-500 hover: b g-green-600 text-white'';
-                      : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`;
-                  }`}
-                >;
-      {history.length > 0 && (
-        <div>"
-          <div className="flex items-center gap-2 mb-4">"
-            <BarChart3 className="w-5 h-5 text-zion-cyan"  />"
-            <h3 className="text-lg font-semibold text-white">
-              Performance History
-          </div>"
-          <div className="bg-white/5 rounded-lg p-4">"
-            <div className="flex items-center justify-between text-sm text-gray-300 mb-3">
-              <span>Last 10 measurements</span>
-              <span>Score trend</span>
-            </div>"
-            <div className="flex items-end gap-1 h-20">
-              {history.map((metric, index) => (
-                <div key={index}"
-                  className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-cyan-light rounded-t"`
-                  style="{{{ height: `${metric.score}}"%` }}`
-                  title={`Score: ${Math.round(metric.score)}`}
-                 />
-              ))}
-            </div>
-          </div>
-            </div>
+      )}
+      
+      {/* Loading shimmer effect */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-blue-light/20 to-transparent animate-pulse" />
+      )}
+    </div>
   );
 }
-            </div>;
-          </div>;
-        </div>) }
+
+// Virtual Scrolling Component for Large Lists
+interface VirtualListProps<T> {
+  items: T[];
+  renderItem: (item: T, index: number) => React.ReactNode;
+  itemHeight: number;
+  containerHeight: number;
+  overscan?: number;
+}
+
+export function VirtualList<T>({ 
+  items, 
+  renderItem, 
+  itemHeight, 
+  containerHeight, 
+  overscan = 5 
+}: VirtualListProps<T>) {
+  const [scrollTop, setScrollTop] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const totalHeight = items.length * itemHeight;
+  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
+  const endIndex = Math.min(
+    items.length,
+    Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan
+  );
+
+  const visibleItems = items.slice(startIndex, endIndex);
+  const offsetY = startIndex * itemHeight;
+
+  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
+    setScrollTop(e.currentTarget.scrollTop);
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      style={{ height: containerHeight, overflow: 'auto' }}
+      onScroll={handleScroll}
+    >
+      <div style={{ height: totalHeight, position: 'relative' }}>
+        <div style={{ transform: `translateY(${offsetY}px)` }}>
+          {visibleItems.map((item, index) => (
+            <div key={startIndex + index} style={{ height: itemHeight }}>
+              {renderItem(item, startIndex + index)}
             </div>
-          </div>
-        </div>) }
-    </div>) ;};
-interface PerformanceOptimizerProps {;
- "children": "React.ReactNode;
-"}
-;
-export const "PerformanceOptimizer": "React.FC<PerformanceOptimizerProps> = ({ children "}) => {;
-  useEffect(() => {;
-    // comment;
-const preloadCriticalResources = ("props": "any) => {;
-      const criticalFonts = [];
-      criticalFonts.forEach(font => {",;
-        const link = document.createElement("link"),;
-        link.rel = "preload",",;
-        link.as = "style",;
-        link.href = font,;
-        document.head.appendChild(link)})}
-;
-    // comment;
-const optimizeImages = ("props": "any) => {;
-      const images = document.querySelectorAll("img");
-"}
-      images.forEach(img = > {;
-        if (!img.loading) {";
-          img.loading = "lazy"}
-;
-        if(!img.decoding) {";
-          img.decoding = "async"}
-      })}
-;
-    // comment;
-preloadCriticalResources();
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
-    optimizeImages();
-}
-    // comment;
-const observer = new IntersectionObserver((entries) => {;
-        entries.forEach(entry => {;
-          if (entry.isIntersecting) {;
-            const target = entry.target as HTMLElement;
-            if(target.dataset.src) {;
-              target.style.backgroundImage = "url(${target.dataset.src})",;
-              target.removeAttribute("data-src");
-}
-              observer.unobserve(target)}
-;
-          }";
-        })} { rootMargin: "50px" }
-;,"});,"})" PerformanceOptimizerProps {,"});,"})"
-  children: Reac t.ReactNode,"});,"});"
-}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
-  useEffect(() => {,"});,"})"
-    // comment
-const preloadCriticalResources = (props: any) => {,"});,"})"
-      const criticalFonts = []"criticalFonts.forEach (font => {,"});,"})"
-        const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }) ;,"});,"});"
-};,"});,"})"
-    // comment
-const optimizeImages = (props: any) => {,"});,"})"
-      const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"});,"})"
-          img.loading = "lazy",        }"        if (!img.decoding) {,"});,"})"
-          img.decoding = "async",        }"      }) };// comment
-    preloadCriticalResources () ;,"});,"})"
-    optimizeImages () ;,"});,"})"
-    // comment
-const observer = new IntersectionObserver ( (entries) => {,"});,"})"
-        entries.forEach (entry => {,"});,"})"
-          if (entry.isIntersecting) {,"});,"})"
-            const target = entry.target as HTMLElement,"});,"})"
-            if (target.dataset.src) {,"});,"})"
-target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target) ;"            };,"});,"});"
-}) ;,"});,"});"
-} { rootMargin: "50px" }") ;"// comment
-    const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"});,"})"
-      observer.disconnect () ;,"});,"});"
-}, []) ;,"});,"})","});,"})"
-export default function Page(props: any) {,"});,"})"    </div>
-    );};
-interface PerformanceOptimizerProps {
- children: React.ReactNode
-}
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+
+// Performance Monitor Component
+export function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+  });
+
   useEffect(() => {
-    // comment
-      const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {const preloadCriticalResources = (props: any) => {
-      const criticalFonts = []
-      criticalFonts.forEach(font => {,
-        const link = document.createElement("link"),
-        link.rel = "preload",",
-        link.as = "style",
-        link.href = font,
-        document.head.appendChild(link)})}
-    // comment
-const optimizeImages = (props: any) => {
-      const images = document.querySelectorAll("img")
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcp = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lcp = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fid = entries[entries.length - 1];
+        const fidEntry = fid as any;
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        for (const entry of list.getEntries()) {
+          const layoutShiftEntry = entry as any;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+  }, []);
+
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 left-4 bg-zion-blue-dark/90 backdrop-blur-sm border border-zion-purple/30 rounded-lg p-3 text-xs text-white z-50">
+      <div className="font-mono space-y-1">
+        <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
+        <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
+        <div>FID: {metrics.fid.toFixed(0)}ms</div>
+        <div>CLS: {metrics.cls.toFixed(3)}</div>
+      </div>
+    </div>
+  );
 }
-      images.forEach(img = > {
-        if (!img.loading) {"
-          img.loading = "lazy"}
-        if(!img.decoding) {"
-          img.decoding = "async"}
-      })}
-    // comment
-preloadCriticalResources()
+
+// Debounced Search Hook
+export function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
 }
-    optimizeImages()
+
+// Throttled Scroll Hook
+export function useThrottledScroll(callback: () => void, delay: number) {
+  const lastRun = useRef(Date.now());
+
+  useEffect(() => {
+    const handler = () => {
+      if (Date.now() - lastRun.current >= delay) {
+        callback();
+        lastRun.current = Date.now();
+      }
+    };
+
+    window.addEventListener('scroll', handler);
+    return () => window.removeEventListener('scroll', handler);
+  }, [callback, delay]);
 }
-    // comment
-const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement
-            if(target.dataset.src) {
-              target.style.backgroundImage = "url(${target.dataset.src})",
-              target.removeAttribute("data-src")
+
+// Preload Critical Resources
+export function PreloadCriticalResources() {
+  useEffect(() => {
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.as = 'style';
+    criticalCSS.href = '/src/index.css';
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const font = document.createElement('link');
+    font.rel = 'preload';
+    font.as = 'font';
+    font.href = '/fonts/orbitron.woff2';
+    font.crossOrigin = 'anonymous';
+    document.head.appendChild(font);
+
+    // Preload critical images
+    const criticalImages = [
+      '/images/zion-logo.png',
+      '/images/zion-homepage-og.jpg'
+    ];
+
+    criticalImages.forEach(src => {
+      const img = document.createElement('link');
+      img.rel = 'preload';
+      img.as = 'image';
+      img.href = src;
+      document.head.appendChild(img);
+    });
+  }, []);
+
+  return null;
 }
-              observer.unobserve(target)}
-;
-          }";
-        })} { "rootMargin": "50px" }
-;
-;,"});,"})" PerformanceOptimizerProps {,"});,"})";
-  "children": "React.ReactNode","});,"});";
-}export const "PerformanceOptimizer": "React.FC < PerformanceOptimizerProps> = ({ children "}) => {,"});,"})";
-  useEffect(() => {,"});,"})";
-    // comment;
-const preloadCriticalResources = ("props": "any) => {","});,"})";
-      const criticalFonts = []"criticalFonts.forEach (font => {,"});,"})";
-        const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }) ;,"});,"});";
-};,"});,"})";
-    // comment;
-const optimizeImages = ("props": "any) => {","});,"})";
-      const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"});,"})";
-          img.loading = "lazy"}"        if (!img.decoding) {,"});,"})";
-          img.decoding = "async"}"      }) };// comment;
-    preloadCriticalResources () ;,"});,"})";
-    optimizeImages () ;,"});,"})";
-    // comment;
-const observer = new IntersectionObserver ( (entries) => {,"});,"})";
-        entries.forEach (entry => {,"});,"})";
-          if (entry.isIntersecting) {,"});,"})";
-            const target = entry.target as HTMLElement,"});,"})";
-            if (target.dataset.src) {,"});,"})";
-target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target) ;"            };,"});,"});";
-}) ;,"});,"});";
-} { "rootMargin": "50px" }") ;"// comment;
-    const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"});,"})";
-      observer.disconnect () ;,"});,"});";
-}, []) ;,"});,"})","});,"})";
-export default function Page("props": "any) {","});,"})";
-interface PerformanceOptimizerProps {;
- "children": "React.ReactNode",";
-});,"});";
-}"});,"})";
-export const "PerformanceOptimizer": "React.FC<PerformanceOptimizerProps> = ({ children "}) => {,"});,"})";
-  useEffect(() => {,"});,"})";
-    // comment;
-      const criticalFonts = [],"});,"})";
-      criticalFonts.forEach(font => {,"});,"})";
-        const link = document.createElement("link");,"});,"})";
-        link.rel = "preload";,"});,"})";
-        link.as = "style";,"});,"})";
-        link.href = font,"});,"})";
-        document.head.appendChild(link);,"});,"});";
-});,"});,"})";
-    // comment;
-      const images = document.querySelectorAll("img");,"});,"})";
-      images.forEach(img => {,"});,"})";
-        if (!img.loading) {,"});,"})";
-          img.loading = "lazy";,"});,"})";
-        if(!img.decoding) {,"});,"})";
-          img.decoding = "async";,"});,"})";
-    // comment;
-    preloadCriticalResources();,"});,"})";
-    optimizeImages();,"});,"})";
-    // comment;
-    const observer = new IntersectionObserver((entries) => {,"});,"})";
-        entries.forEach(entry => {,"});,"})";
-            if(target.dataset.src) {,"});,"})";
-              target.style.backgroundImage = "url(${target.dataset.src})";,"});,"})";
-              target.removeAttribute("data-src");,"});,"})";
-              observer.unobserve(target);,"});,"});";
-},,"});,"})";
-      { "rootMargin": "50px"  }"});,"})";
-    );,"});,"})";
-    // comment;
-    const lazyElements = document.querySelectorAll("[data-src]");,"});,"})";
-    lazyElements.forEach(el => observer.observe(el));,"});,"})";
-    return () => {,"});,"})";
-      observer.disconnect();,"});,"});";
-}, []);,"});,"})";
-  return <>{children}</>"});,"})"interface PerformanceOptimizerProps {;
-   "children": "React.ReactNode;
-"}export const "PerformanceOptimizer": "React.FC < PerformanceOptimizerProps> = ({ children "}) => {;
-  useEffect(() => {;
-    // comment;
-      const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {;
-  ": any;
-   children: React.ReactNode;
-}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({children }) => {useEffect(() => {;        const link = document.createElement ("link") "        link.rel = "preload"        link.as = "style"        link.href = font"        document.head.appendChild (link) "})}
-;
-    // comment;
-const optimizeImages = ("props": "any) => {";
-      const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {";
-          img.loading = "lazy"        "}        if (!img.decoding) {"";
-          img.decoding = "async"        }      })}// comment;
-const optimizeImages = ("props": "any) => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {;
-   "children": React.ReactNode;
-"}&apos;&apos;export const "PerformanceOptimizer": "React.FC < PerformanceOptimizerProps> = ({ children "}) => {;
-    // comment;
-const preloadCriticalResources = (props: any) => {}        })} { rootMargin: "50px"   }") ";// comment
-    const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) "return () => {})} { rootMargin: "50px" }") ";// comment
-    const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) ";return () => {
-      observer.disconnect () }
-  }, [])
+
+// Service Worker Registration
+export function ServiceWorkerRegistration() {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  }, []);
+
+  return null;
 }
-  return <>{children}</>;
-  return <>{children}</>;
-const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {;
-    // comment;
-            if (target.dataset.src) {"";";
-}",";";
-})} { "rootMargin": "50px" }) ";// comment;
-    const lazyElements = document.querySelectorAll ("[data - src]) "    lazyElements.forEach (el => observer.observe (el) ) ";return () => {;
-          if (entry.isIntersecting) {}}}
-;
-            const;const;const target = entry.target as HTMLElement;
-target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute (&apos;data - src&apos) &apos;              observer.unobserve (target) &apos}";
-        })} { "rootMargin": "50px"  }
-;
-    );;
-target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}";
-  })} { "rootMargin": "50px" }") ";// comment;
-  return <>{children}</>}"""";
-"`""";
-</PerformanceOptimizerProps>;
-</PerformanceOptimizerProps>;
-</div>;
-</PerformanceOptimizerProps>;
-</any>;

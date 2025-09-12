@@ -1,8 +1,0 @@
-{
-  "enabled": true,
-  "openAnalyzer": false,
-  "analyzerMode": "static",
-  "reportFilename": "bundle-report.html",
-  "generateStatsFile": true,
-  "statsFilename": "bundle-stats.json"
-}

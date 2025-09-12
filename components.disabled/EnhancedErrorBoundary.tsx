@@ -1,6 +1,255 @@
-<<<<<<< HEAD
-=======
-const Component = () => {; import React from \"react\"; \""use\": client\",\"; \"; interface Props {; \"children\": \'ReactNode\',; fallback?: ReactNode,; onError?: (\"error\": \'Erro\',r,\"errorInfo\": \'ErrorInfo) => void\'} showDetails?: boolea,n} ; interface State {; \"hasError\": \'boolean\',; \"error\": \'Error: | null\'} \"errorInfo\": \'ErrorInfo: | nul\',l} ; class EnhancedErrorBoundary extends Component<Props,State> {; constructor(\"props\": Props) {,; super(props),; this.\"state\": = {,; \"hasError\": \'fals\',e,\"error\": \'nul\',l,; \"errorInfo\": \'nul\',l} } ; \"static\": getDerivedStateFromError(error: Error): State: {,; return {,; \"hasError\": \'tru\',e,error,; \"override\": componentDidCatch(error: Erro,r,\"errorInfo\": ErrorInfo) {,; this.setState(),,; \"if\": (process.env.NODE_ENV = == \"development\") {\",\";}\"; onError?: (\"error\": \'Error\',\"errorInfo\": \'ErrorInfo) => void\',; onError?: (erro,; \"r\": \'Error\',\"errorInfo\": \'ErrorInfo) => void\',showDetails?: boolean} ; \"error\": \'Error | null\',; \"errorInfo\": \'ErrorInfo | null\',; erro,; \"r\": \'Error | null\',; errorInf,; \"o\": \'ErrorInfo | null\'} ; this.state = {; \"hasError\": \'false\',; hasErro,; \"r\": \'false\',; \"error\": \'null\',; \"errorInfo\": \'null\'}} ; static getDerivedStateFromError(\"error\": Error): State {,; \"hasError\": \'true\',; \"r\": \'true\',; error,; static getDerivedStateFromError(\"error\": Error): State {,; \"hasError\": \'true\',; \"r\": \'true\',; error,; override componentDidCatch(\"error\": \'Error\',\"errorInfo\": ErrorInfo) {,,; errorInfo});} if (process.env.NODE_ENV = == \"development\") {\";} ; this.reportErrorToService(error,errorInfo);} if (this.props.onError) {; this.props.onError(error,errorInfo)} ; private reportErrorToService = async (\"error\": \'Error\',\"errorInfo\": ErrorInfo) => {; try {\"; if (typeof window !== \"undefined\" && process.env.NODE_ENV === \"production\") {\",; await fetch(\"/api/error-reporting\" {,\"; \"method\": \"POST\",; \"headers\": {\",; \"Content-Type\": \"application/json\"},; \"body\": JSON.stringify({,; \"error\": {,; \"message\": \'error.message\',; \"stack\": \'error.stack\',; \"name\": \'error.name\'},; \"errorInfo\": {,; \"componentStack\": \'errorInfo.componentStack\',; \"timestamp\": new Date().toISOString(),; \"userAgent\": \'navigator.userAgent\',; \"url\": \'window.location.href\'});} }).catch(() => {} catch (reportingError) {; private handleRetry = () => {})} ; private handleReload = () => {; window.location.reload()} ; override render() {; if (process.env.NODE_ENV = == \"development\") {\"; this.logErrorToService(error,errorInfo);} this.props.onError?.(error,errorInfo)} ; \"private\": logErrorToService = (error: Erro,r,\"errorInfo\": ErrorInfo) => {,,; \"try\": {,; \"if\": (typeof gtag !== \"undefined\") {\",\"; gtag(\"event,\",\"exception\" {\"; \"description\": \'error.messag\',e,\"fatal\": \'fals\',e})} ; fetch(\"/api/error-reporting,\" {\"; \"method\": \"POST,\",\"; \"Content-Type\": \"application/json,\"},\"; \"message\": \'error.messag\',e,\"stack\": \'error.stac\',k,; \"name\": \'error.nam\',e},; \"componentStack\": \'errorInfo.componentStac\',k},; \"timestamp\": new: Date().toISOString(),\"userAgent\": \'navigator.userAgen\',t,; \"url\": \'window.location.hre\',f})}).catch(() => {; private logErrorToService = (\"error\": \'Error\',\"errorInfo\": ErrorInfo) => {,; if (typeof (window as any).gtag !== \"undefined\") {\"; (window as any).gtag(\"event\",\"exception\" {\"; if (typeof gtag !== \"undefined\") {\",; if (typeof gtag !== \"undefined\") {\"; gtag(\"event\",\"exception\" {; \"description\": \'error.message\',; \"fatal\": \'false\',; fetch(\"/api/error-reporting\" {; \"headers\": {\",; \"Content-Type\": \"application/json\",; \"r\": {,; messag,; \"e\": \'error.message\',\"; \"componentStack\": \'errorInfo.componentStack\'}).catch(console.error)} catch (loggingError) {;}\"; gtag(\"event,exception\" {; \"description\": \'error.message\',\"fatal\": \'false\'})} ; fetch(\"/api/error-reporting\" {; \"componentStack\": \'errorInfo.componentStack\'},\"timestamp\": new Date().toISOString(),\"userAgent\": \'navigator.userAgent\',; \"url\": \'window.location.href\'})}).catch(() => {; \"private\": handleRetry = () => {,; \"errorInfo\": \'nul\',l})} ; \"private\": handleReload = () => {,; window.location.reload()} ; \"override\": render() {; if (this.state.hasError) {,; \"if\": (this.props.fallback) {,; return this.props.fallback} ; return(\"; <div className=\"min-h-screen flex items-center justify-center bg-gray-50\">\"; <\"div\": className=\"max-w-md w-full bg-white shadow-lg rounded-lg p-6\">\"; <div: className=\"flex items-center mb-4\">\"; <div: className=\"flex-shrink-0\">\"; <svg: className=\"h-8 w-8 text-red-500\"; fill=\"none\"; stroke=\"currentColor\",\"; viewBox=\""0\": 0 24 24\">\",\",; <\"path\": strokeLinecap = \"round\",\"; strokeLinejoin=\"round\"> strokeWidth=\"{2}> d=\""M12\": 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z\" />\",; ></div> </div>\"; <\"div\": className=\"ml-3\">\",\",; <\"h3\": className=\"text-lg font-medium text-gray-900\">\",,; \"Something\": \'went wrong\',; </h3>\",; <p className = \"text-sm text-gray-500\">\",\"; We&apos,\"re\": \'sorry\',but something unexpected happened.; render() {; if (this.props.fallback) {; return (\"; <div className = \"min-h-screen bg-gray-50 flex flex-col justify-center items-center px-6\">\"; <div className=\"max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center\">\"; <div className=\"mb-6\">\"; <svg className=\"h-16 w-16 text-red-500 mx-auto mb-4; fill=\"none; stroke=\"currentColor; viewBox=\"0 0 24 24\">\"; <path strokeLinecap=\"round; strokeLinejoin=\"round; strokeWidth=\"{1.5} d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z\" />\"; <h1 className=\"text-2xl font-bold text-gray-900 mb-2\"> Oops! Something went wrong,; </h1>\"; <p className=\"text-gray-600\">\"; We\"re sorry for the inconvenience. An unexpected error has occurred.; ></div> {this.props.showDetails && this.state.error && (\"; <div className=\"mb-6 p-4 bg-gray-100 rounded-lg text-left\">\"; <h3 className=\"font-semibold text-sm text-gray-700 mb-2\">Error \"Details\": </h3>\"; <div className=\"text-xs text-gray-600 font-mono\">\"; <div className=\"mb-2\">,; <strong>\"Message\": </strong> {this.state.error.message} ; {this.state.error.stack && (; <div> <strong>\"Stack\": </strong>\"; <pre className=\"whitespace-pre-wrap mt-1 text-xs\">,; {this.state.error.stack} ; ></div> )} ; <div className=\"min-h-screen flex items-center justify-center bg-gray-50\">\"; <div className=\"max-w-md w-full bg-white shadow-lg rounded-lg p-6\">\"; <div className=\"flex items-center mb-4\">\"; <div className=\"flex-shrink-0\">\"; className=\"h-8 w-8 text-red-500; <div className=\"ml-3\">\"; <h3 className=\"text-lg font-medium text-gray-900\"> Something went wrong\"; <p className=\"text-sm text-gray-500\">\"; We\"re sorry,but something unexpected happened.\"; return (; <div className=\"min-h-screen bg-gray-50 flex items-center justify-center p-4\"> <div className=\"max-w-md w-full bg-white rounded-lg shadow-lg p-6\"> <div className=\"flex items-center mb-4\"> <div className=\"w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4\"> <svg className=\"w-6 h-6 text-red-600\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"{2}\" d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z\" />\"; <div> <h2 className=\"text-lg font-semibold text-gray-900\">Something went wrong></div> <div className=\"min-h-screen bg-gray-50 flex items-center justify-center p-4\">\"; <div className=\"max-w-md w-full bg-white rounded-lg shadow-lg p-6\">\"; <div className=\"w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4\">\"; <svg className=\"w-6 h-6 text-red-600\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\"; <div className=\"ml-3\">\"; <h3 className=\"text-lg font-medium text-gray-900\">\"; <p className=\"text-sm text-gray-500\">\"; We&apos;re sorry,but something unexpected happened.\"; <h2 className = \"text-lg font-semibold text-gray-900\">Something went wrong></div> <p className=\"text-sm text-gray-600\">We\"re sorry for the inconvenience></div> {this.props.\"showDetails\": && this.state.error && (\",; <div className=\"mb-4 p-3 bg-red-50 border border-red-200 rounded-md\">\",\"; <\"h4\": className=\"text-sm font-medium text-red-800 mb-2\">\",; \"Error\": Details: </h4>\",; <\"p\": className=\"text-sm text-red-700 font-mono\">\" {this.state.error.messag,e} ; {this.state.error.\"stack\": && (\",; <details className=\"mt-2\">\",\"; <\"summary\": className=\"text-sm text-red-600 cursor-pointer\">\",; \"Stack\": \'Trace\',; </summary>\"; <pre className=\"text-xs text-red-600 mt-2 whitespace-pre-wrap overflow-auto max-h-32\">\" {this.props.showDetails && this.state.error && (\"; <div className=\"mb-4 p-3 bg-red-50 border border-red-200 rounded-md\">\"; <h4 className=\"text-sm font-medium text-red-800 mb-2\"> Error \"Details\": ; </h4>\"; <p className=\"text-sm text-red-700 font-mono\">,; {this.state.error.message}\"; <details className=\"mt-2\">\"; <summary className=\"text-sm text-red-600 cursor-pointer\"> Stack Trace\"; <pre className=\"text-xs text-red-600 mt-2 whitespace-pre-wrap overflow-auto max-h-32\"> </details>\"; <div className=\"mb-4\"> <p className=\"text-gray-700\"> An unexpected error occurred. Our team has been notified and is working to fix this issue.\"; className=\"h-8 w-8 text-red-500; fill=\"none; stroke=\"currentColor; viewBox=\"0 0 24 24\">\"; strokeLinecap=\"round; strokeLinejoin=\"round; d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z\"; \"; <div className=\"mb-4\">\"; <p className=\"text-sm text-gray-600\">\"; We\"re sorry,but something unexpected happened. Please try refreshing the page.; \"; {this.props.showDetails && this.state.error && (; <details className=\"mb-4\"> <details className=\"mb-4\">\"; <summary className=\"cursor-pointer text-sm font-medium text-gray-700 mb-2\"> Error Details\"; ></div> <div className=\"bg-gray-100 rounded p-3 text-xs font-mono text-gray-600 overflow-auto max-h-32\">\"; <strong>\"Error\": </strong> {this.state.error.message}\"; <strong>\"Stack\": </strong>\",; <pre className=\"whitespace-pre-wrap mt-1\">{this.state.error.stack}</pre>\"; <summary className=\"text-sm font-medium text-gray-700 cursor-pointer\">\"; <div className=\"mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto\"> {this.state.errorInfo && (; <strong>Component \"Stack\": </strong>\"; <pre className=\"whitespace-pre-wrap\">,; {this.state.errorInfo.componentStack}\"; <\"div\": className=\"flex space-x-3\">\",\"; <\"button\": onClick=\"{this.handleRetry} className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium \"hover\": bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2\">\",; \"Try\": \'Again\',; </button>\",; <button onClick=\"{this.handleReloa,d}> className=\"flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium \"hover\": bg-gray-700: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2\">\",,; \"Reload\": Page\",; <div className = \"mt-4 text-center\">\",\"; <\"p\": className=\"text-xs text-gray-500\">\",\"; \"If\": \'this problem persist\',s,please{}\"; <\"a\": href = \"/contact\",\"; className=\"text-blue-\"600\": hover: text-blue-500\">\",; \"contact\": \'support\',; \"; <div className=\"flex flex-col \"sm\": flex-row gap-3\">\",; onClick=\"{this.handleRetry} className=\"flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg \"hover\": bg-blue-700 transition-colors font-medium\"; Try Again,; \"; <div className=\"flex space-x-3\">\"; className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium \"hover\": bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2; \",; onClick=\"{()\" => window.location.reload()} onClick=\"{()\" => window.location.reload()}\"; className=\"flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium \"hover\": bg-blue-700 transition-colors\",; Reload Page,\"; onClick=\"{()\" => window.history.back()} className=\"flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium \"hover\": bg-gray-300 transition-colors\",; Go Back,; Refresh Page,\"; onClick=\"{()\" => this.setState({ \"hasError\": \'false\',\"error\": \'null\',\"errorInfo\": \'null\' })}\"; className=\"flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium \"hover\": bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2\",; onClick=\"{this.handleReload} className=\"flex-1 bg-gray-600 text-white py-2 px-4 rounded-lg \"hover\": bg-gray-700 transition-colors font-medium; className=\"flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2\"; \"; <p className=\"mt-6 text-sm text-gray-500\">\",; If this problem persists,please{}\"; <a href=\"/contact; className=\"text-blue-600 \"hover\": text-blue-500\"; contact support> </a>\"; <div className=\"mt-4 text-center\">\"; <p className=\"text-xs text-gray-500\">\"; href=\"/contact; className=\"text-blue-600 hover: text-blue-500\">,return this.props.children} ; export default EnhancedErrorBoundary;\"export default EnhancedErrorBoundary;\"}}}}}}}}}}}}}}}}})))))))))
-const Component = () => {; import React from "react"; "use: client","; "; interface Props {; children: "ReactNode",; fallback?: ReactNode,; onError?: (error: "Erro",r,errorInfo: "ErrorInfo) => void"} showDetails?: boolea,n} ; interface State {; hasError: "boolean",; error: "Error: | null"} errorInfo: "ErrorInfo: | nul",l} ; class EnhancedErrorBoundary extends Component<Props,State> {; constructor(props: Props) {,; super(props),; this.state: = {,; hasError: "fals",e,error: "nul",l,; errorInfo: "nul",l} } ; static: getDerivedStateFromError(error: Error): State: {,; return {,; hasError: "tru",e,error,; override: componentDidCatch(error: Erro,r,errorInfo: ErrorInfo) {,; this.setState(),; if: (process.env.NODE_ENV = == "development") {",";}"; onError?: (error: "Error",errorInfo: "ErrorInfo) => void",; onError?: (erro,; r: "Error",errorInfo: "ErrorInfo) => void",showDetails?: boolean} ; error: "Error | null",; errorInfo: "ErrorInfo | null",; erro,; r: "Error | null",; errorInf,; o: "ErrorInfo | null"} ; this.state = {; hasError: "false",; hasErro,; r: "false",; error: "null",; errorInfo: "null"}} ; static getDerivedStateFromError(error: Error): State {,; hasError: "true",; r: "true",; error,; static getDerivedStateFromError(error: Error): State {,; hasError: "true",; r: "true",; error,; override componentDidCatch(error: "Error",errorInfo: ErrorInfo) {,; errorInfo});} if (process.env.NODE_ENV = == "development") {";} ; this.reportErrorToService(error,errorInfo);} if (this.props.onError) {; this.props.onError(error,errorInfo)} ; private reportErrorToService = async (error: "Error",errorInfo: ErrorInfo) => {; try {"; if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {",; await fetch("/api/error-reporting" {,"; method: "POST",; headers: {",; "Content-Type": "application/json"},; body: JSON.stringify({,; error: {,; message: "error.message",; stack: "error.stack",; name: "error.name"},; errorInfo: {,; componentStack: "errorInfo.componentStack",; timestamp: new Date().toISOString(),; userAgent: "navigator.userAgent",; url: "window.location.href"});} }).catch(() => {} catch (reportingError) {; private handleRetry = () => {})} ; private handleReload = () => {; window.location.reload()} ; override render() {; if (process.env.NODE_ENV = == "development") {"; this.logErrorToService(error,errorInfo);} this.props.onError?.(error,errorInfo)} ; private: logErrorToService = (error: Erro,r,errorInfo: ErrorInfo) => {,; try: {,; if: (typeof gtag !== "undefined") {","; gtag("event,","exception" {"; description: "error.messag",e,fatal: "fals",e})} ; fetch("/api/error-reporting," {"; method: "POST,","; "Content-Type": "application/json,"},"; message: "error.messag",e,stack: "error.stac",k,; name: "error.nam",e},; componentStack: "errorInfo.componentStac",k},; timestamp: new: Date().toISOString(),userAgent: "navigator.userAgen",t,; url: "window.location.hre",f})}).catch(() => {; private logErrorToService = (error: "Error",errorInfo: ErrorInfo) => {,; if (typeof (window as any).gtag !== "undefined") {"; (window as any).gtag("event","exception" {"; if (typeof gtag !== "undefined") {",; if (typeof gtag !== "undefined") {"; gtag("event","exception" {; description: "error.message",; fatal: "false",; fetch("/api/error-reporting" {; headers: {",; "Content-Type": "application/json",; r: {,; messag,; e: "error.message","; componentStack: "errorInfo.componentStack"}).catch(console.error)} catch (loggingError) {;}"; gtag("event,exception" {; description: "error.message",fatal: "false"})} ; fetch("/api/error-reporting" {; componentStack: "errorInfo.componentStack"},timestamp: new Date().toISOString(),userAgent: "navigator.userAgent",; url: "window.location.href"})}).catch(() => {; private: handleRetry = () => {,; errorInfo: "nul",l})} ; private: handleReload = () => {,; window.location.reload()} ; override: render() {; if (this.state.hasError) {,; if: (this.props.fallback) {,; return this.props.fallback} ; return("; <div className="min-h-screen flex items-center justify-center bg-gray-50">"; <div: className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"; <div: className="flex items-center mb-4">"; <div: className="flex-shrink-0">"; <svg: className="h-8 w-8 text-red-500"; fill="none"; stroke="currentColor","; viewBox="0: 0 24 24">",",; <path: strokeLinecap = "round","; strokeLinejoin="round"> strokeWidth="{2}> d="M12: 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />",; ></div> </div>"; <div: className="ml-3">",",; <h3: className="text-lg font-medium text-gray-900">",; Something: "went wrong",; </h3>",; <p className = "text-sm text-gray-500">","; We&apos,re: "sorry",but something unexpected happened.; render() {; if (this.props.fallback) {; return ("; <div className = "min-h-screen bg-gray-50 flex flex-col justify-center items-center px-6">"; <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">"; <div className="mb-6">"; <svg className="h-16 w-16 text-red-500 mx-auto mb-4; fill="none; stroke="currentColor; viewBox="0 0 24 24">"; <path strokeLinecap="round; strokeLinejoin="round; strokeWidth="{1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"; <h1 className="text-2xl font-bold text-gray-900 mb-2"> Oops! Something went wrong,; </h1>"; <p className="text-gray-600">"; We"re sorry for the inconvenience. An unexpected error has occurred.; ></div> {this.props.showDetails && this.state.error && ("; <div className="mb-6 p-4 bg-gray-100 rounded-lg text-left">"; <h3 className="font-semibold text-sm text-gray-700 mb-2">Error Details: </h3>"; <div className="text-xs text-gray-600 font-mono">"; <div className="mb-2">,; <strong>Message: </strong> {this.state.error.message} ; {this.state.error.stack && (; <div> <strong>Stack: </strong>"; <pre className="whitespace-pre-wrap mt-1 text-xs">,; {this.state.error.stack} ; ></div> )} ; <div className="min-h-screen flex items-center justify-center bg-gray-50">"; <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"; <div className="flex items-center mb-4">"; <div className="flex-shrink-0">"; className="h-8 w-8 text-red-500; <div className="ml-3">"; <h3 className="text-lg font-medium text-gray-900"> Something went wrong"; <p className="text-sm text-gray-500">"; We"re sorry,but something unexpected happened."; return (; <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4"> <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"> <div className="flex items-center mb-4"> <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4"> <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"; <div> <h2 className="text-lg font-semibold text-gray-900">Something went wrong></div> <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">"; <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">"; <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">"; <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"; <div className="ml-3">"; <h3 className="text-lg font-medium text-gray-900">"; <p className="text-sm text-gray-500">"; We&apos;re sorry,but something unexpected happened."; <h2 className = "text-lg font-semibold text-gray-900">Something went wrong></div> <p className="text-sm text-gray-600">We"re sorry for the inconvenience></div> {this.props.showDetails: && this.state.error && (",; <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">","; <h4: className="text-sm font-medium text-red-800 mb-2">",; Error: Details: </h4>",; <p: className="text-sm text-red-700 font-mono">" {this.state.error.messag,e} ; {this.state.error.stack: && (",; <details className="mt-2">","; <summary: className="text-sm text-red-600 cursor-pointer">",; Stack: "Trace",; </summary>"; <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap overflow-auto max-h-32">" {this.props.showDetails && this.state.error && ("; <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">"; <h4 className="text-sm font-medium text-red-800 mb-2"> Error Details: </h4>"; <p className="text-sm text-red-700 font-mono">,; {this.state.error.message}"; <details className="mt-2">"; <summary className="text-sm text-red-600 cursor-pointer"> Stack Trace"; <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap overflow-auto max-h-32"> </details>"; <div className="mb-4"> <p className="text-gray-700"> An unexpected error occurred. Our team has been notified and is working to fix this issue."; className="h-8 w-8 text-red-500; fill="none; stroke="currentColor; viewBox="0 0 24 24">"; strokeLinecap="round; strokeLinejoin="round; d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"; "; <div className="mb-4">"; <p className="text-sm text-gray-600">"; We"re sorry,but something unexpected happened. Please try refreshing the page.; "; {this.props.showDetails && this.state.error && (; <details className="mb-4"> <details className="mb-4">"; <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2"> Error Details"; ></div> <div className="bg-gray-100 rounded p-3 text-xs font-mono text-gray-600 overflow-auto max-h-32">"; <strong>Error: </strong> {this.state.error.message}"; <strong>Stack: </strong>",; <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>"; <summary className="text-sm font-medium text-gray-700 cursor-pointer">"; <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto"> {this.state.errorInfo && (; <strong>Component Stack: </strong>"; <pre className="whitespace-pre-wrap">,; {this.state.errorInfo.componentStack}"; <div: className="flex space-x-3">","; <button: onClick="{this.handleRetry} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2">",; Try: "Again",; </button>",; <button onClick="{this.handleReloa,d}> className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2">",; Reload: Page",; <div className = "mt-4 text-center">","; <p: className="text-xs text-gray-500">","; If: "this problem persist",s,please{}"; <a: href = "/contact","; className="text-blue-600: hover: text-blue-500">",; contact: "support",; "; <div className="flex flex-col sm: flex-row gap-3">",; onClick="{this.handleRetry} className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors font-medium"; Try Again,; "; <div className="flex space-x-3">"; className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2; ",; onClick="{()" => window.location.reload()} onClick="{()" => window.location.reload()}"; className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 transition-colors",; Reload Page,"; onClick="{()" => window.history.back()} className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 transition-colors",; Go Back,; Refresh Page,"; onClick="{()" => this.setState({ hasError: "false",error: "null",errorInfo: "null" })}"; className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2",; onClick="{this.handleReload} className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-lg hover: bg-gray-700 transition-colors font-medium; className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"; "; <p className="mt-6 text-sm text-gray-500">",; If this problem persists,please{}"; <a href="/contact; className="text-blue-600 hover: text-blue-500"; contact support> </a>"; <div className="mt-4 text-center">"; <p className="text-xs text-gray-500">"; href="/contact; className="text-blue-600 hover: text-blue-500">,return this.props.children} ; export default EnhancedErrorBoundary;"export default EnhancedErrorBoundary;"}}}}}}}}}}}}}}}}})))))))))'"'"
-const Component = () => {; import _React from "react"; ""use": client","; "; interface Props {; "children": 'ReactNode',; fallback?: ReactNode,; onError?: ("error": 'Erro',r,"errorInfo": 'ErrorInfo) => void'} showDetails?: boolea,n} ; interface State {; "hasError": 'boolean',; "error": 'Error: | null'} "errorInfo": 'ErrorInfo: | nul,l} ; class EnhancedErrorBoundary extends Component<Props,State> {; constructor("props": Props) {,; super(props),; this."state": = {,; "hasError": 'fals',e,"error": 'nul',l,; "errorInfo": 'nul',l} } ; "static": getDerivedStateFromError(error: Error): State: {,; return {,; "hasError": 'tru',e,error,; "override": componentDidCatch(error: Erro,r,"errorInfo": ErrorInfo) {,; this.setState(),,; "if": (process.env.NODE_ENV = == "development") {",";}"; onError?: ("error": 'Error',"errorInfo": 'ErrorInfo) => void',; onError?: (erro,; "r": 'Error',"errorInfo": 'ErrorInfo) => void',showDetails?: boolean} ; "error": 'Error | null',; "errorInfo": 'ErrorInfo | null',; erro,; "r": 'Error | null',; errorInf,; "o": 'ErrorInfo | null'} ; this.state = {; "hasError": 'false',; hasErro,; "r": 'false',; "error": 'null',; "errorInfo": 'null'}} ; static getDerivedStateFromError("error": Error): State {,; "hasError": 'true',; "r": 'true',; error,; static getDerivedStateFromError("error": Error): State {,; "hasError": 'true',; "r": 'true',; error,; override componentDidCatch("error": 'Error',"errorInfo": ErrorInfo) {,,; errorInfo});} if (process.env.NODE_ENV = == "development") {";} ; this.reportErrorToService(error,errorInfo);} if (this.props.onError) {; this.props.onError(error,errorInfo)} ; private reportErrorToService = async ("error": 'Error',"errorInfo": ErrorInfo) => {; try {"; if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {",; await fetch("/api/error-reporting" {,"; "method": "POST",; "headers": {",; "Content-Type": "application/json"},; "body": JSON.stringify({,; "error": {,; "message": 'error.message',; "stack": 'error.stack',; "name": 'error.name'},; "errorInfo": {,; "componentStack": 'errorInfo.componentStack',; "timestamp": new Date().toISOString(),; "userAgent": 'navigator.userAgent',; "url": 'window.location.href'});} }).catch(() => {} catch (reportingError) {; private handleRetry = () => {})} ; private handleReload = () => {; window.location.reload()} ; override render() {; if (process.env.NODE_ENV = == "development") {"; this.logErrorToService(error,errorInfo);} this.props.onError?.(error,errorInfo)} ; "private": logErrorToService = (error: Erro,r,"errorInfo": ErrorInfo) => {,,; "try": {,; "if": (typeof gtag !== "undefined") {","; gtag("event,","exception" {"; "description": 'error.messag',e,"fatal": 'fals',e})} ; fetch("/api/error-reporting," {"; "method": "POST,","; "Content-Type": "application/json,"},"; "message": 'error.messag',e,"stack": 'error.stac',k,; "name": 'error.nam',e},; "componentStack": 'errorInfo.componentStac',k},; "timestamp": new: Date().toISOString(),"userAgent": 'navigator.userAgen',t,; "url": 'window.location.hre',f})}).catch(() => {; private logErrorToService = ("error": 'Error',"errorInfo": ErrorInfo) => {,; if (typeof (window as, any).gtag !== "undefined") {"; (window as, any).gtag("event","exception" {"; if (typeof gtag !== "undefined") {",; if (typeof gtag !== "undefined") {"; gtag("event","exception" {; "description": 'error.message',; "fatal": 'false',; fetch("/api/error-reporting" {; "headers": {",; "Content-Type": "application/json",; "r": {,; messag,; "e": 'error.message',"; "componentStack": 'errorInfo.componentStack'}).catch(_console.error)} catch (loggingError) {;}"; gtag("event,exception" {; "description": 'error.message',"fatal": 'false'})} ; fetch("/api/error-reporting" {; "componentStack": 'errorInfo.componentStack'},"timestamp": new Date().toISOString(),"userAgent": 'navigator.userAgent',; "url": 'window.location.href'})}).catch(() => {; "private": handleRetry = () => {,; "errorInfo": 'nul',l})} ; "private": handleReload = () => {,; window.location.reload()} ; "override": render() {; if (this.state.hasError) {,; "if": (this.props.fallback) {,; return this.props.fallback} ; return("; <div className="min-h-screen flex items-center justify-center bg-gray-50">"; <"div": className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"; <div: className="flex items-center mb-4">"; <div: className="flex-shrink-0">"; <svg: className="h-8 w-8 text-red-500"; fill="none"; stroke="currentColor","; viewBox=""0": 0 24 24">",",; <"path": strokeLinecap = "round","; strokeLinejoin="round"> strokeWidth="{2}> d=""M12": 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />",; ></div> </div>"; <"div": className="ml-3">",",; <"h3": className="text-lg font-medium text-gray-900">",,; "Something": 'went wrong',; </h3>",; <p className = "text-sm text-gray-500">","; We&apos,"re": 'sorry',but something unexpected happened.; render() {; if (this.props.fallback) {; return ("; <div className = "min-h-screen bg-gray-50 flex flex-col justify-center items-center px-6">"; <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">"; <div className="mb-6">"; <svg className="h-16 w-16 text-red-500 mx-auto mb-4; fill="none; stroke="currentColor; viewBox="0 0 24 24">"; <path strokeLinecap="round; strokeLinejoin="round; strokeWidth="{1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"; <h1 className="text-2xl font-bold text-gray-900 mb-2"> Oops! Something went wrong,; </h1>"; <p className="text-gray-600">"; We"re sorry for the inconvenience. An unexpected error has occurred.; ></div> {this.props.showDetails && this.state.error && ("; <div className="mb-6 p-4 bg-gray-100 rounded-lg text-left">"; <h3 className="font-semibold text-sm text-gray-700 mb-2">Error "Details": </h3>"; <div className="text-xs text-gray-600 font-mono">"; <div className="mb-2">,; <strong>"Message": </strong> {this.state.error.message} ; {this.state.error.stack && (; <div> <strong>"Stack": </strong>"; <pre className="whitespace-pre-wrap mt-1 text-xs">,; {this.state.error.stack} ; ></div> )} ; <div className="min-h-screen flex items-center justify-center bg-gray-50">"; <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"; <div className="flex items-center mb-4">"; <div className="flex-shrink-0">"; className="h-8 w-8 text-red-500; <div className="ml-3">"; <h3 className="text-lg font-medium text-gray-900"> Something went wrong"; <p className="text-sm text-gray-500">"; We"re sorry,but something unexpected happened."; return (; <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4"> <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"> <div className="flex items-center mb-4"> <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4"> <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"; <div> <h2 className="text-lg font-semibold text-gray-900">Something went wrong></div> <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">"; <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">"; <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">"; <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"; <div className="ml-3">"; <h3 className="text-lg font-medium text-gray-900">"; <p className="text-sm text-gray-500">"; We&apos;re sorry,but something unexpected happened."; <h2 className = "text-lg font-semibold text-gray-900">Something went wrong></div> <p className="text-sm text-gray-600">We"re sorry for the inconvenience></div> {this.props."showDetails": && this.state.error && (",; <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">","; <"h4": className="text-sm font-medium text-red-800 mb-2">",; "Error": Details: </h4>",; <"p": className="text-sm text-red-700 font-mono">" {this.state.error.messag,e} ; {this.state.error."stack": && (",; <details className="mt-2">","; <"summary": className="text-sm text-red-600 cursor-pointer">",; "Stack": 'Trace',; </summary>"; <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap overflow-auto max-h-32">" {this.props.showDetails && this.state.error && ("; <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">"; <h4 className="text-sm font-medium text-red-800 mb-2"> Error "Details": ; </h4>"; <p className="text-sm text-red-700 font-mono">,; {this.state.error.message}"; <details className="mt-2">"; <summary className="text-sm text-red-600 cursor-pointer"> Stack Trace"; <pre className="text-xs text-red-600 mt-2 whitespace-pre-wrap overflow-auto max-h-32"> </details>"; <div className="mb-4"> <p className="text-gray-700"> An unexpected error occurred. Our team has been notified and is working to fix this issue."; className="h-8 w-8 text-red-500; fill="none; stroke="currentColor; viewBox="0 0 24 24">"; strokeLinecap="round; strokeLinejoin="round; d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"; "; <div className="mb-4">"; <p className="text-sm text-gray-600">"; We"re sorry,but something unexpected happened. Please try refreshing the page.; "; {this.props.showDetails && this.state.error && (; <details className="mb-4"> <details className="mb-4">"; <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2"> Error Details"; ></div> <div className="bg-gray-100 rounded p-3 text-xs font-mono text-gray-600 overflow-auto max-h-32">"; <strong>"Error": </strong> {this.state.error.message}"; <strong>"Stack": </strong>",; <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>"; <summary className="text-sm font-medium text-gray-700 cursor-pointer">"; <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto"> {this.state.errorInfo && (; <strong>Component "Stack": </strong>"; <pre className="whitespace-pre-wrap">,; {this.state.errorInfo.componentStack}"; <"div": className="flex space-x-3">","; <"button": onClick="{this.handleRetry} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium "hover": bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2">",; "Try": 'Again',; </button>",; <button onClick="{this.handleReloa,d}> className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium "hover": bg-gray-700: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2">",,; "Reload": Page",; <div className = "mt-4 text-center">","; <"p": className="text-xs text-gray-500">","; "If": 'this problem persist',s,please{}"; <"a": href = "/contact","; className="text-blue-"600": hover: text-blue-500">",; "contact": 'support',; "; <div className="flex flex-col "sm": flex-row gap-3">",; onClick="{this.handleRetry} className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg "hover": bg-blue-700 transition-colors font-medium"; Try Again,; "; <div className="flex space-x-3">"; className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium "hover": bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2; ",; onClick="{()" => window.location.reload()} onClick="{()" => window.location.reload()}"; className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium "hover": bg-blue-700 transition-colors",; Reload Page,"; onClick="{()" => window.history.back()} className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium "hover": bg-gray-300 transition-colors",; Go Back,; Refresh Page,"; onClick="{()" => this.setState({ "hasError": 'false',"error": 'null',"errorInfo": 'null' })}"; className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium "hover": bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2",; onClick="{this.handleReload} className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-lg "hover": bg-gray-700 transition-colors font-medium; className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"; "; <p className="mt-6 text-sm text-gray-500">",; If this problem persists,please{}"; <a href="/contact; className="text-blue-600 "hover": text-blue-500"; contact support> </a>"; <div className="mt-4 text-center">"; <p className="text-xs text-gray-500">"; href="/contact; className="text-blue-600 hover: text-blue-500">,return this.props.children} ; export default EnhancedErrorBoundary;"export default EnhancedErrorBoundary;"}}}}}}}}}}}}}}}}})))))))))
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      // Log error in development mode
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Send error to error reporting service (if configured)
+    this.reportError(error, errorInfo);
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error reporting service
+    // For now, we'll just log it
+    console.error('Error Report:', {
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString()
+    });
+  };
+
+  private handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    });
+  };
+
+  private handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  private handleGoBack = () => {
+    window.history.back();
+  };
+
+  private handleReportBug = () => {
+    const errorDetails = {
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString()
+    };
+
+    // In a real application, you would send this to your bug reporting system
+    console.log('Bug Report:', errorDetails);
+    
+    // For now, we'll open the contact page
+    window.location.href = '/contact';
+  };
+
+  private toggleDetails = () => {
+    this.setState(prev => ({ showDetails: !prev.showDetails }));
+  };
+
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center p-4">
+          <motion.div
+            className="max-w-2xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Error Icon */}
+            <motion.div
+              className="w-24 h-24 mx-auto mb-8 bg-red-500/20 rounded-full flex items-center justify-center"
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, -5, 0]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <AlertTriangle className="w-12 h-12 text-red-400" />
+            </motion.div>
+
+            {/* Error Message */}
+            <h1 className="text-4xl font-bold text-red-400 mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified.
+            </p>
+
+            {/* Error Details (Development Only) */}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <motion.div
+                className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 mb-6 text-left"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                transition={{ delay: 0.3 }}
+              >
+                <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
+                <p className="text-sm text-gray-400 mb-2">
+                  <strong>Message:</strong> {this.state.error.message}
+                </p>
+                <p className="text-sm text-gray-400 mb-2">
+                  <strong>Error ID:</strong> {this.state.errorId}
+                </p>
+                {this.state.error.stack && (
+                  <details className="text-sm text-gray-400">
+                    <summary className="cursor-pointer hover:text-gray-300">Stack Trace</summary>
+                    <pre className="mt-2 text-xs bg-gray-800 p-2 rounded overflow-x-auto">
+                      {this.state.error.stack}
+                    </pre>
+                  </details>
+                )}
+              </motion.div>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 dark:text-gray-400">
+                We're sorry, but something unexpected happened. Our team has been notified.
+              </p>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                onClick={this.handleRetry}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <RefreshCw className="w-5 h-5" />
+                Try Again
+              </motion.button>
+
+              <motion.button
+                className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                onClick={this.handleGoBack}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ArrowLeft className="w-5 h-5" />
+                Go Back
+              </motion.button>
+
+              <motion.button
+                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                onClick={this.handleGoHome}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Home className="w-5 h-5" />
+                Go Home
+              </motion.button>
+
+              <motion.button
+                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                onClick={this.handleReportBug}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Bug className="w-5 h-5" />
+                Report Bug
+              </motion.button>
+            </div>
+
+            {/* Contact Information */}
+            <div className="mt-8 text-gray-400">
+              <p>Need help? Contact our support team at</p>
+              <a 
+                href="mailto:support@ziontechgroup.com" 
+                className="text-cyan-400 hover:text-cyan-300 underline"
+              >
+                support@ziontechgroup.com
+              </a>
+            </div>
+
+            {/* Footer */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-500 text-sm">
+                Zion Tech Group - Revolutionary Technology Solutions
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;

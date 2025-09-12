@@ -7,10 +7,16 @@ on:
 
 permissions:
   contents: write
+<<<<<<< HEAD:.github/workflows/homepage-updater.yml
+
+concurrency:
+  group: homepage-updater
+=======
   pull-requests: write
   actions: read
 concurrency:
   group: "cursor-rules-auto-update-${{ github.ref }}"
+>>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/cursor-rules-autoupdate.yml
   cancel-in-progress: true
 
 jobs:

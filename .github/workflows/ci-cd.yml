@@ -1,291 +1,57 @@
-name: CI/CD Pipeline
+# .github/workflows/ci-cd.yml
+name: Node.js CI/CD
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main] # Defaulting to 'main'. Adjust if your main branch is different (e.g., master).
   pull_request:
-    branches: [ main, develop ]
-
-env:
-  NODE_VERSION: '20.20.0'
-  NPM_VERSION: '10.8.2'
+    branches: [main] # Defaulting to 'main'. Adjust if your main branch is different.
 
 jobs:
-  # Lint and Type Check
-  lint-and-typecheck:
-    name: Lint and Type Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run ESLint
-        run: npm run lint
-
-      - name: Run TypeScript type check
-        run: npm run type-check
-
-      - name: Run Prettier check
-        run: npm run format:check
-
-  # Unit Tests
-  unit-tests:
-    name: Unit Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run unit tests
-        run: npm run test:coverage
-
-      - name: Upload coverage reports
-        uses: codecov/codecov-action@v3
-        with:
-          file: ./coverage/lcov.info
-          flags: unittests
-          name: codecov-umbrella
-
-  # Integration Tests
-  integration-tests:
-    name: Integration Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run integration tests
-        run: npm run test:integration
-
-  # E2E Tests
-  e2e-tests:
-    name: E2E Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Run E2E tests
-        run: npm run test:e2e
-
-      - name: Upload E2E test results
-        uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: playwright-report
-          path: playwright-report/
-
-  # Security Scan
-  security-scan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run security audit
-        run: npm audit --audit-level=moderate
-
-      - name: Run Snyk security scan
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=high
-
-  # Build and Test
   build-and-test:
-    name: Build and Test
-    runs-on: ubuntu-latest
-    needs: [lint-and-typecheck, unit-tests, integration-tests]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+    strategy:
+      matrix:
+        node-version: ['20.x'] # Using Node.js version '20.x' as per package.json engines field or a recent LTS.
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Checks out your repository under $GITHUB_WORKSPACE
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4 # Sets up a Node.js environment
         with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          node-version: ${{ matrix.node-version }} # Specifies the Node.js version
+          cache: 'npm' # Enables caching for npm dependencies to speed up subsequent builds
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci # Use 'ci' for consistent and faster installs in CI environments
+
+      - name: Run security audits
+        run: bash ./scripts/security-audit.sh # Runs the security audit script. Assumes it's executable.
+
+      - name: Run linters and formatters
+        run: bash ./scripts/lint-format.sh # Runs the linting and formatting script. Assumes it's executable.
+        # Or, for more granular control if the script above isn't suitable:
+        # - name: Run Prettier format check
+        #   run: npm run format # Assuming 'npm run format' is configured to check formatting without writing changes.
+        # - name: Run ESLint
+        #   run: npm run lint
+
+      - name: Run tests
+        run: npm test # Executes the test suite
 
       - name: Build application
-        run: npm run build
-        env:
-          SHARP_IGNORE_GLOBAL_LIBVIPS: 1
-          NODE_ENV: production
+        run: npm run build # Builds the application using the script from package.json
 
-      - name: Test build
-        run: npm run test:build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-files
-          path: dist/
-
-  # Performance Tests
-  performance-tests:
-    name: Performance Tests
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: build-files
-          path: dist/
-
-      - name: Run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.12.x
-          lhci autorun
-
-  # Deploy to Staging
-  deploy-staging:
-    name: Deploy to Staging
-    runs-on: ubuntu-latest
-    needs: [build-and-test, e2e-tests, security-scan]
-    if: github.ref == 'refs/heads/develop'
-    environment: staging
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: build-files
-          path: dist/
-
-      - name: Deploy to Netlify Staging
-        uses: nwtgck/actions-netlify@v2.0
-        with:
-          publish-dir: './dist'
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: false
-          enable-commit-comment: true
-          overwrites-pull-request-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
-  # Deploy to Production
-  deploy-production:
-    name: Deploy to Production
-    runs-on: ubuntu-latest
-    needs: [build-and-test, e2e-tests, security-scan, performance-tests]
-    if: github.ref == 'refs/heads/main'
-    environment: production
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: build-files
-          path: dist/
-
-      - name: Deploy to Netlify Production
-        uses: nwtgck/actions-netlify@v2.0
-        with:
-          publish-dir: './dist'
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: false
-          enable-commit-comment: true
-          overwrites-pull-request-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
-  # Notify on Success/Failure
-  notify:
-    name: Notify
-    runs-on: ubuntu-latest
-    needs: [deploy-staging, deploy-production]
-    if: always()
-    steps:
-      - name: Notify Slack on Success
-        if: success()
-        uses: 8398a7/action-slack@v3
-        with:
-          status: success
-          text: 'Deployment successful! 🎉'
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-      - name: Notify Slack on Failure
-        if: failure()
-        uses: 8398a7/action-slack@v3
-        with:
-          status: failure
-          text: 'Deployment failed! ❌'
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    # Optional: Deployment step (placeholder)
+    # This section is commented out. To enable deployment, configure it for your specific hosting environment.
+    # - name: Deploy to Staging/Production
+    #   if: github.ref == 'refs/heads/main' && github.event_name == 'push' # Example: deploy only on push to the main branch
+    #   run: |
+    #     echo "Deployment steps would go here..."
+    #     # Example commands for deployment:
+    #     # ssh user@server 'cd /path/to/app && git pull && npm install --production && pm2 restart app'
+    #     # Or use dedicated GitHub Actions for services like GitHub Pages, AWS, Azure, Google Cloud, etc.

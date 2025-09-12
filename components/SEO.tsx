@@ -1,82 +1,123 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
-  type = "website";
-}) => {;
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https://zion.app',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = []
+}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  return (;
-    <Head>;
+  const fullUrl = url.startsWith('http') ? url : `https://zion.app${url}`;
+  const fullImage = image.startsWith('http') ? image : `https://zion.app${image}`;
+
+  return (
+    <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="author" content="Zion Tech Group" />;
-      <meta name="robots" content="index, follow" />;
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />;
-      <meta property="og:url" content={url} />;
-      <meta property="og:title" content={fullTitle} />;
-      <meta property="og:description" content={description} />;
-      <meta property="og:image" content={image} />;
-      <meta property="og:site_name" content="Zion Tech Group" />;
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />;
-      <meta property="twitter:url" content={url} />;
-      <meta property="twitter:title" content={fullTitle} />;
-      <meta property="twitter:description" content={description} />;
-      <meta property="twitter:image" content={image} />;
-      {/* Additional SEO */}
-      <meta name="theme-color" content="#3B82F6" />;
-      <meta name="msapplication-TileColor" content="#3B82F6" />;
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={fullUrl} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={fullImage} />
+      <meta property="twitter:site" content="@ZionTechGroup" />
+      <meta property="twitter:creator" content="@ZionTechGroup" />
+      
+      {/* Article specific meta tags */}
+      {type === 'article' && (
+        <>
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {author && <meta property="article:author" content={author} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />;
+      <link rel="canonical" href={fullUrl} />
+      
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />;
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />;
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />;
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />;
-      <link rel="manifest" href="/site.webmanifest" />;
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Theme Color */}
+      <meta name="theme-color" content="#2563eb" />
+      <meta name="msapplication-TileColor" content="#2563eb" />
+      
       {/* Structured Data */}
-      <script;
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{;
-          __html: JSON.stringify({;
-            "@context": "https://schema.org",
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": type === 'article' ? 'Article' : 'Organization',
+          "name": fullTitle,
+          "description": description,
+          "url": fullUrl,
+          "image": fullImage,
+          "author": type === 'article' ? {
+            "@type": "Organization",
+            "name": author
+          } : undefined,
+          "publisher": {
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-            "address": {;
-              "@type": "PostalAddress",
-              "addressCountry": "BR",
-              "addressLocality": "São Paulo";
-},
-            "contactPoint": {;
-              "@type": "ContactPoint",
-              "contactType": "customer service",
-              "availableLanguage": ["English", "Portuguese"];
-},
-            "sameAs": [ "https://www.linkedin.com/company/zion-technologies" ];
-});
-}}
-      />;
-    </Head>;
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://zion.app/images/zion-tech-group-logo.png"
+            }
+          },
+          "datePublished": publishedTime,
+          "dateModified": modifiedTime || publishedTime,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": fullUrl
+          }
+        })}
+      </script>
+    </Helmet>
   );
 };
+
 export default SEO;

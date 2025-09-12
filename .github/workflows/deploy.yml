@@ -1,23 +1,21 @@
 name: Deploy
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
 
 permissions:
-  contents: read
-
-concurrency:
-  group: deploy-${{ github.ref }}
-  cancel-in-progress: true
+  contents: write
+  actions: read
 
 jobs:
-  build-and-test:
+  main:
+    name: Main Job
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -25,49 +23,35 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
-
-      - name: Install dependencies
+      - name: Install dependencies (for Sentry CLI and potential build step)
         run: npm ci
+      - name: Build application (to generate sourcemaps for Sentry)
+        env:
+          # Mimic Netlify's production environment as much as possible for consistent sourcemaps
+          # These are illustrative; actual values might need to match netlify.toml production context
+          NODE_ENV: production
+          NEXT_TELEMETRY_DISABLED: '1'
+          # Add other critical NEXT_PUBLIC_ vars if they affect sourcemap generation or IDs
+        run: npm run build # This uses the standard build, not the full optimized-build.cjs
 
-      - name: Build project
-        run: npm run build
-
-      - name: Verify build output
-        run: |
-          if [ ! -d .next ]; then
-            echo "Build failed: .next folder not found"
-            exit 1
-          fi
-          echo "Build successful: .next folder found"
-          ls -la .next
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: zion-holdings # Make sure this is your Sentry org slug
+          SENTRY_PROJECT: javascript-nextjs # Make sure this is your Sentry project slug
         with:
-          name: build
-          path: .next
+          environment: production
+          sourcemaps: # Path to sourcemaps
+            - './.next/**/*.js.map'
+            - './.next/static/**/*.js.map' # Common locations for Next.js sourcemaps
+          url_prefix: '~/_next' # Adjust if your assets are served from a different base path e.g. /_next or cdn
+          # version: ${{ github.sha }} # Explicitly set version, defaults to github.sha
+          set_commits: auto # Automatically associate commits with the release
+          # deploy: # Optional: if you want to mark the release as deployed in Sentry
+          # env: production
+          # started_at: ${{ steps.start_time.outputs.time }} # Requires a step to output current time
+          # name: "Netlify Production Deployment"
 
-  deploy-preview:
-    needs: build-and-test
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy preview
-        run: |
-          echo "Deploying preview for PR #${{ github.event.number }}"
-          echo "Preview deployment would happen here"
-          echo "Build artifacts available from previous job"
-
-  deploy-production:
-    needs: build-and-test
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Deploy to production
-        run: |
-          echo "Deploying to production"
-          echo "Production deployment would happen here"
-          echo "Build artifacts available from previous job"

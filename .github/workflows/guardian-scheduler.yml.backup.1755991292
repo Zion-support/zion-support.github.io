@@ -28,6 +28,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+<<<<<<< HEAD
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+=======
       - name: Run workflow
         run: |
           echo "Workflow Workflow completed successfully"
+>>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c

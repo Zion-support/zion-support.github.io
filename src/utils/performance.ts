@@ -1,204 +1,87 @@
-// Performance monitoring and optimization utilities
+// Performance optimization utilities
 
-export interface PerformanceMetrics {
-	loadTime: number;
-	renderTime: number;
-	memoryUsage: number;
-	bundleSize: number;
-	cacheHitRate: number;
+// Debounce function for search inputs and other frequent events
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
 }
 
-export interface PerformanceConfig {
-	enableMonitoring: boolean;
-	enablePreloading: boolean;
-	enableCaching: boolean;
-	enableCompression: boolean;
-	maxCacheSize: number;
+// Throttle function for scroll events and other high-frequency events
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
 }
 
-export class PerformanceMonitor {
-	private metrics: PerformanceMetrics = {
-		loadTime: 0,
-		renderTime: 0,
-		memoryUsage: 0,
-		bundleSize: 0,
-		cacheHitRate: 0,
-	};
-
-	private config: PerformanceConfig = {
-		enableMonitoring: true,
-		enablePreloading: true,
-		enableCaching: true,
-		enableCompression: true,
-		maxCacheSize: 50 * 1024 * 1024, // 50MB
-	};
-
-	private cache = new Map<string, { value: unknown; timestamp: number; ttl: number }>();
-	private preloadQueue = new Set<string>();
-
-	constructor(config?: Partial<PerformanceConfig>) {
-		this.config = { ...this.config, ...config };
-		this.initializeMonitoring();
-	}
-
-	private initializeMonitoring(): void {
-		if (typeof window === "undefined" || !this.config.enableMonitoring) return;
-
-		window.addEventListener("load", () => {
-			this.metrics.loadTime = performance.now();
-			this.reportMetrics();
-		});
-
-		if ((performance as any).memory) {
-			setInterval(() => {
-				this.metrics.memoryUsage = (performance as any).memory.usedJSHeapSize ?? 0;
-			}, 5000);
-		}
-	}
-
-	preloadResource(url: string, type: "script" | "style" | "image" | "font" = "script"): void {
-		if (!this.config.enablePreloading || this.preloadQueue.has(url) || typeof document === "undefined") return;
-		this.preloadQueue.add(url);
-		const link = document.createElement("link");
-		link.rel = "preload";
-		link.href = url;
-		link.as = type;
-		if (type === "font") link.crossOrigin = "anonymous";
-		document.head.appendChild(link);
-	}
-
-	setCache(key: string, value: unknown, ttl: number = 300000): void {
-		if (!this.config.enableCaching) return;
-		this.cache.set(key, { value, timestamp: Date.now(), ttl });
-		this.cleanupCache();
-	}
-
-	getCache<T = unknown>(key: string): T | null {
-		if (!this.config.enableCaching) return null;
-		const item = this.cache.get(key);
-		if (!item) return null;
-		if (Date.now() - item.timestamp > item.ttl) {
-			this.cache.delete(key);
-			return null;
-		}
-		return item.value as T;
-	}
-
-	private cleanupCache(): void {
-		const now = Date.now();
-		for (const [key, item] of this.cache.entries()) {
-			if (now - item.timestamp > item.ttl) this.cache.delete(key);
-		}
-	}
-
-	optimizeImage(src: string, width?: number, height?: number, quality: number = 80): string {
-		if (src.startsWith("data:") || src.startsWith("blob:")) return src;
-		const params = new URLSearchParams();
-		if (width) params.set("w", String(width));
-		if (height) params.set("h", String(height));
-		params.set("q", String(quality));
-		params.set("f", "auto");
-		return `${src}?${params.toString()}`;
-	}
-
-	analyzeBundleSize(): void {
-		if (typeof document === "undefined") return;
-		const scripts = Array.from(document.querySelectorAll("script[src]"));
-		let totalSize = 0;
-		scripts.forEach((script) => {
-			const s = script as HTMLScriptElement;
-			if (s.src) totalSize += s.src.length * 2; // rough estimate only
-		});
-		this.metrics.bundleSize = totalSize;
-	}
-
-	private reportMetrics(): void {
-		if (!this.config.enableMonitoring) return;
-		// eslint-disable-next-line no-console
-		console.log("Performance Metrics:", {
-			loadTime: `${this.metrics.loadTime.toFixed(2)}ms`,
-			renderTime: `${this.metrics.renderTime.toFixed(2)}ms`,
-			memoryUsage: `${(this.metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB`,
-			bundleSize: `${(this.metrics.bundleSize / 1024).toFixed(2)}KB`,
-			cacheSize: this.cache.size,
-		});
-
-		if (typeof window !== "undefined" && (window as any).gtag) {
-			(window as any).gtag("event", "performance_metrics", {
-				load_time: this.metrics.loadTime,
-				render_time: this.metrics.renderTime,
-				memory_usage: this.metrics.memoryUsage,
-				bundle_size: this.metrics.bundleSize,
-			});
-		}
-	}
-
-	getMetrics(): PerformanceMetrics {
-		return { ...this.metrics };
-	}
-
-	clearCache(): void {
-		this.cache.clear();
-	}
-
-	updateConfig(newConfig: Partial<PerformanceConfig>): void {
-		this.config = { ...this.config, ...newConfig };
-	}
+// Lazy loading utility for images
+export function lazyLoadImage(img: HTMLImageElement, src: string) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          img.src = src;
+          observer.unobserve(img);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(img);
 }
 
-export const performanceMonitor = new PerformanceMonitor();
+// Performance monitoring
+export function measurePerformance(name: string, fn: () => void) {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`);
+}
 
-export const preloadCriticalResources = (): void => {
-	const criticalResources = ["/fonts/inter.woff2", "/images/hero-bg.webp", "/js/critical.js"];
-	criticalResources.forEach((resource) => {
-		const type = resource.endsWith(".woff2") ? "font" : resource.endsWith(".webp") ? "image" : "script";
-		performanceMonitor.preloadResource(resource, type);
-	});
-};
+// Memory usage monitoring
+export function getMemoryUsage() {
+  if ('memory' in performance) {
+    const memory = (performance as any).memory;
+    return {
+      used: Math.round(memory.usedJSHeapSize / 1048576), // MB
+      total: Math.round(memory.totalJSHeapSize / 1048576), // MB
+      limit: Math.round(memory.jsHeapSizeLimit / 1048576), // MB
+    };
+  }
+  return null;
+}
 
-export const optimizeImages = (images: NodeListOf<HTMLImageElement>): void => {
-	images.forEach((img) => {
-		if ((img as any).dataset.optimized) return;
-		const optimizedSrc = performanceMonitor.optimizeImage(img.src, img.width || undefined, img.height || undefined);
-		img.src = optimizedSrc;
-		(img as any).dataset.optimized = "true";
-	});
-};
+// Preload critical resources
+export function preloadResource(href: string, as: string) {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);
+}
 
-export const enableLazyLoading = (): void => {
-	const images = document.querySelectorAll("img[data-src]");
-	const lazyImages = Array.from(images) as HTMLImageElement[];
-	lazyImages.forEach((img) => {
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const image = entry.target as HTMLImageElement;
-					if (image.dataset.src) {
-						image.src = image.dataset.src;
-						image.classList.remove("lazy");
-						observer.unobserve(image);
-					}
-				}
-			});
-		});
-		observer.observe(img);
-	});
-};
+// Optimize images based on device pixel ratio
+export function getOptimizedImageSrc(
+  baseSrc: string,
+  sizes: number[] = [1, 2, 3]
+) {
+  const pixelRatio = window.devicePixelRatio || 1;
+  const closestSize = sizes.reduce((prev, curr) =>
+    Math.abs(curr - pixelRatio) < Math.abs(prev - pixelRatio) ? curr : prev
+  );
 
-export const measurePerformance = (name: string, fn: () => void): number => {
-	const start = performance.now();
-	fn();
-	const end = performance.now();
-	return end - start;
-};
-
-export const reportWebVitals = (metric: { name: string; id: string; value: number }): void => {
-	if (typeof window !== "undefined" && (window as any).gtag) {
-		(window as any).gtag("event", metric.name, {
-			event_category: "Web Vitals",
-			event_label: metric.id,
-			value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
-			non_interaction: true,
-		});
-	}
-};
+  return baseSrc.replace(/\.(jpg|jpeg|png|webp)/, `@${closestSize}x.$1`);
+}

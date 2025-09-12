@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React from \'react\' import ReactDOM from \'react-dom/client\' import { BrowserRouter } from \'react-router-dom\' import { Provider } from \'react-redux\' import { store } from \'./store\' import App from \'./App\' import \'./index.css\' ReactDOM.createRoot(document.getElementById(\'root\')!).render( <React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> )\';
-const React from "react" import ReactDOM from "react-dom/client" import { BrowserRouter } from "react-router-dom" import { Provider } from "react-redux" import { store } from "./store" import App from "./App" import "./index.css" ReactDOM.createRoot(document.getElementById("root")!).render( <React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> )";""
-import _React from 'react' import ReactDOM from 'react-dom/client' import { BrowserRouter } from 'react-router-dom' import { Provider } from 'react-redux' import { store } from './store' import App from './App' import './index.css' ReactDOM.createRoot(document.getElementById('root')!).render( <_React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </_React.StrictMode> )';
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

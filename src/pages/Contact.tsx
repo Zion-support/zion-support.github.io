@@ -1,131 +1,74 @@
-import React, { useState } from 'react';
-:src/pages/Contact.tsx
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send,
-  CheckCircle,
-  Clock,
-  Users,
-  MessageCircle
-} from 'lucide-react';
-export function Contact() {export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-:src/pages/Contact.tsx
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    // Handle form submission
-  };
+import React from 'react';
+
+export default function Contact() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-        <p className="text-xl text-gray-600">
-          Get in touch with our team to discuss your technology needs
-        </p>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Form */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-foreground mb-8">
+            Contact Us
+          </h1>
+          <p className="text-xl text-muted-foreground mb-12">
+            Get in touch with the Zion Tech Group team
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 text-left">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-        {/* Contact Information */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in touch</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">contact@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
-              <p className="text-gray-600">
-                123 Technology Drive<br />
-                Innovation City, IC 12345<br />
-                United States
+              <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+              <p className="text-muted-foreground mb-6">
+                Have questions about our services? Need technical support? 
+                We're here to help you succeed.
               </p>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-medium">Email</h3>
+                  <p className="text-muted-foreground">contact@ziontechgroup.com</p>
+                </div>
+                <div>
+                  <h3 className="font-medium">Phone</h3>
+                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                </div>
+                <div>
+                  <h3 className="font-medium">Support Hours</h3>
+                  <p className="text-muted-foreground">24/7 Technical Support</p>
+                </div>
+              </div>
             </div>
+            
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
-              <p className="text-gray-600">
-                Monday - Friday: 9:00 AM - 6:00 PM<br />
-                Saturday: 10:00 AM - 4:00 PM<br />
-                Sunday: Closed
-              </p>
+              <h2 className="text-2xl font-semibold mb-4">Quick Contact Form</h2>
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full p-3 border border-input rounded-md bg-background"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <input 
+                    type="email" 
+                    className="w-full p-3 border border-input rounded-md bg-background"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <textarea 
+                    className="w-full p-3 border border-input rounded-md bg-background h-32"
+                    placeholder="How can we help you?"
+                  />
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-md hover:bg-primary/90 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>
