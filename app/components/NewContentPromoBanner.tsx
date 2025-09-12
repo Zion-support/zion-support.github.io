@@ -8,6 +8,56 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "Advanced AI Architecture 2025",
+    description: "Scalable, resilient AI systems with distributed computing patterns",
+    url: "/blog/ai-2025-advanced-ai-architecture",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🏗️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Cybersecurity Revolution 2025",
+    description: "Next-gen defense strategies with AI-powered threat detection",
+    url: "/blog/ai-2025-cybersecurity-revolution",
+    type: "Blog Post",
+    category: "Cybersecurity",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Quantum Computing Breakthrough 2025",
+    description: "AI's next frontier with quantum machine learning and algorithms",
+    url: "/blog/ai-2025-quantum-computing-breakthrough",
+    type: "Blog Post",
+    category: "Quantum Computing",
+    icon: "⚛️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete enterprise playbook with 250+ pages of frameworks and case studies",
+    url: "/resources/ai-implementation-master-guide-2026",
+    type: "Resource",
+    category: "Implementation",
+    icon: "📚",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Automation Implementation Guide 2025",
+    description: "180+ page comprehensive playbook with frameworks and templates",
+    url: "/resources/ai-automation-implementation-guide-2025",
+    type: "Resource",
+    category: "Automation",
+    icon: "🤖",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Copilots for Engineering Teams",
     description: "Secure, repo-aware copilots that reduce toil and speed reviews",
     url: "/blog/ai-copilots-for-engineering",
