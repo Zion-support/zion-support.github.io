@@ -124,6 +124,10 @@ import NewContent2026PromotionBanner from '../components/NewContent2026Promotion
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 import NewContentNavigation2026 from '../components/NewContentNavigation2026';
 
+// New Revolutionary Content Promotion Components
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -139,6 +143,16 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER 2025 */}
+        <RevolutionaryContentPromotionBanner2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <div className="py-12 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto">
+            <InteractiveContentDiscoveryWidget2025 />
+          </div>
+        </div>
+        
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
