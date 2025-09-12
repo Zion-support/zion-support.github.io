@@ -1,21 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Tag, Star } from 'lucide-react';
+import { ArrowRight, Clock, Tag, Star, TrendingUp, Eye, Download } from 'lucide-react';
 
 interface ContentItem {
   title: string;
   description: string;
   href: string;
-<<<<<<< HEAD
-  icon: string;
-  readTime?: string;
-  category?: string;
-  isNew?: boolean;
-  isTrending?: boolean;
-  type: 'article' | 'case-study' | 'resource' | 'guide';
-  status: 'new' | 'popular' | 'trending' | 'featured';
-=======
->>>>>>> cursor/create-and-deploy-new-content-47dd
   type: 'blog' | 'resource' | 'case-study';
   readTime?: string;
   isNew?: boolean;
@@ -23,75 +13,25 @@ interface ContentItem {
   category?: string;
   featured?: boolean;
   isTrending?: boolean;
-<<<<<<< HEAD
-  icon: string;
-  category: string;
-  type: 'article' | 'resource' | 'case-study';
-  readTime?: string;
-  fileSize?: string;
+  views?: string;
+  downloads?: string;
+  rating?: number;
   badge?: string;
   badgeColor?: string;
-  type: 'blog' | 'case-study' | 'resource';
-  isNew?: boolean;
-  isTrending?: boolean;
-  type: 'article' | 'resource' | 'case-study';
-  isNew?: boolean;
-  isTrending?: boolean;
-  metrics?: string;
-=======
->>>>>>> cursor/create-and-deploy-new-content-47dd
 }
 
 interface ContentShowcaseProps {
   title: string;
   subtitle: string;
   items: ContentItem[];
-<<<<<<< HEAD
-  variant?: 'default' | 'featured' | 'trending';
+  variant?: 'default' | 'featured' | 'trending' | 'promotional';
   className?: string;
   showViewAll?: boolean;
   viewAllHref?: string;
-  backgroundColor?: string;
-  textColor?: string;
-  showViewAll?: boolean;
-  viewAllHref?: string;
-  viewAllText?: string;
-  variant?: 'default' | 'gradient' | 'dark';
-  showViewAll?: boolean;
-  viewAllHref?: string;
+  showPromotionalBanner?: boolean;
+  promotionalText?: string;
+  promotionalLink?: string;
   columns?: 2 | 3 | 4;
-interface ContentShowcaseProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  content: Array<{
-    title: string;
-    description: string;
-    link: string;
-    category: string;
-    readTime: string;
-    publishDate: string;
-    featured?: boolean;
-    trending?: boolean;
-    new?: boolean;
-  }>;
-  showViewAll?: boolean;
-  viewAllLink?: string;
-  variant?: 'default' | 'featured' | 'compact';
-  showViewAll?: boolean;
-  viewAllHref?: string;
-  badge: string;
-  items: ContentItem[];
-  primaryButton: {
-    text: string;
-    href: string;
-  };
-  secondaryButton?: {
-    text: string;
-    href: string;
-  };
-  gradient: string;
-  className?: string;
 }
 
 export default function ContentShowcase({
@@ -664,40 +604,56 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 // Predefined content collections for easy use
 export const featuredContent = [
   {
-    title: "AI Enterprise Transformation 2026",
-    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
-    href: "/blog/ai-2026-enterprise-transformation",
-    icon: "🏢",
-    readTime: "25 min read",
+    title: "AI Enterprise Adoption Trends 2025: Complete Market Analysis",
+    description: "Discover the latest AI enterprise adoption trends for 2025. Learn how Fortune 500 companies are implementing AI, key success factors, and market predictions.",
+    href: "/blog/ai-2025-enterprise-adoption-trends",
+    icon: "📈",
+    readTime: "15 min read",
     category: "Enterprise AI",
-    isNew: true
+    isNew: true,
+    views: "2.3k views",
+    rating: 4.9,
+    badge: "Trending",
+    badgeColor: "bg-red-100 text-red-800"
   },
   {
-    title: "AI Breakthrough Predictions 2026",
-    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
-    href: "/blog/ai-2026-breakthrough-predictions",
-    icon: "🔮",
-    readTime: "22 min read",
-    category: "AI Predictions",
-    isNew: true
-  },
-  {
-    title: "AI Healthcare Diagnosis Breakthrough",
-    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
-    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
-    icon: "🏥",
+    title: "AI Workflow Automation 2025: Complete Optimization Guide",
+    description: "Master AI workflow automation with our comprehensive 2025 guide. Learn proven strategies to optimize business processes, reduce costs by 60%, and boost productivity by 40%.",
+    href: "/blog/ai-automation-workflow-optimization-2025",
+    icon: "⚡",
     readTime: "18 min read",
-    category: "Healthcare AI",
-    isNew: true
+    category: "AI Automation",
+    isNew: true,
+    views: "3.1k views",
+    rating: 4.8,
+    badge: "New",
+    badgeColor: "bg-green-100 text-green-800"
   },
   {
-    title: "AI Implementation Master Guide 2026",
-    description: "Complete 200-page playbook with templates, checklists, and case studies",
-    href: "/resources/ai-implementation-master-guide-2026",
+    title: "AI Manufacturing Transformation: $2.8B Cost Savings Case Study",
+    description: "Discover how a Fortune 500 manufacturing company achieved $2.8B in cost savings and 45% efficiency gains through comprehensive AI transformation.",
+    href: "/case-studies/ai-manufacturing-transformation-2025",
+    icon: "🏭",
+    readTime: "20 min read",
+    category: "Case Study",
+    isNew: true,
+    views: "4.2k views",
+    rating: 4.9,
+    badge: "Featured",
+    badgeColor: "bg-blue-100 text-blue-800"
+  },
+  {
+    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
+    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+    href: "/resources/ai-implementation-master-guide-2025",
     icon: "📚",
     readTime: "Free Download",
     category: "Resources",
-    isNew: true
+    isNew: true,
+    downloads: "12.5k downloads",
+    rating: 4.9,
+    badge: "Popular",
+    badgeColor: "bg-purple-100 text-purple-800"
   }
 ];
 
