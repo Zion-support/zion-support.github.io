@@ -15,7 +15,7 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 const ContentPromotionBanner = lazy(() => import('../components/ContentPromotionBanner'));
 const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
-const TrendingTopicsWidget = lazy(() => import('../components/TrendingTopicsWidget'));
+const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 
 // Card component
@@ -86,12 +86,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 NEW: AI Advanced Automation & Healthcare Revolution Content!
+                🎉 Massive Content Update: 15+ New AI Resources Just Released!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Just released: Complete AI Automation Enterprise Guide (40-60% efficiency gains), 
-                AI Healthcare Diagnosis Revolution (95-98% accuracy), plus Fortune 500 success case studies. 
-                Get expert insights on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough content: Multimodal AI Revolution, Robotics & Automation, 
+                Sustainability & Green Tech, plus new case studies and implementation guides. Get expert insights 
+                on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -101,7 +101,7 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-advanced-automation"
+                  href="/blog/ai-2025-breakthrough-innovations"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Read Latest Article
@@ -185,17 +185,30 @@ export default function HomePage() {
               Latest AI Innovations & Success Stories
             </h2>
             <p className='text-lg opacity-90 max-w-3xl mx-auto'>
-              Explore our newest content covering AI automation, healthcare diagnosis revolution, 
-              and real-world transformation case studies with proven ROI results.
+              Explore our newest content covering multimodal AI, robotics automation, sustainability solutions, 
+              and real-world transformation case studies.
             </p>
           </div>
 
           <div className='grid md:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-2025-advanced-automation' className='group'>
+            <Link href='/blog/ai-2025-advanced-robotics' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Advanced Automation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete enterprise guide with 40-60% efficiency gains and 300-500% ROI</p>
+                <h3 className='text-lg font-semibold mb-2'>Advanced Robotics & AI Integration</h3>
+                <p className='text-sm opacity-90 mb-3'>The future of manufacturing with intelligent robotic systems</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>15 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span className='bg-blue-500 px-2 py-1 rounded-full'>NEW</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-2025-healthcare-diagnosis-revolution' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Healthcare Diagnosis Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>Transforming medical care with AI-powered diagnostics</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>18 min read</span>
                   <span className='mx-2'>•</span>
@@ -204,20 +217,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/blog/ai-healthcare-diagnosis-revolution-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Healthcare Diagnosis Revolution</h3>
-                <p className='text-sm opacity-90 mb-3'>95-98% diagnostic accuracy transforming medical care worldwide</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>22 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span className='bg-blue-500 px-2 py-1 rounded-full'>Healthcare</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/case-studies/ai-2025-advanced-automation-success' className='group'>
+            <Link href='/case-studies/ai-transformation-retail-giant-success-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
                 <h3 className='text-lg font-semibold mb-2'>Fortune 500 AI Success</h3>
@@ -2061,19 +2061,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Content Showcase */}
-      <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
-        <FeaturedContentShowcase />
+      {/* Enhanced Content Showcase */}
+      <Suspense fallback={<LoadingSpinner size="lg" text="Loading content showcase..." />}>
+        <EnhancedContentShowcase />
       </Suspense>
-
-      {/* Trending Topics Widget */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <Suspense fallback={<LoadingSpinner size="lg" text="Loading trending topics..." />}>
-            <TrendingTopicsWidget />
-          </Suspense>
-        </div>
-      </section>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
