@@ -4,6 +4,7 @@ import './globals.css';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
+import NewContentBanner from '../components/NewContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -49,16 +50,22 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <Link 
-            href="/about" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+            href="/content-showcase" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
           >
-            About
+            Content Library
           </Link>
           <Link 
             href="/services" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Services
+          </Link>
+          <Link 
+            href="/case-studies" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Case Studies
           </Link>
           <Link 
             href="/contact" 
@@ -185,6 +192,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
+          <NewContentBanner />
           <Header />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}

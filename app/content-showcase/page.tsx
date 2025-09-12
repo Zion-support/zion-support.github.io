@@ -47,6 +47,56 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "AI Edge Computing Revolution 2025: Bringing Intelligence to the Edge",
+      description: "Discover how edge AI is transforming industries with real-time processing, reduced latency, and enhanced privacy. Learn implementation strategies and best practices.",
+      href: "/blog/ai-2025-edge-computing-revolution",
+      icon: "📱",
+      category: "Edge Computing",
+      readTime: "22 min read",
+      date: "Jan 30, 2025",
+      featured: true
+    },
+    {
+      title: "Ethical AI Framework 2025: Building Responsible AI Systems",
+      description: "Comprehensive framework for developing ethical AI systems. Learn about bias mitigation, transparency, fairness, and responsible AI practices for 2025.",
+      href: "/blog/ai-2025-ethical-ai-framework",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "28 min read",
+      date: "Jan 31, 2025",
+      featured: true
+    },
+    {
+      title: "Generative AI in Enterprise 2025: Strategic Implementation Guide",
+      description: "Master enterprise generative AI implementation with our comprehensive guide. Learn about strategy, use cases, ROI, and best practices for 2025.",
+      href: "/blog/ai-2025-generative-ai-enterprise",
+      icon: "🚀",
+      category: "Generative AI",
+      readTime: "30 min read",
+      date: "Feb 1, 2025",
+      featured: true
+    },
+    {
+      title: "AI Healthcare Diagnostic Revolution: 95% Accuracy Case Study",
+      description: "How a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times using AI-powered medical imaging and diagnostic tools.",
+      href: "/case-studies/ai-2025-healthcare-diagnostic-revolution",
+      icon: "🏥",
+      category: "Case Study",
+      readTime: "18 min read",
+      date: "Feb 2, 2025",
+      featured: true
+    },
+    {
+      title: "AI Financial Services Transformation: $50M ROI Case Study",
+      description: "How a major financial institution achieved $50M ROI and 40% improvement in fraud detection using AI-powered financial services solutions.",
+      href: "/case-studies/ai-2025-financial-services-transformation",
+      icon: "💰",
+      category: "Case Study",
+      readTime: "20 min read",
+      date: "Feb 3, 2025",
+      featured: true
+    },
+    {
       title: "AI Autonomous Manufacturing Revolution: $200M Success Story",
       description: "Complete case study: How a Fortune 500 manufacturer achieved $200M in cost savings and 300% productivity gains through AI-powered autonomous manufacturing systems.",
       href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
@@ -54,7 +104,7 @@ export default function ContentShowcase() {
       category: "Case Study",
       readTime: "15 min read",
       date: "Jan 28, 2025",
-      featured: true
+      featured: false
     },
     {
       title: "Building Scalable AI Infrastructure: A Complete Guide",
@@ -143,13 +193,14 @@ export default function ContentShowcase() {
     { name: 'Advanced AI', count: featuredContent.filter(c => c.category === 'Advanced AI').length, active: false },
     { name: 'Multimodal AI', count: featuredContent.filter(c => c.category === 'Multimodal AI').length, active: false },
     { name: 'Quantum AI', count: featuredContent.filter(c => c.category === 'Quantum AI').length, active: false },
+    { name: 'Edge Computing', count: featuredContent.filter(c => c.category === 'Edge Computing').length, active: false },
+    { name: 'AI Ethics', count: featuredContent.filter(c => c.category === 'AI Ethics').length, active: false },
+    { name: 'Generative AI', count: featuredContent.filter(c => c.category === 'Generative AI').length, active: false },
     { name: 'Case Study', count: featuredContent.filter(c => c.category === 'Case Study').length, active: false },
     { name: 'AI Infrastructure', count: featuredContent.filter(c => c.category === 'AI Infrastructure').length, active: false },
     { name: 'AI Security', count: featuredContent.filter(c => c.category === 'AI Security').length, active: false },
     { name: 'AI Healthcare', count: featuredContent.filter(c => c.category === 'AI Healthcare').length, active: false },
-    { name: 'Machine Learning', count: featuredContent.filter(c => c.category === 'Machine Learning').length, active: false },
-    { name: 'AI Ethics', count: featuredContent.filter(c => c.category === 'AI Ethics').length, active: false },
-    { name: 'Edge Computing', count: featuredContent.filter(c => c.category === 'Edge Computing').length, active: false }
+    { name: 'Machine Learning', count: featuredContent.filter(c => c.category === 'Machine Learning').length, active: false }
   ];
 
   return (
