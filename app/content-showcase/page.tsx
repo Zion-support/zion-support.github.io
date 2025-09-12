@@ -6,74 +6,84 @@ export default function ContentShowcase() {
   const featuredContent = [
     {
       id: 1,
-      title: "AI Advanced Automation 2025: Complete Implementation Guide",
-      description: "Master advanced AI automation with comprehensive strategies, best practices, and real-world case studies for enterprise success.",
-      href: "/blog/ai-2025-advanced-automation",
+      title: "AI Advanced Architecture 2025",
+      description: "Master advanced AI architecture patterns for 2025. Learn microservices, MLOps, vector databases, and enterprise-grade AI system design.",
+      href: "/blog/ai-2025-advanced-ai-architecture",
       type: "blog",
-      category: "Automation",
+      category: "Architecture",
       readTime: "25 min read",
       featured: true,
-      icon: "🤖"
+      icon: "🏗️"
     },
     {
       id: 2,
-      title: "AI Cybersecurity Threats 2025: Complete Defense Guide",
-      description: "Protect your organization from emerging AI cybersecurity threats with advanced defense strategies and security best practices.",
-      href: "/blog/ai-2025-cybersecurity-threats",
+      title: "AI Multimodal Revolution 2025",
+      description: "Explore the multimodal AI revolution transforming how humans interact with AI. Learn about vision, audio, text, and sensor fusion technologies.",
+      href: "/blog/ai-2025-multimodal-revolution",
       type: "blog",
-      category: "Cybersecurity",
+      category: "Innovation",
       readTime: "22 min read",
+      featured: true,
+      icon: "🎭"
+    },
+    {
+      id: 3,
+      title: "AI Cybersecurity Revolution 2025",
+      description: "Defend against AI-powered threats while leveraging AI for security enhancement. Complete guide to AI security strategies and implementation.",
+      href: "/blog/ai-2025-cybersecurity-revolution",
+      type: "blog",
+      category: "Security",
+      readTime: "28 min read",
       featured: true,
       icon: "🛡️"
     },
     {
-      id: 2,
-      title: "AI Healthcare Diagnosis Breakthrough 2025",
-      description: "Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs. Real implementation strategies and case studies.",
-      href: "/blog/ai-healthcare-diagnosis-breakthrough-2025",
-      type: "blog",
-      category: "Healthcare",
-      readTime: "22 min read",
-      featured: true,
-      icon: "🏥"
-    },
-    {
-      id: 3,
-      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
-      description: "How a Fortune 500 manufacturing company achieved $200M savings, 60% faster processing, and 99.7% uptime with autonomous AI systems.",
+      id: 4,
+      title: "$200M Manufacturing Success Case Study",
+      description: "How a Fortune 500 manufacturer achieved $200M in savings through autonomous AI systems. Complete implementation guide and ROI analysis.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
       type: "case-study",
       category: "Manufacturing",
-      readTime: "18 min read",
+      readTime: "15 min read",
       featured: true,
       icon: "💰"
     },
     {
-      id: 4,
-      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
-      description: "Complete checklist covering every aspect of AI implementation with 150+ actionable items across 7 key categories.",
-      href: "/resources/ai-implementation-checklist-2025",
+      id: 5,
+      title: "AI Implementation Master Guide 2026",
+      description: "The most comprehensive AI implementation guide available. 200+ pages of proven frameworks, checklists, templates, and step-by-step strategies.",
+      href: "/resources/ai-implementation-master-guide-2026",
       type: "resource",
       category: "Implementation",
-      readTime: "35 min read",
+      readTime: "200+ pages",
       featured: true,
-      icon: "📋"
+      icon: "📚"
     }
   ];
 
   const latestContent = [
     {
-      id: 5,
-      title: "AI Trends 2025 Predictions",
-      description: "15 predictions shaping the future of AI in 2025, from breakthrough innovations to enterprise adoption trends.",
-      href: "/blog/ai-2025-trends-predictions",
+      id: 6,
+      title: "AI Enterprise Automation Revolution",
+      description: "How Fortune 500 companies achieved 300% ROI through strategic AI implementation. Real case studies and implementation strategies.",
+      href: "/blog/ai-2025-enterprise-automation-revolution",
       type: "blog",
-      category: "Trends",
-      readTime: "28 min read",
-      icon: "🔮"
+      category: "Automation",
+      readTime: "25 min read",
+      icon: "🏢"
     },
     {
-      id: 6,
+      id: 7,
+      title: "AI Healthcare Diagnosis Breakthrough",
+      description: "Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.",
+      href: "/blog/ai-healthcare-diagnosis-breakthrough-2025",
+      type: "blog",
+      category: "Healthcare",
+      readTime: "22 min read",
+      icon: "🏥"
+    },
+    {
+      id: 8,
       title: "AI Workforce Transformation 2025",
       description: "Complete guide to reskilling strategies for the AI era, including implementation frameworks and success stories.",
       href: "/blog/ai-2025-workforce-transformation",
@@ -83,7 +93,7 @@ export default function ContentShowcase() {
       icon: "👥"
     },
     {
-      id: 7,
+      id: 9,
       title: "AI Sustainability & Green Tech",
       description: "Building eco-friendly AI systems for the future. Learn about energy optimization and sustainable AI practices.",
       href: "/blog/ai-2025-sustainability-green-tech",
@@ -93,7 +103,7 @@ export default function ContentShowcase() {
       icon: "🌱"
     },
     {
-      id: 8,
+      id: 10,
       title: "AI Go-To-Market Strategy 2025",
       description: "Positioning, pricing, and distribution strategies that work for AI products in 2025. From zero to traction playbook.",
       href: "/blog/ai-2025-ai-go-to-market",
@@ -101,6 +111,36 @@ export default function ContentShowcase() {
       category: "Strategy",
       readTime: "15 min read",
       icon: "📈"
+    },
+    {
+      id: 11,
+      title: "AI Trends 2025 Predictions",
+      description: "15 predictions shaping the future of AI in 2025, from breakthrough innovations to enterprise adoption trends.",
+      href: "/blog/ai-2025-trends-predictions",
+      type: "blog",
+      category: "Trends",
+      readTime: "28 min read",
+      icon: "🔮"
+    },
+    {
+      id: 12,
+      title: "AI Robotics & Automation 2025",
+      description: "The future of intelligent machines and autonomous systems. Learn about the latest advances in robotics and automation.",
+      href: "/blog/ai-2025-robotics-automation",
+      type: "blog",
+      category: "Robotics",
+      readTime: "24 min read",
+      icon: "🤖"
+    },
+    {
+      id: 13,
+      title: "AI Financial Services Transformation",
+      description: "Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.",
+      href: "/case-studies/ai-financial-services-transformation-2025",
+      type: "case-study",
+      category: "Finance",
+      readTime: "18 min read",
+      icon: "💳"
     }
   ];
 
@@ -186,6 +226,10 @@ export default function ContentShowcase() {
         return 'bg-cyan-100 text-cyan-800';
       case 'Healthcare':
         return 'bg-teal-100 text-teal-800';
+      case 'Innovation':
+        return 'bg-violet-100 text-violet-800';
+      case 'Robotics':
+        return 'bg-slate-100 text-slate-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
