@@ -7,6 +7,7 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
+<<<<<<< HEAD:temp_components.disabled/services/[slug].tsx.backup.1755991628.backup.1757660910
 import { newlyAddedServices } from '../../data/newly-added-services';
 import { curatedMarketServices } from '../../data/curated-market-services';
 import { new2025Services } from '../../data/new-2025-services';
@@ -59,6 +60,12 @@ import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-ad
 import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { real2032ServiceAdditions } from '../../data/real-2032-service-additions';
+=======
+import { newDiversifiedServices } from '../../data/new-2026-2027-additions';
+=======
+import { newRealServices } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+>>>>>>> origin/content/blog-sept12:temp_components.disabled/services/[slug].tsx.backup.1755992063
 
 type Service = typeof enhancedRealMicroSaasServices[number] | {
   id: string;
@@ -115,6 +122,7 @@ function getPriceValue(price: Service['price']): string {
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
+<<<<<<< HEAD:temp_components.disabled/services/[slug].tsx.backup.1755991628.backup.1757660910
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
 		.concat(curatedMarketServices as Service[])
@@ -166,6 +174,16 @@ function getAllServices(): Service[] {
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-13fb
 >>>>>>> origin/backup-critical-fixes-20250824-224408
+=======
+		.concat(newDiversifiedServices as unknown as Service[]);
+=======
+		.concat(
+			extraServices as Service[],
+			additionalEnhancedServices as Service[],
+			newRealServices as Service[],
+			marketReadyServices as Service[]
+		);
+>>>>>>> origin/content/blog-sept12:temp_components.disabled/services/[slug].tsx.backup.1755992063
 }
 
 function toSlug(value: string): string {
@@ -252,33 +270,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
 				<link rel="canonical" href={service.link} />
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(
-							{
-								"@context": "https://schema.org",
-								"@type": "Service",
-								name: service.name,
-								description: service.tagline || service.description,
-								url: service.link,
-								provider: {
-									"@type": "Organization",
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup.com"
-								},
-								offers: {
-									"@type": "Offer",
-									        price: "99",
-									priceCurrency: "USD",
-									availability: "https://schema.org/InStock"
-								}
-							},
-							null,
-							2
-							)
-						}}
-				/>
+=======
 			</Head>
 
 			<div className="container mx-auto px-4 py-16">
@@ -335,8 +327,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					<div className="space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
-							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
+							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'}</div>
 							<div className="mt-6 flex gap-3">
 								<Link href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
 								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>

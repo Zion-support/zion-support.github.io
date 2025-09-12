@@ -78,6 +78,25 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+<<<<<<< HEAD
+=======
+      {/* Promo Banner */}
+      <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+          <span className="font-semibold">New on the blog:</span>
+          <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+            <a href="/blog/ai-governance-playbook" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">AI Governance Playbook</a>
+            <span className="hidden sm:inline">•</span>
+            <a href="/blog/it-cost-optimization-quick-wins" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">IT Cost Optimization</a>
+            <span className="hidden sm:inline">•</span>
+            <a href="/blog/token-rewards-growth-loops" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">Token Reward Loops</a>
+          </div>
+          <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read all →
+          </a>
+        </div>
+      </div>
+>>>>>>> origin/content/blog-sept12
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -99,9 +118,12 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
+<<<<<<< HEAD
               <a href="/news" className="btn-secondary hover-lift">
                 📰 Read the Latest News
               </a>
+=======
+>>>>>>> origin/content/blog-sept12
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
@@ -160,6 +182,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Latest News Teaser */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -200,6 +223,8 @@ export default function HomePage() {
         </div>
       </section>
 
+=======
+>>>>>>> origin/content/blog-sept12
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">

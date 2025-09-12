@@ -1,5 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Globe, 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Instagram,
+  Youtube,
+  Facebook,
+  ArrowRight,
+  Heart,
+  Shield,
+  Zap,
+  Brain,
+  Rocket,
+  Star,
+  Users,
+  Award,
+  Clock,
+  Target,
+  Building,
+  BookOpen
+=======
+import { motion } from 'framer-motion';
+>>>>>>> origin/content/blog-sept12
 import {
   Phone,
   Mail,
@@ -353,4 +382,8 @@ export default function UltraFuturisticFooter2036() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> origin/content/blog-sept12

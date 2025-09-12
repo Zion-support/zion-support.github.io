@@ -4,6 +4,7 @@ export interface InnovativeITService2024 {
   id: string;
   name: string;
   tagline: string;
+<<<<<<< HEAD
   variant: ServiceVariant;
   contactInfo: {
     mobile: string;
@@ -19,6 +20,8 @@ export interface InnovativeITService2024 {
   reviews: number;
 =======
 =======
+=======
+>>>>>>> origin/content/blog-sept12
   price: string;
   variant: string;
   features: string[];
@@ -33,10 +36,22 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     name: 'Cloud Automation Platform 2024',
     tagline: 'Automate your cloud infrastructure',
     price: '$199',
+<<<<<<< HEAD
     variant: 'cloud',
     features: ['Infrastructure automation', 'Cost optimization', 'Security compliance'],
     rating: 4.7,
     customers: '300+'
+=======
+=======
+    id: 'cloud-infrastructure-2024',
+    name: 'Cloud Infrastructure Solution 2024',
+    tagline: 'Scalable cloud infrastructure for enterprises',
+    price: '$499',
+    variant: 'cloud',
+    features: ['Auto-scaling', 'Load balancing', 'High availability'],
+    rating: 4.7,
+    reviews: 420
+>>>>>>> origin/content/blog-sept12
   },
 
   // AI-Powered IT Operations Center

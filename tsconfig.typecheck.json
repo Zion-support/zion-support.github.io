@@ -1,0 +1,33 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    "out",
+    "coverage",
+    "**/*.disabled/**",
+    "**/*.bak/**",
+    "**/*.backup/**",
+    "**/backup/**",
+    "**/backups/**",
+    "**/temp*/**",
+    "**/*.broken/**",
+    "**/*.corrupted*/**",
+    "__tests__/**",
+    "tests/**",
+    "pages*/**",
+    "src_backup*/**",
+    "public-backup/**"
+  ]
+}
+

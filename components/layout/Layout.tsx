@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -50,6 +51,44 @@ interface LayoutProps {;
 }
 
 =======
+=======
+import React, { useState, useEffect } from 'react';
+import UltraFuturisticNavigation2036 from './UltraFuturisticNavigation2036';
+import UltraFuturisticFooter2036 from './UltraFuturisticFooter2036';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
+import TopContactBar from './TopContactBar';
+import PerformanceMonitor from '../PerformanceMonitor';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import CookieConsentBanner from '../CookieConsentBanner';
+import SEOHead from '../SEOHead';
+import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+
+=======
+import UltraFuturisticNavigation2036 from './UltraFuturisticNavigation2036';
+import UltraFuturisticFooter2036 from './UltraFuturisticFooter2036';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraFuturisticBackground2037 from '../backgrounds/UltraFuturisticBackground2037';
+import TopContactBar from './TopContactBar';
+import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
+import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
+import CookieConsentBanner from '../CookieConsentBanner';
+import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
+import ThemeToggle from '../ThemeToggle';
+import LoadingSpinner from '../LoadingSpinner';
+import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  type?: string;
+}
+
+>>>>>>> origin/content/blog-sept12
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Revolutionary 2045 Technology",
@@ -74,6 +113,7 @@ export default function Layout({
       setIsOnline(navigator.onLine);
     };
 
+<<<<<<< HEAD
 
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -113,11 +153,49 @@ function Layout() {
       <main>;
         {children}
     return () => {
+=======
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    updateOnlineStatus();
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          // Check for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New version available
+                  if (typeof window !== 'undefined' && window.confirm) {
+                    if (window.confirm('A new version is available! Would you like to update?')) {
+                      newWorker.postMessage({ type: 'SKIP_WAITING' });
+                      window.location.reload();
+                    }
+                  }
+                }
+              });
+            }
+          });
+        })
+        .catch((error) => {
+          // Silently handle service worker registration errors
+          // eslint-disable-next-line no-console
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+
+    return () => {
+      clearTimeout(timer);
+>>>>>>> origin/content/blog-sept12
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
     };
   }, []);
 
+<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -336,6 +414,26 @@ const Layout: React.FC = () => {
 
 export default Layout;
 =======
+=======
+  useEffect(() => {
+    // Apply theme to document
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const handleThemeToggle = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  // Add missing variables and functions
+  const darkMode = theme === 'dark';
+  const toggleDarkMode = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+
+>>>>>>> origin/content/blog-sept12
 	return (
 		<div className="min-h-screen bg-black text-white">
 			<a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-black/80 focus:text-white focus:border focus:border-cyan-500 focus:rounded px-3 py-2 z-[100]">Skip to content</a>

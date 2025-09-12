@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
+
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+>>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
@@ -95,6 +104,15 @@ const EnhancedNavigation: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+=======
+>>>>>>> origin/content/blog-sept12
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -102,6 +120,10 @@ const EnhancedNavigation: React.FC = () => {
         setActiveDropdown(null);
       }
     };
+<<<<<<< HEAD
+=======
+>>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

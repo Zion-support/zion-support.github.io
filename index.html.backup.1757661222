@@ -48,7 +48,19 @@
     </style>
 =======
 
+<<<<<<< HEAD:index.html.backup.1757661222
     <meta name="theme-color" content="#000000" />
+=======
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8c15e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+>>>>>>> origin/content/blog-sept12:index.html.backup.1755989864
     
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Zion - The Future of Tech & AI Marketplace" />
@@ -101,5 +113,20 @@
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 >>>>>>> origin/backup-main-20250825-235410
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,10 +1,18 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { vi } from 'vitest';
+<<<<<<< HEAD:tests/Login.test.tsx
+=======
+=======
+>>>>>>> origin/content/blog-sept12:tests.disabled/Login.test.tsx.backup.1755989855
 import { LoginForm } from '@/components/auth/login';
 import { Toaster } from '@/components/ui/toaster';
 import * as authService from '@/services/authService';
 import * as authHook from '@/hooks/useAuth';
+<<<<<<< HEAD:tests/Login.test.tsx
+=======
+=======
+>>>>>>> origin/content/blog-sept12:tests.disabled/Login.test.tsx.backup.1755989855
 
 vi.mock('@/services/auth');
 
@@ -28,6 +36,10 @@ describe('LoginForm', () => {
     fireEvent.input(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
     fireEvent.click(screen.getByRole('button', { name: /login/i }));
 
+<<<<<<< HEAD:tests/Login.test.tsx
+=======
+=======
+>>>>>>> origin/content/blog-sept12:tests.disabled/Login.test.tsx.backup.1755989855
     // wait for login submission to resolve
     await screen.findByRole('button', { name: /login/i });
 

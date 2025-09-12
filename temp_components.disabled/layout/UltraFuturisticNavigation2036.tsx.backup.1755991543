@@ -125,13 +125,18 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Showcase & Pricing',
+<<<<<<< HEAD
     href: '/comprehensive-2036-services-showcase',
+=======
+    href: '/pricing',
+>>>>>>> origin/content/blog-sept12
     icon: <Star className="w-5 h-5" />,
     description: 'Service showcases and pricing',
     badge: 'Featured',
     category: 'showcase',
     children: [
       { 
+<<<<<<< HEAD
         name: 'Services Showcase 2036', 
         href: '/comprehensive-services-showcase-2036', 
         description: 'Complete 2036 services overview',
@@ -154,10 +159,24 @@ const navigationItems: NavigationItem[] = [
         name: '2026 Pricing', 
         href: '/pricing-2036', 
         description: 'Competitive pricing for 2036',
+=======
+        name: 'Pricing Plans', 
+        href: '/pricing', 
+        description: 'Service pricing information',
+>>>>>>> origin/content/blog-sept12
         icon: <DollarSign className="w-4 h-4" />,
         featured: true
       },
       { 
+<<<<<<< HEAD
+=======
+        name: 'Services Showcase', 
+        href: '/comprehensive-services-showcase-2025', 
+        description: 'Complete services overview',
+        icon: <Grid className="w-4 h-4" />
+      },
+      { 
+>>>>>>> origin/content/blog-sept12
         name: 'Market Pricing', 
         href: '/market-pricing', 
         description: 'Market price references',

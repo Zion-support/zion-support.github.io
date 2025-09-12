@@ -7,6 +7,11 @@ function runNode(relativePath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
+<<<<<<< HEAD
+=======
+exports.config = { schedule: '*/10 * * * *' };
+
+>>>>>>> origin/content/blog-sept12
 exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
@@ -18,7 +23,11 @@ exports.handler = async () => {
     return status;
   };
 
+<<<<<<< HEAD
   step('repo-radar-metrics', () => runNode('automation/repo-radar-metrics.cjs'));
+=======
+  step('content:freshness-score', () => runNode('automation/content-freshness-score.cjs'));
+>>>>>>> origin/content/blog-sept12
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };

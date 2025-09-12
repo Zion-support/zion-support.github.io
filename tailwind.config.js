@@ -1,6 +1,27 @@
+<<<<<<< HEAD
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+=======
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+          50: "hsl(var(--primary) / 0.05)",
+          100: "hsl(var(--primary) / 0.1)",
+          200: "hsl(var(--primary) / 0.2)",
+          300: "hsl(var(--primary) / 0.3)",
+          400: "hsl(var(--primary) / 0.4)",
+          500: "hsl(var(--primary) / 0.5)",
+          600: "hsl(var(--primary) / 0.6)",
+          700: "hsl(var(--primary) / 0.7)",
+          800: "hsl(var(--primary) / 0.8)",
+          900: "hsl(var(--primary) / 0.9)",
+>>>>>>> origin/content/blog-sept12
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -181,8 +202,22 @@
         '5xl': '2.5rem',
       },
       animation: {
+<<<<<<< HEAD
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 2s infinite',
+=======
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'fade-in-up': 'fadeInUp 0.5s ease-out',
+        'fade-in-down': 'fadeInDown 0.5s ease-out',
+        'slide-in-up': 'slideInUp 0.5s ease-out',
+        'slide-in-down': 'slideInDown 0.5s ease-out',
+        'slide-in-left': 'slideInLeft 0.5s ease-out',
+        'slide-in-right': 'slideInRight 0.5s ease-out',
+        'scale-in': 'scaleIn 0.2s ease-out',
+        'bounce-in': 'bounceIn 0.6s ease-out',
+        'shimmer': 'shimmer 2s infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+>>>>>>> origin/content/blog-sept12
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'shimmer': 'shimmer 2.5s linear infinite',
@@ -193,6 +228,7 @@
         'scale-in': 'scale-in 0.3s ease-out forwards',
         'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
         'gradient-text': 'gradient-text 3s ease infinite',
+<<<<<<< HEAD
       },
       keyframes: {
         float: {
@@ -383,6 +419,100 @@ module.exports = {
             boxShadow:
               "0 0 15px rgba(0, 212, 255, 0.8), 0 0 25px rgba(0, 212, 255, 0.5)",
           },
+=======
+=======
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
+/** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      screens: {
+        xs: "475px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1920px",
+      },
+      spacing: {
+        18: "4.5rem",
+        88: "22rem",
+        128: "32rem",
+        "8xl": "88rem",
+        "9xl": "96rem",
+      },
+      animation: {
+        float: "float 6s ease-in-out infinite",
+        "gradient-x": "gradient-x 3s ease infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        glow: "glow 2s ease-in-out infinite alternate",
+        "slide-up": "slide-up 0.5s ease-out",
+        "fade-in": "fade-in 0.6s ease-out",
+        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
+        "holographic-shift": "holographic-shift 3s ease infinite",
+        "cyber-float": "cyber-float 6s ease-in-out infinite",
+        "particle-drift": "particle-drift 8s linear infinite",
+        "matrix-rain": "matrix-rain 3s linear infinite",
+        "neon-text-glow": "neon-text-glow 2s ease-in-out infinite",
+        "scan-line": "scan-line 3s linear infinite",
+        glitch: "glitch 0.3s ease-in-out infinite",
+        typewriter: "typewriter 3s steps(40) infinite",
+        breathe: "breathe 4s ease-in-out infinite",
+        orbit: "orbit 20s linear infinite",
+        "pulse-neon": "pulse-neon 1.5s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+        wave: "wave 2s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInUp: {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideInDown: {
+          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        bounceIn: {
+          '0%': { transform: 'scale(0.3)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+>>>>>>> origin/content/blog-sept12
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
@@ -422,6 +552,10 @@ module.exports = {
         "responsive-4xl": ["2.25rem", { lineHeight: "2.5rem" }],
         "responsive-5xl": ["3rem", { lineHeight: "1" }],
       },
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/content/blog-sept12
       colors: {
         neon: {
           blue: "#00d4ff",
@@ -446,6 +580,7 @@ module.exports = {
         "neon-glow":
           "0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.1)",
       },
+<<<<<<< HEAD
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
@@ -515,6 +650,20 @@ module.exports = {
         'futuristic': ['Orbitron', 'monospace'],
         'tech': ['Rajdhani', 'sans-serif'],
       },
+=======
+      spacing: {
+        responsive: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+      fontFamily: {
+        'futuristic': ['Orbitron', 'monospace'],
+        'tech': ['Rajdhani', 'sans-serif'],
+      },
+>>>>>>> origin/content/blog-sept12
       fontSize: {
         '2xs': '0.625rem',
         '3xl': '1.875rem',

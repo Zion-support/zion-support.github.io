@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+=======
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+>>>>>>> origin/content/blog-sept12
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, ArrowRight,
@@ -8,6 +12,7 @@ import {
   Grid, FileText, Code, Video
 } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 
 // Custom ShoppingBag icon component
 const ShoppingBag = ({ className }: { className?: string }) => (
@@ -88,6 +93,13 @@ const navigationItems: NavigationItem[] = [
         name: 'Innovative 2036 Services', 
         href: '/innovative-2036-services-showcase', 
         description: 'Revolutionary micro SAAS solutions',
+=======
+import EnhancedSearch from '../EnhancedSearch';
+
+        name: '2036 Innovative Services', 
+        href: '/2036-innovative-services-showcase', 
+        description: 'Cutting-edge 2036 services showcase',
+>>>>>>> origin/content/blog-sept12
         icon: <Star className="w-4 h-4" />,
         featured: true
       },
@@ -530,6 +542,16 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
       </AnimatePresence>
     </nav>
   );
+<<<<<<< HEAD
 };
 
 export default UltraFuturisticNavigation2036;
+=======
+=======
+const UltraFuturisticNavigation2036: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">UltraFuturisticNavigation2036 temporarily disabled</div>;
+};
+
+export default UltraFuturisticNavigation2036;
+>>>>>>> origin/content/blog-sept12

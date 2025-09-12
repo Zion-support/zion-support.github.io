@@ -5,7 +5,13 @@ const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
+<<<<<<< HEAD
   '/index.html',
+=======
+<<<<<<< HEAD
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+>>>>>>> origin/content/blog-sept12
   '/manifest.json',
   '/favicon.ico',
   '/images/zion-logo.png',
@@ -27,12 +33,70 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         console.error('Error caching static files:', error);
       })
+<<<<<<< HEAD
+=======
+  );
+});
+
+// Fetch event - serve from cache when offline
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+=======
+  '/index.html',
+  '/manifest.json',
+=======
+  '/favicon.ico',
+  '/images/zion-logo.png',
+  '/images/placeholder.jpg'
+];
+
+// Install event - cache static files
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(STATIC_CACHE_NAME)
+      .then((cache) => {
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Static files cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static files:', error);
+      })
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+=======
+>>>>>>> origin/content/blog-sept12
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
@@ -50,6 +114,10 @@ self.addEventListener('activate', (event) => {
         console.log('Service worker activated');
         return self.clients.claim();
       })
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12
   );
 });
 
@@ -221,6 +289,21 @@ self.addEventListener('error', (event) => {
   console.error('Service worker error:', event.error);
 });
 
+<<<<<<< HEAD
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
 });
+=======
+<<<<<<< HEAD
+// Remove stored request
+async function removeStoredRequest(id) {
+  const requests = await getStoredRequests();
+  const filtered = requests.filter(req => req.id !== id);
+  localStorage.setItem('offline-requests', JSON.stringify(filtered));
+}
+=======
+self.addEventListener('unhandledrejection', (event) => {
+  console.error('Service worker unhandled rejection:', event.reason);
+});
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12

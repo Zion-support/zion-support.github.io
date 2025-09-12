@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
+=======
+import React from 'react';
+import SEO from '../../components/SEO';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+>>>>>>> origin/content/blog-sept12
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
@@ -23,7 +29,34 @@ import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
+<<<<<<< HEAD
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+=======
+import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
+import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+import { realMarketServicesExtended } from '../../data/real-market-services-extended';
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+import { added2026Q2Services } from '../../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
+import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
+import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
+import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
+import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
+import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
+import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
+import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
+import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
+import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+import { professionalServices } from '../../data/professional-services';
+import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
+import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
+import { real2035Q2Additions } from '../../data/real-2035-q2-additions';
+>>>>>>> origin/content/blog-sept12
 
 // Define a common service interface
 interface Service {
@@ -128,6 +161,20 @@ export default function ServicesIndexPage() {
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
       realServicesQ32025 as unknown[],
+<<<<<<< HEAD
+=======
+      realQ4Services2025 as unknown[],
+      real2025Q4Additions as unknown[],
+      real2026Q1Additions as unknown[],
+      added2026Q2Services as unknown[],
+      real2026Q3Additions as unknown[],
+      real2026Q4Additions as unknown[],
+      real2026Q4NewServices as unknown[],
+      real2027Q1Additions as unknown[],
+      real2027Q2Additions as unknown[],
+      real2027Q3Additions as unknown[],
+      real2028ServiceExpansions as unknown[],
+>>>>>>> origin/content/blog-sept12
       real2029Q1Additions as unknown[],
       real2029Q2Additions as unknown[],
       real2029Q3Additions as unknown[],
@@ -138,15 +185,23 @@ export default function ServicesIndexPage() {
       real2031AIServicesAdditions as unknown[],
       professionalServices as unknown[],
       real2032ServiceExpansions as unknown[],
+<<<<<<< HEAD
       real2026Q2VerifiedAdditions as unknown[]
 =======
       realServicesQ42025 as unknown[]
+=======
+      realServicesQ42025 as unknown[]
+=======
+      real2035Q1Additions as unknown[],
+      real2035Q2Additions as unknown[]
+>>>>>>> origin/content/blog-sept12
     );
     return acc;
   }, {} as Record<string, Service[]>);
 
 
 
+<<<<<<< HEAD
 
 
   return (
@@ -169,6 +224,45 @@ export default function ServicesIndexPage() {
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
               ))}
             </div>
+=======
+
+  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const normalized = (value: unknown) => {
+    const obj = value as { id?: string; name?: string; tagline?: string; description?: string };
+    return `${obj.id || ''} ${obj.name || ''} ${obj.tagline || ''} ${obj.description || ''}`.toLowerCase();
+  };
+
+  const filteredAll = searchQuery.trim().length
+    ? all.filter((s) => normalized(s).includes(searchQuery.toLowerCase()))
+    : all;
+
+  return (
+    <UltraFuturisticBackground variant="quantum" intensity="high">
+      <SEO title="Services | Zion Tech Group" description="Browse 350+ real micro SaaS, IT, and AI services with transparent pricing and fast onboarding." canonical="https://ziontechgroup.com/services/" />
+
+      <div className="container mx-auto px-4 py-16 space-y-12 text-white">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">All Services</h1>
+          <p className="text-gray-300 text-lg">Productized solutions across AI, cloud, DevOps, observability, and more. Average market prices linked in <a href="/market-pricing" className="text-cyan-400 underline">Market Pricing</a>. Contact: +1 302 464 0950 • kleber@ziontechgroup.com.</p>
+          <p className="mt-3 text-gray-400 text-sm">Prefer a tailored bundle? See <a href="/pricing" className="text-cyan-400 underline">Pricing</a> or <a href="/contact" className="text-cyan-400 underline">Contact Sales</a> for custom quotes.</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+            <a href="#ai" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">AI & Data</a>
+            <a href="#developer-tools" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Developer Tools</a>
+            <a href="#cloud" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Cloud & FinOps</a>
+            <a href="#observability" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Observability</a>
+            <a href="#quality" className="px-3 py-1.5 rounded-full bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50">Quality & Monitoring</a>
+          </div>
+          <div className="mt-6 max-w-3xl mx-auto">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search services by name, feature, or use case..."
+              className="w-full px-4 py-3 rounded-xl bg-gray-900/70 border border-gray-700/70 focus:border-cyan-500/60 outline-none placeholder-gray-500"
+            />
+>>>>>>> origin/content/blog-sept12
           </div>
         </section>
 
@@ -508,6 +602,7 @@ export default function ServicesIndexPage() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
   );
 }
 
@@ -518,5 +613,7 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
+=======
+>>>>>>> origin/content/blog-sept12
   );
 }
