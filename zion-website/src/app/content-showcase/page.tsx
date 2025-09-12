@@ -36,6 +36,26 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "Production Prompt Engineering 2025: Patterns that Scale",
+      description: "Structured prompting, tool calling, retrieval orchestration, evals, and guardrails for reliable, cost‑aware AI.",
+      href: "/blog/ai-2025-production-prompt-engineering",
+      icon: "🧠",
+      category: "Advanced AI",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Governance 2025: Operational Playbook for Enterprises",
+      description: "Decision rights, policy libraries, eval pipelines, and runtime guardrails that fit your SDLC.",
+      href: "/blog/ai-2025-ai-governance-operational-playbook",
+      icon: "🛡️",
+      category: "Governance",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Agentic Data Pipelines in Production (2025)",
       description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
       href: "/blog/ai-2025-agentic-data-pipelines",

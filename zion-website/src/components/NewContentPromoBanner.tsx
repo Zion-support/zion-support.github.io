@@ -45,6 +45,28 @@ const NewContentPromoBanner = ({
       category: 'RAG'
     },
     {
+      id: '70',
+      title: 'Production Prompt Engineering 2025: Patterns that Scale',
+      description: 'Schema-first prompts, tool calling, retrieval orchestration, evals, and guardrails for reliability.',
+      href: '/blog/ai-2025-production-prompt-engineering',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Advanced AI'
+    },
+    {
+      id: '71',
+      title: 'AI Governance 2025: Operational Playbook for Enterprises',
+      description: 'Practical operating model: policies, evaluations, review boards, and runtime enforcement.',
+      href: '/blog/ai-2025-ai-governance-operational-playbook',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
