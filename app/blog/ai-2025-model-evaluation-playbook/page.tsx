@@ -1,4 +1,47 @@
 import React from 'react';
+import SEO from '../../../components/SEO';
+
+export const metadata = {
+  title: 'AI Model Evaluation Playbook 2025 | Zion Tech Group',
+  description: 'Production-ready evaluation strategies for LLM apps and agent systems: quality, latency, cost, safety, and reliability.',
+};
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="AI Model Evaluation Playbook 2025"
+        description="Operational evals for quality, latency, cost, safety, and reliability with automated pipelines."
+        keywords="AI evaluation 2025, LLM evals, agent evaluation, latency, cost, safety"
+        url="/blog/ai-2025-model-evaluation-playbook"
+      />
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-lg">
+        <h1>AI Model Evaluation Playbook 2025</h1>
+        <p className="lead">A practical guide to building evaluation pipelines for LLM apps and agents that measure quality, latency, cost, and safety continuously.</p>
+
+        <h2>Evaluation Dimensions</h2>
+        <ul>
+          <li>Task success and factuality</li>
+          <li>Latency distributions and SLO adherence</li>
+          <li>Unit economics and cost caps</li>
+          <li>Policy adherence and safety violations</li>
+          <li>Tool correctness and trace coverage for agents</li>
+        </ul>
+
+        <h2>Pipelines</h2>
+        <p>Adopt automated batch and online evals. Store results with lineage, compare variants, and gate releases with policy checks.</p>
+
+        <h2>Next Actions</h2>
+        <ul>
+          <li>Use the <a href="/resources/ai-evaluation-checklist-2025">AI Evaluation Checklist 2025</a></li>
+          <li>Explore <a href="/content-showcase">more guides and case studies</a></li>
+        </ul>
+      </article>
+    </div>
+  );
+}
+
+import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {

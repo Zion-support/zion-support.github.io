@@ -1,5 +1,60 @@
 import React from 'react';
 import Link from 'next/link';
+import SEO from '../../../components/SEO';
+
+export const metadata = {
+  title: 'Enterprise GenAI Blueprint 2025 | Zion Tech Group',
+  description: 'A practical blueprint for enterprises to ship GenAI to production safely and profitably in 2025: governance, cost, performance, and reliability.',
+};
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="Enterprise GenAI Blueprint 2025"
+        description="Practical blueprint to ship GenAI to production safely and profitably: governance, cost, performance, and reliability."
+        keywords="GenAI blueprint 2025, enterprise AI governance, AI cost optimization, AI reliability"
+        url="/blog/ai-2025-enterprise-genai-blueprint"
+      />
+
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-lg">
+        <h1>Enterprise GenAI Blueprint 2025</h1>
+        <p className="lead">A pragmatic blueprint to ship GenAI into production with governance, cost controls, performance SLAs, and safety guardrails.</p>
+
+        <h2>What This Covers</h2>
+        <ul>
+          <li>Architecture and platform choices for 2025 stacks</li>
+          <li>Security, privacy, and responsible AI guardrails</li>
+          <li>Operational evaluation for quality, latency, and cost</li>
+          <li>Observability, incident response, and SLOs</li>
+          <li>Cost optimization via routing, caching, and quantization</li>
+        </ul>
+
+        <h2>Reference Architecture</h2>
+        <p>Adopt a layered architecture: data layer, evaluation and guardrails layer, orchestration, and presentation. Use policy-as-code, tracing, and continuous evals.</p>
+
+        <h2>Governance & Safety</h2>
+        <p>Implement input/output filtering, jailbreak prevention, PII detection, and privacy-by-design controls. Maintain audit logs and human-in-the-loop for sensitive flows.</p>
+
+        <h2>Cost & Performance</h2>
+        <p>Apply dynamic model routing, response caching, prompt compression, and quantized backends where appropriate. Track unit costs per transaction and per segment.</p>
+        
+        <h2>Next Steps</h2>
+        <ul>
+          <li>
+            <Link href="/resources/ai-evaluation-checklist-2025">Download the AI Evaluation Checklist 2025</Link>
+          </li>
+          <li>
+            <Link href="/content-showcase">Explore more implementation guides</Link>
+          </li>
+        </ul>
+      </article>
+    </div>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
 	title: 'Enterprise GenAI Blueprint 2025: From Pilot to Production',
