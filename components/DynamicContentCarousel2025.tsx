@@ -8,77 +8,70 @@ interface ContentItem {
   href: string;
   category: string;
   roi: string;
-  badge: string;
   gradient: string;
   icon: string;
 }
 
 const contentItems: ContentItem[] = [
   {
-    id: '1',
+    id: 'ai-2025-breakthrough',
     title: 'AI 2025 Ultimate Breakthrough Revolution',
-    description: 'Revolutionary AI breakthroughs transforming industries with 5000%+ ROI',
+    description: 'Revolutionary AI implementations delivering 5000%+ ROI with unprecedented accuracy and performance.',
     href: '/ai-2025-ultimate-breakthrough-revolution',
     category: 'BREAKTHROUGH',
     roi: '5000% ROI',
-    badge: 'ULTIMATE',
-    gradient: 'from-red-600/20 to-pink-600/20',
+    gradient: 'from-red-500 to-pink-500',
     icon: '🚀'
   },
   {
-    id: '2',
-    title: 'AI 2026-2030 Future Predictions Showcase',
-    description: 'Revolutionary predictions for quantum-neural fusion and consciousness AI',
+    id: 'ai-2026-predictions',
+    title: 'AI 2026-2030 Future Predictions',
+    description: 'Exclusive insights into revolutionary AI technologies that will reshape the next decade.',
     href: '/ai-2026-2030-future-predictions-showcase',
-    category: 'REVOLUTIONARY',
+    category: 'FUTURE',
     roi: '15,000% ROI',
-    badge: 'FUTURE',
-    gradient: 'from-cyan-600/20 to-purple-600/20',
+    gradient: 'from-purple-500 to-blue-500',
     icon: '🔮'
   },
   {
-    id: '3',
+    id: 'quantum-computing',
     title: 'Advanced Quantum Computing Solutions',
-    description: 'Revolutionary quantum computing solutions achieving 10,000%+ ROI',
+    description: 'Revolutionary quantum-AI fusion technologies delivering exponential performance improvements.',
     href: '/quantum-computing-solutions-advanced',
     category: 'QUANTUM',
-    roi: '10,000% ROI',
-    badge: 'ADVANCED',
-    gradient: 'from-purple-600/20 to-indigo-600/20',
+    roi: '15,000% ROI',
+    gradient: 'from-cyan-500 to-blue-500',
     icon: '⚛️'
   },
   {
-    id: '4',
-    title: 'Neural Interface Revolution 2026',
-    description: 'Breakthrough neural interfaces achieving 95% patient recovery success',
+    id: 'neural-interfaces',
+    title: 'Neural Interface Revolution',
+    description: 'Breakthrough neural interface technologies enabling direct brain-computer communication.',
     href: '/neural-interface-solutions',
     category: 'NEURAL',
     roi: '8,500% ROI',
-    badge: 'BREAKTHROUGH',
-    gradient: 'from-green-600/20 to-teal-600/20',
+    gradient: 'from-green-500 to-emerald-500',
     icon: '🧠'
   },
   {
-    id: '5',
-    title: 'AI 2035 Consciousness Breakthrough',
-    description: 'Transcendent AI consciousness achieving infinite computational possibilities',
-    href: '/ai-2035-breakthrough-showcase',
-    category: 'TRANSCENDENT',
+    id: 'consciousness-ai',
+    title: 'Consciousness AI Breakthrough',
+    description: 'Revolutionary AI systems demonstrating emergent consciousness capabilities.',
+    href: '/ai-2030-future-revolutionary-showcase',
+    category: 'CONSCIOUSNESS',
     roi: '∞ ROI',
-    badge: 'CONSCIOUSNESS',
-    gradient: 'from-pink-600/20 to-rose-600/20',
+    gradient: 'from-orange-500 to-red-500',
     icon: '🌌'
   },
   {
-    id: '6',
-    title: 'Enterprise Automation Mastery 2025',
-    description: 'Complete enterprise transformation with 800% ROI automation solutions',
-    href: '/enterprise-automation-mastery-2026',
-    category: 'AUTOMATION',
-    roi: '800% ROI',
-    badge: 'MASTERY',
-    gradient: 'from-orange-600/20 to-red-600/20',
-    icon: '🤖'
+    id: 'quantum-neural',
+    title: 'Quantum-Neural Fusion',
+    description: 'Groundbreaking integration of quantum computing with neural networks for infinite possibilities.',
+    href: '/ai-2026-quantum-neural-fusion',
+    category: 'FUSION',
+    roi: '15,000% ROI',
+    gradient: 'from-indigo-500 to-purple-500',
+    icon: '⚡'
   }
 ];
 
@@ -90,167 +83,161 @@ export default function DynamicContentCarousel2025() {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-    }, 5000);
+      setCurrentIndex((prevIndex) => 
+        prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+    // Resume auto-play after 10 seconds
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
+    );
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentIndex((prevIndex => 
+      prevIndex === 0 ? contentItems.length - 1 : prevIndex - 1
+    ));
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const currentItem = contentItems[currentIndex];
 
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white text-sm font-bold rounded-full mb-6 animate-pulse">
-          🔥 REVOLUTIONARY CONTENT SHOWCASE
-        </div>
-        <h2 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-          BREAKTHROUGH CONTENT CAROUSEL
-        </h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Explore our revolutionary AI content library. Each piece delivers unprecedented value and guaranteed ROI.
-        </p>
-      </div>
-
-      {/* Carousel Container */}
       <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full mb-6">
+            <span className="text-purple-400 font-bold text-lg">🎯 FEATURED BREAKTHROUGHS</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Content Showcase
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the most advanced AI technologies and breakthrough implementations that are transforming industries worldwide.
+          </p>
+        </div>
+
+        {/* Carousel Container */}
         <div className="relative">
           {/* Main Content Card */}
-          <div 
-            className={`bg-gradient-to-br ${currentItem.gradient} p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:scale-105 shadow-2xl`}
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-          >
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-12 min-h-[400px] flex flex-col justify-center">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Content */}
               <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl">{currentItem.icon}</div>
-                  <div className="flex gap-2">
-                    <span className="px-3 py-1 bg-gradient-to-r from-red-600 to-pink-600 text-white text-xs font-bold rounded-full">
-                      {currentItem.badge}
-                    </span>
-                    <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full">
+                <div className="flex items-center mb-4">
+                  <span className="text-4xl mr-4">{currentItem.icon}</span>
+                  <div>
+                    <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-400 font-bold text-sm mb-2">
                       {currentItem.category}
-                    </span>
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      {currentItem.title}
+                    </h3>
                   </div>
                 </div>
                 
-                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                  {currentItem.title}
-                </h3>
-                
-                <p className="text-lg text-gray-200 mb-6">
+                <p className="text-xl text-gray-300 mb-6 leading-relaxed">
                   {currentItem.description}
                 </p>
-                
-                <div className="flex items-center gap-6 mb-6">
-                  <div className="text-2xl font-black text-yellow-400">
+
+                <div className="flex items-center justify-between mb-8">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                     {currentItem.roi}
                   </div>
-                  <div className="text-sm text-gray-300">
-                    Guaranteed ROI
-                  </div>
+                  <Link 
+                    href={currentItem.href}
+                    className={`px-8 py-4 bg-gradient-to-r ${currentItem.gradient} hover:opacity-90 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105`}
+                  >
+                    Explore Now
+                  </Link>
                 </div>
-                
-                <Link 
-                  href={currentItem.href}
-                  className="inline-block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-xl"
-                >
-                  Explore Content →
-                </Link>
               </div>
-              
+
               {/* Visual Element */}
-              <div className="relative">
-                <div className="w-full h-64 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center">
-                  <div className="text-8xl opacity-50">
-                    {currentItem.icon}
-                  </div>
+              <div className="flex justify-center">
+                <div className={`w-64 h-64 bg-gradient-to-br ${currentItem.gradient} rounded-full flex items-center justify-center text-8xl opacity-20 animate-pulse`}>
+                  {currentItem.icon}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl animate-pulse"></div>
               </div>
             </div>
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Controls */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700/80 border border-gray-600/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
             aria-label="Previous content"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
+
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700/80 border border-gray-600/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
             aria-label="Next content"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {contentItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-white scale-125' 
+                    : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to content ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {contentItems.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125' 
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Content Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {contentItems.slice(0, 3).map((item, index) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105 ${
-                index === currentIndex ? 'ring-2 ring-cyan-400' : ''
-              }`}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="text-2xl">{item.icon}</div>
-                <span className="px-2 py-1 bg-gradient-to-r from-red-600 to-pink-600 text-white text-xs font-bold rounded-full">
-                  {item.badge}
-                </span>
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">
-                {item.title}
-              </h4>
-              <p className="text-sm text-gray-200 mb-3">
-                {item.description}
-              </p>
-              <div className="text-yellow-400 font-bold">
-                {item.roi}
-              </div>
-            </Link>
-          ))}
+        {/* Quick Access Grid */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-300">Quick Access to All Content</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {contentItems.map((item, index) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                onClick={() => goToSlide(index)}
+                className={`p-4 rounded-lg border transition-all duration-300 hover:scale-105 ${
+                  index === currentIndex
+                    ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-500/50'
+                    : 'bg-gray-800/30 border-gray-600/30 hover:border-gray-500/50'
+                }`}
+              >
+                <div className="text-center">
+                  <div className="text-3xl mb-2">{item.icon}</div>
+                  <div className="text-sm font-bold text-gray-300 mb-1">{item.category}</div>
+                  <div className="text-xs text-gray-400">{item.roi}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -48,8 +48,9 @@ import NewContentPromotionBanner2025 from '../components/NewContentPromotionBann
 import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
-import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
-import RevolutionaryContentCarousel2025 from '../components/RevolutionaryContentCarousel2025';
+import UltimateContentShowcaseBanner2025 from '../components/UltimateContentShowcaseBanner2025';
+import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -213,6 +214,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE BANNER 2025 - FEATURED */}
+        <UltimateContentShowcaseBanner2025 />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2025 - NEW CONTENT */}
+        <DynamicContentCarousel2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 - FEATURED */}
         <NewContentPromotionBanner2025 />
         
@@ -224,12 +231,6 @@ export default function HomePage() {
         
         {/* FUTURE TECH PREVIEW BANNER - NEW CONTENT */}
         <FutureTechPreviewBanner />
-        
-        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEW */}
-        <UltimateContentPromotionBanner2025 />
-        
-        {/* REVOLUTIONARY CONTENT CAROUSEL 2025 - NEW */}
-        <RevolutionaryContentCarousel2025 />
         
         {/* NEW 2025 ENHANCED CONTENT - TOP PRIORITY */}
         <AIInnovationPromotionBanner2025 />
@@ -3489,6 +3490,13 @@ export default function HomePage() {
 
       {/* ENHANCED NEWSLETTER SIGNUP 2025 - LEAD CAPTURE */}
       <EnhancedNewsletterSignup2025 />
+      
+      {/* NEWSLETTER SIGNUP 2025 - CONTENT PROMOTION */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="max-w-6xl mx-auto px-4">
+          <NewsletterSignup2025 />
+        </div>
+      </section>
     </div>
     </EnhancedErrorBoundary>
   );
