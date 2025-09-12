@@ -92,11 +92,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 FRESH CONTENT - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: Advanced AI Agents, Quantum Computing & $3.2B Success Stories!
+                🎉 NEW: Comprehensive AI Trends, Healthcare Revolution & $2.8B Manufacturing Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: Advanced AI Agents Revolution (300-500% efficiency gains), Quantum Computing Business Revolution (10,000x speedups), 
-                Fortune 500 Quantum AI Transformation ($3.2B value created), plus comprehensive implementation strategies. 
+                Just released: AI 2025 Comprehensive Trends Analysis ($3.2T market insights), AI Healthcare Diagnosis Revolution (99.7% accuracy), 
+                Global Manufacturing AI Transformation ($2.8B value created), plus detailed implementation roadmaps. 
                 Get expert insights on the cutting-edge technologies transforming 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,16 +107,16 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-advanced-ai-agents"
+                  href="/blog/ai-2025-comprehensive-trends-analysis"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read AI Agents Guide
+                  Read Trends Analysis
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-fortune-500-quantum-transformation"
+                  href="/case-studies/ai-transformation-global-manufacturing-giant-2025"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $3.2B Success Story
+                  View $2.8B Success Story
                 </Link>
               </div>
             </div>
