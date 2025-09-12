@@ -151,11 +151,11 @@ export default function ContentShowcasePage() {
                 <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Fresh AI & Tech Content Just Dropped
+                🚀 Revolutionary AI Content Just Dropped
               </h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-                New this week: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
-                Sustainability Success Stories, and comprehensive implementation resources.
+                New this week: AI Breakthrough Innovations 2025, Sustainability & Green Tech, 
+                $200M Manufacturing Success Story, and comprehensive implementation resources.
               </p>
             </div>
 
@@ -164,7 +164,7 @@ export default function ContentShowcasePage() {
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
                   <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
-                  <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
+                  <p className="text-sm opacity-90 mb-3">Revolutionary AI technologies reshaping industries</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
@@ -173,24 +173,24 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
 
-              <Link href="/blog/ai-workforce-transformation-2025" className="group">
+              <Link href="/blog/ai-sustainability-green-tech-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">👥</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Workforce Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete reskilling strategies for the AI era</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Sustainability & Green Tech</h3>
+                  <p className="text-sm opacity-90 mb-3">Building eco-friendly AI systems for the future</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>18 min read</span>
+                    <span>20 min read</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
                   </div>
                 </div>
               </Link>
 
-              <Link href="/case-studies/ai-sustainability-transformation-2025" className="group">
+              <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Sustainability Success</h3>
-                  <p className="text-sm opacity-90 mb-3">60% energy reduction and carbon neutrality</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💰</div>
+                  <h3 className="text-lg font-semibold mb-2">$200M Manufacturing Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Real case study with autonomous AI systems</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
