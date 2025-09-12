@@ -172,28 +172,28 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/zion-os-1-3-agents-rag" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🧠</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3: Agent Workflows + RAG</h3>
+                <p className="text-white/70">Autonomous workflows, built‑in RAG, and analytics dashboards.</p>
+              </div>
+            </a>
+            <a href="/news/case-study-resume-ai-38-percent-faster" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">📈</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Case Study: 38% Faster Hiring</h3>
+                <p className="text-white/70">Resume AI cut time‑to‑hire while improving conversion.</p>
+              </div>
+            </a>
+            <a href="/news/zion-os-1-0-launch" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🚀</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.0 Launches</h3>
-                <p className="text-white/70">One-click deployment of AI-powered digital economies is here.</p>
-              </div>
-            </a>
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-teal-600 to-cyan-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🎓</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion Academy Opens</h3>
-                <p className="text-white/70">Courses to help you learn AI, Web3, and launch faster.</p>
-              </div>
-            </a>
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-orange-600 to-red-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🤝</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Enterprise Partner Program</h3>
-                <p className="text-white/70">White‑label solutions and SLAs for large-scale deployments.</p>
+                <p className="text-white/70">One‑click deployment of AI‑powered digital economies.</p>
               </div>
             </a>
           </div>
