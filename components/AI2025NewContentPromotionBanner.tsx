@@ -3,99 +3,99 @@ import Link from 'next/link';
 
 export default function AI2025NewContentPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-8 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4 backdrop-blur-sm">
-            <span className="text-sm font-medium">🔥 NEW CONTENT DROP - JANUARY 2025</span>
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-8 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+            <span className="text-yellow-300 text-sm font-semibold mr-2">🚀 NEW</span>
+            <span className="text-sm">January 2025 Content Release</span>
           </div>
-          
-          {/* Main Headline */}
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            🚀 Revolutionary AI 2025 Content Just Released!
+            Revolutionary AI Content for 2025
           </h2>
-          
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-            Discover our most comprehensive AI analysis yet: Complete trends breakdown, breakthrough case studies, 
-            and the ultimate implementation master guide. Everything you need to dominate AI in 2025.
+          <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
+            Discover cutting-edge AI insights, success stories, and implementation guides that are transforming businesses worldwide.
           </p>
-          
-          {/* Content Highlights */}
-          <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-5xl mx-auto">
-            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
-              <div className="text-2xl mb-2">📊</div>
-              <h3 className="font-bold text-sm mb-1">Comprehensive Trends Analysis</h3>
-              <p className="text-xs opacity-80">15 critical AI trends reshaping 2025</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="flex items-center mb-3">
+              <span className="text-2xl mr-3">📝</span>
+              <h3 className="text-lg font-semibold">Enterprise Automation Revolution</h3>
             </div>
-            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
-              <div className="text-2xl mb-2">🏆</div>
-              <h3 className="font-bold text-sm mb-1">900% ROI Case Study</h3>
-              <p className="text-xs opacity-80">Real Fortune 500 transformation story</p>
-            </div>
-            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
-              <div className="text-2xl mb-2">📚</div>
-              <h3 className="font-bold text-sm mb-1">Master Implementation Guide</h3>
-              <p className="text-xs opacity-80">Complete blueprint for AI success</p>
-            </div>
-          </div>
-          
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link
-              href="/blog/ai-2025-comprehensive-trends-analysis"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+            <p className="text-blue-100 text-sm mb-4">
+              Learn how AI automation is revolutionizing enterprise operations with 300-500% efficiency gains.
+            </p>
+            <Link 
+              href="/blog/ai-2025-enterprise-automation-revolution"
+              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm"
             >
-              🔮 Explore AI 2025 Trends
-            </Link>
-            <Link
-              href="/case-studies/ai-2025-global-tech-transformation-breakthrough"
-              className="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-30 transition-colors text-lg border border-white border-opacity-30 backdrop-blur-sm"
-            >
-              🏆 View 900% ROI Success
-            </Link>
-            <Link
-              href="/resources/ai-2025-comprehensive-implementation-master-guide"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
-            >
-              📚 Get Master Guide
+              Read More →
             </Link>
           </div>
-          
-          {/* Additional Links */}
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/content-showcase" className="text-white hover:text-yellow-300 transition-colors underline">
-              📚 View All Content
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="flex items-center mb-3">
+              <span className="text-2xl mr-3">🏆</span>
+              <h3 className="text-lg font-semibold">600% ROI Success Story</h3>
+            </div>
+            <p className="text-blue-100 text-sm mb-4">
+              Discover how a global retail chain achieved 600% ROI through strategic AI implementation.
+            </p>
+            <Link 
+              href="/case-studies/ai-2025-global-retail-transformation-success"
+              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm"
+            >
+              View Case Study →
             </Link>
-            <span className="text-white opacity-50">•</span>
-            <Link href="/webinars" className="text-white hover:text-yellow-300 transition-colors underline">
-              🎥 Watch Webinars
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="flex items-center mb-3">
+              <span className="text-2xl mr-3">🛠️</span>
+              <h3 className="text-lg font-semibold">Ultimate Implementation Toolkit</h3>
+            </div>
+            <p className="text-blue-100 text-sm mb-4">
+              Get everything you need for successful AI implementation with our comprehensive toolkit.
+            </p>
+            <Link 
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm"
+            >
+              Download Toolkit →
             </Link>
-            <span className="text-white opacity-50">•</span>
-            <Link href="/tools/ai-roi-calculator-2026" className="text-white hover:text-yellow-300 transition-colors underline">
-              💰 Calculate ROI
+          </div>
+        </div>
+
+        <div className="text-center">
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
+            <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <span className="text-sm font-semibold">500+ Successful Implementations</span>
+            </div>
+            <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <span className="text-sm font-semibold">Average 400% ROI</span>
+            </div>
+            <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <span className="text-sm font-semibold">Fortune 500 Clients</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Started Today
             </Link>
-            <span className="text-white opacity-50">•</span>
-            <Link href="/contact" className="text-white hover:text-yellow-300 transition-colors underline">
-              🤝 Get Expert Help
+            <Link 
+              href="/content-showcase"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Explore All Content
             </Link>
           </div>
         </div>
       </div>
-      
-      {/* Animated Elements */}
-      <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
-      <div className="absolute top-8 right-8 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-4 left-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-8 right-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
     </div>
   );
 }
