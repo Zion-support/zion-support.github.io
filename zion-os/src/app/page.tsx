@@ -172,28 +172,28 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news/v1-3-multi-region-scaling" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-violet-600" />
+            <a href="/news/zion-os-1-4-security-compliance" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🌐</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">v1.3: Multi‑Region Scaling</h3>
-                <p className="text-white/70">Blue/green deploys, faster latency, zero‑downtime upgrades.</p>
+                <div className="text-2xl mb-2">🛡️</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.4: Security & Compliance</h3>
+                <p className="text-white/70">Compliance templates, audit trails, and security hardening.</p>
               </div>
             </a>
-            <a href="/news/launch-wizard-2-0" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-cyan-600 to-blue-600" />
+            <a href="/news/enterprise-infra-cost-reduction-50-percent" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🧭</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Launch Wizard 2.0</h3>
-                <p className="text-white/70">Provision a full economy with curated templates.</p>
+                <div className="text-2xl mb-2">💼</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Customer Story: 50% Cost Reduction</h3>
+                <p className="text-white/70">Policy‑based scaling and orchestration delivered savings.</p>
               </div>
             </a>
-            <a href="/news/grants-2025" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-green-600" />
+            <a href="/news/zion-os-1-3-agents-rag" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">💸</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion Grants 2025</h3>
-                <p className="text-white/70">$2.5M for builders across the ecosystem.</p>
+                <div className="text-2xl mb-2">🧠</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3: Agent Workflows + RAG</h3>
+                <p className="text-white/70">Autonomous workflows and built‑in RAG.</p>
               </div>
             </a>
           </div>
