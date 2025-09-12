@@ -2,6 +2,9 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
+import { FeaturedContentBanner } from '../components/PromoBanner';
+import dynamic from 'next/dynamic';
+const PromoBanner = dynamic(() => import('../components/PromoBanner').then(m => m.PromoBanner), { ssr: false });
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
@@ -16,7 +19,7 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -25,6 +28,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Latest Blog Promo */}
+        <PromoBanner />
+        <FeaturedContentBanner />
         {/* Content Promotion Banner */}
         <section className="py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2287,6 +2293,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-    </ErrorBoundary>
+    </>
   );
 }

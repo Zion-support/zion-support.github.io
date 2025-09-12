@@ -57,6 +57,36 @@ export const blogPosts: BlogPost[] = [
   }
   ,
   {
+    slug: 'multimodal-agents-in-production-2025',
+    title: 'Multimodal Agents in Production: Patterns, Guardrails, and ROI',
+    excerpt:
+      'Deploy resilient, cost-efficient multimodal agents with clear safety constraints and measurable outcomes.',
+    content:
+      'Productionizing multimodal agents requires robust tool orchestration, fallbacks, and observability spanning vision, text, and audio. This article details proven patterns for action planners, sandboxed tools, prompt hardening, and budget controls to ensure predictable ROI...',
+    publishedAt: '2025-09-12',
+    tags: ['Agents', 'Multimodal', 'Production']
+  },
+  {
+    slug: 'cloud-cost-optimization-blueprint-2025',
+    title: 'Cloud Cost Optimization Blueprint 2025: 30% Savings in 30 Days',
+    excerpt:
+      'A focused, engineering-first approach to shaving cloud waste without breaking SLAs.',
+    content:
+      'From rightsizing and spot automation to egress-aware architectures and cache strategies, this blueprint shows how teams deliver double-digit savings quickly while improving resilience and performance...',
+    publishedAt: '2025-09-12',
+    tags: ['Cloud', 'FinOps', 'Performance']
+  },
+  {
+    slug: 'enterprise-rag-qa-hardening',
+    title: 'Enterprise RAG QA Hardening: From Hallucinations to Helpful',
+    excerpt:
+      'Practical steps to improve precision and safety: retrieval tuning, guardrails, and evals.',
+    content:
+      'RAG quality hinges on data prep, retriever recall, and grounded generation. Learn corpus normalization, chunking, hybrid search, tool-use for citations, and continuous evals to push your QA from demo-grade to production-ready...',
+    publishedAt: '2025-09-11',
+    tags: ['RAG', 'LLM', 'Quality']
+  },
+  {
     slug: 'edge-ai-on-prem-breakthroughs',
     title: 'Edge AI On‑Prem: Breakthroughs That Cut Latency by 80%+',
     excerpt: 'Why moving inference to the edge slashes costs and accelerates mission‑critical apps.',
