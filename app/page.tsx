@@ -14,10 +14,8 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
-import ContentShowcase from '../components/ContentShowcase';
-import EnhancedContentBanner from '../components/EnhancedContentBanner';
-import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -276,6 +274,18 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* Enhanced Content Promotion Banner */}
+      <section className="py-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <EnhancedContentPromotionBanner 
+            variant="premium"
+            isVisible={true}
+            autoRotate={true}
+            rotationInterval={8000}
+          />
+        </div>
+      </section>
+
       {/* Featured Content Section */}
       <ContentShowcase
         title="Latest AI Insights & Case Studies"
@@ -287,14 +297,14 @@ export default function HomePage() {
       />
 
       {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
+      {/* <NewContentBanner variant="default" maxItems={4} /> */}
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
       {/* NEW: Enhanced Content Showcase - Latest 2025 Content */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
       {/* Enhanced Content Promotion Banner */}
-      <ContentPromotionBanner
+      {/* <ContentPromotionBanner
         title="🚀 Fresh AI & Business Insights"
         subtitle="JUST PUBLISHED - JANUARY 2025"
         description="New this week: AI Enterprise Integration Guide, Customer Support Automation, LLM Guardrails, and our comprehensive AI Architecture & Cost Governance framework. Expert insights to accelerate your growth."
@@ -345,7 +355,7 @@ export default function HomePage() {
             type: "Case Study"
           }
         ]}
-      />
+      /> */}
 
       {/* New Content Showcase Banner */}
       {/* Latest Content Showcase Banner */}
@@ -4005,6 +4015,13 @@ export default function HomePage() {
               <div className="text-gray-600">Client Satisfaction Rate</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Content Discovery Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InteractiveContentDiscovery />
         </div>
       </section>
 
