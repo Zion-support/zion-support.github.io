@@ -46,6 +46,8 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -115,6 +117,9 @@ export default function HomePage() {
         
         {/* LATEST CONTENT SHOWCASE */}
         <LatestContentShowcase />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
         
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
@@ -427,6 +432,9 @@ export default function HomePage() {
 
         {/* New Content Promotion Banner */}
         <NewContentPromoBanner />
+
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
 
         {/* AI Tools Showcase Banner */}
         <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
