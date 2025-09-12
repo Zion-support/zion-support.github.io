@@ -174,6 +174,24 @@ function Header() {
             </div>
           </div>
           <Link 
+            href="/ai-services-2025" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+          >
+            AI Services
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
+          </Link>
+          <Link 
+            href="/quantum-computing-solutions" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+          >
+            Quantum Computing
+            <span className="absolute -top-2 -right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              BREAKTHROUGH
+            </span>
+          </Link>
+          <Link 
             href="/blog" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
@@ -196,6 +214,15 @@ function Header() {
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Webinars
+          </Link>
+          <Link 
+            href="/ai-implementation-guide-2025" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+          >
+            AI Guide
+            <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              ESSENTIAL
+            </span>
           </Link>
           <Link 
             href="/services" 
@@ -229,7 +256,7 @@ function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
             <div className="space-y-2">
@@ -250,6 +277,18 @@ function Footer() {
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
                 AI Services
+              </Link>
+              <Link 
+                href="/ai-services-2025" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                AI Services 2025
+              </Link>
+              <Link 
+                href="/quantum-computing-solutions" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Quantum Computing
               </Link>
               <Link 
                 href="/services/it-services" 
@@ -282,6 +321,35 @@ function Footer() {
               >
                 Main Site
               </a>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
+            <div className="space-y-2">
+              <Link 
+                href="/resources" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                All Resources
+              </Link>
+              <Link 
+                href="/ai-implementation-guide-2025" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                AI Implementation Guide
+              </Link>
+              <Link 
+                href="/blog" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Blog
+              </Link>
+              <Link 
+                href="/case-studies" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Case Studies
+              </Link>
             </div>
           </div>
           <div>
