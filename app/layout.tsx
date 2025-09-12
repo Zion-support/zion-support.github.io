@@ -158,11 +158,13 @@ function Header() {
                   🌐 Edge Computing Revolution
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <div className="border-t border-gray-200 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-purple-600 uppercase tracking-wide">AI 2027 BREAKTHROUGHS</div>
                 <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2027 Future Predictions (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2027-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🚗 Automotive AI Breakthrough (NEW)
+                  🚗 Automotive AI Breakthrough (500% ROI) (NEW)
                 </Link>
                 <Link href="/resources/ai-2027-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 AI 2027 Master Guide (NEW)
@@ -210,11 +212,13 @@ function Header() {
                   ⭐ Featured Content
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <div className="border-t border-gray-200 my-2"></div>
+                <div className="px-4 py-2 text-xs font-semibold text-purple-600 uppercase tracking-wide">AI 2027 BREAKTHROUGHS</div>
                 <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2027 Predictions (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2027-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🚗 Automotive AI Case Study (NEW)
+                  🚗 Automotive AI Case Study (500% ROI) (NEW)
                 </Link>
                 <Link href="/resources/ai-2027-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 AI 2027 Master Guide (NEW)
