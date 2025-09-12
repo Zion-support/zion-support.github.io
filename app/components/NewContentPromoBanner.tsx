@@ -8,6 +8,16 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "Edge AI Agents 2025",
+    description: "Deploy and operate autonomous agents at the edge with reliability and safety",
+    url: "/blog/ai-2025-edge-agents-in-production",
+    type: "Blog Post",
+    category: "Edge AI",
+    icon: "🤖",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Benchmarking & Evaluation 2025",
     description: "Practical guide to LLM, agent, and RAG evaluations",
     url: "/blog/ai-benchmarking-and-evaluation-2025",

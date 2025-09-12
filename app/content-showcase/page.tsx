@@ -20,6 +20,21 @@ export default function ContentShowcase() {
 
   const content = [
     {
+      id: 0,
+      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
+      description: "Architectures, safety, and observability for deploying autonomous agents at the edge.",
+      category: "ai-automation",
+      type: "Article",
+      readTime: "21 min read",
+      publishDate: "2025-09-12",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "🤖",
+      href: "/blog/ai-2025-edge-agents-in-production",
+      tags: ["Edge AI", "Agents", "Observability", "Safety"]
+    },
+    {
       id: 1,
       title: "Advanced AI Architecture Patterns for 2025: Building Scalable, Resilient Systems",
       description: "Master advanced AI architecture patterns for 2025. Learn microservices, event-driven design, and distributed AI systems with real-world examples and implementation guides.",
