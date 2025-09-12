@@ -41,16 +41,16 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/content-showcase"
+                  href="/blog/ai-2025-enterprise-genai-blueprint"
                   className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore New Content
+                  Read Enterprise GenAI Blueprint
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/content-showcase"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Read Latest Article
+                  Explore All New Content
                 </Link>
               </div>
             </div>

@@ -25,6 +25,20 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 'ai-2025-enterprise-genai-blueprint',
+    title: 'Enterprise GenAI Blueprint 2025: From Pilot to Production',
+    excerpt: 'A practical, guardrailed path for enterprises to ship GenAI to production safely and profitably — with a 90-day playbook and ROI model.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['GenAI', 'Enterprise', 'Governance', 'MLOps'],
+    featured: true,
+    url: '/blog/ai-2025-enterprise-genai-blueprint',
+    image: '🏢',
+    views: 0
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'The AI Revolution of 2025: Transformative Technologies Reshaping Business',
     excerpt: 'Discover how cutting-edge AI technologies are revolutionizing industries and creating unprecedented opportunities for business growth and innovation.',
