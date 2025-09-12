@@ -117,6 +117,66 @@ export default function ContentShowcase() {
                   </div>
                 </article>
               </Link>
+
+              {/* Financial Services Case Study */}
+              <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
+                <article className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-green-100">
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">💰</div>
+                  <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-medium mb-4">
+                    CASE STUDY
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                    AI Financial Services Transformation
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    How a major financial institution achieved 300% ROI and $2.3B in savings through strategic AI implementation.
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>15 min read</span>
+                    <span className="group-hover:text-green-600 transition-colors">Read Case Study →</span>
+                  </div>
+                </article>
+              </Link>
+
+              {/* AI Implementation Master Guide */}
+              <Link href="/resources/ai-implementation-master-guide-2026" className="group">
+                <article className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-purple-100">
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">📚</div>
+                  <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-3 py-1 text-sm font-medium mb-4">
+                    RESOURCE
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    AI Implementation Master Guide 2026
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Complete 200+ page resource with frameworks, templates, and step-by-step strategies for successful AI adoption.
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>200+ pages</span>
+                    <span className="group-hover:text-purple-600 transition-colors">Download Guide →</span>
+                  </div>
+                </article>
+              </Link>
+
+              {/* AI Healthcare Breakthrough */}
+              <Link href="/blog/ai-healthcare-diagnosis-breakthrough-2025" className="group">
+                <article className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-red-100">
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">🏥</div>
+                  <div className="inline-flex items-center bg-red-100 text-red-800 rounded-full px-3 py-1 text-sm font-medium mb-4">
+                    NEW
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">
+                    AI Healthcare Diagnosis Breakthrough
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>18 min read</span>
+                    <span className="group-hover:text-red-600 transition-colors">Read Article →</span>
+                  </div>
+                </article>
+              </Link>
             </div>
           </div>
         </section>

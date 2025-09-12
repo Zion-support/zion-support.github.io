@@ -11,6 +11,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import MegaContentDropBanner from '../components/MegaContentDropBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -44,6 +45,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
+        
+        {/* Mega Content Drop Banner */}
+        <MegaContentDropBanner />
         
         {/* Revolutionary Content Update Banner - Top Priority */}
         <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
