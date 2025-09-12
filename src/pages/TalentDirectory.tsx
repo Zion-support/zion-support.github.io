@@ -1,74 +1,77 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useNavigate
+import React, { useState } from 'react';
+import { SEO } from "@/components/SEO";
 import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { FilterSidebar } from '@/components/talent/FilterSidebar';
-import { TalentResults } from '@/components/talent/TalentResults';
-import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
-import { useTalentDirectory } from '@/hooks/useTalentDirectory';
-import { SORT_OPTIONS } from '@/data/sortOptions';
-import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { TalentProfile } from '@/types/talent';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationButton,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
+import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
 
-export default function TalentDirectory() {
-  const router = useRouterReady(); // Use our custom hook
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
-  const [initialized, setInitialized] = useState(false);
-
-  // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
-    setInitialized(false);
-    setCurrentPage(1);
-  });
-
-  // Use our custom hook to manage state
-  const {
-    filteredTalents,
-    total,
-    isLoading,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    error,
-    isAuthenticated,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
-  } = useTalentDirectory(currentPage, itemsPerPage);
-
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
+const TalentDirectory: React.FC = () => {
+  const talents = [
+    {
+      id: 1,
+      name: "Sarah Chen",
+      role: "Senior AI Engineer",
+      experience: "8+ years",
+      location: "San Francisco, CA",
+      skills: ["Machine Learning", "Python", "TensorFlow", "Computer Vision"],
+      rating: 4.9,
+      projects: 24,
+      avatar: "👩‍💻"
+    },
+    {
+      id: 2,
+      name: "Marcus Rodriguez",
+      role: "Cloud Architect",
+      experience: "10+ years",
+      location: "Austin, TX",
+      skills: ["AWS", "Kubernetes", "Terraform", "DevOps"],
+      rating: 4.8,
+      projects: 31,
+      avatar: "👨‍💻"
+    },
+    {
+      id: 3,
+      name: "Priya Patel",
+      role: "Cybersecurity Specialist",
+      experience: "6+ years",
+      location: "New York, NY",
+      skills: ["Penetration Testing", "SOC", "Compliance", "Incident Response"],
+      rating: 4.9,
+      projects: 18,
+      avatar: "👩‍💻"
+    },
+    {
+      id: 4,
+      name: "David Kim",
+      role: "Data Scientist",
+      experience: "7+ years",
+      location: "Seattle, WA",
+      skills: ["Data Analytics", "SQL", "R", "Tableau"],
+      rating: 4.7,
+      projects: 22,
+      avatar: "👨‍💻"
+    },
+    {
+      id: 5,
+      name: "Emily Watson",
+      role: "Full Stack Developer",
+      experience: "5+ years",
+      location: "Boston, MA",
+      skills: ["React", "Node.js", "Python", "MongoDB"],
+      rating: 4.8,
+      projects: 19,
+      avatar: "👩‍💻"
+    },
+    {
+      id: 6,
+      name: "Alex Thompson",
+      role: "DevOps Engineer",
+      experience: "9+ years",
+      location: "Denver, CO",
+      skills: ["Docker", "Jenkins", "Ansible", "Linux"],
+      rating: 4.9,
+      projects: 28,
+      avatar: "👨‍💻"
+    }
+  ];
 
   const categories = [
     "All",

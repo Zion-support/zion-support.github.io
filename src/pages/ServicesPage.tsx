@@ -689,13 +689,19 @@ export default function ServicesPage() {
                 Request a Quote
               </Button>
             </Link>
+            <Link to="/contact">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Contact Sales
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
 
       <DynamicListingPage 
-        title="IT & AI Services"
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        title="Comprehensive Micro SAAS Solutions"
+        description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
         categorySlug="services"
         listings={listings}
         categoryFilters={SERVICE_FILTERS}

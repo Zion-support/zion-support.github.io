@@ -23,10 +23,11 @@ export default defineConfig({
           res.end(JSON.stringify(data))
         })
       },
-      mangle: {
-        safari10: true,
-        properties: {}
-      }
+    },
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
     }
   },
   build: {

@@ -9,6 +9,7 @@ import { Menu, X } from 'lucide-react'
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Sidebar } from '@/components/Sidebar';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
