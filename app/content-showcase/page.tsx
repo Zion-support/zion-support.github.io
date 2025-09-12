@@ -452,7 +452,18 @@ export default function ContentShowcasePage() {
 
         {/* Featured Content */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🔥 Featured This Week</h2>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🔥 FEATURED THIS WEEK - JANUARY 30, 2025</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Fresh AI Content Just Dropped
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Discover our latest expert insights, case studies, and resources. From AI industry disruption 
+              to Fortune 500 success stories, get the knowledge you need to succeed in 2025.
+            </p>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/blog/ai-2025-industry-disruption" className="group">
@@ -513,6 +524,16 @@ export default function ContentShowcasePage() {
                   <span className="text-green-600 font-medium group-hover:underline">Read Case Study →</span>
                 </div>
               </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg"
+            >
+              View All Featured Content
+              <span>→</span>
             </Link>
           </div>
         </section>
