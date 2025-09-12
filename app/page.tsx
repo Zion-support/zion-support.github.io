@@ -14,6 +14,8 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import LatestContentShowcase from '../components/LatestContentShowcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -43,6 +45,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTIONAL BANNER */}
+        <NewContentPromotionalBanner />
+        
         {/* ULTRA CONTENT PROMOTION BANNER */}
         <UltraContentPromotionBanner />
         
@@ -521,6 +526,9 @@ export default function HomePage() {
 
       {/* Featured New Content Showcase */}
       <FeaturedNewContentShowcase title="Featured in January 2025" subtitle="Fresh articles, resources, and case studies just released" showViewAll={true} viewAllHref="/content-showcase" columns={3} />
+
+      {/* Latest Content Showcase */}
+      <LatestContentShowcase />
 
       {/* Featured Content Showcase */}
       <FeaturedContentShowcase />
