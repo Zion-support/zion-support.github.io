@@ -88,6 +88,11 @@ import InteractiveContentDiscovery2025 from '../components/InteractiveContentDis
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateContentDiscoveryWidget';
 
+// New Revolutionary Tech Components
+import NewYear2025PromotionBanner from '../src/components/NewYear2025PromotionBanner';
+import RevolutionaryTechShowcase from '../src/components/RevolutionaryTechShowcase';
+import InteractiveServiceSelector from '../src/components/InteractiveServiceSelector';
+
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
 import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
@@ -3557,6 +3562,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* NEW YEAR 2025 PROMOTION BANNER - REVOLUTIONARY TECH */}
+      <NewYear2025PromotionBanner />
+
+      {/* REVOLUTIONARY TECHNOLOGY SHOWCASE */}
+      <RevolutionaryTechShowcase />
+
+      {/* INTERACTIVE SERVICE SELECTOR */}
+      <InteractiveServiceSelector />
 
       {/* MEGA PROMOTIONAL BANNER 2025 */}
       <MegaPromotionalBanner2025 />
