@@ -1,14 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-import EnhancedNavigation from '../components/EnhancedNavigation';
-=======
 import Link from 'next/link';
 import './globals.css';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
->>>>>>> cursor/create-and-deploy-new-content-3130
+import EnhancedNavigation from '../components/EnhancedNavigation';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -66,26 +63,6 @@ export const metadata = {
 	},
 };
 
-<<<<<<< HEAD
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-	return (
-		<html lang="en">
-			<head>
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-				<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-				<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-			</head>
-			<body>
-				<EnhancedNavigation />
-				{children}
-			</body>
-		</html>
-	);
-}
-
-=======
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -242,6 +219,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
           <NewContentBanner />
+          <EnhancedNavigation />
           <Header />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
@@ -256,4 +234,3 @@ export default function RootLayout({
     </html>
   );
 }
->>>>>>> cursor/create-and-deploy-new-content-3130
