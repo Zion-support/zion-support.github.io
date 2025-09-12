@@ -37,103 +37,119 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Content Promotion Banner */}
-        <section className="py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Revolutionary Content Drop Banner */}
+        <section className="py-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-4">
+                <span className="text-lg font-bold">🚀 REVOLUTIONARY CONTENT DROP - JANUARY 2025</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Revolutionary AI Content Update: 20+ New Resources Just Released!
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                🎉 MASSIVE AI CONTENT UPDATE: 50+ New Resources Released!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations, Sustainability & Green Tech, 
-                Robotics & Automation, plus new case studies and implementation guides. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
+                🔥 BREAKTHROUGH REVEALED: AI Breakthrough Innovations 2025, AI Sustainability & Green Tech, 
+                AI Robotics & Automation Case Study ($100M Success), plus the complete 200+ page AI Implementation Master Guide 2026. 
+                Everything you need to dominate AI in 2025 and beyond!
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
                 >
-                  Explore New Content
+                  🎯 Explore All New Content
                 </Link>
                 <Link
                   href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Read Latest Article
+                  📖 Read Latest Article
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  📋 Download Free Guide
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Autonomous Systems Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* AI Robotics Breakthrough Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🤖 AUTONOMOUS SYSTEMS BREAKTHROUGH</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-4">
+                <span className="text-lg font-bold">🤖 AI ROBOTICS BREAKTHROUGH</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                💰 $200M Manufacturing Success: Autonomous AI Systems Case Study!
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                💰 $100M Manufacturing Transformation: AI Robotics Success Story!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover how Fortune 500 companies are achieving unprecedented results with autonomous AI systems. 
-                Read our new case study showing $200M savings and download our free implementation guide with ROI calculators.
+              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
+                🚀 EXCLUSIVE CASE STUDY: Discover how Global Manufacturing Corp achieved $100M annual savings with AI robotics and automation. 
+                95% efficiency increase, 98% defect reduction, and complete operational transformation. Download the complete implementation guide!
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
-                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  href="/case-studies/ai-robotics-automation-breakthrough-2025"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
                 >
-                  View Case Study
+                  📊 View $100M Case Study
                 </Link>
                 <Link
-                  href="/resources/autonomous-systems-implementation-guide"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  Free Implementation Guide
+                  📋 Download Implementation Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                  href="/services/ai-robotics-automation"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  Read Latest Article
+                  🤖 Robotics Services
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Sustainability & Green Tech Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* AI Sustainability & Green Tech Banner */}
+        <section className="py-8 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🌱 SUSTAINABILITY & GREEN TECH</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-4">
+                <span className="text-lg font-bold">🌱 AI SUSTAINABILITY & GREEN TECH</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🌍 AI-Powered Sustainability: 40% Energy Reduction Achieved!
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                🌍 AI-Powered Sustainability: 60% Energy Reduction Achieved!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover how AI is driving sustainability initiatives and reducing carbon footprints. 
-                Learn about smart energy management, intelligent waste management, and climate risk assessment solutions.
+              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
+                🚀 BREAKTHROUGH SUSTAINABILITY: Discover how AI is revolutionizing environmental sustainability. 
+                Smart energy management, intelligent waste reduction, carbon footprint optimization, and green tech solutions 
+                delivering 60% energy reduction and carbon neutrality. Build a sustainable future with AI!
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/blog/ai-2025-sustainability-green-tech"
-                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  href="/blog/ai-sustainability-green-tech-2025"
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
                 >
-                  Read Sustainability Guide
+                  🌱 Read Sustainability Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-robotics-automation"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                  href="/case-studies/ai-sustainability-transformation-2025"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Robotics & Automation
+                  📊 View Case Study
+                </Link>
+                <Link
+                  href="/services/ai-sustainability-solutions"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  🌍 Green AI Services
                 </Link>
               </div>
             </div>
