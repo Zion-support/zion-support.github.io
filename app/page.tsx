@@ -22,7 +22,18 @@ import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBa
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
 import AI2031ContentDiscoveryWidget from '../components/AI2031ContentDiscoveryWidget';
->>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
+import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
+import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
+import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
+import AI2026BreakthroughContentShowcase from '../components/AI2026BreakthroughContentShowcase';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
+import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
+import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
+import AI2035ContentShowcase from '../components/AI2035ContentShowcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -111,6 +122,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
         <NewContent2025BreakthroughBanner />
+        
+        {/* AI 2035 REVOLUTIONARY CONTENT SHOWCASE */}
+        <AI2035ContentShowcase />
+        
+        {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
+        <AI2034RevolutionaryPromotionBanner />
         
         {/* DYNAMIC CONTENT PROMOTION BANNER */}
         <DynamicContentPromotionBanner />
@@ -273,8 +290,6 @@ export default function HomePage() {
         
         {/* AI 2031 CONTENT DISCOVERY WIDGET */}
         <AI2031ContentDiscoveryWidget />
-        
->>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
         {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
         <NewContent2025UltimatePromotionBanner />
         
