@@ -7,6 +7,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import AI2035ContentPromotionBanner from '../components/AI2035ContentPromotionBanner';
+import AI2025BreakthroughContentBanner from '../components/AI2025BreakthroughContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
@@ -1121,6 +1122,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
+          <AI2025BreakthroughContentBanner />
           <AI2035ContentPromotionBanner />
           <EnhancedContentPromotionBanner />
           <EnhancedNavigationWithContentDiscovery />
