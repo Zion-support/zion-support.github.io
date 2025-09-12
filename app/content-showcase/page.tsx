@@ -95,13 +95,22 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Predictions 2025: The Future of Artificial Intelligence",
-      description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
-      href: "/blog/ai-2025-predictions",
-      icon: "🔮",
-      category: "AI Trends",
-      readTime: "15 min read",
-      date: "Jan 25, 2025"
+      title: "AI Productivity Automation 2025: Complete Implementation Guide",
+      description: "Transform your business operations with AI productivity automation. Learn proven strategies, tools, and implementation frameworks to achieve 40% efficiency gains and 60% cost reduction in 2025.",
+      href: "/blog/ai-productivity-automation-2025",
+      icon: "⚡",
+      category: "AI Automation",
+      readTime: "12 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Startup Funding Masterclass 2025: From Seed to Series A",
+      description: "Master the $47B AI startup funding landscape with our comprehensive guide. Learn proven strategies, pitch templates, and investor insights to secure funding in 2025.",
+      href: "/blog/ai-startup-funding-masterclass-2025",
+      icon: "💰",
+      category: "Startup Strategy",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -111,15 +120,6 @@ export default function ContentShowcasePage() {
       category: "AI Strategy",
       readTime: "18 min read",
       date: "Feb 01, 2025"
-    },
-    {
-      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
-      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
-      href: "/blog/ai-multimodal-applications-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "12 min read",
-      date: "Jan 28, 2025"
     },
     {
       title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen Attacks",
@@ -134,13 +134,22 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
-      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
-      description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
-      href: "/case-studies/ai-transformation-enterprise-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
-      date: "Feb 05, 2025"
+      title: "AI Financial Services Transformation Breakthrough: $2.4B Cost Savings",
+      description: "Discover how a Fortune 500 financial services company achieved $2.4B in cost savings and 95% fraud detection accuracy through AI transformation. Complete case study with implementation details.",
+      href: "/case-studies/ai-financial-services-transformation-breakthrough-2025",
+      icon: "🏦",
+      category: "Financial Services",
+      result: "$2.4B Savings",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Manufacturing Automation Success: 40% Cost Reduction Achieved",
+      description: "How a Fortune 500 manufacturing company transformed their operations with AI automation, achieving unprecedented cost savings and efficiency gains while maintaining the highest quality standards.",
+      href: "/case-studies/ai-manufacturing-automation-success-2025",
+      icon: "🏭",
+      category: "Manufacturing",
+      result: "40% Cost Reduction",
+      date: "Jan 20, 2025"
     },
     {
       title: "AI Retail Transformation Success: 300% Revenue Growth",
@@ -150,27 +159,18 @@ export default function ContentShowcasePage() {
       category: "Retail AI",
       result: "300% Growth",
       date: "Feb 03, 2025"
-    },
-    {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Transformation Playbook 2025: Your Guide to Digital Success",
-      description: "Download Zion Tech Group's comprehensive AI Transformation Playbook for 2025. A step-by-step guide covering strategy, technology, and people for successful digital transformation.",
-      href: "/resources/ai-transformation-playbook-2025",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide 2025. 200+ pages of proven strategies, checklists, templates, and best practices for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2025",
       icon: "📚",
-      category: "Playbook",
+      category: "Master Guide",
       type: "Free Download",
-      date: "Feb 10, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
@@ -279,37 +279,37 @@ export default function ContentShowcasePage() {
 
             {/* Featured Content Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-2025-predictions" className="group">
+              <Link href="/blog/ai-2025-year-ahead-predictions" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
-                  <h3 className="text-lg font-semibold mb-2">AI 2025 Predictions</h3>
-                  <p className="text-sm opacity-90 mb-3">The future of AI: AGI breakthroughs, enterprise adoption, and industry transformation</p>
+                  <h3 className="text-lg font-semibold mb-2">AI 2025: Year Ahead Predictions</h3>
+                  <p className="text-sm opacity-90 mb-3">Expert predictions for breakthrough technologies and enterprise adoption trends</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>18 min read</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-implementation-success-framework-2025" className="group">
+              <Link href="/blog/ai-multimodal-revolution-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Implementation Framework</h3>
-                  <p className="text-sm opacity-90 mb-3">7-step process that guarantees 340% ROI and successful AI transformation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎭</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Multimodal Revolution 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">The future of intelligent systems across industries</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>30 min read</span>
+                    <span>22 min read</span>
                     <span className="mx-2">•</span>
-                    <span>Essential</span>
+                    <span>New</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-transformation-enterprise-success-2025" className="group">
+              <Link href="/case-studies/ai-manufacturing-automation-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">Enterprise AI Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Fortune 500 case study: 340% ROI and $50M in cost savings</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">40% cost reduction, 60% faster processing - complete case study</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
@@ -318,11 +318,11 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
 
-              <Link href="/resources/ai-transformation-playbook-2025" className="group">
+              <Link href="/resources/ai-multimodal-implementation-guide-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Transformation Playbook</h3>
-                  <p className="text-sm opacity-90 mb-3">150+ page complete implementation guide with templates</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
+                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Implementation Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete 180+ page implementation guide with templates</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Free Download</span>
                     <span className="mx-2">•</span>
