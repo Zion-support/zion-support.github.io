@@ -13,6 +13,7 @@ import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
@@ -1081,8 +1082,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Content Discovery Section */}
-      <ContentDiscoverySection />
+      {/* Interactive Content Discovery Section */}
+      <InteractiveContentDiscovery />
 
       {/* Trending Content Banner */}
       <RevolutionaryContentBanner variant="trending" maxItems={4} />

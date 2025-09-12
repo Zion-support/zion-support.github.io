@@ -1,410 +1,190 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  id: string;
+interface ContentRecommendation {
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'resource';
   category: string;
-  readTime?: string;
-  featured: boolean;
-  tags: string[];
+  icon: string;
+  readTime: string;
 }
 
-const contentItems: ContentItem[] = [
-  {
-    id: '1',
-    title: 'Advanced AI Architecture Patterns for 2025',
-    description: 'Building scalable, cost-effective systems with 300%+ ROI',
-    href: '/blog/ai-2025-advanced-ai-architecture',
-    category: 'AI Architecture',
-    readTime: '25 min read',
-    difficulty: 'Advanced',
-    tags: ['Architecture', 'Scalability', 'ROI', 'Enterprise'],
-    icon: '🏗️',
-    featured: true,
-    isNew: true
-  },
-  {
-    id: '2',
-    title: 'AI Automation Trends 2025',
-    description: 'Complete guide to enterprise transformation with 400%+ ROI',
-    href: '/blog/ai-2025-automation-trends',
-    category: 'AI Automation',
-    readTime: '22 min read',
-    difficulty: 'Intermediate',
-    tags: ['Automation', 'Enterprise', 'Trends', 'ROI'],
-    icon: '🤖',
-    featured: true,
-    isNew: true
-  },
-  {
-    id: '3',
-    title: '$200M Manufacturing Success Case Study',
-    description: 'How Fortune 500 achieved 60% efficiency gains with autonomous AI',
-    href: '/case-studies/ai-autonomous-manufacturing-success-2025',
-    category: 'Case Study',
-    readTime: '15 min read',
-    difficulty: 'Intermediate',
-    tags: ['Manufacturing', 'Case Study', 'ROI', 'Success'],
-    icon: '💰',
-    featured: true,
-    isNew: true
-  },
-  {
-    id: '4',
-    title: 'AI Implementation Master Guide 2026',
-    description: '200+ page comprehensive guide with frameworks and templates',
-    href: '/resources/ai-implementation-master-guide-2026',
-    category: 'Free Resource',
-    readTime: '200+ pages',
-    difficulty: 'Beginner',
-    tags: ['Guide', 'Implementation', 'Templates', 'Free'],
-    icon: '📚',
-    featured: true,
-    isNew: true
-  },
-  {
-    id: '5',
-    title: 'AI Workforce Transformation 2025',
-    description: 'Reskilling strategies for the AI era',
-    href: '/blog/ai-workforce-transformation-2025',
-    category: 'Workforce',
-    readTime: '18 min read',
-    difficulty: 'Intermediate',
-    tags: ['Workforce', 'Transformation', 'Skills', 'Future'],
-    icon: '👥'
-  },
-  {
-    id: '6',
-    title: 'AI Sustainability & Green Tech',
-    description: 'Building eco-friendly AI systems',
-    href: '/blog/ai-sustainability-green-tech-2025',
-    category: 'Sustainability',
-    readTime: '20 min read',
-    difficulty: 'Intermediate',
-    tags: ['Sustainability', 'Green Tech', 'Environment', 'AI'],
-    icon: '🌱'
-  },
-  {
-    id: '7',
-    title: 'AI Cybersecurity Checklist 2025',
-    description: '150+ security items for secure AI implementation',
-    href: '/resources/ai-cybersecurity-checklist-2025',
-    category: 'Security',
-    readTime: 'Free Download',
-    difficulty: 'Advanced',
-    tags: ['Security', 'Checklist', 'Compliance', 'Free'],
-    icon: '🛡️'
-  },
-  {
-    id: '8',
-    title: 'Edge AI: Privacy by Design',
-    description: 'On-device intelligence for instant, compliant CX',
-    href: '/blog/edge-ai-privacy-by-design-2025',
-    category: 'Edge Computing',
-    readTime: '8 min read',
-    difficulty: 'Advanced',
-    tags: ['Edge Computing', 'Privacy', 'On-device', 'Compliance'],
-    icon: '🔐'
-  }
-];
+export default function InteractiveContentDiscovery() {
+  const [selectedRole, setSelectedRole] = useState<string>('');
+  const [recommendations, setRecommendations] = useState<ContentRecommendation[]>([]);
 
-const categories = ['All', 'AI Architecture', 'AI Automation', 'Case Study', 'Free Resource', 'Workforce', 'Sustainability', 'Security', 'Edge Computing'];
-const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
-
-const InteractiveContentDiscovery: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
-
-  const contentItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'AI 2025: Quantum Computing Breakthrough',
-      description: 'Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications and real-world implementations.',
-      href: '/blog/ai-2025-quantum-computing-breakthrough',
-      type: 'blog',
-      category: 'AI Innovations',
-      readTime: '22 min read',
-      featured: true,
-      tags: ['quantum computing', 'AI breakthrough', 'technology trends']
-    },
-    {
-      id: '2',
-      title: 'AI 2025: Neural Interface Revolution',
-      description: 'Discover how neural interfaces are revolutionizing human-AI interaction in 2025. Explore brain-computer interfaces and neural prosthetics.',
-      href: '/blog/ai-2025-neural-interface-revolution',
-      type: 'blog',
-      category: 'AI Innovations',
-      readTime: '20 min read',
-      featured: true,
-      tags: ['neural interfaces', 'BCI', 'human-AI interaction']
-    },
-    {
-      id: '3',
-      title: 'AI 2025: Autonomous Systems Mastery',
-      description: 'Master autonomous AI systems in 2025 with our comprehensive guide. Learn implementation strategies and real-world case studies.',
-      href: '/blog/ai-2025-autonomous-systems-mastery',
-      type: 'blog',
-      category: 'Implementation',
-      readTime: '25 min read',
-      featured: true,
-      tags: ['autonomous systems', 'AI implementation', 'automation']
-    },
-    {
-      id: '4',
-      title: 'AI 2025: Autonomous Manufacturing Revolution - $500M Success Story',
-      description: 'Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems.',
-      href: '/case-studies/ai-2025-autonomous-manufacturing-revolution',
-      type: 'case-study',
-      category: 'Case Studies',
-      featured: true,
-      tags: ['manufacturing', 'autonomous AI', 'ROI', 'case study']
-    },
-    {
-      id: '5',
-      title: 'AI Implementation Master Guide 2026',
-      description: 'Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, and best practices.',
-      href: '/resources/ai-implementation-master-guide-2026',
-      type: 'resource',
-      category: 'Resources',
-      featured: true,
-      tags: ['implementation guide', 'templates', 'best practices', 'free download']
-    },
-    {
-      id: '6',
-      title: 'AI Cybersecurity Checklist 2025',
-      description: 'Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems.',
-      href: '/resources/ai-cybersecurity-checklist-2025',
-      type: 'resource',
-      category: 'Security',
-      featured: false,
-      tags: ['cybersecurity', 'AI security', 'checklist', 'compliance']
-    },
-    {
-      id: '7',
-      title: 'AI Workforce Transformation Playbook 2025',
-      description: 'Complete reskilling strategies and implementation guides for the AI era. Transform your workforce for the future.',
-      href: '/resources/ai-workforce-transformation-playbook-2025',
-      type: 'resource',
-      category: 'Workforce',
-      featured: false,
-      tags: ['workforce transformation', 'reskilling', 'AI training', 'human resources']
-    },
-    {
-      id: '8',
-      title: 'AI Financial Services Transformation Success',
-      description: 'Complete case study: How a major bank achieved $50M savings and 300% ROI through strategic AI implementation.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
-      type: 'case-study',
-      category: 'Case Studies',
-      featured: false,
-      tags: ['financial services', 'banking', 'ROI', 'transformation']
-    }
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'AI Innovations', name: 'AI Innovations', count: contentItems.filter(item => item.category === 'AI Innovations').length },
-    { id: 'Implementation', name: 'Implementation', count: contentItems.filter(item => item.category === 'Implementation').length },
-    { id: 'Case Studies', name: 'Case Studies', count: contentItems.filter(item => item.category === 'Case Studies').length },
-    { id: 'Resources', name: 'Resources', count: contentItems.filter(item => item.category === 'Resources').length },
-    { id: 'Security', name: 'Security', count: contentItems.filter(item => item.category === 'Security').length },
-    { id: 'Workforce', name: 'Workforce', count: contentItems.filter(item => item.category === 'Workforce').length }
-  ];
-
-  useEffect(() => {
-    let filtered = contentItems;
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by search query
-    if (searchQuery) {
-      filtered = filtered.filter(item => 
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
-
-    setFilteredContent(filtered);
-  }, [selectedCategory, searchQuery]);
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝';
-      case 'case-study':
-        return '📊';
-      case 'resource':
-        return '📚';
-      default:
-        return '✨';
-    }
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'from-blue-500 to-cyan-500';
-      case 'case-study':
-        return 'from-green-500 to-emerald-500';
-      case 'resource':
-        return 'from-purple-500 to-pink-500';
-      default:
-        return 'from-gray-500 to-gray-600';
-    }
+  const handleRoleSelect = (role: string) => {
+    setSelectedRole(role);
+    const roleContent = {
+      executive: [
+        {
+          title: "AI Implementation Master Guide 2026",
+          description: "Strategic framework for AI implementation with ROI analysis.",
+          href: "/resources/ai-implementation-master-guide-2026",
+          category: "Strategy",
+          icon: "📊",
+          readTime: "200+ pages"
+        }
+      ],
+      technical: [
+        {
+          title: "AI Advanced Neural Architectures 2025",
+          description: "Deep dive into revolutionary neural architectures.",
+          href: "/blog/ai-2025-advanced-neural-architectures",
+          category: "Architecture",
+          icon: "🧠",
+          readTime: "35 min read"
+        }
+      ],
+      business: [
+        {
+          title: "AI Workforce Transformation Playbook 2025",
+          description: "Complete guide to building AI-ready teams.",
+          href: "/resources/ai-workforce-transformation-playbook-2025",
+          category: "Workforce",
+          icon: "👥",
+          readTime: "150+ pages"
+        }
+      ]
+    };
+    setRecommendations(roleContent[role as keyof typeof roleContent] || []);
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          🔍 Discover Your Perfect AI Content
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Use our interactive discovery tool to find the most relevant AI content for your needs. 
-          Filter by category, search by keywords, or explore our featured content.
-        </p>
-      </div>
+    <section className="py-16 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-indigo-100 text-indigo-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-bold">🎯 INTERACTIVE CONTENT DISCOVERY</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Find Your Perfect AI Resources
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Tell us about your role and we'll recommend the most relevant AI resources for your needs.
+          </p>
+        </div>
 
-      {/* Search and Filter Controls */}
-      <div className="mb-8">
-        <div className="flex flex-col md:flex-row gap-4 mb-6">
-          {/* Search Input */}
-          <div className="flex-1">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search content by title, description, or tags..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">👤 What's your primary role?</h3>
+              <div className="space-y-4">
+                <button
+                  onClick={() => handleRoleSelect('executive')}
+                  className={`w-full p-4 rounded-xl border-2 transition-all duration-300 text-left ${
+                    selectedRole === 'executive'
+                      ? 'border-blue-500 bg-blue-50 text-blue-900'
+                      : 'border-gray-200 bg-white hover:border-gray-300'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">👔</span>
+                    <div>
+                      <div className="font-semibold">Executive & Leader</div>
+                      <div className="text-sm text-gray-600">Strategic AI implementation guides and ROI frameworks</div>
+                    </div>
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleRoleSelect('technical')}
+                  className={`w-full p-4 rounded-xl border-2 transition-all duration-300 text-left ${
+                    selectedRole === 'technical'
+                      ? 'border-green-500 bg-green-50 text-green-900'
+                      : 'border-gray-200 bg-white hover:border-gray-300'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">👨‍💻</span>
+                    <div>
+                      <div className="font-semibold">Technical Team</div>
+                      <div className="text-sm text-gray-600">Deep technical guides and implementation frameworks</div>
+                    </div>
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleRoleSelect('business')}
+                  className={`w-full p-4 rounded-xl border-2 transition-all duration-300 text-left ${
+                    selectedRole === 'business'
+                      ? 'border-purple-500 bg-purple-50 text-purple-900'
+                      : 'border-gray-200 bg-white hover:border-gray-300'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🏢</span>
+                    <div>
+                      <div className="font-semibold">Business Team</div>
+                      <div className="text-sm text-gray-600">Business-focused guides and practical strategies</div>
+                    </div>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                selectedCategory === category.id
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredContent.map((item) => (
-          <Link key={item.id} href={item.href} className="group">
-            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-blue-300">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">{getTypeIcon(item.type)}</span>
-                  <span className={`text-xs font-medium px-2 py-1 rounded-full bg-gradient-to-r ${getTypeColor(item.type)} text-white`}>
-                    {item.type === 'case-study' ? 'Case Study' : 
-                     item.type === 'resource' ? 'Resource' : 'Article'}
-                  </span>
-                </div>
-                {item.featured && (
-                  <span className="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">
-                    Featured
-                  </span>
-                )}
-              </div>
-
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {item.title}
-              </h3>
-
-              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                {item.description}
-              </p>
-
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <span className="bg-gray-100 px-2 py-1 rounded-full">
-                  {item.category}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              📚 Recommended for You
+              {recommendations.length > 0 && (
+                <span className="text-lg font-normal text-gray-600 ml-2">
+                  ({recommendations.length} resources)
                 </span>
-                {item.readTime && (
-                  <span>{item.readTime}</span>
-                )}
-              </div>
+              )}
+            </h3>
 
-              <div className="mt-4 flex flex-wrap gap-1">
-                {item.tags.slice(0, 3).map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full"
-                  >
-                    {tag}
-                  </span>
+            {recommendations.length === 0 ? (
+              <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+                <div className="text-6xl mb-4">🎯</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Select your role</h4>
+                <p className="text-gray-600">
+                  Choose your primary role to get personalized AI resource recommendations.
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {recommendations.map((item, index) => (
+                  <Link key={index} href={item.href} className="group block">
+                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                      <div className="flex items-start gap-4">
+                        <div className="text-3xl group-hover:scale-110 transition-transform">{item.icon}</div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                              {item.category}
+                            </span>
+                            <span className="text-xs text-gray-500">{item.readTime}</span>
+                          </div>
+                          <h4 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                            {item.title}
+                          </h4>
+                          <p className="text-gray-600 text-sm leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
                 ))}
-                {item.tags.length > 3 && (
-                  <span className="text-xs text-gray-500">
-                    +{item.tags.length - 3} more
-                  </span>
-                )}
               </div>
+            )}
+
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white text-center">
+              <h4 className="text-xl font-bold mb-2">Want to explore more?</h4>
+              <p className="text-indigo-100 mb-4">Discover our complete library of AI resources.</p>
+              <Link
+                href="/content-showcase"
+                className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+              >
+                🎯 Explore All Content
+                <span>→</span>
+              </Link>
             </div>
-          </Link>
-        ))}
-      </div>
-
-      {/* No Results */}
-      {filteredContent.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-6xl mb-4">🔍</div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
-          <p className="text-gray-600 mb-4">
-            Try adjusting your search terms or category filters to find what you're looking for.
-          </p>
-          <button
-            onClick={() => {
-              setSearchQuery('');
-              setSelectedCategory('all');
-            }}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-          >
-            Clear Filters
-          </button>
+          </div>
         </div>
-      )}
-
-      {/* View All Content CTA */}
-      <div className="text-center mt-8 pt-8 border-t border-gray-200">
-        <Link
-          href="/content-showcase"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-        >
-          View All Content
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default InteractiveContentDiscovery;
+}
