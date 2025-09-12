@@ -100,6 +100,11 @@ import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughP
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
+// New 2026 Content Components
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -116,8 +121,37 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
 <<<<<<< HEAD
+<<<<<<< HEAD
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
+        
+        {/* AI 2026 CONTENT DISCOVERY WIDGET */}
+        <div className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <AI2026ContentDiscoveryWidget />
+          </div>
+        </div>
+        
+        {/* NEW CONTENT NAVIGATION 2026 */}
+        <NewContentNavigation2026 />
+        
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
+        
+        {/* AI 2028 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2028BreakthroughPromotionBanner />
+        
+        {/* AI 2028 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2028BreakthroughContentShowcase />
+        
+        {/* AI 2028 CONTENT DISCOVERY */}
+        <EnhancedContentDiscovery2028 />
+        
+        {/* AI 2028 ROI CALCULATOR */}
+        <AI2028ROICalculator />
+        
+        {/* AI 2028 NEWSLETTER SIGNUP */}
+        <AI2028NewsletterSignup />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
