@@ -143,14 +143,8 @@ export default function ResourcesPage() {
                   <span>Read Case Study</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <a
-                  href="/docs"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >
-                  Browse Documentation
-                </a>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,19 +1,11 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { ArrowUp, Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
-import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
-import apiClient from "@/services/apiClient";
-import retry from "@/utils/retry";
-import { toast } from "@/hooks/use-toast";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [

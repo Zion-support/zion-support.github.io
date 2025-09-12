@@ -1,0 +1,20 @@
+name: Commitlint
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v6
+        with:
+<<<<<<< HEAD
+          configFile: commitlint.config.cjs
+=======
+          configFile: commitlint.config.cjs
+>>>>>>> origin/backup-critical-fixes-20250824-224408

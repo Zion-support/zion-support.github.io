@@ -1666,8 +1666,8 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Template packs + contract parsers.',
     launchDate: '2025-05-28',
     customers: 8,
-    rating: 4.7,
-    reviews: 4
+    rating: 4.5,
+    reviews: 5
   },
   {
     id: 'ai-incident-analysis-bot',

@@ -124,6 +124,8 @@ function getAllServices(): Service[] {
 		.concat(real2026Q3Additions as unknown as Service[])
 		.concat(real2026Q4Additions as unknown as Service[])
 		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(additional2026Q4RealServices as unknown as Service[]);
+=======
 		.concat(newSaasItAiServices2025 as unknown as Service[]);
 =======
 		.concat(additional2026Q4RealServices as unknown as Service[]);

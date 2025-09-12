@@ -427,25 +427,6 @@ export default function Services() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
-
-  const filteredServices = activeCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => service.category === activeCategory);
-
-  const stats = [
-    { number: '500+', label: 'Services Delivered', icon: CheckCircle, color: 'text-cyan-400' },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'text-green-400' },
-    { number: '24/7', label: 'Global Support', icon: Clock, color: 'text-purple-400' },
-    { number: '2500%', label: 'Average ROI', icon: TrendingUp, color: 'text-yellow-400' }
-  ];
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {microServices.map((service, index) => (
-              <Card
-                key={index}
-                className="card-hover group border-gradient-blue cursor-pointer"
-=======
   return (
 const ServicesPage: React.FC = () => {
   const mainServices = [
@@ -655,6 +636,177 @@ const ServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
 =======
+    <div className="min-h-screen bg-black text-white">
+      <Head>
+        <title>Services - Zion Tech Group | 500+ Revolutionary Micro SaaS Services</title>
+        <meta name="description" content="Explore our comprehensive portfolio of 500+ revolutionary micro SaaS services, quantum AI solutions, and cutting-edge technology platforms." />
+        <meta name="keywords" content="micro SaaS services, AI solutions, quantum computing, blockchain, cybersecurity, space technology, biotech AI, financial trading, metaverse, IoT, cloud computing" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              Revolutionary Micro SaaS Services
+            </h1>
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Discover our comprehensive portfolio of 500+ cutting-edge micro SaaS services powered by quantum AI, 
+              blockchain technology, and revolutionary innovations.
+            </p>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+          >
+            <div className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-cyan-400 mb-1">{allServices.length}+</div>
+              <div className="text-sm text-gray-400">Total Services</div>
+            </div>
+            <div className="bg-black/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-purple-400 mb-1">{categories.length - 1}</div>
+              <div className="text-sm text-gray-400">Categories</div>
+            </div>
+            <div className="bg-black/20 backdrop-blur-sm border border-pink-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-pink-400 mb-1">30+</div>
+              <div className="text-sm text-gray-400">Day Trials</div>
+            </div>
+            <div className="bg-black/20 backdrop-blur-sm border border-green-500/20 rounded-lg p-4">
+              <div className="text-2xl font-bold text-green-400 mb-1">1200%+</div>
+              <div className="text-sm text-gray-400">Average ROI</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Filters and Search */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-end">
+              {/* Search */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search by name, description, or category..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                  />
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category}>
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Sort By */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as 'popularity' | 'name' | 'price' | 'rating')}
+                  className="w-full px-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                >
+                  <option value="popularity">Most Popular</option>
+                  <option value="name">Name A-Z</option>
+                  <option value="price">Price Low-High</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+              </div>
+
+              {/* View Mode */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
+                <div className="flex border border-cyan-500/30 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`px-4 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'bg-black/30 text-gray-300'} transition-colors`}
+                  >
+                    <Grid className="h-5 w-5" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`px-4 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'bg-black/30 text-gray-300'} transition-colors`}
+                  >
+                    <List className="h-5 w-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Grid/List */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="max-w-7xl mx-auto">
+          {/* Results Count */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <p className="text-gray-300">
+              Showing {filteredServices.length} of {allServices.length} services
+              {selectedCategory !== 'all' && ` in ${selectedCategory}`}
+            </p>
+          </motion.div>
+
+=======
+  };
+
+  const filteredServices = activeCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => service.category === activeCategory);
+
+  const stats = [
+    { number: '500+', label: 'Services Delivered', icon: CheckCircle, color: 'text-cyan-400' },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'text-green-400' },
+    { number: '24/7', label: 'Global Support', icon: Clock, color: 'text-purple-400' },
+    { number: '2500%', label: 'Average ROI', icon: TrendingUp, color: 'text-yellow-400' }
+  ];
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {microServices.map((service, index) => (
+              <Card
+                key={index}
+                className="card-hover group border-gradient-blue cursor-pointer"
+=======
+  return (
     <div className="min-h-screen bg-black text-white">
       <Head>
         <title>Services - Zion Tech Group | 500+ Revolutionary Micro SaaS Services</title>

@@ -125,7 +125,7 @@ const EnhancedFooter: React.FC = () => {
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>

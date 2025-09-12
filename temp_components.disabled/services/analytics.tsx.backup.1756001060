@@ -132,6 +132,38 @@ export default function AnalyticsServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+                className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-indigo-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-indigo-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} p-4 mb-6 flex items-center justify-center`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
+                  <p className="text-white/70 leading-relaxed">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent">
+              Analytics Solutions
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Tailored analytics solutions for every stage of your data journey
+=======
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive analytics solutions designed to unlock the value of your data

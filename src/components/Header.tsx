@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,30 +52,6 @@ export function Header() {
             </div>
           </Link>
 
-  const serviceCategories = [
-    { name: 'AI Services', path: '/services?category=AI Services' },
-    { name: 'IT Services', path: '/services?category=IT Services' },
-    { name: 'Micro SAAS', path: '/services?category=Micro SAAS' },
-    { name: 'Development', path: '/services?category=Development' },
-    { name: 'Analytics', path: '/services?category=Analytics' },
-    { name: 'Security', path: '/services?category=Security' },
-    { name: 'Automation', path: '/services?category=Automation' },
-  ];
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg shadow-zion-cyan/10">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Sparkles className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
-          </Link>
-          
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (

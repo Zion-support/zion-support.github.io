@@ -1,8 +1,4 @@
 
-import React, { ReactNode } from 'react';
-
-=======
-
 
 import React from 'react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -406,6 +402,7 @@ export default function Layout({ children }: LayoutProps) {
 
 =======
 
+=======
 =======
 import React from 'react';
 

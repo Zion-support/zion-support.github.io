@@ -72,7 +72,7 @@ const EnhancedNavigation: React.FC = () => {
                 onClick={() => toggleDropdown('services')}
                 className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
               >
-                <span>Services</span>
+                <span>Solutions</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                   activeDropdown === 'services' ? 'rotate-180' : ''
                 }`} />
@@ -89,7 +89,7 @@ const EnhancedNavigation: React.FC = () => {
                   >
                     <div className="p-4">
                       <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                        Our Services
+                        Our Solutions
                       </h3>
                       <div className="grid grid-cols-1 gap-2">
                         {services.map((service) => (
@@ -107,9 +107,9 @@ const EnhancedNavigation: React.FC = () => {
                         </Link>
                       ))}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Company Dropdown */}
@@ -118,73 +118,62 @@ const EnhancedNavigation: React.FC = () => {
                 onClick={() => toggleDropdown('company')}
                 className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
               >
-                <span>Company</span>
+                <span>About</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                   activeDropdown === 'company' ? 'rotate-180' : ''
                 }`} />
               </button>
               
-              <AnimatePresence>
-                {activeDropdown === 'company' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
-                  >
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                        About Zion Tech
-                      </h3>
-                      <div className="space-y-2">
-                        {company.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            onClick={closeAllDropdowns}
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-2 flex items-center justify-center">
-                              <item.icon className="w-4 h-4 text-purple-400" />
+              {activeDropdown === 'company' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+                  <div className="p-4">
+                    <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
+                      About Zion
+                    </h3>
+                    <div className="grid grid-cols-1 gap-2">
+                      {company.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          onClick={closeAllDropdowns}
+                          className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                            <item.icon className="w-5 h-5 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="font-medium text-white group-hover:text-blue-300 transition-colors">
+                              {item.name}
                             </div>
                             <div className="text-sm text-white/60">{item.description}</div>
                           </div>
                         </Link>
                       ))}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </div>
+                </div>
+              )}
             </div>
 
-            <Link href="/blog" className="text-white/80 hover:text-white transition-colors duration-200">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-white/80 hover:text-white transition-colors duration-200">
-              Contact
-            </Link>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            {/* Contact Button */}
+            <Link
+              href="mailto:kleber@ziontechgroup.com"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white/80 hover:text-white transition-colors duration-200"
+            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
+        {/* Mobile Menu */}
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -192,8 +181,7 @@ const EnhancedNavigation: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="lg:hidden py-6 border-t border-white/10"
           >
-            <div className="px-6 py-6 space-y-6">
-              {/* Services Section */}
+            <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
                   Services
@@ -204,7 +192,7 @@ const EnhancedNavigation: React.FC = () => {
                       key={service.name}
                       href={service.href}
                       onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors"
                     >
                       <service.icon className="w-5 h-5 text-white" />
                       <span className="text-white">{service.name}</span>
@@ -212,8 +200,7 @@ const EnhancedNavigation: React.FC = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Company Section */}
+              
               <div>
                 <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
                   Company
@@ -224,7 +211,7 @@ const EnhancedNavigation: React.FC = () => {
                       key={item.name}
                       href={item.href}
                       onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors"
                     >
                       <item.icon className="w-5 h-5 text-white" />
                       <span className="text-white">{item.name}</span>

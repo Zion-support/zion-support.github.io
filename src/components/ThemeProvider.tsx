@@ -1,3 +1,4 @@
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 import { createContext, useContext, useEffect, useState } from "react"
 
@@ -7,31 +8,28 @@ type ThemeProviderProps = {
   children: React.ReactNode
 }
 
-export type ThemeProviderState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+interface ThemeProviderProps {
+  children: ReactNode;
+  defaultTheme?: Theme;
 }
 
-const initialState: ThemeProviderState = {
-  theme: "dark",
-  setTheme: () => null,
-}
-
-export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-
-export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme] = useState<Theme>("dark")
+export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove("light", "dark")
-    root.classList.add("dark")
-  }, [])
-
-  const value = {
-    theme,
-    setTheme: () => {},
-  }
+    const root = window.document.documentElement;
+    
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.remove('light', 'dark');
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.remove('light', 'dark');
+      root.classList.add(theme);
+    }
+  }, [theme]);
 
   return (
     <ThemeProviderContext.Provider value={value}>
@@ -40,11 +38,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   )
 }
 
-export const useTheme = (): ThemeProviderState => {
-  const context = useContext(ThemeProviderContext)
-
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider")
-
-  return context
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
 }

@@ -26,20 +26,6 @@ export interface InnovativeITService2024 {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  price: string;
-  variant: string;
-  features: string[];
-  rating: number;
-  customers: string;
-}
-
-export const innovativeITServices2024: InnovativeITService2024[] = [
-  {
-    id: 'cloud-automation-2024',
-    name: 'Cloud Automation Platform 2024',
-    tagline: 'Automate your cloud infrastructure',
-    price: '$199',
-=======
     id: 'cloud-infrastructure-2024',
     name: 'Cloud Infrastructure Solution 2024',
     tagline: 'Scalable cloud infrastructure for enterprises',
@@ -50,6 +36,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: '300+'
   }
 ];
+=======
 =======
   variant: ServiceVariant;
   contactInfo: {

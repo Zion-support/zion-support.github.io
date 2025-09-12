@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import React from 'react';
-import SEO from '../../components/SEO';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
@@ -18,7 +16,9 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { newDiversifiedServices } from '../../data/new-2026-2027-additions';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { realImplementationServices2025 } from '../../data/real-implementation-services-2025';
 
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug,
@@ -45,7 +45,6 @@ export default function ServicesIndexPage() {
       newlyAddedServices as unknown[],
       curatedMarketServices as unknown[],
       realMarketServices as unknown[],
-      realMarketServicesExtended as unknown[],
       new2025Services as unknown[],
       marketValidatedServices as unknown[],
       moreRealServices2025 as unknown[],
@@ -53,7 +52,9 @@ export default function ServicesIndexPage() {
       verified2025Additions as unknown[],
       realServicesQ12025 as unknown[],
       realEnterpriseServices2025 as unknown[],
-      newDiversifiedServices as unknown[]
+      realMarketAugmentations2025 as unknown[],
+      verifiedRealServices2025Batch2 as unknown[],
+      realImplementationServices2025 as unknown[]
     );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
@@ -127,7 +128,7 @@ export default function ServicesIndexPage() {
   };
 
   return (
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+    <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Zion AI Marketplace - Services</title>
         <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
@@ -149,6 +150,9 @@ export default function ServicesIndexPage() {
           </div>
         </div>
       </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+}
 
       <QuoteRequestModal
         open={modalOpen}

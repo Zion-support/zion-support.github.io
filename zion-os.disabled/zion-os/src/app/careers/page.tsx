@@ -331,8 +331,17 @@ export default function CareersPage() {
                   Apply Now
                 </button>
               </div>
-            ))}
-          </div>
+              <p className="opacity-80 mb-4">{position.description}</p>
+              <div>
+                <h4 className="font-semibold mb-2">Requirements:</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm opacity-70">
+                  {position.requirements.map((req, reqIndex) => (
+                    <li key={reqIndex}>{req}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

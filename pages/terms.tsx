@@ -1136,6 +1136,75 @@ export default function Terms() {
                       </div>
                     </div>
                   </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                      {service.category}
+                    </h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                      <ul className="text-sm text-gray-300 space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>
+                      <ul className="text-sm text-gray-300 space-y-1">
+                        {service.restrictions.map((restriction, restrictionIndex) => (
+                          <li key={restrictionIndex} className="flex items-start gap-2">
+                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                            {restriction}
+                          </li>
+                        ))}
+                      </ul>
+=======
+    'Unauthorized access to our systems or networks',
+    'Interference with service operation',
+    'Distribution of malware or harmful code',
+    'Violation of third-party rights',
+    'Attempts to gain unauthorized access',
+    'Use of services for illegal activities'
+  ];
+
+  const limitations = [
+    'Services provided "as is" without warranties',
+    'No guarantee of uninterrupted service',
+    'Limitation of liability for damages',
+    'No responsibility for third-party content',
+    'Service availability subject to change',
+    'Technical support during business hours only'
+  ];
+
+  return (
+    <ErrorBoundary>
+      <SEOOptimizer />
+      <AnalyticsTracker />
+      <Layout>
+        <main className="relative z-10 pt-8">
+          {/* Hero Section */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Terms of Service
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Please read these terms carefully before using our services. They govern your use of Zion Tech Group's technology solutions.
+                </p>
+                <div className="flex items-center justify-center gap-4 text-gray-400">
+                  <FileText className="w-6 h-6" />
+                  <span>Last updated: {lastUpdated}</span>
                 </div>
               </motion.div>
               <FileText className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
@@ -1374,10 +1443,35 @@ export default function Terms() {
                       <p>Phone: +1 302 464 0950</p>
                     </div>
                   </div>
-                </div>
-                <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Terms of Service
-                </h1>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="relative"
+                >
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                    <div className="text-center space-y-6">
+                      <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
+                        <FileText className="w-12 h-12 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">Legal Framework</h3>
+                      <p className="text-gray-300">Protecting your rights and ours</p>
+                      
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-cyan-400">100%</div>
+                          <div className="text-gray-400">Transparent</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-purple-400">24/7</div>
+                          <div className="text-gray-400">Support</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>

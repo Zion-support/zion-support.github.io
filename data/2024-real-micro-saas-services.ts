@@ -26,20 +26,6 @@ export interface RealMicroSaasService2024 {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  price: string;
-  variant: string;
-  features: string[];
-  rating: number;
-  customers: string;
-}
-
-export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
-  {
-    id: 'ai-content-generator-2024',
-    name: 'AI Content Generator 2024',
-    tagline: 'Generate high-quality content with AI',
-    price: '$99',
-=======
     id: 'ai-automation-2024',
     name: 'AI Automation Platform 2024',
     tagline: 'Intelligent automation for modern businesses',
@@ -50,6 +36,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: '500+'
   }
 ];
+=======
 =======
   variant: ServiceVariant;
   contactInfo: {

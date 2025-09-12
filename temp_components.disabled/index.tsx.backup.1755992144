@@ -1,5 +1,50 @@
 import React from 'react';
 import Head from 'next/head';
+  // Combine all services for comprehensive showcase
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...innovativeMicroSaasServices,
+    ...innovativeMicroSaasServicesV3,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...quantumAIServices2025,
+    ...enterpriseITServices,
+    ...nextGenerationAIServices,
+    ...emergingTechnologyServices,
+    ...emergingTechServices2025,
+    ...cuttingEdgeInnovations2029,
+    ...enterpriseITServices2029,
+    ...emergingTechServices2029,
+    ...innovativeMicroSaasServices2029,
+    ...comprehensiveITSolutions,
+    ...realMarketServices,
+    ...serviceExpansions2025,
+    ...realOperationalServices,
+    ...newOperationalServices2025,
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTechServices2025,
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025,
+    ...innovative2026Services,
+    ...emergingTech2026Services,
+    ...enterpriseIT2026Services,
+    ...innovative2026MicroSaasServices,
+    ...emergingTech2026ServicesNew,
+    ...enterpriseIT2026ServicesNew,
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...revolutionary2026Innovations,
+    ...nextGenAI2026Services,
+    ...revolutionary2026AIServices,
+    ...revolutionary2026ITServices,
+    ...revolutionary2026EmergingTechServices,
+    ...revolutionary2026MicroSaasServices
+  ];
+=======
 import { motion } from 'framer-motion';
 import { 
   ExternalLink
@@ -141,6 +186,28 @@ export default function HomePage() {
         {/* Navigation */}
         <UltraFuturisticNavigation2029 />
 
+            {/* Featured Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group cursor-pointer"
+                >
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <span className="text-2xl">{service.icon}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-4">{service.name}</h3>
+                    <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className={`${service.textColor} font-semibold`}>{service.price}</span>
+                      <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                    </div>
+=======
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}

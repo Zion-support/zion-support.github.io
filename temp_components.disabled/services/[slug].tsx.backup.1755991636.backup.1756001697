@@ -116,6 +116,8 @@ function getAllServices(): Service[] {
 		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
 		.concat(real2026Additions as unknown as Service[])
+		.concat(real2026Q2Services as unknown as Service[]);
+=======
 		.concat(additional2026Q4RealServices as unknown as Service[]);
 =======
 		.concat(real2026Q2Services as unknown as Service[]);

@@ -36,6 +36,7 @@ export function PerformanceMonitor({
   const measureFCP = () => {
     const paintEntries = performance.getEntriesByType('paint');
     const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+
     if (fcpEntry) {
       metricsRef.current.fcp = fcpEntry.startTime;
       if (logToConsole) {
@@ -59,6 +60,7 @@ export function PerformanceMonitor({
           }
         });
         observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+
       } catch (error) {
         console.warn('LCP measurement failed:', error);
       }
@@ -72,8 +74,11 @@ export function PerformanceMonitor({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
-            if (entry.processingStart && entry.startTime) {
-              metricsRef.current.fid = entry.processingStart - entry.startTime;
+            if (entry.entryType === 'first-input') {
+              // Use a safer way to measure FID
+              const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
+
+              metricsRef.current.fid = fid;
               if (logToConsole) {
                 console.log('FID:', metricsRef.current.fid, 'ms');
               }
@@ -113,11 +118,26 @@ export function PerformanceMonitor({
 
   // Measure Time to First Byte (TTFB)
   const measureTTFB = () => {
-    if (performance.getEntriesByType) {
-      const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
-      if (navigationEntries.length > 0) {
-        const nav = navigationEntries[0];
-        metricsRef.current.ttfb = nav.responseStart - nav.requestStart;
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+    if (navigationEntry) {
+      metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+
+      if (logToConsole) {
+        console.log('TTFB:', metricsRef.current.ttfb, 'ms');
+      }
+    }
+  };
+
+  // Measure First Meaningful Paint (FMP) approximation
+  const measureFMP = () => {
+    // FMP is not directly measurable, but we can approximate it
+    // by looking at the first paint after a significant delay
+    setTimeout(() => {
+      const paintEntries = performance.getEntriesByType('paint');
+      const lastPaintEntry = paintEntries[paintEntries.length - 1];
+      if (lastPaintEntry) {
+        metricsRef.current.fmp = lastPaintEntry.startTime;
         if (logToConsole) {
           console.log('TTFB:', metricsRef.current.ttfb, 'ms');
         }

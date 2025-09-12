@@ -4,9 +4,8 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Zap, Brain } from "lucide-react";
+import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -287,12 +286,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
       id: "privacy-first",
       avatarUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=100&h=100",
     },
-    images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-07T12:10:00.000Z",
-    aiScore: 87,
-    rating: 4.6,
-    reviewCount: 76,
-  }
+    images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-12T14:45:00.000Z",
+    aiScore: 92,
+    rating: 4.8,
+    reviewCount: 128,
+  },
 ];
 
 function getRandomItem<T>(arr: T[]): T {
@@ -461,7 +460,6 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -469,10 +467,8 @@ export default function ServicesPage() {
               </Button>
             </Link>
             <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-cyan text-zion-purple hover:bg-zion-cyan/10">
-                <Globe className="h-4 w-4 mr-2" />
-                All Services
-              </Button>
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                View All Services
               </Button>
             </Link>
             <Link to="/request-quote">
@@ -483,33 +479,33 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
-      {/* Comprehensive Services Showcase */}
-      <ComprehensiveServicesShowcase />
-
-      {/* Marketplace Services */}
-      <div className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Marketplace <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Services</span>
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Discover additional services from our verified partners and technology experts in the marketplace
-            </p>
+            <Link to="/it-onsite-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/comprehensive-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                View All Services
+              </Button>
+            </Link>
+            <Link to="/request-quote">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                Request a Quote
+              </Button>
+            </Link>
           </div>
-          
-          <DynamicListingPage 
-            title="Marketplace Services"
-            description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-            categorySlug="services"
-            listings={listings}
-            categoryFilters={SERVICE_FILTERS}
-            initialPrice={{ min: 3000, max: 10000 }}
-          />
         </div>
       </div>
-
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+        listings={listings}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />
       <TrustedBySection />
     </>
   );

@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-18T20:32:44.644Z",
-=======
   "generatedAt": "2025-08-14T09:37:48.596Z",
->>>>>>> origin/backup-main-20250823-225952
   "functions": [
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
@@ -23,10 +19,7 @@
     "content-freshness-score-runner",
     "continuous-front-runner",
     "continuous-orchestrator",
-<<<<<<< HEAD
-=======
     "dead-code-audit",
->>>>>>> origin/backup-main-20250823-225952
     "dead-code-report",
     "deps-auto-upgrade-runner",
     "docs-index-runner",
@@ -42,31 +35,22 @@
     "front-maximizer",
     "front-visionary-expander",
     "frontpage-enhancer",
-<<<<<<< HEAD
-=======
     "frontpage-scheduler",
->>>>>>> origin/backup-main-20250823-225952
     "headers-enforcer",
     "home-visionary-expander",
     "homepage_advertiser",
     "hyper-front-index-accelerator",
     "image-optimizer-runner",
     "innovation-lab",
-<<<<<<< HEAD
-=======
     "innovations-promoter",
->>>>>>> origin/backup-main-20250823-225952
     "intelligent-meta-orchestrator",
     "internal-link-graph-runner",
     "knowledge-pack-runner",
     "license-compliance-auditor",
     "link-and-health-scheduler",
     "marketing-and-features-promo",
-<<<<<<< HEAD
-=======
     "marketing-scheduler",
     "media-og-and-optimize",
->>>>>>> origin/backup-main-20250823-225952
     "metadata-optimizer-runner",
     "netlify-auto-healer-runner",
     "newsroom-runner",
@@ -79,11 +63,6 @@
     "revenue-ideas-lab",
     "roadmap-curator",
     "robots-auditor",
-<<<<<<< HEAD
-    "security-audit-runner",
-    "seo-audit-runner",
-    "site-404-map-runner",
-=======
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -93,7 +72,6 @@
     "seo-audit-runner",
     "site-404-map-runner",
     "site-crawler",
->>>>>>> origin/backup-main-20250823-225952
     "sitemap_runner",
     "stale-content-auditor-runner",
     "todo-scanner-runner",

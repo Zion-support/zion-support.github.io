@@ -26,7 +26,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 96
   },
-  // IT Infrastructure Services
   {
     id: "ai-customer-intelligence",
     title: "AI Customer Intelligence Platform",
