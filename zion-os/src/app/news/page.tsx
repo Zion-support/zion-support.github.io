@@ -1,6 +1,15 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "⚡",
+      title: "Zion OS 1.3: Faster Deploys, Smarter Analytics, Smoother UX",
+      excerpt:
+        "v1.3 brings 42% faster provisioning, real-time analytics overlay, and UX refinements.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-3-upgrades",
+      gradient: "from-indigo-600 to-blue-600",
+    },
+    {
       emoji: "🚀",
       title: "Zion OS 1.0 Launches: One-Click Digital Economies",
       excerpt:

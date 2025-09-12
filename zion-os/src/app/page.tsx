@@ -172,12 +172,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🚀</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.0 Launches</h3>
-                <p className="text-white/70">One-click deployment of AI-powered digital economies is here.</p>
+                <div className="text-2xl mb-2">⚡</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3 Released</h3>
+                <p className="text-white/70">42% faster deploys, real-time analytics, and smoother UX.</p>
               </div>
             </a>
             <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
