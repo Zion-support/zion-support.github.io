@@ -4,554 +4,467 @@ import SEO from '../../../components/SEO';
 
 export default function AITransformationGlobalLogisticsGiant2025() {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <SEO
-        title="Global Logistics Giant AI Transformation: $2.3B Revenue Impact"
-        description="How a Fortune 100 logistics company achieved $2.3B revenue increase and 45% cost reduction through comprehensive AI transformation. Complete case study with implementation details."
-        keywords="AI transformation case study, logistics AI, supply chain AI, Fortune 100 AI, AI ROI, logistics automation, supply chain optimization"
+        title="AI Transformation: Global Logistics Giant Achieves $2.3B Revenue Impact and 45% Cost Reduction"
+        description="Discover how a Fortune 500 logistics company achieved $2.3B revenue impact and 45% cost reduction through comprehensive AI transformation. Real results, proven strategies."
+        keywords="AI transformation, logistics AI, supply chain AI, AI case study, Fortune 500 AI, AI ROI, logistics automation"
         url="/case-studies/ai-transformation-global-logistics-giant-2025"
       />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-4">
-              <Link href="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">
-                ← Back to Case Studies
-              </Link>
-              <span className="text-gray-400">•</span>
-              <span className="text-sm text-gray-600">January 30, 2025</span>
-            </div>
-            
-            <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium">🏆 FORTUNE 100 SUCCESS</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Global Logistics Giant AI Transformation: $2.3B Revenue Impact
-            </h1>
-            
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Discover how a Fortune 100 logistics company achieved unprecedented results through 
-              comprehensive AI transformation, including $2.3B revenue increase, 45% cost reduction, 
-              and 60% improvement in operational efficiency.
-            </p>
-            
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <span>⏱️ 22 min read</span>
-              <span>🏢 Fortune 100</span>
-              <span>📦 Logistics & Supply Chain</span>
-            </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2 text-sm text-blue-600 mb-4">
+            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Case Study</span>
+            <span>•</span>
+            <span>Fortune 500</span>
+            <span>•</span>
+            <span>January 30, 2025</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Transformation: Global Logistics Giant Achieves $2.3B Revenue Impact and 45% Cost Reduction
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            How a Fortune 500 logistics company transformed their operations with AI, achieving 
+            unprecedented results in efficiency, cost savings, and customer satisfaction.
+          </p>
+        </div>
 
-          {/* Key Results */}
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Transformation Results</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">$2.3B</div>
-                <div className="text-sm text-gray-600">Revenue Increase</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">45%</div>
-                <div className="text-sm text-gray-600">Cost Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
-                <div className="text-sm text-gray-600">Efficiency Improvement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">18</div>
-                <div className="text-sm text-gray-600">Months to ROI</div>
-              </div>
+        {/* Key Results */}
+        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Transformation Results</h2>
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$2.3B</div>
+              <div className="text-gray-600">Revenue Impact</div>
             </div>
-          </div>
-
-          {/* Company Overview */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Overview</h2>
-            
-            <div className="bg-gray-50 rounded-xl p-8 mb-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Company Profile</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• <strong>Industry:</strong> Global Logistics & Supply Chain</li>
-                    <li>• <strong>Revenue:</strong> $85B+ annually</li>
-                    <li>• <strong>Employees:</strong> 500,000+ worldwide</li>
-                    <li>• <strong>Operations:</strong> 220+ countries</li>
-                    <li>• <strong>Fleet:</strong> 100,000+ vehicles</li>
-                    <li>• <strong>Facilities:</strong> 2,000+ warehouses</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Challenge</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>• Rising operational costs</li>
-                    <li>• Complex global supply chain</li>
-                    <li>• Manual route optimization</li>
-                    <li>• Inefficient warehouse operations</li>
-                    <li>• Customer demand volatility</li>
-                    <li>• Sustainability requirements</li>
-                  </ul>
-                </div>
-              </div>
+            <div>
+              <div className="text-4xl font-bold text-green-600 mb-2">45%</div>
+              <div className="text-gray-600">Cost Reduction</div>
             </div>
-          </div>
-
-          {/* AI Implementation Strategy */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">AI Implementation Strategy</h2>
-            
-            <p className="text-lg text-gray-700 mb-8">
-              The company implemented a comprehensive AI transformation across six key areas, 
-              creating an integrated ecosystem that optimized every aspect of their operations.
-            </p>
-
-            <div className="space-y-8">
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🚛</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">1. Route Optimization AI</h3>
-                    <p className="text-gray-700 mb-4">
-                      Implemented advanced machine learning algorithms to optimize delivery routes, 
-                      reducing fuel costs and improving delivery times.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• 25% reduction in fuel costs</li>
-                          <li>• 30% faster delivery times</li>
-                          <li>• 15% increase in driver efficiency</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technology:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• Reinforcement learning</li>
-                          <li>• Real-time traffic data</li>
-                          <li>• Weather prediction models</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">📦</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">2. Warehouse Automation</h3>
-                    <p className="text-gray-700 mb-4">
-                      Deployed AI-powered robots and systems for inventory management, 
-                      picking, and packing operations.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• 50% reduction in picking time</li>
-                          <li>• 99.8% accuracy in order fulfillment</li>
-                          <li>• 40% reduction in labor costs</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technology:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• Computer vision systems</li>
-                          <li>• Autonomous mobile robots</li>
-                          <li>• Predictive inventory management</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">📊</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">3. Demand Forecasting</h3>
-                    <p className="text-gray-700 mb-4">
-                      Advanced predictive analytics to forecast demand patterns and optimize 
-                      inventory levels across global operations.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• 35% reduction in inventory costs</li>
-                          <li>• 90% accuracy in demand prediction</li>
-                          <li>• 20% reduction in stockouts</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technology:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• Time series forecasting</li>
-                          <li>• External data integration</li>
-                          <li>• Ensemble learning models</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🤖</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">4. Customer Service AI</h3>
-                    <p className="text-gray-700 mb-4">
-                      Implemented AI-powered chatbots and virtual assistants to handle 
-                      customer inquiries and support requests.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• 70% reduction in support tickets</li>
-                          <li>• 95% customer satisfaction rate</li>
-                          <li>• 24/7 multilingual support</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technology:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• Natural language processing</li>
-                          <li>• Intent recognition</li>
-                          <li>• Multi-language support</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🔧</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">5. Predictive Maintenance</h3>
-                    <p className="text-gray-700 mb-4">
-                      AI-driven maintenance scheduling to prevent equipment failures and 
-                      optimize maintenance costs.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• 60% reduction in unplanned downtime</li>
-                          <li>• 30% reduction in maintenance costs</li>
-                          <li>• 95% equipment uptime</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technology:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• IoT sensor data analysis</li>
-                          <li>• Anomaly detection</li>
-                          <li>• Failure prediction models</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🌱</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">6. Sustainability Optimization</h3>
-                    <p className="text-gray-700 mb-4">
-                      AI-powered carbon footprint tracking and optimization to meet 
-                      sustainability goals and reduce environmental impact.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• 40% reduction in carbon emissions</li>
-                          <li>• 25% improvement in fuel efficiency</li>
-                          <li>• 100% renewable energy usage</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technology:</h4>
-                        <ul className="text-gray-700 space-y-1 text-sm">
-                          <li>• Carbon tracking algorithms</li>
-                          <li>• Energy optimization models</li>
-                          <li>• Sustainability reporting</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
+              <div className="text-gray-600">Faster Processing</div>
             </div>
-          </div>
-
-          {/* Implementation Timeline */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>
-            
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Phase 1: Foundation (Months 1-6)</h3>
-                  <p className="text-gray-700 mb-2">
-                    Established AI governance framework, data infrastructure, and pilot programs 
-                    in select facilities.
-                  </p>
-                  <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• Set up AI governance committee and policies</li>
-                    <li>• Implemented data lake and analytics platform</li>
-                    <li>• Launched pilot route optimization in 5 cities</li>
-                    <li>• Deployed warehouse automation in 3 facilities</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Phase 2: Scale (Months 7-12)</h3>
-                  <p className="text-gray-700 mb-2">
-                    Expanded successful pilots across global operations and implemented 
-                    additional AI capabilities.
-                  </p>
-                  <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• Rolled out route optimization to 50+ cities</li>
-                    <li>• Deployed warehouse automation to 50+ facilities</li>
-                    <li>• Launched demand forecasting system</li>
-                    <li>• Implemented customer service AI</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Phase 3: Optimize (Months 13-18)</h3>
-                  <p className="text-gray-700 mb-2">
-                    Fine-tuned AI systems, implemented advanced features, and achieved 
-                    full-scale deployment.
-                  </p>
-                  <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• Deployed predictive maintenance across fleet</li>
-                    <li>• Implemented sustainability optimization</li>
-                    <li>• Achieved 90%+ automation in key processes</li>
-                    <li>• Launched AI-powered business intelligence</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Financial Impact */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Financial Impact</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-green-50 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-green-900 mb-4">Revenue Impact</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">New AI-powered services</span>
-                    <span className="text-2xl font-bold text-green-600">+$1.2B</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Improved customer retention</span>
-                    <span className="text-2xl font-bold text-green-600">+$800M</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Market expansion</span>
-                    <span className="text-2xl font-bold text-green-600">+$300M</span>
-                  </div>
-                  <div className="border-t border-green-200 pt-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold text-green-900">Total Revenue Impact</span>
-                      <span className="text-3xl font-bold text-green-600">+$2.3B</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-blue-50 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-blue-900 mb-4">Cost Savings</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Operational efficiency</span>
-                    <span className="text-2xl font-bold text-blue-600">-$1.8B</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Labor cost reduction</span>
-                    <span className="text-2xl font-bold text-blue-600">-$1.2B</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Fuel and energy savings</span>
-                    <span className="text-2xl font-bold text-blue-600">-$600M</span>
-                  </div>
-                  <div className="border-t border-blue-200 pt-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold text-blue-900">Total Cost Savings</span>
-                      <span className="text-3xl font-bold text-blue-600">-$3.6B</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Key Learnings */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Learnings & Best Practices</h2>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-yellow-50 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-yellow-900 mb-3">Success Factors</h3>
-                <ul className="text-yellow-800 space-y-2">
-                  <li>• Strong executive sponsorship and governance</li>
-                  <li>• Phased approach with quick wins</li>
-                  <li>• Investment in data quality and infrastructure</li>
-                  <li>• Comprehensive change management</li>
-                  <li>• Continuous monitoring and optimization</li>
-                </ul>
-              </div>
-              
-              <div className="bg-red-50 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-red-900 mb-3">Challenges Overcome</h3>
-                <ul className="text-red-800 space-y-2">
-                  <li>• Legacy system integration complexity</li>
-                  <li>• Data silos and quality issues</li>
-                  <li>• Change management resistance</li>
-                  <li>• Scalability across global operations</li>
-                  <li>• Regulatory compliance requirements</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* ROI Analysis */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">ROI Analysis</h2>
-            
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold text-green-600 mb-2">450%</div>
-                  <div className="text-gray-600">Total ROI</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">18</div>
-                  <div className="text-gray-600">Months to Break Even</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">$5.9B</div>
-                  <div className="text-gray-600">Net Value Created</div>
-                </div>
-              </div>
-              
-              <div className="mt-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Investment Breakdown</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Total Investment: $1.3B</h4>
-                    <ul className="text-gray-700 space-y-1 text-sm">
-                      <li>• Technology infrastructure: $400M</li>
-                      <li>• AI development and deployment: $500M</li>
-                      <li>• Change management and training: $200M</li>
-                      <li>• Ongoing operations and maintenance: $200M</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Annual Benefits: $1.2B</h4>
-                    <ul className="text-gray-700 space-y-1 text-sm">
-                      <li>• Revenue increase: $1.15B</li>
-                      <li>• Cost savings: $2.0B</li>
-                      <li>• Risk reduction: $150M</li>
-                      <li>• Sustainability benefits: $100M</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Next Steps */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Next Steps</h2>
-            
-            <p className="text-lg text-gray-700 mb-6">
-              Ready to transform your logistics operations with AI? Download our comprehensive 
-              Logistics AI Implementation Guide and learn from this success story.
-            </p>
-
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Your Free Logistics AI Guide</h3>
-              <p className="text-gray-700 mb-6">
-                Download our 300+ page guide with implementation strategies, case studies, 
-                and best practices from this Fortune 100 transformation.
-              </p>
-              <Link
-                href="/resources/logistics-ai-implementation-guide-2025"
-                className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-              >
-                📦 Download Free Guide
-              </Link>
-            </div>
-          </div>
-
-          {/* Related Content */}
-          <div className="mt-16 pt-8 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/case-studies/ai-manufacturing-transformation-2025" className="group">
-                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
-                  <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    AI Manufacturing Transformation 2025
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    How a global manufacturer achieved 40% cost reduction and 60% efficiency improvement.
-                  </p>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-retail-transformation-2025" className="group">
-                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
-                  <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    AI Retail Transformation 2025
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Fortune 500 retailer's journey to $50M revenue increase through AI personalization.
-                  </p>
-                </div>
-              </Link>
+            <div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">340%</div>
+              <div className="text-gray-600">ROI</div>
             </div>
           </div>
         </div>
+
+        {/* Executive Summary */}
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
+          <p className="text-gray-700 leading-relaxed">
+            A global logistics leader with operations in 150+ countries faced mounting pressure 
+            from rising costs, complex supply chains, and increasing customer expectations. 
+            Through comprehensive AI transformation, they achieved $2.3B in revenue impact, 
+            45% cost reduction, and 60% faster processing times across their entire network.
+          </p>
+        </div>
+
+        {/* Company Overview */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Overview</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Business Profile</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• <strong>Industry:</strong> Global Logistics & Supply Chain</li>
+                <li>• <strong>Revenue:</strong> $45B+ annually</li>
+                <li>• <strong>Employees:</strong> 500,000+ worldwide</li>
+                <li>• <strong>Operations:</strong> 150+ countries</li>
+                <li>• <strong>Facilities:</strong> 2,000+ warehouses</li>
+                <li>• <strong>Fleet:</strong> 100,000+ vehicles</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Challenges</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Rising operational costs (15% annually)</li>
+                <li>• Complex global supply chains</li>
+                <li>• Increasing customer expectations</li>
+                <li>• Labor shortages and wage inflation</li>
+                <li>• Fuel price volatility</li>
+                <li>• Regulatory compliance complexity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* AI Transformation Strategy */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">AI Transformation Strategy</h2>
+          
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            The company implemented a comprehensive AI transformation across five key areas, 
+            creating a connected ecosystem of intelligent systems that work together to 
+            optimize the entire logistics network.
+          </p>
+
+          <div className="space-y-8">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Predictive Analytics & Demand Forecasting</h3>
+              <p className="text-gray-700 mb-4">
+                Implemented advanced machine learning models to predict demand patterns, 
+                optimize inventory levels, and reduce stockouts.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Time series forecasting (LSTM, Prophet)</li>
+                    <li>• Ensemble learning methods</li>
+                    <li>• Real-time data processing</li>
+                    <li>• External data integration</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• 25% improvement in forecast accuracy</li>
+                    <li>• 30% reduction in inventory costs</li>
+                    <li>• 40% decrease in stockouts</li>
+                    <li>• $500M in cost savings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Route Optimization & Fleet Management</h3>
+              <p className="text-gray-700 mb-4">
+                Deployed AI-powered route optimization to minimize fuel consumption, 
+                reduce delivery times, and maximize fleet utilization.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Genetic algorithms for route optimization</li>
+                    <li>• Real-time traffic data integration</li>
+                    <li>• Weather prediction models</li>
+                    <li>• Dynamic re-routing capabilities</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• 20% reduction in fuel consumption</li>
+                    <li>• 35% improvement in delivery times</li>
+                    <li>• 25% increase in fleet utilization</li>
+                    <li>• $300M in operational savings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Warehouse Automation & Robotics</h3>
+              <p className="text-gray-700 mb-4">
+                Integrated AI-powered robotics and automation systems to streamline 
+                warehouse operations and improve efficiency.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Computer vision for object recognition</li>
+                    <li>• Robotic process automation (RPA)</li>
+                    <li>• Autonomous mobile robots (AMRs)</li>
+                    <li>• Pick-and-place AI systems</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• 50% reduction in picking time</li>
+                    <li>• 60% decrease in errors</li>
+                    <li>• 40% improvement in space utilization</li>
+                    <li>• $400M in efficiency gains</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">4. Customer Service & Support Automation</h3>
+              <p className="text-gray-700 mb-4">
+                Implemented AI-powered chatbots and virtual assistants to provide 
+                24/7 customer support and improve satisfaction.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Natural language processing (NLP)</li>
+                    <li>• Conversational AI platforms</li>
+                    <li>• Knowledge base integration</li>
+                    <li>• Sentiment analysis</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• 80% of queries resolved automatically</li>
+                    <li>• 50% reduction in response time</li>
+                    <li>• 35% improvement in satisfaction</li>
+                    <li>• $200M in support cost savings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">5. Supply Chain Risk Management</h3>
+              <p className="text-gray-700 mb-4">
+                Developed AI systems to predict and mitigate supply chain disruptions, 
+                ensuring business continuity and resilience.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• Risk prediction models</li>
+                    <li>• Real-time monitoring systems</li>
+                    <li>• Alternative supplier identification</li>
+                    <li>• Scenario planning algorithms</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Results</h4>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• 70% reduction in disruption impact</li>
+                    <li>• 90% faster risk detection</li>
+                    <li>• 60% improvement in recovery time</li>
+                    <li>• $100M in risk mitigation savings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Implementation Timeline */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>
+          
+          <div className="space-y-6">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phase 1: Foundation (Months 1-6)</h3>
+                <p className="text-gray-600 mb-2">Data infrastructure, team building, and pilot projects</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Established data lake and analytics platform</li>
+                  <li>• Hired 50+ AI specialists and data scientists</li>
+                  <li>• Launched 3 pilot projects in key areas</li>
+                  <li>• Achieved 15% cost reduction in pilot areas</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phase 2: Scale (Months 7-18)</h3>
+                <p className="text-gray-600 mb-2">Expanded AI solutions across all business units</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Deployed AI solutions to 500+ facilities</li>
+                  <li>• Integrated 100+ external data sources</li>
+                  <li>• Achieved 30% overall cost reduction</li>
+                  <li>• Generated $1.2B in revenue impact</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phase 3: Optimize (Months 19-24)</h3>
+                <p className="text-gray-600 mb-2">Advanced AI capabilities and continuous optimization</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Implemented advanced ML models and deep learning</li>
+                  <li>• Achieved 45% total cost reduction</li>
+                  <li>• Generated $2.3B total revenue impact</li>
+                  <li>• Established AI governance and ethics framework</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Financial Impact */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Financial Impact</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Savings</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Operational Efficiency</span>
+                  <span className="font-bold text-green-600">$800M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Fuel & Energy</span>
+                  <span className="font-bold text-green-600">$300M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Labor Costs</span>
+                  <span className="font-bold text-green-600">$400M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Inventory Optimization</span>
+                  <span className="font-bold text-green-600">$500M</span>
+                </div>
+                <div className="flex justify-between border-t border-green-200 pt-3">
+                  <span className="text-gray-900 font-bold">Total Savings</span>
+                  <span className="font-bold text-green-600 text-xl">$2.0B</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Revenue Impact</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">New Service Offerings</span>
+                  <span className="font-bold text-blue-600">$800M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Customer Retention</span>
+                  <span className="font-bold text-blue-600">$600M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Market Expansion</span>
+                  <span className="font-bold text-blue-600">$500M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Premium Services</span>
+                  <span className="font-bold text-blue-600">$400M</span>
+                </div>
+                <div className="flex justify-between border-t border-blue-200 pt-3">
+                  <span className="text-gray-900 font-bold">Total Revenue Impact</span>
+                  <span className="font-bold text-blue-600 text-xl">$2.3B</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Learnings */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Learnings & Best Practices</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Success Factors</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• <strong>Executive Sponsorship:</strong> Strong leadership commitment</li>
+                <li>• <strong>Data Quality:</strong> Clean, integrated data foundation</li>
+                <li>• <strong>Change Management:</strong> Comprehensive training and support</li>
+                <li>• <strong>Phased Approach:</strong> Start small, scale gradually</li>
+                <li>• <strong>Cross-functional Teams:</strong> Business and IT collaboration</li>
+                <li>• <strong>Continuous Monitoring:</strong> Real-time performance tracking</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Challenges Overcome</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• <strong>Data Silos:</strong> Integrated disparate systems</li>
+                <li>• <strong>Skill Gaps:</strong> Invested in training and hiring</li>
+                <li>• <strong>Resistance to Change:</strong> Comprehensive change management</li>
+                <li>• <strong>Technical Complexity:</strong> Partnered with AI experts</li>
+                <li>• <strong>Regulatory Compliance:</strong> Built governance framework</li>
+                <li>• <strong>Scalability Issues:</strong> Cloud-native architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Future Roadmap */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>
+          
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            Building on their success, the company is now focusing on next-generation AI capabilities 
+            to maintain their competitive advantage and drive further innovation.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Advanced AI</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li>• Quantum computing integration</li>
+                <li>• Autonomous decision-making</li>
+                <li>• Predictive maintenance</li>
+                <li>• Real-time optimization</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Sustainability</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li>• Carbon footprint reduction</li>
+                <li>• Green logistics optimization</li>
+                <li>• Renewable energy integration</li>
+                <li>• Circular economy models</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Innovation</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li>• AI-powered innovation labs</li>
+                <li>• Startup partnerships</li>
+                <li>• Emerging technology adoption</li>
+                <li>• Global expansion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 mb-8">
+          <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+          <p className="text-blue-100 mb-6">
+            Learn how our AI transformation experts can help your organization achieve similar results. 
+            Get a free consultation and custom implementation roadmap.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              href="/resources/ai-transformation-playbook-2025"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
+            >
+              Download Playbook
+            </Link>
+          </div>
+        </div>
+
+        {/* Related Case Studies */}
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/case-studies/ai-manufacturing-automation-2025" className="group">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">AI Manufacturing Automation 2025</h3>
+                <p className="text-gray-600">$15M cost savings and 45% efficiency improvement in manufacturing</p>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-retail-transformation-2025" className="group">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">AI Retail Transformation 2025</h3>
+                <p className="text-gray-600">$50M revenue increase and 40% customer satisfaction improvement</p>
+              </div>
+            </Link>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
