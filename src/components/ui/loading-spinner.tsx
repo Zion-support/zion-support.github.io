@@ -1,9 +1,12 @@
 import React from 'react';
 
-export const PageLoader: React.FC = () => {
+export const PageLoader = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500"></div>
+        <p className="text-gray-600">Loading...</p>
+      </div>
     </div>
   );
 };
