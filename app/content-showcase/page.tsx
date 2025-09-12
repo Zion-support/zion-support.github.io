@@ -5,8 +5,13 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+<<<<<<< HEAD
       title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
       description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+=======
+      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, real-world implementations, and the future of quantum-enhanced artificial intelligence.",
+>>>>>>> cursor/create-and-deploy-new-content-9104
       href: "/blog/ai-2025-quantum-computing-breakthrough",
       icon: "⚛️",
       category: "Quantum AI",
@@ -32,6 +37,7 @@ export default function ContentShowcasePage() {
       date: "Jan 30, 2025"
     },
     {
+<<<<<<< HEAD
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
       description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
       href: "/blog/ai-implementation-success-framework-2025",
@@ -39,11 +45,21 @@ export default function ContentShowcasePage() {
       category: "AI Strategy",
       readTime: "18 min read",
       date: "Feb 01, 2025"
+=======
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🚀",
+      category: "AI Innovations",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+>>>>>>> cursor/create-and-deploy-new-content-9104
     }
   ];
 
   const newCaseStudies = [
     {
+<<<<<<< HEAD
       title: "AI Manufacturing Automation Breakthrough 2025: $200M Savings Case Study",
       description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings through AI automation. Complete case study with implementation details, ROI analysis, and lessons learned.",
       href: "/case-studies/ai-manufacturing-automation-breakthrough-2025",
@@ -51,6 +67,15 @@ export default function ContentShowcasePage() {
       category: "Manufacturing AI",
       result: "$200M Savings",
       date: "Jan 25, 2025"
+=======
+      title: "AI 2025: Autonomous Manufacturing Revolution - $500M Success Story",
+      description: "Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems implementation. Complete transformation story with detailed ROI analysis.",
+      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
+      icon: "💰",
+      category: "Autonomous Systems",
+      result: "$500M Savings",
+      date: "Jan 30, 2025"
+>>>>>>> cursor/create-and-deploy-new-content-9104
     },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
@@ -75,8 +100,13 @@ export default function ContentShowcasePage() {
   const newResources = [
     {
       title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+<<<<<<< HEAD
       description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across industries.",
       href: "/resources/ai-implementation-master-guide-2025",
+=======
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across your organization.",
+      href: "/resources/ai-2025-implementation-master-guide",
+>>>>>>> cursor/create-and-deploy-new-content-9104
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",

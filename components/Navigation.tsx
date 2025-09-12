@@ -35,12 +35,23 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
+<<<<<<< HEAD
     { name: 'Content Showcase', href: '/content-showcase', icon: '✨', isNew: true },
     { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
     { name: 'Case Studies', href: '/case-studies', icon: '📊' },
     { name: 'Resources', href: '/resources', icon: '📚', isNew: true },
     { name: 'Services', href: '/services', icon: '🚀' },
     { name: 'About', href: '/about', icon: 'ℹ️' },
+=======
+    { name: 'About', href: '/about', icon: 'ℹ️' },
+    { name: 'Services', href: '/services', icon: '🚀' },
+    { name: 'Products', href: '/products', icon: '💎' },
+    { name: 'Case Studies', href: '/case-studies', icon: '📊', badge: 'New' },
+    { name: 'Blog', href: '/blog', icon: '📝', badge: 'Hot' },
+    { name: 'Resources', href: '/resources', icon: '📚', badge: 'Free' },
+    { name: 'Testimonials', href: '/testimonials', icon: '⭐' },
+    { name: 'Careers', href: '/careers', icon: '💼' },
+>>>>>>> cursor/create-and-deploy-new-content-9104
     { name: 'Contact', href: '/contact', icon: '📞' }
   ];
 
@@ -83,6 +94,7 @@ const Navigation = () => {
               >
                 <span className="text-sm">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
+<<<<<<< HEAD
                 {item.isNew && (
                   <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
                     NEW
@@ -91,6 +103,16 @@ const Navigation = () => {
                 {item.isTrending && (
                   <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
                     🔥
+=======
+                {item.badge && (
+                  <span className={`absolute -top-1 -right-1 px-2 py-0.5 text-xs font-bold rounded-full ${
+                    item.badge === 'New' ? 'bg-green-500 text-white' :
+                    item.badge === 'Hot' ? 'bg-red-500 text-white' :
+                    item.badge === 'Free' ? 'bg-blue-500 text-white' :
+                    'bg-gray-500 text-white'
+                  }`}>
+                    {item.badge}
+>>>>>>> cursor/create-and-deploy-new-content-9104
                   </span>
                 )}
               </Link>
@@ -152,6 +174,7 @@ const Navigation = () => {
               >
                 <span className="text-lg">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
+<<<<<<< HEAD
                 {item.isNew && (
                   <span className="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
                     NEW
@@ -160,6 +183,16 @@ const Navigation = () => {
                 {item.isTrending && (
                   <span className="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
                     🔥
+=======
+                {item.badge && (
+                  <span className={`ml-auto px-2 py-0.5 text-xs font-bold rounded-full ${
+                    item.badge === 'New' ? 'bg-green-500 text-white' :
+                    item.badge === 'Hot' ? 'bg-red-500 text-white' :
+                    item.badge === 'Free' ? 'bg-blue-500 text-white' :
+                    'bg-gray-500 text-white'
+                  }`}>
+                    {item.badge}
+>>>>>>> cursor/create-and-deploy-new-content-9104
                   </span>
                 )}
               </Link>
