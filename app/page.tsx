@@ -130,7 +130,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Showcase Banner */}
+      {/* Enhanced Content Showcase Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -142,8 +142,8 @@ export default function HomePage() {
               🚀 Fresh AI & Business Insights Just Dropped
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Industry Disruption Analysis, Comprehensive Trends Guide, Fortune 500 Success Story, 
-              and our 200+ page AI Implementation Master Guide. Expert insights to accelerate your growth.
+              New this week: AI Enterprise Implementation Masterclass, Market Disruption Analysis, Fortune 500 Success Story, 
+              and our 200+ page AI Retail Personalization Playbook. Expert insights to accelerate your growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -163,33 +163,33 @@ export default function HomePage() {
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-industry-disruption-analysis-2025' className='group'>
+            <Link href='/blog/ai-2025-enterprise-implementation-masterclass' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Industry Disruption Analysis 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>How AI is reshaping every sector with real impact data</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎓</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Implementation Masterclass</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete 45-minute guide to enterprise AI transformation</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>45 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Masterclass</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-2025-market-disruption-analysis' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📈</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Market Disruption Analysis 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>How AI is reshaping every industry with real impact data</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>25 min read</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>Trending</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/ai-trends-2025-comprehensive-guide' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Trends 2025 Comprehensive Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>15 breakthrough trends that will shape the future of AI</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>28 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/case-studies/ai-transformation-fortune-500-success-2025' className='group'>
+            <Link href='/case-studies/ai-transformation-fortune-500-breakthrough-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
                 <h3 className='text-lg font-semibold mb-2'>Fortune 500 AI Success Story</h3>
@@ -202,15 +202,15 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
+            <Link href='/resources/ai-retail-personalization-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete 200+ page resource with templates</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛍️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Retail Personalization Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>200+ pages for 300% revenue growth</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>200+ pages</span>
                 </div>
               </div>
             </Link>
