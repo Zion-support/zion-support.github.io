@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '54',
+      title: 'Secure Multi‑Tenant RAG in 2025: Architectures and Controls',
+      description: 'Design multi‑tenant RAG with strong isolation, policy‑as‑code, and observability without sacrificing performance.',
+      href: '/blog/ai-2025-secure-multi-tenant-rag',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '55',
+      title: 'End‑to‑End Evaluation Playbooks for AI Systems (2025)',
+      description: 'Offline tests, canary releases, runtime scoring, and guardrails to ship reliable AI.',
+      href: '/blog/ai-2025-e2e-evaluation-playbooks',
+      type: 'blog',
+      featured: true,
+      readTime: '22 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
