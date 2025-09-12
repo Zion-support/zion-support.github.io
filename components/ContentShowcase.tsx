@@ -203,4 +203,154 @@ export default function ContentShowcase() {
       </div>
     </section>
   );
-}
+};
+
+// Featured content for homepage
+export const featuredContent = [
+  {
+    title: "AI Enterprise Automation Revolution 2025: Complete Implementation Guide",
+    description: "Transform your enterprise with AI automation. Learn proven strategies to achieve 40% productivity gains, 60% cost reduction, and 300% efficiency improvements in 2025.",
+    href: "/blog/ai-2025-enterprise-automation-revolution",
+    icon: "🤖",
+    readTime: "25 min read",
+    category: "AI & Automation",
+    isNew: true,
+    featured: true,
+    badge: "FEATURED",
+    badgeColor: "bg-blue-100 text-blue-800",
+    metrics: "300% Efficiency Gains"
+  },
+  {
+    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
+    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
+    href: "/blog/ai-startup-funding-playbook-2025",
+    icon: "💰",
+    readTime: "22 min read",
+    category: "Startup Strategy",
+    isNew: true,
+    featured: true,
+    badge: "HOT",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "$47B+ Funding"
+  },
+  {
+    title: "AI Enterprise Transformation Success: $100M Revenue Impact Case Study",
+    description: "Discover how a Fortune 500 company achieved $100M revenue impact through comprehensive AI transformation. Learn the strategies, challenges, and results.",
+    href: "/case-studies/ai-2025-enterprise-transformation-success",
+    icon: "🏆",
+    readTime: "18 min read",
+    category: "Case Study",
+    isNew: true,
+    featured: true,
+    badge: "SUCCESS",
+    badgeColor: "bg-emerald-100 text-emerald-800",
+    metrics: "$100M Impact"
+  },
+  {
+    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
+    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+    href: "/resources/ai-implementation-master-guide-2025",
+    icon: "📚",
+    readTime: "45 min read",
+    category: "Implementation Guide",
+    isNew: true,
+    featured: true,
+    badge: "MASTER",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "150+ Pages"
+  }
+];
+
+// Trending content
+export const trendingContent = [
+  {
+    title: "AI Enterprise Automation Revolution 2025: Complete Implementation Guide",
+    description: "Transform your enterprise with AI automation. Learn proven strategies to achieve 40% productivity gains, 60% cost reduction, and 300% efficiency improvements in 2025.",
+    href: "/blog/ai-2025-enterprise-automation-revolution",
+    icon: "🤖",
+    readTime: "25 min read",
+    category: "AI & Automation",
+    isTrending: true,
+    badge: "TRENDING",
+    badgeColor: "bg-blue-100 text-blue-800",
+    metrics: "300% Efficiency Gains"
+  },
+  {
+    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
+    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
+    href: "/blog/ai-startup-funding-playbook-2025",
+    icon: "💰",
+    readTime: "22 min read",
+    category: "Startup Strategy",
+    isTrending: true,
+    badge: "HOT",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "$47B+ Funding"
+  },
+  {
+    title: "AI Enterprise Transformation Success: $100M Revenue Impact Case Study",
+    description: "Discover how a Fortune 500 company achieved $100M revenue impact through comprehensive AI transformation. Learn the strategies, challenges, and results.",
+    href: "/case-studies/ai-2025-enterprise-transformation-success",
+    icon: "🏆",
+    readTime: "18 min read",
+    category: "Case Study",
+    isTrending: true,
+    badge: "SUCCESS",
+    badgeColor: "bg-emerald-100 text-emerald-800",
+    metrics: "$100M Impact"
+  }
+];
+
+// Latest content
+export const latestContent = [
+  {
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
+  },
+  {
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
+    icon: "⚖️",
+    readTime: "25 min read",
+    category: "AI Ethics",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "95% Trust Score"
+  },
+  {
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction"
+  },
+  {
+    title: "AI Go-To-Market Strategy 2025: From Zero to Traction",
+    description: "Positioning, pricing, and distribution playbook to launch and scale AI products.",
+    href: "/blog/ai-2025-ai-go-to-market-strategy",
+    icon: "📈",
+    readTime: "12 min read",
+    category: "Growth & Marketing",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-blue-100 text-blue-800",
+    metrics: "Faster time-to-first-value"
+  }
+];
+
+export default ContentShowcase;
