@@ -56,6 +56,8 @@ import FutureTechInnovationBanner from '../components/FutureTechInnovationBanner
 import UltimateContentDiscovery2025 from '../components/UltimateContentDiscovery2025';
 import LatestContent2025PromotionBanner from '../components/LatestContent2025PromotionBanner';
 import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
+import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePromotionBanner2026';
+import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
 
 // New 2025 Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
@@ -80,6 +82,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEURAL INTERFACE PROMOTION BANNER 2026 */}
+        <NeuralInterfacePromotionBanner2026 />
+        
+        {/* NEURAL INTERFACE CONTENT SHOWCASE 2026 */}
+        <NeuralInterfaceContentShowcase2026 />
+        
         {/* AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025ContentPromotionBanner />
         
