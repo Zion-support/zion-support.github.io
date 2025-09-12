@@ -43,15 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-2025-generative-ai-enterprise-masterclass" className="group">
+              <Link href="/blog/ai-2025-advanced-ai-agents-enterprise" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
                   <h3 className="text-lg font-semibold mb-2">Advanced AI Agents</h3>
-                  <p className="text-sm opacity-90 mb-3">95% accuracy in autonomous business operations with multi-agent collaboration</p>
+                  <p className="text-sm opacity-90 mb-3">300-500% efficiency gains with autonomous enterprise decision-making</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🆕 NEW</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-healthcare-diagnosis-revolution-advanced" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2">Healthcare AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">95% diagnostic accuracy with 70% faster diagnosis times</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>18 min read</span>
                     <span className="mx-2">•</span>
                     <span>🔥 HOT</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-2025-fortune-500-manufacturing-transformation" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">$3.2B Manufacturing Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 500 transformation with 45% cost reduction and 60% efficiency gains</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 $3.2B Value</span>
                   </div>
                 </div>
               </Link>
@@ -64,33 +90,7 @@ export default function ContentShowcase() {
                   <div className="flex items-center text-xs opacity-75">
                     <span>16 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🆕 NEW</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
-                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">300% accuracy boost with advanced vision, language, and audio processing</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>15 min read</span>
-                    <span className="mx-2">•</span>
                     <span>🚀 TRENDING</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-2025-global-retail-transformation-success" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="text-lg font-semibold mb-2">$2.8B Retail Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Fortune 500 transformation with 30% cost reduction and 95% accuracy</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
-                    <span className="mx-2">•</span>
-                    <span>💰 $2.8B Value</span>
                   </div>
                 </div>
               </Link>

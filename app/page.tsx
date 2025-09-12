@@ -92,12 +92,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: LLM Optimization Masterclass, AI Automation Guide & $2.8B Unicorn Success!
+                🎉 NEW: Advanced AI Agents, Healthcare AI Revolution & $3.2B Manufacturing Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: LLM Optimization Masterclass (10x performance gains), AI Automation Enterprise Transformation (300-500% efficiency), 
-                Global Tech Unicorn Success Story ($2.8B value creation), plus advanced implementation strategies. 
-                Get expert insights on the cutting-edge AI technologies transforming 2025.
+                Just released: Advanced AI Agents for Enterprise (300-500% efficiency gains), Healthcare AI Diagnosis Revolution (95% accuracy), 
+                Fortune 500 Manufacturing Transformation ($3.2B value creation), plus cutting-edge implementation strategies. 
+                Discover the breakthrough AI technologies reshaping industries in 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -107,16 +107,16 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-llm-optimization-masterclass"
+                  href="/blog/ai-2025-advanced-ai-agents-enterprise"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read LLM Masterclass
+                  Read AI Agents Guide
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-global-tech-unicorn-transformation"
+                  href="/case-studies/ai-2025-fortune-500-manufacturing-transformation"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $2.8B Success Story
+                  View $3.2B Success Story
                 </Link>
               </div>
             </div>
