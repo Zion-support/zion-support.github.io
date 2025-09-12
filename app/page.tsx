@@ -38,13 +38,10 @@ import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeura
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
-<<<<<<< HEAD
-=======
 import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
->>>>>>> cursor/create-and-deploy-new-content-dcba
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
@@ -60,6 +57,37 @@ import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025Revolutio
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 
 // New 2025 Content Components
+// New AI 2025 Breakthrough Content Components
+import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
+import NewContent2025BreakthroughShowcase from '../components/NewContent2025BreakthroughShowcase';
+import ContentRecommendationWidget2026 from '../components/ContentRecommendationWidget2026';
+import EnhancedSearch2026 from '../components/EnhancedSearch2026';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import NewContent2026AdvancedPromotionBanner from '../components/NewContent2026AdvancedPromotionBanner';
+import AI2026ROICalculator from '../components/AI2026ROICalculator';
+import ContentDiscovery2026 from '../components/ContentDiscovery2026';
+import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import MegaContentShowcase2025 from '../components/MegaContentShowcase2025';
+import SuperContentPromoBanner2025 from '../components/SuperContentPromoBanner2025';
+import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
+import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
+import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
+import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
+import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
@@ -138,8 +166,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-=======
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
         
@@ -484,6 +510,30 @@ export default function HomePage() {
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
         
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
+        <InteractiveContentDiscovery2025 />
+        
+        {/* CONTENT DISCOVERY WIDGET 2026 */}
+        <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <ContentDiscoveryWidget2026 />
+          </div>
+        </div>
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
+        <RevolutionaryContentShowcase2026 />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2026 */}
+        <DynamicContentCarousel2026 />
+        
+        {/* NEW CONTENT CAROUSEL 2026 */}
+        <DynamicContentCarousel2026 />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2025 */}
+        <DynamicContentCarousel2025 />
         {/* ULTRA CONTENT PROMOTION BANNER 2025 */}
         <UltraContentPromotionBanner2025 />
         
