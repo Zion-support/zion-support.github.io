@@ -57,6 +57,9 @@ import InteractiveContentDiscovery from '../components/InteractiveContentDiscove
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2025UltimateContentHubBanner from '../components/AI2025UltimateContentHubBanner';
+import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictionsBanner';
+import MegaContentShowcase2026Banner from '../components/MegaContentShowcase2026Banner';
 import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -252,6 +255,15 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEW */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE CONTENT HUB BANNER - NEW */}
+        <AI2025UltimateContentHubBanner />
+        
+        {/* AI 2026 FUTURE PREDICTIONS BANNER - INTERACTIVE */}
+        <AI2026FuturePredictionsBanner />
+        
+        {/* MEGA CONTENT SHOWCASE 2026 BANNER - COMPREHENSIVE */}
+        <MegaContentShowcase2026Banner />
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER - BREAKTHROUGH */}
         <AI2026QuantumNeuralPromotionBanner />
