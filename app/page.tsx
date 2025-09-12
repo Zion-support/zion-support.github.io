@@ -22,6 +22,8 @@ import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBa
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
 import AI2031ContentDiscoveryWidget from '../components/AI2031ContentDiscoveryWidget';
+import AI2032ContentPromotionBanner from '../components/AI2032ContentPromotionBanner';
+import AI2032ContentShowcase from '../components/AI2032ContentShowcase';
 >>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
@@ -250,6 +252,12 @@ export default function HomePage() {
         
         {/* AI 2031 CONTENT DISCOVERY WIDGET */}
         <AI2031ContentDiscoveryWidget />
+        
+        {/* AI 2032 BREAKTHROUGH CONTENT PROMOTION BANNER */}
+        <AI2032ContentPromotionBanner />
+        
+        {/* AI 2032 CONTENT SHOWCASE */}
+        <AI2032ContentShowcase />
         
 >>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
         {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
