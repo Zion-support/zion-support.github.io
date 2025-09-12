@@ -6,6 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -1435,6 +1437,116 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Content Banner */}
+      <EnhancedContentBanner
+        title="🚀 Fresh AI & Tech Content Just Dropped"
+        subtitle="Discover our latest expert insights, case studies, and resources. From AI cybersecurity to enterprise integration, get the knowledge you need to succeed in 2025."
+        items={[
+          {
+            title: "AI Cybersecurity 2025",
+            description: "Protecting your digital assets in the age of intelligent threats",
+            href: "/blog/ai-cybersecurity-2025",
+            icon: "🛡️",
+            readTime: "18 min read",
+            isNew: true,
+            category: "AI & Security"
+          },
+          {
+            title: "AI Data Privacy 2025",
+            description: "Navigating the new regulatory landscape for AI systems",
+            href: "/blog/ai-data-privacy-2025",
+            icon: "🔒",
+            readTime: "15 min read",
+            isNew: true,
+            category: "Privacy & Compliance"
+          },
+          {
+            title: "AI Integration Playbook",
+            description: "Complete implementation guide with templates and checklists",
+            href: "/resources/ai-integration-playbook-2025",
+            icon: "📚",
+            readTime: "45 min read",
+            isNew: true,
+            category: "Resources"
+          }
+        ]}
+        ctaText="📚 Read Latest Articles"
+        ctaHref="/blog"
+        variant="gradient"
+        colorScheme="blue"
+      />
+
+      {/* Enhanced Content Showcase */}
+      <ContentShowcase
+        title="Latest AI & Technology Insights"
+        subtitle="Stay ahead with our latest articles, resources, and case studies covering the most important trends in AI, cloud architecture, and business growth."
+        items={[
+          {
+            title: "AI Cybersecurity 2025: Protecting Your Digital Assets",
+            description: "Comprehensive guide to AI cybersecurity in 2025. Learn about emerging threats, defense strategies, and best practices for protecting your organization.",
+            href: "/blog/ai-cybersecurity-2025",
+            type: "blog",
+            readTime: "18 min read",
+            isNew: true,
+            icon: "🛡️",
+            category: "AI & Security"
+          },
+          {
+            title: "AI Data Privacy 2025: Navigating the New Regulatory Landscape",
+            description: "Comprehensive guide to AI data privacy regulations in 2025. Learn about GDPR, CCPA, and emerging AI-specific privacy laws affecting your business.",
+            href: "/blog/ai-data-privacy-2025",
+            type: "blog",
+            readTime: "15 min read",
+            isNew: true,
+            icon: "🔒",
+            category: "Privacy & Compliance"
+          },
+          {
+            title: "AI Enterprise Integration 2025: A Complete Implementation Guide",
+            description: "Comprehensive guide to AI enterprise integration in 2025. Learn best practices, implementation strategies, and common pitfalls for successful AI adoption.",
+            href: "/blog/ai-enterprise-integration-2025",
+            type: "blog",
+            readTime: "20 min read",
+            isNew: true,
+            icon: "🏢",
+            category: "Enterprise & Integration"
+          },
+          {
+            title: "AI Integration Playbook 2025: Complete Implementation Guide",
+            description: "Download our comprehensive AI integration playbook for 2025. Step-by-step guide with templates, checklists, and best practices for successful AI implementation.",
+            href: "/resources/ai-integration-playbook-2025",
+            type: "resource",
+            readTime: "45 min read",
+            isNew: true,
+            icon: "📚",
+            category: "Templates & Guides"
+          },
+          {
+            title: "AI Privacy Compliance Checklist 2025: GDPR, CCPA & More",
+            description: "Download our comprehensive AI privacy compliance checklist for 2025. Ensure your AI systems meet GDPR, CCPA, and emerging AI-specific privacy regulations.",
+            href: "/resources/ai-privacy-compliance-checklist",
+            type: "resource",
+            readTime: "30 min read",
+            isNew: true,
+            icon: "✅",
+            category: "Compliance & Security"
+          },
+          {
+            title: "AI Retail Transformation 2025: How TechMart Increased Revenue by 340%",
+            description: "Discover how TechMart transformed their retail operations with AI, achieving 340% revenue growth, 60% cost reduction, and 95% customer satisfaction through intelligent automation.",
+            href: "/case-studies/ai-retail-transformation-2025",
+            type: "case-study",
+            readTime: "12 min read",
+            isNew: true,
+            icon: "🛒",
+            category: "Retail & E-commerce",
+            featured: true
+          }
+        ]}
+        showViewAll={true}
+        viewAllHref="/blog"
+      />
     </div>
   );
 }
