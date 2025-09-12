@@ -8,6 +8,26 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Copilots for Engineering Teams",
+    description: "Secure, repo-aware copilots that reduce toil and speed reviews",
+    url: "/blog/ai-copilots-for-engineering",
+    type: "Blog Post",
+    category: "Engineering Productivity",
+    icon: "👩‍💻",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Practical AI Agents for Small Businesses",
+    description: "Automate support, sales outreach, and back-office reliably",
+    url: "/blog/ai-agents-for-smbs",
+    type: "Blog Post",
+    category: "SMB Automation",
+    icon: "🏪",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI 2025 Breakthrough Innovations",
     description: "Revolutionary AI technologies reshaping industries",
     url: "/blog/ai-2025-breakthrough-innovations",

@@ -22,6 +22,14 @@ const posts = [
     description:
       'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
     href: '/blog/ai-agents-for-smbs',
+    date: '2025-09-12',
+    tags: ['AI', 'Automation', 'Agents'],
+  },
+  {
+    title: 'Practical AI Agents for Small Businesses',
+    description:
+      'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
+    href: '/blog/ai-agents-for-smbs',
     date: '2025-09-11',
     tags: ['AI', 'Automation', 'Agents'],
   },
