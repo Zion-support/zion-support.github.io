@@ -34,6 +34,50 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'EVAL-CI-2025',
+      title: 'AI Evaluation Pipelines in CI: Ship with Confidence (2025)',
+      description: 'Automate evals in CI/CD to gate releases on quality, safety, and cost.',
+      href: '/blog/ai-2025-eval-pipelines-ci',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: 'SECURE-TOOLS-2025',
+      title: 'Securing AI Tools & Plugins: Sandboxing, Scopes, and Audits',
+      description: 'Design scopes, isolate execution, require approvals, and audit tool usage for safety.',
+      href: '/blog/ai-2025-secure-tools-and-plugins',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Security'
+    },
+    {
+      id: 'PRODUCTIZING-GENAI-2025',
+      title: 'Productizing GenAI Platforms: From Pilots to Products (2025)',
+      description: 'A pragmatic roadmap to turn GenAI pilots into governed, scalable products.',
+      href: '/blog/ai-2025-productizing-genai-platforms',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platforms'
+    },
+    {
+      id: 'CS-CHATBOTS-GOV-2025',
+      title: 'Enterprise Chatbots with Governance: 28% Deflection, 92% CSAT',
+      description: 'Case study: Policy-as-code and evals drove deflection and CSAT with compliance.',
+      href: '/case-studies/ai-2025-enterprise-chatbots-governance-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: 'ANALYTICS-OBS-2025',
       title: 'Analytics Observability Blueprint 2025: Traces, Quality, Cost',
       description: 'End-to-end visibility for analytics and AI: lineage, traces, data quality, and cost SLOs.',
