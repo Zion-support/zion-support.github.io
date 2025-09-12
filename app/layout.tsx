@@ -9,6 +9,7 @@ import EnhancedContentPromotionBanner from '../components/EnhancedContentPromoti
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
+import EnhancedNavigationWithContentDiscovery from '../components/EnhancedNavigationWithContentDiscovery';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -211,6 +212,8 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <Link href="/blog/ai-2025-enterprise-ai-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🏢 Enterprise AI Revolution (REVOLUTIONARY)
                 </Link>
@@ -229,6 +232,22 @@ function Header() {
                 </Link>
                 <Link href="/resources/ai-2025-comprehensive-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   📚 AI 2025 Master Implementation Guide (NEW)
+                <Link href="/blog/ai-2025-advanced-neural-networks" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧠 Advanced Neural Networks (JUST RELEASED)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 1200% ROI Enterprise Success (JUST RELEASED)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (JUST RELEASED)
+                <Link href="/blog/ai-2026-breakthrough-innovations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧠 AI 2026 Breakthrough Innovations (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2026-energy-sector-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚡ 4000% ROI Energy Transformation (NEW)
+                </Link>
+                <Link href="/resources/ai-2026-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Ultimate Implementation Guide (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2031-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
@@ -274,6 +293,15 @@ function Header() {
                   🛠️ Ultimate Implementation Toolkit (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2025-ultimate-breakthrough-trends" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Ultimate Breakthrough Trends (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-finance-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  💰 Global Finance 1500% ROI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2025-enterprise-transformation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Enterprise Master Guide (ESSENTIAL)
+                </Link>
                 <Link href="/blog/ai-2026-neural-interface-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧠 Neural Interface Revolution (BREAKTHROUGH)
                 </Link>
@@ -760,7 +788,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
           <EnhancedContentPromotionBanner />
-          <EnhancedNavigationWithNewContent />
+          <EnhancedNavigationWithContentDiscovery />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
           </main>
