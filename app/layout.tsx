@@ -112,6 +112,15 @@ function Header() {
                 <Link href="/blog/ai-2026-neural-interface-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🧠 Neural Interfaces
                 </Link>
+                <Link href="/blog/ai-2025-multimodal-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🎯 Multimodal AI Revolution
+                </Link>
+                <Link href="/blog/ai-2025-quantum-machine-learning-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  ⚛️ Quantum ML Breakthrough
+                </Link>
+                <Link href="/blog/ai-2025-edge-computing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🌐 Edge Computing Revolution
+                </Link>
               </div>
             </div>
           </div>
