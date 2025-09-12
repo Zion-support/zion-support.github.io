@@ -147,6 +147,10 @@ import EdgeComputingIOTBanner from '../components/EdgeComputingIOTBanner';
 >>>>>>> cursor/create-and-deploy-new-content-6671
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+
+// New AI 2025 Breakthrough Content Components
+import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
+import NewContent2025BreakthroughShowcase from '../components/NewContent2025BreakthroughShowcase';
 import ContentRecommendationWidget2026 from '../components/ContentRecommendationWidget2026';
 import EnhancedSearch2026 from '../components/EnhancedSearch2026';
 import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
@@ -198,6 +202,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
+        <NewContent2025BreakthroughBanner />
+        
         {/* AI 2026 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2026BreakthroughPromotionBanner />
         
@@ -499,6 +506,9 @@ export default function HomePage() {
         
         {/* New Content Showcase 2026 */}
         <NewContentShowcase2026 />
+        
+        {/* NEW AI 2025 BREAKTHROUGH CONTENT SHOWCASE - LATEST */}
+        <NewContent2025BreakthroughShowcase />
         
         {/* Enhanced Content Showcase 2026 */}
         <EnhancedContentShowcase2026 />
