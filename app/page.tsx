@@ -72,6 +72,8 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -1372,6 +1374,9 @@ export default function HomePage() {
         {/* AI 2025 Revolutionary Breakthrough Banner */}
         <AI2025RevolutionaryBreakthroughBanner />
 
+        {/* New Content Promotion Banner */}
+        <AI2025NewContentPromotionBanner />
+
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <h1 id="hero-heading" className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight'>
@@ -2262,6 +2267,13 @@ export default function HomePage() {
 
       {/* Enhanced Content Discovery 2026 */}
       <EnhancedContentDiscovery2026 />
+
+      {/* Enhanced Content Discovery 2025 */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <EnhancedContentDiscovery2025 />
+        </div>
+      </section>
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
