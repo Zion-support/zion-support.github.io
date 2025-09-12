@@ -16,36 +16,36 @@ interface ContentItem {
 const contentItems: ContentItem[] = [
   {
     id: '1',
-    title: 'AI Advanced Automation 2025: Complete Business Transformation Guide',
-    description: 'Discover how advanced AI automation is revolutionizing businesses with real-world case studies and implementation strategies.',
+    title: 'AI Governance Framework 2025: Enterprise Implementation Guide',
+    description: 'Complete guide to implementing AI governance frameworks in enterprise environments. Learn best practices, compliance requirements, and risk management strategies.',
     type: 'blog',
-    url: '/blog/ai-2025-advanced-automation',
-    readTime: '15 min',
-    category: 'AI & Automation',
+    url: '/blog/ai-2025-enterprise-ai-governance',
+    readTime: '12 min',
+    category: 'AI Governance',
     featured: true,
-    publishDate: '2025-01-15'
+    publishDate: '2025-01-20'
   },
   {
     id: '2',
-    title: 'Quantum Computing Business Revolution 2025: The Next Frontier',
-    description: 'Explore how quantum computing is transforming industries with practical applications and competitive advantages.',
-    type: 'blog',
-    url: '/blog/quantum-computing-business-revolution-2025',
-    readTime: '18 min',
-    category: 'Quantum Technology',
+    title: 'AI Manufacturing Success: 300% ROI and $2.5B Savings',
+    description: 'How a global manufacturing giant achieved unprecedented success with AI transformation, delivering 300% ROI and $2.5B in cost savings.',
+    type: 'case-study',
+    url: '/case-studies/ai-transformation-manufacturing-giant-success-2025',
+    readTime: '15 min',
+    category: 'Manufacturing AI',
     featured: true,
-    publishDate: '2025-01-14'
+    publishDate: '2025-01-19'
   },
   {
     id: '3',
-    title: 'AI Implementation Success Framework 2025: Complete Guide',
-    description: 'Master AI implementation with our comprehensive success framework, proven strategies, and step-by-step methodologies.',
+    title: 'AI Implementation Success Checklist 2025: Complete Guide',
+    description: 'Comprehensive 50+ point checklist for successful AI implementation. Achieve 85% success rate with our proven methodology.',
     type: 'resource',
-    url: '/resources/ai-implementation-success-framework-2025',
-    readTime: '45 min',
+    url: '/resources/ai-implementation-success-checklist-2025',
+    readTime: '20 min',
     category: 'Implementation',
     featured: true,
-    publishDate: '2025-01-13'
+    publishDate: '2025-01-18'
   },
   {
     id: '4',

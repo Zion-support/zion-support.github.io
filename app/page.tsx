@@ -83,15 +83,14 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+                <span className="text-sm font-medium">🚀 FRESH CONTENT - JANUARY 2025</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 NEW: AI Advanced Automation & Healthcare Revolution Content!
+                🎉 NEW: AI Governance, Manufacturing Success & Implementation Checklist!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Just released: Complete AI Automation Enterprise Guide (40-60% efficiency gains), 
-                AI Healthcare Diagnosis Revolution (95-98% accuracy), plus Fortune 500 success case studies. 
-                Get expert insights on the technologies transforming 2025 and beyond.
+                Just released: AI Governance Framework (enterprise compliance), Manufacturing AI Success Story (300% ROI, $2.5B savings), 
+                and AI Implementation Checklist (85% success rate). Plus Fortune 500 case studies and expert implementation guides.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -101,10 +100,10 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-advanced-automation"
+                  href="/blog/ai-2025-enterprise-ai-governance"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Read Latest Article
+                  Read AI Governance Guide
                 </Link>
               </div>
             </div>

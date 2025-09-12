@@ -43,41 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-advanced-automation" className="group">
+              <Link href="/blog/ai-2025-enterprise-ai-governance" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Advanced Automation 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete enterprise guide to AI automation with 40-60% efficiency gains</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏛️</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Governance Framework 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete enterprise implementation guide for AI governance and compliance</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>18 min read</span>
+                    <span>12 min read</span>
                     <span className="mx-2">•</span>
                     <span>🔥 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-healthcare-diagnosis-revolution-2025" className="group">
+              <Link href="/case-studies/ai-transformation-manufacturing-giant-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Diagnosis Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">95-98% diagnostic accuracy transforming medical care worldwide</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success Story</h3>
+                  <p className="text-sm opacity-90 mb-3">300% ROI and $2.5B savings through comprehensive AI transformation</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>22 min read</span>
+                    <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>🏥 Healthcare</span>
+                    <span>💰 $2.5B ROI</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-2025-advanced-automation-success" className="group">
+              <Link href="/resources/ai-implementation-success-checklist-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="text-lg font-semibold mb-2">Fortune 500 Automation Success</h3>
-                  <p className="text-sm opacity-90 mb-3">$50M savings and 60% efficiency gains through advanced AI automation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Implementation Checklist</h3>
+                  <p className="text-sm opacity-90 mb-3">Comprehensive 50+ point checklist for successful AI implementation</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
+                    <span>Resource</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $50M ROI</span>
+                    <span>✅ 85% Success Rate</span>
                   </div>
                 </div>
               </Link>
