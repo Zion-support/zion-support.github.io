@@ -107,6 +107,49 @@ const blogPosts: BlogPost[] = [
     url: '/blog/edge-computing-future',
     image: '⚡',
     views: 987
+  },
+  // New content added September 2025
+  {
+    id: 'ai-go-to-market-2025',
+    title: 'AI Go-To-Market 2025: From Zero to Traction',
+    excerpt: 'Positioning, pricing, and distribution strategies that work for AI products in 2025.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '12 min read',
+    category: 'Growth & Marketing',
+    tags: ['Go-To-Market', 'Pricing', 'Growth', 'AI'],
+    featured: true,
+    url: '/blog/ai-go-to-market-2025',
+    image: '📈',
+    views: 0
+  },
+  {
+    id: 'startup-pricing-strategy-2025',
+    title: 'Startup Pricing Strategy 2025: Validate, Launch, Scale',
+    excerpt: 'Data-driven pricing strategies to validate willingness to pay and scale with confidence.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '11 min read',
+    category: 'Startup Strategy',
+    tags: ['Pricing', 'Monetization', 'SaaS', 'AI'],
+    featured: false,
+    url: '/blog/startup-pricing-strategy-2025',
+    image: '💵',
+    views: 0
+  },
+  {
+    id: 'cloud-native-architecture-2025',
+    title: 'Cloud-Native Architecture in 2025: Building for Scale and Resilience',
+    excerpt: 'Modern patterns and practices to build scalable, resilient, and cost-effective systems.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '14 min read',
+    category: 'Cloud & DevOps',
+    tags: ['Cloud', 'Architecture', 'DevOps', 'Scalability'],
+    featured: false,
+    url: '/blog/cloud-native-architecture-2025',
+    image: '☁️',
+    views: 0
   }
 ];
 

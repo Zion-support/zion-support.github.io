@@ -64,6 +64,7 @@ function TestimonialCard({ company, industry, result, description, savings }: {
 }
 
 export default function HomePage() {
+  const today = 'SEPTEMBER 12, 2025';
   return (
     <ErrorBoundary>
       <SEO
@@ -137,7 +138,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🚀 JUST RELEASED - JANUARY 30, 2025</span>
+              <span className='text-sm font-medium'>🚀 JUST RELEASED - {today}</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
               🎯 Revolutionary AI Content Just Dropped
@@ -154,10 +155,10 @@ export default function HomePage() {
                 📚 Explore All Content
               </Link>
               <Link
-                href='/resources/ai-2025-comprehensive-implementation-playbook'
+                href='/blog/ai-go-to-market-2025'
                 className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
               >
-                📖 Download Master Playbook
+                🆕 Read: AI GTM 2025
               </Link>
             </div>
           </div>
@@ -240,7 +241,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - JANUARY 2025</span>
+              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - {today}</span>
             </div>
             <h2 className='text-5xl md:text-6xl font-bold mb-6'>
               🚀 Fresh AI & Business Content Just Dropped
@@ -257,10 +258,10 @@ export default function HomePage() {
                 📚 Explore All New Content
               </Link>
               <Link
-                href='/resources'
+                href='/blog/ai-go-to-market-2025'
                 className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
               >
-                📋 Download Free Resources
+                🆕 Read: AI GTM 2025
               </Link>
             </div>
           </div>
@@ -383,7 +384,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - JANUARY 2025</span>
+              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - {today}</span>
             </div>
             <h2 className='text-5xl md:text-6xl font-bold mb-6'>
               🚀 Fresh AI & Business Content Just Dropped
@@ -465,10 +466,10 @@ export default function HomePage() {
 
           <div className='text-center mt-12'>
             <Link
-              href='/blog'
+              href='/content-showcase'
               className='bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
             >
-              View All Articles
+              View All New Content
             </Link>
             <Link
               href='/resources'
@@ -794,7 +795,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>✨ JUST PUBLISHED - JANUARY 2025</span>
+              <span className='text-sm font-medium'>✨ JUST PUBLISHED - {today}</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
               🚀 Fresh AI & Business Content Just Dropped
@@ -874,7 +875,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className='text-center mt-12'>
+          <div className='text-center mt-8'>
             <Link
               href='/blog'
               className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
@@ -897,7 +898,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🚀 JUST PUBLISHED - JANUARY 30, 2025</span>
+              <span className='text-sm font-medium'>🚀 JUST PUBLISHED - {today}</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
               Fresh AI & Business Insights Just Dropped
@@ -1601,7 +1602,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🚀 JUST PUBLISHED - JANUARY 30, 2025</span>
+              <span className='text-sm font-medium'>🚀 JUST PUBLISHED - {today}</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
               🎯 New Expert Content Just Dropped
