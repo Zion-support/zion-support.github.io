@@ -99,9 +99,12 @@ function Header() {
           </Link>
           <Link 
             href="/resources" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
           >
             Resources
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
           </Link>
           <Link 
             href="/services" 
