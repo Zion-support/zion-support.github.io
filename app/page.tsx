@@ -70,6 +70,10 @@ import EnhancedContentDiscovery2028 from '../components/EnhancedContentDiscovery
 import AI2028ROICalculator from '../components/AI2028ROICalculator';
 import AI2028NewsletterSignup from '../components/AI2028NewsletterSignup';
 
+// New 2029 Breakthrough Content Components
+import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
+import AI2029BreakthroughContentShowcase from '../components/AI2029BreakthroughContentShowcase';
+
 // New 2027 Breakthrough Content Components
 import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
 import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
@@ -105,6 +109,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2029 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2029BreakthroughPromotionBanner />
+        
+        {/* AI 2029 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2029BreakthroughContentShowcase />
+        
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
         
