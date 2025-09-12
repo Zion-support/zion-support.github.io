@@ -25,14 +25,14 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
+                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content: Quantum Computing, Cybersecurity & Logistics Success Stories!
+                🎉 Revolutionary AI Content: Multimodal AI, Healthcare Automation & Financial Services Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-                Just released: AI Quantum Computing Breakthrough, Cybersecurity Revolution, Global Logistics $300M Success Case Study, 
-                plus our comprehensive 200+ page AI Implementation Master Guide. Get expert insights on the technologies 
+                Just released: AI Multimodal Revolution, Healthcare Automation Guide, Financial Services $2.8B Success Case Study, 
+                plus our comprehensive AI Automation Implementation Playbook. Get expert insights on the technologies 
                 transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -43,54 +43,54 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-quantum-computing-breakthrough"
+                  href="/blog/ai-2025-multimodal-revolution"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read Quantum AI Article
+                  Read Multimodal AI Article
                 </Link>
                 <Link
-                  href="/resources/ai-implementation-master-guide-2025"
+                  href="/resources/ai-automation-implementation-playbook-2025"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Download Master Guide
+                  Download Implementation Playbook
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Global Logistics Success Banner */}
+        {/* Healthcare & Financial Services Success Banner */}
         <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚛 GLOBAL LOGISTICS SUCCESS</span>
+                <span className="text-sm font-medium">🏥 HEALTHCARE & FINANCE SUCCESS</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                💰 $300M Savings & 400% ROI: Global Logistics AI Transformation Case Study!
+                💰 $2.8B Revenue Increase: Healthcare AI & Financial Services Transformation!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover how a Fortune 500 logistics company achieved $300M in annual savings and 400% ROI through 
-                comprehensive AI transformation. Complete case study with implementation details, challenges, and results.
+                Discover how AI is revolutionizing healthcare with 40% cost reduction and 95% patient satisfaction, 
+                plus how financial services achieved $2.8B revenue increase through comprehensive AI transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/case-studies/ai-transformation-global-logistics-2025"
+                  href="/case-studies/ai-financial-services-transformation-breakthrough-2025"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  View Case Study
+                  View Financial Case Study
                 </Link>
                 <Link
-                  href="/resources/ai-implementation-master-guide-2025"
+                  href="/blog/ai-healthcare-automation-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Download Master Guide
+                  Read Healthcare Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-quantum-computing-breakthrough"
+                  href="/blog/ai-2025-multimodal-revolution"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Read Quantum AI Article
+                  Read Multimodal AI Article
                 </Link>
               </div>
             </div>
