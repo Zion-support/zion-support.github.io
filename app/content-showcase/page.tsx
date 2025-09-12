@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -30,6 +31,47 @@ export default function ContentShowcasePage() {
       category: "AI Technology",
       readTime: "22 min read",
       date: "Jan 18, 2025"
+=======
+import { Metadata } from 'next';
+import Link from 'next/link';
+import SEO from '../../components/SEO';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import StructuredData from '../../components/StructuredData';
+import { BookOpen, Briefcase, Download, TrendingUp, Users, Award } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Content Showcase: Latest AI & Technology Insights | Zion Tech Group',
+  description: 'Explore our comprehensive collection of AI and technology content. Discover the latest articles, case studies, and resources from industry experts.',
+  keywords: 'AI content, technology insights, case studies, resources, AI articles, tech guides',
+  openGraph: {
+    title: 'Content Showcase: Latest AI & Technology Insights',
+    description: 'Explore our comprehensive collection of AI and technology content. Discover the latest articles, case studies, and resources.',
+    type: 'website',
+  },
+};
+
+export default function ContentShowcase() {
+  const newBlogPosts = [
+    {
+      title: "AI Industry Disruption 2025: How AI is Reshaping Every Sector",
+      description: "Discover how artificial intelligence is transforming industries with real impact data, case studies, and actionable insights for business leaders.",
+      href: "/blog/ai-2025-industry-disruption",
+      icon: "🏭",
+      category: "AI & Technology",
+      readTime: "25 min read",
+      date: "Jan 28, 2025",
+      featured: true
+    },
+    {
+      title: "AI Trends 2025 Predictions: 15 Predictions That Will Shape the Future",
+      description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
+      href: "/blog/ai-trends-2025-predictions",
+      icon: "🔮",
+      category: "AI Predictions",
+      readTime: "28 min read",
+      date: "Jan 28, 2025",
+      featured: true
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -38,7 +80,18 @@ export default function ContentShowcasePage() {
       icon: "✅",
       category: "AI Strategy",
       readTime: "18 min read",
-      date: "Feb 01, 2025"
+      date: "Feb 01, 2025",
+      featured: false
+    },
+    {
+      title: "AI Multimodal Applications 2025: Beyond Text to Vision, Audio, and Beyond",
+      description: "Complete implementation guide for building multimodal AI systems that can process text, images, audio, and video simultaneously.",
+      href: "/blog/ai-multimodal-applications-2025",
+      icon: "🎯",
+      category: "AI Technology",
+      readTime: "15 min read",
+      date: "Jan 28, 2025",
+      featured: false
     }
   ];
 
@@ -50,7 +103,8 @@ export default function ContentShowcasePage() {
       icon: "🏆",
       category: "Enterprise AI",
       result: "$50M Savings",
-      date: "Jan 30, 2025"
+      date: "Jan 30, 2025",
+      featured: true
     },
     {
       title: "AI Manufacturing Automation Success: 40% Cost Reduction Achieved",
@@ -68,7 +122,22 @@ export default function ContentShowcasePage() {
       icon: "🛒",
       category: "Retail AI",
       result: "300% Growth",
+<<<<<<< HEAD
       date: "Feb 03, 2025"
+=======
+      date: "Feb 03, 2025",
+      featured: false
+    },
+    {
+      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
+      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
+      href: "/case-studies/ai-manufacturing-automation-success-2025",
+      icon: "🏭",
+      category: "Manufacturing",
+      result: "40% Cost Reduction",
+      date: "Feb 01, 2025",
+      featured: false
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
     }
   ];
 
@@ -80,7 +149,8 @@ export default function ContentShowcasePage() {
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Jan 30, 2025",
+      featured: true
     },
     {
       title: "AI Multimodal Implementation Guide 2025",
@@ -98,24 +168,31 @@ export default function ContentShowcasePage() {
       icon: "📋",
       category: "Checklist",
       type: "Free Download",
+<<<<<<< HEAD
       date: "Feb 08, 2025"
+=======
+      date: "Feb 08, 2025",
+      featured: false
+    },
+    {
+      title: "AI Security Hardening Checklist: Essential Security Measures",
+      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
+      href: "/resources/ai-security-hardening-checklist",
+      icon: "🛡️",
+      category: "Security",
+      type: "Free Download",
+      date: "Feb 06, 2025",
+      featured: false
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
     }
   ];
-=======
->>>>>>> cursor/create-and-deploy-new-content-fa2c
 
   return (
     <ErrorBoundary>
       <SEO
-<<<<<<< HEAD
-        title="Latest AI & Tech Content Showcase - Zion Tech Group"
-        description="Discover Zion Tech Group's newest blog posts, case studies, and free resources on AI, cloud, and digital transformation. Stay informed with our expert insights."
-        keywords="AI content, tech articles, case studies, free resources, AI blog, digital transformation, Zion Tech Group"
-=======
         title="Content Showcase - Latest AI & Technology Resources | Zion Tech Group"
         description="Explore our comprehensive collection of AI articles, case studies, and resources. Stay ahead with the latest insights in artificial intelligence and technology."
         keywords="AI content, technology resources, AI articles, case studies, AI guides, technology insights"
->>>>>>> cursor/create-and-deploy-new-content-fa2c
         url="/content-showcase"
       />
       <StructuredData
@@ -135,7 +212,6 @@ export default function ContentShowcasePage() {
         }}
       />
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -182,18 +258,26 @@ export default function ContentShowcasePage() {
                 🚀 Fresh AI & Tech Content Just Dropped
               </h2>
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-                New this week: AI 2025 Predictions, Implementation Success Framework, Enterprise Transformation Case Study, 
-                and our comprehensive 150-page AI Transformation Playbook. Expert insights to accelerate your growth.
+                New this week: AI Industry Disruption 2025, AI Trends Predictions, Fortune 500 Success Story, 
+                and our comprehensive 150-page AI Implementation Master Guide. Expert insights to accelerate your growth.
               </p>
             </div>
 
             {/* Featured Content Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
               <Link href="/blog/ai-2025-year-ahead-predictions" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
                   <h3 className="text-lg font-semibold mb-2">AI 2025: Year Ahead Predictions</h3>
                   <p className="text-sm opacity-90 mb-3">Expert predictions for breakthrough technologies and enterprise adoption trends</p>
+=======
+              <Link href="/blog/ai-2025-industry-disruption" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Industry Disruption 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">How AI is reshaping every sector with real impact data and case studies</p>
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
                   <div className="flex items-center text-xs opacity-75">
                     <span>18 min read</span>
                     <span className="mx-2">•</span>
@@ -202,6 +286,7 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
               
+<<<<<<< HEAD
               <Link href="/blog/ai-multimodal-revolution-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎭</div>
@@ -211,15 +296,34 @@ export default function ContentShowcasePage() {
                     <span>22 min read</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
+=======
+              <Link href="/blog/ai-trends-2025-predictions" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Trends 2025 Predictions</h3>
+                  <p className="text-sm opacity-90 mb-3">15 predictions that will shape the future of technology</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>28 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>Trending</span>
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
                   </div>
                 </div>
               </Link>
               
+<<<<<<< HEAD
               <Link href="/case-studies/ai-manufacturing-automation-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
                   <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
                   <p className="text-sm opacity-90 mb-3">40% cost reduction, 60% faster processing - complete case study</p>
+=======
+              <Link href="/case-studies/ai-transformation-fortune-500-success-2025" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+                  <h3 className="text-lg font-semibold mb-2">Fortune 500 AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">$50M savings and 300% ROI in 18 months</p>
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
@@ -228,11 +332,19 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
 
+<<<<<<< HEAD
               <Link href="/resources/ai-multimodal-implementation-guide-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
                   <h3 className="text-lg font-semibold mb-2">Multimodal AI Implementation Guide</h3>
                   <p className="text-sm opacity-90 mb-3">Complete 180+ page implementation guide with templates</p>
+=======
+              <Link href="/resources/ai-implementation-master-guide-2025" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Implementation Master Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">150+ page complete implementation guide with templates</p>
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
                   <div className="flex items-center text-xs opacity-75">
                     <span>Free Download</span>
                     <span className="mx-2">•</span>
@@ -371,9 +483,11 @@ export default function ContentShowcasePage() {
                   <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                     <div className="aspect-video bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center relative">
                       <div className="text-8xl">{post.icon}</div>
-                      <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        NEW
-                      </div>
+                      {post.featured && (
+                        <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                          NEW
+                        </div>
+                      )}
                     </div>
                     <div className="p-8">
                       <div className="flex items-center gap-3 mb-4">
@@ -416,6 +530,7 @@ export default function ContentShowcasePage() {
                 <span>→</span>
               </Link>
             </div>
+<<<<<<< HEAD
 =======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -868,8 +983,12 @@ export default function ContentShowcase() {
           </div>
         </section>
 
+=======
+          </div>
+        </section>
+
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
         {/* Featured Case Studies */}
-<<<<<<< HEAD
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -887,9 +1006,11 @@ export default function ContentShowcase() {
                   <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                     <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative">
                       <div className="text-8xl">{study.icon}</div>
-                      <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        NEW
-                      </div>
+                      {study.featured && (
+                        <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                          NEW
+                        </div>
+                      )}
                     </div>
                     <div className="p-8">
                       <div className="flex items-center gap-3 mb-4">
@@ -938,6 +1059,7 @@ export default function ContentShowcase() {
                 <span>→</span>
               </Link>
             </div>
+<<<<<<< HEAD
 =======
         <section className="mb-16">
           <div className="flex items-center justify-between mb-8">
@@ -1161,11 +1283,12 @@ export default function ContentShowcase() {
               </div>
             </Link>
 >>>>>>> cursor/create-and-deploy-new-content-fa2c
+=======
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
           </div>
         </section>
 
         {/* Featured Resources */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -1219,14 +1342,8 @@ export default function ContentShowcase() {
                 <span>→</span>
               </Link>
             </div>
-=======
-        <section className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">📋 Featured Resources</h2>
-            <Link href="/resources" className="text-purple-600 hover:text-purple-700 font-medium">
-              View All Resources →
-            </Link>
           </div>
+<<<<<<< HEAD
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/resources/ai-implementation-master-guide-2025" className="group">
@@ -1474,6 +1591,11 @@ export default function ContentShowcase() {
         {/* Newsletter Signup */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        </section>
+
+        {/* Newsletter Signup */}
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
         <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
@@ -1513,6 +1635,7 @@ export default function ContentShowcase() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 =======
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated with Our Latest Content</h2>
@@ -1588,5 +1711,10 @@ export default function ContentShowcase() {
       </div>
     </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-831d
+=======
+        </section>
+      </div>
+    </ErrorBoundary>
+>>>>>>> 142f80cf370915cfbd164ae6f117d0052398a5d0
   );
 }
