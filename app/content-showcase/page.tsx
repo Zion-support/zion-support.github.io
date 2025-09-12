@@ -43,41 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
+              <Link href="/blog/ai-2025-enterprise-integration-masterclass" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Revolution 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">The future of human-computer interaction with voice, vision, and gesture</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎓</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Integration Masterclass</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete guide to successfully integrating AI into your enterprise infrastructure</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>12 min read</span>
+                    <span>25 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Hot Topic</span>
+                    <span>🔥 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-robotics-automation" className="group">
+              <Link href="/blog/ai-2025-trends-predictions" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Robotics & Automation</h3>
-                  <p className="text-sm opacity-90 mb-3">Intelligent machines transforming industries with collaborative robots</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Trends 2025 Predictions</h3>
+                  <p className="text-sm opacity-90 mb-3">Comprehensive analysis of the most impactful AI trends shaping 2025</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>15 min read</span>
+                    <span>20 min read</span>
                     <span className="mx-2">•</span>
                     <span>🚀 Trending</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-sustainability-transformation-2025" className="group">
+              <Link href="/case-studies/ai-transformation-healthcare-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Sustainability Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">Net-zero emissions achieved with 40% cost reduction</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Transformation Success</h3>
+                  <p className="text-sm opacity-90 mb-3">40% efficiency gains and $2.3M savings achieved through AI</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>🏆 Award Winner</span>
+                    <span>🏆 NEW</span>
                   </div>
                 </div>
               </Link>
