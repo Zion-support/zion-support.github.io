@@ -18,6 +18,36 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Data Pipeline Automation 2025",
+    description: "Streaming, orchestration, and monitoring patterns for reliable AI dataflows",
+    url: "/blog/ai-2025-data-pipeline-automation",
+    type: "Blog Post",
+    category: "Data Engineering",
+    icon: "🛠️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agentic Orchestration in the Enterprise",
+    description: "Workflow blueprints, safety gates, and cost controls for agent systems",
+    url: "/resources/agentic-orchestration-enterprise-2025",
+    type: "Resource",
+    category: "AI Engineering",
+    icon: "🧠",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Retail Personalization Playbook 2025",
+    description: "200+ page guide to 1:1 experiences that drive 300% revenue growth",
+    url: "/resources/ai-retail-personalization-playbook-2025",
+    type: "Resource",
+    category: "Growth",
+    icon: "🛍️",
+    featured: true,
+    new: true
+  },
+  {
     title: "Practical AI Agents for Small Businesses",
     description: "Automate support, sales outreach, and back-office reliably",
     url: "/blog/ai-agents-for-smbs",
