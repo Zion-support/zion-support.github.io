@@ -80,6 +80,49 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <div className="relative group">
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              AI 2028
+              <span className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full animate-pulse">
+                REVOLUTIONARY
+              </span>
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/ai-2028-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500">
+                  🚀 AI 2028 Breakthrough Showcase (REVOLUTIONARY)
+                </Link>
+                <Link href="/blog/ai-2028-quantum-ai-fusion" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚛️ Quantum-AI Fusion Revolution (8000% ROI)
+                </Link>
+                <Link href="/blog/ai-2028-neural-synthesis" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧠 Neural Synthesis Technology (99.7% Accuracy)
+                </Link>
+                <Link href="/case-studies/ai-2028-enterprise-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏢 Enterprise Automation Mastery (5000% ROI)
+                </Link>
+                <Link href="/blog/ai-2028-autonomous-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🤖 Autonomous Decision Systems (3000% ROI)
+                </Link>
+                <Link href="/tools/ai-2028-predictive-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📊 Predictive Analytics Engine (2500% ROI)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/resources/ai-2028-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2028 Implementation Guide (BREAKTHROUGH)
+                </Link>
+                <Link href="/tools/ai-2028-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 AI 2028 ROI Calculator (NEW)
+                </Link>
+                <Link href="/webinars/ai-2028-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Revolutionary Breakthroughs Webinar (NEW)
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
               AI 2027
               <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
                 BREAKTHROUGH
