@@ -1,199 +1,131 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 
-interface NewsletterSignupProps {
-  showContentPreview?: boolean;
-  variant?: 'default' | 'compact' | 'inline';
-}
-
-export default function EnhancedNewsletterSignup({ 
-  showContentPreview = true,
-  variant = 'default'
-}: NewsletterSignupProps) {
+export default function EnhancedNewsletterSignup() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate subscription
+    setIsLoading(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
     setIsSubscribed(true);
-    setTimeout(() => setIsSubscribed(false), 3000);
+    setIsLoading(false);
+    setEmail('');
   };
 
-  const upcomingContent = [
-    {
-      title: "AI-Powered Healthcare Revolution",
-      description: "How AI is transforming medical diagnosis and treatment",
-      type: "Article",
-      date: "Next Week"
-    },
-    {
-      title: "Quantum Computing Business Applications",
-      description: "Real-world quantum solutions for enterprise challenges",
-      type: "Case Study",
-      date: "Coming Soon"
-    },
-    {
-      title: "AI Ethics & Governance Framework",
-      description: "Best practices for responsible AI implementation",
-      type: "Guide",
-      date: "This Month"
-    }
-  ];
-
-  if (variant === 'compact') {
+  if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900">Stay Updated</h3>
-            <p className="text-sm text-gray-600">Get AI insights delivered weekly</p>
-          </div>
-          <form onSubmit={handleSubmit} className="flex gap-2">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email"
-              className="px-3 py-2 rounded-md text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-            >
-              {isSubscribed ? '✓' : 'Subscribe'}
-            </button>
-          </form>
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 text-center border border-green-200">
+        <div className="text-6xl mb-4">🎉</div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Welcome to the AI Revolution!</h3>
+        <p className="text-lg text-gray-600 mb-6">
+          You're now part of our exclusive community of AI leaders and innovators. 
+          Check your email for a special welcome gift!
+        </p>
+        <div className="bg-white rounded-lg p-4 border border-green-200">
+          <h4 className="font-semibold text-gray-900 mb-2">🎁 Your Welcome Gift:</h4>
+          <p className="text-sm text-gray-600">
+            Free access to our AI Implementation Toolkit (valued at $297) - 
+            includes templates, checklists, and ROI calculators.
+          </p>
         </div>
-      </div>
-    );
-  }
-
-  if (variant === 'inline') {
-    return (
-      <div className="flex items-center space-x-4">
-        <span className="text-sm text-gray-600">Get weekly AI insights:</span>
-        <form onSubmit={handleSubmit} className="flex gap-2">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter email"
-            className="px-3 py-2 rounded-md text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-          >
-            {isSubscribed ? '✓' : 'Subscribe'}
-          </button>
-        </form>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full -translate-y-16 translate-x-16"></div>
+      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-5 rounded-full translate-y-12 -translate-x-12"></div>
+      
+      <div className="relative">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Stay Ahead with AI Insights
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2 mb-4 backdrop-blur-sm">
+            <span className="text-sm font-medium">📧 EXCLUSIVE CONTENT</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Stay Ahead of the AI Revolution
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Join 10,000+ AI professionals getting weekly updates on trends, 
-            implementation guides, and exclusive content delivered to their inbox.
+          
+          <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
+            Get weekly insights, exclusive content, and early access to our latest 
+            AI strategies. Join 50,000+ AI professionals already transforming their businesses.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Newsletter Signup */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
+        <div className="max-w-2xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex-1">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                  className="w-full px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 text-lg"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className={`w-full px-6 py-3 rounded-lg font-semibold transition-colors ${
-                  isSubscribed 
-                    ? 'bg-green-600 text-white' 
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
-                }`}
+                disabled={isLoading}
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
               >
-                {isSubscribed ? '✓ Subscribed Successfully!' : 'Subscribe to Newsletter'}
+                {isLoading ? (
+                  <span className="flex items-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Subscribing...
+                  </span>
+                ) : (
+                  'Get Free Updates'
+                )}
               </button>
-            </form>
+            </div>
             
-            <div className="mt-4 text-sm text-gray-500">
-              <p>✓ No spam, ever</p>
-              <p>✓ Unsubscribe anytime</p>
-              <p>✓ Weekly AI insights</p>
-            </div>
-          </div>
+            <p className="text-sm opacity-75 text-center">
+              No spam. Unsubscribe anytime. Read our{' '}
+              <a href="/privacy" className="underline hover:no-underline">privacy policy</a>.
+            </p>
+          </form>
+        </div>
 
-          {/* Content Preview */}
-          {showContentPreview && (
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                What's Coming Next
-              </h3>
-              <div className="space-y-3">
-                {upcomingContent.map((content, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg border border-gray-200">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <h4 className="text-sm font-semibold text-gray-900 mb-1">
-                          {content.title}
-                        </h4>
-                        <p className="text-xs text-gray-600 mb-2">
-                          {content.description}
-                        </p>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
-                            {content.type}
-                          </span>
-                          <span className="text-xs text-gray-500">
-                            {content.date}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-4">
-                <Link 
-                  href="/content-showcase" 
-                  className="text-sm text-blue-600 hover:text-blue-800 font-medium"
-                >
-                  View All Content →
-                </Link>
-              </div>
-            </div>
-          )}
+        {/* Benefits */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="text-center">
+            <div className="text-3xl mb-2">📚</div>
+            <h3 className="font-semibold mb-1">Weekly Insights</h3>
+            <p className="text-sm opacity-90">Latest AI trends and strategies</p>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl mb-2">🎁</div>
+            <h3 className="font-semibold mb-1">Exclusive Content</h3>
+            <p className="text-sm opacity-90">Early access to new resources</p>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl mb-2">💡</div>
+            <h3 className="font-semibold mb-1">Expert Tips</h3>
+            <p className="text-sm opacity-90">Implementation best practices</p>
+          </div>
         </div>
 
         {/* Social Proof */}
         <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500 mb-4">
-            Trusted by professionals at leading companies
-          </p>
+          <p className="text-sm opacity-75 mb-4">Trusted by industry leaders</p>
           <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="text-sm font-semibold text-gray-400">Microsoft</div>
-            <div className="text-sm font-semibold text-gray-400">Google</div>
-            <div className="text-sm font-semibold text-gray-400">Amazon</div>
-            <div className="text-sm font-semibold text-gray-400">Tesla</div>
-            <div className="text-sm font-semibold text-gray-400">OpenAI</div>
+            <div className="text-2xl font-bold">Fortune 500</div>
+            <div className="text-2xl font-bold">Startups</div>
+            <div className="text-2xl font-bold">Consultants</div>
+            <div className="text-2xl font-bold">Enterprises</div>
           </div>
         </div>
       </div>

@@ -17,6 +17,9 @@ const EnhancedContentPromotionBanner = lazy(() => import('../components/Enhanced
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
 const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
+const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
+const TrendingContentWidget = lazy(() => import('../components/TrendingContentWidget'));
+const EnhancedNewsletterSignup = lazy(() => import('../components/EnhancedNewsletterSignup'));
 
 // Card component
 function Card({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) {
@@ -2066,11 +2069,32 @@ export default function HomePage() {
         <EnhancedContentShowcase />
       </Suspense>
 
+      {/* Trending Content Section */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+              🔥 What's Trending Right Now
+            </h2>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Discover the most popular AI content, case studies, and resources 
+              that are helping businesses transform in 2025.
+            </p>
+          </div>
+          
+          <div className='max-w-4xl mx-auto'>
+            <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+              <TrendingContentWidget />
+            </Suspense>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
           <Suspense fallback={<LoadingSpinner size="md" text="Loading newsletter..." />}>
-            <NewsletterSignup />
+            <EnhancedNewsletterSignup />
           </Suspense>
         </div>
       </section>
