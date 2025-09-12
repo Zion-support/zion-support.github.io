@@ -59,6 +59,13 @@ import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
 import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePromotionBanner2026';
 import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
 
+// New 2027 Breakthrough Content Components
+import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
+import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
+import QuantumComputingBreakthroughShowcase from '../components/QuantumComputingBreakthroughShowcase';
+import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomationMasteryShowcase';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
 // New 2025 Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
 import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
@@ -82,6 +89,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2027 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2027BreakthroughPromotionBanner />
+        
+        {/* AI 2027 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2027BreakthroughContentShowcase />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH SHOWCASE */}
+        <QuantumComputingBreakthroughShowcase />
+        
+        {/* ENTERPRISE AUTOMATION MASTERY SHOWCASE */}
+        <EnterpriseAutomationMasteryShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
         {/* NEURAL INTERFACE PROMOTION BANNER 2026 */}
         <NeuralInterfacePromotionBanner2026 />
         
