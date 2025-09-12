@@ -125,6 +125,8 @@ import AI2034RevolutionaryContentShowcase from '../components/AI2034Revolutionar
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
+import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
