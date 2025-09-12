@@ -885,6 +885,94 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Showcase Banner */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>✨ JUST PUBLISHED - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI & Business Insights
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              New this week: AI 2025 Year in Review, Productivity Automation Guide, Cybersecurity Threats, 
+              and our comprehensive content showcase. Expert insights to accelerate your growth.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/content-showcase'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Explore Content Library
+              </Link>
+              <Link
+                href='/blog'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📖 Read Latest Articles
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-year-in-review' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive analysis of AI breakthroughs and trends</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Featured</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-productivity-automation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Productivity Automation</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete implementation guide for 40% efficiency gains</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-cybersecurity-threats-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats</h3>
+                <p className='text-sm opacity-90 mb-3'>Defending against next-gen AI-powered attacks</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Urgent</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-productivity-automation-playbook-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>Productivity Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>150+ pages with checklists, templates, and ROI calculator</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Latest Articles Section */}
       <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -901,10 +989,10 @@ export default function HomePage() {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link 
-                href='/blog' 
+                href='/content-showcase' 
                 className='inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
               >
-                View All Articles
+                Explore Content Library
                 <span>→</span>
               </Link>
               <Link 
@@ -1238,18 +1326,74 @@ export default function HomePage() {
         <TechnologyStack />
       </Suspense>
 
-      {/* Newsletter Signup Section */}
+      {/* Enhanced Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-8'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              Stay Ahead with Our Latest Insights
+              📧 Stay Ahead with Our Latest Insights
             </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
               Get weekly updates on AI trends, technology insights, and business strategies. 
-              Join 10,000+ professionals who trust our content.
+              Join 10,000+ professionals who trust our content and get exclusive access to new resources.
             </p>
           </div>
+          
+          <div className='grid md:grid-cols-2 gap-8 mb-12'>
+            <div className='bg-white rounded-xl shadow-lg p-8'>
+              <h3 className='text-xl font-semibold text-gray-900 mb-4'>🎯 What You'll Get</h3>
+              <ul className='space-y-3 text-gray-700'>
+                <li className='flex items-center gap-3'>
+                  <span className='text-green-500'>✓</span>
+                  <span>Weekly AI insights and trend analysis</span>
+                </li>
+                <li className='flex items-center gap-3'>
+                  <span className='text-green-500'>✓</span>
+                  <span>Exclusive case studies and success stories</span>
+                </li>
+                <li className='flex items-center gap-3'>
+                  <span className='text-green-500'>✓</span>
+                  <span>Free resources and implementation guides</span>
+                </li>
+                <li className='flex items-center gap-3'>
+                  <span className='text-green-500'>✓</span>
+                  <span>Early access to new content and tools</span>
+                </li>
+                <li className='flex items-center gap-3'>
+                  <span className='text-green-500'>✓</span>
+                  <span>Invitation to exclusive webinars and events</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className='bg-white rounded-xl shadow-lg p-8'>
+              <h3 className='text-xl font-semibold text-gray-900 mb-4'>📊 Recent Subscriber Benefits</h3>
+              <div className='space-y-4'>
+                <div className='flex items-center gap-3'>
+                  <div className='text-2xl'>📋</div>
+                  <div>
+                    <div className='font-medium text-gray-900'>AI Productivity Playbook</div>
+                    <div className='text-sm text-gray-600'>150+ pages of implementation guides</div>
+                  </div>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <div className='text-2xl'>🛡️</div>
+                  <div>
+                    <div className='font-medium text-gray-900'>Cybersecurity Checklist</div>
+                    <div className='text-sm text-gray-600'>Essential security measures for AI systems</div>
+                  </div>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <div className='text-2xl'>📊</div>
+                  <div>
+                    <div className='font-medium text-gray-900'>ROI Calculator Tool</div>
+                    <div className='text-sm text-gray-600'>Calculate your AI investment returns</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div className='bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto'>
             <form className='space-y-4'>
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -1272,8 +1416,8 @@ export default function HomePage() {
             </form>
             <div className='mt-6 text-center'>
               <p className='text-sm text-gray-600'>
-                <strong>What you'll get:</strong> Weekly AI insights, exclusive case studies, 
-                free resources, and early access to new content.
+                <strong>Join 10,000+ professionals</strong> who get our weekly insights delivered 
+                straight to their inbox. Start your AI transformation journey today.
               </p>
             </div>
           </div>
