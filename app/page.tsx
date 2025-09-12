@@ -39,64 +39,64 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Revolutionary Content Drop Banner */}
-        <section className="py-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
+        {/* AI Tools Showcase Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT JUST RELEASED</span>
+                <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
+                🎯 Revolutionary AI Tools Suite: 6 Powerful Tools Now Available!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Ethical Governance Framework, Automation Trends 2025, 
-                $150M Supply Chain Success Story, and the Complete AI Automation Implementation Guide. Get expert insights
-                on the technologies transforming 2025 and beyond.
+                Transform your AI journey with our comprehensive suite of tools: AI Readiness Assessment, ROI Calculator, 
+                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, and Cost Optimizer. 
+                Get personalized insights and recommendations to maximize your AI success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
-                  href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  href="/tools/ai-tools-showcase"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
-                  Explore All New Content
+                  🛠️ Explore All AI Tools
                 </Link>
                 <Link
-                  href="/blog/ai-2025-ethical-ai-governance"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  href="/tools/ai-readiness-assessment"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  📖 Read Latest Article
+                  🎯 Take Assessment
                 </Link>
                 <Link
-                  href="/resources/ai-automation-implementation-guide-2025"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  href="/resources/ai-implementation-roadmap-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  📋 Download Free Guide
+                  🗺️ View Roadmap
                 </Link>
               </div>
               
-              {/* Featured Content Preview */}
+              {/* Featured Tools Preview */}
               <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
+                <Link href="/tools/ai-readiness-assessment" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🚀</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Breakthrough Innovations</h3>
-                    <p className="text-xs opacity-90">Revolutionary technologies reshaping industries</p>
+                    <div className="text-2xl mb-2">🎯</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Readiness Assessment</h3>
+                    <p className="text-xs opacity-90">Evaluate your AI transformation readiness</p>
                   </div>
                 </Link>
-                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <Link href="/tools/ai-roi-calculator" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">💰</div>
-                    <h3 className="text-sm font-semibold mb-1">$200M Success Story</h3>
-                    <p className="text-xs opacity-90">Autonomous AI systems case study</p>
+                    <div className="text-2xl mb-2">📊</div>
+                    <h3 className="text-sm font-semibold mb-1">AI ROI Calculator</h3>
+                    <p className="text-xs opacity-90">Calculate your AI investment returns</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-sustainability-green-tech-2025" className="group">
+                <Link href="/resources/ai-implementation-roadmap-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🌱</div>
-                    <h3 className="text-sm font-semibold mb-1">Green AI Systems</h3>
-                    <p className="text-xs opacity-90">Building eco-friendly AI solutions</p>
+                    <div className="text-2xl mb-2">🗺️</div>
+                    <h3 className="text-sm font-semibold mb-1">Implementation Roadmap</h3>
+                    <p className="text-xs opacity-90">32-week AI transformation guide</p>
                   </div>
                 </Link>
                 <Link
