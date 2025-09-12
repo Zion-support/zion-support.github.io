@@ -202,6 +202,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
             Download Resources
           </Link>
         </div>
+<<<<<<< HEAD
 interface NewContentBannerProps {
   title: string;
   subtitle: string;
@@ -256,11 +257,17 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
             </Link>
           </div>
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
       </div>
     </section>
   );
 };
 
 export default NewContentBanner;
+<<<<<<< HEAD
 export { hotContent };
 export default NewContentBanner;
+=======
+export { hotContent };
+>>>>>>> cursor/create-and-deploy-new-content-28f5

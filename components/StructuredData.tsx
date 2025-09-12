@@ -14,23 +14,37 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Pioneering the future of technology with cutting-edge AI, quantum computing, and autonomous solutions that transform businesses worldwide.",
+          "url": "https://zion.app",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://zion.app/images/zion-tech-group-logo.png",
+            "width": 600,
+            "height": 60
+          },
+          "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
           "foundingDate": "2020",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "US"
           },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "email": "info@ziontechgroup.com"
-          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "email": "info@zion.app",
+              "availableLanguage": "English"
+            },
+            {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "sales@zion.app",
+              "availableLanguage": "English"
+            }
+          ],
           "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/ziontechgroup"
+            "https://linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ZionTechGroup",
+            "https://github.com/Zion-Holdings"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -41,27 +55,57 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "AI & Machine Learning",
-                  "description": "Advanced AI solutions for enterprise automation"
-                }
+                  "description": "Advanced AI solutions for enterprise automation and workforce transformation"
+                },
+                "priceRange": "$$$",
+                "availability": "InStock"
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Quantum Computing",
-                  "description": "Next-generation computational power"
-                }
+                  "name": "Cloud Infrastructure",
+                  "description": "Scalable cloud solutions and micro SaaS development"
+                },
+                "priceRange": "$$$",
+                "availability": "InStock"
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Cybersecurity",
-                  "description": "Military-grade protection for digital assets"
-                }
+                  "name": "Data Privacy & Compliance",
+                  "description": "GDPR, CCPA, and enterprise data protection solutions"
+                },
+                "priceRange": "$$$",
+                "availability": "InStock"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Green AI & Sustainability",
+                  "description": "Sustainable AI solutions and green technology implementation"
+                },
+                "priceRange": "$$$",
+                "availability": "InStock"
               }
             ]
-          }
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Worldwide"
+          },
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Cloud Computing",
+            "Data Privacy",
+            "Sustainability",
+            "Digital Transformation",
+            "Micro SaaS",
+            "Enterprise Solutions"
+          ]
         };
 
       case 'website':
@@ -69,12 +113,22 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "Leading technology company specializing in AI, quantum computing, and cybersecurity solutions",
+          "url": "https://zion.app",
+          "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://zion.app"
+          },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "target": "https://zion.app/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://zion.app"
           }
         };
 
