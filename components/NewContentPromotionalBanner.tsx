@@ -1,139 +1,159 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, CheckCircle, BookOpen, CaseStudy, FileText } from 'lucide-react';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Target, CheckCircle } from 'lucide-react';
 
 const NewContentPromotionalBanner: React.FC = () => {
+  const newContent = [
+    {
+      title: "AI Enterprise Automation Revolution 2025",
+      description: "Complete Implementation Guide",
+      href: "/blog/ai-2025-enterprise-automation-revolution",
+      icon: "🤖",
+      badge: "FEATURED",
+      badgeColor: "bg-blue-100 text-blue-800",
+      metrics: "300% Efficiency Gains"
+    },
+    {
+      title: "AI Startup Funding Playbook 2025",
+      description: "From Seed to Series A",
+      href: "/blog/ai-startup-funding-playbook-2025",
+      icon: "💰",
+      badge: "HOT",
+      badgeColor: "bg-green-100 text-green-800",
+      metrics: "$47B+ Funding"
+    },
+    {
+      title: "AI Enterprise Transformation Success",
+      description: "$100M Revenue Impact Case Study",
+      href: "/case-studies/ai-2025-enterprise-transformation-success",
+      icon: "🏆",
+      badge: "SUCCESS",
+      badgeColor: "bg-emerald-100 text-emerald-800",
+      metrics: "$100M Impact"
+    },
+    {
+      title: "AI Implementation Master Guide 2025",
+      description: "Complete 150-Page Playbook",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      badge: "MASTER",
+      badgeColor: "bg-purple-100 text-purple-800",
+      metrics: "150+ Pages"
+    }
+  ];
+
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Content */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                <CheckCircle className="w-4 h-4 mr-1" />
-                NEW CONTENT
-              </span>
-              <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                <TrendingUp className="w-4 h-4 mr-1" />
-                TRENDING
-              </span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Discover Our Latest AI Content & Success Stories
-            </h2>
-            
-            <p className="text-xl text-blue-100 leading-relaxed">
-              Explore our newest blog posts, case studies, and comprehensive guides featuring 
-              real-world AI transformations and proven implementation strategies.
-            </p>
+    <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2" />
+            New Content Alert
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Fresh AI Content Just Dropped! 🚀
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Discover our latest comprehensive guides, case studies, and resources 
+            designed to accelerate your AI transformation journey in 2025.
+          </p>
+        </div>
 
-            {/* Content Highlights */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="flex items-center space-x-3 mb-2">
-                  <BookOpen className="w-5 h-5 text-blue-300" />
-                  <span className="font-semibold">New Blog Posts</span>
-                </div>
-                <p className="text-blue-100 text-sm">
-                  Enterprise transformation success stories and funding insights
-                </p>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {newContent.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <div className="flex items-center mb-2">
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${item.badgeColor}`}>
+                  {item.badge}
+                </span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="flex items-center space-x-3 mb-2">
-                  <CaseStudy className="w-5 h-5 text-purple-300" />
-                  <span className="font-semibold">Case Studies</span>
-                </div>
-                <p className="text-blue-100 text-sm">
-                  $2B revenue growth and 99.9% security success stories
-                </p>
+              <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-white/80 text-sm mb-3">{item.description}</p>
+              <div className="flex items-center justify-between">
+                <span className="text-yellow-300 text-sm font-medium">{item.metrics}</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
-            </div>
+            </Link>
+          ))}
+        </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/blog" 
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center"
-              >
-                Explore All Content
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                href="/resources" 
-                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors flex items-center"
-              >
-                Download Guides
-                <FileText className="w-5 h-5 ml-2" />
-              </Link>
+        {/* Stats Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">4</div>
+              <div className="text-white/80">New Articles</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">150+</div>
+              <div className="text-white/80">Pages of Content</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">$200M+</div>
+              <div className="text-white/80">Value Insights</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">100%</div>
+              <div className="text-white/80">Actionable</div>
             </div>
           </div>
+        </div>
 
-          {/* Featured Content Cards */}
-          <div className="space-y-4">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl">🏢</span>
-                  <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-medium">NEW</span>
-                </div>
-                <Star className="w-5 h-5 text-yellow-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">AI Enterprise Transformation Success</h3>
-              <p className="text-blue-100 text-sm mb-3">
-                $2B revenue growth case study with proven strategies and implementation roadmap
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-blue-200">25 min read</span>
-                <Link href="/blog/ai-2025-enterprise-transformation-success" className="text-blue-300 hover:text-white text-sm font-medium">
-                  Read More →
-                </Link>
-              </div>
+        {/* CTA Section */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already achieving remarkable results with our proven AI strategies and implementation guides.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/content-showcase"
+              className="inline-flex items-center px-8 py-4 bg-white text-indigo-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+            >
+              Explore All Content
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-900 transition-colors text-lg"
+            >
+              Get AI Consultation
+            </Link>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-12 pt-8 border-t border-white/20">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-white/70">
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+              <span className="text-sm">Fortune 500 Tested</span>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl">🛡️</span>
-                  <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs font-medium">TRENDING</span>
-                </div>
-                <TrendingUp className="w-5 h-5 text-green-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Transformation</h3>
-              <p className="text-blue-100 text-sm mb-3">
-                99.9% threat detection success with $200M in security cost savings
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-blue-200">22 min read</span>
-                <Link href="/case-studies/ai-cybersecurity-transformation-2025" className="text-blue-300 hover:text-white text-sm font-medium">
-                  Read More →
-                </Link>
-              </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+              <span className="text-sm">Expert-Reviewed</span>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl">📚</span>
-                  <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-medium">GUIDE</span>
-                </div>
-                <BookOpen className="w-5 h-5 text-purple-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">AI 2025 Implementation Playbook</h3>
-              <p className="text-blue-100 text-sm mb-3">
-                Complete 200-page guide with frameworks, templates, and proven strategies
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-blue-200">200 pages</span>
-                <Link href="/resources/ai-2025-comprehensive-implementation-playbook" className="text-blue-300 hover:text-white text-sm font-medium">
-                  Download →
-                </Link>
-              </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+              <span className="text-sm">Proven Results</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+              <span className="text-sm">Free Access</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
