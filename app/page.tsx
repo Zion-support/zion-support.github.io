@@ -787,48 +787,47 @@ export default function HomePage() {
               Fresh AI & Tech Content Just Dropped
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our latest expert insights, case studies, and resources. From AI multimodal 
-              applications to cybersecurity threats and sustainability solutions - get the knowledge 
-              you need to succeed in 2025.
+              Discover our latest expert insights, case studies, and resources. From AI 2025 predictions 
+              to multimodal revolution and cybersecurity threats - get the knowledge you need to succeed.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
-                href='/blog'
+                href='/content-showcase'
                 className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
               >
-                📚 Read Latest Articles
+                🎯 View Content Showcase
               </Link>
               <Link
-                href='/resources'
+                href='/blog'
                 className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
               >
-                📋 Download Free Resources
+                📚 Read Latest Articles
               </Link>
             </div>
           </div>
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-multimodal-applications-2025' className='group'>
+            <Link href='/blog/ai-2025-year-ahead-predictions' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎭</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Multimodal Applications 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Beyond text to vision, audio, and beyond - the future of AI</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025: The Year Ahead</h3>
+                <p className='text-sm opacity-90 mb-3'>15 predictions that will shape technology in 2025</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>15 min read</span>
+                  <span>18 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/ai-sustainability-green-tech-2025' className='group'>
+            <Link href='/blog/ai-multimodal-revolution-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
-                <h3 className='text-lg font-semibold mb-2'>AI for Sustainability 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Green tech solutions driving environmental impact</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎭</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Multimodal Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>Beyond text to vision, audio, and beyond</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
+                  <span>15 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -838,10 +837,23 @@ export default function HomePage() {
             <Link href='/blog/ai-cybersecurity-threats-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats 2025</h3>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats</h3>
                 <p className='text-sm opacity-90 mb-3'>Defending against next-gen AI-powered attacks</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Critical</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-multimodal-implementation-guide-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>Multimodal AI Guide</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 150+ pages</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -861,23 +873,10 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/resources/ai-transformation-readiness-assessment-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Readiness Assessment</h3>
-                <p className='text-sm opacity-90 mb-3'>Free tool to evaluate your AI transformation readiness</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/blog' className='group md:col-span-3'>
+            <Link href='/content-showcase' className='group md:col-span-3'>
               <div className='mt-2 bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
-                <div className='text-3xl mb-2'>📚</div>
-                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>View All New Content</h3>
+                <div className='text-3xl mb-2'>🎯</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>View Complete Content Showcase</h3>
                 <p className='text-sm opacity-90'>Explore our complete library of AI insights, case studies, and resources</p>
               </div>
             </Link>
