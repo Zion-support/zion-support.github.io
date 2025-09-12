@@ -9,6 +9,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'agentic-automation-field-guide',
+    title: 'Agentic Automation: A Field Guide for 10x Ops Efficiency',
+    excerpt:
+      'Design autonomous workflows that cut tickets, accelerate MTTR, and boost NPS with guardrails.',
+    content:
+      'Agentic systems combine planners, tools, and feedback loops to autonomously execute tasks across IT and business ops. This guide covers capability scoping, safety constraints, observability, and rollout patterns to achieve step-change efficiency without losing control... ',
+    publishedAt: '2025-09-12',
+    tags: ['Agents', 'Automation', 'Operations']
+  },
+  {
+    slug: 'founder-led-ai-sales',
+    title: 'Founder‑Led AI Sales: From Zero Meetings to Qualified Pipeline',
+    excerpt:
+      'Practical prompts, workflows, and cadences to book conversations with ideal customers in 14 days.',
+    content:
+      'Early-stage teams can leverage AI copilots to research accounts, personalize outreach, and run multi-channel cadences with tight feedback loops. Learn the exact workflow templates, safety checks, and measurement stack used to generate qualified meetings without a sales team... ',
+    publishedAt: '2025-09-12',
+    tags: ['Go-To-Market', 'AI', 'Playbooks']
+  },
+  {
     slug: 'ai-support-24-7',
     title: 'How AI-Powered 24/7 IT Support Transforms SLAs',
     excerpt: 'Learn how always-on, AI-augmented support can reduce MTTR and elevate customer satisfaction.',
