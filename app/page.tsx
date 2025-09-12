@@ -191,12 +191,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: Advanced AI Agents, Healthcare AI Revolution & $3.2B Manufacturing Success!
+                🎉 NEW: AI Trends 2025 Analysis, Manufacturing Transformation & Interactive ROI Calculator!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: Advanced AI Agents for Enterprise (300-500% efficiency gains), Healthcare AI Diagnosis Revolution (95% accuracy), 
-                Fortune 500 Manufacturing Transformation ($3.2B value creation), plus cutting-edge implementation strategies. 
-                Discover the breakthrough AI technologies reshaping industries in 2025.
+                Just released: Comprehensive AI Trends 2025 Analysis, Manufacturing Giant $2.1B Transformation Case Study, 
+                Interactive AI ROI Calculator, plus quantum AI breakthroughs and neural interface innovations. 
+                Get expert insights on the cutting-edge AI technologies transforming 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -206,16 +206,22 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-advanced-ai-agents-enterprise"
+                  href="/blog/ai-2025-comprehensive-trends-analysis"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read AI Agents Guide
+                  Read AI Trends 2025
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-fortune-500-manufacturing-transformation"
+                  href="/case-studies/ai-2025-manufacturing-giant-transformation"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $3.2B Success Story
+                  View $2.1B Success Story
+                </Link>
+                <Link
+                  href="/tools/ai-roi-calculator"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  Try ROI Calculator
                 </Link>
               </div>
             </div>
@@ -249,8 +255,167 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-      {/* Fresh Content Banner */}
-      <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* Hero Section */}
+      <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center'>
+            <h1 id="hero-heading" className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
+              Zion Tech Group
+            </h1>
+            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+              Transforming businesses through cutting-edge technology solutions.
+              From AI and blockchain to cloud infrastructure and micro SaaS
+              platforms.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/services'
+                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
+              >
+                Explore Services
+              </Link>
+              <Link
+                href='/contact'
+                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Content Promotion Banner */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
+        <EnhancedContentPromotionBanner />
+      </Suspense>
+
+      {/* Trending Content Carousel */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+        <TrendingContentCarousel />
+      </Suspense>
+
+      {/* Content Recommendation Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Recommended for You
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Personalized content recommendations based on trending topics and expert insights 
+              to accelerate your AI transformation journey.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <Suspense fallback={<LoadingSpinner size="md" text="Loading recommendations..." />}>
+                <ContentRecommendationWidget />
+              </Suspense>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Content Analytics</h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Total Articles</span>
+                    <span className="font-semibold text-gray-900">50+</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Case Studies</span>
+                    <span className="font-semibold text-gray-900">25+</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Implementation Guides</span>
+                    <span className="font-semibold text-gray-900">15+</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Success Stories</span>
+                    <span className="font-semibold text-gray-900">$10B+ Value</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">🎯 Quick Actions</h3>
+                <div className="space-y-3">
+                  <Link href="/blog" className="block text-blue-600 hover:text-blue-800 font-medium">
+                    Browse All Articles →
+                  </Link>
+                  <Link href="/case-studies" className="block text-purple-600 hover:text-purple-800 font-medium">
+                    View Success Stories →
+                  </Link>
+                  <Link href="/contact" className="block text-green-600 hover:text-green-800 font-medium">
+                    Get Expert Consultation →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trending Content Widget */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What's Trending Now
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the most popular and engaging content our community is reading right now.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+              <TrendingContentWidget />
+            </Suspense>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">🔥 Hot Topics</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
+                    <span className="font-medium text-gray-900">AI Trends 2025</span>
+                    <span className="text-sm text-red-600 font-medium">+2.3k views</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
+                    <span className="font-medium text-gray-900">Manufacturing AI</span>
+                    <span className="text-sm text-orange-600 font-medium">+1.8k views</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                    <span className="font-medium text-gray-900">ROI Calculator</span>
+                    <span className="text-sm text-yellow-600 font-medium">+3.1k views</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                    <span className="font-medium text-gray-900">LLM Optimization</span>
+                    <span className="text-sm text-green-600 font-medium">+4.2k views</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 Pro Tip</h3>
+                <p className="text-sm text-gray-700 mb-4">
+                  Start with our AI ROI Calculator to understand your potential returns, 
+                  then dive into our case studies for real-world implementation insights.
+                </p>
+                <Link
+                  href="/tools/ai-roi-calculator"
+                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm"
+                >
+                  Try the Calculator →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Content Spotlight - January 2025 */}
+      <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>

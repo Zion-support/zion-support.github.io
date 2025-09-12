@@ -1,268 +1,164 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface RecommendationItem {
-  id: string;
+interface Recommendation {
   title: string;
   description: string;
-  type: 'blog' | 'case-study' | 'resource';
-  category: string;
-  readTime?: string;
-  pages?: string;
-  icon: string;
   href: string;
-  reason: string;
-  priority: 'high' | 'medium' | 'low';
+  type: 'blog' | 'case-study' | 'tool';
+  category: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  estimatedValue: string;
+  readTime: string;
 }
 
-interface ContentRecommendationWidgetProps {
-  currentContentType?: 'blog' | 'case-study' | 'resource';
-  currentCategory?: string;
-  maxItems?: number;
-}
-
-const allRecommendations: RecommendationItem[] = [
+const recommendations: Recommendation[] = [
   {
-    id: 'ai-2025-predictions',
-    title: 'AI 2025: Year Ahead Predictions',
-    description: 'Comprehensive predictions for breakthrough technologies and market trends',
-    type: 'blog',
-    category: 'AI Predictions',
-    readTime: '25 min read',
-    icon: '🔮',
-    href: '/blog/ai-2025-year-ahead-predictions',
-    reason: 'Trending this week',
-    priority: 'high'
+    title: "AI Trends 2025: Comprehensive Analysis",
+    description: "Master the latest AI technologies transforming industries in 2025",
+    href: "/blog/ai-2025-comprehensive-trends-analysis",
+    type: "blog",
+    category: "AI Strategy",
+    difficulty: "intermediate",
+    estimatedValue: "High",
+    readTime: "15 min"
   },
   {
-    id: 'ai-workforce-transformation',
-    title: 'AI Workforce Transformation 2025',
-    description: 'Complete reskilling strategies and workforce development guide',
-    type: 'blog',
-    category: 'Workforce Development',
-    readTime: '18 min read',
-    icon: '👥',
-    href: '/blog/ai-workforce-transformation-2025',
-    reason: 'Most downloaded',
-    priority: 'high'
+    title: "Manufacturing Giant $2.1B Transformation",
+    description: "Learn from a Fortune 500's successful AI implementation journey",
+    href: "/case-studies/ai-2025-manufacturing-giant-transformation",
+    type: "case-study",
+    category: "Implementation",
+    difficulty: "advanced",
+    estimatedValue: "Very High",
+    readTime: "12 min"
   },
   {
-    id: 'ai-sustainability-case-study',
-    title: 'AI Sustainability Transformation',
-    description: '60% energy reduction and carbon neutrality case study',
-    type: 'case-study',
-    category: 'Sustainability',
-    icon: '🌱',
-    href: '/case-studies/ai-sustainability-transformation-2025',
-    reason: 'High impact results',
-    priority: 'high'
+    title: "AI ROI Calculator",
+    description: "Calculate your potential AI investment returns instantly",
+    href: "/tools/ai-roi-calculator",
+    type: "tool",
+    category: "Planning",
+    difficulty: "beginner",
+    estimatedValue: "High",
+    readTime: "5 min"
   },
   {
-    id: 'ai-workforce-playbook',
-    title: 'AI Workforce Transformation Playbook',
-    description: '150+ page complete implementation guide with templates',
-    type: 'resource',
-    category: 'Free Download',
-    pages: '150+ pages',
-    icon: '📚',
-    href: '/resources/ai-workforce-transformation-playbook-2025',
-    reason: 'Editor\'s choice',
-    priority: 'high'
+    title: "LLM Optimization Masterclass",
+    description: "Achieve 10x performance gains with large language models",
+    href: "/blog/ai-2025-llm-optimization-masterclass",
+    type: "blog",
+    category: "Technical",
+    difficulty: "advanced",
+    estimatedValue: "Very High",
+    readTime: "20 min"
   },
   {
-    id: 'ai-innovation-trends',
-    title: 'AI Innovation Trends 2025',
-    description: 'Quantum AI, neuromorphic computing, and breakthrough technologies',
-    type: 'blog',
-    category: 'AI Innovation',
-    readTime: '25 min read',
-    icon: '🚀',
-    href: '/blog/ai-innovation-trends-2025',
-    reason: 'Popular this month',
-    priority: 'medium'
-  },
-  {
-    id: 'ai-cybersecurity-2025',
-    title: 'AI Cybersecurity Trends 2025',
-    description: 'Protect your digital assets with cutting-edge AI security strategies',
-    type: 'blog',
-    category: 'Cybersecurity',
-    readTime: '28 min read',
-    icon: '🛡️',
-    href: '/blog/ai-cybersecurity-2025',
-    reason: 'Critical for security',
-    priority: 'medium'
-  },
-  {
-    id: 'ai-multimodal-applications',
-    title: 'AI Multimodal Applications 2025',
-    description: 'Beyond text to vision, audio, and beyond - the future of AI',
-    type: 'blog',
-    category: 'AI Technology',
-    readTime: '15 min read',
-    icon: '🎭',
-    href: '/blog/ai-multimodal-applications-2025',
-    reason: 'Cutting-edge technology',
-    priority: 'medium'
-  },
-  {
-    id: 'ai-implementation-master-guide',
-    title: 'AI Implementation Master Guide',
-    description: '150-page complete blueprint for AI success in your organization',
-    type: 'resource',
-    category: 'Free Download',
-    pages: '150+ pages',
-    icon: '📋',
-    href: '/resources/ai-implementation-master-guide-2025',
-    reason: 'Comprehensive guide',
-    priority: 'high'
-  },
-  {
-    id: 'ai-automation-manufacturing',
-    title: 'AI Automation in Manufacturing',
-    description: '40% cost reduction and 60% faster processing times',
-    type: 'case-study',
-    category: 'Manufacturing',
-    icon: '🏭',
-    href: '/case-studies/ai-automation-manufacturing-2025',
-    reason: 'Proven results',
-    priority: 'medium'
-  },
-  {
-    id: 'green-ai-implementation-guide',
-    title: 'Green AI Implementation Guide',
-    description: 'Build sustainable AI systems with 60% energy reduction',
-    type: 'resource',
-    category: 'Sustainability',
-    pages: '120+ pages',
-    icon: '🌱',
-    href: '/resources/green-ai-implementation-guide-2025',
-    reason: 'Environmental impact',
-    priority: 'medium'
+    title: "$2.8B Tech Unicorn Success Story",
+    description: "How AI transformed a startup into a global tech unicorn",
+    href: "/case-studies/ai-2025-global-tech-unicorn-transformation",
+    type: "case-study",
+    category: "Success Stories",
+    difficulty: "intermediate",
+    estimatedValue: "High",
+    readTime: "10 min"
   }
 ];
 
-export default function ContentRecommendationWidget({ 
-  currentContentType, 
-  currentCategory, 
-  maxItems = 6 
-}: ContentRecommendationWidgetProps) {
-  // Filter recommendations based on current content
-  const getFilteredRecommendations = () => {
-    let filtered = allRecommendations;
+const getDifficultyColor = (difficulty: string) => {
+  switch (difficulty) {
+    case 'beginner':
+      return 'bg-green-100 text-green-800';
+    case 'intermediate':
+      return 'bg-yellow-100 text-yellow-800';
+    case 'advanced':
+      return 'bg-red-100 text-red-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
 
-    // If we have a current content type, prioritize different types
-    if (currentContentType) {
-      filtered = filtered.sort((a, b) => {
-        if (a.type !== currentContentType && b.type === currentContentType) return 1;
-        if (a.type === currentContentType && b.type !== currentContentType) return -1;
-        return 0;
-      });
-    }
+const getValueColor = (value: string) => {
+  switch (value) {
+    case 'Very High':
+      return 'text-green-600';
+    case 'High':
+      return 'text-blue-600';
+    case 'Medium':
+      return 'text-yellow-600';
+    default:
+      return 'text-gray-600';
+  }
+};
 
-    // If we have a current category, show related content
-    if (currentCategory) {
-      filtered = filtered.filter(item => 
-        item.category.toLowerCase().includes(currentCategory.toLowerCase()) ||
-        item.title.toLowerCase().includes(currentCategory.toLowerCase())
-      );
-    }
-
-    // Sort by priority and return limited results
-    return filtered
-      .sort((a, b) => {
-        const priorityOrder = { high: 3, medium: 2, low: 1 };
-        return priorityOrder[b.priority] - priorityOrder[a.priority];
-      })
-      .slice(0, maxItems);
-  };
-
-  const recommendations = getFilteredRecommendations();
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'case-study':
-        return 'bg-green-100 text-green-800 border-green-200';
-      case 'resource':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
-      default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
-
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'Article';
-      case 'case-study':
-        return 'Case Study';
-      case 'resource':
-        return 'Resource';
-      default:
-        return 'Content';
-    }
-  };
-
-  const getPriorityIcon = (priority: string) => {
-    switch (priority) {
-      case 'high':
-        return '🔥';
-      case 'medium':
-        return '⭐';
-      case 'low':
-        return '💡';
-      default:
-        return '📌';
-    }
-  };
+const getTypeIcon = (type: string) => {
+  switch (type) {
+    case 'blog':
+      return '📝';
+    case 'case-study':
+      return '📊';
+    case 'tool':
+      return '🧮';
+    default:
+      return '📄';
+  }
+};
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-          <span className="text-white font-bold text-sm">AI</span>
-        </div>
-        <div>
-          <h3 className="text-lg font-bold text-gray-900">Recommended for You</h3>
-          <p className="text-sm text-gray-600">Based on your interests and trending content</p>
-        </div>
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold text-gray-900">Recommended for You</h2>
+        <div className="text-sm text-gray-500">Based on your interests</div>
       </div>
 
       <div className="space-y-4">
-        {recommendations.map((item, index) => (
+        {recommendations.slice(0, 3).map((item, index) => (
           <Link
-            key={item.id}
+            key={index}
             href={item.href}
-            className="group block p-4 rounded-lg border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-200"
+            className="block group hover:bg-gray-50 rounded-xl p-4 transition-all hover:shadow-sm"
           >
-            <div className="flex items-start gap-4">
-              <div className="text-2xl flex-shrink-0">{item.icon}</div>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center text-xl">
+                  {getTypeIcon(item.type)}
+                </div>
+              </div>
               
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getTypeColor(item.type)}`}>
-                    {getTypeLabel(item.type)}
-                  </span>
-                  <span className="text-xs text-gray-500 flex items-center gap-1">
-                    {getPriorityIcon(item.priority)}
-                    {item.reason}
-                  </span>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <div className="flex items-center space-x-2">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
+                      {item.difficulty}
+                    </span>
+                  </div>
                 </div>
                 
-                <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1 line-clamp-2">
-                  {item.title}
-                </h4>
-                
-                <p className="text-xs text-gray-600 line-clamp-2 mb-2">
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                   {item.description}
                 </p>
                 
-                <div className="flex items-center gap-3 text-xs text-gray-500">
-                  {item.readTime && <span>{item.readTime}</span>}
-                  {item.pages && <span>{item.pages}</span>}
-                  <span>{item.category}</span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4 text-xs text-gray-500">
+                    <span className="flex items-center space-x-1">
+                      <span>📂</span>
+                      <span>{item.category}</span>
+                    </span>
+                    <span className="flex items-center space-x-1">
+                      <span>⏱️</span>
+                      <span>{item.readTime}</span>
+                    </span>
+                    <span className={`font-medium ${getValueColor(item.estimatedValue)}`}>
+                      💎 {item.estimatedValue} Value
+                    </span>
+                  </div>
+                  
+                  <div className="text-blue-600 text-sm font-medium group-hover:text-blue-700">
+                    Read More →
+                  </div>
                 </div>
               </div>
               
@@ -277,24 +173,18 @@ export default function ContentRecommendationWidget({
       </div>
 
       <div className="mt-6 pt-4 border-t border-gray-200">
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <Link
-            href="/blog"
-            className="flex-1 text-center px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
+            href="/content-showcase"
+            className="block text-center bg-gray-100 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors"
           >
-            View All Articles
+            View All Content
           </Link>
           <Link
-            href="/case-studies"
-            className="flex-1 text-center px-4 py-2 text-sm font-medium text-green-600 hover:text-green-700 hover:bg-green-50 rounded-lg transition-colors"
+            href="/contact"
+            className="block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
           >
-            Browse Case Studies
-          </Link>
-          <Link
-            href="/resources"
-            className="flex-1 text-center px-4 py-2 text-sm font-medium text-purple-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors"
-          >
-            Download Resources
+            Get Personalized Recommendations
           </Link>
         </div>
       </div>
