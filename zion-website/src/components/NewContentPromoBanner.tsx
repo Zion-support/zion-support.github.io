@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronLeftIcon, ChevronRightIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
+// Icons removed to avoid dependency issues in this environment
 
 interface ContentItem {
   id: string;
@@ -23,12 +23,12 @@ interface NewContentPromoBannerProps {
   rotationInterval?: number;
 }
 
-const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
+const NewContentPromoBanner = ({
   variant = 'default',
   maxItems = 4,
   autoRotate = true,
   rotationInterval = 5000
-}) => {
+}: NewContentPromoBannerProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -43,6 +43,17 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       readTime: '25 min read',
       date: 'Jan 28, 2025',
       category: 'Advanced AI'
+    },
+    {
+      id: '0',
+      title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
+      description: 'Architectures, safety, and observability for deploying autonomous agents on edge devices with low latency and high reliability.',
+      href: '/blog/ai-2025-edge-agents-in-production',
+      type: 'blog',
+      featured: true,
+      readTime: '21 min read',
+      date: 'Sep 12, 2025',
+      category: 'Edge AI'
     },
     {
       id: '2',
@@ -130,25 +141,21 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
   useEffect(() => {
     if (autoRotate && !isHovered && displayedContent.length > 1) {
       const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => 
-          prevIndex === displayedContent.length - 1 ? 0 : prevIndex + 1
-        );
+        const nextIndex = currentIndex === displayedContent.length - 1 ? 0 : currentIndex + 1;
+        setCurrentIndex(nextIndex);
       }, rotationInterval);
-
       return () => clearInterval(interval);
     }
-  }, [autoRotate, isHovered, displayedContent.length, rotationInterval]);
+  }, [autoRotate, isHovered, displayedContent.length, rotationInterval, currentIndex]);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === displayedContent.length - 1 ? 0 : prevIndex + 1
-    );
+    const nextIndex = currentIndex === displayedContent.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(nextIndex);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? displayedContent.length - 1 : prevIndex - 1
-    );
+    const prevIndex = currentIndex === 0 ? displayedContent.length - 1 : currentIndex - 1;
+    setCurrentIndex(prevIndex);
   };
 
   const getTypeIcon = (type: string) => {
@@ -253,11 +260,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                         
                         <div className="flex items-center space-x-6 text-sm text-indigo-200 mb-6">
                           <div className="flex items-center">
-                            <ClockIcon className="h-4 w-4 mr-2" />
+                            <span className="mr-2">⏱️</span>
                             {item.readTime}
                           </div>
                           <div className="flex items-center">
-                            <TagIcon className="h-4 w-4 mr-2" />
+                            <span className="mr-2">🏷️</span>
                             {item.category}
                           </div>
                           <div>{item.date}</div>
@@ -268,7 +275,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                           className="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
                         >
                           Read More
-                          <ChevronRightIcon className="ml-2 h-5 w-5" />
+                          <span className="ml-2">→</span>
                         </Link>
                       </div>
                       
@@ -291,13 +298,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                     onClick={prevSlide}
                     className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
                   >
-                    <ChevronLeftIcon className="h-6 w-6" />
+                    <span className="text-lg">◀</span>
                   </button>
                   <button
                     onClick={nextSlide}
                     className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
                   >
-                    <ChevronRightIcon className="h-6 w-6" />
+                    <span className="text-lg">▶</span>
                   </button>
                 </div>
               </div>
@@ -347,7 +354,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                   
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <div className="flex items-center">
-                      <ClockIcon className="h-4 w-4 mr-1" />
+                      <span className="mr-1">⏱️</span>
                       {item.readTime}
                     </div>
                     <span>{item.date}</span>
@@ -365,7 +372,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             Explore All Content
-            <ChevronRightIcon className="ml-2 h-5 w-5" />
+            <span className="ml-2">→</span>
           </Link>
         </div>
       </div>

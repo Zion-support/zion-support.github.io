@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MagnifyingGlassIcon, SparklesIcon, ChartBarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
+// Icons removed to avoid dependency issues in this environment
 
 interface ContentItem {
   id: string;
@@ -18,7 +18,7 @@ interface ContentItem {
   difficulty: 'beginner' | 'intermediate' | 'advanced';
 }
 
-const InteractiveContentDiscovery: React.FC = () => {
+function InteractiveContentDiscovery() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState('all');
@@ -27,6 +27,19 @@ const InteractiveContentDiscovery: React.FC = () => {
   const [isSearching, setIsSearching] = useState(false);
 
   const contentItems: ContentItem[] = [
+    {
+      id: '0',
+      title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
+      description: 'A practical guide to deploying and operating autonomous AI agents at the edge with strong guardrails and observability.',
+      href: '/blog/ai-2025-edge-agents-in-production',
+      type: 'blog',
+      category: 'Edge AI',
+      readTime: '21 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Edge AI', 'Agents', 'Observability', 'Safety'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
     {
       id: '1',
       title: 'Advanced RAG Systems 2025: Production-Ready Implementation Guide',
@@ -209,7 +222,7 @@ const InteractiveContentDiscovery: React.FC = () => {
           <div className="space-y-6">
             {/* Search Bar */}
             <div className="relative">
-              <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
+              <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">🔎</span>
               <input
                 type="text"
                 placeholder="Search content, topics, or tags..."
@@ -298,7 +311,7 @@ const InteractiveContentDiscovery: React.FC = () => {
                 </h3>
                 {filteredContent.length > 0 && (
                   <div className="flex items-center text-sm text-gray-600">
-                    <SparklesIcon className="h-5 w-5 mr-2" />
+                    <span className="mr-2">✨</span>
                     Powered by AI Discovery
                   </div>
                 )}
@@ -306,7 +319,7 @@ const InteractiveContentDiscovery: React.FC = () => {
 
               {filteredContent.length === 0 ? (
                 <div className="text-center py-12 bg-white rounded-2xl shadow-lg">
-                  <MagnifyingGlassIcon className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+                  <div className="text-5xl text-gray-400 mx-auto mb-4">🔎</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
                   <p className="text-gray-600 mb-6">Try adjusting your search terms or filters</p>
                   <button
@@ -371,11 +384,11 @@ const InteractiveContentDiscovery: React.FC = () => {
                         <div className="flex items-center justify-between text-sm text-gray-500">
                           <div className="flex items-center space-x-4">
                             <div className="flex items-center">
-                              <ClockIcon className="h-4 w-4 mr-1" />
+                              <span className="mr-1">⏱️</span>
                               {item.readTime}
                             </div>
                             <div className="flex items-center">
-                              <ChartBarIcon className="h-4 w-4 mr-1" />
+                              <span className="mr-1">📊</span>
                               {item.category}
                             </div>
                           </div>
