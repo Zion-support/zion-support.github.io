@@ -22,14 +22,14 @@ export function FuturisticBackground({
     if (!ctx) return;
 
 =======
+    // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    let particles: Array<{
-=======
 =======
 
+=======
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -53,71 +53,12 @@ export function FuturisticBackground({
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 2 + 1,
-      life: number;
-      maxLife: number;
-    }> = [];
-
-    const getColorScheme = () => {
-      switch (colorScheme) {
-        case 'cyberpunk':
-          return {
-            primary: '#8c15e9',
-            secondary: '#22ddd2',
-            accent: '#ff0080',
-            background: 'rgba(8, 8, 8, 0.8)'
-          };
-        case 'neon':
-          return {
-            primary: '#00ffff',
-            secondary: '#ff00ff',
-            accent: '#ffff00',
-            background: 'rgba(0, 0, 0, 0.9)'
-          };
-        case 'holographic':
-          return {
-            primary: '#ff6b6b',
-            secondary: '#4ecdc4',
-            accent: '#45b7d1',
-            background: 'rgba(0, 0, 0, 0.7)'
-          };
-        case 'matrix':
-          return {
-            primary: '#00ff00',
-            secondary: '#00cc00',
-            accent: '#009900',
-            background: 'rgba(0, 0, 0, 0.95)'
-          };
-        default:
-          return {
-            primary: '#8c15e9',
-            secondary: '#22ddd2',
-            accent: '#ff0080',
-            background: 'rgba(8, 8, 8, 0.8)'
-          };
-      }
-    };
-
-    const colors = getColorScheme();
-
-    // Create particles
-    const createParticle = () => {
-      const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
-      
-      if (particles.length < particleCount) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
+          opacity: Math.random() * 0.5 + 0.1,
+=======
           vx: (Math.random() - 0.5) * 2,
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
-          life: Math.random() * 100,
-          maxLife: 100
-=======
-          opacity: Math.random() * 0.5 + 0.1,
+          opacity: Math.random() * 0.8 + 0.2,
           color: colors[Math.floor(Math.random() * colors.length)]
         });
       }
@@ -173,156 +114,14 @@ export function FuturisticBackground({
             ctx.stroke();
           }
         });
-      });
-
-      // Draw grid lines
-      ctx.strokeStyle = '#8c15e9';
-      ctx.globalAlpha = 0.1;
-      ctx.lineWidth = 1;
-
-      const gridSize = 50;
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-    // Update and draw particles
-    const animate = () => {
-      ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Draw grid pattern
-      if (variant === 'grid' || variant === 'default') {
-        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + Math.sin(time) * 0.05})`;
-        ctx.lineWidth = 1;
-        
-        const gridSize = 50;
-        for (let x = 0; x < canvas.width; x += gridSize) {
-          ctx.beginPath();
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, canvas.height);
-          ctx.stroke();
-        }
-        for (let y = 0; y < canvas.height; y += gridSize) {
-          ctx.beginPath();
-          ctx.moveTo(0, y);
-          ctx.lineTo(canvas.width, y);
-          ctx.stroke();
-        }
-      }
-
-      // Draw particles
-      if (variant === 'particle' || variant === 'default') {
-        particles.forEach((particle, index) => {
-          // Update position
-          particle.x += particle.vx;
-          particle.y += particle.vy;
-
-          // Wrap around edges
-          if (particle.x < 0) particle.x = canvas.width;
-          if (particle.x > canvas.width) particle.x = 0;
-          if (particle.y < 0) particle.y = canvas.height;
-          if (particle.y > canvas.height) particle.y = 0;
-
-          // Draw particle
-          ctx.save();
-          ctx.globalAlpha = particle.alpha;
-          ctx.fillStyle = particle.color;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-
-          // Add glow effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 10;
-          ctx.fill();
-          ctx.restore();
-
-          // Draw connections between nearby particles
-          particles.slice(index + 1).forEach(otherParticle => {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 100) {
-              ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.stroke();
-            }
-          });
-        });
-      }
-
-      // Draw neon effects
-      if (variant === 'neon' || variant === 'cyberpunk') {
-        // Neon lines
-        const neonLines = [
-          { x1: 0, y1: canvas.height * 0.3, x2: canvas.width, y2: canvas.height * 0.3 },
-          { x1: 0, y1: canvas.height * 0.7, x2: canvas.width, y2: canvas.height * 0.7 },
-          { x1: canvas.width * 0.3, y1: 0, x2: canvas.width * 0.3, y2: canvas.height },
-          { x1: canvas.width * 0.7, y1: 0, x2: canvas.width * 0.7, y2: canvas.height }
-        ];
-
-        neonLines.forEach((line, index) => {
-          const hue = (time * 50 + index * 90) % 360;
-          const color = `hsl(${hue}, 100%, 60%)`;
-          
-          // Main neon line
-          ctx.strokeStyle = color;
-          ctx.lineWidth = 3;
-          ctx.shadowColor = color;
-          ctx.shadowBlur = 20;
-          ctx.beginPath();
-          ctx.moveTo(line.x1, line.y1);
-          ctx.lineTo(line.x2, line.y2);
-          ctx.stroke();
-
-          // Glow effect
-          ctx.strokeStyle = `rgba(${hue}, 100%, 60%, 0.3)`;
-          ctx.lineWidth = 1;
-          ctx.shadowBlur = 0;
-          ctx.beginPath();
-          ctx.moveTo(line.x1, line.y1);
-          ctx.lineTo(line.x2, line.y2);
-          ctx.stroke();
-        });
-      }
-
-      // Draw cyberpunk elements
-      if (variant === 'cyberpunk') {
-        // Scanning lines
-        const scanY = (canvas.height * 0.5) + Math.sin(time * 2) * 100;
-        ctx.strokeStyle = 'rgba(0, 255, 255, 0.8)';
-        ctx.lineWidth = 2;
-        ctx.shadowColor = 'cyan';
-        ctx.shadowBlur = 10;
-        ctx.beginPath();
-        ctx.moveTo(0, scanY);
-        ctx.lineTo(canvas.width, scanY);
-        ctx.stroke();
-
-        // Digital rain effect
-        const rainChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-        ctx.fillStyle = 'rgba(0, 255, 0, 0.7)';
-        ctx.font = '14px monospace';
-        
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, scanY - 10, canvas.width, 20);
-=======
 
       // Draw scanning line effect
       const time = Date.now() * 0.001;
       const scanY = (Math.sin(time * 0.5) * 0.5 + 0.5) * canvas.height;
+=======
+        
+        requestAnimationFrame(animate);
+      };
       
       ctx.strokeStyle = '#22ddd2';
       ctx.globalAlpha = 0.3;

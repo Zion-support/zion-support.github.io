@@ -243,6 +243,29 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     useCases: [
       "Blog content creation",
       "Social media marketing",
+    aiScore: 97
+  },
+  {
+    id: "threat-intelligence-platform",
+    title: "Real-Time Threat Intelligence Platform",
+    description: "Advanced threat detection and response platform using AI to analyze network traffic, detect anomalies, and automatically respond to security threats. 24/7 monitoring with instant alerting.",
+    category: "Threat Intelligence",
+    price: 5999,
+    currency: "$",
+    tags: ["Threat Detection", "Network Security", "AI Security", "Real-time Monitoring", "Incident Response"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-05T15:45:00.000Z",
+    rating: 4.8,
+    reviewCount: 45,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 93
+=======
     description: "Comprehensive zero trust security framework implementation with continuous monitoring, threat detection, and automated response systems.",
     category: "Cybersecurity",
     subcategory: "Zero Trust",
@@ -767,6 +790,36 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
 
   // Data & Analytics Services
   {
+    id: "data-warehouse-enterprise",
+    title: "Enterprise Data Warehouse & ETL Pipeline",
+    description: "Design and implementation of enterprise data warehouse with ETL pipelines, data modeling, and business intelligence dashboards. Supports real-time and batch processing.",
+    category: "Data Analytics",
+    price: 6499,
+    currency: "$",
+    tags: ["Real-time Analytics", "Data Streaming", "Big Data", "Performance", "Visualization"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-20T13:15:00.000Z",
+    rating: 4.9,
+    reviewCount: 56,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 95
+  },
+  {
+    id: "predictive-maintenance-ai",
+    title: "AI-Powered Predictive Maintenance",
+    description: "Industrial IoT predictive maintenance platform using machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime by up to 40%. Real-time sensor monitoring.",
+    category: "IoT & Predictive Analytics",
+    price: 7999,
+    currency: "$",
+    tags: ["Predictive Maintenance", "IoT", "Machine Learning", "Industrial", "Cost Reduction"],
+=======
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T11:45:00.000Z",
     rating: 4.9,
@@ -2150,8 +2203,25 @@ export const PRICING_TIERS = [
   }
 ];
 
-export const SERVICE_CATEGORIES = [
-  {
+// Service categories for filtering
+export const EXPANDED_SERVICE_CATEGORIES = [
+  { label: 'AI Development', value: 'ai-development' },
+  { label: 'Cloud Services', value: 'cloud-services' },
+  { label: 'DevOps', value: 'devops' },
+  { label: 'Cybersecurity', value: 'cybersecurity' },
+  { label: 'Data Analytics', value: 'data-analytics' },
+  { label: 'Web Development', value: 'web-development' },
+  { label: 'Mobile Development', value: 'mobile-development' },
+  { label: 'Blockchain', value: 'blockchain' },
+  { label: 'IoT', value: 'iot' },
+  { label: 'Hardware', value: 'hardware' },
+  { label: 'Business Automation', value: 'business-automation' },
+  { label: 'Business Solutions', value: 'business-solutions' }
+];
+
+export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured);
+export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
+=======
     id: "ai-services",
     name: "AI Services",
     description: "Artificial Intelligence and Machine Learning solutions",

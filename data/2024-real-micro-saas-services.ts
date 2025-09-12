@@ -4,8 +4,6 @@ export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
-  price: string;
-=======
   variant: ServiceVariant;
   contactInfo: {
     mobile: string;
@@ -20,6 +18,8 @@ export interface RealMicroSaasService2024 {
   rating: number;
   reviews: number;
 =======
+=======
+  price: string;
   variant: string;
   features: string[];
   rating: number;

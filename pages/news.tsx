@@ -2,28 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  ExternalLink,
-  TrendingUp,
-  Award,
-  Globe,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Cloud,
-  Zap
-=======
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
   Newspaper, Calendar, User, Tag, ArrowRight, 
   Star, Zap, Brain, Atom, Rocket, Globe,
   Clock, TrendingUp
+=======
+  Calendar, Clock, ArrowRight, Star, Users, 
+  Brain, Atom, Shield, Rocket, Globe,
+  TrendingUp, Award, Sparkles, ExternalLink
 } from 'lucide-react';
 
 const NewsPage: React.FC = () => {
@@ -82,233 +70,11 @@ const NewsPage: React.FC = () => {
       author: 'Marcus Rodriguez',
       readTime: '6 min read',
       featured: false,
-      image: '/images/news/space-resource-platform.jpg',
-      tags: ['Space Technology', 'Mars', 'Resource Intelligence', 'Deployment'],
-      url: '/press/space-resource-platform-mars'
-    },
-    {
-      id: 4,
-      title: "New Quantum Cybersecurity Framework Protects Against Future Threats",
-      excerpt: "Advanced quantum-resistant security protocols ensure data protection even against quantum computing attacks.",
-      category: 'security',
-      date: '2025-01-05',
-      author: 'Dr. Maya Patel',
-      readTime: '7 min read',
-      featured: false,
-      image: '/images/news/quantum-cybersecurity.jpg',
-      tags: ['Cybersecurity', 'Quantum Security', 'Data Protection', 'Innovation'],
-      url: '/press/quantum-cybersecurity-framework'
-    },
-    {
-      id: 5,
-      title: "Zion Tech Group Named Top 10 Most Innovative Companies 2025",
-      excerpt: "Recognition for groundbreaking work in AI consciousness, quantum computing, and space technology innovation.",
-      category: 'ai',
-      date: '2025-01-03',
-      author: 'Press Team',
-      readTime: '3 min read',
-      featured: false,
-      image: '/images/news/innovation-award.jpg',
-      tags: ['Award', 'Innovation', 'Recognition', 'Technology'],
-      url: '/press/innovation-award-2025'
-    },
-    {
-      id: 6,
-      title: "Edge Computing Orchestration Platform Achieves 99.99% Uptime",
-      excerpt: "Our distributed computing solution demonstrates exceptional reliability and performance in enterprise environments.",
-      category: 'ai',
-      date: '2024-12-28',
-      author: 'James Thompson',
-      readTime: '5 min read',
-      featured: false,
-      image: '/images/news/edge-computing-uptime.jpg',
-      tags: ['Edge Computing', 'Uptime', 'Enterprise', 'Performance'],
-      url: '/press/edge-computing-uptime-achievement'
-    },
-    {
-      id: 7,
-      title: "AI Autonomous Research Platform Discovers New Materials",
-      excerpt: "Machine learning algorithms identify promising compounds for quantum computing and energy storage applications.",
-      category: 'ai',
-      date: '2024-12-25',
-      author: 'Dr. Sarah Chen',
-      readTime: '6 min read',
-      featured: false,
-      image: '/images/news/ai-research-discovery.jpg',
-      tags: ['AI Research', 'Materials Discovery', 'Quantum Computing', 'Innovation'],
-      url: '/press/ai-materials-discovery'
-    },
-    {
-      id: 8,
-      title: "Global Expansion: Zion Opens New Research Centers in Asia and Europe",
-      excerpt: "Strategic expansion brings cutting-edge technology closer to global markets and talent pools.",
-      category: 'ai',
-      date: '2024-12-20',
-      author: 'Press Team',
-      readTime: '4 min read',
-      featured: false,
-      image: '/images/news/global-expansion.jpg',
-      tags: ['Expansion', 'Global', 'Research Centers', 'Strategy'],
-      url: '/press/global-expansion-asia-europe'
-    }
-  ];
-
-  const filteredNews = newsArticles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    const matchesYear = selectedYear === 'all' || article.date.startsWith(selectedYear);
-    return matchesSearch && matchesCategory && matchesYear;
-  });
-
-  const featuredNews = newsArticles.filter(article => article.featured);
-  const regularNews = filteredNews.filter(article => !article.featured);
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'ai': return Brain;
-      case 'quantum': return Atom;
-      case 'space': return Rocket;
-      case 'security': return Shield;
-      default: return Newspaper;
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'ai': return 'from-purple-500 to-pink-500';
-      case 'quantum': return 'from-blue-500 to-cyan-500';
-      case 'space': return 'from-indigo-500 to-purple-500';
-      case 'security': return 'from-red-500 to-orange-500';
-      default: return 'from-gray-500 to-gray-600';
-    }
-  };
-
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-        {/* Hero Section */}
-  const featuredNews = [
-    {
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
-      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
-      author: 'Press Team',
-      date: '2025-01-15',
-      author: 'Dr. Kleber',
-      featured: true,
-      image: '/api/placeholder/600/400',
-      tags: ['AI Consciousness', 'Breakthrough', 'Innovation'],
-      readTime: '5 min read'
-    },
-    {
-      title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems',
-      excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',
-      author: 'Research Team',
-      date: '2025-01-12',
-      category: 'Research',
-      readTime: '6 min read',
-      image: '/news/quantum-breakthrough.jpg',
-      tags: ['Quantum Computing', 'Research', 'Breakthrough'],
-      icon: <Atom className="w-6 h-6" />,
-      featured: true
-    },
-    {
-      title: 'Cybersecurity Partnership with Global Tech Leaders',
-      excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
-      author: 'Partnerships Team',
-      date: '2025-01-10',
-      author: 'Quantum Team',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['Quantum Computing', 'AI Integration', 'Technology'],
-      readTime: '7 min read'
-    },
-    {
-      id: 3,
-      title: 'Global Expansion: Zion Tech Group Opens New Offices',
-      excerpt: 'Expanding our global presence with new offices in key technology hubs, bringing our revolutionary solutions closer to clients worldwide.',
-      category: 'Company News',
-      date: '2025-01-05',
-      author: 'Operations Team',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['Global Expansion', 'Growth', 'Operations'],
-      readTime: '3 min read'
-    },
-    {
-      id: 4,
-      title: 'Partnership with Leading Research Institutions Announced',
-      excerpt: 'Strategic partnerships with top-tier research institutions to advance AI consciousness research and quantum computing applications.',
-      category: 'Partnerships',
-      date: '2024-12-28',
-      author: 'Partnership Team',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['Partnerships', 'Research', 'Collaboration'],
-      readTime: '4 min read'
-    },
-    {
-      id: 5,
-      title: 'New AI Ethics Framework Released',
-      excerpt: 'Introducing our comprehensive AI ethics framework, ensuring responsible development and deployment of conscious AI systems.',
-      category: 'AI Ethics',
-      date: '2024-12-20',
-      author: 'Ethics Committee',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['AI Ethics', 'Responsible AI', 'Framework'],
-      readTime: '6 min read'
-    },
-    {
-      id: 6,
-      title: 'Space Technology Division Achieves Breakthrough',
-      excerpt: 'Our space technology division has achieved a major breakthrough in autonomous space systems and resource intelligence platforms.',
-      category: 'Space Technology',
-      date: '2024-12-15',
-      author: 'Space Team',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['Space Technology', 'Autonomous Systems', 'Innovation'],
-      readTime: '5 min read'
+      slug: 'autonomous-business-operations'
     }
   ];
 
   const categories = [
-    { name: 'All News', count: newsArticles.length, active: true },
-    { name: 'AI Innovation', count: 2, active: false },
-    { name: 'Quantum Computing', count: 1, active: false },
-    { name: 'Company News', count: 1, active: false },
-    { name: 'Partnerships', count: 1, active: false },
-    { name: 'AI Ethics', count: 1, active: false },
-    { name: 'Space Technology', count: 1, active: false }
-  ];
-
-  const featuredArticle = newsArticles.find(article => article.featured);
-
-  return (
-    <Layout
-      title="Latest News & Updates - Zion Tech Group"
-      description="Stay updated with the latest news, breakthroughs, and announcements from Zion Tech Group. Discover our latest innovations in AI consciousness and quantum computing."
-      keywords="Zion Tech Group news, AI consciousness updates, quantum computing news, technology breakthroughs, company announcements"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-=======
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
@@ -908,6 +674,42 @@ export default function NewsPage() {
                 </motion.article>
               ))}
             </div>
+=======
+    { name: 'All', count: newsArticles.length, active: true },
+    { name: 'Product Launch', count: 1, active: false },
+    { name: 'Technology', count: 1, active: false },
+    { name: 'Business', count: 1, active: false }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>News & Updates - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest news, product launches, and industry insights from Zion Tech Group. Discover breakthroughs in AI, quantum computing, and technology innovation." />
+        <meta name="keywords" content="news, updates, AI news, quantum computing, technology news, company updates, industry insights" />
+        <link rel="canonical" href="https://ziontechgroup.com/news" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            >
+              Latest News & Updates
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+            >
+              Stay informed about the latest breakthroughs in AI, quantum computing, and cutting-edge technology from Zion Tech Group.
+            </motion.p>
           </div>
         </section>
 
@@ -1007,25 +809,6 @@ export default function NewsPage() {
                 </motion.article>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Media Contact */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Media Inquiries
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information, 
-                please contact our communications team.
-=======
               className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl p-12 border border-cyan-400/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1052,6 +835,7 @@ export default function NewsPage() {
                 </a>
               </div>
             </motion.div>
+=======
           </div>
         </section>
       </div>

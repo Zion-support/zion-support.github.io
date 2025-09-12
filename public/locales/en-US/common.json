@@ -21,13 +21,17 @@
     "marketplace": "Marketplace",
     "services": "Services",
     "categories": "Categories",
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
     "dashboard": "Dashboard",
     "messages": "Messages",
     "post_job": "Post Job",
-    "analytics": "Analytics"
+    "analytics": "Analytics",
+    "faq": "FAQ",
+    "help": "Help Center"
   },
   "auth": {
     "login": "Login",
