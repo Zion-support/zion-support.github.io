@@ -5,6 +5,24 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. From quantum machine learning to breakthrough applications, explore the technologies reshaping artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "28 min read",
+      date: "Feb 15, 2025"
+    },
+    {
+      title: "AI Ethics & Governance 2025: Building Trustworthy AI Systems",
+      description: "Navigate the complex landscape of AI ethics and governance in 2025. Learn how to implement responsible AI practices and build trustworthy AI systems that benefit society.",
+      href: "/blog/ai-ethics-governance-2025",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "24 min read",
+      date: "Feb 12, 2025"
+    },
+    {
       title: "AI Advanced Automation 2025: Complete Implementation Guide",
       description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
       href: "/blog/ai-2025-advanced-automation",
@@ -39,30 +57,20 @@ export default function ContentShowcasePage() {
       category: "Sustainability",
       readTime: "20 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the revolutionary advances in AI-powered robotics and automation. Discover how intelligent machines are transforming manufacturing, healthcare, and service industries with unprecedented capabilities.",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-<<<<<<< HEAD
+      title: "AI Cybersecurity Transformation Breakthrough: 99.8% Threat Detection Achieved",
+      description: "How a Fortune 500 financial services company revolutionized their cybersecurity operations with AI-powered threat detection, achieving 99.8% accuracy, 85% faster response times, and $15M in annual cost savings.",
+      href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
+      icon: "🛡️",
+      category: "Cybersecurity AI",
+      result: "99.8% Detection",
+      date: "Feb 10, 2025"
+    },
+    {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
@@ -70,15 +78,6 @@ export default function ContentShowcasePage() {
       category: "Manufacturing AI",
       result: "$200M Savings",
       date: "Jan 28, 2025"
-=======
-      title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
-      description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
-      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-      icon: "🏥",
-      category: "Healthcare AI",
-      result: "95% Accuracy",
-      date: "Jan 30, 2025"
->>>>>>> cursor/create-and-deploy-new-content-f6c0
     },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
@@ -88,45 +87,36 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
     }
   ];
 
   const newResources = [
     {
       title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across any organization.",
       href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Feb 15, 2025"
     },
     {
-      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
-      description: "Complete checklist covering every aspect of AI implementation from strategy to deployment, with 150+ actionable items across 7 key categories.",
-      href: "/resources/ai-implementation-checklist-2025",
-      icon: "📋",
-      category: "Checklist",
+      title: "AI Ethics & Governance Implementation Guide 2025",
+      description: "Complete framework for implementing responsible AI practices and governance. Includes ethical frameworks, compliance requirements, and best practices for building trustworthy AI systems.",
+      href: "/resources/ai-ethics-governance-implementation-guide-2025",
+      icon: "⚖️",
+      category: "Ethics & Governance",
       type: "Free Download",
-      date: "Feb 08, 2025"
+      date: "Feb 12, 2025"
     },
     {
-      title: "AI Security Hardening Checklist: Essential Security Measures",
-      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
-      href: "/resources/ai-security-hardening-checklist",
-      icon: "🛡️",
-      category: "Security",
+      title: "Quantum AI Implementation Blueprint 2025",
+      description: "Comprehensive guide to implementing quantum AI solutions. Covers quantum machine learning, quantum algorithms, and real-world applications with step-by-step implementation instructions.",
+      href: "/resources/quantum-ai-implementation-blueprint-2025",
+      icon: "⚛️",
+      category: "Quantum AI",
       type: "Free Download",
-      date: "Feb 06, 2025"
+      date: "Feb 15, 2025"
     }
   ];
 

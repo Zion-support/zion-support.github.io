@@ -72,33 +72,33 @@ export default function HomePage() {
               
               {/* Featured Content Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                <Link href="/blog/ai-2025-advanced-automation" className="group">
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🤖</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Advanced Automation 2025</h3>
-                    <p className="text-xs opacity-90">Complete implementation guide</p>
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">⚛️</div>
+                    <h3 className="text-sm font-semibold mb-1">Quantum AI Breakthrough</h3>
+                    <p className="text-xs opacity-90">Revolutionary applications</p>
                   </div>
                 </Link>
                 
-                <Link href="/blog/ai-2025-cybersecurity-threats" className="group">
+                <Link href="/blog/ai-ethics-governance-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">⚖️</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Ethics & Governance</h3>
+                    <p className="text-xs opacity-90">Responsible AI framework</p>
+                  </div>
+                </Link>
+                
+                <Link href="/case-studies/ai-cybersecurity-transformation-breakthrough-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                     <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity Threats</h3>
-                    <p className="text-xs opacity-90">Complete defense guide</p>
-                  </div>
-                </Link>
-                
-                <Link href="/case-studies/ai-healthcare-diagnosis-success-2025" className="group">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🏥</div>
-                    <h3 className="text-sm font-semibold mb-1">Healthcare AI Success</h3>
-                    <p className="text-xs opacity-90">95% accuracy achieved</p>
+                    <h3 className="text-sm font-semibold mb-1">Cybersecurity Breakthrough</h3>
+                    <p className="text-xs opacity-90">99.8% threat detection</p>
                   </div>
                 </Link>
                 
                 <Link href="/resources/ai-implementation-master-guide-2026" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">📖</div>
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">📚</div>
                     <h3 className="text-sm font-semibold mb-1">Master Guide 2026</h3>
                     <p className="text-xs opacity-90">200+ pages free</p>
                   </div>
@@ -140,6 +140,44 @@ export default function HomePage() {
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Read Latest Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Drop - February 2025 */}
+        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🚀 NEW CONTENT DROP - FEBRUARY 2025</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                ⚛️ Quantum AI & Ethics: Revolutionary New Content Just Released!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: Quantum Computing AI applications, AI Ethics & Governance frameworks, 
+                and Cybersecurity transformation case studies. Plus, download our comprehensive 200+ page AI Implementation Master Guide 2026.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Quantum AI Article
+                </Link>
+                <Link
+                  href="/blog/ai-ethics-governance-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  AI Ethics Guide
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Download Master Guide
                 </Link>
               </div>
             </div>
