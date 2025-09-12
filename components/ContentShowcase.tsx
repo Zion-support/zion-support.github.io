@@ -664,97 +664,100 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 // Predefined content collections for easy use
 export const featuredContent = [
   {
-    title: "AI Enterprise Transformation 2026",
-    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
-    href: "/blog/ai-2026-enterprise-transformation",
-    icon: "🏢",
-    readTime: "25 min read",
-    category: "Enterprise AI",
-    isNew: true
-  },
-  {
-    title: "AI Breakthrough Predictions 2026",
-    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
-    href: "/blog/ai-2026-breakthrough-predictions",
-    icon: "🔮",
+    title: "AI Enterprise Automation Revolution 2025",
+    description: "Transform your enterprise operations with AI automation strategies that deliver 400% ROI and revolutionize how your business operates",
+    href: "/blog/ai-2025-enterprise-automation-revolution",
+    icon: "⚙️",
     readTime: "22 min read",
-    category: "AI Predictions",
-    isNew: true
+    category: "Enterprise AI",
+    isNew: true,
+    isTrending: true
   },
   {
-    title: "AI Healthcare Diagnosis Breakthrough",
-    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
-    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    title: "AI Healthcare Diagnosis Revolution 2025",
+    description: "Revolutionary AI technologies achieving 95% accuracy in medical diagnosis, saving thousands of lives and transforming healthcare delivery worldwide",
+    href: "/blog/ai-healthcare-diagnosis-revolution-2025",
     icon: "🏥",
-    readTime: "18 min read",
+    readTime: "20 min read",
     category: "Healthcare AI",
-    isNew: true
+    isNew: true,
+    isTrending: true
   },
   {
-    title: "AI Implementation Master Guide 2026",
-    description: "Complete 200-page playbook with templates, checklists, and case studies",
-    href: "/resources/ai-implementation-master-guide-2026",
-    icon: "📚",
-    readTime: "Free Download",
-    category: "Resources",
+    title: "AI Financial Services Transformation 2025",
+    description: "How a Fortune 500 financial services company achieved $2B+ revenue increase and 400% ROI through comprehensive AI transformation",
+    href: "/case-studies/ai-financial-services-transformation-2025",
+    icon: "💰",
+    readTime: "25 min read",
+    category: "Financial AI",
+    isNew: true,
+    isTrending: true
+  },
+  {
+    title: "AI Breakthrough Innovations 2025",
+    description: "Revolutionary technologies that are reshaping industries and creating unprecedented opportunities for businesses worldwide",
+    href: "/blog/ai-2025-breakthrough-innovations",
+    icon: "🚀",
+    readTime: "18 min read",
+    category: "AI Innovation",
     isNew: true
   }
 ];
 
 export const trendingContent = [
   {
-    title: "AI Breakthrough Predictions 2026",
-    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
-    href: "/blog/ai-2026-breakthrough-predictions",
-    icon: "🔮",
+    title: "AI Enterprise Automation Revolution 2025",
+    description: "Transform your enterprise operations with AI automation strategies that deliver 400% ROI and revolutionize how your business operates",
+    href: "/blog/ai-2025-enterprise-automation-revolution",
+    icon: "⚙️",
     readTime: "22 min read",
-    category: "AI Predictions",
+    category: "Enterprise AI",
     isTrending: true
   },
   {
-    title: "AI Healthcare Diagnosis Breakthrough",
-    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
-    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    title: "AI Healthcare Diagnosis Revolution 2025",
+    description: "Revolutionary AI technologies achieving 95% accuracy in medical diagnosis, saving thousands of lives and transforming healthcare delivery worldwide",
+    href: "/blog/ai-healthcare-diagnosis-revolution-2025",
     icon: "🏥",
-    readTime: "18 min read",
+    readTime: "20 min read",
     category: "Healthcare AI",
     isTrending: true
   },
   {
-    title: "AI Enterprise Transformation 2026",
-    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
-    href: "/blog/ai-2026-enterprise-transformation",
-    icon: "🏢",
+    title: "AI Financial Services Transformation 2025",
+    description: "How a Fortune 500 financial services company achieved $2B+ revenue increase and 400% ROI through comprehensive AI transformation",
+    href: "/case-studies/ai-financial-services-transformation-2025",
+    icon: "💰",
     readTime: "25 min read",
-    category: "Enterprise AI",
+    category: "Financial AI",
     isTrending: true
   }
 ];
 
 export const latestContent = [
   {
-    title: "AI Healthcare Diagnosis Breakthrough",
-    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
-    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    title: "AI Healthcare Diagnosis Revolution 2025",
+    description: "Revolutionary AI technologies achieving 95% accuracy in medical diagnosis, saving thousands of lives and transforming healthcare delivery worldwide",
+    href: "/blog/ai-healthcare-diagnosis-revolution-2025",
     icon: "🏥",
-    readTime: "18 min read",
+    readTime: "20 min read",
     category: "Healthcare AI"
   },
   {
-    title: "AI Breakthrough Predictions 2026",
-    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
-    href: "/blog/ai-2026-breakthrough-predictions",
-    icon: "🔮",
+    title: "AI Enterprise Automation Revolution 2025",
+    description: "Transform your enterprise operations with AI automation strategies that deliver 400% ROI and revolutionize how your business operates",
+    href: "/blog/ai-2025-enterprise-automation-revolution",
+    icon: "⚙️",
     readTime: "22 min read",
-    category: "AI Predictions"
+    category: "Enterprise AI"
   },
   {
-    title: "AI Enterprise Transformation 2026",
-    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
-    href: "/blog/ai-2026-enterprise-transformation",
-    icon: "🏢",
+    title: "AI Financial Services Transformation 2025",
+    description: "How a Fortune 500 financial services company achieved $2B+ revenue increase and 400% ROI through comprehensive AI transformation",
+    href: "/case-studies/ai-financial-services-transformation-2025",
+    icon: "💰",
     readTime: "25 min read",
-    category: "Enterprise AI"
+    category: "Financial AI"
   }
 ];
   backgroundColor = 'bg-gray-50',
