@@ -173,6 +173,15 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner />
       </Suspense>
 
+      {/* Trending Topics Widget */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading trending topics..." />}>
+            <TrendingTopicsWidget />
+          </Suspense>
+        </div>
+      </section>
+
       {/* New Content Spotlight - January 2025 */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>

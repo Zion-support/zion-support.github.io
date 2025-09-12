@@ -43,41 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-advanced-automation" className="group">
+              <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Advanced Automation 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete enterprise guide to AI automation with 40-60% efficiency gains</p>
+                  <h3 className="text-lg font-semibold mb-2">AI Agents 2025: Autonomous Intelligence</h3>
+                  <p className="text-sm opacity-90 mb-3">Next generation AI agents with autonomous decision-making and multi-modal capabilities</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>18 min read</span>
+                    <span>12 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 NEW</span>
+                    <span>🔥 HOT</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-healthcare-diagnosis-revolution-2025" className="group">
+              <Link href="/case-studies/ai-2025-financial-services-ai-transformation-success" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Diagnosis Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">95-98% diagnostic accuracy transforming medical care worldwide</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>22 min read</span>
-                    <span className="mx-2">•</span>
-                    <span>🏥 Healthcare</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-2025-advanced-automation-success" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="text-lg font-semibold mb-2">Fortune 500 Automation Success</h3>
-                  <p className="text-sm opacity-90 mb-3">$50M savings and 60% efficiency gains through advanced AI automation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏦</div>
+                  <h3 className="text-lg font-semibold mb-2">Financial Services AI: 450% ROI</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 500 success story with fraud detection and customer service automation</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $50M ROI</span>
+                    <span>💰 450% ROI</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-smart-manufacturing-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">Smart Manufacturing Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Industry 4.0 transformation with 40-60% efficiency gains through AI</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🏭 Manufacturing</span>
                   </div>
                 </div>
               </Link>
