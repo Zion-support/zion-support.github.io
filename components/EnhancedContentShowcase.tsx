@@ -223,6 +223,51 @@ const EnhancedContentShowcase: React.FC<EnhancedContentShowcaseProps> = ({
 
   const contentItems: ContentItem[] = [
     {
+      title: 'AI Transformation Success: Manufacturing Giant Achieves 400% ROI',
+      description: 'Discover how a Fortune 500 manufacturing company transformed operations with AI, achieving 400% ROI, 60% cost reduction, and $2.3B in savings.',
+      href: '/case-studies/ai-transformation-manufacturing-giant-2025',
+      icon: '🏭',
+      readTime: '10 min read',
+      category: 'Case Study',
+      isNew: true,
+      isTrending: true,
+      type: 'case-study',
+      status: 'featured',
+      publishDate: '2025-01-17',
+      author: 'Zion Tech Group',
+      tags: ['manufacturing', 'ROI', 'transformation', 'Fortune 500']
+    },
+    {
+      title: 'AI Transformation Playbook 2025: Complete Implementation Guide',
+      description: 'Download our comprehensive playbook with proven frameworks, templates, and strategies for enterprise AI transformation success.',
+      href: '/resources/ai-transformation-playbook-2025',
+      icon: '📚',
+      readTime: '45 min read',
+      category: 'Resource',
+      isNew: true,
+      isTrending: true,
+      type: 'resource',
+      status: 'featured',
+      publishDate: '2025-01-17',
+      author: 'Zion Tech Group',
+      tags: ['playbook', 'implementation', 'frameworks', 'templates']
+    },
+    {
+      title: 'AI Transformation Masterclass: Free Live Training',
+      description: 'Join 2,500+ executives for our comprehensive 2-hour masterclass covering proven AI transformation strategies and frameworks.',
+      href: '/webinars/ai-transformation-masterclass',
+      icon: '🎓',
+      readTime: '2 hours',
+      category: 'Webinar',
+      isNew: true,
+      isTrending: true,
+      type: 'resource',
+      status: 'featured',
+      publishDate: '2025-01-25',
+      author: 'Zion Tech Group',
+      tags: ['masterclass', 'live training', 'free', 'executives']
+    },
+    {
       title: 'The Generative AI Revolution: How 2025 is Transforming Every Industry',
       description: 'Explore how generative AI is revolutionizing industries in 2025, from healthcare to finance, with real-world applications and future predictions.',
       href: '/blog/ai-2025-generative-ai-revolution',
@@ -404,8 +449,8 @@ const EnhancedContentShowcase: React.FC<EnhancedContentShowcaseProps> = ({
     }
   ];
 
-  const categories = ['all', 'AI Innovation', 'AI Automation', 'Case Study', 'Healthcare AI', 'Enterprise AI', 'Cybersecurity', 'Data Engineering', 'Edge Computing', 'AI Ethics', 'Multimodal AI'];
-  const types = ['all', 'article', 'case-study', 'guide', 'resource'];
+  const categories = ['all', 'Case Study', 'Resource', 'Webinar', 'AI Innovation', 'AI Automation', 'Healthcare AI', 'Enterprise AI', 'Cybersecurity', 'Data Engineering', 'Edge Computing', 'AI Ethics', 'Multimodal AI'];
+  const types = ['all', 'case-study', 'resource', 'article', 'guide'];
 
   const filteredContent = contentItems
     .filter(item => {
