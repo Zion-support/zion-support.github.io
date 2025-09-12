@@ -1,283 +1,164 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-interface TrendingContent {
-  id: string;
-  title: string;
-  description: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  publishDate: string;
-  readTime: string;
-  category: string;
-  views: number;
-  trending: boolean;
-  featured: boolean;
-}
-
-const TrendingContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const trendingContent: TrendingContent[] = [
+export default function TrendingContentCarousel() {
+  const trendingContent = [
     {
-      id: 'quantum-ai-breakthrough',
-      title: 'Quantum AI Breakthrough: Revolutionary Computing Meets AI',
-      description: 'Explore the groundbreaking convergence of quantum computing and AI, unlocking unprecedented computational power and solving previously impossible problems.',
-      type: 'blog',
-      url: '/blog/ai-2025-quantum-ai-breakthrough',
-      publishDate: '2025-01-17',
-      readTime: '8 min read',
-      category: 'Quantum Technology',
-      views: 15420,
-      trending: true,
-      featured: true
+      title: "Advanced AI Agents Implementation Guide",
+      description: "Complete enterprise implementation with 340% ROI and autonomous systems",
+      href: "/blog/ai-2025-advanced-ai-agents",
+      category: "AI Implementation",
+      readTime: "15 min",
+      icon: "🤖",
+      badge: "HOT",
+      badgeColor: "bg-red-500"
     },
     {
-      id: 'advanced-ai-agents',
-      title: 'Advanced AI Agents: The Future of Autonomous Operations',
-      description: 'Discover how advanced AI agents are revolutionizing business operations with autonomous decision-making, multi-modal capabilities, and enterprise-grade reliability.',
-      type: 'blog',
-      url: '/blog/ai-2025-advanced-ai-agents',
-      publishDate: '2025-01-17',
-      readTime: '10 min read',
-      category: 'AI Technology',
-      views: 12850,
-      trending: true,
-      featured: true
+      title: "AI Cybersecurity Revolution",
+      description: "94% threat detection accuracy and zero-day attack prevention",
+      href: "/blog/ai-2025-cybersecurity-revolution",
+      category: "Cybersecurity",
+      readTime: "18 min",
+      icon: "🛡️",
+      badge: "NEW",
+      badgeColor: "bg-blue-500"
     },
     {
-      id: 'fintech-unicorn',
-      title: 'Fintech Unicorn: $3.2B Valuation Through AI Innovation',
-      description: 'How a fintech startup achieved unicorn status and $3.2B valuation by implementing cutting-edge AI solutions across their entire platform.',
-      type: 'case-study',
-      url: '/case-studies/ai-2025-fintech-unicorn-transformation',
-      publishDate: '2025-01-17',
-      readTime: '12 min read',
-      category: 'Success Story',
-      views: 18750,
-      trending: true,
-      featured: true
+      title: "$2.1B Manufacturing Transformation",
+      description: "Global manufacturing giant achieves 340% ROI across 47 facilities",
+      href: "/case-studies/ai-2025-global-manufacturing-ai-transformation-success",
+      category: "Case Study",
+      readTime: "12 min",
+      icon: "🏭",
+      badge: "SUCCESS",
+      badgeColor: "bg-green-500"
     },
     {
-      id: 'implementation-checklist',
-      title: 'AI Implementation Master Checklist 2025',
-      description: 'The definitive step-by-step checklist for successfully implementing AI solutions in 2025. Based on 500+ successful AI deployments.',
-      type: 'resource',
-      url: '/resources/ai-2025-implementation-master-checklist',
-      publishDate: '2025-01-17',
-      readTime: '15 min read',
-      category: 'Implementation Guide',
-      views: 22100,
-      trending: true,
-      featured: true
+      title: "Healthcare AI Diagnosis Revolution",
+      description: "94% accuracy in cancer detection and 67% faster diagnosis times",
+      href: "/blog/ai-2025-healthcare-diagnosis-revolution",
+      category: "Healthcare AI",
+      readTime: "14 min",
+      icon: "🏥",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-purple-500"
     },
     {
-      id: 'ai-governance-guide',
-      title: 'Enterprise AI Governance: Complete Implementation Guide',
-      description: 'Master the art of AI governance with our comprehensive guide covering ethics, compliance, risk management, and operational excellence.',
-      type: 'resource',
-      url: '/resources/ai-2025-enterprise-governance-guide',
-      publishDate: '2025-01-16',
-      readTime: '18 min read',
-      category: 'Governance',
-      views: 9650,
-      trending: true,
-      featured: false
+      title: "Enterprise AI Automation Masterclass",
+      description: "Complete automation transformation delivering 340% ROI",
+      href: "/blog/ai-2025-enterprise-automation-revolution",
+      category: "Automation",
+      readTime: "16 min",
+      icon: "⚡",
+      badge: "TRENDING",
+      badgeColor: "bg-orange-500"
     },
     {
-      id: 'multimodal-ai-revolution',
-      title: 'Multimodal AI Revolution: 300% Accuracy Boost',
-      description: 'Discover how multimodal AI is transforming industries with unprecedented accuracy improvements in text, voice, and visual processing.',
-      type: 'blog',
-      url: '/blog/ai-2025-multimodal-revolution',
-      publishDate: '2025-01-16',
-      readTime: '9 min read',
-      category: 'AI Innovation',
-      views: 14200,
-      trending: true,
-      featured: false
+      title: "Quantum AI Computing Breakthrough",
+      description: "Next-generation quantum AI systems transforming enterprise computing",
+      href: "/blog/ai-2025-quantum-ai-breakthrough",
+      category: "Quantum AI",
+      readTime: "20 min",
+      icon: "⚛️",
+      badge: "FUTURE",
+      badgeColor: "bg-indigo-500"
     }
   ];
 
-  const slidesToShow = 3;
-  const totalSlides = Math.ceil(trendingContent.length / slidesToShow);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, totalSlides]);
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝';
-      case 'case-study':
-        return '📊';
-      case 'resource':
-        return '📚';
-      default:
-        return '📄';
-    }
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'border-blue-200 bg-blue-50 text-blue-800';
-      case 'case-study':
-        return 'border-green-200 bg-green-50 text-green-800';
-      case 'resource':
-        return 'border-purple-200 bg-purple-50 text-purple-800';
-      default:
-        return 'border-gray-200 bg-gray-50 text-gray-800';
-    }
-  };
-
-  const formatViews = (views: number) => {
-    if (views >= 1000) {
-      return `${(views / 1000).toFixed(1)}k`;
-    }
-    return views.toString();
-  };
-
-  const getCurrentSlideContent = () => {
-    const startIndex = currentSlide * slidesToShow;
-    return trendingContent.slice(startIndex, startIndex + slidesToShow);
-  };
-
   return (
-    <div className="bg-gray-50 py-16">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            🔥 Trending Content
+            🔥 Trending Content This Week
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, success stories, and implementation guides 
-            that are transforming businesses worldwide.
+            Discover the most popular and impactful AI content that's transforming businesses worldwide. 
+            Expert insights, real-world success stories, and implementation guides.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Carousel Container */}
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {trendingContent
-                      .slice(slideIndex * slidesToShow, (slideIndex + 1) * slidesToShow)
-                      .map((content) => (
-                        <div
-                          key={content.id}
-                          className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow border border-gray-200 overflow-hidden group"
-                        >
-                          <div className="p-6">
-                            <div className="flex items-center justify-between mb-4">
-                              <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(content.type)}`}>
-                                <span className="mr-2">{getTypeIcon(content.type)}</span>
-                                {content.category}
-                              </div>
-                              {content.trending && (
-                                <div className="flex items-center text-orange-600 text-sm font-medium">
-                                  <span className="mr-1">🔥</span>
-                                  Trending
-                                </div>
-                              )}
-                            </div>
-
-                            <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                              {content.title}
-                            </h3>
-
-                            <p className="text-gray-600 mb-4 line-clamp-3">
-                              {content.description}
-                            </p>
-
-                            <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                              <span>{content.readTime}</span>
-                              <span>{formatViews(content.views)} views</span>
-                            </div>
-
-                            <Link
-                              href={content.url}
-                              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                            >
-                              Read More
-                              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </div>
-                        </div>
-                      ))}
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8">
+          {trendingContent.slice(0, 6).map((content, index) => (
+            <Link key={index} href={content.href} className="group">
+              <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group-hover:border-blue-300">
+                <div className="flex items-start mb-4">
+                  <div className="text-3xl mr-4 group-hover:scale-110 transition-transform">{content.icon}</div>
+                  <div className="flex-1">
+                    <div className="flex items-center mb-2">
+                      <span className={`text-xs font-medium text-white px-2 py-1 rounded-full ${content.badgeColor} mr-2`}>
+                        {content.badge}
+                      </span>
+                      <span className="text-xs text-gray-500">{content.category}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      {content.title}
+                    </h3>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-          >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % totalSlides)}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-          >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  {content.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500">{content.readTime} read</span>
+                  <span className="text-blue-600 text-sm font-medium group-hover:underline">
+                    Read More →
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {Array.from({ length: totalSlides }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
+        {/* Mobile/Tablet Carousel */}
+        <div className="lg:hidden">
+          <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+            {trendingContent.map((content, index) => (
+              <Link key={index} href={content.href} className="group flex-shrink-0 w-80">
+                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group-hover:border-blue-300">
+                  <div className="flex items-start mb-4">
+                    <div className="text-3xl mr-4 group-hover:scale-110 transition-transform">{content.icon}</div>
+                    <div className="flex-1">
+                      <div className="flex items-center mb-2">
+                        <span className={`text-xs font-medium text-white px-2 py-1 rounded-full ${content.badgeColor} mr-2`}>
+                          {content.badge}
+                        </span>
+                        <span className="text-xs text-gray-500">{content.category}</span>
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        {content.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    {content.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-500">{content.readTime} read</span>
+                    <span className="text-blue-600 text-sm font-medium group-hover:underline">
+                      Read More →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
         {/* View All Button */}
         <div className="text-center mt-8">
           <Link
             href="/content-showcase"
-            className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             View All Trending Content
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default TrendingContentCarousel;
+}

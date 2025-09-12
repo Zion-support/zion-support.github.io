@@ -92,10 +92,10 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 BREAKTHROUGH: AI Masterclass, Cybersecurity Revolution & $2.1B Manufacturing Success!
+                🎉 BREAKTHROUGH: Advanced AI Agents, Cybersecurity Revolution & $2.1B Manufacturing Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: Complete AI Enterprise Masterclass (340% ROI), Advanced Cybersecurity AI (94% threat detection), 
+                Just released: Complete AI Agents Implementation Guide (340% ROI), Advanced Cybersecurity AI (94% threat detection), 
                 Healthcare Diagnosis Revolution (94% cancer detection accuracy), plus $2.1B Manufacturing Transformation case study. 
                 Get expert insights on breakthrough AI implementations transforming 2025.
               </p>
@@ -113,10 +113,10 @@ export default function HomePage() {
                   Read AI Agents Guide
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-fortune-500-quantum-transformation"
+                  href="/case-studies/ai-2025-global-manufacturing-ai-transformation-success"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $3.2B Success Story
+                  View $2.1B Success Story
                 </Link>
               </div>
             </div>

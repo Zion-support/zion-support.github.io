@@ -43,28 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-2025-generative-ai-enterprise-masterclass" className="group">
+              <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎓</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Masterclass</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete implementation guide with 340% ROI and $4.4T market potential</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">Advanced AI Agents Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete enterprise implementation with 340% ROI and autonomous systems</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>18 min read</span>
+                    <span>15 min read</span>
                     <span className="mx-2">•</span>
                     <span>🔥 HOT</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-cybersecurity-advanced-threat-detection" className="group">
+              <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
                   <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">Advanced threat detection with 94% reduction in false positives</p>
+                  <p className="text-sm opacity-90 mb-3">94% threat detection accuracy and zero-day attack prevention</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>16 min read</span>
+                    <span>18 min read</span>
                     <span className="mx-2">•</span>
                     <span>🆕 NEW</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-2025-global-manufacturing-ai-transformation-success" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">$2.1B Manufacturing Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Global manufacturing giant transformation with 340% ROI</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 $2.1B Value</span>
                   </div>
                 </div>
               </Link>
@@ -78,19 +91,6 @@ export default function ContentShowcase() {
                     <span>14 min read</span>
                     <span className="mx-2">•</span>
                     <span>🚀 BREAKTHROUGH</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-2025-global-manufacturing-ai-transformation-success" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
-                  <h3 className="text-lg font-semibold mb-2">$2.1B Manufacturing Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Fortune 100 transformation with 340% ROI across 47 facilities</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
-                    <span className="mx-2">•</span>
-                    <span>💰 $2.1B Value</span>
                   </div>
                 </div>
               </Link>
