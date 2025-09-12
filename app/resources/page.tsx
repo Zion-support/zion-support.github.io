@@ -47,6 +47,18 @@ export default function ResourcesPage() {
       featured: true,
       image: '/api/placeholder/400/300',
     },
+    // New resource added January 2025
+    {
+      id: 'ai-startup-funding-playbook-2025',
+      title: 'AI Startup Funding Playbook 2025',
+      description: 'Master the $47B AI funding landscape with our comprehensive playbook. Includes pitch templates, investor database, and proven strategies.',
+      category: 'Startup Strategy',
+      type: 'Playbook',
+      downloadCount: '3,200+',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
     {
       id: 'ai-governance-framework',
       title: 'AI Governance Framework',

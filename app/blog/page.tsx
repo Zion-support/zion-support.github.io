@@ -547,6 +547,29 @@ export default function BlogPage() {
 	    category: 'AI Strategy',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
+	  },
+	  // New content added January 2025
+	  {
+	    id: 'ai-multimodal-applications-2025',
+	    title: 'AI Multimodal Applications 2025: Beyond Text to Vision, Audio, and Beyond',
+	    excerpt:
+	      'Explore the revolutionary world of multimodal AI applications in 2025. Discover how AI systems are processing text, images, audio, and video simultaneously to create unprecedented business value.',
+	    date: '2025-01-28',
+	    readTime: '15 min read',
+	    category: 'AI Technology',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-enterprise-transformation-2025',
+	    title: 'AI Enterprise Transformation 2025: Complete Implementation Guide with 340% ROI',
+	    excerpt:
+	      'Transform your enterprise with AI. Learn proven strategies, implementation frameworks, and real case studies that deliver 340% ROI and measurable business impact in 2025.',
+	    date: '2025-01-28',
+	    readTime: '18 min read',
+	    category: 'Enterprise AI',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
 	  }
 	];
 

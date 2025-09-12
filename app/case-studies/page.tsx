@@ -299,6 +299,37 @@ export default function CaseStudiesPage() {
       image: '/api/placeholder/600/400',
       featured: true,
     },
+    // New case study added January 2025
+    {
+      id: 'ai-financial-services-transformation-2025',
+      title: 'AI Financial Services Transformation: $50M Cost Savings & 300% Efficiency Gains',
+      client: 'Fortune 500 Financial Services Firm',
+      industry: 'Financial Services',
+      challenge:
+        'Manual loan processing taking 5-7 days, high error rates in data entry (12%), inconsistent customer service quality, and regulatory compliance bottlenecks causing operational inefficiencies',
+      solution:
+        'Strategic AI implementation including automated loan processing, predictive risk assessment, intelligent customer service chatbots, and comprehensive compliance automation',
+      results: [
+        '$50M annual cost savings achieved',
+        '300% efficiency improvement',
+        '340% ROI in 18 months',
+        '95% customer satisfaction rate',
+      ],
+      technologies: [
+        'Machine Learning',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Python',
+        'TensorFlow',
+        'AWS',
+        'Kubernetes',
+        'Blockchain',
+      ],
+      duration: '18 months',
+      team: '25 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
   ];
 
   const featuredStudies = caseStudies.filter(study => study.featured);
