@@ -29,6 +29,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <a href="/" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Home
                   </a>
+                  <a href="/blog" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    Blog
+                  </a>
                   <a href="/multiverse/launch" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Launch
                   </a>
