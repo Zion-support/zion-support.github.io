@@ -94,6 +94,8 @@ import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomat
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
 // Revolutionary Content Showcase
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -162,6 +164,12 @@ export default function HomePage() {
         
         {/* ENHANCED CONTENT DISCOVERY WIDGET 2026 */}
         <EnhancedContentDiscoveryWidget2026 />
+        
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
         
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
