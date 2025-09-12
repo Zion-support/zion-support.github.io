@@ -416,13 +416,13 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/blog/edge-ai-privacy-by-design-2025' className='group'>
+            <Link href='/blog/serverless-ai-architecture-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔒</div>
-                <h3 className='text-lg font-semibold mb-2'>Edge AI: Privacy by Design</h3>
-                <p className='text-sm opacity-90 mb-3'>On-device intelligence for instant, compliant CX</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>☁️</div>
+                <h3 className='text-lg font-semibold mb-2'>Serverless AI Architecture 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Patterns, costs, and pitfalls</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>8 min read</span>
+                  <span>10 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -681,19 +681,19 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              <Link href='/blog/ai-cost-optimization-2025' className='group'>
+              <Link href='/blog/ai-evals-observability-2025' className='group'>
                 <div className='bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100'>
-                  <div className='text-3xl mb-3'>⚡</div>
-                  <div className='text-xs font-medium text-orange-700 mb-2'>AI Engineering</div>
+                  <div className='text-3xl mb-3'>🧪</div>
+                  <div className='text-xs font-medium text-orange-700 mb-2'>AI Reliability</div>
                   <h4 className='font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors'>
-                    AI Cost Optimization 2025
+                    AI Evals & Observability 2025
                   </h4>
                   <p className='text-gray-600 text-sm mb-3'>
-                    Ship faster, spend less with practical cost optimization.
+                    Measure success, control risk, and scale production AI reliably.
                   </p>
                   <div className='flex items-center justify-between text-xs text-gray-500'>
-                    <span>9 min read</span>
-                    <span>💡 Insight</span>
+                    <span>11 min read</span>
+                    <span>🧩 Reliability</span>
                   </div>
                 </div>
               </Link>
