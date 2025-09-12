@@ -21,6 +21,28 @@ export const newsArticles: NewsArticle[] = [
       "Zion OS 1.0 delivers one-click orchestration for AI-powered marketplaces, governance, and analytics. It includes ZionGPT Core, deployment automation, and a growing partner ecosystem.",
   },
   {
+    slug: "zion-os-1-4-performance-accessibility",
+    emoji: "⚡",
+    title: "Zion OS 1.4: Performance & Accessibility Upgrades",
+    excerpt:
+      "Faster cold starts, smaller bundles, and WCAG 2.2 improvements ship in 1.4.",
+    date: "2025-09-12",
+    gradient: "from-amber-500 to-yellow-600",
+    content:
+      "The 1.4 release delivers major performance boosts, smaller bundles via code‑splitting, and WCAG 2.2 accessibility improvements across the platform, including focus states and contrast fixes.",
+  },
+  {
+    slug: "zion-os-1-4-security-compliance",
+    emoji: "🛡️",
+    title: "Zion OS 1.4: Security & Compliance Pack",
+    excerpt:
+      "Enterprise-grade compliance templates, audit trails, and security hardening for regulated deployments.",
+    date: "2025-09-12",
+    gradient: "from-rose-600 to-red-600",
+    content:
+      "This release adds prebuilt SOC 2 controls, audit logging enhancements, and hardened defaults to accelerate compliant deployments.",
+  },
+  {
     slug: "autonomous-deployments",
     emoji: "📰",
     title: "Zion OS v1.2 Launches Autonomous Deployments",

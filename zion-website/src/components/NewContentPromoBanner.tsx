@@ -67,6 +67,28 @@ const NewContentPromoBanner = ({
       category: 'Advanced AI'
     },
     {
+      id: '9',
+      title: 'Foundation Models Cost Optimization 2025',
+      description: 'Cut inference and training costs with quantization, distillation, caching, and smart routing in 2025 stacks.',
+      href: '/blog/ai-2025-foundation-models-cost-optimization',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: '10',
+      title: 'AI-Powered Customer Service: 90% Satisfaction',
+      description: 'Case study: 90% CSAT and 60% cost reduction through AI assistants, deflection, and smart escalation.',
+      href: '/case-studies/ai-customer-service-transformation',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Jan 20, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '0',
       title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
       description: 'Architectures, safety, and observability for deploying autonomous agents on edge devices with low latency and high reliability.',

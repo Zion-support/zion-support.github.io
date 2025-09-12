@@ -1,8 +1,9 @@
 import { newsArticles } from "./data";
 
 export default function NewsPage() {
-<<<<<<< HEAD
-  const articles = [
+  const articles = [...newsArticles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
     {
 <<<<<<< HEAD
       emoji: "⚡",
@@ -192,20 +193,16 @@ export default function NewsPage() {
             {articles.map((article, index) => (
               <a
                 key={index}
-                href={article.href}
+                href={`/news/${article.slug}`}
                 className="group block rounded-2xl overflow-hidden border border-white/10 bg-zinc-800/50 hover:border-white/30 transition-all duration-300 hover:scale-105"
               >
                 <div className={`h-2 bg-gradient-to-r ${article.gradient}`} />
                 <div className="p-6">
                   <div className="text-3xl mb-3">{article.emoji}</div>
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-white">
-                    {article.title}
-                  </h3>
-                  <p className="text-white/70 mb-4 text-sm leading-relaxed">
-                    {article.excerpt}
-                  </p>
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-white">{article.title}</h3>
+                  <p className="text-white/70 mb-4 text-sm leading-relaxed">{article.excerpt}</p>
                   <div className="flex items-center justify-between text-sm text-white/50">
-                    <span>{article.date}</span>
+                    <span>{new Date(article.date).toLocaleDateString()}</span>
                     <span className="group-hover:text-white transition-colors">
                       Read more →
                     </span>
