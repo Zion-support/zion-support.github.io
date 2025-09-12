@@ -1375,16 +1375,17 @@ export default function HomePage() {
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8'>
             <h3 className='text-2xl font-bold mb-6 text-center'>Free Resources & Tools</h3>
             <div className='grid md:grid-cols-2 gap-6'>
-              <div className='flex items-center gap-4'>
-                <div className='w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
-                  <span className='text-xl'>📋</span>
+              <Link href='/resources/ai-implementation-checklist-2025' className='group'>
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center'>
+                    <span className='text-xl'>📋</span>
+                  </div>
+                  <div>
+                    <h4 className='font-semibold'>AI Implementation Checklist</h4>
+                    <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className='font-semibold'>AI Implementation Checklist</h4>
-                  <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
-                </div>
-              </article>
-            </Link>
+              </Link>
 
             <Link href='/blog/cloud-native-architecture-2025' className='group'>
               <article className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100'>
@@ -1631,7 +1632,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      
       {/* Performance Metrics Section */}
       <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
         <PerformanceMetrics />
@@ -1684,5 +1685,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </ErrorBoundary>
   );
 }
