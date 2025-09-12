@@ -53,6 +53,7 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
@@ -80,6 +81,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
+        
+        {/* NEW CONTENT 2026 SHOWCASE */}
+        <NewContent2026Showcase />
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
