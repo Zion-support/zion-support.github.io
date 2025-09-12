@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import UltraFuturisticNavigation2037 from './UltraFuturisticNavigation2037';
@@ -27,16 +28,50 @@ export default function Layout({ children, seo }: LayoutProps) {
               {/* Futuristic Background */}
         <UltraFuturisticBackground2036 variant="quantum" intensity="high" />
       
+=======
+      {/* Skip to content link for accessibility */}
+      <a 
+        href="#main" 
+        className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300"
+      >
+        Skip to main content
+      </a>
+
+      {/* Enhanced Futuristic Background */}
+      <UltraFuturisticBackground2038 intensity="medium" theme="quantum-neon" />
+
+      {/* Loading State */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+          >
+            <div className="text-center">
+              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-cyan-400 text-lg font-semibold">Loading Zion Tech Group</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+>>>>>>> origin/content/blog-sept12
       {/* Layout Structure */}
       <div className="relative z-10">
         {/* Top Contact Bar */}
         <TopContactBar />
         
+<<<<<<< HEAD
         {/* Enhanced Navigation */}
         <UltraFuturisticNavigation2037 
           onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
           aria-expanded={sidebarOpen}
         />
+=======
+        {/* Navigation */}
+        <UltraAdvancedNavigation2035 />
+>>>>>>> origin/content/blog-sept12
         
         {/* Sidebar and Main Content */}
         <div className="flex">
@@ -67,7 +102,11 @@ export default function Layout({ children, seo }: LayoutProps) {
         </div>
         
         {/* Footer */}
+<<<<<<< HEAD
         <UltraFuturisticFooter2037 />
+=======
+        <UltraAdvancedFooter2035 />
+>>>>>>> origin/content/blog-sept12
       </div>
 
       {/* Back to top button */}
@@ -96,4 +135,17 @@ export default function Layout({ children, seo }: LayoutProps) {
       </motion.button>
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+}
+=======
+import React from 'react';
+
+const Layout: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">Layout temporarily disabled</div>;
+};
+
+export default Layout;
+>>>>>>> origin/content/blog-sept12

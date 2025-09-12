@@ -25,6 +25,7 @@ import {
 const footerSections = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Core Services',
     description: 'Our flagship technology solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
@@ -38,6 +39,8 @@ const footerSections = [
       { name: 'Cloud Infrastructure', href: '/cloud-platform', featured: true },
       { name: 'Process Automation', href: '/automation', featured: true }
 =======
+=======
+>>>>>>> origin/content/blog-sept12
     title: '2038 Featured Services',
     description: 'Our latest revolutionary solutions',
     icon: <Star className="w-5 h-5 text-yellow-400" />,
@@ -45,6 +48,7 @@ const footerSections = [
       { name: 'AI Services', href: '/ai-services', featured: true },
       { name: 'Quantum Services', href: '/quantum-services', featured: true },
       { name: 'Space Technology', href: '/space-technology', featured: true },
+<<<<<<< HEAD
       { name: 'IT Solutions', href: '/it-services', featured: true },
       { name: 'Healthcare Solutions', href: '/healthcare-solutions', featured: true },
       { name: 'Financial Solutions', href: '/financial-solutions', featured: true },
@@ -53,6 +57,16 @@ const footerSections = [
       { name: 'Retail Technology', href: '/retail-technology-solutions' },
       { name: 'Education Technology', href: '/education-technology-solutions' }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+      { name: 'IT Services', href: '/it-services', featured: true },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' }
+========
+>>>>>>> origin/content/blog-sept12
     ]
   },
   {
@@ -60,6 +74,7 @@ const footerSections = [
     description: 'Revolutionary AI platforms and solutions',
     icon: <Brain className="w-5 h-5 text-cyan-400" />,
     links: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' },
@@ -70,6 +85,8 @@ const footerSections = [
       { name: 'AI Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
 =======
+=======
+>>>>>>> origin/content/blog-sept12
       { name: 'AI Services', href: '/ai-services' },
       { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
       { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform' },
@@ -78,7 +95,10 @@ const footerSections = [
       { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework' },
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform' },
       { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform' }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+>>>>>>> origin/content/blog-sept12
     ]
   },
   {
@@ -86,6 +106,7 @@ const footerSections = [
     description: 'Breakthrough quantum and space technologies',
     icon: <Atom className="w-5 h-5 text-blue-400" />,
     links: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
@@ -126,6 +147,8 @@ const footerSections = [
       { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform' },
       { name: 'AI Customer Success', href: '/ai-customer-success-platform' }
 =======
+=======
+>>>>>>> origin/content/blog-sept12
       { name: 'Quantum Services', href: '/quantum-services' },
       { name: 'Space Technology', href: '/space-technology' },
       { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
@@ -149,11 +172,15 @@ const footerSections = [
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
       { name: 'AI-Powered Cybersecurity Platform', href: '/ai-powered-cybersecurity' },
       { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+>>>>>>> origin/content/blog-sept12
     ]
   },
   {
     title: 'Industry Solutions',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: 'Specialized solutions by industry',
     icon: <Target className="w-5 h-5 text-orange-400" />,
@@ -167,6 +194,8 @@ const footerSections = [
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
       { name: 'Space Technology', href: '/space-technology' }
 =======
+=======
+>>>>>>> origin/content/blog-sept12
     description: 'Tailored solutions for specific industries',
     icon: <Target className="w-5 h-5 text-emerald-400" />,
     links: [
@@ -195,7 +224,25 @@ const footerSections = [
       { name: 'Blog & News', href: '/news' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Partners', href: '/partners' }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+    ]
+  },
+  {
+    title: 'Company & Resources',
+    description: 'Learn more about Zion Tech Group',
+    icon: <Building className="w-5 h-5 text-indigo-400" />,
+    links: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Support', href: '/support' }
+>>>>>>> origin/content/blog-sept12
     ]
   }
 ];

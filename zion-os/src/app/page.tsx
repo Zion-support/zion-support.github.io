@@ -78,16 +78,25 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+<<<<<<< HEAD
+=======
       {/* Promo Banner */}
       <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
-          <span className="font-semibold">New:</span>
-          <span className="opacity-90">3 fresh guides on AI deployment, services pricing, and Web3.</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+          <span className="font-semibold">New on the blog:</span>
+          <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+            <a href="/blog/ai-governance-playbook" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">AI Governance Playbook</a>
+            <span className="hidden sm:inline">•</span>
+            <a href="/blog/it-cost-optimization-quick-wins" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">IT Cost Optimization</a>
+            <span className="hidden sm:inline">•</span>
+            <a href="/blog/token-rewards-growth-loops" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">Token Reward Loops</a>
+          </div>
           <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
-            Read the blog →
+            Read all →
           </a>
         </div>
       </div>
+>>>>>>> origin/content/blog-sept12
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -109,6 +118,12 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
+<<<<<<< HEAD
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 Read the Latest News
+              </a>
+=======
+>>>>>>> origin/content/blog-sept12
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
@@ -167,36 +182,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Updates Promo */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+<<<<<<< HEAD
+      {/* Latest News Teaser */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What's New in Zion OS</h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">Latest improvements shipped to your AI-powered economy platform.</p>
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-3xl font-bold mb-2">Latest News</h2>
+              <p className="text-white/70">Product releases, academy updates, and ecosystem highlights</p>
+            </div>
+            <a href="/news" className="btn-secondary hover-lift px-6 py-3">View All</a>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/updates/ai-orchestrator-v2" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
-              <div className="text-sm text-white/60 mb-2">2025-09-12</div>
-              <h3 className="text-xl font-semibold mb-2">AI Orchestrator v2 Released</h3>
-              <p className="text-white/70">Smarter scheduling, reduced latency, and improved observability across workflows.</p>
+            <a href="/news/ziongpt-core-v2" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🧠</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">ZionGPT Core v2</h3>
+                <p className="text-white/70">10x context windows, native Tools API, faster inference.</p>
+              </div>
             </a>
-            <a href="/updates/marketplace-insights" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
-              <div className="text-sm text-white/60 mb-2">2025-09-10</div>
-              <h3 className="text-xl font-semibold mb-2">New Marketplace Insights Dashboard</h3>
-              <p className="text-white/70">Real-time KPIs for jobs, talent, and token flows with exportable reports.</p>
+            <a href="/news/case-study-resume-ai-38-percent-faster" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">📈</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Case Study: 38% Faster Hiring</h3>
+                <p className="text-white/70">Resume AI cut time‑to‑hire while improving conversion.</p>
+              </div>
             </a>
-            <a href="/updates/governance-upgrades" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
-              <div className="text-sm text-white/60 mb-2">2025-09-07</div>
-              <h3 className="text-xl font-semibold mb-2">Governance Upgrades: Dual-Vote and Delegates</h3>
-              <p className="text-white/70">Flexible local/global voting, delegate roles, and granular proposal lifecycles.</p>
+            <a href="/news/zion-os-1-0-launch" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🚀</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.0 Launches</h3>
+                <p className="text-white/70">One‑click deployment of AI‑powered digital economies.</p>
+              </div>
             </a>
-          </div>
-          <div className="text-center mt-10">
-            <a href="/updates" className="btn-secondary hover-lift">View all updates →</a>
           </div>
         </div>
       </section>
 
+=======
+>>>>>>> origin/content/blog-sept12
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">

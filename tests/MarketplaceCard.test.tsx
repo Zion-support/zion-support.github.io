@@ -19,6 +19,10 @@ jest.mock('react-router-dom', () => ({
   useNavigate: jest.fn(),
 }));
 
+<<<<<<< HEAD:tests/MarketplaceCard.test.tsx
+=======
+=======
+>>>>>>> origin/content/blog-sept12:tests.disabled/MarketplaceCard.test.tsx.backup.1755989866
 describe('MarketplaceCard Buy Now', () => {
   it('navigates to login when unauthenticated', () => {
     const navigateMock = jest.fn();
@@ -31,6 +35,11 @@ describe('MarketplaceCard Buy Now', () => {
     );
 
     fireEvent.click(screen.getByRole('button'));
+<<<<<<< HEAD:tests/MarketplaceCard.test.tsx
+=======
+    expect(navigateMock).toHaveBeenCalledWith('/login', { state: { from: '/' } });
+=======
+>>>>>>> origin/content/blog-sept12:tests.disabled/MarketplaceCard.test.tsx.backup.1755989866
     expect(navigateMock).toHaveBeenCalledWith('/login', { state: { from: '/' } });
   });
 });

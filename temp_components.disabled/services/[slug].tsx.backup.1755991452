@@ -53,10 +53,18 @@ import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { aiAutonomousEcosystemServices2029 } from '../../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../../data/2029-practical-business-solutions';
+<<<<<<< HEAD
 import { real2025Q4FreshAdditions } from '../../data/real-2025-q4-fresh-additions';
 =======
 import { real2032Q1Additions } from '../../data/real-2032-q1-additions';
 =======
+=======
+import { professionalServices } from '../../data/professional-services';
+import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
+import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
+import { real2035Q2Additions } from '../../data/real-2035-q2-additions';
+import { newRealServices2026 } from '../../data/2025-2026-new-real-services';
+>>>>>>> origin/content/blog-sept12
 
 type Service = typeof enhancedRealMicroSaasServices[number] | {
   id: string;
@@ -131,7 +139,10 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ32025 as unknown as Service[])
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
+<<<<<<< HEAD
 		.concat(real2025Q4AugmentedBatch as unknown as Service[])
+=======
+>>>>>>> origin/content/blog-sept12
 		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
 		.concat(real2026Additions as unknown as Service[])
@@ -146,7 +157,10 @@ function getAllServices(): Service[] {
 		.concat(realMarketServices as unknown as Service[])
 		.concat(real2029Q2Additions as unknown as Service[])
 		.concat(real2029Q3Additions as unknown as Service[])
+<<<<<<< HEAD
 		.concat(real2029Q4Additions as unknown as Service[])
+=======
+>>>>>>> origin/content/blog-sept12
 		.concat(real2030Q1Additions as unknown as Service[])
 		.concat(real2030Q2Additions as unknown as Service[])
 		.concat(real2031MicroSaasAdditions as unknown as Service[])
@@ -157,7 +171,13 @@ function getAllServices(): Service[] {
 		.concat(aiAutonomousEcosystemServices2029 as unknown as Service[])
 		.concat(emergingTechBreakthroughServices2029 as unknown as Service[])
 		.concat(practicalBusinessSolutionServices2029 as unknown as Service[])
+<<<<<<< HEAD
 =======
+=======
+		.concat(professionalServices as unknown as Service[])
+		.concat(real2032ServiceExpansions as unknown as Service[])
+		.concat(real2035Q1Additions as unknown as Service[])
+>>>>>>> origin/content/blog-sept12
 	const allServices: Service[] = [];
 	
 	// Add all service arrays to the main array
@@ -214,6 +234,7 @@ function getAllServices(): Service[] {
 	
 	return allServices;
 =======
+<<<<<<< HEAD
 		.concat(real2032ServiceExpansions as unknown as Service[])
 		.concat(real2025Q4FreshAdditions as unknown as Service[]);
 =======
@@ -225,6 +246,10 @@ function getAllServices(): Service[] {
 		.concat(emergingTechBreakthroughServices2029Additions as unknown as Service[])
 		.concat(practicalBusinessSolutionServices2029Additions as unknown as Service[]);
 =======
+=======
+		.concat(real2035Q2Additions as unknown as Service[])
+		.concat(newRealServices2026 as unknown as Service[]);
+>>>>>>> origin/content/blog-sept12
 }
 
 function toSlug(value: string): string {
@@ -306,7 +331,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
+<<<<<<< HEAD
 		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
+=======
+		<UltraFuturisticBackground variant="holographic" intensity="high">
+>>>>>>> origin/content/blog-sept12
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
@@ -428,8 +457,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			</div>
 		</UltraFuturisticBackground>
 	);
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> origin/content/blog-sept12
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -490,3 +522,8 @@ const ServiceDetail: NextPage = () => {
 };
 
 export default ServiceDetail;
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> origin/content/blog-sept12

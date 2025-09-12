@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/content/blog-sept12
   name: string;
   tagline: string;
   price: string;
@@ -5,6 +9,7 @@
 export const realMarketAugmentations2025 = [
   {
 =======
+<<<<<<< HEAD
     id: 'market-augmentation-1',
     name: 'Market Augmentation Service 2025',
     tagline: 'Advanced market augmentation solutions',
@@ -12,6 +17,8 @@ export const realMarketAugmentations2025 = [
     category: 'Market Services'
 =======
 =======
+=======
+>>>>>>> origin/content/blog-sept12
 }
 
 export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
@@ -23,6 +30,3 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     features: ['Market analysis', 'Strategy development', 'Implementation support']
   }
 ];
-=======
-export interface RealMarketAugmentation2025 {
-  id: string;

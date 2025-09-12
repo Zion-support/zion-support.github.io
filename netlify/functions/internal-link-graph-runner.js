@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async function() {
   const { execSync } = require('child_process');
   try {
@@ -31,6 +32,10 @@ exports.handler = async function() {
     }
     return acc;
   }
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+>>>>>>> origin/content/blog-sept12
 
   function extractLinksFromContent(content) {
     const links = new Set();
@@ -69,6 +74,7 @@ exports.handler = async function() {
         .sort((a,b)=>b[1]-a[1]).slice(0,20).map(([target,count])=>({ target, count }))
     };
 
+<<<<<<< HEAD
     return { generatedAt: new Date().toISOString(), nodes: Array.from(nodes), edges, stats };
   }
 
@@ -93,4 +99,7 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
+=======
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+>>>>>>> origin/content/blog-sept12
 };
