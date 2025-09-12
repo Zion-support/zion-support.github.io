@@ -17,7 +17,7 @@ import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/Su
 import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -182,6 +182,9 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner />
       
       <div className='min-h-screen bg-white'>
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
