@@ -16,6 +16,106 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Model Routing Strategies 2025: Cost, Latency, and Quality",
+      description: "Production patterns for multi-model routing with budgets, SLAs, and caching.",
+      href: "/blog/ai-2025-model-routing-strategies",
+      icon: "🧭",
+      category: "Optimization",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Evaluation Playbook 2025: Methods and Automation",
+      description: "Evaluate agents with golden tasks, tool correctness, safety, and CI/CD gates.",
+      href: "/blog/ai-2025-agent-evaluation-playbook",
+      icon: "🧪",
+      category: "AI Safety",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Privacy-Preserving AI in Production (2025)",
+      description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
+      href: "/blog/ai-2025-privacy-preserving-ai",
+      icon: "🔒",
+      category: "Privacy",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Securing AI Tools & Plugins: Sandboxing, Scopes, and Audits",
+      description: "Scopes, sandboxing, approvals, and auditing to minimize tool risk.",
+      href: "/blog/ai-2025-secure-tools-and-plugins",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Productizing GenAI Platforms: From Pilots to Products (2025)",
+      description: "Roadmap to scale GenAI with governance, budgets, and observability.",
+      href: "/blog/ai-2025-productizing-genai-platforms",
+      icon: "🧱",
+      category: "Platforms",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Enterprise Chatbots with Governance: 28% Deflection, 92% CSAT",
+      description: "Case study: Policy-as-code and evals increased deflection and CSAT.",
+      href: "/case-studies/ai-2025-enterprise-chatbots-governance-impact",
+      icon: "💬",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Analytics Observability Blueprint 2025: Traces, Quality, Cost",
+      description: "Blueprint to observe analytics and AI pipelines: lineage, traces, quality, and cost SLOs.",
+      href: "/blog/ai-2025-analytics-observability-blueprint",
+      icon: "📈",
+      category: "Platforms",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Data Contracts for ML in 2025: Reliability & Governance",
+      description: "Schema-first data contracts to reduce breakages, improve quality, and speed ML delivery.",
+      href: "/blog/ai-2025-data-contracts-for-ml",
+      icon: "📜",
+      category: "Data Platforms",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Platform Engineering Blueprint 2025",
+      description: "Governance, evaluations, routing, observability, and cost controls for enterprise AI platforms.",
+      href: "/blog/ai-2025-ai-platform-engineering-blueprint",
+      icon: "🧱",
+      category: "Platforms",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Customer 360 AI Platform: 23% Lift in Cross-Sell",
+      description: "Case study: Unified profiles, uplift modeling, and guardrailed copilots drove 23% cross-sell lift.",
+      href: "/case-studies/ai-2025-customer-360-platform-impact",
+      icon: "👤",
+      category: "Case Study",
+      readTime: "11 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Enterprise RAG Platforms 2025: Architecture, Quality, and Ops",
       description: "Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.",
       href: "/blog/ai-2025-enterprise-rag-platforms",

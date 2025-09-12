@@ -1,0 +1,209 @@
+{
+  "timestamp": "2025-09-12T15:03:38.509Z",
+  "prs": [
+    {
+      "number": 14673,
+      "title": "Install dependencies with node version mismatch",
+      "branch": "cursor/install-dependencies-with-node-version-mismatch-ce5e",
+      "author": "Zion-support",
+      "status": "failed",
+      "message": "Merge failed: 405",
+      "timestamp": "2025-09-12T15:03:42.093Z"
+    },
+    {
+      "number": 14661,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-7f12",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:03:45.321Z"
+    },
+    {
+      "number": 14657,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-a4b9",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:03:48.638Z"
+    },
+    {
+      "number": 14655,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-da1c",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:03:50.661Z"
+    },
+    {
+      "number": 14651,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-4c44",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:03:51.504Z"
+    },
+    {
+      "number": 14647,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-6937",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:03:54.759Z"
+    },
+    {
+      "number": 14645,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-98cc",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:03:56.824Z"
+    },
+    {
+      "number": 14636,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-8309",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:00.136Z"
+    },
+    {
+      "number": 14634,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-d417",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:02.224Z"
+    },
+    {
+      "number": 14630,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-b6d4",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:05.634Z"
+    },
+    {
+      "number": 14620,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-0be3",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:08.918Z"
+    },
+    {
+      "number": 14619,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-e2c6",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:12.395Z"
+    },
+    {
+      "number": 14608,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-5284",
+      "author": "Zion-support",
+      "status": "failed",
+      "message": "Merge failed: 405",
+      "timestamp": "2025-09-12T15:04:14.925Z"
+    },
+    {
+      "number": 14607,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-c477",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:17.004Z"
+    },
+    {
+      "number": 14600,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-96bc",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:19.168Z"
+    },
+    {
+      "number": 14598,
+      "title": "Install dependencies and resolve node version conflict",
+      "branch": "cursor/install-dependencies-and-resolve-node-version-conflict-78d0",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:22.701Z"
+    },
+    {
+      "number": 14579,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-3d1e",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:24.802Z"
+    },
+    {
+      "number": 14573,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-5c19",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:28.317Z"
+    },
+    {
+      "number": 14572,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-86dd",
+      "author": "Zion-support",
+      "status": "failed",
+      "message": "Merge failed: 405",
+      "timestamp": "2025-09-12T15:04:32.006Z"
+    },
+    {
+      "number": 14537,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-5ade",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:32.745Z"
+    },
+    {
+      "number": 14531,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-0928",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:36.071Z"
+    },
+    {
+      "number": 14501,
+      "title": "Create and deploy new content",
+      "branch": "cursor/create-and-deploy-new-content-513c",
+      "author": "Zion-support",
+      "status": "skipped",
+      "message": "Has conflicts",
+      "timestamp": "2025-09-12T15:04:39.445Z"
+    }
+  ],
+  "summary": {
+    "total": 22,
+    "merged": 0,
+    "failed": 3,
+    "skipped": 19
+  }
+}

@@ -1,22 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import Head from 'next/head';
+>>>>>>> 14eca1f1070a8f01fa9716aba945c40febbf2397
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string | string[];
+  title: string;
+  description: string;
+  keywords: string;
+  url: string;
   image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+  type?: string;
 }
 
+<<<<<<< HEAD
 const SEO: React.FC<SEOProps></SEOProps> = ({
   title = 'Zion Tech Group - Pioneering the Future of Technology',
   description = 'Leading technology solutions provider specializing in AI, quantum computing, space technology, and innovative business solutions. Transform your business with cutting-edge technology.',
@@ -33,86 +30,52 @@ const SEO: React.FC<SEOProps></SEOProps> = ({
   noindex = false,
   nofollow = false,
 }) => {
+=======
+export default function SEO({ 
+  title, 
+  description, 
+  keywords, 
+  url, 
+  image = '/og-image.jpg',
+  type = 'website'
+}: SEOProps) {
+>>>>>>> 14eca1f1070a8f01fa9716aba945c40febbf2397
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
+  
   return (
+<<<<<<< HEAD
     <>
       {/* Basic Meta Tags */}
+=======
+    <Head>
+>>>>>>> 14eca1f1070a8f01fa9716aba945c40febbf2397
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={noindex ? 'noindex' : 'index'} />
-      {nofollow && <meta name="robots" content="nofollow" />}
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="canonical" href={`https://zion.app${url}`} />
       
-      {/* Robots Meta */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={type} />
+      {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:url" content={fullUrl} />
+      <meta property="og:url" content={`https://zion.app${url}`} />
+      <meta property="og:type" content={type} />
+      <meta property="og:image" content={`https://zion.app${image}`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:image" content={`https://zion.app${image}`} />
       
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      
-      {/* Enhanced SEO Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Performance and Security */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-      
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="theme-color" content="#4f46e5" />
       
       {/* Structured Data */}
+<<<<<<< HEAD
       {structuredData && (
         <script
           type="application/ld+json"
@@ -186,7 +149,25 @@ const SEO: React.FC<SEOProps></SEOProps> = ({
         />
       )}
     </>
+=======
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://zion.app",
+            "logo": "https://zion.app/logo.png",
+            "description": "AI and technology solutions company",
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/zion-tech-group"
+            ]
+          })
+        }}
+      />
+    </Head>
+>>>>>>> 14eca1f1070a8f01fa9716aba945c40febbf2397
   );
-};
-
-export default SEO;
+}

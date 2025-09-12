@@ -105,8 +105,10 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
+  NODE_VERSION = "22"
 
 [context.deploy-preview]
+<<<<<<< HEAD
   command = "npm run build:ci"
 
 [context.branch-deploy]
@@ -407,3 +409,13 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   schedule = "*/3 * * * *"
 >>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
 >>>>>>> bulk-merge-20250912-100339
+=======
+  command = "npm run build"
+  [context.deploy-preview.environment]
+  NODE_VERSION = "22"
+
+[context.branch-deploy]
+  command = "npm run build"
+  [context.branch-deploy.environment]
+  NODE_VERSION = "22"
+>>>>>>> 14eca1f1070a8f01fa9716aba945c40febbf2397

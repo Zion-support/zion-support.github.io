@@ -10,59 +10,26 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
-    slug: "production-prompt-engineering-2025",
-    emoji: "🧠",
-    title: "New Guide: Production Prompt Engineering 2025",
+    slug: "zion-os-1-6-cost-aware-routing",
+    emoji: "🧭",
+    title: "Zion OS 1.6: Cost-Aware Model Routing & Caching",
     excerpt:
-      "We published a production-focused guide: schemas, tool calling, retrieval, evals, and guardrails.",
-    date: "2025-09-12",
-    gradient: "from-indigo-600 to-pink-600",
-    content:
-      "This guide focuses on operational patterns to scale prompt engineering reliably: schema-first prompts, function/tool calling, retrieval orchestration, automated evaluations, and runtime guardrails."
-  },
-  {
-    slug: "ai-governance-operational-playbook-2025",
-    emoji: "🛡️",
-    title: "New Guide: AI Governance 2025 Operational Playbook",
-    excerpt:
-      "Decision rights, policy libraries, evaluation pipelines, and runtime enforcement integrated with SDLCs.",
-    date: "2025-09-12",
-    gradient: "from-violet-600 to-fuchsia-600",
-    content:
-      "A practical operating model for AI governance that includes policy libraries, review boards, automated evaluations in CI/CD, and runtime enforcement with policy-as-code guardrails."
-  },
-  {
-    slug: "mlops-best-practices-2025",
-    emoji: "🛠️",
-    title: "New Guide: MLOps Best Practices 2025",
-    excerpt:
-      "We published a concise field guide to shipping reliable AI: versioning, evals, guardrails, and cost controls.",
+      "Dynamic multi-model routing with budget guardrails, SLAs, and response caching.",
     date: "2025-09-12",
     gradient: "from-indigo-600 to-purple-600",
     content:
-      "Our latest article distills pragmatic MLOps practices that consistently work in production: version everything, automate evaluations, enforce policy-as-code gates, and use budget-aware routing to control spend.",
+      "Zion OS 1.6 introduces a policy-driven routing layer that balances quality, latency, and cost. It adds response and embedding caches, shadow traffic, and circuit breakers for reliable production ops.",
   },
   {
-    slug: "vector-db-benchmarks-2025",
-    emoji: "📊",
-    title: "New Benchmarks: Vector Databases 2025",
+    slug: "zion-os-1-6-agent-evaluation-playbook",
+    emoji: "🧪",
+    title: "Zion OS 1.6: Agent Evaluation Playbook Built-In",
     excerpt:
-      "A practical look at recall under budget, latency tails, scaling, and ops tradeoffs across major vendors.",
+      "Golden tasks, red teaming harnesses, and policy-as-code gates integrated into CI/CD.",
     date: "2025-09-12",
-    gradient: "from-sky-600 to-indigo-600",
+    gradient: "from-fuchsia-600 to-indigo-600",
     content:
-      "We compare Pinecone, Weaviate, Qdrant, and Milvus on metrics that matter in production and share selection guidance tied to SLOs and team skills.",
-  },
-  {
-    slug: "agent-marketplaces-strategy-guide",
-    emoji: "🛒",
-    title: "New Guide: Agent Marketplaces Strategy for 2025",
-    excerpt:
-      "We published a strategy guide on launching enterprise agent marketplaces: architecture, monetization, and governance.",
-    date: "2025-09-12",
-    gradient: "from-violet-600 to-fuchsia-600",
-    content:
-      "Explore our latest guide covering the reference architecture, monetization patterns, safety guardrails, and observability required to ship enterprise agent marketplaces.",
+      "This release adds first-class agent evaluation: task success scoring, tool correctness checks, and policy gates wired into pipelines with trace-level observability.",
   },
   {
     slug: "zion-os-1-5-realtime-agents",

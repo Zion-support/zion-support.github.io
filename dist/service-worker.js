@@ -3,6 +3,7 @@
 
 // Try multiple CDNs for Workbox
 try {
+<<<<<<< HEAD
   importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-sw-no-eval.js');
 } catch (e) {
   try {
@@ -13,6 +14,14 @@ try {
     } catch (e3) {
       console.error('Failed to load Workbox from all CDNs:', e3);
       // Fallback to basic service worker without Workbox
+=======
+  importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-sw-no-eval.js');} catch {
+  try {
+    importScripts('https://cdn.jsdelivr.net/npm/workbox-sw@6.1.5/build/workbox-sw.js');  } catch {
+    try {
+      importScripts('https://unpkg.com/workbox-sw@6.1.5/build/workbox-sw.js');    } catch (_e3) {
+      console.error('Failed to load Workbox from all CDNs:', e3);      // Fallback to basic service worker without Workbox
+>>>>>>> origin/ziontechgroup-improvements
       self.skipWaiting();
       self.clientsClaim();
       return;
@@ -23,6 +32,7 @@ try {
 self.skipWaiting();
 workbox.core.clientsClaim();
 
+<<<<<<< HEAD
 self.addEventListener('push', event => {
   const data = event.data ? event.data.json() : {};
   const title = data.title || 'Zion Notification';
@@ -32,6 +42,9 @@ self.addEventListener('push', event => {
   };
   event.waitUntil(self.registration.showNotification(title, options));
 });
+=======
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST || []);
+>>>>>>> origin/ziontechgroup-improvements
 
 workbox.routing.registerRoute(
   ({request}) => request.method === GET' && request.url.includes('/api/'),  new workbox.strategies.StaleWhileRevalidate({ cacheName: 'api-get' }));
@@ -76,6 +89,7 @@ try {
           client.postMessage({ type: 'QUEUE_SYNCED' });        }
       }
     }
+<<<<<<< HEAD
   } catch (error) {
     console.error('Error handling service worker message:', error);
     // Try to send error response if possible
@@ -85,6 +99,87 @@ try {
       } catch (postError) {
         console.error('Failed to post error message:', postError);
       }
+=======
+  });
+} catch {
+  console.warn('BackgroundSync disabled: storage unavailable', e);}
+;
+const networkOnlyOptions = bgSyncPlugin ? { plugins: [bgSyncPlugin] } : {};
+workbox.routing.registerRoute(
+  ({url, request}) => url.pathname.startsWith('/api/') && request.method !== 'GET',  new workbox.strategies.NetworkOnly(networkOnlyOptions)
+);
+
+workbox.routing.setCatchHandler(async ({ event }) => {
+  if (event.request.destination === 'document') {'    return caches.match('/offline.html');  }
+  return Response.error();
+});
+
+self.addEventListener('push', event => {'  const data = event.data ? event.data.json() : {};
+  const title = data.title || Zion Notification';  const options = {
+    body: data.body,
+    icon: /logos/zion-logo.png''  };
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+self.addEventListener('notificationclick', event => {'  event.notification.close();
+  if (event.notification.data) {
+    event.waitUntil(clients.openWindow(event.notification.data));
+  }
+});
+
+// Manually trigger replay of the Background Sync queue
+self.addEventListener('message', event => {'  try {
+    if (event.data && event.data.type === SYNC_QUEUE' && bgSyncPlugin) {'      // Add timeout to prevent hanging operations
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Sync timeout')), 30000)      );
+      
+      const syncPromise = bgSyncPlugin.queue
+        .replayRequests()
+        .then(() => {
+          // Send success response if there's a port'          if (event.ports && event.ports[0]) {
+            try {
+              event.ports[0].postMessage({ type: 'SYNC_SUCCESS' });            } catch (_postError) {
+              console.error('Failed to post sync success message:', postError);            }
+          }
+        })
+        .catch(err => {
+          console.error('Background sync replay failed', err);          // Try to notify clients about the failure
+          return self.clients.matchAll().then(clients => {
+            clients.forEach(client => {
+              try {
+                client.postMessage({ type: 'SYNC_FAILED', error: err.message });              } catch (_postError) {
+                console.error('Failed to post sync failure message:', postError);              }
+            });
+          });
+        });
+      
+      event.waitUntil(
+        Promise.race([syncPromise, timeoutPromise])
+          .catch(timeoutError => {
+            console.error('Background sync timed out:', timeoutError);            return self.clients.matchAll().then(clients => {
+              clients.forEach(client => {
+                try {
+                  client.postMessage({ type: 'SYNC_TIMEOUT', error: Sync operation timed out' });                } catch (_postError) {
+                  console.error('Failed to post sync timeout message:', postError);                }
+              });
+            });
+          })
+      );
+    } else {
+      // Handle other message types or send error response
+      if (event.ports && event.ports[0]) {
+        try {
+          event.ports[0].postMessage({ type: 'UNKNOWN_MESSAGE_TYPE' });        } catch (_postError) {
+          console.error('Failed to post error message:', postError);        }
+      }
+    }
+  } catch {
+    console.('Error handling service worker message:', );    // Try to send  response if possible
+    if (event.ports && event.ports[0]) {
+      try {
+        event.ports[0].postMessage({ type: 'MESSAGE_ERROR', : .message });      } catch (_postError) {
+        console.error('Failed to post error message:', postError);      }
+>>>>>>> origin/ziontechgroup-improvements
     }
   }
 });
@@ -93,6 +188,7 @@ self.addEventListener('fetch', event => {'  const url = new URL(event.request.ur
   if (event.request.mode === navigate' && url.pathname.startsWith('/auth/')) {'    event.respondWith(fetch(event.request));
   }
 });
+<<<<<<< HEAD
 
 // Handle Web Push notifications
 self.addEventListener('push', event => {
@@ -112,3 +208,5 @@ self.addEventListener('notificationclick', event => {
     event.waitUntil(clients.openWindow(event.notification.data));
   }
 });
+=======
+>>>>>>> origin/ziontechgroup-improvements
