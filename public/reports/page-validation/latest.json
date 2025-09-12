@@ -1,55 +1,5 @@
 {
   "summary": {
-      "file": "pages/403.tsx",
-      "issues": [
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_EXPORT_DEFAULT",
-          "message": "Missing export default statement",
-          "line": 0,
-          "severity": "error"
-        }
-      ],
-      "warnings": []
-    },
-    {
-      "file": "pages/ProductsList.tsx",
-      "issues": [
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_EXPORT_DEFAULT",
-          "message": "Missing export default statement",
-          "line": 0,
-          "severity": "error"
-        },
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_COMPONENT_DECLARATION",
-          "message": "Missing component function/class declaration",
-          "line": 0,
-          "severity": "error"
-        },
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_RETURN_STATEMENT",
-          "message": "Missing return statement or JSX",
-          "line": 0,
-          "severity": "error"
-        }
-      ],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "PAGE_TOO_SHORT",
-          "message": "Page content seems too short, may be incomplete",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/admin/kpi.tsx",
-=======
       "file": "pages/_app.js",
       "issues": [],
       "warnings": [
@@ -1181,4 +1131,15 @@
   "generatedAt": "2025-08-20T19:03:33.426Z"
 =======
   "generatedAt": "2025-08-20T19:21:03.555Z"
+=======
+    "totalFiles": 36,
+    "filesWithIssues": 36,
+    "totalIssues": 31,
+    "totalWarnings": 36,
+    "buildBreakingFiles": 11,
+    "canBuild": false
+  },
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T15:32:55.538Z"
 }

@@ -1,47 +1,50 @@
 {
-  "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading-edge technology solutions and autonomous innovation platform",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
+  "name": "Zion Tech Group - AI & Technology Solutions",
+  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
   "icons": [
     {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     },
     {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
+      "src": "logo192.png",
       "type": "image/png",
-      "purpose": "maskable any"
+      "sizes": "192x192"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ],
   "shortcuts": [
-    {
-      "name": "Launch Economy",
-      "short_name": "Launch",
-      "description": "Quick access to launch your digital economy",
-      "url": "/multiverse/launch",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
     {
       "name": "Services",
       "short_name": "Services",
@@ -49,7 +52,19 @@
       "url": "/services",
       "icons": [
         {
-          "src": "/icon-192x192.png",
+          "src": "logo192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "AI Solutions",
+      "short_name": "AI Solutions",
+      "description": "Explore AI solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "logo192.png",
           "sizes": "192x192"
         }
       ]
@@ -61,40 +76,10 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/icon-192x192.png",
+          "src": "logo192.png",
           "sizes": "192x192"
         }
       ]
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": ["image/*", "text/*", "application/pdf"]
-        }
-      ]
-    }
-  }
+  ]
 }

@@ -1,6 +1,5 @@
 
 import React, { useState, useRef, useEffect } from "react";
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -100,7 +99,7 @@ export function ChatBotPanel() {
         setFailedAttempts(0);
       }
     } catch (error) {
-      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' });
+      console.error("Error in AI chat:", error);
       toast({
         variant: "destructive",
         title: "Communication Error",
@@ -118,17 +117,14 @@ export function ChatBotPanel() {
 
   const sendToAIAssistant = async (message: string) => {
     try {
-      const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const response = await api.post(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
+        {
           messages: [{ role: "user", content: message }]
-        }),
-      });
-      
-      if (!response.ok) {
+        }
+      );
+
+      if (response.status < 200 || response.status >= 300) {
         return {
           success: false,
           message: "I'm having trouble connecting to my knowledge base right now."
@@ -141,7 +137,7 @@ export function ChatBotPanel() {
         message: data.message
       };
     } catch (error) {
-      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' });
+      console.error("Error in AI chat:", error);
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
@@ -168,7 +164,7 @@ export function ChatBotPanel() {
     try {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
-      logDebug("Support escalation triggered", {
+      console.log("Support escalation triggered", { 
         conversationHistory: messages.map(m => ({
           content: m.content,
           sender: m.sender,
@@ -177,7 +173,7 @@ export function ChatBotPanel() {
         component: 'ChatBotPanel'
       });
     } catch (error) {
-      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' });
+      console.error("Failed to log support escalation:", error);
     }
   };
 
@@ -312,12 +308,11 @@ export function ChatBotPanel() {
                 : "bg-white border-gray-200"
             )}
           />
-          <Button
+          <Button 
             type="submit"
             size="icon"
             disabled={isLoading || !inputValue.trim()}
             className="bg-zion-cyan hover:bg-zion-cyan/80 text-white"
-            aria-label="Send message"
           >
             <Send className="h-4 w-4" />
           </Button>

@@ -1,24 +1,4 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/context/LanguageContext';
-import { ChevronDown, Globe } from 'lucide-react';
-
-const LANGUAGES = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'pt', name: 'Português', flag: '🇵🇹' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
-  { code: 'ja', name: '日本語', flag: '🇯🇵' },
-  { code: 'ko', name: '한국어', flag: '🇰🇷' },
-];
-
-export const LanguageSelector: React.FC = () => {
-  const { language, setLanguage } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const currentLanguage = LANGUAGES.find(lang => lang.code === language) || LANGUAGES[0];
+import { Globe } from 'lucide-react';
 
   return (
     <div className="relative">

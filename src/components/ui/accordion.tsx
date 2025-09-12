@@ -1,17 +1,9 @@
-import * as React from "react"
-import { ElementRef, ComponentPropsWithoutRef } from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from 'lucide-react'
+import * as React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-interface AccordionItemProps {
-  value: string;
-  children: React.ReactNode;
-}
-
-interface AccordionTriggerProps {
-  children: React.ReactNode;
-  className?: string;
-}
+const Accordion = AccordionPrimitive.Root;
 
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>,
@@ -22,8 +14,8 @@ const AccordionItem = React.forwardRef<
     className={cn("border-b", className)}
     {...props}
   />
-))
-AccordionItem.displayName = "AccordionItem"
+));
+AccordionItem.displayName = "AccordionItem";
 
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
@@ -39,9 +31,11 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-    </div>
-  );
-}
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
@@ -54,15 +48,7 @@ const AccordionContent = React.forwardRef<
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
-))
+));
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-export function AccordionTrigger({ children, className }: AccordionTriggerProps) {
-  return (
-    <button className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-zion-blue-light transition-colors ${className || ''}`}>
-      {children}
-      <span className="text-zion-cyan">+</span>
-    </button>
-  );
-}
-
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

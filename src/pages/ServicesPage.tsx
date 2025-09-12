@@ -1,27 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users
-} from 'lucide-react';
-
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+import { Globe, Zap } from "lucide-react";
+=======
+import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
 
@@ -514,9 +493,15 @@ const SERVICE_LISTINGS: ProductListing[] = [
   },
 ];
 
-function getRandomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
+async function fetchServices() {
+  try {
+    const res = await apiClient.get('/api/services');
+    return res.data as ProductListing[];
+  } catch (err) {
+    captureException(err);
+    throw err;
+  }
+];
 
 function generateRandomService(idNum: number): ProductListing {
   const templates = [
@@ -614,6 +599,221 @@ const SERVICE_FILTERS = [
 ];
 
 export default function ServicesPage() {
+  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+
+  const { data, error, isLoading, mutate } = useSWR<ProductListing[]>('/api/services', fetchServices);
+
+  useEffect(() => {
+    async function load() {
+      const res = await apiClient.get<ProductListing[]>('/services');
+      setListings(res.data);
+    }
+    load();
+  }, []);
+=======
+
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
+import { useEffect, useState } from "react";
+
+// Sample service listings
+const SERVICE_LISTINGS: ProductListing[] = [
+  {
+    id: "service-1",
+    name: "AI Development & Integration",
+    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
+    category: "Development",
+    price: 5000,
+    currency: "$",
+    tags: ["AI Integration", "Machine Learning", "Enterprise"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-12-10T14:48:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 124,
+  },
+  {
+    id: "service-2",
+    name: "Cloud Infrastructure Management",
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
+    category: "Management",
+    price: 3000,
+    currency: "$",
+    tags: ["Cloud", "DevOps", "Security"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-11-20T09:30:00.000Z",
+    aiScore: 88,
+    rating: 4.7,
+    reviewCount: 92,
+  },
+  {
+    id: "service-3",
+    name: "Big Data Analysis & Insights",
+    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
+    category: "Analytics",
+    price: 4500,
+    currency: "$",
+    tags: ["Big Data", "Analytics", "Business Intelligence"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2024-01-05T11:15:00.000Z",
+    aiScore: 92,
+    rating: 4.8,
+    reviewCount: 78,
+  },
+  {
+    id: "service-4",
+    name: "Cybersecurity Assessment & Protection",
+    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
+    category: "Security",
+    price: 6000,
+    currency: "$",
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-12-28T16:22:00.000Z",
+    aiScore: 89,
+    rating: 4.9,
+    reviewCount: 103,
+  },
+  {
+    id: "service-5",
+    name: "IT Infrastructure Modernization",
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
+    category: "Consulting",
+    price: 8500,
+    currency: "$",
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-11-10T08:45:00.000Z",
+    aiScore: 86,
+    rating: 4.6,
+    reviewCount: 67,
+  },
+  {
+    id: "service-6",
+    name: "AI Strategy & Implementation",
+    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
+    category: "Strategy",
+    price: 7500,
+    currency: "$",
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2024-02-02T10:30:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 85,
+  },
+];
+
+function getRandomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateRandomService(idNum: number): ProductListing {
+  const templates = [
+    {
+      name: "AI Automation Consulting",
+      category: "Consulting",
+      min: 4000,
+      max: 12000,
+      tags: ["Automation", "AI Strategy", "Optimization"],
+    },
+    {
+      name: "Cloud Migration & Support",
+      category: "Management",
+      min: 3000,
+      max: 9000,
+      tags: ["Cloud", "Migration", "DevOps"],
+    },
+    {
+      name: "Advanced Cybersecurity Suite",
+      category: "Security",
+      min: 5000,
+      max: 15000,
+      tags: ["Cybersecurity", "PenTesting", "Compliance"],
+    },
+    {
+      name: "Big Data Engineering",
+      category: "Analytics",
+      min: 3500,
+      max: 11000,
+      tags: ["Data Engineering", "Analytics", "ETL"],
+    },
+    {
+      name: "AI Model Training Service",
+      category: "Development",
+      min: 4500,
+      max: 13000,
+      tags: ["Machine Learning", "Model Training", "AI"],
+    },
+    {
+      name: "Digital Transformation Strategy",
+      category: "Strategy",
+      min: 6000,
+      max: 14000,
+      tags: ["Transformation", "Strategy", "Business"],
+    },
+  ];
+
+  const authors = [
+    "Global AI Experts",
+    "InnovateTech",
+    "SecureFuture",
+    "CloudOps Partners",
+    "DataVisor",
+    "NexGen Solutions",
+  ];
+
+  const images = [
+    "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
+  ];
+
+  const template = getRandomItem(templates);
+  const author = getRandomItem(authors);
+  const price = Math.round(
+    Math.random() * (template.max - template.min) + template.min
+  );
+
+  return {
+    id: `auto-service-${idNum}`,
+    name: template.title,
+          description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
+    category: template.category,
+    price,
+    currency: "$",
+    tags: template.tags,
+          author: author,
+    images: [getRandomItem(images)],
+    created_at: new Date().toISOString(),
+    ai_score: Math.floor(90 + Math.random() * 10),
+    rating: parseFloat((4 + Math.random()).toFixed(1)),
+    review_count: Math.floor(50 + Math.random() * 150),
+  };
+}
+
+// Filter options specific to services
+const SERVICE_FILTERS = [
+  { label: 'Development', value: 'development' },
+  { label: 'Management', value: 'management' },
+  { label: 'Security', value: 'security' },
+  { label: 'Analytics', value: 'analytics' },
+  { label: 'Consulting', value: 'consulting' },
+  { label: 'Strategy', value: 'strategy' },
+];
+
+export default function ServicesPage() {
   const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
 
   useEffect(() => {
@@ -624,75 +824,137 @@ export default function ServicesPage() {
     return () => clearInterval(interval);
   }, []);
 
+// Use comprehensive services instead of sample listings
+const SERVICE_LISTINGS: ProductListing[] = COMPREHENSIVE_SERVICES;
+
+// Use comprehensive service categories for filtering
+const SERVICE_FILTERS = SERVICE_CATEGORIES;
+
+export default function ServicesPage() {
+  const [listings] = useState<ProductListing[]>(SERVICE_LISTINGS);
+
+  return (
+            <Link to="/micro-saas-services">
+=======
+            <Link to="/comprehensive-services">
+=======
+            <Link to="/enhanced-services">
+=======
+            <Link to="/enhanced-services">
+=======
+    
+=======
   return (
     <>
-      <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-              Zion Micro SAAS Services
-            </h1>
-            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto">
-              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations. 
-              From AI content generation to cybersecurity, we have the tools you need to succeed.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Brain className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">AI & ML Services</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $19/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Shield className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cybersecurity</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $99/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Cloud className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cloud Solutions</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $49/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Users className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Business Tools</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $29/month</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>
+          <div className="flex flex-wrap gap-2">
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue py-16 px-4 md:px-8">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Professional Tech Services
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8 leading-relaxed">
+            Discover our comprehensive ecosystem of cutting-edge technology services, 
+            from AI development to cybersecurity, designed to transform your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/it-onsite-services">
+              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
+                <Globe className="h-5 w-5 mr-2" />
                 Global IT Onsite Services
               </Button>
             </Link>
             <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white shadow-lg shadow-zion-purple/25">
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg">
+                <DollarSign className="h-5 w-5 mr-2" />
+=======
+                Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/request-quote">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
-                <MessageCircle className="h-4 w-4 mr-2" />
-                Contact Sales
+          </div>
+        </div>
+      </div>
+      {/* IT Services Showcase */}
+      <div className="bg-zion-blue-dark py-16 mb-8">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Professional IT Services</h2>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+              Expert IT consulting, development, and infrastructure services to help your business thrive in the digital age
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {IT_SERVICES.map((service) => (
+              <div key={service.id} className="bg-zion-blue-light/20 backdrop-blur-md rounded-xl p-6 border border-zion-purple/30 hover:border-zion-purple/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan">
+                    {service.category === 'Development' && <Code className="w-5 h-5 text-white" />}
+                    {service.category === 'Infrastructure' && <Network className="w-5 h-5 text-white" />}
+                    {service.category === 'Security' && <Shield className="w-5 h-5 text-white" />}
+                    {service.category === 'Analytics' && <BarChart3 className="w-5 h-5 text-white" />}
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold group-hover:text-zion-cyan transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm">{service.subcategory}</p>
+                  </div>
+                </div>
+                
+                <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">Starting at</span>
+                    <span className="text-zion-cyan font-bold">
+                      {service.pricing.currency}{service.pricing.hourly}/hr
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 text-sm text-zion-slate-light">
+                    <span>⭐ {service.rating}</span>
+                    <span>•</span>
+                    <span>{service.reviewCount} reviews</span>
+                    <span>•</span>
+                    <span>{service.experience}</span>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.slice(0, 3).map((tag, index) => (
+                      <span key={index} className="px-2 py-1 bg-zion-purple/20 text-zion-purple-light text-xs rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="mt-4 pt-4 border-t border-zion-purple/20">
+                  <div className="flex items-center justify-between text-sm text-zion-slate-light">
+                    <span>📧 {service.contactEmail}</span>
+                    <span>📞 {service.phone}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/marketplace">
+              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
+                View All Services
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
@@ -700,14 +962,65 @@ export default function ServicesPage() {
       </div>
 
       <DynamicListingPage 
-        title="Comprehensive Micro SAAS Solutions"
-        description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
+=======
+      <DynamicListingPage
+=======
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
         listings={listings}
         categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 19, max: 5000 }}
+        initialPrice={{ min: 3000, max: 10000 }}
+        itemsPerPage={10}
       />
       
+      <TrustedBySection />
+    </>
+  );
+}
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ServicesPage: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Services - Zion Tech Group" 
+        description="Comprehensive range of IT and AI services to transform your business operations."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Services
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Comprehensive range of IT and AI services to transform your business operations.
+              From automation to cybersecurity, we've got you covered.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our services page is currently under development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ServicesPage;
+=======
+      />
       <TrustedBySection />
     </>
   );

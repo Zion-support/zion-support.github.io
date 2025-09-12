@@ -1,4 +1,3 @@
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -6,6 +5,7 @@ import {
   BookOpen, 
   MessageCircle, 
   Phone, 
+=======
   Search, 
   HelpCircle, 
   BookOpen, 
@@ -120,6 +120,7 @@ import { Button } from "@/components/ui/Button";
 import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 =======
+=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Phone, Mail, ArrowRight } from 'lucide-react';
@@ -144,6 +145,15 @@ const HelpCenter = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 =======
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
+
+export default function HelpCenter() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(['getting-started']);
 
   const toggleCategory = (category: string) => {
     setExpandedCategories(prev => 
@@ -152,6 +162,22 @@ const HelpCenter = () => {
         : [...prev, category]
     );
   };
+  HelpCircle,
+  Lightbulb,
+  Clock,
+  Star,
+  TrendingUp,
+  Settings,
+  Users,
+  Globe,
+  Shield,
+  Zap
+} from 'lucide-react';
+
+export default function HelpCenter() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedFaqs, setExpandedFaqs] = useState<Set<string>>(new Set());
 
   const categories = [
     {
@@ -232,6 +258,70 @@ const HelpCenter = () => {
       ]
     }
   } as const;
+=======
+
+  const helpCategories = {
+    'getting-started': {
+      title: 'Getting Started',
+      icon: BookOpen,
+      articles: [
+        { title: 'How to create your first account', href: '/help/create-account' },
+        { title: 'Complete profile setup guide', href: '/help/profile-setup' },
+        { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
+        { title: 'First steps for new users', href: '/help/first-steps' }
+      ]
+    },
+    'marketplace': {
+      title: 'Marketplace',
+      icon: BookOpen,
+      articles: [
+        { title: 'How to list products and services', href: '/help/list-products' },
+        { title: 'Managing your listings', href: '/help/manage-listings' },
+        { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
+        { title: 'Marketplace policies and guidelines', href: '/help/marketplace-policies' }
+      ]
+    },
+    'talent': {
+      title: 'Talent & Hiring',
+      icon: BookOpen,
+      articles: [
+        { title: 'Creating a talent profile', href: '/help/talent-profile' },
+        { title: 'Finding and hiring talent', href: '/help/hire-talent' },
+        { title: 'Managing projects and contracts', href: '/help/manage-projects' },
+        { title: 'Payment and escrow system', href: '/help/payment-system' }
+      ]
+    },
+    'technical': {
+      title: 'Technical Support',
+      icon: BookOpen,
+      articles: [
+        { title: 'Common technical issues', href: '/help/technical-issues' },
+        { title: 'Browser compatibility', href: '/help/browser-compatibility' },
+        { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
+        { title: 'API and integration support', href: '/help/api-support' }
+      ]
+    },
+    'billing': {
+      title: 'Billing & Payments',
+      icon: BookOpen,
+      articles: [
+        { title: 'Understanding your invoice', href: '/help/invoice-guide' },
+        { title: 'Payment methods and security', href: '/help/payment-methods' },
+        { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
+        { title: 'Tax information and reporting', href: '/help/tax-information' }
+      ]
+    },
+    'account': {
+      title: 'Account & Security',
+      icon: BookOpen,
+      articles: [
+        { title: 'Account security best practices', href: '/help/account-security' },
+        { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
+        { title: 'Password reset and recovery', href: '/help/password-recovery' },
+        { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
+      ]
+    }
+  };
 
   const popularArticles = [
     'How to create your first account',
@@ -243,36 +333,8 @@ const HelpCenter = () => {
   ];
 
 
-  const helpCategories = [
-    {
-  const popularArticles = [
-    {
-      title: 'Getting Started with Zion Tech Group',
-      description: 'Complete guide to setting up your account and first project',
-      category: 'Getting Started',
-      readTime: '5 min read'
-    },
-    {
-      title: 'Understanding AI Service Pricing',
-      description: 'Learn about our pricing structure and cost optimization',
-      category: 'Billing & Payments',
-      readTime: '8 min read'
-    },
-    {
-      title: 'Security Best Practices',
-      description: 'Essential security measures for your data and applications',
-      category: 'Account & Security',
-      readTime: '10 min read'
-    },
-    {
-      title: 'Troubleshooting Common Issues',
-      description: 'Solutions to frequently encountered problems',
-      category: 'Technical Support',
-      readTime: '6 min read'
-    }
-  ];
-=======
 
+=======
   const helpCategories = [
     {
   const [activeCategory, setActiveCategory] = useState('getting-started');
@@ -614,6 +676,174 @@ const HelpCenter: React.FC = () => {
     },
     {
       title: "Technical Support",
+      icon: QuestionMarkCircleIcon,
+      questions: [
+        {
+          question: "What kind of technical support do you provide?",
+          answer: "We provide comprehensive technical support including 24/7 monitoring, troubleshooting, system optimization, and ongoing maintenance. Our team of experts is always available to help resolve any technical issues."
+        },
+        {
+          question: "How quickly do you respond to support requests?",
+          answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically resolved within 4-8 hours during business days."
+        },
+        {
+          question: "Do you provide training for your solutions?",
+          answer: "Absolutely! We provide comprehensive training programs for all our solutions, including user training, administrator training, and ongoing education to ensure your team gets the most value from our technology."
+        }
+      ]
+    },
+    {
+      title: "Billing & Pricing",
+      icon: DocumentTextIcon,
+      questions: [
+        {
+          question: "What are your pricing models?",
+          answer: "We offer flexible pricing models including subscription-based services, project-based pricing, and enterprise licensing. We work with you to find the most cost-effective solution for your needs."
+        },
+        {
+          question: "Do you offer volume discounts?",
+          answer: "Yes, we offer volume discounts for enterprise clients and organizations implementing multiple services. Contact our sales team to discuss custom pricing options."
+        },
+        {
+          question: "What payment methods do you accept?",
+          answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our payment systems."
+        }
+      ]
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  Clock, 
+  BookOpen,
+  Video,
+  FileText,
+  Users,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  HelpCircle,
+  ChevronDown,
+  ChevronUp,
+  ExternalLink,
+  Download,
+  Play,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+
+const HelpCenter = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Topics', icon: HelpCircle, count: 0 },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 15 },
+    { id: 'quantum', name: 'Quantum Technology', icon: Zap, count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 12 },
+    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: 10 },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Network, count: 9 },
+    { id: '5g', name: '5G Solutions', icon: Network, count: 6 },
+    { id: 'general', name: 'General Support', icon: Users, count: 20 }
+=======
+      name: 'Getting Started',
+      description: 'Learn the basics and set up your account',
+      icon: BookOpen,
+      color: 'from-blue-500 to-cyan-500',
+      articleCount: 12
+    },
+    {
+      id: 'ai-workflows',
+      name: 'AI Workflows',
+      description: 'Create and manage automated workflows',
+      icon: Zap,
+      color: 'from-purple-500 to-pink-500',
+      articleCount: 18
+    },
+    {
+      id: 'integrations',
+      name: 'Integrations',
+      description: 'Connect with your favorite tools and services',
+      icon: Settings,
+      color: 'from-green-500 to-emerald-500',
+      articleCount: 25
+    },
+    {
+      id: 'billing',
+      name: 'Billing & Plans',
+      description: 'Manage your subscription and billing',
+      icon: CreditCard,
+      color: 'from-orange-500 to-red-500',
+      articleCount: 8
+    },
+    {
+      id: 'security',
+      name: 'Security & Privacy',
+      description: 'Learn about our security measures',
+      icon: Shield,
+      color: 'from-indigo-500 to-blue-500',
+      articleCount: 15
+    },
+    {
+      id: 'troubleshooting',
+      name: 'Troubleshooting',
+      description: 'Common issues and their solutions',
+      icon: HelpCircle,
+      color: 'from-yellow-500 to-orange-500',
+      articleCount: 22
+    }
+  ];
+
+  const popularArticles = [
+    {
+      id: 'getting-started-1',
+      title: 'How to Create Your First AI Workflow',
+      category: 'Getting Started',
+      readTime: '5 min read',
+      views: '2.4k',
+      helpful: '98%',
+      excerpt: 'Step-by-step guide to creating your first automated workflow using our AI-powered platform.'
+    },
+    {
+      id: 'ai-workflows-1',
+      title: 'Understanding AI Decision Trees',
+      category: 'AI Workflows',
+      readTime: '8 min read',
+      views: '1.8k',
+      helpful: '95%',
+      excerpt: 'Learn how our AI makes decisions and how to optimize your workflows for better results.'
+    },
+    {
+      id: 'integrations-1',
+      title: 'Connecting to Salesforce',
+      category: 'Integrations',
+      readTime: '6 min read',
+      views: '1.6k',
+      helpful: '92%',
+      excerpt: 'Complete guide to integrating your workflows with Salesforce CRM for seamless data flow.'
+    },
+    {
+      id: 'troubleshooting-1',
+      title: 'Workflow Not Triggering? Here\'s Why',
+      category: 'Troubleshooting',
+      readTime: '4 min read',
+      views: '1.9k',
+      helpful: '96%',
+      excerpt: 'Common reasons why workflows might not trigger and how to fix them quickly.'
+    }
+  ];
+
+  const faqs = [
+    {
+      icon: Phone,
+=======
       description: "Speak directly with our technical experts",
       icon: Phone,
       responseTime: "< 15 min",
@@ -1798,25 +2028,58 @@ export default function HelpCenter() {
               </div>
             ))}
           </div>
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information." />
+        <meta name="keywords" content="help center, support, FAQ, tutorials, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/help-center" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              How can we <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">help you?</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8">
+              Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search for help articles, tutorials, or topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-blue-light/30 rounded-xl text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+            </div>
+          </div>
         </section>
 
         {/* Help Categories */}
         <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="container mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Browse Help Categories</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {Object.entries(helpCategories).map(([key, category]) => (
-                <div key={key} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                <div key={key} className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                        <category.icon className="w-5 h-5 text-cyan-400" />
+                      <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
+                        <category.icon className="w-5 h-5 text-zion-cyan" />
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.title}</h3>
                     </div>
                     <button
                       onClick={() => toggleCategory(key)}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                     >
                       {expandedCategories.includes(key) ? (
                         <ChevronDown className="w-5 h-5" />
@@ -1825,26 +2088,20 @@ export default function HelpCenter() {
                       )}
                     </button>
                   </div>
+                  
                   {expandedCategories.includes(key) && (
                     <div className="space-y-2">
                       {category.articles.map((article, index) => (
                         <Link
                           key={index}
                           to={article.href}
-                          className="block text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
-                        >
-                          <FileText className="w-5 h-5 text-cyan-400 mr-3" />
-                          <span className="text-gray-300 hover:text-white transition-colors duration-300">
-                            {article.title}
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
-                />
-              </div>
-            </div>
-          </motion.div>
+      {/* Categories Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-6">Browse by Category</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Find the help you need organized by topic and category
+          </p>
         </div>
       </section>
 
@@ -2249,19 +2506,18 @@ export default function HelpCenter() {
                   <h3 className="text-xl font-semibold text-white mb-2">{article.title}</h3>
                   <p className="text-gray-300">{article.description}</p>
 =======
+=======
+                          className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-zion-blue-light/10"
+                        >
+                          {article.title}
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}
             </div>
           </div>
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <resource.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
-                <p className="text-gray-300 mb-4">{resource.description}</p>
-                <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
-              </motion.div>
-=======
               <div key={index} className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
                 <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
                   <channel.icon className="w-6 h-6 text-white" />
@@ -2274,6 +2530,7 @@ export default function HelpCenter() {
               </div>
             ))}
           </div>
+=======
 =======
       {/* Quick Support Channels */}
       <div className="container mx-auto px-4 py-16">
@@ -3824,7 +4081,6 @@ export default HelpCenter;
           </div>
 =======
 
-=======
                 <div className="flex items-start justify-between mb-3">
                   <span className="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full">
                     {article.category}
@@ -3843,6 +4099,122 @@ export default HelpCenter;
             ))}
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
+=======
+        </section>
+
+        {/* Popular Articles */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Popular Help Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {popularArticles.map((article, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
+                  <Link
+                    to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+=======
+        </section>
+
+        {/* Popular Articles */}
+        <section className="py-16 px-4 bg-zion-blue-light/10">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Popular Help Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {popularArticles.map((article, index) => (
+                <div key={index} className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
+                  <Link
+                    to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"
+                  >
+                    Read Article
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Support */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Our support team is here to help you 24/7. Get in touch with us through any of these channels.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
+                <p className="text-zion-slate-light text-sm mb-4">Get instant help from our support team</p>
+                <button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                  Start Chat
+                </button>
+              </div>
+              
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
+                <p className="text-zion-slate-light text-sm mb-4">Send us a detailed message</p>
+                <Link
+                  to="/contact"
+                  className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+                >
+                  Send Email
+                </Link>
+              </div>
+              
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
+                <p className="text-zion-slate-light text-sm mb-4">Call us directly for urgent issues</p>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+                >
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+=======
+          {/* Help Categories */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {helpCategories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <Card key={category.title} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
+                  <CardHeader className="text-center">
+                    <div className={`mx-auto w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mb-3`}>
+                      <Icon className={`w-6 h-6 ${category.color}`} />
+                    </div>
+                    <CardTitle className="text-white">{category.title}</CardTitle>
+                    <CardDescription className="text-zion-slate-light">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <Button asChild variant="outline" className="w-full">
+                      <Link to={category.href}>Learn More</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
 
 const HelpCenter = () => {
   return (
@@ -4375,4 +4747,6 @@ export default $page;
       <Footer />
     </div>
   );
+}
+=======
 }

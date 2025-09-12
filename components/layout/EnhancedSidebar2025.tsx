@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  X, ChevronRight, Home, Star, Users, 
-  Settings, HelpCircle, Mail, Phone, MapPin,
-  Brain, Atom, Shield, Rocket, DollarSign,
-  Globe, Cpu, Database, Lock, Zap,
-  TrendingUp, Award, CheckCircle, Clock,
-  ArrowRight, Search, Menu, X as CloseIcon,
-  Target, BookOpen, Truck, BarChart3,
-  Sparkles, Eye, Lightbulb, Palette, Code
+  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
+  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
+  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
+  Award, Clock, Heart, Lightbulb, Users, FileText, 
+  HelpCircle, BookOpen, Target, TrendingUp, Star, DollarSign, CheckCircle
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -219,13 +216,15 @@ const sidebarItems: SidebarItem[] = [
   }
 ];
 
-const resources = [
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },
-  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className="w-4 h-4" /> },
-  { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
-  { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
-  { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
+const quickLinks = [
+  { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
+  { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" /> },
+  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Services Advertising', href: '/services-advertising', icon: <BookOpen className="w-4 h-4" /> },
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
+  { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
 ];
 
 
@@ -238,7 +237,29 @@ const supportLinks = [
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
 
-  const toggleSection = (title: string) => {
+const stats = [
+  { label: 'Services Delivered', value: '500+', icon: <CheckCircle className="w-5 h-5" /> },
+  { label: 'Happy Clients', value: '200+', icon: <Users className="w-5 h-5" /> },
+  { label: 'Years Experience', value: '15+', icon: <Clock className="w-5 h-5" /> },
+  { label: 'Awards Won', value: '25+', icon: <Award className="w-5 h-5" /> }
+];
+
+const contactInfo = {
+  mobile: '+1 (555) 123-4567',
+  email: 'info@ziontechgroup.com'
+};
+
+interface EnhancedSidebar2025Props {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
+  const router = useRouter();
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+
+  const toggleSection = (sectionTitle: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(title)) {
       newExpanded.delete(title);

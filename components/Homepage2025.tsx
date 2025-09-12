@@ -112,115 +112,144 @@ const Homepage2025: React.FC = () => {
   };
 
   return (
-    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
-      {showInternalNav && (
-        <>
-          {/* Navigation */}
-          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
+    <Layout>
+      {/* Main Content */}
+      <main className="relative z-10">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+          {/* Animated Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+          </div>
+          
+          {/* Floating Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            {[...Array(15)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
+                animate={{
+                  x: [0, 100, 0],
+                  y: [0, -100, 0],
+                  opacity: [0.3, 0.8, 0.3],
+                }}
+                transition={{
+                  duration: 10 + i * 2,
+                  repeat: Infinity,
+                  delay: i * 0.5,
+                }}
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="text-center max-w-6xl mx-auto relative z-10">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Zion Tech Group
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              Pioneering the future of technology with innovative solutions that drive business transformation. 
+              From AI consciousness to quantum computing, we're building tomorrow's solutions today.
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              <a
+                href="/2036-innovative-services-showcase"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25"
+              >
+                Explore 2036 Services
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </a>
+            </motion.div>
+
+                          <motion.div
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <motion.a
+                  href="/innovative-2038-services-showcase"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-lg rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-2xl shadow-purple-500/25 mb-4 sm:mb-0"
+                >
+                  <span>Explore 2038 Services</span>
+                  <ArrowRight className="w-6 h-6" />
+                </motion.a>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Get Started Today
+              </button>
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300">
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 inline" />
+              </button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Preview */}
+        <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-6xl mx-auto">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Featured Services
+            </motion.h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="flex items-center space-x-2"
+                  key={service.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
-                  <span className="text-white font-bold text-xl">ZionTech Group</span>
+                  <UltraFuturisticServiceCard2026
+                    service={{
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period || '/month',
+                      features: service.features.slice(0, 4),
+                      popular: index === 0,
+                      category: service.category,
+                      icon: '🚀'
+                    }}
+                    variant={index % 3 === 0 ? 'ai' : index % 3 === 1 ? 'quantum' : 'automation'}
+                  />
                 </motion.div>
-                
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex space-x-8">
-                  {navigationSections.map((section) => (
-                    <button
-                      key={section.id}
-                      onClick={() => scrollToSection(section.id)}
-                      className={`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
-                        activeSection === section.id
-                          ? 'text-cyan-400 border-b-2 border-cyan-400'
-                          : 'text-gray-300 hover:text-cyan-400'
-                      }`}
-                    >
-                      <span>{section.icon}</span>
-                      <span>{section.label}</span>
-                    </button>
-                  ))}
-                </div>
-
-                {/* Contact Info */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="hidden md:flex items-center space-x-4"
-                >
-                  <a
-                    href="tel:+13024640950"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
-                  >
-                    +1 302 464 0950
-                  </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm"
-                  >
-                    Contact Us
-                  </a>
-                </motion.div>
-
-                {/* Mobile Menu Button */}
-                <button
-                  className="lg:hidden text-white p-2"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Mobile Navigation Menu */}
-              <AnimatePresence>
-                {isMobileMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="lg:hidden border-t border-white/10"
-                  >
-                    <div className="py-4 space-y-2">
-                      {navigationSections.map((section) => (
-                        <button
-                          key={section.id}
-                          onClick={() => scrollToSection(section.id)}
-                          className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                            activeSection === section.id
-                              ? 'bg-cyan-400/20 text-cyan-400'
-                              : 'text-gray-300 hover:bg-white/10'
-                          }`}
-                        >
-                          <span>{section.icon}</span>
-                          <span>{section.label}</span>
-                        </button>
-                      ))}
-                      <div className="pt-4 border-t border-white/10">
-                        <a
-                          href="tel:+13024640950"
-                          className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                        >
-                          <span>📱</span>
-                          <span>+1 302 464 0950</span>
-                        </a>
-                        <a
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                        >
-                          <span>✉️</span>
-                          <span>kleber@ziontechgroup.com</span>
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              ))}
             </div>
           </nav>
         </>

@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import Link from 'next/link';
-import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
+import React from 'react';
+import { SEO } from '@/components/SEO';
 
 const TalentDirectory: React.FC = () => {
   const talents = [
@@ -85,45 +83,41 @@ const TalentDirectory: React.FC = () => {
   ];
 
   return (
-    <div key={pageKey} className="container mx-auto px-4 py-8">
-      <div className="flex flex-col space-y-8">
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">
-              AI & Tech Talent Directory
+    <>
+      <SEO 
+        title="Talent Directory - Zion Tech Group" 
+        description="Discover top AI experts, developers, and tech specialists in our comprehensive talent directory."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Talent Directory
             </h1>
-            <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers,
-              and tech professionals for your projects.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Connect with verified AI experts, developers, and tech specialists from around the world.
+              Find the perfect talent for your next project.
             </p>
           </div>
-          {isAdmin && (
-            <Link
-              href="/create-talent-profile"
-              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
-            >
-              Add Talent
-            </Link>
-          )}
-        </div>
-
-      {/* Filters Section */}
-      <section className="py-8 bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="text-gray-600 font-medium">Filter by:</span>
-            {categories.map((category, index) => (
-              <button
-                key={category}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  index === 0 
-                    ? 'bg-violet-600 text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our comprehensive talent directory is currently under development. 
+                We're building a platform to connect you with the best tech talent worldwide.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="px-6 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark font-medium rounded-lg transition-colors">
+                  Get Notified
+                </button>
+                <button className="px-6 py-3 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 font-medium rounded-lg transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

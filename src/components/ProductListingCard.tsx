@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
+import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars";
+import { DollarSign } from "lucide-react";
+import { RatingStars } from "./RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
-import { toast } from '@/hooks/use-toast';
-import { useCurrency } from '@/hooks/useCurrency';
-import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -55,9 +48,7 @@ const ProductListingCardComponent = ({
       ? 'warning'
       : 'success';
     
-  const { formatPrice } = useCurrency();
-
-  const getPrice = () => {
+  const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return formatPrice(listing.price);
   };
@@ -114,7 +105,7 @@ const ProductListingCardComponent = ({
     if (onRequestQuote) {
       onRequestQuote(listing.id);
     } else {
-      router.push(`/request-quote?listing=${listing.id}`);
+      navigate(`/request-quote?listing=${listing.id}`);
     }
   };
   
@@ -135,42 +126,21 @@ const ProductListingCardComponent = ({
       }}
     >
       {/* Image */}
-      <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleViewListing();
-          }
-        }}
-      >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image
-            src={imageSrc}
-            alt={listing.title}
-            fill={true}
-            style={{ objectFit: 'cover' }}
+      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing}>
+        <div className={`relative ${isGrid ? 'h-48' : 'h-32 w-48'}`}>
+          <img
+            src={imageUrl}
+            alt={`Image of ${listing.title}`}
+            className="w-full h-full object-cover"
             onError={handleImageError}
-            priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
+            loading="lazy"
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>
           )}
-          {stockStatus && (
-            <Badge
-              variant={stockVariant as any}
-              className="absolute top-2 left-2"
-            >
-              {stockStatus}
-            </Badge>
-          )}
-           <FavoriteButton itemId={listing.id} />
+          <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
       
@@ -183,17 +153,18 @@ const ProductListingCardComponent = ({
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
+              <div className="flex items-center text-zion-slate-light">
+                <RatingStars value={listing.rating} />
+                <span className="ml-1">{listing.rating.toFixed(1)}</span>
+                {listing.reviewCount && (
+                  <span className="text-xs ml-1">({listing.reviewCount})</span>
+                )}
+              </div>
             )}
           </div>
           
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
-            {listing.uspHeadline && (
-              <p className="text-primary font-semibold text-sm mb-1">
-                {listing.uspHeadline}
-              </p>
-            )}
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -227,7 +198,7 @@ const ProductListingCardComponent = ({
               </div>
             ) : (
               <span className="text-foreground/80">
-                {getPrice()}
+                {formatPrice()}
               </span>
             )}
           </div>
@@ -242,6 +213,12 @@ const ProductListingCardComponent = ({
               }}
               disabled={loading}
             >
+              <Heart className="h-5 w-5" />
+            </Button>
+            <Link
+              to={`${detailBasePath}/${listing.id}`}
+              onClick={(e) => e.stopPropagation()}
+            >
               {loading ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -254,24 +231,6 @@ const ProductListingCardComponent = ({
                 "Add to Cart"
               )}
             </Button>
-            
-            <Button
-              size="sm"
-              variant="default"
-              className="bg-green-600 hover:bg-green-700 text-white"
-              onClick={(e) => {
-                e.stopPropagation(); // Prevent card click event
-                // Add to cart first, then redirect to checkout
-                dispatch(
-                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
-                );
-                router.push('/checkout');
-              }}
-              disabled={loading}
-            >
-              Buy Now
-            </Button>
-            
             {onRequestQuote && (
               <Button 
                 size="sm"

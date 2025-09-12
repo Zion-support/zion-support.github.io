@@ -1,34 +1,17 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardHeader, 
-  CardTitle 
-} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
-  ArrowRight, 
+  Brain, 
+  Cloud, 
+  Zap, 
   Star, 
   CheckCircle, 
-  Users, 
-  Search,
-  Filter,
-  Zap,
-  Brain,
-  Shield,
-  Globe,
-  BarChart3,
-  Cpu,
-  Bot,
-  Database,
-  Cloud,
-  TrendingUp,
-  Code
+  ArrowRight,
+  Eye
 } from 'lucide-react';
-import { MICRO_SAAS_SERVICES, getFeaturedServices } from '@/data/microSaasServices';
+import { getFeaturedServices } from '@/data/microSaasServices';
 
 export function MicroSaasServicesSection() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,19 +20,17 @@ export function MicroSaasServicesSection() {
   const featuredServices = getFeaturedServices();
   
   const getCategoryIcon = (category: string) => {
-    const icons: { [key: string]: React.ReactNode } = {
-      'AI': <Brain className="h-5 w-5" />,
-      'IT': <Cpu className="h-5 w-5" />,
-      'Development': <Code className="h-5 w-5" />,
-      'Analytics': <BarChart3 className="h-5 w-5" />,
-      'Security': <Shield className="h-5 w-5" />,
-      'Automation': <Zap className="h-5 w-5" />,
-      'Cloud': <Cloud className="h-5 w-5" />,
-      'Marketing': <TrendingUp className="h-5 w-5" />,
-      'Productivity': <Zap className="h-5 w-5" />,
-      'Finance': <BarChart3 className="h-5 w-5" />
-    };
-    return icons[category] || <Zap className="h-5 w-5" />;
+    switch (category) {
+      case 'AI': return <Brain className="h-5 w-5" />;
+      case 'IT': return <Cloud className="h-5 w-5" />;
+      case 'Development': return <Eye className="h-5 w-5" />;
+      case 'Analytics': return <Eye className="h-5 w-5" />;
+      case 'Automation': return <Zap className="h-5 w-5" />;
+      case 'Marketing': return <Eye className="h-5 w-5" />;
+      case 'Productivity': return <Eye className="h-5 w-5" />;
+      case 'Finance': return <Eye className="h-5 w-5" />;
+      default: return <Eye className="h-5 w-5" />;
+    }
   };
 
   const getPricingDisplay = (service: any) => {
@@ -184,7 +165,7 @@ export function MicroSaasServicesSection() {
                 {/* Target Audience */}
                 <div className="pt-2 border-t border-zion-blue-light/20">
                   <div className="flex items-center gap-2 text-xs text-zion-slate-light">
-                    <Users className="h-3 w-3" />
+                    <Eye className="h-3 w-3" />
                     <span>Perfect for {service.targetAudience.slice(0, 2).join(', ')}</span>
                   </div>
                 </div>

@@ -1,10 +1,16 @@
-export default function Page(){return null}
-=======
 =======
 import React from 'react';
 =======
 import React, { useState } from 'react';
 import Head from 'next/head';
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Mail, Phone, MapPin, Clock, Globe, MessageSquare, 
+  Send, CheckCircle, AlertCircle, Building2, Users, Award
+} from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, Send, CheckCircle, Star, Zap, Shield, Users, ArrowRight, DollarSign } from 'lucide-react';
@@ -283,193 +289,6 @@ const Contact: NextPage = () => (
           </div>
         </div>
       </section>
-
-      {/* Additional Services Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                Additional Services
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Beyond our micro SaaS solutions, we offer comprehensive support and consulting services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {additionalServices.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 h-full">
-                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-sm text-gray-400">
-                      <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                      {service.price}
-                    </div>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                      {service.duration}
-                    </div>
-                  </div>
-                  <Button
-                    href="/contact"
-                    size="sm"
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-                  >
-                    Get Quote
-                  </Button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Contact Methods Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Multiple Ways to <span className="text-blue-600">Connect</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the most convenient way to reach our team
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contactMethods.map((method, index) => (
-              <motion.div
-                key={method.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className={`bg-gradient-to-br ${method.bgColor} rounded-2xl p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer`}>
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {method.icon}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{method.title}</h3>
-                  
-                  {method.link ? (
-                    <a 
-                      href={method.link}
-                      target={method.link.startsWith('http') ? '_blank' : '_self'}
-                      rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                      className="block"
-                    >
-                      <p className={`text-lg font-semibold bg-gradient-to-r ${method.color} bg-clip-text text-transparent mb-2 hover:underline`}>
-                        {method.value}
-                      </p>
-                    </a>
-                  ) : (
-                    <p className={`text-lg font-semibold bg-gradient-to-r ${method.color} bg-clip-text text-transparent mb-2`}>
-                      {method.value}
-                    </p>
-                  )}
-                  
-                  <p className="text-gray-600">{method.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose <span className="text-blue-600">Zion Tech Group</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to delivering exceptional value and support
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">
-                      {feature.icon}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Card variant="holographic" size="xl" className="text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't wait to transform your business. Our team is ready to help you succeed with our micro SaaS solutions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                variant="futuristic"
-                size="lg"
-                href="tel:+13024640950"
-                icon={<Phone className="w-5 h-5" />}
-                iconPosition="left"
-                glow
-                className="min-w-[200px]"
-              >
-                Call Now
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                href="mailto:kleber@ziontechgroup.com"
-                icon={<Mail className="w-5 h-5" />}
-                iconPosition="left"
-                glow
-                className="min-w-[200px]"
-              >
-                Send Email
-              </Button>
-            </div>
-          </Card>
-        </div>
-      </section>
-    </div>
+    </UltraAdvancedFuturisticBackground>
   );
 }

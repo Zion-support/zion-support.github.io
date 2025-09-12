@@ -73,8 +73,171 @@ export function AppHeader() {
             <MainNavigation unreadCount={unreadCount} />
           </div>
           
-          {/* Right side actions */}
-          <div className="flex items-center space-x-2 ml-auto">
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+              Services
+            </Link>
+            <Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+              About
+            </Link>
+            <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+              Contact
+            </Link>
+            <Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+              Get Quote
+            </Link>
+          </nav>
+          
+          {/* CTA Button */}
+          <div className="flex items-center space-x-4">
+            <Link
+              to="/signup"
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-md transition-all duration-300"
+            >
+              Get Started
+            </Link>
+=======
+      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-40 pt-16">
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+=======
+      </motion.header>
+      
+      {/* Enhanced mobile menu with animations */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 z-40 pt-16">
+            {/* Backdrop */}
+            <motion.div 
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              variants={backdropVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
+            
+            {/* Menu content */}
+            <motion.div 
+              className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto"
+              variants={menuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              <MobileMenu 
+                unreadCount={unreadCount} 
+                onClose={() => setMobileMenuOpen(false)} 
+              />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+    </>
+=======
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { MainNavigation } from "./MainNavigation";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Search, User, Bell, MessageSquare } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+interface AppHeaderProps {
+  isAdmin?: boolean;
+  unreadCount?: number;
+}
+
+export function AppHeader({ isAdmin = false, unreadCount = 0 }: AppHeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { user, signOut } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Close menu when route changes
+  useEffect(() => {
+    closeMenu();
+  }, [location.pathname]);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-zion-blue-dark/95 backdrop-blur-md shadow-lg border-b border-zion-blue-light/20"
+          : "bg-zion-blue-dark"
+      }`}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+            </div>
+            <div className="hidden sm:block">
+              <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
+                ZION
+              </span>
+              <div className="text-xs text-zion-slate-light -mt-1">Tech Group</div>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <MainNavigation isAdmin={isAdmin} unreadCount={unreadCount} />
+          </div>
+
+          {/* Right Side Actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden sm:flex text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20"
+            >
+              <Search className="h-4 w-4" />
+            </Button>
+
             {/* Notifications */}
             {user && (
               <Link

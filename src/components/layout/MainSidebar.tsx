@@ -5,19 +5,25 @@ import { cn } from '@/lib/utils';
 import { 
   Home, 
   Briefcase, 
-  Users, 
-  Settings, 
-  BarChart3, 
-  FileText, 
-  MessageSquare, 
-  HelpCircle,
-  Code,
-  Smartphone,
-  Globe,
-  Building,
-  Mail,
-  Phone,
-  MapPin
+  HelpCircle, 
+  MessageCircle, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Database, 
+  Lock, 
+  BookOpen, 
+  Phone, 
+  Mail, 
+  MapPin,
+  ExternalLink,
+  ChevronDown,
+  ChevronRight,
+  Sparkles,
+  Cpu,
+  TrendingUp,
+  Building2,
+  X
 } from 'lucide-react';
 
 interface MainSidebarProps {
