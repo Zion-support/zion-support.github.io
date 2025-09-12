@@ -1,74 +1,112 @@
-import Link from 'next/link';
+import React from 'react';
 
-type Post = {
-  slug: string;
+type BlogPost = {
   title: string;
-  content: string;
   date: string;
   tag: string;
+  excerpt: string;
+  content: React.ReactNode;
 };
 
-const postsBySlug: Record<string, Post> = {
+const posts: Record<string, BlogPost> = {
   'ai-deployment-blueprint-2025': {
-    slug: 'ai-deployment-blueprint-2025',
     title: 'AI Deployment Blueprint: Launch Faster in 2025',
-    content:
-      `Learn the minimal path to production for AI assistants, analytics, and automation.\n\nKey steps:\n- Scope a single narrow workflow\n- Instrument telemetry from day one\n- Add approvals where risk is meaningful\n- Ship weekly with user feedback`,
     date: '2025-09-12',
     tag: 'AI',
+    excerpt:
+      'A pragmatic guide to ship AI assistants, analytics, and automation safely and quickly.',
+    content: (
+      <>
+        <p>
+          Getting AI into production quickly requires a practical blueprint: clear use cases,
+          data readiness, a minimal-but-robust stack, and strong observability from day one.
+        </p>
+        <h2 className="text-2xl font-semibold mt-8 mb-3">Recommended Stack</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Assistant core with retrieval augmented generation (RAG)</li>
+          <li>Event-driven orchestration for workflows and tools</li>
+          <li>Analytics with structured logging and tracing</li>
+          <li>Guardrails for safety, privacy, and cost controls</li>
+        </ul>
+        <h2 className="text-2xl font-semibold mt-8 mb-3">Deployment Tips</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Start with one measurable workflow and expand</li>
+          <li>Use feature flags for rapid iteration</li>
+          <li>Instrument everything; analyze weekly</li>
+        </ul>
+      </>
+    ),
   },
   'service-pricing-starters-for-smbs': {
-    slug: 'service-pricing-starters-for-smbs',
     title: 'Starter Pricing: AI, IT, and Web3 Service Bundles',
-    content:
-      `Transparent entry pricing and ranges that make budgeting simple.\n\nIncludes:\n- AI assistant packages\n- IT foundation bundles\n- Web3 kickoff kits`,
     date: '2025-09-12',
     tag: 'Business',
+    excerpt:
+      'Transparent entry pricing and project ranges so teams can budget with confidence.',
+    content: (
+      <>
+        <p>
+          We designed entry-level bundles to help teams kick off AI, IT, and Web3 projects with
+          predictable scope and clear milestones.
+        </p>
+        <h2 className="text-2xl font-semibold mt-8 mb-3">Popular Bundles</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>AI Assistant Starter: knowledge base + chat + analytics</li>
+          <li>Cloud Foundations: secure, automated CI/CD with cost guardrails</li>
+          <li>Web3 Pilot: contract + gateway + basic dashboards</li>
+        </ul>
+        <p className="mt-6">
+          Each bundle includes a roadmap, weekly check-ins, and success metrics so you can prove
+          value quickly and scale with confidence.
+        </p>
+      </>
+    ),
   },
   'web3-stack-checklist-for-enterprise': {
-    slug: 'web3-stack-checklist-for-enterprise',
     title: 'Enterprise Web3 Stack Checklist',
-    content:
-      `A minimal-but-complete stack: identity, smart contracts, infra, and monitoring.`,
     date: '2025-09-12',
     tag: 'Web3',
-  },
-  'ai-governance-playbook': {
-    slug: 'ai-governance-playbook',
-    title: "AI Governance Playbook: Guardrails That Don’t Slow You Down",
-    content:
-      `Standards for safe AI delivery without bureaucracy.\n\nFocus areas:\n- Model risk tiers\n- Data retention & PII handling\n- Human-in-the-loop checkpoints\n- Incident response drills`,
-    date: '2025-09-12',
-    tag: 'AI',
-  },
-  'it-cost-optimization-quick-wins': {
-    slug: 'it-cost-optimization-quick-wins',
-    title: 'IT Cost Optimization: 9 Quick Wins for Q4',
-    content:
-      `Reduce spend with surgical changes across cloud, licenses, data, and automation.`,
-    date: '2025-09-12',
-    tag: 'IT',
-  },
-  'token-rewards-growth-loops': {
-    slug: 'token-rewards-growth-loops',
-    title: 'Designing Token Reward Growth Loops',
-    content:
-      `Design incentives that compound engagement while remaining sustainable and compliant.`,
-    date: '2025-09-12',
-    tag: 'Web3',
+    excerpt:
+      'From smart contracts to infra, a minimal-but-complete list to get production-ready.',
+    content: (
+      <>
+        <p>
+          This checklist covers critical components for a secure, scalable enterprise Web3 stack
+          including contracts, infra, data, and compliance.
+        </p>
+        <h2 className="text-2xl font-semibold mt-8 mb-3">Checklist Highlights</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Contracts: audits, upgradability strategy, and test coverage</li>
+          <li>Infra: nodes, gateways, indexers, and monitoring</li>
+          <li>Security: key management, policies, and incident playbooks</li>
+          <li>Data: indexing, analytics, and archival strategies</li>
+        </ul>
+      </>
+    ),
   },
 };
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = postsBySlug[params.slug];
+export async function generateStaticParams() {
+  return Object.keys(posts).map((slug) => ({ slug }));
+}
 
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = posts[params.slug];
+  if (!post) return {};
+  return {
+    title: `${post.title} - Zion OS Blog`,
+    description: post.excerpt,
+  };
+}
+
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = posts[params.slug];
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-2">Post not found</h1>
-          <p className="text-white/70 mb-6">The article you’re looking for does not exist.</p>
-          <Link href="/blog" className="underline">Back to Blog</Link>
+      <div className="min-h-screen py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold">Post not found</h1>
+          <p className="mt-4 text-white/70">The article you are looking for does not exist.</p>
         </div>
       </div>
     );
@@ -76,27 +114,19 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <article className="min-h-screen">
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 py-20 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-xs uppercase tracking-wide text-blue-100 mb-3">{post.tag}</div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{post.title}</h1>
-          <div className="text-blue-100/80">{new Date(post.date).toLocaleDateString()}</div>
+      <header className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-xs uppercase tracking-wide text-white/70 mb-2">{post.tag}</div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{post.title}</h1>
+          <div className="text-white/80">{new Date(post.date).toLocaleDateString()}</div>
         </div>
       </header>
-
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="prose prose-invert max-w-3xl mx-auto whitespace-pre-wrap">
+        <div className="prose prose-invert max-w-3xl mx-auto text-white/90">
           {post.content}
-        </div>
-        <div className="max-w-3xl mx-auto mt-10">
-          <Link href="/blog" className="text-blue-400 hover:text-blue-300">← All posts</Link>
         </div>
       </section>
     </article>
   );
-}
-
-export async function generateStaticParams() {
-  return Object.keys(postsBySlug).map((slug) => ({ slug }));
 }
 
