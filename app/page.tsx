@@ -4,13 +4,7 @@ import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
-<<<<<<< HEAD
-import ContentShowcase from '../components/ContentShowcase';
-=======
-import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
-import NewContentPromoBanner2025 from '../components/NewContentPromoBanner2025';
-import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
-import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import MegaContentDropBanner from '../components/MegaContentDropBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
@@ -224,8 +218,8 @@ export default function HomePage() {
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
 
-      {/* New Content Discovery */}
-      <NewContentDiscovery />
+      {/* Mega Content Drop Banner */}
+      <MegaContentDropBanner variant="mega" maxItems={8} />
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
