@@ -1,6 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
+import InteractiveContentDiscovery from '../../components/InteractiveContentDiscovery';
 
 export default function ContentShowcasePage() {
   const newBlogPosts = [
@@ -253,6 +254,11 @@ export default function ContentShowcasePage() {
               </Link>
             </div>
           </div>
+        </section>
+
+        {/* Interactive Content Discovery */}
+        <section className="mb-16">
+          <InteractiveContentDiscovery />
         </section>
 
         {/* Content Categories */}
