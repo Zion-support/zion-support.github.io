@@ -1,172 +1,144 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function AI2025ContentDiscoveryWidget() {
-  const [isExpanded, setIsExpanded] = useState(false);
+const AI2025ContentDiscoveryWidget = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const contentItems = [
+  const featuredContent = [
     {
-      title: "AI 2025 Revolutionary Breakthroughs",
-      description: "Discover groundbreaking AI innovations reshaping industries",
-      href: "/blog/ai-2025-revolutionary-breakthroughs",
-      category: "Breakthroughs",
-      readTime: "15 min",
-      featured: true
+      title: "AI 2025: Advanced Autonomous Systems",
+      description: "Breakthrough autonomous systems with 2000% ROI potential",
+      link: "/blog/ai-2025-advanced-autonomous-systems",
+      category: "Breakthrough Technology",
+      metrics: "2000% ROI",
+      color: "from-blue-500 to-purple-500",
+      icon: "🤖"
     },
     {
-      title: "Global Enterprise Transformation: 2000% ROI",
-      description: "Fortune 500 success story with unprecedented results",
-      href: "/case-studies/ai-2025-global-enterprise-transformation-breakthrough",
-      category: "Case Study",
-      readTime: "12 min",
-      featured: true
+      title: "Quantum Machine Learning Revolution",
+      description: "10,000x speed improvements with quantum AI algorithms",
+      link: "/blog/ai-2025-quantum-machine-learning-breakthrough",
+      category: "Revolutionary Tech",
+      metrics: "10,000x Faster",
+      color: "from-purple-500 to-indigo-500",
+      icon: "⚛️"
     },
     {
-      title: "AI 2025 Implementation Master Guide",
-      description: "Complete roadmap for enterprise AI transformation",
-      href: "/resources/ai-2025-implementation-master-guide",
-      category: "Guide",
-      readTime: "25 min",
-      featured: false
+      title: "2000% ROI Enterprise Success",
+      description: "Fortune 500 transformation case study with proven results",
+      link: "/case-studies/ai-2025-global-enterprise-transformation-breakthrough",
+      category: "Success Story",
+      metrics: "2000% ROI",
+      color: "from-green-500 to-blue-500",
+      icon: "🏆"
     },
     {
-      title: "Quantum-Enhanced Neural Networks",
-      description: "10,000x performance improvements in optimization",
-      href: "/blog/ai-2025-quantum-neural-networks",
-      category: "Research",
-      readTime: "18 min",
-      featured: false
-    },
-    {
-      title: "Autonomous Enterprise Systems",
-      description: "Fully autonomous business operations with 99.9% uptime",
-      href: "/blog/ai-2025-autonomous-enterprise",
-      category: "Analysis",
-      readTime: "20 min",
-      featured: false
-    },
-    {
-      title: "AI 2026 Breakthrough Predictions",
-      description: "What to expect in the next wave of AI innovation",
-      href: "/blog/ai-2026-breakthrough-predictions",
-      category: "Prediction",
-      readTime: "14 min",
-      featured: false
+      title: "AI 2025 Content Showcase",
+      description: "Comprehensive collection of breakthrough AI content",
+      link: "/ai-2025-content-showcase",
+      category: "Content Hub",
+      metrics: "50+ Articles",
+      color: "from-orange-500 to-red-500",
+      icon: "📚"
     }
   ];
 
-  const featuredItems = contentItems.filter(item => item.featured);
-  const regularItems = contentItems.filter(item => !item.featured);
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentContent = featuredContent[currentIndex];
 
   return (
-    <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-4">
         <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold">🚀 AI 2025 Content Discovery</h3>
-            <p className="text-blue-100 text-sm">Explore revolutionary breakthroughs and insights</p>
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-sm font-semibold">DISCOVER NEW CONTENT</span>
           </div>
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-white hover:text-blue-200 transition-colors"
-            aria-label={isExpanded ? "Collapse" : "Expand"}
-          >
-            <svg 
-              className={`w-5 h-5 transform transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Featured Content */}
-      <div className="p-4">
-        <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-          ⭐ Featured Content
-        </h4>
-        <div className="space-y-3">
-          {featuredItems.map((item, index) => (
-            <div key={index} className="border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow">
-              <div className="flex items-start justify-between mb-2">
-                <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full">
-                  {item.category}
-                </span>
-                <span className="text-xs text-gray-500">{item.readTime}</span>
-              </div>
-              <h5 className="font-semibold text-gray-900 mb-1 text-sm">
-                {item.title}
-              </h5>
-              <p className="text-gray-600 text-xs mb-2">
-                {item.description}
-              </p>
-              <Link 
-                href={item.href}
-                className="text-blue-600 hover:text-blue-800 text-xs font-semibold"
-              >
-                Read More →
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Expandable Regular Content */}
-      {isExpanded && (
-        <div className="border-t border-gray-200 p-4 bg-gray-50">
-          <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-            📚 More Content
-          </h4>
-          <div className="space-y-2">
-            {regularItems.map((item, index) => (
-              <div key={index} className="flex items-center justify-between p-2 hover:bg-white rounded transition-colors">
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <span className="bg-gray-100 text-gray-700 text-xs font-semibold px-2 py-1 rounded">
-                      {item.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{item.readTime}</span>
-                  </div>
-                  <h5 className="font-semibold text-gray-900 text-sm mb-1">
-                    {item.title}
-                  </h5>
-                  <p className="text-gray-600 text-xs">
-                    {item.description}
-                  </p>
-                </div>
-                <Link 
-                  href={item.href}
-                  className="text-blue-600 hover:text-blue-800 text-xs font-semibold ml-2"
-                >
-                  →
-                </Link>
-              </div>
+          <div className="flex space-x-1">
+            {featuredContent.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full ${
+                  index === currentIndex ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
             ))}
           </div>
         </div>
-      )}
+      </div>
 
-      {/* Footer */}
+      {/* Content */}
+      <div className="p-6">
+        <div className="flex items-start space-x-4">
+          <div className="text-4xl">{currentContent.icon}</div>
+          <div className="flex-1">
+            <div className="flex items-center space-x-2 mb-2">
+              <span className={`px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${currentContent.color} text-white`}>
+                {currentContent.category}
+              </span>
+              <span className="text-xs text-gray-500">{currentContent.metrics}</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              {currentContent.title}
+            </h3>
+            <p className="text-gray-600 text-sm mb-4">
+              {currentContent.description}
+            </p>
+            <Link
+              href={currentContent.link}
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group"
+            >
+              <span>Explore Content</span>
+              <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Links */}
       <div className="border-t border-gray-200 p-4 bg-gray-50">
-        <div className="flex items-center justify-between">
-          <Link 
+        <div className="grid grid-cols-2 gap-2">
+          <Link
             href="/ai-2025-content-showcase"
-            className="text-blue-600 hover:text-blue-800 text-sm font-semibold"
+            className="text-xs text-gray-600 hover:text-blue-600 transition-colors"
           >
-            View All Content →
+            📚 All Content
           </Link>
-          <Link 
-            href="/contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs font-semibold transition-colors"
+          <Link
+            href="/case-studies"
+            className="text-xs text-gray-600 hover:text-blue-600 transition-colors"
           >
-            Get Started
+            🏆 Case Studies
+          </Link>
+          <Link
+            href="/blog"
+            className="text-xs text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            📝 Blog Posts
+          </Link>
+          <Link
+            href="/resources"
+            className="text-xs text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            🛠️ Resources
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default AI2025ContentDiscoveryWidget;
