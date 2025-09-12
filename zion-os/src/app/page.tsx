@@ -79,6 +79,16 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo Banner */}
+      <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <span className="font-semibold">New:</span>
+          <span className="opacity-90">AI Governance Roadmap 2025 now live — plus guides on AI, pricing, and Web3.</span>
+          <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read the blog →
+          </a>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -173,57 +183,6 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">⚡</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3 Released</h3>
-                <p className="text-white/70">42% faster deploys, real-time analytics, and smoother UX.</p>
-              </div>
-            </a>
-            <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🏪</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Marketplace Suite GA</h3>
-                <p className="text-white/70">Jobs, proposals, and escrow reach General Availability.</p>
-              </div>
-            </a>
-            <a href="/news/compliance-pack-release" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🛡️</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
-                <p className="text-white/70">SOC 2 playbooks and turnkey KYC/AML integrations.</p>
-=======
-            <a href="/news/zion-os-1-4-security-compliance" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🛡️</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.4: Security & Compliance</h3>
-                <p className="text-white/70">Compliance templates, audit trails, and security hardening.</p>
-              </div>
-            </a>
-            <a href="/news/enterprise-infra-cost-reduction-50-percent" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">💼</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Customer Story: 50% Cost Reduction</h3>
-                <p className="text-white/70">Policy‑based scaling and orchestration delivered savings.</p>
-              </div>
-            </a>
-            <a href="/news/zion-os-1-3-agents-rag" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🧠</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3: Agent Workflows + RAG</h3>
-                <p className="text-white/70">Autonomous workflows and built‑in RAG.</p>
->>>>>>> 94c34cf87ce80fe1dec962245ab12c3fa6ded719
-              </div>
-            </a>
-=======
             {getLatestArticles(3).map((article, index) => (
               <a key={index} href={`/news/${article.slug}`} className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
                 <div className={`h-2 bg-gradient-to-r ${article.gradient}`} />
@@ -234,7 +193,6 @@ export default function HomePage() {
                 </div>
               </a>
             ))}
->>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
           </div>
         </div>
       </section>
