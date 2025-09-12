@@ -17,6 +17,7 @@ import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
 import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -88,8 +89,8 @@ export default function HomePage() {
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
         
-        {/* Content Showcase 2026 */}
-        <ContentShowcase2026 />
+        {/* New Content Showcase 2026 */}
+        <NewContentShowcase2026 />
         
         {/* Content Promotion Banner */}
         <NewContentPromotionBanner />
