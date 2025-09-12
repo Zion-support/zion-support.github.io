@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
-import NewContentPromoBanner from './components/NewContentPromoBanner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ErrorBoundary from '../components/ErrorBoundary';
+import NewContentBanner from '../components/NewContentBanner';
+import EnhancedNavigation from '../components/EnhancedNavigation';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -213,12 +217,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
-        <Header />
-        <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
-          <NewContentPromoBanner variant="minimal" maxItems={3} />
-          {children}
-        </main>
-        <Footer />
+        <ErrorBoundary>
+          <NewContentBanner />
+          <EnhancedNavigation />
+          <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
+            {children}
+          </main>
+          <Footer />
+          
+          {/* Development Tools */}
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+        </ErrorBoundary>
       </body>
     </html>
   );
