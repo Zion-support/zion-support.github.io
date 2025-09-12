@@ -110,6 +110,15 @@ function Header() {
                 <Link href="/blog/ai-2026-enterprise-implementation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Mastery
                 </Link>
+                <Link href="/blog/ai-2026-advanced-autonomous-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🤖 Advanced Autonomous Systems
+                </Link>
+                <Link href="/resources/ai-2026-enterprise-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📖 Enterprise Implementation Guide
+                </Link>
+                <Link href="/case-studies/ai-2026-global-retail-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏆 Global Retail Success Story
+                </Link>
                 <Link href="/blog/ai-2026-neural-interface-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🧠 Neural Interfaces
                 </Link>

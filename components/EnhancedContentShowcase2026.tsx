@@ -5,219 +5,350 @@ export default function EnhancedContentShowcase2026() {
   const featuredContent = [
     {
       id: 1,
-      title: "AI 2026: Revolutionary Trends That Will Transform Everything",
-      description: "Discover the groundbreaking AI trends for 2026 that will revolutionize industries, from quantum AI to neural interfaces and autonomous systems.",
-      category: "Blog Post",
+      title: "AI 2026: Advanced Autonomous Systems Revolution",
+      description: "Explore the revolutionary advances in autonomous systems powered by AI in 2026. From self-driving vehicles to smart cities and industrial automation.",
+      type: "Blog Post",
+      category: "AI 2026",
       readTime: "15 min read",
-      image: "/images/ai-2026-trends-hero.jpg",
-      href: "/blog/ai-2026-revolutionary-trends",
-      badge: "TRENDING",
-      badgeColor: "bg-red-500",
-      tags: ["AI Trends", "2026 Predictions", "Technology"]
+      image: "🧠",
+      href: "/blog/ai-2026-advanced-autonomous-systems",
+      featured: true,
+      stats: {
+        views: "12.5K",
+        likes: "890",
+        shares: "234"
+      }
     },
     {
       id: 2,
-      title: "Global Retail Giant AI Transformation: $2.3B Revenue Increase",
-      description: "How a Fortune 500 retail company achieved unprecedented growth through comprehensive AI transformation, revolutionizing every aspect of their business operations.",
-      category: "Case Study",
-      readTime: "12 min read",
-      image: "/images/retail-ai-transformation.jpg",
-      href: "/case-studies/ai-transformation-global-retail-giant-2026",
-      badge: "SUCCESS STORY",
-      badgeColor: "bg-green-500",
-      tags: ["Retail", "AI Transformation", "ROI"]
+      title: "AI 2026 Enterprise Implementation Master Guide",
+      description: "Complete guide to implementing AI solutions in enterprise environments in 2026. Comprehensive strategies, frameworks, and best practices.",
+      type: "Master Guide",
+      category: "Implementation",
+      readTime: "45 min read",
+      image: "📚",
+      href: "/resources/ai-2026-enterprise-implementation-master-guide",
+      featured: true,
+      stats: {
+        views: "8.7K",
+        likes: "654",
+        shares: "189"
+      }
     },
     {
       id: 3,
-      title: "AI 2026 Implementation Master Guide: Complete Blueprint for Success",
-      description: "The definitive guide to implementing AI in 2026. Complete blueprint with frameworks, checklists, templates, and step-by-step implementation strategies.",
-      category: "Resource",
-      readTime: "45 min read",
-      image: "/images/ai-implementation-guide.jpg",
-      href: "/resources/ai-2026-implementation-master-guide",
-      badge: "MASTER GUIDE",
-      badgeColor: "bg-blue-500",
-      tags: ["Implementation", "Guide", "Framework"]
-    },
-    {
-      id: 4,
-      title: "Quantum AI Breakthrough: The Future of Machine Learning",
-      description: "Explore how quantum computing is revolutionizing machine learning algorithms and enabling solutions to previously impossible problems.",
-      category: "Blog Post",
-      readTime: "18 min read",
-      image: "/images/quantum-ai-breakthrough.jpg",
-      href: "/blog/ai-2026-quantum-machine-learning-revolution",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-purple-500",
-      tags: ["Quantum AI", "Machine Learning", "Breakthrough"]
-    },
-    {
-      id: 5,
-      title: "Neural Interface Revolution: Brain-Computer Interfaces in 2026",
-      description: "Discover the latest developments in brain-computer interface technology and how it's transforming healthcare, communication, and human-AI interaction.",
-      category: "Blog Post",
-      readTime: "20 min read",
-      image: "/images/neural-interface-revolution.jpg",
-      href: "/blog/ai-2026-neural-interface-breakthrough",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-orange-500",
-      tags: ["Neural Interfaces", "BCI", "Healthcare"]
-    },
-    {
-      id: 6,
-      title: "Fortune 500 Manufacturing AI Breakthrough: 60% Efficiency Gains",
-      description: "How a manufacturing giant achieved unprecedented efficiency gains through AI automation, predictive maintenance, and intelligent supply chain optimization.",
-      category: "Case Study",
-      readTime: "14 min read",
-      image: "/images/manufacturing-ai-breakthrough.jpg",
-      href: "/case-studies/ai-transformation-fortune-500-breakthrough-2025",
-      badge: "EFFICIENCY",
-      badgeColor: "bg-teal-500",
-      tags: ["Manufacturing", "Automation", "Efficiency"]
+      title: "Global Retail Transformation Success Case Study",
+      description: "How a global retail giant achieved 60% revenue growth and 45% cost reduction through comprehensive AI transformation.",
+      type: "Case Study",
+      category: "Success Stories",
+      readTime: "12 min read",
+      image: "🏆",
+      href: "/case-studies/ai-2026-global-retail-transformation-success",
+      featured: true,
+      stats: {
+        views: "15.2K",
+        likes: "1.2K",
+        shares: "456"
+      }
     }
   ];
 
-  const categories = [
-    { name: "All", count: featuredContent.length, active: true },
-    { name: "Blog Posts", count: featuredContent.filter(c => c.category === "Blog Post").length, active: false },
-    { name: "Case Studies", count: featuredContent.filter(c => c.category === "Case Study").length, active: false },
-    { name: "Resources", count: featuredContent.filter(c => c.category === "Resource").length, active: false }
+  const trendingContent = [
+    {
+      id: 4,
+      title: "AI 2026 Neural Interface Breakthrough",
+      description: "Revolutionary advances in brain-computer interfaces and neural technology.",
+      type: "Blog Post",
+      category: "Neural AI",
+      readTime: "10 min read",
+      image: "🧬",
+      href: "/blog/ai-2026-neural-interface-breakthrough",
+      stats: {
+        views: "9.8K",
+        likes: "567",
+        shares: "123"
+      }
+    },
+    {
+      id: 5,
+      title: "Quantum AI Financial Optimization Breakthrough",
+      description: "How quantum computing is revolutionizing financial services and optimization.",
+      type: "Case Study",
+      category: "Quantum AI",
+      readTime: "18 min read",
+      image: "⚛️",
+      href: "/case-studies/quantum-ai-financial-optimization-breakthrough-2026",
+      stats: {
+        views: "7.3K",
+        likes: "445",
+        shares: "98"
+      }
+    },
+    {
+      id: 6,
+      title: "AI 2026 Implementation Toolkit",
+      description: "Complete toolkit with templates, checklists, and frameworks for AI implementation.",
+      type: "Resource",
+      category: "Toolkit",
+      readTime: "30 min read",
+      image: "🛠️",
+      href: "/resources/ai-2026-implementation-toolkit",
+      stats: {
+        views: "11.4K",
+        likes: "789",
+        shares: "267"
+      }
+    }
+  ];
+
+  const latestContent = [
+    {
+      id: 7,
+      title: "AI 2026 Future Predictions",
+      description: "Comprehensive analysis of AI trends and predictions for 2026 and beyond.",
+      type: "Blog Post",
+      category: "Predictions",
+      readTime: "20 min read",
+      image: "🔮",
+      href: "/blog/ai-2026-future-predictions",
+      stats: {
+        views: "6.2K",
+        likes: "334",
+        shares: "87"
+      }
+    },
+    {
+      id: 8,
+      title: "AI Governance Blueprint 2026",
+      description: "Comprehensive governance framework for responsible AI implementation.",
+      type: "Resource",
+      category: "Governance",
+      readTime: "25 min read",
+      image: "⚖️",
+      href: "/resources/ai-governance-blueprint-2026",
+      stats: {
+        views: "5.8K",
+        likes: "298",
+        shares: "76"
+      }
+    },
+    {
+      id: 9,
+      title: "Manufacturing AI Transformation Success",
+      description: "How a manufacturing giant achieved 40% cost reduction through AI automation.",
+      type: "Case Study",
+      category: "Manufacturing",
+      readTime: "14 min read",
+      image: "🏭",
+      href: "/case-studies/ai-manufacturing-automation-success-2025",
+      stats: {
+        views: "8.9K",
+        likes: "512",
+        shares: "134"
+      }
+    }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             🚀 NEW CONTENT 2026
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Revolutionary AI Content for 2026
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge insights, implementation guides, and success stories that will transform your understanding of AI in 2026
+            Discover cutting-edge AI insights, implementation guides, and success stories that will transform your business in 2026
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                category.active
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
-              }`}
+        {/* Featured Content */}
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold text-gray-900">Featured Content</h3>
+            <Link 
+              href="/mega-content-showcase-2026"
+              className="text-blue-600 hover:text-blue-800 font-semibold"
             >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredContent.map((content) => (
-            <div
-              key={content.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
-            >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={content.image}
-                  alt={content.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className={`${content.badgeColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
-                    {content.badge}
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <span className="bg-black/50 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    {content.category}
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {content.title}
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-                
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {content.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Meta */}
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>{content.readTime}</span>
-                  <span>January 2025</span>
-                </div>
-
-                {/* CTA */}
-                <Link
-                  href={content.href}
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group"
-                >
-                  Read More
-                  <svg
-                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+              View All →
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredContent.map((item) => (
+              <div key={item.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{item.image}</div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                        {item.type}
+                      </span>
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                        {item.category}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                    {item.title}
+                  </h4>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-gray-500">{item.readTime}</span>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span>👁️ {item.stats.views}</span>
+                      <span>❤️ {item.stats.likes}</span>
+                      <span>📤 {item.stats.shares}</span>
+                    </div>
+                  </div>
+                  
+                  <Link 
+                    href={item.href}
+                    className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
+                    Read More
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
-            <p className="text-lg mb-6 text-blue-100">
-              Get expert guidance and support for your AI transformation journey. Our team of AI specialists can help you implement these strategies successfully.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Expert Consultation
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View Our AI Services
-              </Link>
-            </div>
+        {/* Trending Content */}
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold text-gray-900">Trending Now</h3>
+            <Link 
+              href="/content-showcase"
+              className="text-blue-600 hover:text-blue-800 font-semibold"
+            >
+              View All →
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {trendingContent.map((item) => (
+              <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-3xl">{item.image}</div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                        {item.type}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    {item.title}
+                  </h4>
+                  
+                  <p className="text-gray-600 mb-3 line-clamp-2 text-sm">
+                    {item.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs text-gray-500">{item.readTime}</span>
+                    <div className="flex items-center space-x-3 text-xs text-gray-500">
+                      <span>👁️ {item.stats.views}</span>
+                      <span>❤️ {item.stats.likes}</span>
+                    </div>
+                  </div>
+                  
+                  <Link 
+                    href={item.href}
+                    className="text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Latest Content */}
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold text-gray-900">Latest Content</h3>
+            <Link 
+              href="/blog"
+              className="text-blue-600 hover:text-blue-800 font-semibold"
+            >
+              View All →
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {latestContent.map((item) => (
+              <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-3xl">{item.image}</div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                        {item.type}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    {item.title}
+                  </h4>
+                  
+                  <p className="text-gray-600 mb-3 line-clamp-2 text-sm">
+                    {item.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs text-gray-500">{item.readTime}</span>
+                    <div className="flex items-center space-x-3 text-xs text-gray-500">
+                      <span>👁️ {item.stats.views}</span>
+                      <span>❤️ {item.stats.likes}</span>
+                    </div>
+                  </div>
+                  
+                  <Link 
+                    href={item.href}
+                    className="text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
+          <p className="text-xl text-blue-100 mb-6">
+            Get expert guidance and implementation support for your AI transformation journey
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link 
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Get Started Today
+            </Link>
+            <Link 
+              href="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Explore Our Services
+            </Link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
