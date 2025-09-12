@@ -43,6 +43,35 @@ const Home: NextPage = () => {
               <p>End-to-end digital transformation services to modernize your business.</p>
             </div>
           </div>
+
+          <section className="mt-20 text-left">
+            <h2 className="text-3xl font-bold mb-6">Latest from the Blog</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  <Link href="/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat">
+                    AI-Powered Marketplaces: The Future of Digital Commerce
+                  </Link>
+                </h3>
+                <p className="opacity-90">
+                  How AI transforms marketplaces with personalization, trust, and operational efficiency.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  <Link href="/blog/cloud-native-architecture-best-practices-chat">
+                    Cloud-Native Architecture: Best Practices
+                  </Link>
+                </h3>
+                <p className="opacity-90">
+                  Practical guidance for building resilient, scalable, and cost-efficient cloud-native systems.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6">
+              <Link href="/blog" className="underline font-semibold">View all articles →</Link>
+            </div>
+          </section>
         </div>
       </main>
     </div>
