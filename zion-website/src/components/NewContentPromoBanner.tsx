@@ -34,26 +34,224 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '27',
-      title: 'Model Routing Strategies 2025: Cost, Latency, and Quality',
-      description: 'Production patterns for multi-model routing with budgets, SLAs, and caching.',
-      href: '/blog/ai-2025-model-routing-strategies',
+      id: '58',
+      title: 'Agent Security Operations (2025): End-to-End Controls',
+      description: 'Identity, least privilege, policy-as-code, isolation, evals, and SOC integration for agent security.',
+      href: '/blog/ai-2025-agent-security-operations',
       type: 'blog',
       featured: true,
-      readTime: '16 min read',
+      readTime: '17 min read',
       date: 'Sep 12, 2025',
-      category: 'Optimization'
+      category: 'AI Security'
     },
     {
-      id: '26',
-      title: 'Agent Evaluation Playbook 2025: Methods and Automation',
-      description: 'Evaluate agents with golden tasks, tool correctness, safety, and CI/CD gates.',
-      href: '/blog/ai-2025-agent-evaluation-playbook',
+      id: '56',
+      title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
+      description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
+      href: '/blog/ai-2025-enterprise-retrieval-playbook',
       type: 'blog',
       featured: true,
       readTime: '18 min read',
       date: 'Sep 12, 2025',
-      category: 'AI Safety'
+      category: 'RAG'
+    },
+    {
+      id: '54',
+      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
+      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
+      href: '/blog/ai-2025-mlops-best-practices',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'MLOps'
+    },
+    {
+      id: '55',
+      title: 'Vector Databases Benchmarks 2025',
+      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
+      href: '/blog/ai-2025-vector-databases-benchmarks',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '56',
+      title: 'Secure Agent Architectures (2025)',
+      description: 'Blueprint for secure enterprise agent architectures with policy-as-code, guardrails, and SLAs.',
+      href: '/blog/ai-2025-secure-agent-architectures',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Security'
+    },
+    {
+      id: '57',
+      title: 'AI Customer Analytics: 19% Revenue Uplift',
+      description: 'Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.',
+      href: '/case-studies/ai-2025-customer-analytics-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '50',
+      title: 'Machine Learning Model Optimization: Advanced Techniques',
+      description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
+      href: '/blog/ml-model-optimization',
+      type: 'blog',
+      featured: true,
+      readTime: '24 min read',
+      date: 'Sep 12, 2025',
+      category: 'Machine Learning'
+    },
+    {
+      id: '51',
+      title: 'AI Ethics and Responsible Development: A Framework',
+      description: 'Practical framework for fairness, transparency, and accountability without slowing delivery.',
+      href: '/blog/ai-ethics-framework',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Ethics'
+    },
+    {
+      id: '52',
+      title: 'Edge AI Deployment: Bringing Intelligence to the Edge',
+      description: 'Deploy AI at the edge with optimized runtimes, secure updates, and hybrid routing.',
+      href: '/blog/edge-ai-deployment',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Edge Computing'
+    },
+    {
+      id: '53',
+      title: 'AI in Financial Services: Risk Management Case Study',
+      description: '40% fraud detection improvement and 25% fewer false positives with AI‑powered risk.',
+      href: '/case-studies/ai-financial-risk-management',
+      type: 'case-study',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '40',
+      title: 'AI 2026 Outlook: Enterprise Agent Roadmap',
+      description: 'Where enterprise AI agents are headed in 2026: architectures, SLAs, governance, and edge.',
+      href: '/blog/ai-2026-enterprise-agent-roadmap',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Strategy'
+    },
+    {
+      id: '36',
+      title: 'Agentic Data Pipelines in Production (2025)',
+      description: 'Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.',
+      href: '/blog/ai-2025-agentic-data-pipelines',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Data Platforms'
+    },
+    {
+      id: '35',
+      title: 'Evaluations in Production (2025): Shipping with Confidence',
+      description: 'Online and offline evaluations for AI quality, safety, and cost. Pipelines and metrics.',
+      href: '/blog/ai-2025-evaluations-in-production',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: '33',
+      title: 'Reliable Realtime Agents in 2025: Architecture & SLAs',
+      description: 'Production blueprint for realtime agents with reliability SLAs, safety guardrails, and observability.',
+      href: '/blog/ai-2025-reliable-realtime-agents',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Reliability'
+    },
+    {
+      id: '31',
+      title: 'Agentic Vendor Management 2025: From Intake to Renewal',
+      description: 'Automate diligence, smarter negotiations, and renewal guardrails with agentic workflows.',
+      href: '/blog/ai-2025-agentic-vendor-management',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
+    },
+    {
+      id: '32',
+      title: 'Agentic Vendor Management: 32% Faster Cycle Time',
+      description: 'Case study: Automated intake, risk, and negotiation cut cycle time by 32% and exceptions by 21%.',
+      href: '/case-studies/ai-2025-vendor-management-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '16',
+      title: 'Agent Marketplaces in 2025: Strategy & Governance',
+      description: 'Strategy, reference architectures, monetization, and safety for enterprise agent marketplaces.',
+      href: '/blog/ai-2025-agent-marketplaces-strategy',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Strategy'
+    },
+    {
+      id: '15',
+      title: 'AI Agent Observability in 2025: Telemetry & Guardrails',
+      description: 'End-to-end visibility for agents with structured telemetry, distributed tracing, inline evals, and policy guardrails.',
+      href: '/blog/ai-2025-ai-agent-observability',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: '26',
+      title: 'Agentic Supply Planning 2025: Forecasting-to-Fulfillment with AI',
+      description: 'Design agentic workflows across demand sensing, planning, and fulfillment to cut expedites and boost OTIF.',
+      href: '/blog/ai-2025-agentic-supply-planning',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '27',
+      title: 'Agentic Supply Planning: 27% Expedites Cut, +6 pts OTIF',
+      description: 'Case study: Agentic planning tied forecasting to fulfillment, reducing expedites and improving service.',
+      href: '/case-studies/ai-2025-agentic-supply-planning-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
     },
     {
       id: '24',
@@ -318,28 +516,6 @@ const NewContentPromoBanner = ({
       readTime: '22 min read',
       date: 'Jan 18, 2025',
       category: 'AI Healthcare'
-    },
-    {
-      id: '9991',
-      title: 'LLM Inference Optimization on GPUs (2025)',
-      description: 'Quantization, KV cache strategies, smart batching, and parallelism to cut latency and cost.',
-      href: '/blog/ai-2025-llm-inference-optimization-gpus',
-      type: 'blog',
-      featured: true,
-      readTime: '15 min read',
-      date: 'Sep 12, 2025',
-      category: 'Inference'
-    },
-    {
-      id: '9992',
-      title: 'Serverless GenAI Architectures (2025)',
-      description: 'Event-driven GenAI with functions, queues, vector DBs, and eval guardrails on AWS/GCP/Azure.',
-      href: '/blog/ai-2025-serverless-genai-architectures',
-      type: 'blog',
-      featured: true,
-      readTime: '14 min read',
-      date: 'Sep 12, 2025',
-      category: 'Architecture'
     }
   ];
 
