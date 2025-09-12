@@ -12,6 +12,7 @@ import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -121,6 +122,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content Promotion Banner */}
+        <NewContentPromoBanner />
 
         {/* AI Tools Showcase Banner */}
         <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
@@ -502,6 +506,9 @@ export default function HomePage() {
 
       {/* Featured New Content Showcase */}
       <FeaturedNewContentShowcase title="Featured in January 2025" subtitle="Fresh articles, resources, and case studies just released" showViewAll={true} viewAllHref="/content-showcase" columns={3} />
+
+      {/* Featured Content Showcase */}
+      <FeaturedContentShowcase />
 
       {/* NEW CONTENT SPOTLIGHT SECTION */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
