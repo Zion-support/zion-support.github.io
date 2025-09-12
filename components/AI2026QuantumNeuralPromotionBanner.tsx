@@ -1,44 +1,93 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function AI2026QuantumNeuralPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai2026-quantum-neural-banner-dismissed');
+    if (!dismissed) {
+      // Show banner after a short delay
+      const timer = setTimeout(() => setIsVisible(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    setIsDismissed(true);
+    localStorage.setItem('ai2026-quantum-neural-banner-dismissed', 'true');
+  };
+
+  if (!isVisible || isDismissed) return null;
+
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-4 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex-1 mb-4 md:mb-0">
-            <div className="flex items-center space-x-2 mb-2">
-              <span className="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
-                ⚛️ BREAKTHROUGH
-              </span>
-              <span className="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                AI 2026
-              </span>
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white shadow-lg animate-slide-down">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <span className="text-lg">⚛️</span>
+              </div>
             </div>
-            <h2 className="text-xl md:text-2xl font-bold mb-2">
-              Quantum-Neural Fusion Breakthrough: The Future is Here
-            </h2>
-            <p className="text-purple-100 text-sm md:text-base">
-              Discover revolutionary quantum-neural fusion technologies delivering 15,000% ROI and 
-              unprecedented computational power. The next evolution of AI starts now.
-            </p>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold">
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold mr-2 animate-pulse">
+                  BREAKTHROUGH
+                </span>
+                AI 2026 Quantum-Neural Fusion: 15,000% ROI Achieved!
+              </p>
+              <p className="text-xs text-cyan-100 mt-1">
+                Discover the revolutionary technology that's transforming businesses worldwide
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors text-center text-sm"
+          
+          <div className="flex items-center space-x-3">
+            <Link
+              href="/ai-2026-quantum-neural-breakthrough"
+              className="bg-white/20 hover:bg-white/30 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              Learn More
+              Explore Now
             </Link>
-            <Link 
+            <Link
               href="/case-studies/ai-2026-quantum-neural-fusion-success"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors text-center text-sm"
+              className="bg-white text-cyan-600 hover:bg-gray-100 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               View Success Stories
             </Link>
+            <button
+              onClick={handleDismiss}
+              className="text-white/80 hover:text-white p-1 transition-colors"
+              aria-label="Dismiss banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes slide-down {
+          from {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        .animate-slide-down {
+          animation: slide-down 0.5s ease-out;
+        }
+      `}</style>
     </div>
   );
 }
