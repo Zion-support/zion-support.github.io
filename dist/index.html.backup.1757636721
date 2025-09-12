@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+    <title>Zion Tech Group</title>
+    <meta name="description" content="Zion Tech Group - Advanced Technology Solutions" />
+    <script type="module" crossorigin src="/assets/index-Cl1qwa-W.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-HnKmhvXM.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-3vIg9Hob.js">
+=======
     <title>Zion Tech Group - AI-Powered Tech Marketplace</title>
     <meta name="description" content="Discover top AI and tech talent, services, and equipment in one place. AI-powered matching for your tech needs." />
     
@@ -38,6 +45,7 @@
     <link rel="modulepreload" crossorigin href="/js/ui-vendor-Bi3pSXK5.js">
     <link rel="modulepreload" crossorigin href="/js/data-vendor-C92_H1ue.js">
     <link rel="stylesheet" crossorigin href="/css/index-nGzNBPOv.css">
+>>>>>>> origin/backup-main-20250824-190304
   </head>
   <body>
     <div id="root"></div>

@@ -1,50 +1,16 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import InstallPrompt from "./components/InstallPrompt";
-import {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes,
-  SellerRoutes
-} from './routes';
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import MoreTalentsPage from './pages/MoreTalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
-import MoreProductsPage from './pages/MoreProductsPage';
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
+import { Breadcrumb } from './components/Breadcrumb';
+import { FloatingContactButton } from './components/FloatingContactButton';
+
+const Home = React.lazy(() => import('./pages/Home'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
+const EnterpriseSolutionsPage = React.lazy(() => import('./pages/EnterpriseSolutionsPage'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -81,44 +47,16 @@ const baseRoutes = [
 
 const App = () => {
   return (
-    <WhitelabelProvider>
-      <ConsentProvider>
-        <ThemeProvider defaultTheme="dark">
-          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <ErrorBoundary>
-          <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="/seller/*" element={<SellerRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-        </Suspense>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-          <CookieBanner />
-          <PwaInstallButton />
-        </ThemeProvider>
-      </ConsentProvider>
-    </WhitelabelProvider>
-  );
-}
-
-function HomePage() {
-  return (
-    <div>
-      <h2>Welcome to Zion Tech Group</h2>
-      <p>Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.</p>
+    <div className="min-h-screen bg-zion-blue-dark">
+      <Breadcrumb />
+      <Suspense fallback={<div className="p-4 text-center text-white">Loading...</div>}>
+        <Routes>
+          {baseRoutes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
+        </Routes>
+      </Suspense>
+      <FloatingContactButton />
     </div>
   );
 }
