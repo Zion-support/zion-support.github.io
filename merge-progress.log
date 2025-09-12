@@ -1,0 +1,685 @@
+🚀 Starting comprehensive merge conflict resolution for all open PRs...
+📊 Total cursor branches to process: 6281
+⏰ Started at: Thu Sep 11 06:42:17 PM UTC 2025
+---
+🔒 Creating backup branch: backup-main-20250911-184217
+Switched to a new branch 'backup-main-20250911-184217'
+remote: 
+remote: Create a pull request for 'backup-main-20250911-184217' on GitHub by visiting:        
+remote:      https://github.com/Zion-Holdings/zion.app/pull/new/backup-main-20250911-184217        
+remote: 
+To https://github.com/Zion-Holdings/zion.app
+ * [new branch]                backup-main-20250911-184217 -> backup-main-20250911-184217
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+🔄 Starting branch processing...
+---
+📋 Processing branch: cursor/add-2030q1-services-ui-8deb1aee36d
+🔄 Attempting to merge cursor/add-2030q1-services-ui-8deb1aee36d...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-2030q1-services-ui-8deb1aee36d -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-2030q1-services-ui-8deb1aee36d
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-2030q1-services-ui-8deb1aee36d processed successfully
+📊 Progress: 1 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0357
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0357...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-0357 -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0357
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0357 processed successfully
+📊 Progress: 2 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-03b6
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-03b6...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-03b6 -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-03b6
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-03b6 processed successfully
+📊 Progress: 3 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-06aa
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-06aa...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-06aa -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-06aa
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-06aa processed successfully
+📊 Progress: 4 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0756
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0756...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-0756 -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0756
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0756 processed successfully
+📊 Progress: 5 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0c04
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0c04...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-0c04 -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0c04
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0c04 processed successfully
+📊 Progress: 6 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0cca
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0cca...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-0cca -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0cca
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0cca processed successfully
+📊 Progress: 7 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-174e
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-174e...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-174e -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-174e
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-174e processed successfully
+📊 Progress: 8 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-17cc
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-17cc...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-17cc -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-17cc
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-17cc processed successfully
+📊 Progress: 9 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-192f
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-192f...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      cursor/add-and-advertise-new-services-then-build-192f -> FETCH_HEAD
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-192f
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-192f processed successfully
+📊 Progress: 10 successful, 0 failed, 0 conflicts resolved
+---
+💾 Pushing progress to remote...
+Everything up-to-date
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-1d5b
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-1d5b...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-1d5b
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-1d5b
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-1d5b processed successfully
+📊 Progress: 11 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-21f8
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-21f8...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-21f8
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-21f8
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-21f8 processed successfully
+📊 Progress: 12 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-2b91
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-2b91...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-2b91
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-2b91
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-2b91 processed successfully
+📊 Progress: 13 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-2c85
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-2c85...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-2c85
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-2c85
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-2c85 processed successfully
+📊 Progress: 14 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-336c
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-336c...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-336c
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-336c
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-336c processed successfully
+📊 Progress: 15 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-359a
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-359a...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-359a
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-359a
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-359a processed successfully
+📊 Progress: 16 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-39d5
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-39d5...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-39d5
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-39d5
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-39d5 processed successfully
+📊 Progress: 17 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-3ac9
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3ac9...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-3ac9
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3ac9
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-3ac9 processed successfully
+📊 Progress: 18 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-3bf4
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3bf4...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-3bf4
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3bf4
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-3bf4 processed successfully
+📊 Progress: 19 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-3f02
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3f02...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-3f02
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3f02
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-3f02 processed successfully
+📊 Progress: 20 successful, 0 failed, 0 conflicts resolved
+---
+💾 Pushing progress to remote...
+Everything up-to-date
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-3f57
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3f57...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-3f57
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3f57
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	merge-progress.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-3f57 processed successfully
+📊 Progress: 21 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-4074
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-4074...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-4074
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-4074
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U	next-env.d.ts
+U	out/404.html
+U	out/404/index.html
+U	out/_next/static/chunks/pages/_app-5810f0a972a88d88.js
+U	out/_next/static/chunks/pages/_error-7a92967bea80186d.js
+U	out/index.html
+U	package-lock.json
+U	package.json
+U	pages/_app.tsx
+U	pages/about.tsx
+U	pages/contact.tsx
+U	pages/ecommerce-returns-management.tsx
+U	pages/index.tsx
+U	pages/services.tsx
+U	postcss.config.js
+U	src/App.tsx
+U	src/components/BenefitsSection.tsx
+U	src/components/CategoriesSection.tsx
+U	src/components/ChatAssistant/ChatAssistant.tsx
+U	src/components/ChatAssistant/ChatInput.tsx
+U	src/components/ContactForm.tsx
+U	src/components/EnhancedSEO.tsx
+U	src/components/ErrorBoundary.tsx
+U	src/components/Footer.tsx
+U	src/components/HeroSection.tsx
+U	src/components/HowItWorksSection.tsx
+U	src/components/LoadingSpinner.tsx
+U	src/components/MobileNavigation.tsx
+U	src/components/NewsletterSection.tsx
+U	src/components/NotFound.tsx
+U	src/components/Notification.tsx
+U	src/components/PerformanceMonitor.tsx
+U	src/components/PerformanceOptimizer.tsx
+U	src/components/ProductListingCard.tsx
+U	src/components/ProtectedRoute.js
+U	src/components/SEO.tsx
+U	src/components/ScrollToTop.tsx
+U	src/components/ThemeProvider.tsx
+U	src/components/ThemeToggle.tsx
+U	src/components/home/EnhancedQuickAccess.js
+U	src/components/home/EnhancedSearchSection.js
+U	src/components/home/FeatureCTAs.tsx
+U	src/components/home/FeatureHighlights.tsx
+U	src/components/home/ITServiceRequestHero.tsx
+U	src/components/home/TestimonialsSection.tsx
+U	src/components/ui/LoadingSpinner.tsx
+U	src/components/ui/ScrollToTop.js
+U	src/components/ui/badge.tsx
+U	src/components/ui/button.tsx
+U	src/components/ui/input.tsx
+U	src/components/ui/loading-spinner.tsx
+U	src/components/ui/sonner.tsx
+U	src/components/ui/toaster.tsx
+U	src/context/WhitelabelContext.tsx
+U	src/data/comprehensiveServices.ts
+U	src/data/enhancedServices.ts
+U	src/data/microSaasServices.ts
+U	src/hooks/index.ts
+U	src/hooks/useAuth.ts
+U	src/hooks/useScrollToTop.js
+U	src/index.css
+U	src/lib/utils.js
+U	src/lib/utils.ts
+U	src/main.tsx
+U	src/pages/About.tsx
+U	src/pages/Blog.tsx
+U	src/pages/BlogPost.tsx
+U	src/pages/Contact.tsx
+U	src/pages/GreenIT.tsx
+U	src/pages/Home.tsx
+U	src/pages/MicroSaasServices.tsx
+U	src/pages/NotFound.tsx
+U	src/pages/ServicesPage.tsx
+U	src/routes.js
+U	src/store/hooks.ts
+U	src/types/listings.js
+U	src/types/listings.ts
+U	src/types/ref-types.js
+U	src_disabled/ProjectDetails.tsx
+U	src_disabled/ProjectRoom.tsx
+U	src_disabled/SavedTalentsPage.tsx
+U	src_disabled/ServiceDescriptionGenerator.tsx
+U	src_disabled/TranslationManager.tsx
+U	src_disabled/UpdatePassword.tsx
+U	src_disabled/VideoCall.tsx
+U	styles/globals.css
+U	tailwind.config.js
+U	temp_disabled/ForumCategoryPage.tsx
+U	temp_disabled/ForumPostPage.tsx
+U	temp_disabled/Onboarding.tsx
+U	temp_disabled/ProfileDetail.tsx
+U	temp_disabled/ProfilePage.tsx
+U	temp_disabled/ServicesShowcase.tsx
+U	types.disabled/service-variants.ts
+U	vite.config.ts
+U	yarn.lock
+✅ Branch cursor/add-and-advertise-new-services-then-build-4074 processed successfully
+📊 Progress: 22 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-4798
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-4798...
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-4798
+⚠️  Merge conflicts detected in cursor/add-and-advertise-new-services-then-build-4798, resolving...
+📋 Conflicted files: next-env.d.ts
+out/404.html
+out/404/index.html
+out/_next/static/chunks/pages/_app-5810f0a972a88d88.js
+out/_next/static/chunks/pages/_error-7a92967bea80186d.js
+out/index.html
+package-lock.json
+package.json
+pages/_app.tsx
+pages/about.tsx
+pages/contact.tsx
+pages/ecommerce-returns-management.tsx
+pages/index.tsx
+pages/services.tsx
+postcss.config.js
+src/App.tsx
+src/components/BenefitsSection.tsx
+src/components/CategoriesSection.tsx
+src/components/ChatAssistant/ChatAssistant.tsx
+src/components/ChatAssistant/ChatInput.tsx
+src/components/ContactForm.tsx
+src/components/EnhancedSEO.tsx
+src/components/ErrorBoundary.tsx
+src/components/Footer.tsx
+src/components/HeroSection.tsx
+src/components/HowItWorksSection.tsx
+src/components/LoadingSpinner.tsx
+src/components/MobileNavigation.tsx
+src/components/NewsletterSection.tsx
+src/components/NotFound.tsx
+src/components/Notification.tsx
+src/components/PerformanceMonitor.tsx
+src/components/PerformanceOptimizer.tsx
+src/components/ProductListingCard.tsx
+src/components/ProtectedRoute.js
+src/components/SEO.tsx
+src/components/ScrollToTop.tsx
+src/components/ThemeProvider.tsx
+src/components/ThemeToggle.tsx
+src/components/home/EnhancedQuickAccess.js
+src/components/home/EnhancedSearchSection.js
+src/components/home/FeatureCTAs.tsx
+src/components/home/FeatureHighlights.tsx
+src/components/home/ITServiceRequestHero.tsx
+src/components/home/TestimonialsSection.tsx
+src/components/ui/LoadingSpinner.tsx
+src/components/ui/ScrollToTop.js
+src/components/ui/badge.tsx
+src/components/ui/button.tsx
+src/components/ui/input.tsx
+src/components/ui/loading-spinner.tsx
+src/components/ui/sonner.tsx
+src/components/ui/toaster.tsx
+src/context/WhitelabelContext.tsx
+src/data/comprehensiveServices.ts
+src/data/enhancedServices.ts
+src/data/microSaasServices.ts
+src/hooks/index.ts
+src/hooks/useAuth.ts
+src/hooks/useScrollToTop.js
+src/index.css
+src/lib/utils.js
+src/lib/utils.ts
+src/main.tsx
+src/pages/About.tsx
+src/pages/Blog.tsx
+src/pages/BlogPost.tsx
+src/pages/Contact.tsx
+src/pages/GreenIT.tsx
+src/pages/Home.tsx
+src/pages/MicroSaasServices.tsx
+src/pages/NotFound.tsx
+src/pages/ServicesPage.tsx
+src/routes.js
+src/store/hooks.ts
+src/types/listings.js
+src/types/listings.ts
+src/types/ref-types.js
+src_disabled/ProjectDetails.tsx
+src_disabled/ProjectRoom.tsx
+src_disabled/SavedTalentsPage.tsx
+src_disabled/ServiceDescriptionGenerator.tsx
+src_disabled/TranslationManager.tsx
+src_disabled/UpdatePassword.tsx
+src_disabled/VideoCall.tsx
+styles/globals.css
+tailwind.config.js
+temp_disabled/ForumCategoryPage.tsx
+temp_disabled/ForumPostPage.tsx
+temp_disabled/Onboarding.tsx
+temp_disabled/ProfileDetail.tsx
+temp_disabled/ProfilePage.tsx
+temp_disabled/ServicesShowcase.tsx
+types.disabled/service-variants.ts
+vite.config.ts
+yarn.lock
+🔧 Resolving conflicts in next-env.d.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in out/404.html for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in out/404/index.html for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in out/_next/static/chunks/pages/_app-5810f0a972a88d88.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in out/_next/static/chunks/pages/_error-7a92967bea80186d.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in out/index.html for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in package-lock.json for branch cursor/add-and-advertise-new-services-then-build-4798...
+⚠️  Found conflicts in package-lock.json, resolving...
+📦 Critical file detected, keeping main version and merging dependencies...
+✅ Resolved conflicts in package-lock.json
+🔧 Resolving conflicts in package.json for branch cursor/add-and-advertise-new-services-then-build-4798...
+⚠️  Found conflicts in package.json, resolving...
+📦 Critical file detected, keeping main version and merging dependencies...
+✅ Resolved conflicts in package.json
+🔧 Resolving conflicts in pages/_app.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in pages/about.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in pages/contact.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in pages/ecommerce-returns-management.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in pages/index.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in pages/services.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in postcss.config.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/App.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/BenefitsSection.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/CategoriesSection.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ChatAssistant/ChatAssistant.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ChatAssistant/ChatInput.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ContactForm.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/EnhancedSEO.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ErrorBoundary.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/Footer.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/HeroSection.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/HowItWorksSection.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/LoadingSpinner.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/MobileNavigation.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/NewsletterSection.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/NotFound.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/Notification.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/PerformanceMonitor.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/PerformanceOptimizer.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ProductListingCard.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ProtectedRoute.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/SEO.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ScrollToTop.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ThemeProvider.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ThemeToggle.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/home/EnhancedQuickAccess.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/home/EnhancedSearchSection.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/home/FeatureCTAs.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/home/FeatureHighlights.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/home/ITServiceRequestHero.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/home/TestimonialsSection.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/LoadingSpinner.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/ScrollToTop.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/badge.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/button.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/input.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/loading-spinner.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/sonner.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/components/ui/toaster.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/context/WhitelabelContext.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/data/comprehensiveServices.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/data/enhancedServices.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/data/microSaasServices.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/hooks/index.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/hooks/useAuth.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/hooks/useScrollToTop.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/index.css for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/lib/utils.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/lib/utils.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/main.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/About.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/Blog.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/BlogPost.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/Contact.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/GreenIT.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/Home.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/MicroSaasServices.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/NotFound.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/pages/ServicesPage.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/routes.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/store/hooks.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/types/listings.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/types/listings.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src/types/ref-types.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/ProjectDetails.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/ProjectRoom.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/SavedTalentsPage.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/ServiceDescriptionGenerator.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/TranslationManager.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/UpdatePassword.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in src_disabled/VideoCall.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in styles/globals.css for branch cursor/add-and-advertise-new-services-then-build-4798...
+⚠️  Found conflicts in styles/globals.css, resolving...
+📝 Regular file, attempting to merge both versions...
+✅ Resolved conflicts in styles/globals.css
+🔧 Resolving conflicts in tailwind.config.js for branch cursor/add-and-advertise-new-services-then-build-4798...
+⚠️  Found conflicts in tailwind.config.js, resolving...
+📝 Regular file, attempting to merge both versions...
+✅ Resolved conflicts in tailwind.config.js
+🔧 Resolving conflicts in temp_disabled/ForumCategoryPage.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in temp_disabled/ForumPostPage.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in temp_disabled/Onboarding.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in temp_disabled/ProfileDetail.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in temp_disabled/ProfilePage.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in temp_disabled/ServicesShowcase.tsx for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in types.disabled/service-variants.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in vite.config.ts for branch cursor/add-and-advertise-new-services-then-build-4798...
+🔧 Resolving conflicts in yarn.lock for branch cursor/add-and-advertise-new-services-then-build-4798...
+⚠️  Found conflicts in yarn.lock, resolving...
+📝 Regular file, attempting to merge both versions...
+✅ Resolved conflicts in yarn.lock
