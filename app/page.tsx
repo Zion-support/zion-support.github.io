@@ -161,6 +161,13 @@ import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryP
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
 
+// AI 2025 Revolutionary Breakthrough Components
+import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+import AI2025RevolutionaryBreakthroughContentShowcase from '../components/AI2025RevolutionaryBreakthroughContentShowcase';
+
+// New 2026 Ultimate Content Components
+import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
+import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -176,6 +183,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER - FEATURED */}
+        <NewContent2026UltimatePromotionBanner />
+        
+        {/* NEW 2026 ULTIMATE CONTENT SHOWCASE - FEATURED */}
+        <NewContent2026UltimateShowcase />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2025RevolutionaryBreakthroughContentShowcase />
+        
         {/* AI 2040 ULTIMATE PROMOTION BANNER - ULTIMATE CONTENT */}
         <AI2040UltimatePromotionBanner />
         
