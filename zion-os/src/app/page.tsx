@@ -195,12 +195,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news/zion-os-1-3-agents-rag" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/ziongpt-core-v2" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🧠</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3: Agent Workflows + RAG</h3>
-                <p className="text-white/70">Autonomous workflows, built‑in RAG, and analytics dashboards.</p>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">ZionGPT Core v2</h3>
+                <p className="text-white/70">10x context windows, native Tools API, faster inference.</p>
               </div>
             </a>
             <a href="/news/case-study-resume-ai-38-percent-faster" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
