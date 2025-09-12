@@ -45,10 +45,43 @@ const NewContentPromoBanner = ({
       category: 'RAG'
     },
     {
+      id: '73',
+      title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
+      description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
+      href: '/blog/ai-2025-enterprise-retrieval-playbook',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: '71',
       title: 'AI Governance 2025: Policy-as-Code and Runtime Enforcement',
       description: 'From policy docs to enforced guardrails across datasets, prompts, tools, and agents.',
       href: '/blog/ai-2025-governance-policy-as-code',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '74',
+      title: 'Production Prompt Engineering 2025: Patterns that Scale',
+      description: 'Schema-first prompts, tool calling, retrieval orchestration, evals, and guardrails for reliability.',
+      href: '/blog/ai-2025-production-prompt-engineering',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Advanced AI'
+    },
+    {
+      id: '75',
+      title: 'AI Governance 2025: Operational Playbook for Enterprises',
+      description: 'Practical operating model: policies, evaluations, review boards, and runtime enforcement.',
+      href: '/blog/ai-2025-ai-governance-operational-playbook',
       type: 'blog',
       featured: true,
       readTime: '18 min read',
@@ -66,7 +99,6 @@ const NewContentPromoBanner = ({
       date: 'Sep 12, 2025',
       category: 'Agents'
     },
-    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
@@ -153,6 +185,28 @@ const NewContentPromoBanner = ({
       readTime: '14 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
+    },
+    {
+      id: '54',
+      title: 'Cloud Cost Optimization for AI & Data Workloads (2025)',
+      description: 'Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.',
+      href: '/blog/ai-2025-cloud-cost-optimization',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: '55',
+      title: 'Agent Safety Red-Teaming (2025): Methods & Tooling',
+      description: 'Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.',
+      href: '/blog/ai-2025-agent-safety-red-teaming',
+      type: 'blog',
+      featured: true,
+      readTime: '21 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
     },
     {
       id: '40',
@@ -527,6 +581,28 @@ const NewContentPromoBanner = ({
       readTime: '22 min read',
       date: 'Jan 18, 2025',
       category: 'AI Healthcare'
+    },
+    {
+      id: '9991',
+      title: 'LLM Inference Optimization on GPUs (2025)',
+      description: 'Quantization, KV cache strategies, smart batching, and parallelism to cut latency and cost.',
+      href: '/blog/ai-2025-llm-inference-optimization-gpus',
+      type: 'blog',
+      featured: true,
+      readTime: '15 min read',
+      date: 'Sep 12, 2025',
+      category: 'Inference'
+    },
+    {
+      id: '9992',
+      title: 'Serverless GenAI Architectures (2025)',
+      description: 'Event-driven GenAI with functions, queues, vector DBs, and eval guardrails on AWS/GCP/Azure.',
+      href: '/blog/ai-2025-serverless-genai-architectures',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Architecture'
     }
   ];
 

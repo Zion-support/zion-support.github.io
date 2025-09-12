@@ -26,6 +26,16 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "LLM Inference Optimization on GPUs (2025)",
+      description: "Quantization, KV cache, batching, and parallelism to cut latency and cost.",
+      href: "/blog/ai-2025-llm-inference-optimization-gpus",
+      icon: "🧠",
+      category: "Inference",
+      readTime: "15 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "AI Governance 2025: Policy-as-Code and Runtime Enforcement",
       description: "From policy docs to enforced guardrails across datasets, prompts, tools, and agents.",
       href: "/blog/ai-2025-governance-policy-as-code",
@@ -46,6 +56,16 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "Serverless GenAI Architectures (2025)",
+      description: "Event-driven GenAI with functions, queues, vector DBs, and eval guardrails.",
+      href: "/blog/ai-2025-serverless-genai-architectures",
+      icon: "☁️",
+      category: "Architecture",
+      readTime: "14 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Secure Agent Architectures (2025)",
       description: "Blueprint for secure agent architectures with policy-as-code, guardrails, and SLAs.",
       href: "/blog/ai-2025-secure-agent-architectures",
@@ -62,6 +82,26 @@ export default function ContentShowcase() {
       icon: "📈",
       category: "Case Study",
       readTime: "12 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Production Prompt Engineering 2025: Patterns that Scale",
+      description: "Structured prompting, tool calling, retrieval orchestration, evals, and guardrails for reliable, cost‑aware AI.",
+      href: "/blog/ai-2025-production-prompt-engineering",
+      icon: "🧠",
+      category: "Advanced AI",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Governance 2025: Operational Playbook for Enterprises",
+      description: "Decision rights, policy libraries, eval pipelines, and runtime guardrails that fit your SDLC.",
+      href: "/blog/ai-2025-ai-governance-operational-playbook",
+      icon: "🛡️",
+      category: "Governance",
+      readTime: "18 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -284,6 +324,26 @@ export default function ContentShowcase() {
       readTime: "24 min read",
       date: "Sep 12, 2025",
       featured: false
+    },
+    {
+      title: "Cloud Cost Optimization for AI & Data Workloads (2025)",
+      description: "Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.",
+      href: "/blog/ai-2025-cloud-cost-optimization",
+      icon: "💸",
+      category: "Optimization",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Safety Red-Teaming (2025): Methods & Tooling",
+      description: "Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.",
+      href: "/blog/ai-2025-agent-safety-red-teaming",
+      icon: "🛡️",
+      category: "AI Safety",
+      readTime: "21 min read",
+      date: "Sep 12, 2025",
+      featured: true
     },
     {
       title: "AI Ethics and Responsible Development: A Framework",
