@@ -1,39 +1,29 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Track initial page load
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Page loaded
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(registration => {
+        // eslint-disable-next-line no-console
+        console.log('SW registered: ', registration);
+      })
+      .catch(registrationError => {
+        // eslint-disable-next-line no-console
+        console.log('SW registration failed: ', registrationError);
+      });
   });
-
-  // Track Core Web Vitals
-  if ('web-vitals' in window) {
-    import('web-vitals').then((vitals) => {
-      if (vitals.onCLS) vitals.onCLS(() => {});
-      if (vitals.onINP) vitals.onINP(() => {}); // INP replaces FID
-      if (vitals.onFCP) vitals.onFCP(() => {});
-      if (vitals.onLCP) vitals.onLCP(() => {});
-      if (vitals.onTTFB) vitals.onTTFB(() => {});
-    });
-  }
 }
 
-const rootElement = document.getElementById('root');
-
-if (rootElement) {
-  const root = createRoot(rootElement);
-  
-  const app = (
-    <React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <BrowserRouter>
       <App />
-    </React.StrictMode>
-  );
-
-  root.render(app);
-} else {
-  // console.error('Root element not found');
-}
+    </BrowserRouter>
+  </React.StrictMode>
+);

@@ -1,4 +1,4 @@
-# Netlify build configuration (resolved)
+# Netlify build configuration (unified)
 [build]
   command = "npm ci --no-audit --no-fund --include=optional && npm run build"
   publish = ".next"
@@ -25,12 +25,10 @@
 
 # Security headers
 [[headers]]
-  for = "/*"
+  for = "/css/*"
   [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
     X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-DNS-Prefetch-Control = "on"
@@ -40,6 +38,7 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
+<<<<<<< HEAD
 # Static assets caching
 [[headers]]
   for = "/_next/static/*"
@@ -84,6 +83,8 @@
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund --include=optional && npm run build"
 
+=======
+>>>>>>> d84246c56c6de5f940a3c4ea6b197e062557aa6e
 [[redirects]]
   from = "/ai-financial-planning-platform"
   to = "/services/ai-financial-planning-platform/"

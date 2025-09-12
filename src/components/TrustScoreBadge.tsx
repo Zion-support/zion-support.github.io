@@ -1,4 +1,0 @@
-import React from "react"; interface TrustScoreBadgeProps { score: number | null | undefined; tooltipText?: string;   } const TrustScoreBadge: React.FC<TrustScoreBadgeProps> = ({ score, tooltipText }) => { const _displayScore = score !== null && score !== undefined ? score : "N/A"; const _defaultTooltip = score !== null && score !== undefined ? "Detailed analysis: ${tooltipText || "No analysis available"}" : "Trust score not yet calculated."; const _getScoreColor = () => { if(score === null || score === undefined) return "text-gray-500"; if(score > 85) return "text-green-600"; if(score > 70) return "text-yellow-600"; return "text-red-600"; }; return ( <div className="trust-score-badge p-2 border rounded-md shadow-sm bg-white inline-block" title={tooltipText || defaultTooltip}
-
-
-export default Component

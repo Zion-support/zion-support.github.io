@@ -1,4 +1,4 @@
-import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
@@ -9,7 +9,6 @@ export default defineConfig({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
     }),
-    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
@@ -106,9 +105,9 @@ export default defineConfig({
     exclude: ['@radix-ui/react-icons']
   },
   server: {
-    port: 3000,
+    port: Number(process.env.PORT) || 3000,
     host: true,
-    open: true,
+    open: false,
     cors: true,
     hmr: {
       overlay: false,
@@ -121,7 +120,7 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.js'
+    postcss: './postcss.config.cjs'
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),

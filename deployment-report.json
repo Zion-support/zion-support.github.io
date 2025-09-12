@@ -1,48 +1,45 @@
 {
-  "timestamp": "2025-09-03T13:59:38.581Z",
-  "deploymentStatus": {
-    "preDeploymentChecks": [
-      {
-        "name": "Dependencies",
-        "success": true
-      },
-      {
-        "name": "Linting",
-        "success": false,
-        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      },
-      {
-        "name": "Type Check",
-        "success": false,
-        "error": "spawnSync /bin/sh ENOBUFS"
-      },
-      {
-        "name": "Build",
-        "success": false,
-        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nerror - ESLint: Cannot read config file: /workspace/.eslintrc.js Error: module is not defined\nFailed to compile.\n\n./components/AccessibilityEnhancer.tsx:82:73\nType error: Expression expected.\n\n\u001b[0m \u001b[90m 80 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 81 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"flex gap-1\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 | \u001b[39m            {[\u001b[32m'small'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'normal'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'large'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'extra-large'\u001b[39m]\u001b[33m.\u001b[39mmap((size) \u001b[33m=>\u001b[39m (\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 | \u001b[39m              \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 | \u001b[39m                key\u001b[33m=\u001b[39m{size}\u001b[0m\n\u001b[0m \u001b[90m 85 | \u001b[39m                onClick\u001b[33m=\u001b[39m{() \u001b[33m=>\u001b[39m changeFontSize(size)}\u001b[0m\n"
-      }
-    ],
-    "buildStatus": null,
-    "testStatus": null,
-    "deploymentReady": false,
-    "errors": [
-      "Linting: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
-      "Type Check: spawnSync /bin/sh ENOBUFS",
-      "Build: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nerror - ESLint: Cannot read config file: /workspace/.eslintrc.js Error: module is not defined\nFailed to compile.\n\n./components/AccessibilityEnhancer.tsx:82:73\nType error: Expression expected.\n\n\u001b[0m \u001b[90m 80 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 81 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"flex gap-1\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 | \u001b[39m            {[\u001b[32m'small'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'normal'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'large'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'extra-large'\u001b[39m]\u001b[33m.\u001b[39mmap((size) \u001b[33m=>\u001b[39m (\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 | \u001b[39m              \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 | \u001b[39m                key\u001b[33m=\u001b[39m{size}\u001b[0m\n\u001b[0m \u001b[90m 85 | \u001b[39m                onClick\u001b[33m=\u001b[39m{() \u001b[33m=>\u001b[39m changeFontSize(size)}\u001b[0m\n"
-    ]
-  },
+  "timestamp": "2025-07-17T17:35:19.614Z",
+  "version": "0.0.0",
+  "environment": "production",
+  "optimizations": [],
+  "bundleSize": 0,
+  "bundleSizeFormatted": "0 Bytes",
+  "warnings": [],
   "recommendations": [
-    "Set up automated testing in CI/CD pipeline",
-    "Implement blue-green deployment strategy",
-    "Add monitoring and alerting for production",
-    "Set up automated rollback mechanisms",
-    "Implement security scanning in deployment pipeline"
+    {
+      "type": "monitoring",
+      "priority": "medium",
+      "title": "Setup production monitoring",
+      "description": "Enable performance monitoring in production.",
+      "action": "Configure Sentry alerts and performance budgets"
+    }
   ],
-  "nextSteps": [
-    "Review and customize deployment scripts",
-    "Set up production environment variables",
-    "Configure monitoring and logging",
-    "Test deployment in staging environment",
-    "Schedule production deployment"
+  "deploymentChecklist": [
+    {
+      "item": "Environment variables configured",
+      "status": "pending",
+      "required": true
+    },
+    {
+      "item": "Production build successful",
+      "status": "complete",
+      "required": true
+    },
+    {
+      "item": "Bundle size optimized",
+      "status": "complete",
+      "required": false
+    },
+    {
+      "item": "Security audit passed",
+      "status": "complete",
+      "required": false
+    },
+    {
+      "item": "Performance monitoring ready",
+      "status": "manual-check",
+      "required": false
+    }
   ]
 }
