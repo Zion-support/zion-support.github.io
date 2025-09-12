@@ -25,15 +25,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
+                🎉 Revolutionary AI Content: Quantum Computing, Cybersecurity & Logistics Success Stories!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
-                Sustainability Success Stories, plus comprehensive implementation guides and free resources. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                Just released: AI Quantum Computing Breakthrough, Cybersecurity Revolution, Global Logistics $300M Success Case Study, 
+                plus our comprehensive 200+ page AI Implementation Master Guide. Get expert insights on the technologies 
+                transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -43,54 +43,54 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read Latest Article
+                  Read Quantum AI Article
                 </Link>
                 <Link
-                  href="/resources"
+                  href="/resources/ai-implementation-master-guide-2025"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Download Free Resources
+                  Download Master Guide
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Autonomous Systems Promotion Banner */}
+        {/* Global Logistics Success Banner */}
         <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🤖 AUTONOMOUS SYSTEMS BREAKTHROUGH</span>
+                <span className="text-sm font-medium">🚛 GLOBAL LOGISTICS SUCCESS</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                💰 $200M Manufacturing Success: Autonomous AI Systems Case Study!
+                💰 $300M Savings & 400% ROI: Global Logistics AI Transformation Case Study!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover how Fortune 500 companies are achieving unprecedented results with autonomous AI systems. 
-                Read our new case study showing $200M savings and download our free implementation guide with ROI calculators.
+                Discover how a Fortune 500 logistics company achieved $300M in annual savings and 400% ROI through 
+                comprehensive AI transformation. Complete case study with implementation details, challenges, and results.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  href="/case-studies/ai-transformation-global-logistics-2025"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   View Case Study
                 </Link>
                 <Link
-                  href="/resources/autonomous-systems-implementation-guide"
+                  href="/resources/ai-implementation-master-guide-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Free Implementation Guide
+                  Download Master Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Read Latest Article
+                  Read Quantum AI Article
                 </Link>
               </div>
             </div>
