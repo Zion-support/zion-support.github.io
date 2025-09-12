@@ -123,6 +123,13 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
+// New AI 2035-2036 Revolutionary Content Components
+import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
+import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
+import AI2036FuturePredictionsPromotionBanner from '../components/AI2036FuturePredictionsPromotionBanner';
+import QuantumComputing2035BreakthroughShowcase from '../components/QuantumComputing2035BreakthroughShowcase';
+import NeuralInterface2035RevolutionaryBanner from '../components/NeuralInterface2035RevolutionaryBanner';
+
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
@@ -143,6 +150,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2036 FUTURE PREDICTIONS PROMOTION BANNER */}
+        <AI2036FuturePredictionsPromotionBanner />
+        
+        {/* NEURAL INTERFACE 2035 REVOLUTIONARY BANNER */}
+        <NeuralInterface2035RevolutionaryBanner />
+        
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2035BreakthroughContentShowcase />
+        
+        {/* QUANTUM COMPUTING 2035 BREAKTHROUGH SHOWCASE */}
+        <QuantumComputing2035BreakthroughShowcase />
+        
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
