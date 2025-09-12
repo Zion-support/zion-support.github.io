@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'B-plat-2025',
+      title: 'AI Platform Engineering Blueprint 2025',
+      description: 'Governance, evals, routing, observability, and cost controls for enterprise AI platforms.',
+      href: '/blog/ai-2025-ai-platform-engineering-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platforms'
+    },
+    {
+      id: 'CS-c360-2025',
+      title: 'Customer 360 AI Platform: 23% Cross-Sell Lift',
+      description: 'Case study: Unified profiles, uplift modeling, and guardrailed copilots lifted cross-sell by 23%.',
+      href: '/case-studies/ai-2025-customer-360-platform-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '11 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: 'CS-llm-cost-2025',
       title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
       description: 'Case study: Quantization, KV cache, and batching cut cost by 38% and p95 by 27%.',
