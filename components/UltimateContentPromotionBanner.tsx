@@ -1,127 +1,303 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Sparkles, 
+  Zap, 
+  Rocket, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Globe, 
+  Code, 
+  Database, 
+  Cpu,
+  TrendingUp,
+  Users,
+  Award,
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  Share2,
+  Heart,
+  Bookmark,
+  Clock,
+  Eye,
+  MessageCircle,
+  X,
+  ChevronRight,
+  ChevronLeft,
+  ExternalLink,
+  CheckCircle,
+  Lightbulb,
+  Target,
+  BarChart3
+} from 'lucide-react';
 import Link from 'next/link';
-import { Button } from './ui/Button';
-import { Badge } from './ui/Badge';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award } from 'lucide-react';
 
-const UltimateContentPromotionBanner: React.FC = () => {
+const UltimateContentPromotionBanner = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [autoSlide, setAutoSlide] = useState(true);
+
+  const promotionalContent = [
+    {
+      id: 1,
+      title: "🚀 Revolutionary AI Automation Suite",
+      subtitle: "Transform Your Business Operations",
+      description: "Cut operational costs by 40-60% and boost productivity by 300% with our AI-powered automation platform. ROI guaranteed within 3 months!",
+      features: [
+        "Intelligent workflow automation",
+        "Natural language processing",
+        "Predictive analytics",
+        "Real-time optimization"
+      ],
+      cta: "Start Free Trial",
+      ctaSecondary: "Watch Demo",
+      badge: "Most Popular",
+      badgeColor: "bg-gradient-to-r from-yellow-400 to-orange-500",
+      gradient: "from-blue-600 via-purple-600 to-pink-600",
+      icon: Brain,
+      stats: { savings: "40-60%", productivity: "300%", roi: "3 months" }
+    },
+    {
+      id: 2,
+      title: "🛡️ Advanced Cybersecurity Platform",
+      subtitle: "Protect Your Digital Assets",
+      description: "Next-generation threat detection that identifies and neutralizes threats 90% faster with 70% fewer false positives. Enterprise-grade security.",
+      features: [
+        "AI-powered threat hunting",
+        "Behavioral analysis",
+        "Zero-day detection",
+        "Automated response"
+      ],
+      cta: "Get Security Audit",
+      ctaSecondary: "View Features",
+      badge: "Enterprise Grade",
+      badgeColor: "bg-gradient-to-r from-red-400 to-pink-500",
+      gradient: "from-red-600 via-orange-600 to-yellow-600",
+      icon: Shield,
+      stats: { detection: "90% faster", accuracy: "95%", monitoring: "24/7" }
+    },
+    {
+      id: 3,
+      title: "☁️ Cloud Infrastructure Automation",
+      subtitle: "Scale Without Limits",
+      description: "Complete cloud management solution that reduces infrastructure costs by 40% and enables 10x faster deployments with automated scaling.",
+      features: [
+        "Infrastructure as Code",
+        "Auto-scaling capabilities",
+        "Cost optimization",
+        "Disaster recovery"
+      ],
+      cta: "Deploy Now",
+      ctaSecondary: "Calculate Savings",
+      badge: "Cloud Native",
+      badgeColor: "bg-gradient-to-r from-blue-400 to-cyan-500",
+      gradient: "from-blue-600 via-cyan-600 to-teal-600",
+      icon: Cloud,
+      stats: { savings: "40%", deployment: "10x faster", uptime: "99.9%" }
+    },
+    {
+      id: 4,
+      title: "⚛️ Quantum Computing Solutions",
+      subtitle: "Future of Computing Today",
+      description: "Revolutionary quantum algorithms for solving complex optimization problems with quantum advantage. Access the next generation of computing.",
+      features: [
+        "Quantum circuit design",
+        "Algorithm optimization",
+        "Cryptography solutions",
+        "Research collaboration"
+      ],
+      cta: "Explore Quantum",
+      ctaSecondary: "Learn More",
+      badge: "Next Gen",
+      badgeColor: "bg-gradient-to-r from-yellow-400 to-orange-500",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      icon: Zap,
+      stats: { advantage: "Quantum", problems: "Complex", future: "Proof" }
+    }
+  ];
+
+  useEffect(() => {
+    if (autoSlide) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
+      }, 8000);
+      return () => clearInterval(interval);
+    }
+  }, [autoSlide, promotionalContent.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
+    setAutoSlide(false);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + promotionalContent.length) % promotionalContent.length);
+    setAutoSlide(false);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setAutoSlide(false);
+  };
+
+  if (!isVisible) return null;
+
+  const currentContent = promotionalContent[currentSlide];
+
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white opacity-10 rounded-full animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-white opacity-10 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-32 w-24 h-24 bg-white opacity-10 rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-32 right-10 w-12 h-12 bg-white opacity-10 rounded-full animate-pulse delay-3000"></div>
-        </div>
-      </div>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 text-white overflow-hidden"
+        >
+          {/* Background Effects */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Header Badge */}
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <Zap className="w-4 h-4 mr-2 text-yellow-300" />
-            <span className="text-sm font-medium">🔥 ULTIMATE CONTENT DROP - JANUARY 2026</span>
+          {/* Close Button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="absolute top-4 right-4 z-20 p-2 hover:bg-white/10 rounded-full transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          <div className="relative z-10 container mx-auto px-6 py-8">
+            <div className="flex items-center justify-between">
+              {/* Content */}
+              <div className="flex-1 max-w-4xl">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSlide}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.5 }}
+                    className="space-y-4"
+                  >
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2">
+                      <span className={`px-3 py-1 ${currentContent.badgeColor} text-white text-sm font-bold rounded-full`}>
+                        {currentContent.badge}
+                      </span>
+                      <div className="flex items-center gap-1">
+                        <Sparkles className="w-4 h-4 text-yellow-400" />
+                        <span className="text-sm text-blue-200">Limited Time Offer</span>
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                      {currentContent.title}
+                    </h2>
+
+                    {/* Subtitle */}
+                    <h3 className="text-xl text-blue-200 font-semibold">
+                      {currentContent.subtitle}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-lg text-blue-100 leading-relaxed max-w-2xl">
+                      {currentContent.description}
+                    </p>
+
+                    {/* Features */}
+                    <div className="flex flex-wrap gap-4">
+                      {currentContent.features.slice(0, 3).map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-blue-200">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Stats */}
+                    <div className="flex flex-wrap gap-6">
+                      {Object.entries(currentContent.stats).map(([key, value], index) => (
+                        <div key={index} className="text-center">
+                          <div className="text-2xl font-bold text-white">{value}</div>
+                          <div className="text-sm text-blue-200 capitalize">{key}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-wrap gap-4 pt-2">
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`px-8 py-3 bg-gradient-to-r ${currentContent.gradient} text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2`}
+                      >
+                        {currentContent.cta}
+                        <ArrowRight className="w-4 h-4" />
+                      </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20"
+                      >
+                        <Play className="w-4 h-4" />
+                        {currentContent.ctaSecondary}
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Navigation */}
+              <div className="flex items-center gap-4 ml-8">
+                {/* Previous Button */}
+                <button
+                  onClick={prevSlide}
+                  className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="flex gap-2">
+                  {promotionalContent.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/40'
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Next Button */}
+                <button
+                  onClick={nextSlide}
+                  className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            🚀 The Most Revolutionary AI Content Collection Ever Created
-          </h1>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
-            Discover our groundbreaking collection of AI resources, breakthrough technologies, and implementation guides. 
-            Everything you need to master artificial intelligence and transform your business in 2026.
-          </p>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl md:text-3xl font-bold text-yellow-300">100K+</div>
-              <div className="text-sm opacity-80">Total Views</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl md:text-3xl font-bold text-green-300">4.9★</div>
-              <div className="text-sm opacity-80">Average Rating</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl md:text-3xl font-bold text-purple-300">50+</div>
-              <div className="text-sm opacity-80">Premium Resources</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl md:text-3xl font-bold text-pink-300">24/7</div>
-              <div className="text-sm opacity-80">Expert Support</div>
-            </div>
+          {/* Progress Bar */}
+          <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <motion.div
+              className="h-full bg-white/30"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 8, ease: "linear" }}
+              key={currentSlide}
+            />
           </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button asChild size="lg" className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg">
-              <Link href="/ultimate-content-showcase-2026">
-                <Star className="w-5 h-5 mr-2" />
-                Explore Ultimate Content
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 text-lg font-semibold">
-              <Link href="/ai-mastery-academy-2026">
-                <TrendingUp className="w-5 h-5 mr-2" />
-                Join AI Mastery Academy
-              </Link>
-            </Button>
-          </div>
-
-          {/* Featured Content Preview */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
-              <div className="text-4xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold mb-2">AI Revolution 2026</h3>
-              <p className="text-sm opacity-80 mb-3">Complete transformation guide with breakthrough technologies</p>
-              <Badge variant="secondary" className="bg-yellow-400/20 text-yellow-300 border-yellow-300">
-                <Award className="w-3 h-3 mr-1" />
-                Featured
-              </Badge>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
-              <div className="text-4xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold mb-2">Quantum AI Breakthrough</h3>
-              <p className="text-sm opacity-80 mb-3">Next-gen computing convergence with AI</p>
-              <Badge variant="secondary" className="bg-green-400/20 text-green-300 border-green-300">
-                <Zap className="w-3 h-3 mr-1" />
-                New
-              </Badge>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
-              <div className="text-4xl mb-3">🤖</div>
-              <h3 className="text-lg font-bold mb-2">Autonomous AI Systems</h3>
-              <p className="text-sm opacity-80 mb-3">Self-evolving technology without human intervention</p>
-              <Badge variant="secondary" className="bg-purple-400/20 text-purple-300 border-purple-300">
-                <Users className="w-3 h-3 mr-1" />
-                Trending
-              </Badge>
-            </div>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-12 pt-8 border-t border-white/20">
-            <p className="text-sm opacity-70 mb-4">
-              Trusted by 10,000+ professionals worldwide
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm opacity-70">
-              <span>✓ Enterprise Grade Security</span>
-              <span>✓ 99.9% Uptime Guarantee</span>
-              <span>✓ Expert Support</span>
-              <span>✓ Regular Updates</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
