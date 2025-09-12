@@ -46,6 +46,34 @@ const featuredContent: ContentItem[] = [
     isNew: true,
     icon: "🛍️",
     stats: "$2.5B revenue increase"
+    title: "AI Enterprise Readiness 2025: Complete Implementation Guide",
+    description: "Master AI enterprise readiness with our comprehensive 2025 guide. Learn proven strategies, frameworks, and best practices for successful AI transformation at scale.",
+    href: "/blog/ai-2025-enterprise-readiness-comprehensive-guide",
+    category: "Enterprise AI",
+    readTime: "25 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "500+ enterprises using this"
+  },
+  {
+    title: "AI Multimodal Revolution 2025: Comprehensive Market Analysis",
+    description: "Explore the AI multimodal revolution transforming industries in 2025. Discover breakthrough technologies, market opportunities, and implementation strategies for multimodal AI systems.",
+    href: "/blog/ai-2025-multimodal-revolution-comprehensive-analysis",
+    category: "AI Revolution",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "🧠",
+    stats: "$180B market value"
+  },
+  {
+    title: "AI Transformation: Global Retail Giant Achieves $2.3B Revenue Growth",
+    description: "Discover how a Fortune 500 retail giant achieved $2.3B revenue growth and 45% operational efficiency through comprehensive AI transformation. Real results, proven strategies.",
+    href: "/case-studies/ai-transformation-retail-giant-success-2025",
+    category: "Case Study",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "🏪",
+    stats: "$2.3B revenue growth"
   },
   {
     title: "AI Business Automation 2025: Complete Implementation Guide",
@@ -99,6 +127,10 @@ const trendingContent: ContentItem[] = [
     description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
     href: "/blog/ai-2025-revolutionary-breakthroughs",
     category: "AI Innovation",
+    title: "AI Multimodal Revolution 2025: Comprehensive Market Analysis",
+    description: "Explore the AI multimodal revolution transforming industries in 2025. Discover breakthrough technologies, market opportunities, and implementation strategies for multimodal AI systems.",
+    href: "/blog/ai-2025-multimodal-revolution-comprehensive-analysis",
+    category: "AI Revolution",
     readTime: "18 min read",
     isTrending: true,
     icon: "🧠",
@@ -136,6 +168,24 @@ const trendingContent: ContentItem[] = [
     icon: "🛍️",
     stats: "$200M revenue boost"
     stats: "$2.5B revenue increase"
+    title: "AI Enterprise Readiness 2025: Complete Implementation Guide",
+    description: "Master AI enterprise readiness with our comprehensive 2025 guide. Learn proven strategies, frameworks, and best practices for successful AI transformation at scale.",
+    href: "/blog/ai-2025-enterprise-readiness-comprehensive-guide",
+    category: "Enterprise AI",
+    readTime: "25 min read",
+    isTrending: true,
+    icon: "🏢",
+    stats: "500+ enterprises using this"
+  },
+  {
+    title: "AI Transformation: Global Retail Giant Achieves $2.3B Revenue Growth",
+    description: "Discover how a Fortune 500 retail giant achieved $2.3B revenue growth and 45% operational efficiency through comprehensive AI transformation. Real results, proven strategies.",
+    href: "/case-studies/ai-transformation-retail-giant-success-2025",
+    category: "Case Study",
+    readTime: "15 min read",
+    isTrending: true,
+    icon: "🏪",
+    stats: "$2.3B revenue growth"
   }
 ];
 
@@ -179,6 +229,44 @@ const latestContent: ContentItem[] = [
     isNew: true,
     icon: "🏥",
     stats: "95% accuracy achieved"
+    title: "AI Enterprise Readiness 2025: Complete Implementation Guide",
+    description: "Master AI enterprise readiness with our comprehensive 2025 guide. Learn proven strategies, frameworks, and best practices for successful AI transformation at scale.",
+    href: "/blog/ai-2025-enterprise-readiness-comprehensive-guide",
+    category: "Enterprise AI",
+    readTime: "25 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "500+ enterprises using this"
+  },
+  {
+    title: "AI Multimodal Revolution 2025: Comprehensive Market Analysis",
+    description: "Explore the AI multimodal revolution transforming industries in 2025. Discover breakthrough technologies, market opportunities, and implementation strategies for multimodal AI systems.",
+    href: "/blog/ai-2025-multimodal-revolution-comprehensive-analysis",
+    category: "AI Revolution",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "🧠",
+    stats: "$180B market value"
+  },
+  {
+    title: "AI Transformation: Global Retail Giant Achieves $2.3B Revenue Growth",
+    description: "Discover how a Fortune 500 retail giant achieved $2.3B revenue growth and 45% operational efficiency through comprehensive AI transformation. Real results, proven strategies.",
+    href: "/case-studies/ai-transformation-retail-giant-success-2025",
+    category: "Case Study",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "🏪",
+    stats: "$2.3B revenue growth"
+  },
+  {
+    title: "AI Productivity Automation 2025: Complete Implementation Guide",
+    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
+    href: "/blog/ai-productivity-automation-2025",
+    category: "Productivity",
+    readTime: "12 min read",
+    isNew: true,
+    icon: "🚀",
+    stats: "40% productivity boost"
   }
 ];
 
