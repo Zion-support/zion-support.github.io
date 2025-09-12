@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-08-17T21:08:42.421Z",
-=======
   "timestamp": "2025-08-17T21:20:36.000Z",
 >>>>>>> origin/content/blog-sept12
   "systems": {
@@ -17,27 +14,18 @@
     },
     "resource-optimization": {
       "success": true,
-<<<<<<< HEAD
-      "duration": 153,
-=======
       "duration": 124,
 >>>>>>> origin/content/blog-sept12
       "error": null
     },
     "smart-dispatch": {
       "success": true,
-<<<<<<< HEAD
-      "duration": 8873,
-=======
       "duration": 8370,
 >>>>>>> origin/content/blog-sept12
       "error": null
     },
     "retry-system": {
       "success": true,
-<<<<<<< HEAD
-      "duration": 87,
-=======
       "duration": 77,
 >>>>>>> origin/content/blog-sept12
       "error": null
@@ -47,9 +35,6 @@
     "total": 5,
     "success": 4,
     "failed": 1,
-<<<<<<< HEAD
-    "totalDuration": 9205
-=======
     "totalDuration": 8663
 >>>>>>> origin/content/blog-sept12
   }

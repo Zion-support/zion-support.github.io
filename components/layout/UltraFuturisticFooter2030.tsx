@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const UltraFuturisticFooter2030: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticFooter2030 temporarily disabled</div>;
-=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -21,5 +15,4 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 >>>>>>> origin/content/blog-sept12
 };
-
 export default UltraFuturisticFooter2030;

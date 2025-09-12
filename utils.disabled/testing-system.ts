@@ -4,13 +4,6 @@ export class TestingSystem {
       case 'click':
         element.click();
         break;
-<<<<<<< HEAD:utils.disabled/testing-system.ts
-      case 'type':
-        // Implement typing behavior in tests as needed
-        break;
-      case 'hover':
-        // Implement hover behavior in tests as needed
-=======
       case 'type': // Handle typing
         break;
       case 'hover': // Handle hover

@@ -17,15 +17,6 @@ export class NavigationGenerator {
 
   // Auto-discover services from data and generate navigation
   async discoverServices(): Promise<NavigationItem[]> {
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-    // This would typically scan a services directory or API
-    // For now, using the services from the website analysis
-    this.services = [
-      {
-        id: 'ai-analytics',
-        label: 'AI-Powered Data Analytics Platform',
-        href: '/demo/analytics/',
-=======
     // Comprehensive services list based on website analysis
     this.services = [
       // AI & Machine Learning Services
@@ -48,142 +39,6 @@ export class NavigationGenerator {
         priority: 1
       },
       {
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-        id: 'support-bot',
-        label: 'Intelligent Customer Support Bot',
-        href: '/demo/support-bot/',
-        category: 'AI & Machine Learning',
-        status: 'active',
-        description: 'AI-powered chatbot with natural language processing',
-        technologyStack: ['Python', 'NLP', 'React', 'FastAPI'],
-        pricing: '$0.10/conversation',
-        performance: {
-          uptime: '99.8%',
-          response: '<100ms',
-          users: '50,000+'
-        },
-        lastUpdated: '2025-01-14',
-        priority: 2
-      },
-      {
-        id: 'predictive-maintenance',
-        label: 'Predictive Maintenance System',
-        href: '/demo/predictive-maintenance/',
-        category: 'AI & Machine Learning',
-        status: 'active',
-        description: 'AI-driven predictive maintenance system',
-        technologyStack: ['Python', 'Scikit-learn', 'React', 'PostgreSQL'],
-        pricing: '$50/equipment/month',
-        performance: {
-          uptime: '99.9%',
-          response: '<300ms',
-          users: '15,000+'
-        },
-        lastUpdated: '2025-01-08',
-        priority: 3
-      },
-      {
-        id: 'video-analytics',
-        label: 'Real-time Video Analytics',
-        href: '/demo/video-analytics/',
-        category: 'AI & Machine Learning',
-        status: 'beta',
-        description: 'Advanced video analytics with real-time object detection',
-        technologyStack: ['Python', 'OpenCV', 'TensorFlow', 'WebRTC'],
-        pricing: '$25/stream/month',
-        performance: {
-          uptime: '99.7%',
-          response: '<500ms',
-          users: '8,000+'
-        },
-        lastUpdated: '2025-01-07',
-        priority: 4
-      },
-      {
-        id: 'iot-pipeline',
-        label: 'Real-time IoT Data Pipeline',
-        href: '/demo/iot-pipeline/',
-        category: 'IoT & Edge',
-        status: 'beta',
-        description: 'High-performance data pipeline for IoT sensor data',
-        technologyStack: ['Apache Kafka', 'Python', 'Node.js', 'MongoDB'],
-        pricing: '$5/device/month',
-        performance: {
-          uptime: '99.7%',
-          response: '<50ms',
-          users: '5,000+'
-        },
-        lastUpdated: '2025-01-13',
-        priority: 5
-      },
-      {
-        id: 'edge-orchestrator',
-        label: 'Edge Computing Orchestrator',
-        href: '/demo/edge-orchestrator/',
-        category: 'IoT & Edge',
-        status: 'development',
-        description: 'Intelligent edge computing platform',
-        technologyStack: ['Kubernetes', 'Docker', 'Python', 'Go'],
-        pricing: '$20/node/month',
-        performance: {
-          uptime: '99.8%',
-          response: '<200ms',
-          users: '3,000+'
-        },
-        lastUpdated: '2025-01-09',
-        priority: 6
-      },
-      {
-        id: 'blockchain',
-        label: 'Blockchain Smart Contract Platform',
-        href: '/demo/blockchain/',
-        category: 'Blockchain',
-        status: 'development',
-        description: 'Enterprise-grade blockchain platform',
-        technologyStack: ['Ethereum', 'Solidity', 'Web3.js', 'React'],
-        pricing: '$0.01/transaction',
-        performance: {
-          uptime: '99.5%',
-          response: '<500ms',
-          users: '2,000+'
-        },
-        lastUpdated: '2025-01-12',
-        priority: 7
-      },
-      {
-        id: 'quantum',
-        label: 'Quantum Computing Simulator',
-        href: '/demo/quantum/',
-        category: 'Quantum Computing',
-        status: 'beta',
-        description: 'Advanced quantum computing simulator',
-        technologyStack: ['Python', 'Qiskit', 'React', 'WebAssembly'],
-        pricing: '$0.50/minute',
-        performance: {
-          uptime: '99.6%',
-          response: '<1s',
-          users: '1,000+'
-        },
-        lastUpdated: '2025-01-11',
-        priority: 8
-      },
-      {
-        id: 'api-gateway',
-        label: 'Microservice API Gateway',
-        href: '/demo/api-gateway/',
-        category: 'Microservices',
-        status: 'active',
-        description: 'High-performance API gateway for microservices',
-        technologyStack: ['Node.js', 'Express', 'Redis', 'Docker'],
-        pricing: '$0.001/request',
-        performance: {
-          uptime: '99.9%',
-          response: '<100ms',
-          users: '25,000+'
-        },
-        lastUpdated: '2025-01-10',
-        priority: 9
-=======
         id: 'ai-autonomous-business-manager',
         label: 'AI Autonomous Business Manager',
         href: '/services/ai-autonomous-business-manager',
@@ -609,9 +464,6 @@ export class NavigationGenerator {
     return this.services;
   }
 
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-  // Auto-discover pages from the pages directory
-=======
   // Discover and generate pages
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
   async discoverPages(): Promise<NavigationItem[]> {
@@ -623,11 +475,6 @@ export class NavigationGenerator {
         priority: 1
       },
       {
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-        id: 'explore',
-        label: 'Explore',
-        href: '/explore',
-=======
         id: 'about',
         label: 'About Us',
         href: '/about',
@@ -641,48 +488,6 @@ export class NavigationGenerator {
         priority: 3
       },
       {
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-        id: 'automation',
-        label: 'Automations',
-        href: '/automation',
-        priority: 4
-      },
-      {
-        id: 'reports',
-        label: 'Reports',
-        href: '/reports',
-        priority: 5
-      },
-      {
-        id: 'newsroom',
-        label: 'Updates',
-        href: '/newsroom',
-        priority: 6
-      },
-      {
-        id: 'search',
-        label: 'Search',
-        href: '/search',
-        priority: 7
-      },
-      {
-        id: 'dashboard',
-        label: 'Dashboard',
-        href: '/dashboard',
-        priority: 8
-      },
-      {
-        id: 'system-status',
-        label: 'System Status',
-        href: '/system-status',
-        priority: 9
-      },
-      {
-        id: 'contact',
-        label: 'Contact',
-        href: '/contact',
-        priority: 10
-=======
         id: 'solutions',
         label: 'Solutions',
         href: '/solutions',
@@ -802,9 +607,6 @@ export class NavigationGenerator {
     return this.pages;
   }
 
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-  // Auto-generate category-based navigation
-=======
   // Generate categories from services
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
   async generateCategories(): Promise<NavigationCategory[]> {
@@ -820,46 +622,12 @@ export class NavigationGenerator {
       }
     });
 
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-    // Generate category objects
-=======
     // Create category objects
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
       id: name.toLowerCase().replace(/\s+/g, '-'),
       name,
       slug: name.toLowerCase().replace(/\s+/g, '-'),
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-      description: `${name} solutions and services`,
-      serviceCount: services.length,
-      icon: this.getCategoryIcon(name),
-      color: this.getCategoryColor(name)
-    }));
-
-    return this.categories;
-  }
-
-  private getCategoryIcon(category: string): string {
-    const iconMap: Record<string, string> = {
-      'AI & Machine Learning': '🤖',
-      'IoT & Edge': '🌐',
-      'Blockchain': '⛓️',
-      'Quantum Computing': '⚛️',
-      'Microservices': '🔧'
-    };
-    return iconMap[category] || '📱';
-  }
-
-  private getCategoryColor(category: string): string {
-    const colorMap: Record<string, string> = {
-      'AI & Machine Learning': 'from-blue-500 to-purple-600',
-      'IoT & Edge': 'from-green-500 to-teal-600',
-      'Blockchain': 'from-yellow-500 to-orange-600',
-      'Quantum Computing': 'from-purple-500 to-pink-600',
-      'Microservices': 'from-indigo-500 to-blue-600'
-    };
-    return colorMap[category] || 'from-gray-500 to-gray-600';
-=======
       icon: this.getCategoryIcon(name),
       serviceCount: services.length,
       services: services.map(s => s.id),
@@ -1058,9 +826,6 @@ export class NavigationGenerator {
       {
         id: 'service-demo',
         label: 'Demo',
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-        href: service.href.replace('/demo/', '/demo/'),
-=======
         href: service.href.replace('/services/', '/demo/'),
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
         priority: 2
@@ -1068,9 +833,6 @@ export class NavigationGenerator {
       {
         id: 'service-docs',
         label: 'Documentation',
-<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
-        href: service.href.replace('/demo/', '/docs/'),
-=======
         href: service.href.replace('/services/', '/docs/'),
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
         priority: 3

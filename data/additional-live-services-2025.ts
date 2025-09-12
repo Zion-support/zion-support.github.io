@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export interface AdditionalLiveService2025 {;
-=======
 export interface AdditionalLiveService2025 {
 >>>>>>> origin/content/blog-sept12
   id: string;

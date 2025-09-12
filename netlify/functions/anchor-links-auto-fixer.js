@@ -7,8 +7,6 @@ function runNode(relativePath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-<<<<<<< HEAD
-=======
 exports.config = { schedule: '*/5 * * * *' };
 
 >>>>>>> origin/content/blog-sept12
@@ -23,9 +21,6 @@ exports.handler = async () => {
     return status;
   };
 
-<<<<<<< HEAD
-  step('auto-media-release', () => runNode('automation/auto-media-release.cjs'));
-=======
   step('links:scan', () => runNode('automation/site-link-crawler.cjs'));
 >>>>>>> origin/content/blog-sept12
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
