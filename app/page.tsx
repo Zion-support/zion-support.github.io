@@ -11,6 +11,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -1063,94 +1064,119 @@ const HomePage = memo(function HomePage() {
         </div>
       </section>
 
-      {/* Ultra Content Promotion Banner */}
-      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>
-              <span className='text-sm font-medium'>🔥 MEGA CONTENT DROP - JANUARY 2025</span>
-            </div>
-            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
-              🚀 25+ New AI Resources Just Released!
-            </h2>
-            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our biggest content update yet: Advanced AI Automation, Cybersecurity Threats, 
-              Healthcare AI Success Stories, and the complete 200+ page AI Implementation Master Guide 2026. 
-              Everything you need to succeed with AI in 2025.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/mega-content-showcase'
-                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
-              >
-                🎯 Explore All New Content
-              </Link>
-              <Link
-                href='/resources/ai-implementation-master-guide-2026'
-                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg'
-              >
-                📚 Download Master Guide
-              </Link>
-            </div>
-          </div>
+      {/* Ultra Content Promotion - Featured Content */}
+      <UltraContentPromotionBanner
+        title="🚀 Featured AI & Technology Content"
+        subtitle="✨ JUST PUBLISHED - JANUARY 2025"
+        description="Discover our most comprehensive and impactful content covering the latest AI trends, implementation strategies, and real-world success stories."
+        content={[
+          {
+            title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
+            description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
+            href: "/blog/ai-2025-advanced-automation",
+            icon: "🤖",
+            category: "AI Automation",
+            readTime: "25 min read",
+            isNew: true
+          },
+          {
+            title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
+            description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
+            href: "/blog/ai-2025-cybersecurity-threats",
+            icon: "🛡️",
+            category: "Cybersecurity",
+            readTime: "22 min read",
+            isNew: true
+          },
+          {
+            title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
+            description: "Discover how a Fortune 500 manufacturing company achieved $200M savings and 40% cost reduction with autonomous AI systems.",
+            href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+            icon: "💰",
+            category: "Case Study",
+            type: "Success Story",
+            isNew: true
+          },
+          {
+            title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+            description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
+            href: "/resources/ai-implementation-master-guide-2026",
+            icon: "📚",
+            category: "Master Guide",
+            type: "Free Download",
+            isNew: true
+          },
+          {
+            title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies",
+            description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions.",
+            href: "/blog/ai-2025-breakthrough-innovations",
+            icon: "🚀",
+            category: "AI Innovations",
+            readTime: "25 min read",
+            isTrending: true
+          },
+          {
+            title: "AI Workforce Transformation 2025: Complete Reskilling Guide",
+            description: "Learn how to transform your workforce for the AI era with comprehensive reskilling strategies, training programs, and change management approaches.",
+            href: "/blog/ai-workforce-transformation-2025",
+            icon: "👥",
+            category: "Workforce",
+            readTime: "18 min read",
+            isNew: true
+          }
+        ]}
+        variant="featured"
+        maxItems={6}
+        className="py-20"
+      />
 
-          {/* Featured New Content Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-2025-advanced-automation' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Advanced Automation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete enterprise implementation guide with real case studies</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>25 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/blog/ai-2025-cybersecurity-threats' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete defense strategy and security best practices</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>22 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/case-studies/ai-autonomous-manufacturing-success-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
-                <h3 className='text-lg font-semibold mb-2'>$200M Manufacturing Success</h3>
-                <p className='text-sm opacity-90 mb-3'>Real case study with autonomous AI systems</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/webinars/ai-enterprise-transformation-masterclass-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎓</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Masterclass</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete transformation training program</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>2-day intensive</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Ultra Content Promotion - Trending Content */}
+      <UltraContentPromotionBanner
+        title="📈 Trending This Week"
+        subtitle="🔥 HOT RIGHT NOW"
+        description="The most popular and trending content that our community is reading and sharing this week."
+        content={[
+          {
+            title: "AI Data Privacy & Compliance 2025: Complete Guide",
+            description: "Navigate the complex landscape of AI data privacy regulations with our comprehensive compliance guide and best practices.",
+            href: "/blog/ai-data-privacy-compliance-2025",
+            icon: "🔒",
+            category: "Privacy",
+            readTime: "22 min read",
+            isTrending: true
+          },
+          {
+            title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI",
+            description: "Learn how to build sustainable AI systems that reduce environmental impact while maintaining high performance.",
+            href: "/blog/ai-sustainability-green-tech-2025",
+            icon: "🌱",
+            category: "Sustainability",
+            readTime: "20 min read",
+            isNew: true
+          },
+          {
+            title: "AI Customer Support Automation 2025: Complete Implementation",
+            description: "Transform your customer support with AI automation. Learn proven strategies to reduce response times and improve satisfaction.",
+            href: "/blog/ai-customer-support-automation-2025",
+            icon: "🎧",
+            category: "Customer Service",
+            readTime: "9 min read",
+            isPopular: true
+          },
+          {
+            title: "LLM Guardrails in Production 2025: Safety Without Blocking Delivery",
+            description: "Implement effective guardrails for Large Language Models in production environments without hindering innovation.",
+            href: "/blog/llm-guardrails-in-production-2025",
+            icon: "🛡️",
+            category: "AI Safety",
+            readTime: "8 min read",
+            isTrending: true
+          }
+        ]}
+        variant="trending"
+        maxItems={4}
+        className="py-20"
+      />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
