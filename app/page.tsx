@@ -44,6 +44,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
+<<<<<<< HEAD
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
                 <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT DROP</span>
               </div>
@@ -54,6 +55,18 @@ export default function HomePage() {
                 Discover our latest breakthrough content: AI 2025 Breakthrough Innovations, Sustainability & Green Tech, 
                 Robotics & Automation, plus the $200M Manufacturing Success case study. Get expert insights 
                 on the technologies transforming 2025 and beyond.
+=======
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎉 Revolutionary AI Content: Quantum Computing, Edge AI & Ethical Governance!
+              </h2>
+              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: Quantum Computing AI Revolution, Edge Computing Transformation, 
+                Ethical AI Governance Framework, plus $2.5B Financial Services Case Study and 200+ Page Master Guide. 
+                Get expert insights on the technologies reshaping 2025 and beyond.
+>>>>>>> cursor/create-and-deploy-new-content-645d
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
@@ -63,9 +76,10 @@ export default function HomePage() {
                   🎯 Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
+<<<<<<< HEAD
                   📖 Read Latest Article
                 </Link>
               </div>
@@ -92,6 +106,15 @@ export default function HomePage() {
                     <h3 className="text-sm font-semibold mb-1">Green AI Systems</h3>
                     <p className="text-xs opacity-90">Building eco-friendly AI solutions</p>
                   </div>
+=======
+                  Read Quantum AI Article
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  Download Master Guide
+>>>>>>> cursor/create-and-deploy-new-content-645d
                 </Link>
               </div>
             </div>
