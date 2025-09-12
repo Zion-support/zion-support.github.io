@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '19',
+      title: 'Data Quality for RAG in Production (2025)',
+      description: 'Operator guide to curating, evaluating, and governing high-quality knowledge for reliable RAG.',
+      href: '/blog/ai-2025-data-quality-rag',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: '18',
       title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
       description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
