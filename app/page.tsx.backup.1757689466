@@ -537,8 +537,14 @@ export default function HomePage() {
               🚀 Revolutionary AI Content Just Dropped
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+<<<<<<< HEAD
+              Discover our latest breakthrough content: AI 2025 Year in Review, Workforce Transformation strategies, 
+              Sustainability success stories, and the complete AI Implementation Master Guide 2026. Expert insights 
+              to accelerate your AI success in 2025 and beyond.
+=======
               Discover our latest expert insights, case studies, and resources. From AI enterprise implementation 
               to retail transformation success stories, get the knowledge you need to succeed in 2025.
+>>>>>>> origin/backup-before-pr-merge-20250912-080448
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -706,6 +712,8 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
@@ -898,6 +906,7 @@ export default function HomePage() {
         </div>
       </section>
 
+>>>>>>> origin/backup-before-pr-merge-20250912-080448
 
       {/* Services Section */}
       <section className='py-16' aria-labelledby="services-heading">
