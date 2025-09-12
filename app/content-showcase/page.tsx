@@ -29,6 +29,9 @@ export default function ContentShowcase() {
 
         {/* Featured Content Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8 mb-16 text-center">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🚀 JUST PUBLISHED - JANUARY 30, 2025</span>
+          </div>
           <h2 className="text-3xl font-bold mb-4">🔥 Fresh Content This Week</h2>
           <p className="text-xl mb-6 opacity-90">
             New articles, case studies, and resources published this week. Expert insights to accelerate your growth.
@@ -46,6 +49,26 @@ export default function ContentShowcase() {
             >
               Download Resources
             </Link>
+          </div>
+        </div>
+
+        {/* Content Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+            <div className="text-3xl font-bold text-blue-600 mb-2">150+</div>
+            <div className="text-gray-600">Articles Published</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+            <div className="text-3xl font-bold text-green-600 mb-2">50+</div>
+            <div className="text-gray-600">Case Studies</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+            <div className="text-3xl font-bold text-purple-600 mb-2">25+</div>
+            <div className="text-gray-600">Free Resources</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+            <div className="text-3xl font-bold text-orange-600 mb-2">25K+</div>
+            <div className="text-gray-600">Downloads</div>
           </div>
         </div>
 
@@ -431,6 +454,129 @@ export default function ContentShowcase() {
                     </div>
                     <span className="text-green-600 font-medium group-hover:underline">
                       Download →
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* Trending Content */}
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">Trending This Week</h2>
+            <div className="text-sm text-gray-500">
+              Most popular content
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="aspect-video bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center relative">
+                  <div className="text-8xl">🚀</div>
+                  <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    TRENDING
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                      AI Innovation
+                    </span>
+                    <span className="text-gray-500 text-sm">25 min read</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    AI Breakthrough Innovations 2025
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Revolutionary technologies that are reshaping industries and creating 
+                    unprecedented opportunities for businesses.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span className="text-purple-600 font-bold text-sm">ZT</span>
+                      </div>
+                      <span className="text-sm text-gray-600">Zion Tech Group</span>
+                    </div>
+                    <span className="text-purple-600 font-medium group-hover:underline">
+                      Read Article →
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-trends-2025-predictions" className="group">
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center relative">
+                  <div className="text-8xl">🔮</div>
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    HOT
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                      AI Trends
+                    </span>
+                    <span className="text-gray-500 text-sm">28 min read</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    AI Trends 2025 Predictions
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    15 game-changing technologies that will reshape business and create 
+                    new opportunities for growth and innovation.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span className="text-blue-600 font-bold text-sm">ZT</span>
+                      </div>
+                      <span className="text-sm text-gray-600">Zion Tech Group</span>
+                    </div>
+                    <span className="text-blue-600 font-medium group-hover:underline">
+                      Read Article →
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/ai-transformation-fortune-500-success-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative">
+                  <div className="text-8xl">🏆</div>
+                  <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    SUCCESS
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                      Case Study
+                    </span>
+                    <span className="text-gray-500 text-sm">30 min read</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                    Fortune 500 AI Success Story
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    How a Fortune 500 company achieved $50M savings and 300% ROI through 
+                    comprehensive AI transformation in just 18 months.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <span className="text-green-600 font-bold text-sm">ZT</span>
+                      </div>
+                      <span className="text-sm text-gray-600">Zion Tech Group</span>
+                    </div>
+                    <span className="text-green-600 font-medium group-hover:underline">
+                      Read Case Study →
                     </span>
                   </div>
                 </div>
