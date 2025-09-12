@@ -47,8 +47,50 @@ import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { professionalServices } from '../../data/professional-services';
 import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
 import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
-import { real2035Q2Additions } from '../../data/real-2035-q2-additions';
-import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batch';
+import { real2035Q2AdditionsExtra } from '../../data/real-2035-q2-additions-extra';
+import { real2025ExtraServices } from '../../data/real-2025-extra-services';
+import { real2026Q4ExpansionsV2 } from '../../data/real-2026-q4-expansions-v2';
+import { real2036ServiceExpansions } from '../../data/real-2036-service-expansions';
+import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
+import { real2036MicroSaasAdditions } from '../../data/real-2036-micro-saas-additions';
+import { real2036ITServicesAdditions } from '../../data/real-2036-it-services-additions';
+import { real2036AIServicesAdditions } from '../../data/real-2036-ai-services-additions';
+import { innovativeMicroSaasServices } from '../../data/innovative-2025-micro-saas-expansions';
+import { innovativeITServices } from '../../data/innovative-2025-it-services-expansions';
+import { innovativeAIServices } from '../../data/innovative-2025-ai-services-expansions';
+import { innovative2025MicroSaasBatch } from '../../data/innovative-2025-micro-saas-batch';
+import { innovative2025ITEnterpriseBatch } from '../../data/innovative-2025-it-enterprise-batch';
+import { innovativeMicroSaasServices as innovative2025MicroSaasExpansions } from '../../data/innovative-2025-micro-saas-expansions';
+import { innovativeITServices as innovative2025ITServicesExpansions } from '../../data/innovative-2025-it-services-expansions';
+import { innovativeAIServices as innovative2025AIServicesExpansions } from '../../data/innovative-2025-ai-services-expansions';
+// Import our new 2025 advanced services
+import { advanced2025MicroSaasExpansion } from '../../data/2025-advanced-micro-saas-expansion';
+import { advanced2025ITSolutionsExpansion } from '../../data/2025-advanced-it-solutions-expansion';
+import { advanced2025AIServicesExpansion } from '../../data/2025-advanced-ai-services-expansion';
+// Import our new innovative 2025 services
+import { innovative2025AdvancedServicesExpansion } from '../../data/innovative-2025-advanced-services-expansion';
+import { innovative2025EnterpriseSolutions } from '../../data/innovative-2025-enterprise-solutions';
+
+// Define a proper interface for services
+interface ServiceItem {
+  id?: string;
+  name: string;
+  tagline?: string;
+  description: string;
+  price?: string;
+  period?: string;
+  features?: string[];
+  icon?: string;
+  pricing?: {
+    starter?: { price: string; period?: string };
+    monthly?: string;
+    [key: string]: { price: string; period?: string } | string;
+  };
+  category: string;
+  popular?: boolean;
+  launchDate?: string;
+  [key: string]: unknown;
+}
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -119,28 +161,33 @@ export default function ServicesIndexPage() {
       real2029Q1Additions as unknown[],
       real2029Q2Additions as unknown[],
       real2029Q3Additions as unknown[],
-      real2030Q1Additions as unknown[],
-      real2030Q2Additions as unknown[],
-      real2031MicroSaasAdditions as unknown[],
-      real2031ITServicesAdditions as unknown[],
-      real2031AIServicesAdditions as unknown[],
-      real2027Q3Additions as unknown[],
-      professionalServices as unknown[],
-      real2032ServiceExpansions as unknown[],
-      real2035Q1Additions as unknown[],
-      real2035Q2AdditionsExtra as unknown[],
-      real2025ExtraServices as unknown[],
-      real2026Q4ExpansionsV2 as unknown[],
-      real2036ServiceExpansions as unknown[],
-      real2036MicroSaasAdditions as unknown[],
-      real2036ITServicesAdditions as unknown[],
-      real2036AIServicesAdditions as unknown[]
-    )
-    .concat(innovative2025MicroSaasBatch as unknown[])
-    .concat(innovative2025ITEnterpriseBatch as unknown[])
-    .concat(innovative2025Q4Services as unknown[])
-    .concat(emergingTech2025Services as unknown[])
-    .concat(specializedBusiness2025Services as unknown[]);
+      real2029Q4Additions as unknown[]
+    );
+  const byCategory: Record<string, unknown[]> = {};
+  for (const c of categories) byCategory[c] = [];
+  // Normalize various category labels into our main buckets
+  const categoryAliases: Record<string, string> = {
+    'AI & Data': 'AI & Data',
+    'AI & Machine Learning': 'AI & Data',
+    'GenAI': 'AI & Data',
+    'Cloud & FinOps': 'Cloud & FinOps',
+    'Cloud & Data': 'Cloud & FinOps',
+    'Platform Engineering': 'Cloud & FinOps',
+    'Observability': 'Observability',
+    'Observability & Telemetry': 'Observability',
+    'Quality & Monitoring': 'Quality & Monitoring',
+    'Security & Reliability': 'Quality & Monitoring',
+    'Security & Compliance': 'Quality & Monitoring',
+    'Developer Tools': 'Developer Tools',
+    'Growth & Marketing': 'Developer Tools'
+  };
+  for (const s of all) {
+    const service = s as { category?: string | string[] };
+    const rawCatValue = service.category;
+    const rawCat = Array.isArray(rawCatValue) ? (rawCatValue[0] || '') : (rawCatValue || '');
+    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
+    byCategory[mapped].push(s);
+  }
 
   const anchorMap: Record<string, string> = {
     'AI & Data': 'ai',

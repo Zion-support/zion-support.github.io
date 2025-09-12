@@ -1,17 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { Suspense } from 'react';
+import Homepage2025 from '../components/Homepage2025';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 
   return (
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
-      <PerformanceOptimizer />
-      <AccessibilityEnhancer />
-      <MobileOptimizer showDebugInfo={false}>
+      <PerformanceOptimizer>
         <Homepage2025 />
-        <PerformanceMonitor showUI={true} />
-      </MobileOptimizer>
+      </PerformanceOptimizer>
+      <PerformanceMonitor />
+      <AccessibilityEnhancer />
     </ErrorBoundary>
   );
 };

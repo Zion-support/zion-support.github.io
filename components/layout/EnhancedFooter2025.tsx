@@ -301,26 +301,25 @@ const EnhancedFooter2025: React.FC = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-                <div className="flex items-center space-x-4">
-                  <Link href="/privacy" className="hover:text-cyan-300 transition-colors">
-                    Privacy Policy
-                  </Link>
-                  <Link href="/terms" className="hover:text-cyan-300 transition-colors">
-                    Terms of Service
-                  </Link>
-                  <Link href="/cookies" className="hover:text-cyan-300 transition-colors">
-                    Cookie Policy
-                  </Link>
-                </div>
-              </div>
-              
+          <div className="text-center max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Updated with the Latest Tech Trends
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Get insights on AI, quantum computing, cybersecurity, and emerging technologies delivered to your inbox.
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-200"
+                aria-label="Email address for newsletter"
+              />
               <button
-                onClick={scrollToTop}
-                className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
+                type="submit"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                aria-label="Subscribe to newsletter"
               >
                 <span className="text-sm">Back to top</span>
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -375,7 +374,7 @@ const EnhancedFooter2025: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800/50 hover:bg-cyan-500/20 rounded-xl flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                aria-label={social.name}
+                aria-label={social.label}
               >
                 <social.icon className="w-5 h-5" aria-hidden="true" />
               </a>

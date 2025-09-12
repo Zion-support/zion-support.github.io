@@ -16,17 +16,14 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI & Quantum Technology Solutions',
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
-  keywords = 'AI, quantum computing, cybersecurity, space technology, autonomous solutions, Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = []
+  title = "Zion Tech Group - Revolutionary AI & Quantum Technology Solutions",
+  description = "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.",
+  keywords = "AI, artificial intelligence, quantum computing, cybersecurity, space technology, autonomous solutions, Zion Tech Group",
+  image = "/images/zion-tech-group-og.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  structuredData,
+  noindex = false
 }) => {
   const siteName = 'Zion Tech Group';
   const twitterHandle = '@ziontechgroup';
@@ -35,9 +32,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": siteName,
-    "url": url,
-    "logo": `${url}/images/zion-tech-group-logo.png`,
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
     "description": description,
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
@@ -52,17 +49,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     },
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "foundingDate": "2020",
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Quantum Computing",
-      "Cybersecurity",
-      "Space Technology",
-      "Autonomous Systems",
-      "Cloud Infrastructure"
-    ]
+      "addressCountry": "United States"
+    }
   };
 
   if (type === 'article') {
@@ -82,9 +70,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={noindex ? "noindex,nofollow" : "index,follow"} />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
@@ -92,13 +79,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitterHandle} />
-      <meta name="twitter:creator" content={twitterHandle} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
@@ -114,19 +101,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
     </Head>
   );
 };
