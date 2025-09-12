@@ -1,6 +1,42 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "🌐",
+      title: "Zion OS v1.3: Multi‑Region Scaling + Zero‑Downtime Upgrades",
+      excerpt:
+        "New multi‑region blue/green deploys reduce latency up to 42% and enable zero‑downtime updates.",
+      date: "Sep 12, 2025",
+      href: "/news/v1-3-multi-region-scaling",
+      gradient: "from-fuchsia-600 to-violet-600",
+    },
+    {
+      emoji: "🧭",
+      title: "Launch Wizard 2.0: Provision a Full Economy in 4 Minutes",
+      excerpt:
+        "Preconfigured templates for marketplaces, DAOs, and academies streamline end‑to‑end setup.",
+      date: "Sep 12, 2025",
+      href: "/news/launch-wizard-2-0",
+      gradient: "from-cyan-600 to-blue-600",
+    },
+    {
+      emoji: "💸",
+      title: "Zion Grants 2025: $2.5M for Ecosystem Builders",
+      excerpt:
+        "Apply for product, research, and regional ecosystem grants to accelerate your launch.",
+      date: "Sep 11, 2025",
+      href: "/news/grants-2025",
+      gradient: "from-emerald-600 to-green-600",
+    },
+    {
+      emoji: "🛡️",
+      title: "Security Hardening: Default mTLS, Key Rotation, and SOC2 Readiness",
+      excerpt:
+        "Platform‑wide security upgrades including service mTLS, auto key rotation, and audit trails.",
+      date: "Sep 11, 2025",
+      href: "/news/security-hardening",
+      gradient: "from-orange-600 to-rose-600",
+    },
+    {
       emoji: "🚀",
       title: "Zion OS 1.0 Launches: One-Click Digital Economies",
       excerpt:

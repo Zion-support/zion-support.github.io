@@ -172,28 +172,28 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
+            <a href="/news/v1-3-multi-region-scaling" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-violet-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🚀</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.0 Launches</h3>
-                <p className="text-white/70">One-click deployment of AI-powered digital economies is here.</p>
+                <div className="text-2xl mb-2">🌐</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">v1.3: Multi‑Region Scaling</h3>
+                <p className="text-white/70">Blue/green deploys, faster latency, zero‑downtime upgrades.</p>
               </div>
             </a>
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-teal-600 to-cyan-600" />
+            <a href="/news/launch-wizard-2-0" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-cyan-600 to-blue-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🎓</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion Academy Opens</h3>
-                <p className="text-white/70">Courses to help you learn AI, Web3, and launch faster.</p>
+                <div className="text-2xl mb-2">🧭</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Launch Wizard 2.0</h3>
+                <p className="text-white/70">Provision a full economy with curated templates.</p>
               </div>
             </a>
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-orange-600 to-red-600" />
+            <a href="/news/grants-2025" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-green-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🤝</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Enterprise Partner Program</h3>
-                <p className="text-white/70">White‑label solutions and SLAs for large-scale deployments.</p>
+                <div className="text-2xl mb-2">💸</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion Grants 2025</h3>
+                <p className="text-white/70">$2.5M for builders across the ecosystem.</p>
               </div>
             </a>
           </div>
