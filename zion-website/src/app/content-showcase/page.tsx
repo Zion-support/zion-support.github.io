@@ -16,52 +16,12 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "LLM Observability 2025: Metrics, Traces, and Guardrails",
-      description: "End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.",
-      href: "/blog/llm-observability-2025",
+      title: "AI Agent Observability in 2025: Telemetry, Tracing, Guardrails",
+      description: "Blueprint for end-to-end agent observability with telemetry, tracing, evaluations, and policy guardrails.",
+      href: "/blog/ai-2025-ai-agent-observability",
       icon: "📈",
-      category: "Observability",
+      category: "Reliability",
       readTime: "19 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Retail Demand Forecasting: 32% Stockouts Reduction",
-      description: "Global retailer cut stockouts by 32% and waste by 18% via AI-driven demand forecasting.",
-      href: "/case-studies/ai-2025-retail-demand-forecasting",
-      icon: "🛒",
-      category: "Case Study",
-      readTime: "12 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Operationalizing AI Governance 2025",
-      description: "Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.",
-      href: "/blog/ai-2025-operationalizing-ai-governance",
-      icon: "📜",
-      category: "Governance",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Generative AI Evaluation 2025: Reliable Metrics and Methods",
-      description: "Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.",
-      href: "/blog/ai-2025-genai-evaluation",
-      icon: "📏",
-      category: "Evaluation",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Governance 2025: Best Practices for Responsible AI",
-      description: "A concise playbook for practical AI governance across policy, risk, compliance, and engineering.",
-      href: "/blog/ai-2025-ai-governance-best-practices",
-      icon: "🛡️",
-      category: "Governance",
-      readTime: "16 min read",
       date: "Sep 12, 2025",
       featured: true
     },

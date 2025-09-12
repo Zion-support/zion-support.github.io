@@ -34,92 +34,15 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '16',
-      title: 'AI 2025 Year in Review',
-      description: 'Breakthroughs, enterprise adoption patterns, unit economics, and the road to 2026.',
-      href: '/blog/ai-2025-year-in-review',
-      type: 'blog',
-      featured: true,
-      readTime: '25 min read',
-      date: 'Sep 12, 2025',
-      category: 'Strategy'
-    },
-    {
-      id: '17',
-      title: 'AI Workforce Transformation 2025',
-      description: 'Practical blueprint for reskilling at scale with measurable enterprise outcomes.',
-      href: '/blog/ai-workforce-transformation-2025',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Workforce'
-    },
-    {
-      id: '18',
-      title: 'AI Sustainability Transformation: 60% Energy Reduction',
-      description: 'Case study: energy optimization, peak load reduction, and carbon neutrality with AI.',
-      href: '/case-studies/ai-sustainability-transformation-2025',
-      type: 'case-study',
-      featured: true,
-      readTime: '12 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: '13',
-      title: 'Real-Time Agents 2025: Observability, Safety, and SLAs',
-      description: 'Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.',
-      href: '/blog/ai-2025-realtime-agents-observability',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Agents'
-    },
-    {
-      id: '14',
-      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
-      description: 'Case study: Global retailer cut stockouts by 32% and waste by 18% via AI forecasting.',
-      href: '/case-studies/ai-2025-retail-demand-forecasting',
-      type: 'case-study',
-      featured: true,
-      readTime: '12 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
       id: '15',
-      title: 'Operationalizing AI Governance 2025',
-      description: 'Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.',
-      href: '/blog/ai-2025-operationalizing-ai-governance',
+      title: 'AI Agent Observability in 2025: Telemetry & Guardrails',
+      description: 'End-to-end visibility for agents with structured telemetry, distributed tracing, inline evals, and policy guardrails.',
+      href: '/blog/ai-2025-ai-agent-observability',
       type: 'blog',
       featured: true,
-      readTime: '16 min read',
+      readTime: '19 min read',
       date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '9',
-      title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
-      description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
-      href: '/blog/ai-2025-genai-evaluation',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Evaluation'
-    },
-    {
-      id: '10',
-      title: 'AI Governance 2025: Best Practices for Responsible AI',
-      description: 'A concise playbook for practical AI governance across policy, risk, compliance, and engineering.',
-      href: '/blog/ai-2025-ai-governance-best-practices',
-      type: 'blog',
-      featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
+      category: 'Reliability'
     },
     {
       id: '1',
