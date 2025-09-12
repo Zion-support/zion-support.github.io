@@ -96,6 +96,20 @@ export default function HomePage() {
               Discover our latest expert insights, case studies, and resources. From AI automation 
               to startup growth strategies, get the knowledge you need to succeed in 2025.
             </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog/ai-productivity-automation-2025'
+                className='bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg'
+              >
+                Read AI Productivity Guide
+              </Link>
+              <Link
+                href='/resources/ai-productivity-playbook-2025'
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-lg'
+              >
+                Download Free Playbook
+              </Link>
+            </div>
           </div>
 
           {/* Featured New Content Cards */}
@@ -913,6 +927,77 @@ export default function HomePage() {
               >
                 Download Resources
                 <span>📋</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* New Content Spotlight Banner */}
+          <div className='bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-16'>
+            <div className='text-center mb-8'>
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4'>
+                <span className='text-sm font-medium'>✨ JUST PUBLISHED - JANUARY 2025</span>
+              </div>
+              <h3 className='text-3xl md:text-4xl font-bold mb-4'>
+                🚀 Fresh AI & Business Content Just Dropped
+              </h3>
+              <p className='text-xl opacity-90 max-w-3xl mx-auto mb-6'>
+                Discover our latest expert guides, case studies, and resources covering the most 
+                important trends in AI, automation, and business growth for 2025.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <Link
+                  href='/blog/ai-productivity-automation-2025'
+                  className='bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+                >
+                  Read AI Productivity Guide
+                </Link>
+                <Link
+                  href='/resources/ai-productivity-playbook-2025'
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors'
+                >
+                  Download Free Playbook
+                </Link>
+              </div>
+            </div>
+
+            <div className='grid md:grid-cols-3 gap-6'>
+              <Link href='/blog/ai-productivity-automation-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI Productivity Automation 2025</h4>
+                  <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 40% efficiency gains and 300% productivity improvements</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>15 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href='/blog/ai-multimodal-applications-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎭</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI Multimodal Applications 2025</h4>
+                  <p className='text-sm opacity-90 mb-3'>Beyond text to vision, audio, and beyond - the future of AI</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>12 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/case-studies/ai-retail-transformation-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛒</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI Retail Transformation</h4>
+                  <p className='text-sm opacity-90 mb-3'>300% revenue growth in 18 months - complete case study</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Case Study</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
