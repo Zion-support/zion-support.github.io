@@ -14,6 +14,8 @@ import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import TrendingContentWidget from '../components/TrendingContentWidget';
+import FeaturedContentCarousel from '../components/FeaturedContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -38,6 +40,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Enhanced Content Promotion Banner */}
+        <EnhancedContentPromotionBanner />
+        
         {/* Revolutionary Content Update Banner - Top Priority */}
         <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -1490,6 +1495,71 @@ export default function HomePage() {
             autoRefresh={true}
             refreshInterval={30000}
           />
+        </div>
+      </section>
+
+      {/* Interactive Content Elements */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              🚀 Interactive Content Experience
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our content through interactive widgets and discover what's trending, 
+              featured, and most relevant to your interests.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Featured Content Carousel */}
+            <div className="lg:col-span-2">
+              <FeaturedContentCarousel />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Trending Content Widget */}
+            <div className="lg:col-span-1">
+              <TrendingContentWidget />
+            </div>
+            
+            {/* Content Stats Widget */}
+            <div className="lg:col-span-2">
+              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">📊 Content Statistics</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-indigo-600 mb-2">50+</div>
+                    <div className="text-sm text-gray-600">Total Articles</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600 mb-2">25+</div>
+                    <div className="text-sm text-gray-600">Case Studies</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
+                    <div className="text-sm text-gray-600">Implementation Guides</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
+                    <div className="text-sm text-gray-600">Webinars</div>
+                  </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <Link
+                    href="/content-showcase"
+                    className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                  >
+                    Explore All Content
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

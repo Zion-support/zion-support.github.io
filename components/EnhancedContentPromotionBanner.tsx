@@ -6,71 +6,113 @@ interface ContentItem {
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'resource' | 'tool';
+  type: 'blog' | 'case-study' | 'service' | 'resource';
+  featured: boolean;
   category: string;
   readTime: string;
-  icon: string;
-  featured: boolean;
+  isNew: boolean;
 }
 
 const EnhancedContentPromotionBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const contentItems: ContentItem[] = [
+  const newContent: ContentItem[] = [
     {
       id: '1',
-      title: 'Advanced AI Architecture 2025',
-      description: 'Master the latest AI architecture patterns for 2025. Learn about microservices, MLOps, vector databases, and production deployment strategies that scale.',
-      href: '/blog/ai-2025-advanced-ai-architecture',
+      title: 'AI Neural Architecture Revolution 2025',
+      description: 'Discover how revolutionary neural architectures are transforming AI capabilities with 40% improvement in long-context understanding.',
+      href: '/blog/ai-2025-neural-architecture-revolution',
       type: 'blog',
-      category: 'Architecture',
-      readTime: '25 min read',
-      icon: '🏗️',
-      featured: true
+      featured: true,
+      category: 'AI Architecture',
+      readTime: '25 min',
+      isNew: true
     },
     {
       id: '2',
-      title: 'AI Cybersecurity Revolution 2025',
-      description: 'Discover the latest AI cybersecurity threats and defense strategies for 2025. Learn about adversarial attacks, AI-powered security tools, and enterprise protection frameworks.',
-      href: '/blog/ai-2025-cybersecurity-revolution',
+      title: 'Quantum Machine Learning 2025',
+      description: 'Explore how quantum computing is revolutionizing machine learning with exponential speedup potential and breakthrough applications.',
+      href: '/blog/ai-2025-quantum-machine-learning',
       type: 'blog',
-      category: 'Security',
-      readTime: '22 min read',
-      icon: '🛡️',
-      featured: true
+      featured: true,
+      category: 'Quantum AI',
+      readTime: '28 min',
+      isNew: true
     },
     {
       id: '3',
-      title: '$200M Manufacturing Success Case Study',
-      description: 'How a Fortune 500 manufacturing giant transformed their operations with autonomous AI systems, achieving unprecedented cost savings and efficiency gains.',
-      href: '/case-studies/ai-autonomous-manufacturing-success-2025',
-      type: 'case-study',
-      category: 'Manufacturing',
-      readTime: '18 min read',
-      icon: '💰',
-      featured: true
+      title: 'AI Ethical Governance Framework 2025',
+      description: 'Comprehensive guide to building trustworthy AI systems with bias mitigation, transparency, and regulatory compliance.',
+      href: '/blog/ai-2025-ethical-governance-framework',
+      type: 'blog',
+      featured: true,
+      category: 'AI Ethics',
+      readTime: '32 min',
+      isNew: true
     },
     {
       id: '4',
+      title: 'AI Manufacturing Transformation: $200M Success',
+      description: 'Complete case study: How a Fortune 500 manufacturer achieved 300% ROI and $200M savings through AI transformation.',
+      href: '/case-studies/ai-manufacturing-transformation-2025',
+      type: 'case-study',
+      featured: true,
+      category: 'Case Study',
+      readTime: '35 min',
+      isNew: true
+    },
+    {
+      id: '5',
+      title: 'AI Enterprise Automation Revolution 2025',
+      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
+      href: '/blog/ai-2025-enterprise-automation-revolution',
+      type: 'blog',
+      featured: true,
+      category: 'Automation',
+      readTime: '22 min',
+      isNew: false
+    },
+    {
+      id: '6',
       title: 'AI Implementation Master Guide 2026',
-      description: 'The most comprehensive AI implementation guide available. 200+ pages of proven frameworks, checklists, templates, and step-by-step strategies.',
+      description: 'Download our comprehensive 200+ page AI implementation guide with templates, best practices, and real-world examples.',
       href: '/resources/ai-implementation-master-guide-2026',
       type: 'resource',
+      featured: true,
       category: 'Implementation',
       readTime: '200+ pages',
-      icon: '📚',
-      featured: true
+      isNew: false
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % newContent.length);
+        setIsAnimating(false);
+      }, 300);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [contentItems.length]);
+  }, [newContent.length]);
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'service':
+        return '🚀';
+      case 'resource':
+        return '📚';
+      default:
+        return '✨';
+    }
+  };
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -78,9 +120,9 @@ const EnhancedContentPromotionBanner: React.FC = () => {
         return 'from-blue-500 to-cyan-500';
       case 'case-study':
         return 'from-green-500 to-emerald-500';
-      case 'resource':
+      case 'service':
         return 'from-purple-500 to-pink-500';
-      case 'tool':
+      case 'resource':
         return 'from-orange-500 to-red-500';
       default:
         return 'from-gray-500 to-gray-600';
@@ -89,14 +131,18 @@ const EnhancedContentPromotionBanner: React.FC = () => {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Architecture':
+      case 'AI Architecture':
         return 'bg-blue-100 text-blue-800';
-      case 'Security':
-        return 'bg-red-100 text-red-800';
-      case 'Manufacturing':
-        return 'bg-green-100 text-green-800';
-      case 'Implementation':
+      case 'Quantum AI':
         return 'bg-purple-100 text-purple-800';
+      case 'AI Ethics':
+        return 'bg-green-100 text-green-800';
+      case 'Case Study':
+        return 'bg-emerald-100 text-emerald-800';
+      case 'Automation':
+        return 'bg-orange-100 text-orange-800';
+      case 'Implementation':
+        return 'bg-indigo-100 text-indigo-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -104,85 +150,128 @@ const EnhancedContentPromotionBanner: React.FC = () => {
 
   if (!isVisible) return null;
 
-  const currentItem = contentItems[currentIndex];
+  const currentContent = newContent[currentIndex];
 
   return (
     <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
       </div>
 
       <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="flex items-center justify-between">
             {/* Content */}
             <div className="flex-1 pr-8">
-              <div className="flex items-center mb-4">
-                <span className="text-4xl mr-4">{currentItem.icon}</span>
-                <div className="flex items-center gap-3">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(currentItem.category)}`}>
-                    {currentItem.category}
+              <div className="flex items-center mb-3">
+                <span className="text-3xl mr-3 animate-bounce">{getTypeIcon(currentContent.type)}</span>
+                <div className="flex items-center gap-2">
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(currentContent.category)}`}>
+                    {currentContent.category}
                   </span>
-                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-                    {currentItem.type === 'case-study' ? 'Case Study' : 
-                     currentItem.type === 'resource' ? 'Resource' : 'Article'}
-                  </span>
+                  {currentContent.isNew && (
+                    <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                      NEW
+                    </span>
+                  )}
                 </div>
               </div>
               
-              <h3 className="text-3xl font-bold mb-4 group-hover:underline">
-                {currentItem.title}
-              </h3>
-              
-              <p className="text-xl text-indigo-100 mb-6 leading-relaxed">
-                {currentItem.description}
-              </p>
-              
-              <div className="flex items-center space-x-6">
+              <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-4' : 'opacity-100 transform translate-x-0'}`}>
+                <h3 className="text-3xl font-bold mb-3 leading-tight">
+                  {currentContent.title}
+                </h3>
+                <p className="text-lg text-indigo-100 mb-4 leading-relaxed">
+                  {currentContent.description}
+                </p>
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-sm opacity-75">⏱️ {currentContent.readTime} read</span>
+                  <span className="text-sm opacity-75">•</span>
+                  <span className="text-sm opacity-75">📅 Just Published</span>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
                 <Link 
-                  href={currentItem.href}
-                  className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all duration-300 text-lg shadow-lg transform hover:scale-105"
+                  href={currentContent.href}
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  Read More
+                  {currentContent.type === 'resource' ? 'Download Now' : 'Read More'}
                 </Link>
                 <Link 
                   href="/content-showcase"
-                  className="text-white hover:text-indigo-200 transition-colors font-medium text-lg"
+                  className="text-white hover:text-indigo-200 transition-colors text-lg font-medium flex items-center gap-2"
                 >
-                  View All Content →
+                  View All Content 
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
-              </div>
-              
-              <div className="mt-6 flex items-center text-sm opacity-75">
-                <span>{currentItem.readTime}</span>
-                <span className="mx-2">•</span>
-                <span>Featured Content</span>
               </div>
             </div>
 
             {/* Navigation Dots */}
             <div className="flex flex-col space-y-3">
-              {contentItems.map((_, index) => (
+              {newContent.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => {
+                    setIsAnimating(true);
+                    setTimeout(() => {
+                      setCurrentIndex(index);
+                      setIsAnimating(false);
+                    }, 300);
+                  }}
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
                     index === currentIndex 
                       ? 'bg-white scale-125 shadow-lg' 
-                      : 'bg-white/50 hover:bg-white/75'
+                      : 'bg-white/50 hover:bg-white/75 hover:scale-110'
                   }`}
                 />
               ))}
             </div>
+          </div>
+
+          {/* Featured Content Grid */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {newContent.slice(0, 3).map((item, index) => (
+              <Link key={item.id} href={item.href} className="group">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-2xl group-hover:scale-110 transition-transform">{getTypeIcon(item.type)}</span>
+                    <div className="flex items-center gap-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                        {item.category}
+                      </span>
+                      {item.isNew && (
+                        <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
+                          NEW
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold mb-2 group-hover:text-indigo-200 transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-indigo-100 mb-3 line-clamp-2">
+                    {item.description}
+                  </p>
+                  <div className="flex items-center justify-between text-xs opacity-75">
+                    <span>⏱️ {item.readTime}</span>
+                    <span className="group-hover:text-white transition-colors">Read More →</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
         {/* Close Button */}
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-6 right-6 text-white/75 hover:text-white transition-colors p-2"
+          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -194,14 +283,9 @@ const EnhancedContentPromotionBanner: React.FC = () => {
       <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
         <div 
           className="h-full bg-white transition-all duration-6000 ease-linear"
-          style={{ width: `${((currentIndex + 1) / contentItems.length) * 100}%` }}
+          style={{ width: `${((currentIndex + 1) / newContent.length) * 100}%` }}
         />
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 right-20 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
     </div>
   );
 };
