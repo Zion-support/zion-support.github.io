@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2025PromotionBanner() {
   return (
@@ -29,13 +29,13 @@ export default function NewContent2025PromotionBanner() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-2025-revolutionary-trends-breakthrough"
+              to="/blog/ai-2025-revolutionary-trends-breakthrough"
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               🔮 Explore Revolutionary Trends
             </Link>
             <Link
-              href="/case-studies/ai-2025-energy-sector-transformation-breakthrough"
+              to="/case-studies/ai-2025-energy-sector-transformation-breakthrough"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
             >
               🏆 View 2000% ROI Success Story
@@ -45,7 +45,7 @@ export default function NewContent2025PromotionBanner() {
           {/* Featured Content Grid */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {/* Blog Post */}
-            <Link href="/blog/ai-2025-revolutionary-trends-breakthrough" className="group">
+            <Link to="/blog/ai-2025-revolutionary-trends-breakthrough" className="group">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <div className="text-4xl mb-4">🔮</div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300">Revolutionary AI Trends 2025</h3>
@@ -59,7 +59,7 @@ export default function NewContent2025PromotionBanner() {
             </Link>
             
             {/* Case Study */}
-            <Link href="/case-studies/ai-2025-energy-sector-transformation-breakthrough" className="group">
+            <Link to="/case-studies/ai-2025-energy-sector-transformation-breakthrough" className="group">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300">Energy Sector Breakthrough</h3>
@@ -73,7 +73,7 @@ export default function NewContent2025PromotionBanner() {
             </Link>
             
             {/* Resource Guide */}
-            <Link href="/resources/ai-2025-comprehensive-implementation-master-guide" className="group">
+            <Link to="/resources/ai-2025-comprehensive-implementation-master-guide" className="group">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <div className="text-4xl mb-4">📚</div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300">Implementation Master Guide</h3>
@@ -90,7 +90,7 @@ export default function NewContent2025PromotionBanner() {
           {/* Bottom CTA */}
           <div className="mt-12">
             <Link
-              href="/content-showcase"
+              to="/content-showcase"
               className="inline-flex items-center text-white/90 hover:text-white transition-colors text-lg font-medium"
             >
               View All New Content

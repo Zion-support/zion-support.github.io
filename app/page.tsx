@@ -33,6 +33,57 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import NewContent2026Banner from '../components/NewContent2026Banner';
+import ContentShowcase2026 from '../components/ContentShowcase2026';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import ContentRecommendationWidget2026 from '../components/ContentRecommendationWidget2026';
+import EnhancedSearch2026 from '../components/EnhancedSearch2026';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import NewContent2026AdvancedPromotionBanner from '../components/NewContent2026AdvancedPromotionBanner';
+import AI2026ROICalculator from '../components/AI2026ROICalculator';
+import ContentDiscovery2026 from '../components/ContentDiscovery2026';
+import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
+import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
+import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
+import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
+import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
+import AI2029ContentShowcase from '../components/AI2029ContentShowcase';
+import NewContent2029PromotionBanner from '../components/NewContent2029PromotionBanner';
+import NewContent2029Showcase from '../components/NewContent2029Showcase';
+import AI2030VisionBanner from '../components/AI2030VisionBanner';
+import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
+import FutureInnovationHub from '../components/FutureInnovationHub';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9047
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -49,6 +100,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
+        
+        {/* NEW CONTENT 2029 PROMOTION BANNER */}
+        <NewContent2029PromotionBanner />
+        
         {/* AI 2030 CONTENT PROMOTION BANNER */}
         <AI2030ContentPromotionBanner />
         
