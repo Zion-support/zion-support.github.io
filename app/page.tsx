@@ -869,81 +869,157 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Resources Promotion Banner */}
-      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🎁 FREE DOWNLOADS</span>
+        {/* New Resources Promotion Banner */}
+        <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
+          <div className='absolute inset-0 bg-black opacity-10'></div>
+          <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+                <span className='text-sm font-medium'>🎁 FREE DOWNLOADS</span>
+              </div>
+              <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+                📚 New Implementation Guides
+              </h2>
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+                Download our latest comprehensive guides: AI Implementation Master Guide 2026, 
+                AI Cybersecurity Checklist, and Workforce Transformation Playbooks. Everything you 
+                need to succeed with AI in 2025.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+                <Link
+                  href='/resources'
+                  className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+                >
+                  📋 Download All Resources
+                </Link>
+                <Link
+                  href='/blog'
+                  className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
+                >
+                  📖 Read Latest Articles
+                </Link>
+              </div>
             </div>
-            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
-              📚 New Implementation Guides
-            </h2>
-            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Download our latest comprehensive guides: AI Implementation Master Guide 2026, 
-              AI Cybersecurity Checklist, and Workforce Transformation Playbooks. Everything you 
-              need to succeed with AI in 2025.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-              <Link
-                href='/resources'
-                className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
-              >
-                📋 Download All Resources
+
+            {/* Featured Resources Grid */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <Link href='/resources/ai-implementation-master-guide-2026' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📖</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide 2026</h3>
+                  <p className='text-sm opacity-90 mb-3'>200+ page comprehensive guide with frameworks and templates</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Free Download</span>
+                    <span className='mx-2'>•</span>
+                    <span>200+ pages</span>
+                  </div>
+                </div>
               </Link>
-              <Link
-                href='/blog'
-                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
-              >
-                📖 Read Latest Articles
+              
+              <Link href='/resources/ai-cybersecurity-checklist-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Checklist 2025</h3>
+                  <p className='text-sm opacity-90 mb-3'>150+ security items for secure AI implementation</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Free Download</span>
+                    <span className='mx-2'>•</span>
+                    <span>150+ items</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/resources/ai-workforce-transformation-playbook-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Workforce Transformation Playbook</h3>
+                  <p className='text-sm opacity-90 mb-3'>Complete reskilling strategies and implementation guides</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Free Download</span>
+                    <span className='mx-2'>•</span>
+                    <span>150+ pages</span>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
+        </section>
 
-          {/* Featured Resources Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <Link href='/resources/ai-implementation-master-guide-2026' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📖</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide 2026</h3>
-                <p className='text-sm opacity-90 mb-3'>200+ page comprehensive guide with frameworks and templates</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>200+ pages</span>
-                </div>
+        {/* Latest Blog Articles Promotion */}
+        <section className='py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden'>
+          <div className='absolute inset-0 bg-black opacity-10'></div>
+          <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+                <span className='text-sm font-medium'>🔥 HOT THIS WEEK</span>
               </div>
-            </Link>
-            
-            <Link href='/resources/ai-cybersecurity-checklist-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Checklist 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>150+ security items for secure AI implementation</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>150+ items</span>
-                </div>
+              <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+                📝 Latest Expert Articles
+              </h2>
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+                Discover our newest articles covering AI enterprise automation success stories, 
+                startup funding strategies, and breakthrough cybersecurity transformations. 
+                Expert insights from industry leaders.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+                <Link
+                  href='/blog'
+                  className='bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+                >
+                  📚 Read All Articles
+                </Link>
+                <Link
+                  href='/blog/ai-2025-enterprise-automation-success'
+                  className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg' 
+                >
+                  🚀 Read Featured Article
+                </Link>
               </div>
-            </Link>
+            </div>
 
-            <Link href='/resources/ai-workforce-transformation-playbook-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Workforce Transformation Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete reskilling strategies and implementation guides</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>150+ pages</span>
+            {/* Featured Articles Grid */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <Link href='/blog/ai-2025-enterprise-automation-success' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Enterprise Automation Success</h3>
+                  <p className='text-sm opacity-90 mb-3'>40-60% cost reduction, 300% efficiency gains from Fortune 500 companies</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>18 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+              
+              <Link href='/blog/ai-2025-startup-funding-playbook' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Startup Funding Playbook 2025</h3>
+                  <p className='text-sm opacity-90 mb-3'>$47B market insights, pitch templates, and funding strategies</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>25 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/case-studies/ai-cybersecurity-transformation-breakthrough-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Breakthrough</h3>
+                  <p className='text-sm opacity-90 mb-3'>99.7% threat detection accuracy and $50M prevented losses</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Case Study</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
