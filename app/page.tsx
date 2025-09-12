@@ -64,18 +64,18 @@ const HomePage = memo(function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
-                  href="/content-showcase"
+                  href="/blog/ai-2025-enterprise-genai-blueprint"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
+                  aria-label="Read the Enterprise GenAI Blueprint"
+                >
+                  🏢 Read Enterprise GenAI Blueprint
+                </Link>
+                <Link
+                  href="/content-showcase"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
                   aria-label="Explore all new content and resources"
                 >
                   🎯 Explore All New Content
-                </Link>
-                <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
-                  aria-label="Read the latest breakthrough innovations article"
-                >
-                  📖 Read Latest Article
                 </Link>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
