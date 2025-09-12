@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
-  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
+  ChevronRight, Shield, Zap, Globe
 } from 'lucide-react';
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
 
 interface Service {
   id: string;
@@ -345,163 +344,8 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Service Detail Modal */}
-      <AnimatePresence>
-        {selectedService && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6"
-            onClick={() => setSelectedService(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-slate-900 rounded-2xl border border-white/10 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {(() => {
-                const service = enhancedMicroSaasServices.find(s => s.id === selectedService);
-                if (!service) return null;
-
-                return (
-                  <div className="p-8">
-                    <div className="flex items-start justify-between mb-6">
-                      <div className="flex items-center gap-4">
-                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 flex items-center justify-center text-4xl`}>
-                          {service.icon}
-                        </div>
-                        <div>
-                          <h2 className="text-3xl font-bold text-white mb-2">{service.name}</h2>
-                          <p className="text-xl text-white/70">{service.tagline}</p>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => setSelectedService(null)}
-                        className="text-white/60 hover:text-white text-2xl"
-                      >
-                        ×
-                      </button>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                      <div>
-                        <h3 className="text-xl font-bold text-white mb-4">Service Overview</h3>
-                        <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
-                        
-                        <div className="mb-6">
-                          <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
-                          <div className="space-y-2">
-                            {service.benefits.map((benefit, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-white/70">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
-                                {benefit}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="mb-6">
-                          <h4 className="text-lg font-semibold text-white mb-3">Capabilities</h4>
-                          <div className="space-y-2">
-                            {service.capabilities.map((capability, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-white/70">
-                                <Zap className="w-4 h-4 text-blue-400" />
-                                {capability}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <div className="bg-white/5 rounded-lg p-6 mb-6">
-                          <h4 className="text-lg font-semibold text-white mb-4">Pricing & Details</h4>
-                          <div className="text-3xl font-bold text-white mb-2">{service.price}{service.period}</div>
-                          <div className="space-y-3 text-sm text-white/70">
-                            <div className="flex justify-between">
-                              <span>Trial Period:</span>
-                              <span>{service.trialDays} days</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Setup Time:</span>
-                              <span>{service.setupTime}</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Current Customers:</span>
-                              <span>{service.customers}</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Rating:</span>
-                              <span className="flex items-center gap-1">
-                                {service.rating}/5 <Star className="w-4 h-4 text-yellow-400" />
-                                ({service.reviews} reviews)
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="bg-white/5 rounded-lg p-6 mb-6">
-                          <h4 className="text-lg font-semibold text-white mb-4">Market Information</h4>
-                          <div className="space-y-3 text-sm text-white/70">
-                            <div>
-                              <span className="font-medium">Market Size:</span> {service.marketSize}
-                            </div>
-                            <div>
-                              <span className="font-medium">Growth Rate:</span> {service.growthRate}
-                            </div>
-                            <div>
-                              <span className="font-medium">ROI:</span> {service.roi}
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="bg-white/5 rounded-lg p-6">
-                          <h4 className="text-lg font-semibold text-white mb-4">Contact Information</h4>
-                          <div className="space-y-3 text-sm text-white/70">
-                            <div>
-                              <span className="font-medium">Email:</span> {service.contactInfo.email}
-                            </div>
-                            <div>
-                              <span className="font-medium">Phone:</span> {service.contactInfo.mobile}
-                            </div>
-                            <div>
-                              <span className="font-medium">Address:</span> {service.contactInfo.address}
-                            </div>
-                            <div>
-                              <span className="font-medium">Website:</span> {service.contactInfo.website}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mt-8 flex gap-4">
-                      <a
-                        href={service.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105"
-                      >
-                        Visit Service Page
-                      </a>
-                      <a
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-                        className="flex-1 px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-center transition-all duration-300 hover:bg-white/5"
-                      >
-                        Contact Sales
-                      </a>
-                    </div>
-                  </div>
-                );
-              })()}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
-}
+};
+
+export default EnhancedServicesShowcase;

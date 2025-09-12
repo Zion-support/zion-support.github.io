@@ -1,0 +1,25 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function requireAdmin(req: NextApiRequest, res: NextApiResponse): boolean {
+  const expected = process.env.ADMIN_TOKEN || 'dev-admin-token';
+  const provided = req.headers['x-admin-token'];
+  if (!provided || provided !== expected) {
+=======
+>>>>>>> origin/backup-critical-fixes-20250824-224408
+import { getUserFromCookies } from '../auth-utils';
+
+export function requireSuperadminApi(req: NextApiRequest, res: NextApiResponse): boolean {
+  const user = getUserFromCookies(req.headers.cookie);
+  if (!user || user.role !== 'superadmin' || !user.twofaVerified) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
+>>>>>>> origin/backup-critical-fixes-20250824-224408
+    res.status(401).json({ error: 'Unauthorized' });
+    return false;
+  }
+  return true;
+}

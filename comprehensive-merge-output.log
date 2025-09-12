@@ -1,0 +1,159 @@
+🚀 Starting comprehensive merge conflict resolution for all open PRs...
+📊 Total cursor branches to process: 6268
+⏰ Started at: Thu Sep 11 06:29:10 PM UTC 2025
+---
+🔒 Creating backup branch: backup-main-20250911-182910
+Your branch is up to date with 'origin/main'.
+🔄 Starting branch processing...
+---
+📋 Processing branch: cursor/add-2030q1-services-ui-8deb1aee36d
+🔄 Attempting to merge cursor/add-2030q1-services-ui-8deb1aee36d...
+Already up to date.
+✅ Successfully merged cursor/add-2030q1-services-ui-8deb1aee36d
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-2030q1-services-ui-8deb1aee36d processed successfully
+📊 Progress: 1 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0357
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0357...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0357
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0357 processed successfully
+📊 Progress: 2 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-03b6
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-03b6...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-03b6
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-03b6 processed successfully
+📊 Progress: 3 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-06aa
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-06aa...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-06aa
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-06aa processed successfully
+📊 Progress: 4 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0756
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0756...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0756
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0756 processed successfully
+📊 Progress: 5 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0c04
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0c04...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0c04
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0c04 processed successfully
+📊 Progress: 6 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0cca
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0cca...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0cca
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-0cca processed successfully
+📊 Progress: 7 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-174e
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-174e...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-174e
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-174e processed successfully
+📊 Progress: 8 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-17cc
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-17cc...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-17cc
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-17cc processed successfully
+📊 Progress: 9 successful, 0 failed, 0 conflicts resolved
+---
+📋 Processing branch: cursor/add-and-advertise-new-services-then-build-192f
+🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-192f...
+Already up to date.
+✅ Successfully merged cursor/add-and-advertise-new-services-then-build-192f
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	comprehensive-merge-output.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+✅ Branch cursor/add-and-advertise-new-services-then-build-192f processed successfully
+📊 Progress: 10 successful, 0 failed, 0 conflicts resolved
+---
+💾 Pushing progress to remote...

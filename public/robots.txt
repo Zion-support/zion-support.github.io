@@ -1,4 +1,50 @@
-User-agent: *;
+
+# Allow all crawlers
+User-agent: *
 Allow: /
 
-Sitemap: https://zion.app/sitemap.xml
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+
+# Specific rules for major crawlers
+=======
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandexbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Allow access to static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /logo192.png
+Allow: /manifest.json
+
+# Sitemap locations
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.json
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Host directive
+Host: https://ziontechgroup.com

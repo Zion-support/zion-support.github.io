@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React from \'react\'; export default function Home() {; return(; <div className=\"container mx-auto px-4 py-12\">\";\" <h1 className=\"text-3xl font-bold mb-4\">Zion Tech Group</h1>\";\" <p className=\"text-gray-300\">Leading AI,cybersecurity,and cloud solutions.</p>;\" </div>;\";\" );\";\" };\";\";
-const React from "react"; export default function Home() {; return(; <div className="container mx-auto px-4 py-12">";" <h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>";" <p className="text-gray-300">Leading AI,cybersecurity,and cloud solutions.</p>;" </div>;";" );";" };";";'"'"
-import _React from 'react'; export default function Home() {; return(; <div className="container mx-auto px-4 py-12">";" <h1 className="text-3xl font-bold mb-4">Zion Tech Group</h1>";" <p className="text-gray-300">Leading AI,cybersecurity,and cloud solutions.</p>;" </div>;";" );";" };";";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

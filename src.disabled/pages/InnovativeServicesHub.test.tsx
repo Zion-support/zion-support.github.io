@@ -1,1 +1,0 @@
-describe("InnovativeServicesHub", () => { it("renders without crashing", () => { render(<InnovativeServicesHub />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<InnovativeServicesHub />) ;

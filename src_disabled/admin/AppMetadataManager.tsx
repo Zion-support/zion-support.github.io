@@ -6,10 +6,9 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
 const AppMetadataManager: React.FC = () => {
   return (
     <>
-      <SEO 
+      <SEO
         title="App Metadata Manager"
-        description="Manage app store metadata for the Zion mobile application"
-        // noindex removed - not supported in new SEO component
+        description="Manage application metadata and configuration"
       />
       
       <div className="container py-8">

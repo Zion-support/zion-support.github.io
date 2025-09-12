@@ -1,371 +1,279 @@
-import React, { useEffect } from 'react;
-import Head from 'next/head;
-interface PerformanceOptimizerProps {preloadImages?: string[];
-  preloadFonts?: string[];
-  criticalCSS?: string;
-}
+import React, { useEffect, useState, useCallback } from 'react';
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-preloadImages = [], preloadFonts = [;
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
-  ], criticalCSS'}) => {;
-  useEffect(() => {
-    // Performance monitoring;
-    if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-if (entry.entryType === 'largest-contentful-paint') {'            console.log('LCP: ', entry.startTime);
-'          }'          if (entry.entryType === 'first-input') {'            console.log('FID: ', entry.processingStart - entry.startTime);'          }'          if (entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console.log('CLS: ', (entry as any).value);'            }'          }}
-      });
-      try {;
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
-        console.log('Performance monitoring not fully supported');
-'      }';
-      // Resource hints for better performance;
-      const addResourceHint = (href: string, as: string, type?: string) => {;
-=======
 interface PerformanceOptimizerProps {
-  className?: string;
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
-    timeToInteractive: 0
-  });
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
-  const [showMetrics, setShowMetrics] = useState(false);
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [connectionType, setConnectionType] = useState<'slow' | 'fast' | 'unknown'>('unknown');
 
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      
-      const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0, // Would need to be measured with CLS API
-        firstInputDelay: 0, // Would need to be measured with FID API
-        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
-      };
-
-      setMetrics(newMetrics);
-    }
-  }, []);
-
-  // Optimize images
-  const optimizeImages = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing images...');
-
-    try {
-      const images = document.querySelectorAll('img');
-      let optimizedCount = 0;
-
-      for (const img of Array.from(images)) {
-        if (img.complete && img.naturalWidth > 0) {
-          // Add lazy loading
-          img.loading = 'lazy';
-          
-          // Add responsive sizes if not present
-          if (!img.sizes) {
-            img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-          }
-          
-          optimizedCount++;
-        }
+  useEffect(() => {
+    // Check connection type for adaptive loading
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+        setConnectionType('slow');
+      } else {
+        setConnectionType('fast');
       }
-
-      setOptimizationStatus(`Optimized ${optimizedCount} images`);
-      
-      // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setOptimizationStatus('Image optimization complete');
-    } catch (error) {
-      setOptimizationStatus('Image optimization failed');
-      console.error('Image optimization error:', error);
-    } finally {
-      setIsOptimizing(false);
     }
+
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Observe the main content
+    const mainContent = document.querySelector('main');
+    if (mainContent) {
+      observer.observe(mainContent);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
-  // Optimize fonts
-  const optimizeFonts = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing fonts...');
+  // Preload critical resources
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
 
-    try {
-      // Add font-display: swap to improve font loading
-      const style = document.createElement('style');
-      style.textContent = `
-        @font-face {
-          font-family: 'Inter';
-          font-display: swap;
-        }
-        @font-face {
-          font-family: 'JetBrains Mono';
-          font-display: swap;
-        }
-        @font-face {
-          font-family: 'Orbitron';
-          font-display: swap;
-        }
-      `;
-      document.head.appendChild(style);
-
-      setOptimizationStatus('Font optimization complete');
-      
-      // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 800));
-    } catch (error) {
-      setOptimizationStatus('Font optimization failed');
-      console.error('Font optimization error:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, []);
-
-  // Optimize CSS and JavaScript
-  const optimizeCode = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing code...');
-
-    try {
-      // Add resource hints for critical resources
-      const preloadLinks = [
-        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+      // Preload critical images
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
       ];
 
-      preloadLinks.forEach(linkAttrs => {
->>>>>>> origin/automation/changelog
+      criticalImages.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize images based on connection
+  const getOptimizedImageSrc = useCallback((src: string, width?: number) => {
+    if (connectionType === 'slow') {
+      // Use lower quality images for slow connections
+      return `${src}?q=60&w=${width || 400}`;
+    }
+    return `${src}?q=80&w=${width || 800}`;
+  }, [connectionType]);
+
+  // Debounce scroll events
+  const debounce = useCallback((func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }, []);
+
+  // Optimize scroll performance
+  useEffect(() => {
+    const handleScroll = debounce(() => {
+      // Track scroll position for analytics
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      console.log('Scroll percentage:', scrollPercent);
+    }, 100);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [debounce]);
+
+  // Resource hints
+  useEffect(() => {
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'www.google-analytics.com'
+      ];
+
+      dnsPrefetchDomains.forEach((domain) => {
         const link = document.createElement('link');
-'        link.rel = 'preload;
-        link.href = href;'        link.as = as;if (type) link.type = type;
+        link.rel = 'dns-prefetch';
+        link.href = `//${domain}`;
         document.head.appendChild(link);
-<<<<<<< HEAD
-};
-      // Preload critical resources;
-      preloadImages.forEach(image => {;
-addResourceHint(image, 'image');
-'      });';
-      preloadFonts.forEach(font => {;
-        addResourceHint(font, 'style');
-'      });'    }}, [preloadImages, preloadFonts]);
-  return (;
-    <Head>;
-      {/* Critical CSS inlined for above-the-fold content */}
-      {criticalCSS && (;
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
-=======
       });
 
-      setOptimizationStatus('Code optimization complete');
-      
-      // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1200));
-    } catch (error) {
-      setOptimizationStatus('Code optimization failed');
-      console.error('Code optimization error:', error);
-    } finally {
-      setIsOptimizing(false);
+      // Preconnect to critical origins
+      const preconnectOrigins = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com'
+      ];
+
+      preconnectOrigins.forEach((origin) => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = origin;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+    };
+
+    addResourceHints();
+  }, []);
+
+  return (
+    <div className="performance-optimizer">
+      {children}
+    </div>
+  );
+};
+
+// Lazy loading image component
+export const LazyImage: React.FC<{
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+}> = ({ src, alt, width, height, className = '', priority = false }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+
+  useEffect(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const img = document.querySelector(`img[data-src="${src}"]`);
+    if (img) {
+      observer.observe(img);
+    }
+
+    return () => observer.disconnect();
+  }, [src, priority]);
+
+  return (
+    <img
+      data-src={src}
+      src={isInView ? src : ''}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+      onLoad={() => setIsLoaded(true)}
+      loading={priority ? 'eager' : 'lazy'}
+    />
+  );
+};
+
+// Virtual scrolling component for large lists
+export const VirtualList: React.FC<{
+  items: any[];
+  itemHeight: number;
+  containerHeight: number;
+  renderItem: (item: any, index: number) => React.ReactNode;
+}> = ({ items, itemHeight, containerHeight, renderItem }) => {
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const visibleStart = Math.floor(scrollTop / itemHeight);
+  const visibleEnd = Math.min(
+    visibleStart + Math.ceil(containerHeight / itemHeight) + 1,
+    items.length
+  );
+
+  const visibleItems = items.slice(visibleStart, visibleEnd);
+
+  const handleScroll = useCallback(
+    debounce((e: React.UIEvent<HTMLDivElement>) => {
+      setScrollTop(e.currentTarget.scrollTop);
+    }, 16),
+    []
+  );
+
+  return (
+    <div
+      style={{ height: containerHeight, overflow: 'auto' }}
+      onScroll={handleScroll}
+    >
+      <div style={{ height: items.length * itemHeight, position: 'relative' }}>
+        <div
+          style={{
+            transform: `translateY(${visibleStart * itemHeight}px)`,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+          }}
+        >
+          {visibleItems.map((item, index) =>
+            renderItem(item, visibleStart + index)
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Memoized component wrapper
+export const MemoizedComponent = React.memo;
+
+// Performance monitoring hook
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<{
+    renderTime: number;
+    memoryUsage?: number;
+  }>({ renderTime: 0 });
+
+  useEffect(() => {
+    const startTime = performance.now();
+
+    const measureRender = () => {
+      const endTime = performance.now();
+      setMetrics(prev => ({
+        ...prev,
+        renderTime: endTime - startTime
+      }));
+    };
+
+    // Measure after render
+    requestAnimationFrame(measureRender);
+
+    // Memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // MB
+      }));
     }
   }, []);
 
-  // Run all optimizations
-  const runAllOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Starting comprehensive optimization...');
-
-    try {
-      await optimizeImages();
-      await optimizeFonts();
-      await optimizeCode();
-      
-      setOptimizationStatus('All optimizations complete!');
-      
-      // Re-measure performance after optimization
-      setTimeout(() => {
-        measurePerformance();
-      }, 500);
-      
-    } catch (error) {
-      setOptimizationStatus('Optimization failed');
-      console.error('Optimization error:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
-
-  // Initialize performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Measure initial performance
-      window.addEventListener('load', measurePerformance);
-      
-      // Monitor for performance issues
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) { // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp);
-            }
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      
-      return () => {
-        window.removeEventListener('load', measurePerformance);
-        observer.disconnect();
-      };
-    }
-  }, [measurePerformance]);
-
-  const getPerformanceScore = (): number => {
-    let score = 100;
-    
-    if (metrics.firstContentfulPaint > 1800) score -= 20;
-    if (metrics.largestContentfulPaint > 2500) score -= 25;
-    if (metrics.loadTime > 3000) score -= 15;
-    if (metrics.timeToInteractive > 3500) score -= 20;
-    
-    return Math.max(0, score);
-  };
-
-  const getPerformanceGrade = (score: number): string => {
-    if (score >= 90) return 'A';
-    if (score >= 80) return 'B';
-    if (score >= 70) return 'C';
-    if (score >= 60) return 'D';
-    return 'F';
-  };
-
-  const performanceScore = getPerformanceScore();
-  const performanceGrade = getPerformanceGrade(performanceScore);
-
-  return (
-    <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-bold text-white flex items-center gap-2">
-          <Gauge className="w-5 h-5 text-cyan-400" />
-          Performance Optimizer
-        </h3>
-        <button
-          onClick={() => setShowMetrics(!showMetrics)}
-          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-        >
-          {showMetrics ? 'Hide' : 'Show'} Metrics
-        </button>
-      </div>
-
-      {/* Performance Score */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-white/70">Performance Score</span>
-          <span className="text-2xl font-bold text-cyan-400">{performanceGrade}</span>
-        </div>
-        <div className="w-full bg-white/10 rounded-full h-3">
-          <motion.div
-            className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${performanceScore}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          />
-        </div>
-        <div className="text-right mt-1">
-          <span className="text-sm text-white/60">{performanceScore}/100</span>
-        </div>
-      </div>
-
-      {/* Metrics Display */}
-      {showMetrics && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
-        >
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>
-            <div className="text-xs text-white/60">Load Time</div>
-          </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>
-            <div className="text-xs text-white/60">FCP</div>
-          </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>
-            <div className="text-xs text-white/60">LCP</div>
-          </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>
-            <div className="text-xs text-white/60">TTI</div>
-          </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>
-            <div className="text-xs text-white/60">CLS</div>
-          </div>
-          
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
-            <div className="text-xs text-white/60">FID</div>
-          </div>
-        </motion.div>
->>>>>>> origin/automation/changelog
-      )}
-
-      {/* Preload critical resources */}
-      {preloadImages.map((image, index) => (;
-        <link;
-key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}
-
-      {preloadFonts.map((font, index) => (;
-        <link;
-key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {;
-            const link = document.querySelector(link[href="${font}"]`);
-"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
-}'          }}`        />;
-      ))}
-
-      {/* Performance hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
-      <script;
-        dangerouslySetInnerHTML={{;
-          __html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration);
-'                  })'                  .catch(function(registrationError) {;
-                    console.log('SW registration failed: ', registrationError);'                  });'              });
-}
-          ``        }}/>;
-    </Head>;
-  );
+  return metrics;
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/automation/changelog
 export default PerformanceOptimizer;

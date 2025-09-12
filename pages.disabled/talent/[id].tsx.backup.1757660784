@@ -1,0 +1,73 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+=======
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import type { TalentProfile as TalentProfileType } from '@/types/talent';
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+
+interface TalentProfileWithSocial extends TalentProfileType {
+  social?: Record<string, string>;
+}
+
+const TalentProfilePage: React.FC = () => {
+  const { id } = useParams();
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (!id) return;
+      setLoading(true);
+      setError(null);
+      try {
+        const res = await fetch(`/api/talent/${id}`);
+        if (res.status === 404) {
+          setError('Talent not found');
+          setProfile(null);
+          return;
+        }
+        if (!res.ok) throw new Error('Failed to load profile');
+        const data = await res.json();
+        setProfile(data.profile);
+      } catch (err) {
+        setError('Talent not found');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
+      fetchProfile();
+    }
+  }, [id]);
+
+  if (loading) return <ProfileLoadingState />;
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+
+>>>>>>> origin/backup-20250824-222848
+  return (
+
+export default function [id]Page() {
+  return (
+    <>
+              <Head>
+        <title>talent/[id] - Zion App</title>
+        <meta name="description" content="talent/[id] page" />
+              </Head>
+              <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">talent/[id]</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+        <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home</a>
+              </div>
+              </div>
+        </>
+  );
+
+  );
+}

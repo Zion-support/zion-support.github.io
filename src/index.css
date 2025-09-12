@@ -1,7 +1,9 @@
-/* Minimal baseline styles to unblock build */
-html, body, #root {
+body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
+.App {
+  text-align: center;
+  padding: 2rem;
+}

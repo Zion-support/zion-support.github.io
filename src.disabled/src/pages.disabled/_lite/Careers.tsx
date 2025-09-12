@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React from \'react\'; export default function Careers() {; return(; <div className=\"container mx-auto px-4 py-12\">\";\" <h1 className=\"text-2xl font-bold mb-2\">Careers</h1>\";\" <p className=\"text-gray-300\">No open roles at this time.</p>;\" </div>;\";\" );\";\" };\";\";
-const React from "react"; export default function Careers() {; return(; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Careers</h1>";" <p className="text-gray-300">No open roles at this time.</p>;" </div>;";" );";" };";";'"'"
-import _React from 'react'; export default function Careers() {; return(; <div className="container mx-auto px-4 py-12">";" <h1 className="text-2xl font-bold mb-2">Careers</h1>";" <p className="text-gray-300">No open roles at this time.</p>;" </div>;";" );";" };";";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

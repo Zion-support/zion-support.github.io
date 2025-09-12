@@ -1,97 +1,9 @@
-module.exports = {;
-  apps: [;
-    {;
-      name: 'error-fixer',;
-      script: 'automation/lint-error-fixer.cjs',;
-      args: 'continuous',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '1G',;
-      env: {;
-        NODE_ENV: 'production';
-      },;
-      error_file: './logs/error-fixer-error.log',;
-      out_file: './logs/error-fixer-out.log',;
-      log_file: './logs/error-fixer-combined.log',;
-      time: true;
-    },;
-    {;
-      name: 'intelligent-orchestrator',;
-      script: 'automation/intelligent-orchestrator.cjs',;
-      args: 'continuous',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '1G',;
-      env: {;
-        NODE_ENV: 'production';
-      },;
-      error_file: './logs/orchestrator-error.log',;
-      out_file: './logs/orchestrator-out.log',;
-      log_file: './logs/orchestrator-combined.log',;
-      time: true;
-    },;
-    {;
-      name: 'automation-dashboard',;
-      script: 'automation/automation-dashboard.cjs',;
-      args: 'start',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '1G',;
-      env: {;
-        NODE_ENV: 'production',;
-        PORT: 3001;
-      },;
-      error_file: './logs/dashboard-error.log',;
-      out_file: './logs/dashboard-out.log',;
-      log_file: './logs/dashboard-combined.log',;
-      time: true;
-    },;
-    {;
-      name: 'code-quality-monitor',;
-      script: 'automation/code-quality-monitor.cjs',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '512M',;
-      env: {;
-        NODE_ENV: 'production';
-      },;
-      error_file: './logs/code-quality-error.log',;
-      out_file: './logs/code-quality-out.log',;
-      log_file: './logs/code-quality-combined.log',;
-      time: true;
-    },;
-    {;
-      name: 'performance-optimizer',;
-      script: 'automation/performance-optimizer.cjs',;
-      instances: 1,;
-      autorestart: true,;
-      watch: false,;
-      max_memory_restart: '512M',;
-      env: {;
-        NODE_ENV: 'production';
-      },;
-      error_file: './logs/performance-error.log',;
-      out_file: './logs/performance-out.log',;
-      log_file: './logs/performance-combined.log',;
-      time: true;
-    }
-  ];
-},;
-export default {
-
-
-  apps: [;
+module.exports = {
+  apps: [
     {
-
-      name: 'bolt-zion-app',
-name: 'bolt - zion - app',
-      script: 'npm',
+      name: 'autonomous-ai-manager',
+      script: 'automation/autonomous-system-manager.cjs',
       args: 'start',
-      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -100,15 +12,25 @@ name: 'bolt - zion - app',
         NODE_ENV: 'production',
         PORT: 3000
       },
-      error_file: './logs/web-error.log',
-      out_file: './logs/web-out.log',
-      log_file: './logs/web-combined.log',
-      time: true
+      env_production: {
+        NODE_ENV: 'production',
+        PORT: 3000
+      },
+      log_file: 'logs/autonomous-ai-manager.log',
+      out_file: 'logs/autonomous-ai-manager-out.log',
+      error_file: 'logs/autonomous-ai-manager-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 4000,
+      kill_timeout: 5000,
+      wait_ready: true,
+      listen_timeout: 8000
     },
     {
-      name: 'error-monitor',
-      script: './scripts/error-monitor.js',
-      cwd: '/workspace',
+      name: 'ml-intelligence',
+      script: 'automation/ml-link-intelligence.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -116,16 +38,20 @@ name: 'bolt - zion - app',
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/error-monitor-error.log',
-      out_file: './logs/error-monitor-out.log',
-      log_file: './logs/error-monitor-combined.log',
-      time: true,
-      cron_restart: '*/5 * * * *' // Restart every 5 minutes
+      log_file: 'logs/ml-intelligence.log',
+      out_file: 'logs/ml-intelligence-out.log',
+      error_file: 'logs/ml-intelligence-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '30s',
+      restart_delay: 10000,
+      kill_timeout: 5000
     },
     {
-      name: 'merge-conflict-detector',
-      script: './scripts/merge-conflict-detector.js',
-      cwd: '/workspace',
+      name: 'real-time-monitor',
+      script: 'automation/real-time-performance-monitor.cjs',
+      args: 'start',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -133,69 +59,124 @@ name: 'bolt - zion - app',
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/merge-detector-error.log',
-      out_file: './logs/merge-detector-out.log',
-      log_file: './logs/merge-detector-combined.log',
-      time: true,
-      cron_restart: '*/10 * * * *' // Check every 10 minutes
+      log_file: 'logs/real-time-monitor.log',
+      out_file: 'logs/real-time-monitor-out.log',
+      error_file: 'logs/real-time-monitor-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 5000,
+      kill_timeout: 5000
     },
     {
-      name: 'build-monitor',
-      script: './scripts/build-monitor.js',
-      cwd: '/workspace',
+      name: 'link-scheduler',
+      script: 'automation/link-health-scheduler.cjs',
+      args: 'start',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '128M',
       env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/build-monitor-error.log',
-      out_file: './logs/build-monitor-out.log',
-      log_file: './logs/build-monitor-combined.log',
-      time: true,
-      cron_restart: '*/15 * * * *' // Check every 15 minutes
+      cron_restart: '0 0 * * 0', // Restart weekly on Sunday
+      log_file: 'logs/pm2/dependency-monitor.log',
+      error_file: 'logs/pm2/dependency-monitor-error.log',
+      out_file: 'logs/pm2/dependency-monitor-out.log'
     },
     {
-      name: 'auto-fixer',
-      script: './scripts/auto-fixer.js',
-      cwd: '/workspace',
+      name: 'performance-monitor',
+      script: 'scripts/pm2/performance-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'performance-monitor'
       },
-      error_file: './logs/auto-fixer-error.log',
-      out_file: './logs/auto-fixer-out.log',
-      log_file: './logs/auto-fixer-combined.log',
-      time: true,
-      cron_restart: '*/30 * * * *' // Run every 30 minutes
+      cron_restart: '0 */8 * * *', // Restart every 8 hours
+      log_file: 'logs/pm2/performance-monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error.log',
+      out_file: 'logs/pm2/performance-monitor-out.log'
+    },
+    {
+      name: 'smart-test-runner',
+      script: 'scripts/pm2/smart-test-runner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'smart-test-runner'
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours for frequent testing
+      log_file: 'logs/pm2/smart-test-runner.log',
+      error_file: 'logs/pm2/smart-test-runner-error.log',
+      out_file: 'logs/pm2/smart-test-runner-out.log'
+    },
+    {
+      name: 'git-workflow-automator',
+      script: 'scripts/pm2/git-workflow-automator.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'git-workflow-automator'
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours for git operations
+      log_file: 'logs/pm2/git-workflow-automator.log',
+      error_file: 'logs/pm2/git-workflow-automator-error.log',
+      out_file: 'logs/pm2/git-workflow-automator-out.log'
+    },
+    {
+      name: 'security-scanner',
+      script: 'scripts/pm2/security-scanner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'security-scanner'
+      },
+      cron_restart: '0 0 * * *', // Restart daily at midnight for security
+      log_file: 'logs/pm2/security-scanner.log',
+      error_file: 'logs/pm2/security-scanner-error.log',
+      out_file: 'logs/pm2/security-scanner-out.log'
+    },
+    {
+      name: 'bundle-optimizer',
+      script: 'scripts/pm2/bundle-optimizer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'bundle-optimizer'
+      },
+      cron_restart: '0 6 * * *', // Restart daily at 6 AM for bundle optimization
+      log_file: 'logs/pm2/bundle-optimizer.log',
+      error_file: 'logs/pm2/bundle-optimizer-error.log',
+      out_file: 'logs/pm2/bundle-optimizer-out.log'
     }
   ],
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-module.exports = {
-  apps: [{
-    name: "ziontechgroup-site",
-    script: "npm",
-    args: "start",
-    instances: 1,
-    exec_mode: "fork",
-    env: {
-      NODE_ENV: "production",
-      PORT: 3000
-    },
-    env_production: {
-      NODE_ENV: "production",
-      PORT: 3000
-    },
-    max_memory_restart: "1G",
-    node_args: "--max-old-space-size=1024",
-    error_file: "./logs/err.log",
-    out_file: "./logs/out.log",
-    log_file: "./logs/combined.log",
-    time: true
-  }]
+
+  deploy: {
+    production: {
+      user: 'node',
+      host: 'localhost',
+      ref: 'origin/main',
+      repo: 'git@github.com:Zion-Holdings/zion.git',
+      path: '/var/www/zion',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': ''
+    }
+  }
 };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

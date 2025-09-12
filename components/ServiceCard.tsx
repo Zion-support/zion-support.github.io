@@ -1,171 +1,161 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink, Star, Clock, Users, TrendingUp, Target } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 interface ServiceCardProps {
   service: {
-    slug: string;
+    id: string;
     name: string;
     description: string;
-    category: string;
-    type: string;
-    features?: string[];
-    pricing?: {
-      starter: string;
-      professional: string;
-      enterprise: string;
-      custom: string;
-    };
-    benefits?: string[];
-    useCases?: string[];
-    marketSize?: string;
-    targetAudience?: string;
-    competitiveAdvantage?: string;
+    category: string[];
+    features: string[];
+    pricing?: string;
+    rating?: number;
+    icon?: string;
+    href?: string;
+    isPopular?: boolean;
+    isNew?: boolean;
   };
-  onClick: () => void;
-  onHover: () => void;
-  isHovered: boolean;
+  index: number;
+  isReducedMotion?: boolean;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ 
-  service, 
-  onClick, 
-  onHover, 
-  isHovered 
-}) => {
-  const [isPressed, setIsPressed] = useState(false);
-
-  const handleClick = useCallback(() => {
-    setIsPressed(true);
-    setTimeout(() => setIsPressed(false), 150);
-    onClick();
-  }, [onClick]);
-
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleClick();
-    }
-  }, [handleClick]);
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isReducedMotion = false }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleMouseEnter = useCallback(() => {
-    onHover();
-  }, [onHover]);
+    if (!isReducedMotion) {
+      setIsHovered(true);
+    }
+  }, [isReducedMotion]);
 
   const handleMouseLeave = useCallback(() => {
-    // Optional: handle mouse leave if needed
+    if (!isReducedMotion) {
+      setIsHovered(false);
+    }
+  }, [isReducedMotion]);
+
+  const toggleExpanded = useCallback(() => {
+    setIsExpanded(prev => !prev);
+  }, []);
+
+  const getCategoryColor = useCallback((category: string) => {
+    const colors: Record<string, string> = {
+      'AI': 'from-purple-400 to-pink-500',
+      'Quantum': 'from-cyan-400 to-blue-500',
+      'IT': 'from-emerald-400 to-teal-500',
+      'Micro SAAS': 'from-orange-400 to-red-500',
+      'Cybersecurity': 'from-red-400 to-pink-500',
+      'Space': 'from-indigo-400 to-purple-500',
+      'Blockchain': 'from-yellow-400 to-orange-500'
+    };
+    return colors[category] || 'from-gray-400 to-gray-500';
+  }, []);
+
+  const getIcon = useCallback((category: string) => {
+    const icons: Record<string, React.ReactNode> = {
+      'AI': <Brain className="w-6 h-6" />,
+      'Quantum': <Zap className="w-6 h-6" />,
+      'IT': <Shield className="w-6 h-6" />,
+      'Micro SAAS': <Rocket className="w-6 h-6" />,
+      'Cybersecurity': <Shield className="w-6 h-6" />,
+      'Space': <Rocket className="w-6 h-6" />,
+      'Blockchain': <Zap className="w-6 h-6" />
+    };
+    return icons[category] || <Star className="w-6 h-6" />;
   }, []);
 
   return (
     <motion.div
-      className="group cursor-pointer h-full"
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: isReducedMotion ? 0.1 : 0.5, 
+        delay: isReducedMotion ? 0 : index * 0.1 
+      }}
+      whileHover={!isReducedMotion ? { y: -5 } : {}}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      tabIndex={0}
-      role="button"
-      aria-label={`View ${service.name} service details`}
-      whileHover={{ y: -5, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      animate={{
-        scale: isPressed ? 0.98 : 1,
-        y: isHovered ? -5 : 0
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 400,
-        damping: 17
-      }}
+      className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm"
+      role="article"
+      aria-labelledby={`service-${service.id}-title`}
+      aria-describedby={`service-${service.id}-description`}
     >
-      <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70 h-full flex flex-col">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-3 flex-1">
-            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Star className="w-6 h-6 text-white" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <h3 className="font-semibold text-lg text-white group-hover:text-cyan-400 transition-colors line-clamp-2">
-                {service.name}
-              </h3>
-              <div className="flex items-center gap-2 mt-1">
-                <span className="text-sm text-gray-400 bg-gray-700/50 px-2 py-1 rounded-full">
-                  {service.category}
-                </span>
-                <span className="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded-full">
-                  {service.type}
-                </span>
-              </div>
-            </div>
-          </div>
-          
-          {/* External link indicator */}
-          <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors flex-shrink-0" />
+      {/* Popular/New Badge */}
+      {(service.isPopular || service.isNew) && (
+        <div className="absolute -top-3 left-6">
+          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+            service.isPopular 
+              ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black' 
+              : 'bg-gradient-to-r from-green-400 to-emerald-500 text-black'
+          }`}>
+            {service.isPopular ? 'Popular' : 'New'}
+          </span>
         </div>
+      )}
 
-        {/* Description */}
-        <p className="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
-          {service.description}
-        </p>
-
-        {/* Features (if available) */}
-        {service.features && service.features.length > 0 && (
-          <div className="mb-4">
-            <div className="flex flex-wrap gap-2">
-              {service.features.slice(0, 3).map((feature, index) => (
-                <span
-                  key={index}
-                  className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full border border-cyan-400/20"
-                >
-                  {feature}
-                </span>
-              ))}
-              {service.features.length > 3 && (
-                <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded-full">
-                  +{service.features.length - 3} more
-                </span>
+      {/* Header */}
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category[0])} text-white`}>
+            {getIcon(service.category[0])}
+          </div>
+          <div>
+            <h3 
+              id={`service-${service.id}-title`}
+              className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300"
+            >
+              {service.name}
+            </h3>
+            <div className="flex items-center gap-2 mt-1">
+              {service.rating && (
+                <div className="flex items-center gap-1">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span className="text-sm text-gray-300">{service.rating}</span>
+                </div>
               )}
+              <span className="text-sm text-gray-400">•</span>
+              <span className="text-sm text-gray-400">{service.category[0]}</span>
             </div>
-          </div>
-        )}
-
-        {/* Footer */}
-        <div className="mt-auto pt-4 border-t border-gray-700/50">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4 text-xs text-gray-400">
-                           {/* Market Size */}
-             {service.marketSize && (
-               <div className="flex items-center gap-1">
-                 <TrendingUp className="w-3 h-3 text-green-400" />
-                 <span className="text-xs">{service.marketSize}</span>
-               </div>
-             )}
-             
-             {/* Type */}
-             <div className="flex items-center gap-1">
-               <Target className="w-3 h-3 text-blue-400" />
-               <span className="text-xs">{service.type}</span>
-             </div>
-            </div>
-            
-                         {/* Pricing */}
-             {service.pricing && (
-               <span className="text-sm font-medium text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded-full border border-emerald-400/20">
-                 From {service.pricing.starter}
-               </span>
-             )}
-          </div>
-          
-          {/* Action indicator */}
-          <div className="flex items-center justify-between mt-3">
-            <span className="text-xs text-gray-500">
-              Click to learn more
-            </span>
-            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" />
           </div>
         </div>
       </div>
+
+      {/* Description */}
+      <p 
+        id={`service-${service.id}-description`}
+        className="text-gray-300 mb-4 line-clamp-3"
+      >
+        {service.description}
+      </p>
+
+      {/* Service Features */}
+      <div className="space-y-2 mb-6">
+        {service.features.slice(0, 3).map((feature, idx) => (
+          <div key={idx} className="flex items-center space-x-2">
+            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" aria-hidden="true" />
+            <span className="text-sm text-gray-300">{feature}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Service Price */}
+      <div className="mb-6">
+        <span className="text-2xl font-bold text-cyan-400">
+          {service.price}
+        </span>
+      </div>
+
+      {/* CTA Button */}
+      <Link 
+        href={service.link}
+        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
+      >
+        Learn More
+        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+      </Link>
     </motion.div>
   );
 };

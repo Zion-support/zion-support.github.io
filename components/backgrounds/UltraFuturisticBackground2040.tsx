@@ -1,17 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticBackground2040Props {
-  intensity?: 'low' | 'medium' | 'high';
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon' | 'quantum-holographic';
-  children?: React.ReactNode;
-}
-
-export default function UltraFuturisticBackground2040({ 
-  intensity = 'medium', 
-  theme = 'quantum-holographic',
-  children
-}: UltraFuturisticBackground2040Props) {
+const UltraFuturisticBackground2040: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | undefined>(undefined);
@@ -127,6 +117,8 @@ export default function UltraFuturisticBackground2040({
     if (!canvasRef.current) return;
     
     const canvas = canvasRef.current;
+    if (!canvas) return;
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -134,13 +126,8 @@ export default function UltraFuturisticBackground2040({
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Clear canvas with gradient background
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-    gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
-    gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.05)');
-    gradient.addColorStop(1, 'rgba(0, 0, 0, 0.1)');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    let animationFrameId: number;
+    let time = 0;
 
     // Update and draw particles
     particles.current.forEach((particle, index) => {
@@ -242,9 +229,67 @@ export default function UltraFuturisticBackground2040({
       ctx.lineWidth = 1;
       for (let i = 0; i < 5; i++) {
         ctx.beginPath();
-        for (let x = 0; x < canvas.width; x += 10) {
-          const y = Math.sin(x * 0.01 + Date.now() * 0.001 + i) * 50 + canvas.height / 2;
-          if (x === 0) {
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      
+      for (let y = offset; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw floating geometric shapes
+      const shapes = [
+        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 60, rotation: time * 0.5 },
+        { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 40, rotation: time * -0.3 },
+        { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
+      ];
+
+      shapes.forEach((shape, index) => {
+        ctx.save();
+        ctx.translate(shape.x, shape.y);
+        ctx.rotate(shape.rotation);
+        
+        ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
+        ctx.lineWidth = 2;
+        
+        if (index === 0) {
+          // Square
+          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size);
+        } else if (index === 1) {
+          // Circle
+          ctx.beginPath();
+          ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
+          ctx.stroke();
+        } else {
+          // Triangle
+          ctx.beginPath();
+          ctx.moveTo(0, -shape.size/2);
+          ctx.lineTo(shape.size/2, shape.size/2);
+          ctx.lineTo(-shape.size/2, shape.size/2);
+          ctx.closePath();
+          ctx.stroke();
+        }
+        
+        ctx.restore();
+      });
+
+      // Draw energy waves
+      const waveCount = 3;
+      for (let i = 0; i < waveCount; i++) {
+        const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
+        const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
+        
+        ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
+        ctx.lineWidth = 3;
+        
+        ctx.beginPath();
+        for (let x = -100; x < canvas.width + 100; x += 5) {
+          const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
+          if (x === -100) {
             ctx.moveTo(x, y);
           } else {
             ctx.lineTo(x, y);
@@ -252,15 +297,11 @@ export default function UltraFuturisticBackground2040({
         }
         ctx.stroke();
       }
-    }
 
     // Continue animation
     animationFrameRef.current = requestAnimationFrame(animate);
   }, [theme]);
 
-  // Initialize and start animation
-  useEffect(() => {
-    initParticles();
     animate();
 
     return () => {
@@ -273,12 +314,17 @@ export default function UltraFuturisticBackground2040({
   // Handle window resize
   useEffect(() => {
     const handleResize = () => {
-      initParticles();
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [initParticles]);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -291,20 +337,23 @@ export default function UltraFuturisticBackground2040({
         }}
       />
       
-      {/* Additional visual effects */}
+      {/* Overlay Gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />
+      
+      {/* Floating Elements */}
       <div className="absolute inset-0">
-        {/* Quantum grid overlay */}
-        {theme.includes('quantum') && (
-          <div className="absolute inset-0 opacity-10">
-            <div className="w-full h-full" style={{
-              backgroundImage: `
-                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: '50px 50px'
-            }} />
-          </div>
-        )}
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'gridMove 20s linear infinite'
+          }} />
+        </div>
         
         {/* Holographic overlay */}
         {theme.includes('holographic') && (
@@ -329,7 +378,37 @@ export default function UltraFuturisticBackground2040({
         )}
       </div>
       
-      {children}
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+            transform: translate(0, 0);
+          }
+          100% {
+            transform: translate(50px, 50px);
+          }
+        }
+        
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 0.2;
+          }
+          50% {
+            opacity: 0.5;
+          }
+        }
+      `}</style>
     </div>
   );
-}
+};
+
+export default UltraFuturisticBackground2040;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -6,139 +6,8 @@ import {
   Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
   Home, Briefcase, Users, FileText, Phone, Mail, MapPin, Globe,
   Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink,
-  Building, GraduationCap, Heart, Palette, BarChart3, Cloud, Lock,
-  Handshake, Video, BookOpen
+  GraduationCap, Building, Truck, Zap as ZapIcon, Heart, DollarSign
 } from 'lucide-react';
-
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-}
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const navigationItems: NavigationItem[] = [
-  {
-    name: 'AI & Machine Learning',
-    href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
-    description: 'Revolutionary AI consciousness and emotional intelligence',
-    badge: 'New',
-    featured: true,
-    children: [
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-platform', description: 'Transform data into actionable insights', featured: true },
-      { name: 'AI Customer Service', href: '/ai-customer-service-automation', description: '24/7 intelligent customer support', featured: true },
-      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Supercharge sales with AI automation', featured: true },
-      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-suite', description: 'Automate and optimize marketing campaigns' },
-      { name: 'AI Content Creation', href: '/ai-content-creation-suite', description: 'Create engaging content at scale' },
-      { name: 'AI HR Analytics', href: '/ai-hr-analytics-platform', description: 'Transform HR with data-driven insights' },
-      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', description: 'Intelligent financial planning and wealth management' },
-      { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics-platform', description: 'Transform healthcare with AI-powered insights' }
-    ]
-  },
-  {
-    name: 'Quantum Computing',
-    href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
-    description: 'Next-generation quantum computing solutions',
-    badge: 'Quantum',
-    children: [
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Unlock quantum advantage in ML', featured: true },
-      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof security with quantum encryption' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Secure the future of the internet' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum advantage in financial markets' },
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Discover new materials with quantum computing' },
-      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', description: 'Advanced quantum neural computing' }
-    ]
-  },
-  {
-    name: 'Emerging Technologies',
-    href: '/emerging-tech',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Cutting-edge emerging technology solutions',
-    badge: 'Future',
-    children: [
-      { name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', featured: true },
-      { name: 'Space Technology AI', href: '/space-technology-ai-platform', description: 'AI-powered space exploration' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Revolutionary neural interface technology' },
-      { name: 'Autonomous Vehicles', href: '/autonomous-vehicle-ai-platform', description: 'AI-powered autonomous vehicle technology' },
-      { name: 'Synthetic Biology', href: '/synthetic-biology-platform', description: 'Design and engineer biological systems' },
-      { name: 'Digital Twin Platform', href: '/digital-twin-platform', description: 'Create virtual replicas of physical systems' }
-    ]
-  },
-  {
-    name: 'Enterprise Solutions',
-    href: '/enterprise',
-    icon: <Building className="w-5 h-5" />,
-    description: 'Advanced enterprise infrastructure solutions',
-    badge: 'Enterprise',
-    children: [
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform', description: 'Self-healing infrastructure with AI', featured: true },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Manage distributed edge infrastructure' },
-      { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity-platform', description: 'Intelligent threat detection and response' },
-      { name: 'Blockchain Identity Management', href: '/blockchain-identity-management', description: 'Secure, decentralized identity verification' },
-      { name: 'Supply Chain Optimization', href: '/ai-supply-chain-optimization', description: 'Optimize supply chain with intelligent AI' },
-      { name: 'Manufacturing AI', href: '/ai-manufacturing-platform', description: 'Optimize manufacturing with AI' }
-    ]
-  },
-  {
-    name: 'Innovative Services',
-    href: '/innovative-services-showcase-2025',
-    icon: <Star className="w-5 h-5" />,
-    description: 'Cutting-edge AI, quantum, and emerging technology services',
-    badge: '2025',
-    featured: true,
-    children: [
-      { name: 'AI-Powered Solutions', href: '/innovative-services-showcase-2025?category=ai', description: 'Advanced AI and machine learning services', featured: true },
-      { name: 'Quantum Computing', href: '/innovative-services-showcase-2025?category=quantum', description: 'Quantum computing and emerging tech solutions' },
-      { name: 'Industry Solutions', href: '/innovative-services-showcase-2025?category=industry', description: 'Specialized industry-focused services' },
-      { name: 'Cybersecurity', href: '/innovative-services-showcase-2025?category=cybersecurity', description: 'AI-powered security and threat intelligence' },
-      { name: 'Emerging Technologies', href: '/innovative-services-showcase-2025?category=emerging', description: 'Blockchain, IoT, and metaverse solutions' }
-    ]
-  },
-  {
-    name: 'Micro SAAS',
-    href: '/micro-saas',
-    icon: <Zap className="w-5 h-5" />,
-    description: 'Innovative business solutions for modern enterprises',
-    badge: 'SAAS',
-    children: [
-      { name: 'AI Content Creation', href: '/ai-content-creation-suite', description: 'Create engaging content at scale', featured: true },
-      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Supercharge sales with AI insights' },
-      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-suite', description: 'Automate and optimize marketing' },
-      { name: 'AI Customer Success', href: '/ai-customer-success-platform', description: 'Predict and prevent churn with AI' },
-      { name: 'AI HR Analytics', href: '/ai-hr-analytics-platform', description: 'Transform HR with data-driven insights' },
-      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalize learning with AI' }
-    ]
-  },
-  {
-    name: 'All Services',
-    href: '/services',
-    icon: <Grid className="w-5 h-5" />,
-    description: 'Complete portfolio of all technology services',
-    badge: 'Showcase',
-    featured: true,
-    children: [
-      { name: 'View All Services', href: '/services', description: 'Complete services portfolio' },
-      { name: 'Service Categories', href: '/services', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/pricing', description: 'Compare service costs' },
-      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
-      { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references' }
-    ]
-  }
-];
 
 const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -146,22 +15,30 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Handle scroll effect with throttling for better performance
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDropdownToggle = useCallback((dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  }, [activeDropdown]);
-
-  const closeMobileMenu = useCallback(() => {
-    setIsOpen(false);
-    setActiveDropdown(null);
+  // Dark mode effect
+  useEffect(() => {
+    const savedMode = localStorage.getItem('dark-mode');
+    if (savedMode !== null) {
+      setIsDarkMode(savedMode === 'true');
+    }
   }, []);
 
   const navigationItems = [
@@ -244,7 +121,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
         {
           name: 'Financial Services',
           href: '/solutions/financial',
-          icon: TrendingUp,
+          icon: DollarSign,
           description: 'Fintech and banking solutions',
           color: 'from-green-500 to-emerald-500'
         },
@@ -277,18 +154,18 @@ const UltraFuturisticNavigation2040: React.FC = () => {
           color: 'from-gray-500 to-blue-500'
         },
         {
-          name: 'Entertainment & Media',
-          href: '/entertainment-media-solutions',
-          icon: Palette,
-          description: 'Creative technology solutions',
-          color: 'from-pink-500 to-rose-500'
+          name: 'Energy & Utilities',
+          href: '/solutions/energy',
+          icon: ZapIcon,
+          description: 'Smart energy and grid solutions',
+          color: 'from-yellow-500 to-orange-500'
         },
         {
-          name: 'Energy & Utilities',
-          href: '/energy-utilities-solutions',
-          icon: Zap,
-          description: 'Smart energy management',
-          color: 'from-yellow-500 to-orange-500'
+          name: 'Transportation',
+          href: '/solutions/transportation',
+          icon: Truck,
+          description: 'Smart transportation and logistics',
+          color: 'from-blue-500 to-cyan-500'
         }
       ]
     },
@@ -299,22 +176,40 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       description: 'Learn about our mission and team'
     },
     {
-      name: 'Careers',
-      href: '/careers',
-      icon: Users,
-      description: 'Join our revolutionary team'
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
+      name: 'Resources',
+      href: '/resources',
       icon: FileText,
-      description: 'Insights and thought leadership'
-    },
-    {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: TrendingUp,
-      description: 'Client success stories'
+      description: 'Knowledge base and insights',
+      dropdown: [
+        {
+          name: 'Blog',
+          href: '/blog',
+          icon: FileText,
+          description: 'Latest insights and updates',
+          color: 'from-blue-500 to-cyan-500'
+        },
+        {
+          name: 'Case Studies',
+          href: '/case-studies',
+          icon: Star,
+          description: 'Success stories and results',
+          color: 'from-green-500 to-emerald-500'
+        },
+        {
+          name: 'Webinars',
+          href: '/webinars',
+          icon: Zap,
+          description: 'Educational content and events',
+          color: 'from-purple-500 to-pink-500'
+        },
+        {
+          name: 'Documentation',
+          href: '/docs',
+          icon: FileText,
+          description: 'Technical guides and API docs',
+          color: 'from-indigo-500 to-blue-500'
+        }
+      ]
     },
     {
       name: 'Contact',
@@ -322,12 +217,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       icon: Phone,
       description: 'Get in touch with our experts'
     }
-  ];
+  }, [isDarkMode]);
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   return (
@@ -461,7 +354,8 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-white hover:text-cyan-400 transition-colors duration-300"
+              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800/50"
+              aria-label="Toggle mobile menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -582,6 +476,4 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       <div className="h-20 lg:h-20" />
     </>
   );
-};
-
-export default UltraFuturisticNavigation2040;
+}

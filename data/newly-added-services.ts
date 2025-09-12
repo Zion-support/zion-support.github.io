@@ -1667,7 +1667,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-05-28',
     customers: 8,
     rating: 4.5,
-    reviews: 4
+    reviews: 5
   },
   {
     id: 'ai-incident-analysis-bot',

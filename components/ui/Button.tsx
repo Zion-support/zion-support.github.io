@@ -1,136 +1,69 @@
 import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '../../src/lib/utils';
+import Link from 'next/link';
 
-<<<<<<< HEAD
-const buttonVariants = cva(;
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-  {;
-    variants: {;
-      variant: {;
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:;
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:;
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:;
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",,
-},
-      size: {;
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",,
-},,
-},
-    defaultVariants: {;
-      variant: "default",
-      size: "default",,
-}
-=======
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
+  external?: boolean;
   onClick?: () => void;
-  className?: string;
   disabled?: boolean;
+  className?: string;
   type?: 'button' | 'submit' | 'reset';
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
-  style?: React.CSSProperties;
 }
 
-const Button: React.FC<ButtonProps> = ({
+export default function Button({
   children,
   variant = 'primary',
   size = 'md',
   href,
+  external = false,
   onClick,
-  className = '',
   disabled = false,
+  className = '',
   type = 'button',
-  icon,
-  iconPosition = 'left',
-  style,
-}) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group hover:scale-105 active:scale-95';
+}: ButtonProps) {
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
-  const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',
-    ghost: 'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',
-    outline: 'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5',
+  const variants = {
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:scale-105',
+    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500',
+    outline: 'border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 focus:ring-blue-500',
+    ghost: 'text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
   };
 
-  const sizeClasses = {
+  const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg',
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-  const content = (
-    <>
-      {/* Shine effect for primary buttons */}
-      {variant === 'primary' && (
-        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000" />
-      )}
-      
-      {icon && iconPosition === 'left' && <span className="mr-2 transition-transform duration-200 group-hover:scale-110">{icon}</span>}
-      <span className="relative z-10">{children}</span>
-      {icon && iconPosition === 'right' && <span className="ml-2 transition-transform duration-200 group-hover:scale-110">{icon}</span>}
-    </>
-  );
+  const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
+    if (external) {
+      return (
+        <a href={href} className={classes} style={style} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      );
+    }
     return (
-      <Link href={href} className={classes} style={style}>
+      <Link href={href} className={classes} style={style} target={target} rel={target === '_blank' ? 'noopener noreferrer' : rel}>
         {content}
       </Link>
     );
->>>>>>> origin/automation/changelog
   }
-);
 
-<<<<<<< HEAD
-export interface ButtonProps;
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {;
-  asChild?: boolean;
-}
-
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(;
-  ({ className, variant, size, asChild = false, ...props }, ref) => {;
-    const Comp = asChild ? 'span' : 'button';
-    return (;
-      <Comp;
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />;
-    );
-}
-);
-Button.displayName = "Button";
-
-export default Button
-=======
   return (
     <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
-      style={style}
     >
-      {content}
+      {children}
     </button>
   );
-};
-
-export default Button;
->>>>>>> origin/automation/changelog
+}
