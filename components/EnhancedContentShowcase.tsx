@@ -15,77 +15,77 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
-    title: "AI Business Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
-    href: "/blog/ai-business-automation-2025",
+    title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
+    description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
     category: "AI & Automation",
-    readTime: "12 min read",
+    readTime: "15 min read",
     isNew: true,
-    icon: "🤖",
-    stats: "40% productivity boost"
+    icon: "🏢",
+    stats: "300% productivity gain"
   },
   {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
-  },
-  {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    category: "Case Study",
+    title: "AI 2025 Revolutionary Breakthroughs: The Technologies Reshaping Our World",
+    description: "Explore the groundbreaking AI technologies that will define 2025. From quantum AI to autonomous systems, discover the innovations transforming industries and creating unprecedented opportunities.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
     readTime: "18 min read",
     isNew: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
+    icon: "🧠",
+    stats: "Revolutionary breakthroughs"
   },
   {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+    title: "AI Retail Transformation Success: $200M Revenue Boost Case Study 2025",
+    description: "Discover how a global retail giant achieved unprecedented success through comprehensive AI transformation, resulting in $200M revenue increase and 150% customer satisfaction improvement.",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    category: "Case Study",
+    readTime: "20 min read",
+    isNew: true,
+    icon: "🛍️",
+    stats: "$200M revenue boost"
+  },
+  {
+    title: "AI Implementation Master Guide 2025: Complete 200-Page Playbook",
+    description: "Master AI implementation with our comprehensive 200-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in any organization.",
     href: "/resources/ai-implementation-master-guide-2025",
     category: "Master Guide",
-    readTime: "150 pages",
+    readTime: "200 pages",
     isNew: true,
     icon: "📚",
-    stats: "500+ companies using this"
+    stats: "10,000+ downloads"
   }
 ];
 
 const trendingContent: ContentItem[] = [
   {
-    title: "AI 2025 Predictions: The Future of AI in Business",
-    description: "The future of AI in business - key trends and predictions that will shape the industry in 2025 and beyond.",
-    href: "/blog/ai-2025-predictions",
-    category: "AI Trends",
-    readTime: "20 min read",
+    title: "AI 2025 Revolutionary Breakthroughs: The Technologies Reshaping Our World",
+    description: "Explore the groundbreaking AI technologies that will define 2025. From quantum AI to autonomous systems, discover the innovations transforming industries.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
     isTrending: true,
-    icon: "🔮",
+    icon: "🧠",
     stats: "Trending this week"
   },
   {
-    title: "AI Automation Trends 2025: Transform Your Operations",
-    description: "Transform your business operations with the latest intelligent automation trends and proven implementation strategies.",
-    href: "/blog/ai-automation-trends-2025",
-    category: "Automation",
-    readTime: "16 min read",
+    title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
+    description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation with real case studies.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
+    readTime: "15 min read",
     isTrending: true,
-    icon: "⚡",
-    stats: "300% efficiency gains"
+    icon: "🏢",
+    stats: "300% productivity gain"
   },
   {
-    title: "AI Enterprise Security 2025: Complete Implementation Guide",
-    description: "Complete implementation guide for securing AI systems in enterprise environments with proven security frameworks.",
-    href: "/blog/ai-enterprise-security-2025",
-    category: "Security",
+    title: "AI Retail Transformation Success: $200M Revenue Boost Case Study 2025",
+    description: "Discover how a global retail giant achieved unprecedented success through comprehensive AI transformation with $200M revenue increase.",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    category: "Case Study",
     readTime: "20 min read",
     isTrending: true,
-    icon: "🛡️",
-    stats: "Enterprise-grade security"
+    icon: "🛍️",
+    stats: "$200M revenue boost"
   }
 ];
 

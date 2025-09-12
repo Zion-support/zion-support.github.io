@@ -166,6 +166,7 @@ const TestimonialCard = ({
   </div>
 );
 import ContentPromoBanner, { contentPromoBanners } from '../components/ContentPromoBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -212,34 +213,8 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-      {/* Top Content Promotion Banner */}
-      <section className='py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1 mb-3'>
-              <span className='text-xs font-medium'>🔥 NEW CONTENT DROP</span>
-            </div>
-            <p className='text-sm md:text-base opacity-90 mb-3'>
-              <strong>AI Workforce Transformation Guide</strong> • <strong>Data Strategy Playbook</strong> • <strong>Manufacturing Success Story</strong>
-            </p>
-            <div className='flex flex-col sm:flex-row gap-2 justify-center'>
-              <Link
-                href='/blog/ai-workforce-transformation-2025'
-                className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
-              >
-                Read Workforce Guide
-              </Link>
-              <Link
-                href='/resources/ai-workforce-transformation-playbook-2025'
-                className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
-              >
-                Download Free Playbook
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
 
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
