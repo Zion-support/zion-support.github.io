@@ -128,6 +128,16 @@ function Header() {
                   🛠️ Ultimate Implementation Toolkit (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/ai-2026-ultimate-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚀 AI 2026 Ultimate Showcase (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2026-space-exploration-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🌌 Space Exploration 5000% ROI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2026-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Ultimate Implementation Guide (ESSENTIAL)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2026-advanced-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Advanced Technology Showcase
                 </Link>
