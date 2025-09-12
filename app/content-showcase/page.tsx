@@ -326,94 +326,64 @@ export default function ContentShowcase() {
 
   const content = [
     {
+      id: 0,
+      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
+      description: "Architectures, safety, and observability for deploying autonomous agents at the edge.",
+      category: "ai-automation",
+      type: "Article",
+      readTime: "21 min read",
+      publishDate: "2025-01-28",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "🤖",
+      href: "/blog/ai-2025-edge-agents-in-production",
+      tags: ["Edge AI", "Agents", "Observability", "Safety"]
+    },
+    {
       id: 1,
-      title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies",
-      description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions.",
-      category: "trends",
-      type: "Article",
-      readTime: "25 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "🚀",
-      href: "/blog/ai-2025-breakthrough-innovations",
-      tags: ["AI Innovations", "Technology", "Future", "Breakthrough"]
-    },
-    {
-      id: 2,
-      title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI",
-      description: "Learn how to build sustainable AI systems that reduce environmental impact while maintaining performance. Complete guide to green AI practices.",
-      category: "trends",
-      type: "Article",
-      readTime: "20 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "🌱",
-      href: "/blog/ai-sustainability-green-tech-2025",
-      tags: ["Sustainability", "Green Tech", "Environment", "Eco-Friendly"]
-    },
-    {
-      id: 3,
-      title: "AI Autonomous Manufacturing Success: $200M Case Study",
-      description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings through autonomous AI systems. Complete implementation details and lessons learned.",
-      category: "case-studies",
-      type: "Case Study",
-      readTime: "18 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "💰",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      tags: ["Manufacturing", "Autonomous AI", "Case Study", "ROI"]
-    },
-    {
-      id: 4,
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the latest breakthroughs in AI-powered robotics and automation. From autonomous manufacturing to service robots, discover how intelligent machines are transforming industries.",
-      category: "ai-automation",
-      type: "Article",
-      readTime: "22 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "🤖",
-      href: "/blog/ai-robotics-automation-2025",
-      tags: ["Robotics", "Automation", "Intelligent Machines", "AI"]
-    },
-    {
-      id: 5,
-      title: "AI Enterprise Automation Revolution 2025: Complete Implementation Guide",
-      description: "Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains. Complete implementation guide with real-world case studies.",
+      title: "Advanced AI Architecture Patterns for 2025: Building Scalable, Resilient Systems",
+      description: "Master advanced AI architecture patterns for 2025. Learn microservices, event-driven design, and distributed AI systems with real-world examples and implementation guides.",
       category: "ai-automation",
       type: "Article",
       readTime: "25 min read",
-      publishDate: "2025-01-15",
+      publishDate: "2025-01-28",
       author: "Zion Tech Group",
-      featured: false,
+      featured: true,
       trending: true,
-      icon: "🤖",
-      href: "/blog/ai-2025-enterprise-automation-revolution",
-      tags: ["AI Automation", "Enterprise", "Implementation", "ROI"]
+      icon: "🏗️",
+      href: "/blog/ai-2025-advanced-ai-architecture",
+      tags: ["AI Architecture", "Microservices", "Scalability", "Implementation"]
     },
     {
       id: 2,
-      title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
-      description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
+      title: "AI Cybersecurity Revolution 2025: Protecting Against Next-Gen Threats",
+      description: "Discover the AI cybersecurity revolution transforming enterprise security in 2025. Learn about advanced threat detection, automated response, and zero-trust AI architectures.",
       category: "cybersecurity",
       type: "Article",
       readTime: "22 min read",
-      publishDate: "2025-01-12",
+      publishDate: "2025-01-28",
       author: "Zion Tech Group",
       featured: true,
       trending: true,
       icon: "🛡️",
-      href: "/blog/ai-2025-cybersecurity-threats",
-      tags: ["Cybersecurity", "AI Threats", "Defense", "Security"]
+      href: "/blog/ai-2025-cybersecurity-revolution",
+      tags: ["AI Cybersecurity", "Threat Detection", "Zero Trust", "Security"]
+    },
+    {
+      id: 3,
+      title: "Quantum Computing Breakthrough 2025: The AI Revolution Accelerates",
+      description: "Discover the quantum computing breakthroughs revolutionizing AI in 2025. Learn about quantum machine learning, quantum advantage, and the future of computational intelligence.",
+      category: "trends",
+      type: "Article",
+      readTime: "28 min read",
+      publishDate: "2025-01-28",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "⚛️",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      tags: ["Quantum Computing", "Quantum AI", "Machine Learning", "Innovation"]
     },
     {
       id: 3,
@@ -432,12 +402,27 @@ export default function ContentShowcase() {
     },
     {
       id: 4,
+      title: "$200M Manufacturing Success: AI Autonomous Systems Case Study 2025",
+      description: "Discover how a Fortune 500 manufacturer achieved $200M in savings using AI autonomous systems. Complete case study with implementation details, ROI analysis, and lessons learned.",
+      category: "case-studies",
+      type: "Case Study",
+      readTime: "18 min read",
+      publishDate: "2025-01-28",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "💰",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      tags: ["Manufacturing", "Autonomous AI", "Case Study", "ROI"]
+    },
+    {
+      id: 5,
       title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
       category: "resources",
       type: "Free Download",
       readTime: "200+ pages",
-      publishDate: "2025-01-08",
+      publishDate: "2025-01-28",
       author: "Zion Tech Group",
       featured: true,
       trending: true,
@@ -564,53 +549,57 @@ export default function ContentShowcase() {
       icon: "💰",
       href: "/case-studies/ai-financial-services-transformation-2025",
       tags: ["Financial Services", "Case Study", "ROI", "Transformation"]
-    },
+    }
+  ];
+
+  // Newly added September 2025 content
+  content.push(
     {
       id: 13,
-      title: "AI Cybersecurity Revolution 2025: Protecting Against Next-Gen Threats",
-      description: "Discover the AI cybersecurity revolution transforming enterprise security in 2025. Learn about advanced threat detection, automated response, and zero-trust AI architectures.",
+      title: "GenAI Security Blueprint 2025: Production-Grade Guardrails",
+      description: "Practical patterns to secure LLM apps: prompt injection defenses, data leakage prevention, and runtime policy enforcement.",
       category: "cybersecurity",
       type: "Article",
-      readTime: "22 min read",
-      publishDate: "2025-01-28",
+      readTime: "16 min read",
+      publishDate: "2025-09-12",
       author: "Zion Tech Group",
       featured: true,
       trending: true,
       icon: "🛡️",
-      href: "/blog/ai-2025-cybersecurity-revolution",
-      tags: ["AI Cybersecurity", "Threat Detection", "Zero Trust", "Security"]
+      href: "/blog/genai-security-blueprint-2025",
+      tags: ["GenAI Security", "Guardrails", "Policies", "LLM"]
     },
     {
       id: 14,
-      title: "$200M Manufacturing Success: AI Autonomous Systems Case Study 2025",
-      description: "Discover how a Fortune 500 manufacturer achieved $200M in savings using AI autonomous systems. Complete case study with implementation details, ROI analysis, and lessons learned.",
-      category: "case-studies",
-      type: "Case Study",
-      readTime: "18 min read",
-      publishDate: "2025-01-28",
+      title: "AI Implementation Playbook 2025: Starter Kit (Free)",
+      description: "Download the starter kit with roadmaps, templates, and checklists to kick off AI safely and quickly.",
+      category: "resources",
+      type: "Free Download",
+      readTime: "75+ pages",
+      publishDate: "2025-09-12",
       author: "Zion Tech Group",
       featured: true,
-      trending: true,
-      icon: "💰",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      tags: ["Manufacturing", "Autonomous AI", "Case Study", "ROI"]
+      trending: false,
+      icon: "📥",
+      href: "/resources/ai-implementation-starter-kit-2025",
+      tags: ["Templates", "Roadmap", "Checklist", "Free"]
     },
     {
       id: 15,
-      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
-      category: "resources",
-      type: "Free Download",
-      readTime: "200+ pages",
-      publishDate: "2025-01-28",
+      title: "Telecom Network Automation: 55% OPEX Reduction with AI Agents",
+      description: "How a global operator automated incidents and changes using AI agents, cutting OPEX by 55% within 6 months.",
+      category: "case-studies",
+      type: "Case Study",
+      readTime: "14 min read",
+      publishDate: "2025-09-11",
       author: "Zion Tech Group",
-      featured: true,
+      featured: false,
       trending: true,
-      icon: "📚",
-      href: "/resources/ai-implementation-master-guide-2026",
-      tags: ["Master Guide", "Implementation", "Templates", "Free Download"]
+      icon: "📶",
+      href: "/case-studies/ai-telecom-network-automation-success-2025",
+      tags: ["Telecom", "Automation", "Agents", "OPEX"]
     }
-  ];
+  );
 
   const filteredContent = content.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -659,19 +648,19 @@ export default function ContentShowcase() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-blue-600 mb-2">55</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">50</div>
             <div className="text-gray-600">Total Articles</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-green-600 mb-2">18</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">16</div>
             <div className="text-gray-600">Case Studies</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-purple-600 mb-2">12</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">8</div>
             <div className="text-gray-600">Free Resources</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-orange-600 mb-2">45K+</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">30K+</div>
             <div className="text-gray-600">Downloads</div>
           </div>
         </div>

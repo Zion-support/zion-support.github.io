@@ -8,6 +8,36 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Model Evaluation Playbook 2025",
+    description: "Production-ready evals for LLM apps and agent systems",
+    url: "/blog/ai-2025-model-evaluation-playbook",
+    type: "Blog Post",
+    category: "Engineering",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Edge AI Governance Blueprint 2025",
+    description: "Privacy-by-design controls for compliant edge intelligence",
+    url: "/blog/ai-2025-edge-governance-blueprint",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Startup Distribution Playbook 2025",
+    description: "Channels, motions, and metrics that compound",
+    url: "/blog/startup-distribution-playbook-2025",
+    type: "Blog Post",
+    category: "Growth",
+    icon: "📈",
+    featured: false,
+    new: true
+  },
+  {
     title: "AI Agents in Production 2025",
     description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
     url: "/blog/ai-2025-production-agent-patterns",
@@ -15,6 +45,36 @@ const newContentItems = [
     category: "Engineering",
     icon: "🧭",
     featured: true,
+    new: true
+  },
+  {
+    title: "GenAI Security Blueprint 2025",
+    description: "Enterprise-grade practices to secure GenAI systems in production",
+    url: "/blog/genai-security-blueprint-2025",
+    type: "Blog Post",
+    category: "Security",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Implementation Starter Kit 2025",
+    description: "Free templates, roadmaps, and checklists to kickstart AI",
+    url: "/resources/ai-implementation-starter-kit-2025",
+    type: "Resource",
+    category: "Implementation",
+    icon: "📥",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Telecom Network Automation: 55% OPEX Reduction",
+    description: "Global operator automates incidents and changes with AI agents",
+    url: "/case-studies/ai-telecom-network-automation-success-2025",
+    type: "Case Study",
+    category: "Telecom",
+    icon: "📶",
+    featured: false,
     new: true
   },
   {
