@@ -24,16 +24,11 @@ export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {;
 };
 };
 };
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
@@ -70,20 +65,10 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
 };
 };
 
-
 };
 
-
+}
 
 }
 
-
 }
-
-
-
-}
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

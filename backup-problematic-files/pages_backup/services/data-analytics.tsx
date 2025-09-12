@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -35,7 +34,6 @@ const analyticsServices = [
     pricing: "$4,000 - $20,000/month"
   }
 ];
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 
 export default function DataAnalyticsPage() {
   return (
@@ -63,7 +61,6 @@ export default function DataAnalyticsPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -103,7 +100,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -138,7 +134,6 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/data-analytics.tsx
     </>
   );
 }

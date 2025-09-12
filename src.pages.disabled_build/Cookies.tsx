@@ -1,0 +1,32 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { 
+  Shield,
+  Cookie,
+  Settings,
+  Eye,
+  EyeOff,
+  Check,
+  X,
+  Info,
+  AlertTriangle,
+  Lock,
+  Database,
+  Globe,
+  User,
+  Bell,
+  BarChart3,
+  Target,
+  Zap,
+  Heart,
+  Star,
+  Award,
+  TrendingUp,
+  Lightbulb,
+  Rocket,
+  Crown,
+  Sparkles,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp
+} from "lucide-react";

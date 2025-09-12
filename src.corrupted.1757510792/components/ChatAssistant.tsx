@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function Page() {;
 interface ChatAssistantProps {

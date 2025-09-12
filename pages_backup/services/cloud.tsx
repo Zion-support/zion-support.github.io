@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
 
 const cloudServices = [
   {
@@ -59,7 +58,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud Services</h1>
@@ -70,7 +68,6 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">

@@ -1,6 +1,4 @@
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { _clsx } from 'clsx';
+import { _twMerge } from 'tailwind-merge';
 
 export function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}

@@ -1,24 +1,19 @@
 {
 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   "timestamp": "2025-09-05T15:05:30.907Z",
   "totalDuration": "86s",
   "results": {
     "dependencyFix": {
       "success": true,
       "duration": 79551,
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       "errors": []
     },
     "typescriptFix": {
       "success": false,
       "duration": 25,
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       "errors": [
         "Command failed: node automation/typescript-fixer.cjs"
       ]
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     },
     "healthCheck": {
       "success": false,
@@ -46,56 +41,3 @@
       "errors": [
         "Command failed: npm run build"
       ]
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-    }
-  },
-  "summary": {
-    "totalPhases": 6,
-
-    "successfulPhases": 1,
-    "failedPhases": 5,
-    "overallSuccess": false
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-  }
-}
-  "timestamp": "2025-09-06T19:17:00.201Z",
-  "duration": "4s",
-  "results": {
-    "builds": {
-      "success": 1,
-      "failed": 0
-    },
-    "tests": {
-      "passed": 0,
-      "failed": 0
-    },
-    "optimizations": {
-      "applied": 2,
-      "errors": 0
-    },
-    "security": {
-      "issues": 0,
-      "fixed": 0
-    },
-    "improvements": [
-      "Error Boundary Component",
-      "Performance Monitor Hook",
-      "SEO Meta Component"
-    ]
-  },
-  "summary": {
-    "buildsSuccessful": 1,
-    "buildsFailed": 0,
-    "optimizationsApplied": 2,
-    "securityIssuesFixed": 0,
-    "improvementsCreated": 3,
-    "totalDuration": "4s"
-  }
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88

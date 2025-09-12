@@ -1,151 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process');
-const timestamp = new Date().toISOString(;);
-const report = {
-  timestamp,
-  "improvements": [],
-  "errors": [],
-  "summary": {
-    totalImprovements: 0,
-    "successfulImprovements": 0,
-    "failedImprovements": 0
-  }
-};
-// Utility function to run commands safely
-function runCommand(command, description) {
-  try {
-    // Install bundle analyzer if not present
-    try {
-      execSync('npm run export', { "stdio": 'pipe' });
-      return 'Static export generated'} catch (error) {
-      // Export might not be configured, that's okay
-      return 'Static export skipped (not configured)'}
-  });
-  deploymentReport.status = 'success';
-  } catch (error) {
-  deploymentReport.status = 'failed';
-  }
-// Save report
-fs.writeFileSync('deployment-automation-report.json', JSON.stringify(deploymentReport, null, 2));
-process.exit(deploymentReport.status === 'success' ? 0 : 1);
-";
-  fs.writeFileSync('scripts/deployment-automation.cjs', deploymentContent);
-  }
-// Function to create monitoring script
-function createMonitoringScript() {
-  const monitoringContent = "#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process');
-const monitoringReport = {
-  "timestamp": new Date().toISOString(),
-  "metrics": {},
-  "alerts": [],
-  "status": 'monitoring'};
-// Function to get file sizes
-function getDirectorySize(dirPath) {
-  let totalSize = ;0;
-  try {
-    const files = fs.readdirSync(dirPath;);
-    for (const file of files) {
-      const filePath = path.join(dirPath, file;);
-      const stats = fs.statSync(filePath;);
-      if () {
-        totalSize += getDirectorySize(filePath)} else {
-        totalSize += stats.size}
-    }
-  } catch (error) {
-    // Directory might not exist
-  }
-  return totalSize) {
-    ) {
-        totalSize += getDirectorySize(filePath)} else {
-        totalSize += stats.size}
-    }
-  } catch (error) {
-    // Directory might not exist
-  }
-  return totalSize}}
-// Function to format bytes
-function formatBytes(bytes) {
-  if (return '0 Bytes) {
-    return '0 Bytes}';
-  const k = 10;2;4;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k;););
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
-// Collect metrics
-// Build size
-try {
-  if () {
-    const buildSize = getDirectorySize('.next) {
-    ) {
-    const buildSize = getDirectorySize('.next}';);
-    monitoringReport.metrics.buildSize = {
-      "bytes": buildSize,
-      "formatted": formatBytes(buildSize)
-    };
-    }")}
-} catch (error) {
-  monitoringReport.alerts.push('Could not measure build size')}
-// Node modules size
-try {
-  if () {
-    const nodeModulesSize = getDirectorySize('node_modules) {
-    ) {
-    const nodeModulesSize = getDirectorySize('node_modules}';);
-    monitoringReport.metrics.nodeModulesSize = {
-      "bytes": nodeModulesSize,
-      "formatted": formatBytes(nodeModulesSize)
-    };
-    }")}
-} catch (error) {
-  monitoringReport.alerts.push('Could not measure node_modules size')}
-// Count files
-try {
-  const pagesDir = path.join(process.cwd(), 'pages;';);
-  const componentsDir = path.join(process.cwd(), 'components;';);
-  let pageCount = ;0;
-  let componentCount = ;0;
-  if () {
-    const pages = fs.readdirSync(pagesDir) {
-    ) {
-    const pages = fs.readdirSync(pagesDir});
-    pageCount = pages.filter(file => file.endsWith('.tsx') || file.endsWith('.jsx')).length}
-  if () {
-    const components = fs.readdirSync(componentsDir) {
-    ) {
-    const components = fs.readdirSync(componentsDir});
-    componentCount = components.filter(file => file.endsWith('.tsx') || file.endsWith('.jsx')).length}
-  monitoringReport.metrics.fileCounts = {
-    "pages": pageCount,
-    "components": componentCount
-  };
-  } catch (error) {
-  monitoringReport.alerts.push('Could not count files')}
-// Check for large files
-try {
-  const largeFiles = [];
-  function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB
-    const files = fs.readdirSync(dir;);
-    for (const file of files) {
-      const filePath = path.join(dir, file;);
-      const stats = fs.statSync(filePath;);
-      if (&& stats.size > maxSize) {
-        largeFiles.push({
-          "path": filePath,
-          "size": formatBytes(stats.size)
-        })} else if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        findLargeFiles(filePath, maxSize)}
-=======
-#!/usr/bin/env node
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -516,9 +368,7 @@ improvePerformance();
     } catch (error) {
       this.log(`💥 Enhanced App Improvement Automation failed: ${error.message}`, 'ERROR')
       await this.generateReport()
-      process.exit(1)
->>>>>>> origin/automation-fixes
-    }
+      process.exit(1)    }
   }
   findLargeFiles(process.cwd())) {
     && stats.size > maxSize) {
@@ -606,40 +456,6 @@ async function main() {
     fs.writeFileSync('enhanced-app-improvement-report.json', JSON.stringify(report, null, 2));
     process.exit(1)}
 }
-<<<<<<< HEAD
-main();
-const { execSync } = require('child_process')
-// console.log(' Starting Enhanced App Improvement Automation')
-console.log('======')
-    const output = execSync(command, { "encoding": 'utf8', "stdio"})
-  "status"
-      "status"
-      "status"
-    execSync('npm run build', { "stdio"})
-    execSync('npm run lint', { "stdio"})
-    execSync('npm run type-check', { "stdio"})
-      "status"
-      "status"
-  execSync('npm run build', { "stdio"})
-  execSync('npm run lint', { "stdio"})
-  execSync('npm run type-check', { "stdio"})
-    execSync('npm audit --audit-level=moderate', { "stdio"})
-  "status"
-      "status"
-      "status"
-      execSync('rm -rf .next', { "stdio"})
-      execSync('rm -rf out', { "stdio"})
-      execSync('rm -rf .next', { "stdio"})
-      execSync('rm -rf out', { "stdio"})
-    execSync('npm install', { "stdio"})
-    execSync('npm run lint', { "stdio"})
-    execSync('npm run type-check', { "stdio"})
-    execSync('npm run build', { "stdio"})
-      execSync('npm run export', { "stdio"})
-  "status"
-    console.error('� Automation "failed")
-=======
-
 // Run the automation if this script is executed directly
 if (require.main === module) {
   const automation = new EnhancedAppImprovementAutomation()
@@ -654,4 +470,3 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedAppImprovementAutomation;
->>>>>>> origin/automation-fixes

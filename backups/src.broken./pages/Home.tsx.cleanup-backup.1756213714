@@ -1,43 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { Suspense } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { PricingSection } from "@/components/PricingSection";
-import { TechSolutionsSection } from "@/components/TechSolutionsSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { TeamExpertiseSection } from "@/components/TeamExpertiseSection";
-import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
-import { InnovationResearchSection } from "@/components/InnovationResearchSection";
-import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
-import { TechnologyStackSection } from "@/components/TechnologyStackSection";
-import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
-import { AIServicesShowcase } from "@/components/AIServicesShowcase";
-import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-
 export default function Home() {
   return (
     <>
@@ -71,10 +32,6 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>
-<<<<<<< HEAD
-=======
-import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
-
 // Lazy load heavy components for better performance
 const InteractiveServiceShowcase = React.lazy(() => import('@/components/InteractiveServiceShowcase'));
 
@@ -357,9 +314,5 @@ export default function Home() {
 
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  );
+    </div>=======  );
 }

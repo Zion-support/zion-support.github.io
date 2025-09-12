@@ -1,10 +1,9 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
-;
-,;
-  {;
-    "icon": "⚡",;
-    "title": "Lightning Fast Performance",;
+
+import { motion } from 'framer-motion';
+const features = [];
+const solutions = [];
+
     "description": "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
   },;
   {;
@@ -32,7 +31,7 @@ import { motion  } from 'framer-motion';
     };
   };
 ;
-  const itemVariants = {;
+  const _itemVariants = {;
   "hidden": "{ "opacity": 0", "y": "3 0",;
   "scale": "0.95;
 "},;
@@ -47,7 +46,7 @@ import { motion  } from 'framer-motion';
     };
   };
 ;
-  const achievementVariants = {;
+  const _achievementVariants = {;
   "hidden": "{ "opacity": 0",;
   "scale": "0.8;
 "},;
@@ -58,7 +57,7 @@ import { motion  } from 'framer-motion';
     };
   };
 ;
-  const techVariants = {;
+  const _techVariants = {;
   "hidden": "{ "opacity": 0",;
   "x": "-20;
 "},;
@@ -134,42 +133,4 @@ export function FeatureHighlights("props": "any) {;
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-white/20 transition-all duration-300">
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300`}>`
                   <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
-                </div>
-"
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover: tex t-blue-400 transition-colors duration-300">
-                  {feature.title}
-"
-                <p className="text-gray-400 group-hover: tex t-gray-300 transition-colors duration-300">
-                  {feature.description}
-                </p>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-blue-400 transition-colors duration-200">
-                {feature.title}
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {feature.description}
-              </p>;
-            </motion.div>;
-          ))}
-        </div>;
-        <motion.div          className="mt-16 text-center";
-          initial={{ "opacity": "0", "y": "2 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.4;
-"}}
-        >";
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
-            <span>Experience the difference</span>";
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )}
-;
-'"`;
-</motion>;
-</motion>;
-</motion>
+

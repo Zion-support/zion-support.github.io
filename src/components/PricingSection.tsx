@@ -1,57 +1,13 @@
-import React, { useState } from "react";
-  Crown, Rocket,
-  Building} from "lucide-react";
- * PricingSection function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;
- */;
-<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
-function PricingSection("props": "any) {;
-      "icon": Shiel d;
-    "};  ];
-=======
-function PricingSection () {;
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Zap } from 'lucide-react';
+import { Check } from 'lucide-react';
+import { Icon } from 'lucide-react';
+const features = [];
+const services = [];
+const solutions = [];
 
-      icon: Shield;
-};  ];
->>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
-const pricingTiers = [{;
-const savings = billingCycle === "annual" ? 25 : "0;
-  return (;
-    <section className = "py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">;
-      {/* comment */"}";
-      <div className="absolute inset-0">";
-        <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>";
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>;
-      </div>;
-";
-<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
-      <div className="relative z-10 max-w-7xl mx-auto px-4 "sm": "p x-6 "lg": p x-8">",;
-        {/* comment */}
-;
-return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
-      <div className="max - w-7xl mx - auto px-6">;
-        <motion.div;
-          className="text-center mb-16"          initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
->";
-          <h2 className="text-3xl "md": "tex t-5xl font-bold mb-6 text-white">"",;
-=======
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* comment */}
-
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
-      <div className="max - w-7xl mx - auto px-6">;
-        <motion.div;
-          className="text-center mb-16"          initial = {;
 
   { opacity: 0,
   y: 20;
@@ -65,7 +21,7 @@ return (<section className="py-20 bg-gradient - to - br from - slate - 900 via -
           transition={{ duration: 0.6 }}
         >";
           <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",
->>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
+
             Simple, {" "}";
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
               Transparent Pricing,
@@ -109,13 +65,11 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
           </div>;
         </motion.div>;
         {/* comment */}";
-<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
-        <div className="{"grid" grid-cols-1 "md": "gri d-cols-3 gap-8">",;
-=======
+
         <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">,
->>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
+
           {plans.map((plan, index) => {;
-            const IconComponent = plan.icon;
+            const _IconComponent = plan.icon;
             return (;
               <motion.div,";
 key = "{plan.name}"";
@@ -124,33 +78,17 @@ key = "{plan.name}"";
                 viewport="{{" "once": "tru e "}}";
                 transition="{{" "duration": "0.6", "delay": "inde x * 0.1 "}}";
                 className="{"relative" group ${";
-<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
-                  plan.popular ? ""md": "-mt-4 "md": m b-4" : """}"}
-;
-=======
+
                   plan.popular ? "md: -mt-4 md:mb-4" : ""}"}
 
->>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
+
               >;
                 {/* comment */}
 
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>";
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">";
-<<<<<<< HEAD:src_backup_temp/components/PricingSection.tsx
-                      <Star className="{"w-4" h-4 fill-current"   />;
-                      Most Popular,;
-                    </div>;
-                  </div>                )}
- {/*   */}";
-                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}`}> {/*   */}";
-                  <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300`"}>";
-                    <IconComponent className="`w-8" h-8`}  />;
-                  </div> {/* comment */}";
-                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}"}>;
-=======
+
                       <Star className="{"w-4" h-4 fill-current"  />;
                       Most Popular,
                     </div>;
@@ -166,7 +104,7 @@ key = "{plan.name}"";
                 {/* comment */}";
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
->>>>>>> origin/automation-fixes:src/components/PricingSection.tsx
+
                   {/* comment */}";
                   <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300""}>";
                     <IconComponent className=""w-8" h-8"}        />;
@@ -234,3 +172,5 @@ export default function PricingSection(props: any) {return ("
 </div>
 </div>
 </section>
+
+>>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

@@ -1,39 +1,9 @@
-const sitemapData = [{;
-      "title": 'Main Pages',;
-      "links": "[;
-        { "name": 'Home'", "url": '/' },;
-        { "name": 'About', "url": '/about' },;
-        { "name": 'Services', "url": '/services' },;
-        { "name": 'Contact', "url": '/contact' },;
-        { "name": 'Blog', "url": '/blog' },;
-        { "name": 'Careers', "url": '/careers' },;
-      ];
-    },;
-    {;
-      "title": 'Services',;
-      "links": "[{ "name": 'AI Services'", "url": '/services / ai' },;
-        { "name": 'IT Services', "url": '/services / it' },;
-        { "name": 'Cloud Solutions', "url": '/services / cloud' },;
-        { "name": 'Cybersecurity', "url": '/services / cybersecurity' },;
-        { "name": 'Digital Transformation', "url": '/services / digital - transformation' },;
-      ];
-    },;
-    {;
-      "title": 'Solutions',;
-      "links": "[{ "name": 'Enterprise'", "url": '/solutions / enterprise' },;
-        { "name": 'Healthcare', "url": '/solutions / healthcare' },;
-        { "name": 'Financial Services', "url": '/solutions / financial' },;
-        { "name": 'Manufacturing', "url": '/solutions / manufacturing' },;
-      ];
-    },;
-    {;
-      "title": 'Resources',;
-      "links": "[{ "name": 'Case Studies'", "url": '/case - studies' }, { "name": 'White Papers', "url": '/white - papers' }, { "name": 'Webinars', "url": '/webinars' }, { "name": 'Documentation', "url": '/docs' }, { "name": 'API Reference', "url": '/api' },;
-      ]} { "name": 'Case Studies', "url": '/case-studies' },;';
-        { "name": 'White Papers', "url": '/white-papers' },;';
-        { "name": 'Webinars', "url": '/webinars' },;';
-        { "name": 'Documentation', "url": '/docs' },;'        { "name": 'API Reference', "url": '/api' },;
-const sitemapData = [{
+import SEO from '@/components/SEO';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
+
+
       title: 'Main Pages',
       links: [
         { name: 'Home', url: '/' },
@@ -87,3 +57,4 @@ const sitemapData = [{
           {sitemapData.map((section", sectionIndex)  => (";
             <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">";
               <h2 className="text-xl font-semibold mb-4 text-cyan-400">;
+

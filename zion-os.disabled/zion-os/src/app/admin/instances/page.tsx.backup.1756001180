@@ -23,19 +23,6 @@ interface InstanceWithCounts {
 }
 
 export default async function InstancesPage() {
-<<<<<<< HEAD
-  // Temporarily commented out for build
-  // const instances = await prisma.instance.findMany({
-  //   include: {
-  //     daoConfig: true,
-  //     _count: { select: { deployments: true, features: true } },
-  //   },
-  //   orderBy: { createdAt: "desc" },
-  // });
-=======
-  let instances: InstanceWithCounts[] = [];
-  let error: string | null = null;
-
   try {
     instances = await prisma.instance.findMany({
       include: {
@@ -48,31 +35,10 @@ export default async function InstancesPage() {
     console.error("Database connection error:", err);
     error = "Unable to connect to database";
   }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
-
   const instances: any[] = []; // Temporary empty array
 
 export default function InstancesPage() {
   return (
-<<<<<<< HEAD
-    <div className="space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold gradient-text">Instance Management</h1>
-        <p className="text-xl text-white/70 max-w-2xl mx-auto">
-          Monitor and manage your deployed digital economy instances
-        </p>
-=======
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">📊 Manage Your Instances</h1>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Monitor and manage your deployed digital economies, track performance, and access configuration settings.
-          </p>
-        </div>
-
         {/* Error State */}
         {error && (
           <div className="mb-8 p-6 bg-red-900/20 border border-red-500/20 rounded-xl text-center">
@@ -200,9 +166,7 @@ export default function InstancesPage() {
               🚀 Launch Your First Economy
             </a>
           </div>
-        )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d
-      </div>
+        )}      </div>
 
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

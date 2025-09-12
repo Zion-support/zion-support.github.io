@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-      name: 'bolt-zion-app',
-      script: 'npm',
-      args: 'run start',
-      cwd: './',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-=======
 module.exports = {
   apps: [
     {
@@ -43,7 +31,6 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',        NODE_ENV: 'production',
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       },
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
@@ -84,9 +71,6 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-=======
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
@@ -98,7 +82,6 @@ module.exports = {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',        PM2_PROCESS_NAME: 'code-quality-monitor',
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
       },
@@ -522,9 +505,4 @@ module.exports = {}
       "log_file": 'logs/pm2/type-checker.log',
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
-<<<<<<< HEAD
-  ];
-};
-=======
   ];};
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

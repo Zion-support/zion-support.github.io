@@ -18,6 +18,7 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
 :public/locales/en-US/common.json
     "services": "Services",
     "services": "Services",
@@ -26,21 +27,51 @@
     "categories": "Categories",
     "talent": "Talent",
     "equipment": "Equipment",
+=======
+<<<<<<< HEAD:public/locales/en-US/common.json
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
+    "talent": "Talent",
+    "equipment": "Equipment",
+    "community": "Community",
+    "company": "Company",
+    "blog": "Blog",
+>>>>>>> origin/chore/site-link-fixes:dist/locales/en-US/common.json
     "dashboard": "Dashboard",
     "messages": "Messages",
 :public/locales/en-US/common.json
     "post_job": "Post Job",
     "analytics": "Analytics",
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+=======
+<<<<<<< HEAD:public/locales/en-US/common.json
+    "faq": "FAQ",
+    "help": "Help Center"
+=======
+>>>>>>> origin/chore/site-link-fixes:dist/locales/en-US/common.json
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
     "contact": "Contact",
     "products": "Products",
     "green-it": "Green IT",
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
     "sitemap": "Sitemap";
 },    "post_job": "Post Job"
+=======
+    "help": "Help Center",
+    "developers": "Developer Portal",
+    "api-docs": "API Documentation",
+    "sitemap": "Sitemap"
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
+>>>>>>> origin/chore/site-link-fixes:dist/locales/en-US/common.json
   },
   "auth": {
     "login": "Login",
@@ -147,6 +178,3 @@
     "changes_saved": "Translation changes have been saved"
   }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json

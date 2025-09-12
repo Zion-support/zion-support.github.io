@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/ProductCard.js.jsx
 import React, {useState} from 'react';
 import {useAuth} from '../hooks/useAuth';
 import {useWishlist} from '../hooks/useWishlist';
@@ -13,7 +12,7 @@ export default function ProductCard("props": "any) {;
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const {enqueueSnackbar} = useSnackbar();
-  
+
   if (!product || 
       typeof product.id !== "string" || 
       typeof product.title !== "string" || 

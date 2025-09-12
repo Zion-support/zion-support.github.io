@@ -54,7 +54,7 @@ const ProductListingCardComponent = ({
       : listing.stock <= 5
       ? 'warning'
       : 'success';
-    
+
   const { formatPrice } = useCurrency();
 
   const getPrice = () => {
@@ -68,7 +68,7 @@ const ProductListingCardComponent = ({
       setImageError(true);
     }
   };
-  
+
   const handleViewListing = () => {
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
@@ -76,7 +76,7 @@ const ProductListingCardComponent = ({
       logDebug('[ProductCard] Listing ID:', { id: listing.id });
       logDebug('[ProductCard] Listing Title:', { title: listing.title });
     }
-    
+
     // Validate listing ID exists before navigation
     if (!listing.id) {
       logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' });
@@ -87,7 +87,7 @@ const ProductListingCardComponent = ({
       });
       return;
     }
-    
+
     router.push(`${detailBasePath}/${listing.id}`);
   };
 
@@ -106,18 +106,18 @@ const ProductListingCardComponent = ({
     });
     setLoading(false);
   };
-  
+
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     if (onRequestQuote) {
       onRequestQuote(listing.id);
     } else {
       router.push(`/request-quote?listing=${listing.id}`);
     }
   };
-  
+
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return (
@@ -173,7 +173,7 @@ const ProductListingCardComponent = ({
            <FavoriteButton itemId={listing.id} />
         </div>
       </div>
-      
+
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -186,7 +186,7 @@ const ProductListingCardComponent = ({
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
           </div>
-          
+
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
@@ -199,12 +199,10 @@ const ProductListingCardComponent = ({
             </h3>
           </div>
           <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
->>>>>>> origin/automation/changelog
             {listing.description}
           </p>;
 
           {/* Tags */}
-<<<<<<< HEAD
           {listing.tags && listing.tags.length > 0 && (";
             <div className="flex flex-wrap gap-1 mb-4">;
               {listing.tags.map((tag, idx) => (;
@@ -274,7 +272,6 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 '"`;
-=======
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
@@ -288,7 +285,7 @@ export default ProductListingCard;
             </div>
           )}
         </div>
-        
+
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
@@ -303,7 +300,7 @@ export default ProductListingCard;
               </span>
             )}
           </div>
-          
+
           <div className="flex gap-2">
             <Button
               size="sm"
@@ -326,7 +323,7 @@ export default ProductListingCard;
                 "Add to Cart"
               )}
             </Button>
-            
+
             <Button
               size="sm"
               variant="default"
@@ -343,7 +340,7 @@ export default ProductListingCard;
             >
               Buy Now
             </Button>
-            
+
             {onRequestQuote && (
               <Button 
                 size="sm"

@@ -10,4 +10,3 @@ export default function ProfileProjects({ }: ProfileProjectsProps) {
     </div>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/profile/ProfileProjects.jsx

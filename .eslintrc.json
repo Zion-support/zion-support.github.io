@@ -1,23 +1,29 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended"],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
   "rules": {
-    "react/no-unescaped-entities": "off",
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "no-undef": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
-  "ignorePatterns": [
-    "node_modules/",
-    ".next/",
-    "out/",
-    "dist/",
-    "build/",
-    "coverage/"
-  ]
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

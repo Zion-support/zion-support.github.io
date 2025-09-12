@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -15,7 +14,6 @@ import {
   Globe,
   Database;
 } from 'lucide-react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -84,15 +82,12 @@ const services = [
       'Social commerce integration'';
     ];
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
 ];
-=======
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 const benefits = [
   {
     title: 'Increased Sales',
@@ -114,7 +109,6 @@ const benefits = [
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database;
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
 ];
 export default function RetailPage() {
   return (
@@ -165,7 +159,6 @@ export default function RetailPage() {
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
-=======
 ;];
 export default function RetailPage() {
   return (;
@@ -183,14 +176,11 @@ export default function RetailPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
               className="text-center mb-16"
-=======
               className="text-center max-w-4xl mx-auto""
             >;
               <div className="flex items-center justify-center mb-6">";
@@ -217,7 +207,6 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Retail Technology Services
@@ -234,7 +223,6 @@ export default function RetailPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -252,9 +240,7 @@ export default function RetailPage() {
                   </ul>,
                 </motion.div>;
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
             </div>
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -266,7 +252,6 @@ export default function RetailPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";            </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           </div>
         </section>
         {/* Benefits Section */}
@@ -276,7 +261,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -303,9 +287,7 @@ export default function RetailPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
             </div>
-=======
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -319,7 +301,6 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),            </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           </div>
         </section>
         {/* CTA Section */}
@@ -329,7 +310,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/retail.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?

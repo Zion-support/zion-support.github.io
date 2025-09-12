@@ -4,97 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-<<<<<<< HEAD
-  title: "Zion Tech Group - AI-Powered Technology Solutions",
-  description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative business platforms. Transform your business with cutting-edge AI technology.",
-  keywords: "AI, artificial intelligence, autonomous systems, quantum computing, technology solutions, business automation",
-  authors: [{ name: "Zion Tech Group" }],
-=======
-  title: {
-    default: "Zion OS - Sovereign AI-Powered Digital Economies",
-    template: "%s | Zion OS"
-  },
-  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
-  keywords: "AI, digital economy, blockchain, governance, marketplace, deployment, Zion, Zion OS, digital transformation",
-  authors: [{ name: "Zion Tech Group", url: "https://ziontechgroup.com" }],
-  creator: "Zion Tech Group",
-  publisher: "Zion Tech Group",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-  viewport: "width=device-width, initial-scale=1",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-<<<<<<< HEAD
-    title: "Zion Tech Group - AI-Powered Technology Solutions",
-    description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative business platforms.",
-    type: "website",
-    url: "https://ziontechgroup.com",
-    siteName: "Zion Tech Group",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zion Tech Group - AI-Powered Technology Solutions",
-    description: "Leading provider of AI-powered technology solutions, autonomous systems, quantum computing, and innovative business platforms.",
-=======
-    type: "website",
-    locale: "en_US",
-    url: "https://ziontechgroup.com",
-    siteName: "Zion OS",
-    title: "Zion OS - Sovereign AI-Powered Digital Economies",
-    description: "Launch sovereign AI-powered digital economies with one click",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Zion OS - Sovereign AI-Powered Digital Economies",
-      },
-    ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zion OS - Sovereign AI-Powered Digital Economies",
-    description: "Launch sovereign AI-powered digital economies with one click",
-    images: ["/og-image.svg"],
-    creator: "@ziontechgroup",
-    site: "@ziontechgroup",
-  },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-  },
-  category: "technology",
-};
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-<<<<<<< HEAD
-    <html lang="en">
-      <body className="min-h-screen bg-gray-50 text-gray-900">
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-=======
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -197,9 +108,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
             </div>
           </div>
-        </footer>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-      </body>
+        </footer>      </body>
     </html>
   );
 }

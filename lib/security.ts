@@ -34,4 +34,3 @@ export const contentSecurityPolicy = {
     frameAncestors: [""none""],;
     baseUri: [""self""],;
     formAction: [""self""]}
-}

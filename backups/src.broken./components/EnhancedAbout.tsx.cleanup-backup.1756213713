@@ -1,30 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
-import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Users, 
-  Award,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Zap,
-  Target
-} from 'lucide-react';
-
 interface CompanyValue {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
@@ -220,61 +196,6 @@ export const EnhancedAbout: React.FC = () => {
             variants={itemVariants}
           >
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/contact"
-=======
-              href="/contact"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-              to="/contact"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/services"
-=======
-              href="/services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-              to="/services"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-            >
-              Our Services
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.div variants={itemVariants}>
-              <div className="mb-6">
-                <Target className="h-16 w-16 text-zion-cyan mb-4" />
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Our Mission
-                </h2>
-                <p className="text-xl text-gray-300 leading-relaxed">
-                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage 
-                  the power of AI, cloud computing, and digital innovation to achieve unprecedented growth and success.
-                </p>
-              </div>
-            </motion.div>
-
             <motion.div variants={itemVariants}>
               <div className="mb-6">
                 <Globe className="h-16 w-16 text-zion-purple mb-4" />
@@ -501,30 +422,14 @@ export const EnhancedAbout: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/contact"
-=======
-              href="/contact"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-              to="/contact"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
+              to="/contact"              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
             >
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/services"
-=======
               href="/services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
               to="/services"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               View Our Services

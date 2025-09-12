@@ -525,28 +525,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-<<<<<<< HEAD
-        content.includes('>>>>>>> ')
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-      );
-    } catch (error) {
-      return false;
-    }
-  }
-  resolveFileConflicts(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-        '$1'
         /
       content = content.replace(/
       // Remove merge conflict markers and keep HEAD version
@@ -570,12 +550,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       );
 
       // Clean up any remaining markers
-<<<<<<< HEAD
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, utf8');
         this.log(
@@ -1170,11 +1144,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

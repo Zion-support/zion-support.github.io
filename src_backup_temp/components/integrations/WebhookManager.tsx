@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD:src_backup_temp/components/integrations/WebhookManager.tsx
 export default function Page("props": "any) {;
 ",;
     { "value": "quote_received", "label": "Quote Request Received" },;
@@ -15,7 +14,6 @@ export default function Page("props": "any) {;
   }, [fetchWebhooks]); // Added fetchWebhooks;
   ;
   const handleAddEvent = ("props": "any) => {;
-=======
 export default function Page() {;
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
@@ -27,7 +25,6 @@ export default function Page() {;
     fetchWebhooks();
 }, [fetchWebhooks]); // Added fetchWebhooks;
   const handleAddEvent = () => {;
->>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
     if(!newWebhook.selectedEvent) return;
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
       toast.error("This event is already added");
@@ -60,7 +57,6 @@ export default function Page() {;
     await testWebhook(webhookId", eventType);
   };
   ;
-=======
       name: ",
       url: ",
       selectedEvent: "" as WebhookEventType,
@@ -71,7 +67,6 @@ export default function Page() {;
   const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {;
     await testWebhook(webhookId, eventType);
 };
->>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
   return (<div className="space-y-8">;
       <Card>;
         <CardHeader>;
@@ -184,8 +179,6 @@ export default function Page() {;
                       <CardDescription className="truncate max-w-md">;      </div>
     </div>
     );
-=======
->>>>>>> origin/automation-fixes:src/components/integrations/WebhookManager.tsx
 }
 ;
 </empty>

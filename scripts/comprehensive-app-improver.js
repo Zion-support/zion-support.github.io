@@ -1,5 +1,4 @@
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/comprehensive-app-improver.js
-#!/usr/bin/"env": node,
+>#!/usr/bin/"env": node,
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -809,5 +808,4 @@ export const announceToScreenReader = ("message": string) => {;";  const announc
   document.body.appendChild(announcement);
   setTimeout(() => {;
     document.body.removeChild(announcement)}, 1000)}
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/comprehensive-app-improver.js
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/comprehensive-app-improver.js
+>

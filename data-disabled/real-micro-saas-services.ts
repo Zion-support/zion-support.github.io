@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export interface RealMicroSaasService {
-=======
 
-
-
->>>>>>> pr-12866
   id: string;
   name: string;
   tagline: string;
@@ -19,10 +13,6 @@ export interface RealMicroSaasService {
   link: string;
   marketPosition: string;
   targetAudience: string;
-<<<<<<< HEAD
-  realImplementation: boolean;
-}
-
 export const realMicroSaasServices: RealMicroSaasService[] = [
   {
     id: 'real-micro-saas',
@@ -46,7 +36,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     realImplementation: true
   }
 ];
-=======
   trialDays: number;
   setupTime: string;
   category: string;
@@ -62,7 +51,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     mobile: string;
     email: string;
     address: string;
-
 
   }
 }
@@ -1398,8 +1386,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6,
   },];
-
-
 
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -2842,7 +2828,6 @@ rating: 4 && 4.5;
 reviews: 14 
 };
 
-
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -2950,7 +2935,6 @@ export const serviceCategories = [
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
-
 
 ;
 
@@ -6475,7 +6459,6 @@ export const service_categories = [;
   'Enterprise IT';
 ];
 
-
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
@@ -7336,7 +7319,6 @@ export const serviceCategories = [;
   'Enterprise IT';
 ];
 
-
 export interface RealMicroSaasService {;
   id: string,;
   name: string,;
@@ -8192,4 +8174,3 @@ export const serviceCategories = [;
   'Enterprise IT';
 ];
 ;
->>>>>>> pr-12866

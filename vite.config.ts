@@ -121,7 +121,7 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.cjs'
+    postcss: './postcss.config.js'
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),

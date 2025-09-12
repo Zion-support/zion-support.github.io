@@ -1,36 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/CheckoutShippingOptions.tsx
-interface Address {;
-  "name": "string;
-  "address": string;
-  "city": string;
-  "country": string"}
-;
-interface ShippingRate {;
-  "id": "string;
-  "carrier": string;
-  "service": string;
-  "rate": string;
-  "currency": string;
-  delivery_days?: number | null;
-  tax?: string"}
-;
-interface Props {;
-  "toAddress": "Addres s | null;
-  onSelect?: ("rate": ShippingRat e) => void"}
-;
-export function CheckoutShippingOptions("props": "any) {;
-  const [rates", setRates] = useState<ShippingRate[]>([]);
-  const [loading, setLoading] = useState<any>(false);
-  const [selected, setSelected] = useState<string>('');
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-=======
-
 interface Address {
   name: string;
   address: string;
@@ -60,9 +27,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
   return () => {;
     // Cleanup function;
 };
-}, []); []);
->>>>>>> origin/automation-fixes:src/components/CheckoutShippingOptions.tsx
-    if(!toAddress) return;
+}, []); []);    if(!toAddress) return;
       try {;
         if(res.ok) {;
           setRates(data.rates || [])} else {;

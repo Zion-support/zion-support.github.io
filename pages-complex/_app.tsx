@@ -4,9 +4,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 
-// ===================================================================
+// ====
 // DYNAMIC IMPORTS - Load heavy providers only when needed
-// ===================================================================
+// ====
 
 // Load non-critical providers dynamically to reduce initial bundle
 const WhitelabelProvider = dynamic(() =>
@@ -80,9 +80,9 @@ const RouteSEO = dynamic(() =>
   loading: () => null
 });
 
-// ===================================================================
+// ====
 // FONT CONFIGURATION - Optimized loading
-// ===================================================================
+// ====
 
 const inter = Inter({
   subsets: ['latin'],
@@ -104,9 +104,9 @@ const poppins = Poppins({
   preload: true,
 });
 
-// ===================================================================
+// ====
 // LIGHTWEIGHT LANGUAGE WRAPPER
-// ===================================================================
+// ====
 
 const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -131,9 +131,9 @@ const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-// ===================================================================
+// ====
 // MAIN APP COMPONENT - FIXED: Optimized with fallback safety
-// ===================================================================
+// ====
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

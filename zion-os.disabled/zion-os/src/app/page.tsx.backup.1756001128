@@ -4,34 +4,6 @@ export default function HomePage() {
   const { user, isAuthenticated } = useAuth();
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              AI-Powered
-            </span>
-            <br />
-            <span className="text-white">Enterprise Solutions</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. From autonomous systems to quantum computing, 
-            we deliver next-generation solutions that drive innovation and growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Get Started Today
-            </Link>
-            <Link href="/solutions" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              Explore Solutions
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,8 +339,6 @@ export default function HomePage() {
         >
           Contact Us
         </a>
-      </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e179
-    </div>
+      </div>    </div>
   );
 }

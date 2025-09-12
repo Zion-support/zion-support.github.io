@@ -4,18 +4,6 @@ return ();
         <motion.div";
           className="text-center mb-16";
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
-  { "opacity": 0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          transition={{ "duration": "0.8 "}}
-          viewport={{ "once": "tru e "}}
-=======
-
   { opacity: 0,
   y: 30;
 }}
@@ -25,9 +13,7 @@ return ();
   y: 0;
 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
-";
+          viewport={{ once: true }}";
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">";
             <Quote className="w-4 h-4 text-zion-cyan mr-2"   />"            <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>;
           </div>;
@@ -45,25 +31,6 @@ return ();
             <motion.div;
               key={currentIndex}
               initial = {;
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
-  { "opacity": "0",;
-  "x": "10 0;
-"}}
-              animate = {;
-  { "opacity": "1",;
-  "x": "0;
-"}}
-              exit = {;
-  { "opacity": "0",;
-  "x": "-100;
-"}}
-              transition={{ "duration": "0.5 "}}";
-              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 "md": "p-12 text-center relative overflow-hidden";
-              {/* Background decoration */"}";
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl"  />";
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl"  />;
-=======
-
   { opacity: 0,
   x: 100;
 }}
@@ -83,8 +50,6 @@ return ();
               {/* Background decoration */}";
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />";
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />;
-
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
               {/* Rating */}";
               <div className="flex justify-center mb-6">;
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (";
@@ -117,27 +82,9 @@ return ();
             </motion.div>;
           </AnimatePresence>;
           {/* Navigation Arrows */}
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
-          <button onClick={prevTestimonial}";
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan "hover": "b g-zion-cyan "hover": tex t-white transition-all duration-300 "hover": scal e-110 "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50";
-            ;
-";
-            <ChevronLeft className="w-6 h-6"   />          </button>;
-          <button onClick={nextTestimonial"}";
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan "hover": "b g-zion-cyan "hover": tex t-white transition-all duration-300 "hover": scal e-110 "focus": outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan/50";
-            ;
-=======
-          <button;
-            onClick={prevTestimonial}";
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
-";
-            <ChevronLeft className="w-6 h-6"  />          </button>;
-
           <button;
             onClick={nextTestimonial}";
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
-";
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";";
             <ChevronRight className="w-6 h-6"   />          </button>;
         </div>;
         {/* Dots Indicator */"}";
@@ -146,36 +93,6 @@ return ();
               onClick={(: "unknown goToTestimonial(index)"}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex';
                   ? 'bg-zion-cyan scale-125'';
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
-                  : 'bg-zion-slate-light "hover": "b g-zion-cyan/50'`;
-              "}`}`;
-=======
-                  : 'bg-zion-slate-light hover:bg-zion-cyan/50'`;
-}`}`;
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
-              aria-label={`Go to testimonial ${index + 1}`}
-             />;
-          ))}
-        </div>;
-        {/* Trust Indicators */}
-        <motion.div";
-          className="mt-16 text-center";
-          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
-  { "opacity": "0",;
-  "y": "2 0 ;
-;
-"}}          whileInView = {;
-  { "opacity": "1",;
-  "y": "0 ;
-;
-"}}          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.4 ;
-;
-"}}          viewport={{ "once": "tru e "}}
-=======
-
   { opacity: 0,
   y: 20 ;
 }}          whileInView = {;
@@ -186,9 +103,7 @@ return ();
 
   { duration: 0.8,
   delay: 0.4 ;
-}}          viewport={{ once: true }}
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
-";
+}}          viewport={{ once: true }}";
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>";
           <div className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 max-w-2xl mx-auto">";
             <div className="text-center">";
@@ -211,12 +126,9 @@ return ();
         </motion.div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup_temp/components/home/Testimonials.tsx
   )"};
 ;
-=======
   )};
->>>>>>> origin/automation-fixes:src/components/home/Testimonials.tsx
 export default Testimonials}}}'"`;
 </motion>;
 </button>;

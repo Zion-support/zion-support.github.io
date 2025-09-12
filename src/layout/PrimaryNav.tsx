@@ -1,97 +1,9 @@
-import React from 'react';
-// // // // // // // // ;
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-      // // // // // `;
-      router.push(`/search/${slugify(query)}`);
-      setQuery('')}
-// Theme toggle component;
-  const [isDark, setIsDark] = useState<typeof false>(false);
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-;
-  const toggleTheme = (..."args": "unknow n[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here;
-  "};
-;
-=======
-  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here;
-};
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
-  return ();
-    <>;
-      <header;
-        className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
-        role="navigation";
-        data-testid="header";
-";
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 "sm": "p x-6">;
-          <Logo  />;
-          {/* Navigation - hidden on mobile", shown on desktop */}";
-          <div className="hidden "md": "block order-1 flex-shrink-0">;
-            <ResponsiveNavigation  />;
-          </div>;
-                  // // // // // // // // ;
-                onSelectSuggestion = {;
-  (sugg) => {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-                  // // // // // ;
-=======
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ShoppingCart } from 'lucide-react';
 
-                  // // // // // console.log('PrimaryNav search suggestion selected:',
-  sugg);
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
-                  // Handle different suggestion types with proper navigation;
-                  if(sugg.id) {;
-                    // Product listings with IDs go to product detail page`;
-                    router.push(`/marketplace/listing/${sugg.id;
-'`;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-"}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-=======
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
 
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
-                    // Documentation suggestions navigate directly to their path';
-                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {;
-                    // Blog posts navigate to blog detail page`;
-                    router.push(`/blog/${sugg.slug}`)} else {;
-                    // "Default": "search results page with slug;`;
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)"}`)};
-                  setQuery('');
-                  // Track analytics event';
-                  if(typeof window !== 'null' && window.gtag) {;
-                    window.gtag('event',search_suggestion_click', {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-                      "search_term": "sug g.text",;
-                      "suggestion_type": "sug g.type",;
-                      "suggestion_id": "sug g.id || sugg.slug;
-                    "})}
-=======
 
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug;
-})}
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
-                }}
-                searchSuggestions = {suggestions}
-              />;
-            </form>;
-            {/* Compact actions group */}";
-            <div className="flex items-center gap-1">;
-              <PointsBadge  />;
-              <HoverCard openDelay={100}>;
-                <HoverCardTrigger asChild>;
-                  <Link";
-                    href="/cart";
-                    className="relative p-1";
-                    aria-label= {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-=======
-
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
-  t('nav.cart',Cart');
 }
                   >";
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground "hover": "tex t-primary"   />;
@@ -145,102 +57,28 @@ import React from 'react';
           {isOpen && ;
             <motion.div;
               initial = {;
-<<<<<<< HEAD:src_backup_temp/layout/PrimaryNav.tsx
-  { "opacity": "0",;
-  "height": "0;
-"}}
-              animate = {;
-  { "opacity": "1",;
-  "height": 'auto';
-}}
-              exit = {;
-  { "opacity": "0",;
-  "height": "0;
-"}}
-              transition={{ "duration": "0.3 "}}";
-              className=""lg": "hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10";
-            >";
-=======
 
-  { opacity: 0,
-  height: 0;
-}}
-              animate = {;
 
-  { opacity: 1,
-  height: 'auto';
-}}
-              exit = {;
 
-  { opacity: 0,
-  height: 0;
-}}
-              transition={{ duration: 0.3 }}";
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
->>>>>>> origin/automation-fixes:src/layout/PrimaryNav.tsx
-              <div className="px-4 py-6 space-y-4">;
-                {services.map((category", index) => (;
-                  <div key={index}>";
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
-                      {category.category}
-                    </h3>";
-                    <div className="space-y-2 ml-4">;
-                      {category.items.map(("service": "unknow n", "serviceIndex": "unknow n ;
-                        <Link;
-                          key={serviceIndex"}
-                          to={service.path}";
-                          className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                          onClick={( setIsOpen(false)"}
-                        >;
-                    "
-                    <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknow n, serviceIndex: unknow n 
-                        <Link
-                          key={serviceIndex}
-                          to={service.path}"
-                          className="block text-gray-300 hover: tex t-white transition-colors duration-200"
-                          onClick={( setIsOpen(false)}
-                        >
-                          {service.name}
-                        </Link>;
-                      ))}
-                    </div>;
-                  </div>;
-                ))}
+  return (
+    <header
+      className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
+      role="navigation"
+      data-testid="header"
+    >
+      <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
+        <Logo />
+        
+        {/* Navigation - hidden on mobile, shown on desktop */}
+        <div className="hidden md:block order-1 flex-shrink-0">
+          <ResponsiveNavigation />
+        </div>
 
-                <div className="pt-4 border-t border-white/10 space-y-2">;
-                  <Link                    to="/solutions";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
-                    Solutions;
-                  </Link>;
-                  <Link                    to="/about";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
-                    About;
-                  </Link>;
-                  <Link                    to="/blog";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
-                    Blog;
-                  </Link>;
-                  <Link                    to="/contact";
-                    className="block text-gray-300 "hover": "tex t-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)"}
-                  >;
-                    Contact;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>;
-          )};
-        </AnimatePresence>;
-      </nav>;
-    </header>;
-  )}
-'"`;
-</motion>;
-</typeof>
+        {/* Search Bar - hidden on mobile, shown on desktop */}
+        <div className="hidden md:block order-2 flex-1 max-w-md mx-4">
+          <SearchBar
+            onSearch={handleSearch}
+            onSelectSuggestion={handleSuggestionSelect}
+            placeholder="Search products, docs, or pages..."
+          />
+        </div>

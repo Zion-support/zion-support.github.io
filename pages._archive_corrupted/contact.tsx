@@ -1,6 +1,3 @@
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -33,12 +30,7 @@ import {
   MessageCircle,
   Globe
 
-
-
-
 } from 'lucide-react';
-
-
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -46,13 +38,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -78,9 +63,6 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -97,13 +79,6 @@ const "ContactPage": React.FC = () => {
     "Blockchain Technology",
     "Digital Transformation",
     "Consulting & Strategy"
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   ]
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
@@ -201,21 +176,11 @@ const "ContactPage": React.FC = () => {;
               </motion.div>
             </div>
           </section>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -449,9 +414,6 @@ const "Contact": NextPage = () => {;
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
 
-
-
-
                     placeholder=\"Tell us about your project or how we can help you...\"></textarea>;
                 </div>;
                 <button
@@ -505,22 +467,12 @@ const "Contact": NextPage = () => {;
               Get answers to common questions about our services and process
             </p>
           </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -529,20 +481,10 @@ const "Contact": NextPage = () => {;
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -551,20 +493,10 @@ const "Contact": NextPage = () => {;
                 security patches, and technical support.
               </p>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -573,20 +505,10 @@ const "Contact": NextPage = () => {;
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -617,17 +539,8 @@ const "Contact": NextPage = () => {;
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
->>>>>>> main
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -675,17 +588,8 @@ const "Contact": NextPage = () => {;
                   Fill out the form below and we\'ll get back to you within 24 hours
                 </p>
               </motion.div>
->>>>>>> main
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -780,26 +684,8 @@ const "Contact": NextPage = () => {;
                 </p>
               </motion.div>
 
-
-
-
-
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 {contactInfo.map((info, index) => (
                   <motion.div
@@ -864,26 +750,8 @@ const "Contact": NextPage = () => {;
                 </p>
               </motion.div>
 
-
-
-
-
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
@@ -936,17 +804,8 @@ const "Contact": NextPage = () => {;
                        />
                     </div>
                   </div>
->>>>>>> main
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -986,20 +845,10 @@ placeholder=\"your && your.email@example && example.com\"
                        />
                     </div>
                   </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                       Service Interest
                     </label>
                     <select
@@ -1015,20 +864,10 @@ placeholder=\"your && your.email@example && example.com\"
                       ))}
                     </select>
                   </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                       Message *
                     </label>
                     </select>;
@@ -1059,17 +898,8 @@ placeholder=\"your && your.email@example && example.com\"
                     Send Message
                   </motion.button>
                 </motion.form>
->>>>>>> main
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1088,20 +918,10 @@ placeholder=\"your && your.email@example && example.com\"
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -1148,17 +968,8 @@ placeholder=\"your && your.email@example && example.com\"
                         />
                       </div>
                     </div>
->>>>>>> main
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -1248,17 +1059,8 @@ placeholder=\"your && your.email@example && example.com\"
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
->>>>>>> main
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1274,9 +1076,6 @@ placeholder=\"your && your.email@example && example.com\"
                 </div>
               </div>
             </div>
->>>>>>> main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
           </section>
           {/* Services Overview */}
           <section className="py-20">
@@ -1317,26 +1116,10 @@ placeholder=\"your && your.email@example && example.com\"
   )
 }
 export default ContactPage
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
           </div>
         </section>
       </div>
     </>
   );
 }
->>>>>>> main
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
->>>>>>> main
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

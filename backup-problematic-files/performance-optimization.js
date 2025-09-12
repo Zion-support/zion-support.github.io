@@ -1,4 +1,3 @@
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:performance-optimization.js
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
@@ -65,5 +64,4 @@ fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 console.log('✅ Package.json updated with performance scripts');
 console.log('⚡ Performance optimization completed!');
 "
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:performance-optimization.js
 #!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('⚡ Starting performance optimization...'); const optimizations = { nextConfig:; ;`; const nextConfig = { compress: true; poweredByHeader: false; generateEtags: false; images: { formats: ['image/webp','image/avif']; minimumCacheTTL: 60; dangerouslyAllowSVG: true; contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;",}; webpack: (config { isServer }) => { if ( { config.resolve.fallback = { ...config.resolve.fallback fs: false) { { config.resolve.fallback = { ...config.resolve.fallback fs: false} net: false; tls: false}} return config}; experimental: { optimizeCss: true; scrollRestoration: true}; async headers() { return [{; source: '/(.*),'; headers: [{ key: 'X-Content-Type-Options'; value: 'nosniff',},{ key: 'X-Frame-Options'; value: 'DENY',},{ key: 'X-XSS-Protection'; value: '1; mode=block',}],}]},}; module.exports = nextConfig; `; packageJson: { scripts: { 'analyze': 'cross-env ANALYZE=true next build'; 'lighthouse': 'lighthouse http: 'perf: audit': 'npm run build && npm run lighthous,e',} } }; fs.writeFileSync('next.config.optimized.js',optimizations.nextConfig); console.log('✅ Performance optimizations created'); const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); packageJson.scripts = { ...packageJson.scripts,...optimizations.packageJson.scripts }; fs.writeFileSync('package.json',JSON.stringify(packageJson,null,2)); console.log('✅ Package.json updated with performance scripts'); console.log('⚡ Performance optimization completed!'); "

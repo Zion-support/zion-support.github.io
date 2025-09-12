@@ -48,34 +48,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text">Zion Tech Group</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Leading provider of AI automation, quantum computing, cybersecurity, and enterprise IT solutions. 
-              Transform your business with cutting-edge technology that drives innovation and growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started Today
-              </Link>
-              <Link href="/services" className="btn-secondary text-lg px-8 py-4">
-                Explore Services
-              </Link>
-            </div>
-          </div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        </div>
-      </section>
-
       {/* Services Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -126,31 +98,10 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               From autonomous business operations to advanced AI research, we provide end-to-end solutions 
-              that transform how organizations operate and innovate.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
-            </p>
+              that transform how organizations operate and innovate.            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {/* AI & Automation */}
-            <div className="card group">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">AI & Automation</h3>
-              <p className="text-gray-400 mb-4">
-                Intelligent automation solutions that streamline operations and enhance productivity across your organization.
-              </p>
-              <div className="space-y-2 text-sm">
-                <Link href="/ai-automation-services" className="block text-blue-400 hover:text-blue-300 transition-colors">→ AI Automation Services</Link>
-                <Link href="/ai-business-intelligence" className="block text-blue-400 hover:text-blue-300 transition-colors">→ Business Intelligence</Link>
-                <Link href="/ai-content-generation" className="block text-blue-400 hover:text-blue-300 transition-colors">→ Content Generation</Link>
-              </div>
-            </div>
-
             {/* Quantum Computing */}
             <div className="card group">
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
@@ -362,43 +313,11 @@ export default function HomePage() {
                   >
                     Start Your Journey
                   </a>
-                </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
-              </div>
+                </div>              </div>
             </div>
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Featured Solutions */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Solutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover our most innovative and transformative technology solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* AI Consciousness Evolution */}
-            <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-              <h3 className="text-2xl font-bold mb-4">AI Consciousness Evolution</h3>
-              <p className="text-gray-300 mb-6">
-                Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/ai-consciousness-evolution" className="btn-primary">
-                  Learn More
-                </Link>
-                <Link href="/ai-consciousness-evolution-2029" className="btn-secondary">
-                  Future Vision 2029
-                </Link>
-              </div>
-            </div>
 
             {/* Quantum Neural Networks */}
             <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30">
@@ -538,7 +457,5 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-54ae
-  );
+    </div>  );
 }

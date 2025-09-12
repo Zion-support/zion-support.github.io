@@ -10,4 +10,3 @@
    images: string[];
    seller: { id: string;
    name: string;
-

@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -33,7 +32,6 @@ const features = [
     benefits: ['Document storage', 'Workflow automation', 'Version control', 'Collaboration']
   },
   {
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
@@ -81,7 +79,6 @@ export default function GovernmentSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our government solutions are built with security and compliance in mind.
               </p>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -95,7 +92,6 @@ export default function GovernmentSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -145,7 +141,6 @@ export default function GovernmentSolutionsPage() {
           </div>
         </section>
       </div>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
     </>
   );
 }

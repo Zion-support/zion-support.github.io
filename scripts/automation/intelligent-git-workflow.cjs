@@ -1,59 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-#!/usr/bin/env node;
-/**
- * Intelligent Git Workflow Automation;
- * Advanced Git automation with intelligent conflict resolution, auto-merge, and code review;
- * Features: Smart branching, conflict resolution, PR automation, code quality checks;
- */
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-    this.logFile = path.join(this.projectRoot, 'logs', 'git-workflow.log')
-    this.configFile = path.join(this.projectRoot, 'logs', 'git-workflow-config.json')
-    this.workflowHistoryFile = path.join(this.projectRoot, 'logs', 'git-workflow-history.json')
-      autoMerge: process.env.AUTO_MERGE === 'true'
-      conflictResolution: process.env.CONFLICT_RESOLUTION === 'intelligent'
-      branchCleanup: process.env.BRANCH_CLEANUP === 'true'
-      prAutomation: process.env.PR_AUTOMATION === 'true'
-      codeReviewAI: process.env.CODE_REVIEW_AI === 'true'
-      branchStrategy: process.env.BRANCH_STRATEGY || 'gitflow'
-      protectedBranches: ['main', 'master', 'develop']
-      autoCommit: process.env.AUTO_COMMIT === 'true'
-      commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
-      mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
-<<<<<<< HEAD
-          conflictType = 'separator';
-          continue;
-        } else if (line.startsWith('>>>>>>')) {
-          inConflict = false;
-          conflictType = 'end';
-          continue;
-        }
-        
-        if (!inConflict) {
-          resolvedLines.push(line);
-        } else if (conflictType === 'separator') {
-          // Use the version after the separator (incoming changes)
-          resolvedLines.push(line);
-        }
-      }
-      
-      // Write resolved content
-      await fs.writeFile(file, resolvedLines.join('\n'));
-      
-      // Add resolved file to git
-      await this.runGitCommand(`git add ${file}`);
-      
-      return { resolved: true, method: 'auto_merge' };
-      
-    } catch (error) {
-      return { resolved: false, error: error.message };
-    }
-  }
-
   async createPullRequest(sourceBranch, targetBranch = 'main', title = null, description = null) {
     this.log(`📝 Creating pull request from ${sourceBranch} to ${targetBranch}...`);
     
@@ -383,9 +327,7 @@ if (require.main === module) {
 
 module.exports = IntelligentGitWorkflow;
 =======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
+=======      await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')

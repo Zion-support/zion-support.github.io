@@ -1,19 +1,4 @@
-require('@testing-library/jest-dom');
-
-// Mock Next.js Image to plain img
-jest.mock('next/image', () => {
-  const React = require('react');
-  return function MockedImage(props) {
-    const { src, alt, ...rest } = props || {};
-    return React.createElement('img', { src, alt, ...rest });
-  };
-});
-
-// Mock Next.js Link to anchor
-jest.mock('next/link', () => {
-  const React = require('react');
-  return ({ children, href, ...rest }) => React.createElement('a', { href, ...rest }, children);
-});
+import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {

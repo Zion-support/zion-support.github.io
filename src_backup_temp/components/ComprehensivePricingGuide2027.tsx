@@ -1,69 +1,6 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-;
-export default function Page("props": "any) {;
-=======
-export default function Page() {;
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-    );
-    if(element) {;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-      observer.observe(element)"}
-;
-=======
-      observer.observe(element)}
-
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
     return () => observer.disconnect () }, []) ;
   // Combine all services;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-  ;
-      "source": 'innovative',;
-      "category": "servic e.category",;
-      "features": "servic e.features || []",;
-      "ctaLabel": "servic e.ctaLabel || 'Get Started'",;
-      "href": "servic e.href || '/contact'"}) ) ;  ];
-;
-=======
-      source: 'innovative',
-      category: service.category,
-      features: service.features || [],
-      ctaLabel: service.ctaLabel || 'Get Started',
-      href: service.href || '/contact'}) ) ;  ];
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-  // Filter services based on search and category;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
-;
-    return matchesSearch && matchesCategory && matchesPrice}) ;
-  // Sort services;
-  ;    return matchesSearch && matchesCategory && matchesPrice}
-    );
-  // Sort services
-  
-    switch(sortBy) {;
-      case 'name': ";
-        return a.title.localeCompare(b.title);
-      case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g",)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category': ";
-        return a.category.localeCompare(b.category) ;
-      "default":;
-        return 0"}
-  });
-;  ;
-';
-  "phone": '+1 302 464 0950',';
-    "email": 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
-  "address": '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-;
-};
-;
-=======
-
 ';
   phone: '+1 302 464 0950',';
     email: 'kleber@ziontechgroup.com',
@@ -71,53 +8,11 @@ export default function Page() {;
   address: '364 E Main St STE 1008 Middletown DE 19709';
 
 };
-
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
     return 'High'};
       "default": "retur n 'text-white'"}
   };
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-;
-      'Robotics & Automation': "Cpu",;
-      'AR/VR Solutions': "Eye",;
-      'Biotech Solutions': "Dna",;
-      'LegalTech Solutions': "Scale",;
-      'Real Estate Tech': "Home",;
-      'Supply Chain Solutions': "Truck"};    return iconMap[category] || Target};
-;
-=======
-      'Robotics & Automation': Cpu,
-      'AR/VR Solutions': Eye,
-      'Biotech Solutions': Dna,
-      'LegalTech Solutions': Scale,
-      'Real Estate Tech': Home,
-      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-  return (";
-    <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
-      {/* Animated Background */}";
-      <div className="absolute inset-0 overflow-hidden">";
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>";
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
-      </div>;
-";
-      <div className="max-w-7xl mx-auto px-6 relative z-10">;
-        {/* Header */}
-        <motion.div;
-          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0;
-"} : "{ "opacity": 0", "y": "3 0 "}}
-          transition={{ "duration": "0.8 "}}";
-=======
-
   { opacity: 0,
   y: 30;
 }}
@@ -126,9 +21,7 @@ export default function Page() {;
   isVisible ? { opacity: 1,
   y: 0;
 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}";
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-          className="text-center mb-16";
+          transition={{ duration: 0.8 }}";          className="text-center mb-16";
 ";
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">";
             <Calculator className="w-5 h-5 text-zion-cyan mr-2"   />"            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>;
@@ -143,30 +36,6 @@ export default function Page() {;
           </h2>;
 ";
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-            Explore our complete portfolio of innovative services with transparent pricing",;
-=======
-            Explore our complete portfolio of innovative services with transparent pricing,
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-            detailed ROI analysis, and market insights to help you make informed decisions.</p>;
-        </motion.div>;
-        {/* Search and Filters */}
-        <motion.div;
-          initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0;
-"} : "{ "opacity": 0", "y": "2 0 "}}
-          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.2;
-"}}";
-=======
-
   { opacity: 0,
   y: 20;
 }}
@@ -179,9 +48,7 @@ export default function Page() {;
 
   { duration: 0.8,
   delay: 0.2;
-}}";
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-          className="mb-12";
+}}";          className="mb-12";
 ";
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">";
             <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-4">;
@@ -239,38 +106,6 @@ export default function Page() {;
                 </span>) }
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-        </motion.div> {/* Services Grid */}
-        <motion.div;
-          initial = {;
-  { "opacity": "0",;
-  "y": "3 0 "}}          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.4 "}}"          className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16";
-        >;
-          {sortedServices.map((service", index) => (;
-            <motion.div;
-              key={`${service.source}-${service.id}`}
-              initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-              animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0;
-"} : "{ "opacity": 0", "y": "2 0 "}}
-              transition = {;
-  { "duration": "0.6",;
-  "delay": "inde x * 0.05;
-"}}";
-=======
-        </motion.div>;
-        {/* Services Grid */}
-        <motion.div;
-          initial = {;
-
   { opacity: 0,
   y: 30 }}          animate = {;
 
@@ -296,9 +131,7 @@ export default function Page() {;
 
   { duration: 0.6,
   delay: index * 0.05;
-}}";
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-              className="group relative";
+}}";              className="group relative";
 ";
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 "hover": "scal e-105 "hover": borde r-zion-cyan/40 "hover": shado w-2xl "hover": shado w-zion-cyan/25">;
                 {/* Service Header */"}";
@@ -389,15 +222,6 @@ export default function Page() {;
         {/* Contact Section */}
         <motion.div;
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/ComprehensivePricingGuide2027.tsx
-  { "opacity": "0",;
-  "y": "3 0 "}}          animate = {;
-  isVisible ? { "opacity": "1",;
-  "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.6 "}}"          className="text-center";
-=======
-
   { opacity: 0,
   y: 30 }}          animate = {;
 
@@ -405,9 +229,7 @@ export default function Page() {;
   y: 0 } : { opacity: 0, y: 30 }}          transition = {;
 
   { duration: 0.8,
-  delay: 0.6 }}"          className="text-center";
->>>>>>> origin/automation-fixes:src/components/ComprehensivePricingGuide2027.tsx
-";
+  delay: 0.6 }}"          className="text-center";";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";
             <h3 className="text-3xl font-bold text-white mb-6">;
               Need Custom Pricing or Have Questions?;

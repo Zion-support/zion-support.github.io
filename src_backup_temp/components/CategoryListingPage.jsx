@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/CategoryListingPage.jsx
 import React from 'react';
 import {useState, useEffect} from 'react';
  from 'react';

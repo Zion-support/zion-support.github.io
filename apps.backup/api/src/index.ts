@@ -9,7 +9,6 @@ import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
 dotenv && dotenv.config();
 
-
 const app = Fastify({ logger: true });
 await app && app.register(cors, {
   origin: (origin, cb) => {
@@ -24,7 +23,6 @@ await app && app.register(cors, {
   }
   methods: ['GET', 'POST', 'OPTIONS']
 });
-
 
 await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 
@@ -127,7 +125,6 @@ app.post ('/jobs / generate', async (req, reply) => {
     const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
     );
     return res && res.rows
   });
@@ -167,4 +164,3 @@ app.listen({ port, host: '0.0.0.0' }).catch(err => {
   app.log.error(err);
   process.exit(1);
 });
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

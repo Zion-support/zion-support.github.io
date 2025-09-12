@@ -11,8 +11,7 @@ const healthMonitor = new HealthMonitor(),;
 healthMonitor.run().catch(error => {,;
   process.exit(1);
 }),;
-    
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -31,7 +30,7 @@ healthMonitor.run().catch(error => {,;
 
   async getSystemHealth() {}
     this.log('Checking system health...');',
-    
+
     try {}
       const health = {}
         timestamp: new Date().toISOString(),
@@ -40,7 +39,7 @@ healthMonitor.run().catch(error => {,;
         resources: await this.getResourceUsage(),
         alerts: [];,
 ;      };,
-      
+
       // Check for alerts;
       if (health.resources.memoryUsage > this.alertThreshold) {}
         health.alerts.push({}),
@@ -49,7 +48,7 @@ healthMonitor.run().catch(error => {,;
           message: `Memory usage is ${health.resources.memoryUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
         });,
       }
-      
+
       if (health.resources.cpuUsage > this.alertThreshold) {}
         health.alerts.push({}),
           type: 'cpu,',
@@ -57,7 +56,7 @@ healthMonitor.run().catch(error => {,;
           message: `CPU usage is ${health.resources.cpuUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
         });,
       }
-      
+
       if (health.resources.diskUsage > this.alertThreshold) {}
         health.alerts.push({}),
           type: 'disk,',
@@ -65,7 +64,7 @@ healthMonitor.run().catch(error => {,;
           message: `Disk usage is ${health.resources.diskUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
         });,
       }
-      
+
       // Log alerts;
       for (const alert of health.alerts) {}
         if (alert.level === 'warning') {',
@@ -74,9 +73,9 @@ healthMonitor.run().catch(error => {,;
           this.error(alert.message);,
         }
       }
-      
+
       return health;
-      
+
     } catch (error) {}
       this.error(`System health check failed: ${error.message}`);,
       return { success: false, error: error.message };,
@@ -87,7 +86,7 @@ healthMonitor.run().catch(error => {,;
     try {}
       const uptime = os.uptime();,
       const loadAvg = os.loadavg();,
-      
+
       return {}
         platform: os.platform(),
         arch: os.arch(),
@@ -105,7 +104,7 @@ healthMonitor.run().catch(error => {,;
         freeMemory: os.freemem(),
         cpus: os.cpus().length,
       };,
-      
+
     } catch (error) {}
       this.error(`Failed to get system info: ${error.message}`);,
       return null;,
@@ -115,12 +114,12 @@ healthMonitor.run().catch(error => {,;
   async getProcessInfo() {}
     try {}
       const processes = [];,
-      
+
       // Get PM2 processes;
       try {}
         const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });',
         const pm2Processes = JSON.parse(pm2List);,
-        
+
         for (const proc of, pm2Processes) {}
           processes.push({}),
             name: proc.name,
@@ -135,12 +134,12 @@ healthMonitor.run().catch(error => {,;
       } catch (error) {}
         this.log(`Failed to get PM2 processes: ${error.message}`, 'WARNING');',
       }
-      
+
       // Get system processes (top 10 by memory, usage),
       try {}
         const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });',
         const lines = psOutput.split('\n').slice(1); // Skip header';,
-        
+
         for (const line of, lines) {}
           if (line.trim()) {}
             const parts = line.trim().split(/\s+/);,
@@ -159,7 +158,7 @@ healthMonitor.run().catch(error => {,;
         this.log(`Failed to get system processes: ${error.message}`, 'WARNING');',
       }
       return processes;
-      
+
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
       return [];,
@@ -172,24 +171,24 @@ healthMonitor.run().catch(error => {,;
       const freeMem = os.freemem();,
       const usedMem = totalMem - freeMem;
       const memoryUsage = (usedMem / totalMem) * 100;
-      
+
       // Get CPU usage (simplified);
       const cpus = os.cpus();
       let totalIdle = 0;
       let totalTick = 0;
-      
+
       for (const cpu of, cpus) {}
         for (const type in cpu.times) {}
           totalTick += cpu.times[type];,
         }
         totalIdle += cpu.times.idle;,
       }
-      
+
       const cpuUsage = 100 - ~~(100 * totalIdle / totalTick);
-      
+
       // Get disk usage;
       const diskUsage = await this.getDiskUsage();
-      
+
       return {}
         memoryUsage: memoryUsage,
         memoryTotal: totalMem,
@@ -199,7 +198,7 @@ healthMonitor.run().catch(error => {,;
         diskUsage: diskUsage,
         loadAverage: os.loadavg(),
       };,
-      
+
     } catch (error) {}
       this.error(`Failed to get resource usage: ${error.message}`);,
       return {}
@@ -220,9 +219,9 @@ healthMonitor.run().catch(error => {,;
         const usageStr = parts[4]; // e.g., "45%"",
         return parseInt(usageStr.replace('%', ''));',
       }
-      
+
       return 0;
-      
+
     } catch (error) {}
       this.log(`Failed to get disk usage: ${error.message}`, 'WARNING');',
       return 0;,
@@ -233,16 +232,16 @@ healthMonitor.run().catch(error => {,;
     const days = Math.floor(seconds / 86400);,
     const hours = Math.floor((seconds % 86400) / 3600);,
     const minutes = Math.floor((seconds % 3600) / 60);
-    
+
     return `${days}d ${hours}h ${minutes}m`;,
   }
 
   async checkApplicationHealth() {}
     this.log('Checking application health...');',
-    
+
     try {}
       const healthChecks = [];,
-      
+
       // Check if main application is running;
       try {}
         const pm2List = execSync('pm2 list', { encoding: 'utf8' });',
@@ -254,7 +253,7 @@ healthMonitor.run().catch(error => {,;
       } catch (error) {}
         healthChecks.push({ name: 'Main App, status: 'error, error: error.message });',
       }
-      
+
       // Check if build directory exists;
       const buildDirs = ['dist', 'build', 'out', '.next'];',
       let buildExists = false;,
@@ -264,12 +263,12 @@ healthMonitor.run().catch(error => {,;
           break;,
         }
       }
-      
+
       healthChecks.push({ }),
         name: 'Build Directory, ',
         status: buildExists ? 'healthy' : 'missing' ';,
       });,
-      
+
       // Check log files;
       const logDir = 'logs/pm2';';
       const logFiles = fs.existsSync(logDir) ? fs.readdirSync(logDir) : [];,
@@ -278,9 +277,9 @@ healthMonitor.run().catch(error => {,;
         status: logFiles.length > 0 ? 'healthy' : 'missing,',
         count: logFiles.length;,
       });,
-      
+
       return healthChecks;
-      
+
     } catch (error) {}
       this.error(`Application health check failed: ${error.message}`);,
       return [{ name: 'Health Check, status: 'error, error: error.message }];',
@@ -289,7 +288,7 @@ healthMonitor.run().catch(error => {,;
 
   async generateHealthReport() {}
     this.log('Generating health report...');',
-    
+
     try {}
       const report = {}
         timestamp: new Date().toISOString(),
@@ -302,11 +301,11 @@ healthMonitor.run().catch(error => {,;
           cwd: process.cwd(),
         }
 ;      };,
-      
+
       // Calculate overall health score;
       let healthScore = 100;
       const alerts = report.systemHealth?.alerts || [];,
-      
+
       for (const alert of, alerts) {}
         if (alert.level === 'warning') {',
 ;          healthScore -= 10;,
@@ -314,22 +313,22 @@ healthMonitor.run().catch(error => {,;
           healthScore -= 25;,
         }
       }
-      
+
       report.healthScore = Math.max(0, healthScore);,
-      
+
       const reportFile = `health-reports/health-report-${Date.now()}.json`;,
       const reportDir = path.dirname(reportFile);,
-      
+
       if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });,
       }
-      
+
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
       this.log(`Health report saved to: ${reportFile}`);,
       this.log(`Overall health score: ${report.healthScore}/100`);,
-      
+
       return report;
-      
+
     } catch (error) {}
       this.error(`Failed to generate health report: ${error.message}`);,
       return null;,
@@ -338,17 +337,17 @@ healthMonitor.run().catch(error => {,;
 
   async start() {}
     this.log(`Starting ${this.processName}...`);,
-    
+
     // Run initial health check;
     await this.generateHealthReport();
-    
+
     // Set up periodic monitoring;
     const interval = 60 * 1000; // 1 minute;
     setInterval(async () => {}
       this.log('Running scheduled health check...');',
       await this.generateHealthReport();,
     }, interval);,
-    
+
     this.log(`${this.processName} started successfully`);,
   }
 }
@@ -363,5 +362,3 @@ if (require.main === module) {}
 }
 
 module.exports = HealthMonitor;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

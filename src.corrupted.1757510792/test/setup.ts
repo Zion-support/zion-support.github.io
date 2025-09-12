@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import '@testing-library/jest-dom';
-
 // Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', { writable: true,
   value: vi.fn().mockImplementation(query => ({ matches: false,
@@ -35,6 +32,4 @@ global.console = {;
   warn: vi.fn(),
   error: vi.fn(),,
 }
-=======
-import '@testing-library/jest-dom'; global.ResizeObserver = jest.fn().mockImplementation(() => ({ <<<<<<< HEAD observe: jes t.fn(),unobserve: jes t.fn(),disconnect: jes t.fn(),})); ======= disconnect: jest.fn(); import &apos;@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia' { writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,Object.defineProperty(window,&apos;matchMedia&apos { writable: true,matche,s: false,media: query,onchange: null,addListener: jest.fn(),writable: true,value: jest.fn().mockImplementation(query => ({ ,matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))}) observe: jest.fn(),unobserve: jest.fn(),global.IntersectionObserver = jest.fn().mockImplementation(() => ({ observe: jest.fn(),unobserve: jest.fn(),disconnect: jest.fn()})); global.ResizeObserver = jest.fn().mockImplementation(() => ({ observe: jest.fn(),unobserve: jest.fn(),disconnect: jest.fn() observe: jest.fn(),unobserve: jest.fn(),disconnect: jest.fn() jest.mock('next/router',() => ({ useRouter() { return { route: '/',pathname: '/',query: {},asPath: '/',push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn().mockResolvedValue(undefined),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()},isFallback: false}}})); route: '/',pathname: '/',query: {},asPath: '/',push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn().mockResolvedValue(undefined),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()},jest.mock('next/navigation',() => ({ push: jest.fn(),replace: jest.fn(),prefetch: jest.fn(),back: jest.fn(),forward: jest.fn(),refresh: jest.fn()}},useSearchParams() { return new URLSearchParams()},usePathname() { return '/'}})); global.ResizeObserver = jest.fn().mockImplementation(() => ({observe: jest.fn(),observe: jest.fn(),unobserve: jest.fn(),disconnect: jest.fn()})); >>>>>>> origin/merge-pr-11138 global.IntersectionObserver = jest.fn().mockImplementation(() => ({ observe: jes t.fn(),unobserve: jes t.fn(),disconnect: jes t.fn(),})); ...console,warn: jes t.fn(),error: jes t.fn()}
->>>>>>> origin/automation-improvements
+import '@testing-library/jest-dom'; global.ResizeObserver = jest.fn().mockImplementation(() => ({ 

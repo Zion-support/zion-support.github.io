@@ -1,7 +1,3 @@
-<<<<<<< HEAD
->>>>>>> main
-=======
-
 interface RoleCardProps extends React.PropsWithChildren<{}> {;
 
   role: RecommendedRole;
@@ -11,4 +7,3 @@ export ;
     </Card>;
   )};
 '"`;
->>>>>>> origin/automation-fixes

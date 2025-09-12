@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup_temp/components/developers/CodeBlock.jsx
 import React from "react";
 ;
 export default function CodeBlock("props": "any) {;

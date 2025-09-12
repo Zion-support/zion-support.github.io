@@ -24,8 +24,6 @@ export function useIntersectionObserver({
     const observerParams = { threshold, root, rootMargin };
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts
     observer.current = currentObserver;
     currentObserver.observe(node);
     return () => {
@@ -41,10 +39,7 @@ export function useIntersectionObserver({
       observer.current?.observe(node);
     }
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts
     prevNode.current = node;
   }, [node]);
   return [setNode, entry] as const;
 }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/useIntersectionObserver.ts

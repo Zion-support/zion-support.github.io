@@ -10,18 +10,6 @@ export function CaseStudiesSection("props": any) {;
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-<<<<<<< HEAD:src_backup_temp/components/CaseStudiesSection.tsx
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
-=======
-
   { opacity: 0,
   y: 20;
 }}
@@ -31,9 +19,7 @@ export function CaseStudiesSection("props": any) {;
   y: 0;
 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
->>>>>>> origin/automation-fixes:src/components/CaseStudiesSection.tsx
-        >";
+          transition={{ duration: 0.6 }}        >";
           <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
             Success Stories;
           </h2>";
@@ -48,21 +34,6 @@ export function CaseStudiesSection("props": any) {;
               key={study.id}";
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25";
               initial = {;
-<<<<<<< HEAD:src_backup_temp/components/CaseStudiesSection.tsx
-  { "opacity": 0",;
-  "y": "3 0;
-"}}
-              whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-              viewport={{ "once": "tru e "}}
-              transition = {;
-  { "duration": "0.6",;
-  "delay": "inde x * 0.1;
-"}}
-=======
-
   { opacity: 0,
   y: 30;
 }}
@@ -76,9 +47,7 @@ export function CaseStudiesSection("props": any) {;
 
   { duration: 0.6,
   delay: index * 0.1;
-}}
->>>>>>> origin/automation-fixes:src/components/CaseStudiesSection.tsx
-            >";
+}}            >";
               <div className="flex items-center mb-6">;
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>";
                   <span className="text-2xl">{study.logo}</span>;
@@ -129,12 +98,9 @@ export function CaseStudiesSection("props": any) {;
           </div>;
         </motion.div>;
       </div>;
-<<<<<<< HEAD:src_backup_temp/components/CaseStudiesSection.tsx
     </section>;) "};
 ;
-=======
     </section>;) };
->>>>>>> origin/automation-fixes:src/components/CaseStudiesSection.tsx
 export default CaseStudiesSection;";
             <span className="text-2xl">→</span>;
           </div>;

@@ -1,10 +1,15 @@
 import React from 'react';
+import { _Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
+import { Cloud } from 'lucide-react';
+const services = [];
+const solutions = [];
 ;
 export default function Footer("props": "any) {;
-  const currentYear = new Date().getFullYear();
+  const _currentYear = new Date().getFullYear();
 ;
-  const footerSections = [;
+  const _footerSections = [;
     {;
       "title": 'Services';
       "links": [;
@@ -68,7 +73,7 @@ export default function Footer("props": "any) {;
     }
   ];
 ;
-  const legalLinks = [;
+  const _legalLinks = [;
     { "name": 'Privacy Policy', "href": '/privacy-policy' }
     { "name": 'Terms of Service', "href": '/terms-of-service' }
     { "name": 'Cookie Policy', "href": '/cookie-policy' }
@@ -164,69 +169,3 @@ export default function Footer("props": "any) {;
                   <li key={link.name}>
                     <Link to={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
                       {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>;
-            </div>;
-          ))}
-        </div>;
-      </div>;
-      <div className="border-t border-gray-800">;
-        <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-8">;
-          <div className="grid grid-cols-1 "md":grid-cols-3 gap-8">;
-            <div>;
-              <h5 className="text-white font-semibold mb-3">Contact Information</h5>;
-              <div className="space-y-2 text-gray-400 text-sm">;
-                <p><strong>"Phone":</strong> +1 302 464 0950</p>;
-                <p><strong>"Email":</strong> kleber@ziontechgroup.com</p>;
-                <p>;
-                  <strong>"Address":</strong> 364 E Main St STE 1008;
-                  <br />;
-                  Middletown", DE 19709;
-                </p>;
-              </div>;
-            </div>;
-            <div>;
-              <h5 className="text-white font-semibold mb-3">Business Hours</h5>;
-              <div className="space-y-2 text-gray-400 text-sm">;
-                <p>Monday - "Friday": "9": "00 AM - "6":00 PM EST</p>;
-                <p>"Saturday": "10":00 AM - "4":00 PM EST</p>;
-                <p>"Sunday": Closed</p>;
-              </div>;
-            </div>;
-            <div>;
-              <h5 className="text-white font-semibold mb-3">Quick Links</h5>;
-              <div className="space-y-2">;
-                <Link to="/contact" className="block text-gray-400 "hover":text-white transition-colors text-sm">;
-                  Get a Quote;
-                </Link>;
-                <Link to="/support" className="block text-gray-400 "hover":text-white transition-colors text-sm">;
-                  Technical Support;
-                </Link>;
-                <Link to="/careers" className="block text-gray-400 "hover":text-white transition-colors text-sm">;
-                  Join Our Team;
-                </Link>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <div className="border-t border-gray-800">;
-        <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-6">;
-          <div className="flex flex-col "md":flex-row justify-between items-center space-y-4 "md":space-y-0">;
-            <div className="text-gray-400 text-sm">© {currentYear"} Zion Tech Group. All rights reserved.</div>;
-            <div className="flex space-x-6">;
-              {legalLinks.map((link) => (;
-                <Link key={link.name} to={link.href} className="text-gray-400 "hover": "text-white transition-colors text-sm">;
-                  {link.name"}
-                </Link>;
-              ))}
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-  );
-;
-}

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 "delay": "0.3"};
   ];
 ;

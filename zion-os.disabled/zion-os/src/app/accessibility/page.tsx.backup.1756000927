@@ -2,35 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Accessibility Statement - Zion Tech Group",
-<<<<<<< HEAD
-  description: "Zion Tech Group's commitment to digital accessibility and ensuring our website is usable by people with disabilities.",
-  keywords: "accessibility, digital accessibility, WCAG, disability access, Zion Tech Group",
-=======
-  description: "Learn about Zion Tech Group's commitment to digital accessibility and how we ensure our website is accessible to all users.",
-  keywords: "accessibility, digital accessibility, WCAG, inclusive design, Zion Tech Group",
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-};
-
 export default function AccessibilityPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Accessibility Statement</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. 
-            We are continually improving the user experience for everyone and applying the relevant 
-            accessibility standards.
-          </p>
-          <div className="text-sm text-gray-400 mt-4">
-            Last updated: December 15, 2024
-          </div>
-        </div>
-
         {/* Statement Content */}
         <div className="space-y-12">
           {/* Commitment */}
@@ -151,7 +124,6 @@ export default function AccessibilityPage() {
                     <li>• Switch navigation devices</li>
                     <li>• Magnification software</li>
                     <li>• High contrast mode</li>
-=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -241,15 +213,10 @@ export default function AccessibilityPage() {
                     <li>• Captions for videos</li>
                     <li>• Audio descriptions</li>
                     <li>• Transcripts for audio content</li>
-                    <li>• Pause/stop controls</li>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-                  </ul>
+                    <li>• Pause/stop controls</li>                  </ul>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          </section>
-
           {/* Known Issues */}
           <section>
             <h2 className="text-2xl font-bold mb-4">Known Accessibility Issues</h2>
@@ -458,7 +425,6 @@ export default function AccessibilityPage() {
                 Contact Us
               </Link>
               <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary">
-=======
 
             {/* Assistive Technologies */}
             <div>
@@ -647,19 +613,11 @@ export default function AccessibilityPage() {
               <Link href="/contact" className="btn-primary text-lg px-8 py-4">
                 Contact Us
               </Link>
-              <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary text-lg px-8 py-4">
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-                Accessibility Feedback
+              <a href="mailto:accessibility@ziontechgroup.com" className="btn-secondary text-lg px-8 py-4">                Accessibility Feedback
               </a>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-=======
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-2f29
-    </div>
+      </section>    </div>
   );
 }

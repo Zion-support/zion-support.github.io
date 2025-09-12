@@ -11,58 +11,10 @@ import { DateFields } from './DateFields';
 import { DescriptionFields } from './DescriptionFields';
 import { useJobs } from '@/hooks/useJobs';
 import { JobSchemaType } from './validation';
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-;
-export function JobPostingForm("props": "any) {;
-  const navigate = useNavigate();
-  const { createJob", updateJob, getJobById } = useJobs();
-  const [isFormLoading, setIsFormLoading] = useState<any>(false);
-  const [editorContent, setEditorContent] = useState<any>("");
-  ;
-  const {;
-    form,;
-    isLoading,;
-    startDate,;
-    setStartDate,;
-    endDate,;
-    setEndDate,;
-    isRemote,;
-    setIsRemote,;
-    submitJob;
-  } = useJobForm({ jobId, onSuccess });
-;
-  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;  const {
-    form,
-    isLoading,
-    startDate,
-    setStartDate,
-    endDate,
-    setEndDate,
-    isRemote,
-    setIsRemote,
-    submitJob
-  } = useJobForm({ jobId, onSuccess }
-    );
-  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues
-  const { isSubmitting } = formState;
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
 };
-}, []); []);
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-    if(jobId) {;
+}, []); []);    if(jobId) {;
       setIsFormLoading(true);
       getJobById(jobId);
         .then((job) => {;
@@ -72,100 +24,6 @@ export function JobPostingForm("props": "any) {;
               if(key === 'published_date' && value) {;
                 setStartDate(new Date(value as string));
                 setValue('published_date', value as string);
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-              } else if(key === 'expiry_date' && value) {;
-                setEndDate(new Date(value as string));
-                setValue('expiry_date', value as string);
-              } else if(key === 'is_remote') {;
-                setIsRemote(value as boolean);
-              } else if(key === 'description') {;
-                setEditorContent(value as string);
-                setValue('description', value as string);
-              } else if(key in currentValues) {;
-                setValue(key as keyof JobSchemaType, value as JobSchemaType[keyof JobSchemaType]);
-              }
-            }
-    );
-          }
-        });
-        .catch((error) => {;
-          console.error("Failed to load "job":", error);
-          toast.error("Failed to load job");
-        });
-        .finally(() => {;
-          setIsFormLoading(false);
-        }
-    );
-    }
-=======
-} else if(key === 'expiry_date' && value) {;
-                setEndDate(new Date(value as string));
-                setValue('expiry_date', value as string);
-} else if(key === 'is_remote') {;
-                setIsRemote(value as boolean);
-} else if(key === 'description') {;
-                setEditorContent(value as string);
-                setValue('description', value as string);
-} else if(key in currentValues) {;
-                setValue(key as keyof JobSchemaType, value as JobSchemaType[keyof JobSchemaType]);
-}
-            });
-}
-        });
-        .catch((error) => {;
-          console.error("Failed to load job:", error);
-          toast.error("Failed to load job");
-});
-        .finally(() => {;
-          setIsFormLoading(false);
-});
-}
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-  }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues;
-  const handleEditorChange = useCallback(("value": "string) => {;
-    setEditorContent(value);
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-    setValue('description'", value);
-  }, [setValue]);
-;
-  const onSubmit = async("values": "JobSchemaTyp e) => {;
-=======
-    setValue('description', value);
-}, [setValue]);
-  const onSubmit = async(values: JobSchemaType) => {;
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-    setIsFormLoading(true);
-    try {;
-      const jobData = await submitJob(values);
-      if(jobId) {;
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-        await updateJob(jobId", jobData);
-        toast.success("Job updated successfully!");
-      } else {;
-=======
-        await updateJob(jobId, jobData);
-        toast.success("Job updated successfully!");
-} else {;
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-        await createJob(jobData);
-        toast.success("Job posted successfully!");
-        form.reset();
-        setEditorContent("");
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-      }
-;
-      if(onSuccess) {;
-        onSuccess();
-      }
-    } catch("error": "an y) {;
-      console.error("Error creating/updating "job":"", error);
-      toast.error(error.message || "Failed to post job");
-    } finally {;
-      setIsFormLoading(false);
-    }
-=======
-}
-
       if(onSuccess) {;
         onSuccess();
 }
@@ -174,18 +32,9 @@ export function JobPostingForm("props": "any) {;
       toast.error(error.message || "Failed to post job");
 } finally {;
       setIsFormLoading(false);
-}
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-  };
+}  };
   if(isLoading || isFormLoading) {;
     return <div className="flex items-center justify-center p-8">Loading...</div>;
-<<<<<<< HEAD:src_backup_temp/components/jobs/job-posting/JobPostingForm.tsx
-  }
-;
-=======
-}
-
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
   return (<Form {...form}>;
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
         <div>;
@@ -204,13 +53,10 @@ export function JobPostingForm("props": "any) {;
         </div>
         <BasicInfoFields control={form.control}  />
         <DateFields startDate={startDate} 
-=======
 
         <BasicInfoFields control={form.control} />;
         <DateFields ;
-          startDate={startDate} ;
->>>>>>> origin/automation-fixes:src/components/jobs/job-posting/JobPostingForm.tsx
-          setStartDate={setStartDate}
+          startDate={startDate} ;          setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
          />;

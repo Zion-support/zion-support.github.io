@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
 export const useTheme = () => {;

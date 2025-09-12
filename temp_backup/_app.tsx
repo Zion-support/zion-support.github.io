@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import type { AppProps } from 'next/app';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import React, { useRef } from 'react';
-import '../styles/globals.css';
-import { SEOContext } from '../components/SEOContext';
-import DefaultSEO from '../components/DefaultSEO';
-import Analytics from '../components/Analytics';
-
 export default function App({ Component, pageProps }: AppProps) {
 	const renderedRef = useRef(false);
 	return (
@@ -21,21 +9,13 @@ export default function App({ Component, pageProps }: AppProps) {
 		</SEOContext.Provider>
 	);
 }
-<<<<<<< HEAD
-=======
-import '../styles/globals.css';
-import SiteLayout from '../components/layout/SiteLayout';
-
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<SiteLayout>
 			<Component {...pageProps} />
 		</SiteLayout>
 	);
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-=======
-import type { AppProps } from 'next/app'
+}import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import SiteLayout from '../components/SiteLayout'
 import '../styles/globals.css'
@@ -54,6 +34,3 @@ export default function App({ Component, pageProps }: AppProps) {
 		</SiteLayout>
 	)
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

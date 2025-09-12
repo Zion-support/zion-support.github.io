@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -43,36 +40,11 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6e4a
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
-<<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // In a real application, you would send this data to your backend
-    console.log('Form submitted:', formData);
-    
-    setIsSubmitting(false);
-    setSubmitStatus('success');
-    
-    // Reset form after successful submission
-    setTimeout(() => {
-      setSubmitStatus('idle');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 5000);
-  };
-
   const contactMethods = [
     {
       title: "General Inquiries",
@@ -412,17 +384,11 @@ export default function ContactPage() {
                   <div className="opacity-80">
                     364 E Main St STE 1008<br />
                     Middletown DE 19709<br />
-                    United States
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6e4a
-                  </div>
+                    United States                  </div>
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -669,8 +635,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6e4a
-    </div>
+      </div>    </div>
   );
 }

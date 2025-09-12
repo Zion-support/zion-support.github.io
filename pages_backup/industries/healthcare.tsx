@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -19,7 +18,6 @@ import {
   Camera,
   FileText;
 } from 'lucide-react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -83,15 +81,12 @@ const services = [
       'Outcome tracking systems'';
     ];
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 ];
-=======
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 const benefits = [
   {
     title: 'Improved Patient Care',
@@ -113,7 +108,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
     icon: Shield;
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 ];
 const caseStudies = [
   {
@@ -131,7 +125,6 @@ const caseStudies = [
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
 ];
 export default function HealthcarePage() {
   return (
@@ -212,7 +205,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -230,7 +222,6 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -247,7 +238,6 @@ export default function HealthcarePage() {
                   </ul>
                 </motion.div>
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             </div>
           </div>
         </section>
@@ -259,13 +249,10 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
               className="text-center mb-16"
-=======
             </div>,
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Healthcare Solutions?
@@ -291,7 +278,6 @@ export default function HealthcarePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             </div>
           </div>
         </section>
@@ -302,13 +288,10 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
               className="text-center mb-16"
-=======
             </div>,
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Healthcare Success Stories
@@ -325,7 +308,6 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -340,7 +322,6 @@ export default function HealthcarePage() {
                   </div>,
                 </motion.div>;
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             </div>
           </div>
         </section>
@@ -352,7 +333,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/healthcare.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Healthcare?

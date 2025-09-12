@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -55,7 +54,6 @@ export default function ServicesIndex() {
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -151,4 +149,3 @@ export default function ServicesIndex() {
     </>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx

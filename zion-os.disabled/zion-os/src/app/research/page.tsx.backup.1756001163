@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export default function ResearchPage() {
   const researchAreas = [
     {
@@ -624,8 +621,6 @@ export default function ResearchPage() {
             </a>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
-    </div>
+      </section>    </div>
   );
 }

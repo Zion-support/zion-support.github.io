@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React from "react";"});"})framer-motion";react;
-"framer-motion;
-  Smartphone,
-  Tablet,
-  Monitor,
-  Touch,
-  Gesture,
-  Swipe,
-  Pinch,
-  Rotate,
-  X,
-  Menu,
-  Home,
-  Search,
-  User,
-  Settings,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,";
-  ArrowRight} from "lucide-react";
-
 import { Smartphone, Tablet, Monitor,
 export default function Page() {;
  | null>(null);
@@ -1136,6 +1114,4 @@ export: default MobileExperienceEnhancer,
 export default MobileExperienceEnhancer,";
 export default MobileExperienceEnhancer;
 export default MobileExperienceEnhancer,"")))))))))))))))
-=======
 import React,{ useEffect,useState } from 'react'; interface MobileExperienceEnhancerProps { enabled?: boolean; showGestures?: boolean; enableSwipeNavigation?: boolean} export function MobileExperienceEnhancer({ enabled = true,showGestures = false,enableSwipeNavigation = true }: MobileExperienceEnhancerProps) { const [isMobile,setIsMobile] = useState(false); const [isTablet,setIsTablet] = useState(false); const [deviceOrientation,setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait'); useEffect(() => { if (!enabled) return; const checkDevice = () => { const width = window.innerWidth; const height = window.innerHeight; setIsMobile(width < 768); setIsTablet(width >= 768 && width < 1024); setDeviceOrientation(height > width ? 'portrait' : 'landscape')}; checkDevice(); window.addEventListener('resize',checkDevice); window.addEventListener('orientationchange',checkDevice); return () => { window.removeEventListener('resize',checkDevice); window.removeEventListener('orientationchange',checkDevice)}},[enabled]); useEffect(() => { if (!enabled) return; if (isMobile) { const viewport = document.querySelector('meta[name="viewport"]'); if (viewport) { viewport.setAttribute('content','width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no')} document.body.classList.add('mobile-optimized')} else { document.body.classList.remove('mobile-optimized')} return () => { document.body.classList.remove('mobile-optimized')}},[isMobile,enabled]); if (!enabled) return null; return null} export default MobileExperienceEnhancer;
->>>>>>> origin/automation-improvements

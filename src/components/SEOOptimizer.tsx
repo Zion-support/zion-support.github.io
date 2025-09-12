@@ -1,27 +1,9 @@
-import React from 'react';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page("props": "any) {;
-interface SEOMetrics {;
-  "pageSpeed": number;
-  "mobileFriendliness": number;
-  "accessibility": number;
-  "bestPractices": number;
-  "seoScore": number;
-"coreWebVitals": {;
-    "lcp": number;
-    "fid": number;
-    "cls": number;
-"}}
-;
-interface SEOOptimizerProps extends React.PropsWithChildren<{}> {;
-  url?: "string;
-  autoAnalyze?: boolean;
-  showDetails?: boolean;
-  onAnalysisComplete?: ("analysis": SEOAnalysi s) => void"}
-;
-export const "SEOOptimizer": "React.FC<SEOOptimizerProps> = ({;
-  url",;
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { Settings } from 'lucide-react';
+
+
 "autoAnalyze": "tru e",;export default function Page(props: any) {
 interface SEOMetrics {
   pageSpeed: number;
@@ -510,3 +492,4 @@ autoAnalyze: tru e,;
 </any>
 </SEOAnalysis>
 </SEOOptimizerProps>
+

@@ -1,7 +1,4 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/services-broken.tsx
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/services-broken.tsx
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/services-broken.tsx
-import { 
+>import { 
 	}
 	Award, 
 	Brain, 
@@ -11,10 +8,7 @@ import {
 	Cloud, 
 	Shield, 
 	Code 
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/services-broken.tsx
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/services-broken.tsx
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/services-broken.tsx
-export default function Services() {
+>export default function Services() {
 	const title = \"Services — Zion Tech Group\";
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\";
 	return (
@@ -44,14 +38,14 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
- 
+
 			{/* Process Section */}
 
 						</div>
 					</div>
 				</div>
 			</section>
- 
+
 			{/* CTA Section */}
 
 							</Link>

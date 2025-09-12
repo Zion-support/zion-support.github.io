@@ -1,11 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { _configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 import wishlistReducer from './wishlistSlice';
 import authReducer from './authSlice';
-import { safeLocalStorage } from '@/utils/safeStorage';
-import { warn } from '@/utils/productionLogger';
+import { _safeLocalStorage } from '@/utils/safeStorage';
+import { _warn } from '@/utils/productionLogger';
 
-export const store = configureStore({
+export const _store = configureStore({
   reducer: {
     cart: cartReducer,
     wishlist: wishlistReducer,
@@ -13,22 +13,22 @@ export const store = configureStore({
   },
 });
 
-let lastStorageUpdate = 0;
+const _lastStorageUpdate = 0;
 const STORAGE_UPDATE_THROTTLE = 100;
 
 store.subscribe(() => {
-  const now = Date.now();
+  const _now = Date.now();
   if (now - lastStorageUpdate < STORAGE_UPDATE_THROTTLE) {
     return;
   }
   lastStorageUpdate = now;
 
   try {
-    const state = store.getState();
-    const cartData = JSON.stringify(state.cart.items);
-    const wishlistData = JSON.stringify(state.wishlist.items);
+    const _state = store.getState();
+    const _cartData = JSON.stringify(state.cart.items);
+    const _wishlistData = JSON.stringify(state.wishlist.items);
 
-    const storage = safeLocalStorage();
+    const _storage = safeLocalStorage();
     if (!storage) return;
 
     if (cartData !== storage.getItem('zion_cart')) {
@@ -40,7 +40,7 @@ store.subscribe(() => {
     }
 
     if (state.auth.token) {
-      const currentToken = storage.getItem('authToken');
+      const _currentToken = storage.getItem('authToken');
       if (currentToken !== state.auth.token) {
         storage.setItem('authToken', state.auth.token);
         storage.setItem('ztg_token', state.auth.token);

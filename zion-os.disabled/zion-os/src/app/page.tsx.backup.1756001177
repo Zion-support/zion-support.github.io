@@ -4,38 +4,6 @@ export default function HomePage() {
   const { user, isAuthenticated } = useAuth();
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-12">
-      {/* Hero Section */}
-      <div className="text-center space-y-6 py-12">
-        <div className="space-y-4">
-          <h1 className="text-5xl md:text-6xl font-bold">
-            <span className="gradient-text">Zion OS</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Launch sovereign AI-powered digital economies with one click. 
-            <span className="block text-lg text-white/60 mt-2">
-              Unified deployment protocol for Zion ecosystems
-            </span>
-          </p>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a 
-            href="/multiverse/launch" 
-            className="btn-primary text-lg px-8 py-4"
-          >
-            🚀 Launch New Instance
-          </a>
-          <a 
-            href="/admin/instances" 
-            className="btn-secondary text-lg px-8 py-4"
-          >
-            📊 View Instances
-          </a>
-        </div>
-      </div>
-
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="card card-hover">
@@ -146,9 +114,7 @@ export default function HomePage() {
             <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Get Consultation
             </a>
-          </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f7dd
-        </div>
+          </div>        </div>
       </div>
 
       {/* Contact Info Banner */}

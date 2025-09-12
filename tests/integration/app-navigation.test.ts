@@ -9,9 +9,4 @@ describe('Navigation Integration', () => {;
         <App />;
       </BrowserRouter>;
     );
-    // Test navigation between main routes;
-    const homeLink = screen.getByText(/home/i);
-    fireEvent.click(homeLink);
-    expect(window.location.pathname).toBe('/');
-});
-});
+<<<<<<< HEAD

@@ -2,12 +2,6 @@
 
 import * as React from "react";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-export type Theme = "dark" | "light" | "system"
-
 type ThemeProviderProps = {
   children: React.ReactNode
 }
@@ -37,14 +31,6 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     theme,
     setTheme: () => {},
   }
-<<<<<<< HEAD
-=======
-interface ThemeProviderProps {
-  children: React.ReactNode;
-  defaultTheme?: string;
-  storageKey?: string;
-}
-
 export function ThemeProvider({ 
   children, 
   defaultTheme = "system", 
@@ -81,37 +67,18 @@ export function ThemeProvider({
       },
     }),
     [theme, storageKey]
-  );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
-  return (
+  );  return (
     <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-export const useTheme = (): ThemeProviderState => {
-  const context = useContext(ThemeProviderContext)
-
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider")
 
   return context
 }
-<<<<<<< HEAD
-=======
-interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
-}
-
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
 export const useTheme = () => {
@@ -121,6 +88,3 @@ export const useTheme = () => {
   }
   return context;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

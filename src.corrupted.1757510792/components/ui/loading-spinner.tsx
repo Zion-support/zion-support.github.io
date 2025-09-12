@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'cyan' | 'white' | 'blue';
-  text?: string;
-  showText?: boolean;
-  className?: string;
-}
-
 const sizeClasses = {;
   sm: 'w-4 h-4',
   md: 'w-6 h-6',
@@ -129,6 +118,4 @@ export const SkeletonLoader: React.FC<{;
     ))}
   </div>;
 );
-=======
 import React from 'react'; export function LoadingSpinner() { return ( <div className="flex items-center justify-center min-h-screen bg-gray-900"> <div className="text-center"> <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div> <p className="text-gray-400">Loading...</p> </div> </div> )}
->>>>>>> origin/automation-improvements

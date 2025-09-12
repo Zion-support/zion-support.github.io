@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -16,7 +15,6 @@ import {
   FileText,
   Users;
 } from 'lucide-react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -85,15 +83,12 @@ const services = [
       'Compliance dashboards'';
     ];
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
 ];
-=======
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'Blockchain Solutions,',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 const benefits = [
   {
     title: 'Enhanced Security',
@@ -115,7 +110,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
     icon: FileText;
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
 ];
 export default function FinancePage() {
   return (
@@ -166,7 +160,6 @@ export default function FinancePage() {
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
-=======
 ;];
 export default function FinancePage() {
   return (;
@@ -184,14 +177,11 @@ export default function FinancePage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
               className="text-center mb-16"
-=======
               className="text-center max-w-4xl mx-auto""
             >;
               <div className="flex items-center justify-center mb-6">";
@@ -218,7 +208,6 @@ export default function FinancePage() {
             </motion.div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Financial Technology Services
@@ -235,7 +224,6 @@ export default function FinancePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
@@ -253,9 +241,7 @@ export default function FinancePage() {
                   </ul>,
                 </motion.div>;
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
             </div>
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -267,7 +253,6 @@ export default function FinancePage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";            </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           </div>
         </section>
         {/* Benefits Section */}
@@ -277,7 +262,6 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -304,9 +288,7 @@ export default function FinancePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
             </div>
-=======
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -320,7 +302,6 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),            </div>
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           </div>
         </section>
         {/* CTA Section */}
@@ -330,7 +311,6 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/finance.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?

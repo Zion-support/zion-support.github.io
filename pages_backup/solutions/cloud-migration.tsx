@@ -1,5 +1,4 @@
 import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Cloud, 
@@ -19,12 +18,10 @@ import { Cloud,
 import Layout from "../../components/Layout";";
 
 const phases = [;
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';const phases = [;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   {}
     title: 'Assessment & Planning,',
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',
@@ -320,7 +317,6 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

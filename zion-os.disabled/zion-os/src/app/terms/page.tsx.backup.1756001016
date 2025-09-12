@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from "next/link";
-
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
   description: "Read the terms and conditions that govern your use of Zion Tech Group's services and website.",
@@ -9,29 +6,10 @@ export const metadata = {
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
   description: "Read Zion Tech Group's terms of service and conditions for using our website and services.",
-  keywords: "terms of service, terms and conditions, Zion Tech Group terms, service agreement",
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
-};
+  keywords: "terms of service, terms and conditions, Zion Tech Group terms, service agreement",};
 
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Terms of Service</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The terms and conditions that govern your use of our services
-          </p>
-          <p className="text-sm text-gray-400">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
-        </div>
-      </section>
-
       {/* Terms Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -531,8 +509,6 @@ export default function TermsPage() {
             </div>
           </section>
         </div>
-      </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-0da5
-    </div>
+      </div>    </div>
   );
 }

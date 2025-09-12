@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { ArrowRight, Brain, Rocket, Shield, Globe, Zap, Users, Target } from 'lucide-react';
-
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
@@ -89,7 +85,6 @@ export default function HomePage() {
       color: "indigo",
       bgColor: "bg-indigo-500/20",
       hoverBgColor: "group-hover:bg-indigo-500/30"
-=======
 "use client";
 
 import Link from "next/link";
@@ -195,42 +190,12 @@ export default function HomePage() {
         </svg>
       ),
       color: "indigo",
-      href: "/architecture"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-    }
+      href: "/architecture"    }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-            Pioneering the future of AI-powered business transformation and autonomous systems
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              Explore Services
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -370,7 +335,6 @@ export default function HomePage() {
                   <span className="text-gray-700">Future-proof technology stack</span>
                 </li>
               </ul>
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="hero-heading">
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in">
@@ -437,35 +401,12 @@ export default function HomePage() {
             </div>
             <div className="card bg-transparent border-green-500/30">
               <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-            </div>
+              <div className="text-gray-300">Uptime</div>            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Join the AI revolution and unlock unprecedented growth opportunities
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-            >
-              Schedule a Consultation
-            </Link>
-            <Link 
-              href="/services" 
-              className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-            >
-              View All Services
-            </Link>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
@@ -484,7 +425,6 @@ export default function HomePage() {
                 View Examples
               </CTAButton>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
           </div>
         </div>
       </section>

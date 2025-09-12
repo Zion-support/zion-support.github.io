@@ -6,17 +6,3 @@ export default function CheckoutProgress()({currentStep, className}) {
       <Step status="incomplete" label="Shipping" />
       <Step status="incomplete" label="Payment" />
       <Step status="incomplete" label="Review" />
-    </Steps>)}
-;
-export {CheckoutProgress};
-;
-
-export {CheckoutProgress};
-
-export {CheckoutProgress};
-
-export {CheckoutProgress};
-
-export {CheckoutProgress};
-
-export {CheckoutProgress};

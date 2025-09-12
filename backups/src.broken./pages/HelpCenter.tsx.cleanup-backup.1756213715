@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
-
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['getting-started']);
@@ -184,48 +175,7 @@ export default function HelpCenter() {
                   >
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEO from '../SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video, 
-  Users,
-  Lightbulb,
-  Shield,
-  Zap,
-  Cloud
-} from 'lucide-react';
-
 const HelpCenter: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
   const helpCategories = [
     {
       id: 'getting-started',
@@ -338,9 +288,7 @@ const HelpCenter: React.FC = () => {
         {
           question: "How quickly do you respond to support requests?",
           answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically addressed within 4-8 hours during business hours."
-        }
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
+        }=======
   const helpCategories = [
     {
       title: "Getting Started",
@@ -379,20 +327,8 @@ const HelpCenter: React.FC = () => {
         "Understanding Pricing",
         "Upgrading Your Plan",
         "Payment Methods",
-        "Invoice Management"
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
-      ]
+        "Invoice Management"      ]
     }
-  ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const popularArticles = [
-    { title: 'How to Get Started with AI Solutions', category: 'Services', path: '/help/ai-solutions' },
-    { title: 'Understanding Cloud Migration', category: 'Services', path: '/help/cloud-migration' },
-    { title: 'Cybersecurity Best Practices', category: 'Security & Privacy', path: '/help/cybersecurity' },
-    { title: 'Billing and Payment FAQ', category: 'Account & Billing', path: '/help/billing-faq' },
-    { title: 'API Integration Guide', category: 'Technical Support', path: '/help/api-integration' }
   ];
 
   const filteredCategories = selectedCategory === 'all' 
@@ -516,44 +452,10 @@ const HelpCenter: React.FC = () => {
       views: "1.2k"
     }
   ];
-
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              How Can We
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Help You?
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to your questions, get technical support, and access helpful resources to make the most of our services.
-=======
-import React from 'react';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { 
-  BookOpen, 
-  Video, 
-  FileText, 
-  MessageCircle, 
-  Users, 
-  Settings, 
-  Shield, 
-  CreditCard,
-  Search,
-  ArrowRight
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 export default function HelpCenter() {
   const helpCategories = [
     {
@@ -686,56 +588,11 @@ export default function HelpCenter() {
               Help Center
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Find answers, tutorials, and support resources to help you make the most of Zion Tech Group
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
-            </p>
+              Find answers, tutorials, and support resources to help you make the most of Zion Tech Group            </p>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-<<<<<<< HEAD
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for help articles, tutorials, or contact information..."
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-            </div>
-          </div>
-
-<<<<<<< HEAD
-        {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 rounded-xl text-white text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">📞</div>
-            <h3 className="text-lg font-semibold mb-2">Contact Support</h3>
-            <p className="text-sm opacity-90">Get direct help from our team</p>
-          </Link>
-          
-          <Link
-            to="/status"
-            className="bg-slate-800/50 p-6 rounded-xl text-white text-center border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">📊</div>
-            <h3 className="text-lg font-semibold mb-2">Service Status</h3>
-            <p className="text-sm text-gray-300">Check system status and updates</p>
-          </Link>
-          
-          <Link
-            to="/faq"
-            className="bg-slate-800/50 p-6 rounded-xl text-white text-center border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">❓</div>
-            <h3 className="text-lg font-semibold mb-2">FAQ</h3>
-            <p className="text-sm text-gray-300">Frequently asked questions</p>
-          </Link>
-        </div>
-
         {/* Popular Articles */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8">Popular Articles</h2>
@@ -774,9 +631,7 @@ const $page: React.FC = () => {
           <div className="flex justify-center mb-6">
             <div className="p-3 bg-blue-600/20 rounded-full">
               <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-          </div>
+            </div>          </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             $page
           </h1>
@@ -790,39 +645,6 @@ const $page: React.FC = () => {
             Contact Us for More Information
           </Link>
         </div>
-<<<<<<< HEAD
-
-        {/* Help Categories */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Browse by Category</h2>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 mb-8">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              All Categories
-            </button>
-            {helpCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-
           {/* Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category) => (
@@ -1118,181 +940,18 @@ export default function HelpCenter() {
                     <Button variant="outline" className="w-full border-zion-purple/20 text-zion-purple hover:bg-zion-purple/10">
                       View All Articles
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
-                  </CardContent>
+                    </Button>                  </CardContent>
                 </Card>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-
-          {/* Quick Actions */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Quick Actions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple h-16 text-lg">
-                <Link to="/contact">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Contact Support
-                </Link>
-              </Button>
-              <Button asChild className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light h-16 text-lg">
-                <Link to="/community">
-                  <Users className="mr-2 h-5 w-5" />
-                  Ask Community
-                </Link>
-              </Button>
-              <Button asChild className="bg-gradient-to-r from-zion-green to-zion-green-dark hover:from-zion-green-light hover:to-zion-green h-16 text-lg">
-                <Link to="/sitemap">
-                  <HelpCircle className="mr-2 h-5 w-5" />
-                  Browse All Pages
-                </Link>
-              </Button>
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-            </div>
-          </div>
-
           {/* FAQ Section */}
           <div className="mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div className="space-y-8">
-              {faqCategories.map((category) => {
-                const IconComponent = category.icon;
-                return (
-                  <div key={category.title} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                    <div className="flex items-center mb-6">
-                      <IconComponent className="w-8 h-8 text-blue-400 mr-3" />
-                      <h3 className="text-2xl font-semibold">{category.title}</h3>
-                    </div>
-                    <div className="space-y-4">
-                      {category.questions.map((item, index) => (
-                        <div key={index} className="bg-white/5 rounded-lg p-4">
-                          <h4 className="font-semibold mb-2 text-blue-300">{item.question}</h4>
-                          <p className="text-gray-300 text-sm">{item.answer}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Resources Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Helpful Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource) => {
-                const IconComponent = resource.icon;
-                return (
-                  <Link
-                    key={resource.title}
-                    to={resource.link}
-                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
-                    <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
-                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                      {resource.category}
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Contact CTA */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30">
-              <Lightbulb className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our expert team is here to help you with any questions or technical issues you may have.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Contact Support
-                </Link>
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/20 transition-all duration-300"
-                >
-                  Email Support
-                </a>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Help
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Center
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions, learn best practices, 
-              and get the most out of Zion Tech Group's services
-            </p>
-          </div>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-16">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search for help articles, tutorials, or solutions..."
-                className="w-full pl-6 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300">
-                Search
-              </button>
-            </div>
-          </div>
-          
-          {/* Help Categories */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {helpCategories.map((category, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{category.description}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    {category.articles.map((article, idx) => (
-                      <div key={idx} className="text-sm text-gray-400 hover:text-blue-400 cursor-pointer transition-colors">
-                        • {article}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    to={`/docs/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
-                  >
-                    View All →
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </Link>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-        </section>
-
         {/* Contact Support */}
         <section className="py-16 px-4">
           <div className="container mx-auto text-center">
@@ -1347,92 +1006,6 @@ export default function HelpCenter() {
     </>
   );
 }
-<<<<<<< HEAD
-=======
-          
-          {/* Popular Articles */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Popular Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {popularArticles.map((article, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-semibold text-white">{article.title}</h3>
-                    <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded-full">
-                      {article.views} views
-                    </span>
-                  </div>
-                  <p className="text-gray-400 text-sm mb-3">{article.category}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                    <span className="text-blue-400 text-sm">Read Article →</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Quick Actions */}
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
-              <p className="text-gray-300 mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/support"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Contact Support
-                </Link>
-                <Link
-                  to="/tutorials"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
-                  Browse Tutorials
-                </Link>
-                <Link
-                  to="/docs"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
-                  View Documentation
-                </Link>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
-            </div>
-          </div>
-        </div>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-      </section>
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default HelpCenter;
-=======
-export default $page;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                    <AccordionTrigger className="px-6 py-4 text-white hover:text-zion-cyan">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-zion-slate-light">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-
           {/* Contact Section */}
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Still need help?</h2>
@@ -1453,9 +1026,7 @@ export default $page;
       </main>
     </AppLayout>
   );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-=======
+}=======
         </section>
 
         {/* Additional Resources */}
@@ -1537,8 +1108,6 @@ export default $page;
       <Footer />
     </div>
   );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+}>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

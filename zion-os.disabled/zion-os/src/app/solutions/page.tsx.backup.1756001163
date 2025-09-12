@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
 export default function SolutionsPage() {
   const caseStudies = [
     {
@@ -581,8 +578,6 @@ export default function SolutionsPage() {
             </a>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-8931
-    </div>
+      </section>    </div>
   );
 }

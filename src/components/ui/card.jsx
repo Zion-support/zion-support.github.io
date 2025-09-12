@@ -1,4 +1,4 @@
-import React from 'react';'
+
 const Card = (props: any) => {}
   return()
     <div;
@@ -53,38 +53,4 @@ const CardFooter = (props: any) => {}
 ;
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 const CardDescription = (props: any) => {
-    return (<p className={`text-sm text-muted-foreground ${className}`}>
-      {children}
-    </p>);
-};
 
-const CardFooter = ({ className, children, ...props }) => {
-  return (
-    <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>
-const CardContent = (props: any) => {
-    return (
-        <div className={`p-6 pt-0 ${className}`}>
-      {children}
-    </div>
-    );
-};
-const CardFooter = (props: any) => {
-    return (
-        <div className={`flex items-center p-6 pt-0 ${className}`}>
-      {children}
-    </div>
-    );
-};
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};

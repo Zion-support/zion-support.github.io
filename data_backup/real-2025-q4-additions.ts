@@ -1,5 +1,3 @@
->>>>>>> main
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 export interface Q4Service {
   "id": string;
   name: string;
@@ -903,6 +901,3 @@ export const real2025Q4Additions = [{
     "rating": 4.6,
     "reviews": 9
 ]}}}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
