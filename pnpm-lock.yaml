@@ -105,7 +105,7 @@ importers:
         specifier: ^4.2.1
         version: 4.2.1
       openai:
-        specifier: ^5.20.1
+        specifier: ^5.11.0
         version: 5.20.1(ws@8.18.3)(zod@3.25.76)
       path:
         specifier: ^0.12.7
@@ -169,7 +169,7 @@ importers:
         specifier: ^18.3.0
         version: 18.3.7(@types/react@18.3.23)
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.39.0
+        specifier: ^8.43.0
         version: 8.43.0(@typescript-eslint/parser@8.43.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1)(typescript@5.9.2)
       '@typescript-eslint/parser':
         specifier: ^8.39.0
