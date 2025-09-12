@@ -89,15 +89,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🚀 FRESH CONTENT - JANUARY 2025</span>
+                <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: AI Governance, Multimodal Revolution & $2.8B Success Stories!
+                🎉 BREAKTHROUGH: AI Masterclass, Cybersecurity Revolution & $2.1B Manufacturing Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: Enterprise AI Governance Master Guide, Multimodal AI Revolution (300% accuracy boost), 
-                Fortune 100 Retail Transformation ($2.8B value created), plus comprehensive implementation playbooks. 
-                Get expert insights on the technologies and strategies transforming 2025.
+                Just released: Complete AI Enterprise Masterclass (340% ROI), Advanced Cybersecurity AI (94% threat detection), 
+                Healthcare Diagnosis Revolution (94% cancer detection accuracy), plus $2.1B Manufacturing Transformation case study. 
+                Get expert insights on breakthrough AI implementations transforming 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -299,54 +299,54 @@ export default function HomePage() {
 
           {/* Featured Content Mega Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                   <Link href='/blog/ai-2025-breakthrough-innovations' className='group'>
+                   <Link href='/blog/ai-2025-generative-ai-enterprise-masterclass' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🧠</div>
-                       <h3 className='text-xl font-bold mb-3'>AI 2025 Breakthrough Innovations</h3>
-                       <p className='text-sm opacity-90 mb-4'>Quantum AI, brain-computer interfaces, and AGI breakthroughs reshaping industries</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🎓</div>
+                       <h3 className='text-xl font-bold mb-3'>AI Enterprise Masterclass</h3>
+                       <p className='text-sm opacity-90 mb-4'>Complete implementation guide with 340% ROI and $4.4T market potential</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>28 min read</span>
+                         <span>18 min read</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-red-500 px-2 py-1 rounded-full'>🔥 HOT</span>
                        </div>
                      </div>
                    </Link>
                    
-                   <Link href='/blog/ai-2025-year-ahead-predictions' className='group'>
+                   <Link href='/blog/ai-2025-cybersecurity-advanced-threat-detection' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🔮</div>
-                       <h3 className='text-xl font-bold mb-3'>AI 2025 Year Ahead Predictions</h3>
-                       <p className='text-sm opacity-90 mb-4'>15 predictions that will reshape business and technology in 2025</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🛡️</div>
+                       <h3 className='text-xl font-bold mb-3'>AI Cybersecurity Revolution</h3>
+                       <p className='text-sm opacity-90 mb-4'>Advanced threat detection with 94% reduction in false positives</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>32 min read</span>
+                         <span>16 min read</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-blue-500 px-2 py-1 rounded-full'>🆕 NEW</span>
                        </div>
                      </div>
                    </Link>
        
-                   <Link href='/blog/ai-enterprise-automation-2025' className='group'>
+                   <Link href='/blog/ai-2025-healthcare-diagnosis-revolution' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🏢</div>
-                       <h3 className='text-xl font-bold mb-3'>AI Enterprise Automation 2025</h3>
-                       <p className='text-sm opacity-90 mb-4'>Complete implementation guide for enterprise AI automation and process optimization</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🏥</div>
+                       <h3 className='text-xl font-bold mb-3'>Healthcare AI Revolution</h3>
+                       <p className='text-sm opacity-90 mb-4'>94% accuracy in cancer detection and 67% faster diagnosis times</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>35 min read</span>
+                         <span>14 min read</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-purple-500 px-2 py-1 rounded-full'>🚀 BREAKTHROUGH</span>
                        </div>
                      </div>
                    </Link>
        
-                   <Link href='/case-studies/ai-transformation-fortune-500-success-2025' className='group'>
+                   <Link href='/case-studies/ai-2025-global-manufacturing-ai-transformation-success' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🏆</div>
-                       <h3 className='text-xl font-bold mb-3'>Fortune 500 AI Success Story</h3>
-                       <p className='text-sm opacity-90 mb-4'>$50M savings and 300% ROI in 18 months - complete transformation case study</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🏭</div>
+                       <h3 className='text-xl font-bold mb-3'>$2.1B Manufacturing Success</h3>
+                       <p className='text-sm opacity-90 mb-4'>Fortune 100 transformation with 340% ROI across 47 facilities</p>
                        <div className='flex items-center text-xs opacity-75'>
                          <span>Case Study</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-green-500 px-2 py-1 rounded-full'>💰 $2.1B VALUE</span>
                        </div>
                      </div>
                    </Link>

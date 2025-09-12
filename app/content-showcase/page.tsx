@@ -16,7 +16,7 @@ export default function ContentShowcase() {
         {/* Header */}
         <header className="text-center mb-16">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 FRESH CONTENT - JANUARY 2025</span>
+            <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -24,8 +24,8 @@ export default function ContentShowcase() {
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our latest AI insights, implementation guides, and real-world success stories. 
-            Expert content designed to accelerate your AI transformation journey in 2025.
+            Explore our comprehensive collection of cutting-edge AI insights, enterprise implementation guides, 
+            and billion-dollar success stories. Expert content designed to accelerate your AI transformation journey in 2025.
           </p>
         </header>
 
@@ -37,47 +37,60 @@ export default function ContentShowcase() {
                 🎯 Featured This Week
               </h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Our most popular and impactful content, handpicked by our experts to help you 
-                stay ahead in the rapidly evolving AI landscape.
+                Our latest and most impactful content, featuring breakthrough AI implementations, 
+                enterprise masterclasses, and multi-billion dollar transformation success stories.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/blog/ai-2025-generative-ai-enterprise-masterclass" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                  <h3 className="text-lg font-semibold mb-2">Advanced AI Agents</h3>
-                  <p className="text-sm opacity-90 mb-3">Autonomous business operations with 95% accuracy and multi-agent collaboration</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎓</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Masterclass</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete implementation guide with 340% ROI and $4.4T market potential</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>12 min read</span>
+                    <span>18 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🔥 HOT</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-cybersecurity-advanced-threat-detection" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Advanced threat detection with 94% reduction in false positives</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>16 min read</span>
                     <span className="mx-2">•</span>
                     <span>🆕 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-quantum-ai-breakthrough" className="group">
+              <Link href="/blog/ai-2025-healthcare-diagnosis-revolution" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
-                  <h3 className="text-lg font-semibold mb-2">Quantum AI Breakthrough</h3>
-                  <p className="text-sm opacity-90 mb-3">1000x speedup with quantum computing revolutionizing AI capabilities</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2">Healthcare AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">94% accuracy in cancer detection and 67% faster diagnosis times</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>15 min read</span>
+                    <span>14 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🚀 TRENDING</span>
+                    <span>🚀 BREAKTHROUGH</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-2025-fintech-unicorn-transformation" className="group">
+              <Link href="/case-studies/ai-2025-global-manufacturing-ai-transformation-success" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
-                  <h3 className="text-lg font-semibold mb-2">$3.2B FinTech Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Unicorn transformation with 450% revenue growth and 2.5M active users</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">$2.1B Manufacturing Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 100 transformation with 340% ROI across 47 facilities</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $3.2B Value</span>
+                    <span>💰 $2.1B Value</span>
                   </div>
                 </div>
               </Link>
@@ -121,8 +134,8 @@ export default function ContentShowcase() {
             Stay Updated with Latest AI Insights
           </h2>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Get weekly updates on AI trends, implementation guides, and exclusive content 
-            delivered straight to your inbox. Join 10,000+ AI professionals.
+            Get weekly updates on breakthrough AI implementations, enterprise masterclasses, 
+            and exclusive transformation success stories. Join 25,000+ AI professionals and business leaders.
           </p>
           <div className="max-w-md mx-auto flex gap-4">
             <input
