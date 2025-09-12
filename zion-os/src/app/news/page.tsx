@@ -1,6 +1,15 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "🧠",
+      title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
+      excerpt:
+        "New autonomous agent workflows, built-in retrieval augmented generation, and analytics dashboards ship in 1.3.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-3-agents-rag",
+      gradient: "from-fuchsia-600 to-purple-600",
+    },
+    {
       emoji: "🚀",
       title: "Zion OS 1.0 Launches: One-Click Digital Economies",
       excerpt:
@@ -8,6 +17,14 @@ export default function NewsPage() {
       date: "Sep 12, 2025",
       href: "/news/zion-os-1-0-launch",
       gradient: "from-blue-600 to-purple-600",
+    },
+    {
+      emoji: "📈",
+      title: "Case Study: 38% Faster Hiring with Resume AI",
+      excerpt: "A regional marketplace cut time‑to‑hire by 38% using Zion Resume AI and proposal scoring.",
+      date: "Sep 08, 2025",
+      href: "/news/case-study-resume-ai-38-percent-faster",
+      gradient: "from-emerald-600 to-teal-600",
     },
     {
       emoji: "📰",
