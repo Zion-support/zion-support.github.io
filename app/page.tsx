@@ -6,6 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import DynamicContentCarousel from '../components/DynamicContentCarousel';
+import ContentRecommendationWidget from '../components/ContentRecommendationWidget';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -130,61 +132,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Spotlight Banner */}
-      <section className='py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🔥 BREAKING - JANUARY 30, 2025</span>
-            </div>
-            <h2 className='text-4xl md:text-5xl font-bold mb-6'>
-              🚀 New AI Content Just Dropped - Get 340% ROI
-            </h2>
-            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Fresh from our AI experts: Complete Business Transformation Guide, Fortune 100 Case Study with $75M savings, 
-              and the ultimate 400+ page Implementation Playbook. Everything you need to succeed with AI in 2025.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/blog/ai-2025-comprehensive-business-transformation'
-                className='bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
-              >
-                📖 Read Transformation Guide
-              </Link>
-              <Link
-                href='/resources/ai-2025-comprehensive-implementation-playbook'
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
-              >
-                📚 Download Free Playbook
-              </Link>
-            </div>
-          </div>
-
-          {/* Quick Stats */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 text-center'>
-            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg'>
-              <div className='text-2xl font-bold mb-1'>340%</div>
-              <div className='text-sm opacity-90'>Average ROI</div>
-            </div>
-            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg'>
-              <div className='text-2xl font-bold mb-1'>$75M</div>
-              <div className='text-sm opacity-90'>Proven Savings</div>
-            </div>
-            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg'>
-              <div className='text-2xl font-bold mb-1'>400+</div>
-              <div className='text-sm opacity-90'>Pages of Content</div>
-            </div>
-            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg'>
-              <div className='text-2xl font-bold mb-1'>50+</div>
-              <div className='text-sm opacity-90'>Ready Templates</div>
-            </div>
-          </div>
+      {/* Dynamic Content Carousel */}
+      <section className='py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <DynamicContentCarousel />
         </div>
       </section>
 
-      {/* Enhanced New Content Showcase Banner */}
-      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* Enhanced Content Showcase - Latest Drop */}
+      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -496,7 +452,7 @@ export default function HomePage() {
               solutions that drive real results.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
             <FeatureCard
               title='Fast Delivery'
               description='Rapid prototyping and deployment with modern tools and practices.'
@@ -513,6 +469,11 @@ export default function HomePage() {
               title='Cost Effective'
               description='Optimized solutions that reduce operational costs and improve efficiency.'
             />
+          </div>
+          
+          {/* Content Recommendation Widget */}
+          <div className='max-w-4xl mx-auto'>
+            <ContentRecommendationWidget maxItems={4} />
           </div>
         </div>
       </section>
