@@ -147,6 +147,13 @@ import AI2034RevolutionaryContentShowcase from '../components/AI2034Revolutionar
 
 // Additional Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
+
+// New AI 2035-2036 Breakthrough Content Components
+import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
+import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
+import AI2036FuturePredictionsPromotionBanner from '../components/AI2036FuturePredictionsPromotionBanner';
+import AI2036FuturePredictionsShowcase from '../components/AI2036FuturePredictionsShowcase';
+import QuantumConsciousnessTransferShowcase from '../components/QuantumConsciousnessTransferShowcase';
 import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
 import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
 import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
@@ -169,6 +176,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEW */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE - NEW */}
+        <AI2035BreakthroughContentShowcase />
+        
+        {/* AI 2036 FUTURE PREDICTIONS PROMOTION BANNER - NEW */}
+        <AI2036FuturePredictionsPromotionBanner />
+        
+        {/* AI 2036 FUTURE PREDICTIONS SHOWCASE - NEW */}
+        <AI2036FuturePredictionsShowcase />
+        
+        {/* QUANTUM CONSCIOUSNESS TRANSFER SHOWCASE - NEW */}
+        <QuantumConsciousnessTransferShowcase />
+        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughBanner />
         
