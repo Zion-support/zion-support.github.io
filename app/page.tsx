@@ -34,6 +34,7 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -58,6 +59,9 @@ export default function HomePage() {
         
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
+        <RevolutionaryContentShowcase2026 />
         
         {/* DYNAMIC CONTENT CAROUSEL 2026 */}
         <DynamicContentCarousel2026 />
