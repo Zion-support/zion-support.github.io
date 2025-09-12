@@ -5,13 +5,22 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI 2025: Year Ahead Predictions",
-      description: "Discover our expert predictions for AI in 2025. From breakthrough technologies to enterprise adoption trends, get insights that will shape your AI strategy.",
-      href: "/blog/ai-2025-year-ahead-predictions",
+      title: "AI 2025 Breakthrough Innovations: The Technologies Reshaping Our World",
+      description: "Discover the groundbreaking AI innovations of 2025 that are transforming industries. From quantum-enhanced AI to brain-computer interfaces, explore the technologies that will define the future.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🚀",
+      category: "AI Innovation",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025 Predictions: 15 Trends That Will Reshape Technology and Business",
+      description: "Discover the 15 most important AI trends and predictions for 2025. From AGI breakthroughs to quantum AI, explore the technologies that will transform industries and create new opportunities.",
+      href: "/blog/ai-2025-predictions",
       icon: "🔮",
       category: "AI Predictions",
-      readTime: "18 min read",
-      date: "Jan 15, 2025"
+      readTime: "28 min read",
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Multimodal Revolution 2025: The Future of Intelligent Systems",
@@ -30,19 +39,19 @@ export default function ContentShowcasePage() {
       category: "AI Strategy",
       readTime: "18 min read",
       date: "Feb 01, 2025"
-    },
-    {
-      title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen Attacks",
-      description: "Comprehensive analysis of emerging AI-powered cyber threats and defense strategies to protect your organization in 2025.",
-      href: "/blog/ai-cybersecurity-threats-2025",
-      icon: "🛡️",
-      category: "Cybersecurity",
-      readTime: "20 min read",
-      date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "Fortune 500 AI Transformation Success: $50M Savings and 300% ROI in 18 Months",
+      description: "Discover how a Fortune 500 manufacturing company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details and lessons learned.",
+      href: "/case-studies/ai-transformation-fortune-500-success-2025",
+      icon: "🏆",
+      category: "Enterprise AI",
+      result: "$50M Savings",
+      date: "Jan 30, 2025"
+    },
     {
       title: "AI Manufacturing Automation Success: 40% Cost Reduction Achieved",
       description: "How a Fortune 500 manufacturing company transformed their operations with AI automation, achieving unprecedented cost savings and efficiency gains while maintaining the highest quality standards.",
@@ -51,15 +60,6 @@ export default function ContentShowcasePage() {
       category: "Manufacturing",
       result: "40% Cost Reduction",
       date: "Jan 20, 2025"
-    },
-    {
-      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
-      description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
-      href: "/case-studies/ai-transformation-enterprise-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
-      date: "Feb 05, 2025"
     },
     {
       title: "AI Retail Transformation Success: 300% Revenue Growth",
@@ -73,6 +73,15 @@ export default function ContentShowcasePage() {
   ];
 
   const newResources = [
+    {
+      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide 2025. Complete step-by-step resource with checklists, templates, and best practices for successful AI implementation.",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 30, 2025"
+    },
     {
       title: "AI Multimodal Implementation Guide 2025",
       description: "Everything you need to successfully implement multimodal AI in your organization. This comprehensive guide includes practical strategies, checklists, templates, and real-world case studies.",
@@ -90,15 +99,6 @@ export default function ContentShowcasePage() {
       category: "Checklist",
       type: "Free Download",
       date: "Feb 08, 2025"
-    },
-    {
-      title: "AI Security Hardening Checklist: Essential Security Measures",
-      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
-      href: "/resources/ai-security-hardening-checklist",
-      icon: "🛡️",
-      category: "Security",
-      type: "Free Download",
-      date: "Feb 06, 2025"
     }
   ];
 =======
