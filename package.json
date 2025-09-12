@@ -119,7 +119,10 @@
     "tailwind-merge": "^2.2.1",
     "vaul": "^0.9.0",
     "zod": "^3.22.4",
+<<<<<<< HEAD
     "uuid": "^11.1.0",
+=======
+>>>>>>> main
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
