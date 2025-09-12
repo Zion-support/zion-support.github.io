@@ -1,6 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Smartphone, Building, Globe, Zap, Shield, Users } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Smartphone, 
+  Building, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Users, 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Youtube, 
+  Github, 
+  ExternalLink, 
+  ArrowUp 
+} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -12,60 +29,47 @@ const Footer: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-  const footerSections = [
-    {
-      title: 'Revolutionary Services',
-      links: [
-        { name: 'Quantum AI Platform', href: '/quantum-ai-cognitive' },
-        { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Space Technology', href: '/space-technology' },
-        { name: 'Biotech AI', href: '/biotech-ai' },
-        { name: 'Quantum Trading', href: '/quantum-financial-trading' }
-      ]
-    },
-    {
-      title: 'Technology Solutions',
-      links: [
-        { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
-        { name: 'Blockchain & DeFi', href: '/services?category=Blockchain%20%26%20DeFi' },
-        { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' },
-        { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/services?category=Cloud%20Infrastructure' },
-        { name: 'Digital Transformation', href: '/solutions' }
-      ]
-    },
-    {
-      title: 'Industries',
-      links: [
-        { name: 'Financial Services', href: '/solutions#financial' },
-        { name: 'Healthcare', href: '/solutions#healthcare' },
-        { name: 'Manufacturing', href: '/solutions#manufacturing' },
-        { name: 'Government', href: '/solutions#government' },
-        { name: 'Education', href: '/solutions#education' },
-        { name: 'Retail & E-commerce', href: '/solutions#retail' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Research', href: '/research' },
-        { name: 'Support', href: '/support' }
-      ]
-    }
+  const services = [
+    { name: 'AI & Consciousness', href: '/ai-services', icon: Brain },
+    { name: 'Quantum Technology', href: '/quantum-services', icon: Atom },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+    { name: 'Business Solutions', href: '/business-solutions', icon: Target },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cpu },
+    { name: 'Space Technology', href: '/space-tech', icon: Rocket }
   ];
 
-  const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup' }
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Leadership', href: '/leadership' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Press', href: '/press' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const resources = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' }
+  ];
+
+  const social = [
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'GitHub', href: '#', icon: Github },
+    { name: 'YouTube', href: '#', icon: Youtube },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'Facebook', href: '#', icon: Facebook }
   ];
 
   const scrollToTop = () => {
@@ -133,27 +137,10 @@ const Footer: React.FC = () => {
                   className="w-11 h-11 bg-gray-800/50 hover:bg-blue-500/20 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 border border-gray-700/50 hover:border-blue-500/30"
                   aria-label={social.name}
                 >
-                  {social.icon}
+                  <social.icon className="w-5 h-5" />
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
-                <Mail className="w-5 h-5" />
-                <a href={`mailto:${contactInfo.email}`} className="text-white hover:text-cyan-300">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-start space-x-3 text-cyan-400">
-                <MapPin className="w-5 h-5 mt-0.5" />
-                <span className="text-white">{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
-                <Globe className="w-5 h-5" />
-                <a href={contactInfo.website} className="text-white hover:text-cyan-300 flex items-center space-x-2">
-                  <span>Visit Website</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </motion.div>
+              ))}
+            </div>
           </div>
 
           {/* Footer Sections */}
@@ -179,7 +166,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Bottom Section */}
         <div className="mt-16 pt-8 border-t border-white/20">
@@ -219,7 +206,7 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll to top button */}
@@ -261,4 +248,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -1,7 +1,10 @@
 import js from '@eslint/js';
+import globals from 'globals';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
   js.configs.recommended,
@@ -10,6 +13,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
+      parser: tsparser,
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -27,19 +31,156 @@ export default [
       parserOptions: {
         ecmaFeatures: {
           jsx: true
-        }
+        },
+        project: './tsconfig.json'
       }
     },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+    rules: {
+      // React rules
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off", // We use TypeScript
+      "react/display-name": "warn",
+      // Enable react-hooks rules for React 19 compatibility
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      
+      // Basic accessibility rules
+      "jsx-a11y/alt-text": "error",
+      "jsx-a11y/aria-props": "error",
+    },
+    settings: {
+      react: {
+        version: "detect"
+      }
+    }
+  },
+
+  // Test files configuration
+  {
+    files: [
+      "**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "**/tests/**/*.{js,jsx,ts,tsx}",
+      "**/*.test.{js,jsx,ts,tsx}",
+      "**/*.spec.{js,jsx,ts,tsx}"
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+        ...globals.browser,
+        vi: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      }
     },
     rules: {
-      'no-unused-vars': 'warn',
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-console": "off"
+    }
+  },
+
+  // Node.js specific files
+  {
+    files: [
+      "**/*.cjs",
+      "scripts/**/*.js",
+      "api/**/*.js",
+      "server/**/*.js",
+      "backend/**/*.js",
+      "token/**/*.js",
+      "hardhat.config.js"
+    ],
+    languageOptions: {
+      sourceType: "commonjs",
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  },
+
+  // Cypress files
+  {
+    files: ["cypress/**/*.{js,ts,jsx,tsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        cy: "readonly",
+        Cypress: "readonly",
+        context: "readonly",
+        assert: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        before: "readonly",
+        after: "readonly"
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
+
+  // Chrome Extension files
+  {
+    files: ["extension/**/*.{js,ts}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        chrome: "readonly"
+      }
+    },
+    rules: {
+      "no-console": "off"
+    }
+  },
+
+  // Service Worker files
+  {
+    files: ["public/service-worker.js", "**/sw.js", "**/*service-worker*.js"],
+    languageOptions: {
+      globals: {
+        ...globals.serviceworker,
+        workbox: "readonly",
+        importScripts: "readonly",
+        self: "readonly",
+        clients: "readonly",
+        caches: "readonly"
+      }
+    },
+    rules: {
+      "no-console": "off",
+      "no-redeclare": "off" // Allow workbox to be redeclared in service worker context
+    }
+  },
+
+  // Jest setup files
+  {
+    files: ["tests/jest.setup.ts", "**/*jest.setup*"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+        jest: "readonly",
+        global: "readonly"
+      }
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-undef': 'error'
     }
   },
   {

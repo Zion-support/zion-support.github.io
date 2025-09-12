@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "successfullyMerged": 7,
+    "failedBranches": 3,
+    "duration": "25 seconds"
+  },
+  "mergedBranches": [
+    "0t8m4m-codex/update-project-color-palette",
+    "0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+    "14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+    "1dcwqi-codex/implement-global-pricing-with-currency-selection",
+    "1nc0kn-codex/fix-blank-screen-on-app-load",
+    "1nq1ky-codex/render-talent-profiles-with-error-states",
+    "1ry69n-codex/fix-npm-eio-error-during-install"
+  ],
+  "failedBranches": [
+    {
+      "branch": "1fjs4s-codex/implement-instant-messaging-for-negotiations",
+      "error": "Command failed: git merge origin/1fjs4s-codex/implement-instant-messaging-for-negotiations --no-ff -m \"Merge: 1fjs4s-codex/implement-instant-messaging-for-negotiations\"\nerror: could not write index\nfatal: stash failed\n"
+    },
+    {
+      "branch": "1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+      "error": "Command failed: git merge origin/1m9jcs-codex/fix-client-side-rendering-and-javascript-errors --no-ff -m \"Merge: 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors\"\nfatal: You have not concluded your merge (MERGE_HEAD exists).\nPlease, commit your changes before you merge.\n"
+    },
+    {
+      "branch": "1sqc9r-codex/implement-light/dark-theme-with-persistence",
+      "error": "Command failed: git merge origin/1sqc9r-codex/implement-light/dark-theme-with-persistence --no-ff -m \"Merge: 1sqc9r-codex/implement-light/dark-theme-with-persistence\"\nerror: could not write index\nfatal: stash failed\n"
+    }
+  ],
+  "timestamp": "2025-09-12T00:47:43.677Z"
+}
