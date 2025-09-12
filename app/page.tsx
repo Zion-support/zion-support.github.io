@@ -197,18 +197,30 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
 
+=======
+<<<<<<< HEAD
+      {/* New Content Showcase Banner */}
+      <section className='py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
+=======
+>>>>>>> bulk-merge-20250912-100339
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
+>>>>>>> bulk-merge-20250912-100339
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+<<<<<<< HEAD
               <span className='text-sm font-medium'>🔥 HOT THIS WEEK</span>
             </div>
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -217,6 +229,17 @@ export default function HomePage() {
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Enterprise AI Transformation Success Stories, 
               and the complete AI Implementation Playbook. Expert insights to accelerate your success.
+=======
+<<<<<<< HEAD
+              <span className='text-sm font-medium'>🔥 JUST PUBLISHED - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI & Tech Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest expert insights, case studies, and resources. From AI multimodal applications 
+              to cybersecurity threats and sustainable AI, get the knowledge you need to succeed in 2025.
+>>>>>>> bulk-merge-20250912-100339
             </p>
           </div>
 
@@ -293,6 +316,19 @@ export default function HomePage() {
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
               New this week: AI Manufacturing Success Story, Cloud-Native Architecture Blueprint, 
               and AI Implementation Playbook. Expert insights to accelerate your digital transformation.
+<<<<<<< HEAD
+=======
+=======
+              <span className='text-sm font-medium'>🔥 JUST PUBLISHED</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI Insights & Expert Guides
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest breakthrough content: AI Breakthrough Trends 2025, AI Startup Funding Masterclass, 
+              Enterprise Security Guide, and the complete AI Implementation Master Guide. Expert insights to accelerate your success.
+>>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
+>>>>>>> bulk-merge-20250912-100339
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -945,8 +981,74 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
+=======
+<<<<<<< HEAD
+      {/* New Content Promotion Banner */}
+      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🎯 LIMITED TIME OFFER</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Get Your Free AI Transformation Assessment
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Ready to transform your business with AI? Get a free 30-minute consultation with our experts 
+              and receive a custom implementation roadmap worth $5,000. Limited to 50 companies this month.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/contact'
+                className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                🎯 Claim Your Free Assessment
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+            <div className='text-center text-sm opacity-75'>
+              <p>✓ Free 30-minute consultation • ✓ Custom implementation roadmap • ✓ ROI projections • ✓ No obligation</p>
+            </div>
+          </div>
+
+          {/* Success Metrics */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 text-center'>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl'>
+              <div className='text-3xl font-bold mb-2'>340%</div>
+              <div className='text-sm opacity-90'>Average ROI</div>
+            </div>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl'>
+              <div className='text-3xl font-bold mb-2'>50+</div>
+              <div className='text-sm opacity-90'>Companies Transformed</div>
+            </div>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl'>
+              <div className='text-3xl font-bold mb-2'>$50M+</div>
+              <div className='text-sm opacity-90'>Total Savings Generated</div>
+            </div>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl'>
+              <div className='text-3xl font-bold mb-2'>6 Months</div>
+              <div className='text-sm opacity-90'>Average Payback</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup Section */}
+      <section className='py-16 bg-gray-900 text-white'>
+=======
+      {/* Trending Articles Section */}
+      <section className='py-20 bg-gray-50'>
+>>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
+>>>>>>> bulk-merge-20250912-100339
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold mb-4'>
