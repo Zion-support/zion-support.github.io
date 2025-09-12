@@ -48,6 +48,8 @@ import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
@@ -183,6 +185,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEW */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT DISCOVERY WIDGET 2025 - NEW */}
+        <NewContentDiscoveryWidget2025 />
+        
         {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER - FEATURED */}
         <NewContent2026UltimatePromotionBanner />
         
