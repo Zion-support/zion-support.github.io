@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '33',
+      title: 'Reliable Realtime Agents in 2025: Architecture & SLAs',
+      description: 'Production blueprint for realtime agents with reliability SLAs, safety guardrails, and observability.',
+      href: '/blog/ai-2025-reliable-realtime-agents',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Reliability'
+    },
+    {
       id: '31',
       title: 'Agentic Vendor Management 2025: From Intake to Renewal',
       description: 'Automate diligence, smarter negotiations, and renewal guardrails with agentic workflows.',

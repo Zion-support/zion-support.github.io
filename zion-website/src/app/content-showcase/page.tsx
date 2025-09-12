@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Reliable Realtime Agents in 2025: Architecture & SLAs",
+      description: "Blueprint for production-grade realtime agents with SLAs, safety, and observability.",
+      href: "/blog/ai-2025-reliable-realtime-agents",
+      icon: "⚡",
+      category: "Reliability",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Enterprise GenAI Security Blueprint 2025",
       description: "Practical controls for data leakage, prompt injection, model abuse, and compliance-by-design.",
       href: "/blog/ai-2025-genai-security-blueprint",
