@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '58',
+      title: 'Agent Security Operations (2025): End-to-End Controls',
+      description: 'Identity, least privilege, policy-as-code, isolation, evals, and SOC integration for agent security.',
+      href: '/blog/ai-2025-agent-security-operations',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Security'
+    },
+    {
       id: '56',
       title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
       description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
