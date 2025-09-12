@@ -42,15 +42,235 @@ const AccessibilityEnhancer: React.FC = () => {
     if (settings.focusVisible) {
       root.classList.add('focus-visible');
     } else {
-      root.classList.remove('focus-visible');
+      root.style.setProperty('--focus-outline', 'none');
+    }
+
+  // Load saved settings
+  useEffect(() => {
+    const saved = localStorage.getItem('accessibility-settings');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setSettings(parsed);
+        applySettings(parsed);
+      } catch (e) {
+        // console.log('Failed to parse saved accessibility settings');
+      }
+    }
+  }, [applySettings]);
+
+  // Focus management
+  const handleFocusChange = useCallback((e: Event) => {
+    const target = e.target as HTMLElement;
+    if (target) {
+      setCurrentFocus(target);
+      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
+    }
+  }, []);
+
+  // Keyboard navigation enhancements
+  const handleKeyDown = useCallback((e: Event) => {
+    // Tab navigation detected
+  }, []);
+
+  // Announce to screen reader
+  const announceToScreenReader = useCallback((message: string) => {
+    // setAnnouncements(prev => [...prev, message]); // This line was removed
+    
+    // Create live region for screen readers
+    if (!announcementRef.current) {
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      document.body.appendChild(liveRegion);
+      announcementRef.current = liveRegion;
+    }
+    
+    if (announcementRef.current) {
+      announcementRef.current.textContent = message;
     }
   }, [settings]);
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
-    setSettings(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
+  // Track focus changes
+  useEffect(() => {
+    const handleFocusChange = (event: Event) => {
+      const target = event.target as HTMLElement;
+      if (target && target !== currentFocus) {
+        setCurrentFocus(target);
+        setFocusHistory(prev => [target, ...prev.slice(0, 9)]);
+        
+        // Add focus indicator
+        if (settings.focusIndicator) {
+          target.style.outline = '3px solid #0066cc';
+          target.style.outlineOffset = '2px';
+        }
+      }
+    };
+
+    const handleBlur = (event: Event) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        target.style.outline = '';
+        target.style.outlineOffset = '';
+      }
+    };
+
+    document.addEventListener('focusin', handleFocusChange);
+    document.addEventListener('focusout', handleBlur);
+
+    return () => {
+      document.removeEventListener('focusin', handleFocusChange);
+      document.removeEventListener('focusout', handleBlur);
+    };
+  }, [currentFocus, settings.focusIndicator]);
+
+  // Highlighter effect
+  useEffect(() => {
+    if (!settings.highlighter) return;
+
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, span, div');
+    
+    elements.forEach(element => {
+      if (element instanceof HTMLElement) {
+        element.style.backgroundColor = 'rgba(255, 255, 0, 0.3)';
+        element.style.color = '#000000';
+        element.style.padding = '2px 4px';
+        element.style.borderRadius = '4px';
+      }
+    });
+
+    return () => {
+      elements.forEach(element => {
+        if (element instanceof HTMLElement) {
+          element.style.backgroundColor = '';
+          element.style.color = '';
+          element.style.padding = '';
+          element.style.borderRadius = '';
+        }
+      });
+    };
+  }, [settings.highlighter]);
+
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    if (settings.screenReader) {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      
+      document.body.appendChild(announcement);
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    }
+  }, [settings.screenReader]);
+
+  // Toggle setting
+  const toggleSetting = useCallback((key: keyof AccessibilitySettings) => {
+    setSettings(prev => {
+      const newSettings = { ...prev, [key]: !prev[key] };
+      announceToScreenReader(`${key} ${newSettings[key] ? 'enabled' : 'disabled'}`);
+      return newSettings;
+    });
+  }, [announceToScreenReader]);
+
+  // Update setting
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: string | number | boolean) => {
+    setSettings(prev => ({ ...prev, [key]: value }));
+    announceToScreenReader(`${key} updated to ${value}`);
+  }, [announceToScreenReader]);
+
+  // Reset to defaults
+  const resetToDefaults = useCallback(() => {
+    const defaults: AccessibilitySettings = {
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      highlighter: false,
+      fontSize: 16,
+      colorScheme: 'auto',
+      focusIndicator: true,
+      screenReader: false
+    };
+    setSettings(defaults);
+    announceToScreenReader('Settings reset to defaults');
+  }, [announceToScreenReader]);
+
+  // Increase/decrease font size
+  const changeFontSize = useCallback((increment: boolean) => {
+    setSettings(prev => {
+      const newSize = increment ? prev.fontSize + 2 : prev.fontSize - 2;
+      const clampedSize = Math.max(12, Math.min(24, newSize));
+      announceToScreenReader(`Font size ${clampedSize}px`);
+      return { ...prev, fontSize: clampedSize };
+    });
+  }, [announceToScreenReader]);
+
+  // Get accessibility score
+  const getAccessibilityScore = () => {
+    let score = 0;
+    let totalChecks = 0;
+
+    // Check for alt text on images
+    const images = document.querySelectorAll('img');
+    let imagesWithAlt = 0;
+    images.forEach(img => {
+      if (img.alt && img.alt.trim() !== '') imagesWithAlt++;
+    });
+    if (images.length > 0) {
+      totalChecks++;
+      score += (imagesWithAlt / images.length) * 100;
+    }
+
+    // Check for proper heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let properStructure = 0;
+    let currentLevel = 0;
+    headings.forEach(heading => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level <= currentLevel + 1) {
+        properStructure++;
+        currentLevel = level;
+      }
+    });
+    if (headings.length > 0) {
+      totalChecks++;
+      score += (properStructure / headings.length) * 100;
+    }
+
+    // Check for form labels
+    const formControls = document.querySelectorAll('input, select, textarea');
+    let labeledControls = 0;
+    formControls.forEach(control => {
+      if (control.hasAttribute('aria-label') || 
+          control.hasAttribute('aria-labelledby') ||
+          control.closest('label')) {
+        labeledControls++;
+      }
+    });
+    if (formControls.length > 0) {
+      totalChecks++;
+      score += (labeledControls / formControls.length) * 100;
+    }
+
+    // Check for keyboard navigation
+    const focusableElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
+    let keyboardAccessible = 0;
+    focusableElements.forEach(element => {
+      if (element instanceof HTMLElement && element.tabIndex >= 0) {
+        keyboardAccessible++;
+      }
+    });
+    if (focusableElements.length > 0) {
+      totalChecks++;
+      score += (keyboardAccessible / focusableElements.length) * 100;
+    }
+
+    return totalChecks > 0 ? Math.round(score / totalChecks) : 100;
   };
 
   return (

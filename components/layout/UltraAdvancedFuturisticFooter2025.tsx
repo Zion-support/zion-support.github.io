@@ -382,19 +382,22 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <motion.button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}
+      {/* Floating CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="absolute bottom-8 right-8 z-20"
       >
-        <ArrowUp className="w-6 h-6 mx-auto" />
-      </motion.button>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/50 flex items-center justify-center text-white hover:shadow-cyan-500/75 transition-all duration-300"
+        >
+          <Rocket className="w-6 h-6" />
+        </motion.button>
+      </motion.div>
     </footer>
   );
 };

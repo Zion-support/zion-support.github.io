@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, ChevronUp, 
@@ -157,8 +156,61 @@ export default function EnhancedNavigation() {
     { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> }
   ];
 
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+  // Handle search focus
+  useEffect(() => {
+    if (isSearchOpen && searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+              const target = event.target as any;
+      if (!target.closest('.navigation-dropdown')) {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Optimized event handlers
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+
+  const toggleDropdown = useCallback((label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  }, [activeDropdown]);
+
+  const closeDropdown = useCallback(() => {
+    setActiveDropdown(null);
+  }, []);
+
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+      setIsSearchOpen(false);
+    }
+  }, [searchQuery, router]);
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setSearchQuery('');
+    }
+  }, [isSearchOpen]);
+
+  // Get animation props based on user preference
+  const getAnimationProps = (animationType: keyof typeof navigationAnimations) => {
+    if (isReducedMotion) {
+      return { initial: {}, animate: {}, exit: {}, transition: {} };
+    }
+    return navigationAnimations[animationType];
   };
 
   return (
