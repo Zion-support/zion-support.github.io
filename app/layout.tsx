@@ -92,8 +92,8 @@ function Header() {
                 <Link href="/ai-2026-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Technology Showcase
                 </Link>
-                <Link href="/ai-trends-2026-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  📈 Trends & Predictions
+                <Link href="/blog/ai-2026-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📈 Revolutionary Trends & Predictions
                 </Link>
                 <Link href="/resources/ai-2026-complete-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 Master Implementation Guide
@@ -107,8 +107,23 @@ function Header() {
                 <Link href="/case-studies/quantum-ai-financial-optimization-breakthrough-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   ⚛️ Quantum AI Breakthrough
                 </Link>
-                <Link href="/blog/ai-2026-enterprise-implementation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🚀 Enterprise Mastery
+                <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🚀 Enterprise Automation Revolution
+                </Link>
+                <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏢 Global Enterprise Success (800% ROI)
+                </Link>
+                <Link href="/case-studies/ai-2026-global-retail-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏪 Global Retail Success (600% ROI)
+                </Link>
+                <Link href="/blog/ai-2026-advanced-autonomous-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🤖 Advanced Autonomous Systems
+                </Link>
+                <Link href="/resources/ai-2026-enterprise-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📖 Enterprise Implementation Guide
+                </Link>
+                <Link href="/case-studies/ai-2026-global-retail-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏆 Global Retail Success Story
                 </Link>
                 <Link href="/blog/ai-2026-neural-interface-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🧠 Neural Interfaces
@@ -136,6 +151,18 @@ function Header() {
               <div className="py-2">
                 <Link href="/mega-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Mega Content Showcase 2026
+                </Link>
+                <Link href="/blog/ai-2026-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📝 Enterprise Automation Mastery (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2026-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📊 Fortune 500 Case Study (NEW)
+                </Link>
+                <Link href="/resources/ai-2026-implementation-toolkit-ultimate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <Link href="/tools/ai-roi-calculator-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🧮 AI ROI Calculator 2026 (NEW)
                 </Link>
                 <Link href="/content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 All Content
