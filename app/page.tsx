@@ -184,6 +184,38 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Content Promotion Banner */}
+        <section className="py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                Fresh AI Insights & Resources Available Now
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest AI breakthrough innovations, enterprise security guide, manufacturing case study, 
+                and comprehensive 150-page implementation master guide. Expert insights to accelerate your AI transformation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/content-showcase"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Explore New Content
+                </Link>
+                <Link
+                  href="/blog/ai-2025-breakthrough-innovations"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Read Latest Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
             type="Organization" 
