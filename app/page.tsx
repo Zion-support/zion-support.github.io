@@ -69,10 +69,10 @@ export default function HomePage() {
                   🎯 Take Assessment
                 </Link>
                 <Link
-                  href="/resources/ai-implementation-roadmap-2025"
+                  href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  🗺️ View Roadmap
+                  📚 Download Master Guide
                 </Link>
               </div>
               
@@ -110,6 +110,83 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Latest Content Drop Banner */}
+        <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🔥 JUST PUBLISHED - JANUARY 2025</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 Revolutionary AI Content: Edge Agents, Advanced Architecture & Cybersecurity
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: Edge AI Agents in Production, Advanced AI Architecture Patterns, 
+                AI Cybersecurity Revolution, and the $200M Manufacturing Success Case Study. Expert insights to accelerate your AI success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+                <Link
+                  href="/blog/ai-2025-edge-agents-in-production"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  🤖 Edge AI Agents Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-advanced-ai-architecture"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  🏗️ Architecture Patterns
+                </Link>
+                <Link
+                  href="/blog/ai-2025-cybersecurity-revolution"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  🛡️ Cybersecurity Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  💰 $200M Case Study
+                </Link>
+              </div>
+              
+              {/* Featured Content Preview */}
+              <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <Link href="/blog/ai-2025-edge-agents-in-production" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🤖</div>
+                    <h3 className="text-sm font-semibold mb-1">Edge AI Agents</h3>
+                    <p className="text-xs opacity-90">Production deployment guide</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🏗️</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Architecture</h3>
+                    <p className="text-xs opacity-90">Scalable patterns & design</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🛡️</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
+                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                  </div>
+                </Link>
+                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">💰</div>
+                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
+                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Autonomous Systems Promotion Banner */}
         <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,10 +209,10 @@ export default function HomePage() {
                   View Case Study
                 </Link>
                 <Link
-                  href="/resources/autonomous-systems-implementation-guide"
+                  href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Free Implementation Guide
+                  Free Master Guide
                 </Link>
                 <Link
                   href="/blog/ai-2025-breakthrough-innovations"
