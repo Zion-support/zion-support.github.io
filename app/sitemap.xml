@@ -25,6 +25,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ziontechgroup.com/resources/autonomous-systems-implementation-guide</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   
   <!-- New Featured Blog Articles -->
   <url>
@@ -36,6 +42,30 @@
   <url>
     <loc>https://ziontechgroup.com/blog/ai-2025-enterprise-ai-transformation-success</loc>
     <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/blog/ai-2025-multimodal-revolution</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/blog/ai-2025-robotics-automation</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/blog/ai-2025-sustainability-green-tech</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/blog/ai-2025-autonomous-systems-revolution</loc>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -90,8 +120,14 @@
   
   <!-- New Featured Resources -->
   <url>
-    <loc>https://ziontechgroup.com/resources/ai-2026-implementation-roadmap</loc>
-    <lastmod>2025-01-30</lastmod>
+    <loc>https://ziontechgroup.com/case-studies/ai-autonomous-manufacturing-success-2025</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/case-studies/ai-transformation-healthcare-success-2025</loc>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

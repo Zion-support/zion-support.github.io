@@ -52,20 +52,27 @@ export default function ContentShowcase() {
 
         {/* Featured Content */}
         <section className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">🔥 Featured This Week</h2>
-            <Link href="/blog" className="text-blue-600 hover:underline font-medium">
-              View All Articles →
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2025-year-in-review" className="group">
-              <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative">
-                  <div className="text-8xl">📊</div>
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    FEATURED
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎯 Featured This Week
+              </h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                Our most popular and impactful content, handpicked by our experts to help you 
+                stay ahead in the rapidly evolving AI landscape.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/blog/ai-2025-autonomous-systems-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">Autonomous Systems Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Self-operating AI systems achieving 95% efficiency gains across industries</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>18 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🚀 NEW</span>
                   </div>
                 </div>
                 <div className="p-8">
@@ -179,9 +186,73 @@ export default function ContentShowcase() {
           </div>
         </section>
 
-        {/* Content Categories */}
+        {/* Featured Resources */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Explore by Category</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              📚 Featured Resources
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Download our latest implementation guides, ROI calculators, and frameworks 
+              to accelerate your AI transformation journey.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Link href="/resources/autonomous-systems-implementation-guide" className="group">
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="text-5xl mr-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-green-600">Autonomous Systems Guide</h3>
+                    <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-medium mb-2">
+                      🆕 NEW RESOURCE
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Complete implementation guide with ROI calculators, checklists, and Fortune 500 case studies. 
+                  Everything you need to deploy autonomous AI systems successfully.
+                </p>
+                <div className="flex items-center text-green-600 font-medium group-hover:underline">
+                  Download Free Guide →
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="text-5xl mr-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-600">Manufacturing Success Story</h3>
+                    <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-3 py-1 text-sm font-medium mb-2">
+                      💰 $200M ROI
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Discover how a Fortune 500 manufacturer achieved 95% efficiency gains and $200M cost savings 
+                  through autonomous AI systems implementation.
+                </p>
+                <div className="flex items-center text-purple-600 font-medium group-hover:underline">
+                  Read Case Study →
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* Quick Links */}
+        <section className="grid md:grid-cols-3 gap-8 mb-16">
+          <Link href="/blog" className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600">Latest Articles</h3>
+              <p className="text-gray-600 mb-4">Expert insights on AI trends, implementation strategies, and business transformation.</p>
+              <div className="text-blue-600 font-medium group-hover:underline">Browse Articles →</div>
+            </div>
+          </Link>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/blog" className="group">
