@@ -12,39 +12,39 @@ interface EnhancedContentPromotionBannerProps {
 const contentPromotions = [
   {
     id: 1,
-    title: "🚀 NEW: AI Automation Enterprise Guide 2025",
-    description: "Complete implementation strategy for enterprise-scale AI automation with proven 300% ROI frameworks",
-    ctaText: "Download Free Guide",
-    ctaHref: "/resources/ai-automation-enterprise-guide-2025",
-    badge: "NEW",
-    badgeColor: "bg-blue-100 text-blue-800",
-    metrics: "300% ROI",
+    title: "🎨 HOT: The Generative AI Revolution 2025",
+    description: "Discover how generative AI is transforming business operations with 10x content output and practical implementation strategies",
+    ctaText: "Read Full Article",
+    ctaHref: "/blog/ai-2025-generative-ai-revolution",
+    badge: "HOT",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output",
     icon: <Zap className="w-5 h-5" />,
-    gradient: "from-blue-500 to-indigo-600"
+    gradient: "from-purple-500 to-pink-600"
   },
   {
     id: 2,
-    title: "🌱 SUSTAINABLE AI: Green Transformation Guide",
-    description: "Reduce your carbon footprint by 75% while building environmentally responsible AI systems",
-    ctaText: "Get Sustainability Plan",
-    ctaHref: "/resources/ai-sustainability-transformation-guide-2025",
-    badge: "GREEN",
+    title: "⚖️ CRITICAL: Ethical AI Governance Guide",
+    description: "Build trustworthy AI systems with comprehensive ethics frameworks and governance strategies for 95% trust scores",
+    ctaText: "Learn AI Ethics",
+    ctaHref: "/blog/ai-2025-ethical-ai-governance",
+    badge: "CRITICAL",
     badgeColor: "bg-green-100 text-green-800",
-    metrics: "75% Carbon Reduction",
-    icon: <Leaf className="w-5 h-5" />,
+    metrics: "95% Trust Score",
+    icon: <Globe className="w-5 h-5" />,
     gradient: "from-green-500 to-emerald-600"
   },
   {
     id: 3,
-    title: "🏆 SUCCESS STORY: Global Logistics Transformation",
-    description: "How a Fortune 500 company achieved 450% ROI and $85M annual savings through AI automation",
-    ctaText: "Read Case Study",
-    ctaHref: "/case-studies/ai-automation-global-logistics-2025",
-    badge: "SUCCESS",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "450% ROI",
+    title: "⚡ BREAKTHROUGH: Edge Computing Revolution",
+    description: "Unlock real-time AI processing with edge computing solutions that reduce latency by 90% and enable new applications",
+    ctaText: "Explore Edge AI",
+    ctaHref: "/blog/ai-2025-edge-computing-revolution",
+    badge: "BREAKTHROUGH",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction",
     icon: <TrendingUp className="w-5 h-5" />,
-    gradient: "from-purple-500 to-pink-600"
+    gradient: "from-orange-500 to-red-600"
   }
 ];
 

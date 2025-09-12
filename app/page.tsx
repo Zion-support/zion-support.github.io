@@ -84,11 +84,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                Fresh AI Insights & Resources Available Now
+                Revolutionary AI Content Just Released
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest AI breakthrough innovations, enterprise security guide, manufacturing case study, 
-                and comprehensive 150-page implementation master guide. Expert insights to accelerate your AI transformation.
+                Explore our latest breakthrough articles: The Generative AI Revolution, Ethical AI Governance, 
+                and Edge Computing Revolution. Get expert insights on the technologies shaping 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
