@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Enterprise GenAI Security Blueprint 2025",
+      description: "Practical controls for data leakage, prompt injection, model abuse, and compliance-by-design.",
+      href: "/blog/ai-2025-genai-security-blueprint",
+      icon: "🔒",
+      category: "AI Security",
+      readTime: "15 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Agent Marketplaces in 2025: Strategy & Governance",
       description: "How to launch enterprise agent marketplaces with reference architectures, monetization, and safety.",
       href: "/blog/ai-2025-agent-marketplaces-strategy",
