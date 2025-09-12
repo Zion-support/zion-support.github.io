@@ -72,6 +72,8 @@ import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
+import NewContent2025Carousel from '../components/NewContent2025Carousel';
 <<<<<<< HEAD
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
@@ -173,6 +175,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025BreakthroughBanner />
+        
+        {/* NEW AI 2025 CONTENT CAROUSEL */}
+        <NewContent2025Carousel />
+        
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* NEW REVOLUTIONARY CONTENT BANNER - LATEST */}
