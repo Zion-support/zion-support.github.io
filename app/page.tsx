@@ -69,6 +69,8 @@ import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughC
 import QuantumComputingBreakthroughShowcase from '../components/QuantumComputingBreakthroughShowcase';
 import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomationMasteryShowcase';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
 
 // Revolutionary Content Showcase
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -96,11 +98,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2028 CONTENT PROMOTION BANNER */}
+        <AI2028ContentPromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE */}
         <RevolutionaryContentShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2028 */}
+        <InteractiveContentDiscovery2028 />
         
         {/* AI 2027 BREAKTHROUGH PROMOTION BANNER */}
         <AI2027BreakthroughPromotionBanner />
