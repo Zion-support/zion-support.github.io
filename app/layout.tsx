@@ -6,6 +6,7 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import AI2035ContentPromotionBanner from '../components/AI2035ContentPromotionBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
@@ -881,6 +882,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
+          <AI2035ContentPromotionBanner />
           <EnhancedContentPromotionBanner />
           <EnhancedNavigationWithContentDiscovery />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
