@@ -1657,13 +1657,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-        </div>
-      </PerformanceOptimizer>
-    </EnhancedErrorBoundary>
-=======
     </div>
-    </ErrorBoundary>
->>>>>>> 06b99312074b311484e64d35a3cef908ed7e864d
+    </EnhancedErrorBoundary>
   );
 }
