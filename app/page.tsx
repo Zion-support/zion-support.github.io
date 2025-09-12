@@ -49,11 +49,8 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
-<<<<<<< HEAD
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
@@ -125,6 +122,13 @@ import AI2034RevolutionaryContentShowcase from '../components/AI2034Revolutionar
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+
+// Additional 2027-2028 Content Components
+import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import UltimateContent2027PromotionBanner from '../components/UltimateContent2027PromotionBanner';
+import FutureTechShowcase2027 from '../components/FutureTechShowcase2027';
+import RevolutionaryTechShowcase2027 from '../components/RevolutionaryTechShowcase2027';
+import UltimateContent2028PromotionBanner from '../components/UltimateContent2028PromotionBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -300,7 +304,6 @@ export default function HomePage() {
         {/* NEW CONTENT 2025 SHOWCASE */}
         <NewContent2025Showcase />
         
-<<<<<<< HEAD
         {/* AI 2026 BREAKTHROUGH PROMOTION BANNER */}
         <AI2026BreakthroughPromotionBanner />
         
@@ -310,7 +313,6 @@ export default function HomePage() {
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <AI2026ContentDiscoveryWidget />
         
-<<<<<<< HEAD
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
@@ -1081,6 +1083,80 @@ export default function HomePage() {
               platforms.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center px-4'>
+            <Suspense fallback={<LoadingSpinner />}>
+              <ROICalculator />
+            </Suspense>
+          </div>
+        </section>
+
+        {/* Special Offer Banner */}
+        <section className="py-16 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🎯 LIMITED TIME OFFER</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Free AI Transformation Assessment
+            </h2>
+            <p className="text-xl text-orange-200 mb-8 max-w-3xl mx-auto">
+              Get a personalized AI readiness assessment and implementation roadmap worth $5,000. 
+              Discover your AI potential and unlock hidden opportunities in your business.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-3xl font-bold mb-2">$5,000</div>
+                <div className="text-orange-200">Value</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-3xl font-bold mb-2">FREE</div>
+                <div className="text-orange-200">Today</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-3xl font-bold mb-2">30</div>
+                <div className="text-orange-200">Min Assessment</div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-lg"
+              >
+                Get Free Assessment
+              </Link>
+              <Link
+                href="/resources/ai-implementation-master-guide-2025"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition-colors text-lg"
+              >
+                Download Master Guide
+              </Link>
+            </div>
+            <p className="text-sm text-orange-200 mt-4">No commitment required • Instant results • 100% confidential</p>
+          </div>
+        </section>
+
+        {/* ULTIMATE CONTENT 2027 PROMOTION BANNER */}
+        <UltimateContent2027PromotionBanner />
+        
+        {/* FUTURE TECH SHOWCASE 2027 */}
+        <FutureTechShowcase2027 />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE 2027 */}
+        <RevolutionaryTechShowcase2027 />
+        
+        {/* ULTIMATE CONTENT 2028 PROMOTION BANNER */}
+        <UltimateContent2028PromotionBanner />
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI and technology solutions can drive your success
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href='/services'
                 className='bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-base sm:text-lg text-center min-w-[200px]'
