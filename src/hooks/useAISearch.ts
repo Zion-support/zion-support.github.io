@@ -3,6 +3,7 @@ import { useState } from "react";
 import { TALENT_PROFILES } from "@/data/talentData";
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
+import { apiClient } from "@/utils/apiClient";
 
 export interface SearchResult {
   id: string;
@@ -26,15 +27,11 @@ export function useAISearch() {
   const search = async (query: string) => {
     setLoading(true);
     try {
-      const response = await fetch(
+      const response = await apiClient(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query }),
-        }
+        { query }
       );
-      const data = await response.json();
+      const data = response.data;
       const filters: SearchFilters = data.filters || {};
 
       const items: SearchResult[] = [];
@@ -66,13 +63,8 @@ export function useAISearch() {
         });
       }
 
-      setResults(items);
-    } catch (err) {
-      console.error("search error", err);
-      setResults([]);
-    } finally {
-      setLoading(false);
-    }
+    setResults(items);
+    setLoading(false);
   };
 
   return { results, loading, search };

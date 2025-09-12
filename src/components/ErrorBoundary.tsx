@@ -1,9 +1,9 @@
 import React from 'react';
-import { captureException } from '@/lib/sentry';
+import type { ReactNode, ErrorInfo } from 'react';
+import { toast } from 'react-hot-toast';
 
 interface Props {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
+  children: ReactNode;
 }
 
 interface State {
@@ -13,19 +13,19 @@ interface State {
 export class ErrorBoundary extends React.Component<Props, State> {
   state: State = { hasError: false };
 
-  static getDerivedStateFromError() {
+  static getDerivedStateFromError(): State {
     return { hasError: true };
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
-    captureException(error);
-    console.error(error, errorInfo);
+  componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
+    toast.error(error.message || 'An unexpected error occurred');
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || <div>Something went wrong.</div>;
+      return null;
     }
+
     return this.props.children;
   }
 }

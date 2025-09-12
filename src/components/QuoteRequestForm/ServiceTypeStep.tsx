@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import type { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
+import { Search } from 'lucide-react';
+
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { SAMPLE_SERVICES } from "@/data/sampleServices";
+import api from '@/lib/api';
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -14,11 +15,13 @@ interface ServiceTypeStepProps {
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const debouncedQuery = useDebounce(searchQuery, 300);
   const [listings, setListings] = useState<ListingItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const isMounted = useIsMounted();
 
-  // Fetch services when the service type changes
+  // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
       setListings([]);
@@ -27,22 +30,23 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
     const fetchServices = async () => {
       setLoading(true);
-      setError(null);
       try {
-        const response = await fetch(`/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`);
-        if (!response.ok) throw new Error('Failed to fetch');
-        const data = await response.json();
+        const response = await api.get(
+          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
+        );
+        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
+        const data = response.data;
         setListings(data as ListingItem[]);
       } catch (err) {
-        setError('Failed to load services');
-        setListings(SAMPLE_SERVICES.filter(item => item.category === formData.serviceType));
+        // Fallback to sample data on error
+        setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
       } finally {
         setLoading(false);
       }
     };
 
     fetchServices();
-  }, [formData.serviceType]);
+  }, [formData.serviceType, debouncedQuery, isMounted]);
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -56,7 +60,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const sourceListings = listings.length > 0 ? listings : SAMPLE_SERVICES;
+  const sourceListings = listings;
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
@@ -128,12 +132,16 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <div className="text-center text-red-400 text-sm">{error}. Showing sample data.</div>
+            <div className="text-center text-red-400 text-sm">{error}</div>
           )}
           
-          <div className="grid grid-cols-1 gap-4 mt-4">
+          <div className="grid grid-cols-1 gap-4 mt-4" aria-busy={loading}>
             {loading ? (
-              <div className="text-center py-8 text-zion-slate-light">Loading services...</div>
+              <>
+                <Skeleton className="h-[120px] w-full" />
+                <Skeleton className="h-[120px] w-full" />
+                <Skeleton className="h-[120px] w-full" />
+              </>
             ) : filteredListings.length > 0 ? (
               filteredListings.map((item) => (
                 <div
