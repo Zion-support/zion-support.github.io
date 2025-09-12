@@ -29,6 +29,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <a href="/" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Home
                   </a>
+                  <a href="/services" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    Services
+                  </a>
                   <a href="/multiverse/launch" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Launch
                   </a>
@@ -37,6 +40,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   </a>
                   <a href="/admin/os-deploy" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Admin
+                  </a>
+                  <a href="/news" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    News
                   </a>
                 </div>
               </div>
@@ -85,6 +91,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+                  <li><a href="/news" className="hover:text-white transition-colors">News</a></li>
                 </ul>
               </div>
             </div>
