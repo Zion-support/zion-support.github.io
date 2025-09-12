@@ -42,7 +42,59 @@ export default function ContentShowcase() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">Advanced AI Agents Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Autonomous AI agents transforming business operations with 340% productivity increase</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>12 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🆕 NEW</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-quantum-ai-breakthrough" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
+                  <h3 className="text-lg font-semibold mb-2">Quantum AI Breakthrough</h3>
+                  <p className="text-sm opacity-90 mb-3">Revolutionary quantum computing meets AI with 1Mx speedup in optimization</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🚀 BREAKTHROUGH</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-2025-enterprise-ai-transformation-success" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+                  <h3 className="text-lg font-semibold mb-2">$3.2B Enterprise Transformation</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 500 success story with 450% ROI and comprehensive AI implementation</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 $3.2B Value</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-2025-financial-services-ai-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏦</div>
+                  <h3 className="text-lg font-semibold mb-2">$5.7B Financial AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Banking transformation with 680% ROI and 94% customer satisfaction</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 $5.7B Value</span>
+                  </div>
+                </div>
+              </Link>
+              
               <Link href="/blog/ai-2025-enterprise-ai-governance" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏛️</div>
@@ -51,7 +103,7 @@ export default function ContentShowcase() {
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🆕 NEW</span>
+                    <span>📋 GUIDE</span>
                   </div>
                 </div>
               </Link>
@@ -65,19 +117,6 @@ export default function ContentShowcase() {
                     <span>28 min read</span>
                     <span className="mx-2">•</span>
                     <span>🚀 TRENDING</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-2025-global-retail-transformation-success" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="text-lg font-semibold mb-2">$2.8B Retail Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">Fortune 100 success story with 340% ROI and global scale across 50+ countries</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
-                    <span className="mx-2">•</span>
-                    <span>💰 $2.8B Value</span>
                   </div>
                 </div>
               </Link>
