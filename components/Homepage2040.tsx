@@ -55,16 +55,8 @@ const Homepage2040: React.FC = () => {
     }
   };
 
-  const floatingVariants = {
-    float: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 3,
-        repeat: -1,
-        ease: "easeInOut" as const
-      }
-    }
-  };
+  // Combine all revolutionary services
+  const allRevolutionaryServices = [...revolutionary2041AdvancedServices];
 
   const statsData = [
     {
@@ -186,63 +178,52 @@ const Homepage2040: React.FC = () => {
               ))}
             </div>
           </div>
-          
-          <div className="text-center max-w-6xl mx-auto relative z-10">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="space-y-8"
-            >
-              {/* Enhanced Company Badge */}
+        </div>
+      </section>
+
+      {/* Service Categories Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comprehensive Service Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our extensive portfolio of revolutionary technology solutions across multiple domains
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceCategories.map((category, index) => (
               <motion.div
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
                 aria-label="Company recognition"
               >
-                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
-                <span>Innovation Leader 2040</span>
-                <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
-              </motion.div>
-              
-              <motion.h1 
-                variants={itemVariants}
-                id="hero-heading"
-                className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
-              >
-                Zion Tech Group
-              </motion.h1>
-              
-              <motion.p 
-                variants={itemVariants}
-                className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
-              >
-                Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
-              </motion.p>
-              
-              {/* Enhanced CTA Section */}
-              <motion.div 
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
-              >
-                <Link href="/get-started" aria-label="Get started with our services">
-                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
-                    <span className="flex items-center gap-3">
-                      Get Started
-                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" />
-                    </span>
-                  </button>
-                </Link>
-                <Link href="/services" aria-label="Learn more about our services">
-                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
-                    Explore Services
-                  </button>
-                </Link>
-                <Link href="/pricing" aria-label="View our pricing">
-                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">
-                    View Pricing
-                  </button>
+                <Link href={category.href}>
+                  <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105 h-full">
+                    <div className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-20 border border-cyan-400/30 flex items-center justify-center group-hover:border-cyan-400/50 transition-all duration-300`}>
+                      <category.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                      {category.name}
+                    </h3>
+                    <p className="text-gray-300 mb-6">
+                      {category.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-bold text-cyan-400">
+                        {category.count}+
+                      </span>
+                      <span className="text-sm text-gray-400">Services</span>
+                    </div>
+                  </div>
                 </Link>
               </motion.div>
               

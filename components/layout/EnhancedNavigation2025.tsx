@@ -446,7 +446,9 @@ export default function EnhancedNavigation2025() {
                 {item.children ? (
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 group"
+                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg px-3 py-2"
+                    aria-expanded={activeDropdown === item.name}
+                    aria-haspopup="true"
                   >
                     {item.icon}
                     <span>{item.name}</span>
@@ -457,7 +459,8 @@ export default function EnhancedNavigation2025() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={closeMobileMenu}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg px-3 py-2"
                   >
                     {item.icon}
                     <span>{item.name}</span>
@@ -545,16 +548,32 @@ export default function EnhancedNavigation2025() {
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link
               href="/contact"
-              className="px-4 py-2 text-sm font-medium text-cyan-300 hover:text-white transition-colors duration-200"
+              className="px-4 py-2 text-sm font-medium text-cyan-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg"
             >
               Contact Sales
             </Link>
             <Link
               href="/get-started"
-              className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25"
+              className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
               Get Started
             </Link>
+          </div>
+
+          {/* Search */}
+          <div className="hidden md:block">
+            <form onSubmit={handleSearch} className="flex items-center space-x-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="Search solutions..."
+                  className="w-64 pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  aria-label="Search solutions"
+                />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              </div>
+            </form>
           </div>
 
           {/* Mobile menu button */}
@@ -562,7 +581,9 @@ export default function EnhancedNavigation2025() {
             <button
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 rounded-lg"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg"
+              aria-label="Toggle mobile menu"
+              aria-expanded={isOpen}
             >
               {isOpen ? (
                 <X className="block h-6 w-6" />
@@ -673,7 +694,6 @@ export default function EnhancedNavigation2025() {
                         >
                           {item.label}
                         </Link>
-=======
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -695,6 +715,7 @@ export default function EnhancedNavigation2025() {
                         <span className="px-2 py-1 text-xs bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full">
                           {item.badge}
                         </span>
+=======
                       )}
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${

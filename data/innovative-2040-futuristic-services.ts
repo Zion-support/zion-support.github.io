@@ -36,7 +36,7 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
     price: '$15,000',
     period: '/month',
     icon: '🧠',
-    color: 'from-purple-600 to-indigo-700',
+    color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
     popular: true,
     features: [
@@ -77,10 +77,10 @@ export const innovative2040FuturisticServices: Innovative2040FuturisticService[]
     category: 'Quantum & Emerging Tech',
     price: '$8,500',
     period: '/month',
-    icon: '🌐',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    popular: false,
+    icon: '🌟',
+    color: 'from-blue-600 to-cyan-600',
+    textColor: 'text-blue-400',
+    popular: true,
     features: [
       'True 3D holographic displays',
       'Quantum-powered real-time rendering',

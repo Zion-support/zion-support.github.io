@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, ArrowRight, Star, Sparkles,
-  Brain, Atom, Shield, Cpu, Code, Rocket, Users,
-  Globe, Lock, Database, Server, Zap, TrendingUp,
-  MessageCircle, HelpCircle, BookOpen, FileText, 
-  GraduationCap, Building, Handshake, Heart
+  Globe, Phone, Mail, MapPin, 
+  Brain, Atom, Target, 
+  Star, Rocket, Shield,
+  Twitter, Linkedin, Youtube, Github, 
+  ArrowUp, ArrowRight, ExternalLink
 } from 'lucide-react';
 
 const UltraFuturisticFooter2040: React.FC = () => {
