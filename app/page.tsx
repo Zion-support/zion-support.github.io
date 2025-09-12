@@ -80,6 +80,7 @@ import NewContent2025UltimatePromotionBanner from '../components/NewContent2025U
 import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
 =======
@@ -104,6 +105,12 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
 <<<<<<< HEAD
+        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
