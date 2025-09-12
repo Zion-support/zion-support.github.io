@@ -8,23 +8,23 @@ export const NewContentBanner = () => {
 
   const newContentItems = [
     {
-      title: "Revolutionary New Services",
-      description: "Discover cutting-edge AI and technology solutions",
-      link: "/new-services",
+      title: "Service Showcase",
+      description: "Explore our comprehensive portfolio of technology solutions",
+      link: "/service-showcase",
       icon: <Rocket className="w-5 h-5" />,
       color: "from-cyan-500 to-blue-500"
+    },
+    {
+      title: "Success Stories",
+      description: "Real results from real clients - see how we transform businesses",
+      link: "/case-studies",
+      icon: <Lightbulb className="w-5 h-5" />,
+      color: "from-purple-500 to-pink-500"
     },
     {
       title: "Innovation Lab",
       description: "Explore breakthrough technologies in development",
       link: "/innovation-lab",
-      icon: <Lightbulb className="w-5 h-5" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Technology Showcase",
-      description: "See the latest in AI, quantum computing, and more",
-      link: "/technology-showcase",
       icon: <Cpu className="w-5 h-5" />,
       color: "from-green-500 to-emerald-500"
     }
@@ -69,7 +69,7 @@ export const NewContentBanner = () => {
 
             <div className="flex items-center space-x-4">
               <Link
-                to="/new-services"
+                to="/service-showcase"
                 className="hidden sm:inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-200 text-sm font-semibold"
               >
                 Explore Now
