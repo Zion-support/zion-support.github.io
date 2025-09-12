@@ -84,6 +84,7 @@ import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
 import FutureInnovationHub from '../components/FutureInnovationHub';
 import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
+import InteractiveContentDiscovery2030 from '../components/InteractiveContentDiscovery2030';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -105,6 +106,9 @@ export default function HomePage() {
         
         {/* AI 2030 CONTENT SHOWCASE */}
         <AI2030ContentShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2030 */}
+        <InteractiveContentDiscovery2030 />
         
         {/* NEW CONTENT 2029 PROMOTION BANNER */}
         <NewContent2029PromotionBanner />
