@@ -16,162 +16,32 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "Model Routing Strategies 2025: Cost, Latency, and Quality",
-      description: "Production patterns for multi-model routing with budgets, SLAs, and caching.",
-      href: "/blog/ai-2025-model-routing-strategies",
-      icon: "🧭",
+      title: "FinOps for GenAI 2025: Cost, Quality, and Risk Controls",
+      description: "Optimize spend while maintaining quality and safety with budgets, SLAs, and guardrails.",
+      href: "/blog/ai-2025-finops-for-genai",
+      icon: "💸",
       category: "Optimization",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Agent Evaluation Playbook 2025: Methods and Automation",
-      description: "Evaluate agents with golden tasks, tool correctness, safety, and CI/CD gates.",
-      href: "/blog/ai-2025-agent-evaluation-playbook",
-      icon: "🧪",
-      category: "AI Safety",
       readTime: "18 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "Privacy-Preserving AI in Production (2025)",
-      description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
-      href: "/blog/ai-2025-privacy-preserving-ai",
-      icon: "🔒",
-      category: "Privacy",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Securing AI Tools & Plugins: Sandboxing, Scopes, and Audits",
-      description: "Scopes, sandboxing, approvals, and auditing to minimize tool risk.",
-      href: "/blog/ai-2025-secure-tools-and-plugins",
-      icon: "🛡️",
-      category: "AI Security",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Productizing GenAI Platforms: From Pilots to Products (2025)",
-      description: "Roadmap to scale GenAI with governance, budgets, and observability.",
-      href: "/blog/ai-2025-productizing-genai-platforms",
-      icon: "🧱",
-      category: "Platforms",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Enterprise Chatbots with Governance: 28% Deflection, 92% CSAT",
-      description: "Case study: Policy-as-code and evals increased deflection and CSAT.",
-      href: "/case-studies/ai-2025-enterprise-chatbots-governance-impact",
-      icon: "💬",
-      category: "Case Study",
-      readTime: "10 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Analytics Observability Blueprint 2025: Traces, Quality, Cost",
-      description: "Blueprint to observe analytics and AI pipelines: lineage, traces, quality, and cost SLOs.",
-      href: "/blog/ai-2025-analytics-observability-blueprint",
-      icon: "📈",
-      category: "Platforms",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Data Contracts for ML in 2025: Reliability & Governance",
-      description: "Schema-first data contracts to reduce breakages, improve quality, and speed ML delivery.",
-      href: "/blog/ai-2025-data-contracts-for-ml",
-      icon: "📜",
-      category: "Data Platforms",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Platform Engineering Blueprint 2025",
-      description: "Governance, evaluations, routing, observability, and cost controls for enterprise AI platforms.",
-      href: "/blog/ai-2025-ai-platform-engineering-blueprint",
-      icon: "🧱",
-      category: "Platforms",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Customer 360 AI Platform: 23% Lift in Cross-Sell",
-      description: "Case study: Unified profiles, uplift modeling, and guardrailed copilots drove 23% cross-sell lift.",
-      href: "/case-studies/ai-2025-customer-360-platform-impact",
-      icon: "👤",
-      category: "Case Study",
-      readTime: "11 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Enterprise RAG Platforms 2025: Architecture, Quality, and Ops",
-      description: "Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.",
-      href: "/blog/ai-2025-enterprise-rag-platforms",
-      icon: "🔎",
-      category: "RAG",
+      title: "AI Sales Copilots Blueprint 2025",
+      description: "Design and govern AI sales copilots to boost win rates and speed cycles—safely.",
+      href: "/blog/ai-2025-ai-sales-copilots-blueprint",
+      icon: "🧭",
+      category: "Go-to-Market",
       readTime: "20 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "LLM Inference Cost Reduction: 38% Savings (2025)",
-      description: "Case study: Quantization, KV cache, and batching cut cost by 38% and improved p95 by 27%.",
-      href: "/case-studies/ai-2025-llm-inference-cost-reduction",
-      icon: "💸",
+      title: "AI Sales Cycle Acceleration: 28% Faster Close",
+      description: "Case study: Copilots sped up approvals and proposals with policy-aware automation.",
+      href: "/case-studies/ai-2025-sales-cycle-acceleration",
+      icon: "📈",
       category: "Case Study",
-      readTime: "10 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "LLM Inference Optimization on GPUs (2025)",
-      description: "Quantization, KV cache, batching, and parallelism to cut latency and cost.",
-      href: "/blog/ai-2025-llm-inference-optimization-gpus",
-      icon: "🧠",
-      category: "Inference",
-      readTime: "15 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Governance 2025: Policy-as-Code and Runtime Enforcement",
-      description: "From policy docs to enforced guardrails across datasets, prompts, tools, and agents.",
-      href: "/blog/ai-2025-governance-policy-as-code",
-      icon: "📜",
-      category: "Governance",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Agent Fleet Management 2025: Reliability, Safety, and Cost",
-      description: "Operate large fleets of AI agents with SLAs: scheduling, guardrails, telemetry, and budgets.",
-      href: "/blog/ai-2025-agent-fleet-management",
-      icon: "🧭",
-      category: "Agents",
-      readTime: "19 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Serverless GenAI Architectures (2025)",
-      description: "Event-driven GenAI with functions, queues, vector DBs, and eval guardrails.",
-      href: "/blog/ai-2025-serverless-genai-architectures",
-      icon: "☁️",
-      category: "Architecture",
-      readTime: "14 min read",
+      readTime: "9 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -192,26 +62,6 @@ export default function ContentShowcase() {
       icon: "📈",
       category: "Case Study",
       readTime: "12 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Production Prompt Engineering 2025: Patterns that Scale",
-      description: "Structured prompting, tool calling, retrieval orchestration, evals, and guardrails for reliable, cost‑aware AI.",
-      href: "/blog/ai-2025-production-prompt-engineering",
-      icon: "🧠",
-      category: "Advanced AI",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Governance 2025: Operational Playbook for Enterprises",
-      description: "Decision rights, policy libraries, eval pipelines, and runtime guardrails that fit your SDLC.",
-      href: "/blog/ai-2025-ai-governance-operational-playbook",
-      icon: "🛡️",
-      category: "Governance",
-      readTime: "18 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -434,26 +284,6 @@ export default function ContentShowcase() {
       readTime: "24 min read",
       date: "Sep 12, 2025",
       featured: false
-    },
-    {
-      title: "Cloud Cost Optimization for AI & Data Workloads (2025)",
-      description: "Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.",
-      href: "/blog/ai-2025-cloud-cost-optimization",
-      icon: "💸",
-      category: "Optimization",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Agent Safety Red-Teaming (2025): Methods & Tooling",
-      description: "Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.",
-      href: "/blog/ai-2025-agent-safety-red-teaming",
-      icon: "🛡️",
-      category: "AI Safety",
-      readTime: "21 min read",
-      date: "Sep 12, 2025",
-      featured: true
     },
     {
       title: "AI Ethics and Responsible Development: A Framework",

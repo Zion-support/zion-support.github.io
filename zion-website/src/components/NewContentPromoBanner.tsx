@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '59',
+      title: 'FinOps for GenAI 2025: Cost, Quality, and Risk Controls',
+      description: 'Operator guide to optimize spend while maintaining quality and safety with budgets, SLAs, and guardrails.',
+      href: '/blog/ai-2025-finops-for-genai',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: '58',
+      title: 'AI Sales Copilots Blueprint 2025',
+      description: 'Design, deploy, and govern AI sales copilots to boost win rates and cycle time—safely.',
+      href: '/blog/ai-2025-ai-sales-copilots-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Go-to-Market'
+    },
+    {
       id: '54',
       title: 'Knowledge Graph RAG in 2025: Hybrid Retrieval in Production',
       description: 'Fuse vector search with knowledge graphs for factual, controllable, and policy-aware RAG.',
@@ -96,6 +118,17 @@ const NewContentPromoBanner = ({
       type: 'case-study',
       featured: true,
       readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '60',
+      title: 'AI Sales Cycle Acceleration: 28% Faster Close',
+      description: 'Case study: Copilots sped up approvals and proposals with policy-aware automation.',
+      href: '/case-studies/ai-2025-sales-cycle-acceleration',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
     },
