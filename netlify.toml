@@ -18,9 +18,14 @@
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
+  NODE_VERSION = "22"
 
 [context.deploy-preview]
   command = "npm run build"
+  [context.deploy-preview.environment]
+  NODE_VERSION = "22"
 
 [context.branch-deploy]
   command = "npm run build"
+  [context.branch-deploy.environment]
+  NODE_VERSION = "22"
