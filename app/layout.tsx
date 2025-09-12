@@ -1,4 +1,5 @@
 import React from 'react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -66,7 +67,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 				<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 			</head>
-			<body>{children}</body>
+			<body>
+				<EnhancedNavigation />
+				{children}
+			</body>
 		</html>
 	);
 }
