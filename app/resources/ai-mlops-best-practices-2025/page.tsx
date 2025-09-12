@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import Card from '../../../components/ui/Card';
 
 export default function MLOpsBestPractices() {

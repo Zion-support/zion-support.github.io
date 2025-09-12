@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export default function AIAutomationROICalculator2025() {

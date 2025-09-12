@@ -1,6 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import { Link } from 'react-router-dom';
 
 export default function AIFinancialServicesTransformation2025() {
@@ -369,7 +369,7 @@ export default function AIFinancialServicesTransformation2025() {
 =======
 import { Metadata } from 'next';
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, CheckCircleIcon, ChartBarIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Financial Services Transformation: $50M ROI Case Study | Zion Tech Group',

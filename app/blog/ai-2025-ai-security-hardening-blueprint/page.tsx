@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import StructuredData from '../../../components/StructuredData';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
