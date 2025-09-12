@@ -84,11 +84,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                Revolutionary AI Content Just Released
+                🎯 BREAKTHROUGH AI CONTENT JUST RELEASED
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Explore our latest breakthrough articles: The Generative AI Revolution, Ethical AI Governance, 
-                and Edge Computing Revolution. Get expert insights on the technologies shaping 2025 and beyond.
+                Discover our latest game-changing content: Multimodal AI Revolution, AI-Powered Robotics & Automation, 
+                and Financial Services Transformation. Plus, get our comprehensive Multimodal AI Implementation Playbook 
+                with 200+ pages of strategies, templates, and real-world case studies.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -98,10 +99,16 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-multimodal-revolution"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Read Latest Article
+                  Read Multimodal AI Article
+                </Link>
+                <Link
+                  href="/resources/ai-2025-multimodal-implementation-playbook"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Download Playbook
                 </Link>
               </div>
             </div>
@@ -204,15 +211,15 @@ export default function HomePage() {
 
           {/* Featured Content Mega Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                   <Link href='/blog/ai-2025-breakthrough-innovations' className='group'>
+                   <Link href='/blog/ai-2025-multimodal-revolution' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🧠</div>
-                       <h3 className='text-xl font-bold mb-3'>AI 2025 Breakthrough Innovations</h3>
-                       <p className='text-sm opacity-90 mb-4'>Quantum AI, brain-computer interfaces, and AGI breakthroughs reshaping industries</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🎯</div>
+                       <h3 className='text-xl font-bold mb-3'>Multimodal AI Revolution 2025</h3>
+                       <p className='text-sm opacity-90 mb-4'>Transform your business with cutting-edge multimodal AI that processes text, images, audio, and video</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>28 min read</span>
+                         <span>15 min read</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-green-500 px-2 py-1 rounded-full'>Hot</span>
                        </div>
                      </div>
                    </Link>
@@ -230,28 +237,28 @@ export default function HomePage() {
                      </div>
                    </Link>
        
-                   <Link href='/blog/ai-enterprise-automation-2025' className='group'>
+                   <Link href='/blog/ai-2025-robotics-automation' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🏢</div>
-                       <h3 className='text-xl font-bold mb-3'>AI Enterprise Automation 2025</h3>
-                       <p className='text-sm opacity-90 mb-4'>Complete implementation guide for enterprise AI automation and process optimization</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🤖</div>
+                       <h3 className='text-xl font-bold mb-3'>AI-Powered Robotics & Automation</h3>
+                       <p className='text-sm opacity-90 mb-4'>Revolutionize manufacturing and operations with intelligent robotics and automation systems</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>35 min read</span>
+                         <span>18 min read</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-orange-500 px-2 py-1 rounded-full'>Trending</span>
                        </div>
                      </div>
                    </Link>
        
-                   <Link href='/case-studies/ai-transformation-fortune-500-success-2025' className='group'>
+                   <Link href='/case-studies/ai-2025-financial-services-multimodal-transformation' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🏆</div>
-                       <h3 className='text-xl font-bold mb-3'>Fortune 500 AI Success Story</h3>
-                       <p className='text-sm opacity-90 mb-4'>$50M savings and 300% ROI in 18 months - complete transformation case study</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>💰</div>
+                       <h3 className='text-xl font-bold mb-3'>Financial Services AI Transformation</h3>
+                       <p className='text-sm opacity-90 mb-4'>$2.8B additional revenue and 340% ROI through multimodal AI implementation</p>
                        <div className='flex items-center text-xs opacity-75'>
                          <span>Case Study</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                         <span className='bg-green-500 px-2 py-1 rounded-full'>Success</span>
                        </div>
                      </div>
                    </Link>
@@ -269,15 +276,15 @@ export default function HomePage() {
                      </div>
                    </Link>
        
-                   <Link href='/resources/ai-enterprise-automation-playbook-2025' className='group'>
+                   <Link href='/resources/ai-2025-multimodal-implementation-playbook' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
                        <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>📖</div>
-                       <h3 className='text-xl font-bold mb-3'>AI Enterprise Automation Playbook</h3>
-                       <p className='text-sm opacity-90 mb-4'>Complete implementation playbook with templates, checklists, and case studies</p>
+                       <h3 className='text-xl font-bold mb-3'>Multimodal AI Implementation Playbook</h3>
+                       <p className='text-sm opacity-90 mb-4'>200+ pages of strategies, templates, and real-world case studies for multimodal AI</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>250+ pages</span>
+                         <span>200+ pages</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-purple-500 px-2 py-1 rounded-full'>Playbook</span>
+                         <span className='bg-purple-500 px-2 py-1 rounded-full'>New</span>
                        </div>
                      </div>
                    </Link>

@@ -43,37 +43,37 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Readiness 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete assessment & implementation guide with 340% ROI</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Revolution 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Transform your business with cutting-edge multimodal AI capabilities</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>15 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Trending</span>
+                    <span>🔥 Hot</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/resources/ai-2025-comprehensive-implementation-guide" className="group">
+              <Link href="/resources/ai-2025-multimodal-implementation-playbook" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Implementation Guide 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">200+ pages of strategies, templates, and case studies</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📖</div>
+                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Implementation Playbook</h3>
+                  <p className="text-sm opacity-90 mb-3">200+ pages of strategies, templates, and real-world case studies</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Free Download</span>
                     <span className="mx-2">•</span>
-                    <span>⭐ Popular</span>
+                    <span>⭐ New</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-transformation-global-retail-giant-2025" className="group">
+              <Link href="/case-studies/ai-2025-financial-services-multimodal-transformation" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛍️</div>
-                  <h3 className="text-lg font-semibold mb-2">Global Retail AI Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">300% revenue growth and $2.4B additional revenue</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💰</div>
+                  <h3 className="text-lg font-semibold mb-2">Financial Services AI Transformation</h3>
+                  <p className="text-sm opacity-90 mb-3">$2.8B additional revenue and 340% ROI through multimodal AI</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
