@@ -11,12 +11,12 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2021,
+      ecmaVersion: 2020,
       sourceType: 'module',
+      parser: tsparser,
       globals: {
         ...globals.browser,
         ...globals.node,
-        React: 'readonly',
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',
@@ -26,61 +26,178 @@ export default [
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        // Testing globals
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
+        clearInterval: 'readonly'
       },
-      parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
+          jsx: true
         },
-        project: './tsconfig.json',
-      },
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
+        project: './tsconfig.json'
+      }
     },
     rules: {
       // React rules
-      'react/jsx-uses-react': 'error',
-      'react/jsx-uses-vars': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn',
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off", // We use TypeScript
+      "react/display-name": "warn",
+      // Enable react-hooks rules for React 19 compatibility
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
       
-      // TypeScript rules
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      
-      // General rules
-      'no-console': 'warn',
-      'no-debugger': 'error',
-      'prefer-const': 'error',
-      'no-var': 'error',
+      // Basic accessibility rules
+      "jsx-a11y/alt-text": "error",
+      "jsx-a11y/aria-props": "error",
     },
+    settings: {
+      react: {
+        version: "detect"
+      }
+    }
   },
+
+  // Test files configuration
   {
-    files: ['**/*.{ts,tsx}'],
+    files: [
+      "**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "**/tests/**/*.{js,jsx,ts,tsx}",
+      "**/*.test.{js,jsx,ts,tsx}",
+      "**/*.spec.{js,jsx,ts,tsx}"
+    ],
     languageOptions: {
-      parser: tsparser,
-      parserOptions: {
-        project: './tsconfig.json',
-      },
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+        ...globals.browser,
+        vi: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      }
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-console": "off"
+    }
   },
+
+  // Node.js specific files
+  {
+    files: [
+      "**/*.cjs",
+      "scripts/**/*.js",
+      "api/**/*.js",
+      "server/**/*.js",
+      "backend/**/*.js",
+      "token/**/*.js",
+      "hardhat.config.js"
+    ],
+    languageOptions: {
+      sourceType: "commonjs",
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  },
+
+  // Cypress files
+  {
+    files: ["cypress/**/*.{js,ts,jsx,tsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        cy: "readonly",
+        Cypress: "readonly",
+        context: "readonly",
+        assert: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        before: "readonly",
+        after: "readonly"
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
+
+  // Chrome Extension files
+  {
+    files: ["extension/**/*.{js,ts}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        chrome: "readonly"
+      }
+    },
+    rules: {
+      "no-console": "off"
+    }
+  },
+
+  // Service Worker files
+  {
+    files: ["public/service-worker.js", "**/sw.js", "**/*service-worker*.js"],
+    languageOptions: {
+      globals: {
+        ...globals.serviceworker,
+        workbox: "readonly",
+        importScripts: "readonly",
+        self: "readonly",
+        clients: "readonly",
+        caches: "readonly"
+      }
+    },
+    rules: {
+      "no-console": "off",
+      "no-redeclare": "off" // Allow workbox to be redeclared in service worker context
+    }
+  },
+
+  // Jest setup files
+  {
+    files: ["tests/jest.setup.ts", "**/*jest.setup*"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+        jest: "readonly",
+        global: "readonly"
+      }
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-undef': 'error'
+    }
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      'build/',
+      '*.config.js',
+      '*.config.ts',
+      'scripts/',
+      'automation/',
+      'public/reports/**',
+      'netlify/',
+      'ecosystem*.cjs',
+      '**/*.cjs'
+    ]
+  }
 ];

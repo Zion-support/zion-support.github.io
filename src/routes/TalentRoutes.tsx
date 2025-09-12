@@ -1,28 +1,50 @@
-import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";
-import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
 
-export default function TalentRoutes() {
+const TalentProfilePage = lazy(() => import("../pages/TalentProfilePage"));
+
+const TalentRoutes = () => {
   return (
-<<<<<<< HEAD
     <Routes>
-      <Route path = "directory" element={<TalentDirectory />} />
-      <Route path="list" element={<TalentsPage />} />
-      <Route path="profile/:id" element={<TalentProfilePage />} />
-      <Route path="saved" element={<SavedTalentsPage />} />
-      <Route path="create" element={<CreateTalentProfile />} />
-      <Route path="my-profile" element={<ProfilePage />} />
+      {/* Talent Routes */}
+      <Route path="/talent" element={<TalentDirectory />} />
+      <Route path="/talents" element={<TalentsPage />} />
+      <Route
+        path="/talent/:id"
+        element={
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+            <ErrorBoundary fallback={<div className="p-4 text-center">Profile not found</div>}>
+              <TalentProfilePage />
+            </ErrorBoundary>
+          </Suspense>
+        }
+      />
+      <Route 
+        path="/saved-talents" 
+        element={
+          <ProtectedRoute>
+            <SavedTalentsPage />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/create-talent-profile" 
+        element={
+          <ProtectedRoute>
+            <CreateTalentProfile />
+          </ProtectedRoute>
+        } 
+      />
+      <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
-=======;
-    <>;
-      <Route path = "directory" element={<TalentDirectory />} />;
-      <Route path="list" element={<TalentsPage />} />;
-    </>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-}
+};
+
+export default TalentRoutes;
