@@ -1,7 +1,22 @@
 // @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+
+export const metadata: Metadata = {
+  title: 'AI Go-To-Market 2025: From Zero to Traction',
+  description:
+    'Practical 2025 GTM playbook for AI products: positioning, pricing, distribution, and growth loops.',
+  keywords:
+    'AI GTM, go-to-market, AI startup, distribution, pricing, positioning, growth loops, 2025',
+  openGraph: {
+    title: 'AI Go-To-Market 2025: From Zero to Traction',
+    description:
+      'Practical 2025 GTM playbook for AI products: positioning, pricing, distribution, and growth loops.',
+    type: 'article',
+    publishedTime: '2025-09-11T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AIGoToMarket2025() {
   return (
@@ -46,8 +61,14 @@ export default function AIGoToMarket2025() {
               <div className="text-gray-600">Distribution Plays</div>
             </div>
           </div>
+        </header>
+
+        {/* Featured Image */}
+        <div className="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl mb-12 flex items-center justify-center">
+          <div className="text-8xl">🚀</div>
         </div>
 
+        {/* Article Content */}
         <div className="prose prose-lg max-w-none">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Nail The ICP And Job-To-Be-Done</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">

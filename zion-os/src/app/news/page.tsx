@@ -1,6 +1,7 @@
 export default function NewsPage() {
   const articles = [
     {
+<<<<<<< HEAD
       emoji: "🛡️",
       title: "Zion OS 1.4: Security & Compliance Pack",
       excerpt:
@@ -19,6 +20,53 @@ export default function NewsPage() {
       gradient: "from-emerald-600 to-teal-600",
     },
     {
+=======
+      emoji: "⚡",
+      title: "Zion OS 1.4: Performance & Accessibility Upgrades",
+      excerpt:
+        "Faster cold starts, smaller bundles, and WCAG 2.2 improvements ship in 1.4.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-4-performance-accessibility",
+      gradient: "from-amber-500 to-yellow-600",
+    },
+    {
+      emoji: "⚡",
+      title: "Zion OS 1.3: Agents, RAG, and UX Upgrades",
+      excerpt:
+        "New agent framework, enhanced RAG capabilities, and improved user experience in 1.3.",
+      date: "Sep 11, 2025",
+      href: "/news/zion-os-1-3-upgrades",
+      gradient: "from-blue-500 to-indigo-600",
+    },
+    {
+      emoji: "🧠",
+      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
+      excerpt:
+        "Major upgrade delivers 10x larger context, native Tools API, and faster, cheaper inference across the platform.",
+      date: "Sep 12, 2025",
+      href: "/news/ziongpt-core-v2",
+      gradient: "from-fuchsia-600 to-purple-600",
+    },
+    {
+      emoji: "🏪",
+      title: "Marketplace Suite: Jobs, Proposals, and Escrow Go GA",
+      excerpt:
+        "The complete marketplace stack moves to General Availability with SLAs, audit logs, and fraud protections.",
+      date: "Sep 11, 2025",
+      href: "/news/marketplace-suite-ga",
+      gradient: "from-emerald-600 to-teal-600",
+    },
+    {
+      emoji: "🛡️",
+      title: "Compliance Pack: SOC 2 Playbooks and KYC/AML APIs",
+      excerpt:
+        "Launch faster with prebuilt SOC 2 controls, audit-ready checklists, and turnkey KYC/AML integrations.",
+      date: "Sep 09, 2025",
+      href: "/news/compliance-pack-release",
+      gradient: "from-rose-600 to-red-600",
+    },
+    {
+>>>>>>> cursor/create-and-deploy-new-content-ddbf
       emoji: "🧠",
       title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
       excerpt:
@@ -87,6 +135,7 @@ export default function NewsPage() {
       gradient: "from-orange-600 to-red-600",
     },
     {
+<<<<<<< HEAD
       emoji: "🧠",
       title: "ZionGPT Core v2: Context Windows 10x and Tools API",
       excerpt:
@@ -96,6 +145,8 @@ export default function NewsPage() {
       gradient: "from-fuchsia-600 to-purple-600",
     },
     {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ddbf
       emoji: "🏪",
       title: "Marketplace Suite: Jobs, Proposals, and Escrow Go GA",
       excerpt:
