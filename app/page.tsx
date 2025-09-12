@@ -37,6 +37,88 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Latest Content Drop - February 2025 */}
+        <section className="py-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+                <span className="text-sm font-medium">🔥 JUST PUBLISHED - FEBRUARY 2025</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                🚀 Revolutionary AI Content: Future Predictions & Enterprise Transformation!
+              </h2>
+              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Discover our latest breakthrough content: AI 2025 Future Predictions, Enterprise Transformation Guide, 
+                Manufacturing Automation Case Study ($200M savings), and comprehensive implementation resources. 
+                Everything you need to master AI in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  href="/blog/ai-2025-future-predictions"
+                  className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                >
+                  🔮 Read Future Predictions
+                </Link>
+                <Link
+                  href="/blog/ai-enterprise-transformation-2025"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+                >
+                  🏢 Enterprise Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-manufacturing-automation-breakthrough-2025"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+                >
+                  🏭 $200M Case Study
+                </Link>
+              </div>
+              
+              {/* Featured Content Grid */}
+              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <Link href="/blog/ai-2025-future-predictions" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🔮</div>
+                    <h3 className="text-lg font-semibold mb-2">AI 2025 Future Predictions</h3>
+                    <p className="text-sm opacity-90 mb-3">Revolutionary technologies shaping tomorrow</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>28 min read</span>
+                      <span className="mx-2">•</span>
+                      <span>New</span>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/blog/ai-enterprise-transformation-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏢</div>
+                    <h3 className="text-lg font-semibold mb-2">Enterprise AI Transformation</h3>
+                    <p className="text-sm opacity-90 mb-3">Complete implementation guide with 300% ROI</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>22 min read</span>
+                      <span className="mx-2">•</span>
+                      <span>New</span>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/case-studies/ai-manufacturing-automation-breakthrough-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">💰</div>
+                    <h3 className="text-lg font-semibold mb-2">$200M Manufacturing Success</h3>
+                    <p className="text-sm opacity-90 mb-3">Real case study with 400% ROI</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>Case Study</span>
+                      <span className="mx-2">•</span>
+                      <span>New</span>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Content Promotion Banner */}
         <section className="py-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
