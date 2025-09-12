@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '16',
+      title: 'Agent Marketplaces in 2025: Strategy & Governance',
+      description: 'Strategy, reference architectures, monetization, and safety for enterprise agent marketplaces.',
+      href: '/blog/ai-2025-agent-marketplaces-strategy',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Strategy'
+    },
+    {
       id: '15',
       title: 'AI Agent Observability in 2025: Telemetry & Guardrails',
       description: 'End-to-end visibility for agents with structured telemetry, distributed tracing, inline evals, and policy guardrails.',
