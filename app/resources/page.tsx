@@ -5,6 +5,16 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   const resources = [
     {
+      title: "AI Neural Interface Implementation Guide 2025",
+      description: "Complete 150+ page blueprint for deploying neural interface technology in healthcare, accessibility, and business applications with brain-computer interfaces.",
+      type: "Guide",
+      pages: "150+",
+      downloadCount: "3,200+",
+      icon: "🧠",
+      href: "/resources/ai-neural-interface-implementation-guide-2025",
+      featured: true
+    },
+    {
       title: "AI Implementation Master Guide 2026",
       description: "200+ page comprehensive guide with frameworks, templates, and step-by-step implementation strategies for AI transformation.",
       type: "Guide",
