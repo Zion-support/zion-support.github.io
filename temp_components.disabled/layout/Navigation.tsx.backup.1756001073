@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -260,3 +261,13 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+=======
+import React from 'react';
+
+const Navigation: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">Navigation temporarily disabled</div>;
+};
+
+export default Navigation;
+>>>>>>> origin/content/blog-sept12

@@ -21,6 +21,7 @@ export default function WishlistPage() {
     if (!isAuthLoading && !user) {
       router.push('/login');
     }
+<<<<<<< HEAD
   }, [user, isAuthLoading, router]);
 
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
@@ -41,6 +42,14 @@ export default function WishlistPage() {
       }
     });
     toast.success(`1× ${item.title || 'Item'} added`);
+=======
+    dispatch(loadWishlistFromDB(user.id!));
+  }, [user, dispatch, navigate, location]);
+
+  const handleRemove = (id: string) => {
+    dispatch(removeFromWishlist({ id }));
+    fetch(`${getApiUrl()}/wishlist/${id}`, { method: 'DELETE' }).catch(() => {});
+>>>>>>> origin/content/blog-sept12
   };
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {

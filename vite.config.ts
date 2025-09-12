@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 // @ts-nocheck
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
+=======
+=======
+// @ts-nocheck
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
+import { resolve } from 'path'
+import { analyzer } from 'vite-bundle-analyzer'
+>>>>>>> origin/content/blog-sept12
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -30,11 +40,23 @@ function splitVendorChunkPlugin() {
 
 export default defineConfig({
   plugins: [
+<<<<<<< HEAD
+=======
+    react(),
+    ...(mode === 'analyze' ? [analyzer()] : [])
+=======
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+export default defineConfig({
+  plugins: [
+>>>>>>> origin/content/blog-sept12
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
     }),
     splitVendorChunkPlugin(),
+<<<<<<< HEAD
   ],
   resolve: {
     alias: {
@@ -51,6 +73,25 @@ export default defineConfig({
       '@services': resolve('src/services'),
       '@context': resolve('src/context'),
       '@constants': resolve('src/constants')
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+  ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+>>>>>>> origin/content/blog-sept12
     }
   },
   css: {
@@ -121,6 +162,10 @@ export default defineConfig({
       '@radix-ui/react-alert-dialog',
       '@radix-ui/react-avatar',
       '@radix-ui/react-checkbox',
+<<<<<<< HEAD
+=======
+      '@radix-ui/react-collapsible',
+>>>>>>> origin/content/blog-sept12
       '@radix-ui/react-dialog',
       '@radix-ui/react-dropdown-menu',
       '@radix-ui/react-label',
@@ -156,6 +201,17 @@ export default defineConfig({
   
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+<<<<<<< HEAD
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   }
 });
+=======
+<<<<<<< HEAD
+  },
+}))
+=======
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  }
+});
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12

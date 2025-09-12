@@ -4,6 +4,7 @@ export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
+<<<<<<< HEAD
   variant: ServiceVariant;
   contactInfo: {
     mobile: string;
@@ -19,6 +20,8 @@ export interface RealMicroSaasService2024 {
   reviews: number;
 =======
 =======
+=======
+>>>>>>> origin/content/blog-sept12
   price: string;
   variant: string;
   features: string[];
@@ -33,6 +36,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     name: 'AI Content Generator 2024',
     tagline: 'Generate high-quality content with AI',
     price: '$99',
+<<<<<<< HEAD
     variant: 'ai',
     features: ['AI-powered content creation', 'SEO optimization', 'Multi-language support'],
     rating: 4.8,
@@ -151,6 +155,15 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     implementationDetails: 'Production-ready platform with quantum-resistant encryption algorithms, enterprise-grade security features, and comprehensive compliance tools.',
     launchDate: '2024-01-10',
     customers: 850,
+=======
+=======
+    id: 'ai-automation-2024',
+    name: 'AI Automation Platform 2024',
+    tagline: 'Intelligent automation for modern businesses',
+    price: '$299',
+    variant: 'ai',
+    features: ['AI-powered workflows', 'Process automation', 'Smart decision making'],
+>>>>>>> origin/content/blog-sept12
     rating: 4.8,
     reviews: 420
   },

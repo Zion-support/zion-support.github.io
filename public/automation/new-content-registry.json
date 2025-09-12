@@ -1,24 +1,31 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2025-08-14T11:29:28.456Z",
+=======
+  "generatedAt": "2025-08-17T21:11:02.472Z",
+=======
+  "generatedAt": "2025-08-17T21:21:02.523Z",
+>>>>>>> origin/content/blog-sept12
   "items": [
     {
-      "title": "Reference Architecture — Autonomous Content Mesh",
-      "href": "/reports/blueprints/blueprint-2025-08-15-000055",
+      "title": "Innovation Insight — 2025-08-17 21-21",
+      "href": "/reports/innovations/insight-2025-08-17T21-21",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T00:00:55.974Z",
-      "source": "cloud-blueprint-factory"
+      "createdAt": "2025-08-17T21:21:02.450Z",
+      "source": "cloud-content-factory"
     },
     {
-      "title": "Playbook — Autonomous Delivery",
-      "href": "/reports/playbooks/playbook-2025-08-15-000055",
+      "title": "Autonomous Update — 2025-08-17 21-21",
+      "href": "/reports/updates/update-2025-08-17T21-21",
       "desc": "New autonomous content",
-      "createdAt": "2025-08-15T00:00:55.909Z",
-      "source": "cloud-playbook-factory"
+      "createdAt": "2025-08-17T21:21:02.450Z",
+      "source": "cloud-content-factory"
     },
     {
-      "title": "Case Study — Trigger Homepage",
-      "href": "/reports/cases/case-2025-08-15-000055",
+      "title": "Innovation Insight — 2025-08-17 21-21",
+      "href": "/reports/innovations/insight-2025-08-17T21-21",
       "desc": "New autonomous content",
+<<<<<<< HEAD
       "createdAt": "2025-08-14T11:29:28.358Z",
       "source": "cloud-deep-research-factory"
     },
@@ -57,6 +64,17 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-14T14:06:48.784Z",
       "source": "cloud-deep-research-factory"
+=======
+      "createdAt": "2025-08-17T21:21:02.450Z",
+      "source": "cloud-content-factory"
+    },
+    {
+      "title": "Autonomous Update — 2025-08-17 21-21",
+      "href": "/reports/updates/update-2025-08-17T21-21",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-17T21:21:02.450Z",
+      "source": "cloud-content-factory"
+>>>>>>> origin/content/blog-sept12
     }
   ]
 }

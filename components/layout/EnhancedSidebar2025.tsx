@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import { useRouter } from 'next/router';
+>>>>>>> origin/content/blog-sept12
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
@@ -12,12 +16,21 @@ import {
 interface SidebarItem {
   name: string;
   href: string;
+<<<<<<< HEAD
   icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
   isHot?: boolean;
+=======
+  icon: React.ReactNode;
+  description?: string;
+  children?: SidebarItem[];
+  badge?: string;
+  featured?: boolean;
+  category?: string;
+>>>>>>> origin/content/blog-sept12
 }
 
 const contactInfo = {
@@ -29,6 +42,7 @@ const contactInfo = {
 
 const sidebarItems: SidebarItem[] = [
   {
+<<<<<<< HEAD
     name: 'All Services',
     href: '/comprehensive-services-showcase-2025',
     icon: <Globe className="w-5 h-5" />,
@@ -44,6 +58,12 @@ const sidebarItems: SidebarItem[] = [
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ]
+=======
+    name: 'Home',
+    href: '/',
+    icon: <Home className="w-5 h-5" />,
+    description: 'Welcome to Zion Tech Group'
+>>>>>>> origin/content/blog-sept12
   },
   {
     name: 'AI & Consciousness',
@@ -115,6 +135,7 @@ const sidebarItems: SidebarItem[] = [
     name: 'Micro SAAS',
     href: '/micro-saas',
     icon: <Rocket className="w-5 h-5" />,
+<<<<<<< HEAD
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
@@ -184,12 +205,55 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Startup Plans', href: '/startup-pricing', description: 'Small business pricing' },
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
       { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
+=======
+    description: 'Our comprehensive technology solutions',
+    badge: 'Featured',
+    children: [
+      { name: 'All Services', href: '/services', icon: <Rocket className="w-4 h-4" />, featured: true },
+      { name: 'AI & Machine Learning', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
+      { name: 'Quantum Technology', href: '/quantum-services', icon: <Atom className="w-4 h-4" /> },
+      { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+      { name: 'Cloud & Infrastructure', href: '/it-services', icon: <Cloud className="w-4 h-4" /> },
+      { name: 'Business Intelligence', href: '/data-analytics', icon: <BarChart className="w-4 h-4" /> },
+      { name: 'DevOps & Automation', href: '/devops-automation', icon: <Code className="w-4 h-4" /> },
+      { name: 'Space Technology', href: '/space-tech', icon: <RocketIcon className="w-4 h-4" /> }
+    ]
+  },
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    icon: <Target className="w-5 h-5" />,
+    description: 'Industry-specific solutions',
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4" /> },
+      { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <Heart className="w-4 h-4" /> },
+      { name: 'Financial Solutions', href: '/solutions/financial', icon: <DollarSign className="w-4 h-4" /> },
+      { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: <Cog className="w-4 h-4" /> },
+      { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: <Target className="w-4 h-4" /> },
+      { name: 'Government Solutions', href: '/government-technology-solutions', icon: <Shield className="w-4 h-4" /> }
+    ]
+  },
+  {
+    name: 'Company',
+    href: '/about',
+    icon: <Building className="w-5 h-5" />,
+    description: 'About Zion Tech Group',
+    children: [
+      { name: 'About Us', href: '/about', icon: <Info className="w-4 h-4" /> },
+      { name: 'Our Mission', href: '/mission', icon: <Target className="w-4 h-4" /> },
+      { name: 'Leadership Team', href: '/leadership', icon: <Users className="w-4 h-4" /> },
+      { name: 'Company Culture', href: '/culture', icon: <Heart className="w-4 h-4" /> },
+      { name: 'Our Values', href: '/values', icon: <Star className="w-4 h-4" /> },
+      { name: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4" /> },
+      { name: 'News & Press', href: '/press', icon: <FileText className="w-4 h-4" /> }
+>>>>>>> origin/content/blog-sept12
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
+<<<<<<< HEAD
     description: 'Educational resources and documentation',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -198,13 +262,29 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
       { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
       { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
+=======
+    description: 'Knowledge and resources',
+    children: [
+      { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
+      { name: 'Blog & Articles', href: '/blog', icon: <BookOpen className="w-4 h-4" /> },
+      { name: 'Case Studies', href: '/case-studies', icon: <BarChart className="w-4 h-4" /> },
+      { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4" /> },
+      { name: 'Webinars', href: '/webinars', icon: <Calendar className="w-4 h-4" /> },
+      { name: 'Events', href: '/events-webinars', icon: <Calendar className="w-4 h-4" /> },
+      { name: 'Training', href: '/training', icon: <Lightbulb className="w-4 h-4" /> }
+>>>>>>> origin/content/blog-sept12
     ]
   },
   {
     name: 'Support',
     href: '/support',
+<<<<<<< HEAD
     icon: <Settings className="w-5 h-5" />,
     description: 'Technical support and customer service',
+=======
+    icon: <MessageCircle className="w-5 h-5" />,
+    description: 'Get help and support',
+>>>>>>> origin/content/blog-sept12
     children: [
       { name: 'Help Center', href: '/help', description: 'Self-service support' },
       { name: 'Contact Support', href: '/contact', description: 'Get in touch' },
@@ -216,6 +296,17 @@ const sidebarItems: SidebarItem[] = [
   }
 ];
 
+<<<<<<< HEAD
+=======
+const resources = [
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
+  { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },
+  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className="w-4 h-4" /> },
+  { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
+  { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
+  { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
+=======
+>>>>>>> origin/content/blog-sept12
 const quickLinks = [
   { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
   { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" /> },
@@ -264,9 +355,15 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     if (newExpanded.has(title)) {
       newExpanded.delete(title);
     } else {
+<<<<<<< HEAD
       newExpanded.add(title);
     }
     setExpandedSections(newExpanded);
+=======
+      newExpandedItems.add(itemName);
+    }
+    setExpandedItems(newExpandedItems);
+>>>>>>> origin/content/blog-sept12
   };
 
   const filteredServices = sidebarItems.flatMap(item =>
@@ -352,21 +449,32 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   transition={{ duration: 0.2 }}
                   className="ml-8 space-y-1"
                 >
+<<<<<<< HEAD
                   <CloseIcon className="w-5 h-5" />
+=======
+                  <X className="w-5 h-5" />
+>>>>>>> origin/content/blog-sept12
                 </button>
               </div>
 
               {/* Search Bar */}
               <div className="relative">
+<<<<<<< HEAD
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search services..."
+=======
+                <input
+                  type="text"
+                  placeholder="Search navigation..."
+>>>>>>> origin/content/blog-sept12
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
+<<<<<<< HEAD
               
               {/* Search Results */}
               {searchQuery && (
@@ -402,6 +510,8 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   )}
                 </div>
               )}
+=======
+>>>>>>> origin/content/blog-sept12
             </div>
 
             {/* Contact Information */}
@@ -533,9 +643,44 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                           ))}
                         </motion.div>
                       )}
+<<<<<<< HEAD
                     </AnimatePresence>
                   </div>
                 ))}
+=======
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Footer */}
+            <div className="sticky bottom-0 bg-black/80 backdrop-blur-md border-t border-cyan-500/20 p-4 mt-8">
+              <div className="space-y-3">
+                <div className="text-xs text-gray-500 text-center">
+                  © 2025 Zion Tech Group
+                </div>
+                <div className="flex justify-center space-x-4">
+                  <Link
+                    href="/contact"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    href="/support"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Support
+                  </Link>
+                  <Link
+                    href="/privacy"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Privacy
+                  </Link>
+                </div>
+>>>>>>> origin/content/blog-sept12
               </div>
             </div>
 

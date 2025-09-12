@@ -153,6 +153,7 @@ export default function HomePage() {
     ...practicalBusiness2029Solutions
   ];
 
+<<<<<<< HEAD
   // Combine all services for comprehensive display
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -162,6 +163,33 @@ export default function HomePage() {
     ...advancedAIServices,
     ...blockchainEmergingTechServices
   ];
+=======
+=======
+    ...revolutionary2026AIServices,
+    ...revolutionary2027Services,
+    ...emergingTech2027Services,
+    ...revolutionary2027AIServices,
+    ...revolutionary2027ITServices,
+    ...revolutionary2027MicroSaasServices,
+    ...cuttingEdge2028MicroSaas,
+    ...practicalBusinessSolutions2028,
+    ...futuristic2029AIServices,
+    ...quantumInnovation2029Services,
+    ...emergingTech2029Services,
+    ...enterpriseIT2029Services,
+    ...practicalBusiness2029Solutions
+  ];
+
+  // Combine all services for comprehensive display
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...innovativeMicroSaasServices,
+    ...advancedAIServices,
+    ...blockchainEmergingTechServices
+  ];
+>>>>>>> origin/content/blog-sept12
 
   // Service statistics
   const serviceStats = {

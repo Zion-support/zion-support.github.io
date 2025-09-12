@@ -11,4 +11,8 @@ export default function EnhancedFooter() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/content/blog-sept12

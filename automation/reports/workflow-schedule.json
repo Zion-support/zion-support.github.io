@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-08-17T21:08:48.226Z",
+=======
+  "timestamp": "2025-08-17T21:20:41.514Z",
+>>>>>>> origin/content/blog-sept12
   "critical": [
     {
       "name": "ci.yml",

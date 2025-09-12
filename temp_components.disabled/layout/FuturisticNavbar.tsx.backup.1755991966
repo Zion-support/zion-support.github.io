@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Zap, Globe, Bot, Cloud, Shield, Sparkles, Rocket, Cpu, Database, Brain, Atom, Eye, Lock, BarChart3, Users, Target, TrendingUp, Star, Award, ZapIcon, CloudIcon, BotIcon, ShieldIcon, GlobeIcon, CpuIcon, DatabaseIcon, BrainIcon, AtomIcon, EyeIcon, LockIcon, BarChart3Icon, UsersIcon, TargetIcon, TrendingUpIcon, StarIcon, AwardIcon, DollarSign, FlaskConical, Leaf, Factory, ShieldCheck } from 'lucide-react';
@@ -192,3 +193,13 @@ const FuturisticNavbar: React.FC = () => {
     </nav>
   );
 }
+=======
+import React from 'react';
+
+const FuturisticNavbar: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">FuturisticNavbar temporarily disabled</div>;
+};
+
+export default FuturisticNavbar;
+>>>>>>> origin/content/blog-sept12

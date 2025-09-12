@@ -30,6 +30,7 @@
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
+<<<<<<< HEAD
       "purpose": "maskable any"
 =======
   "name": "Zion Tech Group - AI-Powered Tech Marketplace",
@@ -93,6 +94,48 @@
       "type": "image/png"
     }
   ],
+<<<<<<< HEAD
+=======
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
+=======
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zion-logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+=======
+  ],
+>>>>>>> origin/content/blog-sept12
   "screenshots": [
     {
       "src": "/images/screenshot-desktop.png",
@@ -226,3 +269,7 @@
     "url": "https://ziontechgroup.com"
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12

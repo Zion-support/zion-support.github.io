@@ -475,6 +475,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     launchDate: '2024-10-01',
     customers: 45,
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 32,
     benefits: [
       '25% reduction in energy costs',
@@ -617,5 +618,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Threat hunting'
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+=======
+    reviews: 34
+>>>>>>> origin/content/blog-sept12
   }
 ];

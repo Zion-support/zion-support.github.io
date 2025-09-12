@@ -135,6 +135,13 @@ const navigationItems: NavigationItem[] = [
         name: 'Services Showcase 2036', 
         href: '/comprehensive-services-showcase-2036', 
         description: 'Complete 2036 services overview',
+<<<<<<< HEAD
+=======
+========
+        name: 'Services Showcase 2036', 
+        href: '/comprehensive-services-showcase-2036', 
+        description: 'Complete 2036 services overview',
+>>>>>>> origin/content/blog-sept12
         icon: <Grid className="w-4 h-4" />,
         featured: true
       },

@@ -1,4 +1,48 @@
 {
+<<<<<<< HEAD
+  "name": "Zion Tech Group - Micro SAAS Services",
+=======
+<<<<<<< HEAD
+  "name": "Zion Tech Group",
+>>>>>>> origin/content/blog-sept12
+  "short_name": "Zion Tech",
+  "name": "Zion Tech Group - AI & Technology Solutions",
+  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+<<<<<<< HEAD
+=======
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
+=======
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+=======
+=======
   "name": "Zion Tech Group - Micro SAAS Services",
   "short_name": "Zion Tech",
   "name": "Zion Tech Group - AI & Technology Solutions",
@@ -20,11 +64,41 @@
       "sizes": "512x512"
     }
   ],
+>>>>>>> origin/content/blog-sept12
   "screenshots": [
     {
       "src": "screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
+<<<<<<< HEAD
+=======
+      "name": "AI Solutions",
+      "short_name": "AI Solutions",
+      "description": "Explore AI solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "logo192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "logo192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+=======
+>>>>>>> origin/content/blog-sept12
       "form_factor": "wide",
       "label": "Zion Tech Group Desktop View"
     },
@@ -32,6 +106,7 @@
       "src": "/images/screenshot-mobile.png",
       "sizes": "390x844",
       "type": "image/png",
+<<<<<<< HEAD
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
     }
@@ -105,3 +180,34 @@
     "offline-capable"
   ]
 }
+=======
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", "text/*", "application/pdf"]
+        }
+      ]
+    }
+  }
+=======
+  ]
+}
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12

@@ -91,6 +91,7 @@ export default [
       }
     },
     plugins: {
+      '@typescript-eslint': tseslint.plugin,
       react,
       'react-hooks': reactHooks
     },
@@ -98,6 +99,10 @@ export default [
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD
+=======
+      ...(tseslint.configs.recommendedTypeChecked?.rules ?? {}),
+>>>>>>> origin/content/blog-sept12
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',

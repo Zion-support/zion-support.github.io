@@ -95,4 +95,8 @@ echo "📋 Log saved to: $LOG_FILE"
 echo "🎉 Merge process completed!" >> "$LOG_FILE"
 echo "✅ Successful merges: $SUCCESS_COUNT" >> "$LOG_FILE"
 echo "❌ Failed merges: $FAILED_COUNT" >> "$LOG_FILE"
+<<<<<<< HEAD
 echo "⏭️  Skipped branches: $SKIPPED_COUNT" >> "$LOG_FILE"
+=======
+echo "⏭️  Skipped branches: $SKIPPED_COUNT" >> "$LOG_FILE"
+>>>>>>> origin/content/blog-sept12

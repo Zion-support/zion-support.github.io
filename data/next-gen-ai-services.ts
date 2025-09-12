@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
+=======
+>>>>>>> origin/content/blog-sept12
 export interface NextGenAIService {
   id: string;
   name: string;
@@ -26,7 +29,11 @@ export interface NextGenAIService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+<<<<<<< HEAD
   variant: ServiceVariant;
+=======
+  variant: string;
+>>>>>>> origin/content/blog-sept12
   contactInfo: {
     mobile: string;
     email: string;
@@ -444,9 +451,15 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2 weeks',
     category: 'AI & Emotional Intelligence',
     realService: true,
+<<<<<<< HEAD
     technology: ['TensorFlow', 'PyTorch', 'OpenCV', 'NLP', 'Computer Vision', 'AWS', 'React', 'Node.js'],
     integrations: ['Salesforce', 'Zendesk', 'Intercom', 'Slack', 'Microsoft Teams', 'Zoom', 'WebRTC'],
     useCases: ['Customer service automation', 'Mental health monitoring', 'Employee wellness tracking', 'Educational engagement', 'Gaming AI', 'Healthcare diagnostics'],
+=======
+    technology: ['TensorFlow, PyTorch, OpenCV, NLP, Computer Vision, AWS, React, Node.js'],
+    integrations: ['Salesforce, Zendesk, Intercom, Slack, Microsoft Teams, Zoom, WebRTC'],
+    useCases: ['Customer service automation, Mental health monitoring, Employee wellness tracking, Educational engagement, Gaming AI, Healthcare diagnostics'],
+>>>>>>> origin/content/blog-sept12
     roi: 'Average customer sees 800% ROI through improved customer satisfaction and reduced support costs.',
     competitors: ['Traditional sentiment analysis tools ($50K+)', 'Basic emotion detection APIs ($5K+)'],
     marketSize: '$15B emotional AI market',
@@ -600,9 +613,15 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '1 week',
     category: 'AI & Creative Design',
     realService: true,
+<<<<<<< HEAD
     technology: ['Generative AI', 'Computer Vision', 'NLP', 'React', 'Node.js', 'AWS', 'Docker'],
     integrations: ['Adobe Creative Suite', 'Figma', 'Canva', 'Shopify', 'WordPress', 'Social media platforms'],
     useCases: ['Logo and brand design', 'Marketing materials creation', 'Social media content', 'Product packaging design', 'Website design', 'Print materials'],
+=======
+    technology: ['Generative AI, Computer Vision, NLP, React, Node.js, AWS, Docker'],
+    integrations: ['Adobe Creative Suite, Figma, Canva, Shopify, WordPress, Social media platforms'],
+    useCases: ['Logo and brand design, Marketing materials creation, Social media content, Product packaging design, Website design, Print materials'],
+>>>>>>> origin/content/blog-sept12
     roi: 'Average customer sees 600% ROI through increased creative output and reduced design costs.',
     competitors: ['Traditional design tools ($10K+)', 'Basic AI design tools ($2K+)'],
     marketSize: '$12B creative software market',
@@ -672,6 +691,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 180,
     rating: 4.8,
     reviews: 156
+<<<<<<< HEAD
   },
 
   // AI-Powered Predictive Analytics Platform
@@ -937,5 +957,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
     rating: 4.9,
     reviews: 34
+=======
+>>>>>>> origin/content/blog-sept12
   }
 ];
