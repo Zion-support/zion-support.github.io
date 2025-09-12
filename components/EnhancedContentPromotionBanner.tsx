@@ -14,191 +14,220 @@ interface ContentItem {
   isTrending?: boolean;
 }
 
-interface EnhancedContentPromotionBannerProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  content: ContentItem[];
-  variant?: 'featured' | 'trending' | 'latest';
-  maxItems?: number;
-}
-
-const EnhancedContentPromotionBanner: React.FC<EnhancedContentPromotionBannerProps> = ({
-  title,
-  subtitle,
-  description,
-  content,
-  variant = 'featured',
-  maxItems = 6
-}) => {
+const EnhancedContentPromotionBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const displayedContent = content.slice(0, maxItems);
+  const featuredContent: ContentItem[] = [
+    {
+      id: 'ai-advanced-automation',
+      title: 'AI Advanced Automation 2025: Complete Implementation Guide',
+      description: 'Master advanced AI automation with our comprehensive guide. Learn strategies that deliver 300%+ ROI and 60% cost reduction.',
+      href: '/blog/ai-2025-advanced-automation',
+      icon: '🤖',
+      category: 'AI Automation',
+      readTime: '22 min read',
+      isNew: true
+    },
+    {
+      id: 'generative-agents-production',
+      title: 'Generative AI Agents in Production 2025',
+      description: 'Deploy and manage AI agents in production environments. Achieve 99.9% uptime and 400%+ ROI with proven strategies.',
+      href: '/blog/ai-2025-generative-agents-in-production',
+      icon: '🧠',
+      category: 'AI Agents',
+      readTime: '28 min read',
+      isTrending: true
+    },
+    {
+      id: 'cybersecurity-breakthrough',
+      title: '$50M Cybersecurity Transformation Success',
+      description: 'How a Fortune 500 company achieved 99.8% threat detection accuracy and $50M in security cost savings.',
+      href: '/case-studies/ai-cybersecurity-transformation-breakthrough-2025',
+      icon: '🛡️',
+      category: 'Case Study',
+      type: 'Success Story',
+      isNew: true
+    },
+    {
+      id: 'ai-implementation-guide',
+      title: 'AI Implementation Master Guide 2026',
+      description: 'Download our 200+ page comprehensive guide with templates, checklists, and proven strategies for AI success.',
+      href: '/resources/ai-implementation-master-guide-2026',
+      icon: '📚',
+      category: 'Free Resource',
+      type: '200+ Pages',
+      isNew: true
+    }
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedContent.length);
-    }, 4000);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [displayedContent.length]);
+  }, []);
 
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'featured':
-        return 'from-indigo-600 via-purple-600 to-pink-600';
-      case 'trending':
-        return 'from-orange-600 via-red-600 to-pink-600';
-      case 'latest':
-        return 'from-emerald-600 via-teal-600 to-cyan-600';
-      default:
-        return 'from-indigo-600 via-purple-600 to-pink-600';
-    }
-  };
-
-  const getBadgeColor = (item: ContentItem) => {
-    if (item.isNew) return 'bg-green-100 text-green-800';
-    if (item.isTrending) return 'bg-orange-100 text-orange-800';
-    return 'bg-blue-100 text-blue-800';
-  };
-
-  const getBadgeText = (item: ContentItem) => {
-    if (item.isNew) return 'NEW';
-    if (item.isTrending) return 'TRENDING';
-    return 'FEATURED';
-  };
+  const currentContent = featuredContent[currentIndex];
 
   if (!isVisible) return null;
 
   return (
-    <div className={`relative bg-gradient-to-r ${getVariantStyles()} text-white overflow-hidden`}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-      </div>
-
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-              <span className="text-sm font-medium">✨ {subtitle}</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {title}
-            </h2>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8 leading-relaxed">
-              {description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/content-showcase"
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-              >
-                🎯 Explore All Content
-              </Link>
-              <Link
-                href="/blog"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
-              >
-                📚 Read Latest Articles
-              </Link>
-            </div>
-          </div>
-
-          {/* Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {displayedContent.map((item, index) => (
-              <Link key={item.id} href={item.href} className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl group-hover:scale-110 transition-transform">
-                      {item.icon}
-                    </div>
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${getBadgeColor(item)}`}>
-                      {getBadgeText(item)}
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-indigo-200 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm opacity-90 mb-3 leading-relaxed">
-                    {item.description}
-                  </p>
-                  <div className="flex items-center justify-between text-xs opacity-75">
-                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded-full">
-                      {item.category}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      {item.readTime && <span>{item.readTime}</span>}
-                      {item.type && (
-                        <>
-                          <span>•</span>
-                          <span>{item.type}</span>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-2 mb-6">
-            {displayedContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/50 hover:bg-white/75'
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Additional Links */}
-          <div className="text-center">
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <Link href="/blog" className="text-white hover:text-indigo-200 transition-colors">
-                📝 All Articles
-              </Link>
-              <Link href="/case-studies" className="text-white hover:text-indigo-200 transition-colors">
-                📊 Case Studies
-              </Link>
-              <Link href="/resources" className="text-white hover:text-indigo-200 transition-colors">
-                📋 Resources
-              </Link>
-              <Link href="/services" className="text-white hover:text-indigo-200 transition-colors">
-                🚀 Services
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Close Button */}
+    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Close button */}
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors"
+          className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+          aria-label="Close banner"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-      </div>
 
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
-        <div 
-          className="h-full bg-white transition-all duration-4000 ease-linear"
-          style={{ width: `${((currentIndex + 1) / displayedContent.length) * 100}%` }}
-        />
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 FEATURED CONTENT</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            🚀 Fresh AI & Tech Content Just Dropped
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover our latest breakthrough content: Advanced AI Automation, Generative AI Agents, 
+            Cybersecurity Success Stories, and comprehensive implementation guides. Expert insights 
+            to accelerate your success in 2025.
+          </p>
+        </div>
+
+        {/* Featured Content Card */}
+        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <div className="text-6xl mb-4">{currentContent.icon}</div>
+              <div className="flex gap-2">
+                {featuredContent.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+                    }`}
+                    aria-label={`Go to content ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex-1 text-center lg:text-left">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
+                <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+                  {currentContent.category}
+                </span>
+                {currentContent.isNew && (
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    NEW
+                  </span>
+                )}
+                {currentContent.isTrending && (
+                  <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    TRENDING
+                  </span>
+                )}
+              </div>
+              
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                {currentContent.title}
+              </h3>
+              
+              <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                {currentContent.description}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  href={currentContent.href}
+                  className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                >
+                  {currentContent.type ? 'Download Now' : 'Read Article'}
+                </Link>
+                <Link
+                  href="/content-showcase"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
+                >
+                  Explore All Content
+                </Link>
+              </div>
+              
+              {currentContent.readTime && (
+                <div className="mt-4 text-sm opacity-75">
+                  {currentContent.readTime}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {featuredContent.map((item, index) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              onClick={() => setCurrentIndex(index)}
+              className="group bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300 text-center"
+            >
+              <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <h4 className="text-sm font-semibold mb-1 line-clamp-2">
+                {item.title}
+              </h4>
+              <div className="flex justify-center gap-1 mb-2">
+                {item.isNew && (
+                  <span className="bg-green-500 text-white px-2 py-0.5 rounded text-xs">NEW</span>
+                )}
+                {item.isTrending && (
+                  <span className="bg-orange-500 text-white px-2 py-0.5 rounded text-xs">HOT</span>
+                )}
+              </div>
+              <div className="text-xs opacity-75">
+                {item.readTime || item.type}
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-8">
+          <p className="text-lg opacity-90 mb-4">
+            Join 15,000+ AI professionals who trust our content
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/blog"
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              📚 Browse All Articles
+            </Link>
+            <Link
+              href="/resources"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+            >
+              📋 Download Resources
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+            >
+              📊 View Case Studies
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
