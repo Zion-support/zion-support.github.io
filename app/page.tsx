@@ -13,7 +13,9 @@ const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 const ContentPromotionBanner = lazy(() => import('../components/ContentPromotionBanner'));
+const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
+const TrendingTopicsWidget = lazy(() => import('../components/TrendingTopicsWidget'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 
 // Card component
@@ -166,9 +168,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Content Promotion Banner */}
+      {/* Enhanced Content Promotion Banner */}
       <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
-        <ContentPromotionBanner />
+        <EnhancedContentPromotionBanner />
       </Suspense>
 
       {/* New Content Spotlight - January 2025 */}
@@ -2010,6 +2012,15 @@ export default function HomePage() {
       <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
         <FeaturedContentShowcase />
       </Suspense>
+
+      {/* Trending Topics Widget */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Suspense fallback={<LoadingSpinner size="lg" text="Loading trending topics..." />}>
+            <TrendingTopicsWidget />
+          </Suspense>
+        </div>
+      </section>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
