@@ -39,10 +39,55 @@ export default function ContentShowcasePage() {
       category: "AI Technology",
       readTime: "12 min read",
       date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Workforce Transformation 2025: Reskilling Strategies for the AI Era",
+      description: "Complete guide to workforce transformation in the AI era. Learn how to reskill employees, create AI-ready teams, and navigate the changing job landscape.",
+      href: "/blog/ai-workforce-transformation-2025",
+      icon: "👥",
+      category: "Workforce AI",
+      readTime: "18 min read",
+      date: "Feb 02, 2025"
+    },
+    {
+      title: "AI Data Privacy & Compliance 2025: Complete Guide to AI Privacy Regulations",
+      description: "Navigate the complex landscape of AI privacy regulations and compliance requirements. Learn how to build privacy-first AI systems that meet global standards.",
+      href: "/blog/ai-data-privacy-compliance-2025",
+      icon: "🔒",
+      category: "AI Compliance",
+      readTime: "22 min read",
+      date: "Feb 03, 2025"
+    },
+    {
+      title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems",
+      description: "Discover how to build sustainable AI systems that reduce environmental impact while maintaining performance. Learn about green AI practices and carbon-neutral computing.",
+      href: "/blog/ai-sustainability-green-tech-2025",
+      icon: "🌱",
+      category: "Green AI",
+      readTime: "20 min read",
+      date: "Feb 04, 2025"
+    },
+    {
+      title: "AI Customer Support Automation 2025: Resolve Faster, Cut Costs",
+      description: "Transform your customer support with AI automation. Learn how to implement intelligent chatbots, automated ticket routing, and predictive customer service.",
+      href: "/blog/ai-customer-support-automation-2025",
+      icon: "🎧",
+      category: "Customer AI",
+      readTime: "9 min read",
+      date: "Feb 05, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Autonomous Manufacturing Success: $200M Savings & 300% ROI",
+      description: "Discover how a Fortune 500 manufacturing company achieved $200M in cost savings and 300% ROI through autonomous AI systems. Complete case study with implementation details.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      icon: "🏭",
+      category: "Manufacturing AI",
+      result: "$200M Savings",
+      date: "Jan 30, 2025"
+    },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
       description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
@@ -62,21 +107,39 @@ export default function ContentShowcasePage() {
       date: "Feb 03, 2025"
     },
     {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
+      title: "AI Financial Services Transformation: $50M Cost Savings",
+      description: "Major bank achieves $50M in cost savings and 300% efficiency gains through AI-powered automation, fraud detection, and customer service optimization.",
+      href: "/case-studies/ai-financial-services-transformation-2025",
+      icon: "🏦",
+      category: "Financial AI",
+      result: "$50M Savings",
+      date: "Feb 04, 2025"
+    },
+    {
+      title: "AI Healthcare Diagnosis Breakthrough: 98.7% Accuracy",
+      description: "Revolutionary AI system achieves 98.7% accuracy in medical diagnosis, reducing diagnostic time by 80% and improving patient outcomes significantly.",
+      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "98.7% Accuracy",
+      date: "Feb 05, 2025"
+    },
+    {
+      title: "AI Sustainability Transformation: 60% Energy Reduction",
+      description: "Global manufacturing company achieves 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives and smart energy management.",
+      href: "/case-studies/ai-sustainability-transformation-2025",
+      icon: "🌱",
+      category: "Green AI",
+      result: "60% Energy Reduction",
+      date: "Feb 06, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
@@ -99,6 +162,33 @@ export default function ContentShowcasePage() {
       category: "Security",
       type: "Free Download",
       date: "Feb 06, 2025"
+    },
+    {
+      title: "AI Workforce Transformation Playbook 2025: Complete Reskilling Guide",
+      description: "Complete playbook for workforce transformation in the AI era. Includes reskilling strategies, training programs, and change management frameworks.",
+      href: "/resources/ai-workforce-transformation-playbook-2025",
+      icon: "👥",
+      category: "Workforce",
+      type: "Free Download",
+      date: "Feb 07, 2025"
+    },
+    {
+      title: "AI ROI Calculator: Measure Your AI Investment Returns",
+      description: "Interactive calculator to measure potential ROI from AI investments. Includes templates for cost-benefit analysis and success metrics tracking.",
+      href: "/resources/ai-roi-calculator-2025",
+      icon: "💰",
+      category: "Tools",
+      type: "Free Tool",
+      date: "Feb 09, 2025"
+    },
+    {
+      title: "AI Ethics & Governance Framework: Responsible AI Implementation",
+      description: "Complete framework for implementing responsible AI practices. Includes ethics guidelines, governance structures, and compliance checklists.",
+      href: "/resources/ai-ethics-governance-framework-2025",
+      icon: "⚖️",
+      category: "Governance",
+      type: "Free Download",
+      date: "Feb 10, 2025"
     }
   ];
 
