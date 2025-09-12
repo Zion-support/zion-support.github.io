@@ -9,12 +9,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Healthcare Diagnosis Success: 95% Accuracy Case Study',
     description: 'Discover how a regional healthcare system achieved 95% accuracy in medical diagnosis with AI automation.',
-  title: 'AI Healthcare Diagnosis Success: 95% Accuracy in Medical Diagnosis',
-  description: 'Discover how a leading healthcare provider achieved 95% diagnostic accuracy and 60% faster diagnosis times using AI-powered medical imaging and diagnostic systems.',
-  keywords: 'AI healthcare, medical diagnosis, healthcare AI, medical imaging, diagnostic accuracy, case study',
-  openGraph: {
-    title: 'AI Healthcare Diagnosis Success: 95% Accuracy in Medical Diagnosis',
-    description: 'Discover how a leading healthcare provider achieved 95% diagnostic accuracy using AI-powered medical imaging.',
     type: 'article',
   },
 };
@@ -25,6 +19,18 @@ export default function AIHealthcareDiagnosisSuccess2025() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">
+export default function AIHealthcareDiagnosisSuccess2025() {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="AI Healthcare Diagnosis Success Story 2025: 95% Accuracy in Medical Diagnosis"
+        description="Discover how a leading healthcare provider achieved 95% accuracy in medical diagnosis using AI automation. Real results, proven strategies, and implementation insights."
+        keywords="AI healthcare, medical diagnosis, healthcare automation, AI success story, medical AI, 2025"
+        url="/case-studies/ai-healthcare-diagnosis-success-2025"
+      />
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
               Healthcare AI
@@ -80,36 +86,24 @@ export default function AIHealthcareDiagnosisSuccess2025() {
             <span>•</span>
             <span>8 min read</span>
             <span>•</span>
-            <span>Jan 28, 2025</span>
+            <span>Healthcare AI</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI Healthcare Diagnosis Success: 95% Accuracy in Medical Diagnosis
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            How a leading healthcare provider transformed patient care with AI-powered 
-            diagnostic systems, achieving unprecedented accuracy and efficiency gains.
-          </p>
-        </header>
+        </div>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            A major healthcare provider was struggling with diagnostic accuracy, long wait times, 
-            and increasing patient volumes. Traditional diagnostic methods were time-consuming 
-            and prone to human error, leading to delayed treatments and suboptimal patient outcomes.
-          </p>
-          
-          <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-red-900 mb-3">Key Challenges</h3>
-            <ul className="space-y-2 text-red-800">
-              <li>• <strong>78%</strong> diagnostic accuracy with traditional methods</li>
-              <li>• <strong>2-3 weeks</strong> average diagnosis time</li>
-              <li>• <strong>25%</strong> increase in patient volume annually</li>
-              <li>• <strong>40%</strong> of cases required second opinions</li>
-              <li>• <strong>$2.3M</strong> annual cost of misdiagnoses</li>
+        <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl mb-12 flex items-center justify-center">
+          <div className="text-8xl">🏥</div>
+        </div>
+
+        <article className="prose prose-lg max-w-none">
+          <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
+            <h3 className="text-lg font-semibold text-green-900 mb-2">Key Results</h3>
+            <ul className="text-green-800 space-y-1">
+              <li>• 95% accuracy in medical diagnosis (vs 78% human baseline)</li>
+              <li>• 60% faster diagnosis time</li>
+              <li>• $2.3M annual cost savings</li>
+              <li>• 40% reduction in misdiagnosis</li>
             </ul>
           </div>
-        </section>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h2>
@@ -255,6 +249,11 @@ export default function AIHealthcareDiagnosisSuccess2025() {
             </div>
           </div>
         </section>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Executive Summary */}
         <section className="mb-12">
@@ -516,26 +515,71 @@ export default function AIHealthcareDiagnosisSuccess2025() {
               <li>• <strong>85%</strong> reduction in second opinions needed</li>
               <li>• <strong>$3.2M</strong> annual cost savings</li>
               <li>• <strong>92%</strong> physician satisfaction rate</li>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Success Factors</h2>
+
+          <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-3">
+              <span className="text-green-600 font-bold text-xl">✓</span>
+              <div>
+                <h4 className="font-semibold text-gray-900">Comprehensive Data Quality</h4>
+                <p className="text-gray-700 text-sm">
+                  High-quality, diverse training data was crucial for model accuracy. 
+                  We spent significant time cleaning and validating the dataset.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="text-green-600 font-bold text-xl">✓</span>
+              <div>
+                <h4 className="font-semibold text-gray-900">Physician Collaboration</h4>
+                <p className="text-gray-700 text-sm">
+                  Involving healthcare professionals in the design process ensured 
+                  the system met real-world needs and gained user adoption.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="text-green-600 font-bold text-xl">✓</span>
+              <div>
+                <h4 className="font-semibold text-gray-900">Gradual Implementation</h4>
+                <p className="text-gray-700 text-sm">
+                  Starting with a pilot program allowed us to identify issues early 
+                  and build confidence before full deployment.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="text-green-600 font-bold text-xl">✓</span>
+              <div>
+                <h4 className="font-semibold text-gray-900">Continuous Monitoring</h4>
+                <p className="text-gray-700 text-sm">
+                  Regular performance monitoring and model updates ensure the system 
+                  maintains high accuracy as medical knowledge evolves.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
+
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+            <h3 className="text-lg font-semibold text-yellow-900 mb-4">Critical Success Factors</h3>
+            <ul className="space-y-2 text-yellow-800">
+              <li>• <strong>Data Quality is Everything:</strong> Invest heavily in data preparation and validation</li>
+              <li>• <strong>User Experience Matters:</strong> Make the AI system intuitive and easy to use</li>
+              <li>• <strong>Change Management is Key:</strong> Prepare your team for the transition</li>
+              <li>• <strong>Start Small, Scale Fast:</strong> Pilot programs reduce risk and build confidence</li>
+              <li>• <strong>Measure Everything:</strong> Track both technical and business metrics</li>
             </ul>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-              <div className="text-gray-600 mb-2">Diagnostic Accuracy</div>
-              <div className="text-sm text-gray-500">Up from 78% with traditional methods</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">60%</div>
-              <div className="text-gray-600 mb-2">Faster Diagnosis</div>
-              <div className="text-sm text-gray-500">Reduced from 2-3 weeks to 3-5 days</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">$3.2M</div>
-              <div className="text-gray-600 mb-2">Annual Savings</div>
-              <div className="text-sm text-gray-500">Through improved efficiency and accuracy</div>
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>
 
           <div className="space-y-6">
             <div className="bg-white border border-gray-200 rounded-xl p-6">
@@ -643,59 +687,6 @@ export default function AIHealthcareDiagnosisSuccess2025() {
                   <span>Performance optimization and scalability</span>
                 </li>
               </ul>
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-yellow-900 mb-3">Key Success Factors</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-yellow-900 mb-2">Technical</h4>
-                  <ul className="space-y-1 text-yellow-800 text-sm">
-                    <li>• High-quality, diverse training data</li>
-                    <li>• Robust model validation and testing</li>
-                    <li>• Seamless system integration</li>
-                    <li>• Continuous monitoring and improvement</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-yellow-900 mb-2">Organizational</h4>
-                  <ul className="space-y-1 text-yellow-800 text-sm">
-                    <li>• Strong leadership support and buy-in</li>
-                    <li>• Comprehensive training and change management</li>
-                    <li>• Physician involvement in design and testing</li>
-                    <li>• Clear governance and accountability</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Challenges Overcome</h3>
-              <div className="space-y-4">
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Data Quality and Privacy</h4>
-                  <p className="text-gray-700 text-sm">
-                    Implemented robust data anonymization and privacy protection measures 
-                    while ensuring high-quality training data for AI models.
-                  </p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Physician Adoption</h4>
-                  <p className="text-gray-700 text-sm">
-                    Addressed initial resistance through comprehensive training, 
-                    demonstrating clear value, and involving physicians in the design process.
-                  </p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">System Integration</h4>
-                  <p className="text-gray-700 text-sm">
-                    Overcame technical challenges by working closely with IT teams 
-                    and ensuring seamless integration with existing hospital systems.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -740,11 +731,6 @@ export default function AIHealthcareDiagnosisSuccess2025() {
           <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
             Join leading healthcare organizations that are revolutionizing patient care with AI-powered 
             medical diagnosis and automation.
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Transform Your Healthcare Operations</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Ready to achieve similar results? Get expert guidance on implementing 
-            AI-powered diagnostic systems in your healthcare organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -765,6 +751,8 @@ export default function AIHealthcareDiagnosisSuccess2025() {
         {/* Related Case Studies */}
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h2>
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <Link href="/case-studies/ai-automation-manufacturing-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
@@ -789,32 +777,9 @@ export default function AIHealthcareDiagnosisSuccess2025() {
             </Link>
           </div>
         </section>
-              Get Healthcare AI Consultation
-            </Link>
-            <Link
-              href="/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-            >
-              View More Case Studies
-            </Link>
-          </div>
-        </section>
-
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-              <span className="text-green-600 font-bold text-xl">ZT</span>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">Zion Tech Group</h3>
-              <p className="text-gray-600">
-                Leading AI and healthcare technology consulting firm specializing in 
-                medical AI implementation and healthcare transformation.
-              </p>
-            </div>
-          </div>
-        </div>
       </article>
+        </div>
+      </div>
     </div>
   );
 }
