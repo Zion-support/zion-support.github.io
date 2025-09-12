@@ -237,6 +237,15 @@ function Header() {
                   🛠️ Ultimate Implementation Toolkit (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2025-ultimate-breakthrough-trends" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Ultimate Breakthrough Trends (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-finance-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  💰 Global Finance 1500% ROI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2025-enterprise-transformation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Enterprise Master Guide (ESSENTIAL)
+                </Link>
                 <Link href="/blog/ai-2026-neural-interface-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧠 Neural Interface Revolution (BREAKTHROUGH)
                 </Link>

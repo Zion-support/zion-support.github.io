@@ -46,6 +46,7 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
+<<<<<<< HEAD
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
@@ -245,6 +246,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
