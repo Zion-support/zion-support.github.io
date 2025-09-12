@@ -165,6 +165,49 @@ const blogPosts: BlogPost[] = [
     image: '☁️',
     views: 0
   }
+  ,
+  {
+    id: 'ai-2025-real-time-rag-systems',
+    title: 'Real-Time RAG Systems 2025: Low-Latency Retrieval and Generation',
+    excerpt: 'Production patterns for hybrid retrieval, caching, chunking, and evaluation to deliver accurate answers fast.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '13 min read',
+    category: 'AI & Machine Learning',
+    tags: ['RAG', 'Retrieval', 'Latency', 'Evaluation'],
+    featured: true,
+    url: '/blog/ai-2025-real-time-rag-systems',
+    image: '🧠',
+    views: 0
+  },
+  {
+    id: 'ai-2025-cost-guardrails',
+    title: 'AI Cost Guardrails 2025: FinOps Patterns for LLMs and Agents',
+    excerpt: 'Token budgets, model tiering, caching, and batching to keep AI costs predictable without losing quality.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    category: 'FinOps',
+    tags: ['FinOps', 'Costs', 'Caching', 'Routing'],
+    featured: false,
+    url: '/blog/ai-2025-cost-guardrails',
+    image: '💰',
+    views: 0
+  },
+  {
+    id: 'ai-2025-agent-observability',
+    title: 'Agent Observability 2025: Metrics, Tracing, and Reliability',
+    excerpt: 'Instrument agents with function-level KPIs, traces, and eval harnesses to catch regressions early.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '11 min read',
+    category: 'Observability',
+    tags: ['Observability', 'Tracing', 'KPIs', 'SLOs'],
+    featured: false,
+    url: '/blog/ai-2025-agent-observability',
+    image: '📈',
+    views: 0
+  }
 ];
 
 export default function BlogPage() {
