@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '55',
+      title: 'Evaluations at Scale for GenAI Systems (2025)',
+      description: 'Automated pipelines for quality, safety, and cost in CI/CD with online and offline evals.',
+      href: '/blog/ai-2025-evaluations-at-scale',
+      type: 'blog',
+      category: 'Evaluation',
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Evaluations', 'Safety', 'CI/CD', 'Guardrails'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '54',
+      title: 'Knowledge Graphs for Reliable RAG in 2025',
+      description: 'Combine knowledge graphs with vector search to add provenance and reduce hallucinations.',
+      href: '/blog/ai-2025-knowledge-graphs-for-rag',
+      type: 'blog',
+      category: 'RAG',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['RAG', 'Knowledge Graphs', 'Provenance', 'Vector Search'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
@@ -183,6 +209,7 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',

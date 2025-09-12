@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '55',
+      title: 'Evaluations at Scale for GenAI Systems (2025)',
+      description: 'Automated pipelines for quality, safety, and cost in CI/CD with online and offline evals.',
+      href: '/blog/ai-2025-evaluations-at-scale',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: '54',
+      title: 'Knowledge Graphs for Reliable RAG in 2025',
+      description: 'Combine graphs with vectors to boost precision, add provenance, and reduce hallucinations.',
+      href: '/blog/ai-2025-knowledge-graphs-for-rag',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',

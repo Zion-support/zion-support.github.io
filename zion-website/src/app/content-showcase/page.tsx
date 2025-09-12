@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Evaluations at Scale for GenAI Systems (2025)",
+      description: "Automated pipelines for quality, safety, and cost in CI/CD with online and offline evals.",
+      href: "/blog/ai-2025-evaluations-at-scale",
+      icon: "🧪",
+      category: "Evaluation",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Knowledge Graphs for Reliable RAG in 2025",
+      description: "Combine graphs with vectors to boost precision, add provenance, and reduce hallucinations.",
+      href: "/blog/ai-2025-knowledge-graphs-for-rag",
+      icon: "🕸️",
+      category: "RAG",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Agentic Data Pipelines in Production (2025)",
       description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
       href: "/blog/ai-2025-agentic-data-pipelines",
