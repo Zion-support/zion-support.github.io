@@ -355,7 +355,7 @@ export default function ContentShowcase() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredContent.filter(content => content.featured).map((content, index) => (
+            {featuredContent.filter(content => content.featured).map((content) => (
               <Link
                 key={content.href}
                 href={content.href}
@@ -418,7 +418,7 @@ export default function ContentShowcase() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredContent.map((content, index) => (
+            {featuredContent.map((content) => (
               <Link
                 key={content.href}
                 href={content.href}
@@ -470,10 +470,10 @@ export default function ContentShowcase() {
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Can't Find What You're Looking For?
+            Can&apos;t Find What You&apos;re Looking For?
           </h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-            Our team creates custom content tailored to your specific needs. Let us know what topics you'd like to explore, and we'll create comprehensive resources just for you.
+            Our team creates custom content tailored to your specific needs. Let us know what topics you&apos;d like to explore, and we&apos;ll create comprehensive resources just for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
