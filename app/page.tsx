@@ -19,6 +19,8 @@ import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -280,8 +282,18 @@ export default function HomePage() {
       {/* New Content Promotion Banner */}
       <NewContentPromotionBanner />
       
+      {/* New Content Promotional Banner */}
+      <NewContentPromotionalBanner />
+      
       {/* Featured Content Section */}
       <FeaturedContentShowcase />
+      
+      {/* Featured New Content Showcase */}
+      <FeaturedNewContentShowcase 
+        title="Latest AI Breakthroughs & Success Stories"
+        subtitle="Discover our newest content featuring revolutionary AI innovations, real-world case studies, and comprehensive implementation guides"
+        className="bg-gradient-to-br from-gray-50 to-blue-50"
+      />
       
       {/* Additional Content Showcase */}
       <ContentShowcase
