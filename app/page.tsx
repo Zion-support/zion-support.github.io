@@ -11,6 +11,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -311,6 +312,9 @@ export default function HomePage() {
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
 
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner />
+      
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
 
