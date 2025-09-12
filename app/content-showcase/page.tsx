@@ -43,45 +43,116 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Readiness 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete assessment & implementation guide with 340% ROI</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
+                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Beyond text to complete intelligence - $45.2B market by 2025</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>12 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Trending</span>
+                    <span>🚀 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/resources/ai-2025-comprehensive-implementation-guide" className="group">
+              <Link href="/blog/ai-2025-personalization-revolution" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Implementation Guide 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">200+ pages of strategies, templates, and case studies</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Personalization Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Hyper-targeted experiences driving 340% engagement increase</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Free Download</span>
+                    <span>15 min read</span>
                     <span className="mx-2">•</span>
-                    <span>⭐ Popular</span>
+                    <span>🔥 HOT</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-transformation-global-retail-giant-2025" className="group">
+              <Link href="/case-studies/ai-transformation-fintech-unicorn-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛍️</div>
-                  <h3 className="text-lg font-semibold mb-2">Global Retail AI Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">300% revenue growth and $2.4B additional revenue</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+                  <h3 className="text-lg font-semibold mb-2">Fintech Unicorn AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">$2.8B valuation through comprehensive AI transformation</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
+                    <span>18 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🏆 Success</span>
+                    <span>⭐ MUST READ</span>
                   </div>
                 </div>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Latest Content */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Latest Content Releases</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/blog/ai-2025-multimodal-revolution" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">🧠</div>
+                  <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">NEW</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">Multimodal AI Revolution</h3>
+                <p className="text-gray-600 text-sm mb-3">Beyond text to complete intelligence with $45.2B market potential</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>12 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>🔥 Trending</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2025-personalization-revolution" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">🎯</div>
+                  <span className="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">HOT</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-pink-600">AI Personalization Revolution</h3>
+                <p className="text-gray-600 text-sm mb-3">Hyper-targeted experiences driving 340% engagement increase</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>15 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>⭐ Popular</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/ai-transformation-fintech-unicorn-2025" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">🏆</div>
+                  <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">SUCCESS</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-yellow-600">Fintech Unicorn Success</h3>
+                <p className="text-gray-600 text-sm mb-3">$2.8B valuation through comprehensive AI transformation</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>18 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>🏆 Case Study</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/resources/ai-2025-comprehensive-implementation-guide" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">📚</div>
+                  <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">FREE</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">AI Implementation Guide</h3>
+                <p className="text-gray-600 text-sm mb-3">200+ pages of strategies, templates, and case studies</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>Free Download</span>
+                  <span className="mx-2">•</span>
+                  <span>📄 200+ Pages</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
