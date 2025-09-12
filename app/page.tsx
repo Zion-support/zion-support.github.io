@@ -110,76 +110,76 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Latest Content Drop Banner */}
+        {/* Latest Content Drop Banner - September 2025 */}
         <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🔥 JUST PUBLISHED - JANUARY 2025</span>
+                <span className="text-sm font-medium">🔥 JUST PUBLISHED - SEPTEMBER 2025</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🚀 Revolutionary AI Content: Edge Agents, Advanced Architecture & Cybersecurity
+                🚀 New AI Guides: Breakthrough Innovations, Agent Patterns, Vector DBs & Supply Chain
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: Edge AI Agents in Production, Advanced AI Architecture Patterns, 
-                AI Cybersecurity Revolution, and the $200M Manufacturing Success Case Study. Expert insights to accelerate your AI success.
+                Explore our latest releases: AI 2025 Breakthrough Innovations, Production Agent Patterns, Vector Database Guide,
+                and Supply Chain Automation with AI. Practical, deployment-focused content to accelerate outcomes.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
                 <Link
-                  href="/blog/ai-2025-edge-agents-in-production"
+                  href="/blog/ai-2025-breakthrough-innovations"
                   className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  🤖 Edge AI Agents Guide
+                  🚀 Breakthrough Innovations
                 </Link>
                 <Link
-                  href="/blog/ai-2025-advanced-ai-architecture"
+                  href="/blog/ai-2025-production-agent-patterns"
                   className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  🏗️ Architecture Patterns
+                  🧭 Agent Patterns
                 </Link>
                 <Link
-                  href="/blog/ai-2025-cybersecurity-revolution"
+                  href="/blog/ai-vector-databases-2025"
                   className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  🛡️ Cybersecurity Guide
+                  🗄️ Vector Databases 2025
                 </Link>
                 <Link
-                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  href="/blog/ai-2025-supply-chain-automation"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                 >
-                  💰 $200M Case Study
+                  📦 Supply Chain Automation
                 </Link>
               </div>
               
               {/* Featured Content Preview */}
               <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <Link href="/blog/ai-2025-edge-agents-in-production" className="group">
+                <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🤖</div>
-                    <h3 className="text-sm font-semibold mb-1">Edge AI Agents</h3>
-                    <p className="text-xs opacity-90">Production deployment guide</p>
+                    <div className="text-2xl mb-2">🚀</div>
+                    <h3 className="text-sm font-semibold mb-1">Breakthrough Innovations</h3>
+                    <p className="text-xs opacity-90">Industry-shaping advances in AI</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                <Link href="/blog/ai-2025-production-agent-patterns" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🏗️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Architecture</h3>
-                    <p className="text-xs opacity-90">Scalable patterns & design</p>
+                    <div className="text-2xl mb-2">🧭</div>
+                    <h3 className="text-sm font-semibold mb-1">Agent Patterns</h3>
+                    <p className="text-xs opacity-90">Reliable production systems</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                <Link href="/blog/ai-vector-databases-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
-                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                    <div className="text-2xl mb-2">🗄️</div>
+                    <h3 className="text-sm font-semibold mb-1">Vector Databases</h3>
+                    <p className="text-xs opacity-90">Choosing and implementing</p>
                   </div>
                 </Link>
-                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <Link href="/blog/ai-2025-supply-chain-automation" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">💰</div>
-                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
-                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                    <div className="text-2xl mb-2">📦</div>
+                    <h3 className="text-sm font-semibold mb-1">Supply Chain</h3>
+                    <p className="text-xs opacity-90">Forecasting to fulfillment</p>
                   </div>
                 </Link>
               </div>
