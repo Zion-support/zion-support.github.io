@@ -59,11 +59,16 @@ export default function AIIndustryDisruption2025() {
           <h2 className="text-2xl font-bold mb-4">Get the Full Industry Playbooks</h2>
           <p className="text-indigo-100 mb-6">Download sector-specific implementation guides with architectures, vendor maps, and KPIs.</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/resources" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold text-center">Browse Playbooks</Link>
-            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-indigo-700">Request Sector Briefing</Link>
+            <Link href="/resources" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold text-center">
+              Browse Playbooks
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-indigo-700">
+              Request Sector Briefing
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

@@ -313,7 +313,7 @@ export default function HomePage() {
 
           {/* Featured New Content Cards */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-vector-databases-2025' className='group'>
+            <Link href='/blog/ai-2025-vector-search-systems' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🗄️</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Vector Databases 2025</h3>
@@ -326,7 +326,7 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/blog/ai-agents-production-2025' className='group'>
+            <Link href='/blog/ai-2025-agentic-automation' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Agents in Production 2025</h3>
@@ -580,7 +580,7 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-vector-databases-2025' className='group'>
+            <Link href='/blog/ai-2025-vector-search-systems' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🗄️</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Vector Databases 2025</h3>
@@ -593,7 +593,7 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/blog/ai-agents-production-2025' className='group'>
+            <Link href='/blog/ai-2025-agentic-automation' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Agents in Production</h3>
