@@ -28,6 +28,19 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '23',
+      title: 'AI Agents On‑Prem in Enterprise (2025)',
+      description: 'Deploy secure, governed, and performant on‑prem AI agents with hybrid patterns that scale.',
+      href: '/blog/ai-2025-ai-agents-on-prem-enterprise',
+      type: 'blog',
+      category: 'Agents',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Agents', 'On‑Prem', 'Security', 'Governance', 'Observability'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '19',
       title: 'Data Quality for RAG in Production (2025)',
       description: 'Data curation, chunking, hybrid search, and evaluations to make RAG reliable and cost‑efficient.',

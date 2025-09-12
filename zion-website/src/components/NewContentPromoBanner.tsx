@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '23',
+      title: 'AI Agents On‑Prem in Enterprise (2025)',
+      description: 'Secure, governed, high‑performance on‑prem AI agents: reference architectures and patterns.',
+      href: '/blog/ai-2025-ai-agents-on-prem-enterprise',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
       id: '19',
       title: 'Data Quality for RAG in Production (2025)',
       description: 'Operator guide to curating, evaluating, and governing high-quality knowledge for reliable RAG.',
