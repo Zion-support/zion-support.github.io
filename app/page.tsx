@@ -48,6 +48,8 @@ import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
@@ -173,6 +175,23 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* CONTENT DISCOVERY WIDGET 2025 */}
+        <div className="py-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <ContentDiscoveryWidget2025 />
+          </div>
+        </div>
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2025 */}
+        <div className="py-16 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <DynamicContentCarousel2025 />
+          </div>
+        </div>
+        
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* NEW REVOLUTIONARY CONTENT BANNER - LATEST */}
