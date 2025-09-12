@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "public"), { fallthrough: true }));
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
 if (!openaiApiKey) {
-  // eslint-disable-next-line no-console
+   
   console.warn("OPENAI_API_KEY not set. Set it in .env before using /api/chat.");
 }
 const openaiModel = process.env.OPENAI_MODEL || "gpt-4o-mini";
@@ -133,7 +133,7 @@ app.post("/api/chat", async (req, res) => {
     const reply = completion.choices?.[0]?.message?.content || "";
     return res.json({ reply, model: openaiModel });
   } catch (err) {
-    // eslint-disable-next-line no-console
+     
     console.error("OpenAI error", err?.response?.data || err?.message || err);
     return res.status(500).json({ error: "Upstream model error" });
   }
@@ -150,6 +150,6 @@ app.get(["/", "/demo"], (req, res) => {
 });
 
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
+   
   console.log(`Zion Assistant server running on http://localhost:${port}`);
 });
