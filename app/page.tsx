@@ -64,11 +64,17 @@ import UltimateContentPromotionBanner2026 from '../components/UltimateContentPro
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
+import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
-import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
 import AI2029ContentShowcase from '../components/AI2029ContentShowcase';
 
@@ -93,6 +99,18 @@ export default function HomePage() {
         {/* AI 2029 CONTENT SHOWCASE */}
         <AI2029ContentShowcase />
         
+        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* FORTUNE 500 SUCCESS BANNER 2025 */}
+        <Fortune500SuccessBanner2025 />
+        
+        {/* REVOLUTIONARY AI 2025 PROMOTION BANNER */}
+        <RevolutionaryAI2025PromotionBanner />
+        
+        {/* REVOLUTIONARY AI 2025 SHOWCASE */}
+        <RevolutionaryAI2025Showcase />
+        
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
         
@@ -101,6 +119,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2028 PROMOTION BANNER */}
         <NewContent2028PromotionBanner />
+        
+        {/* NEW CONTENT 2028 SHOWCASE */}
+        <NewContent2028Showcase />
         
         {/* AI 2027 CONTENT PROMOTION BANNER */}
         <AI2027ContentPromotionBanner />
@@ -229,6 +250,9 @@ export default function HomePage() {
             <EnhancedSearch2026 />
           </div>
         </section>
+        
+        {/* Enhanced Content Showcase 2025 */}
+        <EnhancedContentShowcase2025 />
         
         {/* Content Recommendation Widget */}
         <section className="py-16 bg-white">

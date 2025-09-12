@@ -89,6 +89,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Ultimate Trends (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 1200% ROI Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2026-advanced-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Advanced Technology Showcase
                 </Link>
@@ -101,11 +111,14 @@ function Header() {
                 <Link href="/blog/ai-2029-quantum-computing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2029 Quantum Revolution (BREAKTHROUGH)
                 </Link>
+                <Link href="/blog/ai-2025-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🚀 Enterprise Automation Mastery (NEW)
+                </Link>
                 <Link href="/blog/ai-2027-future-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 AI 2027 Future Trends (BREAKTHROUGH)
                 </Link>
                 <Link href="/blog/ai-2026-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🔮 Ultimate Trends & Predictions (NEW)
+                  🔮 Ultimate Trends & Predictions
                 </Link>
                 <Link href="/blog/ai-2026-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📈 Revolutionary Trends & Predictions
@@ -116,11 +129,14 @@ function Header() {
                 <Link href="/resources/ai-2029-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 AI 2029 Master Guide (BREAKTHROUGH)
                 </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
                 <Link href="/resources/ai-2027-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 AI 2027 Ultimate Master Guide (BREAKTHROUGH)
                 </Link>
                 <Link href="/resources/ai-2026-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🛠️ Ultimate Implementation Toolkit (NEW)
+                  🛠️ Implementation Toolkit 2026
                 </Link>
                 <Link href="/resources/ai-2026-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🛠️ Implementation Toolkit
@@ -140,13 +156,11 @@ function Header() {
                 <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Automation Revolution
                 </Link>
-<<<<<<< HEAD
-                <Link href="/case-studies/ai-2026-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Enterprise Success (1200% ROI) (NEW)
-=======
+                </Link>
                 <Link href="/case-studies/ai-2026-global-tech-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Tech Breakthrough (900% ROI)
->>>>>>> 97532ba80d6a2232465120469b0cbc1c4a19f48f
                 </Link>
                 <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Enterprise Success (800% ROI)
@@ -206,6 +220,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Ultimate Trends (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 1200% ROI Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2027-future-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 AI 2027 Future Trends (BREAKTHROUGH)
                 </Link>
@@ -218,17 +242,17 @@ function Header() {
                 <Link href="/mega-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Mega Content Showcase 2026
                 </Link>
-                <Link href="/blog/ai-2026-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🔮 Ultimate AI Trends 2026 (NEW)
+                <Link href="/blog/ai-2025-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🚀 Enterprise Automation Mastery (NEW)
                 </Link>
-                <Link href="/case-studies/ai-2026-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📈 1200% ROI Success Story (NEW)
                 </Link>
-                <Link href="/resources/ai-2026-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🛠️ Ultimate AI Toolkit (NEW)
                 </Link>
-                <Link href="/blog/ai-2026-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  📝 Enterprise Automation Mastery (NEW)
+                <Link href="/blog/ai-2026-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🔮 Ultimate AI Trends 2026
                 </Link>
                 <Link href="/case-studies/ai-2026-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📊 Fortune 500 Case Study (NEW)
