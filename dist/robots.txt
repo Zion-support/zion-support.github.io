@@ -7,6 +7,7 @@ Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
 
+<<<<<<< HEAD
 # Specific rules for major crawlers
 =======
 # Allow all major search engines
@@ -21,6 +22,10 @@ Allow: /
 
 User-agent: Twitterbot
 Allow: /
+=======
+# Crawl-delay
+Crawl-delay: 1
+>>>>>>> origin/ziontechgroup-improvements
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -30,6 +35,7 @@ Disallow: /_next/
 Disallow: /node_modules/
 Disallow: /.git/
 
+<<<<<<< HEAD
 # Allow access to static assets
 Allow: /css/
 Allow: /js/
@@ -48,3 +54,11 @@ Crawl-delay: 1
 
 # Host directive
 Host: https://ziontechgroup.com
+=======
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /technologies
+>>>>>>> origin/ziontechgroup-improvements
