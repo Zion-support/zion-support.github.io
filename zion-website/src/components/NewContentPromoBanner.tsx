@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'NEW-e2e-agent-testing-2025',
+      title: 'E2E Testing for AI Agents in 2025',
+      description: 'Scenario-driven agent tests with simulators, guardrails, and CI pipelines for reliability.',
+      href: '/blog/ai-2025-e2e-agent-testing',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: 'NEW-data-contracts-genai-2025',
+      title: 'Data Contracts for GenAI in 2025',
+      description: 'Contracts for schemas, quality, and governance that boost RAG reliability and compliance.',
+      href: '/blog/ai-2025-data-contracts-genai',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Data'
+    },
+    {
       id: 'CS-llm-cost-2025',
       title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
       description: 'Case study: Quantization, KV cache, and batching cut cost by 38% and p95 by 27%.',
