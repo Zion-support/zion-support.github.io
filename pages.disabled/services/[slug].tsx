@@ -10,16 +10,9 @@ import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { aiAutonomousEcosystemServices2029 } from '../../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../../data/2029-practical-business-solutions';
-import { professionalServices } from '../../data/professional-services';
-import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
-<<<<<<< HEAD
-import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
-import { real2035Q2AdditionsExtra } from '../../data/real-2035-q2-additions-extra';
-import { real2036ServiceExpansions } from '../../data/real-2036-service-expansions';
-import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
-=======
 import { real2025Q4FreshAdditions } from '../../data/real-2025-q4-fresh-additions';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
+=======
+import { real2032Q1Additions } from '../../data/real-2032-q1-additions';
 
 type Service = typeof enhancedRealMicroSaasServices[number] | {
   id: string;
@@ -86,14 +79,6 @@ function getAllServices(): Service[] {
 		.concat(aiAutonomousEcosystemServices2029 as unknown as Service[])
 		.concat(emergingTechBreakthroughServices2029 as unknown as Service[])
 		.concat(practicalBusinessSolutionServices2029 as unknown as Service[])
-<<<<<<< HEAD
-		.concat(professionalServices as unknown as Service[])
-		.concat(real2032ServiceExpansions as unknown as Service[])
-		.concat(real2035Q1Additions as unknown as Service[])
-		.concat(real2035Q2AdditionsExtra as unknown as Service[])
-		.concat(real2026Q4ExpansionsV3 as unknown as Service[])
-		.concat(real2036ServiceExpansions as unknown as Service[]);
-=======
 	const allServices: Service[] = [];
 	
 	// Add all service arrays to the main array
@@ -152,7 +137,14 @@ function getAllServices(): Service[] {
 =======
 		.concat(real2032ServiceExpansions as unknown as Service[])
 		.concat(real2025Q4FreshAdditions as unknown as Service[]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
+=======
+		// Additive 2034 and 2029 datasets
+		.concat(enterpriseITSolutions2034Additions as unknown as Service[])
+		.concat(innovativeMicroSaasSolutions2034Additions as unknown as Service[])
+		.concat(cuttingEdgeAIServices2034Additions as unknown as Service[])
+		.concat(aiAutonomousEcosystemServices2029Additions as unknown as Service[])
+		.concat(emergingTechBreakthroughServices2029Additions as unknown as Service[])
+		.concat(practicalBusinessSolutionServices2029Additions as unknown as Service[]);
 }
 
 function toSlug(value: string): string {

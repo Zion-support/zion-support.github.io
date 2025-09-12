@@ -3,14 +3,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, ChevronRight,
-  Home, Zap, Brain, Atom, Shield, Rocket,
-  Users, FileText, HelpCircle, Settings,
-  TrendingUp, Award, CheckCircle, Clock,
-  Globe, Cpu, Database, Lock, Star,
-  Mail, Phone, MapPin, Search, ArrowRight,
-  Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale,
-  BarChart3, Layers, Code, Terminal, Cloud, Server, Network, DollarSign
+  Menu, X, ChevronDown, ChevronRight, Home, Rocket, Target, Building, BookOpen, MessageCircle,
+  Brain, Atom, Shield, Cloud, BarChart, Code, Rocket as RocketIcon, Users, Info, Briefcase,
+  Heart, DollarSign, Cog, FileText, Calendar, Lightbulb, HelpCircle, Monitor, Zap, Star,
+  Settings, Globe, Lock, Server, Database, Network, Palette, Cpu, Layers, Globe2, Truck, Accessibility
 } from 'lucide-react';
 
 const contactInfo = {
@@ -205,20 +201,47 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const toggleCategory = (categoryTitle: string) => {
-    setExpandedCategories(prev => 
-      prev.includes(categoryTitle) 
-        ? prev.filter(cat => cat !== categoryTitle)
-        : [...prev, categoryTitle]
-    );
+  // Auto-expand current section
+  useEffect(() => {
+    const currentPath = router.pathname;
+    const newExpandedItems = new Set<string>();
+    
+    sidebarItems.forEach(item => {
+      if (item.children) {
+        const hasActiveChild = item.children.some(child => 
+          currentPath === child.href || currentPath.startsWith(child.href + '/')
+        );
+        if (hasActiveChild) {
+          newExpandedItems.add(item.name);
+        }
+      }
+    });
+    
+    setExpandedItems(newExpandedItems);
+  }, [router.pathname]);
+
+  const toggleExpanded = (itemName: string) => {
+    const newExpandedItems = new Set(expandedItems);
+    if (newExpandedItems.has(itemName)) {
+      newExpandedItems.delete(itemName);
+    } else {
+      newExpandedItems.add(itemName);
+    }
+    setExpandedItems(newExpandedItems);
   };
 
-  // Search functionality can be implemented here if needed
-  // const filteredServices = sidebarSections.flatMap(section =>
-  //   section.items.filter(item =>
-  //     item.name.toLowerCase().includes(searchQuery.toLowerCase())
-  //   )
-  // );
+  const isActive = (href: string) => {
+    return router.pathname === href || router.pathname.startsWith(href + '/');
+  };
+
+  const filteredItems = sidebarItems.filter(item => {
+    if (!searchQuery) return true;
+    const matchesName = item.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesDescription = item.description?.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesChildren = item.children?.some(child => 
+      child.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  };
 
   return (
     <AnimatePresence>
@@ -244,18 +267,17 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             {/* Header */}
             <div className="p-6 border-b border-gray-800">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-6 h-6 text-white" />
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-white" />
                   </div>
-                  <div>
-                    <div className="text-lg font-bold text-white">Zion Tech</div>
-                    <div className="text-xs text-cyan-400">Tech Solutions</div>
-                  </div>
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    Zion Tech
+                  </span>
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200"
+                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -268,45 +290,17 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   placeholder="Search navigation..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                  className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
                 />
               </div>
             </div>
 
-            {/* Main Navigation */}
-            <div className="p-6">
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Main Navigation
-                </h3>
-                <div className="space-y-2">
-                  {mainNavigation.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500">{item.description}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Service Categories */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Service Categories
-                </h3>
-                <div className="space-y-2">
-                  {serviceCategories.map((category) => (
-                    <div key={category.title} className="border border-gray-800 rounded-lg overflow-hidden">
+            {/* Navigation Items */}
+            <div className="p-4 space-y-2">
+              {filteredItems.map((item) => (
+                <div key={item.name}>
+                  {item.children ? (
+                    <div>
                       <button
                         onClick={() => toggleCategory(category.title)}
                         className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
@@ -352,7 +346,53 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                         )}
                       </AnimatePresence>
                     </div>
-                  ))}
+                  ) : (
+                    <button
+                      onClick={() => handleItemClick(item.href)}
+                      className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
+                        isActive(item.href)
+                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+                          : 'text-gray-300 hover:bg-gray-800/50 hover:text-white'
+                      }`}
+                    >
+                      {item.icon}
+                      <span className="font-medium">{item.name}</span>
+                      {item.badge && (
+                        <span className="ml-auto px-2 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-300 rounded">
+                          {item.badge}
+                        </span>
+                      )}
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Footer */}
+            <div className="sticky bottom-0 bg-black/80 backdrop-blur-md border-t border-cyan-500/20 p-4 mt-8">
+              <div className="space-y-3">
+                <div className="text-xs text-gray-500 text-center">
+                  © 2025 Zion Tech Group
+                </div>
+                <div className="flex justify-center space-x-4">
+                  <Link
+                    href="/contact"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    href="/support"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Support
+                  </Link>
+                  <Link
+                    href="/privacy"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Privacy
+                  </Link>
                 </div>
               </div>
 

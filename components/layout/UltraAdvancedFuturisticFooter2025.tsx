@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, Phone, MapPin, Globe, 
-  Twitter, Linkedin, Github, 
-  ArrowUp, Crown, Zap, Brain, Rocket,
-  Shield, Users, BookOpen, Briefcase, Atom
+  Mail, Phone, MapPin, 
+  Facebook, Twitter, Linkedin, Github, Youtube,
+  Heart, Shield, Users, Award, TrendingUp
 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
@@ -94,6 +93,49 @@ const quickLinks = [
 ];
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+
+  const toggleSection = (title: string) => {
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(title)) {
+      newExpanded.delete(title);
+    } else {
+      newExpanded.add(title);
+    }
+    setExpandedSections(newExpanded);
+  };
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+
+  const supportLinks = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Support Center', href: '/support' },
+    { name: 'Live Chat', href: '/chat' },
+    { name: 'Status Page', href: '/status' },
+    { name: 'Contact Support', href: '/contact' }
+  ];
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubscriptionStatus('success');
+      setEmail('');
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => setSubscriptionStatus('idle'), 3000);
+    } catch {
+      setSubscriptionStatus('error');
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -219,62 +261,141 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
                     <Crown className="w-7 h-7 text-white" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50"></div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:from-cyan-500 group-hover:to-blue-600 transition-all duration-300">
                     Zion Tech Group
-                  </h3>
-                  <p className="text-sm text-gray-400">Future Technology Solutions</p>
-                </div>
+                  </span>
+                </Link>
+                
+                <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-md">
+                  Pioneering the future of technology with quantum computing, autonomous AI, and revolutionary solutions that drive business transformation.
+                </p>
               </div>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, 
-                and autonomous systems. Transforming businesses through next-generation technology.
-              </p>
-              
-              <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
-                We help businesses transform and thrive in the digital age.
-              </p>
 
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-pink-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Globe className="w-4 h-4 text-blue-400" />
-                  <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
-                    ziontechgroup.com
-                  </a>
+              {/* Newsletter Subscription */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
+                <form onSubmit={handleSubscribe} className="space-y-3">
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" aria-hidden="true" />
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                      aria-label="Email address for newsletter subscription"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubscribing}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+                    aria-label={isSubscribing ? 'Subscribing to newsletter...' : 'Subscribe to newsletter'}
+                  >
+                    {isSubscribing ? 'Subscribing...' : 'Subscribe'}
+                  </button>
+                  
+                  {/* Subscription Status */}
+                  <AnimatePresence>
+                    {subscriptionStatus === 'success' && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="text-green-400 text-sm text-center"
+                        role="status"
+                        aria-live="polite"
+                      >
+                        Successfully subscribed! Welcome to our community.
+                      </motion.div>
+                    )}
+                    {subscriptionStatus === 'error' && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="text-red-400 text-sm text-center"
+                        role="status"
+                        aria-live="polite"
+                      >
+                        Something went wrong. Please try again.
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </form>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <Phone className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <a 
+                      href={`tel:${contactInfo.phone}`}
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      aria-label={`Call us at ${contactInfo.phone}`}
+                    >
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Mail className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <a 
+                      href={`mailto:${contactInfo.email}`}
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      aria-label={`Email us at ${contactInfo.email}`}
+                    >
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <address className="text-gray-400 not-italic">
+                      {contactInfo.address}
+                    </address>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={itemVariants}>
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                  {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
-                  {section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
-                  {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
-                  {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
-                  <span>{section.title}</span>
-                </h4>
-                <ul className="space-y-3">
-                  {section.items.map((item) => (
-                    <li key={item.label}>
+            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+              <div className="relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-200"
+                  required
+                />
+                <button
+                  onClick={() => toggleSection(section.title)}
+                  onKeyDown={(e) => handleKeyDown(e, () => toggleSection(section.title))}
+                  className="flex items-center justify-between w-full text-left text-lg font-semibold text-white hover:text-cyan-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg lg:hidden"
+                  aria-expanded={expandedSections.has(section.title)}
+                  aria-controls={`footer-section-${section.title}`}
+                >
+                  {section.title}
+                  <ChevronRight 
+                    className={`w-5 h-5 transition-transform duration-200 ${
+                      expandedSections.has(section.title) ? 'rotate-90' : ''
+                    }`} 
+                    aria-hidden="true" 
+                  />
+                </button>
+                
+                <h3 className="text-lg font-semibold text-white hidden lg:block">{section.title}</h3>
+                
+                <div 
+                  id={`footer-section-${section.title}`}
+                  className={`space-y-3 ${
+                    expandedSections.has(section.title) ? 'block' : 'hidden lg:block'
+                  }`}
+                >
+                  {section.links.map((link) => (
+                    <div key={link.label}>
                       <Link
                         href={item.href}
                         className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
@@ -340,13 +461,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
+      {/* Floating Contact Button */}
+      <div className="fixed bottom-6 right-6 z-40">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/50 flex items-center justify-center text-white hover:shadow-cyan-500/75 transition-all duration-300"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -382,19 +502,24 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <motion.button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}
+      {/* Floating CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="absolute bottom-8 right-8 z-20"
       >
-        <ArrowUp className="w-6 h-6 mx-auto" />
-      </motion.button>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-200 flex items-center justify-center text-white focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+          onClick={() => window.location.href = '/contact'}
+          aria-label="Quick contact Zion Tech Group"
+        >
+          <Rocket className="w-6 h-6" />
+        </motion.button>
+      </motion.div>
     </footer>
   );
 };

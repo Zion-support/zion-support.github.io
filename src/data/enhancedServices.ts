@@ -1,458 +1,439 @@
-export interface Service {
+export interface EnhancedService {
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  price: {
-    basic: number;
-    professional: number;
-    enterprise: number;
-  };
+  price: number;
+  currency: string;
+  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'per-hour';
   features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
   tags: string[];
-  featured: boolean;
-  popular: boolean;
-  estimatedTime: string;
-  included: string[];
-  notIncluded: string[];
-  requirements: string[];
-  deliverables: string[];
-  technologies: string[];
-  certifications: string[];
-  support: string[];
-  warranty: string;
-  location: string[];
-  languages: string[];
-  availability: string;
-  rating: number;
-  reviews: number;
-  provider: {
-    name: string;
-    verified: boolean;
-    rating: number;
-    completedProjects: number;
-    responseTime: string;
-    location: string;
-    languages: string[];
-    certifications: string[];
-    specialties: string[];
+  estimatedDelivery: string;
+  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
   };
+  technologyStack?: string[];
+  integrations?: string[];
+  compliance?: string[];
 }
 
-export const ENHANCED_SERVICES: Service[] = [
+export const ENHANCED_SERVICES: EnhancedService[] = [
+  // AI & Machine Learning Services
   {
-    id: "ai-ml-consulting",
-    title: "AI & Machine Learning Consulting",
-    description: "Expert consultation on implementing AI and ML solutions for your business",
-    category: "AI & Machine Learning",
-    subcategory: "Consulting",
-    price: {
-      basic: 150,
-      professional: 250,
-      enterprise: 400
-    },
+    id: 'ai-content-generation',
+    title: 'AI Content Generation Platform',
+    description: 'Advanced AI-powered content creation platform for blogs, social media, marketing copy, and technical documentation with SEO optimization.',
+    category: 'AI Services',
+    subcategory: 'Content Creation',
+    price: 299,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "AI Strategy Development",
-      "Technology Assessment",
-      "Implementation Roadmap",
-      "ROI Analysis",
-      "Team Training",
-      "Ongoing Support"
+      'GPT-4 powered content generation',
+      'SEO optimization',
+      'Multi-language support',
+      'Brand voice customization',
+      'Content scheduling',
+      'Analytics dashboard'
     ],
-    tags: ["AI", "Machine Learning", "Consulting", "Strategy", "Digital Transformation"],
-    featured: true,
-    popular: true,
-    estimatedTime: "2-4 weeks",
-    included: [
-      "Initial Assessment",
-      "Strategy Document",
-      "Implementation Plan",
-      "Technology Recommendations",
-      "Cost Analysis"
+    benefits: [
+      'Save 70% on content creation costs',
+      'Increase content output by 10x',
+      'Improve SEO rankings',
+      'Maintain consistent brand voice',
+      'Scale content marketing efforts'
     ],
-    notIncluded: [
-      "Actual Implementation",
-      "Hardware/Software",
-      "Ongoing Maintenance"
+    useCases: [
+      'Blog content creation',
+      'Social media posts',
+      'Marketing copy',
+      'Technical documentation',
+      'Product descriptions'
     ],
-    requirements: [
-      "Business Requirements Document",
-      "Current Technology Stack",
-      "Budget Constraints",
-      "Timeline Expectations"
-    ],
-    deliverables: [
-      "AI Strategy Report",
-      "Implementation Roadmap",
-      "Technology Architecture",
-      "Cost-Benefit Analysis",
-      "Risk Assessment"
-    ],
-    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "AWS SageMaker"],
-    certifications: ["AWS ML Specialty", "Google Cloud ML Engineer", "Microsoft Azure AI Engineer"],
-    support: ["Email Support", "Phone Consultation", "Monthly Review Calls"],
-    warranty: "30-day satisfaction guarantee",
-    location: ["Remote", "On-site", "Hybrid"],
-    languages: ["English", "Spanish", "Portuguese"],
-    availability: "24/7",
-    rating: 4.9,
-    reviews: 127,
-    provider: {
-      name: "AI Solutions Pro",
-      verified: true,
-      rating: 4.9,
-      completedProjects: 89,
-      responseTime: "<2 hours",
-      location: "United States",
-      languages: ["English", "Spanish"],
-      certifications: ["AWS ML Specialty", "Google Cloud ML Engineer"],
-      specialties: ["Computer Vision", "Natural Language Processing", "Predictive Analytics"]
-    }
+    targetAudience: ['Marketing teams', 'Content creators', 'Small businesses', 'Agencies'],
+    tags: ['AI', 'Content', 'Marketing', 'SEO', 'Automation'],
+    estimatedDelivery: '2-3 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$299-599/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['OpenAI GPT-4', 'React', 'Node.js', 'MongoDB'],
+    integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp'],
+    compliance: ['GDPR', 'CCPA', 'SOC 2']
   },
   {
-    id: "cybersecurity-audit",
-    title: "Cybersecurity Audit & Assessment",
-    description: "Comprehensive security assessment to identify vulnerabilities and improve protection",
-    category: "Cybersecurity",
-    subcategory: "Audit & Assessment",
-    price: {
-      basic: 200,
-      professional: 350,
-      enterprise: 600
-    },
+    id: 'ai-chatbot-builder',
+    title: 'AI Chatbot Builder Suite',
+    description: 'No-code AI chatbot creation platform with advanced NLP, multi-channel deployment, and analytics dashboard.',
+    category: 'AI Services',
+    subcategory: 'Chatbots',
+    price: 199,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Vulnerability Assessment",
-      "Penetration Testing",
-      "Security Policy Review",
-      "Compliance Check",
-      "Risk Analysis",
-      "Remediation Plan"
+      'No-code chatbot builder',
+      'Advanced NLP capabilities',
+      'Multi-channel deployment',
+      'Analytics dashboard',
+      'Custom integrations',
+      '24/7 availability'
     ],
-    tags: ["Cybersecurity", "Security Audit", "Penetration Testing", "Compliance", "Risk Assessment"],
-    featured: true,
-    popular: true,
-    estimatedTime: "1-3 weeks",
-    included: [
-      "Security Assessment",
-      "Vulnerability Report",
-      "Risk Analysis",
-      "Remediation Recommendations",
-      "Compliance Report"
+    benefits: [
+      'Reduce customer support costs by 60%',
+      'Handle 80% of inquiries automatically',
+      'Improve customer satisfaction',
+      'Scale support operations',
+      'Gather customer insights'
     ],
-    notIncluded: [
-      "Security Tool Implementation",
-      "Ongoing Monitoring",
-      "Incident Response"
+    useCases: [
+      'Customer support',
+      'Lead qualification',
+      'Appointment booking',
+      'FAQ handling',
+      'Order tracking'
     ],
-    requirements: [
-      "Network Access",
-      "System Documentation",
-      "Security Policies",
-      "Compliance Requirements"
-    ],
-    deliverables: [
-      "Security Assessment Report",
-      "Vulnerability Database",
-      "Risk Matrix",
-      "Remediation Roadmap",
-      "Compliance Checklist"
-    ],
-    technologies: ["Nmap", "Metasploit", "Wireshark", "Nessus", "OpenVAS"],
-    certifications: ["CISSP", "CEH", "OSCP", "CISM", "CompTIA Security+"],
-    support: ["24/7 Emergency Support", "Weekly Status Updates", "Monthly Review"],
-    warranty: "90-day remediation support",
-    location: ["Remote", "On-site"],
-    languages: ["English", "French", "German"],
-    availability: "Business Hours + Emergency",
-    rating: 4.8,
-    reviews: 94,
-    provider: {
-      name: "SecureNet Solutions",
-      verified: true,
-      rating: 4.8,
-      completedProjects: 156,
-      responseTime: "<1 hour",
-      location: "United Kingdom",
-      languages: ["English", "French", "German"],
-      certifications: ["CISSP", "CEH", "OSCP"],
-      specialties: ["Network Security", "Application Security", "Cloud Security"]
-    }
+    targetAudience: ['E-commerce', 'Service businesses', 'Healthcare', 'Education'],
+    tags: ['AI', 'Chatbot', 'Customer Support', 'Automation', 'NLP'],
+    estimatedDelivery: '3-4 weeks',
+    supportLevel: 'standard',
+    marketPrice: '$199-399/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['Dialogflow', 'React', 'Node.js', 'PostgreSQL'],
+    integrations: ['Slack', 'WhatsApp', 'Facebook Messenger', 'Website'],
+    compliance: ['GDPR', 'HIPAA', 'SOC 2']
   },
   {
-    id: "cloud-migration",
-    title: "Cloud Migration & DevOps",
-    description: "Seamless migration to cloud platforms with DevOps automation and best practices",
-    category: "Cloud & Infrastructure",
-    subcategory: "Migration",
-    price: {
-      basic: 300,
-      professional: 500,
-      enterprise: 800
-    },
+    id: 'ai-business-analytics',
+    title: 'AI-Powered Business Analytics',
+    description: 'Machine learning-driven business intelligence platform with predictive analytics and automated insights.',
+    category: 'AI Services',
+    subcategory: 'Analytics',
+    price: 499,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Cloud Strategy Planning",
-      "Migration Execution",
-      "DevOps Implementation",
-      "CI/CD Pipeline Setup",
-      "Monitoring & Alerting",
-      "Cost Optimization"
+      'Predictive analytics',
+      'Automated insights',
+      'Real-time dashboards',
+      'Custom reports',
+      'Data visualization',
+      'Machine learning models'
     ],
-    tags: ["Cloud Migration", "DevOps", "AWS", "Azure", "Google Cloud", "CI/CD"],
-    featured: true,
-    popular: true,
-    estimatedTime: "4-8 weeks",
-    included: [
-      "Migration Strategy",
-      "Infrastructure as Code",
-      "CI/CD Pipeline",
-      "Monitoring Setup",
-      "Documentation",
-      "Team Training"
+    benefits: [
+      'Improve decision-making accuracy by 40%',
+      'Identify trends before competitors',
+      'Automate data analysis',
+      'Reduce manual reporting time',
+      'Increase revenue through insights'
     ],
-    notIncluded: [
-      "Cloud Infrastructure Costs",
-      "Third-party Tools",
-      "Ongoing Operations"
+    useCases: [
+      'Sales forecasting',
+      'Customer behavior analysis',
+      'Risk assessment',
+      'Performance optimization',
+      'Market trend analysis'
     ],
-    requirements: [
-      "Current Infrastructure Documentation",
-      "Application Dependencies",
-      "Performance Requirements",
-      "Budget Approval"
+    targetAudience: ['Enterprises', 'Financial services', 'Healthcare', 'Retail'],
+    tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning', 'Predictive'],
+    estimatedDelivery: '4-6 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$499-999/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['Python', 'TensorFlow', 'React', 'PostgreSQL'],
+    integrations: ['Salesforce', 'HubSpot', 'QuickBooks', 'Google Analytics'],
+    compliance: ['GDPR', 'SOC 2', 'ISO 27001']
+  },
+  // IT Infrastructure Services
+  {
+    id: 'cloud-migration',
+    title: 'Cloud Migration & Optimization',
+    description: 'Complete cloud migration solution for AWS, Azure, or Google Cloud with minimal downtime and cost optimization.',
+    category: 'IT Services',
+    subcategory: 'Cloud',
+    price: 5000,
+    currency: 'USD',
+    pricingModel: 'per-project',
+    features: [
+      'Multi-cloud strategy',
+      'Zero-downtime migration',
+      'Cost optimization',
+      'Security assessment',
+      'Performance monitoring',
+      'Disaster recovery'
     ],
-    deliverables: [
-      "Migration Plan",
-      "Infrastructure Code",
-      "CI/CD Pipeline",
-      "Monitoring Dashboard",
-      "Runbooks",
-      "Training Materials"
+    benefits: [
+      'Reduce infrastructure costs by 25-40%',
+      'Improve scalability and flexibility',
+      'Enhance security posture',
+      'Increase performance',
+      'Reduce maintenance overhead'
     ],
-    technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Docker", "Kubernetes"],
-    certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "Google Cloud Professional"],
-    support: ["24/7 Support", "Weekly Reviews", "Monthly Optimization"],
-    warranty: "6-month post-migration support",
-    location: ["Remote", "On-site"],
-    languages: ["English", "Spanish", "Portuguese"],
-    availability: "24/7",
-    rating: 4.7,
-    reviews: 203,
-    provider: {
-      name: "CloudTech Experts",
-      verified: true,
-      rating: 4.7,
-      completedProjects: 234,
-      responseTime: "<4 hours",
-      location: "Canada",
-      languages: ["English", "French"],
-      certifications: ["AWS Solutions Architect", "Azure Solutions Architect"],
-      specialties: ["AWS", "Azure", "Kubernetes", "Terraform"]
-    }
+    useCases: [
+      'Legacy system migration',
+      'Data center consolidation',
+      'Application modernization',
+      'Disaster recovery setup',
+      'Performance optimization'
+    ],
+    targetAudience: ['Enterprises', 'Mid-size companies', 'Healthcare', 'Financial services'],
+    tags: ['Cloud', 'Migration', 'AWS', 'Azure', 'Optimization'],
+    estimatedDelivery: '8-12 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$5,000-25,000',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['AWS', 'Azure', 'Terraform', 'Docker', 'Kubernetes'],
+    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth'],
+    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS']
   },
   {
-    id: "data-analytics",
-    title: "Data Analytics & Business Intelligence",
-    description: "Transform raw data into actionable insights with advanced analytics solutions",
-    category: "Data & Analytics",
-    subcategory: "Business Intelligence",
-    price: {
-      basic: 180,
-      professional: 300,
-      enterprise: 500
-    },
+    id: 'cybersecurity-assessment',
+    title: 'Cybersecurity Assessment',
+    description: 'Comprehensive security audit including penetration testing, vulnerability assessment, and compliance review.',
+    category: 'Security',
+    subcategory: 'Assessment',
+    price: 3000,
+    currency: 'USD',
+    pricingModel: 'per-project',
     features: [
-      "Data Strategy Development",
-      "ETL Pipeline Design",
-      "Dashboard Creation",
-      "Predictive Analytics",
-      "Data Governance",
-      "Performance Optimization"
+      'Penetration testing',
+      'Vulnerability assessment',
+      'Compliance review',
+      'Security audit report',
+      'Remediation guidance',
+      'Ongoing monitoring'
     ],
-    tags: ["Data Analytics", "Business Intelligence", "ETL", "Data Visualization", "Predictive Analytics"],
-    featured: true,
-    popular: false,
-    estimatedTime: "3-6 weeks",
-    included: [
-      "Data Assessment",
-      "ETL Pipeline",
-      "Analytics Dashboard",
-      "Data Dictionary",
-      "Governance Framework"
+    benefits: [
+      'Identify security vulnerabilities',
+      'Meet compliance requirements',
+      'Protect customer data',
+      'Reduce security risks',
+      'Improve security posture'
     ],
-    notIncluded: [
-      "Data Sources",
-      "Third-party Tools",
-      "Ongoing Data Processing"
+    useCases: [
+      'Compliance audits',
+      'Security assessments',
+      'Pre-acquisition due diligence',
+      'Risk management',
+      'Security improvements'
     ],
-    requirements: [
-      "Data Sources Access",
-      "Business Requirements",
-      "Performance Expectations",
-      "Compliance Requirements"
+    targetAudience: ['Enterprises', 'Healthcare', 'Financial services', 'E-commerce'],
+    tags: ['Security', 'Cybersecurity', 'Penetration Testing', 'Compliance', 'Audit'],
+    estimatedDelivery: '4-6 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$3,000-15,000',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['Nmap', 'Metasploit', 'Burp Suite', 'OWASP ZAP'],
+    integrations: ['SIEM systems', 'Vulnerability scanners', 'Security tools'],
+    compliance: ['SOC 2', 'ISO 27001', 'PCI DSS', 'HIPAA']
+  },
+  // Micro SAAS Platforms
+  {
+    id: 'business-process-automation',
+    title: 'Business Process Automation',
+    description: 'End-to-end automation solutions that streamline operations and reduce manual tasks by up to 80%.',
+    category: 'Micro SAAS',
+    subcategory: 'Automation',
+    price: 199,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Workflow automation',
+      'Process mapping',
+      'Integration capabilities',
+      'Analytics dashboard',
+      'Custom workflows',
+      'Mobile access'
     ],
-    deliverables: [
-      "Data Strategy Document",
-      "ETL Pipeline",
-      "Analytics Dashboard",
-      "Data Dictionary",
-      "Governance Policy",
-      "Training Materials"
+    benefits: [
+      'Reduce manual tasks by 80%',
+      'Improve process efficiency',
+      'Reduce errors and delays',
+      'Increase productivity',
+      'Better process visibility'
     ],
-    technologies: ["Python", "SQL", "Tableau", "Power BI", "Apache Spark", "Snowflake"],
-    certifications: ["Tableau Desktop Specialist", "Power BI Data Analyst", "Google Data Analytics"],
-    support: ["Email Support", "Weekly Reviews", "Monthly Optimization"],
-    warranty: "60-day support period",
-    location: ["Remote", "On-site"],
-    languages: ["English", "Spanish"],
-    availability: "Business Hours",
-    rating: 4.6,
-    reviews: 78,
-    provider: {
-      name: "DataInsight Pro",
-      verified: true,
-      rating: 4.6,
-      completedProjects: 67,
-      responseTime: "<8 hours",
-      location: "Australia",
-      languages: ["English"],
-      certifications: ["Tableau Desktop Specialist", "Power BI Data Analyst"],
-      specialties: ["Data Engineering", "Business Intelligence", "Predictive Analytics"]
-    }
+    useCases: [
+      'Invoice processing',
+      'Employee onboarding',
+      'Customer service workflows',
+      'Approval processes',
+      'Data entry automation'
+    ],
+    targetAudience: ['Small businesses', 'Medium enterprises', 'Service companies', 'Manufacturing'],
+    tags: ['Automation', 'Workflow', 'Process', 'Productivity', 'Integration'],
+    estimatedDelivery: '3-4 weeks',
+    supportLevel: 'standard',
+    marketPrice: '$199-399/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['Node.js', 'React', 'PostgreSQL', 'Redis'],
+    integrations: ['Slack', 'Microsoft 365', 'Google Workspace', 'Zapier'],
+    compliance: ['GDPR', 'SOC 2']
   },
   {
-    id: "web-development",
-    title: "Custom Web Application Development",
-    description: "Full-stack web applications built with modern technologies and best practices",
-    category: "Web & Mobile",
-    subcategory: "Development",
-    price: {
-      basic: 250,
-      professional: 450,
-      enterprise: 750
-    },
+    id: 'project-management-saas',
+    title: 'Project Management SaaS Platform',
+    description: 'Comprehensive project management solution with task tracking, team collaboration, and resource management.',
+    category: 'Micro SAAS',
+    subcategory: 'Project Management',
+    price: 149,
+    currency: 'USD',
+    pricingModel: 'per-user',
     features: [
-      "Custom Design",
-      "Full-stack Development",
-      "Responsive Layout",
-      "Performance Optimization",
-      "Security Implementation",
-      "Testing & Deployment"
+      'Task management',
+      'Team collaboration',
+      'Resource allocation',
+      'Time tracking',
+      'Reporting and analytics',
+      'Mobile applications'
     ],
-    tags: ["Web Development", "React", "Node.js", "Full-stack", "Custom Development"],
-    featured: false,
-    popular: true,
-    estimatedTime: "6-12 weeks",
-    included: [
-      "UI/UX Design",
-      "Frontend Development",
-      "Backend Development",
-      "Database Design",
-      "Testing",
-      "Deployment"
+    benefits: [
+      'Improve project delivery by 30%',
+      'Enhance team collaboration',
+      'Better resource utilization',
+      'Real-time project visibility',
+      'Reduce project risks'
     ],
-    notIncluded: [
-      "Hosting",
-      "Domain Registration",
-      "Ongoing Maintenance",
-      "Content Creation"
+    useCases: [
+      'Software development',
+      'Marketing campaigns',
+      'Construction projects',
+      'Event planning',
+      'Product launches'
     ],
-    requirements: [
-      "Project Requirements",
-      "Design Preferences",
-      "Target Audience",
-      "Performance Requirements"
+    targetAudience: ['Project teams', 'Agencies', 'Consulting firms', 'Construction'],
+    tags: ['Project Management', 'Collaboration', 'Task Tracking', 'Resource Management'],
+    estimatedDelivery: '4-5 weeks',
+    supportLevel: 'standard',
+    marketPrice: '$149-299/user/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
+    integrations: ['Slack', 'Microsoft Teams', 'Google Calendar', 'Jira'],
+    compliance: ['GDPR', 'SOC 2']
+  },
+  // Development Services
+  {
+    id: 'custom-software-development',
+    title: 'Custom Software Development',
+    description: 'Tailored software solutions built to meet specific business requirements with modern technologies and best practices.',
+    category: 'Development',
+    subcategory: 'Custom Software',
+    price: 150,
+    currency: 'USD',
+    pricingModel: 'per-hour',
+    features: [
+      'Custom application development',
+      'Modern tech stack',
+      'Responsive design',
+      'API development',
+      'Testing and QA',
+      'Deployment and maintenance'
     ],
-    deliverables: [
-      "Source Code",
-      "Documentation",
-      "Deployment Guide",
-      "User Manual",
-      "Maintenance Guide"
+    benefits: [
+      'Tailored to business needs',
+      'Competitive advantage',
+      'Scalable solutions',
+      'Modern technology',
+      'Ongoing support'
     ],
-    technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS", "Docker"],
-    certifications: ["AWS Developer Associate", "Microsoft Certified Developer", "Google Cloud Developer"],
-    support: ["3-month post-launch support", "Bug fixes", "Performance optimization"],
-    warranty: "90-day bug-free guarantee",
-    location: ["Remote", "On-site"],
-    languages: ["English", "Spanish", "Portuguese"],
-    availability: "Business Hours",
-    rating: 4.8,
-    reviews: 156,
-    provider: {
-      name: "WebDev Masters",
-      verified: true,
-      rating: 4.8,
-      completedProjects: 189,
-      responseTime: "<6 hours",
-      location: "Brazil",
-      languages: ["English", "Portuguese", "Spanish"],
-      certifications: ["AWS Developer Associate", "Microsoft Certified Developer"],
-      specialties: ["React", "Node.js", "Full-stack Development", "E-commerce"]
-    }
+    useCases: [
+      'Business applications',
+      'E-commerce platforms',
+      'Customer portals',
+      'Internal tools',
+      'Mobile applications'
+    ],
+    targetAudience: ['Businesses', 'Startups', 'Enterprises', 'Government'],
+    tags: ['Development', 'Custom Software', 'Web Apps', 'Mobile Apps', 'APIs'],
+    estimatedDelivery: '8-16 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$150-250/hour',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
+    integrations: ['Third-party APIs', 'Payment gateways', 'Authentication systems'],
+    compliance: ['GDPR', 'SOC 2', 'PCI DSS']
+  },
+  // Analytics Services
+  {
+    id: 'data-analytics-platform',
+    title: 'Data Analytics Platform',
+    description: 'Comprehensive data analytics solution with real-time dashboards, predictive modeling, and business intelligence.',
+    category: 'Analytics',
+    subcategory: 'Business Intelligence',
+    price: 399,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Real-time dashboards',
+      'Data visualization',
+      'Predictive modeling',
+      'Custom reports',
+      'Data integration',
+      'Advanced analytics'
+    ],
+    benefits: [
+      'Data-driven decision making',
+      'Identify business opportunities',
+      'Improve operational efficiency',
+      'Better customer insights',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Sales analytics',
+      'Customer analytics',
+      'Operational analytics',
+      'Financial analytics',
+      'Marketing analytics'
+    ],
+    targetAudience: ['Enterprises', 'Data teams', 'Business analysts', 'Executives'],
+    tags: ['Analytics', 'Business Intelligence', 'Data Visualization', 'Predictive', 'Reporting'],
+    estimatedDelivery: '6-8 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$399-799/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['Python', 'React', 'PostgreSQL', 'Redis', 'Apache Spark'],
+    integrations: ['Salesforce', 'HubSpot', 'QuickBooks', 'Google Analytics'],
+    compliance: ['GDPR', 'SOC 2', 'ISO 27001']
   }
 ];
-
-export const SERVICE_CATEGORIES = [
-  {
-    id: "ai-ml",
-    name: "AI & Machine Learning",
-    description: "Artificial intelligence and machine learning solutions",
-    services: ["ai-ml-consulting"],
-    icon: "🤖",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    id: "cybersecurity",
-    name: "Cybersecurity",
-    description: "Security solutions and protection services",
-    services: ["cybersecurity-audit"],
-    icon: "🔒",
-    color: "from-red-500 to-orange-500"
-  },
-  {
-    id: "cloud-infrastructure",
-    name: "Cloud & Infrastructure",
-    description: "Cloud migration and infrastructure management",
-    services: ["cloud-migration"],
-    icon: "☁️",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    id: "data-analytics",
-    name: "Data & Analytics",
-    description: "Data processing and business intelligence",
-    services: ["data-analytics"],
-    icon: "📊",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    id: "web-mobile",
-    name: "Web & Mobile",
-    description: "Custom application development",
-    services: ["web-development"],
-    icon: "💻",
-    color: "from-indigo-500 to-purple-500"
-  }
-];
-
-export const FEATURED_SERVICES = ENHANCED_SERVICES.filter(service => service.featured);
-
-export const POPULAR_SERVICES = ENHANCED_SERVICES.filter(service => service.popular);
-
-export const getServiceById = (id: string): Service | undefined => {
-  return ENHANCED_SERVICES.find(service => service.id === id);
-};
-
-export const getServicesByCategory = (category: string): Service[] => {
-  return ENHANCED_SERVICES.filter(service => service.category === category);
-};
-
-export const searchServices = (query: string): Service[] => {
-  const searchTerm = query.toLowerCase();
-  return ENHANCED_SERVICES.filter(service => 
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-  );
-};

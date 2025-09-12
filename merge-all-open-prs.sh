@@ -1,10 +1,9 @@
 #!/bin/bash
 
 # Comprehensive script to resolve merge conflicts and merge all open PRs into main
-<<<<<<< HEAD
+# Optimized for handling thousands of unmerged branches
 =======
 # Optimized for handling thousands of unmerged branches
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 set -e
 
 echo "🚀 Starting comprehensive merge conflict resolution for all open PRs..."
@@ -24,10 +23,9 @@ SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
 SKIPPED_BRANCHES=0
-<<<<<<< HEAD
+TOTAL_PROCESSED=0
 =======
 TOTAL_PROCESSED=0
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 
 # Get all unmerged branches, prioritizing cursor branches
 CURSOR_BRANCHES=$(git branch -r --no-merged main | grep "origin/cursor/" | sed 's/origin\///' | sort)
@@ -49,60 +47,14 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == ".gitignore" || "$file" == "README.md" ]]; then
-            echo "📝 Documentation file detected, keeping both versions..."
-            # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         else
             echo "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
-        
-        echo "✅ Resolved conflicts in $file"
-        CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
-    fi
-}
-
-# Function to check if a branch can be merged
-can_merge_branch() {
-    local branch="$1"
-    
-    # Skip if branch doesn't exist
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        return 1
-    fi
-    
-    # Skip if branch is already merged
-    if git branch --merged main | grep -q "$branch"; then
-        return 1
-    fi
-    
-    # Skip if branch has too many commits (likely complex conflicts)
-    local commit_count=$(git log --oneline main.."origin/$branch" 2>/dev/null | wc -l)
-<<<<<<< HEAD
-    if [ "$commit_count" -gt 100 ]; then
+    if [ "$commit_count" -gt 200 ]; then
 =======
     if [ "$commit_count" -gt 200 ]; then
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
         echo "⚠️  Skipping $branch - too many commits ($commit_count)"
         return 1
     fi
@@ -193,13 +145,6 @@ merge_branch() {
     fi
 }
 
-<<<<<<< HEAD
-# Main processing loop
-echo "🔄 Starting branch processing..."
-echo "---"
-
-for branch in $ALL_BRANCHES; do
-    echo "📋 Processing branch: $branch"
 =======
 # Main processing loop with progress tracking
 echo "🔄 Starting branch processing..."
@@ -214,7 +159,6 @@ for branch in $ALL_BRANCHES; do
     CURRENT_BATCH=$((CURRENT_BATCH + 1))
     
     echo "📋 Processing branch: $branch (${TOTAL_PROCESSED}/$(echo "$ALL_BRANCHES" | wc -l))"
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
     
     # Check if branch can be merged
     if ! can_merge_branch "$branch"; then
@@ -232,25 +176,16 @@ for branch in $ALL_BRANCHES; do
     
     # Progress update
     echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
-<<<<<<< HEAD
-    echo "---"
-    
-    # Push changes periodically to avoid losing work
-    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
 =======
     echo "📈 Success rate: $((SUCCESSFUL_MERGES * 100 / TOTAL_PROCESSED))%"
     echo "---"
     
     # Push changes periodically to avoid losing work
     if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
         echo "💾 Pushing progress to remote..."
         git push origin main
     fi
     
-<<<<<<< HEAD
-    # Small delay to avoid overwhelming the system
-    sleep 1
 =======
     # Batch processing - take a break every batch
     if [ $CURRENT_BATCH -eq $BATCH_SIZE ]; then
@@ -267,7 +202,6 @@ for branch in $ALL_BRANCHES; do
     
     # Small delay to avoid overwhelming the system
     sleep 0.5
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 done
 
 # Final push
@@ -282,10 +216,9 @@ echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
-<<<<<<< HEAD
+echo "   📈 Total processed: $TOTAL_PROCESSED"
 =======
 echo "   📈 Total processed: $TOTAL_PROCESSED"
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 

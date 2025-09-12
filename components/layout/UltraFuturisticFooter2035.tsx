@@ -11,6 +11,29 @@ import {
 
 const footerSections = [
   {
+    title: 'Featured Services',
+    description: 'Our most popular and innovative solutions',
+    icon: <Star className="w-5 h-5 text-yellow-400" />,
+    links: [
+      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', featured: true },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', featured: true },
+      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', featured: true },
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', featured: true },
+      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform' },
+      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
+      { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
+      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
+      { name: 'AI Evaluation Orchestrator', href: '/ai-evaluation-orchestrator', featured: true },
+              { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
+              { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
+              { name: 'Managed Postgres HA', href: '/managed-postgres-ha' },
+              { name: 'DORA Metrics Dashboard', href: '/dora-metrics-dashboard' },
+              { name: 'Kubernetes Cost Guardrails', href: '/kubernetes-cost-guardrails' },
+              { name: 'OpenTelemetry Quickstart', href: '/opentelemetry-quickstart' },
+              { name: 'API Usage Billing Meter', href: '/api-usage-billing-meter' }
+    ]
+  },
+  {
     title: 'AI & Consciousness',
     links: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },

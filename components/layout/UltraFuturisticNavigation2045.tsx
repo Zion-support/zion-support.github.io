@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-<<<<<<< HEAD
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Grid, Heart, Database,
-  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
-  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2, Truck,
-  Sparkles as SparklesIcon, Zap as ZapIcon, Target as TargetIcon, Cpu as CpuIcon, Database as DatabaseIcon
-=======
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Shield, Atom, BookOpen,
   DollarSign, BarChart3, Star, Sparkles, 
   Grid, Globe, Cpu, Database, Cloud, Palette,
   HelpCircle, FileText, Video, Building, MessageCircle,
   Zap, Target, Users, Award, TrendingUp, Lock, Clock, Calendar
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
+=======
+import React, { useState, useCallback } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, Shield, Menu, X, ChevronDown, ChevronRight, ExternalLink, 
+  Building, Users, Brain, Cpu, Database, Atom, Rocket, Target, Zap, Globe
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -43,36 +37,18 @@ function normalizeHref(href: string): string {
   return href.endsWith('/') ? href : href + '/';
 }
 
-<<<<<<< HEAD
-const navigationItems: NavigationItem[] = [
-  {
-    name: 'Revolutionary Services 2045',
-    href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Future-defining technology solutions',
-    badge: 'New 2045',
-    category: 'services',
-    color: 'from-emerald-500 to-cyan-500',
-    children: [
-      { 
-        name: 'All Services', 
-        href: '/services', 
-        description: 'Complete revolutionary services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'AI Consciousness Evolution 2045', 
-        href: '/ai-consciousness-evolution-platform', 
-        description: 'Next-generation AI consciousness',
+      {
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai-ml',
         icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
-        featured: true
+        description: 'Advanced AI solutions for enterprise',
+        featured: true,
+        neonColor: 'shadow-purple-400/50',
+        category: 'ai'
       },
-      { 
-        name: 'Quantum AI Neural Networks 2045', 
-        href: '/quantum-ai-neural-network-platform', 
-        description: 'Quantum-powered AI neural networks',
+      {
+        label: 'Quantum Computing',
+        href: '/services?category=quantum',
         icon: <Atom className="w-4 h-4" />,
         color: 'from-blue-500 to-cyan-500',
         featured: true
@@ -84,26 +60,30 @@ const navigationItems: NavigationItem[] = [
         icon: <Brain className="w-4 h-4" />,
         color: 'from-emerald-500 to-teal-500'
       },
-      { 
-        name: 'Emotional AI Intelligence 2045', 
-        href: '/emotional-ai-intelligence-platform', 
-        description: 'Advanced emotional AI intelligence',
-        icon: <Heart className="w-4 h-4" />,
-        color: 'from-pink-500 to-purple-500'
+      {
+        label: 'Cloud Infrastructure',
+        href: '/services?category=cloud',
+        icon: <Cpu className="w-4 h-4" />,
+        description: 'Scalable cloud solutions',
+        neonColor: 'shadow-cyan-400/50',
+        category: 'cloud'
       },
-      { 
-        name: 'Quantum AI Metaverse 2045', 
-        href: '/quantum-ai-metaverse-platform', 
-        description: 'Quantum-powered metaverse',
-        icon: <Globe className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
+      {
+        label: 'Business Intelligence',
+        href: '/services?category=bi',
+        icon: <Database className="w-4 h-4" />,
+        description: 'Data-driven insights and analytics',
+        neonColor: 'shadow-green-400/50',
+        category: 'bi'
       },
-      { 
-        name: 'AI Autonomous Business Intelligence 2045', 
-        href: '/ai-autonomous-business-intelligence', 
-        description: 'Autonomous AI business intelligence',
-        icon: <BarChart3 className="w-4 h-4" />,
-        color: 'from-yellow-500 to-orange-500'
+      {
+        label: 'Micro SAAS',
+        href: '/services?category=saas',
+        icon: <Rocket className="w-4 h-4" />,
+        description: 'Revolutionary micro SAAS solutions',
+        featured: true,
+        neonColor: 'shadow-orange-400/50',
+        category: 'saas'
       }
     ]
   },
@@ -239,142 +219,9 @@ function normalizeHref(href: string): string {
 
 const navigationItems: NavigationItem[] = [
   {
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
     name: 'AI & Consciousness',
     href: '/ai-consciousness',
     icon: <Brain className="w-5 h-5" />,
-<<<<<<< HEAD
-    description: 'Advanced AI consciousness solutions',
-    badge: 'Revolutionary',
-    category: 'ai-consciousness',
-    color: 'from-purple-500 to-pink-500',
-    children: [
-      { 
-        name: 'AI Consciousness Evolution', 
-        href: '/ai-consciousness-evolution-platform', 
-        description: 'Next-generation AI consciousness',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
-        featured: true
-      },
-      { 
-        name: 'Quantum AI Neural Networks', 
-        href: '/quantum-ai-neural-network-platform', 
-        description: 'Quantum-powered AI with consciousness',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
-        featured: true
-      },
-      { 
-        name: 'Autonomous AI Research', 
-        href: '/autonomous-ai-research-assistant', 
-        description: 'Fully autonomous AI research',
-        icon: <Eye className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
-      },
-      { 
-        name: 'Emotional AI Intelligence', 
-        href: '/emotional-ai-intelligence-platform', 
-        description: 'Advanced emotional AI intelligence',
-        icon: <Heart className="w-4 h-4" />,
-        color: 'from-pink-500 to-purple-500'
-      },
-      { 
-        name: 'Quantum AI Metaverse', 
-        href: '/quantum-ai-metaverse-platform', 
-        description: 'Quantum-powered metaverse',
-        icon: <Globe className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
-      }
-    ]
-  },
-  {
-    name: 'Quantum Technology',
-    href: '/quantum-technology',
-    icon: <Atom className="w-5 h-5" />,
-    description: 'Quantum computing and technology',
-    badge: 'Future',
-    category: 'quantum-technology',
-    color: 'from-blue-500 to-indigo-500',
-    children: [
-      { 
-        name: 'Quantum AI Neural Networks', 
-        href: '/quantum-ai-neural-network-platform', 
-        description: 'Quantum-powered AI neural networks',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
-        featured: true
-      },
-      { 
-        name: 'Quantum-Secure Cloud Infrastructure', 
-        href: '/quantum-secure-cloud-infrastructure', 
-        description: 'Post-quantum cryptography cloud',
-        icon: <Cloud className="w-4 h-4" />,
-        color: 'from-cyan-500 to-blue-500',
-        featured: true
-      },
-      { 
-        name: 'Quantum-Secure Communication', 
-        href: '/quantum-secure-communication-platform', 
-        description: 'Post-quantum cryptography communications',
-        icon: <Lock className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
-      },
-      { 
-        name: 'Quantum AI Metaverse', 
-        href: '/quantum-ai-metaverse-platform', 
-        description: 'Quantum-powered metaverse',
-        icon: <Globe className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
-      },
-      { 
-        name: 'Quantum AI Research Assistant', 
-        href: '/quantum-ai-research-assistant', 
-        description: 'AI research with quantum insights',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
-      }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: <Building className="w-5 h-5" />,
-    description: 'About Zion Tech Group',
-    category: 'company',
-    color: 'from-gray-500 to-gray-600',
-    children: [
-      { 
-        name: 'About Us', 
-        href: '/about', 
-        description: 'Learn about our mission and vision',
-        icon: <Users className="w-4 h-4" />
-      },
-      { 
-        name: 'Leadership Team', 
-        href: '/team', 
-        description: 'Meet our leadership team',
-        icon: <Users className="w-4 h-4" />
-      },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
-        description: 'Join our revolutionary team',
-        icon: <Target className="w-4 h-4" />
-      },
-      { 
-        name: 'News & Blog', 
-        href: '/blog', 
-        description: 'Latest insights and updates',
-        icon: <Globe className="w-4 h-4" />
-      },
-      { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
-        description: 'Success stories and results',
-        icon: <BarChart3 className="w-4 h-4" />
-      }
-=======
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'Featured',
     featured: true,
@@ -495,15 +342,19 @@ const navigationItems: NavigationItem[] = [
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection', featured: true },
       { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references', featured: true },
       { name: 'Pricing Comparison', href: '/pricing', description: 'Service pricing comparison', featured: true }
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
     ]
   }
 ];
 
 const UltraFuturisticNavigation2045: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const searchRef = React.useRef<HTMLDivElement>(null);
+  const mobileMenuRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -514,35 +365,86 @@ const UltraFuturisticNavigation2045: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+  // Handle click outside search
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsSearchOpen(false);
+      }
+    };
 
-<<<<<<< HEAD
-  const closeDropdown = () => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Handle click outside mobile menu
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close mobile menu on route change
+  React.useEffect(() => {
+    setIsMobileMenuOpen(false);
     setActiveDropdown(null);
-  };
+  }, [router.asPath]);
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/5 to-blue-900/5"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
-      </div>
+  const handleDropdownToggle = useCallback((itemLabel: string) => {
+    setActiveDropdown(activeDropdown === itemLabel ? null : itemLabel);
+  }, [activeDropdown]);
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] group-hover:shadow-[0_0_50px_rgba(6,182,212,0.5)] transition-all duration-300">
-                <Zap className="w-6 h-6 text-white" />
+  const handleSearchToggle = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setTimeout(() => {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) searchInput.focus();
+      }, 100);
+    }
+  }, [isSearchOpen]);
+
+  const handleSearchSubmit = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
+  }, [searchQuery, router]);
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setTimeout(() => {
+        const searchInput = document.getElementById('search-input') as HTMLInputElement;
+        if (searchInput) searchInput.focus();
+      }, 100);
+    }
+  }, [isSearchOpen]);
+
+  const renderDropdown = useCallback((item: NavigationItem) => {
+    if (!item.children) return null;
+
+    return (
+      <AnimatePresence>
+        {activeDropdown === item.label && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 z-50 overflow-hidden"
+          >
+            <div className="p-6">
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold text-white mb-2">{item.label}</h3>
+                <p className="text-gray-400 text-sm">{item.description}</p>
               </div>
               <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -638,16 +540,16 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                 +1 302 464 0950
               </a>
             </div>
-            <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:kleber@ziontechgroup.com" className="text-sm font-medium">
-                kleber@ziontechgroup.com
-              </a>
-=======
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
     setIsOpen(false);
   };
+=======
+          </motion.div>
+        )}
+      </AnimatePresence>
+    );
+  }, [activeDropdown, isActiveRoute]);
 
   return (
     <>
@@ -838,7 +740,6 @@ const UltraFuturisticNavigation2045: React.FC = () => {
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
             </div>
           </div>
 
@@ -852,32 +753,6 @@ const UltraFuturisticNavigation2045: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-300"
-                  >
-                    <div className="flex items-center space-x-3">
-                      {item.icon}
-                      <span className="font-medium">{item.name}</span>
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs font-bold bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-full">
-=======
 
         {/* Mobile Navigation */}
         <AnimatePresence>
@@ -903,65 +778,22 @@ const UltraFuturisticNavigation2045: React.FC = () => {
                           item.badge === 'Enterprise' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white' :
                           'bg-gradient-to-r from-gray-500 to-slate-500 text-white'
                         }`}>
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
                           {item.badge}
                         </span>
                       )}
                     </div>
-<<<<<<< HEAD
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                  
-                  {activeDropdown === item.name && (
-                    <div className="ml-6 mt-2 space-y-2">
-=======
                     <div className="pl-4 space-y-2">
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
                       {item.children?.map((child) => (
                         <Link
                           key={child.name}
                           href={normalizeHref(child.href)}
-<<<<<<< HEAD
-                          onClick={() => setIsOpen(false)}
-                          className="block p-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-=======
                           onClick={closeAllDropdowns}
                           className="block text-white/70 hover:text-cyan-400 transition-colors text-sm"
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
                         >
                           {child.name}
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
-                  )}
-                </div>
-              ))}
-              
-              <div className="pt-4 border-t border-gray-800">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Phone className="w-4 h-4 text-cyan-400" />
-                    <a href="tel:+13024640950" className="text-sm">
-                      +1 302 464 0950
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-4 h-4 text-cyan-400" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-sm">
-                      kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-=======
                   </div>
                 ))}
                 <div className="pt-4 border-t border-white/10">
@@ -978,7 +810,6 @@ const UltraFuturisticNavigation2045: React.FC = () => {
         </AnimatePresence>
       </nav>
     </>
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
   );
 };
 
