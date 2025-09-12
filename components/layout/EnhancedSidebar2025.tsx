@@ -255,14 +255,32 @@ interface EnhancedSidebar2025Props {
 }
 
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
-  const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [expandedCategories, setExpandedCategories] = useState<string[]></string>([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const toggleSection = (sectionTitle: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(title)) {
-      newExpanded.delete(title);
+  // Auto-expand current section
+  useEffect(() => {
+    const currentPath = router.pathname;
+    const newExpandedItems = new Set<string></string>();
+    
+    sidebarItems.forEach(item => {
+      if (item.children) {
+        const hasActiveChild = item.children.some(child => 
+          currentPath === child.href || currentPath.startsWith(child.href + '/')
+        );
+        if (hasActiveChild) {
+          newExpandedItems.add(item.name);
+        }
+      }
+    });
+    
+    setExpandedItems(newExpandedItems);
+  }, [router.pathname]);
+
+  const toggleExpanded = (itemName: string) => {
+    const newExpandedItems = new Set(expandedItems);
+    if (newExpandedItems.has(itemName)) {
+      newExpandedItems.delete(itemName);
     } else {
       newExpanded.add(title);
     }
@@ -277,112 +295,70 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   );
 
   return (
-    <motion.aside
-      initial={{ x: -300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent"
-    >
-      {/* Header */}
-      <div className="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 p-4">
-        <div className="flex items-center space-x-3 mb-4">
-          <div className="relative">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50"></div>
-          </div>
-          <div>
-            <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h2>
-            <p className="text-xs text-gray-400">Navigation</p>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="space-y-2 text-xs text-gray-300">
-          <div className="flex items-center space-x-2">
-            <Phone className="w-3 h-3 text-cyan-400" />
-            <span>{contactInfo.mobile}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Mail className="w-3 h-3 text-cyan-400" />
-            <span>{contactInfo.email}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Globe className="w-3 h-3 text-cyan-400" />
-            <span>{contactInfo.website}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation Sections */}
-      <div className="p-4 space-y-2">
-        {sidebarSections.map((section) => (
-          <div key={section.title} className="space-y-1">
-            <button
-              onClick={() => toggleSection(section.title)}
-              className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-lg transition-all duration-200 group"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
-                  {section.icon}
-                </div>
-                <span className="font-medium">{section.title}</span>
-                {section.badge && (
-                  <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                    {section.badge}
+    <AnimatePresence></AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            onClick={onClose}
+          />
+          
+          {/* Sidebar */}
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 to-black border-r border-gray-800 z-50 overflow-y-auto"
+          ></motion>
+            {/* Header */}
+            <div className="p-6 border-b border-gray-800"></div>
+              <div className="flex items-center justify-between mb-4"></div>
+                <div className="flex items-center space-x-2"></div>
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center"></div>
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"></span>
+                    Zion Tech
                   </span>
-                )}
-              </div>
-              {expandedSections.has(section.title) ? (
-                <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
-              ) : (
-                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
-              )}
-            </button>
-
-            <AnimatePresence>
-              {expandedSections.has(section.title) && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="ml-8 space-y-1"
-                >
-                  <CloseIcon className="w-5 h-5" />
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                ></button>
+                  <X className="w-5 h-5" />
                 </button>
               </div>
-
-              {/* Search Bar */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              
+              {/* Search */}
+              <div className="relative"></div>
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                  onChange={(e) =></input> setSearchQuery(e.target.value)}
+                  className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
                 />
               </div>
-              
-              {/* Search Results */}
-              {searchQuery && (
-                <div className="mt-4 space-y-2">
-                  <h4 className="text-sm font-medium text-gray-300">Search Results</h4>
-                  {filteredServices.length > 0 ? (
-                    <div className="space-y-1">
-                      {filteredServices.slice(0, 5).map((service) => (
-                        <Link
-                          key={service.name}
-                          href={service.href}
-                          onClick={onClose}
-                          className="block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
-                        >
-                          <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
-                            {service.name}
+            </div>
+
+            {/* Navigation Items */}
+            <div className="p-4 space-y-2"></div>
+              {filteredItems.map((item) => (
+                <div key={item.name}></div>
+                  {item.children ? (
+                    <div></div>
+                      <button
+                        onClick={() =></button> toggleCategory(category.title)}
+                        className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <div className="flex items-center space-x-3"></div>
+                          <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}></div>
+                            {category.icon}
                           </div>
                           <div className="text-xs text-gray-500">
                             {service.description}
@@ -393,41 +369,169 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                         <div className="text-xs text-cyan-400 text-center">
                           +{filteredServices.length - 5} more results
                         </div>
-                      )}
+                        {expandedCategories.includes(category.title) ? (
+                          <ChevronDown className="w-4 h-4 text-gray-400" />
+                        ) : (
+                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                        )}
+                      </button>
+                      
+                      <AnimatePresence></AnimatePresence>
+                        {expandedCategories.includes(category.title) && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="bg-gray-800/30"
+                          ></motion>
+                            <div className="p-3 space-y-2"></div>
+                              {category.services.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  href={service.href}
+                                  onClick={onClose}
+                                  className="flex items-center justify-between p-2 text-sm text-gray-400 hover:text-white hover:bg-gray-700/50 rounded transition-colors duration-200 group"
+                                ></Link>
+                                  <span className="truncate">{service.name}</span>
+                                  {service.popular && (
+                                    <Star className="w-3 h-3 text-yellow-400" />
+                                  )}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   ) : (
-                    <div className="text-sm text-gray-500 text-center py-2">
-                      No services found
-                    </div>
+                    <button
+                      onClick={() =></button> handleItemClick(item.href)}
+                      className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
+                        isActive(item.href)
+                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+                          : 'text-gray-300 hover:bg-gray-800/50 hover:text-white'
+                      }`}
+                    >
+                      {item.icon}
+                      <span className="font-medium">{item.name}</span>
+                      {item.badge && (
+                        <span className="ml-auto px-2 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-300 rounded"></span>
+                          {item.badge}
+                        </span>
+                      )}
+                    </button>
                   )}
                 </div>
-              )}
+              ))}
+            </div>
+
+            {/* Footer */}
+            <div className="sticky bottom-0 bg-black/80 backdrop-blur-md border-t border-cyan-500/20 p-4 mt-8"></div>
+              <div className="space-y-3"></div>
+                <div className="text-xs text-gray-500 text-center"></div>
+                  © 2025 Zion Tech Group
+                </div>
+                <div className="flex justify-center space-x-4"></div>
+                  <Link
+                    href="/contact"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  ></Link>
+                    Contact
+                  </Link>
+                  <Link
+                    href="/support"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  ></Link>
+                    Support
+                  </Link>
+                  <Link
+                    href="/privacy"
+                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
+                  ></Link>
+                    Privacy
+                  </Link>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div className="mb-6"></div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"></h3>
+                  Quick Links
+                </h3>
+                <div className="space-y-2"></div>
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={onClose}
+                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
+                    ></Link>
+                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200"></div>
+                        {link.icon}
+                      </div>
+                      <span className="font-medium">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Company Links */}
+              <div className="mb-6"></div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"></h3>
+                  Company
+                </h3>
+                <div className="space-y-2"></div>
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={onClose}
+                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
+                    ></Link>
+                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200"></div>
+                        {link.icon}
+                      </div>
+                      <span className="font-medium">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Contact Information */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span>Contact Information</span>
+            <div className="p-6 border-t border-gray-800 bg-gray-800/20"></div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"></h3>
+                Contact Information
               </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
+              <div className="space-y-3"></div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300"></div>
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
                     {contactInfo.mobile}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
+                <div className="flex items-center space-x-3 text-sm text-gray-300"></div>
                   <Mail className="w-4 h-4 text-cyan-400" />
                   <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                  <span className="text-sm">{contactInfo.address}</span>
+                <div className="flex items-start space-x-3 text-sm text-gray-300"></div>
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                  <span className="text-xs leading-relaxed">{contactInfo.address}</span>
                 </div>
               </div>
+              
+              {/* CTA Button */}
+              <Link
+                href="/contact"
+                onClick={onClose}
+                className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group"
+              ></Link>
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
             </div>
 
             {/* Quick Stats */}

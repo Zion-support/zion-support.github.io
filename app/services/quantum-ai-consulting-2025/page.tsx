@@ -114,7 +114,6 @@ const QuantumAIConsulting = () => {
             ))}
           </div>
         </div>
-      </section>
 
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -137,20 +136,102 @@ const QuantumAIConsulting = () => {
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-semibold mb-2">Quantum Algorithm Development</h3>
+                    <p className="text-gray-600 mb-4">
+                      Custom quantum algorithms designed for your specific business challenges, from portfolio optimization to supply chain management.
+                    </p>
+                    <ul className="list-disc pl-6 text-sm text-gray-600">
+                      <li>Portfolio optimization and risk assessment</li>
+                      <li>Supply chain and logistics optimization</li>
+                      <li>Drug discovery and molecular modeling</li>
+                      <li>Cryptographic security enhancement</li>
+                    </ul>
                   </div>
                 </div>
-                
-                <div className="space-y-2">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div className="flex items-start">
+                  <div className="bg-green-100 p-3 rounded-lg mr-4">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Quantum Machine Learning</h3>
+                    <p className="text-gray-600 mb-4">
+                      Leverage quantum computing to enhance machine learning models, achieving superior performance on complex datasets.
+                    </p>
+                    <ul className="list-disc pl-6 text-sm text-gray-600">
+                      <li>Quantum neural networks</li>
+                      <li>Quantum support vector machines</li>
+                      <li>Quantum clustering algorithms</li>
+                      <li>Quantum feature selection</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div className="flex items-start">
+                  <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Quantum Security Consulting</h3>
+                    <p className="text-gray-600 mb-4">
+                      Prepare your organization for the quantum computing era with quantum-resistant security solutions and protocols.
+                    </p>
+                    <ul className="list-disc pl-6 text-sm text-gray-600">
+                      <li>Post-quantum cryptography implementation</li>
+                      <li>Quantum key distribution systems</li>
+                      <li>Security risk assessment</li>
+                      <li>Migration planning and strategy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div className="flex items-start">
+                  <div className="bg-orange-100 p-3 rounded-lg mr-4">
+                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Strategic Quantum Roadmap</h3>
+                    <p className="text-gray-600 mb-4">
+                      Develop a comprehensive strategy for quantum technology adoption aligned with your business objectives.
+                    </p>
+                    <ul className="list-disc pl-6 text-sm text-gray-600">
+                      <li>Technology assessment and readiness</li>
+                      <li>ROI analysis and business case development</li>
+                      <li>Implementation timeline and milestones</li>
+                      <li>Team training and skill development</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-1">
+            <div className="bg-gray-50 p-6 rounded-lg sticky top-8">
+              <h3 className="text-xl font-semibold mb-4">Service Packages</h3>
+              
+              <div className="space-y-4 mb-6">
+                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                  <h4 className="font-semibold text-blue-600 mb-2">Starter Package</h4>
+                  <p className="text-2xl font-bold text-gray-900 mb-2">$5,000</p>
+                  <p className="text-sm text-gray-600 mb-3">Perfect for small businesses</p>
+                  <ul className="text-sm space-y-1">
+                    <li>• Quantum readiness assessment</li>
+                    <li>• Basic quantum algorithm consultation</li>
+                    <li>• 4-week engagement</li>
+                    <li>• Executive summary report</li>
                   </ul>
                 </div>
               </div>
@@ -261,9 +342,111 @@ const QuantumAIConsulting = () => {
             </div>
           </div>
         </div>
-      </section>
+
+        <div className="bg-gray-50 p-8 rounded-lg mb-12">
+          <h2 className="text-2xl font-semibold mb-6 text-center">Success Metrics</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
+              <p className="text-sm text-gray-600">Client Satisfaction Rate</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
+              <p className="text-sm text-gray-600">Average Performance Improvement</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">6 months</div>
+              <p className="text-sm text-gray-600">Average ROI Timeline</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
+              <p className="text-sm text-gray-600">Quantum Projects Completed</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h2 className="text-2xl font-semibold mb-6">Industry Applications</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="font-semibold mb-3">Financial Services</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Portfolio optimization</li>
+                <li>• Risk assessment</li>
+                <li>• Fraud detection</li>
+                <li>• Algorithmic trading</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="font-semibold mb-3">Healthcare</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Drug discovery</li>
+                <li>• Medical imaging</li>
+                <li>• Personalized medicine</li>
+                <li>• Protein folding</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="font-semibold mb-3">Manufacturing</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Supply chain optimization</li>
+                <li>• Quality control</li>
+                <li>• Predictive maintenance</li>
+                <li>• Process optimization</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="font-semibold mb-3">Energy</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Grid optimization</li>
+                <li>• Renewable energy</li>
+                <li>• Battery research</li>
+                <li>• Carbon capture</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="font-semibold mb-3">Transportation</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Route optimization</li>
+                <li>• Traffic management</li>
+                <li>• Autonomous vehicles</li>
+                <li>• Logistics planning</li>
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="font-semibold mb-3">Technology</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Cybersecurity</li>
+                <li>• Machine learning</li>
+                <li>• Cryptography</li>
+                <li>• Data analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Lead the Quantum Revolution?</h2>
+          <p className="text-lg mb-6">
+            Join the organizations already leveraging quantum AI to gain competitive advantage. 
+            Our experts are ready to help you transform your business with quantum computing.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Start Your Quantum Journey
+            </Link>
+            <Link 
+              href="/case-studies" 
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              View Success Stories
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default QuantumAIConsulting;
+}

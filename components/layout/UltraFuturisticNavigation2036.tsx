@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 // Custom ShoppingBag icon component
 const ShoppingBag = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
   </svg>
 );
@@ -231,9 +231,9 @@ interface UltraFuturisticNavigation2036Props {
 
 export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expanded': ariaExpanded }: UltraFuturisticNavigation2036Props) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null></string>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLElement></HTMLElement>(null);
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Close mobile menu when clicking outside
@@ -289,39 +289,39 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
       }`}
       role="navigation"
       aria-label="Main navigation"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
+    ></nav>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="flex justify-between items-center h-16 lg:h-20"></div>
           {/* Logo */}
           <motion.div 
             className="flex-shrink-0"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-          >
+          ></motion>
             <Link 
               href="/" 
               className="flex items-center space-x-2 group"
               onClick={closeAllDropdowns}
               aria-label="Zion Tech Group Homepage"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            ></Link>
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                 <Rocket className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>
                 Zion Tech Group
               </span>
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          <div className="hidden lg:flex lg:items-center lg:space-x-8"></div>
             {navigationItems.map((item) => (
-              <div key={item.name} className="relative" ref={(el) => {
+              <div key={item.name} className="relative" ref={(el) =></div> {
                 dropdownRefs.current[item.name] = el;
               }}>
                 <button
-                  onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                  onClick={() =></button> setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                   onKeyDown={(e) => {
                     if (e.key === 'Escape') {
                       setActiveDropdown(null);
@@ -350,7 +350,7 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
 
                 {/* Desktop Dropdown */}
                 {item.children && (
-                  <AnimatePresence>
+                  <AnimatePresence></AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
                         initial="hidden"
@@ -358,32 +358,32 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                         exit="hidden"
                         variants={dropdownVariants}
                         className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl z-50"
-                      >
-                        <div className="p-4">
-                          <div className="grid grid-cols-1 gap-2">
+                      ></motion>
+                        <div className="p-4"></div>
+                          <div className="grid grid-cols-1 gap-2"></div>
                             {item.children.map((child) => (
                               <Link
                                 key={child.name}
                                 href={normalizeHref(child.href)}
                                 className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-200"
-                                onClick={() => setActiveDropdown(null)}
+                                onClick={() =></Link> setActiveDropdown(null)}
                               >
-                                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"></div>
                                   {child.icon}
                                 </div>
-                                <div className="flex-1 min-w-0">
-                                  <div className="flex items-center space-x-2">
-                                    <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                <div className="flex-1 min-w-0"></div>
+                                  <div className="flex items-center space-x-2"></div>
+                                    <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors"></span>
                                       {child.name}
                                     </span>
                                     {child.featured && (
-                                      <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full">
+                                      <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full"></span>
                                         Featured
                                       </span>
                                     )}
                                   </div>
                                   {child.description && (
-                                    <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                    <p className="text-xs text-gray-400 mt-1 line-clamp-2"></p>
                                       {child.description}
                                     </p>
                                   )}
@@ -402,14 +402,14 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-4">
-            <Link href="/contact">
-              <button className="px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-all duration-200">
+          <div className="hidden lg:flex lg:items-center lg:space-x-4"></div>
+            <Link href="/contact"></Link>
+              <button className="px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-all duration-200"></button>
                 Contact
               </button>
             </Link>
-            <Link href="/get-started">
-              <button className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+            <Link href="/get-started"></Link>
+              <button className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"></button>
                 Get Started
               </button>
             </Link>
@@ -418,7 +418,7 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() =></button> setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -428,7 +428,7 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
       </div>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
@@ -436,16 +436,16 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden overflow-y-auto"
-          >
-            <div className="p-6">
+          ></motion>
+            <div className="p-6"></div>
               {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-3">
+              <div className="flex items-center justify-between mb-8"></div>
+                <div className="flex items-center space-x-3"></div>
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg"></div>
                   <span className="text-white font-bold text-lg">ZionTech Group</span>
                 </div>
                 <button
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() =></button> setMobileMenuOpen(false)}
                   className="p-2 text-white hover:text-cyan-400 transition-colors"
                   aria-label="Close mobile menu"
                 >
@@ -454,24 +454,24 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
               </div>
 
               {/* Mobile Search */}
-              <div className="mb-6">
+              <div className="mb-6"></div>
                 <EnhancedSearch />
               </div>
 
               {/* Mobile Navigation Items */}
-              <div className="space-y-4">
+              <div className="space-y-4"></div>
                 {navigationItems.map((item) => (
-                  <div key={item.name}>
+                  <div key={item.name}></div>
                     <button
                       className="w-full flex items-center justify-between p-3 text-left text-white hover:bg-white/5 rounded-lg transition-colors"
-                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                      onClick={() =></button> setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                       aria-expanded={activeDropdown === item.name}
                     >
-                      <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-3"></div>
                         {item.icon}
                         <span>{item.name}</span>
                         {item.badge && (
-                          <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full">
+                          <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full"></span>
                             {item.badge}
                           </span>
                         )}
@@ -480,20 +480,20 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                     </button>
 
                     {/* Mobile Dropdown */}
-                    <AnimatePresence>
+                    <AnimatePresence></AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           className="ml-4 mt-2 space-y-2 overflow-hidden"
-                        >
+                        ></motion>
                           {item.children?.map((child) => (
                             <Link
                               key={child.name}
                               href={normalizeHref(child.href)}
                               className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-                              onClick={() => setMobileMenuOpen(false)}
+                              onClick={() =></Link> setMobileMenuOpen(false)}
                             >
                               {child.icon}
                               <span className="text-sm">{child.name}</span>
@@ -512,14 +512,14 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
           </div>
 
               {/* Mobile CTA */}
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              <div className="mt-8 pt-6 border-t border-white/10"></div>
+                <Link href="/contact" onClick={() =></Link> setMobileMenuOpen(false)}>
+                  <button className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"></button>
                     Contact Us
                   </button>
                 </Link>
-                <Link href="/get-started" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full px-4 py-3 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+                <Link href="/get-started" onClick={() =></Link> setMobileMenuOpen(false)}>
+                  <button className="w-full px-4 py-3 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"></button>
                     Get Started
                   </button>
                 </Link>

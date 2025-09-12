@@ -2,7 +2,7 @@
   from = "/api/*"
   to = "https://backend.example.com/:splat"
   status = 200
- 
+
 [build]
   command = "npm run build"
   publish = "dist"
