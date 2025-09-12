@@ -38,6 +38,7 @@ const Navigation = () => {
     { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Services', href: '/services', icon: '🚀' },
     { name: 'Products', href: '/products', icon: '💎' },
+    { name: 'Content', href: '/content-showcase', icon: '📚' },
     { name: 'Case Studies', href: '/case-studies', icon: '📊' },
     { name: 'Testimonials', href: '/testimonials', icon: '⭐' },
     { name: 'Blog', href: '/blog', icon: '📝' },
