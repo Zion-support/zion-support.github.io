@@ -86,3 +86,8 @@
 2025-09-12 09:40:28 - Resolving conflicts in netlify/functions/functions-manifest.json for branch backup/sync-2025-08-17T21-11-30-233Z
 2025-09-12 09:40:28 - Resolving conflicts in public/reports/alignment/chat-latest.json for branch backup/sync-2025-08-17T21-11-30-233Z
 2025-09-12 09:40:28 - Resolving conflicts in tsconfig.tsbuildinfo for branch backup/sync-2025-08-17T21-11-30-233Z
+2025-09-12 09:40:37 - Merge conflicts detected in backup/sync-2025-08-17T21-12-06-183Z
+2025-09-12 09:40:37 - Resolving conflicts in public/automation/content-registry.json for branch backup/sync-2025-08-17T21-12-06-183Z
+2025-09-12 09:40:37 - Resolving conflicts in public/reports/metadata/index.html for branch backup/sync-2025-08-17T21-12-06-183Z
+2025-09-12 09:40:37 - Resolving conflicts in public/reports/metadata/latest.json for branch backup/sync-2025-08-17T21-12-06-183Z
+2025-09-12 09:40:38 - Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-12-06-183Z
