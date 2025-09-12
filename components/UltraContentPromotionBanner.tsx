@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Clock, TrendingUp, Download, BookOpen, Award, Zap } from 'lucide-react';
+import { ArrowRight, Star, Clock, User, TrendingUp, Download, BookOpen, FileText, Award, Zap, Target, Rocket } from 'lucide-react';
 
 interface ContentItem {
   title: string;
@@ -14,7 +14,6 @@ interface ContentItem {
   isNew?: boolean;
   isTrending?: boolean;
   isPopular?: boolean;
-  featured?: boolean;
 }
 
 interface UltraContentPromotionBannerProps {
@@ -40,42 +39,47 @@ export default function UltraContentPromotionBanner({
     switch (variant) {
       case 'featured':
         return {
-          gradient: 'from-indigo-600 via-purple-600 to-pink-600',
-          badgeColor: 'bg-white bg-opacity-20',
-          textColor: 'text-white',
-          buttonPrimary: 'bg-white text-indigo-600 hover:bg-gray-100',
+          bg: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600',
+          badge: 'bg-white bg-opacity-20',
+          text: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          button: 'bg-white text-indigo-600 hover:bg-gray-100',
           buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600'
         };
       case 'trending':
         return {
-          gradient: 'from-orange-600 via-red-600 to-pink-600',
-          badgeColor: 'bg-white bg-opacity-20',
-          textColor: 'text-white',
-          buttonPrimary: 'bg-white text-orange-600 hover:bg-gray-100',
+          bg: 'bg-gradient-to-r from-orange-600 via-red-600 to-pink-600',
+          badge: 'bg-white bg-opacity-20',
+          text: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          button: 'bg-white text-orange-600 hover:bg-gray-100',
           buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-orange-600'
         };
       case 'new':
         return {
-          gradient: 'from-green-600 via-emerald-600 to-teal-600',
-          badgeColor: 'bg-white bg-opacity-20',
-          textColor: 'text-white',
-          buttonPrimary: 'bg-white text-green-600 hover:bg-gray-100',
+          bg: 'bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600',
+          badge: 'bg-white bg-opacity-20',
+          text: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          button: 'bg-white text-green-600 hover:bg-gray-100',
           buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-green-600'
         };
       case 'popular':
         return {
-          gradient: 'from-blue-600 via-indigo-600 to-purple-600',
-          badgeColor: 'bg-white bg-opacity-20',
-          textColor: 'text-white',
-          buttonPrimary: 'bg-white text-blue-600 hover:bg-gray-100',
+          bg: 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600',
+          badge: 'bg-white bg-opacity-20',
+          text: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          button: 'bg-white text-blue-600 hover:bg-gray-100',
           buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-blue-600'
         };
       default:
         return {
-          gradient: 'from-indigo-600 via-purple-600 to-pink-600',
-          badgeColor: 'bg-white bg-opacity-20',
-          textColor: 'text-white',
-          buttonPrimary: 'bg-white text-indigo-600 hover:bg-gray-100',
+          bg: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600',
+          badge: 'bg-white bg-opacity-20',
+          text: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          button: 'bg-white text-indigo-600 hover:bg-gray-100',
           buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600'
         };
     }
@@ -85,7 +89,7 @@ export default function UltraContentPromotionBanner({
   const displayedContent = content.slice(0, maxItems);
 
   return (
-    <section className={`py-20 bg-gradient-to-r ${styles.gradient} text-white relative overflow-hidden ${className}`}>
+    <section className={`py-20 ${styles.bg} text-white relative overflow-hidden ${className}`}>
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -95,7 +99,7 @@ export default function UltraContentPromotionBanner({
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className={`inline-flex items-center ${styles.badgeColor} rounded-full px-6 py-2 mb-6 backdrop-blur-sm`}>
+          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6 backdrop-blur-sm`}>
             <span className="text-sm font-medium">{subtitle}</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -104,24 +108,23 @@ export default function UltraContentPromotionBanner({
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/content-showcase"
-              className={`${styles.buttonPrimary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg flex items-center gap-2`}
+              className={`${styles.button} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
             >
-              <BookOpen className="w-5 h-5" />
-              Explore All Content
+              🎯 Explore All Content
             </Link>
             <Link
               href="/resources"
-              className={`${styles.buttonSecondary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg flex items-center gap-2`}
+              className={`${styles.buttonSecondary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
             >
-              <Download className="w-5 h-5" />
-              Download Resources
+              📚 Download Resources
             </Link>
           </div>
         </motion.div>
 
+        {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedContent.map((item, index) => (
             <motion.div
@@ -133,40 +136,54 @@ export default function UltraContentPromotionBanner({
               whileHover={{ y: -10, scale: 1.02 }}
             >
               <Link href={item.href} className="group block">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
+                <div className={`${styles.card} p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border h-full`}>
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
                     </div>
                     <div className="flex items-center gap-2">
-                      {item.isTrending && <TrendingUp className="w-4 h-4 text-orange-300" />}
-                      {item.featured && <Star className="w-4 h-4 text-yellow-300" />}
                       {item.isNew && (
                         <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                           NEW
                         </span>
                       )}
+                      {item.isTrending && (
+                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                          TRENDING
+                        </span>
+                      )}
+                      {item.isPopular && (
+                        <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                          POPULAR
+                        </span>
+                      )}
                     </div>
                   </div>
                   
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-200 transition-colors line-clamp-2">
+                  <h3 className="text-lg font-semibold mb-3 group-hover:text-yellow-300 transition-colors">
                     {item.title}
                   </h3>
                   
-                  <p className="text-sm opacity-90 mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-sm opacity-90 mb-4 leading-relaxed">
                     {item.description}
                   </p>
                   
                   <div className="flex items-center justify-between text-xs opacity-75">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
                       <span className="bg-white bg-opacity-20 px-2 py-1 rounded">
                         {item.category}
                       </span>
                       {item.readTime && (
-                        <span className="flex items-center gap-1">
+                        <>
                           <Clock className="w-3 h-3" />
-                          {item.readTime}
-                        </span>
+                          <span>{item.readTime}</span>
+                        </>
+                      )}
+                      {item.type && (
+                        <>
+                          <FileText className="w-3 h-3" />
+                          <span>{item.type}</span>
+                        </>
                       )}
                     </div>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -177,17 +194,33 @@ export default function UltraContentPromotionBanner({
           ))}
         </div>
 
-        {content.length > maxItems && (
-          <div className="text-center mt-8">
-            <Link
-              href="/content-showcase"
-              className={`${styles.buttonSecondary} px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2`}
-            >
-              View All Content
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">{content.length}+</div>
+              <div className="text-sm opacity-90">Total Resources</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">50K+</div>
+              <div className="text-sm opacity-90">Downloads</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">10K+</div>
+              <div className="text-sm opacity-90">Monthly Readers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">98%</div>
+              <div className="text-sm opacity-90">Satisfaction</div>
+            </div>
           </div>
-        )}
+        </motion.div>
       </div>
     </section>
   );
