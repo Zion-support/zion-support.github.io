@@ -45,10 +45,10 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                🎉 50+ New AI Resources: Trends, Implementation & Success Stories!
+                🎉 75+ New AI Resources: Breakthrough Innovations, Case Studies & Implementation Guides!
               </h2>
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
-                Just released: AI Trends 2025 Predictions, Implementation Success Framework, Manufacturing Automation Case Study, 
+                Just released: Quantum AI Breakthroughs, Healthcare Revolution, Manufacturing $200M Success Story, 
                 plus 200+ page Master Guide, comprehensive checklists, and expert webinars. Everything you need to master AI in 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -74,24 +74,24 @@ export default function HomePage() {
               
               {/* Featured Content Grid */}
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <Link href="/blog/ai-2025-trends-predictions" className="group">
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🔮</div>
-                    <h3 className="text-lg font-semibold mb-2">AI Trends 2025 Predictions</h3>
-                    <p className="text-sm opacity-90 mb-3">15 predictions shaping the future of AI</p>
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">⚛️</div>
+                    <h3 className="text-lg font-semibold mb-2">Quantum AI Breakthrough</h3>
+                    <p className="text-sm opacity-90 mb-3">Revolutionary quantum computing applications</p>
                     <div className="flex items-center text-xs opacity-75">
-                      <span>28 min read</span>
+                      <span>22 min read</span>
                       <span className="mx-2">•</span>
                       <span>New</span>
                     </div>
                   </div>
                 </Link>
                 
-                <Link href="/case-studies/ai-automation-manufacturing-success-2025" className="group">
+                <Link href="/case-studies/ai-manufacturing-automation-breakthrough-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                     <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏭</div>
-                    <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
-                    <p className="text-sm opacity-90 mb-3">40% cost reduction case study</p>
+                    <h3 className="text-lg font-semibold mb-2">$200M Manufacturing Success</h3>
+                    <p className="text-sm opacity-90 mb-3">Complete case study with ROI analysis</p>
                     <div className="flex items-center text-xs opacity-75">
                       <span>Case Study</span>
                       <span className="mx-2">•</span>

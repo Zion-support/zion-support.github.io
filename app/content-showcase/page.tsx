@@ -26,7 +26,7 @@ export default function ContentShowcasePage() {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🧠",
+      icon: "🚀",
       category: "AI Innovations",
       readTime: "25 min read",
       date: "Jan 30, 2025"
@@ -39,6 +39,24 @@ export default function ContentShowcasePage() {
       category: "AI Strategy",
       readTime: "18 min read",
       date: "Feb 01, 2025"
+    },
+    {
+      title: "AI Workforce Transformation 2025: Complete Reskilling Strategies",
+      description: "Learn how to transform your workforce for the AI era. Complete guide to reskilling strategies, change management, and building AI-ready teams.",
+      href: "/blog/ai-workforce-transformation-2025",
+      icon: "👥",
+      category: "Workforce AI",
+      readTime: "20 min read",
+      date: "Feb 05, 2025"
+    },
+    {
+      title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems",
+      description: "Discover how AI is driving sustainability initiatives and reducing carbon footprints. Learn about smart energy management and climate risk assessment solutions.",
+      href: "/blog/ai-sustainability-green-tech-2025",
+      icon: "🌱",
+      category: "Green AI",
+      readTime: "16 min read",
+      date: "Feb 08, 2025"
     }
   ];
 
