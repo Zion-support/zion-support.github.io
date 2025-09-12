@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '23',
+      title: 'AI Agents On‑Prem in Enterprise (2025)',
+      description: 'Secure, governed, high‑performance on‑prem AI agents: reference architectures and patterns.',
+      href: '/blog/ai-2025-ai-agents-on-prem-enterprise',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',
@@ -56,13 +67,13 @@ const NewContentPromoBanner = ({
       category: 'Case Study'
     },
     {
-      id: '23',
+      id: '26',
       title: 'Privacy-Preserving AI in Production (2025)',
       description: 'Ship AI with differential privacy, federated learning, and privacy-by-design guardrails.',
       href: '/blog/ai-2025-privacy-preserving-ai',
       type: 'blog',
       featured: true,
-      readTime: '17 min read',
+      readTime: '16 min read',
       date: 'Sep 12, 2025',
       category: 'Privacy'
     },
