@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 import { ArrowRight, Clock, User, Calendar, Tag, Share2, BookOpen, Download, ExternalLink, Eye, Mic, Image, Video } from 'lucide-react';
 

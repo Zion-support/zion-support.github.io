@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp, Brain, Zap, Shield } from 'lucide-react';
 
 export default function AI2025YearInReview() {

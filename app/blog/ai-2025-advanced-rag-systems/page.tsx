@@ -2,8 +2,8 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 =======
 >>>>>>> 6d58bbd2221ec2e3b32c98ab54b0c4aecc83a7e7
 import { Metadata } from 'next';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Download, Calendar, User, Clock, CheckCircle, AlertCircle, Target, Brain, Zap, Shield, BarChart3, FileText, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {

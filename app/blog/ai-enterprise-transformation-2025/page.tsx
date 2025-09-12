@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 =======
 =======
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIEnterpriseTransformation2025() {
   return (

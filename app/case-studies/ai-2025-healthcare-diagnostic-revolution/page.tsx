@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, CheckCircleIcon, ChartBarIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Healthcare Diagnostic Revolution: 95% Accuracy Case Study | Zion Tech Group',
