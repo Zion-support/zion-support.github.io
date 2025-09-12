@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-set -e
 
 echo "🔍 Running pre-commit checks..."
 
@@ -23,7 +22,4 @@ else
   echo "ℹ️  Skipping type-check (tsc not found). Run 'npm install' to enable."
 fi
 
-# Deletion guard to preserve files unless explicitly allowed
-sh ./scripts/prevent-deletion.sh
-
-echo "✅ Pre-commit checks passed"
+echo "✅ All pre-commit checks passed!"

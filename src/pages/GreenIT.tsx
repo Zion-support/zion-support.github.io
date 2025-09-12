@@ -1,4 +1,53 @@
 
+          {/* Case Study */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Success Story: TechCorp's Green Transformation
+            </h2>
+            <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-2xl p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    From High Energy Costs to Sustainable Success
+                  </h3>
+                  <p className="text-zion-slate-light mb-6">
+                    TechCorp, a mid-sized software company, was struggling with skyrocketing energy bills 
+                    and wanted to improve their environmental impact. We helped them implement a comprehensive 
+                    green IT strategy.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-400">40%</div>
+                      <div className="text-zion-slate-light text-sm">Energy Reduction</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-400">$85K</div>
+                      <div className="text-zion-slate-light text-sm">Annual Savings</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-yellow-400">60%</div>
+                      <div className="text-zion-slate-light text-sm">Carbon Footprint</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-400">12</div>
+                      <div className="text-zion-slate-light text-sm">Months ROI</div>
+                    </div>
+                  </div>
+                  <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Read Full Case Study
+                  </button>
+                </div>
+                <div className="bg-white/10 rounded-lg p-6">
+                  <blockquote className="text-zion-slate-light italic text-lg">
+                    "Zion Tech Group's green IT solutions transformed our infrastructure and significantly 
+                    reduced our environmental impact while saving us money. It's a win-win for our business 
+                    and the planet."
+                  </blockquote>
+                  <div className="mt-4 text-white font-semibold">
+                    — Sarah Johnson, CTO at TechCorp
+                  </div>
+=======
+
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";

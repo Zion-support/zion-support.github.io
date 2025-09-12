@@ -1,13 +1,6 @@
-<<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from 'lucide-react'
-========
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
->>>>>>>> origin/backup-critical-fixes-20250824-224408:src.broken/components/ChatAssistant/ChatInput.tsx.backup.1756001039
 
 interface ChatInputProps {
   onSend: (message: string) => void;

@@ -6,6 +6,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {

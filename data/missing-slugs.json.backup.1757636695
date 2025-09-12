@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-[
-<<<<<<< HEAD
-=======
   "ai-autonomous-business-intelligence",
   "ai-autonomous-business-process-automation",
   "ai-autonomous-customer-success",
@@ -70,7 +66,6 @@
   "quantum-storage-platform-2045",
   "quantum-supply-chain-optimizer",
   "services/ai-knowledge-graph-studio",
-=======
   "ai-autonomous-marketing-platform",
   "ai-autonomous-robotics-platform",
   "ai-content-factory-pro",
@@ -99,21 +94,15 @@
   "services/ai-knowledge-graph-studio",
   "services/ai-sales-sequence-personalizer",
   "services/ai-synthetic-data-studio",
->>>>>>> origin/backup-main-20250823-224841
+=======
   "services/data-contracts-hub",
   "services/llm-guarded-api-gateway",
   "services/serverless-lakehouse-starter",
-<<<<<<< HEAD
+[]
+=======
+  "services/zero-trust-sso-mesh",
   "space-colonization-services",
   "space-mining-platform"
 ]
 =======
 []
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
-=======
-  "services/zero-trust-sso-mesh",
-  "space-colonization-services",
-  "space-mining-platform",
-  "transportation-logistics-solutions"
-]
->>>>>>> origin/backup-main-20250823-224841

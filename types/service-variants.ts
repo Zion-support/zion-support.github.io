@@ -103,4 +103,7 @@ export type ServiceVariant =
   | 'quantum-security-futuristic'
   | 'energy-futuristic'
   | 'transportation-futuristic'
-  | 'education-futuristic';
+  | 'education-futuristic'
+  | 'real-estate-futuristic'
+  | 'industrial-futuristic'
+  | 'neural-futuristic';
