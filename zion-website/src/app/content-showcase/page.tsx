@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Foundation Model Cost Optimization 2025",
+      description: "Cut LLM costs 40–70% using smart routing, caching, distillation, and compression while maintaining quality.",
+      href: "/blog/ai-2025-foundation-model-cost-optimization",
+      icon: "💸",
+      category: "MLOps",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Operationalizing AI Governance 2025",
+      description: "Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.",
+      href: "/blog/ai-2025-operationalizing-ai-governance",
+      icon: "📜",
+      category: "Governance",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Generative AI Evaluation 2025: Reliable Metrics and Methods",
       description: "Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.",
       href: "/blog/ai-2025-genai-evaluation",

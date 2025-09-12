@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '11',
+      title: 'Foundation Model Cost Optimization 2025',
+      description: 'Cut LLM costs 40–70% using routing, caching, distillation, and compression while keeping quality high.',
+      href: '/blog/ai-2025-foundation-model-cost-optimization',
+      type: 'blog',
+      category: 'MLOps',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['LLM', 'Routing', 'Caching', 'Distillation', 'Quantization'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '12',
+      title: 'Operationalizing AI Governance 2025',
+      description: 'Practical frameworks to embed responsible AI into engineering, product, and operations without slowing delivery.',
+      href: '/blog/ai-2025-operationalizing-ai-governance',
+      type: 'blog',
+      category: 'Governance',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Governance', 'Risk', 'Compliance', 'Policy-as-code'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '0',
       title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
       description: 'A practical guide to deploying and operating autonomous AI agents at the edge with strong guardrails and observability.',
