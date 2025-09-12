@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '26',
+      title: 'Vector Databases 2025: Benchmarks & Production Patterns',
+      description: 'Latency, recall, and cost tradeoffs across vector stores. HNSW vs IVF, hybrid search, and ops.',
+      href: '/blog/ai-2025-vector-databases-benchmarks',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: '15',
       title: 'AI Agent Observability in 2025: Telemetry & Guardrails',
       description: 'End-to-end visibility for agents with structured telemetry, distributed tracing, inline evals, and policy guardrails.',

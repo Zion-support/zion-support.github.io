@@ -28,6 +28,19 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '26',
+      title: 'Vector Databases 2025: Benchmarks, Tradeoffs, and Production Patterns',
+      description: 'Choose and operate vector databases in production. Benchmarks, hybrid search, filtering, and ops.',
+      href: '/blog/ai-2025-vector-databases-benchmarks',
+      type: 'blog',
+      category: 'RAG',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['RAG', 'Vector Databases', 'Search', 'Benchmarks'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: early signals, dynamic safety stock, and agent workflows.',
@@ -92,6 +105,7 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
