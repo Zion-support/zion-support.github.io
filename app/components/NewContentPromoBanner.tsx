@@ -8,32 +8,32 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
-    title: "Governed Agentic Workflows: 2025 Blueprint",
-    description: "Policy gates, audits, and evals for production agent systems",
-    url: "/blog/governed-agentic-workflows",
+    title: "Agent & LLM Benchmarking Best Practices 2025",
+    description: "Design trustworthy evals with latency, cost, and safety signals",
+    url: "/blog/ai-2025-agent-benchmarking-best-practices",
     type: "Blog Post",
-    category: "Governance",
-    icon: "🧩",
+    category: "Evaluation",
+    icon: "📏",
     featured: true,
     new: true
   },
   {
-    title: "Agent Benchmarking Blueprint 2025",
-    description: "Decision-ready evals for quality, latency, cost, and safety",
-    url: "/resources/agent-benchmarking-blueprint-2025",
+    title: "AI Evaluation Maturity Model 2025",
+    description: "Assess and level-up evals across metrics, data, and governance",
+    url: "/resources/ai-2025-evaluation-maturity-model",
     type: "Resource",
     category: "Evaluation",
-    icon: "📊",
+    icon: "📚",
     featured: true,
     new: true
   },
   {
-    title: "Agent Observability Blueprint: 38% MTTR Reduction",
-    description: "Spans, metrics, and policies that cut outages and costs",
-    url: "/case-studies/ai-2025-agent-observability-blueprint",
+    title: "AI Customer Support Automation Success 2025",
+    description: "60% deflection, 45% faster resolution, +22 NPS with agentic workflows",
+    url: "/case-studies/ai-2025-customer-support-automation-success",
     type: "Case Study",
-    category: "AIOps",
-    icon: "🛰️",
+    category: "Customer Support",
+    icon: "🤝",
     featured: true,
     new: true
   },
