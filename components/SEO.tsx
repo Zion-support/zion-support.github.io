@@ -87,7 +87,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
       
-      {/* Structured Data */}
+      {/* Enhanced Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -98,24 +98,85 @@ const SEO: React.FC<SEOProps> = ({
           "image": fullImage,
           "author": type === 'article' ? {
             "@type": "Organization",
-            "name": author
+            "name": author,
+            "url": "https://zion.app"
           } : undefined,
           "publisher": {
             "@type": "Organization",
             "name": "Zion Tech Group",
+            "url": "https://zion.app",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://zion.app/images/zion-tech-group-logo.png"
-            }
+              "url": "https://zion.app/images/zion-tech-group-logo.png",
+              "width": 600,
+              "height": 60
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "email": "info@zion.app",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://twitter.com/ZionTechGroup",
+              "https://linkedin.com/company/zion-tech-group",
+              "https://github.com/Zion-Holdings"
+            ]
           },
           "datePublished": publishedTime,
           "dateModified": modifiedTime || publishedTime,
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": fullUrl
-          }
+          },
+          "breadcrumb": type === 'article' ? {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://zion.app"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://zion.app/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": title,
+                "item": fullUrl
+              }
+            ]
+          } : undefined
         })}
       </script>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="yandex-verification" content="your-yandex-verification-code" />
+      
+      {/* Performance and UX */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Security */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
     </Helmet>
   );
 };
