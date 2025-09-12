@@ -15,7 +15,6 @@ import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -40,104 +39,66 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-        {/* Mega Content Drop Banner */}
-        <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+        {/* Revolutionary Content Drop Banner */}
+        <section className="py-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                🚀 25+ New AI Resources Just Released!
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover our biggest content update yet: Advanced AI Automation, Cybersecurity Threats, 
-                Healthcare AI Success Stories, and the complete 200+ page AI Implementation Master Guide 2026. 
-                Everything you need to succeed with AI in 2025.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link
-                  href="/content-showcase"
-                  className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-=======
-        {/* Content Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT UPDATE</span>
+                <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT DROP</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content: 25+ New Resources Just Released!
+                🎉 25+ Breakthrough AI Resources Just Released!
               </h2>
-              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Discover our latest breakthrough content: Quantum Computing AI, Neural Interfaces, Space Technology, 
-                plus new case studies showing $2.3B+ in real savings. Get expert insights on the technologies 
-                transforming 2025 and beyond.
+              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto leading-relaxed">
+                Discover our latest breakthrough content: AI Advanced Automation, Quantum Computing Breakthroughs, 
+                Healthcare AI Success Stories, plus the comprehensive AI Implementation Master Guide 2026. Get expert insights 
+                on the technologies transforming 2025 and beyond.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
                   href="/content-showcase"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
->>>>>>> cursor/create-and-deploy-new-content-fe5c
                 >
                   🎯 Explore All New Content
                 </Link>
                 <Link
-<<<<<<< HEAD
-                  href="/resources/ai-implementation-master-guide-2026"
-                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+                  href="/blog/ai-2025-advanced-automation"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  📚 Download Master Guide
+                  📖 Read Latest Article
                 </Link>
               </div>
               
-              {/* Featured Content Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+              {/* Featured Content Preview */}
+              <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
                 <Link href="/blog/ai-2025-advanced-automation" className="group">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🤖</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Advanced Automation 2025</h3>
-                    <p className="text-xs opacity-90">Complete implementation guide</p>
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🤖</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Advanced Automation</h3>
+                    <p className="text-xs opacity-90">Next-gen intelligent systems</p>
                   </div>
                 </Link>
-                
-                <Link href="/blog/ai-2025-cybersecurity-threats" className="group">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity Threats</h3>
-                    <p className="text-xs opacity-90">Complete defense guide</p>
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">⚛️</div>
+                    <h3 className="text-sm font-semibold mb-1">Quantum AI Breakthrough</h3>
+                    <p className="text-xs opacity-90">The next frontier in computing</p>
                   </div>
                 </Link>
-                
                 <Link href="/case-studies/ai-healthcare-diagnosis-success-2025" className="group">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🏥</div>
-                    <h3 className="text-sm font-semibold mb-1">Healthcare AI Success</h3>
-                    <p className="text-xs opacity-90">95% accuracy achieved</p>
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🏥</div>
+                    <h3 className="text-sm font-semibold mb-1">95% Healthcare Accuracy</h3>
+                    <p className="text-xs opacity-90">AI diagnosis success story</p>
                   </div>
                 </Link>
-                
                 <Link href="/resources/ai-implementation-master-guide-2026" className="group">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">📖</div>
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">📚</div>
                     <h3 className="text-sm font-semibold mb-1">Master Guide 2026</h3>
-                    <p className="text-xs opacity-90">200+ pages free</p>
+                    <p className="text-xs opacity-90">200+ page implementation guide</p>
                   </div>
-=======
-                  href="/blog/ai-2025-quantum-computing-breakthrough"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  ⚡ Read Quantum AI Article
-                </Link>
-                <Link
-                  href="/case-studies/ai-quantum-financial-optimization-2025"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  💰 View $2.3B Case Study
->>>>>>> cursor/create-and-deploy-new-content-fe5c
                 </Link>
               </div>
             </div>
@@ -182,38 +143,39 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Latest Articles Promotion Banner */}
+        {/* Latest Content Drop - February 2025 */}
         <section className="py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🧠 BREAKTHROUGH AI ARTICLES</span>
+                <span className="text-sm font-medium">🔥 JUST PUBLISHED - FEBRUARY 2025</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🚀 Revolutionary AI Technologies: Neural Interfaces, Quantum Computing & Space Tech
+                🚀 Revolutionary AI Content: Advanced Automation & Quantum Computing!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Explore our latest breakthrough articles covering the most advanced AI technologies of 2025. 
-                From mind-machine interfaces to quantum AI optimization and space technology applications.
+                Discover our latest breakthrough content: AI Advanced Automation, Quantum Computing Breakthroughs, 
+                Healthcare AI Success Stories, and the comprehensive AI Implementation Master Guide 2026. 
+                Expert insights on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/blog/ai-2025-neural-interfaces-brain-computer"
+                  href="/blog/ai-2025-advanced-automation"
                   className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  🧠 Neural Interfaces
+                  Read Advanced Automation Guide
                 </Link>
                 <Link
                   href="/blog/ai-2025-quantum-computing-breakthrough"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                 >
-                  ⚡ Quantum AI
+                  Quantum Computing Breakthrough
                 </Link>
                 <Link
-                  href="/blog/ai-2025-space-technology-autonomous-systems"
+                  href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                 >
-                  🛰️ Space Tech
+                  Download Master Guide 2026
                 </Link>
               </div>
             </div>
@@ -311,71 +273,6 @@ export default function HomePage() {
 
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
-
-      {/* Enhanced Content Promotion Banner */}
-      <EnhancedContentPromotionBanner
-        title="🚀 Revolutionary AI Content Drop"
-        subtitle="✨ JUST PUBLISHED - JANUARY 2025"
-        description="Discover our latest breakthrough content: AI Advanced Automation, Cybersecurity Threats, Enterprise Success Stories, and comprehensive implementation guides. Expert insights to accelerate your success in 2025."
-        content={[
-          {
-            title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
-            description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
-            href: "/blog/ai-2025-advanced-automation",
-            icon: "🤖",
-            category: "AI Automation",
-            readTime: "25 min read",
-            isNew: true
-          },
-          {
-            title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
-            description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
-            href: "/blog/ai-2025-cybersecurity-threats",
-            icon: "🛡️",
-            category: "Cybersecurity",
-            readTime: "22 min read",
-            isNew: true
-          },
-          {
-            title: "AI Enterprise Automation Success 2025: Complete Implementation Guide",
-            description: "Learn how Fortune 500 companies achieve 300% ROI with AI enterprise automation. Complete implementation guide with real case studies and proven strategies.",
-            href: "/blog/ai-2025-enterprise-automation-success",
-            icon: "🏢",
-            category: "Enterprise AI",
-            readTime: "28 min read",
-            isNew: true
-          },
-          {
-            title: "AI Healthcare Diagnosis Success 2025: 95% Accuracy Case Study",
-            description: "Discover how a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times with AI-powered medical imaging.",
-            href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-            icon: "🏥",
-            category: "Healthcare AI",
-            type: "Case Study",
-            isNew: true
-          },
-          {
-            title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-            description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
-            href: "/resources/ai-implementation-master-guide-2026",
-            icon: "📚",
-            category: "Master Guide",
-            type: "Free Download",
-            isNew: true
-          },
-          {
-            title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies",
-            description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions.",
-            href: "/blog/ai-2025-breakthrough-innovations",
-            icon: "🚀",
-            category: "AI Innovations",
-            readTime: "25 min read",
-            isTrending: true
-          }
-        ]}
-        variant="featured"
-        maxItems={6}
-      />
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />

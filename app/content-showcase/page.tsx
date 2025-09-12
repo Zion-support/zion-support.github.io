@@ -5,27 +5,26 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-<<<<<<< HEAD
-      title: "AI Advanced Automation 2025: Complete Implementation Guide",
-      description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
+      title: "AI Advanced Automation 2025: Next-Generation Intelligent Systems",
+      description: "Discover the future of AI automation in 2025. Learn about advanced intelligent systems, autonomous workflows, and next-generation automation technologies transforming businesses.",
       href: "/blog/ai-2025-advanced-automation",
       icon: "🤖",
       category: "AI Automation",
-      readTime: "25 min read",
+      readTime: "18 min read",
       date: "Jan 30, 2025"
     },
     {
-      title: "AI Cybersecurity Threats 2025: Complete Defense Guide",
-      description: "Protect your organization from emerging AI cybersecurity threats in 2025. Learn about AI-powered attacks, defense strategies, and security best practices.",
-      href: "/blog/ai-2025-cybersecurity-threats",
-      icon: "🛡️",
-      category: "Cybersecurity",
+      title: "AI Quantum Computing Breakthrough 2025: The Next Frontier",
+      description: "Explore the revolutionary intersection of AI and quantum computing in 2025. Discover breakthrough applications, quantum machine learning, and the future of computational intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
       readTime: "22 min read",
-      date: "Jan 30, 2025"
+      date: "Jan 31, 2025"
     },
     {
-      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
-      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
+      title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies Reshaping Industries",
+      description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions that are revolutionizing business operations.",
       href: "/blog/ai-2025-breakthrough-innovations",
       icon: "🚀",
       category: "AI Innovations",
@@ -40,67 +39,20 @@ export default function ContentShowcasePage() {
       category: "Sustainability",
       readTime: "20 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the revolutionary advances in AI-powered robotics and automation. Discover how intelligent machines are transforming manufacturing, healthcare, and service industries with unprecedented capabilities.",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
-=======
-      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
-      description: "Explore how quantum computing is revolutionizing AI in 2025. Discover breakthrough applications, real-world implementations, and the future of quantum-enhanced machine learning.",
-      href: "/blog/ai-2025-quantum-computing-breakthrough",
-      icon: "⚡",
-      category: "Quantum AI",
-      readTime: "18 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI 2025: Neural Interfaces & Brain-Computer Integration",
-      description: "The Mind-Machine Revolution is here. Discover how neural interfaces are creating direct connections between human brains and AI systems, unlocking unprecedented capabilities.",
-      href: "/blog/ai-2025-neural-interfaces-brain-computer",
-      icon: "🧠",
-      category: "Neural Interfaces",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI 2025: Space Technology & Autonomous Systems",
-      description: "The Final Frontier meets Artificial Intelligence. Discover how AI is revolutionizing space exploration, satellite operations, and autonomous systems.",
-      href: "/blog/ai-2025-space-technology-autonomous-systems",
-      icon: "🛰️",
-      category: "Space Technology",
-      readTime: "20 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
-      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
-      href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🚀",
-      category: "AI Innovations",
-      readTime: "25 min read",
-      date: "Jan 30, 2025"
->>>>>>> cursor/create-and-deploy-new-content-fe5c
     }
   ];
 
   const newCaseStudies = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
+      title: "AI Healthcare Diagnosis Success 2025: 95% Accuracy Breakthrough",
+      description: "How a major healthcare system achieved 95% diagnostic accuracy with AI-powered medical imaging and diagnosis systems, saving $12M annually and improving patient outcomes.",
+      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Accuracy",
+      date: "Feb 02, 2025"
+    },
+    {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
@@ -108,33 +60,6 @@ export default function ContentShowcasePage() {
       category: "Manufacturing AI",
       result: "$200M Savings",
       date: "Jan 28, 2025"
-=======
-      title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
-      description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
-      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-      icon: "🏥",
-      category: "Healthcare AI",
-      result: "95% Accuracy",
-      date: "Jan 30, 2025"
->>>>>>> cursor/create-and-deploy-new-content-f6c0
-=======
-      title: "AI Quantum Financial Optimization 2025 - $2.3B Cost Reduction Case Study",
-      description: "Discover how a Fortune 500 financial institution achieved $2.3B in cost savings using quantum AI optimization for portfolio management, risk assessment, and trading algorithms.",
-      href: "/case-studies/ai-quantum-financial-optimization-2025",
-      icon: "💰",
-      category: "Quantum AI",
-      result: "$2.3B Savings",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Neural Interface Healthcare 2025 - Revolutionary Medical Breakthrough",
-      description: "Discover how neural interfaces are revolutionizing healthcare in 2025. Real case study showing 95% improvement in patient outcomes and $500M cost savings.",
-      href: "/case-studies/ai-neural-interface-healthcare-2025",
-      icon: "🏥",
-      category: "Healthcare AI",
-      result: "95% Improvement",
-      date: "Jan 28, 2025"
->>>>>>> cursor/create-and-deploy-new-content-fe5c
     },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
@@ -144,36 +69,18 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
-<<<<<<< HEAD
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
-=======
->>>>>>> cursor/create-and-deploy-new-content-fe5c
     }
   ];
 
   const newResources = [
     {
       title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-<<<<<<< HEAD
-      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across industries.",
       href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
-=======
-      description: "Download our comprehensive AI Implementation Master Guide for 2026. 200+ pages of proven frameworks, templates, and strategies to successfully adopt AI across your organization.",
-      href: "/resources/ai-2025-implementation-master-guide-2026",
-      icon: "📖",
->>>>>>> cursor/create-and-deploy-new-content-fe5c
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 28, 2025"
+      date: "Feb 03, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
