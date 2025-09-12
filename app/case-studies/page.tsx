@@ -270,6 +270,35 @@ export default function CaseStudiesPage() {
       image: '/api/placeholder/600/400',
       featured: true,
     },
+    {
+      id: 'ai-ecommerce-transformation-2025',
+      title: 'AI E-commerce Transformation: 300% Revenue Growth in 18 Months',
+      client: 'E-commerce Leader',
+      industry: 'E-commerce & Retail',
+      challenge:
+        'Manual processes, high customer acquisition costs ($150 per customer), inefficient customer service with 24-hour response times, and poor personalization leading to low conversion rates',
+      solution:
+        'Comprehensive AI transformation including personalized recommendations, dynamic pricing, predictive inventory management, and AI-powered customer service automation',
+      results: [
+        '300% revenue growth in 18 months',
+        '60% reduction in operational costs',
+        '95% customer satisfaction rate',
+        '$15.8M annual benefits achieved',
+      ],
+      technologies: [
+        'Machine Learning',
+        'Python',
+        'TensorFlow',
+        'React',
+        'AWS',
+        'Kubernetes',
+        'Real-time Analytics',
+      ],
+      duration: '18 months',
+      team: '20 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
   ];
 
   const featuredStudies = caseStudies.filter(study => study.featured);
