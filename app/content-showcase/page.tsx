@@ -5,44 +5,62 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
+      description: "Explore how quantum computing is revolutionizing AI in 2025. Discover breakthrough applications, real-world implementations, and the future of quantum-enhanced machine learning.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚡",
+      category: "Quantum AI",
+      readTime: "18 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI 2025: Neural Interfaces & Brain-Computer Integration",
+      description: "The Mind-Machine Revolution is here. Discover how neural interfaces are creating direct connections between human brains and AI systems, unlocking unprecedented capabilities.",
+      href: "/blog/ai-2025-neural-interfaces-brain-computer",
+      icon: "🧠",
+      category: "Neural Interfaces",
+      readTime: "22 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI 2025: Space Technology & Autonomous Systems",
+      description: "The Final Frontier meets Artificial Intelligence. Discover how AI is revolutionizing space exploration, satellite operations, and autonomous systems.",
+      href: "/blog/ai-2025-space-technology-autonomous-systems",
+      icon: "🛰️",
+      category: "Space Technology",
+      readTime: "20 min read",
+      date: "Jan 28, 2025"
+    },
+    {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🧠",
+      icon: "🚀",
       category: "AI Innovations",
       readTime: "25 min read",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Trends 2025: 15 Predictions That Will Shape the Future of Technology",
-      description: "Discover the most important AI trends and predictions for 2025. From AGI breakthroughs to quantum AI, explore what's coming next in artificial intelligence.",
-      href: "/blog/ai-2025-trends-predictions",
-      icon: "🔮",
-      category: "AI Predictions",
-      readTime: "28 min read",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
-    },
-    {
-      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
-      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
-      href: "/blog/ai-multimodal-applications-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "12 min read",
-      date: "Jan 28, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Quantum Financial Optimization 2025 - $2.3B Cost Reduction Case Study",
+      description: "Discover how a Fortune 500 financial institution achieved $2.3B in cost savings using quantum AI optimization for portfolio management, risk assessment, and trading algorithms.",
+      href: "/case-studies/ai-quantum-financial-optimization-2025",
+      icon: "💰",
+      category: "Quantum AI",
+      result: "$2.3B Savings",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Neural Interface Healthcare 2025 - Revolutionary Medical Breakthrough",
+      description: "Discover how neural interfaces are revolutionizing healthcare in 2025. Real case study showing 95% improvement in patient outcomes and $500M cost savings.",
+      href: "/case-studies/ai-neural-interface-healthcare-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Improvement",
+      date: "Jan 28, 2025"
+    },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
       description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
@@ -51,36 +69,18 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
-    },
-    {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
-      icon: "📚",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. 200+ pages of proven frameworks, templates, and strategies to successfully adopt AI across your organization.",
+      href: "/resources/ai-2025-implementation-master-guide-2026",
+      icon: "📖",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
