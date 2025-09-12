@@ -70,41 +70,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-advanced-multimodal-revolution" className="group">
+              <Link href="/blog/ai-2025-comprehensive-trends-analysis" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
-                  <h3 className="text-lg font-semibold mb-2">Advanced Multimodal AI Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">400% efficiency gains with unified content understanding across text, images, audio, and video</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
+                  <h3 className="text-lg font-semibold mb-2">AI 2025: Comprehensive Trends Analysis</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete industry transformation guide covering 12 key AI trends driving the $3.2T revolution</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>15 min read</span>
+                    <span>25 min read</span>
                     <span className="mx-2">•</span>
                     <span>🆕 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-enterprise-automation-masterclass" className="group">
+              <Link href="/blog/ai-healthcare-diagnosis-revolution-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎓</div>
-                  <h3 className="text-lg font-semibold mb-2">Enterprise Automation Masterclass</h3>
-                  <p className="text-sm opacity-90 mb-3">Master the 7-phase framework for enterprise AI automation with 450% efficiency gains and $2.8B value creation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Diagnosis Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">99.7% diagnostic accuracy with AI-powered medical systems transforming healthcare delivery</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>20 min read</span>
                     <span className="mx-2">•</span>
                     <span>🎓 MASTERCLASS</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-2025-global-ecommerce-transformation" className="group">
+              <Link href="/case-studies/ai-transformation-global-manufacturing-giant-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛒</div>
-                  <h3 className="text-lg font-semibold mb-2">$2.1B E-commerce Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">Global e-commerce giant achieves 340% revenue increase and 60% cost reduction through comprehensive AI transformation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">$2.8B Manufacturing AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Global manufacturing giant achieves 340% ROI with comprehensive AI transformation across 150+ facilities</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $2.1B Value</span>
+                    <span>💰 $2.8B Value</span>
                   </div>
                 </div>
               </Link>
