@@ -1,196 +1,50 @@
-import React, { createContext, useContext, useEffect, useState } from 'react.ts';
 
-type Theme = 'light' | 'dark' | 'system';
+import { createContext, useContext, useEffect, useState } from "react"
 
-interface ThemeContextType {
+export type Theme = "dark" | "light" | "system"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  theme: anyanyanyanyanyanyanyanyanyanyanyanyanyanyTheme;
-<<<<<<< HEAD
-  setTheme: (theme: Theme)               => void;
-  isDark: boolean;
-=======
-  setTheme: anyanyanyanyanyanyanyanyanyanyanyanyanyany(theme: Theme)                => void;
-isDark: boolean;
-
-
-
-
-
-
-
-
-
-
-
-
-
+type ThemeProviderProps = {
+  children: React.ReactNode
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const ThemeContext = createContext<ThemeContextType | null>(null);
+export type ThemeProviderState = {
+  theme: Theme
+  setTheme: (theme: Theme) => void
+}
 
-export const useTheme = () => {;
-  const context = useContext(ThemeContext);
-<<<<<<< HEAD
-  if (context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider')};
-  return context};
-=======
-  if (context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider');
+const initialState: ThemeProviderState = {
+  theme: "dark",
+  setTheme: () => null,
+}
 
-  return context;
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
-<<<<<<< HEAD
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-=======
-interface ThemeProviderProps extends React.PropsWithChildren<{
-}> {
-
-  children: React.ReactNode}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-<<<<<<< HEAD
-  const [theme, setTheme] = useState<any>(() => {
-    if (typeof window !== 'null') {
-=======
-  const [theme, setTheme] = useState<any>(() => {
-    if (typeof window !== 'null') {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      const saved = localStorage.getItem('theme') as Theme;
-      if (saved && ['light', 'dark', 'system'].includes(saved)) {
-<<<<<<< HEAD
-        return saved;
-
-
-    return 'system';
-  });
-=======
-        return saved}
-    }
-    return 'system'});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  const [isDark, setIsDark] = useState(false);
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme] = useState<Theme>("dark")
 
   useEffect(() => {
-    const root = window.document.documentElement;
-<<<<<<< HEAD
-
-    const updateTheme = () => {
-      let effectiveTheme: 'light' | 'dark';
-
-      if (theme === 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      } else {
-        effectiveTheme = theme;
-
-      setIsDark(effectiveTheme === 'dark');
-
-      if (effectiveTheme === 'dark') {
-=======
-    
-    const updateTheme = () => {;
-      let effectiveTheme: 'light' | 'dark';
-      
-<<<<<<< HEAD
-      if (theme = == 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'} else {
-        effectiveTheme = theme};
-=======;
-      if (theme = == 'system') {;
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      } else {
-        effectiveTheme = theme;
-      }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      
-      setIsDark(effectiveTheme === 'dark');
-      
-      if (effectiveTheme = == 'dark') {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        root.classList.add('dark');
-        root.classList.remove('light')} else {
-        root.classList.add('light');
-<<<<<<< HEAD
-        root.classList.remove('dark');
-
-    };
-
-    updateTheme();
-
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanyanyanyanyanyanydark)');
-      mediaQuery.addEventListener('change', updateTheme);
-      return ()               => mediaQuery.removeEventListener('change', updateTheme);
-
-=======
-        root.classList.remove('dark')}
-    };
-
-    updateTheme();
-    
-    if (theme = == 'system') {;
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanyanyanyanyanyanydark)');
-      mediaQuery.addEventListener('change', updateTheme);
-      return ()                => mediaQuery.removeEventListener('change', updateTheme)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme)}, [theme]);
+    const root = window.document.documentElement
+    root.classList.remove("light", "dark")
+    root.classList.add("dark")
+  }, [])
 
   const value = {
-  theme,
-    setTheme,
-    isDark,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-
-
-
-
-
-
-};
+    theme,
+    setTheme: () => {},
+  }
 
   return (
-<<<<<<< HEAD
-    <ThemeContext.Provider value = {value}>
-      {children};
-    </ThemeContext.Provider>;
-  )};
-=======
-    <ThemeContext.Provider value = {value}>;
-      {children};
-    </ThemeContext.Provider>;
-  );
-<<<<<<< HEAD
-};}}}}}}}}
-=======
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    <ThemeProviderContext.Provider value={value}>
+      {children}
+    </ThemeProviderContext.Provider>
+  )
+}
+
+export const useTheme = (): ThemeProviderState => {
+  const context = useContext(ThemeProviderContext)
+
+  if (context === undefined)
+    throw new Error("useTheme must be used within a ThemeProvider")
+
+  return context
+}

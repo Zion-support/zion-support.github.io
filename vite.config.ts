@@ -1,72 +1,91 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https: any//vitejs.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      include: '**/*.{jsx,js,ts,tsx}',
+      fastRefresh: true,
+    }),
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
       '@utils': resolve(__dirname, 'src/utils'),
-      '@types': resolve(__dirname, 'src/types'),
       '@hooks': resolve(__dirname, 'src/hooks'),
-      '@services': resolve(__dirname, 'src/services'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
       '@styles': resolve(__dirname, 'src/styles'),
-    },
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
   },
   build: {
-    target: 'es2020',
+    target: 'esnext',
     minify: 'terser',
+    sourcemap: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
+    emptyOutDir: true,
+    assetsInlineLimit: 4096,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.name || '';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        }
+      }
+    },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
       },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'animation-vendor': ['framer-motion'],
-          'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
-          'icons-vendor': ['lucide-react'],
-          'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge'],
-        },
-        chunkFileNames: (chunkInfo)             => {
-          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
-          return `js/${facadeModuleId}-[hash].js`;
-        },
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `css/index-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-    sourcemap: false,
+      mangle: {
+        safari10: true,
+        properties: {}
+      }
+    }
   },
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'clsx',
+      'tailwind-merge',
       '@radix-ui/react-accordion',
       '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-aspect-ratio',
       '@radix-ui/react-avatar',
       '@radix-ui/react-checkbox',
-      '@radix-ui/react-context-menu',
+      '@radix-ui/react-collapsible',
       '@radix-ui/react-dialog',
       '@radix-ui/react-dropdown-menu',
       '@radix-ui/react-label',
@@ -81,21 +100,30 @@ export default defineConfig({
       '@radix-ui/react-switch',
       '@radix-ui/react-tabs',
       '@radix-ui/react-toast',
-      '@radix-ui/react-tooltip',
-      'framer-motion',
-      'lucide-react',
-      'clsx',
-      'class-variance-authority',
-      'tailwind-merge',
+      '@radix-ui/react-tooltip'
     ],
+    exclude: ['@radix-ui/react-icons']
   },
   server: {
-    port: 3000,
+    port: Number(process.env.PORT) || 3000,
     host: true,
-    open: true,
+    open: false,
+    cors: true,
+    hmr: {
+      overlay: false,
+    }
   },
   preview: {
     port: 4173,
     host: true,
+    open: true
   },
-})
+  css: {
+    devSourcemap: true,
+    postcss: './postcss.config.cjs'
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  }
+});
