@@ -116,6 +116,14 @@ import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceCon
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
 
+// New 2025 Enhanced Content Components
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import AIInnovationPromotionBanner2025 from '../components/AIInnovationPromotionBanner2025';
+import BusinessSolutionsShowcase2025 from '../components/BusinessSolutionsShowcase2025';
+import BusinessSolutionsPromotionBanner2025 from '../components/BusinessSolutionsPromotionBanner2025';
+import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
+import EnhancedNewsletterSignup2025 from '../components/EnhancedNewsletterSignup2025';
+
 // New 2026 Content Components
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
@@ -199,6 +207,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 ENHANCED CONTENT - TOP PRIORITY */}
+        <AIInnovationPromotionBanner2025 />
+        
+        {/* AI INNOVATION SHOWCASE 2025 - FEATURED */}
+        <AIInnovationShowcase2025 />
+        
+        {/* BUSINESS SOLUTIONS PROMOTION BANNER 2025 - NEW */}
+        <BusinessSolutionsPromotionBanner2025 />
+        
+        {/* BUSINESS SOLUTIONS SHOWCASE 2025 - FEATURED */}
+        <BusinessSolutionsShowcase2025 />
+        
+        {/* ENHANCED CONTENT DISCOVERY 2025 - NEW */}
+        <EnhancedContentDiscovery2025 />
+        
         {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2035BreakthroughPromotionBanner />
         
@@ -3439,6 +3462,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ENHANCED NEWSLETTER SIGNUP 2025 - LEAD CAPTURE */}
+      <EnhancedNewsletterSignup2025 />
     </div>
     </EnhancedErrorBoundary>
   );
