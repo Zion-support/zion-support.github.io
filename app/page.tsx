@@ -69,6 +69,28 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
+        {/* NEW CONTENT PROMOTIONAL SECTION */}
+        <section className="py-12 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                🚀 Explore Our New Content Hub 2026
+              </h2>
+              <p className="text-xl mb-8 text-blue-100">
+                Discover revolutionary technology solutions, AI innovations, and cutting-edge services that are transforming businesses worldwide.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/ultimate-content-hub-2026" className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  Ultimate Content Hub
+                </Link>
+                <Link href="/ai-innovation-showcase-2026" className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105">
+                  AI Innovation Showcase
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
