@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -238,14 +236,3 @@ export default function ProfilePage() {
       </div>
       <Footer />
     </>
-=======
-import React from 'react';
-export function ProfilePage() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
-}
