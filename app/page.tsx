@@ -12,6 +12,9 @@ const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
+const ContentPromotionBanner = lazy(() => import('../components/ContentPromotionBanner'));
+const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
+const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 
 // Card component
 function Card({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) {
@@ -129,6 +132,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Content Promotion Banner */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
+        <ContentPromotionBanner />
+      </Suspense>
 
       {/* Latest Content Mega Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -1890,45 +1898,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Featured Content Showcase */}
+      <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
+        <FeaturedContentShowcase />
+      </Suspense>
+
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-8'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              Stay Ahead with Our Latest Insights
-            </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Get weekly updates on AI trends, technology insights, and business strategies. 
-              Join 10,000+ professionals who trust our content.
-            </p>
-          </div>
-          <div className='bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto'>
-            <form className='space-y-4'>
-              <div className='flex flex-col sm:flex-row gap-4'>
-                <input
-                  type='email'
-                  placeholder='Enter your email address'
-                  className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  required
-                />
-                <button 
-                  type='submit'
-                  className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap'
-                >
-                  Subscribe Now
-                </button>
-              </div>
-              <p className='text-sm text-gray-500 text-center'>
-                No spam. Unsubscribe anytime. We respect your privacy.
-              </p>
-            </form>
-            <div className='mt-6 text-center'>
-              <p className='text-sm text-gray-600'>
-                <strong>What you'll get:</strong> Weekly AI insights, exclusive case studies, 
-                free resources, and early access to new content.
-              </p>
-            </div>
-          </div>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading newsletter..." />}>
+            <NewsletterSignup />
+          </Suspense>
         </div>
       </section>
     </div>
