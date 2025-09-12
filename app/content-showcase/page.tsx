@@ -26,7 +26,7 @@ export default function ContentShowcase() {
       category: "ai-automation",
       type: "Article",
       readTime: "21 min read",
-      publishDate: "2025-09-12",
+      publishDate: "2025-01-28",
       author: "Zion Tech Group",
       featured: true,
       trending: true,
