@@ -5,31 +5,31 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies Reshaping Industries",
-      description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions that are revolutionizing business operations.",
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Healthcare Revolution 2025: Transforming Medicine with Artificial Intelligence",
+      description: "Discover how AI is revolutionizing healthcare in 2025. Explore breakthrough applications in diagnosis, treatment, drug discovery, and patient care with real-world case studies.",
+      href: "/blog/ai-healthcare-revolution-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      readTime: "18 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🚀",
+      icon: "🧠",
       category: "AI Innovations",
       readTime: "25 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems",
-      description: "Discover how AI is driving sustainability initiatives and reducing carbon footprints. Learn about smart energy management, intelligent waste management, and climate risk assessment solutions.",
-      href: "/blog/ai-sustainability-green-tech-2025",
-      icon: "🌱",
-      category: "Sustainability",
-      readTime: "20 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the revolutionary advances in AI-powered robotics and automation. Discover how intelligent machines are transforming manufacturing, healthcare, and service industries with unprecedented capabilities.",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -44,13 +44,13 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
-      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
-      description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      icon: "💰",
+      title: "AI Manufacturing Automation Breakthrough 2025: $200M Savings Case Study",
+      description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings through AI automation. Complete case study with implementation details, ROI analysis, and lessons learned.",
+      href: "/case-studies/ai-manufacturing-automation-breakthrough-2025",
+      icon: "🏭",
       category: "Manufacturing AI",
       result: "$200M Savings",
-      date: "Jan 28, 2025"
+      date: "Jan 25, 2025"
     },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
@@ -74,8 +74,8 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across industries.",
       href: "/resources/ai-implementation-master-guide-2025",
       icon: "📚",
       category: "Master Guide",
