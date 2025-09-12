@@ -20,6 +20,7 @@ import UltraContentPromotionBanner2026 from '../components/UltraContentPromotion
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
+import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
@@ -49,6 +50,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2025 */}
+        <DynamicContentCarousel2025 />
         
         {/* ULTRA CONTENT PROMOTION BANNER 2025 */}
         <UltraContentPromotionBanner2025 />
