@@ -24,6 +24,49 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
+  // September 2025: new content
+  {
+    id: 'ai-2025-breakthrough-innovations',
+    title: 'AI 2025 Breakthrough Innovations: What Matters Now',
+    excerpt: 'The most impactful AI advancements to deploy now—vector search, agents, multimodal reasoning, and autonomous workflows.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI', 'Innovation', 'Strategy'],
+    featured: true,
+    url: '/blog/ai-2025-breakthrough-innovations',
+    image: '✨',
+    views: 0
+  },
+  {
+    id: 'ai-vector-databases-2025',
+    title: 'AI Vector Databases 2025: Choosing and Implementing the Right Stack',
+    excerpt: 'Vendor-neutral guide to Pinecone, Weaviate, and Elasticsearch vector—schema, embeddings, hybrid search, and ops.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '25 min read',
+    category: 'Architecture',
+    tags: ['RAG', 'Vector', 'Search'],
+    featured: true,
+    url: '/blog/ai-vector-databases-2025',
+    image: '🗄️',
+    views: 0
+  },
+  {
+    id: 'ai-agents-production-2025',
+    title: 'AI Agents in Production 2025: Patterns, Guardrails, and Monitoring',
+    excerpt: 'How to ship reliable agentic systems: tools, routing, observability, safety controls, and SLOs.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '28 min read',
+    category: 'Engineering',
+    tags: ['Agents', 'Observability', 'Safety'],
+    featured: false,
+    url: '/blog/ai-agents-production-2025',
+    image: '🤖',
+    views: 0
+  },
   {
     id: 'ai-revolution-2025',
     title: 'The AI Revolution of 2025: Transformative Technologies Reshaping Business',
