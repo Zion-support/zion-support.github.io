@@ -32,6 +32,8 @@ import AI2026BreakthroughContentShowcase from '../components/AI2026BreakthroughC
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
+import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -124,6 +126,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025ContentPromotionBanner />
+        
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
         
@@ -132,6 +137,11 @@ export default function HomePage() {
         
         {/* AI 2029 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2029BreakthroughContentShowcase />
+        
+        {/* AI 2025 CONTENT DISCOVERY WIDGET */}
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <AI2025ContentDiscoveryWidget />
+        </div>
         
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <div className="py-16 bg-gray-50">
