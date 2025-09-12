@@ -2,6 +2,40 @@ export default function NewsPage() {
   const articles = [
     {
       emoji: "🧠",
+      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
+      excerpt:
+<<<<<<< HEAD
+        "Major upgrade delivers 10x larger context, a native Tools API, and faster, cheaper inference.",
+=======
+        "Major upgrade delivers 10x larger context, native Tools API, and faster, cheaper inference across the platform.",
+>>>>>>> cursor/create-and-deploy-new-content-9b6a
+      date: "Sep 12, 2025",
+      href: "/news/ziongpt-core-v2",
+      gradient: "from-fuchsia-600 to-purple-600",
+    },
+    {
+<<<<<<< HEAD
+=======
+      emoji: "🏪",
+      title: "Marketplace Suite: Jobs, Proposals, and Escrow Go GA",
+      excerpt:
+        "The complete marketplace stack moves to General Availability with SLAs, audit logs, and fraud protections.",
+      date: "Sep 11, 2025",
+      href: "/news/marketplace-suite-ga",
+      gradient: "from-emerald-600 to-teal-600",
+    },
+    {
+      emoji: "🛡️",
+      title: "Compliance Pack: SOC 2 Playbooks and KYC/AML APIs",
+      excerpt:
+        "Launch faster with prebuilt SOC 2 controls, audit-ready checklists, and turnkey KYC/AML integrations.",
+      date: "Sep 09, 2025",
+      href: "/news/compliance-pack-release",
+      gradient: "from-rose-600 to-red-600",
+    },
+    {
+>>>>>>> cursor/create-and-deploy-new-content-9b6a
+      emoji: "🧠",
       title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
       excerpt:
         "New autonomous agent workflows, built-in retrieval augmented generation, and analytics dashboards ship in 1.3.",
@@ -67,15 +101,6 @@ export default function NewsPage() {
       date: "Sep 05, 2025",
       href: "/news/enterprise-partners",
       gradient: "from-orange-600 to-red-600",
-    },
-    {
-      emoji: "🧠",
-      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
-      excerpt:
-        "Major upgrade delivers 10x larger context, native Tools API, and faster, cheaper inference across the platform.",
-      date: "Sep 12, 2025",
-      href: "/news/ziongpt-core-v2",
-      gradient: "from-fuchsia-600 to-purple-600",
     },
     {
       emoji: "🏪",
