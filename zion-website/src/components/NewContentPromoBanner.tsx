@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '56',
+      title: 'LLM Inference Optimization on GPUs (2025)',
+      description: 'Quantization, KV cache strategies, smart batching, and parallelism to cut latency and cost.',
+      href: '/blog/ai-2025-llm-inference-optimization-gpus',
+      type: 'blog',
+      featured: true,
+      readTime: '15 min read',
+      date: 'Sep 12, 2025',
+      category: 'Inference'
+    },
+    {
+      id: '57',
+      title: 'Serverless GenAI Architectures (2025)',
+      description: 'Event-driven GenAI with functions, queues, vector DBs, and eval guardrails on AWS/GCP/Azure.',
+      href: '/blog/ai-2025-serverless-genai-architectures',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Architecture'
+    },
+    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',

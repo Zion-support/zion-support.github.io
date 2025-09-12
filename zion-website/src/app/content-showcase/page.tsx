@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "LLM Inference Optimization on GPUs (2025)",
+      description: "Quantization, KV cache, batching, and parallelism to cut latency and cost.",
+      href: "/blog/ai-2025-llm-inference-optimization-gpus",
+      icon: "🧠",
+      category: "Inference",
+      readTime: "15 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Serverless GenAI Architectures (2025)",
+      description: "Event-driven GenAI with functions, queues, vector DBs, and eval guardrails.",
+      href: "/blog/ai-2025-serverless-genai-architectures",
+      icon: "☁️",
+      category: "Architecture",
+      readTime: "14 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Agentic Data Pipelines in Production (2025)",
       description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
       href: "/blog/ai-2025-agentic-data-pipelines",
