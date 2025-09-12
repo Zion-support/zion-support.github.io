@@ -65,3 +65,10 @@
 2025-09-12 09:40:10 - Resolving conflicts in temp_components/layout/Footer.tsx.backup.1755987811 for branch backup-merged-branches-20250824-010351
 2025-09-12 09:40:10 - Resolving conflicts in temp_components/layout/Layout.tsx.backup.1755990542 for branch backup-merged-branches-20250824-010351
 2025-09-12 09:40:10 - Resolving conflicts in types/service-variants.ts for branch backup-merged-branches-20250824-010351
+2025-09-12 09:40:15 - Merge conflicts detected in backup/sync-2025-08-17T21-10-07-549Z
+2025-09-12 09:40:15 - Resolving conflicts in public/automation/content-registry.json for branch backup/sync-2025-08-17T21-10-07-549Z
+2025-09-12 09:40:15 - Resolving conflicts in public/reports/content-quality/latest.json for branch backup/sync-2025-08-17T21-10-07-549Z
+2025-09-12 09:40:15 - Resolving conflicts in public/reports/metadata/index.html for branch backup/sync-2025-08-17T21-10-07-549Z
+2025-09-12 09:40:15 - Resolving conflicts in public/reports/metadata/latest.json for branch backup/sync-2025-08-17T21-10-07-549Z
+2025-09-12 09:40:15 - Resolving conflicts in public/search/index.json for branch backup/sync-2025-08-17T21-10-07-549Z
+2025-09-12 09:40:15 - Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-10-07-549Z
