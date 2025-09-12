@@ -40,6 +40,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content Promotional Banner */}
+        <NewContentPromoBanner />
+        
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -49,25 +52,25 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 FRESH CONTENT JUST DROPPED - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎯 Revolutionary AI Content: Year in Review, Workforce Transformation & Sustainability Success!
+                🚀 Revolutionary AI Breakthroughs & Space Exploration Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Discover our latest breakthrough content: AI 2025 Year in Review with comprehensive industry analysis, 
-                AI Workforce Transformation guide with proven reskilling strategies, and real case studies showing 60% energy reduction 
-                and carbon neutrality achievements. Plus, download our free 200+ page AI Implementation Master Guide 2026!
+                Discover our latest breakthrough content: AI 2025 Revolutionary Breakthroughs featuring consciousness-enabled AI systems, 
+                AI Space Exploration Breakthrough with $2.1B mission success, and comprehensive implementation guides. 
+                Plus, download our free 200+ page AI Implementation Master Guide 2026!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
-                  href="/blog/ai-2025-year-in-review"
+                  href="/blog/ai-2025-revolutionary-breakthroughs"
                   className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
-                  📊 Read Year in Review
+                  🚀 Read AI Breakthroughs
                 </Link>
                 <Link
-                  href="/blog/ai-workforce-transformation-2025"
+                  href="/case-studies/ai-space-exploration-breakthrough-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
                 >
-                  👥 Workforce Guide
+                  🌌 Space Success Story
                 </Link>
                 <Link
                   href="/resources/ai-implementation-master-guide-2026"
@@ -79,11 +82,11 @@ export default function HomePage() {
               
               {/* Featured New Content Cards */}
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <Link href="/blog/ai-2025-year-in-review" className="group">
+                <Link href="/blog/ai-2025-revolutionary-breakthroughs" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                    <h3 className="text-lg font-semibold mb-2">AI 2025 Year in Review</h3>
-                    <p className="text-sm opacity-90 mb-3">Comprehensive analysis of AI breakthroughs and enterprise adoption trends</p>
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                    <h3 className="text-lg font-semibold mb-2">AI 2025 Revolutionary Breakthroughs</h3>
+                    <p className="text-sm opacity-90 mb-3">Discover groundbreaking AI innovations transforming industries worldwide</p>
                     <div className="flex items-center text-xs opacity-75">
                       <span>25 min read</span>
                       <span className="mx-2">•</span>
@@ -92,15 +95,15 @@ export default function HomePage() {
                   </div>
                 </Link>
                 
-                <Link href="/blog/ai-workforce-transformation-2025" className="group">
+                <Link href="/case-studies/ai-space-exploration-breakthrough-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">👥</div>
-                    <h3 className="text-lg font-semibold mb-2">AI Workforce Transformation 2025</h3>
-                    <p className="text-sm opacity-90 mb-3">Complete guide to reskilling strategies for the AI era</p>
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌌</div>
+                    <h3 className="text-lg font-semibold mb-2">AI Space Exploration Breakthrough</h3>
+                    <p className="text-sm opacity-90 mb-3">$2.1B mission success with 99.9% autonomous operation</p>
                     <div className="flex items-center text-xs opacity-75">
                       <span>18 min read</span>
                       <span className="mx-2">•</span>
-                      <span>New</span>
+                      <span>Case Study</span>
                     </div>
                   </div>
                 </Link>
