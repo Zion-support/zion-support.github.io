@@ -1,5 +1,7 @@
 import FeatureCard from './components/FeatureCard';
 
+import { latestUpdatesTeaser } from './updates/page';
+
 export default function HomePage() {
   const features = [
     {
@@ -153,6 +155,25 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Updates Teaser */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold">Latest Updates</h2>
+            <a href="/updates" className="text-blue-400 hover:text-blue-300">View all →</a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {latestUpdatesTeaser.map((u) => (
+              <a key={`${u.date}-${u.title}`} href={u.href || '/updates'} className="block rounded-xl border border-white/10 hover:border-blue-500 transition-colors p-6 bg-zinc-900/40">
+                <div className="text-sm text-white/60">{u.date}</div>
+                <div className="mt-1 text-lg font-semibold">{u.title}</div>
+                <div className="mt-2 text-white/70 line-clamp-3">{u.summary}</div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
