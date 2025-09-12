@@ -148,12 +148,44 @@ const NewContentPromoBanner = ({
       title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
       description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
       href: '/blog/ai-2025-agents-on-kubernetes',
->>>>>>> feat/new-content-promo-2025
       type: 'blog',
       featured: true,
       readTime: '19 min read',
       date: 'Sep 12, 2025',
       category: 'Reliability'
+    },
+    {
+      id: '28',
+      title: 'Real-Time Voice Agents: Architectures, Guardrails, ROI',
+      description: 'Low-latency agents with streaming evals, safety policies, and observability in production.',
+      href: '/blog/ai-2025-realtime-agents-observability',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: '29',
+      title: 'Enterprise GenAI Security Blueprint 2025',
+      description: 'Practical controls for data leakage, prompt injection, model abuse, and compliance.',
+      href: '/blog/ai-2025-genai-security-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '15 min read',
+      date: 'Sep 12, 2025',
+      category: 'Security'
+    },
+    {
+      id: '30',
+      title: 'Case Study: 41% MTTR Reduction with AIOps Agents',
+      description: 'Runbook automation, incident correlation, and SLO-aware remediation at a global SaaS.',
+      href: '/case-studies/ai-2025-it-ops-automation-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
     },
     {
       id: '1',
