@@ -18,6 +18,8 @@ import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -4017,6 +4019,24 @@ export default function HomePage() {
         showFilters={true}
         showStats={true}
         showSearch={true}
+      />
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner
+        title="🚀 Revolutionary AI Content 2025"
+        subtitle="Discover breakthrough insights, proven case studies, and cutting-edge strategies that are transforming industries worldwide"
+        variant="featured"
+        maxItems={4}
+        showStats={true}
+        showRatings={true}
+        autoRotate={true}
+      />
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery
+        showFilters={true}
+        showSearch={true}
+        showStats={true}
       />
 
       {/* Newsletter Signup */}
