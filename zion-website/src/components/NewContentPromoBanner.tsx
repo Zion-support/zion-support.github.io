@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '54',
+      title: 'Secure Agent Architectures (2025)',
+      description: 'Blueprint for secure enterprise agent architectures with policy-as-code, guardrails, and SLAs.',
+      href: '/blog/ai-2025-secure-agent-architectures',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Security'
+    },
+    {
+      id: '55',
+      title: 'AI Customer Analytics: 19% Revenue Uplift',
+      description: 'Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.',
+      href: '/case-studies/ai-2025-customer-analytics-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',

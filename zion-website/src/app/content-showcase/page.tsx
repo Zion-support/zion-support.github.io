@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Secure Agent Architectures (2025)",
+      description: "Blueprint for secure agent architectures with policy-as-code, guardrails, and SLAs.",
+      href: "/blog/ai-2025-secure-agent-architectures",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Customer Analytics: 19% Revenue Uplift",
+      description: "Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.",
+      href: "/case-studies/ai-2025-customer-analytics-impact",
+      icon: "📈",
+      category: "Case Study",
+      readTime: "12 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Agentic Data Pipelines in Production (2025)",
       description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
       href: "/blog/ai-2025-agentic-data-pipelines",
