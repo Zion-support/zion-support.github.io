@@ -36,7 +36,6 @@ export default function AI2025UltimateBreakthroughPromotionBanner() {
       textColor: "text-white"
     }
   ];
-
   if (!isVisible) return null;
 
   return (
