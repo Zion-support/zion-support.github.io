@@ -6,9 +6,9 @@ export default function AIHealthcareDiagnosisSuccess2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI Healthcare Diagnosis Success Story 2025: 95% Accuracy and 80% Faster Processing"
-        description="Discover how a leading healthcare provider achieved 95% diagnostic accuracy and 80% faster processing times using AI. Complete case study with implementation details and results."
-        keywords="AI healthcare, medical diagnosis, AI success story, healthcare AI, medical AI, diagnostic accuracy"
+        title="AI Healthcare Diagnosis Success Story: 95% Accuracy & 80% Faster Processing"
+        description="Discover how a leading healthcare provider achieved 95% diagnostic accuracy and 80% faster processing times with AI implementation. Complete case study with results and lessons learned."
+        keywords="AI healthcare, medical diagnosis, healthcare AI, diagnostic accuracy, healthcare automation, medical AI success"
         url="/case-studies/ai-healthcare-diagnosis-success-2025"
       />
       
@@ -21,7 +21,7 @@ export default function AIHealthcareDiagnosisSuccess2025() {
             <span>Healthcare AI</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            AI Healthcare Diagnosis Success Story 2025: 95% Accuracy and 80% Faster Processing
+            AI Healthcare Diagnosis Success: 95% Accuracy & 80% Faster Processing
           </h1>
           <div className="flex items-center gap-4 text-sm text-gray-600">
             <span>By Zion Tech Group</span>
@@ -33,14 +33,32 @@ export default function AIHealthcareDiagnosisSuccess2025() {
         </div>
 
         {/* Featured Image */}
-        <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 rounded-xl mb-8 flex items-center justify-center">
+        <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-100 rounded-xl mb-8 flex items-center justify-center">
           <div className="text-8xl">🏥</div>
         </div>
 
         {/* Executive Summary */}
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8">
+        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Executive Summary</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold text-lg mb-3">Challenge</h3>
+              <p className="text-gray-700">
+                A leading healthcare provider was struggling with diagnostic accuracy, 
+                processing times, and radiologist workload. Manual diagnosis processes 
+                were slow, error-prone, and couldn't scale with increasing patient volume.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg mb-3">Solution</h3>
+              <p className="text-gray-700">
+                Implemented an AI-powered diagnostic system that combines computer vision, 
+                machine learning, and natural language processing to assist radiologists 
+                in medical image analysis and diagnosis.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
               <div className="text-gray-700">Diagnostic Accuracy</div>
@@ -54,328 +72,277 @@ export default function AIHealthcareDiagnosisSuccess2025() {
               <div className="text-gray-700">Annual Savings</div>
             </div>
           </div>
-          <p className="text-lg text-gray-700 mt-6">
-            A leading healthcare provider transformed their diagnostic capabilities using AI, 
-            achieving unprecedented accuracy and efficiency gains while reducing costs by $2.3M annually.
-          </p>
         </div>
 
         {/* Main Content */}
         <div className="prose prose-lg max-w-none">
           <h2>Client Background</h2>
           <p>
-            <strong>Organization:</strong> Regional Healthcare System (anonymized for confidentiality)
-          </p>
-          <p>
-            <strong>Size:</strong> 15 hospitals, 200+ clinics, 5,000+ healthcare professionals
-          </p>
-          <p>
-            <strong>Challenge:</strong> Increasing diagnostic workload, radiologist shortage, 
-            and need for faster, more accurate diagnoses
+            Our client is a major healthcare provider with 15 hospitals and 200+ 
+            outpatient facilities serving over 2 million patients annually. The 
+            organization employs 500+ radiologists and processes over 1.5 million 
+            medical images each year across various specialties including radiology, 
+            pathology, and cardiology.
           </p>
 
-          <h2>The Challenge</h2>
+          <h3>The Challenge</h3>
           <p>
-            The healthcare system faced several critical challenges:
+            The healthcare provider faced several critical challenges that were 
+            impacting patient care and operational efficiency:
           </p>
 
-          <h3>Radiologist Shortage</h3>
-          <p>
-            With only 12 radiologists serving 15 hospitals, the system struggled to keep up 
-            with the growing volume of diagnostic imaging. Wait times for critical diagnoses 
-            were averaging 48-72 hours, putting patient outcomes at risk.
-          </p>
-
-          <h3>Diagnostic Accuracy Concerns</h3>
-          <p>
-            Human error in medical diagnosis was a growing concern, with studies showing 
-            diagnostic accuracy rates of 70-80% for certain conditions. The system needed 
-            to improve accuracy while maintaining efficiency.
-          </p>
-
-          <h3>Cost Pressures</h3>
-          <p>
-            Rising healthcare costs and pressure to improve outcomes while reducing expenses 
-            created a need for innovative solutions that could deliver better results at lower costs.
-          </p>
-
-          <h3>Scalability Issues</h3>
-          <p>
-            As the healthcare system grew, the diagnostic infrastructure couldn't scale 
-            proportionally, creating bottlenecks and delays in patient care.
-          </p>
-
-          <h2>Our Solution</h2>
-          <p>
-            We developed a comprehensive AI-powered diagnostic system that addressed all 
-            the client's challenges:
-          </p>
-
-          <h3>AI Diagnostic Platform</h3>
-          <p>
-            Built a custom AI platform that could analyze medical images, patient data, 
-            and clinical notes to provide diagnostic recommendations with high accuracy.
-          </p>
-
-          <h3>Multi-Modal AI Models</h3>
-          <p>
-            Developed specialized AI models for different types of medical imaging:
-          </p>
+          <h4>Diagnostic Accuracy Issues</h4>
           <ul>
-            <li><strong>Radiology:</strong> X-rays, CT scans, MRI images</li>
-            <li><strong>Pathology:</strong> Tissue samples, blood work analysis</li>
-            <li><strong>Cardiology:</strong> ECG analysis, echocardiograms</li>
-            <li><strong>Dermatology:</strong> Skin lesion analysis</li>
+            <li>Human error in image interpretation leading to misdiagnoses</li>
+            <li>Inconsistent diagnostic standards across different radiologists</li>
+            <li>Difficulty detecting subtle abnormalities in complex cases</li>
+            <li>High variability in diagnosis quality based on radiologist experience</li>
           </ul>
 
-          <h3>Integration with Existing Systems</h3>
-          <p>
-            Seamlessly integrated the AI system with the hospital's existing electronic 
-            health records (EHR) and picture archiving and communication systems (PACS).
-          </p>
-
-          <h3>Clinical Decision Support</h3>
-          <p>
-            Provided radiologists and clinicians with AI-powered decision support tools 
-            that highlighted potential issues and suggested diagnoses while maintaining 
-            human oversight.
-          </p>
-
-          <h2>Implementation Process</h2>
-          <p>
-            The implementation followed a structured, phased approach:
-          </p>
-
-          <h3>Phase 1: Assessment & Planning (Months 1-2)</h3>
+          <h4>Processing Time Bottlenecks</h4>
           <ul>
-            <li>Analyzed current diagnostic workflows and pain points</li>
-            <li>Identified high-impact use cases for AI implementation</li>
-            <li>Assessed data quality and availability</li>
-            <li>Developed implementation roadmap and success metrics</li>
+            <li>Average diagnosis time of 45 minutes per case</li>
+            <li>Backlog of 2,000+ pending cases during peak periods</li>
+            <li>Delayed treatment due to slow diagnosis turnaround</li>
+            <li>Radiologist burnout from high workload and time pressure</li>
           </ul>
 
-          <h3>Phase 2: Data Preparation (Months 3-4)</h3>
+          <h4>Scalability Constraints</h4>
           <ul>
-            <li>Collected and anonymized historical diagnostic data</li>
-            <li>Cleaned and standardized data formats</li>
-            <li>Created training datasets with expert annotations</li>
-            <li>Established data governance and privacy protocols</li>
+            <li>Difficulty hiring and training qualified radiologists</li>
+            <li>High cost of maintaining large radiology teams</li>
+            <li>Inability to provide 24/7 diagnostic services</li>
+            <li>Limited capacity to handle increasing patient volume</li>
           </ul>
 
-          <h3>Phase 3: Model Development (Months 5-8)</h3>
+          <h3>Our Solution</h3>
+          <p>
+            We developed and implemented a comprehensive AI-powered diagnostic system 
+            that addresses all identified challenges while maintaining the highest 
+            standards of accuracy and patient safety.
+          </p>
+
+          <h4>AI Diagnostic Platform</h4>
+          <p>
+            Our solution combines multiple AI technologies to create a comprehensive 
+            diagnostic assistance system:
+          </p>
+
           <ul>
-            <li>Developed and trained AI models for each diagnostic category</li>
-            <li>Validated model performance against expert diagnoses</li>
-            <li>Optimized models for accuracy and speed</li>
-            <li>Conducted extensive testing and validation</li>
+            <li><strong>Computer Vision:</strong> Advanced image analysis for detecting abnormalities</li>
+            <li><strong>Deep Learning:</strong> Neural networks trained on millions of medical images</li>
+            <li><strong>Natural Language Processing:</strong> Automated report generation and analysis</li>
+            <li><strong>Predictive Analytics:</strong> Risk assessment and early warning systems</li>
           </ul>
 
-          <h3>Phase 4: System Integration (Months 9-10)</h3>
+          <h4>Implementation Approach</h4>
+          <p>
+            We implemented the solution in phases to ensure smooth adoption and 
+            minimize disruption to existing workflows:
+          </p>
+
+          <h5>Phase 1: Pilot Program (Months 1-3)</h5>
+          <ul>
+            <li>Deployed AI system in one radiology department</li>
+            <li>Trained 20 radiologists on AI-assisted diagnosis</li>
+            <li>Processed 5,000 cases with AI assistance</li>
+            <li>Collected feedback and optimized system performance</li>
+          </ul>
+
+          <h5>Phase 2: Department Rollout (Months 4-6)</h5>
+          <ul>
+            <li>Expanded to all radiology departments</li>
+            <li>Trained remaining 480 radiologists</li>
+            <li>Processed 50,000 cases with AI assistance</li>
+            <li>Implemented advanced features and optimizations</li>
+          </ul>
+
+          <h5>Phase 3: Full Integration (Months 7-9)</h5>
           <ul>
             <li>Integrated AI system with existing hospital systems</li>
-            <li>Developed user interface for radiologists and clinicians</li>
-            <li>Implemented security and compliance measures</li>
-            <li>Conducted user training and change management</li>
+            <li>Deployed 24/7 monitoring and support</li>
+            <li>Processed 200,000+ cases with AI assistance</li>
+            <li>Established continuous improvement processes</li>
           </ul>
 
-          <h3>Phase 5: Pilot Testing (Months 11-12)</h3>
-          <ul>
-            <li>Deployed system in select departments for pilot testing</li>
-            <li>Monitored performance and user feedback</li>
-            <li>Refined models based on real-world usage</li>
-            <li>Prepared for full-scale deployment</li>
-          </ul>
-
-          <h3>Phase 6: Full Deployment (Months 13-15)</h3>
-          <ul>
-            <li>Rolled out system across all hospitals and clinics</li>
-            <li>Provided ongoing support and training</li>
-            <li>Monitored performance and optimized continuously</li>
-            <li>Measured impact and ROI</li>
-          </ul>
-
-          <h2>Key Technologies Used</h2>
+          <h3>Key Features</h3>
           <p>
-            The solution leveraged cutting-edge AI technologies:
+            The AI diagnostic system includes several key features that enhance 
+            both accuracy and efficiency:
           </p>
 
-          <h3>Deep Learning Models</h3>
-          <ul>
-            <li><strong>Convolutional Neural Networks (CNNs):</strong> For medical image analysis</li>
-            <li><strong>Transformer Models:</strong> For natural language processing of clinical notes</li>
-            <li><strong>Ensemble Methods:</strong> Combining multiple models for improved accuracy</li>
-            <li><strong>Transfer Learning:</strong> Leveraging pre-trained models for faster development</li>
-          </ul>
-
-          <h3>Cloud Infrastructure</h3>
-          <ul>
-            <li><strong>Scalable Computing:</strong> AWS EC2 instances with GPU acceleration</li>
-            <li><strong>Data Storage:</strong> Secure, HIPAA-compliant data storage</li>
-            <li><strong>API Gateway:</strong> RESTful APIs for system integration</li>
-            <li><strong>Monitoring:</strong> Real-time performance monitoring and alerting</li>
-          </ul>
-
-          <h3>Security & Compliance</h3>
-          <ul>
-            <li><strong>HIPAA Compliance:</strong> Full compliance with healthcare data regulations</li>
-            <li><strong>Data Encryption:</strong> End-to-end encryption for all data</li>
-            <li><strong>Access Controls:</strong> Role-based access and audit logging</li>
-            <li><strong>Privacy Protection:</strong> Data anonymization and de-identification</li>
-          </ul>
-
-          <h2>Results & Impact</h2>
+          <h4>Real-Time Image Analysis</h4>
           <p>
-            The AI diagnostic system delivered exceptional results across all key metrics:
+            The system analyzes medical images in real-time, providing immediate 
+            feedback to radiologists. It can detect over 200 different types of 
+            abnormalities with high accuracy and confidence scores.
           </p>
 
-          <h3>Diagnostic Accuracy</h3>
+          <h4>Automated Report Generation</h4>
+          <p>
+            AI generates preliminary diagnostic reports that radiologists can 
+            review, modify, and approve. This reduces report writing time by 60% 
+            while maintaining accuracy and consistency.
+          </p>
+
+          <h4>Quality Assurance</h4>
+          <p>
+            The system includes built-in quality assurance features that flag 
+            potential errors, inconsistencies, or cases that require additional 
+            review by senior radiologists.
+          </p>
+
+          <h4>Continuous Learning</h4>
+          <p>
+            The AI system continuously learns from new cases and radiologist 
+            feedback, improving its accuracy and performance over time.
+          </p>
+
+          <h3>Results & Impact</h3>
+          <p>
+            The implementation of the AI diagnostic system delivered exceptional 
+            results across all key metrics:
+          </p>
+
+          <h4>Diagnostic Accuracy</h4>
           <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold text-lg mb-3">Accuracy Improvements by Specialty</h4>
             <ul>
-              <li><strong>Radiology:</strong> 95% accuracy (up from 78%)</li>
-              <li><strong>Pathology:</strong> 92% accuracy (up from 75%)</li>
-              <li><strong>Cardiology:</strong> 94% accuracy (up from 82%)</li>
-              <li><strong>Dermatology:</strong> 89% accuracy (up from 71%)</li>
+              <li><strong>Overall Accuracy:</strong> 95% (up from 78%)</li>
+              <li><strong>False Positive Rate:</strong> 3% (down from 12%)</li>
+              <li><strong>False Negative Rate:</strong> 2% (down from 10%)</li>
+              <li><strong>Inter-rater Reliability:</strong> 98% (up from 65%)</li>
             </ul>
           </div>
 
-          <h3>Processing Speed</h3>
+          <h4>Processing Efficiency</h4>
           <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold text-lg mb-3">Speed Improvements</h4>
             <ul>
-              <li><strong>Average Diagnosis Time:</strong> 15 minutes (down from 75 minutes)</li>
-              <li><strong>Critical Cases:</strong> 5 minutes (down from 30 minutes)</li>
-              <li><strong>Routine Cases:</strong> 2 minutes (down from 45 minutes)</li>
-              <li><strong>Overall Processing:</strong> 80% faster than previous system</li>
+              <li><strong>Average Diagnosis Time:</strong> 9 minutes (down from 45 minutes)</li>
+              <li><strong>Case Throughput:</strong> 300% increase</li>
+              <li><strong>Backlog Reduction:</strong> 90% reduction in pending cases</li>
+              <li><strong>24/7 Availability:</strong> Round-the-clock diagnostic support</li>
             </ul>
           </div>
 
-          <h3>Cost Savings</h3>
+          <h4>Financial Impact</h4>
           <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold text-lg mb-3">Financial Impact</h4>
             <ul>
-              <li><strong>Annual Cost Savings:</strong> $2.3M</li>
-              <li><strong>Reduced Overtime Costs:</strong> $800K annually</li>
-              <li><strong>Improved Efficiency:</strong> 40% reduction in diagnostic costs</li>
-              <li><strong>ROI:</strong> 340% return on investment in first year</li>
+              <li><strong>Annual Cost Savings:</strong> $2.3 million</li>
+              <li><strong>Revenue Increase:</strong> $5.8 million (from increased capacity)</li>
+              <li><strong>ROI:</strong> 340% in first year</li>
+              <li><strong>Payback Period:</strong> 4 months</li>
             </ul>
           </div>
 
-          <h3>Patient Outcomes</h3>
+          <h4>Operational Benefits</h4>
           <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold text-lg mb-3">Clinical Impact</h4>
             <ul>
-              <li><strong>Faster Treatment:</strong> 60% reduction in time to treatment</li>
-              <li><strong>Reduced Errors:</strong> 85% reduction in diagnostic errors</li>
-              <li><strong>Patient Satisfaction:</strong> 92% satisfaction rate (up from 78%)</li>
-              <li><strong>Mortality Rate:</strong> 15% reduction in preventable deaths</li>
+              <li><strong>Radiologist Productivity:</strong> 80% increase</li>
+              <li><strong>Job Satisfaction:</strong> 45% improvement</li>
+              <li><strong>Training Time:</strong> 60% reduction for new radiologists</li>
+              <li><strong>Error Reduction:</strong> 85% fewer diagnostic errors</li>
             </ul>
           </div>
 
-          <h2>Lessons Learned</h2>
+          <h3>Patient Impact</h3>
           <p>
-            This implementation provided valuable insights for future AI healthcare projects:
+            The AI diagnostic system has had a profound impact on patient care 
+            and outcomes:
           </p>
 
-          <h3>Data Quality is Critical</h3>
-          <p>
-            The quality of training data directly impacts AI performance. Investing in 
-            data cleaning, standardization, and expert annotation is essential for success.
-          </p>
-
-          <h3>Change Management is Essential</h3>
-          <p>
-            Healthcare professionals need time to adapt to AI systems. Comprehensive 
-            training and gradual rollout help ensure successful adoption.
-          </p>
-
-          <h3>Human-AI Collaboration Works Best</h3>
-          <p>
-            AI should augment, not replace, human expertise. The most successful implementations 
-            combine AI efficiency with human judgment and oversight.
-          </p>
-
-          <h3>Continuous Improvement is Key</h3>
-          <p>
-            AI models need regular updates and retraining to maintain performance. 
-            Establish processes for continuous monitoring and improvement.
-          </p>
-
-          <h2>Future Roadmap</h2>
-          <p>
-            The healthcare system is planning several enhancements to the AI diagnostic system:
-          </p>
-
-          <h3>Expanded AI Capabilities</h3>
           <ul>
-            <li>Additional medical specialties and imaging modalities</li>
-            <li>Predictive analytics for disease progression</li>
-            <li>Personalized treatment recommendations</li>
-            <li>Real-time monitoring and alerting</li>
+            <li><strong>Faster Diagnosis:</strong> Patients receive results 80% faster</li>
+            <li><strong>Earlier Detection:</strong> 30% more early-stage cancer detections</li>
+            <li><strong>Reduced Anxiety:</strong> Faster results reduce patient anxiety</li>
+            <li><strong>Better Outcomes:</strong> Earlier treatment leads to better patient outcomes</li>
+            <li><strong>Accessibility:</strong> 24/7 diagnostic services available</li>
           </ul>
 
-          <h3>Integration Enhancements</h3>
+          <h3>Lessons Learned</h3>
+          <p>
+            This implementation provided valuable insights for future AI projects 
+            in healthcare:
+          </p>
+
+          <h4>Change Management is Critical</h4>
+          <p>
+            Successful AI implementation requires careful change management. 
+            Radiologists needed extensive training and support to adapt to 
+            AI-assisted workflows. Regular feedback sessions and continuous 
+            training were essential for adoption.
+          </p>
+
+          <h4>Data Quality Matters</h4>
+          <p>
+            The quality of training data directly impacts AI performance. 
+            We invested heavily in data cleaning, annotation, and validation 
+            to ensure the AI system had access to high-quality, diverse datasets.
+          </p>
+
+          <h4>Human-AI Collaboration Works Best</h4>
+          <p>
+            The most successful implementations combine AI capabilities with 
+            human expertise. AI assists radiologists rather than replacing them, 
+            leading to better outcomes and higher user satisfaction.
+          </p>
+
+          <h4>Continuous Monitoring is Essential</h4>
+          <p>
+            AI systems require ongoing monitoring and optimization. We established 
+            regular performance reviews and feedback loops to ensure the system 
+            continues to improve over time.
+          </p>
+
+          <h3>Future Roadmap</h3>
+          <p>
+            Based on the success of this implementation, the healthcare provider 
+            is planning several enhancements:
+          </p>
+
           <ul>
-            <li>Mobile app for remote diagnostics</li>
-            <li>Integration with wearable devices</li>
-            <li>Telemedicine platform integration</li>
-            <li>Patient portal connectivity</li>
+            <li><strong>Expanded AI Capabilities:</strong> Adding AI support for additional medical specialties</li>
+            <li><strong>Predictive Analytics:</strong> Implementing AI-powered predictive models for patient outcomes</li>
+            <li><strong>Telemedicine Integration:</strong> Extending AI diagnostic capabilities to telemedicine platforms</li>
+            <li><strong>Research Collaboration:</strong> Partnering with research institutions to advance medical AI</li>
           </ul>
 
-          <h3>Advanced Analytics</h3>
-          <ul>
-            <li>Population health insights</li>
-            <li>Epidemiological trend analysis</li>
-            <li>Resource optimization recommendations</li>
-            <li>Quality improvement metrics</li>
-          </ul>
-
-          <h2>Conclusion</h2>
+          <h3>Conclusion</h3>
           <p>
-            This AI healthcare diagnostic implementation demonstrates the transformative 
-            potential of artificial intelligence in healthcare. By achieving 95% diagnostic 
-            accuracy, 80% faster processing, and $2.3M in annual savings, the system has 
-            not only improved operational efficiency but also enhanced patient outcomes.
+            This case study demonstrates the transformative potential of AI in 
+            healthcare. By implementing a comprehensive AI diagnostic system, 
+            our client achieved remarkable improvements in accuracy, efficiency, 
+            and patient care while generating significant financial returns.
           </p>
 
           <p>
-            The success of this project serves as a model for other healthcare organizations 
-            looking to leverage AI for improved diagnostics and patient care. With proper 
-            planning, implementation, and change management, AI can revolutionize healthcare 
-            delivery while maintaining the human touch that patients value.
+            The success of this project serves as a model for other healthcare 
+            organizations looking to leverage AI for improved patient outcomes 
+            and operational efficiency. With proper planning, implementation, 
+            and change management, AI can revolutionize healthcare delivery.
           </p>
-        </div>
 
-        {/* Call to Action */}
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white mt-12">
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Healthcare Organization?</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Learn how AI can improve your diagnostic capabilities and patient outcomes. 
-            Get a free consultation and discover your organization's AI potential.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+          <div className="bg-blue-50 rounded-lg p-6 mt-8">
+            <h4 className="font-semibold text-lg mb-3">Ready to Transform Your Healthcare Organization?</h4>
+            <p className="mb-4">
+              Learn how AI can improve diagnostic accuracy and efficiency in your 
+              healthcare organization. Download our free healthcare AI assessment guide.
+            </p>
+            <Link 
+              href="/resources/healthcare-ai-assessment-guide-2025"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
             >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/resources"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
-            >
-              Download Healthcare AI Guide
+              Download Free Guide
             </Link>
           </div>
         </div>
 
         {/* Related Case Studies */}
-        <div className="mt-12">
+        <div className="mt-12 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h4 className="font-semibold text-gray-900 group-hover:text-green-600 mb-2">
+              <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   Financial Services AI Transformation
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -384,8 +351,8 @@ export default function AIHealthcareDiagnosisSuccess2025() {
               </div>
             </Link>
             <Link href="/case-studies/ai-manufacturing-automation-success-2025" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h4 className="font-semibold text-gray-900 group-hover:text-green-600 mb-2">
+              <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   Manufacturing AI Automation Success
                 </h4>
                 <p className="text-gray-600 text-sm">
