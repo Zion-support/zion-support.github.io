@@ -345,6 +345,5 @@ const EnhancedHomepage2026: React.FC = () => {
       </main>
     </Layout>
   );
->>>>>>> origin/content/blog-sept12
 };
 export default EnhancedHomepage2026;
