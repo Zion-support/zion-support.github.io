@@ -62,16 +62,18 @@ import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
-<<<<<<< HEAD
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
-=======
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
->>>>>>> cursor/create-and-deploy-new-content-e5f9
+import NewContent2029PromotionBanner from '../components/NewContent2029PromotionBanner';
+import NewContent2029Showcase from '../components/NewContent2029Showcase';
+import AI2030VisionBanner from '../components/AI2030VisionBanner';
+import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
+import FutureInnovationHub from '../components/FutureInnovationHub';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -88,6 +90,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2029 PROMOTION BANNER */}
+        <NewContent2029PromotionBanner />
+        
+        {/* NEW CONTENT 2029 SHOWCASE */}
+        <NewContent2029Showcase />
+        
+        {/* AI 2030 VISION BANNER */}
+        <AI2030VisionBanner />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE */}
+        <RevolutionaryTechShowcase />
+        
+        {/* FUTURE INNOVATION HUB */}
+        <FutureInnovationHub />
+        
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
         
