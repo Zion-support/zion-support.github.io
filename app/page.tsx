@@ -15,6 +15,7 @@ import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -310,6 +311,71 @@ export default function HomePage() {
 
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner
+        title="🚀 Revolutionary AI Content Drop"
+        subtitle="✨ JUST PUBLISHED - JANUARY 2025"
+        description="Discover our latest breakthrough content: AI Advanced Automation, Cybersecurity Threats, Enterprise Success Stories, and comprehensive implementation guides. Expert insights to accelerate your success in 2025."
+        content={[
+          {
+            title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
+            description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
+            href: "/blog/ai-2025-advanced-automation",
+            icon: "🤖",
+            category: "AI Automation",
+            readTime: "25 min read",
+            isNew: true
+          },
+          {
+            title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
+            description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
+            href: "/blog/ai-2025-cybersecurity-threats",
+            icon: "🛡️",
+            category: "Cybersecurity",
+            readTime: "22 min read",
+            isNew: true
+          },
+          {
+            title: "AI Enterprise Automation Success 2025: Complete Implementation Guide",
+            description: "Learn how Fortune 500 companies achieve 300% ROI with AI enterprise automation. Complete implementation guide with real case studies and proven strategies.",
+            href: "/blog/ai-2025-enterprise-automation-success",
+            icon: "🏢",
+            category: "Enterprise AI",
+            readTime: "28 min read",
+            isNew: true
+          },
+          {
+            title: "AI Healthcare Diagnosis Success 2025: 95% Accuracy Case Study",
+            description: "Discover how a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times with AI-powered medical imaging.",
+            href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+            icon: "🏥",
+            category: "Healthcare AI",
+            type: "Case Study",
+            isNew: true
+          },
+          {
+            title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+            description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
+            href: "/resources/ai-implementation-master-guide-2026",
+            icon: "📚",
+            category: "Master Guide",
+            type: "Free Download",
+            isNew: true
+          },
+          {
+            title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies",
+            description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions.",
+            href: "/blog/ai-2025-breakthrough-innovations",
+            icon: "🚀",
+            category: "AI Innovations",
+            readTime: "25 min read",
+            isTrending: true
+          }
+        ]}
+        variant="featured"
+        maxItems={6}
+      />
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
