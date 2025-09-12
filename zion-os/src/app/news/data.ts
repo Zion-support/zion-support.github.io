@@ -10,6 +10,17 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "zion-os-1-5-autonomous-evaluations",
+    emoji: "🧪",
+    title: "Zion OS 1.5 Introduces Autonomous Evaluations for Agents",
+    excerpt:
+      "Built-in evaluation pipelines, red teaming harnesses, and policy-as-code gates now ship with Zion OS.",
+    date: "2025-09-12",
+    gradient: "from-fuchsia-600 to-indigo-600",
+    content:
+      "Zion OS 1.5 adds first-class autonomous evaluation pipelines for LLM agents. Teams can define golden tasks, generate synthetic scenarios, and run adversarial tests as part of CI/CD. Policy-as-code gates prevent regressions and improve reliability in production.",
+  },
+  {
     slug: "zion-os-1-0-launch",
     emoji: "🚀",
     title: "Zion OS 1.0 Launches: One-Click Digital Economies",

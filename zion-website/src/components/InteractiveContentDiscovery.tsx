@@ -41,6 +41,32 @@ function InteractiveContentDiscovery() {
       difficulty: 'intermediate'
     },
     {
+      id: '13',
+      title: 'Reinforcement Learning in Production: 2025 Patterns',
+      description: 'Offline RL, simulators, safety constraints, and guardrails to ship RL safely.',
+      href: '/blog/ai-2025-reinforcement-learning-production-patterns',
+      type: 'blog',
+      category: 'Advanced AI',
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Reinforcement Learning', 'Safety', 'Offline RL', 'Simulators'],
+      featured: true,
+      difficulty: 'advanced'
+    },
+    {
+      id: '14',
+      title: 'Evaluating LLM Agents in 2025: Methods, Metrics, and Tooling',
+      description: 'Task success, tool correctness, policy adherence, and automated pipelines for agent eval.',
+      href: '/blog/ai-2025-evaluation-llm-agents',
+      type: 'blog',
+      category: 'AI Safety',
+      readTime: '22 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Evaluation', 'Agents', 'Guardrails', 'Red Teaming'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '11',
       title: 'Trust & Safety Guardrails 2025: Practical Patterns',
       description: 'Practical patterns to design, evaluate, and enforce AI trust & safety guardrails across applications in 2025.',
