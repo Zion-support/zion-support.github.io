@@ -6,6 +6,9 @@ import {
   Shield, Brain, Atom, Rocket, Globe, Building,
   Target, TrendingUp, Award, Cpu, Database, Lock, Satellite
 } from 'lucide-react';
+import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
+import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
+import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
 import Link from 'next/link';
 
 const Services2024: React.FC = () => {
