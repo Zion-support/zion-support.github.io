@@ -84,8 +84,8 @@ export default function HomePage() {
                 Revolutionary AI Content Just Released
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Explore our latest breakthrough articles: The Generative AI Revolution, Ethical AI Governance, 
-                and Edge Computing Revolution. Get expert insights on the technologies shaping 2025 and beyond.
+                Discover our latest breakthrough content: AI Advanced Automation, Cybersecurity Advanced Threats, 
+                and Fintech AI Revolution case study. Get expert insights on the technologies shaping 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -95,7 +95,7 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-advanced-automation"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Read Latest Article
@@ -1917,6 +1917,89 @@ export default function HomePage() {
               className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors inline-block'
             >
               Get Custom Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className='py-20 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl font-bold text-gray-900 mb-4'>
+              What Our Clients Say
+            </h2>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Don't just take our word for it. Here's what industry leaders say about 
+              their AI transformation success with Zion Tech Group.
+            </p>
+          </div>
+
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <div className='bg-gray-50 rounded-xl p-8'>
+              <div className='flex items-center mb-4'>
+                <div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4'>
+                  <span className='text-blue-600 font-bold'>JS</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold text-gray-900'>John Smith</h4>
+                  <p className='text-sm text-gray-600'>CTO, TechCorp</p>
+                </div>
+              </div>
+              <p className='text-gray-700 italic mb-4'>
+                "Zion Tech Group transformed our entire AI strategy. We achieved 340% ROI 
+                in just 8 months. Their implementation approach is unmatched."
+              </p>
+              <div className='flex text-yellow-500'>
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+
+            <div className='bg-gray-50 rounded-xl p-8'>
+              <div className='flex items-center mb-4'>
+                <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4'>
+                  <span className='text-green-600 font-bold'>MJ</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold text-gray-900'>Maria Johnson</h4>
+                  <p className='text-sm text-gray-600'>VP Operations, Global Manufacturing</p>
+                </div>
+              </div>
+              <p className='text-gray-700 italic mb-4'>
+                "The AI automation solutions reduced our operational costs by 67% while 
+                improving quality by 92%. Exceptional results and support."
+              </p>
+              <div className='flex text-yellow-500'>
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+
+            <div className='bg-gray-50 rounded-xl p-8'>
+              <div className='flex items-center mb-4'>
+                <div className='w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4'>
+                  <span className='text-purple-600 font-bold'>DR</span>
+                </div>
+                <div>
+                  <h4 className='font-semibold text-gray-900'>Dr. Robert Chen</h4>
+                  <p className='text-sm text-gray-600'>Chief Medical Officer, Regional Health</p>
+                </div>
+              </div>
+              <p className='text-gray-700 italic mb-4'>
+                "AI diagnostic systems achieved 95% accuracy, saving 2,400+ lives. 
+                The implementation was seamless and exceeded all expectations."
+              </p>
+              <div className='flex text-yellow-500'>
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+          <div className='text-center mt-12'>
+            <Link
+              href='/case-studies'
+              className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+            >
+              Read More Success Stories
             </Link>
           </div>
         </div>

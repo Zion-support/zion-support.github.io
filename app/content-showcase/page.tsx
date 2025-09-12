@@ -1,6 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import Link from 'next/link';
+import NewsletterSignup from '../../components/NewsletterSignup';
 
 export default function ContentShowcase() {
   return (
@@ -43,15 +44,15 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <Link href="/blog/ai-2025-advanced-automation" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Readiness 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete assessment & implementation guide with 340% ROI</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Advanced Automation 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete business transformation guide with 340% ROI</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>18 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Trending</span>
+                    <span>🔥 New</span>
                   </div>
                 </div>
               </Link>
@@ -69,19 +70,65 @@ export default function ContentShowcase() {
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-transformation-global-retail-giant-2025" className="group">
+              <Link href="/case-studies/ai-transformation-fintech-revolution-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛍️</div>
-                  <h3 className="text-lg font-semibold mb-2">Global Retail AI Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">300% revenue growth and $2.4B additional revenue</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏦</div>
+                  <h3 className="text-lg font-semibold mb-2">Fintech AI Revolution 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">$2.8B revenue growth and 340% ROI success story</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>🏆 Success</span>
+                    <span>🏆 Featured</span>
                   </div>
                 </div>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Latest Content Grid */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">📚 Latest Content</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/blog/ai-2025-cybersecurity-advanced-threats" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">AI Cybersecurity Advanced Threats</h3>
+                <p className="text-gray-600 text-sm mb-3">Protecting against next-gen AI-powered attacks in 2025</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>22 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>🔥 Critical</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">AI Enterprise Readiness 2025</h3>
+                <p className="text-gray-600 text-sm mb-3">Complete assessment & implementation guide</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>25 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>🔥 Trending</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/case-studies/ai-transformation-global-retail-giant-2025" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛍️</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">Global Retail AI Transformation</h3>
+                <p className="text-gray-600 text-sm mb-3">300% revenue growth and $2.4B additional revenue</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>Case Study</span>
+                  <span className="mx-2">•</span>
+                  <span>🏆 Success</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -116,27 +163,8 @@ export default function ContentShowcase() {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Stay Updated with Latest AI Insights
-          </h2>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Get weekly updates on AI trends, implementation guides, and exclusive content 
-            delivered straight to your inbox. Join 10,000+ AI professionals.
-          </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-gray-500 mt-4">
-            No spam. Unsubscribe anytime. Read our privacy policy.
-          </p>
+        <section className="mb-16">
+          <NewsletterSignup variant="default" />
         </section>
       </div>
     </div>
