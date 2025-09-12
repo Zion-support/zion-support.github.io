@@ -39,6 +39,38 @@ export default function ContentShowcase() {
           </div>
         </div>
 
+        {/* Latest Content Drop */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white mb-12">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔥 JANUARY 2026 CONTENT DROP</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🚀 3 New High-Value Resources Just Released!
+              </h2>
+              <p className="text-lg opacity-90 mb-6 max-w-4xl mx-auto">
+                Master enterprise AI implementation with our complete toolkit, learn from real-world success stories, 
+                and discover proven strategies that deliver measurable results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                >
+                  📚 Download Master Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-enterprise-implementation-masterclass"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  🎯 Start Masterclass
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Featured Content */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🔥 Featured This Week</h2>
