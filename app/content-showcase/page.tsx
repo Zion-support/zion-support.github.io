@@ -46,10 +46,10 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="/blog/ai-2025-enterprise-ai-governance-framework" className="group">
+              <Link href="/blog/ai-2025-comprehensive-business-transformation" className="group">
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                   <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative">
-                    <div className="text-8xl">🛡️</div>
+                    <div className="text-8xl">🚀</div>
                     <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       NEW
                     </div>
@@ -57,18 +57,18 @@ export default function ContentShowcase() {
                   <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                        AI Governance
+                        AI Transformation
                       </span>
-                      <span className="text-gray-500 text-sm">25 min read</span>
+                      <span className="text-gray-500 text-sm">45 min read</span>
                       <span className="text-gray-500 text-sm">•</span>
                       <span className="text-gray-500 text-sm">Jan 30, 2025</span>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                      AI Governance Framework 2025: Complete Implementation Guide
+                      AI Business Transformation 2025: Complete Implementation Guide
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-                      Master enterprise AI governance with our comprehensive framework covering risk management, 
-                      compliance, ethics, and operational controls.
+                      The complete guide to transforming your business with AI. From strategy to implementation, 
+                      discover how leading companies achieve 340% ROI and $50M+ savings.
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -90,7 +90,7 @@ export default function ContentShowcase() {
                   <div className="aspect-video bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center relative">
                     <div className="text-8xl">💰</div>
                     <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      NEW
+                      POPULAR
                     </div>
                   </div>
                   <div className="p-8">
@@ -178,48 +178,48 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <Link href="/case-studies/ai-transformation-global-logistics-giant-2025" className="group">
+              <Link href="/case-studies/ai-transformation-global-financial-services-2025" className="group">
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="aspect-video bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center relative">
-                    <div className="text-8xl">📦</div>
-                    <div className="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative">
+                    <div className="text-8xl">🏦</div>
+                    <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       NEW
                     </div>
                   </div>
                   <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">
+                      <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
                         Fortune 100
                       </span>
-                      <span className="text-gray-500 text-sm">22 min read</span>
+                      <span className="text-gray-500 text-sm">25 min read</span>
                       <span className="text-gray-500 text-sm">•</span>
                       <span className="text-gray-500 text-sm">Jan 30, 2025</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
-                      Global Logistics Giant AI Transformation: $2.3B Revenue Impact
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                      Global Financial Services AI Transformation: $75M Savings
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-                      Discover how a Fortune 100 logistics company achieved unprecedented results through 
-                      comprehensive AI transformation, including $2.3B revenue increase and 45% cost reduction.
+                      How a Fortune 100 financial services company achieved $75M annual savings, 
+                      250% ROI, and transformed customer experience through comprehensive AI implementation.
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">$2.3B</div>
-                        <div className="text-sm text-gray-600">Revenue Increase</div>
+                        <div className="text-2xl font-bold text-green-600">$75M</div>
+                        <div className="text-sm text-gray-600">Annual Savings</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">45%</div>
-                        <div className="text-sm text-gray-600">Cost Reduction</div>
+                        <div className="text-2xl font-bold text-blue-600">250%</div>
+                        <div className="text-sm text-gray-600">ROI</div>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                          <span className="text-orange-600 font-bold text-sm">ZT</span>
+                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                          <span className="text-green-600 font-bold text-sm">ZT</span>
                         </div>
                         <span className="text-sm text-gray-600">Zion Tech Group</span>
                       </div>
-                      <span className="text-orange-600 font-medium group-hover:underline">
+                      <span className="text-green-600 font-medium group-hover:underline">
                         Read Case Study →
                       </span>
                     </div>
@@ -291,12 +291,51 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Link href="/resources/ai-2025-comprehensive-implementation-playbook" className="group">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="aspect-video bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center relative">
+                    <div className="text-8xl">📚</div>
+                    <div className="absolute top-4 left-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      NEW
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
+                        Master Playbook
+                      </span>
+                      <span className="text-gray-500 text-sm">400+ pages</span>
+                      <span className="text-gray-500 text-sm">•</span>
+                      <span className="text-gray-500 text-sm">Free</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                      AI Implementation Master Playbook 2025
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      The most comprehensive AI implementation guide available. 400+ pages of proven strategies, 
+                      frameworks, checklists, and templates to transform your business with AI.
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
+                          <span className="text-indigo-600 font-bold text-sm">ZT</span>
+                        </div>
+                        <span className="text-sm text-gray-600">Zion Tech Group</span>
+                      </div>
+                      <span className="text-indigo-600 font-medium group-hover:underline">
+                        Download Free →
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
               <Link href="/resources/ai-implementation-master-checklist-2025" className="group">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                   <div className="aspect-video bg-gradient-to-br from-teal-100 to-cyan-100 flex items-center justify-center relative">
                     <div className="text-8xl">📋</div>
                     <div className="absolute top-4 left-4 bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      NEW
+                      POPULAR
                     </div>
                   </div>
                   <div className="p-8">
@@ -330,51 +369,12 @@ export default function ContentShowcase() {
                 </div>
               </Link>
 
-              <Link href="/resources/ai-implementation-master-guide-2025" className="group">
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="aspect-video bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center relative">
-                    <div className="text-8xl">📚</div>
-                    <div className="absolute top-4 left-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      POPULAR
-                    </div>
-                  </div>
-                  <div className="p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
-                        Guide
-                      </span>
-                      <span className="text-gray-500 text-sm">300+ pages</span>
-                      <span className="text-gray-500 text-sm">•</span>
-                      <span className="text-gray-500 text-sm">Free</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
-                      AI Implementation Master Guide 2025
-                    </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      Complete 300+ page guide with detailed strategies, frameworks, and best practices 
-                      for successful AI implementation.
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
-                          <span className="text-indigo-600 font-bold text-sm">ZT</span>
-                        </div>
-                        <span className="text-sm text-gray-600">Zion Tech Group</span>
-                      </div>
-                      <span className="text-indigo-600 font-medium group-hover:underline">
-                        Download Free →
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
               <Link href="/resources/ai-governance-implementation-checklist-2025" className="group">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                   <div className="aspect-video bg-gradient-to-br from-red-100 to-pink-100 flex items-center justify-center relative">
                     <div className="text-8xl">🛡️</div>
                     <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      NEW
+                      FEATURED
                     </div>
                   </div>
                   <div className="p-8">
