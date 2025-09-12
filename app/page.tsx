@@ -40,9 +40,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* Mega Content Drop Banner */}
-        <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+        <section className="py-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -59,34 +58,12 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
-                  href="/content-showcase"
+                  href="/mega-content-showcase"
                   className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-=======
-        {/* Content Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT UPDATE</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content: 25+ New Resources Just Released!
-              </h2>
-              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Discover our latest breakthrough content: Quantum Computing AI, Neural Interfaces, Space Technology, 
-                plus new case studies showing $2.3B+ in real savings. Get expert insights on the technologies 
-                transforming 2025 and beyond.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
->>>>>>> cursor/create-and-deploy-new-content-fe5c
                 >
                   🎯 Explore All New Content
                 </Link>
                 <Link
-<<<<<<< HEAD
                   href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
                 >
