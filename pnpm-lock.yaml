@@ -18,7 +18,7 @@ importers:
         specifier: ^1.1.4
         version: 1.1.5(typescript@5.9.2)
       '@modelcontextprotocol/sdk':
-        specifier: ^1.17.1
+        specifier: ^1.18.0
         version: 1.18.0
       '@modelcontextprotocol/server-filesystem':
         specifier: ^2025.7.29
@@ -169,7 +169,7 @@ importers:
         specifier: ^18.3.0
         version: 18.3.7(@types/react@18.3.23)
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.43.0
+        specifier: ^8.39.0
         version: 8.43.0(@typescript-eslint/parser@8.43.0(eslint@8.57.1)(typescript@5.9.2))(eslint@8.57.1)(typescript@5.9.2)
       '@typescript-eslint/parser':
         specifier: ^8.39.0
