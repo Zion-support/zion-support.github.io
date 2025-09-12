@@ -130,7 +130,7 @@ export default function AI2025CybersecurityRevolution() {
             <li><strong>Encryption Everywhere:</strong> Protect data in transit and at rest</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">4. AI Model Security</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">4. AI Model Security</h3>
           
           <p className="text-lg text-gray-700 mb-6">
             Protecting AI models themselves is crucial, as they can be targeted for theft, manipulation, 
