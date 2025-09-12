@@ -21,38 +21,79 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* Content Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+        <section className="py-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                🎉 50+ New AI Resources: Trends, Implementation & Success Stories!
               </h2>
-              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
-                Sustainability Success Stories, plus comprehensive implementation guides and free resources. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
+                Just released: AI Trends 2025 Predictions, Implementation Success Framework, Manufacturing Automation Case Study, 
+                plus 200+ page Master Guide, comprehensive checklists, and expert webinars. Everything you need to master AI in 2025.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  className="bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
                 >
-                  Explore New Content
+                  🚀 Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                  href="/blog/ai-2025-trends-predictions"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read Latest Article
+                  📈 Read AI Trends 2025
                 </Link>
                 <Link
-                  href="/resources"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                  href="/resources/ai-implementation-master-guide-2025"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Download Free Resources
+                  📚 Download Master Guide
+                </Link>
+              </div>
+              
+              {/* Featured Content Grid */}
+              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <Link href="/blog/ai-2025-trends-predictions" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🔮</div>
+                    <h3 className="text-lg font-semibold mb-2">AI Trends 2025 Predictions</h3>
+                    <p className="text-sm opacity-90 mb-3">15 predictions shaping the future of AI</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>28 min read</span>
+                      <span className="mx-2">•</span>
+                      <span>New</span>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/case-studies/ai-automation-manufacturing-success-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏭</div>
+                    <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
+                    <p className="text-sm opacity-90 mb-3">40% cost reduction case study</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>Case Study</span>
+                      <span className="mx-2">•</span>
+                      <span>New</span>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/resources/ai-implementation-master-guide-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 className="text-lg font-semibold mb-2">Master Guide 2025</h3>
+                    <p className="text-sm opacity-90 mb-3">200+ page implementation guide</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>Free Download</span>
+                      <span className="mx-2">•</span>
+                      <span>New</span>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </div>
