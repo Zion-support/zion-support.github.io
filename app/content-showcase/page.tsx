@@ -5,22 +5,22 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI 2025: Year Ahead Predictions",
-      description: "Discover our expert predictions for AI in 2025. From breakthrough technologies to enterprise adoption trends, get insights that will shape your AI strategy.",
-      href: "/blog/ai-2025-year-ahead-predictions",
-      icon: "🔮",
-      category: "AI Predictions",
-      readTime: "18 min read",
-      date: "Jan 15, 2025"
+      title: "AI Productivity Automation 2025: Complete Implementation Guide",
+      description: "Transform your business operations with AI productivity automation. Learn proven strategies, tools, and implementation frameworks to achieve 40% efficiency gains and 60% cost reduction in 2025.",
+      href: "/blog/ai-productivity-automation-2025",
+      icon: "⚡",
+      category: "AI Automation",
+      readTime: "12 min read",
+      date: "Jan 30, 2025"
     },
     {
-      title: "AI Multimodal Revolution 2025: The Future of Intelligent Systems",
-      description: "Explore the multimodal AI revolution transforming how machines understand and interact with the world. Learn about applications, implementation strategies, and business opportunities.",
-      href: "/blog/ai-multimodal-revolution-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "22 min read",
-      date: "Jan 18, 2025"
+      title: "AI Startup Funding Masterclass 2025: From Seed to Series A",
+      description: "Master the $47B AI startup funding landscape with our comprehensive guide. Learn proven strategies, pitch templates, and investor insights to secure funding in 2025.",
+      href: "/blog/ai-startup-funding-masterclass-2025",
+      icon: "💰",
+      category: "Startup Strategy",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -44,6 +44,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Financial Services Transformation Breakthrough: $2.4B Cost Savings",
+      description: "Discover how a Fortune 500 financial services company achieved $2.4B in cost savings and 95% fraud detection accuracy through AI transformation. Complete case study with implementation details.",
+      href: "/case-studies/ai-financial-services-transformation-breakthrough-2025",
+      icon: "🏦",
+      category: "Financial Services",
+      result: "$2.4B Savings",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Manufacturing Automation Success: 40% Cost Reduction Achieved",
       description: "How a Fortune 500 manufacturing company transformed their operations with AI automation, achieving unprecedented cost savings and efficiency gains while maintaining the highest quality standards.",
       href: "/case-studies/ai-manufacturing-automation-success-2025",
@@ -51,15 +60,6 @@ export default function ContentShowcasePage() {
       category: "Manufacturing",
       result: "40% Cost Reduction",
       date: "Jan 20, 2025"
-    },
-    {
-      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
-      description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
-      href: "/case-studies/ai-transformation-enterprise-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
-      date: "Feb 05, 2025"
     },
     {
       title: "AI Retail Transformation Success: 300% Revenue Growth",
@@ -74,13 +74,13 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Multimodal Implementation Guide 2025",
-      description: "Everything you need to successfully implement multimodal AI in your organization. This comprehensive guide includes practical strategies, checklists, templates, and real-world case studies.",
-      href: "/resources/ai-multimodal-implementation-guide-2025",
-      icon: "📋",
-      category: "Implementation Guide",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide 2025. 200+ pages of proven strategies, checklists, templates, and best practices for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      category: "Master Guide",
       type: "Free Download",
-      date: "Jan 18, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
