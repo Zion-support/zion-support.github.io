@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '23',
+      title: 'Privacy-Preserving AI in Production (2025)',
+      description: 'Ship AI with differential privacy, federated learning, and privacy-by-design guardrails.',
+      href: '/blog/ai-2025-privacy-preserving-ai',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Privacy'
+    },
+    {
       id: '19',
       title: 'Data Quality for RAG in Production (2025)',
       description: 'Operator guide to curating, evaluating, and governing high-quality knowledge for reliable RAG.',
