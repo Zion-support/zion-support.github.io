@@ -83,9 +83,9 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-sky-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
           <span className="font-semibold">New:</span>
-          <span className="opacity-90">Zion OS 1.5 ships Real-Time Agents with trace-level observability and SLAs.</span>
-          <a href="/news/zion-os-1-5-realtime-agents" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
-            Read the release →
+          <span className="opacity-90">Five new guides on deployment, governance, security, observability, and Web3.</span>
+          <a href="/news/new-guides-ai-governance-security-web3" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read more →
           </a>
         </div>
       </div>
@@ -115,6 +115,9 @@ export default function HomePage() {
               </a>
               <a href="/news/zion-os-1-5-realtime-agents" className="btn-secondary hover-lift">
                 🛰️ New: Zion OS 1.5 Real‑Time Agents
+              </a>
+              <a href="/blog" className="btn-secondary hover-lift">
+                ✍️ New Guides: Deployment, Security, Web3
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
