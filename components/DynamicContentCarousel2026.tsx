@@ -1,67 +1,61 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const featuredContent = [
+const contentItems = [
   {
-    id: 1,
-    title: "AI 2025: Neural Architecture Revolution",
-    description: "Next-gen AI systems transforming industries with 40% efficiency gains",
-    category: "Revolutionary Breakthroughs",
-    icon: "🧠",
-    href: "/blog/ai-2025-neural-architecture-revolution",
-    badge: "NEW",
-    color: "from-purple-500 to-pink-500"
+    id: 'ai-2026-showcase',
+    title: 'AI 2026 Technology Showcase',
+    description: 'Explore cutting-edge neural interfaces, quantum AI, and autonomous systems that will revolutionize industries in 2026.',
+    href: '/ai-2026-technology-showcase',
+    image: '/api/placeholder/400/300',
+    category: 'Technology',
+    badge: 'NEW',
+    gradient: 'from-purple-500 to-pink-500',
+    icon: '🔮'
   },
   {
-    id: 2,
-    title: "Quantum Machine Learning Breakthrough",
-    description: "The next frontier in AI computing with 10-100x performance improvements",
-    category: "Quantum AI",
-    icon: "⚛️",
-    href: "/blog/ai-2025-quantum-machine-learning",
-    badge: "BREAKTHROUGH",
-    color: "from-indigo-500 to-purple-500"
+    id: 'implementation-toolkit',
+    title: 'AI 2026 Implementation Toolkit',
+    description: 'Complete toolkit with frameworks, checklists, templates, and expert guidance for implementing next-gen AI systems.',
+    href: '/resources/ai-2026-implementation-toolkit',
+    image: '/api/placeholder/400/300',
+    category: 'Resources',
+    badge: 'TOOLKIT',
+    gradient: 'from-blue-500 to-cyan-500',
+    icon: '🛠️'
   },
   {
-    id: 3,
-    title: "$2.3B Fintech Transformation Success",
-    description: "Real-world case study showing massive revenue impact through AI",
-    category: "Case Study",
-    icon: "💰",
-    href: "/case-studies/ai-2025-fintech-transformation-breakthrough",
-    badge: "SUCCESS",
-    color: "from-green-500 to-emerald-500"
+    id: 'quantum-case-study',
+    title: 'Quantum AI Financial Breakthrough',
+    description: 'How a Fortune 500 company achieved 1000x performance improvement using quantum-enhanced AI for risk modeling.',
+    href: '/case-studies/quantum-ai-financial-breakthrough-2026',
+    image: '/api/placeholder/400/300',
+    category: 'Case Study',
+    badge: 'BREAKTHROUGH',
+    gradient: 'from-cyan-500 to-blue-500',
+    icon: '⚛️'
   },
   {
-    id: 4,
-    title: "AI Implementation Master Guide 2026",
-    description: "Complete enterprise strategy for successful AI deployment",
-    category: "Master Guide",
-    icon: "📚",
-    href: "/resources/ai-implementation-master-guide-2026",
-    badge: "GUIDE",
-    color: "from-blue-500 to-cyan-500"
+    id: 'roi-calculator',
+    title: 'AI ROI Calculator 2026',
+    description: 'Interactive calculator to estimate returns on AI investments including neural interfaces and quantum AI systems.',
+    href: '/tools/ai-roi-calculator-2026',
+    image: '/api/placeholder/400/300',
+    category: 'Tools',
+    badge: 'INTERACTIVE',
+    gradient: 'from-green-500 to-teal-500',
+    icon: '💰'
   },
   {
-    id: 5,
-    title: "Multimodal AI Revolution 2025",
-    description: "Seamless integration of text, image, audio, and video processing",
-    category: "Multimodal AI",
-    icon: "🎭",
-    href: "/blog/ai-2025-multimodal-revolution",
-    badge: "TRENDING",
-    color: "from-orange-500 to-red-500"
-  },
-  {
-    id: 6,
-    title: "Enterprise AI Governance Framework",
-    description: "Comprehensive framework for responsible AI implementation",
-    category: "Governance",
-    icon: "🛡️",
-    href: "/resources/ai-governance-framework-2026",
-    badge: "FRAMEWORK",
-    color: "from-teal-500 to-green-500"
+    id: 'ai-trends-2026',
+    title: 'AI Trends 2026 Predictions',
+    description: 'Comprehensive analysis of AI trends and predictions for 2026. Discover the future of artificial intelligence.',
+    href: '/ai-trends-2026-predictions',
+    image: '/api/placeholder/400/300',
+    category: 'Analysis',
+    badge: 'PREDICTIONS',
+    gradient: 'from-orange-500 to-red-500',
+    icon: '📈'
   }
 ];
 
@@ -73,106 +67,78 @@ export default function DynamicContentCarousel2026() {
     if (!isAutoPlaying) return;
     
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
-      );
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
     }, 5000);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+  };
+
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+    setIsAutoPlaying(false);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? featuredContent.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
+    setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
+  const currentItem = contentItems[currentIndex];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 FEATURED CONTENT</span>
+    <section className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-black rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-bold">🌟 FEATURED CONTENT 2026</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Latest AI Insights & Breakthroughs
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary AI Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our curated collection of cutting-edge AI research, 
-            real-world case studies, and practical implementation guides.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our latest cutting-edge content featuring neural interfaces, quantum AI, autonomous systems, and comprehensive implementation guides
           </p>
         </div>
 
-        {/* Carousel Container */}
+        {/* Main Carousel */}
         <div className="relative">
-          {/* Main Carousel */}
           <div className="overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {featuredContent.map((content, index) => (
-                <div key={content.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${content.color} p-12 text-white relative overflow-hidden`}>
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute top-10 right-10 w-32 h-32 bg-white rounded-full"></div>
-                      <div className="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full"></div>
-                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full"></div>
-                    </div>
-                    
-                    <div className="relative z-10 max-w-4xl mx-auto">
-                      <div className="grid md:grid-cols-2 gap-12 items-center">
-                        {/* Content */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-white bg-opacity-20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
-                              {content.category}
-                            </span>
-                            <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                              {content.badge}
-                            </span>
+              {contentItems.map((item, index) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${item.gradient} p-1 rounded-2xl`}>
+                    <div className="bg-slate-900 rounded-xl p-8 h-96 flex items-center">
+                      <div className="grid md:grid-cols-2 gap-8 w-full">
+                        <div className="flex flex-col justify-center">
+                          <div className="flex items-center space-x-3 mb-4">
+                            <span className="text-4xl">{item.icon}</span>
+                            <div>
+                              <span className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-3 py-1 text-xs font-bold">
+                                {item.badge}
+                              </span>
+                              <span className="ml-3 text-sm text-gray-400">{item.category}</span>
+                            </div>
                           </div>
-                          
-                          <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                            {content.title}
-                          </h3>
-                          
-                          <p className="text-lg opacity-90 mb-8 leading-relaxed">
-                            {content.description}
-                          </p>
-                          
-                          <div className="flex flex-col sm:flex-row gap-4">
-                            <Link
-                              href={content.href}
-                              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-                            >
-                              Read More
-                            </Link>
-                            <Link
-                              href="/content-showcase"
-                              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
-                            >
-                              View All Content
-                            </Link>
-                          </div>
+                          <h3 className="text-3xl font-bold mb-4 text-white">{item.title}</h3>
+                          <p className="text-lg text-gray-300 mb-6">{item.description}</p>
+                          <Link
+                            href={item.href}
+                            className={`inline-flex items-center bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity`}
+                          >
+                            Explore Now →
+                          </Link>
                         </div>
-                        
-                        {/* Icon */}
-                        <div className="text-center">
-                          <div className="text-8xl mb-4">{content.icon}</div>
-                          <div className="text-2xl font-bold opacity-80">
-                            {content.category}
+                        <div className="hidden md:block">
+                          <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-lg h-64 flex items-center justify-center">
+                            <div className="text-6xl opacity-50">{item.icon}</div>
                           </div>
                         </div>
                       </div>
@@ -186,102 +152,78 @@ export default function DynamicContentCarousel2026() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all"
             aria-label="Previous slide"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all"
             aria-label="Next slide"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {featuredContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                onMouseEnter={() => setIsAutoPlaying(false)}
-                onMouseLeave={() => setIsAutoPlaying(true)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-blue-600 scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Auto-play Toggle */}
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors text-sm"
-            >
-              <div className={`w-4 h-4 rounded-full border-2 ${
-                isAutoPlaying ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-              }`}></div>
-              Auto-play {isAutoPlaying ? 'ON' : 'OFF'}
-            </button>
-          </div>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            Quick Access to All Content
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog" className="group">
-              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-blue-200">
-                <div className="text-4xl mb-4">📝</div>
-                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  Latest Blog Posts
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  In-depth articles on AI trends, technologies, and best practices
-                </p>
+        {/* Dots Indicator */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {contentItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentIndex 
+                  ? 'bg-purple-400 w-8' 
+                  : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Content Grid */}
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {contentItems.slice(0, 3).map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              className={`group bg-gradient-to-br ${item.gradient} p-1 rounded-xl hover:scale-105 transition-transform`}
+            >
+              <div className="bg-slate-900 rounded-lg p-6 h-full">
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="text-2xl">{item.icon}</span>
+                  <div>
+                    <span className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-2 py-1 text-xs font-bold">
+                      {item.badge}
+                    </span>
+                    <span className="ml-2 text-xs text-gray-400">{item.category}</span>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-white group-hover:text-purple-400 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-300 mb-4">{item.description}</p>
+                <div className="text-purple-400 text-sm font-semibold group-hover:text-purple-300">
+                  Learn More →
+                </div>
               </div>
             </Link>
-            
-            <Link href="/case-studies" className="group">
-              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-green-200">
-                <div className="text-4xl mb-4">📊</div>
-                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                  Success Stories
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Real-world case studies and transformation success stories
-                </p>
-              </div>
-            </Link>
-            
-            <Link href="/resources" className="group">
-              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group-hover:border-purple-200">
-                <div className="text-4xl mb-4">📚</div>
-                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  Implementation Guides
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Comprehensive guides, frameworks, and practical resources
-                </p>
-              </div>
-            </Link>
-          </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <Link
+            href="/content-showcase"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all text-lg shadow-lg inline-block"
+          >
+            View All Content
+          </Link>
         </div>
       </div>
     </section>
