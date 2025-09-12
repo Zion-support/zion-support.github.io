@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, Zap, TrendingUp, Star, ArrowRight, Brain, Rocket, Target } from 'lucide-react';
+import { X, Zap, TrendingUp, Star, ArrowRight, Brain, Rocket, Target, Users } from 'lucide-react';
 
 const AI2025RevolutionaryBreakthroughBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -90,17 +90,17 @@ const AI2025RevolutionaryBreakthroughBanner: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link 
-              href="/blog/ai-2025-revolutionary-breakthroughs"
+              href="/blog/ai-2025-revolutionary-breakthrough-announcement"
               className="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 whitespace-nowrap"
             >
               <Star className="w-4 h-4" />
-              Read Breakthroughs
+              Learn More
             </Link>
             <Link 
-              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              href="/case-studies/ai-2025-revolutionary-breakthrough-success"
               className="border-2 border-white text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-600 transition-colors flex items-center gap-2 whitespace-nowrap"
             >
-              Get Toolkit
+              View Success Stories
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

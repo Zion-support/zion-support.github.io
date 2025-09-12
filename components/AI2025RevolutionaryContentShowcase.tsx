@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Target, CheckCircle, Clock, Users } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Target, CheckCircle, Clock, Users, Award, BookOpen } from 'lucide-react';
 
 const AI2025RevolutionaryContentShowcase: React.FC = () => {
   const featuredContent = [
