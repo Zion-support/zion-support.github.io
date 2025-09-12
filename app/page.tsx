@@ -168,6 +168,7 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Industry Disruption 2025</h3>
                 <p className='text-sm opacity-90 mb-3'>How AI is reshaping every sector with real impact data</p>
+                <p className='text-sm opacity-90 mb-3'>Master the $47B funding landscape with proven strategies</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>25 min read</span>
                   <span className='mx-2'>•</span>
