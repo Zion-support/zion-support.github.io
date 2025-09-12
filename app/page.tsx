@@ -89,6 +89,8 @@ import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPro
 import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
 import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
 import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -105,6 +107,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE */}
+        <AI2025RevolutionaryContentShowcase />
+        
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
         
