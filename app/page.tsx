@@ -1327,54 +1327,24 @@ export default function HomePage() {
         subtitle="Stay ahead with our latest articles, resources, and case studies covering the most important trends in AI, cloud architecture, and business growth."
         items={[
           {
-            title: "AI Cybersecurity 2025: Protecting Your Digital Assets",
-            description: "Comprehensive guide to AI cybersecurity in 2025. Learn about emerging threats, defense strategies, and best practices for protecting your organization.",
-            href: "/blog/ai-cybersecurity-2025",
+            title: "AI 2025 Year in Review: The Breakthrough Year for Artificial Intelligence",
+            description: "Comprehensive review of AI breakthroughs, trends, and transformations in 2025. From GPT-5 to quantum AI, discover how artificial intelligence reshaped industries and society.",
+            href: "/blog/ai-2025-year-in-review",
+            type: "blog",
+            readTime: "25 min read",
+            isNew: true,
+            icon: "🤖",
+            category: "AI Review & Trends"
+          },
+          {
+            title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen AI-Powered Attacks",
+            description: "Comprehensive guide to AI cybersecurity threats in 2025. Learn about AI-powered attacks, defense strategies, and best practices for protecting your organization from intelligent threats.",
+            href: "/blog/ai-cybersecurity-threats-2025",
             type: "blog",
             readTime: "18 min read",
             isNew: true,
             icon: "🛡️",
             category: "AI & Security"
-          },
-          {
-            title: "AI Data Privacy 2025: Navigating the New Regulatory Landscape",
-            description: "Comprehensive guide to AI data privacy regulations in 2025. Learn about GDPR, CCPA, and emerging AI-specific privacy laws affecting your business.",
-            href: "/blog/ai-data-privacy-2025",
-            type: "blog",
-            readTime: "15 min read",
-            isNew: true,
-            icon: "🔒",
-            category: "Privacy & Compliance"
-          },
-          {
-            title: "AI Enterprise Integration 2025: A Complete Implementation Guide",
-            description: "Comprehensive guide to AI enterprise integration in 2025. Learn best practices, implementation strategies, and common pitfalls for successful AI adoption.",
-            href: "/blog/ai-enterprise-integration-2025",
-            type: "blog",
-            readTime: "20 min read",
-            isNew: true,
-            icon: "🏢",
-            category: "Enterprise & Integration"
-          },
-          {
-            title: "AI Integration Playbook 2025: Complete Implementation Guide",
-            description: "Download our comprehensive AI integration playbook for 2025. Step-by-step guide with templates, checklists, and best practices for successful AI implementation.",
-            href: "/resources/ai-integration-playbook-2025",
-            type: "resource",
-            readTime: "45 min read",
-            isNew: true,
-            icon: "📚",
-            category: "Templates & Guides"
-          },
-          {
-            title: "AI Privacy Compliance Checklist 2025: GDPR, CCPA & More",
-            description: "Download our comprehensive AI privacy compliance checklist for 2025. Ensure your AI systems meet GDPR, CCPA, and emerging AI-specific privacy regulations.",
-            href: "/resources/ai-privacy-compliance-checklist",
-            type: "resource",
-            readTime: "30 min read",
-            isNew: true,
-            icon: "✅",
-            category: "Compliance & Security"
           },
           {
             title: "AI Retail Transformation 2025: How TechMart Increased Revenue by 340%",
@@ -1386,11 +1356,151 @@ export default function HomePage() {
             icon: "🛒",
             category: "Retail & E-commerce",
             featured: true
+          },
+          {
+            title: "AI Cybersecurity Checklist 2025: Complete Security Assessment Guide",
+            description: "Download our comprehensive AI cybersecurity checklist for 2025. Assess your organization's AI security posture with 150+ actionable items covering threats, defenses, and best practices.",
+            href: "/resources/ai-cybersecurity-checklist-2025",
+            type: "resource",
+            readTime: "30 min read",
+            isNew: true,
+            icon: "📋",
+            category: "Security & Compliance"
+          },
+          {
+            title: "AI Transformation Readiness Assessment 2025: Free Evaluation Tool",
+            description: "Assess your organization's readiness for AI transformation with our comprehensive evaluation tool. Get personalized recommendations and a detailed roadmap for successful AI implementation.",
+            href: "/resources/ai-transformation-readiness-assessment-2025",
+            type: "resource",
+            readTime: "20 min read",
+            isNew: true,
+            icon: "📊",
+            category: "Assessment Tools"
+          },
+          {
+            title: "AI Enterprise Integration 2025: A Complete Implementation Guide",
+            description: "Comprehensive guide to AI enterprise integration in 2025. Learn best practices, implementation strategies, and common pitfalls for successful AI adoption.",
+            href: "/blog/ai-enterprise-integration-2025",
+            type: "blog",
+            readTime: "20 min read",
+            isNew: true,
+            icon: "🏢",
+            category: "Enterprise & Integration"
           }
         ]}
         showViewAll={true}
         viewAllHref="/blog"
       />
+
+      {/* New Content Spotlight - Latest Drop */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔥 JUST PUBLISHED - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI & Business Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest expert insights, case studies, and resources. From AI year-in-review 
+              to cybersecurity threats and transformation assessments - get the knowledge you need to 
+              succeed in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-2025-year-in-review' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive review of AI breakthroughs and industry transformations</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-cybersecurity-threats-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Defending against next-gen AI-powered attacks</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-retail-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛒</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Retail Transformation</h3>
+                <p className='text-sm opacity-90 mb-3'>340% revenue growth through intelligent automation</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-cybersecurity-checklist-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Checklist</h3>
+                <p className='text-sm opacity-90 mb-3'>150+ actionable security assessment items</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-transformation-readiness-assessment-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Readiness Assessment</h3>
+                <p className='text-sm opacity-90 mb-3'>Free evaluation tool with personalized recommendations</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Tool</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog' className='group md:col-span-3'>
+              <div className='mt-2 bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>📚</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>View All New Content</h3>
+                <p className='text-sm opacity-90'>Explore our complete library of AI insights, case studies, and resources</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
