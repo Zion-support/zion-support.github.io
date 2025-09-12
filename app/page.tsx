@@ -32,6 +32,8 @@ import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import MegaContentShowcase2025 from '../components/MegaContentShowcase2025';
+import SuperContentPromoBanner2025 from '../components/SuperContentPromoBanner2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -48,6 +50,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* SUPER CONTENT PROMO BANNER 2025 */}
+        <SuperContentPromoBanner2025 />
+        
+        {/* MEGA CONTENT SHOWCASE 2025 */}
+        <MegaContentShowcase2025 />
+        
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner />
         
