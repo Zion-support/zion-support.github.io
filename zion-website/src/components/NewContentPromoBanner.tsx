@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '54',
+      title: 'Knowledge Graph RAG in 2025: Hybrid Retrieval in Production',
+      description: 'Fuse vector search with knowledge graphs for factual, controllable, and policy-aware RAG.',
+      href: '/blog/ai-2025-knowledge-graph-rag',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '55',
+      title: 'E2E Testing for AI Agents in 2025: Reliability at Scale',
+      description: 'Design robust agent test suites, reduce flakiness, and integrate evaluations into CI.',
+      href: '/blog/ai-2025-e2e-agent-testing',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',

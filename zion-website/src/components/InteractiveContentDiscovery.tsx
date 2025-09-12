@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '54',
+      title: 'Knowledge Graph RAG in 2025: Hybrid Retrieval in Production',
+      description: 'Hybrid retrieval that fuses vector search with knowledge graphs for factual, controllable RAG.',
+      href: '/blog/ai-2025-knowledge-graph-rag',
+      type: 'blog',
+      category: 'RAG',
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      tags: ['RAG', 'Knowledge Graph', 'Entity Linking', 'Hybrid Retrieval'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '55',
+      title: 'E2E Testing for AI Agents in 2025: Reliability at Scale',
+      description: 'Task suites, tool correctness, safety policies, and observability for agent reliability.',
+      href: '/blog/ai-2025-e2e-agent-testing',
+      type: 'blog',
+      category: 'Evaluation',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Agents', 'Testing', 'Evaluation', 'CI'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
@@ -183,6 +209,7 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
