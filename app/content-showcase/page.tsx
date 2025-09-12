@@ -43,41 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-neural-interfaces" className="group">
+              <Link href="/blog/ai-2025-enterprise-ai-transformation" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Neural Interfaces 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">The future of brain-computer integration and human-AI collaboration</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
+                  <h3 className="text-lg font-semibold mb-2">Enterprise AI Transformation 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete implementation guide with real-world case studies and proven strategies</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>22 min read</span>
+                    <span>12 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Breakthrough</span>
+                    <span>🆕 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-space-technology" className="group">
+              <Link href="/blog/ai-healthcare-diagnosis-revolution-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Space Technology Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">Revolutionizing space exploration and Mars colonization with AI</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Diagnosis Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Transforming medical practice with 67% reduction in diagnostic errors</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>20 min read</span>
+                    <span>15 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🚀 Futuristic</span>
+                    <span>🆕 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-2025-enterprise-automation-success" className="group">
+              <Link href="/resources/ai-automation-enterprise-guide-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="text-lg font-semibold mb-2">Fortune 500 AI Success</h3>
-                  <p className="text-sm opacity-90 mb-3">$50M savings and 60% efficiency gains through AI automation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Automation Enterprise Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete implementation playbook with strategies and best practices</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
+                    <span>Guide</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $50M ROI</span>
+                    <span>🆕 NEW</span>
                   </div>
                 </div>
               </Link>
