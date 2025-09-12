@@ -4,20 +4,9 @@ import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
-<<<<<<< HEAD
-import ContentShowcase from '../components/ContentShowcase';
-=======
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
-import NewContentPromoBanner2025 from '../components/NewContentPromoBanner2025';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
-import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
-import DynamicContentCarousel from '../components/DynamicContentCarousel';
-import ContentDiscoverySection from '../components/ContentDiscoverySection';
-import NewContentDiscovery from '../components/NewContentDiscovery';
-import EnhancedNewsletter from '../components/EnhancedNewsletter';
-import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
-import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
->>>>>>> cursor/create-and-deploy-new-content-fd62
+import ContentShowcase from '../components/ContentShowcase';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
@@ -37,50 +26,45 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW CONTENT PROMO BANNER 2025 */}
-        <NewContentPromoBanner2025 />
-        
         {/* ULTRA CONTENT PROMOTION BANNER */}
         <UltraContentPromotionBanner />
         
-        {/* Content Promotion Banner */}
-        <NewContentPromotionBanner />
-        
         {/* NEW CONTENT LAUNCH BANNER */}
-        <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_0%,transparent_50%)]"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
                 <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 🚀 25+ New AI Resources Just Released!
               </h2>
-              <p className="text-lg opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our biggest content update yet: Advanced AI Architecture, Cybersecurity Defense, 
-                Quantum Computing Guides, and Enterprise Automation Success Stories.
+              <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+                Discover our biggest content update yet: Revolutionary AI Breakthroughs, Space Exploration Success Stories, 
+                Generative AI Revolution, and Complete Implementation Guides with 200+ pages of actionable insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 text-lg"
                 >
-                  Explore Services
+                  Explore All Content
                 </Link>
                 <Link
-                  href="/content-showcase"
-                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300"
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 text-lg"
                 >
-                  View Resources
+                  Download Free Guide
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Content Promotion Banner */}
-        <NewContentPromoBanner variant="featured" maxItems={3} />
+        {/* Featured Content Showcase */}
+        <FeaturedNewContentShowcase />
 
         {/* Featured Services */}
         <section className="py-20 bg-gray-50">
