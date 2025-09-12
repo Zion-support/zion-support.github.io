@@ -36,6 +36,9 @@ const EnhancedNavigation: React.FC = () => {
       badge: '30+ New',
       dropdown: [
         { label: 'All Content', href: '/mega-content-showcase', isNew: true },
+        { label: 'AI Innovation Hub', href: '/ai-innovation-hub', isNew: true, isHot: true },
+        { label: 'AI Tools Showcase', href: '/ai-tools-showcase', isNew: true, isHot: true },
+        { label: 'AI Resources 2025', href: '/ai-resources-2025', isNew: true, isHot: true },
         { label: 'AI Breakthrough Innovations', href: '/blog/ai-2025-breakthrough-innovations', isNew: true, isHot: true },
         { label: 'AI Sustainability Guide', href: '/blog/ai-sustainability-green-tech-2025', isNew: true, isHot: true },
         { label: 'Sustainability Case Study', href: '/case-studies/ai-sustainability-transformation-2025', isNew: true, isHot: true },

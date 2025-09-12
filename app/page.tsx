@@ -14,6 +14,7 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import UltraContentDiscovery from '../components/UltraContentDiscovery';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -1317,6 +1318,9 @@ export default function HomePage() {
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
+
+      {/* Ultra Content Discovery */}
+      <UltraContentDiscovery />
 
         {/* Revolutionary AI Tools Banner */}
         <section className='py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden'>
