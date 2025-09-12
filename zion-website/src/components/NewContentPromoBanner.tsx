@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '60',
+      title: 'Platform Engineering for AI Agents (2025)',
+      description: 'Blueprint for enterprise agent platforms: reliability, safety, observability, and cost.',
+      href: '/blog/ai-2025-platform-engineering-for-agents',
+      type: 'blog',
+      featured: true,
+      readTime: '22 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platform'
+    },
+    {
+      id: '61',
+      title: 'Evaluations + Guardrails Integration (2025)',
+      description: 'Integrate offline/online evals with policy guardrails to ship safely at speed.',
+      href: '/blog/ai-2025-evals-guardrails-integration',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: '62',
+      title: 'Enterprise AI Cost Optimization Playbook (2025)',
+      description: 'Cut AI costs with routing, caching, distillation, and rigorous measurement.',
+      href: '/blog/ai-2025-enterprise-cost-optimization-playbook',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
