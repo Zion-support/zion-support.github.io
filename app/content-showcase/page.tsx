@@ -189,11 +189,11 @@ export default function ContentShowcasePage() {
 
             {/* Featured Content Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-2025-predictions" className="group">
+              <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
-                  <h3 className="text-lg font-semibold mb-2">AI 2025 Predictions</h3>
-                  <p className="text-sm opacity-90 mb-3">The future of AI: AGI breakthroughs, enterprise adoption, and industry transformation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Breakthrough Innovations 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Technologies reshaping our world: AGI, quantum AI, and multimodal systems</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
@@ -202,39 +202,39 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
               
-              <Link href="/blog/ai-implementation-success-framework-2025" className="group">
+              <Link href="/blog/ai-enterprise-security-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Implementation Framework</h3>
-                  <p className="text-sm opacity-90 mb-3">7-step process that guarantees 340% ROI and successful AI transformation</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Security 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Comprehensive protection strategies for AI systems in enterprise environments</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>30 min read</span>
+                    <span>22 min read</span>
                     <span className="mx-2">•</span>
                     <span>Essential</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-transformation-enterprise-success-2025" className="group">
+              <Link href="/blog/ai-productivity-automation-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">Enterprise AI Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Fortune 500 case study: 340% ROI and $50M in cost savings</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Productivity Automation 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">340% productivity gains through intelligent automation and workflow optimization</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
+                    <span>18 min read</span>
                     <span className="mx-2">•</span>
-                    <span>New</span>
+                    <span>Trending</span>
                   </div>
                 </div>
               </Link>
 
-              <Link href="/resources/ai-transformation-playbook-2025" className="group">
+              <Link href="/case-studies/ai-transformation-fortune-500-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Transformation Playbook</h3>
-                  <p className="text-sm opacity-90 mb-3">150+ page complete implementation guide with templates</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+                  <h3 className="text-lg font-semibold mb-2">Fortune 500 AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">$50M savings and 300% ROI in 18 months - complete case study</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Free Download</span>
+                    <span>Case Study</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
                   </div>
