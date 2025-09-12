@@ -34,15 +34,15 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '11',
-      title: 'Real-time AI Agents 2025: Observability, Guardrails, and SLOs',
-      description: 'Operate real-time agents with production-grade telemetry, safety guardrails, tracing, and SLOs.',
+      id: '13',
+      title: 'Real-Time Agents 2025: Observability, Safety, and SLAs',
+      description: 'Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.',
       href: '/blog/ai-2025-realtime-agents-observability',
       type: 'blog',
       featured: true,
       readTime: '17 min read',
       date: 'Sep 12, 2025',
-      category: 'Observability'
+      category: 'Agents'
     },
     {
       id: '9',

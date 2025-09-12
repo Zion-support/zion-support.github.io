@@ -10,6 +10,17 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "zion-os-1-5-realtime-agents",
+    emoji: "🛰️",
+    title: "Zion OS 1.5: Real-Time Agents with First-Class Observability",
+    excerpt:
+      "Streaming agents ship with trace-level observability, safety guardrails, and SLA tooling.",
+    date: "2025-09-12",
+    gradient: "from-sky-600 to-indigo-600",
+    content:
+      "Zion OS 1.5 introduces streaming agent orchestration with end-to-end tracing, budget-aware routing, and built-in safety guardrails for enterprise deployments.",
+  },
+  {
     slug: "zion-os-1-0-launch",
     emoji: "🚀",
     title: "Zion OS 1.0 Launches: One-Click Digital Economies",
