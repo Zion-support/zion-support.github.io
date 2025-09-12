@@ -7,13 +7,13 @@ interface UltraFuturisticBackgroundProps {
   className?: string;
 }
 
-const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ 
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps></UltraFuturisticBackgroundProps> = ({ 
   children, 
   className = '' 
 }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement></HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement></HTMLDivElement>(null);
+  const animationRef = useRef<number | null></number>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -300,7 +300,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     <div 
       ref={containerRef}
       className={`relative min-h-screen overflow-hidden ${className}`}
-    >
+    ></div>
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
@@ -319,7 +319,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-slate-800/10 to-slate-900/20 pointer-events-none" />
       
       {/* Content */}
-      <div className="relative z-20">
+      <div className="relative z-20"></div>
         {children}
       </div>
     </div>

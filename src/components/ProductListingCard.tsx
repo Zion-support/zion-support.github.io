@@ -91,7 +91,7 @@ const ProductListingCardComponent = ({
     router.push(`${detailBasePath}/${listing.id}`);
   };
 
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch<AppDispatch></AppDispatch>();
 
   const addToCart = () => {
     setLoading(true);
@@ -161,7 +161,7 @@ const ProductListingCardComponent = ({
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
-      onKeyDown={(e) => {
+      onKeyDown={(e) =></div> {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           handleViewListing();
@@ -174,14 +174,14 @@ const ProductListingCardComponent = ({
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
+        onKeyDown={(e) =></div> {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             handleViewListing();
           }
         }}
       >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+        <div className={`relative ${imageContainerClasses}`}></div> {/* Ensure this container has dimensions */}
           <Image
             src={imageSrc}
             alt={listing.title}
@@ -192,7 +192,7 @@ const ProductListingCardComponent = ({
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
           {listing.featured && (
-            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
+            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none"></Badge>
               Featured
             </Badge>
           )}
@@ -200,7 +200,7 @@ const ProductListingCardComponent = ({
             <Badge
               variant={stockVariant as any}
               className="absolute top-2 left-2"
-            >
+            ></Badge>
               {stockStatus}
             </Badge>
           )}
@@ -209,11 +209,11 @@ const ProductListingCardComponent = ({
       </div>
       
       {/* Content */}
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
-        <div>
+      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}></div>
+        <div></div>
           {/* Category & Rating */}
-          <div className="flex justify-between items-center mb-2">
-            <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+          <div className="flex justify-between items-center mb-2"></div>
+            <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10"></Badge>
               {listing.category}
             </Badge>
             {listing.rating && (
@@ -222,28 +222,28 @@ const ProductListingCardComponent = ({
           </div>
           
           {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">
+          <div onClick={handleViewListing} className="block"></div>
             {listing.uspHeadline && (
-              <p className="text-primary font-semibold text-sm mb-1">
+              <p className="text-primary font-semibold text-sm mb-1"></p>
                 {listing.uspHeadline}
               </p>
             )}
-            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]"></h3>
               {listing.title}
             </h3>
           </div>
-          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
+          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]"></p>
             {listing.description}
           </p>
           
           {/* Tags */}
           {Array.isArray(listing.tags) && listing.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mb-4">
+            <div className="flex flex-wrap gap-1 mb-4"></div>
               {listing.tags.map((tag, idx) => (
                 <span
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-                >
+                ></span>
                   {tag}
                 </span>
               ))}
@@ -252,21 +252,21 @@ const ProductListingCardComponent = ({
         </div>
         
         {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
-          <div className="text-sm font-medium">
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20"></div>
+          <div className="text-sm font-medium"></div>
             {listing.price !== null ? (
-              <div className="flex items-center text-primary">
+              <div className="flex items-center text-primary"></div>
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
-              <span className="text-foreground/80">
+              <span className="text-foreground/80"></span>
                 {getPrice()}
               </span>
             )}
           </div>
           
-          <div className="flex gap-2">
+          <div className="flex gap-2"></div>
             <Button
               variant="ghost"
               size="icon"
@@ -275,14 +275,14 @@ const ProductListingCardComponent = ({
               className="text-zion-slate-light hover:text-zion-cyan"
             >
               <Heart className="h-5 w-5" />
-            </Button>
+            
             <Link
               to={`${detailBasePath}/${listing.id}`}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) =></Link> e.stopPropagation()}
             >
               {loading ? (
                 <>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"></svg>
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
@@ -291,7 +291,7 @@ const ProductListingCardComponent = ({
               ) : (
                 "Add to Cart"
               )}
-            </Button>
+            
             
             <Button
               size="sm"
@@ -308,7 +308,7 @@ const ProductListingCardComponent = ({
               disabled={loading}
             >
               Buy Now
-            </Button>
+            
             
             {onRequestQuote && (
               <Button 
@@ -318,7 +318,7 @@ const ProductListingCardComponent = ({
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
-              </Button>
+              
             )}
           </div>
         </div>

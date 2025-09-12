@@ -33,7 +33,7 @@ interface ServiceCardProps {
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
 }
 
-const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Props> = ({
+const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Props></UltraFuturisticServiceCard2026Props> = ({
   service,
   variant = 'default',
   className = '',
@@ -101,7 +101,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className="group relative"
-    >
+    ></motion>
       {/* Popular Badge */}
       {service.popular && (
         <motion.div
@@ -109,8 +109,8 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: 0.2 }}
           className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
-        >
-          <div className="px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full shadow-lg flex items-center space-x-1">
+        ></motion>
+          <div className="px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full shadow-lg flex items-center space-x-1"></div>
             <Star className="w-3 h-3 fill-current" />
             <span>Most Popular</span>
           </div>
@@ -125,27 +125,27 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
         }}
         transition={{ duration: 0.3 }}
         className={`relative overflow-hidden rounded-2xl border-2 ${variantStyles.border} bg-gradient-to-br ${variantStyles.gradient} backdrop-blur-sm transition-all duration-500 ${variantStyles.shadow}`}
-      >
+      ></motion>
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
         </div>
       )}
 
         {/* Content */}
-        <div className="relative p-6">
+        <div className="relative p-6"></div>
           {/* Header */}
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <div className={`w-12 h-12 ${variantStyles.accent} rounded-xl flex items-center justify-center text-2xl`}>
+          <div className="flex items-start justify-between mb-4"></div>
+            <div className="flex items-center space-x-3"></div>
+              <div className={`w-12 h-12 ${variantStyles.accent} rounded-xl flex items-center justify-center text-2xl`}></div>
                 {service.icon}
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
                 <p className="text-sm text-gray-300">{service.tagline}</p>
               </div>
             </div>
-            <div className="flex items-center space-x-1 text-yellow-400">
+            <div className="flex items-center space-x-1 text-yellow-400"></div>
               {getCategoryIcon(service.category)}
             </div>
           </div>
@@ -154,8 +154,8 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
           {/* Price */}
-          <div className="mb-6">
-            <div className="flex items-baseline space-x-2">
+          <div className="mb-6"></div>
+            <div className="flex items-baseline space-x-2"></div>
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">/{service.period}</span>
             </div>
@@ -163,9 +163,9 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
         </div>
 
           {/* Features */}
-          <div className="mb-6">
+          <div className="mb-6"></div>
             <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
-            <div className="space-y-2">
+            <div className="space-y-2"></div>
               {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
                 <motion.div
                   key={index}
@@ -173,7 +173,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="flex items-center space-x-2 text-sm text-gray-300"
-                >
+                ></motion>
                   <Check className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                   <span>{feature}</span>
                 </motion.div>
@@ -183,7 +183,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
             {/* Show More/Less */}
             {service.features.length > 3 && (
               <button
-                onClick={(e) => {
+                onClick={(e) =></button> {
                   e.stopPropagation();
                   setIsExpanded(!isExpanded);
                 }}
@@ -193,7 +193,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
                 <motion.div
                   animate={{ rotate: isExpanded ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
-                >
+                ></motion>
                   <ArrowRight className="w-3 h-3" />
                 </motion.div>
               </button>
@@ -205,7 +205,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={`w-full py-3 px-6 bg-gradient-to-r ${variantStyles.button} text-white font-semibold rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group/btn`}
-          >
+          ></motion>
             <span>Get Started</span>
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
           </motion.button>

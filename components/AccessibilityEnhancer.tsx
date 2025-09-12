@@ -30,12 +30,12 @@ interface AccessibilitySettings {
   letterSpacing: number;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></AccessibilityEnhancerProps> = ({
   onSettingsChange
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<AccessibilitySettings></AccessibilitySettings>({
     highContrast: false,
     fontSize: 'medium',
     reducedMotion: false,
@@ -47,8 +47,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     letterSpacing: 0
   });
 
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
+  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null></HTMLElement>(null);
+  const [focusHistory, setFocusHistory] = useState<HTMLElement[]></HTMLElement>([]);
 
   // Initialize accessibility features
   const initializeFeatures = useCallback(() => {
@@ -316,7 +316,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     <>
       {/* Accessibility Toggle Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() =></button> setIsOpen(!isOpen)}
         className="fixed bottom-6 left-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
         aria-label="Open accessibility settings"
         aria-expanded={isOpen}
@@ -326,7 +326,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       </button>
 
       {/* Accessibility Panel */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {showAccessibilityPanel && (
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -337,19 +337,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             role="dialog"
             aria-labelledby="accessibility-panel-title"
             aria-describedby="accessibility-panel-description"
-          >
+          ></motion>
             {/* Header */}
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h2 id="accessibility-panel-title" className="text-xl font-bold">
+            <div className="flex items-center justify-between mb-6"></div>
+              <div></div>
+                <h2 id="accessibility-panel-title" className="text-xl font-bold"></h2>
                   Accessibility Settings
                 </h2>
-                <p id="accessibility-panel-description" className="text-sm text-gray-400">
+                <p id="accessibility-panel-description" className="text-sm text-gray-400"></p>
                   Customize your experience
                 </p>
               </div>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={() =></button> setIsOpen(false)}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Close accessibility panel"
               >
@@ -358,15 +358,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             </div>
 
             {/* Settings */}
-            <div className="space-y-4">
+            <div className="space-y-4"></div>
               {/* High Contrast */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer">
+              <div className="flex items-center justify-between"></div>
+                <label className="flex items-center gap-2 cursor-pointer"></label>
                   <Contrast className="w-5 h-5" />
                   <span>High Contrast</span>
                 </label>
                 <button
-                  onClick={() => handleSettingChange('highContrast', !settings.highContrast)}
+                  onClick={() =></button> handleSettingChange('highContrast', !settings.highContrast)}
                   className={`w-12 h-6 rounded-full transition-colors ${
                     settings.highContrast ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
@@ -380,13 +380,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
 
               {/* Large Text */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer">
+              <div className="flex items-center justify-between"></div>
+                <label className="flex items-center gap-2 cursor-pointer"></label>
                   <Type className="w-5 h-5" />
                   <span>Large Text</span>
                 </label>
                 <button
-                  onClick={() => handleSettingChange('largeText', !settings.largeText)}
+                  onClick={() =></button> handleSettingChange('largeText', !settings.largeText)}
                   className={`w-12 h-6 rounded-full transition-colors ${
                     settings.largeText ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
@@ -400,13 +400,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
 
               {/* Reduced Motion */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer">
+              <div className="flex items-center justify-between"></div>
+                <label className="flex items-center gap-2 cursor-pointer"></label>
                   <Eye className="w-5 h-5" />
                   <span>Reduced Motion</span>
                 </label>
                 <button
-                  onClick={() => handleSettingChange('reducedMotion', !settings.reducedMotion)}
+                  onClick={() =></button> handleSettingChange('reducedMotion', !settings.reducedMotion)}
                   className={`w-12 h-6 rounded-full transition-colors ${
                     settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
@@ -420,13 +420,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
 
               {/* Keyboard Navigation */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer">
+              <div className="flex items-center justify-between"></div>
+                <label className="flex items-center gap-2 cursor-pointer"></label>
                   <Keyboard className="w-5 h-5" />
                   <span>Keyboard Navigation</span>
                 </label>
                 <button
-                  onClick={() => handleSettingChange('keyboardNavigation', !settings.keyboardNavigation)}
+                  onClick={() =></button> handleSettingChange('keyboardNavigation', !settings.keyboardNavigation)}
                   className={`w-12 h-6 rounded-full transition-colors ${
                     settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
@@ -440,13 +440,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
 
               {/* Focus Indicator */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer">
+              <div className="flex items-center justify-between"></div>
+                <label className="flex items-center gap-2 cursor-pointer"></label>
                   <Eye className="w-5 h-5" />
                   <span>Focus Indicator</span>
                 </label>
                 <button
-                  onClick={() => handleSettingChange('focusIndicator', !settings.focusIndicator)}
+                  onClick={() =></button> handleSettingChange('focusIndicator', !settings.focusIndicator)}
                   className={`w-12 h-6 rounded-full transition-colors ${
                     settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-600'
                   }`}
@@ -460,8 +460,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
 
               {/* Font Size Slider */}
-              <div className="space-y-2">
-                <label className="flex items-center gap-2">
+              <div className="space-y-2"></div>
+                <label className="flex items-center gap-2"></label>
                   <ZoomIn className="w-5 h-5" />
                   <span>Font Size: {settings.fontSize}px</span>
                 </label>
@@ -470,7 +470,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   min="12"
                   max="24"
                   value={settings.fontSize}
-                  onChange={(e) => handleFontSizeChange(parseInt(e.target.value))}
+                  onChange={(e) =></input> handleFontSizeChange(parseInt(e.target.value))}
                   className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
                   aria-valuemin={12}
                   aria-valuemax={24}
@@ -482,15 +482,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               <button
                 onClick={resetSettings}
                 className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white py-2 px-4 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-              >
+              ></button>
                 Reset to Default
               </button>
             </div>
 
             {/* Keyboard Shortcuts Help */}
-            <div className="mt-6 p-4 bg-gray-800 rounded-lg">
+            <div className="mt-6 p-4 bg-gray-800 rounded-lg"></div>
               <h3 className="font-semibold mb-2">Keyboard Shortcuts</h3>
-              <div className="text-sm text-gray-400 space-y-1">
+              <div className="text-sm text-gray-400 space-y-1"></div>
                 <div>Tab: Navigate focus</div>
                 <div>Enter/Space: Activate</div>
                 <div>Escape: Close panel</div>
@@ -506,12 +506,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         aria-atomic="true"
         className="sr-only"
         id="accessibility-announcements"
-      >
+      ></div>
         {announcement}
       </div>
 
       {/* Global CSS Variables for Accessibility */}
-      <style jsx global>{`
+      <style jsx global></style>{`
         :root {
           --font-size: ${settings.fontSize}px;
           --line-height: ${settings.lineHeight};

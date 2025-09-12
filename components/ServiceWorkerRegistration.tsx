@@ -5,15 +5,15 @@ interface ServiceWorkerRegistrationProps {
   onUpdateInstalled?: () => void;
 }
 
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps></ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled
 }) => {
   const [isInstalling, setIsInstalling] = useState(false);
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
   const [isUpdateInstalled, setIsUpdateInstalled] = useState(false);
-  const [registration, setRegistration] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [registration, setRegistration] = useState<any></any>(null);
+  const [error, setError] = useState<string | null></string>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
@@ -130,16 +130,16 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
     <>
       {/* Update notification */}
       {isUpdateAvailable && (
-        <div className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-          <div className="flex items-center justify-between">
-            <div>
+        <div className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
+          <div className="flex items-center justify-between"></div>
+            <div></div>
               <h4 className="font-semibold">Update Available</h4>
               <p className="text-sm opacity-90">A new version is ready to install</p>
             </div>
             <button
               onClick={updateServiceWorker}
               className="bg-white text-blue-600 px-3 py-1 rounded text-sm font-medium hover:bg-gray-100 transition-colors"
-            >
+            ></button>
               Update
             </button>
           </div>
@@ -148,14 +148,14 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 
       {/* Update installed notification */}
       {isUpdateInstalled && (
-        <div className="fixed bottom-4 right-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-          <div className="flex items-center justify-between">
-            <div>
+        <div className="fixed bottom-4 right-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
+          <div className="flex items-center justify-between"></div>
+            <div></div>
               <h4 className="font-semibold">Update Installed</h4>
               <p className="text-sm opacity-90">New version is now active</p>
             </div>
             <button
-              onClick={() => setIsUpdateInstalled(false)}
+              onClick={() =></button> setIsUpdateInstalled(false)}
               className="bg-white text-green-600 px-3 py-1 rounded text-sm font-medium hover:bg-gray-100 transition-colors"
             >
               Dismiss
@@ -165,24 +165,24 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       )}
 
       {/* PWA Install Prompt (hidden by default) */}
-      <div id="pwa-install-prompt" className="hidden">
-        <div className="fixed bottom-4 left-4 right-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-lg shadow-lg z-50">
-          <div className="flex items-center justify-between">
-            <div>
+      <div id="pwa-install-prompt" className="hidden"></div>
+        <div className="fixed bottom-4 left-4 right-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-lg shadow-lg z-50"></div>
+          <div className="flex items-center justify-between"></div>
+            <div></div>
               <h4 className="font-semibold">Install Zion Tech Group</h4>
               <p className="text-sm opacity-90">Add to home screen for quick access</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2"></div>
               <button
                 id="pwa-install-accept"
                 className="bg-white text-purple-600 px-4 py-2 rounded font-medium hover:bg-gray-100 transition-colors"
-              >
+              ></button>
                 Install
               </button>
               <button
                 id="pwa-install-dismiss"
                 className="bg-transparent border border-white text-white px-4 py-2 rounded font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
+              ></button>
                 Dismiss
               </button>
             </div>
@@ -192,28 +192,28 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 
       {/* Service Worker Status (for development) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 right-4 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-50 text-sm">
-          <div className="flex items-center gap-2 mb-2">
+        <div className="fixed top-4 right-4 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-50 text-sm"></div>
+          <div className="flex items-center gap-2 mb-2"></div>
             <div className={`w-2 h-2 rounded-full ${registration ? 'bg-green-400' : 'bg-red-400'}`}></div>
             <span>SW: {registration ? 'Active' : 'Inactive'}</span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2"></div>
             <button
               onClick={checkForUpdates}
               className="bg-blue-600 hover:bg-blue-700 px-2 py-1 rounded text-xs transition-colors"
-            >
+            ></button>
               Check Updates
             </button>
             <button
               onClick={requestNotificationPermission}
               className="bg-green-600 hover:bg-green-700 px-2 py-1 rounded text-xs transition-colors"
-            >
+            ></button>
               Notifications
             </button>
             <button
               onClick={sendTestNotification}
               className="bg-purple-600 hover:bg-purple-700 px-2 py-1 rounded text-xs transition-colors"
-            >
+            ></button>
               Test Notif
             </button>
           </div>

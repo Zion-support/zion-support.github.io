@@ -38,26 +38,26 @@ interface ProductContainerProps {
   onRequestQuote: (id: string) => void;
 }
 const MarketInsights: React.FC<{ stats: MarketStats }> = ({ stats }) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6"></Card>
+    <CardContent className="p-6"></CardContent>
+      <div className="flex items-center gap-2 mb-4"></div>
         <TrendingUp className="h-5 w-5 text-blue-400" />
         <h3 className="text-lg font-semibold">Market Insights</h3>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+        <div className="text-center"></div>
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
-        <div className="text-center">
+        <div className="text-center"></div>
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
           <div className="text-sm text-muted-foreground">Avg Rating</div>
         </div>
-        <div className="text-center">
+        <div className="text-center"></div>
           <div className="text-2xl font-bold text-purple-400">{stats.totalProducts}</div>
           <div className="text-sm text-muted-foreground">Products</div>
         </div>
-        <div className="text-center">
+        <div className="text-center"></div>
           <div className="text-2xl font-bold text-yellow-400">{stats.categoriesCount}</div>
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
@@ -110,9 +110,9 @@ const FilterControls: React.FC<{
   setShowRecommended,
   loading
 }) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative"></div>
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <Filter className="h-4 w-4 text-muted-foreground" />
       <select
         value={filterCategory}
@@ -123,10 +123,10 @@ const FilterControls: React.FC<{
         {categories.map(category => (
           <option key={category} value={category}>{category}</option>
         ))}
-      </select>
+      
     </div>
     
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <SortAsc className="h-4 w-4 text-muted-foreground" />
       <select
         value={sortBy}
@@ -139,10 +139,10 @@ const FilterControls: React.FC<{
         <option value="rating">Highest Rated</option>
         <option value="popular">Most Popular</option>
         <option value="ai-score">AI Score</option>
-      </select>
+      
     </div>
 
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <span className="text-sm">$</span>
       <input
         type="number"
@@ -163,7 +163,7 @@ const FilterControls: React.FC<{
       />
     </div>
 
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <span className="text-sm">AI ≥</span>
       <input
         type="number"
@@ -175,7 +175,7 @@ const FilterControls: React.FC<{
       />
     </div>
 
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <span className="text-sm">Rating ≥</span>
       <select
         value={minRating}
@@ -188,10 +188,10 @@ const FilterControls: React.FC<{
         <option value={3}>3</option>
         <option value={2}>2</option>
         <option value={1}>1</option>
-      </select>
+      
     </div>
 
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <select
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
@@ -201,10 +201,10 @@ const FilterControls: React.FC<{
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
-      </select>
+      
     </div>
 
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2"></div>
       <select
         value={filterLocation}
         onChange={(e) => setFilterLocation(e.target.value)}
@@ -214,7 +214,7 @@ const FilterControls: React.FC<{
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
         ))}
-      </select>
+      
     </div>
 
     <Button
@@ -225,7 +225,7 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
-    </Button>
+    
   </div>
 );
 
@@ -330,14 +330,14 @@ export default function Marketplace() {
   }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterLocation, filterAvailability]);
 
   return (
-    <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto mb-8">
+    <main className="flex-grow container mx-auto px-4 py-8"></main>
+        <div className="max-w-4xl mx-auto mb-8"></div>
           <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
-          <p className="text-zion-slate-light">
+          <p className="text-zion-slate-light"></p>
             {t('marketplace.description')}
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
           {Array.from({ length: 12 }).map((_, i) => (
             <SkeletonCard key={i} />
           ))}
@@ -349,18 +349,18 @@ export default function Marketplace() {
   // Error state with retry
   if (error && products.length === 0) {
     return (
-      <main className="container py-8">
-        <div className="text-center space-y-4">
+      <main className="container py-8"></main>
+        <div className="text-center space-y-4"></div>
           <ErrorState error={error} />
           <Button onClick={refresh}>
             Try Again
-          </Button>
+          
         </div>
         
         {/* Search and filter bar */}
-        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="relative flex-1">
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8"></div>
+          <div className="flex flex-col md:flex-row gap-4"></div>
+            <div className="relative flex-1"></div>
               <EnhancedSearchInput
                 value={searchQuery}
                 onChange={setSearchQuery}
@@ -371,7 +371,7 @@ export default function Marketplace() {
               
               {/* AI Score Badge */}
               {product.aiScore && product.aiScore > 90 && (
-                <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">
+                <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"></Badge>
                   <Sparkles className="h-3 w-3 mr-1" />
                   AI {product.aiScore}
                 </Badge>
@@ -379,7 +379,7 @@ export default function Marketplace() {
               
               {/* Featured Badge */}
               {product.featured && (
-                <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10">
+                <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10"></Badge>
                   <Star className="h-3 w-3 mr-1" />
                   Featured
                 </Badge>
@@ -396,7 +396,7 @@ export default function Marketplace() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
             {Array.from({ length: 4 }).map((_, i) => (
               <SkeletonCard key={`loading-${i}`} />
             ))}
@@ -411,17 +411,17 @@ export default function Marketplace() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <div className="text-muted-foreground text-lg mb-2">
-            🎉 You've explored all available products!
+          <div className="text-muted-foreground text-lg mb-2"></div>
+            '🎉 You've explored all available products!'
           </div>
-          <div className="text-sm text-muted-foreground">
-            Showing {products.length} AI-powered solutions
+          <div className="text-sm text-muted-foreground"></div>
+            'Showing {products.length} AI-powered solutions'
           </div>
         </motion.div>
       )}
 
       {/* Scroll to Top Button */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresence>
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
@@ -439,3 +439,4 @@ export default function Marketplace() {
     </main>
   );
 }
+;

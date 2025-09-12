@@ -27,9 +27,9 @@ function normalizeId(value: string): string {
 
 export function useTalentProfile(id: string | undefined) {
 
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
+  const [profile, setProfile] = useState<TalentProfileType | null></TalentProfileType>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null></string>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -77,3 +77,4 @@ export function useTalentProfile(id: string | undefined) {
 
   return { profile, isLoading, error };
 }
+;

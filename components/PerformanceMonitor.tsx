@@ -26,7 +26,7 @@ interface PerformanceMonitorProps {
   };
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+const PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
   showUI = false,
   autoHide = true,
   threshold = {
@@ -36,7 +36,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: 800
   }
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
     lcp: 0,
     fid: 0,
     cls: 0,
@@ -47,9 +47,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   });
   
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [performanceIssues, setPerformanceIssues] = useState<string[]>([]);
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const metricsRef = useRef<PerformanceMetrics>(metrics);
+  const [performanceIssues, setPerformanceIssues] = useState<string[]></string>([]);
+  const observerRef = useRef<PerformanceObserver | null></PerformanceObserver>(null);
+  const metricsRef = useRef<PerformanceMetrics></PerformanceMetrics>(metrics);
 
   const calculateScore = useCallback((metrics: PerformanceMetrics) => {
     let score = 100;
@@ -348,24 +348,24 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   if (!showMetrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl p-4 text-white text-sm max-w-sm z-50">
-      <div className="flex items-center justify-between mb-3">
+    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl p-4 text-white text-sm max-w-sm z-50"></div>
+      <div className="flex items-center justify-between mb-3"></div>
         <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
         <button
           onClick={isMonitoring ? stopMonitoring : startMonitoring}
           className={`px-2 py-1 rounded text-xs ${
             isMonitoring ? 'bg-red-600 hover:bg-red-700' : 'bg-green-600 hover:bg-green-700'
           }`}
-        >
-          <div className="bg-black/90 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-4 shadow-2xl shadow-cyan-500/20">
+        ></button>
+          <div className="bg-black/90 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-4 shadow-2xl shadow-cyan-500/20"></div>
             {/* Header */}
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center space-x-2">
+            <div className="flex items-center justify-between mb-3"></div>
+              <div className="flex items-center space-x-2"></div>
                 <Activity className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-semibold text-white">Performance Monitor</span>
               </div>
               <button
-                onClick={() => setIsVisible(false)}
+                onClick={() =></button> setIsVisible(false)}
                 className="p-1 text-gray-400 hover:text-white transition-colors"
               >
                 <XCircle className="w-4 h-4" />
@@ -373,19 +373,19 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </div>
 
             {/* Overall Score */}
-            <div className="p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
-              <div className="flex items-center justify-between mb-2">
+            <div className="p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50"></div>
+              <div className="flex items-center justify-between mb-2"></div>
                 <span className="text-sm text-gray-400">Overall Score</span>
                 {getScoreIcon(overallScore)}
               </div>
-              <div className="flex items-center space-x-3">
-                <div className={`text-3xl font-bold ${getScoreColor(overallScore)}`}>
+              <div className="flex items-center space-x-3"></div>
+                <div className={`text-3xl font-bold ${getScoreColor(overallScore)}`}></div>
                   {overallScore}
                 </div>
-                <div className="text-center p-2 bg-blue-500/10 rounded-lg border border-blue-400/20">
+                <div className="text-center p-2 bg-blue-500/10 rounded-lg border border-blue-400/20"></div>
                   <div className="text-xs text-blue-400 mb-1">LCP</div>
                   <div className="text-lg font-bold text-white">{metrics.lcp.toFixed(0)}ms</div>
-                  <div className="text-xs text-gray-400">
+                  <div className="text-xs text-gray-400"></div>
                     {getScoreIcon(getScore(metrics.lcp, threshold.lcp))}
                   </div>
                 </div>
@@ -397,30 +397,30 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   className="space-y-2"
-                >
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="text-center p-2 bg-purple-500/10 rounded-lg border border-purple-400/20">
+                ></motion>
+                  <div className="grid grid-cols-2 gap-3"></div>
+                    <div className="text-center p-2 bg-purple-500/10 rounded-lg border border-purple-400/20"></div>
                       <div className="text-xs text-purple-400 mb-1">FID</div>
                       <div className="text-lg font-bold text-white">{metrics.fid.toFixed(0)}ms</div>
-                      <div className="text-xs text-gray-400">
+                      <div className="text-xs text-gray-400"></div>
                         {getScoreIcon(getScore(metrics.fid, threshold.fid))}
                       </div>
                     </div>
-                    <div className="text-center p-2 bg-green-500/10 rounded-lg border border-green-400/20">
+                    <div className="text-center p-2 bg-green-500/10 rounded-lg border border-green-400/20"></div>
                       <div className="text-xs text-green-400 mb-1">CLS</div>
                       <div className="text-lg font-bold text-white">{metrics.cls.toFixed(3)}</div>
-                      <div className="text-xs text-gray-400">
+                      <div className="text-xs text-gray-400"></div>
                         {getScoreIcon(getScore(metrics.cls, threshold.cls))}
                       </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="text-center p-2 bg-orange-500/10 rounded-lg border border-orange-400/20">
+                  <div className="grid grid-cols-2 gap-3"></div>
+                    <div className="text-center p-2 bg-orange-500/10 rounded-lg border border-orange-400/20"></div>
                       <div className="text-xs text-orange-400 mb-1">TTFB</div>
                       <div className="text-lg font-bold text-white">{metrics.ttfb.toFixed(0)}ms</div>
                     </div>
-                    <div className="text-center p-2 bg-pink-500/10 rounded-lg border border-pink-400/20">
+                    <div className="text-center p-2 bg-pink-500/10 rounded-lg border border-pink-400/20"></div>
                       <div className="text-xs text-pink-400 mb-1">DOM Load</div>
                       <div className="text-lg font-bold text-white">{metrics.domLoad.toFixed(0)}ms</div>
                     </div>
@@ -430,14 +430,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
               {/* Alerts */}
               {alerts.length > 0 && (
-                <div className="mt-3 p-2 bg-red-500/10 border border-red-400/20 rounded-lg">
-                  <div className="text-xs text-red-400 mb-1 flex items-center space-x-1">
+                <div className="mt-3 p-2 bg-red-500/10 border border-red-400/20 rounded-lg"></div>
+                  <div className="text-xs text-red-400 mb-1 flex items-center space-x-1"></div>
                     <AlertTriangle className="w-3 h-3" />
                     <span>Performance Alerts</span>
                   </div>
-                  <div className="text-xs text-gray-300 space-y-1">
+                  <div className="text-xs text-gray-300 space-y-1"></div>
                     {alerts.map((alert, index) => (
-                      <div key={index} className="flex items-center space-x-2">
+                      <div key={index} className="flex items-center space-x-2"></div>
                         <div className="w-1 h-1 bg-red-400 rounded-full"></div>
                         <span>{alert}</span>
                       </div>
@@ -450,7 +450,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               <button
                 onClick={measurePerformance}
                 className="w-full mt-3 px-3 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 text-xs font-medium rounded-lg border border-cyan-400/30 transition-all duration-200 hover:border-cyan-400/50"
-              >
+              ></button>
                 <RefreshCw className="w-3 h-3 inline mr-1" />
                 Refresh Metrics
               </button>
@@ -460,9 +460,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       )}
 
       {/* Optimization Suggestions */}
-      <div className="p-2 bg-blue-900/20 border border-blue-500/30 rounded">
+      <div className="p-2 bg-blue-900/20 border border-blue-500/30 rounded"></div>
         <div className="text-blue-400 font-semibold mb-1">Suggestions:</div>
-        <ul className="text-xs space-y-1">
+        <ul className="text-xs space-y-1"></ul>
           {getOptimizationSuggestions().slice(0, 2).map((suggestion, index) => (
             <li key={index} className="text-blue-300">• {suggestion}</li>
           ))}

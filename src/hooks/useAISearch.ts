@@ -21,7 +21,7 @@ interface SearchFilters {
 }
 
 export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<SearchResult[]></SearchResult>([]);
   const [loading, setLoading] = useState(false);
 
   const search = async (query: string) => {
@@ -69,3 +69,4 @@ export function useAISearch() {
 
   return { results, loading, search };
 }
+;

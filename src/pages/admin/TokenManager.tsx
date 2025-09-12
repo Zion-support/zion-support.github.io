@@ -61,38 +61,38 @@ export default function TokenManager() {
   };
 
   return (
-    <ProtectedRoute adminOnly>
-      <div>
+    <ProtectedRoute adminOnly></ProtectedRoute>
+      <div></div>
         <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
+        <div className="min-h-screen bg-zion-blue px-4 py-8"></div>
+          <div className="container mx-auto"></div>
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
-            <Card className="mb-6">
-              <CardHeader>
+            <Card className="mb-6"></Card>
+              <CardHeader></CardHeader>
                 <CardTitle>Issue or Revoke Tokens</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4"></CardContent>
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
-                <div className="flex gap-2">
+                <div className="flex gap-2"></div>
                   <Button onClick={() => handleIssue('earn')} disabled={processing}>
                     {processing ? 'Processing...' : 'Issue'}
-                  </Button>
+                  
                   <Button variant="destructive" onClick={() => handleIssue('burn')} disabled={processing}>
                     {processing ? 'Processing...' : 'Revoke'}
-                  </Button>
+                  
                 </div>
               </CardContent>
             </Card>
 
-            <Tabs defaultValue="history">
-              <TabsList>
+            <Tabs defaultValue="history"></Tabs>
+              <TabsList></TabsList>
                 <TabsTrigger value="history">Transaction History</TabsTrigger>
               </TabsList>
-              <TabsContent value="history">
-                <ul className="space-y-2">
+              <TabsContent value="history"></TabsContent>
+                <ul className="space-y-2"></ul>
                   {transactions.map(tx => (
-                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">
+                    <li key={tx.id} className="flex justify-between border-b py-2 text-white"></li>
                       <span>{tx.user_id}</span>
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
                     </li>

@@ -198,13 +198,13 @@ interface EnhancedSidebar2025Props {
 }
 
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [expandedCategories, setExpandedCategories] = useState<string[]></string>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
   // Auto-expand current section
   useEffect(() => {
     const currentPath = router.pathname;
-    const newExpandedItems = new Set<string>();
+    const newExpandedItems = new Set<string></string>();
     
     sidebarItems.forEach(item => {
       if (item.children) {
@@ -244,7 +244,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   };
 
   return (
-    <AnimatePresence>
+    <AnimatePresence></AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
@@ -263,50 +263,50 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 to-black border-r border-gray-800 z-50 overflow-y-auto"
-          >
+          ></motion>
             {/* Header */}
-            <div className="p-6 border-b border-gray-800">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <div className="p-6 border-b border-gray-800"></div>
+              <div className="flex items-center justify-between mb-4"></div>
+                <div className="flex items-center space-x-2"></div>
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center"></div>
                     <Zap className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"></span>
                     Zion Tech
                   </span>
                 </div>
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
-                >
+                ></button>
                   <X className="w-5 h-5" />
                 </button>
               </div>
               
               {/* Search */}
-              <div className="relative">
+              <div className="relative"></div>
                 <input
                   type="text"
                   placeholder="Search navigation..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) =></input> setSearchQuery(e.target.value)}
                   className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
                 />
               </div>
             </div>
 
             {/* Navigation Items */}
-            <div className="p-4 space-y-2">
+            <div className="p-4 space-y-2"></div>
               {filteredItems.map((item) => (
-                <div key={item.name}>
+                <div key={item.name}></div>
                   {item.children ? (
-                    <div>
+                    <div></div>
                       <button
-                        onClick={() => toggleCategory(category.title)}
+                        onClick={() =></button> toggleCategory(category.title)}
                         className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
                       >
-                        <div className="flex items-center space-x-3">
-                          <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
+                        <div className="flex items-center space-x-3"></div>
+                          <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}></div>
                             {category.icon}
                           </div>
                           <span className="font-medium">{category.title}</span>
@@ -318,7 +318,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                         )}
                       </button>
                       
-                      <AnimatePresence>
+                      <AnimatePresence></AnimatePresence>
                         {expandedCategories.includes(category.title) && (
                           <motion.div
                             initial={{ height: 0, opacity: 0 }}
@@ -326,15 +326,15 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2 }}
                             className="bg-gray-800/30"
-                          >
-                            <div className="p-3 space-y-2">
+                          ></motion>
+                            <div className="p-3 space-y-2"></div>
                               {category.services.map((service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
                                   onClick={onClose}
                                   className="flex items-center justify-between p-2 text-sm text-gray-400 hover:text-white hover:bg-gray-700/50 rounded transition-colors duration-200 group"
-                                >
+                                ></Link>
                                   <span className="truncate">{service.name}</span>
                                   {service.popular && (
                                     <Star className="w-3 h-3 text-yellow-400" />
@@ -348,7 +348,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                     </div>
                   ) : (
                     <button
-                      onClick={() => handleItemClick(item.href)}
+                      onClick={() =></button> handleItemClick(item.href)}
                       className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
                         isActive(item.href)
                           ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
@@ -358,7 +358,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                       {item.icon}
                       <span className="font-medium">{item.name}</span>
                       {item.badge && (
-                        <span className="ml-auto px-2 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-300 rounded">
+                        <span className="ml-auto px-2 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-300 rounded"></span>
                           {item.badge}
                         </span>
                       )}
@@ -369,47 +369,47 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             </div>
 
             {/* Footer */}
-            <div className="sticky bottom-0 bg-black/80 backdrop-blur-md border-t border-cyan-500/20 p-4 mt-8">
-              <div className="space-y-3">
-                <div className="text-xs text-gray-500 text-center">
+            <div className="sticky bottom-0 bg-black/80 backdrop-blur-md border-t border-cyan-500/20 p-4 mt-8"></div>
+              <div className="space-y-3"></div>
+                <div className="text-xs text-gray-500 text-center"></div>
                   © 2025 Zion Tech Group
                 </div>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-4"></div>
                   <Link
                     href="/contact"
                     className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+                  ></Link>
                     Contact
                   </Link>
                   <Link
                     href="/support"
                     className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+                  ></Link>
                     Support
                   </Link>
                   <Link
                     href="/privacy"
                     className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+                  ></Link>
                     Privacy
                   </Link>
                 </div>
               </div>
 
               {/* Quick Links */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+              <div className="mb-6"></div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"></h3>
                   Quick Links
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {quickLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
                       onClick={onClose}
                       className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                    ></Link>
+                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200"></div>
                         {link.icon}
                       </div>
                       <span className="font-medium">{link.name}</span>
@@ -419,19 +419,19 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               </div>
 
               {/* Company Links */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+              <div className="mb-6"></div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"></h3>
                   Company
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {companyLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
                       onClick={onClose}
                       className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                    ></Link>
+                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200"></div>
                         {link.icon}
                       </div>
                       <span className="font-medium">{link.name}</span>
@@ -442,20 +442,20 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             </div>
 
             {/* Contact Information */}
-            <div className="p-6 border-t border-gray-800 bg-gray-800/20">
-              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+            <div className="p-6 border-t border-gray-800 bg-gray-800/20"></div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"></h3>
                 Contact Information
               </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
+              <div className="space-y-3"></div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300"></div>
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <span>{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <div className="flex items-center space-x-3 text-sm text-gray-300"></div>
                   <Mail className="w-4 h-4 text-cyan-400" />
                   <span className="truncate">{contactInfo.email}</span>
                 </div>
-                <div className="flex items-start space-x-3 text-sm text-gray-300">
+                <div className="flex items-start space-x-3 text-sm text-gray-300"></div>
                   <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
                   <span className="text-xs leading-relaxed">{contactInfo.address}</span>
                 </div>
@@ -466,7 +466,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 href="/contact"
                 onClick={onClose}
                 className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group"
-              >
+              ></Link>
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>

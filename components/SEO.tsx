@@ -15,7 +15,7 @@ interface SEOProps {
   tags?: string[];
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps></SEOProps> = ({
   title = 'Zion Tech Group - Pioneering the Future of Technology',
   description = 'Leading technology solutions provider specializing in AI, quantum computing, space technology, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords = ['technology', 'AI', 'quantum computing', 'space technology', 'business solutions', 'innovation'],

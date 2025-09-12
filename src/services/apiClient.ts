@@ -12,7 +12,7 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 
 // Define the global error handler (exported for testing purposes)
 export const globalAxiosErrorHandler = (error: unknown) => {
-  const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined;
+  const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown></string> }).headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     showError('html-error', 'Server returned HTML instead of JSON');
   }
