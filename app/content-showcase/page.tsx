@@ -70,41 +70,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-comprehensive-trends-analysis" className="group">
+              <Link href="/blog/ai-2025-generative-ai-enterprise-adoption" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                  <h3 className="text-lg font-semibold mb-2">AI 2025: Comprehensive Trends Analysis</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete industry transformation guide covering 12 key AI trends driving the $3.2T revolution</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">Generative AI Enterprise Adoption 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete implementation guide with real case studies and 340% ROI</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>12 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🆕 NEW</span>
+                    <span>🔥 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-healthcare-diagnosis-revolution-2025" className="group">
+              <Link href="/blog/ai-2025-automation-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Automation Revolution 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete business transformation guide with 67% cost reduction</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>⭐ Editor's Choice</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-healthcare-diagnosis-revolution-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Diagnosis Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">99.7% diagnostic accuracy with AI-powered medical systems transforming healthcare delivery</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>20 min read</span>
-                    <span className="mx-2">•</span>
-                    <span>🎓 MASTERCLASS</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-transformation-global-manufacturing-giant-2025" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
-                  <h3 className="text-lg font-semibold mb-2">$2.8B Manufacturing AI Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Global manufacturing giant achieves 340% ROI with comprehensive AI transformation across 150+ facilities</p>
+                  <h3 className="text-lg font-semibold mb-2">Healthcare AI Diagnosis Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">95% accuracy breakthrough with $15M annual savings</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $2.8B Value</span>
+                    <span>🏆 Featured</span>
                   </div>
                 </div>
               </Link>

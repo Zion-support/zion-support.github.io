@@ -6,8 +6,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import FreshContentBanner from '../components/FreshContentBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -270,86 +269,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Fresh Content Banner */}
-      <FreshContentBanner />
-
-      {/* Content Showcase */}
-      <ContentShowcase />
-
-      {/* New Content Showcase Banner */}
-      <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🆕 FRESH CONTENT - JANUARY 2025</span>
-            </div>
-            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-              Latest AI Innovations & Success Stories
-            </h2>
-            <p className='text-lg opacity-90 max-w-3xl mx-auto'>
-              Explore our newest content covering multimodal AI, robotics automation, sustainability solutions, 
-              and real-world transformation case studies.
-            </p>
-          </div>
-
-          <div className='grid md:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-2025-advanced-ai-agents' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>Advanced AI Agents 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>95% accuracy in autonomous business operations with multi-agent collaboration</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span className='bg-blue-500 px-2 py-1 rounded-full'>NEW</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/blog/ai-2025-multimodal-revolution' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎯</div>
-                <h3 className='text-lg font-semibold mb-2'>Multimodal AI Revolution</h3>
-                <p className='text-sm opacity-90 mb-3'>300% accuracy boost with advanced vision, language, and audio processing</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>15 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span className='bg-purple-500 px-2 py-1 rounded-full'>TRENDING</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/case-studies/ai-2025-global-retail-transformation-success' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
-                <h3 className='text-lg font-semibold mb-2'>$2.8B Retail Success</h3>
-                <p className='text-sm opacity-90 mb-3'>Fortune 500 transformation with 30% cost reduction and 95% accuracy</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
-                  <span className='mx-2'>•</span>
-                  <span className='bg-green-500 px-2 py-1 rounded-full'>$2.8B Value</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className='text-center mt-8'>
-            <Link
-              href='/content-showcase'
-              className='bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
-            >
-              View All New Content
-            </Link>
-            <Link
-              href='/resources'
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-block'
-            >
-              Download Resources
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* New Content Promotion Banner */}
+      <NewContentPromoBanner />
 
       {/* Latest Content Mega Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
