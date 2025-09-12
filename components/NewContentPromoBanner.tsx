@@ -7,6 +7,15 @@ interface NewContentPromoBannerProps {
   className?: string;
 }
 
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  type: 'blog' | 'case-study' | 'service' | 'webinar';
+  featured: boolean;
+}
+
 const newContent = [
   {
     title: "AI Advanced Automation 2025: Complete Implementation Guide",
@@ -76,6 +85,7 @@ const newContent = [
   }
 ];
 
+<<<<<<< HEAD
 export default function NewContentPromoBanner({ 
   variant = 'default', 
   maxItems = 4,
@@ -133,6 +143,157 @@ export default function NewContentPromoBanner({
             >
               📚 Download Master Guide
             </Link>
+=======
+  const newContent: ContentItem[] = [
+    {
+      id: '1',
+      title: 'AI 2025: The Generative AI Enterprise Revolution',
+      description: 'Discover how generative AI is revolutionizing enterprise operations with 300% ROI and unprecedented efficiency gains.',
+      href: '/blog/ai-2025-generative-ai-enterprise-revolution',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'AI 2025: The Cybersecurity Revolution',
+      description: 'Explore how AI is revolutionizing cybersecurity with 99.7% threat detection accuracy and automated response systems.',
+      href: '/blog/ai-2025-cybersecurity-revolution',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '3',
+      title: 'AI Retail Transformation: 400% Revenue Growth',
+      description: 'Complete case study: How a major retail chain achieved 400% revenue growth through AI-powered personalization.',
+      href: '/case-studies/ai-2025-retail-transformation-breakthrough',
+      type: 'case-study',
+      featured: true
+    },
+    {
+      id: '4',
+      title: 'AI 2025 Implementation Masterclass: Advanced Strategies',
+      description: 'Join our exclusive 6-hour masterclass on advanced AI implementation strategies with industry experts.',
+      href: '/webinars/ai-2025-implementation-masterclass-advanced',
+      type: 'webinar',
+      featured: true
+    },
+    {
+      id: '5',
+      title: 'AI Healthcare Diagnosis Breakthrough 2025',
+      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
+      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '6',
+      title: 'AI Automation Services',
+      description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
+      href: '/services/ai-automation',
+      type: 'service',
+      featured: true
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % newContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [newContent.length]);
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'service':
+        return '🚀';
+      case 'webinar':
+        return '🎓';
+      default:
+        return '✨';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'service':
+        return 'from-purple-500 to-pink-500';
+      case 'webinar':
+        return 'from-orange-500 to-red-500';
+      default:
+        return 'from-gray-500 to-gray-600';
+    }
+  };
+
+  if (!isVisible) return null;
+
+  const currentContent = newContent[currentIndex];
+
+  return (
+    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
+
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="flex items-center justify-between">
+            {/* Content */}
+            <div className="flex-1 pr-8">
+              <div className="flex items-center mb-2">
+                <span className="text-2xl mr-3">{getTypeIcon(currentContent.type)}</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                  {currentContent.type === 'case-study' ? 'Case Study' : 
+                   currentContent.type === 'service' ? 'Service' : 
+                   currentContent.type === 'webinar' ? 'Webinar' : 'New Article'}
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-2">
+                {currentContent.title}
+              </h3>
+              <p className="text-lg text-indigo-100 mb-4">
+                {currentContent.description}
+              </p>
+              <div className="flex items-center space-x-4">
+                <Link 
+                  href={currentContent.href}
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+                >
+                  Read More
+                </Link>
+                <Link 
+                  href="/content-showcase"
+                  className="text-white hover:text-indigo-200 transition-colors"
+                >
+                  View All Content →
+                </Link>
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex flex-col space-y-2">
+              {newContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentIndex 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
