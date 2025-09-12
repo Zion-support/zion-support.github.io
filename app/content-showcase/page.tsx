@@ -31,24 +31,24 @@ export default function ContentShowcase() {
                 <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Fresh AI & Tech Content Just Dropped</h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">New this week: Multimodal Applications, Sustainability, Cybersecurity, and a Retail Transformation Case Study.</p>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">New this week: Data Governance Blueprint, Agent Architecture Guide, and AI Governance Framework updates.</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-multimodal-applications-2025" className="group">
+              <Link href="/resources/ai-2025-data-governance-blueprint" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎭</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Multimodal Applications</h3>
-                  <p className="text-sm opacity-90 mb-3">Beyond text to vision, audio, and more</p>
-                  <div className="flex items-center text-xs opacity-75"><span>15 min read</span><span className="mx-2">•</span><span>New</span></div>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🗂️</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Data Governance Blueprint</h3>
+                  <p className="text-sm opacity-90 mb-3">Lineage, PII controls, and policy-as-code</p>
+                  <div className="flex items-center text-xs opacity-75"><span>Free download</span><span className="mx-2">•</span><span>New</span></div>
                 </div>
               </Link>
-              <Link href="/blog/ai-sustainability-green-tech-2025" className="group">
+              <Link href="/resources/ai-2025-agent-architecture-guide" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
-                  <h3 className="text-lg font-semibold mb-2">AI for Sustainability</h3>
-                  <p className="text-sm opacity-90 mb-3">Green tech solutions driving impact</p>
-                  <div className="flex items-center text-xs opacity-75"><span>12 min read</span><span className="mx-2">•</span><span>New</span></div>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧭</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Agent Architecture Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">Guardrails, evals, memory, orchestration</p>
+                  <div className="flex items-center text-xs opacity-75"><span>Free download</span><span className="mx-2">•</span><span>New</span></div>
                 </div>
               </Link>
               <Link href="/blog/ai-cybersecurity-threats-2025" className="group">

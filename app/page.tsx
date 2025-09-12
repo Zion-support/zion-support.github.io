@@ -137,14 +137,14 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🚀 JUST RELEASED - JANUARY 30, 2025</span>
+              <span className='text-sm font-medium'>🚀 JUST RELEASED - SEPTEMBER 12, 2025</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
               🎯 Revolutionary AI Content Just Dropped
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our latest breakthrough content: AI Business Transformation Guide, Financial Services Case Study, 
-              and the ultimate 400+ page AI Implementation Master Playbook. Transform your business with proven strategies.
+              Discover our latest breakthrough content: AI Data Governance Blueprint, AI Agent Architecture Guide, 
+              and updated AI Governance Framework. Transform your business with proven strategies.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -154,10 +154,10 @@ export default function HomePage() {
                 📚 Explore All Content
               </Link>
               <Link
-                href='/resources/ai-2025-comprehensive-implementation-playbook'
+                href='/resources/ai-2025-data-governance-blueprint'
                 className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
               >
-                📖 Download Master Playbook
+                📥 Download Data Governance Blueprint
               </Link>
             </div>
           </div>
@@ -190,11 +190,11 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/resources/ai-2025-comprehensive-implementation-playbook' className='group'>
+            <Link href='/resources/ai-2025-data-governance-blueprint' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>400+ pages with 50+ templates and proven frameworks</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🗂️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Data Governance Blueprint</h3>
+                <p className='text-sm opacity-90 mb-3'>Lineage, access controls, and policy-as-code playbooks</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
@@ -225,10 +225,10 @@ export default function HomePage() {
               View All New Content
             </Link>
             <Link
-              href='/resources/ai-2025-comprehensive-implementation-playbook'
+              href='/resources/ai-2025-data-governance-blueprint'
               className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block'
             >
-              Download Master Playbook
+              Download Data Governance Blueprint
             </Link>
           </div>
         </div>
@@ -240,7 +240,7 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - JANUARY 2025</span>
+              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - SEPTEMBER 2025</span>
             </div>
             <h2 className='text-5xl md:text-6xl font-bold mb-6'>
               🚀 Fresh AI & Business Content Just Dropped
@@ -306,11 +306,11 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/resources/ai-implementation-master-checklist-2025' className='group'>
+            <Link href='/resources/ai-2025-agent-architecture-guide' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Checklist</h3>
-                <p className='text-sm opacity-90 mb-3'>200+ actionable items for successful AI deployment</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧭</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Agent Architecture Guide</h3>
+                <p className='text-sm opacity-90 mb-3'>Guardrails, evals, memory, orchestration</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
