@@ -13,6 +13,8 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -270,6 +272,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner />
 
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
@@ -1274,6 +1279,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
