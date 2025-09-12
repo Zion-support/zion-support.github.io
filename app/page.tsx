@@ -21,6 +21,8 @@ import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBa
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
 import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -51,6 +53,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
+        
         {/* AI 2031 CONTENT PROMOTION BANNER */}
         <AI2031ContentPromotionBanner />
         
@@ -231,6 +239,155 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* NEW 2025 CONTENT DEEP DIVE */}
+        <section className="py-16 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔥 BREAKTHROUGH CONTENT - JANUARY 2025</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                🚀 Revolutionary AI Insights & Strategies
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Dive deep into our latest research, case studies, and implementation guides that are transforming 
+                industries and delivering unprecedented ROI.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Neural Networks Article */}
+              <div className="lg:col-span-1">
+                <Link href="/blog/ai-2025-advanced-neural-networks" className="group block">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-indigo-200 transform hover:-translate-y-2">
+                    <div className="flex items-center mb-6">
+                      <div className="text-5xl mr-4">🧠</div>
+                      <div>
+                        <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI Architecture</span>
+                        <div className="text-sm text-gray-500 mt-1">15 min read</div>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                      Advanced Neural Networks: The Future of AI Architecture
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      Explore cutting-edge neural network architectures including transformers, GANs, and quantum-enhanced 
+                      systems that are revolutionizing AI in 2025. Learn about self-improving networks and multimodal fusion.
+                    </p>
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-2">Key Highlights:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• 10x performance improvements with new architectures</li>
+                        <li>• Quantum-enhanced neural networks</li>
+                        <li>• Self-improving AI systems</li>
+                        <li>• Multimodal fusion capabilities</li>
+                      </ul>
+                    </div>
+                    <div className="flex items-center text-indigo-600 font-semibold group-hover:text-indigo-800">
+                      Read Full Article →
+                    </div>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Financial Services Case Study */}
+              <div className="lg:col-span-1">
+                <Link href="/case-studies/ai-2025-financial-services-transformation" className="group block">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-green-200 transform hover:-translate-y-2">
+                    <div className="flex items-center mb-6">
+                      <div className="text-5xl mr-4">💰</div>
+                      <div>
+                        <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Case Study</span>
+                        <div className="text-sm text-gray-500 mt-1">20 min read</div>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                      AI Financial Services Transformation: 1500% ROI Success Story
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      Discover how a Fortune 500 financial institution achieved 1500% ROI through comprehensive AI 
+                      transformation, including fraud detection, risk assessment, and automated trading systems.
+                    </p>
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-2">Results Achieved:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• 1500% ROI in 18 months</li>
+                        <li>• $2.3B in total cost savings</li>
+                        <li>• 95% reduction in fraud losses</li>
+                        <li>• 99.7% faster processing</li>
+                      </ul>
+                    </div>
+                    <div className="flex items-center text-green-600 font-semibold group-hover:text-green-800">
+                      Read Case Study →
+                    </div>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Cybersecurity Guide */}
+              <div className="lg:col-span-1">
+                <Link href="/resources/ai-2025-cybersecurity-defense-guide" className="group block">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-red-200 transform hover:-translate-y-2">
+                    <div className="flex items-center mb-6">
+                      <div className="text-5xl mr-4">🛡️</div>
+                      <div>
+                        <span className="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Security Guide</span>
+                        <div className="text-sm text-gray-500 mt-1">25 min read</div>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">
+                      AI Cybersecurity Defense Guide 2025: Complete Protection Strategy
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      Master AI-powered cybersecurity defense with comprehensive strategies, advanced threat detection, 
+                      and automated incident response systems for enterprise security.
+                    </p>
+                    <div className="bg-gradient-to-r from-red-50 to-orange-50 p-4 rounded-lg mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-2">Defense Capabilities:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• 95% threat detection accuracy</li>
+                        <li>• Sub-second response times</li>
+                        <li>• Automated incident response</li>
+                        <li>• Zero trust architecture</li>
+                      </ul>
+                    </div>
+                    <div className="flex items-center text-red-600 font-semibold group-hover:text-red-800">
+                      Download Guide →
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-16">
+              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 className="text-3xl font-bold mb-4">
+                  Ready to Implement These Strategies?
+                </h3>
+                <p className="text-xl opacity-90 mb-8">
+                  Get expert consultation and implementation support for your AI transformation journey. 
+                  Our proven methodologies deliver measurable results.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    to="/contact"
+                    className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                  >
+                    Get Expert Consultation
+                  </Link>
+                  <Link
+                    to="/resources/ai-implementation-master-guide-2026"
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+                  >
+                    Download Master Guide
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
