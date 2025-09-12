@@ -69,6 +69,8 @@ import ContentShowcase2026 from '../components/ContentShowcase2026';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
+import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 <<<<<<< HEAD
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
@@ -172,6 +174,7 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* NEW REVOLUTIONARY CONTENT BANNER - LATEST */}
         <NewContent2026RevolutionaryBanner />
         
@@ -222,6 +225,10 @@ export default function HomePage() {
         
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
+=======
+        {/* AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025ContentPromotionBanner />
+>>>>>>> feature/new-content-and-advertising
         
         {/* DYNAMIC CONTENT PROMOTION BANNER */}
         <DynamicContentPromotionBanner />
@@ -3577,6 +3584,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* AI 2025 CONTENT DISCOVERY WIDGET */}
+      <AI2025ContentDiscoveryWidget />
     </div>
     </EnhancedErrorBoundary>
   );

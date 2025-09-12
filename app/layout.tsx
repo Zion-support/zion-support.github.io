@@ -101,6 +101,15 @@ function Header() {
                 <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🏆 Global Enterprise Success (2000% ROI)
                 </Link>
+                <Link href="/blog/ai-2025-advanced-autonomous-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500">
+                  🤖 Advanced Autonomous Systems (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-autonomous-manufacturing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏭 Manufacturing Revolution (8,500% ROI)
+                </Link>
+                <Link href="/ai-2025-content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 AI 2025 Content Showcase (NEW)
+                </Link>
                 <Link href="/blog/ai-2025-comprehensive-trends-analysis" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2025 Comprehensive Trends Analysis
                 </Link>
