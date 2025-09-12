@@ -1,181 +1,47 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fmp: number | null;
-}
-
-interface PerformanceMonitorProps {
-  onMetrics?: (metrics: PerformanceMetrics) => void;
-  logToConsole?: boolean;
-  sendToAnalytics?: boolean;
-  analyticsEndpoint?: string;
-}
-
-export function PerformanceMonitor({
-  onMetrics,
-  logToConsole = false,
-  sendToAnalytics = false,
-  analyticsEndpoint = '/api/analytics/performance',
-}: PerformanceMonitorProps) {
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const metricsRef = useRef<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null,
-  });
-
-  // Measure First Contentful Paint (FCP)
-  const measureFCP = () => {
-    const paintEntries = performance.getEntriesByType('paint');
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    if (fcpEntry) {
-      metricsRef.current.fcp = fcpEntry.startTime;
-      if (logToConsole) {
-        console.log('FCP:', fcpEntry.startTime, 'ms');
-      }
-    }
-  };
-
-  // Measure Largest Contentful Paint (LCP)
-  const measureLCP = () => {
-    if ('PerformanceObserver' in window) {
-      try {
-        observerRef.current = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
-            metricsRef.current.lcp = lastEntry.startTime;
-            if (logToConsole) {
-              console.log('LCP:', lastEntry.startTime, 'ms');
-            }
-          }
-        });
-        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (error) {
-        console.warn('LCP measurement failed:', error);
-      }
-    }
-  };
-
-  // Measure First Input Delay (FID)
-  const measureFID = () => {
-    if ('PerformanceObserver' in window) {
-      try {
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (entry.processingStart && entry.startTime) {
-              metricsRef.current.fid = entry.processingStart - entry.startTime;
-              if (logToConsole) {
-                console.log('FID:', metricsRef.current.fid, 'ms');
-              }
-            }
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (error) {
-        console.warn('FID measurement failed:', error);
-      }
-    }
-  };
-
-  // Measure Cumulative Layout Shift (CLS)
-  const measureCLS = () => {
-    if ('PerformanceObserver' in window) {
-      try {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          metricsRef.current.cls = clsValue;
-          if (logToConsole) {
-            console.log('CLS:', clsValue);
-          }
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (error) {
-        console.warn('CLS measurement failed:', error);
-      }
-    }
-  };
-
-  // Measure Time to First Byte (TTFB)
-  const measureTTFB = () => {
-    if (performance.getEntriesByType) {
-      const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
-      if (navigationEntries.length > 0) {
-        const nav = navigationEntries[0];
-        metricsRef.current.ttfb = nav.responseStart - nav.requestStart;
-        if (logToConsole) {
-          console.log('TTFB:', metricsRef.current.ttfb, 'ms');
-        }
-      }
-    }
-  };
-
-  // Send metrics to analytics endpoint
-  const sendMetricsToAnalytics = async (metrics: PerformanceMetrics) => {
-    if (!sendToAnalytics) return;
-
-    try {
-      await fetch(analyticsEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          timestamp: Date.now(),
-          url: window.location.href,
-          metrics,
-        }),
-      });
-    } catch (error) {
-      console.warn('Failed to send metrics to analytics:', error);
-    }
-  };
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0
+  })
 
   useEffect(() => {
-    // Start measuring all metrics
-    measureFCP();
-    measureLCP();
-    measureFID();
-    measureCLS();
-    measureTTFB();
-
-    // Send metrics after a delay to allow all measurements to complete
-    const sendMetricsTimer = setTimeout(() => {
-      const metrics = { ...metricsRef.current };
+    const startTime = performance.now()
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0
       
-      if (onMetrics) {
-        onMetrics(metrics);
-      }
+      setMetrics({
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(performance.now() - startTime),
+        memoryUsage: Math.round(memoryUsage / 1024 / 1024) // Convert to MB
+      })
+    }
 
-      if (logToConsole) {
-        console.log('Performance Metrics:', metrics);
-      }
+    measurePerformance()
+    const interval = setInterval(measurePerformance, 5000)
+    
+    return () => clearInterval(interval)
+  }, [])
 
-      sendMetricsToAnalytics(metrics);
-    }, 5000);
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-      clearTimeout(sendMetricsTimer);
-    };
-  }, [onMetrics, logToConsole, sendToAnalytics, analyticsEndpoint]);
-
-  return null; // This component doesn't render anything
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl p-4 text-white text-sm max-w-sm z-50"
+    >
+      <h3 className="font-semibold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>Load Time: {metrics.loadTime}ms</div>
+        <div>Render Time: {metrics.renderTime}ms</div>
+        <div>Memory: {metrics.memoryUsage}MB</div>
+      </div>
+    </motion.div>
+  )
 }
+
+export default PerformanceMonitor
