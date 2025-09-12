@@ -1,3 +1,6 @@
 2025-09-12 15:04:23 - Merge conflicts detected in auto/autonomy-17186719616
 2025-09-12 15:04:26 - Merge conflicts detected in backup-before-pr-merge-20250912-080448
 2025-09-12 15:04:26 - Resolving conflicts in app/page.tsx for branch backup-before-pr-merge-20250912-080448
+2025-09-12 15:04:29 - Merge conflicts detected in backup-main-20250911-205354
+2025-09-12 15:04:29 - Resolving conflicts in app/blog/page.tsx for branch backup-main-20250911-205354
+2025-09-12 15:04:29 - Resolving conflicts in app/page.tsx for branch backup-main-20250911-205354

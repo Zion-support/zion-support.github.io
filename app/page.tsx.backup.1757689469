@@ -1448,6 +1448,89 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+<<<<<<< HEAD
+
+            {/* New Content Grid - Enhanced */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
+              <Link href='/blog/ai-2025-foundation-model-fine-tuning' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔧</div>
+                  <h3 className='text-lg font-semibold mb-2'>Foundation Model Fine-Tuning 2025</h3>
+                  <p className='text-sm opacity-90 mb-3'>PEFT, data curation, evals, guardrails, and cost control</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>22 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href='/blog/ai-2025-agent-safety-evals-playbook' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                  <h3 className='text-lg font-semibold mb-2'>Agent Safety & Evals Playbook</h3>
+                  <p className='text-sm opacity-90 mb-3'>Red teaming, jailbreak prevention, policy enforcement</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>19 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/case-studies/ai-healthcare-diagnosis-success-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Healthcare Diagnosis Success</h3>
+                  <p className='text-sm opacity-90 mb-3'>95% accuracy and 60% faster diagnosis times</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Case Study</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/resources/ai-cybersecurity-checklist-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                  <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Checklist</h3>
+                  <p className='text-sm opacity-90 mb-3'>150+ security items for secure AI implementation</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Free Download</span>
+                    <span className='mx-2'>•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-breakthrough-innovations' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Breakthrough Innovations</h3>
+                <p className='text-sm opacity-90 mb-3'>Revolutionary AI technologies reshaping industries</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-sustainability-green-tech-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Sustainability & Green Tech</h3>
+                <p className='text-sm opacity-90 mb-3'>Building eco-friendly AI systems for the future</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+=======
             <Link href='/blog' className='text-blue-600 font-semibold hover:underline'>View all</Link>
           </div>
           {/* New Content Promo */}
@@ -1464,6 +1547,7 @@ export default function HomePage() {
                 <div className='text-sm font-medium text-green-700 mb-1'>New</div>
                 <h3 className='text-xl font-semibold text-green-900 group-hover:underline'>GenAI Evals & Observability: The Practical 2025 Guide</h3>
                 <p className='text-green-800 mt-2'>Measure quality, cost, and safety with evals and telemetry that matter.</p>
+>>>>>>> origin/backup-main-20250911-205354
               </div>
             </Link>
 
@@ -1492,6 +1576,8 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+<<<<<<< HEAD
+=======
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
@@ -1524,6 +1610,7 @@ export default function HomePage() {
               description='Layered defenses to keep AI systems safe in production.'
               icon='🛡️'
             />
+>>>>>>> origin/backup-main-20250911-205354
           </div>
         </div>
       </section>
