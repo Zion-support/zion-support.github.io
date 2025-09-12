@@ -48,6 +48,8 @@ import LatestContentPromotionBanner from '../components/LatestContentPromotionBa
 import LatestContentShowcase from '../components/LatestContentShowcase';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
+import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
 import RevolutionaryTech2025PromotionBanner from '../components/RevolutionaryTech2025PromotionBanner';
 import RevolutionaryTech2025Showcase from '../components/RevolutionaryTech2025Showcase';
 import FutureTechInnovationBanner from '../components/FutureTechInnovationBanner';
@@ -86,6 +88,12 @@ export default function HomePage() {
         
         {/* AI 2025 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2025BreakthroughContentShowcase />
+        
+        {/* AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025ContentPromotionBanner />
+        
+        {/* AI 2025 CONTENT SHOWCASE */}
+        <AI2025ContentShowcase />
         
         {/* CONTENT DISCOVERY PROMOTION BANNER */}
         <ContentDiscoveryPromotionBanner2025 />
