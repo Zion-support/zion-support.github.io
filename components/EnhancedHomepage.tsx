@@ -32,6 +32,7 @@ import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-
 import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
 import { innovative2025AIAutonomousEcosystem } from '../data/2025-innovative-ai-autonomous-ecosystem';
 import { comprehensiveServicesExpansion } from '../data/2025-comprehensive-services-expansion';
+import { newRealServices2025 } from '../data/2025-new-real-services';
 
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +78,8 @@ const EnhancedHomepage: React.FC = () => {
     ...innovativeAIServices2025ExpansionV2,
     ...cuttingEdgeITInfrastructureInnovations2025,
     ...innovative2025AIAutonomousEcosystem,
-    ...comprehensiveServicesExpansion
+    ...comprehensiveServicesExpansion,
+    ...newRealServices2025
   ];
 
   // Filter services by category

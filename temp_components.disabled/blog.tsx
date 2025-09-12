@@ -7,21 +7,19 @@ const Blog: NextPage = () => {
   const blogPosts = [
     {
       title: "The AI Revolution 2024: How Artificial Intelligence is Transforming Business",
-      excerpt: "Discover how AI is revolutionizing business operations in 2024. Learn about the latest AI trends, applications, and how your company can leverage AI for competitive advantage.",
+      excerpt: "Discover how AI is revolutionizing business operations in 2024. Learn about the latest AI trends, applications, and how companies are leveraging AI for competitive advantage.",
       category: "AI & Machine Learning",
       readTime: "15 min read",
       date: "2024-01-20",
-      href: "/blog/ai-revolution-2024-chat",
-      featured: true
+      href: "/blog/ai-revolution-2024-chat"
     },
     {
       title: "Cloud Computing Trends 2024: The Future of Digital Infrastructure",
-      excerpt: "Discover the latest cloud computing trends shaping 2024. Learn about multi-cloud strategies, edge computing, serverless architecture, and how to optimize your cloud infrastructure.",
+      excerpt: "Discover the latest cloud computing trends shaping 2024. Learn about multi-cloud strategies, edge computing, serverless architecture, and how businesses are leveraging cloud technology.",
       category: "Cloud Computing",
       readTime: "12 min read",
       date: "2024-01-18",
-      href: "/blog/cloud-computing-trends-2024-chat",
-      featured: true
+      href: "/blog/cloud-computing-trends-2024-chat"
     },
     {
       title: "AI-Powered Marketplaces: The Future of Digital Commerce",
