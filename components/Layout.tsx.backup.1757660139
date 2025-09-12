@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+import React, { ReactNode } from 'react';
+import Sidebar from './Sidebar';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Navigation from './Navigation';
+>>>>>>> origin/cursor/create-and-deploy-new-content-d764
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Sidebar />
+      <div className="ml-72 min-h-screen">
+=======
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Navigation />
+      <main>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d764
+        {children}
+      </div>
+    </div>
+  );
+}

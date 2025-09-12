@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+<<<<<<< HEAD
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+=======
+Sitemap: https://zion.app/sitemap.xml
+>>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+<<<<<<< HEAD
+Allow: /
+Allow: /content-showcase
+Allow: /resources
+Allow: /blog/
+Allow: /case-studies/
+=======
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /resources/
+Allow: /blog/
+
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+>>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking

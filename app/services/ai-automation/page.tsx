@@ -1,348 +1,392 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
 import Link from 'next/link';
+import SEO from '../../../components/SEO';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Automation Services - Transform Your Business with Intelligent Automation',
-  description: 'Comprehensive AI automation solutions including process automation, intelligent workflows, and autonomous systems to drive efficiency and growth.',
-  keywords: 'AI automation, business process automation, intelligent workflows, autonomous systems, AI implementation, digital transformation',
+  description: 'Expert AI automation services to streamline operations, reduce costs, and boost efficiency. Custom solutions for every industry. Get started today!',
+  keywords: 'AI automation services, business process automation, intelligent automation, AI consulting, automation solutions',
+  openGraph: {
+    title: 'AI Automation Services - Transform Your Business',
+    description: 'Expert AI automation services to streamline operations and boost efficiency',
+    type: 'website',
+  },
 };
 
 export default function AIAutomationServices() {
   return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Automation Services - Transform Your Business with Intelligent Automation"
-        description="Comprehensive AI automation solutions including process automation, intelligent workflows, and autonomous systems to drive efficiency and growth."
-        keywords="AI automation, business process automation, intelligent workflows, autonomous systems, AI implementation, digital transformation"
-        url="/services/ai-automation"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <SEO 
+        title="AI Automation Services - Transform Your Business"
+        description="Expert AI automation services to streamline operations and boost efficiency"
+        keywords="AI automation services, business process automation, intelligent automation, AI consulting"
       />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
-            🤖 AI Automation Services
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Transform Your Business with AI Automation
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            AI Automation Services
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Unlock unprecedented efficiency and growth with our comprehensive AI automation solutions. 
-            From intelligent workflows to autonomous systems, we help businesses achieve their full potential.
+            Transform your business operations with cutting-edge AI automation solutions. 
+            Reduce costs, increase efficiency, and scale your success with intelligent automation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Get Started Today
+              Get Free Consultation
             </Link>
-            <Link
-              href="#consultation"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
+            <Link 
+              href="/case-studies" 
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
-              Schedule Consultation
+              View Success Stories
             </Link>
           </div>
         </div>
 
         {/* Key Benefits */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">⚡</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">10x Faster Operations</h3>
+          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">90% Faster Processing</h3>
             <p className="text-gray-600">
-              Automate complex processes and achieve unprecedented speed and efficiency in your operations.
+              Automate repetitive tasks and processes to achieve unprecedented speed and efficiency.
             </p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">💰</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">90% Cost Reduction</h3>
+          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">60% Cost Reduction</h3>
             <p className="text-gray-600">
-              Eliminate manual processes and reduce operational costs while improving accuracy and reliability.
+              Significantly reduce operational costs while maintaining or improving quality.
             </p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🎯</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">99% Accuracy</h3>
+          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div className="text-4xl mb-4">🎯</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">99.9% Accuracy</h3>
             <p className="text-gray-600">
-              Achieve near-perfect accuracy in automated processes with advanced AI and machine learning.
+              Eliminate human errors and ensure consistent, reliable results every time.
             </p>
           </div>
         </div>
 
         {/* Service Categories */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our AI Automation Solutions</h2>
-          
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Our AI Automation Solutions
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Process Automation */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">🔄</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Process Automation</h3>
-              <p className="text-gray-600 mb-6">
-                Automate repetitive business processes with intelligent workflows that adapt and learn over time.
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Process Automation</h3>
+              <p className="text-gray-600 mb-4">
+                Automate complex business processes with intelligent workflow management and decision-making systems.
               </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Document processing and management</li>
-                <li>• Data entry and validation</li>
-                <li>• Workflow orchestration</li>
-                <li>• Task scheduling and routing</li>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Workflow automation</li>
+                <li>• Document processing</li>
+                <li>• Data entry automation</li>
+                <li>• Approval workflows</li>
               </ul>
             </div>
 
-            {/* Intelligent Chatbots */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">💬</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Chatbots</h3>
-              <p className="text-gray-600 mb-6">
-                Deploy AI-powered chatbots that understand context and provide human-like customer interactions.
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl mb-4">💬</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Customer Service AI</h3>
+              <p className="text-gray-600 mb-4">
+                Deploy intelligent chatbots and virtual assistants to provide 24/7 customer support.
               </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Natural language processing</li>
-                <li>• Multi-channel support</li>
-                <li>• Context-aware responses</li>
-                <li>• Seamless human handoff</li>
-              </ul>
-            </div>
-
-            {/* Predictive Analytics */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">📊</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
-              <p className="text-gray-600 mb-6">
-                Leverage AI to predict trends, identify opportunities, and make data-driven decisions automatically.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Demand forecasting</li>
-                <li>• Risk assessment</li>
-                <li>• Anomaly detection</li>
-                <li>• Performance optimization</li>
-              </ul>
-            </div>
-
-            {/* Autonomous Systems */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">🤖</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Autonomous Systems</h3>
-              <p className="text-gray-600 mb-6">
-                Build self-managing systems that operate independently and make decisions without human intervention.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Self-healing infrastructure</li>
-                <li>• Autonomous decision making</li>
-                <li>• Dynamic resource allocation</li>
-                <li>• Continuous optimization</li>
-              </ul>
-            </div>
-
-            {/* Data Processing */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Processing</h3>
-              <p className="text-gray-600 mb-6">
-                Automate complex data processing tasks with AI-powered extraction, transformation, and analysis.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Real-time data processing</li>
-                <li>• Pattern recognition</li>
-                <li>• Data quality assurance</li>
-                <li>• Automated reporting</li>
-              </ul>
-            </div>
-
-            {/* Customer Experience */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Customer Experience</h3>
-              <p className="text-gray-600 mb-6">
-                Enhance customer interactions with AI-driven personalization and automated service delivery.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Personalized recommendations</li>
-                <li>• Automated support tickets</li>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• AI chatbots</li>
+                <li>• Voice assistants</li>
+                <li>• Ticket routing</li>
                 <li>• Sentiment analysis</li>
-                <li>• Proactive engagement</li>
               </ul>
             </div>
-          </div>
-        </div>
 
-        {/* Implementation Process */}
-        <div className="bg-gray-50 rounded-2xl p-12 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Implementation Process</h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Discovery & Analysis</h3>
-              <p className="text-gray-600 text-sm">
-                We analyze your current processes and identify automation opportunities.
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Data Analytics AI</h3>
+              <p className="text-gray-600 mb-4">
+                Transform raw data into actionable insights with advanced AI analytics and reporting.
               </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Predictive analytics</li>
+                <li>• Real-time reporting</li>
+                <li>• Anomaly detection</li>
+                <li>• Trend analysis</li>
+              </ul>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Strategy & Design</h3>
-              <p className="text-gray-600 text-sm">
-                We design a comprehensive automation strategy tailored to your needs.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Development & Testing</h3>
-              <p className="text-gray-600 text-sm">
-                We build and rigorously test your AI automation solutions.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Deployment & Support</h3>
-              <p className="text-gray-600 text-sm">
-                We deploy your solutions and provide ongoing support and optimization.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* Success Metrics */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Proven Results</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
-              <div className="text-gray-600">Process Accuracy</div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Security Automation</h3>
+              <p className="text-gray-600 mb-4">
+                Protect your business with AI-powered security monitoring and threat detection systems.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Fraud detection</li>
+                <li>• Threat monitoring</li>
+                <li>• Access control</li>
+                <li>• Compliance automation</li>
+              </ul>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">80%</div>
-              <div className="text-gray-600">Cost Reduction</div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl mb-4">📧</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Marketing Automation</h3>
+              <p className="text-gray-600 mb-4">
+                Optimize your marketing campaigns with AI-driven personalization and automation.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Email automation</li>
+                <li>• Lead scoring</li>
+                <li>• Content personalization</li>
+                <li>• Campaign optimization</li>
+              </ul>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">10x</div>
-              <div className="text-gray-600">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">99%</div>
-              <div className="text-gray-600">Uptime</div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl mb-4">🏭</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Manufacturing AI</h3>
+              <p className="text-gray-600 mb-4">
+                Optimize production processes with intelligent manufacturing and quality control systems.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Predictive maintenance</li>
+                <li>• Quality control</li>
+                <li>• Supply chain optimization</li>
+                <li>• Production scheduling</li>
+              </ul>
             </div>
           </div>
         </div>
 
         {/* Industry Applications */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry Applications</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-blue-600 font-bold">💰</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Services</h3>
-                  <p className="text-gray-600">
-                    Automated risk assessment, fraud detection, and customer service for banks and fintech companies.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-green-600 font-bold">🏭</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Manufacturing</h3>
-                  <p className="text-gray-600">
-                    Smart production lines, predictive maintenance, and quality control automation.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-purple-600 font-bold">🏥</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Healthcare</h3>
-                  <p className="text-gray-600">
-                    Patient data processing, appointment scheduling, and diagnostic assistance automation.
-                  </p>
-                </div>
-              </div>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Industry-Specific Solutions
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-green-900 mb-3">Healthcare</h3>
+              <p className="text-green-800 text-sm">
+                Patient scheduling, medical imaging analysis, and diagnostic assistance.
+              </p>
             </div>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-orange-600 font-bold">🛒</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Retail & E-commerce</h3>
-                  <p className="text-gray-600">
-                    Inventory management, customer service, and personalized shopping experiences.
-                  </p>
-                </div>
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-100 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-blue-900 mb-3">Financial Services</h3>
+              <p className="text-blue-800 text-sm">
+                Fraud detection, risk assessment, and automated trading systems.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-purple-900 mb-3">Retail</h3>
+              <p className="text-purple-800 text-sm">
+                Inventory management, personalized recommendations, and demand forecasting.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-orange-50 to-red-100 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-orange-900 mb-3">Manufacturing</h3>
+              <p className="text-orange-800 text-sm">
+                Predictive maintenance, quality control, and supply chain optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Implementation Process */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Our Implementation Process
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Discovery</h3>
+              <p className="text-gray-600 text-sm">
+                Analyze your current processes and identify automation opportunities.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Design</h3>
+              <p className="text-gray-600 text-sm">
+                Create custom AI automation solutions tailored to your specific needs.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Deploy</h3>
+              <p className="text-gray-600 text-sm">
+                Implement and integrate AI solutions with your existing systems.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Optimize</h3>
+              <p className="text-gray-600 text-sm">
+                Monitor performance and continuously improve your AI automation systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Success Metrics */}
+        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-12 rounded-2xl mb-16">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Proven Results Across Industries
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-indigo-200">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">$50M+</div>
+              <div className="text-indigo-200">Client Savings</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">95%</div>
+              <div className="text-indigo-200">Client Satisfaction</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">24/7</div>
+              <div className="text-indigo-200">Support Available</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Flexible Pricing Options
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$5,000<span className="text-lg text-gray-600">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Basic process automation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Up to 5 workflows
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Email support
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Monthly reporting
+                </li>
+              </ul>
+              <Link 
+                href="/contact" 
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-500 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
               </div>
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-red-600 font-bold">🏢</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Real Estate</h3>
-                  <p className="text-gray-600">
-                    Property valuation, lead qualification, and automated customer communications.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                  <span className="text-indigo-600 font-bold">📚</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Education</h3>
-                  <p className="text-gray-600">
-                    Student assessment, content personalization, and administrative process automation.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$15,000<span className="text-lg text-gray-600">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Advanced AI automation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Up to 20 workflows
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Priority support
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Real-time monitoring
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Custom integrations
+                </li>
+              </ul>
+              <Link 
+                href="/contact" 
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-6">Custom</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Full AI transformation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Unlimited workflows
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Dedicated support team
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Custom AI models
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  On-site training
+                </li>
+              </ul>
+              <Link 
+                href="/contact" 
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+              >
+                Contact Sales
+              </Link>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Business?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join hundreds of companies that have transformed their operations with our AI automation solutions.
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-12 rounded-2xl text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Join hundreds of companies already benefiting from our AI automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Start Your Automation Journey
+              Schedule Free Consultation
             </Link>
-            <Link
-              href="/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+            <Link 
+              href="/case-studies" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              View Success Stories
+              View Case Studies
             </Link>
           </div>
         </div>

@@ -3,12 +3,6 @@ import React, { useState } from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI ROI Calculator - Calculate Your AI Investment Returns',
-  description: 'Calculate the potential return on investment for your AI implementation with our comprehensive ROI calculator. Get detailed insights and projections.',
-  keywords: 'AI ROI calculator, AI investment, ROI calculation, AI business case, AI implementation cost',
-};
-
 export default function AIROICalculator() {
   const [formData, setFormData] = useState({
     companySize: '',

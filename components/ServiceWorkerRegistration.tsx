@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Download, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
 
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void;
@@ -25,10 +23,13 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 
   const registerServiceWorker = async () => {
     try {
-      const swRegistration = await navigator.serviceWorker.register('/sw.js');
+      const swRegistration = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/'
+      });
+
       setRegistration(swRegistration);
-      
-      // Check for updates
+
+      // Handle updates
       swRegistration.addEventListener('updatefound', () => {
         const newWorker = swRegistration.installing;
         if (newWorker) {
@@ -41,7 +42,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
         }
       });
 
-      // Handle controller change (update installed)
+      // Handle successful installation
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         setIsUpdateInstalled(true);
         onUpdateInstalled?.();
@@ -60,13 +61,16 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       });
 
     } catch (error) {
-      console.error('Service worker registration failed:', error);
-      setError('Failed to register service worker');
+      console.error('Service Worker registration failed:', error);
     }
   };
 
-  const handleUpdate = async () => {
-    if (!registration) return;
+  const updateServiceWorker = async () => {
+    if (registration && registration.waiting) {
+      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      setIsUpdateAvailable(false);
+    }
+  };
 
     setIsInstalling(true);
     setError(null);
@@ -79,159 +83,143 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 
       // Check for updates
       await registration.update();
-      
-      // Force reload to activate new service worker
-      window.location.reload();
-    } catch (error) {
-      console.error('Update failed:', error);
-      setError('Failed to update application');
-    } finally {
-      setIsInstalling(false);
     }
   };
 
-  const handleDismiss = () => {
-    setIsUpdateAvailable(false);
-    setIsUpdateInstalled(false);
+  // Request notification permission
+  const requestNotificationPermission = async () => {
+    if ('Notification' in window && Notification.permission === 'default') {
+      const permission = await Notification.requestPermission();
+      if (permission === 'granted') {
+        console.log('Notification permission granted');
+      }
+    }
   };
 
-  // Don't render anything if service worker is not supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    return null;
-  }
+  // Send push notification (for testing)
+  const sendTestNotification = async () => {
+    if ('serviceWorker' in navigator && 'PushManager' in window) {
+      try {
+        const registration = await navigator.serviceWorker.ready;
+        await registration.showNotification('Zion Tech Group', {
+          body: 'Welcome to the future of technology!',
+          icon: '/images/zion-tech-group-logo.png',
+          badge: '/images/badge.png',
+          tag: 'welcome-notification'
+        });
+      } catch (error) {
+        console.error('Failed to send notification:', error);
+      }
+    }
+  };
+
+  // Background sync registration
+  const registerBackgroundSync = async () => {
+    if ('serviceWorker' in navigator && 'SyncManager' in window) {
+      try {
+        const registration = await navigator.serviceWorker.ready;
+        await registration.sync.register('background-sync');
+        console.log('Background sync registered');
+      } catch (error) {
+        console.error('Background sync registration failed:', error);
+      }
+    }
+  };
 
   return (
-    <AnimatePresence>
-      {/* Update Available Notification */}
+    <>
+      {/* Update notification */}
       {isUpdateAvailable && (
-        <motion.div
-          className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0">
-              <Download className="w-5 h-5 text-cyan-400" />
+        <div className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="font-semibold">Update Available</h4>
+              <p className="text-sm opacity-90">A new version is ready to install</p>
             </div>
-            
-            <div className="flex-1 min-w-0">
-              <h4 className="text-sm font-semibold text-white mb-1">
-                Update Available
-              </h4>
-              <p className="text-xs text-gray-400 mb-3">
-                A new version of Zion Tech Group is available with improved features and performance.
-              </p>
-              
-              <div className="flex gap-2">
-                <button
-                  onClick={handleUpdate}
-                  disabled={isInstalling}
-                  className="px-3 py-1.5 bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 text-white text-xs font-medium rounded transition-colors duration-200 flex items-center gap-1"
-                >
-                  {isInstalling ? (
-                    <>
-                      <RefreshCw className="w-3 h-3 animate-spin" />
-                      Updating...
-                    </>
-                  ) : (
-                    'Update Now'
-                  )}
-                </button>
-                
-                <button
-                  onClick={handleDismiss}
-                  className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs font-medium rounded transition-colors duration-200"
-                >
-                  Later
-                </button>
-              </div>
-            </div>
-            
             <button
-              onClick={handleDismiss}
-              className="flex-shrink-0 text-gray-500 hover:text-gray-300 transition-colors duration-200"
+              onClick={updateServiceWorker}
+              className="bg-white text-blue-600 px-3 py-1 rounded text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              <XCircle className="w-4 h-4" />
+              Update
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
 
-      {/* Update Installed Notification */}
+      {/* Update installed notification */}
       {isUpdateInstalled && (
-        <motion.div
-          className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0">
-              <CheckCircle className="w-5 h-5 text-green-400" />
+        <div className="fixed bottom-4 right-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="font-semibold">Update Installed</h4>
+              <p className="text-sm opacity-90">New version is now active</p>
             </div>
-            
-            <div className="flex-1 min-w-0">
-              <h4 className="text-sm font-semibold text-white mb-1">
-                Update Installed
-              </h4>
-              <p className="text-xs text-gray-400 mb-3">
-                The new version has been installed successfully. The page will reload automatically.
-              </p>
-              
-              <button
-                onClick={() => window.location.reload()}
-                className="px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white text-xs font-medium rounded transition-colors duration-200"
-              >
-                Reload Now
-              </button>
-            </div>
-            
             <button
-              onClick={handleDismiss}
-              className="flex-shrink-0 text-gray-500 hover:text-gray-300 transition-colors duration-200"
+              onClick={() => setIsUpdateInstalled(false)}
+              className="bg-white text-green-600 px-3 py-1 rounded text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              <XCircle className="w-4 h-4" />
+              Dismiss
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
 
-      {/* Error Notification */}
-      {error && (
-        <motion.div
-          className="fixed bottom-4 right-4 bg-red-900 border border-red-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0">
-              <XCircle className="w-5 h-5 text-red-400" />
+      {/* PWA Install Prompt (hidden by default) */}
+      <div id="pwa-install-prompt" className="hidden">
+        <div className="fixed bottom-4 left-4 right-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-lg shadow-lg z-50">
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="font-semibold">Install Zion Tech Group</h4>
+              <p className="text-sm opacity-90">Add to home screen for quick access</p>
             </div>
-            
-            <div className="flex-1 min-w-0">
-              <h4 className="text-sm font-semibold text-white mb-1">
-                Service Worker Error
-              </h4>
-              <p className="text-xs text-red-300 mb-3">
-                {error}
-              </p>
-              
+            <div className="flex gap-2">
               <button
-                onClick={() => setError(null)}
-                className="px-3 py-1.5 bg-red-700 hover:bg-red-600 text-white text-xs font-medium rounded transition-colors duration-200"
+                id="pwa-install-accept"
+                className="bg-white text-purple-600 px-4 py-2 rounded font-medium hover:bg-gray-100 transition-colors"
+              >
+                Install
+              </button>
+              <button
+                id="pwa-install-dismiss"
+                className="bg-transparent border border-white text-white px-4 py-2 rounded font-medium hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Dismiss
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+
+      {/* Service Worker Status (for development) */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed top-4 right-4 bg-gray-800 text-white p-3 rounded-lg shadow-lg z-50 text-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <div className={`w-2 h-2 rounded-full ${registration ? 'bg-green-400' : 'bg-red-400'}`}></div>
+            <span>SW: {registration ? 'Active' : 'Inactive'}</span>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={checkForUpdates}
+              className="bg-blue-600 hover:bg-blue-700 px-2 py-1 rounded text-xs transition-colors"
+            >
+              Check Updates
+            </button>
+            <button
+              onClick={requestNotificationPermission}
+              className="bg-green-600 hover:bg-green-700 px-2 py-1 rounded text-xs transition-colors"
+            >
+              Notifications
+            </button>
+            <button
+              onClick={sendTestNotification}
+              className="bg-purple-600 hover:bg-purple-700 px-2 py-1 rounded text-xs transition-colors"
+            >
+              Test Notif
+            </button>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

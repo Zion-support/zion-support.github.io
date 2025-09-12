@@ -1,0 +1,10 @@
+module.exports = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/backup-main-20250910-134333
