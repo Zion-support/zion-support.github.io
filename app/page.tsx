@@ -41,6 +41,9 @@ import ContentShowcase2026 from '../components/ContentShowcase2026';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -57,11 +60,20 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT PROMOTION BANNER */}
+        <UltimateContentPromotionBanner />
+        
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* FUTURE TECH SHOWCASE 2026 */}
+        <FutureTechShowcase2026 />
         
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
