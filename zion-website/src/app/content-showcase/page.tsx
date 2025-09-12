@@ -236,6 +236,26 @@ export default function ContentShowcase() {
       featured: false
     },
     {
+      title: "Cloud Cost Optimization for AI & Data Workloads (2025)",
+      description: "Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.",
+      href: "/blog/ai-2025-cloud-cost-optimization",
+      icon: "💸",
+      category: "Optimization",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Safety Red-Teaming (2025): Methods & Tooling",
+      description: "Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.",
+      href: "/blog/ai-2025-agent-safety-red-teaming",
+      icon: "🛡️",
+      category: "AI Safety",
+      readTime: "21 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "AI Ethics and Responsible Development: A Framework",
       description: "Comprehensive framework for developing AI systems responsibly, covering bias mitigation, transparency, and ethical considerations.",
       href: "/blog/ai-ethics-framework",
