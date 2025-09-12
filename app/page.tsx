@@ -6,17 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import NewContentBanner from '../components/NewContentBanner';
-import NewContentShowcase from '../components/NewContentShowcase';
-import EnhancedNewsletter from '../components/EnhancedNewsletter';
-import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
-import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
+import FreshContentBanner from '../components/FreshContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
-import EnhancedContentBanner from '../components/EnhancedContentBanner';
-import ContentPromotionBanner from '../components/ContentPromotionBanner';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -285,136 +276,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Content Promotion Banner */}
-      <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
-        <EnhancedContentPromotionBanner />
-      </Suspense>
+      {/* Fresh Content Banner */}
+      <FreshContentBanner />
 
-      {/* Trending Content Carousel */}
-      <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
-        <TrendingContentCarousel />
-      </Suspense>
+      {/* Content Showcase */}
+      <ContentShowcase />
 
-      {/* Content Recommendation Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Recommended for You
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Personalized content recommendations based on trending topics and expert insights 
-              to accelerate your AI transformation journey.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <Suspense fallback={<LoadingSpinner size="md" text="Loading recommendations..." />}>
-                <ContentRecommendationWidget />
-              </Suspense>
-            </div>
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Content Analytics</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Total Articles</span>
-                    <span className="font-semibold text-gray-900">50+</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Case Studies</span>
-                    <span className="font-semibold text-gray-900">25+</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Implementation Guides</span>
-                    <span className="font-semibold text-gray-900">15+</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Success Stories</span>
-                    <span className="font-semibold text-gray-900">$10B+ Value</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">🎯 Quick Actions</h3>
-                <div className="space-y-3">
-                  <Link href="/blog" className="block text-blue-600 hover:text-blue-800 font-medium">
-                    Browse All Articles →
-                  </Link>
-                  <Link href="/case-studies" className="block text-purple-600 hover:text-purple-800 font-medium">
-                    View Success Stories →
-                  </Link>
-                  <Link href="/contact" className="block text-green-600 hover:text-green-800 font-medium">
-                    Get Expert Consultation →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trending Content Widget */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What's Trending Now
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the most popular and engaging content our community is reading right now.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
-              <TrendingContentWidget />
-            </Suspense>
-            
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">🔥 Hot Topics</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
-                    <span className="font-medium text-gray-900">AI Trends 2025</span>
-                    <span className="text-sm text-red-600 font-medium">+2.3k views</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
-                    <span className="font-medium text-gray-900">Manufacturing AI</span>
-                    <span className="text-sm text-orange-600 font-medium">+1.8k views</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
-                    <span className="font-medium text-gray-900">ROI Calculator</span>
-                    <span className="text-sm text-yellow-600 font-medium">+3.1k views</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="font-medium text-gray-900">LLM Optimization</span>
-                    <span className="text-sm text-green-600 font-medium">+4.2k views</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">💡 Pro Tip</h3>
-                <p className="text-sm text-gray-700 mb-4">
-                  Start with our AI ROI Calculator to understand your potential returns, 
-                  then dive into our case studies for real-world implementation insights.
-                </p>
-                <Link
-                  href="/tools/ai-roi-calculator"
-                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm"
-                >
-                  Try the Calculator →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* New Content Spotlight - January 2025 */}
+      {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
