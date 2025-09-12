@@ -188,129 +188,132 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 // Featured content for homepage
 export const featuredContent = [
   {
-    title: "AI Automation Enterprise Guide 2025",
-    description: "Complete implementation strategy for enterprise-scale AI automation with 300% average ROI",
-    href: "/resources/ai-automation-enterprise-guide-2025",
-    icon: "⚡",
-    readTime: "45 min read",
-    category: "Enterprise AI",
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
     isNew: true,
-    badge: "NEW",
-    badgeColor: "bg-blue-100 text-blue-800",
-    metrics: "300% ROI"
+    badge: "HOT",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
   },
   {
-    title: "AI Sustainability Transformation Guide 2025",
-    description: "Transform your business with sustainable AI practices and reduce carbon footprint by 75%",
-    href: "/resources/ai-sustainability-transformation-guide-2025",
-    icon: "🌱",
-    readTime: "38 min read",
-    category: "Sustainable AI",
-    isNew: true,
-    badge: "GREEN",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "75% Carbon Reduction"
-  },
-  {
-    title: "AI Automation: Global Logistics Success",
-    description: "How a Fortune 500 logistics company achieved 450% ROI and $85M annual savings",
-    href: "/case-studies/ai-automation-global-logistics-2025",
-    icon: "🚚",
-    readTime: "12 min read",
-    category: "Case Study",
-    isNew: true,
-    badge: "SUCCESS",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "450% ROI"
-  },
-  {
-    title: "AI Enterprise Transformation 2026",
-    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
-    href: "/blog/ai-2026-enterprise-transformation",
-    icon: "🏢",
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
+    icon: "⚖️",
     readTime: "25 min read",
-    category: "Enterprise AI",
-    featured: true
+    category: "AI Ethics",
+    isNew: true,
+    badge: "CRITICAL",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "95% Trust Score"
+  },
+  {
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
+    isNew: true,
+    badge: "BREAKTHROUGH",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction"
+  },
+  {
+    title: "AI 2025 Breakthrough Innovations: The Future is Here",
+    description: "Discover the groundbreaking AI innovations that will reshape industries in 2025. From quantum-enhanced AI to brain-computer interfaces.",
+    href: "/blog/ai-2025-breakthrough-innovations",
+    icon: "🚀",
+    readTime: "28 min read",
+    category: "AI Innovation",
+    featured: true,
+    badge: "FUTURE",
+    badgeColor: "bg-blue-100 text-blue-800",
+    metrics: "Next Decade Tech"
   }
 ];
 
 // Trending content
 export const trendingContent = [
   {
-    title: "AI Automation Enterprise Guide 2025",
-    description: "Complete implementation strategy for enterprise-scale AI automation with 300% average ROI",
-    href: "/resources/ai-automation-enterprise-guide-2025",
-    icon: "⚡",
-    readTime: "45 min read",
-    category: "Enterprise AI",
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
     isTrending: true,
     badge: "TRENDING",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
+  },
+  {
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
+    isTrending: true,
+    badge: "BREAKTHROUGH",
     badgeColor: "bg-orange-100 text-orange-800",
-    metrics: "300% ROI"
+    metrics: "90% Latency Reduction"
   },
   {
-    title: "AI Sustainability Transformation Guide 2025",
-    description: "Transform your business with sustainable AI practices and reduce carbon footprint by 75%",
-    href: "/resources/ai-sustainability-transformation-guide-2025",
-    icon: "🌱",
-    readTime: "38 min read",
-    category: "Sustainable AI",
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
+    icon: "⚖️",
+    readTime: "25 min read",
+    category: "AI Ethics",
     isTrending: true,
-    badge: "GREEN",
+    badge: "CRITICAL",
     badgeColor: "bg-green-100 text-green-800",
-    metrics: "75% Carbon Reduction"
-  },
-  {
-    title: "AI Automation: Global Logistics Success",
-    description: "How a Fortune 500 logistics company achieved 450% ROI and $85M annual savings",
-    href: "/case-studies/ai-automation-global-logistics-2025",
-    icon: "🚚",
-    readTime: "12 min read",
-    category: "Case Study",
-    isTrending: true,
-    badge: "SUCCESS",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "450% ROI"
+    metrics: "95% Trust Score"
   }
 ];
 
 // Latest content
 export const latestContent = [
   {
-    title: "AI Automation Enterprise Guide 2025",
-    description: "Complete implementation strategy for enterprise-scale AI automation with 300% average ROI",
-    href: "/resources/ai-automation-enterprise-guide-2025",
-    icon: "⚡",
-    readTime: "45 min read",
-    category: "Enterprise AI",
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
     isNew: true,
     badge: "NEW",
-    badgeColor: "bg-blue-100 text-blue-800",
-    metrics: "300% ROI"
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
   },
   {
-    title: "AI Sustainability Transformation Guide 2025",
-    description: "Transform your business with sustainable AI practices and reduce carbon footprint by 75%",
-    href: "/resources/ai-sustainability-transformation-guide-2025",
-    icon: "🌱",
-    readTime: "38 min read",
-    category: "Sustainable AI",
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
+    icon: "⚖️",
+    readTime: "25 min read",
+    category: "AI Ethics",
     isNew: true,
-    badge: "GREEN",
+    badge: "NEW",
     badgeColor: "bg-green-100 text-green-800",
-    metrics: "75% Carbon Reduction"
+    metrics: "95% Trust Score"
   },
   {
-    title: "AI Automation: Global Logistics Success",
-    description: "How a Fortune 500 logistics company achieved 450% ROI and $85M annual savings",
-    href: "/case-studies/ai-automation-global-logistics-2025",
-    icon: "🚚",
-    readTime: "12 min read",
-    category: "Case Study",
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
     isNew: true,
-    badge: "SUCCESS",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "450% ROI"
+    badge: "NEW",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction"
   }
 ];
 
