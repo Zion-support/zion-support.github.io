@@ -60,6 +60,8 @@ import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContent
 import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import MegaContentShowcase2025 from '../components/MegaContentShowcase2025';
+import SuperContentPromoBanner2025 from '../components/SuperContentPromoBanner2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -217,6 +219,12 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* SUPER CONTENT PROMO BANNER 2025 */}
+        <SuperContentPromoBanner2025 />
+        
+        {/* MEGA CONTENT SHOWCASE 2025 */}
+        <MegaContentShowcase2025 />
+        
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
         
