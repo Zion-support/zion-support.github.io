@@ -182,3 +182,39 @@ public/sitemap.xml
 [2025-09-12 10:11:46] 📊 Batch progress: 4 successful, 1 failed
 [2025-09-12 10:11:46] 📊 Overall progress: 4 successful, 1 failed, 21 conflicts resolved
 [2025-09-12 10:11:46] 📋 Processing branch 6: backup/sync-2025-08-17T21-10-04-369Z
+[2025-09-12 10:11:46] 🔄 Attempting to merge backup/sync-2025-08-17T21-10-04-369Z...
+[2025-09-12 10:11:47] ✅ Successfully merged backup/sync-2025-08-17T21-10-04-369Z
+[2025-09-12 10:11:47] ✅ Branch backup/sync-2025-08-17T21-10-04-369Z processed successfully
+[2025-09-12 10:11:47] 📊 Batch progress: 5 successful, 1 failed
+[2025-09-12 10:11:47] 📊 Overall progress: 5 successful, 1 failed, 21 conflicts resolved
+[2025-09-12 10:11:47] 📋 Processing branch 7: backup/sync-2025-08-17T21-10-04-531Z
+[2025-09-12 10:11:47] 🔄 Attempting to merge backup/sync-2025-08-17T21-10-04-531Z...
+[2025-09-12 10:11:47] ✅ Successfully merged backup/sync-2025-08-17T21-10-04-531Z
+[2025-09-12 10:11:48] ✅ Branch backup/sync-2025-08-17T21-10-04-531Z processed successfully
+[2025-09-12 10:11:48] 📊 Batch progress: 6 successful, 1 failed
+[2025-09-12 10:11:48] 📊 Overall progress: 6 successful, 1 failed, 21 conflicts resolved
+[2025-09-12 10:11:48] 📋 Processing branch 8: backup/sync-2025-08-17T21-10-04-752Z
+[2025-09-12 10:11:48] 🔄 Attempting to merge backup/sync-2025-08-17T21-10-04-752Z...
+[2025-09-12 10:11:48] ✅ Successfully merged backup/sync-2025-08-17T21-10-04-752Z
+[2025-09-12 10:11:48] ✅ Branch backup/sync-2025-08-17T21-10-04-752Z processed successfully
+[2025-09-12 10:11:48] 📊 Batch progress: 7 successful, 1 failed
+[2025-09-12 10:11:48] 📊 Overall progress: 7 successful, 1 failed, 21 conflicts resolved
+[2025-09-12 10:11:48] 📋 Processing branch 9: backup/sync-2025-08-17T21-10-06-947Z
+[2025-09-12 10:11:48] 🔄 Attempting to merge backup/sync-2025-08-17T21-10-06-947Z...
+[2025-09-12 10:11:48] ✅ Successfully merged backup/sync-2025-08-17T21-10-06-947Z
+[2025-09-12 10:11:49] ✅ Branch backup/sync-2025-08-17T21-10-06-947Z processed successfully
+[2025-09-12 10:11:49] 📊 Batch progress: 8 successful, 1 failed
+[2025-09-12 10:11:49] 📊 Overall progress: 8 successful, 1 failed, 21 conflicts resolved
+[2025-09-12 10:11:49] 📋 Processing branch 10: backup/sync-2025-08-17T21-10-07-549Z
+[2025-09-12 10:11:49] 🔄 Attempting to merge backup/sync-2025-08-17T21-10-07-549Z...
+[2025-09-12 10:11:51] ⚠️  Merge conflicts detected in backup/sync-2025-08-17T21-10-07-549Z, resolving...
+[2025-09-12 10:11:51] 📋 Conflicted files: public/automation/content-registry.json
+public/sitemap.xml
+[2025-09-12 10:11:51] 🔧 Resolving conflicts in public/automation/content-registry.json for branch backup/sync-2025-08-17T21-10-07-549Z...
+[2025-09-12 10:11:51] ⚠️  Found conflicts in public/automation/content-registry.json, resolving...
+[2025-09-12 10:11:51] 📝 Regular file, attempting to merge both versions...
+[2025-09-12 10:11:51] ✅ Resolved conflicts in public/automation/content-registry.json
+[2025-09-12 10:11:51] 🔧 Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-10-07-549Z...
+[2025-09-12 10:11:51] ⚠️  Found conflicts in public/sitemap.xml, resolving...
+[2025-09-12 10:11:51] 📝 Regular file, attempting to merge both versions...
+[2025-09-12 10:11:51] ✅ Resolved conflicts in public/sitemap.xml
