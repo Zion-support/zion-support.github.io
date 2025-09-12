@@ -20,19 +20,19 @@ export default function ContentShowcase() {
 
   const content = [
     {
-      id: 0,
-      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
-      description: "Architectures, safety, and observability for deploying autonomous agents at the edge.",
+      id: 1,
+      title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
+      description: "Master advanced AI automation for enterprise in 2025. Learn implementation strategies, ROI optimization, and real-world case studies with 300% efficiency gains.",
       category: "ai-automation",
       type: "Article",
-      readTime: "21 min read",
-      publishDate: "2025-09-12",
+      readTime: "25 min read",
+      publishDate: "2025-01-28",
       author: "Zion Tech Group",
       featured: true,
       trending: true,
       icon: "🤖",
-      href: "/blog/ai-2025-edge-agents-in-production",
-      tags: ["Edge AI", "Agents", "Observability", "Safety"]
+      href: "/blog/ai-2025-advanced-automation",
+      tags: ["AI Automation", "Enterprise", "Implementation", "ROI"]
     },
     {
       id: 1,
@@ -53,6 +53,15 @@ export default function ContentShowcase() {
       id: 2,
       title: "AI Cybersecurity Revolution 2025: Protecting Against Next-Gen Threats",
       description: "Discover the AI cybersecurity revolution transforming enterprise security in 2025. Learn about advanced threat detection, automated response, and zero-trust AI architectures.",
+=======
+      href: "/blog/ai-2025-advanced-automation",
+      tags: ["AI Automation", "Enterprise", "Implementation", "ROI"]
+    },
+    {
+      id: 2,
+      title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
+      description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
+>>>>>>> cursor/create-and-deploy-new-content-47c9
       category: "cybersecurity",
       type: "Article",
       readTime: "22 min read",
@@ -61,6 +70,7 @@ export default function ContentShowcase() {
       featured: true,
       trending: true,
       icon: "🛡️",
+<<<<<<< HEAD
       href: "/blog/ai-2025-cybersecurity-revolution",
       tags: ["AI Cybersecurity", "Threat Detection", "Zero Trust", "Security"]
     },
@@ -97,6 +107,14 @@ export default function ContentShowcase() {
     {
       id: 4,
       title: "$200M Manufacturing Success: AI Autonomous Systems Case Study 2025",
+=======
+      href: "/blog/ai-2025-cybersecurity-threats",
+      tags: ["Cybersecurity", "AI Threats", "Defense", "Security"]
+    },
+    {
+      id: 3,
+      title: "$200M Manufacturing Success: AI Autonomous Systems Case Study",
+>>>>>>> cursor/create-and-deploy-new-content-47c9
       description: "Discover how a Fortune 500 manufacturer achieved $200M in savings using AI autonomous systems. Complete case study with implementation details, ROI analysis, and lessons learned.",
       category: "case-studies",
       type: "Case Study",
@@ -110,7 +128,7 @@ export default function ContentShowcase() {
       tags: ["Manufacturing", "Autonomous AI", "Case Study", "ROI"]
     },
     {
-      id: 5,
+      id: 4,
       title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
       category: "resources",
@@ -131,7 +149,7 @@ export default function ContentShowcase() {
       category: "trends",
       type: "Article",
       readTime: "25 min read",
-      publishDate: "2025-01-05",
+      publishDate: "2025-01-25",
       author: "Zion Tech Group",
       featured: false,
       trending: true,
@@ -146,7 +164,7 @@ export default function ContentShowcase() {
       category: "ai-automation",
       type: "Article",
       readTime: "18 min read",
-      publishDate: "2025-01-03",
+      publishDate: "2025-01-23",
       author: "Zion Tech Group",
       featured: false,
       trending: false,
@@ -161,7 +179,7 @@ export default function ContentShowcase() {
       category: "cybersecurity",
       type: "Article",
       readTime: "22 min read",
-      publishDate: "2025-01-01",
+      publishDate: "2025-01-20",
       author: "Zion Tech Group",
       featured: false,
       trending: false,
@@ -176,7 +194,7 @@ export default function ContentShowcase() {
       category: "trends",
       type: "Article",
       readTime: "20 min read",
-      publishDate: "2024-12-28",
+      publishDate: "2025-01-18",
       author: "Zion Tech Group",
       featured: false,
       trending: false,
@@ -186,18 +204,18 @@ export default function ContentShowcase() {
     },
     {
       id: 9,
-      title: "AI Autonomous Manufacturing Success: $200M Case Study",
-      description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings through autonomous AI systems. Complete implementation details and lessons learned.",
+      title: "AI Healthcare Diagnosis Success 2025: 95% Accuracy Case Study",
+      description: "Discover how a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times with AI-powered medical imaging.",
       category: "case-studies",
       type: "Case Study",
-      readTime: "18 min read",
-      publishDate: "2024-12-25",
+      readTime: "15 min read",
+      publishDate: "2025-01-15",
       author: "Zion Tech Group",
       featured: false,
-      trending: true,
-      icon: "💰",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      tags: ["Manufacturing", "Autonomous AI", "Case Study", "ROI"]
+      trending: false,
+      icon: "🏥",
+      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+      tags: ["Healthcare", "AI Success", "Case Study", "Medical AI"]
     },
     {
       id: 10,
@@ -206,43 +224,13 @@ export default function ContentShowcase() {
       category: "resources",
       type: "Free Download",
       readTime: "150+ items",
-      publishDate: "2024-12-22",
+      publishDate: "2025-01-12",
       author: "Zion Tech Group",
       featured: false,
       trending: false,
       icon: "📋",
       href: "/resources/ai-cybersecurity-checklist-2025",
       tags: ["Checklist", "Security", "AI Safety", "Free Download"]
-    },
-    {
-      id: 11,
-      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
-      category: "resources",
-      type: "Free Download",
-      readTime: "200+ pages",
-      publishDate: "2025-01-08",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "📚",
-      href: "/resources/ai-implementation-master-guide-2026",
-      tags: ["Master Guide", "Implementation", "Templates", "Free Download"]
-    },
-    {
-      id: 12,
-      title: "AI Financial Services Transformation Success 2025: 300% ROI Case Study",
-      description: "Complete case study: How a major bank achieved 300% ROI through strategic AI implementation. Learn the strategies, challenges, and results of this transformation.",
-      category: "case-studies",
-      type: "Case Study",
-      readTime: "15 min read",
-      publishDate: "2025-01-10",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "💰",
-      href: "/case-studies/ai-financial-services-transformation-2025",
-      tags: ["Financial Services", "Case Study", "ROI", "Transformation"]
     }
   ];
 
@@ -270,11 +258,19 @@ export default function ContentShowcase() {
   });
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <SEO
         title="Content Showcase - AI & Technology Resources"
         description="Explore our comprehensive library of AI articles, case studies, and resources. Expert insights on AI automation, cybersecurity, and implementation strategies."
         keywords="AI content, technology resources, AI articles, case studies, implementation guides, AI automation"
+=======
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="Content Showcase - Latest AI & Tech Resources | Zion Tech Group"
+        description="Explore our comprehensive collection of AI articles, case studies, and resources. Stay ahead with expert insights on AI, cybersecurity, sustainability, and emerging technologies."
+        keywords="AI content, tech resources, case studies, blog articles, AI guides, technology insights, expert analysis"
+>>>>>>> cursor/create-and-deploy-new-content-47c9
         url="/content-showcase"
       />
       
@@ -470,7 +466,11 @@ export default function ContentShowcase() {
         </div>
 
         {/* Newsletter Signup */}
+<<<<<<< HEAD
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+=======
+        <section className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+>>>>>>> cursor/create-and-deploy-new-content-47c9
           <h2 className="text-2xl font-bold mb-4">Stay Updated with Latest Content</h2>
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             Get weekly updates on new articles, case studies, and resources. Join 10,000+ 
@@ -486,7 +486,14 @@ export default function ContentShowcase() {
               Subscribe
             </button>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+          <p className="text-sm text-gray-500 mt-4">
+            No spam. Unsubscribe anytime. Read our privacy policy.
+          </p>
+        </section>
+>>>>>>> cursor/create-and-deploy-new-content-47c9
       </div>
     </div>
   );
