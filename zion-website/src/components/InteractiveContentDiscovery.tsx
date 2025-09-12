@@ -28,6 +28,19 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '40',
+      title: 'AI 2026 Outlook: Enterprise Agent Roadmap',
+      description: 'Where enterprise AI agents are headed in 2026: architectures, SLAs, governance, and edge deployments.',
+      href: '/blog/ai-2026-enterprise-agent-roadmap',
+      type: 'blog',
+      category: 'Strategy',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Agents', 'Strategy', 'Governance', 'Edge'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '31',
       title: 'Agentic Vendor Management 2025: From Intake to Renewal',
       description: 'Automate diligence, negotiations, and renewals with agentic workflows and policy‑as‑code.',
