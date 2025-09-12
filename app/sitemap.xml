@@ -19,6 +19,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ziontechgroup.com/resources/autonomous-systems-implementation-guide</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   
   <!-- Blog Posts -->
   <url>
@@ -52,6 +58,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/blog/ai-2025-autonomous-systems-revolution</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://ziontechgroup.com/blog/ai-2025-breakthrough-innovations</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -83,6 +95,12 @@
   </url>
   
   <!-- Case Studies -->
+  <url>
+    <loc>https://ziontechgroup.com/case-studies/ai-autonomous-manufacturing-success-2025</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://ziontechgroup.com/case-studies/ai-transformation-healthcare-success-2025</loc>
     <lastmod>2025-01-17</lastmod>
