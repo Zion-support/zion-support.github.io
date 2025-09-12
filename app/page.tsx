@@ -37,39 +37,65 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Content Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Enhanced Content Promotion Banner */}
+        <section className="py-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT UPDATE</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-4">
+                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT UPDATE - JANUARY 2025</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                🎉 Revolutionary AI Content: 25+ New Resources Just Released!
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                🎉 Revolutionary AI Content: 50+ New Resources Just Released!
               </h2>
-              <p className="text-xl opacity-90 mb-4 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl opacity-90 mb-6 max-w-5xl mx-auto leading-relaxed">
                 Discover our latest breakthrough content: Quantum AI Computing, Neural Interface Revolution, 
-                Space Exploration AI, plus comprehensive implementation guides and case studies. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                AI Sustainability & Green Tech, plus comprehensive implementation guides, case studies, and 
+                real-world success stories. Get expert insights on the technologies transforming 2025 and beyond.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  className="bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
                 >
                   🎯 Explore All New Content
                 </Link>
                 <Link
                   href="/blog/ai-2025-quantum-computing-breakthrough"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
                   ⚛️ Read Quantum AI Article
                 </Link>
                 <Link
                   href="/resources/ai-2025-implementation-master-guide"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                  className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
                   📚 Download Master Guide
+                </Link>
+              </div>
+              
+              {/* Featured Content Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">⚛️</div>
+                    <h3 className="font-semibold mb-1">Quantum AI Computing</h3>
+                    <p className="text-sm opacity-90">Revolutionary quantum applications</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-neural-interface-revolution" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">🧠</div>
+                    <h3 className="font-semibold mb-1">Neural Interface Revolution</h3>
+                    <p className="text-sm opacity-90">Brain-computer integration</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-sustainability-green-tech" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">🌱</div>
+                    <h3 className="font-semibold mb-1">AI Sustainability & Green Tech</h3>
+                    <p className="text-sm opacity-90">Environmental AI solutions</p>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -199,6 +225,110 @@ export default function HomePage() {
                 Get Started
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Content Spotlight - Enhanced */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-6'>
+              <span className='text-sm font-medium'>✨ JUST PUBLISHED - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI & Tech Insights
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              New this week: Quantum AI Computing, Neural Interface Revolution, AI Sustainability & Green Tech, 
+              plus comprehensive case studies and implementation guides. Expert insights to accelerate your 
+              digital transformation in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-quantum-computing-breakthrough' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚛️</div>
+                <h3 className='text-lg font-semibold mb-2'>Quantum AI Computing</h3>
+                <p className='text-sm opacity-90 mb-3'>Revolutionary quantum computing applications transforming AI</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-2025-neural-interface-revolution' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧠</div>
+                <h3 className='text-lg font-semibold mb-2'>Neural Interface Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>Brain-computer integration and human-AI symbiosis</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>22 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-2025-sustainability-green-tech' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Sustainability & Green Tech</h3>
+                <p className='text-sm opacity-90 mb-3'>Building eco-friendly AI systems for the future</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-autonomous-manufacturing-success-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
+                <h3 className='text-lg font-semibold mb-2'>$200M Manufacturing Success</h3>
+                <p className='text-sm opacity-90 mb-3'>Real case study with autonomous AI systems</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='text-center mt-8'>
+            <Link
+              href='/content-showcase'
+              className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
+            >
+              View All New Content
+            </Link>
+            <Link
+              href='/resources/ai-2025-implementation-master-guide'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block'
+            >
+              Download Master Guide
+            </Link>
           </div>
         </div>
       </section>
