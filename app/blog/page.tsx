@@ -524,6 +524,29 @@ export default function BlogPage() {
 	    category: 'Edge & IoT',
 	    featured: true,
 	    image: '/api/placeholder/600/400',
+	  },
+	  // New articles added January 2025
+	  {
+	    id: 'ai-automation-workflow-2025',
+	    title: 'AI Automation Workflow 2025: The Complete Implementation Guide',
+	    excerpt:
+	      'Transform your business operations with intelligent automation workflows. Learn proven strategies to achieve 300% productivity gains and 40% cost reduction using cutting-edge AI automation tools and techniques.',
+	    date: '2025-01-28',
+	    readTime: '18 min read',
+	    category: 'AI Automation',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
+	  },
+	  {
+	    id: 'ai-business-strategy-2025',
+	    title: 'AI Business Strategy 2025: Transform Your Company with Artificial Intelligence',
+	    excerpt:
+	      'Develop a winning AI business strategy that drives revenue growth, reduces operational costs, and creates sustainable competitive advantages. Learn from industry leaders and implement proven frameworks for AI success.',
+	    date: '2025-01-28',
+	    readTime: '22 min read',
+	    category: 'AI Strategy',
+	    featured: true,
+	    image: '/api/placeholder/600/400',
 	  }
 	];
 
