@@ -76,6 +76,8 @@ import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromo
 import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateContentDiscoveryWidget';
+import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -251,6 +253,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT 2025 BREAKTHROUGH BANNER */}
         <NewContent2025BreakthroughBanner />
+        
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
+        <AI2025UltimateContentRevolutionBanner />
         
         {/* NEW CONTENT PROMOTION BANNER 2025 - LATEST CONTENT */}
         <NewContentPromotionBanner2025 />
@@ -722,6 +727,13 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
         <InteractiveContentDiscovery2025 />
+        
+        {/* NEW INTERACTIVE CONTENT DISCOVERY 2025 - ULTIMATE */}
+        <div className="py-16 px-4 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+          <div className="max-w-7xl mx-auto">
+            <InteractiveContentDiscovery2025 />
+          </div>
+        </div>
         
         {/* CONTENT DISCOVERY WIDGET 2026 */}
         <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
