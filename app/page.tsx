@@ -559,26 +559,29 @@ const HomePage = memo(function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <TestimonialCard
-              company="TechStart Inc."
-              industry="SaaS"
-              result="300% increase in customer satisfaction"
-              description="AI automation reduced support response time from 4 hours to 2 minutes"
-              savings="$50K monthly savings"
+            <Card
+              title='AI Copilots for Engineering Teams'
+              href='/blog/ai-copilots-for-engineering'
+              description='Deploy repo-aware copilots to accelerate reviews and reduce engineering toil.'
+              icon='🧭'
             />
-            <TestimonialCard
-              company="RetailMax"
-              industry="E-commerce"
-              result="90% reduction in manual tasks"
-              description="Automated inventory management and order processing systems"
-              savings="$75K annual cost reduction"
+            <Card
+              title='AI-Powered Customer Support Playbooks'
+              href='/blog/ai-customer-support-playbooks'
+              description='Self-serve assistants, triage, agent copilots and QA—deployed with guardrails.'
+              icon='🎧'
             />
-            <TestimonialCard
-              company="ConsultPro"
-              industry="Professional Services"
-              result="40% increase in proposal win rate"
-              description="AI-powered proposal generation and client management"
-              savings="20 hours saved per week"
+            <Card
+              title='AI Infrastructure Cost Controls That Actually Work'
+              href='/blog/ai-infra-cost-controls'
+              description='Right-size tokens, cache, autoscale, and model tiering for 20–40% savings.'
+              icon='📉'
+            />
+            <Card
+              title='Enterprise RAG Blueprint: From Pilot to Production'
+              href='/blog/enterprise-rag-blueprint'
+              description='Architecture, hybrid retrieval, and rollout plan for regulated environments.'
+              icon='📘'
             />
           </div>
         </div>
@@ -727,6 +730,13 @@ const HomePage = memo(function HomePage() {
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
               New this week: AI Workforce Transformation, Data Privacy Compliance, Green AI Sustainability, 
               and comprehensive implementation guides. Expert insights to accelerate your growth in 2025.
+              <span className='text-sm font-medium'>✨ NEW CONTENT DROP</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh Insights & Expert Guides
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              New this week: AI Sales Automation Playbook, AI Customer Support Automation, and LLM Guardrails in Production.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -751,6 +761,19 @@ const HomePage = memo(function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Risk & Compliance 2025</h3>
                 <p className='text-sm opacity-90 mb-3'>Guardrails that scale without slowing delivery</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>10 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-sales-automation-playbook-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤝</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Sales Automation Playbook 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>From leads to revenue with AI</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>10 min read</span>
                   <span className='mx-2'>•</span>
@@ -820,6 +843,7 @@ const HomePage = memo(function HomePage() {
                   <span>8 min read</span>
                   <span className='mx-2'>•</span>
                   <span>Trending</span>
+                  <span>New</span>
                 </div>
               </div>
             </Link>
