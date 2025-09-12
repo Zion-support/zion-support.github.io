@@ -1,156 +1,117 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { XMarkIcon, SparklesIcon, BookOpenIcon, DocumentTextIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 export default function UltraContentPromotionBanner() {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  if (!isVisible) return null;
-
-  const featuredContent = [
+  const promotions = [
     {
-      title: "Advanced RAG Systems 2025",
-      description: "Production-ready implementation guide for retrieval-augmented generation systems",
-      href: "/blog/ai-2025-advanced-rag-systems",
-      icon: "🔍",
-      type: "Article",
-      readTime: "25 min read",
-      category: "Advanced AI"
+      title: "🚀 New AI Innovation Hub",
+      description: "Explore cutting-edge AI breakthroughs and revolutionary technologies",
+      href: "/ai-innovation-hub",
+      color: "from-blue-600 to-purple-600",
+      textColor: "text-white"
     },
     {
-      title: "AI Multimodal Revolution 2025",
-      description: "Vision, voice, and text integration transforming human-computer interaction",
-      href: "/blog/ai-2025-multimodal-revolution",
-      icon: "🎭",
-      type: "Article",
-      readTime: "28 min read",
-      category: "Multimodal AI"
+      title: "🛠️ AI Tools Showcase",
+      description: "Discover our comprehensive collection of professional AI tools and calculators",
+      href: "/ai-tools-showcase",
+      color: "from-green-600 to-teal-600",
+      textColor: "text-white"
     },
     {
-      title: "$200M Manufacturing Success",
-      description: "Complete case study: Fortune 500 manufacturer achieves massive cost savings",
-      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
-      icon: "🏭",
-      type: "Case Study",
-      readTime: "15 min read",
-      category: "Success Story"
+      title: "📚 AI Resources 2025",
+      description: "Access our complete library of AI courses, guides, and learning materials",
+      href: "/ai-resources-2025",
+      color: "from-purple-600 to-pink-600",
+      textColor: "text-white"
+    },
+    {
+      title: "🎯 AI Implementation Masterclass",
+      description: "Join our comprehensive AI implementation course with real-world case studies",
+      href: "/webinars/ai-2025-implementation-masterclass",
+      color: "from-orange-600 to-red-600",
+      textColor: "text-white"
     }
   ];
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [promotions.length]);
+
+  if (!isVisible) return null;
+
+  const currentPromotion = promotions[currentSlide];
+
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12"></div>
-      </div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
-              <SparklesIcon className="h-5 w-5 mr-2" />
-              <span className="text-sm font-medium">🚀 FRESH CONTENT DROP</span>
-            </div>
-            <div className="hidden md:flex items-center text-sm opacity-90">
-              <span>January 28, 2025</span>
-            </div>
-          </div>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-white hover:text-gray-200 transition-colors"
-          >
-            <XMarkIcon className="h-6 w-6" />
-          </button>
-        </div>
-
-        {/* Main Content */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            🎉 Revolutionary AI Content Just Released!
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
-            Discover our latest breakthrough content: Advanced RAG Systems, AI Multimodal Revolution, 
-            and real-world success stories with proven ROI. Expert insights to accelerate your AI transformation.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/content-showcase"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-            >
-              🎯 Explore All New Content
-            </Link>
-            <Link
-              href="/mega-content-showcase"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-            >
-              📚 Mega Content Drop
-            </Link>
-          </div>
-        </div>
-
-        {/* Featured Content Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {featuredContent.map((content, index) => (
-            <Link key={index} href={content.href} className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform">{content.icon}</div>
-                  <div className="flex items-center space-x-2">
-                    <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">NEW</span>
-                    <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">FEATURED</span>
-                  </div>
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0">
+                  <span className="text-2xl animate-pulse">✨</span>
                 </div>
-                
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-200 transition-colors">
-                  {content.title}
-                </h3>
-                
-                <p className="text-sm opacity-90 mb-4">
-                  {content.description}
-                </p>
-                
-                <div className="flex items-center justify-between text-xs opacity-75">
-                  <div className="flex items-center space-x-4">
-                    <span className="flex items-center">
-                      <BookOpenIcon className="h-4 w-4 mr-1" />
-                      {content.readTime}
-                    </span>
-                    <span className="flex items-center">
-                      <DocumentTextIcon className="h-4 w-4 mr-1" />
-                      {content.type}
-                    </span>
-                  </div>
-                  <span className="bg-white bg-opacity-20 px-2 py-1 rounded-full">
-                    {content.category}
-                  </span>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold mb-1">
+                    {currentPromotion.title}
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    {currentPromotion.description}
+                  </p>
                 </div>
               </div>
-            </Link>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <Link
+                href={currentPromotion.href}
+                className={`px-6 py-2 bg-gradient-to-r ${currentPromotion.color} rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+              >
+                Explore Now
+              </Link>
+              
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-300 hover:text-white transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Slide Indicators */}
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {promotions.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
           ))}
         </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <div className="text-2xl font-bold mb-1">25+</div>
-            <div className="text-sm opacity-90">New Articles</div>
-          </div>
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <div className="text-2xl font-bold mb-1">10</div>
-            <div className="text-sm opacity-90">Case Studies</div>
-          </div>
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <div className="text-2xl font-bold mb-1">200+</div>
-            <div className="text-sm opacity-90">Pages of Content</div>
-          </div>
-          <div className="bg-white bg-opacity-10 rounded-lg p-4">
-            <div className="text-2xl font-bold mb-1">30K+</div>
-            <div className="text-sm opacity-90">Downloads</div>
-          </div>
-        </div>
+      </div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/2 -right-4 w-6 h-6 bg-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute -bottom-4 left-1/4 w-4 h-4 bg-pink-500/20 rounded-full animate-pulse delay-2000"></div>
       </div>
     </div>
   );
