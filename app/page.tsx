@@ -6,6 +6,9 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -129,6 +132,90 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Enhanced Content Promotion Banner */}
+      <section className="py-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <EnhancedContentPromotionBanner 
+            variant="premium"
+            isVisible={true}
+            autoRotate={true}
+            rotationInterval={8000}
+          />
+        </div>
+      </section>
+
+      {/* Featured Content Section */}
+      <ContentShowcase
+        title="Latest AI Insights & Case Studies"
+        subtitle="Discover proven strategies, real-world success stories, and actionable guides from industry experts"
+        items={featuredContent}
+        variant="featured"
+        showViewAll={true}
+        viewAllHref="/blog"
+      />
+
+      {/* New Content Banner - Top */}
+      {/* <NewContentBanner variant="default" maxItems={4} /> */}
+
+      {/* Latest Content Drop - Prominent Banner */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* NEW: Enhanced Content Showcase - Latest 2025 Content */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* Enhanced Content Promotion Banner */}
+      {/* <ContentPromotionBanner
+        title="🚀 Fresh AI & Business Insights"
+        subtitle="JUST PUBLISHED - JANUARY 2025"
+        description="New this week: AI Enterprise Integration Guide, Customer Support Automation, LLM Guardrails, and our comprehensive AI Architecture & Cost Governance framework. Expert insights to accelerate your growth."
+        ctaText="📚 Read Latest Articles"
+        ctaLink="/blog"
+        secondaryCtaText="📋 Download Free Resources"
+        secondaryCtaLink="/resources"
+        gradient="from-indigo-600 via-purple-600 to-pink-600"
+        featuredContent={[
+          {
+            title: "AI Enterprise Integration 2025",
+            description: "Complete implementation guide with 340% ROI and real case studies",
+            link: "/blog/ai-enterprise-integration-2025",
+            icon: "🏢",
+            readTime: "18 min read",
+            type: "New"
+          },
+          {
+            title: "AI Customer Support Automation 2025",
+            description: "Transform support with 40% cost reduction and improved satisfaction",
+            link: "/blog/ai-customer-support-automation-2025",
+            icon: "🎧",
+            readTime: "9 min read",
+            type: "New"
+          },
+          {
+            title: "LLM Guardrails in Production 2025",
+            description: "Safety without blocking delivery - proven production patterns",
+            link: "/blog/llm-guardrails-in-production-2025",
+            icon: "🛡️",
+            readTime: "8 min read",
+            type: "Trending"
+          },
+          {
+            title: "AI Architecture & Cost Governance",
+            description: "Complete framework for reliable and affordable AI systems",
+            link: "/resources/ai-architecture-cost-governance-2025",
+            icon: "🧩",
+            readTime: "45 min read",
+            type: "Free Download"
+          },
+          {
+            title: "Financial Services AI Success",
+            description: "$50M cost savings, 300% efficiency gains - complete case study",
+            link: "/case-studies/ai-financial-services-transformation-2025",
+            icon: "🏦",
+            readTime: "12 min read",
+            type: "Case Study"
+          }
+        ]}
+      /> */}
+>>>>>>> cursor/create-and-deploy-new-content-a22c
 
       {/* New Content Showcase Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -1684,6 +1771,47 @@ export default function HomePage() {
                 free resources, and early access to new content.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Content Discovery Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InteractiveContentDiscovery />
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <EnhancedNewsletterSignup
+        variant="hero"
+        showBenefits={true}
+        showTestimonials={true}
+      />
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Join 500+ companies already seeing massive results with our AI solutions. Get started with a free consultation and implementation roadmap.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+            >
+              Schedule Free Consultation
+            </Link>
+            <Link 
+              href="/resources/ai-implementation-master-guide-2026" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+            >
+              Download Free Guide
+            </Link>
+>>>>>>> cursor/create-and-deploy-new-content-a22c
           </div>
         </div>
       </section>
