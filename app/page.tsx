@@ -105,6 +105,10 @@ import DynamicContentPromotionBanner from '../components/DynamicContentPromotion
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
+// AI 2025 Revolutionary Breakthrough Components
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -125,6 +129,12 @@ export default function HomePage() {
         
         {/* AI 2035 REVOLUTIONARY CONTENT SHOWCASE */}
         <AI2035ContentShowcase />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE */}
+        <AI2025RevolutionaryContentShowcase />
         
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
