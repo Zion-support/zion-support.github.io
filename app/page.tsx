@@ -60,6 +60,8 @@ import LatestContent2025PromotionBanner from '../components/LatestContent2025Pro
 import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
 import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePromotionBanner2026';
 import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
 
 // New 2025 Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
@@ -67,7 +69,6 @@ import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPro
 import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
 import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
 import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -102,6 +103,12 @@ export default function HomePage() {
         {/* AI 2025 CONTENT SHOWCASE */}
         <AI2025ContentShowcase />
         
+        {/* NEW REVOLUTIONARY CONTENT 2025 BANNER */}
+        <NewContent2025RevolutionaryBanner />
+        
+        {/* NEW REVOLUTIONARY CONTENT 2025 SHOWCASE */}
+        <NewContent2025RevolutionaryShowcase />
+        
         {/* CONTENT DISCOVERY PROMOTION BANNER */}
         <ContentDiscoveryPromotionBanner2025 />
         
@@ -123,7 +130,6 @@ export default function HomePage() {
         {/* LATEST CONTENT 2025 SHOWCASE */}
         <LatestContent2025Showcase />
         
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -162,7 +168,6 @@ export default function HomePage() {
         
         {/* AI 2031 CONTENT SHOWCASE */}
         <AI2031ContentShowcase />
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
         
         {/* AI 2030 CONTENT PROMOTION BANNER */}
         <AI2030ContentPromotionBanner />
