@@ -70,6 +70,7 @@ import NewContentPromotionBanner2025 from '../components/NewContentPromotionBann
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+<<<<<<< HEAD
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import ContentRecommendationWidget2026 from '../components/ContentRecommendationWidget2026';
@@ -144,6 +145,11 @@ import AI2025BreakthroughContentShowcase from '../components/AI2025BreakthroughC
 import AI2037TranscendentPromotionBanner from '../components/AI2037TranscendentPromotionBanner';
 import AI2037TranscendentContentShowcase from '../components/AI2037TranscendentContentShowcase';
 import AI2038SingularityPromotionBanner from '../components/AI2038SingularityPromotionBanner';
+=======
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
+import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+>>>>>>> cursor/create-and-deploy-new-content-fa19
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -160,6 +166,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* NEW REVOLUTIONARY CONTENT BANNER - LATEST */}
         <NewContent2026RevolutionaryBanner />
         
@@ -354,6 +361,13 @@ export default function HomePage() {
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
 >>>>>>> origin/cursor/create-and-deploy-new-content-6c3a
+=======
+        {/* AI 2026 ULTIMATE SHOWCASE BANNER */}
+        <AI2026UltimateShowcaseBanner />
+        
+        {/* AI 2026 CONTENT SHOWCASE */}
+        <AI2026ContentShowcase />
+>>>>>>> cursor/create-and-deploy-new-content-fa19
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
