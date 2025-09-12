@@ -45,6 +45,28 @@ const NewContentPromoBanner = ({
       category: 'RAG'
     },
     {
+      id: '21',
+      title: 'AI Agents for IT Operations 2025: Incident Response and SLO Automation',
+      description: 'Reduce toil with AIOps agents for triage, diagnostics, remediation, and SLO-aware controls.',
+      href: '/blog/ai-2025-agents-for-it-ops',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AIOps'
+    },
+    {
+      id: '22',
+      title: 'IT Ops Automation with AI Agents: 41% MTTR Reduction',
+      description: 'Case study: AI agents automated runbooks and cut MTTR by 41% at a global SaaS platform.',
+      href: '/case-studies/ai-2025-it-ops-automation-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '18',
       title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
       description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
