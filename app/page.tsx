@@ -40,6 +40,71 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT MEGA BANNER */}
+        <section className="py-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔥 JUST PUBLISHED - JANUARY 2025</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🚀 Revolutionary AI Content Drop: 200+ Pages of Expert Insights
+              </h2>
+              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
+                Discover our latest breakthrough content: AI 2025 Year in Review, Workforce Transformation Guide, 
+                Sustainability Success Stories, and the Complete AI Implementation Master Guide 2026. 
+                Everything you need to succeed with AI in 2025 and beyond.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  📖 Download Master Guide (200+ Pages)
+                </Link>
+                <Link
+                  href="/blog/ai-2025-year-in-review"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  📊 Read Year in Review
+                </Link>
+                <Link
+                  href="/blog/ai-workforce-transformation-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  👥 Workforce Guide
+                </Link>
+              </div>
+              
+              {/* Featured New Content Cards */}
+              <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                <Link href="/blog/ai-2025-year-in-review" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">📊</div>
+                    <h3 className="text-sm font-semibold mb-1">AI 2025 Year in Review</h3>
+                    <p className="text-xs opacity-90">Comprehensive analysis of AI breakthroughs and trends</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-workforce-transformation-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">👥</div>
+                    <h3 className="text-sm font-semibold mb-1">Workforce Transformation 2025</h3>
+                    <p className="text-xs opacity-90">Complete reskilling strategies for the AI era</p>
+                  </div>
+                </Link>
+                <Link href="/case-studies/ai-sustainability-transformation-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🌱</div>
+                    <h3 className="text-sm font-semibold mb-1">Sustainability Success Story</h3>
+                    <p className="text-xs opacity-90">60% energy reduction and carbon neutrality</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* AI Tools Showcase Banner */}
         <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -916,32 +981,45 @@ export default function HomePage() {
               🚀 Fresh AI & Business Insights
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Workforce Transformation, Data Privacy Compliance, Green AI Sustainability, 
-              and comprehensive implementation guides. Expert insights to accelerate your growth in 2025.
+              New this week: AI 2025 Year in Review, Workforce Transformation Guide, Sustainability Success Stories, 
+              and the Complete AI Implementation Master Guide 2026. Expert insights to accelerate your growth in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
-                href='/blog'
+                href='/resources/ai-implementation-master-guide-2026'
                 className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
               >
-                📚 Read Latest Articles
+                📖 Download Master Guide (200+ Pages)
               </Link>
               <Link
-                href='/resources'
+                href='/blog'
                 className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
               >
-                📋 Download Free Resources
+                📚 Read Latest Articles
               </Link>
             </div>
           </div>
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-year-in-review' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive analysis of AI breakthroughs and trends</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
             <Link href='/blog/ai-workforce-transformation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Workforce Transformation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Reskilling strategies for the AI era</p>
+                <p className='text-sm opacity-90 mb-3'>Complete reskilling strategies for the AI era</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>18 min read</span>
                   <span className='mx-2'>•</span>
@@ -950,41 +1028,28 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/blog/ai-data-privacy-compliance-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔒</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Data Privacy & Compliance 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete guide to AI privacy regulations</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>22 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/blog/ai-sustainability-green-tech-2025' className='group'>
+            <Link href='/case-studies/ai-sustainability-transformation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Sustainability & Green Tech 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Building eco-friendly AI systems</p>
+                <h3 className='text-lg font-semibold mb-2'>AI Sustainability Success Story</h3>
+                <p className='text-sm opacity-90 mb-3'>60% energy reduction, carbon neutrality achieved</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>20 min read</span>
+                  <span>Case Study</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/case-studies/ai-sustainability-transformation-2025' className='group'>
+            <Link href='/resources/ai-implementation-master-guide-2026' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Sustainability Success Story</h3>
-                <p className='text-sm opacity-90 mb-3'>60% energy reduction, carbon neutrality</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📖</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide 2026</h3>
+                <p className='text-sm opacity-90 mb-3'>200+ page comprehensive implementation framework</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
+                  <span>Free Download</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>200+ pages</span>
                 </div>
               </div>
             </Link>
