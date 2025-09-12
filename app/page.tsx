@@ -6,6 +6,20 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
+import NewContentShowcase from '../components/NewContentShowcase';
+import EnhancedNewsletter from '../components/EnhancedNewsletter';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
+import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
+import ContentPromotionBanner from '../components/ContentPromotionBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -80,6 +94,52 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </section>
+      
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
+      
+      {/* New Content Promotional Banner */}
+      <NewContentPromotionalBanner />
+      
+      {/* Featured Content Section */}
+      <FeaturedContentShowcase />
+      
+      {/* Additional Content Showcase */}
+      <ContentShowcase
+        title="Latest AI Insights & Case Studies"
+        subtitle="Discover proven strategies, real-world success stories, and actionable guides from industry experts"
+        items={featuredContent}
+        variant="featured"
+        showViewAll={true}
+        viewAllHref="/blog"
+        viewAllText="View All Articles"
+        columns={3}
+      />
+      
+      {/* Success Metrics Section */}
+      <SuccessMetrics 
+        metrics={contentMetrics}
+        title="Content Performance"
+        subtitle="Our content drives real business results"
+        items={[
+          {
+            title: "Monthly Readers",
+            value: "500K+",
+            description: "Growing audience of professionals"
+          },
+          {
+            title: "Content Downloads",
+            value: "50K+",
+            description: "Resources downloaded monthly"
+          },
+          {
+            title: "Case Study Views",
+            value: "100K+",
+            description: "Real-world success stories"
+          }
+        ]}
+      />
 
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
