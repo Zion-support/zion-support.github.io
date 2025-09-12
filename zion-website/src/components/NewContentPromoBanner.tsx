@@ -34,211 +34,35 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: 'KG-2025',
-      title: 'Enterprise Knowledge Graphs 2025: Unified Search & Reasoning',
-      description: 'Design and operate enterprise knowledge graphs for semantic search, RAG, and governed reasoning.',
-      href: '/blog/ai-2025-enterprise-knowledge-graphs',
-      type: 'blog',
-      featured: true,
-      readTime: '19 min read',
-      date: 'Sep 12, 2025',
-      category: 'Knowledge'
-    },
-    {
-      id: 'CS-graph-search-2025',
-      title: 'Enterprise Graph Search: 21% Case Resolution Lift',
-      description: 'Case study: Graph + hybrid search improved first‑contact resolution by 21% and cut AHT by 18%.',
-      href: '/case-studies/ai-2025-enterprise-graph-search-impact',
-      type: 'case-study',
-      featured: true,
-      readTime: '9 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: 'AIFINOPS-2025',
-      title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
-      description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
-      href: '/blog/ai-2025-ai-finops-automation',
+      id: '60',
+      title: 'AI Guardrails in Production (2025)',
+      description: 'Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.',
+      href: '/blog/ai-2025-guardrails-in-production',
       type: 'blog',
       featured: true,
       readTime: '18 min read',
       date: 'Sep 12, 2025',
-      category: 'Optimization'
+      category: 'AI Safety'
     },
     {
-      id: 'SALES-PLAYBOOKS-2025',
-      title: 'Agentic Sales Playbooks 2025: From Leads to Closed Won',
-      description: 'Design reliable, compliant agentic sales workflows across prospecting, demos, proposals, and renewals.',
-      href: '/blog/ai-2025-agentic-sales-playbooks',
+      id: '61',
+      title: 'AI Governance Operating Model (2025)',
+      description: 'Roles, decision rights, and automated controls to scale AI with confidence.',
+      href: '/blog/ai-2025-ai-governance-operating-model',
       type: 'blog',
       featured: true,
       readTime: '17 min read',
       date: 'Sep 12, 2025',
-      category: 'Operations'
+      category: 'Governance'
     },
     {
-      id: 'B-plat-2025',
-      title: 'AI Platform Engineering Blueprint 2025',
-      description: 'Governance, evals, routing, observability, and cost controls for enterprise AI platforms.',
-      href: '/blog/ai-2025-ai-platform-engineering-blueprint',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Platforms'
-    },
-    {
-      id: 'CS-c360-2025',
-      title: 'Customer 360 AI Platform: 23% Cross-Sell Lift',
-      description: 'Case study: Unified profiles, uplift modeling, and guardrailed copilots lifted cross-sell by 23%.',
-      href: '/case-studies/ai-2025-customer-360-platform-impact',
-      type: 'case-study',
-      featured: true,
-      readTime: '11 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: 'NEW-e2e-agent-testing-2025',
-      title: 'E2E Testing for AI Agents in 2025',
-      description: 'Scenario-driven agent tests with simulators, guardrails, and CI pipelines for reliability.',
-      href: '/blog/ai-2025-e2e-agent-testing',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Agents'
-    },
-    {
-      id: 'NEW-data-contracts-genai-2025',
-      title: 'Data Contracts for GenAI in 2025',
-      description: 'Contracts for schemas, quality, and governance that boost RAG reliability and compliance.',
-      href: '/blog/ai-2025-data-contracts-genai',
-      type: 'blog',
-      featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'Data'
-    },
-    {
-      id: 'CS-llm-cost-2025',
-      title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
-      description: 'Case study: Quantization, KV cache, and batching cut cost by 38% and p95 by 27%.',
-      href: '/case-studies/ai-2025-llm-inference-cost-reduction',
+      id: '62',
+      title: 'AI Governance Operating Model Impact: 35% Faster Delivery',
+      description: 'Case study: Governance operating model cut incidents 28% and accelerated delivery 35%.',
+      href: '/case-studies/ai-2025-governance-operating-model-impact',
       type: 'case-study',
       featured: true,
       readTime: '10 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: '70',
-      title: 'Enterprise RAG Platforms 2025: Architecture, Quality, and Ops',
-      description: 'Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.',
-      href: '/blog/ai-2025-enterprise-rag-platforms',
-      type: 'blog',
-      featured: true,
-      readTime: '20 min read',
-      date: 'Sep 12, 2025',
-      category: 'RAG'
-    },
-    {
-      id: '73',
-      title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
-      description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
-      href: '/blog/ai-2025-enterprise-retrieval-playbook',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'RAG'
-    },
-    {
-      id: '71',
-      title: 'AI Governance 2025: Policy-as-Code and Runtime Enforcement',
-      description: 'From policy docs to enforced guardrails across datasets, prompts, tools, and agents.',
-      href: '/blog/ai-2025-governance-policy-as-code',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '74',
-      title: 'Production Prompt Engineering 2025: Patterns that Scale',
-      description: 'Schema-first prompts, tool calling, retrieval orchestration, evals, and guardrails for reliability.',
-      href: '/blog/ai-2025-production-prompt-engineering',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Advanced AI'
-    },
-    {
-      id: '75',
-      title: 'AI Governance 2025: Operational Playbook for Enterprises',
-      description: 'Practical operating model: policies, evaluations, review boards, and runtime enforcement.',
-      href: '/blog/ai-2025-ai-governance-operational-playbook',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '72',
-      title: 'Agent Fleet Management 2025: Reliability, Safety, and Cost',
-      description: 'Operate large fleets of AI agents with SLAs: scheduling, guardrails, telemetry, and budgets.',
-      href: '/blog/ai-2025-agent-fleet-management',
-      type: 'blog',
-      featured: true,
-      readTime: '19 min read',
-      date: 'Sep 12, 2025',
-      category: 'Agents'
-    },
-    {
-      id: '54',
-      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
-      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
-      href: '/blog/ai-2025-mlops-best-practices',
-      type: 'blog',
-      featured: true,
-      readTime: '14 min read',
-      date: 'Sep 12, 2025',
-      category: 'MLOps'
-    },
-    {
-      id: '55',
-      title: 'Vector Databases Benchmarks 2025',
-      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
-      href: '/blog/ai-2025-vector-databases-benchmarks',
-      type: 'blog',
-      featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'RAG'
-    },
-    {
-      id: '56',
-      title: 'Secure Agent Architectures (2025)',
-      description: 'Blueprint for secure enterprise agent architectures with policy-as-code, guardrails, and SLAs.',
-      href: '/blog/ai-2025-secure-agent-architectures',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'AI Security'
-    },
-    {
-      id: '57',
-      title: 'AI Customer Analytics: 19% Revenue Uplift',
-      description: 'Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.',
-      href: '/case-studies/ai-2025-customer-analytics-impact',
-      type: 'case-study',
-      featured: true,
-      readTime: '12 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
     },
@@ -285,28 +109,6 @@ const NewContentPromoBanner = ({
       readTime: '14 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
-    },
-    {
-      id: '54',
-      title: 'Cloud Cost Optimization for AI & Data Workloads (2025)',
-      description: 'Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.',
-      href: '/blog/ai-2025-cloud-cost-optimization',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Optimization'
-    },
-    {
-      id: '55',
-      title: 'Agent Safety Red-Teaming (2025): Methods & Tooling',
-      description: 'Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.',
-      href: '/blog/ai-2025-agent-safety-red-teaming',
-      type: 'blog',
-      featured: true,
-      readTime: '21 min read',
-      date: 'Sep 12, 2025',
-      category: 'AI Safety'
     },
     {
       id: '40',
@@ -681,28 +483,6 @@ const NewContentPromoBanner = ({
       readTime: '22 min read',
       date: 'Jan 18, 2025',
       category: 'AI Healthcare'
-    },
-    {
-      id: '9991',
-      title: 'LLM Inference Optimization on GPUs (2025)',
-      description: 'Quantization, KV cache strategies, smart batching, and parallelism to cut latency and cost.',
-      href: '/blog/ai-2025-llm-inference-optimization-gpus',
-      type: 'blog',
-      featured: true,
-      readTime: '15 min read',
-      date: 'Sep 12, 2025',
-      category: 'Inference'
-    },
-    {
-      id: '9992',
-      title: 'Serverless GenAI Architectures (2025)',
-      description: 'Event-driven GenAI with functions, queues, vector DBs, and eval guardrails on AWS/GCP/Azure.',
-      href: '/blog/ai-2025-serverless-genai-architectures',
-      type: 'blog',
-      featured: true,
-      readTime: '14 min read',
-      date: 'Sep 12, 2025',
-      category: 'Architecture'
     }
   ];
 

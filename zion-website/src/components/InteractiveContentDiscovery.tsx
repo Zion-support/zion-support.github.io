@@ -28,28 +28,28 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
-      id: 'AIFINOPS-2025',
-      title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
-      description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
-      href: '/blog/ai-2025-ai-finops-automation',
+      id: '60',
+      title: 'AI Governance Maturity Model (2025)',
+      description: 'Assess your governance level and implement pragmatic controls without slowing delivery.',
+      href: '/blog/ai-2025-governance-maturity-model',
       type: 'blog',
-      category: 'Optimization',
-      readTime: '18 min read',
+      category: 'Governance',
+      readTime: '16 min read',
       date: 'Sep 12, 2025',
-      tags: ['FinOps', 'Budgets', 'Routing', 'Right‑sizing'],
+      tags: ['Governance', 'Risk', 'Policy-as-code'],
       featured: true,
-      difficulty: 'intermediate'
+      difficulty: 'beginner'
     },
     {
-      id: 'SALES-PLAYBOOKS-2025',
-      title: 'Agentic Sales Playbooks 2025: From Leads to Closed Won',
-      description: 'Design reliable, compliant agentic sales workflows across prospecting, demos, proposals, and renewals.',
-      href: '/blog/ai-2025-agentic-sales-playbooks',
-      type: 'blog',
-      category: 'Operations',
-      readTime: '17 min read',
+      id: '61',
+      title: 'Governance Maturity Rollout: 60% Faster Reviews',
+      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage.',
+      href: '/case-studies/ai-2025-governance-maturity-rollout',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
       date: 'Sep 12, 2025',
-      tags: ['Sales', 'Agents', 'Playbooks', 'Compliance'],
+      tags: ['Governance', 'Compliance', 'Evaluations'],
       featured: true,
       difficulty: 'beginner'
     },
@@ -65,19 +65,6 @@ function InteractiveContentDiscovery() {
       tags: ['Optimization', 'Quantization', 'Pruning', 'Distillation'],
       featured: true,
       difficulty: 'intermediate'
-    },
-    {
-      id: 'CS-llm-cost-2025',
-      title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
-      description: 'Case study: Quantization, KV cache tuning, and smart batching cut cost by 38% and p95 by 27%.',
-      href: '/case-studies/ai-2025-llm-inference-cost-reduction',
-      type: 'case-study',
-      category: 'Case Study',
-      readTime: '10 min read',
-      date: 'Sep 12, 2025',
-      tags: ['Inference', 'Optimization', 'Quantization', 'Batching'],
-      featured: true,
-      difficulty: 'beginner'
     },
     {
       id: '51',
@@ -222,7 +209,6 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
-    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',

@@ -35,12 +35,11 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
-    { name: 'Ultra Content', href: '/ultra-content-showcase', icon: '🚀', isNew: true, isHot: true },
-    { name: 'Mega Content', href: '/mega-content-showcase', icon: '🎉', isNew: true, isHot: true },
-    { name: 'Content Showcase', href: '/content-showcase', icon: '✨', isNew: true },
+    { name: 'Latest Content', href: '/blog/ai-2025-future-of-work-revolution', icon: '✨', isNew: true, isHot: true },
+    { name: 'Case Studies', href: '/case-studies/ai-transformation-global-tech-giant-2025', icon: '📈', isNew: true },
+    { name: 'Free Resources', href: '/resources/ai-2025-complete-implementation-master-guide', icon: '📚', isNew: true },
     { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
-    { name: 'Case Studies', href: '/case-studies', icon: '📊' },
-    { name: 'Resources', href: '/resources', icon: '📚', isNew: true },
+    { name: 'All Case Studies', href: '/case-studies', icon: '📊' },
     { name: 'Services', href: '/services', icon: '🚀' },
     { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Contact', href: '/contact', icon: '📞' }

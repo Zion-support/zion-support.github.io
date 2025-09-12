@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "filesProcessed": 4,
+    "successfullyFixed": 4,
+    "failedFiles": 0,
+    "duration": "1 seconds"
+  },
+  "fixedFiles": [
+    "src/components/ProductListingCard.tsx",
+    "src/components/talent/TalentCard.tsx",
+    "src/pages/Marketplace.tsx",
+    "src/pages/admin/TokenManager.tsx"
+  ],
+  "failedFiles": [],
+  "timestamp": "2025-09-12T00:48:59.301Z"
+}

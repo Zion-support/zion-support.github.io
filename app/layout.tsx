@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
-import NewContentPromoBanner from './components/NewContentPromoBanner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ErrorBoundary from '../components/ErrorBoundary';
+import NewContentBanner from '../components/NewContentBanner';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import EnhancedNavigation from '../components/EnhancedNavigation';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -73,21 +78,36 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <Link 
             href="/content-showcase" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
             Content Library
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
           </Link>
           <Link 
-            href="/services" 
+            href="/blog" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
-            Services
+            Blog
           </Link>
           <Link 
             href="/case-studies" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Case Studies
+          </Link>
+          <Link 
+            href="/resources" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Resources
+          </Link>
+          <Link 
+            href="/services" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Services
           </Link>
           <Link 
             href="/contact" 
@@ -213,12 +233,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
-        <Header />
-        <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
-          <NewContentPromoBanner variant="minimal" maxItems={3} />
-          {children}
-        </main>
-        <Footer />
+        <ErrorBoundary>
+          <EnhancedContentPromotionBanner />
+          <EnhancedNavigation />
+          <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
+            {children}
+          </main>
+          <Footer />
+          
+          {/* Development Tools */}
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+        </ErrorBoundary>
       </body>
     </html>
   );

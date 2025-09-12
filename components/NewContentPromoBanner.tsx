@@ -4,15 +4,20 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Star, Clock, Sparkles, Rocket, Brain, Zap } from 'lucide-react';
 
-interface NewContentPromoBannerProps {
-  className?: string;
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  type: 'blog' | 'case-study' | 'service';
+  featured: boolean;
 }
 
 const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className = '' }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentContent, setCurrentContent] = useState(0);
 
-  const newContent = [
+  const newContent: ContentItem[] = [
     {
       title: "AI 2025 Revolutionary Breakthroughs",
       description: "Discover groundbreaking AI innovations transforming industries worldwide",
@@ -162,8 +167,26 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className
             </div>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
+        <div 
+          className="h-full bg-white transition-all duration-5000 ease-linear"
+          style={{ width: `${((currentIndex + 1) / newContent.length) * 100}%` }}
+        />
+      </div>
+    </div>
   );
 };
 
