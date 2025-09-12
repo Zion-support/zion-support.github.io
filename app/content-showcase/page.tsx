@@ -5,6 +5,24 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025 Breakthrough Innovations: The Next Frontier of Artificial Intelligence",
+      description: "Discover the groundbreaking AI innovations set to revolutionize 2025. From AGI breakthroughs to quantum AI, explore the technologies that will reshape our world.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🔮",
+      category: "AI Innovation",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Enterprise Security 2025: Complete Guide to Protecting Your AI Systems",
+      description: "Master AI enterprise security in 2025. Learn about AI-specific threats, zero-trust architectures, data protection, and compliance strategies for enterprise AI deployments.",
+      href: "/blog/ai-enterprise-security-2025",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Predictions 2025: The Future of Artificial Intelligence",
       description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
       href: "/blog/ai-2025-predictions",
@@ -44,6 +62,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Manufacturing Automation Success: 40% Cost Reduction Case Study",
+      description: "How a Fortune 500 manufacturing company achieved 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
+      href: "/case-studies/ai-manufacturing-automation-success-2025",
+      icon: "🏭",
+      category: "Manufacturing AI",
+      result: "40% Cost Reduction",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
       description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
       href: "/case-studies/ai-transformation-enterprise-success-2025",
@@ -60,19 +87,19 @@ export default function ContentShowcasePage() {
       category: "Retail AI",
       result: "300% Growth",
       date: "Feb 03, 2025"
-    },
-    {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newResources = [
+    {
+      title: "AI Implementation Master Guide 2025: Complete Step-by-Step Resource",
+      description: "Download our comprehensive 150-page AI Implementation Master Guide for 2025. Includes checklists, templates, best practices, and real-world case studies for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 30, 2025"
+    },
     {
       title: "AI Transformation Playbook 2025: Your Guide to Digital Success",
       description: "Download Zion Tech Group's comprehensive AI Transformation Playbook for 2025. A step-by-step guide covering strategy, technology, and people for successful digital transformation.",
