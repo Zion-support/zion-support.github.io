@@ -39,6 +39,88 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT MEGA BANNER */}
+        <section className="py-12 bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-30 rounded-full px-8 py-3 mb-6">
+                <span className="text-lg font-bold">🚀 ULTIMATE AI CONTENT EXPLOSION - JANUARY 2025</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-8">
+                🎯 50+ NEW AI RESOURCES JUST DROPPED!
+              </h1>
+              <p className="text-2xl md:text-3xl opacity-95 mb-10 max-w-5xl mx-auto leading-relaxed">
+                The biggest AI content update in our history! Advanced automation guides, cybersecurity 
+                frameworks, healthcare success stories, financial transformation case studies, and the 
+                complete 200+ page AI Implementation Master Guide 2026. Everything you need to dominate AI in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
+                <Link
+                  href="/content-showcase"
+                  className="bg-white text-red-600 px-12 py-5 rounded-xl font-bold hover:bg-gray-100 transition-colors text-xl shadow-2xl"
+                >
+                  🎯 EXPLORE ALL 50+ RESOURCES
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-3 border-white text-white px-12 py-5 rounded-xl font-bold hover:bg-white hover:text-red-600 transition-colors text-xl"
+                >
+                  📚 DOWNLOAD MASTER GUIDE (200+ PAGES)
+                </Link>
+              </div>
+              
+              {/* Featured Content Mega Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+                <Link href="/blog/ai-2025-advanced-automation" className="group">
+                  <div className="bg-white bg-opacity-15 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-30">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🤖</div>
+                    <h3 className="text-lg font-bold mb-2">AI Advanced Automation 2025</h3>
+                    <p className="text-sm opacity-90">Complete implementation guide</p>
+                    <div className="mt-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">NEW</div>
+                  </div>
+                </Link>
+                
+                <Link href="/blog/ai-2025-cybersecurity-threats" className="group">
+                  <div className="bg-white bg-opacity-15 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-30">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🛡️</div>
+                    <h3 className="text-lg font-bold mb-2">AI Cybersecurity Threats</h3>
+                    <p className="text-sm opacity-90">Complete defense guide</p>
+                    <div className="mt-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">HOT</div>
+                  </div>
+                </Link>
+                
+                <Link href="/case-studies/ai-healthcare-diagnosis-success-2025" className="group">
+                  <div className="bg-white bg-opacity-15 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-30">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏥</div>
+                    <h3 className="text-lg font-bold mb-2">Healthcare AI Success</h3>
+                    <p className="text-sm opacity-90">95% accuracy achieved</p>
+                    <div className="mt-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">CASE STUDY</div>
+                  </div>
+                </Link>
+                
+                <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
+                  <div className="bg-white bg-opacity-15 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-30">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏦</div>
+                    <h3 className="text-lg font-bold mb-2">$50M Financial Success</h3>
+                    <p className="text-sm opacity-90">300% ROI achieved</p>
+                    <div className="mt-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">BREAKTHROUGH</div>
+                  </div>
+                </Link>
+                
+                <Link href="/resources/ai-implementation-master-guide-2026" className="group">
+                  <div className="bg-white bg-opacity-15 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-30">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📖</div>
+                    <h3 className="text-lg font-bold mb-2">Master Guide 2026</h3>
+                    <p className="text-sm opacity-90">200+ pages free</p>
+                    <div className="mt-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">MEGA GUIDE</div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Mega Content Drop Banner */}
         <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
