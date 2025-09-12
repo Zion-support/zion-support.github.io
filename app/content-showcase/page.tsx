@@ -5,13 +5,22 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Predictions 2025: The Future of Artificial Intelligence",
-      description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
-      href: "/blog/ai-2025-predictions",
+      title: "AI 2025 Breakthrough Innovations: The Next Frontier of Artificial Intelligence",
+      description: "Discover the groundbreaking AI innovations that will reshape 2025. From AGI breakthroughs to quantum AI, explore the technologies that will transform industries and create new possibilities.",
+      href: "/blog/ai-2025-breakthrough-innovations",
       icon: "🔮",
-      category: "AI Trends",
-      readTime: "15 min read",
-      date: "Jan 25, 2025"
+      category: "AI Innovation",
+      readTime: "25 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Enterprise Automation 2025: Complete Implementation Guide with 40% Cost Reduction",
+      description: "Transform your enterprise with AI automation. Our comprehensive 2025 guide covers strategy, implementation, and real case studies showing 40% cost reduction and 300% productivity gains.",
+      href: "/blog/ai-enterprise-automation-2025",
+      icon: "🏢",
+      category: "Enterprise AI",
+      readTime: "20 min read",
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -30,27 +39,18 @@ export default function ContentShowcasePage() {
       category: "AI Technology",
       readTime: "12 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen Attacks",
-      description: "Comprehensive analysis of emerging AI-powered cyber threats and defense strategies to protect your organization in 2025.",
-      href: "/blog/ai-cybersecurity-threats-2025",
-      icon: "🛡️",
-      category: "Cybersecurity",
-      readTime: "20 min read",
-      date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
+      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study with $50M Savings",
       description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
       href: "/case-studies/ai-transformation-enterprise-success-2025",
       icon: "🏆",
       category: "Enterprise AI",
       result: "$50M Savings",
-      date: "Feb 05, 2025"
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Retail Transformation Success: 300% Revenue Growth",
@@ -74,6 +74,15 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
+      title: "AI Implementation Checklist 2025: 150+ Actionable Items for Success",
+      description: "Download Zion Tech Group's comprehensive AI Implementation Checklist for 2025. 150+ actionable items across 7 key categories to ensure successful AI deployment and transformation.",
+      href: "/resources/ai-implementation-checklist-2025",
+      icon: "📋",
+      category: "Checklist",
+      type: "Free Download",
+      date: "Jan 28, 2025"
+    },
+    {
       title: "AI Transformation Playbook 2025: Your Guide to Digital Success",
       description: "Download Zion Tech Group's comprehensive AI Transformation Playbook for 2025. A step-by-step guide covering strategy, technology, and people for successful digital transformation.",
       href: "/resources/ai-transformation-playbook-2025",
@@ -81,15 +90,6 @@ export default function ContentShowcasePage() {
       category: "Playbook",
       type: "Free Download",
       date: "Feb 10, 2025"
-    },
-    {
-      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
-      description: "Complete checklist covering every aspect of AI implementation from strategy to deployment, with 150+ actionable items across 7 key categories.",
-      href: "/resources/ai-implementation-checklist-2025",
-      icon: "📋",
-      category: "Checklist",
-      type: "Free Download",
-      date: "Feb 08, 2025"
     },
     {
       title: "AI Security Hardening Checklist: Essential Security Measures",
