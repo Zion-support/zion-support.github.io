@@ -60,6 +60,7 @@ import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContent
 import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -76,6 +77,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT 2026 PROMOTION BANNER */}
+        <UltimateContent2026PromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
