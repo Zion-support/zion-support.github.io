@@ -1,166 +1,177 @@
-const CACHE_NAME = 'zion-tech-group-v1'; const STATIC_CACHE = 'static-v1'; const DYNAMIC_CACHE = 'dynamic-v1'; const STATIC_ASSETS = [ '/','/favicon.ico','/favicon.svg','/og-image.svg','/manifest.json','/offline.html' ]; self.addEventListener('install',(event) => {  event.waitUntil( caches.open(STATIC_CACHE) .then((cache) => {  return cache.addAll(STATIC_ASSETS)}) .then(() => {  return self.skipWaiting()}) )}); self.addEventListener('activate',(event) => {  event.waitUntil( caches.keys() .then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {  return caches.delete(cacheName)} }) )}) .then(() => {  return self.clients.claim()}) )}); self.addEventListener('fetch',(event) => { const { request } = event; const url = new URL(request.url); if (request.method !== 'GET') { return} if (url.origin !== location.origin) { return} event.respondWith( caches.match(request) .then((cachedResponse) => { if (cachedResponse) { return cachedResponse} return fetch(request) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(DYNAMIC_CACHE) .then((cache) => { cache.put(request,responseToCache)}); return networkResponse}) .catch(() => { if (request.destination === 'document') { return caches.match('/offline.html')} })}) )}); self.addEventListener('sync',(event) => { if (event.tag === 'contact-form') { event.waitUntil( handleOfflineFormSubmissions() )} }); async function handleOfflineFormSubmissions() { } self.addEventListener('push',(event) => { if (event.data) { const data = event.data.json(); const options = { body: data.body,icon: '/favicon.svg',badge: '/favicon.svg',vibrate: [100,50,100],data: { dateOfArrival: Date.now(),primaryKey: 1 } }; event.waitUntil( self.registration.showNotification(data.title,options) )} }); self.addEventListener('notificationclick',(event) => { event.notification.close(); event.waitUntil( clients.openWindow('/') )});
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
-// Assets to cache on install
-const STATIC_ASSETS = ['/'
-  '/favicon.ico'
-  '/favicon.svg'
-  '/og-image.svg'
+/* eslint-env serviceworker */
+/* global self, caches */
+
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+
+// Routes that should be cached
+const STATIC_ROUTES = [
+  '/',
+  '/offline.html',
   '/manifest.json'
-  '/offline.html'];
+];
+
+// API routes that should be cached
+const API_ROUTES = [
+  '/api/contact',
+  '/api/services'
+];
+
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log(Service Worker installing...')
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS)})
+        return cache.addAll(STATIC_ROUTES);
+      })
       .then(() => {
-        console.log('Service Worker installed');
-        return self.skipWaiting()})
-  )});// Activate event - clean up old caches
-self.addEventListener(activate', (event) => {
-  console.log('Service Worker activating...)
+        return self.skipWaiting();
+      })
+      .catch(() => {
+        // Handle caching errors silently
+      })
+  );
+});
+
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old "cache": ', cacheName);
-              return caches.delete(cacheName)}          })
-        )})
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
       .then(() => {
-        console.log('Service Worker activated');
-        return self.clients.claim()})
-  )});
-// Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {  const { request } = event;
+        return self.clients.claim();
+      })
+  );
+});
+
+// Fetch event - serve from cache or network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
   const url = new URL(request.url);
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return}
-  // Skip external requests
-  if (url.origin !== location.origin) {
-    return}  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-  // Return cached version if available
-        if (cachedResponse) {
-          return cachedResponse}
-        // Otherwise, fetch from network
-        return fetch(request)
-          .then((networkResponse) => {
-            // Don't cache non-successful responses
-            if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') {
-              return networkResponse}
-            // Clone the response
-            const responseToCache = networkResponse.clone();
-            // Cache the response
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache)});
-            return networkResponse})
-          .catch(() => {
-            // If network fails, return offline page for navigation requests
-            if (request.destination === 'document') {
-              return caches.match('/offline.html')}
-          })})
-  )});
+    return;
+  }
+
+  // Handle different types of requests
+  if (STATIC_ROUTES.includes(url.pathname)) {
+    // Static routes - cache first
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          return response || fetch(request);
+        })
+        .catch(() => {
+          // Return offline page for navigation requests
+          if (request.mode === 'navigate') {
+            return caches.match('/offline.html');
+          }
+        })
+    );
+  } else if (API_ROUTES.some(route => url.pathname.startsWith(route))) {
+    // API routes - network first, then cache
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          // Clone the response before caching
+          const responseClone = response.clone();
+          caches.open(DYNAMIC_CACHE)
+            .then((cache) => {
+              cache.put(request, responseClone);
+            });
+          return response;
+        })
+        .catch(() => {
+          // Return cached response if available
+          return caches.match(request);
+        })
+    );
+  } else if (request.destination === 'image' || request.destination === 'style' || request.destination === 'script') {
+    // Static assets - cache first
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          return response || fetch(request)
+            .then((fetchResponse) => {
+              // Cache the fetched response
+              const responseClone = fetchResponse.clone();
+              caches.open(DYNAMIC_CACHE)
+                .then((cache) => {
+                  cache.put(request, responseClone);
+                });
+              return fetchResponse;
+            });
+        })
+    );
+  } else {
+    // Other requests - network first
+    event.respondWith(fetch(request));
+  }
+});
+
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
+  if (event.tag === 'background-sync') {
     event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineFormSubmissions()
-    )}});
-async function handleOfflineFormSubmissions() {
-  // This would handle queued form submissions when back online
-  console.log('Handling offline form submissions...')}
-// Push notifications (if needed in the future)
+      // Handle background sync logic here
+      Promise.resolve()
+    );
+  }
+});
+
+// Push notification handling
 self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      "body": data.body
-      "icon": '/favicon.svg'
-      "badge": '/favicon.svg'
-      "vibrate": [100, 50, 100]
-      "data": {
-        dateOfArrival: Date.now()
-        "primaryKey": 1
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/icon-192x192.png',
+    badge: '/icon-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View',
+        icon: '/icon-192x192.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
       }
-    }
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    )}});
-// Notification click handler
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  event.waitUntil(
-    clients.openWindow('/')
-  )});
-const CACHE_NAME = 'zion-tech-group-v1'; const STATIC_CACHE = 'static-v1'; const DYNAMIC_CACHE = 'dynamic-v1'; const STATIC_ASSETS = [ '/','/favicon.ico','/favicon.svg','/og-image.svg','/manifest.json','/offline.html' ]; self.addEventListener('install',(event) => { console.log('Service Worker installing...'); event.waitUntil( caches.open(STATIC_CACHE) .then((cache) => { console.log('Caching static assets'); return cache.addAll(STATIC_ASSETS)}) .then(() => { console.log('Service Worker installed'); return self.skipWaiting()}) )}); self.addEventListener('activate',(event) => { console.log('Service Worker activating...'); event.waitUntil( caches.keys() .then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) { console.log('Deleting old cache:',cacheName); return caches.delete(cacheName)} }) )}) .then(() => { console.log('Service Worker activated'); return self.clients.claim()}) )}); self.addEventListener('fetch',(event) => { const { request } = event; const url = new URL(request.url); if (request.method !== 'GET') { return} if (url.origin !== location.origin) { return} event.respondWith( caches.match(request) .then((cachedResponse) => { if (cachedResponse) { return cachedResponse} return fetch(request) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(DYNAMIC_CACHE) .then((cache) => { cache.put(request,responseToCache)}); return networkResponse}) .catch(() => { if (request.destination === 'document') { return caches.match('/offline.html')} })}) )}); self.addEventListener('sync',(event) => { if (event.tag === 'contact-form') { event.waitUntil( handleOfflineFormSubmissions() )} }); async function handleOfflineFormSubmissions() { console.log('Handling offline form submissions...')} self.addEventListener('push',(event) => { if (event.data) { const data = event.data.json(); const options = { body: 'data.body',icon: '/favicon.svg',badge: '/favicon.svg',vibrate: '[100',50,100],data: { dateOfArrival: Date.now(),primaryKey: '1' } }; event.waitUntil( self.registration.showNotification(data.title,options) )} }); self.addEventListener('notificationclick',(event) => { event.notification.close(); event.waitUntil( clients.openWindow('/') )});
-const CACHE_NAME = 'zion-tech-group-v1'; const STATIC_CACHE = 'static-v1'; const DYNAMIC_CACHE = 'dynamic-v1'; const STATIC_ASSETS = [ '/','/favicon.ico','/favicon.svg','/og-image.svg','/manifest.json','/offline.html' ]; self.addEventListener('install',(event) => { console.log('Service Worker installing...'); event.waitUntil( caches.open(STATIC_CACHE) .then((cache) => { console.log('Caching static assets'); return cache.addAll(STATIC_ASSETS)}) .then(() => { console.log('Service Worker installed'); return self.skipWaiting()}) )}); self.addEventListener('activate',(event) => { console.log('Service Worker activating...'); event.waitUntil( caches.keys() .then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) { console.log('Deleting old cache:',cacheName); return caches.delete(cacheName)} }) )}) .then(() => { console.log('Service Worker activated'); return self.clients.claim()}) )}); self.addEventListener('fetch',(event) => { const { request } = event; const url = new URL(request.url); if (request.method !== 'GET') { return} if (url.origin !== location.origin) { return} event.respondWith( caches.match(request) .then((cachedResponse) => { if (cachedResponse) { return cachedResponse} return fetch(request) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(DYNAMIC_CACHE) .then((cache) => { cache.put(request,responseToCache)}); return networkResponse}) .catch(() => { if (request.destination === 'document') { return caches.match('/offline.html')} })}) )}); self.addEventListener('sync',(event) => { if (event.tag === 'contact-form') { event.waitUntil( handleOfflineFormSubmissions() )} }); async function handleOfflineFormSubmissions() { console.log('Handling offline form submissions...')} self.addEventListener('push',(event) => { if (event.data) { const data = event.data.json(); const options = { body: data.body,icon: '/favicon.svg',badge: '/favicon.svg',vibrate: [100,50,100],data: { dateOfArrival: Date.now(),primaryKey: 1 } }; event.waitUntil( self.registration.showNotification(data.title,options) )} }); self.addEventListener('notificationclick',(event) => { event.notification.close(); event.waitUntil( clients.openWindow('/') )});  console.log(Notification clicked:', event.action)
-  event.notification.close()
-  if (event.action === 'explore) {
+
+  if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow('/')
-    )
-}
+      self.clients.openWindow('/')
+    );
+  }
 });
-// Helper functions
-function shouldCache(url) {
-  // Cache API responses, images, and other assets
-  return (
-    url.includes(/api/') |
-    url.includes('.js) |
-    url.includes('.css') |
-    url.includes(.png') |
-    url.includes('.jpg) |
-    url.includes('.jpeg') |
-    url.includes(.gif') |
-    url.includes('.svg) |
-    url.includes('.webp')
-  )
-}
-async function doBackgroundSync() {
-  try {
-    // Perform background sync operations
-    console.log(Performing background sync...')
-  // Example: Sync offline data
-    const offlineData = await getOfflineData()
-  if (offlineData.length > 0) {
-      await syncOfflineData(offlineData)
-}
-    console.log('Background sync completed);
-  } catch (error) {
-  console.error('Background sync failed:', error)
-}
-}
-async function getOfflineData() {
-  // Get offline data from IndexedDB or localStorage
-  return []
-}
-async function syncOfflineData(data) {
-  // Sync offline data with server
-  console.log(Syncing offline data:', data)
-}
-// Cache management
-async function clearOldCaches() {
-  const cacheNames = await caches.keys()
-  const oldCaches = cacheNames.filter(name =>
-    name !== STATIC_CACHE && name !== DYNAMIC_CACHE
-  )
-  await Promise.all(
-    oldCaches.map(name => caches.delete(name))
-  )
-}
-// Periodic cache cleanup
-setInterval(() => {
-  clearOldCaches()
-}, 24 * 60 * 60 * 1000); // Clean up every 24 hours
-const CACHE_NAME = 'zion-tech-group-v1'; const STATIC_CACHE = 'static-v1'; const DYNAMIC_CACHE = 'dynamic-v1'; const STATIC_ASSETS = [ '/','/favicon.ico','/favicon.svg','/og-image.svg','/manifest.json','/offline.html' ]; self.addEventListener('install',(event) => { console.log('Service Worker installing...'); event.waitUntil( caches.open(STATIC_CACHE) .then((cache) => { console.log('Caching static assets'); return cache.addAll(STATIC_ASSETS)}) .then(() => { console.log('Service Worker installed'); return self.skipWaiting()}) )}); self.addEventListener('activate',(event) => { console.log('Service Worker activating...'); event.waitUntil( caches.keys() .then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) { console.log('Deleting old cache:',cacheName); return caches.delete(cacheName)} }) )}) .then(() => { console.log('Service Worker activated'); return self.clients.claim()}) )}); self.addEventListener('fetch',(event) => { const { request } = event; const url = new URL(request.url); if (request.method !== 'GET') { return} if (url.origin !== location.origin) { return} event.respondWith( caches.match(request) .then((cachedResponse) => { if (cachedResponse) { return cachedResponse} return fetch(request) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(DYNAMIC_CACHE) .then((cache) => { cache.put(request,responseToCache)}); return networkResponse}) .catch(() => { if (request.destination === 'document') { return caches.match('/offline.html')} })}) )}); self.addEventListener('sync',(event) => { if (event.tag === 'contact-form') { event.waitUntil( handleOfflineFormSubmissions() )} }); async function handleOfflineFormSubmissions() { console.log('Handling offline form submissions...')} self.addEventListener('push',(event) => { if (event.data) { const data = event.data.json(); const options = { body: data.body,icon: '/favicon.svg',badge: '/favicon.svg',vibrate: [100,50,100],data: { dateOfArrival: Date.now(),primaryKey: 1 } }; event.waitUntil( self.registration.showNotification(data.title,options) )} }); self.addEventListener('notificationclick',(event) => { event.notification.close(); event.waitUntil( clients.openWindow('/') )});
-const CACHE_NAME = 'zion-tech-group-v1'; const STATIC_CACHE = 'static-v1'; const DYNAMIC_CACHE = 'dynamic-v1'; const STATIC_ASSETS = [ '/','/favicon.ico','/favicon.svg','/og-image.svg','/manifest.json','/offline.html' ]; self.addEventListener('install',(event) => { console.log('Service Worker installing...'); event.waitUntil( caches.open(STATIC_CACHE) .then((cache) => { console.log('Caching static assets'); return cache.addAll(STATIC_ASSETS)}) .then(() => { console.log('Service Worker installed'); return self.skipWaiting()}) )}); self.addEventListener('activate',(event) => { console.log('Service Worker activating...'); event.waitUntil( caches.keys() .then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) { console.log('Deleting old cache:',cacheName); return caches.delete(cacheName)} }) )}) .then(() => { console.log('Service Worker activated'); return self.clients.claim()}) )}); self.addEventListener('fetch',(event) => { const { request } = event; const url = new URL(request.url); if (request.method !== 'GET') { return} if (url.origin !== location.origin) { return} event.respondWith( caches.match(request) .then((cachedResponse) => { if (cachedResponse) { return cachedResponse} return fetch(request) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(DYNAMIC_CACHE) .then((cache) => { cache.put(request,responseToCache)}); return networkResponse}) .catch(() => { if (request.destination === 'document') { return caches.match('/offline.html')} })}) )}); self.addEventListener('sync',(event) => { if (event.tag === 'contact-form') { event.waitUntil( handleOfflineFormSubmissions() )} }); async function handleOfflineFormSubmissions() { console.log('Handling offline form submissions...')} self.addEventListener('push',(event) => { if (event.data) { const data = event.data.json(); const options = { body: data.body,icon: '/favicon.svg',badge: '/favicon.svg',vibrate: [100,50,100],data: { dateOfArrival: Date.now(),primaryKey: 1 } }; event.waitUntil( self.registration.showNotification(data.title,options) )} }); self.addEventListener('notificationclick',(event) => { event.notification.close(); event.waitUntil( clients.openWindow('/') )});
+
+// Message handling for communication with main thread
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});

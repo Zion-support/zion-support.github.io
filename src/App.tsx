@@ -1,34 +1,43 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Sidebar from './components/layout/Sidebar'
-import ErrorBoundary from './components/ErrorBoundary'
-// Import pages
-import HomePage from './pages/Home'
-import AboutPage from './pages/About'
-import ContactPage from './pages/Contact'
-import ServicesPage from './pages/Services'
-import PricingPage from './pages/Pricing'
-export default function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { Footer } from './components/Footer';
+
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const About = React.lazy(() => import('./pages/AboutPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+
+const App = () => {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <Sidebar />
-          <main className="flex-1 lg:ml-80">
+    <Router>
+      <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        <Header />
+        <Sidebar />
+        
+        {/* Main Content with proper spacing for header and sidebar */}
+        <main className="ml-64 pt-20 min-h-screen">
+          <React.Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-cyan-400 text-lg">Loading...</p>
+            </div>
+          }>
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
-  )
-}
+          </React.Suspense>
+        </main>
+        
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;

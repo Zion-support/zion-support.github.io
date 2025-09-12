@@ -1,212 +1,114 @@
 #!/bin/bash
 
-# Comprehensive PR Merge Script
-# This script will merge all open PRs into the main branch systematically
-
+# Comprehensive PR merging script
 set -e
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+echo "=== Starting comprehensive PR merge process ==="
 
-# Set GitHub token
-export GH_TOKEN=ghs_v5EHCNRCCjgCQX6fSeu6jdZDz16uJb3AGWKD
-
-# Function to print colored output
-print_status() {
-    echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-}
-
-print_success() {
-    echo -e "${GREEN}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-}
-
-# Function to merge a single PR
-merge_pr() {
-    local pr_number=$1
-    local pr_title=$2
+# Function to safely merge a branch
+merge_branch() {
+    local branch_name="$1"
+    local branch_ref="origin/$branch_name"
     
-    print_status "Processing PR #$pr_number: $pr_title"
+    echo "Attempting to merge $branch_ref..."
     
-    # Get PR details
-    local pr_details=$(gh pr view "$pr_number" --json headRefName,title,state)
-    local branch_name=$(echo "$pr_details" | jq -r '.headRefName')
-    local state=$(echo "$pr_details" | jq -r '.state')
+    # Create a temporary merge branch
+    local merge_branch="merge-$branch_name-$(date +%s)"
     
-    if [ "$state" != "OPEN" ]; then
-        print_warning "PR #$pr_number is not open (state: $state), skipping..."
-        return 0
-    fi
+    # Checkout main and ensure it's up to date
+    git checkout main
+    git pull origin main
     
-    print_status "Branch: $branch_name"
+    # Create merge branch
+    git checkout -b "$merge_branch"
     
-    # Fetch the branch
-    git fetch origin "$branch_name"
-    
-    if [ $? -ne 0 ]; then
-        print_error "Failed to fetch branch $branch_name"
-        return 1
-    fi
-    
-    # Try to merge the PR
-    print_status "Attempting to merge PR #$pr_number..."
-    
-    # Use GitHub CLI to merge the PR
-    gh pr merge "$pr_number" --merge --delete-branch
-    
-    if [ $? -eq 0 ]; then
-        print_success "Successfully merged PR #$pr_number"
+    # Try to merge the branch
+    if git merge "$branch_ref" --no-ff --no-edit --allow-unrelated-histories; then
+        echo "✅ Successfully merged $branch_ref"
+        
+        # Merge back to main
+        git checkout main
+        git merge "$merge_branch" --no-ff --no-edit
+        
+        # Push to origin
+        git push origin main
+        
+        # Clean up merge branch
+        git branch -D "$merge_branch"
+        
         return 0
     else
-        print_warning "Failed to merge PR #$pr_number automatically, trying manual merge..."
+        echo "❌ Merge conflict in $branch_ref, trying with -X theirs strategy..."
         
-        # Try manual merge
-        git checkout main
-        git pull origin main
+        # Abort current merge
+        git merge --abort
         
-        # Try to merge the branch
-        git merge "origin/$branch_name" --no-edit
-        
-        if [ $? -eq 0 ]; then
-            print_success "Successfully merged PR #$pr_number manually"
+        # Try with theirs strategy
+        if git merge "$branch_ref" --no-ff --no-edit -X theirs --allow-unrelated-histories; then
+            echo "✅ Successfully merged $branch_ref with theirs strategy"
+            
+            # Merge back to main
+            git checkout main
+            git merge "$merge_branch" --no-ff --no-edit
+            
+            # Push to origin
             git push origin main
+            
+            # Clean up merge branch
+            git branch -D "$merge_branch"
+            
             return 0
         else
-            print_error "Failed to merge PR #$pr_number - conflicts detected"
+            echo "❌ Failed to merge $branch_ref even with theirs strategy"
             
-            # Try to resolve conflicts automatically
-            print_status "Attempting to resolve conflicts automatically..."
+            # Clean up merge branch
+            git checkout main
+            git branch -D "$merge_branch"
             
-            # Use our automation to fix conflicts
-            ./pm2-automation.sh quick-fix
-            
-            # Check if conflicts are resolved
-            git status --porcelain | grep -q "^UU\|^AA\|^DD"
-            if [ $? -ne 0 ]; then
-                print_success "Conflicts resolved automatically"
-                git add .
-                git commit -m "Resolve merge conflicts for PR #$pr_number"
-                git push origin main
-                return 0
-            else
-                print_error "Could not resolve conflicts automatically for PR #$pr_number"
-                git merge --abort
-                return 1
-            fi
+            return 1
         fi
     fi
 }
 
-# Function to resolve conflicts automatically
-resolve_conflicts() {
-    local branch_name="$1"
-    local pr_number="$2"
-    local pr_title="$3"
+# Get list of unmerged branches (excluding backups)
+branches=$(git branch -r --no-merged origin/main | grep -v backup | sed 's/origin\///' | head -20)
+
+echo "Found unmerged branches:"
+echo "$branches"
+echo ""
+
+# Count total branches
+total_branches=$(echo "$branches" | wc -l)
+echo "Total branches to process: $total_branches"
+echo ""
+
+# Initialize counters
+merged=0
+failed=0
+
+# Process each branch
+for branch in $branches; do
+    echo "Processing branch: $branch"
     
-    log "Attempting to resolve conflicts for $branch_name"
-    
-    # Check for common conflict patterns and resolve them
-    local conflicts=$(git diff --name-only --diff-filter=U)
-    
-    for file in $conflicts; do
-        log "Resolving conflicts in $file"        
-        # Use git checkout to take our version for most conflicts
-        git checkout --ours "$file" || true
-        
-        # Add the resolved file
-        git add "$file" || true
-    done
-    
-    # Commit the resolved conflicts
-    if git commit -m "Resolve merge conflicts for PR #$pr_number: $pr_title"; then
-        return 0
+    if merge_branch "$branch"; then
+        ((merged++))
+        echo "✅ Successfully merged $branch"
     else
-        return 1
-    fi
-}
-
-# Function to extract PR information from JSON
-extract_pr_info() {
-    local json_file="$1"
-    
-    # Extract PR numbers, titles, and branch names
-    grep -A 20 '"state": "open"' "$json_file" | \
-    grep -E '"number":|"title":|"headRefName":' | \
-    sed 's/.*"number": \([0-9]*\).*/\1/' | \
-    sed 's/.*"title": "\([^"]*\)".*/\1/' | \
-    sed 's/.*"headRefName": "\([^"]*\)".*/\1/' | \
-    paste - - - | \
-    awk '{print $1 "|" $2 "|" $3}'
-}
-
-# Main execution
-main() {
-    log "Starting comprehensive PR merge process"
-    
-    # Ensure we're on main branch
-    git checkout "$MAIN_BRANCH" || {
-        error "Failed to checkout main branch"
-        exit 1
-    }
-    
-    # Pull latest changes
-    git pull origin "$MAIN_BRANCH" || {
-        error "Failed to pull latest changes from main"
-        exit 1
-    }
-    
-    # Extract PR information
-    info "Extracting PR information from open_prs.json"
-    local pr_info=$(extract_pr_info "open_prs.json")
-    
-    local success_count=0
-    local conflict_count=0
-    local total_count=0
-    
-    # Process each PR
-    while IFS='|' read -r pr_number pr_title branch_name; do
-        if [[ -n "$pr_number" && -n "$pr_title" && -n "$branch_name" ]]; then
-            total_count=$((total_count + 1))
-            log "Processing PR #$pr_number: $pr_title (branch: $branch_name)"
-            
-            if merge_branch "$branch_name" "$pr_number" "$pr_title"; then
-                success_count=$((success_count + 1))
-            else
-                conflict_count=$((conflict_count + 1))
-            fi
-            
-            # Small delay to avoid overwhelming the system
-            sleep 1
-        fi
-    done <<< "$pr_info"
-    
-    # Summary
-    log "=== MERGE SUMMARY ==="
-    log "Total PRs processed: $total_count"
-    log "Successfully merged: $success_count"
-    log "Conflicts encountered: $conflict_count"
-    
-    # Push changes
-    if [[ $success_count -gt 0 ]]; then
-        log "Pushing merged changes to main branch"
-        git push origin "$MAIN_BRANCH" || {
-            error "Failed to push changes to main branch"
-        }
+        ((failed++))
+        echo "❌ Failed to merge $branch"
     fi
     
-    success "PR merge process completed!"
-}
+    echo "Progress: $((merged + failed))/$total_branches"
+    echo "---"
+done
 
-# Run the main function
-main "$@"
+echo ""
+echo "=== Merge Summary ==="
+echo "✅ Successfully merged: $merged"
+echo "❌ Failed to merge: $failed"
+echo "Total processed: $((merged + failed))"
+
+# Final status check
+echo ""
+echo "=== Final Status ==="
+git status

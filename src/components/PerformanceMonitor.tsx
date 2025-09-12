@@ -1,1 +1,181 @@
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  fmp: number | null;
+}
+
+interface PerformanceMonitorProps {
+  onMetrics?: (metrics: PerformanceMetrics) => void;
+  logToConsole?: boolean;
+  sendToAnalytics?: boolean;
+  analyticsEndpoint?: string;
+}
+
+export function PerformanceMonitor({
+  onMetrics,
+  logToConsole = false,
+  sendToAnalytics = false,
+  analyticsEndpoint = '/api/analytics/performance',
+}: PerformanceMonitorProps) {
+  const observerRef = useRef<PerformanceObserver | null>(null);
+  const metricsRef = useRef<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null,
+  });
+
+  // Measure First Contentful Paint (FCP)
+  const measureFCP = () => {
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+    if (fcpEntry) {
+      metricsRef.current.fcp = fcpEntry.startTime;
+      if (logToConsole) {
+        console.log('FCP:', fcpEntry.startTime, 'ms');
+      }
+    }
+  };
+
+  // Measure Largest Contentful Paint (LCP)
+  const measureLCP = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        observerRef.current = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            metricsRef.current.lcp = lastEntry.startTime;
+            if (logToConsole) {
+              console.log('LCP:', lastEntry.startTime, 'ms');
+            }
+          }
+        });
+        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (error) {
+        console.warn('LCP measurement failed:', error);
+      }
+    }
+  };
+
+  // Measure First Input Delay (FID)
+  const measureFID = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.processingStart && entry.startTime) {
+              metricsRef.current.fid = entry.processingStart - entry.startTime;
+              if (logToConsole) {
+                console.log('FID:', metricsRef.current.fid, 'ms');
+              }
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID measurement failed:', error);
+      }
+    }
+  };
+
+  // Measure Cumulative Layout Shift (CLS)
+  const measureCLS = () => {
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          metricsRef.current.cls = clsValue;
+          if (logToConsole) {
+            console.log('CLS:', clsValue);
+          }
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('CLS measurement failed:', error);
+      }
+    }
+  };
+
+  // Measure Time to First Byte (TTFB)
+  const measureTTFB = () => {
+    if (performance.getEntriesByType) {
+      const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+      if (navigationEntries.length > 0) {
+        const nav = navigationEntries[0];
+        metricsRef.current.ttfb = nav.responseStart - nav.requestStart;
+        if (logToConsole) {
+          console.log('TTFB:', metricsRef.current.ttfb, 'ms');
+        }
+      }
+    }
+  };
+
+  // Send metrics to analytics endpoint
+  const sendMetricsToAnalytics = async (metrics: PerformanceMetrics) => {
+    if (!sendToAnalytics) return;
+
+    try {
+      await fetch(analyticsEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          timestamp: Date.now(),
+          url: window.location.href,
+          metrics,
+        }),
+      });
+    } catch (error) {
+      console.warn('Failed to send metrics to analytics:', error);
+    }
+  };
+
+  useEffect(() => {
+    // Start measuring all metrics
+    measureFCP();
+    measureLCP();
+    measureFID();
+    measureCLS();
+    measureTTFB();
+
+    // Send metrics after a delay to allow all measurements to complete
+    const sendMetricsTimer = setTimeout(() => {
+      const metrics = { ...metricsRef.current };
+      
+      if (onMetrics) {
+        onMetrics(metrics);
+      }
+
+      if (logToConsole) {
+        console.log('Performance Metrics:', metrics);
+      }
+
+      sendMetricsToAnalytics(metrics);
+    }, 5000);
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+      clearTimeout(sendMetricsTimer);
+    };
+  }, [onMetrics, logToConsole, sendToAnalytics, analyticsEndpoint]);
+
+  return null; // This component doesn't render anything
+}

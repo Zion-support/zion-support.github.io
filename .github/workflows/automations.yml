@@ -11,9 +11,6 @@ permissions:
 permissions:
   contents: write
 
-permissions:
-  contents: write
-
 jobs:
   run-automations:
     runs-on: ubuntu-latest

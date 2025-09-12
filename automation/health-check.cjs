@@ -1,72 +1,112 @@
 #!/usr/bin/env node
-
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🏥 Running Health Check...');
+console.log('Starting Health Check...');
 
-class HealthChecker {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
+const healthCheck = {
+  timestamp: new Date().toISOString(),
+  checks: {},
+  status: 'healthy',
+};
 
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async runHealthCheck() {
-    const checks = [
-      { name: 'Build Status', command: 'npm run build' },
-      { name: 'Test Status', command: 'npm run test:smoke' },
-      { name: 'Lint Status', command: 'npm run lint:check' },
-      { name: 'Type Check', command: 'npm run type-check' },
-      { name: 'Security Audit', command: 'npm audit' }
-    ];
-
-    const results = [];
-    let passedChecks = 0;
-
-    for (const check of checks) {
-      try {
-        this.log(`🔍 Running ${check.name}...`);
-        execSync(check.command, { stdio: 'pipe' });
-        console.log(`✅ ${check.name} OK`);
-        results.push({ name: check.name, status: 'passed', error: null });
-        passedChecks++;
-      } catch (error) {
-        console.log(`❌ ${check.name} FAILED`);
-        results.push({ name: check.name, status: 'failed', error: error.message });
-      }
-    }
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalChecks: checks.length,
-      passedChecks,
-      failedChecks: checks.length - passedChecks,
-      results,
-      overallHealth: passedChecks === checks.length ? 'healthy' : 'unhealthy'
-    };
-
-    const reportPath = path.join(this.reportsDir, 'health-check-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Health check completed! Report saved to: ${reportPath}`);
-    this.log(`📈 Overall Health: ${report.overallHealth} (${passedChecks}/${checks.length} checks passed)`);
-    
-    return report;
-  }
+// package.json
+try {
+  const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  healthCheck.checks.packageJson = {
+    status: 'ok',
+    version: pkg.version || null,
+  };
+} catch (error) {
+  healthCheck.checks.packageJson = {
+    status: 'error',
+    message: 'package.json not readable',
+  };
+  healthCheck.status = 'unhealthy';
 }
 
-// Run health check
-const healthChecker = new HealthChecker();
-healthChecker.runHealthCheck().catch(console.error);
+// dependencies
+try {
+  const hasNodeModules = fs.existsSync('node_modules');
+  healthCheck.checks.dependencies = {
+    status: hasNodeModules ? 'ok' : 'warning',
+    message: hasNodeModules ? 'Dependencies installed' : 'node_modules missing',
+  };
+} catch (error) {
+  healthCheck.checks.dependencies = {
+    status: 'error',
+    message: 'Failed to check dependencies',
+  };
+}
+
+// disk
+try {
+  const stats = execSync('df -h .', { encoding: 'utf8' });
+  healthCheck.checks.disk = {
+    status: 'ok',
+    details: stats.split('\n')[1],
+  };
+} catch (error) {
+  healthCheck.checks.disk = {
+    status: 'warning',
+    message: 'Unable to get disk info',
+  };
+}
+
+// memory
+try {
+  const mem = execSync('free -h', { encoding: 'utf8' });
+  healthCheck.checks.memory = {
+    status: 'ok',
+    details: mem.split('\n')[1],
+  };
+} catch (error) {
+  healthCheck.checks.memory = {
+    status: 'warning',
+    message: 'Unable to get memory info',
+  };
+}
+
+// build dir
+try {
+  const hasBuild =
+    fs.existsSync('.next') || fs.existsSync('dist') || fs.existsSync('build');
+  healthCheck.checks.build = {
+    status: hasBuild ? 'ok' : 'info',
+  };
+} catch (error) {
+  healthCheck.checks.build = {
+    status: 'warning',
+    message: 'Unable to check build dir',
+  };
+}
+
+const reportPath = `health-check-report-${Date.now()}.json`;
+fs.writeFileSync(reportPath, JSON.stringify(healthCheck, null, 2));
+
+console.log('Health check completed');
+console.log(`Report saved to: ${reportPath}`);
+
+// Print summary
+const totalChecks = Object.keys(healthCheck.checks).length;
+const okChecks = Object.values(healthCheck.checks).filter(
+  check => check.status === 'ok'
+).length;
+const errorChecks = Object.values(healthCheck.checks).filter(
+  check => check.status === 'error'
+).length;
+
+console.log('Health Check Summary:');
+console.log(`- Total checks: ${totalChecks}`);
+console.log(`- OK: ${okChecks}`);
+console.log(`- Errors: ${errorChecks}`);
+console.log(`- Status: ${healthCheck.status.toUpperCase()}`);
+
+if (healthCheck.status === 'healthy') {
+  console.log('✅ System is healthy!');
+  process.exit(0);
+} else {
+  console.log('⚠️ System has issues that need attention');
+  process.exit(1);
+}

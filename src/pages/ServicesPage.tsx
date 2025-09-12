@@ -1,25 +1,281 @@
-<<<<<<< HEAD
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { useRouter  } from 'next/router';
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
-import { generateITServices, getServicesMarketStats, getRecommendedServices  } from '@/utils/servicesAutoFeedAlgorithm';
-import { ProductListing  } from '@/types/listings';
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { ArrowUp, Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
+
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { SERVICES } from "@/data/servicesData";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
+import { useEffect, useState } from "react";
+import apiClient from "@/services/apiClient";
+import retry from "@/utils/retry";
+import { toast } from "@/hooks/use-toast";
+
+
+
+
+
+
+
+
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import type { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
-import { SERVICES  } from '@/data/servicesData';
+import { SERVICES, type Service } from '@/data/servicesData';
 import { useCurrency } from '@/hooks/useCurrency';
-// Initial services from existing data
-const INITIAL_SERVICES: ProductListing[] = SERVICES;
+
+// Initial services from existing data - convert Service to ProductListing
+const INITIAL_SERVICES: ProductListing[] = SERVICES.map((service: Service) => ({
+  id: service.id,
+  title: service.title,
+  description: service.description,
+  category: service.category || 'General',
+  price: service.price || 0,
+  currency: service.currency || 'USD',
+  tags: [],
+  author: { name: 'Service Provider', id: 'service-provider' },
+  images: service.image ? [service.image] : [],
+  createdAt: new Date().toISOString(),
+  rating: 0,
+  reviewCount: 0,
+  location: 'Global',
+  availability: 'Available',
+  stock: 1,
+  aiScore: 0,
+}));
+
 // Market insights component
-const ServicesMarketInsights = null;
+interface Stats {
+  averagePrice: number;
+  averageRating: number;
+  totalServices: number;
+  availableServices: number;
+  premiumServices: number;
+  averageAIScore: number;
+}
+const ServicesMarketInsights = ({ stats }: { stats: Stats }) => (
+  <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">${(stats.averagePrice / 1000).toFixed(1)}k</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-blue-400">{stats.averageRating}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{stats.totalServices}</div>
+          <div className="text-sm text-muted-foreground">Total Services</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-orange-400">{stats.availableServices}</div>
+          <div className="text-sm text-muted-foreground">Available Now</div>
+        </div>
+      </div>
+      <div className="mt-4 text-center text-sm text-muted-foreground">
+        Premium Services ({stats.premiumServices}) • AI Score Avg: {stats.averageAIScore}
+      </div>
+    </CardContent>
+  </Card>
+);
+
+// Filter controls
+interface ServiceFilterControlsProps {
+  sortBy: string;
+  setSortBy: (value: string) => void;
+  filterCategory: string;
+  setFilterCategory: (value: string) => void;
+  categories: string[];
+  showRecommended: boolean;
+  setShowRecommended: (value: boolean) => void;
+  loading: boolean;
+}
+const ServiceFilterControls = ({
+  sortBy,
+  setSortBy,
+  filterCategory,
+  setFilterCategory,
+  categories,
+  showRecommended,
+  setShowRecommended,
+  loading
+}: ServiceFilterControlsProps) => (
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="">All Categories</option>
+        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
+      </select>
+    </div>
+    <div className="flex items-center gap-2">
+      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="ai-score">AI Score</option>
+      </select>
+    </div>
+    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Star className="h-4 w-4 mr-1" />
+      {showRecommended ? "All Services" : "Recommended"}
+    </Button>
+  </div>
+);
+
+// Service card
+const ServiceCard = ({ service, onViewDetails }: { service: ProductListing; onViewDetails: () => void }) => {
+  const { formatPrice } = useCurrency();
+  return (
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg mb-1 line-clamp-1">{service.title}</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <span className="text-sm font-medium">{service.rating}</span>
+              <span className="text-xs text-muted-foreground">({service.reviewCount})</span>
+            </div>
+            {service.aiScore && service.aiScore > 85 && (
+              <Badge variant="secondary" className="text-xs bg-purple-100 text-purple-700">
+                AI Score: {service.aiScore}
+              </Badge>
+            )}
+          </div>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{service.author.name}</Badge>
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-xl font-bold text-green-600">{formatPrice(service.price ?? 0)}</div>
+          <Badge variant={service.availability === "Available" ? "default" : "outline"} className="text-xs">
+            {service.availability}
+          </Badge>
+        </div>
+      </div>
+      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{service.description}</p>
+      <div className="flex items-center justify-between">
+        <span className="text-sm font-medium">{service.category}</span>
+        <Button size="sm" onClick={onViewDetails}>
+          <ShoppingCart className="h-4 w-4 mr-1" />
+          Contact
+        </Button>
+      </div>
+    </CardHeader>
+  </Card>
+);
+};
+
+// Loading grid
+const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>
+);
+
+// Main component
+export default function ServicesPage() {
+  const router = useRouter();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [totalGenerated, setTotalGenerated] = useState(0);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        // apiClient prepends '/api', so this requests '/api/services'
+        const res = await retry(() => apiClient.get('/services'), {
+          retries: 3,
+          minTimeout: 500,
+        });
+        setListings(res.data as ProductListing[]);
+      } catch (err) {
+        console.error('Failed to fetch services', err);
+        toast.error('Failed to load services. Showing sample data.');
+        setListings(SERVICES);
+      }
+    }
+
+    if (showRecommended) {
+      filteredServices = filteredServices.filter(s => s.rating && s.rating >= 4.7);
+    }
+
+    filteredServices.sort((a, b) => {
+      switch (sortBy) {
+        case 'price-low':
+          return (a.price || 0) - (b.price || 0);
+        case 'price-high':
+          return (b.price || 0) - (a.price || 0);
+        case 'rating':
+          return (b.rating || 0) - (a.rating || 0);
+        case 'ai-score':
+          return (b.aiScore || 0) - (a.aiScore || 0);
+        default:
+          return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
+      }
+    });
+
+    return {
+      items: filteredServices,
+      hasMore: filteredServices.length >= limit,
+      total: filteredServices.length
+    };
+  }, [filterCategory, showRecommended, sortBy, totalGenerated]);
+
+  const {
+    items: services,
+    loading,
+    error,
+    hasMore,
+    isFetching,
+    lastElementRef,
+    scrollToTop,
+    refresh
+  } = useInfiniteScrollPagination(fetchServices, 12);
+
+  useEffect(() => {
+    refresh();
+    setTotalGenerated(0);
+  }, [sortBy, filterCategory, showRecommended]);
+
+  const marketStats = useMemo(() => {
+    if (services.length === 0) return null;
+    // This function was removed from utils, so it's removed here.
+    // If you need to calculate market stats, you'll need to implement it here.
+    // For now, it will return null.
+    return null;
+  }, [services]);
+
+  const categories = useMemo(() => {
+    return Array.from(new Set(services.map((s: ProductListing) => s.category).filter(Boolean)));
+  }, [services]);
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   if (loading && services.length === 0) {
     return (
-      <div className="container py-8">
+      <main className="container py-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
             IT & AI Services
@@ -27,71 +283,22 @@ const ServicesMarketInsights = null;
           <p className="text-muted-foreground text-lg">Professional services for modern businesses and enterprises</p>
         </motion.div>
         <ServicesLoadingGrid />
-=======
-
-    allServices = [...allServices, ...newServices]
-    let filteredServices = allServices
-}
-import React from 'react'
-const ServicesPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions to help your business thrive in the digital age.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
-            <p className="text-gray-600 mb-6">
-              Cutting-edge artificial intelligence solutions including machine learning
-              natural language processing, and intelligent automation.
-            </p>
-            <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
-              Learn More →
-            </a>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
-            <p className="text-gray-600 mb-6">
-              Comprehensive IT infrastructure, cloud migration, cybersecurity
-              and digital transformation solutions.
-            </p>
-            <a href="/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
-              Learn More →
-            </a>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
-            <p className="text-gray-600 mb-6">
-              Innovative, focused software solutions that solve specific business
-              problems with minimal overhead.
-            </p>
-            <a href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
-              Learn More →
-            </a>
-          </div>
-        </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-      </div>
-    )
+      </main>
+    );
   }
 
   if (error) {
     return (
-      <div className="container py-8 text-center">
+      <main className="container py-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Error Loading Services</h2>
         <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
         <Button onClick={refresh}>Retry</Button>
-      </div>
-    )
+      </main>
+    );
   }
 
   return (
-    <div className="container py-8">
+    <main className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
           IT & AI Services
@@ -120,7 +327,7 @@ const ServicesPage: React.FC = () => {
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
-          {services.map((item, index) => (
+          {services.map((item: ProductListing, index) => (
             <motion.div
               key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
@@ -155,8 +362,6 @@ const ServicesPage: React.FC = () => {
           </motion.button>
         )}
       </AnimatePresence>
-    </div>
-  )
-}
-export default ServicesPage
+    </main>
+  );
 }

@@ -1,32 +1,21 @@
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  testMatch: [
-    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/out/',
-    '/dist/',
-    '/recovered-branches/',
-    '/src_backup/',
-    '/e2e/'
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    'components/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}'
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
   },
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.simple.js'],
-  transform: {
-    '^.+\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
-  },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(.*\.mjs$))'
-  ]
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/'],
+  coverageDirectory: 'coverage',
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
 };

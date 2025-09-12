@@ -1,29 +1,29 @@
-{
-  "timestamp": "2025-09-05T00:20:16.317Z",
-  "memory": {
-    "rss": 48967680,
-    "heapTotal": 5570560,
-    "heapUsed": 4386112,
-    "external": 1472832,
-    "arrayBuffers": 10515
+[
+  {
+    "buildTime": "101.66ms",
+    "bundleSize": null,
+    "chunkCount": null,
+    "timestamp": "2025-06-29T04:25:36.759Z",
+    "warnings": [],
+    "errors": [],
+    "devServerHealth": "offline"
   },
-  "uptime": 0.016888379,
-  "platform": "linux",
-  "nodeVersion": "v22.16.0",
-  "bundleSize": {
-    ".next": {
-      "size": 28534499,
-      "sizeMB": "27.21"
-    },
-    "node_modules": {
-      "size": 0,
-      "sizeMB": "0.00"
-    }
+  {
+    "buildTime": "67.93ms",
+    "bundleSize": null,
+    "chunkCount": null,
+    "timestamp": "2025-06-29T04:26:43.238Z",
+    "warnings": [],
+    "errors": [],
+    "devServerHealth": "offline"
   },
-  "fileCounts": {
-    ".tsx": 25,    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
-  }}
+  {
+    "buildTime": "1296.60ms",
+    "bundleSize": "43.64 MB",
+    "chunkCount": 171,
+    "timestamp": "2025-06-29T04:45:16.879Z",
+    "warnings": [],
+    "errors": [],
+    "devServerHealth": "healthy"
+  }
+]

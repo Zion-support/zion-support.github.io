@@ -1,16 +1,15 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 module.exports = {
   plugins: {
-    tailwindcss: {},
+    '@tailwindcss/postcss': {
+      // Only process files in src/ and public/ directories
+      content: [
+        './src/**/*.{js,ts,jsx,tsx}',
+        './pages/**/*.{js,ts,jsx,tsx}',
+        './public/**/*.css',
+      ],
+      // Exclude static/css directory completely
+      exclude: ['./static/**/*', '**/static/**/*'],
+    },
     autoprefixer: {},
   },
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-},
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {}}},
->>>>>>> pr-11992:postcss.config.js
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

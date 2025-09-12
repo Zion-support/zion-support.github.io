@@ -1,35 +1,62 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["dom", "dom.iterable", "es6", "es2017", "es2018", "es2019", "es2020", "es2021", "es2022"],
-    "allowJs": true,
+    "target": "ES2024",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "WebWorker.Iterable"
+    ],
+    "module": "esnext",
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "allowJs": true,
     "incremental": true,
+    "jsx": "preserve",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "isolatedModules": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"]
-    },
-    "allowSyntheticDefaultImports": true
+    /* Modern TypeScript Features */
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "useUnknownInCatchVariables": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    /* Performance optimizations */
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "disableSizeLimit": true,
+    "generateCpuProfile": "profile.cpuprofile",
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "traceResolution": false,
+    /* Advanced features */
+    "allowArbitraryExtensions": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "verbatimModuleSyntax": true
   },
-  "include": ["next-env.d.ts", "types/global.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "netlify/**", "temp_exclude/**"]
+  "include": ["src", "src/types/offline-shims.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

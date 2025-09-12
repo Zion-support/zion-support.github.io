@@ -1,307 +1,406 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X, ArrowRight, Clock } from "lucide-react";
-import Link from "next/link";
+import { useState, useEffect, useRef, useMemo } from 'react';
+import Link from 'next/link';
+
 interface SearchResult {
+  id: string;
   title: string;
+  type: 'service' | 'product' | 'case-study' | 'blog' | 'testimonial' | 'career';
   description: string;
   url: string;
-  category: string;
+  category?: string;
+  tags?: string[];
+  relevance: number;
 }
+
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-const searchData: SearchResult[] = [
-  // Services
-  {
-    title: "AI Services"
-    description: "Machine learning, computer vision, NLP, and AI solutions"
-    url: "/ai-services"
-    category: "Services"
-  }
-  {
-    title: "IT Services"
-    description: "Cloud infrastructure, cybersecurity, and IT solutions"
-    url: "/it-services"
-    category: "Services"
-  }
-  {
-    title: "Micro SaaS"
-    description: "Custom micro SaaS platforms and automation tools"
-    url: "/micro-saas"
-    category: "Services"
-  }
-  {
-    title: "Cloud Solutions"
-    description: "AWS, Azure, GCP migration and cloud infrastructure"
-    url: "/cloud-solutions"
-    category: "Services"
-  }
-  {
-    title: "Cybersecurity"
-    description: "Security audits, penetration testing, and compliance"
-    url: "/cybersecurity"
-    category: "Services"
-  }
-  {
-    title: "Blockchain Solutions"
-    description: "Smart contracts, DeFi, and blockchain development"
-    url: "/blockchain-services"
-    category: "Services"
-  }
-  // Solutions
-  {
-    title: "Digital Transformation"
-    description: "Complete digital transformation solutions"
-    url: "/digital-transformation"
-    category: "Solutions"
-  }
-  {
-    title: "Enterprise Solutions"
-    description: "Large-scale enterprise technology solutions"
-    url: "/enterprise-solutions"
-    category: "Solutions"
-  }
-  {
-    title: "Startup Solutions"
-    description: "Technology solutions for startups and SMBs"
-    url: "/startup-solutions"
-    category: "Solutions"
-  }
-  // Industries
-  {
-    title: "Healthcare"
-    description: "Technology solutions for healthcare industry"
-    url: "/industries/healthcare"
-    category: "Industries"
-  }
-  {
-    title: "Finance"
-    description: "Financial technology and fintech solutions"
-    url: "/industries/finance"
-    category: "Industries"
-  }
-  {
-    title: "Education"
-    description: "Educational technology and e-learning solutions"
-    url: "/industries/education"
-    category: "Industries"
-  }
-  {
-    title: "Manufacturing"
-    description: "Industrial IoT and manufacturing automation"
-    url: "/industries/manufacturing"
-    category: "Industries"
-  }
-  // Company
-  {
-    title: "About Us"
-    description: "Learn about Zion Tech Group and our mission"
-    url: "/about"
-    category: "Company"
-  }
-  {
-    title: "Contact"
-    description: "Get in touch with our team"
-    url: "/contact"
-    category: "Company"
-  }
-  {
-    title: "Careers"
-    description: "Join our team and build the future"
-    url: "/careers"
-    category: "Company"
-  }
-  {
-    title: "Blog"
-    description: "Latest insights and technology trends"
-    url: "/blog"
-    category: "Company"
-  }
-  {
-    title: "Pricing"
-    description: "Transparent pricing for all our services"
-    url: "/pricing"
-    category: "Company"
-  }
-];
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-  const [query, setQuery] = useState("");
+
+const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [isSearching, setIsSearching] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Mock search data - in a real app, this would come from an API or search service
+  const searchData: SearchResult[] = useMemo(() => [
+    // Services
+    {
+      id: 'ai-fraud-detection',
+      title: 'AI-Powered Fraud Detection System',
+      type: 'service',
+      description: 'Advanced machine learning system that detects fraudulent transactions with 89% accuracy',
+      url: '/services',
+      category: 'AI & Machine Learning',
+      tags: ['AI', 'fraud detection', 'machine learning', 'security'],
+      relevance: 95
+    },
+    {
+      id: 'cloud-migration',
+      title: 'Cloud Migration & Optimization',
+      type: 'service',
+      description: 'Seamless cloud migration services with 99.9% uptime guarantee',
+      url: '/services',
+      category: 'Cloud & Infrastructure',
+      tags: ['cloud', 'migration', 'AWS', 'Azure', 'optimization'],
+      relevance: 90
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity & Compliance',
+      type: 'service',
+      description: 'Comprehensive security solutions including SOC2 and ISO27001 compliance',
+      url: '/services',
+      category: 'Security',
+      tags: ['cybersecurity', 'compliance', 'SOC2', 'ISO27001', 'security'],
+      relevance: 88
+    },
+    // Products
+    {
+      id: 'quantum-ai-analytics',
+      title: 'Quantum AI Analytics Platform',
+      type: 'product',
+      description: 'Next-generation analytics platform leveraging quantum computing principles',
+      url: '/products',
+      category: 'AI Solutions',
+      tags: ['AI', 'analytics', 'quantum', 'machine learning'],
+      relevance: 92
+    },
+    {
+      id: 'autonomous-devops',
+      title: 'Autonomous DevOps Platform',
+      type: 'product',
+      description: 'Self-healing infrastructure with automated deployment and monitoring',
+      url: '/products',
+      category: 'DevOps',
+      tags: ['DevOps', 'automation', 'CI/CD', 'monitoring'],
+      relevance: 87
+    },
+    // Case Studies
+    {
+      id: 'securebank-case',
+      title: 'SecureBank Corp - AI Fraud Detection',
+      type: 'case-study',
+      description: 'Implemented AI fraud detection system achieving 89% fraud reduction',
+      url: '/case-studies',
+      category: 'Financial Services',
+      tags: ['AI', 'fraud detection', 'banking', 'machine learning'],
+      relevance: 85
+    },
+    {
+      id: 'medicore-case',
+      title: 'MediCore Health - AI Diagnostics',
+      type: 'case-study',
+      description: 'AI medical diagnostics platform with 94% accuracy improvement',
+      url: '/case-studies',
+      category: 'Healthcare',
+      tags: ['AI', 'healthcare', 'diagnostics', 'machine learning'],
+      relevance: 83
+    },
+    // Blog Posts
+    {
+      id: 'ai-trends-2024',
+      title: 'AI Trends That Will Dominate 2024',
+      type: 'blog',
+      description: 'Explore the cutting-edge AI technologies and trends shaping the future',
+      url: '/blog',
+      category: 'AI & Technology',
+      tags: ['AI', 'trends', 'technology', '2024', 'machine learning'],
+      relevance: 80
+    },
+    {
+      id: 'cloud-security',
+      title: 'Essential Cloud Security Best Practices',
+      type: 'blog',
+      description: 'Learn the critical security measures for protecting your cloud infrastructure',
+      url: '/blog',
+      category: 'Security',
+      tags: ['cloud', 'security', 'best practices', 'infrastructure'],
+      relevance: 78
+    },
+    // Testimonials
+    {
+      id: 'sarah-mitchell',
+      title: 'Sarah Mitchell - SecureBank Corp',
+      type: 'testimonial',
+      description: 'Chief Risk Officer shares success story of AI fraud detection implementation',
+      url: '/testimonials',
+      category: 'Financial Services',
+      tags: ['testimonial', 'AI', 'fraud detection', 'banking'],
+      relevance: 75
+    },
+    // Careers
+    {
+      id: 'senior-ai-engineer',
+      title: 'Senior AI Engineer Position',
+      type: 'career',
+      description: 'Join our AI team to develop cutting-edge machine learning models',
+      url: '/careers',
+      category: 'AI & Machine Learning',
+      tags: ['career', 'AI', 'machine learning', 'engineering'],
+      relevance: 70
+    }
+  ], []);
+
   useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+    if (isOpen) {
+      searchInputRef.current?.focus();
+      setSearchTerm('');
+      setResults([]);
+      setSelectedIndex(-1);
     }
   }, [isOpen]);
+
   useEffect(() => {
-    // Load recent searches from localStorage
-    const saved = localStorage.getItem("recent-searches");
-    if (saved) {
-      setRecentSearches(JSON.parse(saved));
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden';
     }
-  }, []);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
+
   useEffect(() => {
-    if (query.trim()) {
-      const filtered = searchData.filter(
-        (item) =>
-          item.title.toLowerCase().includes(query.toLowerCase()) |
-          item.description.toLowerCase().includes(query.toLowerCase()) |
-          item.category.toLowerCase().includes(query.toLowerCase())
-      );
-      setResults(filtered);
-    } else {
+    if (searchTerm.trim().length < 2) {
       setResults([]);
+      return;
     }
-    setSelectedIndex(0);
-  }, [query]);
+
+    setIsSearching(true);
+    
+    // Simulate search delay
+    const timeoutId = setTimeout(() => {
+      const searchResults = searchData
+        .filter(item => {
+          const searchLower = searchTerm.toLowerCase();
+          return (
+            item.title.toLowerCase().includes(searchLower) ||
+            item.description.toLowerCase().includes(searchLower) ||
+            item.category?.toLowerCase().includes(searchLower) ||
+            item.tags?.some(tag => tag.toLowerCase().includes(searchLower))
+          );
+        })
+        .sort((a, b) => b.relevance - a.relevance)
+        .slice(0, 10);
+
+      setResults(searchResults);
+      setIsSearching(false);
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchTerm, searchData]);
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") {
-      onClose();
-    } else if (e.key === "ArrowDown") {
+    if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setSelectedIndex((prev) => Math.min(prev + 1, results.length - 1));
-    } else if (e.key === "ArrowUp") {
+      setSelectedIndex(prev => Math.min(prev + 1, results.length - 1));
+    } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setSelectedIndex((prev) => Math.max(prev - 1, 0));
-    } else if (e.key === "Enter" && results[selectedIndex]) {
-      handleResultClick(results[selectedIndex]);
+      setSelectedIndex(prev => Math.max(prev - 1, -1));
+    } else if (e.key === 'Enter' && selectedIndex >= 0) {
+      e.preventDefault();
+      const selectedResult = results[selectedIndex];
+      if (selectedResult) {
+        window.location.href = selectedResult.url;
+        onClose();
+      }
     }
-  }
-  const handleResultClick = (result: SearchResult) => {
-    // Add to recent searches
-    const newRecent = [
-      result.title
-      ...recentSearches.filter((s) => s !== result.title)
-    ].slice(0, 5);
-    setRecentSearches(newRecent);
-    localStorage.setItem("recent-searches", JSON.stringify(newRecent));
-    // Navigate to result
-    window.location.href = result.url;
-  }
-  const handleRecentClick = (search: string) => {
-    setQuery(search);
-  }
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'service': return '🚀';
+      case 'product': return '💎';
+      case 'case-study': return '📊';
+      case 'blog': return '📝';
+      case 'testimonial': return '⭐';
+      case 'career': return '💼';
+      default: return '📄';
+    }
+  };
+
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'service': return 'Service';
+      case 'product': return 'Product';
+      case 'case-study': return 'Case Study';
+      case 'blog': return 'Blog Post';
+      case 'testimonial': return 'Testimonial';
+      case 'career': return 'Career';
+      default: return 'Page';
+    }
+  };
+
   if (!isOpen) return null;
+
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16">
-        {/* Backdrop */}
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
-          onClick={onClose}
-        />
-        {/* Modal */}
-        <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">
-          {/* Search Input */}
-          <div className="flex items-center p-4 border-b">
-            <Search className="w-5 h-5 text-gray-400 mr-3" />
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
+      <div 
+        ref={modalRef}
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[80vh] overflow-hidden"
+      >
+        {/* Search Header */}
+        <div className="p-6 border-b border-gray-200">
+          <div className="relative">
             <input
-              ref={inputRef}
+              ref={searchInputRef}
               type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search services, products, case studies, blog posts..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Search services, solutions, industries..."
-              className="flex-1 text-lg outline-none"
+              className="w-full pl-12 pr-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
-            <button
-              onClick={onClose}
-              className="ml-3 p-1 hover:bg-gray-100 rounded"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+              🔍
+            </div>
+            {isSearching && (
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+              </div>
+            )}
           </div>
-          {/* Results */}
-          <div className="max-h-96 overflow-y-auto">
-            {query.trim() ? (
-              results.length > 0 ? (
-                <div className="p-2">
-                  {results.map((result, index) => (
-                    <div
-                      key={index}
-                      className={`p-3 rounded-lg cursor-pointer transition-colors ${
-                        index === selectedIndex
-                          ? "bg-blue-50 border border-blue-200"
-                          : "hover:bg-gray-50"
-                      }`}
-                      onClick={() => handleResultClick(result)}
-                    >
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h3 className="font-medium text-gray-900">
-                            {result.title}
-                          </h3>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {result.description}
-                          </p>
-                          <span className="inline-block mt-2 text-xs text-blue-600 bg-blue-100 px-2 py-1 rounded">
-                            {result.category}
-                          </span>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 mt-1" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="p-8 text-center text-gray-500">
-                  <Search className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No results found for "{query}"</p>
-                  <p className="text-sm mt-2">
-                    Try different keywords or check our services page
-                  </p>
-                </div>
-              )
-            ) : (
-              <div className="p-4">
-                {recentSearches.length > 0 && (
-                  <div className="mb-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Recent Searches
-                    </div>
-                    <div className="space-y-2">
-                      {recentSearches.map((search, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleRecentClick(search)}
-                          className="w-full text-left p-2 hover:bg-gray-50 rounded text-sm text-gray-700"
-                        >
-                          {search}
-                        </button>
-                      ))}
-                    </div>
+        </div>
+
+        {/* Search Results */}
+        <div className="max-h-[60vh] overflow-y-auto">
+          {searchTerm.length > 0 && (
+            <>
+              {results.length > 0 ? (
+                <div className="p-4">
+                  <div className="text-sm text-gray-500 mb-4">
+                    Found {results.length} result{results.length !== 1 ? 's' : ''}
                   </div>
-                )}
-                <div>
-                  <div className="text-sm text-gray-500 mb-3">
-                    Popular Searches
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {[
-                      "AI Services"
-                      "Cloud Solutions"
-                      "Cybersecurity"
-                      "Digital Transformation"
-                    ].map((term) => (
-                      <button
-                        key={term}
-                        onClick={() => setQuery(term)}
-                        className="text-left p-2 hover:bg-gray-50 rounded text-sm text-gray-700"
+                  <div className="space-y-2">
+                    {results.map((result, index) => (
+                      <Link
+                        key={result.id}
+                        href={result.url}
+                        onClick={onClose}
+                        className={`block p-4 rounded-lg border transition-all duration-200 ${
+                          index === selectedIndex
+                            ? 'border-blue-500 bg-blue-50'
+                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                        }`}
                       >
-                        {term}
-                      </button>
+                        <div className="flex items-start space-x-3">
+                          <div className="text-2xl">{getTypeIcon(result.type)}</div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-2 mb-1">
+                              <h3 className="font-semibold text-gray-900 truncate">
+                                {result.title}
+                              </h3>
+                              <span className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full">
+                                {getTypeLabel(result.type)}
+                              </span>
+                            </div>
+                            <p className="text-sm text-gray-600 line-clamp-2 mb-2">
+                              {result.description}
+                            </p>
+                            {result.category && (
+                              <div className="text-xs text-gray-500">
+                                Category: {result.category}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
+              ) : !isSearching && (
+                <div className="p-8 text-center text-gray-500">
+                  <div className="text-4xl mb-4">🔍</div>
+                  <p className="text-lg">No results found for &quot;{searchTerm}&quot;</p>
+                  <p className="text-sm mt-2">Try different keywords or browse our categories</p>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* Quick Links */}
+          {searchTerm.length === 0 && (
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+              <div className="grid grid-cols-2 gap-3">
+                <Link
+                  href="/services"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">🚀</div>
+                  <div className="font-medium text-gray-900">Services</div>
+                  <div className="text-sm text-gray-600">Explore our solutions</div>
+                </Link>
+                <Link
+                  href="/products"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">💎</div>
+                  <div className="font-medium text-gray-900">Products</div>
+                  <div className="text-sm text-gray-600">View our products</div>
+                </Link>
+                <Link
+                  href="/case-studies"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">📊</div>
+                  <div className="font-medium text-gray-900">Case Studies</div>
+                  <div className="text-sm text-gray-600">Success stories</div>
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={onClose}
+                  className="p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200"
+                >
+                  <div className="text-2xl mb-2">📝</div>
+                  <div className="font-medium text-gray-900">Blog</div>
+                  <div className="text-sm text-gray-600">Latest insights</div>
+                </Link>
               </div>
-            )}
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="p-4 border-t border-gray-200 bg-gray-50">
+          <div className="flex items-center justify-between text-sm text-gray-500">
+            <div className="flex items-center space-x-4">
+              <span>Press <kbd className="px-2 py-1 bg-white border border-gray-300 rounded text-xs">⌘</kbd> + <kbd className="px-2 py-1 bg-white border border-gray-300 rounded text-xs">K</kbd> to search</span>
+            </div>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default SearchModal;
