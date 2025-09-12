@@ -195,6 +195,10 @@ import AI2025RevolutionaryBreakthroughContentShowcase from '../components/AI2025
 // New 2026 Ultimate Content Components
 import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+
+// New Revolutionary Content Promotion Components
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -210,6 +214,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* AI 2025 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2025BreakthroughPromotionBanner />
         
@@ -309,54 +314,6 @@ export default function HomePage() {
         {/* AI 2037 TRANSCENDENT CONTENT SHOWCASE */}
         <AI2037TranscendentContentShowcase />
         
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-a90d
-        {/* AI 2025 BREAKTHROUGH PROMOTION BANNER */}
-        <AI2025BreakthroughPromotionBanner />
-        
-        {/* AI 2025 BREAKTHROUGH CONTENT SHOWCASE */}
-        <AI2025BreakthroughContentShowcase />
-        
-        {/* AI 2033 CONTENT PROMOTION BANNER */}
-        <AI2033ContentPromotionBanner />
-        
-        {/* AI 2033 CONTENT SHOWCASE */}
-        <AI2033ContentShowcase />
-        
-        {/* AI 2036 BREAKTHROUGH PROMOTION BANNER - LATEST CONTENT */}
-        <AI2036BreakthroughPromotionBanner />
-        
-        {/* AI 2036 CONTENT DISCOVERY WIDGET - FLOATING WIDGET */}
-        <AI2036ContentDiscoveryWidget />
-        
-        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
-        <AI2035BreakthroughPromotionBanner />
-        
-        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
-        <AI2035BreakthroughContentShowcase />
-        
-        {/* AI 2035 CONTENT PROMOTION BANNER - NEW CONTENT */}
-        <AI2035ContentPromotionBanner />
-        
-        {/* AI 2035 CONTENT SHOWCASE - NEW CONTENT */}
-        <AI2035ContentShowcase />
-        
-        {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
-        <NewContent2025BreakthroughBanner />
-        
-        {/* ADVANCED QUANTUM COMPUTING PROMOTION BANNER - NEW CONTENT */}
-        <AdvancedQuantumComputingPromotionBanner />
-        
-        {/* NEURAL INTERFACE REVOLUTION BANNER - NEW CONTENT */}
-        <NeuralInterfaceRevolutionBanner />
-        
-        {/* AUTONOMOUS SYSTEMS REVOLUTION BANNER - NEW CONTENT */}
-        <AutonomousSystemsRevolutionBanner />
-        
-        {/* EDGE COMPUTING & IoT BANNER - NEW CONTENT */}
-        <EdgeComputingIOTBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-6558
-        
         {/* AI 2035 REVOLUTIONARY CONTENT SHOWCASE */}
         <AI2035ContentShowcase />
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
@@ -371,24 +328,15 @@ export default function HomePage() {
         {/* ENHANCED CONTENT DISCOVERY WIDGET 2026 */}
         <EnhancedContentDiscoveryWidget2026 />
         
-=======
-        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER */}
-        <AI2035BreakthroughPromotionBanner />
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER 2025 */}
+        <RevolutionaryContentPromotionBanner2025 />
         
-        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE */}
-        <AI2035BreakthroughContentShowcase />
-        
->>>>>>> origin/cursor/create-and-deploy-new-content-57d1
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-a90d
-=======
-        {/* NEW CONTENT 2025 BREAKTHROUGH BANNER */}
-        <NewContent2025BreakthroughBanner />
-        
-        {/* ENHANCED CONTENT SHOWCASE 2025 */}
-        <EnhancedContentShowcase2025 />
-        
->>>>>>> origin/cursor/create-and-deploy-new-content-12a3
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <div className="py-12 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto">
+            <InteractiveContentDiscoveryWidget2025 />
+          </div>
+        </div>
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
