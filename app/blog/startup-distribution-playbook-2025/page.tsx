@@ -1,4 +1,55 @@
 import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Startup Distribution Playbook 2025 | Zion Tech Group',
+  description: 'Repeatable distribution for AI startups: channels, motions, and metrics that compound.',
+  keywords: 'startup distribution, GTM, growth, channels, PLG, sales-assisted'
+};
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-rose-900 via-fuchsia-900 to-purple-900 text-white">
+      <div className="max-w-3xl mx-auto px-6 py-16">
+        <div className="mb-8">
+          <div className="inline-flex items-center bg-pink-500/20 text-pink-100 rounded-full px-4 py-1 text-sm">NEW • September 2025</div>
+          <h1 className="mt-4 text-4xl md:text-5xl font-bold leading-tight">Startup Distribution Playbook 2025</h1>
+          <p className="mt-4 text-lg text-pink-100/90">A practical framework for channels, content, and conversions that scale.</p>
+        </div>
+
+        <div className="prose prose-invert prose-lg">
+          <p>
+            Great AI products fail without distribution. This playbook distills repeatable motions that
+            compound: content engines, partner ecosystems, and product-led loops.
+          </p>
+          <h2>Channel Portfolio</h2>
+          <ul>
+            <li>Owned media: weekly expert content and demos</li>
+            <li>Search and communities: programmatic SEO and credible participation</li>
+            <li>Partners: co-selling and integrations that unlock segments</li>
+          </ul>
+          <h2>Conversion System</h2>
+          <ul>
+            <li>Clear value narrative and outcome-led pages</li>
+            <li>Interactive tools and templates as lead magnets</li>
+            <li>Sales-assisted PLG with in-product prompts</li>
+          </ul>
+          <p>
+            Track weekly leading indicators—activated accounts, qualified signups, and partner-sourced pipeline—
+            and iterate relentlessly.
+          </p>
+        </div>
+
+        <div className="mt-10 flex gap-3">
+          <Link href="/blog" className="bg-white text-rose-700 px-5 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Back to Blog</Link>
+          <Link href="/resources" className="border-2 border-white text-white px-5 py-2 rounded-lg font-semibold hover:bg-white hover:text-rose-700 transition-colors">Download Resources</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+import React from 'react';
 
 export default function StartupDistributionPlaybook2025Page() {
   return (

@@ -8,6 +8,36 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Model Evaluation Playbook 2025",
+    description: "Production-ready evals for LLM apps and agent systems",
+    url: "/blog/ai-2025-model-evaluation-playbook",
+    type: "Blog Post",
+    category: "Engineering",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Edge AI Governance Blueprint 2025",
+    description: "Privacy-by-design controls for compliant edge intelligence",
+    url: "/blog/ai-2025-edge-governance-blueprint",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Startup Distribution Playbook 2025",
+    description: "Channels, motions, and metrics that compound",
+    url: "/blog/startup-distribution-playbook-2025",
+    type: "Blog Post",
+    category: "Growth",
+    icon: "📈",
+    featured: false,
+    new: true
+  },
+  {
     title: "AI Agents in Production 2025",
     description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
     url: "/blog/ai-2025-production-agent-patterns",
