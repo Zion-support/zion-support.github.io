@@ -1,0 +1,17 @@
+🚀 Starting incremental merge conflict resolution for open PRs...
+📊 Total cursor branches to process: 6467
+⏰ Started at: Fri Sep 12 07:39:49 AM UTC 2025
+---
+🔒 Creating backup branch: backup-main-20250912-073949
+Your branch and 'origin/main' have diverged,
+and have 1 and 376 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+🔄 Starting batch processing...
+📊 Batch size: 10, Max failures per batch: 5
+---
+📊 Total branches: 6467, Total batches: 647
+---
+🚀 Starting batch 1/647
+📦 Processing batch 1 (branches 0 to 10)...
+---
+📋 Processing branch 1/6467: cursor/add-2030q1-services-ui-8deb1aee36d
