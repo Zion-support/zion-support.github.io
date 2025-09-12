@@ -137,14 +137,14 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🚀 JUST RELEASED - JANUARY 30, 2025</span>
+              <span className='text-sm font-medium'>🚀 JUST RELEASED - SEPTEMBER 12, 2025</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
-              🎯 Revolutionary AI Content Just Dropped
+              🎯 New: Enterprise Masterclass, Industry Disruption, GTM Playbook
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our latest breakthrough content: AI Business Transformation Guide, Financial Services Case Study, 
-              and the ultimate 400+ page AI Implementation Master Playbook. Transform your business with proven strategies.
+              Explore our latest high-signal content: Enterprise AI Implementation Masterclass, AI Industry Disruption Report, 
+              and the 2025 AI Go-To-Market Playbook. Practical frameworks, templates, and quantified outcomes.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -164,11 +164,11 @@ export default function HomePage() {
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-2025-comprehensive-business-transformation' className='group'>
+            <Link href='/blog/ai-2025-industry-disruption' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Business Transformation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete guide with 340% ROI strategies and real case studies</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Industry Disruption 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Healthcare, finance, manufacturing, retail — quantified impact</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>45 min read</span>
                   <span className='mx-2'>•</span>
@@ -190,11 +190,11 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/resources/ai-2025-comprehensive-implementation-playbook' className='group'>
+            <Link href='/blog/ai-2025-enterprise-implementation-masterclass' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>400+ pages with 50+ templates and proven frameworks</p>
+                <h3 className='text-lg font-semibold mb-2'>Enterprise AI Masterclass</h3>
+                <p className='text-sm opacity-90 mb-3'>Governance, architecture, security, ROI — end-to-end</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
@@ -203,11 +203,11 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/blog/ai-cost-optimization-2025' className='group'>
+            <Link href='/blog/ai-2025-go-to-market-playbook' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Cost Optimization 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Reduce AI costs by 60% with proven optimization strategies</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📈</div>
+                <h3 className='text-lg font-semibold mb-2'>AI GTM Playbook 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Positioning, pricing, and distribution that compound</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>18 min read</span>
                   <span className='mx-2'>•</span>

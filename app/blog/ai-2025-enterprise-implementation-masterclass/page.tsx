@@ -2,6 +2,87 @@ import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
+export default function AIEnterpriseImplementationMasterclass2025() {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="AI Enterprise Implementation Masterclass 2025"
+        description="Comprehensive, 45-minute masterclass covering governance, data, architecture, security, and ROI for enterprise AI."
+        keywords="AI enterprise implementation, AI governance, AI architecture, AI security, ROI, 2025"
+        url="/blog/ai-2025-enterprise-implementation-masterclass"
+      />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-12">
+          <div className="flex items-center gap-2 text-sm text-blue-700 mb-4">
+            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Masterclass</span>
+            <span>•</span>
+            <span>45 min read</span>
+            <span>•</span>
+            <span>September 12, 2025</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Enterprise Implementation Masterclass 2025
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            A practical field guide for CIOs and engineering leaders to implement AI programs with governance, safety, and measurable ROI.
+          </p>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8 mb-12">
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">8</div>
+              <div className="text-gray-600">Domains Covered</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-600 mb-2">30+</div>
+              <div className="text-gray-600">Controls & Checklists</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-indigo-600 mb-2">340%</div>
+              <div className="text-gray-600">Avg. ROI</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-emerald-600 mb-2">6 mo</div>
+              <div className="text-gray-600">Payback</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="prose prose-lg max-w-none">
+          <h2>Program Foundations</h2>
+          <p>Executive sponsorship, budget guardrails, and a portfolio approach with value streams.</p>
+          <h2>Governance & Risk</h2>
+          <p>Policy library, model cards, data lineage, and incident response. Embed RAI controls.</p>
+          <h2>Architecture</h2>
+          <p>Reference architectures for ingestion, retrieval, orchestration, and inference at scale.</p>
+          <h2>Security</h2>
+          <p>Threat models for prompt injection, data exfiltration, and supply chain; mitigations and monitoring.</p>
+          <h2>ROI & Evals</h2>
+          <p>Define north-star metrics, design evals, and run weekly business reviews with owners.</p>
+        </div>
+
+        <div className="bg-blue-600 text-white rounded-xl p-8 mt-12">
+          <h2 className="text-2xl font-bold mb-4">Enterprise Implementation Toolkit</h2>
+          <p className="text-blue-100 mb-6">Download governance templates, reference architectures, and evaluation frameworks.</p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/resources/ai-2025-implementation-master-checklist" className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold text-center">
+              Download Checklist
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-blue-700">
+              Book an Enterprise Workshop
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
+import SEO from '../../../components/SEO';
+
 export default function AIEnterpriseImplementationMasterclass() {
   return (
     <div className="min-h-screen bg-white">
