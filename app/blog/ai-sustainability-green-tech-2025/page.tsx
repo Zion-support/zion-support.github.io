@@ -6,16 +6,9 @@ export default function AISustainabilityGreenTech2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title="AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems"
-        description="Comprehensive guide to sustainable AI development, green computing, and environmental impact reduction. Learn how to build eco-friendly AI systems for 2025."
-        keywords="AI sustainability, green tech, sustainable AI, environmental impact, green computing, carbon footprint, eco-friendly AI"
-=======
-        title="AI for Sustainability: Green Tech Solutions Driving Environmental Impact in 2025"
-        description="Discover how AI is revolutionizing sustainability and green technology in 2025. Learn about energy optimization, carbon reduction, and environmental monitoring solutions."
-        keywords="AI sustainability, green technology, environmental AI, carbon reduction, renewable energy, climate tech, sustainable AI"
->>>>>>> cursor/create-and-deploy-new-content-ed4a
+        title="AI Sustainability & Green Tech 2025: Building Responsible AI for a Sustainable Future"
+        description="Discover how AI can drive sustainability initiatives and reduce environmental impact. Learn about green AI practices, energy-efficient models, and sustainable technology solutions for 2025."
+        keywords="AI sustainability, green AI, sustainable technology, environmental AI, carbon neutral AI, green tech 2025"
         url="/blog/ai-sustainability-green-tech-2025"
       />
       
@@ -23,1604 +16,558 @@ export default function AISustainabilityGreenTech2025() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-<<<<<<< HEAD
             <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Blog
             </Link>
             <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">Sustainability</span>
-            <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">20 min read</span>
+            <span className="text-sm text-gray-600">January 28, 2025</span>
           </div>
           
-          <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4">
-            <span className="text-sm font-medium">🌱 SUSTAINABLE</span>
+          <div className="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
+            Sustainability & AI
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems
+            AI Sustainability & Green Tech 2025: Building Responsible AI for a Sustainable Future
           </h1>
           
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            As AI adoption accelerates, so does its environmental impact. Learn how to build 
-            sustainable AI systems that reduce carbon footprint, optimize energy consumption, 
-            and contribute to a greener future in 2025.
+          <p className="text-xl text-gray-600 leading-relaxed">
+            As AI adoption accelerates, the environmental impact of computing becomes increasingly critical. 
+            Learn how to build sustainable AI systems that reduce carbon footprint while maximizing business value 
+            and environmental benefits.
           </p>
-          
-          <div className="flex items-center gap-4 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                <span className="text-green-600 font-bold text-sm">ZT</span>
-              </div>
-              <span>Zion Tech Group</span>
-            </div>
-            <span>•</span>
-            <span>January 28, 2025</span>
-            <span>•</span>
-            <span>Updated 3 hours ago</span>
-          </div>
         </div>
 
-        {/* Executive Summary */}
-        <div className="bg-green-50 border border-green-200 rounded-xl p-8 mb-12">
-          <h2 className="text-2xl font-bold text-green-900 mb-4">Executive Summary</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-green-800 mb-3">Environmental Impact</h3>
-              <ul className="space-y-2 text-green-700">
-                <li>• AI accounts for 3.5% of global electricity consumption</li>
-                <li>• Training large models emits 284 tons CO₂</li>
-                <li>• Data centers use 1% of global electricity</li>
-                <li>• 40% reduction possible with green practices</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-green-800 mb-3">Business Benefits</h3>
-              <ul className="space-y-2 text-green-700">
-                <li>• 30-50% reduction in operational costs</li>
-                <li>• Improved brand reputation & ESG scores</li>
-                <li>• Regulatory compliance advantages</li>
-                <li>• Access to green financing & incentives</li>
-              </ul>
-            </div>
-=======
-            <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-              Sustainability & AI
-            </span>
-            <span className="text-gray-500 text-sm">18 min read</span>
-            <span className="text-gray-500 text-sm">•</span>
-            <span className="text-gray-500 text-sm">Jan 28, 2025</span>
+        {/* Author Info */}
+        <div className="flex items-center gap-4 mb-12 p-6 bg-gray-50 rounded-xl">
+          <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+            <span className="text-green-600 font-bold">ZT</span>
           </div>
-          
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI for Sustainability: Green Tech Solutions Driving Environmental Impact in 2025
-          </h1>
-          
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            As climate change accelerates, AI is emerging as a powerful ally in the fight for 
-            sustainability. Discover how intelligent systems are optimizing energy consumption, 
-            reducing carbon footprints, and creating a more sustainable future.
-=======
-        title="AI for Sustainability: Green Tech Solutions in 2025"
-        description="Discover how AI is driving sustainability initiatives and green technology solutions. Real-world applications, environmental impact, and implementation strategies for 2025."
-        keywords="AI sustainability, green tech, environmental AI, sustainable technology, climate tech, carbon reduction, green AI"
-        url="/blog/ai-sustainability-green-tech-2025"
-      />
-      
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-              Sustainability & AI
-            </span>
-            <span className="text-gray-500 text-sm">12 min read</span>
-            <span className="text-gray-500 text-sm">•</span>
-            <span className="text-gray-500 text-sm">Jan 30, 2025</span>
+          <div>
+            <div className="font-semibold text-gray-900">Zion Tech Group</div>
+            <div className="text-sm text-gray-600">AI & Sustainability Experts</div>
           </div>
-          
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI for Sustainability: Green Tech Solutions in 2025
-          </h1>
-          
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            How artificial intelligence is becoming the driving force behind sustainable 
-            technology solutions, helping businesses reduce their environmental footprint 
-            while improving efficiency and profitability.
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-          </p>
-          
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-<<<<<<< HEAD
-              <span className="text-green-600 font-bold text-lg">ZT</span>
-            </div>
-            <div>
-              <div className="font-semibold text-gray-900">Zion Tech Group</div>
-              <div className="text-sm text-gray-600">Sustainability & AI Research</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Image */}
-        <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl flex items-center justify-center mb-12">
-          <div className="text-8xl">🌱</div>
-        </div>
-
-        {/* Key Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-green-50 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">40%</div>
-            <div className="text-sm text-green-800">Average Energy Reduction</div>
-          </div>
-          <div className="bg-blue-50 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">$2.3B</div>
-            <div className="text-sm text-blue-800">Market Size by 2025</div>
-          </div>
-          <div className="bg-purple-50 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">85%</div>
-            <div className="text-sm text-purple-800">Companies Planning Green AI</div>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
+          <div className="ml-auto text-sm text-gray-500">
+            18 min read
           </div>
         </div>
 
         {/* Table of Contents */}
-<<<<<<< HEAD
-        <div className="bg-gray-50 rounded-xl p-6 mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
+        <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-12">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2 text-gray-700">
-            <li><a href="#environmental-impact" className="hover:text-blue-600">1. The Environmental Impact of AI</a></li>
-            <li><a href="#green-computing" className="hover:text-blue-600">2. Green Computing Principles</a></li>
-            <li><a href="#sustainable-architecture" className="hover:text-blue-600">3. Sustainable AI Architecture</a></li>
-            <li><a href="#energy-optimization" className="hover:text-blue-600">4. Energy Optimization Strategies</a></li>
-            <li><a href="#carbon-footprint" className="hover:text-blue-600">5. Carbon Footprint Reduction</a></li>
-            <li><a href="#implementation" className="hover:text-blue-600">6. Implementation Guide</a></li>
+            <li><a href="#ai-environmental-impact" className="hover:text-green-600">The Environmental Impact of AI</a></li>
+            <li><a href="#green-ai-principles" className="hover:text-green-600">Green AI Principles & Best Practices</a></li>
+            <li><a href="#sustainable-ai-applications" className="hover:text-green-600">Sustainable AI Applications</a></li>
+            <li><a href="#energy-efficient-models" className="hover:text-green-600">Energy-Efficient AI Models</a></li>
+            <li><a href="#carbon-neutral-ai" className="hover:text-green-600">Carbon Neutral AI Strategies</a></li>
+            <li><a href="#measuring-sustainability" className="hover:text-green-600">Measuring AI Sustainability</a></li>
+            <li><a href="#future-green-ai" className="hover:text-green-600">The Future of Green AI</a></li>
           </ul>
         </div>
 
-        {/* Environmental Impact */}
-        <section id="environmental-impact" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">The Environmental Impact of AI</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            The rapid growth of AI has brought significant environmental challenges. From massive 
-            data centers consuming enormous amounts of electricity to the carbon footprint of 
-            training large language models, the AI industry's environmental impact cannot be ignored.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-red-900 mb-3">Energy Consumption</h3>
-              <div className="space-y-2 text-red-800">
-                <div className="flex justify-between">
-                  <span>Global AI Energy Use</span>
-                  <span className="font-bold">3.5%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Data Center Energy</span>
-                  <span className="font-bold">1%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Growth Rate (YoY)</span>
-                  <span className="font-bold">+25%</span>
-                </div>
-              </div>
-            </div>
+        {/* Main Content */}
+        <article className="prose prose-lg max-w-none">
+          <section id="ai-environmental-impact" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Environmental Impact of AI</h2>
             
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold text-orange-900 mb-3">Carbon Emissions</h3>
-              <div className="space-y-2 text-orange-800">
-                <div className="flex justify-between">
-                  <span>GPT-3 Training</span>
-                  <span className="font-bold">284 tons CO₂</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>GPT-4 Training</span>
-                  <span className="font-bold">1,200 tons CO₂</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Annual AI Emissions</span>
-                  <span className="font-bold">2.3M tons</span>
-                </div>
-              </div>
+            <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
+              <h3 className="text-xl font-semibold text-red-800 mb-4">⚠️ Current Environmental Challenges</h3>
+              <ul className="space-y-2 text-red-700">
+                <li>• AI training can consume as much energy as 5 cars over their lifetime</li>
+                <li>• Data centers account for 1-2% of global electricity consumption</li>
+                <li>• Large language models can emit 500+ tons of CO2 during training</li>
+                <li>• AI inference consumes 10x more energy than training over time</li>
+              </ul>
             </div>
-            
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-              <div className="text-4xl mb-4">💧</div>
-              <h3 className="text-xl font-bold text-yellow-900 mb-3">Water Usage</h3>
-              <div className="space-y-2 text-yellow-800">
-                <div className="flex justify-between">
-                  <span>Cooling Systems</span>
-                  <span className="font-bold">1.7B gallons</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Per Data Center</span>
-                  <span className="font-bold">3-5M gallons</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Growth Rate</span>
-                  <span className="font-bold">+15%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-gray-900 rounded-xl p-8">
-            <h3 className="text-xl font-bold text-white mb-6">Environmental Impact by AI Application</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-semibold text-green-400 mb-4">High Impact Applications</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Large Language Models</span>
-                    <span className="text-red-400 font-bold">Very High</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Computer Vision Training</span>
-                    <span className="text-orange-400 font-bold">High</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Recommendation Systems</span>
-                    <span className="text-yellow-400 font-bold">Medium</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Edge AI Applications</span>
-                    <span className="text-green-400 font-bold">Low</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-blue-400 mb-4">Mitigation Potential</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Model Optimization</span>
-                    <span className="text-green-400 font-bold">40-60%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Renewable Energy</span>
-                    <span className="text-green-400 font-bold">70-90%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Efficient Hardware</span>
-                    <span className="text-green-400 font-bold">30-50%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Edge Computing</span>
-                    <span className="text-green-400 font-bold">50-80%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Green Computing */}
-        <section id="green-computing" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Green Computing Principles</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Green computing principles provide a framework for developing sustainable AI systems. 
-            These principles focus on energy efficiency, resource optimization, and environmental 
-            responsibility throughout the AI development lifecycle.
-          </p>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">1. Energy Efficiency First</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Hardware Optimization</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Use energy-efficient processors (ARM, RISC-V)</li>
-                    <li>• Implement dynamic voltage scaling</li>
-                    <li>• Optimize memory hierarchy</li>
-                    <li>• Use specialized AI chips (TPUs, NPUs)</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Software Optimization</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Model quantization and pruning</li>
-                    <li>• Efficient algorithms and data structures</li>
-                    <li>• Optimized compilers and runtimes</li>
-                    <li>• Smart caching and prefetching</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">2. Renewable Energy Integration</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Data Center Design</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Solar and wind power integration</li>
-                    <li>• Geothermal cooling systems</li>
-                    <li>• Smart grid connectivity</li>
-                    <li>• Energy storage solutions</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Operational Strategies</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Time-shifting workloads to peak renewable hours</li>
-                    <li>• Dynamic load balancing</li>
-                    <li>• Carbon-aware scheduling</li>
-                    <li>• Renewable energy certificates (RECs)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">3. Resource Optimization</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Computing Resources</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Right-sizing infrastructure</li>
-                    <li>• Container orchestration</li>
-                    <li>• Auto-scaling policies</li>
-                    <li>• Resource sharing and pooling</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Data Management</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Data deduplication</li>
-                    <li>• Intelligent data tiering</li>
-                    <li>• Compression and encoding</li>
-                    <li>• Lifecycle management</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              The rapid growth of AI has brought unprecedented computational demands, with environmental costs that 
+              can no longer be ignored. However, AI also presents unique opportunities to solve environmental 
+              challenges and create more sustainable business practices.
+            </p>
 
-        {/* Sustainable Architecture */}
-        <section id="sustainable-architecture" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Sustainable AI Architecture</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Building sustainable AI systems requires careful architectural decisions that balance 
-            performance with environmental impact. Here's how to design AI systems that are both 
-            powerful and environmentally responsible.
-          </p>
-          
-          <div className="bg-gray-900 rounded-xl p-8 mb-8">
-            <h3 className="text-xl font-bold text-white mb-6">Sustainable AI Architecture Stack</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="bg-gray-800 rounded-lg p-4">
-                <h4 className="text-lg font-semibold text-green-400 mb-3">Application Layer</h4>
-                <ul className="text-gray-300 text-sm space-y-2">
-                  <li>• Efficient algorithms</li>
-                  <li>• Model optimization</li>
-                  <li>• Smart caching</li>
-                  <li>• Batch processing</li>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">🌍 Environmental Costs</h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li>• High energy consumption for training</li>
+                  <li>• Water usage for cooling data centers</li>
+                  <li>• Electronic waste from hardware</li>
+                  <li>• Carbon emissions from electricity</li>
                 </ul>
               </div>
-              <div className="bg-gray-800 rounded-lg p-4">
-                <h4 className="text-lg font-semibold text-blue-400 mb-3">Framework Layer</h4>
-                <ul className="text-gray-300 text-sm space-y-2">
-                  <li>• Green ML frameworks</li>
-                  <li>• Energy monitoring</li>
-                  <li>• Auto-scaling</li>
-                  <li>• Resource management</li>
-                </ul>
-              </div>
-              <div className="bg-gray-800 rounded-lg p-4">
-                <h4 className="text-lg font-semibold text-purple-400 mb-3">Infrastructure Layer</h4>
-                <ul className="text-gray-300 text-sm space-y-2">
-                  <li>• Renewable energy</li>
-                  <li>• Efficient cooling</li>
-                  <li>• Edge computing</li>
-                  <li>• Smart routing</li>
-                </ul>
-              </div>
-              <div className="bg-gray-800 rounded-lg p-4">
-                <h4 className="text-lg font-semibold text-yellow-400 mb-3">Hardware Layer</h4>
-                <ul className="text-gray-300 text-sm space-y-2">
-                  <li>• ARM processors</li>
-                  <li>• AI accelerators</li>
-                  <li>• Low-power memory</li>
-                  <li>• Thermal management</li>
+              
+              <div className="bg-green-50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">🌱 Environmental Benefits</h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li>• Optimize energy consumption</li>
+                  <li>• Reduce waste through smart systems</li>
+                  <li>• Enable renewable energy integration</li>
+                  <li>• Support circular economy models</li>
                 </ul>
               </div>
             </div>
-          </div>
-          
-          <div className="space-y-6">
-            <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-green-900 mb-4">Edge-First Architecture</h3>
-              <p className="text-green-800 mb-4">
-                Moving AI processing to the edge reduces data transmission, lowers latency, 
-                and significantly decreases energy consumption.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-green-800 mb-2">Benefits</h4>
-                  <ul className="text-green-700 text-sm space-y-1">
-                    <li>• 50-80% reduction in energy use</li>
-                    <li>• Lower latency and bandwidth requirements</li>
-                    <li>• Improved privacy and data security</li>
-                    <li>• Reduced cloud infrastructure costs</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-green-800 mb-2">Implementation</h4>
-                  <ul className="text-green-700 text-sm space-y-1">
-                    <li>• Deploy edge AI models</li>
-                    <li>• Use efficient inference engines</li>
-                    <li>• Implement smart offloading</li>
-                    <li>• Optimize for mobile devices</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-blue-900 mb-4">Model Optimization Strategies</h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div>
-                  <h4 className="font-semibold text-blue-800 mb-2">Quantization</h4>
-                  <p className="text-blue-700 text-sm">
-                    Reduce model precision from 32-bit to 8-bit or 16-bit floating point, 
-                    reducing memory usage and energy consumption by 50-75%.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-blue-800 mb-2">Pruning</h4>
-                  <p className="text-blue-700 text-sm">
-                    Remove unnecessary weights and connections, reducing model size 
-                    by 60-90% while maintaining performance.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-blue-800 mb-2">Knowledge Distillation</h4>
-                  <p className="text-blue-700 text-sm">
-                    Train smaller "student" models to mimic larger "teacher" models, 
-                    achieving similar performance with 10x fewer parameters.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Energy Optimization */}
-        <section id="energy-optimization" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Energy Optimization Strategies</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Optimizing energy consumption in AI systems requires a multi-layered approach, 
-            from hardware selection to algorithmic efficiency. Here are proven strategies 
-            to minimize energy usage while maintaining performance.
-          </p>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Hardware-Level Optimization</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Processor Selection</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-gray-700">ARM Processors</span>
-                      <span className="text-green-600 font-bold">-60% energy</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-gray-700">AI Accelerators (TPU/NPU)</span>
-                      <span className="text-green-600 font-bold">-40% energy</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-gray-700">RISC-V Architecture</span>
-                      <span className="text-green-600 font-bold">-30% energy</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Memory Optimization</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-gray-700">HBM Memory</span>
-                      <span className="text-green-600 font-bold">-25% energy</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-gray-700">Low-Power DDR</span>
-                      <span className="text-green-600 font-bold">-35% energy</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-gray-700">Smart Caching</span>
-                      <span className="text-green-600 font-bold">-20% energy</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <section id="green-ai-principles" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Green AI Principles & Best Practices</h2>
             
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Software-Level Optimization</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Algorithm Efficiency</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Use sparse neural networks</li>
-                    <li>• Implement early stopping</li>
-                    <li>• Optimize batch sizes</li>
-                    <li>• Use efficient data structures</li>
-                    <li>• Implement gradient checkpointing</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Runtime Optimization</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• Dynamic voltage scaling</li>
-                    <li>• CPU frequency scaling</li>
-                    <li>• Smart task scheduling</li>
-                    <li>• Resource pooling</li>
-                    <li>• Load balancing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Energy Monitoring & Management</h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white bg-opacity-10 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Real-time Monitoring</h4>
-                  <p className="text-sm opacity-90">
-                    Track energy consumption across all AI workloads and infrastructure components.
-                  </p>
-                </div>
-                <div className="bg-white bg-opacity-10 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Predictive Analytics</h4>
-                  <p className="text-sm opacity-90">
-                    Use ML to predict energy usage and optimize resource allocation proactively.
-                  </p>
-                </div>
-                <div className="bg-white bg-opacity-10 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Automated Optimization</h4>
-                  <p className="text-sm opacity-90">
-                    Implement self-optimizing systems that adjust performance based on energy constraints.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Carbon Footprint */}
-        <section id="carbon-footprint" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Carbon Footprint Reduction</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Reducing the carbon footprint of AI systems requires a comprehensive approach that 
-            addresses every aspect of the development and deployment lifecycle. Here's how to 
-            measure, monitor, and minimize your AI carbon impact.
-          </p>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Carbon Footprint Measurement</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Measurement Tools</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• CodeCarbon - Python library for tracking emissions</li>
-                    <li>• MLCO2 - Machine learning carbon calculator</li>
-                    <li>• Green Algorithms - Cloud computing carbon tracker</li>
-                    <li>• CarbonTracker - Real-time emission monitoring</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Metrics</h4>
-                  <ul className="text-gray-700 text-sm space-y-2">
-                    <li>• CO₂ equivalent per model training</li>
-                    <li>• Energy consumption per inference</li>
-                    <li>• Carbon intensity of data centers</li>
-                    <li>• Lifecycle carbon footprint</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-green-900 mb-4">Reduction Strategies</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-green-800 mb-3">Model Development</h4>
-                  <ul className="text-green-700 text-sm space-y-2">
-                    <li>• Use pre-trained models when possible</li>
-                    <li>• Implement transfer learning</li>
-                    <li>• Optimize hyperparameter search</li>
-                    <li>• Use efficient architectures</li>
-                    <li>• Implement model compression</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-green-800 mb-3">Infrastructure</h4>
-                  <ul className="text-green-700 text-sm space-y-2">
-                    <li>• Choose renewable energy providers</li>
-                    <li>• Use carbon-neutral data centers</li>
-                    <li>• Implement smart cooling systems</li>
-                    <li>• Optimize data center locations</li>
-                    <li>• Use energy-efficient hardware</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-900 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Carbon Reduction Impact</h3>
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">40-60%</div>
-                  <div className="text-gray-300 text-sm">Model Optimization</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">70-90%</div>
-                  <div className="text-gray-300 text-sm">Renewable Energy</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">50-80%</div>
-                  <div className="text-gray-300 text-sm">Edge Computing</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">30-50%</div>
-                  <div className="text-gray-300 text-sm">Efficient Hardware</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Implementation Guide */}
-        <section id="implementation" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Guide</h2>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Step-by-Step Implementation</h3>
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">The 5 Pillars of Green AI</h3>
+              
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Assessment & Baseline</h4>
-                    <p className="text-gray-700">
-                      Measure current energy consumption and carbon footprint of your AI systems. 
-                      Establish baseline metrics for comparison.
-                    </p>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Energy Efficiency First</h4>
+                    <p className="text-gray-700">Design AI systems that minimize energy consumption through efficient algorithms, optimized hardware, and smart resource allocation.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Model Optimization</h4>
-                    <p className="text-gray-700">
-                      Implement quantization, pruning, and knowledge distillation to reduce model size 
-                      and energy requirements.
-                    </p>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Renewable Energy Integration</h4>
+                    <p className="text-gray-700">Power AI infrastructure with renewable energy sources and implement smart grid technologies for optimal energy distribution.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Infrastructure Migration</h4>
-                    <p className="text-gray-700">
-                      Move to renewable energy sources, implement edge computing, and optimize 
-                      data center operations.
-                    </p>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Lifecycle Thinking</h4>
+                    <p className="text-gray-700">Consider the entire lifecycle of AI systems, from data collection to model retirement, with sustainability at every stage.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">4</div>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Monitoring & Optimization</h4>
-                    <p className="text-gray-700">
-                      Deploy monitoring systems, implement automated optimization, and continuously 
-                      improve sustainability metrics.
-                    </p>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Transparent Reporting</h4>
+                    <p className="text-gray-700">Measure and report environmental impact transparently, enabling stakeholders to make informed decisions.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">5</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Environmental Value Creation</h4>
+                    <p className="text-gray-700">Use AI to solve environmental challenges and create positive environmental impact beyond just reducing AI's own footprint.</p>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">💡 Quick Wins for Green AI</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Use smaller, specialized models instead of large general-purpose ones</li>
+                <li>• Implement model quantization and pruning techniques</li>
+                <li>• Schedule training during off-peak hours when renewable energy is abundant</li>
+                <li>• Use edge computing to reduce data transmission</li>
+                <li>• Implement automatic model shutdown during idle periods</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="sustainable-ai-applications" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Sustainable AI Applications</h2>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-blue-900 mb-4">Quick Wins (First 30 Days)</h3>
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">🌱 Environmental Monitoring & Conservation</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Wildlife Protection</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• AI-powered camera traps for poaching detection</li>
+                      <li>• Acoustic monitoring for endangered species</li>
+                      <li>• Satellite imagery analysis for habitat monitoring</li>
+                      <li>• Predictive models for migration patterns</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Climate Monitoring</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• Real-time air quality prediction</li>
+                      <li>• Ocean temperature and current analysis</li>
+                      <li>• Deforestation detection and prevention</li>
+                      <li>• Carbon sequestration optimization</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-4 text-sm text-green-600 font-medium">
+                  Impact: 30% improvement in conservation efficiency, 25% reduction in monitoring costs
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">⚡ Smart Energy Management</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Grid Optimization</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• Demand forecasting and load balancing</li>
+                      <li>• Renewable energy integration optimization</li>
+                      <li>• Predictive maintenance for grid infrastructure</li>
+                      <li>• Real-time pricing and demand response</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Building Efficiency</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• Smart HVAC and lighting control</li>
+                      <li>• Occupancy-based energy management</li>
+                      <li>• Predictive maintenance for equipment</li>
+                      <li>• Energy consumption pattern analysis</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-4 text-sm text-purple-600 font-medium">
+                  Impact: 40% reduction in energy consumption, 20% cost savings
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">♻️ Circular Economy & Waste Reduction</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Waste Management</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• Automated waste sorting and recycling</li>
+                      <li>• Predictive waste generation models</li>
+                      <li>• Route optimization for collection</li>
+                      <li>• Material recovery optimization</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Supply Chain Optimization</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• Sustainable sourcing recommendations</li>
+                      <li>• Packaging optimization algorithms</li>
+                      <li>• Reverse logistics planning</li>
+                      <li>• Carbon footprint tracking</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-4 text-sm text-orange-600 font-medium">
+                  Impact: 50% improvement in recycling rates, 35% reduction in waste
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="energy-efficient-models" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Energy-Efficient AI Models</h2>
+            
+            <div className="bg-blue-50 p-6 rounded-xl mb-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Model Optimization Techniques</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Quantization</h4>
+                  <p className="text-sm text-gray-600 mb-2">Reduce precision from 32-bit to 8-bit or lower</p>
+                  <div className="text-xs text-blue-600 font-medium">Energy savings: 2-4x</div>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Pruning</h4>
+                  <p className="text-sm text-gray-600 mb-2">Remove unnecessary parameters and connections</p>
+                  <div className="text-xs text-blue-600 font-medium">Energy savings: 3-5x</div>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Knowledge Distillation</h4>
+                  <p className="text-sm text-gray-600 mb-2">Train smaller models to mimic larger ones</p>
+                  <div className="text-xs text-blue-600 font-medium">Energy savings: 5-10x</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">🏗️ Architecture Choices</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Efficient Architectures</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• MobileNet for computer vision</li>
+                      <li>• DistilBERT for NLP tasks</li>
+                      <li>• EfficientNet for image classification</li>
+                      <li>• TinyBERT for language understanding</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Hardware Optimization</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li>• Use specialized AI chips (TPUs, NPUs)</li>
+                      <li>• Edge computing for inference</li>
+                      <li>• GPU optimization techniques</li>
+                      <li>• Memory-efficient data structures</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-green-50 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">📊 Energy Efficiency Metrics</h3>
+                <div className="grid md:grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">FLOPS/W</div>
+                    <div className="text-sm text-gray-600">Floating Point Operations per Watt</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">Inference/s/W</div>
+                    <div className="text-sm text-gray-600">Inferences per Second per Watt</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">CO2/Query</div>
+                    <div className="text-sm text-gray-600">Carbon Emissions per Query</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">Energy/Accuracy</div>
+                    <div className="text-sm text-gray-600">Energy per Accuracy Point</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="carbon-neutral-ai" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Carbon Neutral AI Strategies</h2>
+            
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Achieving Carbon Neutrality</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Measure Your Carbon Footprint</h4>
+                    <p className="text-gray-700">Use tools like CodeCarbon, MLCO2, or custom tracking to measure emissions from training and inference.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Optimize for Efficiency</h4>
+                    <p className="text-gray-700">Implement energy-efficient models, use renewable energy, and optimize resource utilization.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Offset Remaining Emissions</h4>
+                    <p className="text-gray-700">Invest in verified carbon offset projects or renewable energy credits to neutralize remaining emissions.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Create Positive Impact</h4>
+                    <p className="text-gray-700">Use AI to solve environmental challenges and create net positive environmental impact.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">🌱 Carbon Offset Strategies</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li>• <strong>Renewable Energy Credits:</strong> Purchase RECs from wind or solar projects</li>
+                  <li>• <strong>Forest Conservation:</strong> Support reforestation and forest protection</li>
+                  <li>• <strong>Clean Technology:</strong> Invest in clean tech startups</li>
+                  <li>• <strong>Carbon Capture:</strong> Support direct air capture projects</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">📊 Verification & Reporting</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li>• <strong>Third-party Verification:</strong> Use certified carbon accounting</li>
+                  <li>• <strong>Transparent Reporting:</strong> Publish annual sustainability reports</li>
+                  <li>• <strong>Real-time Monitoring:</strong> Track emissions continuously</li>
+                  <li>• <strong>Stakeholder Engagement:</strong> Involve customers and partners</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="measuring-sustainability" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Measuring AI Sustainability</h2>
+            
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">🔍 Key Sustainability Metrics</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-blue-800 mb-3">Immediate Actions</h4>
-                  <ul className="text-blue-700 text-sm space-y-2">
-                    <li>• Switch to renewable energy providers</li>
-                    <li>• Implement model quantization</li>
-                    <li>• Enable auto-scaling policies</li>
-                    <li>• Deploy energy monitoring tools</li>
+                  <h4 className="font-semibold text-gray-900 mb-3">Environmental Metrics</h4>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    <li>• Carbon emissions (CO2e per inference)</li>
+                    <li>• Energy consumption (kWh per model)</li>
+                    <li>• Water usage (liters per training run)</li>
+                    <li>• Electronic waste generated</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-blue-800 mb-3">Expected Impact</h4>
-                  <ul className="text-blue-700 text-sm space-y-2">
-                    <li>• 20-30% reduction in energy costs</li>
-                    <li>• 15-25% reduction in carbon footprint</li>
-                    <li>• Improved system performance</li>
-                    <li>• Better resource utilization</li>
+                  <h4 className="font-semibold text-gray-900 mb-3">Efficiency Metrics</h4>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    <li>• Energy per accuracy point</li>
+                    <li>• Carbon per business value unit</li>
+                    <li>• Resource utilization efficiency</li>
+                    <li>• Model compression ratio</li>
                   </ul>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Get Expert Help</h3>
-              <p className="text-xl mb-6 opacity-90">
-                Our sustainability experts can help you implement comprehensive green AI strategies. 
-                Get a free sustainability assessment and customized implementation plan.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-                >
-                  Get Free Sustainability Assessment
-                </Link>
-                <Link
-                  href="/resources/sustainable-ai-playbook-2025"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
-                >
-                  Download Green AI Playbook
-                </Link>
-=======
-        <div className="bg-gray-50 rounded-xl p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Table of Contents</h2>
-          <ul className="space-y-3">
-            <li><a href="#introduction" className="text-green-600 hover:underline">The Green AI Revolution</a></li>
-            <li><a href="#energy-optimization" className="text-green-600 hover:underline">AI-Powered Energy Optimization</a></li>
-            <li><a href="#carbon-reduction" className="text-green-600 hover:underline">Carbon Footprint Reduction</a></li>
-            <li><a href="#renewable-energy" className="text-green-600 hover:underline">Renewable Energy Integration</a></li>
-            <li><a href="#environmental-monitoring" className="text-green-600 hover:underline">Environmental Monitoring</a></li>
-            <li><a href="#sustainable-ai" className="text-green-600 hover:underline">Building Sustainable AI Systems</a></li>
-            <li><a href="#case-studies" className="text-green-600 hover:underline">Real-World Success Stories</a></li>
-            <li><a href="#future-outlook" className="text-green-600 hover:underline">Future Outlook and Opportunities</a></li>
-          </ul>
-        </div>
-=======
-              <span className="text-green-600 font-bold">ZT</span>
-            </div>
-            <div>
-              <div className="font-semibold text-gray-900">Zion Tech Group</div>
-              <div className="text-sm text-gray-600">AI & Technology Solutions</div>
-            </div>
-          </div>
-        </header>
 
-        {/* Table of Contents */}
-        <nav className="bg-gray-50 rounded-xl p-6 mb-12">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#introduction" className="text-blue-600 hover:underline">The Green AI Revolution</a></li>
-            <li><a href="#applications" className="text-blue-600 hover:underline">Sustainable AI Applications</a></li>
-            <li><a href="#environmental-impact" className="text-blue-600 hover:underline">Environmental Impact & Benefits</a></li>
-            <li><a href="#implementation" className="text-blue-600 hover:underline">Implementation Strategies</a></li>
-            <li><a href="#case-studies" className="text-blue-600 hover:underline">Real-World Success Stories</a></li>
-            <li><a href="#future" className="text-blue-600 hover:underline">Future of Green AI</a></li>
-          </ul>
-        </nav>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-
-        {/* Introduction */}
-        <section id="introduction" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Green AI Revolution</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-<<<<<<< HEAD
-            The intersection of artificial intelligence and sustainability is creating unprecedented 
-            opportunities to address climate change and environmental challenges. In 2025, we're 
-            witnessing a paradigm shift where AI isn't just a tool for efficiency—it's becoming 
-            a critical component of our environmental strategy.
-          </p>
-          
-          <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-green-900 mb-2">The Sustainability Imperative</h3>
-            <p className="text-green-800">
-              With global temperatures rising and natural resources depleting, businesses are under 
-              increasing pressure to reduce their environmental impact. AI provides the intelligence 
-              needed to make these reductions both effective and profitable.
-=======
-            As climate change accelerates and environmental regulations tighten, businesses 
-            are turning to AI to drive sustainability initiatives. The intersection of 
-            artificial intelligence and green technology is creating unprecedented 
-            opportunities for environmental impact and business value.
-          </p>
-          
-          <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-green-900 mb-2">Key Insight</h3>
-            <p className="text-green-800">
-              Companies using AI for sustainability initiatives report 35% reduction in 
-              carbon emissions and 25% improvement in operational efficiency within the 
-              first year of implementation.
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-            </p>
-          </div>
-
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-<<<<<<< HEAD
-            From optimizing energy consumption in data centers to predicting renewable energy 
-            generation, AI is enabling solutions that were previously impossible. The key is 
-            not just using AI for sustainability, but building AI systems that are themselves 
-            sustainable.
-          </p>
-        </section>
-
-        {/* Energy Optimization */}
-        <section id="energy-optimization" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Powered Energy Optimization</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Energy consumption is one of the largest contributors to carbon emissions. AI systems 
-            are revolutionizing how we manage and optimize energy usage across industries.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Smart Grid Management</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI-powered smart grids can predict energy demand, optimize distribution, and integrate 
-            renewable sources more effectively. Machine learning algorithms analyze historical 
-            consumption patterns, weather data, and real-time grid conditions to make intelligent 
-            decisions about energy flow.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Building Energy Management</h3>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Predictive HVAC:</strong> Optimizing heating and cooling based on occupancy and weather</li>
-            <li><strong>Lighting Control:</strong> Intelligent lighting systems that adapt to natural light and usage patterns</li>
-            <li><strong>Load Balancing:</strong> Distributing energy consumption to reduce peak demand</li>
-            <li><strong>Maintenance Prediction:</strong> Identifying equipment issues before they cause energy waste</li>
-          </ul>
-
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">Success Story</h3>
-            <p className="text-blue-800">
-              A major office complex in New York reduced energy consumption by 35% using AI-powered 
-              building management systems, saving $2.3 million annually while reducing carbon 
-              emissions by 1,200 tons.
-            </p>
-          </div>
-        </section>
-
-        {/* Carbon Reduction */}
-        <section id="carbon-reduction" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Carbon Footprint Reduction</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI is helping organizations measure, monitor, and reduce their carbon footprints through 
-            intelligent analysis and optimization across all operations.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Supply Chain Optimization</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI algorithms can optimize supply chains to minimize transportation emissions, reduce 
-            waste, and identify the most sustainable suppliers. This includes route optimization, 
-            inventory management, and supplier selection based on environmental criteria.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Manufacturing Efficiency</h3>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Process Optimization:</strong> Reducing waste and energy consumption in production</li>
-            <li><strong>Quality Prediction:</strong> Minimizing defects that lead to waste and rework</li>
-            <li><strong>Resource Allocation:</strong> Optimizing material usage and reducing scrap</li>
-            <li><strong>Predictive Maintenance:</strong> Preventing equipment failures that cause environmental impact</li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Carbon Accounting and Reporting</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI-powered carbon accounting systems can automatically track emissions across all 
-            business activities, providing real-time insights and ensuring compliance with 
-            environmental regulations.
-          </p>
-        </section>
-
-        {/* Renewable Energy */}
-        <section id="renewable-energy" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Renewable Energy Integration</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            The intermittent nature of renewable energy sources like solar and wind presents 
-            unique challenges. AI is solving these challenges through intelligent forecasting, 
-            storage optimization, and grid integration.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Weather Prediction and Forecasting</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Advanced AI models can predict weather patterns with unprecedented accuracy, enabling 
-            better planning for renewable energy generation. This helps grid operators balance 
-            supply and demand more effectively.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Energy Storage Optimization</h3>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Battery Management:</strong> Optimizing charge and discharge cycles for maximum efficiency</li>
-            <li><strong>Grid Storage:</strong> Intelligent distribution of stored energy based on demand patterns</li>
-            <li><strong>Predictive Analytics:</strong> Forecasting storage needs and optimizing capacity</li>
-            <li><strong>Lifecycle Management:</strong> Extending battery life through intelligent usage patterns</li>
-          </ul>
-
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-yellow-900 mb-2">Innovation Spotlight</h3>
-            <p className="text-yellow-800">
-              A solar farm in California increased energy output by 22% using AI-powered panel 
-              cleaning and maintenance scheduling, while reducing operational costs by 30%.
-            </p>
-          </div>
-        </section>
-
-        {/* Environmental Monitoring */}
-        <section id="environmental-monitoring" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Environmental Monitoring</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI is revolutionizing environmental monitoring through satellite imagery analysis, 
-            sensor networks, and predictive modeling of environmental changes.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Satellite and Remote Sensing</h3>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Deforestation Detection:</strong> Real-time monitoring of forest cover changes</li>
-            <li><strong>Water Quality Assessment:</strong> Analyzing water bodies for pollution and health</li>
-            <li><strong>Air Quality Monitoring:</strong> Tracking pollution levels across large areas</li>
-            <li><strong>Biodiversity Tracking:</strong> Monitoring wildlife populations and habitats</li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">IoT and Sensor Networks</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Connected sensors combined with AI can monitor environmental conditions in real-time, 
-            providing early warning systems for natural disasters, pollution events, and other 
-            environmental threats.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Climate Modeling</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI-enhanced climate models can predict long-term environmental changes with greater 
-            accuracy, helping policymakers and businesses plan for a changing climate.
-          </p>
-        </section>
-
-        {/* Sustainable AI */}
-        <section id="sustainable-ai" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Building Sustainable AI Systems</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            As AI becomes more powerful, it's crucial to ensure that AI systems themselves are 
-            sustainable and don't contribute to environmental problems.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Green Computing Practices</h3>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Energy-Efficient Algorithms:</strong> Designing AI models that require less computational power</li>
-            <li><strong>Edge Computing:</strong> Processing data locally to reduce cloud energy consumption</li>
-            <li><strong>Model Optimization:</strong> Compressing models without losing performance</li>
-            <li><strong>Renewable Energy:</strong> Powering AI infrastructure with clean energy sources</li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Carbon-Aware AI Development</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Developers are increasingly considering the carbon footprint of AI development, 
-            including training costs, inference requirements, and infrastructure needs. 
-            Tools for measuring and optimizing AI carbon footprints are becoming standard practice.
-          </p>
-
-          <div className="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-purple-900 mb-2">Best Practice</h3>
-            <p className="text-purple-800">
-              Google's AI research shows that using renewable energy for training can reduce 
-              the carbon footprint of AI models by up to 90%. Many companies are now committing 
-              to carbon-neutral AI development.
-            </p>
-=======
-            This comprehensive guide explores how AI is transforming sustainability efforts 
-            across industries, from energy optimization to waste reduction, and provides 
-            actionable strategies for implementing green AI solutions in 2025.
-          </p>
-        </section>
-
-        {/* Sustainable AI Applications */}
-        <section id="applications" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Sustainable AI Applications</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Energy Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                AI-powered smart grids and energy management systems that optimize 
-                consumption and reduce waste across buildings and facilities.
-              </p>
-              <div className="text-sm text-green-600 font-medium">
-                Impact: 30% reduction in energy consumption
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="text-4xl mb-4">🌱</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Carbon Footprint Tracking</h3>
-              <p className="text-gray-600 mb-4">
-                Real-time monitoring and analysis of carbon emissions across supply 
-                chains and operations with automated reduction recommendations.
-              </p>
-              <div className="text-sm text-green-600 font-medium">
-                Impact: 45% improvement in carbon visibility
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="text-4xl mb-4">♻️</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Waste Reduction</h3>
-              <p className="text-gray-600 mb-4">
-                Intelligent waste sorting, recycling optimization, and circular economy 
-                models powered by computer vision and predictive analytics.
-              </p>
-              <div className="text-sm text-green-600 font-medium">
-                Impact: 60% reduction in waste generation
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="text-4xl mb-4">🌊</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Water Management</h3>
-              <p className="text-gray-600 mb-4">
-                Smart water systems that monitor usage, detect leaks, and optimize 
-                distribution for maximum efficiency and conservation.
-              </p>
-              <div className="text-sm text-green-600 font-medium">
-                Impact: 40% reduction in water waste
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Environmental Impact & Benefits */}
-        <section id="environmental-impact" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Environmental Impact & Benefits</h2>
-          
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Quantified Environmental Benefits</h3>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">2.3M</div>
-                <div className="text-gray-700 text-sm">Tons CO2 Reduced</div>
-                <div className="text-xs text-gray-500 mt-1">Across all clients</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">65%</div>
-                <div className="text-gray-700 text-sm">Energy Efficiency</div>
-                <div className="text-xs text-gray-500 mt-1">Average improvement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">$12M</div>
-                <div className="text-gray-700 text-sm">Cost Savings</div>
-                <div className="text-xs text-gray-500 mt-1">From green initiatives</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">90%</div>
-                <div className="text-gray-700 text-sm">Waste Diverted</div>
-                <div className="text-xs text-gray-500 mt-1">From landfills</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                ✓
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Regulatory Compliance</h4>
-                <p className="text-gray-700">
-                  Automated monitoring and reporting ensure compliance with environmental 
-                  regulations and carbon disclosure requirements.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                ✓
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Cost Reduction</h4>
-                <p className="text-gray-700">
-                  Sustainable practices often lead to significant cost savings through 
-                  reduced resource consumption and improved efficiency.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                ✓
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Brand Value</h4>
-                <p className="text-gray-700">
-                  Strong sustainability credentials enhance brand reputation and attract 
-                  environmentally conscious customers and investors.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Implementation Strategies */}
-        <section id="implementation" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Strategies</h2>
-          
-          <div className="bg-gray-50 rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Green AI Implementation Roadmap</h3>
-            
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                  1
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Sustainability Assessment</h4>
-                  <p className="text-gray-700">
-                    Conduct a comprehensive audit of current environmental impact and 
-                    identify opportunities for AI-driven improvements.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                  2
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Pilot Program Design</h4>
-                  <p className="text-gray-700">
-                    Start with high-impact, low-risk pilot projects to demonstrate value 
-                    and build organizational confidence.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                  3
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Technology Integration</h4>
-                  <p className="text-gray-700">
-                    Deploy AI solutions with existing systems, ensuring seamless integration 
-                    and minimal disruption.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
-                  4
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Scale & Optimize</h4>
-                  <p className="text-gray-700">
-                    Expand successful pilots across the organization and continuously 
-                    optimize for maximum environmental and business impact.
-                  </p>
-                </div>
-              </div>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-          </div>
-        </section>
-
-        {/* Case Studies */}
-        <section id="case-studies" className="mb-12">
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Success Stories</h2>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">🏭 Manufacturing Giant Reduces Emissions by 50%</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                A Fortune 500 manufacturer implemented AI-powered process optimization across 
-                their global operations, resulting in a 50% reduction in carbon emissions 
-                while increasing production efficiency by 25%.
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm">
-                <div className="bg-green-50 p-3 rounded">
-                  <div className="font-semibold text-green-800">Energy Savings</div>
-                  <div className="text-green-600">$15M annually</div>
-                </div>
-                <div className="bg-blue-50 p-3 rounded">
-                  <div className="font-semibold text-blue-800">Carbon Reduction</div>
-                  <div className="text-blue-600">50,000 tons/year</div>
-                </div>
-                <div className="bg-purple-50 p-3 rounded">
-                  <div className="font-semibold text-purple-800">ROI Timeline</div>
-                  <div className="text-purple-600">18 months</div>
-=======
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Real-World Success Stories</h2>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">🏭</div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Manufacturing Giant Reduces Carbon Footprint by 40%
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    A Fortune 500 manufacturing company implemented AI-powered energy 
-                    management systems across 50+ facilities, resulting in significant 
-                    environmental and cost benefits.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4 text-sm">
-                    <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="font-semibold text-green-800">40%</div>
-                      <div className="text-green-700">Carbon Reduction</div>
-                    </div>
-                    <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="font-semibold text-blue-800">$8M</div>
-                      <div className="text-blue-700">Annual Savings</div>
-                    </div>
-                    <div className="bg-purple-50 p-3 rounded-lg">
-                      <div className="font-semibold text-purple-800">18 months</div>
-                      <div className="text-purple-700">Payback Period</div>
-                    </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">🛠️ Measurement Tools</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 mb-2">CodeCarbon</h4>
+                    <p className="text-sm text-gray-600">Track carbon emissions from code execution</p>
                   </div>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-                </div>
-              </div>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">🌊 Ocean Cleanup Project Uses AI for Plastic Detection</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                An environmental organization deployed AI-powered drones to identify and 
-                collect plastic waste from ocean surfaces, improving collection efficiency 
-                by 300% and reducing operational costs by 60%.
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm">
-                <div className="bg-green-50 p-3 rounded">
-                  <div className="font-semibold text-green-800">Plastic Collected</div>
-                  <div className="text-green-600">500 tons/month</div>
-                </div>
-                <div className="bg-blue-50 p-3 rounded">
-                  <div className="font-semibold text-blue-800">Efficiency Gain</div>
-                  <div className="text-blue-600">300% improvement</div>
-                </div>
-                <div className="bg-purple-50 p-3 rounded">
-                  <div className="font-semibold text-purple-800">Cost Reduction</div>
-                  <div className="text-purple-600">60% savings</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">🏢 Smart City Reduces Energy Consumption by 40%</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                A major city implemented AI-powered smart grid management and building 
-                optimization systems, reducing overall energy consumption by 40% while 
-                improving citizen satisfaction with public services.
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm">
-                <div className="bg-green-50 p-3 rounded">
-                  <div className="font-semibold text-green-800">Energy Savings</div>
-                  <div className="text-green-600">40% reduction</div>
-                </div>
-                <div className="bg-blue-50 p-3 rounded">
-                  <div className="font-semibold text-blue-800">Citizen Satisfaction</div>
-                  <div className="text-blue-600">+35% improvement</div>
-                </div>
-                <div className="bg-purple-50 p-3 rounded">
-                  <div className="font-semibold text-purple-800">Cost Savings</div>
-                  <div className="text-purple-600">$50M annually</div>
-                </div>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">🏢</div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Smart Building Achieves Net-Zero Energy
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    A commercial real estate company used AI to optimize building operations, 
-                    achieving net-zero energy consumption while improving tenant satisfaction.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4 text-sm">
-                    <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="font-semibold text-green-800">100%</div>
-                      <div className="text-green-700">Renewable Energy</div>
-                    </div>
-                    <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="font-semibold text-blue-800">35%</div>
-                      <div className="text-blue-700">Cost Reduction</div>
-                    </div>
-                    <div className="bg-purple-50 p-3 rounded-lg">
-                      <div className="font-semibold text-purple-800">95%</div>
-                      <div className="text-purple-700">Tenant Satisfaction</div>
-                    </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 mb-2">MLCO2</h4>
+                    <p className="text-sm text-gray-600">Calculate emissions from ML model training</p>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 mb-2">Green AI</h4>
+                    <p className="text-sm text-gray-600">Comprehensive sustainability assessment</p>
                   </div>
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">📈 Sustainability Dashboard Example</h3>
+                <div className="grid md:grid-cols-4 gap-4 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-green-600">2.3kg</div>
+                    <div className="text-sm text-gray-600">CO2 per 1000 inferences</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-blue-600">85%</div>
+                    <div className="text-sm text-gray-600">Renewable energy usage</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-purple-600">12x</div>
+                    <div className="text-sm text-gray-600">Energy efficiency improvement</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-orange-600">-40%</div>
+                    <div className="text-sm text-gray-600">Carbon footprint reduction</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Conclusion */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Building sustainable AI systems is not just an environmental responsibility—it's a 
-            business imperative. Organizations that embrace green AI practices will benefit from 
-            reduced operational costs, improved brand reputation, and regulatory compliance advantages.
-          </p>
-          
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            The path to sustainable AI requires commitment, investment, and continuous optimization. 
-            By implementing the strategies outlined in this guide, you can build AI systems that 
-            are both powerful and environmentally responsible, contributing to a more sustainable future.
-          </p>
-          
-          <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-green-900 mb-3">Key Takeaways</h3>
-            <ul className="space-y-2 text-green-800">
-              <li>• AI's environmental impact is significant but manageable with proper strategies</li>
-              <li>• Model optimization can reduce energy consumption by 40-60%</li>
-              <li>• Renewable energy integration can reduce carbon footprint by 70-90%</li>
-              <li>• Edge computing offers significant energy and latency benefits</li>
-              <li>• Continuous monitoring and optimization are essential for long-term success</li>
-            </ul>
-=======
-        {/* Future Outlook */}
-        <section id="future-outlook" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Outlook and Opportunities</h2>
-          
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Emerging Technologies</h3>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Quantum-Enhanced AI:</strong> Using quantum computing to solve complex optimization problems</li>
-            <li><strong>Biomimetic AI:</strong> Learning from nature to create more efficient systems</li>
-            <li><strong>Federated Learning:</strong> Training AI models without centralizing data</li>
-            <li><strong>Neuromorphic Computing:</strong> Brain-inspired computing for ultra-low power AI</li>
-          </ul>
+          <section id="future-green-ai" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Future of Green AI</h2>
+            
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">2025-2030 Predictions</h3>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Near-term (2025-2027)</h4>
+                  <ul className="space-y-3 text-gray-700">
+                    <li>• 90% of new AI models will be energy-optimized</li>
+                    <li>• Carbon-neutral AI becomes industry standard</li>
+                    <li>• Real-time sustainability monitoring in production</li>
+                    <li>• AI-powered renewable energy optimization</li>
+                    <li>• Green AI certification programs emerge</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Long-term (2027-2030)</h4>
+                  <ul className="space-y-3 text-gray-700">
+                    <li>• Net-positive AI systems that create environmental value</li>
+                    <li>• Quantum computing for ultra-efficient AI</li>
+                    <li>• Biodegradable AI hardware components</li>
+                    <li>• AI-driven circular economy optimization</li>
+                    <li>• Global AI sustainability standards and regulations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Market Opportunities</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            The green AI market is expected to reach $2.3 billion by 2025, with opportunities 
-            spanning energy, transportation, agriculture, and manufacturing sectors. Early 
-            adopters will have significant competitive advantages.
-          </p>
+            <div className="mt-8 bg-white border border-gray-200 rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">🚀 Emerging Technologies</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Neuromorphic Computing</h4>
+                  <p className="text-sm text-gray-600">Brain-inspired chips that consume 1000x less energy than traditional processors</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Edge AI</h4>
+                  <p className="text-sm text-gray-600">Processing data locally to reduce transmission energy and latency</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Federated Learning</h4>
+                  <p className="text-sm text-gray-600">Train models without centralizing data, reducing energy and privacy concerns</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Policy and Regulation</h3>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Governments worldwide are implementing policies to encourage sustainable AI development, 
-            including carbon taxes, green technology incentives, and environmental reporting 
-            requirements. Companies that proactively address sustainability will be better 
-            positioned for regulatory compliance.
-          </p>
-        </section>
-
-        {/* Conclusion */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            AI for sustainability represents one of the most promising applications of artificial 
-            intelligence. As we face unprecedented environmental challenges, AI provides the 
-            tools we need to create a more sustainable future while maintaining economic growth.
-          </p>
-          
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            The key to success lies in approaching sustainability not as a constraint, but as 
-            an opportunity for innovation and competitive advantage. Companies that embrace 
-            green AI today will be the leaders of tomorrow's sustainable economy.
-          </p>
-
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build a Sustainable Future?</h3>
-            <p className="text-lg text-gray-700 mb-6">
-              Our sustainability and AI experts can help you identify opportunities to reduce 
-              your environmental impact while improving your bottom line.
+          {/* Call to Action */}
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-xl text-center">
+            <h3 className="text-2xl font-bold mb-4">Ready to Build Sustainable AI?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Get a free sustainability assessment for your AI systems and learn how to reduce your environmental impact.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Sustainability Assessment
+                Get Free Assessment
               </Link>
               <Link
-                href="/resources/ai-implementation-checklist-2025"
-                className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-center"
+                href="/resources/sustainable-ai-checklist-2025"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
-                Download Green AI Guide
+                Download Green AI Checklist
               </Link>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
-        {/* Future of Green AI */}
-        <section id="future" className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Future of Green AI</h2>
-          
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            The future of AI in sustainability is bright, with emerging technologies 
-            and approaches that will further accelerate environmental progress:
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-900">Emerging Technologies</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Quantum AI:</strong> Solving complex optimization problems 
-                    for maximum efficiency
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Edge Computing:</strong> Real-time environmental monitoring 
-                    and response
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Digital Twins:</strong> Virtual models for testing 
-                    sustainability scenarios
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-900">Industry Trends</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Regulatory Pressure:</strong> Increasing requirements for 
-                    environmental reporting
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Investor Focus:</strong> ESG criteria driving investment 
-                    decisions
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Consumer Demand:</strong> Growing preference for sustainable 
-                    products and services
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white text-center">
-          <h2 className="text-2xl font-bold mb-4">Start Your Green AI Journey Today</h2>
-          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-            Join the growing number of companies using AI to drive sustainability and 
-            environmental impact. Get expert guidance on implementing green AI solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Free Sustainability Assessment
-            </Link>
-            <Link
-              href="/resources/ai-implementation-playbook-2025"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-            >
-              Download Green AI Guide
-            </Link>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-          </div>
-        </section>
+        </article>
 
         {/* Related Articles */}
-<<<<<<< HEAD
-        <section className="border-t border-gray-200 pt-12">
-<<<<<<< HEAD
+        <div className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/edge-ai-privacy-by-design-2025" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                  Edge AI: Privacy by Design
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Learn how edge AI systems can improve both privacy and sustainability through 
-                  local processing and reduced data transmission.
-=======
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/ai-enterprise-transformation-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
-                  AI Enterprise Transformation 2025
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Complete guide to transforming your enterprise with AI technologies
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-                </p>
+                <div className="text-3xl mb-3">🏢</div>
+                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600">AI Enterprise Transformation 2025</h4>
+                <p className="text-gray-600 text-sm">Complete guide to sustainable enterprise AI implementation</p>
               </div>
             </Link>
             
-<<<<<<< HEAD
             <Link href="/blog/ai-cost-optimization-2025" className="group">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                  AI Cost Optimization 2025
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Discover strategies for optimizing AI costs while improving performance and 
-                  reducing environmental impact.
-=======
-            <Link href="/blog/edge-ai-privacy-by-design-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
-                  Edge AI: Privacy by Design
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Building privacy-first AI applications at the edge
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
-        <section className="mt-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-enterprise-transformation-2025" className="group">
-              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                  AI Enterprise Transformation 2025
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Complete guide to transforming your enterprise with AI solutions
-                </p>
+                <div className="text-3xl mb-3">⚡</div>
+                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600">AI Cost Optimization 2025</h4>
+                <p className="text-gray-600 text-sm">Reduce costs while improving sustainability</p>
               </div>
             </Link>
-            <Link href="/blog/ai-cost-optimization-2025" className="group">
+            
+            <Link href="/blog/edge-ai-privacy-by-design-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                  AI Cost Optimization 2025
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Optimize AI costs while maximizing performance and sustainability
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-                </p>
+                <div className="text-3xl mb-3">🔐</div>
+                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600">Edge AI: Privacy by Design</h4>
+                <p className="text-gray-600 text-sm">Energy-efficient edge computing solutions</p>
               </div>
             </Link>
           </div>
-        </section>
-<<<<<<< HEAD
+        </div>
       </div>
-=======
-      </article>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
     </div>
   );
 }
