@@ -107,6 +107,15 @@ function Header() {
                 <Link href="/case-studies/quantum-ai-financial-optimization-breakthrough-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   ⚛️ Quantum AI Breakthrough
                 </Link>
+                <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🤖 Enterprise Automation Revolution
+                </Link>
+                <Link href="/case-studies/ai-2026-global-retail-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏪 Global Retail Success ($2.3B)
+                </Link>
+                <Link href="/resources/ai-2026-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📚 Implementation Master Guide
+                </Link>
                 <Link href="/blog/ai-2026-enterprise-implementation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Mastery
                 </Link>
