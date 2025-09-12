@@ -52,7 +52,7 @@ export default function ContentShowcase() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-transformation-fortune-500-success-2025" className="group">
+            <Link href="/case-studies/ai-transformation-fortune-500-breakthrough-2025" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
                 <h3 className="text-lg font-semibold mb-2">Fortune 500 AI Success Story</h3>
@@ -201,7 +201,7 @@ export default function ContentShowcase() {
             </div>
             
             <div className="space-y-4">
-              <Link href="/case-studies/ai-transformation-fortune-500-success-2025" className="group block">
+              <Link href="/case-studies/ai-transformation-fortune-500-breakthrough-2025" className="group block">
                 <div className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">🏆</span>
