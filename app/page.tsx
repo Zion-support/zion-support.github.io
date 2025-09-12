@@ -63,6 +63,13 @@ import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceCon
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
 
+// New 2028 Breakthrough Content Components
+import AI2028BreakthroughPromotionBanner from '../components/AI2028BreakthroughPromotionBanner';
+import AI2028BreakthroughContentShowcase from '../components/AI2028BreakthroughContentShowcase';
+import EnhancedContentDiscovery2028 from '../components/EnhancedContentDiscovery2028';
+import AI2028ROICalculator from '../components/AI2028ROICalculator';
+import AI2028NewsletterSignup from '../components/AI2028NewsletterSignup';
+
 // New 2027 Breakthrough Content Components
 import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
 import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';

@@ -106,6 +106,19 @@ function Header() {
                 <Link href="/content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 All AI 2028 Content
                 </Link>
+                <Link href="/tools/ai-2028-predictive-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📊 Predictive Analytics Engine (2500% ROI)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/resources/ai-2028-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2028 Implementation Guide (BREAKTHROUGH)
+                </Link>
+                <Link href="/tools/ai-2028-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 AI 2028 ROI Calculator (NEW)
+                </Link>
+                <Link href="/webinars/ai-2028-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Revolutionary Breakthroughs Webinar (NEW)
+                </Link>
               </div>
             </div>
           </div>
