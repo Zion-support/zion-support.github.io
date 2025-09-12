@@ -20,6 +20,8 @@ import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -104,6 +106,13 @@ export default function HomePage() {
       
       {/* Featured Content Section */}
       <FeaturedContentShowcase />
+      
+      {/* Featured New Content Showcase */}
+      <FeaturedNewContentShowcase 
+        title="Latest AI Breakthroughs & Success Stories"
+        subtitle="Discover our newest content featuring revolutionary AI innovations, real-world case studies, and comprehensive implementation guides"
+        className="bg-gradient-to-br from-gray-50 to-blue-50"
+      />
       
       {/* Additional Content Showcase */}
       <ContentShowcase
