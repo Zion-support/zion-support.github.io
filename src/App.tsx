@@ -1,5 +1,6 @@
 import React from 'react'
 import ServiceCard from './components/ServiceCard'
+import FeaturedContent from './components/FeaturedContent'
 import TestimonialCarousel from './components/TestimonialCarousel'
 import FaqSection from './components/FaqSection'
 
@@ -57,6 +58,8 @@ function App() {
       </header>
 
       <main>
+        {/* Featured Content */}
+        <FeaturedContent />
         {/* Services */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
