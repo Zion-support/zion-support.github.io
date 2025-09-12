@@ -308,6 +308,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase />
+
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
 
