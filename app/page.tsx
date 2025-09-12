@@ -14,6 +14,7 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -43,6 +44,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT BANNER */}
+        <RevolutionaryContentBanner />
+        
         {/* ULTRA CONTENT PROMOTION BANNER */}
         <UltraContentPromotionBanner />
         
