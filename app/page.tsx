@@ -47,6 +47,7 @@ import TechnologyStack from '../components/TechnologyStack';
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
@@ -90,6 +91,8 @@ import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPro
 import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
 import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
 import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
+import LatestContent2025PromotionBanner from '../components/LatestContent2025PromotionBanner';
+import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -193,6 +196,7 @@ export default function HomePage() {
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <AI2026ContentDiscoveryWidget />
         
+<<<<<<< HEAD
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
@@ -210,6 +214,11 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY 2025 */}
         <UltimateContentDiscovery2025 />
+        {/* LATEST CONTENT 2025 PROMOTION BANNER */}
+        <LatestContent2025PromotionBanner />
+        
+        {/* LATEST CONTENT 2025 SHOWCASE */}
+        <LatestContent2025Showcase />
         
         {/* AI 2031 CONTENT PROMOTION BANNER */}
         <AI2031ContentPromotionBanner />
