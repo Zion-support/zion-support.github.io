@@ -91,7 +91,10 @@ export default [
       }
     },
     plugins: {
+<<<<<<< HEAD:eslint.config.js
+=======
       '@typescript-eslint': tseslint.plugin,
+>>>>>>> origin/backup-main-20250910-141800:eslint.config.mjs
       react,
       'react-hooks': reactHooks
     },
@@ -99,7 +102,10 @@ export default [
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD:eslint.config.js
+=======
       ...(tseslint.configs.recommendedTypeChecked?.rules ?? {}),
+>>>>>>> origin/backup-main-20250910-141800:eslint.config.mjs
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',

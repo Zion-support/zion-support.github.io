@@ -11,3 +11,8 @@
 2025-09-12 09:39:41 - Merge conflicts detected in backup-main-20250910-141510
 2025-09-12 09:39:41 - Resolving conflicts in merge-open-prs.sh for branch backup-main-20250910-141510
 2025-09-12 09:39:41 - Resolving conflicts in prs.json for branch backup-main-20250910-141510
+2025-09-12 09:39:45 - Merge conflicts detected in backup-main-20250910-141800
+2025-09-12 09:39:45 - Resolving conflicts in eslint.config.js for branch backup-main-20250910-141800
+2025-09-12 09:39:45 - Resolving conflicts in package-lock.json for branch backup-main-20250910-141800
+2025-09-12 09:39:45 - Resolving conflicts in tsconfig.typecheck.json for branch backup-main-20250910-141800
+2025-09-12 09:39:45 - Resolving conflicts in yarn.lock for branch backup-main-20250910-141800
