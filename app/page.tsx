@@ -84,12 +84,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Massive Content Update: 15+ New AI Resources Just Released!
+                🎉 Major Content Expansion: 20+ New AI Resources Just Released!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: Multimodal AI Revolution, Robotics & Automation, 
-                Sustainability & Green Tech, plus new case studies and implementation guides. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough content: AI Neural Interfaces, Space Technology Revolution, 
+                Augmented Reality 2025, plus new case studies and comprehensive implementation guides. 
+                Get expert insights on the cutting-edge technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
