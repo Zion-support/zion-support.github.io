@@ -3,423 +3,342 @@ import Link from 'next/link';
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
-export default function ResourcesPage() {
-  const resources = [
-    {
-      title: "AI Implementation Master Guide 2025",
-      description: "Complete 150+ page resource with checklists, templates, and best practices for successful AI implementation.",
-      href: "/resources/ai-implementation-master-guide-2025",
-      icon: "📚",
-      category: "Implementation Guide",
-      type: "Free Download",
-      pages: "150+ pages"
-    },
-    {
-      title: "AI Implementation Checklist 2025",
-      description: "150+ actionable items for successful AI implementation across all phases of your AI journey.",
-      href: "/resources/ai-implementation-checklist-2025",
-      icon: "📋",
-      category: "Checklist",
-      type: "Free Download",
-      pages: "Checklist"
-    },
-    {
-      title: "AI ROI Calculator 2025",
-      description: "Calculate potential return on investment for AI projects with our comprehensive calculator tool.",
-      href: "/resources/ai-roi-calculator-2025",
-      icon: "💰",
-      category: "Calculator",
-      type: "Free Tool",
-      pages: "Interactive"
-    }
-  ];
-
+export default function Resources() {
   return (
-    <ErrorBoundary>
+    <div className="min-h-screen bg-white">
       <SEO
-        title="Free AI Resources & Tools - Implementation Guides & Templates | Zion Tech Group"
-        description="Download free AI resources including implementation guides, checklists, templates, and tools to accelerate your AI transformation journey."
-        keywords="AI resources, free AI guides, AI implementation tools, AI templates, AI checklists, AI ROI calculator, AI resources download"
-        url="/resources"
-      />
-
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">📚 FREE RESOURCES</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Free AI Resources & Tools
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Download our comprehensive collection of AI implementation guides, checklists, 
-                templates, and tools to accelerate your AI transformation journey.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg"
-                >
-                  Get Expert Consultation
-                </Link>
-                <Link
-                  href="/blog"
-                  className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors text-lg"
-                >
-                  Read Latest Articles
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Resources */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                🎯 Featured Resources
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our most popular and comprehensive AI implementation resources
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {resources.map((resource, index) => (
-                <Link key={index} href={resource.href} className="group">
-                  <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
-                    <div className="aspect-video bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
-                      <div className="text-6xl">{resource.icon}</div>
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
-                          {resource.category}
-                        </span>
-                        <span className="text-gray-500 text-sm">{resource.pages}</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                        {resource.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        {resource.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-green-600 font-medium text-sm">{resource.type}</span>
-                        <span className="text-purple-600 font-medium group-hover:underline">
-                          Download →
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-=======
-      title: "AI Implementation Playbook 2025",
-      description: "Complete 200+ page guide with strategies, templates, checklists, and case studies for successful AI implementation.",
-      href: "/resources/ai-implementation-playbook-2025",
-      category: "Implementation Guide",
-      type: "PDF Download",
-      pages: "200+ pages",
-      icon: "📋",
-      featured: true
-    },
-    {
-      title: "AI Startup Funding Templates 2025",
-      description: "Complete collection of pitch deck templates, financial models, and funding strategy guides for AI startups.",
-      href: "/resources/ai-startup-funding-templates-2025",
-      category: "Startup Resources",
-      type: "Template Pack",
-      pages: "50+ templates",
-      icon: "💰",
-      featured: true
-    },
-    {
-      title: "AI Data Governance Framework",
-      description: "Comprehensive framework for AI data governance, privacy compliance, and ethical AI practices in enterprise environments.",
-      href: "/resources/ai-data-governance-framework-2025",
-      category: "Governance",
-      type: "Framework",
-      pages: "150+ pages",
-      icon: "🛡️",
-      featured: false
-    },
-    {
-      title: "AI ROI Calculator Tool",
-      description: "Interactive tool to calculate potential ROI, cost savings, and efficiency gains from AI implementation projects.",
-      href: "/resources/ai-roi-calculator-tool-2025",
-      category: "Tools",
-      type: "Interactive Tool",
-      pages: "Excel/Web",
-      icon: "📊",
-      featured: false
-    },
-    {
-      title: "AI Ethics & Compliance Guide",
-      description: "Complete guide to AI ethics, regulatory compliance, and responsible AI practices for enterprise organizations.",
-      href: "/resources/ai-ethics-compliance-guide-2025",
-      category: "Compliance",
-      type: "Guide",
-      pages: "120+ pages",
-      icon: "⚖️",
-      featured: false
-    },
-    {
-      title: "AI Security Hardening Checklist",
-      description: "Comprehensive checklist for securing AI systems, protecting data, and implementing security best practices.",
-      href: "/resources/ai-security-hardening-checklist-2025",
-      category: "Security",
-      type: "Checklist",
-      pages: "30+ items",
-      icon: "🔒",
-      featured: false
-    }
-  ];
-
-  const categories = ["All", "Implementation Guide", "Startup Resources", "Governance", "Tools", "Compliance", "Security"];
-
-  return (
-    <>
-      <SEO
-        title="Free AI Resources & Implementation Guides - Download Now"
-        description="Download our comprehensive collection of free AI resources, implementation guides, templates, and tools. Everything you need to succeed with AI in 2025."
-        keywords="AI resources, free downloads, AI templates, implementation guides, AI tools, AI frameworks"
+        title="AI Resources & Tools - Free Guides, Templates, and Implementation Tools"
+        description="Access our comprehensive collection of free AI resources, implementation guides, templates, and tools. Everything you need to accelerate your AI transformation journey."
+        keywords="AI resources, free guides, AI templates, implementation tools, AI checklists, best practices, AI frameworks"
         url="/resources"
       />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-medium">🎁 FREE RESOURCES</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Free AI Resources & Implementation Guides
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Download our comprehensive collection of free AI resources, implementation guides, 
-              templates, and tools. Everything you need to succeed with AI in 2025.
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <header className="text-center mb-16">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">📚 FREE RESOURCES</span>
           </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI Resources & Tools
+          </h1>
+          
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Access our comprehensive collection of free AI resources, implementation guides, 
+            templates, and tools. Everything you need to accelerate your AI transformation journey.
+          </p>
+        </header>
 
-          {/* Featured Resources */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {resources.filter(resource => resource.featured).map((resource, index) => (
-                <Link key={index} href={resource.href} className="group">
-                  <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative">
-                      <div className="text-8xl">{resource.icon}</div>
-                      <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        FREE
-                      </div>
-                    </div>
-                    <div className="p-8">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-                          {resource.category}
-                        </span>
-                        <span className="text-gray-500 text-sm">{resource.type}</span>
-                        <span className="text-gray-500 text-sm">•</span>
-                        <span className="text-gray-500 text-sm">{resource.pages}</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
-                        {resource.title}
-                      </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {resource.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                            <span className="text-green-600 font-bold text-sm">ZT</span>
-                          </div>
-                          <span className="text-sm text-gray-600">Zion Tech Group</span>
-                        </div>
-                        <span className="text-green-600 font-medium group-hover:underline">
-                          Download Now →
-                        </span>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
+        {/* Featured Resources */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎯 Featured Resources
+              </h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                Our most popular and impactful resources, handpicked by our experts to help you 
+                succeed with AI implementation and transformation.
+              </p>
             </div>
-          </div>
-
-          {/* All Resources */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">All Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {resources.map((resource, index) => (
-                <Link key={index} href={resource.href} className="group">
-                  <article className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100">
-                    <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
-                      <div className="text-6xl">{resource.icon}</div>
-                      <div className="absolute top-2 left-2 bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                        FREE
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">
-                          {resource.category}
-                        </span>
-                        <span className="text-gray-500 text-xs">{resource.type}</span>
-                      </div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors line-clamp-2">
-                        {resource.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                        {resource.description}
-                      </p>
-                      <div className="flex items-center justify-between text-xs text-gray-500">
-                        <span>{resource.pages}</span>
-                        <span className="text-green-600 font-medium group-hover:underline">
-                          Download →
-                        </span>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Resource Categories */}
-          <div className="bg-gray-50 rounded-xl p-8 mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Resource Categories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg p-6">
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
                 <div className="text-4xl mb-4">📋</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Implementation Guides</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Step-by-step guides for implementing AI in your organization with proven methodologies.
-                </p>
-                <Link href="/resources?category=implementation" className="text-blue-600 hover:underline text-sm font-medium">
-                  View Guides →
-                </Link>
+                <h3 className="text-lg font-semibold mb-2">AI Implementation Checklist</h3>
+                <p className="text-sm opacity-90 mb-3">Complete step-by-step guide for successful AI deployment</p>
+                <div className="flex items-center text-xs opacity-75">
+                  <span>PDF Download</span>
+                  <span className="mx-2">•</span>
+                  <span>🔥 Most Popular</span>
+                </div>
               </div>
               
-              <div className="bg-white rounded-lg p-6">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Startup Resources</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Templates, guides, and tools specifically designed for AI startups and entrepreneurs.
-                </p>
-                <Link href="/resources?category=startup" className="text-blue-600 hover:underline text-sm font-medium">
-                  View Resources →
-                </Link>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-lg font-semibold mb-2">ROI Calculator Tool</h3>
+                <p className="text-sm opacity-90 mb-3">Calculate potential returns on AI investments</p>
+                <div className="flex items-center text-xs opacity-75">
+                  <span>Interactive Tool</span>
+                  <span className="mx-2">•</span>
+                  <span>⚡ Instant Results</span>
+                </div>
               </div>
               
-              <div className="bg-white rounded-lg p-6">
-                <div className="text-4xl mb-4">🛡️</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Governance & Compliance</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Frameworks and guides for AI governance, ethics, and regulatory compliance.
-                </p>
-                <Link href="/resources?category=governance" className="text-blue-600 hover:underline text-sm font-medium">
-                  View Frameworks →
-                </Link>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
                 <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Tools & Calculators</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Interactive tools and calculators to help you plan and measure AI initiatives.
-                </p>
-                <Link href="/resources?category=tools" className="text-blue-600 hover:underline text-sm font-medium">
-                  View Tools →
-                </Link>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6">
-                <div className="text-4xl mb-4">🔒</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Security & Privacy</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Checklists and guides for securing AI systems and protecting sensitive data.
-                </p>
-                <Link href="/resources?category=security" className="text-blue-600 hover:underline text-sm font-medium">
-                  View Security →
-                </Link>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6">
-                <div className="text-4xl mb-4">📚</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Templates & Checklists</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Ready-to-use templates and checklists for various AI implementation activities.
-                </p>
-                <Link href="/resources?category=templates" className="text-blue-600 hover:underline text-sm font-medium">
-                  View Templates →
-                </Link>
+                <h3 className="text-lg font-semibold mb-2">AI Readiness Assessment</h3>
+                <p className="text-sm opacity-90 mb-3">Evaluate your organization's AI readiness level</p>
+                <div className="flex items-center text-xs opacity-75">
+                  <span>Online Assessment</span>
+                  <span className="mx-2">•</span>
+                  <span>📈 Detailed Report</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Need Help with Your AI Implementation?
-            </h2>
-            <p className="text-xl text-white opacity-90 mb-8">
-              Our expert team can help you implement AI solutions that deliver real business value. 
-              Get personalized guidance and support for your AI transformation journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Free Consultation
+        {/* Resource Categories */}
+        <section className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
+            <div className="text-6xl mb-4">📚</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Implementation Guides</h3>
+            <p className="text-gray-600 mb-6">Comprehensive guides covering every aspect of AI implementation, from strategy to deployment.</p>
+            <ul className="space-y-2 text-gray-700 mb-6">
+              <li>• AI Strategy Development Guide</li>
+              <li>• Data Preparation Best Practices</li>
+              <li>• Model Selection Framework</li>
+              <li>• Deployment & Monitoring Guide</li>
+              <li>• Change Management Playbook</li>
+            </ul>
+            <Link href="/resources/guides" className="text-blue-600 font-medium hover:underline">
+              View All Guides →
+            </Link>
+          </div>
+          
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
+            <div className="text-6xl mb-4">📋</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Templates & Checklists</h3>
+            <p className="text-gray-600 mb-6">Ready-to-use templates and checklists to streamline your AI projects and ensure nothing is missed.</p>
+            <ul className="space-y-2 text-gray-700 mb-6">
+              <li>• Project Planning Templates</li>
+              <li>• Risk Assessment Checklists</li>
+              <li>• Vendor Evaluation Forms</li>
+              <li>• Testing & Validation Templates</li>
+              <li>• Documentation Templates</li>
+            </ul>
+            <Link href="/resources/templates" className="text-green-600 font-medium hover:underline">
+              View All Templates →
+            </Link>
+          </div>
+          
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
+            <div className="text-6xl mb-4">🛠️</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Tools & Calculators</h3>
+            <p className="text-gray-600 mb-6">Interactive tools and calculators to help you make informed decisions about AI investments and implementations.</p>
+            <ul className="space-y-2 text-gray-700 mb-6">
+              <li>• ROI & Cost Calculators</li>
+              <li>• Readiness Assessment Tools</li>
+              <li>• Technology Comparison Matrix</li>
+              <li>• Timeline Planning Tools</li>
+              <li>• Performance Benchmarking</li>
+            </ul>
+            <Link href="/resources/tools" className="text-purple-600 font-medium hover:underline">
+              View All Tools →
+            </Link>
+          </div>
+        </section>
+
+        {/* Industry-Specific Resources */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry-Specific Resources</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-blue-50 p-6 rounded-xl text-center">
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Healthcare</h3>
+              <p className="text-sm text-gray-600 mb-4">AI implementation guides for healthcare organizations</p>
+              <Link href="/resources/healthcare" className="text-blue-600 text-sm font-medium hover:underline">
+                View Resources →
               </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                View Success Stories
+            </div>
+            
+            <div className="bg-green-50 p-6 rounded-xl text-center">
+              <div className="text-4xl mb-4">🏭</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Manufacturing</h3>
+              <p className="text-sm text-gray-600 mb-4">Industrial AI automation and optimization guides</p>
+              <Link href="/resources/manufacturing" className="text-green-600 text-sm font-medium hover:underline">
+                View Resources →
+              </Link>
+            </div>
+            
+            <div className="bg-purple-50 p-6 rounded-xl text-center">
+              <div className="text-4xl mb-4">🏦</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Services</h3>
+              <p className="text-sm text-gray-600 mb-4">AI solutions for banking and financial institutions</p>
+              <Link href="/resources/finance" className="text-purple-600 text-sm font-medium hover:underline">
+                View Resources →
+              </Link>
+            </div>
+            
+            <div className="bg-orange-50 p-6 rounded-xl text-center">
+              <div className="text-4xl mb-4">🛒</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Retail</h3>
+              <p className="text-sm text-gray-600 mb-4">AI-powered customer experience and operations</p>
+              <Link href="/resources/retail" className="text-orange-600 text-sm font-medium hover:underline">
+                View Resources →
               </Link>
             </div>
           </div>
         </section>
-      </div>
-    </ErrorBoundary>
-=======
-          {/* Newsletter Signup */}
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Get New Resources Delivered Weekly
-            </h2>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Be the first to access new resources, templates, and guides as we publish them. 
-              Join 10,000+ professionals who rely on our content.
-            </p>
-            <div className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                Subscribe
+
+        {/* Interactive ROI Calculator */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Interactive AI ROI Calculator</h2>
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Calculate Your AI Investment Returns</h3>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Use our interactive calculator to estimate the potential ROI of AI implementation 
+                for your organization. Get instant projections based on your specific parameters.
+              </p>
+            </div>
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Input Section */}
+                  <div className="space-y-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-4">Your Organization</h4>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Number of Employees
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="100"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Average Annual Salary ($)
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="75000"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Expected Efficiency Gain (%)
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="30"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Implementation Cost ($)
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="500000"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Results Preview */}
+                  <div className="space-y-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-4">Projected Results</h4>
+                    
+                    <div className="bg-green-50 p-6 rounded-xl">
+                      <h5 className="text-lg font-semibold text-gray-900 mb-2">Annual Savings</h5>
+                      <div className="text-3xl font-bold text-green-600 mb-2">
+                        $2,250,000
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        Based on 30% efficiency improvement
+                      </p>
+                    </div>
+
+                    <div className="bg-blue-50 p-6 rounded-xl">
+                      <h5 className="text-lg font-semibold text-gray-900 mb-2">Payback Period</h5>
+                      <div className="text-3xl font-bold text-blue-600 mb-2">
+                        2.7 months
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        Time to recover implementation costs
+                      </p>
+                    </div>
+
+                    <div className="bg-purple-50 p-6 rounded-xl">
+                      <h5 className="text-lg font-semibold text-gray-900 mb-2">3-Year ROI</h5>
+                      <div className="text-3xl font-bold text-purple-600 mb-2">
+                        1,250%
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        Total return over 3 years
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 text-center">
+                  <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg">
+                    Launch Full Calculator
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Access Tools */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Additional Tools</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Readiness Quiz</h3>
+              <p className="text-gray-600 text-sm mb-4">Quick 5-minute assessment to evaluate your AI readiness</p>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                Take Quiz
               </button>
             </div>
-            <p className="text-sm text-gray-500 mt-4">
-              No spam. Unsubscribe anytime. Read our privacy policy.
-            </p>
+            
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-4">📊</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Technology Comparison</h3>
+              <p className="text-gray-600 text-sm mb-4">Compare different AI technologies and vendors</p>
+              <button className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors">
+                Compare Now
+              </button>
+            </div>
+            
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-4">📋</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Implementation Checklist</h3>
+              <p className="text-gray-600 text-sm mb-4">Step-by-step guide for successful AI deployment</p>
+              <button className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                Download PDF
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Get New Resources Weekly
+          </h2>
+          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Subscribe to our newsletter and receive new AI resources, guides, and tools 
+            delivered straight to your inbox every week. Join 15,000+ AI professionals.
+          </p>
+          <div className="max-w-md mx-auto flex gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Subscribe
+            </button>
+          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            No spam. Unsubscribe anytime. Read our privacy policy.
+          </p>
+        </section>
       </div>
-    </>
->>>>>>> 9fbfc7a36d4591e025989cde08ff7996c1921e36
+    </div>
   );
 }
