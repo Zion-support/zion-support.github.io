@@ -5,6 +5,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 
 export const metadata = {
@@ -218,7 +219,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
-          <NewContentBanner />
+          <EnhancedContentPromotionBanner />
           <EnhancedNavigation />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
