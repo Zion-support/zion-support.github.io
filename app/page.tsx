@@ -35,6 +35,7 @@ import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
 import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
 import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
+import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -212,6 +213,9 @@ export default function HomePage() {
         {/* AI 2028 BREAKTHROUGH PROMOTION BANNER */}
         <AI2028BreakthroughPromotionBanner />
         
+        {/* AI 2029 CONTENT PROMOTION BANNER */}
+        <AI2029ContentPromotionBanner />
+        
         {/* AI 2028 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2028BreakthroughContentShowcase />
         
@@ -318,6 +322,9 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
+        
+        {/* AI 2029 CONTENT PROMOTION BANNER */}
+        <AI2029ContentPromotionBanner />
         
         {/* REVOLUTIONARY TECH 2025 PROMOTION BANNER */}
         <RevolutionaryTech2025PromotionBanner />
