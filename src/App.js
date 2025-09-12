@@ -38,6 +38,7 @@ const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculator
 const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
 const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
 const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
+const ServicesShowcase = React.lazy(() => import('./pages/ServicesShowcase'));
 const baseRoutes = [
     { path: '/', element: _jsx(Home, {}) },
     { path: '/match', element: _jsx(AIMatcherPage, {}) },
@@ -52,6 +53,7 @@ const baseRoutes = [
     { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) },
     { path: '/service-analytics', element: _jsx(ServiceAnalyticsDashboard, {}) },
     { path: '/service-marketplace', element: _jsx(ServiceMarketplace, {}) },
+    { path: '/services-showcase', element: _jsx(ServicesShowcase, {}) },
     { path: '/it-onsite-services', element: _jsx(ITOnsiteServicesPage, {}) },
     { path: '/categories', element: _jsx(Categories, {}) },
     { path: '/equipment', element: _jsx(EquipmentPage, {}) },
