@@ -8,6 +8,36 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "Agent & LLM Benchmarking Best Practices 2025",
+    description: "Design trustworthy evals with latency, cost, and safety signals",
+    url: "/blog/ai-2025-agent-benchmarking-best-practices",
+    type: "Blog Post",
+    category: "Evaluation",
+    icon: "📏",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Evaluation Maturity Model 2025",
+    description: "Assess and level-up evals across metrics, data, and governance",
+    url: "/resources/ai-2025-evaluation-maturity-model",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "📚",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Customer Support Automation Success 2025",
+    description: "60% deflection, 45% faster resolution, +22 NPS with agentic workflows",
+    url: "/case-studies/ai-2025-customer-support-automation-success",
+    type: "Case Study",
+    category: "Customer Support",
+    icon: "🤝",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Copilots for Engineering Teams",
     description: "Secure, repo-aware copilots that reduce toil and speed reviews",
     url: "/blog/ai-copilots-for-engineering",

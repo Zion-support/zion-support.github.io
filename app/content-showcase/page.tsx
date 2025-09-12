@@ -615,6 +615,51 @@ export default function ContentShowcase() {
   // Newly added September 2025 content
   content.push(
     {
+      id: 16,
+      title: "Agent & LLM Benchmarking Best Practices 2025",
+      description: "Design trustworthy evals with latency, cost, and safety signals.",
+      category: "ai-automation",
+      type: "Article",
+      readTime: "19 min read",
+      publishDate: "2025-09-12",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "📏",
+      href: "/blog/ai-2025-agent-benchmarking-best-practices",
+      tags: ["Evaluation", "Benchmarks", "Latency", "Cost"]
+    },
+    {
+      id: 17,
+      title: "AI Evaluation Maturity Model 2025 (Free)",
+      description: "Assess and improve your org's evaluation maturity with a simple framework.",
+      category: "resources",
+      type: "Free Download",
+      readTime: "Worksheet",
+      publishDate: "2025-09-12",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: false,
+      icon: "📚",
+      href: "/resources/ai-2025-evaluation-maturity-model",
+      tags: ["Maturity", "Governance", "Automation", "Evals"]
+    },
+    {
+      id: 18,
+      title: "AI Customer Support Automation: 60% Deflection, +22 NPS",
+      description: "Case study: agentic workflows reduce cost and improve CX in 6 months.",
+      category: "case-studies",
+      type: "Case Study",
+      readTime: "14 min read",
+      publishDate: "2025-09-12",
+      author: "Zion Tech Group",
+      featured: false,
+      trending: true,
+      icon: "🤝",
+      href: "/case-studies/ai-2025-customer-support-automation-success",
+      tags: ["Support", "Agents", "Deflection", "NPS"]
+    },
+    {
       id: 13,
       title: "Real-Time Voice Agents in 2025: Architectures, Safety, and ROI",
       description: "Low-latency, reliable voice agents with guardrails and observability for production.",
