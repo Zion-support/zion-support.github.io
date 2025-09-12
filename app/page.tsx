@@ -15,6 +15,7 @@ import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -309,7 +310,109 @@ export default function HomePage() {
       </section>
 
       {/* Dynamic Content Carousel */}
-      <DynamicContentCarousel />
+      <DynamicContentCarousel 
+        content={[
+          {
+            id: 'ai-advanced-automation',
+            title: 'AI Advanced Automation 2025: Complete Implementation Guide',
+            description: 'Master advanced AI automation with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.',
+            href: '/blog/ai-2025-advanced-automation',
+            icon: '🤖',
+            category: 'AI Automation',
+            readTime: '25 min read',
+            type: 'Article',
+            isNew: true
+          },
+          {
+            id: 'ai-cybersecurity-threats',
+            title: 'AI Cybersecurity Threats 2025: Complete Defense Guide',
+            description: 'Protect your organization from emerging AI cybersecurity threats. Learn about AI-powered attacks, defense strategies, and security best practices.',
+            href: '/blog/ai-2025-cybersecurity-threats',
+            icon: '🛡️',
+            category: 'Cybersecurity',
+            readTime: '22 min read',
+            type: 'Article',
+            isNew: true
+          },
+          {
+            id: 'ai-healthcare-success',
+            title: 'AI Healthcare Diagnosis Success: 95% Accuracy Achieved',
+            description: 'How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy and $2.5M annual savings.',
+            href: '/case-studies/ai-healthcare-diagnosis-success-2025',
+            icon: '🏥',
+            category: 'Healthcare AI',
+            readTime: 'Case Study',
+            type: 'Success Story',
+            isNew: true
+          },
+          {
+            id: 'ai-implementation-guide',
+            title: 'AI Implementation Master Guide 2026: Complete 200+ Page Resource',
+            description: 'Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices.',
+            href: '/resources/ai-implementation-master-guide-2026',
+            icon: '📚',
+            category: 'Master Guide',
+            readTime: '200+ pages',
+            type: 'Free Download',
+            isNew: true
+          }
+        ]}
+        autoPlay={true}
+        interval={6000}
+        showDots={true}
+        showArrows={true}
+      />
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner
+        title="🚀 Revolutionary AI Content: 25+ New Resources Just Released!"
+        subtitle="🔥 MEGA CONTENT DROP - JANUARY 2025"
+        description="Discover our biggest content update yet: Advanced AI Automation, Cybersecurity Threats, Healthcare AI Success Stories, and the complete 200+ page AI Implementation Master Guide 2026. Everything you need to succeed with AI in 2025."
+        content={[
+          {
+            title: "AI Advanced Automation 2025",
+            description: "Complete implementation guide with 340% ROI",
+            href: "/blog/ai-2025-advanced-automation",
+            icon: "🤖",
+            category: "AI Automation",
+            readTime: "25 min read",
+            type: "Article",
+            isNew: true
+          },
+          {
+            title: "AI Cybersecurity Threats 2025",
+            description: "Complete defense guide for AI-powered attacks",
+            href: "/blog/ai-2025-cybersecurity-threats",
+            icon: "🛡️",
+            category: "Cybersecurity",
+            readTime: "22 min read",
+            type: "Article",
+            isNew: true
+          },
+          {
+            title: "AI Healthcare Success Story",
+            description: "95% accuracy achieved, $2.5M savings",
+            href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+            icon: "🏥",
+            category: "Healthcare AI",
+            readTime: "Case Study",
+            type: "Success Story",
+            isNew: true
+          },
+          {
+            title: "AI Implementation Master Guide 2026",
+            description: "200+ page comprehensive resource",
+            href: "/resources/ai-implementation-master-guide-2026",
+            icon: "📚",
+            category: "Master Guide",
+            readTime: "200+ pages",
+            type: "Free Download",
+            isNew: true
+          }
+        ]}
+        variant="featured"
+        maxItems={4}
+      />
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
