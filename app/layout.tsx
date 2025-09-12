@@ -17,6 +17,8 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
 import EnhancedNavigationWithContentDiscovery from '../components/EnhancedNavigationWithContentDiscovery';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -98,6 +100,9 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-next-generation-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  🚀 AI 2025 Next-Generation Breakthroughs (NEW)
+                </Link>
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough Revolution (ULTIMATE)
                 </Link>
@@ -109,6 +114,9 @@ function Header() {
                 </Link>
                 <Link href="/blog/ai-2025-breakthrough-innovations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Breakthrough Innovations (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-enterprise-transformation-mega-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 15,000% ROI Enterprise Transformation (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2025-ultimate-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Ultimate Breakthrough Success (5000% ROI)
@@ -135,6 +143,9 @@ function Header() {
                   🏢 Fortune 500 Transformation (1500% ROI)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/resources/ai-2025-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 Ultimate Implementation Master Guide (NEW)
+                </Link>
                 <Link href="/resources/ai-2025-revolutionary-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   📚 Revolutionary Implementation Guide (BREAKTHROUGH)
                 </Link>
@@ -1222,6 +1233,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
+          <AI2025NewContentPromotionBanner />
           <AI2025UltimateBreakthroughPromotionBanner />
           <RevolutionaryContentShowcaseBanner />
           <AI2025BreakthroughContentBanner />
@@ -1230,6 +1242,7 @@ export default function RootLayout({
           <UltimateServiceShowcase2025 />
           <AI2035ContentPromotionBanner />
           <EnhancedContentPromotionBanner />
+          <UltimateContentShowcase2025 />
           <EnhancedNavigationWithContentDiscovery />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
