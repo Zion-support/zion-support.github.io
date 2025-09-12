@@ -38,6 +38,16 @@ const newContentItems = [
     new: true
   },
   {
+    title: "GenAI Security Blueprint 2025",
+    description: "Enterprise-grade practices to secure GenAI systems in production",
+    url: "/blog/ai-2025-genai-security-blueprint",
+    type: "Blog Post",
+    category: "Security",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Productivity Automation 2025",
     description: "Complete guide to 300% productivity gains with AI",
     url: "/blog/ai-productivity-automation-2025",
@@ -55,6 +65,28 @@ const newContentItems = [
     category: "Manufacturing",
     icon: "🏭",
     featured: false,
+    new: true
+  }
+  ,
+  {
+    title: "Telecom Network Automation: 55% OPEX Reduction",
+    description: "Global operator automates incidents and changes with AI agents",
+    url: "/case-studies/ai-telecom-network-automation-success-2025",
+    type: "Case Study",
+    category: "Telecom",
+    icon: "📶",
+    featured: false,
+    new: true
+  }
+  ,
+  {
+    title: "AI Governance Starter Kit 2025",
+    description: "Templates and policies to operationalize responsible AI",
+    url: "/resources/ai-governance-starter-kit-2025",
+    type: "Resource",
+    category: "Governance",
+    icon: "📋",
+    featured: true,
     new: true
   }
 ];
