@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export default function RealTimeVoiceAgents2025Page() {
   return (
@@ -143,7 +143,7 @@ export default function RealTimeVoiceAgents2025Page() {
 }
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Real-Time Voice Agents in 2025: Architectures, Safety, and ROI',

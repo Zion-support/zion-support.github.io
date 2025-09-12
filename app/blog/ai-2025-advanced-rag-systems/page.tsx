@@ -3,12 +3,12 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 =======
 >>>>>>> 6d58bbd2221ec2e3b32c98ab54b0c4aecc83a7e7
 import { Metadata } from 'next';
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Advanced RAG Systems 2025: Production-Ready Implementation Guide | Zion Tech Group',
@@ -597,8 +597,8 @@ export default function AdvancedRAGSystems2025() {
                 Extend RAG systems to handle images, audio, and other media types, creating more comprehensive knowledge bases.
 <<<<<<< HEAD
 =======
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import SEO from "../../components/SEO";
+import { Link } from 'react-router-dom';
 
 export default function AdvancedRAGSystems2025() {
   return (

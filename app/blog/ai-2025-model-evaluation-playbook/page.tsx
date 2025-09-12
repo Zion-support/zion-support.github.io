@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export const metadata = {
   title: 'AI Model Evaluation Playbook 2025 | Zion Tech Group',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export const metadata = {
   title: 'AI 2028 Energy Sector Transformation: 2,400% ROI Breakthrough Case Study',

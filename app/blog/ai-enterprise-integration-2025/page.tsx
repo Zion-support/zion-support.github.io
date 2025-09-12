@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import SEO from "../../components/SEO";
+import { Link } from 'react-router-dom';
 
 export default function AIEnterpriseIntegration2025() {
   return (

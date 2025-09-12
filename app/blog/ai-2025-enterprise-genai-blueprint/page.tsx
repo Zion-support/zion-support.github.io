@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export const metadata = {
   title: 'Enterprise GenAI Blueprint 2025 | Zion Tech Group',
@@ -54,7 +54,7 @@ export default function Page() {
 }
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Enterprise GenAI Blueprint 2025: From Pilot to Production',
