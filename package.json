@@ -36,7 +36,7 @@
     "@sentry/nextjs": "^7.120.4",
     "@sentry/node": "^7.120.4",
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.39.0",
+    "@supabase/supabase-js": "^2.57.4",
     "@types/react-datepicker": "^6.2.0",
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
