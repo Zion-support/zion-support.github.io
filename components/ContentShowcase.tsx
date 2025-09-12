@@ -1,320 +1,396 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Tag, Star, Zap, Globe, Leaf } from 'lucide-react';
 
 interface ContentItem {
+  id: string;
   title: string;
   description: string;
-  href: string;
-  type: 'blog' | 'resource' | 'case-study';
+  type: 'blog' | 'case-study' | 'resource';
+  category: string;
   readTime?: string;
   isNew?: boolean;
-  icon?: string;
-  category?: string;
-  featured?: boolean;
   isTrending?: boolean;
-  badge?: string;
-  badgeColor?: string;
-  metrics?: string;
+  icon: string;
+  href: string;
+  featured?: boolean;
 }
 
-interface ContentShowcaseProps {
-  title: string;
-  subtitle: string;
-  items: ContentItem[];
-  variant?: 'default' | 'featured' | 'trending';
-  className?: string;
-  showViewAll?: boolean;
-  viewAllHref?: string;
-  viewAllText?: string;
-  columns?: 2 | 3 | 4;
-}
+const contentItems: ContentItem[] = [
+  {
+    id: 'ai-2025-predictions',
+    title: 'AI 2025: The Year of Breakthrough Predictions',
+    description: 'Discover our comprehensive predictions for AI in 2025. From quantum AI breakthroughs to enterprise transformation.',
+    type: 'blog',
+    category: 'AI Predictions',
+    readTime: '25 min read',
+    isNew: true,
+    icon: '🔮',
+    href: '/blog/ai-2025-year-predictions',
+    featured: true
+  },
+  {
+    id: 'ai-automation-trends',
+    title: 'AI Automation Trends 2025: The Complete Guide',
+    description: 'Discover the latest AI automation trends for 2025. From intelligent process automation to autonomous business operations.',
+    type: 'blog',
+    category: 'AI Automation',
+    readTime: '22 min read',
+    isNew: true,
+    icon: '🤖',
+    href: '/blog/ai-automation-trends-2025',
+    featured: true
+  },
+  {
+    id: 'ai-implementation-checklist',
+    title: 'AI Implementation Checklist 2025',
+    description: '150+ actionable items to ensure successful AI deployment in your organization. Complete implementation guide.',
+    type: 'resource',
+    category: 'Implementation',
+    readTime: '150+ items',
+    isNew: true,
+    icon: '📋',
+    href: '/resources/ai-implementation-checklist-2025',
+    featured: true
+  },
+  {
+    id: 'financial-services-transformation',
+    title: 'AI Financial Services Transformation: 90% Faster Processing',
+    description: 'How a Fortune 500 financial services company achieved 90% faster loan processing and 75% cost reduction.',
+    type: 'case-study',
+    category: 'Financial Services',
+    readTime: '15 min read',
+    isNew: true,
+    icon: '💰',
+    href: '/case-studies/ai-financial-services-transformation-2025',
+    featured: true
+  },
+  {
+    id: 'ai-innovation-trends',
+    title: 'AI Innovation Trends 2025',
+    description: 'Explore the latest innovations shaping the AI landscape this year. Quantum AI, neuromorphic computing, and more.',
+    type: 'blog',
+    category: 'AI Innovation',
+    readTime: '25 min read',
+    isTrending: true,
+    icon: '🚀',
+    href: '/blog/ai-innovation-trends-2025'
+  },
+  {
+    id: 'ai-workforce-transformation',
+    title: 'AI Workforce Transformation 2025',
+    description: 'How AI is reshaping the future of work and human-AI collaboration. Complete guide to workforce transformation.',
+    type: 'blog',
+    category: 'Workforce',
+    readTime: '18 min read',
+    isNew: true,
+    icon: '👥',
+    href: '/blog/ai-workforce-transformation-2025'
+  },
+  {
+    id: 'ai-cybersecurity-checklist',
+    title: 'AI Cybersecurity Checklist 2025',
+    description: '50+ essential security measures to protect your AI systems from emerging threats. Free download.',
+    type: 'resource',
+    category: 'Security',
+    readTime: '50+ items',
+    isNew: true,
+    icon: '🛡️',
+    href: '/resources/ai-cybersecurity-checklist-2025'
+  },
+  {
+    id: 'ai-automation-manufacturing',
+    title: 'AI Manufacturing Automation Success',
+    description: '40% cost reduction and 60% faster processing in manufacturing operations through AI-powered automation.',
+    type: 'case-study',
+    category: 'Manufacturing',
+    readTime: '12 min read',
+    isTrending: true,
+    icon: '🏭',
+    href: '/case-studies/ai-automation-manufacturing-2025'
+  },
+  {
+    id: 'ai-sustainability-guide',
+    title: 'AI Sustainability Guide 2025',
+    description: '50-page comprehensive guide to building environmentally responsible AI systems. Green AI implementation.',
+    type: 'resource',
+    category: 'Sustainability',
+    readTime: '50 pages',
+    isNew: true,
+    icon: '🌱',
+    href: '/resources/ai-sustainability-guide-2025'
+  },
+  {
+    id: 'ai-retail-transformation',
+    title: 'AI Retail Transformation',
+    description: '300% revenue growth in 18 months through AI-powered personalization and inventory management.',
+    type: 'case-study',
+    category: 'Retail',
+    readTime: '15 min read',
+    isTrending: true,
+    icon: '🛒',
+    href: '/case-studies/ai-retail-transformation-2025'
+  }
+];
 
-const ContentShowcase: React.FC<ContentShowcaseProps> = ({
-  title,
-  subtitle,
-  items,
-  variant = 'default',
-  className = '',
-  showViewAll = false,
-  viewAllHref = '#',
-  viewAllText = 'View All',
-  columns = 3
-}) => {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'featured':
-        return {
-          container: 'bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200',
-          title: 'text-blue-900',
-          subtitle: 'text-blue-700'
-        };
-      case 'trending':
-        return {
-          container: 'bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200',
-          title: 'text-orange-900',
-          subtitle: 'text-orange-700'
-        };
-      default:
-        return {
-          container: 'bg-white border border-gray-200',
-          title: 'text-gray-900',
-          subtitle: 'text-gray-600'
-        };
-    }
-  };
+const categories = ['All', 'AI Predictions', 'AI Automation', 'Implementation', 'Financial Services', 'AI Innovation', 'Workforce', 'Security', 'Manufacturing', 'Sustainability', 'Retail'];
 
-  const styles = getVariantStyles();
+export default function ContentShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const getGridCols = () => {
-    switch (columns) {
-      case 2: return 'md:grid-cols-2';
-      case 4: return 'md:grid-cols-2 lg:grid-cols-4';
-      default: return 'md:grid-cols-2 lg:grid-cols-3';
-    }
-  };
+  const filteredItems = selectedCategory === 'All' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === selectedCategory);
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog': return '📝';
-      case 'resource': return '📚';
-      case 'case-study': return '📊';
-      default: return '📄';
-    }
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'resource': return 'bg-green-100 text-green-800';
-      case 'case-study': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
+  const featuredItems = contentItems.filter(item => item.featured);
 
   return (
-    <div className={`rounded-xl p-6 ${styles.container} ${className}`}>
-      <div className="mb-6">
-        <h2 className={`text-2xl font-bold ${styles.title} mb-2`}>
-          {title}
-        </h2>
-        <p className={`${styles.subtitle}`}>
-          {subtitle}
-        </p>
-      </div>
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 text-sm font-medium mb-6">
+            📚 CONTENT SHOWCASE
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Our Latest Content
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Explore our comprehensive collection of AI insights, implementation guides, 
+            case studies, and resources. Fresh content added weekly to keep you ahead of the curve.
+          </p>
+        </div>
 
-      <div className={`grid gap-6 ${getGridCols()}`}>
-        {items.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className="group block bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
-          >
-            <div className="p-6">
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl">
-                    {item.icon || getTypeIcon(item.type)}
-                  </span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
-                    {item.type.replace('-', ' ')}
-                  </span>
-                </div>
-                {item.isNew && (
-                  <span className="px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">
-                    NEW
-                  </span>
-                )}
-              </div>
-
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
-                {item.title}
-              </h3>
-
-              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                {item.description}
-              </p>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4 text-xs text-gray-500">
-                  {item.readTime && (
-                    <div className="flex items-center space-x-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{item.readTime}</span>
+        {/* Featured Content */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured This Week</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredItems.map((item) => (
+              <Link key={item.id} href={item.href} className="group">
+                <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-3xl">{item.icon}</div>
+                    <div className="flex gap-2">
+                      {item.isNew && (
+                        <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                          NEW
+                        </span>
+                      )}
+                      {item.isTrending && (
+                        <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
+                          TRENDING
+                        </span>
+                      )}
                     </div>
-                  )}
-                  {item.category && (
-                    <div className="flex items-center space-x-1">
-                      <Tag className="w-3 h-3" />
-                      <span>{item.category}</span>
-                    </div>
-                  )}
-                </div>
-
-                <div className="flex items-center space-x-1 text-blue-600 group-hover:text-blue-700">
-                  <span className="text-sm font-medium">Read</span>
-                  <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-
-              {item.metrics && (
-                <div className="mt-3 pt-3 border-t border-gray-100">
-                  <div className="flex items-center space-x-1 text-xs font-medium text-green-600">
-                    <Zap className="w-3 h-3" />
-                    <span>{item.metrics}</span>
+                  </div>
+                  <div className="text-sm font-medium text-blue-600 mb-2">{item.category}</div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <span>{item.readTime}</span>
+                    <span className="capitalize">{item.type.replace('-', ' ')}</span>
                   </div>
                 </div>
-              )}
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      {showViewAll && (
-        <div className="mt-6 text-center">
-          <Link
-            href={viewAllHref}
-            className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
-          >
-            <span>{viewAllText}</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+              </Link>
+            ))}
+          </div>
         </div>
-      )}
+
+        {/* Filters and Controls */}
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setViewMode('grid')}
+              className={`p-2 rounded-lg ${
+                viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              </svg>
+            </button>
+            <button
+              onClick={() => setViewMode('list')}
+              className={`p-2 rounded-lg ${
+                viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Content Grid/List */}
+        <div className={
+          viewMode === 'grid' 
+            ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+            : 'space-y-4'
+        }>
+          {filteredItems.map((item) => (
+            <Link key={item.id} href={item.href} className="group">
+              <div className={`bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 ${
+                viewMode === 'list' ? 'p-6 flex items-center gap-6' : 'p-6 h-full'
+              }`}>
+                {viewMode === 'grid' ? (
+                  <>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-3xl">{item.icon}</div>
+                      <div className="flex gap-2">
+                        {item.isNew && (
+                          <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                            NEW
+                          </span>
+                        )}
+                        {item.isTrending && (
+                          <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
+                            TRENDING
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="text-sm font-medium text-blue-600 mb-2">{item.category}</div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {item.description}
+                    </p>
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <span>{item.readTime}</span>
+                      <span className="capitalize">{item.type.replace('-', ' ')}</span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="text-3xl">{item.icon}</div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="text-sm font-medium text-blue-600">{item.category}</div>
+                        <div className="flex gap-2">
+                          {item.isNew && (
+                            <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                              NEW
+                            </span>
+                          )}
+                          {item.isTrending && (
+                            <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
+                              TRENDING
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center gap-4 text-xs text-gray-500">
+                        <span>{item.readTime}</span>
+                        <span className="capitalize">{item.type.replace('-', ' ')}</span>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+  description,
+  content,
+  showViewAll = true,
+  viewAllLink = "/blog"
+}: ContentShowcaseProps) {
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 TRENDING NOW</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Latest Insights & Expert Analysis
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Stay ahead with our latest articles on AI, cloud architecture, growth strategies, 
+            and emerging technologies. Fresh content published weekly.
+          </p>
+        </div>
+
+        {/* Featured Articles Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <Link href="/blog/ai-productivity-automation-2025" className="group">
+            <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center relative">
+                <div className="text-8xl">🤖</div>
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  NEW
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Load More */}
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Load More Content
+          </button>
+        </div>
+
+        {/* Quick Links */}
+        <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Access</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Link href="/blog" className="text-center group">
+              <div className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-2">📝</div>
+                <div className="font-semibold text-gray-900 group-hover:text-blue-600">All Articles</div>
+                <div className="text-sm text-gray-600">100+ articles</div>
+              </div>
+            </Link>
+            <Link href="/case-studies" className="text-center group">
+              <div className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-2">📊</div>
+                <div className="font-semibold text-gray-900 group-hover:text-blue-600">Case Studies</div>
+                <div className="text-sm text-gray-600">25+ studies</div>
+              </div>
+            </Link>
+            <Link href="/resources" className="text-center group">
+              <div className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-2">📋</div>
+                <div className="font-semibold text-gray-900 group-hover:text-blue-600">Resources</div>
+                <div className="text-sm text-gray-600">50+ downloads</div>
+              </div>
+            </Link>
+            <Link href="/contact" className="text-center group">
+              <div className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-2">💬</div>
+                <div className="font-semibold text-gray-900 group-hover:text-blue-600">Get Help</div>
+                <div className="text-sm text-gray-600">Expert consultation</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-// Featured content for homepage
-export const featuredContent = [
-  {
-    title: "The Generative AI Revolution: Transforming Business in 2025",
-    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
-    href: "/blog/ai-2025-generative-ai-revolution",
-    icon: "🎨",
-    readTime: "22 min read",
-    category: "Generative AI",
-    isNew: true,
-    badge: "HOT",
-    badgeColor: "bg-purple-100 text-purple-800",
-    metrics: "10x Content Output"
-  },
-  {
-    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
-    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
-    href: "/blog/ai-2025-ethical-ai-governance",
-    icon: "⚖️",
-    readTime: "25 min read",
-    category: "AI Ethics",
-    isNew: true,
-    badge: "CRITICAL",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "95% Trust Score"
-  },
-  {
-    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
-    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
-    href: "/blog/ai-2025-edge-computing-revolution",
-    icon: "⚡",
-    readTime: "20 min read",
-    category: "Edge Computing",
-    isNew: true,
-    badge: "BREAKTHROUGH",
-    badgeColor: "bg-orange-100 text-orange-800",
-    metrics: "90% Latency Reduction"
-  },
-  {
-    title: "AI 2025 Breakthrough Innovations: The Future is Here",
-    description: "Discover the groundbreaking AI innovations that will reshape industries in 2025. From quantum-enhanced AI to brain-computer interfaces.",
-    href: "/blog/ai-2025-breakthrough-innovations",
-    icon: "🚀",
-    readTime: "28 min read",
-    category: "AI Innovation",
-    featured: true,
-    badge: "FUTURE",
-    badgeColor: "bg-blue-100 text-blue-800",
-    metrics: "Next Decade Tech"
-  }
-];
-
-// Trending content
-export const trendingContent = [
-  {
-    title: "The Generative AI Revolution: Transforming Business in 2025",
-    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
-    href: "/blog/ai-2025-generative-ai-revolution",
-    icon: "🎨",
-    readTime: "22 min read",
-    category: "Generative AI",
-    isTrending: true,
-    badge: "TRENDING",
-    badgeColor: "bg-purple-100 text-purple-800",
-    metrics: "10x Content Output"
-  },
-  {
-    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
-    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
-    href: "/blog/ai-2025-edge-computing-revolution",
-    icon: "⚡",
-    readTime: "20 min read",
-    category: "Edge Computing",
-    isTrending: true,
-    badge: "BREAKTHROUGH",
-    badgeColor: "bg-orange-100 text-orange-800",
-    metrics: "90% Latency Reduction"
-  },
-  {
-    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
-    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
-    href: "/blog/ai-2025-ethical-ai-governance",
-    icon: "⚖️",
-    readTime: "25 min read",
-    category: "AI Ethics",
-    isTrending: true,
-    badge: "CRITICAL",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "95% Trust Score"
-  }
-];
-
-// Latest content
-export const latestContent = [
-  {
-    title: "The Generative AI Revolution: Transforming Business in 2025",
-    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
-    href: "/blog/ai-2025-generative-ai-revolution",
-    icon: "🎨",
-    readTime: "22 min read",
-    category: "Generative AI",
-    isNew: true,
-    badge: "NEW",
-    badgeColor: "bg-purple-100 text-purple-800",
-    metrics: "10x Content Output"
-  },
-  {
-    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
-    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
-    href: "/blog/ai-2025-ethical-ai-governance",
-    icon: "⚖️",
-    readTime: "25 min read",
-    category: "AI Ethics",
-    isNew: true,
-    badge: "NEW",
-    badgeColor: "bg-green-100 text-green-800",
-    metrics: "95% Trust Score"
-  },
-  {
-    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
-    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
-    href: "/blog/ai-2025-edge-computing-revolution",
-    icon: "⚡",
-    readTime: "20 min read",
-    category: "Edge Computing",
-    isNew: true,
-    badge: "NEW",
-    badgeColor: "bg-orange-100 text-orange-800",
-    metrics: "90% Latency Reduction"
-  }
-];
-
-export default ContentShowcase;
+}

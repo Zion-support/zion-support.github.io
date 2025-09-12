@@ -1,65 +1,45 @@
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+=======
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
+  command = "npm run build"
   publish = "dist"
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+=======
+[build]
+  # Use `npm ci` for deterministic installs
+  command = "npm ci && npm run build && (n=0; until [ $n -ge 3 ]; do curl -sf --connect-timeout 10 $DEPLOY_PRIME_URL/api/health | grep '\"status\":\"ok\"' && break; n=$((n+1)); echo "Health check attempt $n failed, retrying in 15s..."; sleep 15; done; if [ $n -ge 3 ]; then echo "Health check failed after 3 attempts." && exit 1; fi)"
+  publish = ".next"
+
+[build] # touch v4.57 to trigger Netlify rebuild
+  # Build the site with Vite and publish the dist folder
+  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
+  command = "npm run build:ci"
+  publish = "dist"
+  functions = "netlify/functions"
   command_timeout = "30m"
+  # Skip TypeScript checking during build
 
-[build.environment]
-NODE_VERSION = "22.12.0"
-NODE_OPTIONS = "--max-old-space-size=4096"
-NETLIFY_NEXT_PLUGIN_SKIP = "true"
-SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
-
-# API functions (disabled for Vite SPA)
+# API functions (if needed)
 # [functions]
 # directory = "netlify/functions"
 
-# Long-term caching for static assets
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
+[context.production.environment]
+  NODE_ENV = "production"
+  # Ensure dev deps are available in prod builds on Netlify
+  NPM_CONFIG_PRODUCTION = "false"
 
-[[redirects]]
-  from = "/ai-financial-planning-platform"
-  to = "/services/ai-financial-planning-platform/"
-  status = 301
+[context.deploy-preview]
+  command = "npm run build:ci"
 
-[[redirects]]
-  from = "/ai-powered-decision-engine"
-  to = "/services/ai-powered-decision-engine/"
-  status = 301
+[context.branch-deploy]
+  command = "npm run build:ci"
 
-[[redirects]]
-  from = "/intelligent-content-automation-platform"
-  to = "/services/intelligent-content-automation-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/intelligent-hr-analytics-platform"
-  to = "/services/intelligent-hr-analytics-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/smart-crm-intelligence-suite"
-  to = "/services/smart-crm-intelligence-suite/"
-  status = 301
-
-[[redirects]]
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
-
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Next.js configuration - no SPA fallback needed

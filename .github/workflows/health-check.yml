@@ -1,0 +1,99 @@
+name: Workflow Health Check
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+jobs:
+  health-check:
+    name: Check Workflow Health
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Check recent workflow runs
+        id: workflow-status
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const workflows = ['CI', 'Test', 'Deploy', 'CodeQL'];
+            const results = {};
+            
+            for (const workflow of workflows) {
+              try {
+                const runs = await github.rest.actions.listWorkflowRuns({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  workflow_id: workflow,
+                  per_page: 5,
+                  status: 'completed'
+                });
+                
+                const recentRuns = runs.data.workflow_runs.slice(0, 3);
+                const successCount = recentRuns.filter(run => run.conclusion === 'success').length;
+                const totalCount = recentRuns.length;
+                
+                results[workflow] = {
+                  success: successCount,
+                  total: totalCount,
+                  health: totalCount > 0 ? (successCount / totalCount * 100).toFixed(1) : 'N/A'
+                };
+              } catch (error) {
+                results[workflow] = { error: error.message };
+              }
+            }
+            
+            return results;
+            
+      - name: Generate health report
+        id: report
+        run: |
+          echo "Workflow Health Report" > health-report.md
+          echo "Generated: $(date)" >> health-report.md
+          echo "" >> health-report.md
+          echo "## Summary" >> health-report.md
+          echo "" >> health-report.md
+          
+          # Parse workflow status and generate report
+          echo "${{ steps.workflow-status.outputs.result }}" | jq -r '
+            to_entries[] | 
+            "### \(.key)\n" +
+            "- Success Rate: \(.value.health)%\n" +
+            "- Recent Runs: \(.value.success)/\(.value.total) successful\n" +
+            (if .value.error then "- Error: \(.value.error)\n" else "" end) +
+            ""
+          ' >> health-report.md
+          
+          echo "## Recommendations" >> health-report.md
+          echo "" >> health-report.md
+          echo "1. Monitor workflows with < 80% success rate" >> health-report.md
+          echo "2. Check failed runs for configuration issues" >> health-report.md
+          echo "3. Review workflow dependencies and permissions" >> health-report.md
+          
+      - name: Create issue for unhealthy workflows
+        uses: peter-evans/create-issue-from-file@v5
+        if: contains(steps.workflow-status.outputs.result, 'error') || contains(steps.workflow-status.outputs.result, '0.0')
+        with:
+          title: "Workflow Health Alert - $(date +%Y-%m-%d)"
+          content-filepath: health-report.md
+          labels: |
+            workflow-health
+            automated
+            alert
+          assignees: ''
+          
+      - name: Upload health report
+        uses: actions/upload-artifact@v4
+        with:
+          name: workflow-health-report
+          path: health-report.md
+          retention-days: 30

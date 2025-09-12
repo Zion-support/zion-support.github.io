@@ -1,0 +1,303 @@
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
+=======
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Activity, 
+  Zap, 
+  Clock, 
+  TrendingUp, 
+  AlertTriangle, 
+  CheckCircle,
+  X,
+  Settings,
+  BarChart3,
+  Cpu,
+  Memory,
+  HardDrive,
+  Gauge,
+  Network
+} from 'lucide-react';
+
+interface PerformanceMetrics {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
+  networkLatency: number;
+  bundleSize: number;
+  networkRequests: number;
+  coreWebVitals: {
+    lcp: number;
+    fid: number;
+    cls: number;
+  };
+}
+>>>>>>> origin/backup-main-20250831-141707
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+<<<<<<< HEAD
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const location = useLocation();
+
+  // Preload critical resources
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.as = 'style';
+      criticalCSS.href = '/src/index.css';
+      document.head.appendChild(criticalCSS);
+
+      // Preload critical fonts
+      const criticalFonts = document.createElement('link');
+      criticalFonts.rel = 'preload';
+      criticalFonts.as = 'font';
+      criticalFonts.href = '/fonts/inter-var.woff2';
+      criticalFonts.crossOrigin = 'anonymous';
+      document.head.appendChild(criticalFonts);
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize images on route change
+  useEffect(() => {
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        // Add loading="lazy" to images below the fold
+        if (img.getBoundingClientRect().top > window.innerHeight) {
+          img.loading = 'lazy';
+        }
+        
+        // Add decoding="async" for better performance
+        img.decoding = 'async';
+        
+        // Add error handling
+        img.onerror = () => {
+          img.style.display = 'none';
+        };
+      });
+    };
+
+    // Use requestIdleCallback for non-critical optimization
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(optimizeImages);
+    } else {
+      setTimeout(optimizeImages, 100);
+    }
+  }, [location.pathname]);
+
+  // Memoize expensive computations
+  const optimizedChildren = useMemo(() => children, [children]);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    if (!window.scrollTimeout) {
+      window.scrollTimeout = setTimeout(() => {
+        // Handle scroll-based optimizations here
+        window.scrollTimeout = null;
+      }, 16); // ~60fps
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Service Worker registration for caching
+  useEffect(() => {
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+=======
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enabled = true,
+  showMetrics = false,
+  autoOptimize = true,
+  enableLazyLoading = true,
+  enableIntersectionObserver = true,
+  enablePerformanceMonitoring = true,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 60,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0,
+    networkLatency: 0,
+    bundleSize: 0,
+    networkRequests: 0,
+    coreWebVitals: {
+      lcp: 0,
+      fid: 0,
+      cls: 0
+    }
+  });
+  
+  const [isVisible, setIsVisible] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+>>>>>>> origin/backup-main-20250831-141707
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              if (target.dataset.src) {
+                target.src = target.dataset.src;
+                target.removeAttribute('data-src');
+                observer.unobserve(target);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '50px',
+          threshold: 0.1,
+        }
+      );
+
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach((img) => observer.observe(img));
+
+      return () => observer.disconnect();
+    }
+  }, [location.pathname]);
+
+  return <>{optimizedChildren}</>;
+};
+
+<<<<<<< HEAD
+// Add global performance optimizations
+if (typeof window !== 'undefined') {
+  // Optimize long tasks
+  if ('scheduler' in window && 'postTask' in window.scheduler) {
+    window.scheduler.postTask(() => {
+      // Run non-critical tasks during idle time
+    }, { priority: 'background' });
+  }
+
+  // Optimize memory usage
+  if ('memory' in performance) {
+    const memoryThreshold = 50 * 1024 * 1024; // 50MB
+    if (performance.memory.usedJSHeapSize > memoryThreshold) {
+      // Trigger garbage collection if available
+      if ('gc' in window) {
+        (window as any).gc();
+      }
+    }
+  }
+}
+
+export default PerformanceOptimizer;
+=======
+    // Measure render time
+    const renderStartTime = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStartTime;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    });
+
+    requestAnimationFrame(measureFPS);
+  }, [enabled]);
+
+  // Enhanced auto-optimization logic
+  const performOptimizations = useCallback(async () => {
+    if (isOptimizing) return;
+    
+    setIsOptimizing(true);
+    const newOptimizations: string[] = [];
+
+    try {
+      // Check FPS and suggest optimizations
+      if (metrics.fps < 30) {
+        newOptimizations.push('Low FPS detected - Consider reducing animations');
+      }
+
+      // Check memory usage
+      if (metrics.memoryUsage > 100) {
+        newOptimizations.push('High memory usage - Consider implementing memory cleanup');
+      }
+
+      // Check load time
+      if (metrics.loadTime > 3000) {
+        newOptimizations.push('Slow load time - Consider implementing lazy loading');
+      }
+
+      // Check Core Web Vitals
+      if (metrics.coreWebVitals.lcp > 2500) {
+        newOptimizations.push('Poor LCP - Optimize largest contentful paint');
+      }
+
+      if (metrics.coreWebVitals.fid > 100) {
+        newOptimizations.push('Poor FID - Reduce input delay');
+      }
+
+      if (metrics.coreWebVitals.cls > 0.1) {
+        newOptimizations.push('Poor CLS - Reduce layout shifts');
+      }
+
+      setOptimizations(newOptimizations);
+    } catch (error) {
+      console.warn('Optimization analysis failed:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [metrics, isOptimizing]);
+
+  // Auto-optimization effect
+  useEffect(() => {
+    if (enabled && enablePerformanceMonitoring) {
+      const interval = setInterval(measurePerformance, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [enabled, enablePerformanceMonitoring, measurePerformance]);
+
+  // Auto-optimization effect
+  useEffect(() => {
+    if (enabled && enablePerformanceMonitoring) {
+      const interval = setInterval(performOptimizations, 10000);
+      return () => clearInterval(interval);
+    }
+  }, [enabled, enablePerformanceMonitoring, performOptimizations]);
+
+  if (!enabled) {
+    return <>{children}</>;
+  }
+
+  return (
+    <>
+      {/* Performance monitoring overlay for development */}
+      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs z-50">
+          <div>Performance Monitor Active</div>
+          <div>Check console for metrics</div>
+        </div>
+      )}
+    </>
+  );
+};
+>>>>>>> origin/backup-main-20250831-141707

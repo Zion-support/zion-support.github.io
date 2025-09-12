@@ -1,0 +1,7 @@
+// Re-export from Button.tsx for backward compatibility
+export { Button, buttonVariants } from './Button';
+<<<<<<< HEAD
+export type { ButtonProps } from './Button';
+=======
+export type { ButtonProps } from './Button';
+>>>>>>> origin/backup-main-20250826-120658

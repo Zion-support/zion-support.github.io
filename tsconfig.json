@@ -1,61 +1,56 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "useDefineForClassFields": true,
+    "target": "es5",
     "lib": [
-      "ES2024",
-      "DOM",
-      "DOM.Iterable",
-      "WebWorker",
-      "WebWorker.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
-    "module": "esnext",
-    "skipLibCheck": true,
-    "importHelpers": false,
-    "noEmitHelpers": false,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
     "allowJs": true,
-    "incremental": true,
-    "jsx": "preserve",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "skipLibCheck": true,
+    "strict": true,
     "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
   "include": [
-    "app",
-    "components",
-    "lib",
-    "types",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "automation",
+    "scripts",
+    "fix_*.js",
+    "fix_*.cjs",
+    "*.fix.js",
+    "*.fix.cjs"
   ]
 }

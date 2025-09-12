@@ -14,7 +14,7 @@ export interface AdvancedAIAutomationService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -204,57 +204,62 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation',
-    name: 'AI Marketing Automation Suite',
-    tagline: 'Intelligent marketing automation with predictive analytics',
-    price: '$299',
-    period: '/month',
-    description: 'Comprehensive AI-powered marketing automation platform that optimizes campaigns, personalizes content, predicts customer behavior, and maximizes ROI through intelligent automation.',
-    features: [
-      'Predictive customer behavior analysis',
-      'Intelligent campaign optimization',
-      'Personalized content generation',
-      'Multi-channel marketing automation',
-      'A/B testing with AI insights',
-      'Customer segmentation automation',
-      'Lead scoring and qualification',
-      'ROI tracking and optimization',
-      'Social media automation',
-      'Email marketing optimization'
-    ],
-    popular: true,
-    icon: '📈',
-    color: 'from-pink-600 to-rose-600',
-    textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-marketing-automation',
-    marketPosition: 'Competes with HubSpot ($45/month), Marketo ($1,250/month), Pardot ($1,250/month). Our advantage: AI-powered optimization, predictive analytics, and affordable pricing.',
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, B2B companies, Startups',
-    trialDays: 21,
-    setupTime: '3-5 days',
-    category: 'Marketing & Automation',
-    realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
-    integrations: ['HubSpot, Salesforce, Mailchimp, Facebook Ads, Google Ads, LinkedIn'],
-    useCases: ['Campaign automation, Customer personalization, Lead generation, ROI optimization, Multi-channel marketing'],
-    roi: 'Marketing teams report 320% ROI through improved campaign performance and customer engagement.',
-    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
-    marketSize: '$25.1B marketing automation market',
-    growthRate: '22% annual growth',
-    variant: 'ai-marketing-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+    name: 'AI-Powered Marketing Automation Platform',
+    tagline: 'Supercharge your marketing with AI-driven automation and personalization',
+    description: 'Intelligent marketing automation platform that uses AI to personalize campaigns, optimize content, and automate marketing workflows for maximum engagement and ROI.',
+    category: 'AI Automation',
+    type: 'AI Service',
+    pricing: {
+      starter: '$249/month',
+      professional: '$649/month',
+      enterprise: '$1,599/month',
+      custom: 'Contact for pricing'
     },
-    realImplementation: true,
-    implementationDetails: 'Advanced marketing automation platform with AI-powered optimization, predictive analytics, and comprehensive campaign management.',
-    launchDate: '2024-08-15',
-    customers: 156,
-    rating: 4.7,
-    reviews: 67
+    features: [
+      'AI-powered personalization',
+      'Predictive analytics',
+      'Automated campaign management',
+      'Content optimization',
+      'Lead scoring',
+      'Email automation',
+      'Social media automation',
+      'A/B testing',
+      'Performance tracking',
+      'Integration with marketing tools',
+      'Custom workflows',
+      'White-label options'
+    ],
+    benefits: [
+      'Higher engagement rates',
+      'Improved conversion rates',
+      'Better ROI',
+      'Time savings',
+      'Personalized experiences',
+      'Data-driven decisions',
+      'Scalable campaigns',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Digital marketing agencies',
+      'E-commerce businesses',
+      'B2B companies',
+      'SaaS companies',
+      'Retail brands',
+      'Startups',
+      'Marketing teams',
+      'Growth hackers'
+    ],
+    marketSize: '$25.1B by 2025',
+    targetAudience: 'Marketing managers, digital marketers, growth hackers, business owners',
+    competitiveAdvantage: 'AI-powered personalization with predictive analytics and comprehensive automation',
+    contact: 'kleber@ziontechgroup.com',
+    mobile: '+1 302 464 0950',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    slug: '/ai-marketing-automation'
   },
 
-  // AI-Powered Sales Intelligence
+  // Intelligent Data Quality Management
   {
     id: 'ai-sales-intelligence',
     name: 'AI Sales Intelligence Platform',

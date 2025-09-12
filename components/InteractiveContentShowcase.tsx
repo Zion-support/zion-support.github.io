@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -43,7 +45,7 @@ export default function InteractiveContentShowcase({
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(items.map(item => item.category).filter(Boolean))];
+  const categories = ['all', ...Array.from(new Set(items.map(item => item.category).filter(Boolean)))];
 
   // Filter and sort items
   useEffect(() => {

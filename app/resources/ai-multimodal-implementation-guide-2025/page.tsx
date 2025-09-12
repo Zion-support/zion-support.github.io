@@ -1,16 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
+=======
+import Link from 'next/link';
+import SEO from '../../../components/SEO';
+>>>>>>> cursor/create-and-deploy-new-content-47dd
 
 export default function AIMultimodalImplementationGuide2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
 <<<<<<< HEAD
-        title="AI Multimodal Implementation Guide 2025 - Free Download - Zion Tech Group"
-        description="Download our comprehensive guide to implementing multimodal AI in your organization. Includes checklists, templates, and step-by-step strategies for 2025."
-        keywords="multimodal AI implementation, AI guide, free download, AI resources, implementation checklist, AI strategy"
-=======
         title="AI Multimodal Implementation Guide 2025 - Free Download"
 <<<<<<< HEAD
         description="Complete step-by-step guide to implementing multimodal AI applications in 2025. Includes architecture patterns, best practices, and real-world examples."
@@ -26,7 +28,6 @@ export default function AIMultimodalImplementationGuide2025() {
         description="Complete guide to building multimodal AI applications. Download our free implementation guide with code examples, architecture patterns, and best practices."
         keywords="multimodal AI guide, AI implementation, computer vision, speech recognition, AI development, free resources"
 >>>>>>> cursor/create-and-deploy-new-content-47dd
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
         url="/resources/ai-multimodal-implementation-guide-2025"
       />
       
@@ -193,19 +194,10 @@ export default function AIMultimodalImplementationGuide2025() {
 =======
         {/* Header */}
 <<<<<<< HEAD
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
-              ← Back to Resources
-            </Link>
-            <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">Free Download</span>
-=======
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
             📋 FREE RESOURCE
 >>>>>>> cursor/create-and-deploy-new-content-47dd
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
           </div>
           
           <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-6">
@@ -363,17 +355,6 @@ export default function AIMultimodalImplementationGuide2025() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Table of Contents</h2>
           
 <<<<<<< HEAD
-          <div className="bg-gray-50 rounded-xl p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-4">Part I: Foundation</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>Chapter 1: Understanding Multimodal AI</li>
-                  <li>Chapter 2: Business Applications & Use Cases</li>
-                  <li>Chapter 3: Technology Landscape</li>
-                  <li>Chapter 4: ROI & Business Case Development</li>
-                </ul>
-=======
           <div className="grid md:grid-cols-2 gap-8">
             <div>
 <<<<<<< HEAD
@@ -398,7 +379,18 @@ export default function AIMultimodalImplementationGuide2025() {
                   <span className="text-blue-500">4.</span>
                   <span>Architecture Patterns</span>
                 </div>
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
+=======
+          <div className="bg-gray-50 rounded-xl p-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-4">Part I: Foundation</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>Chapter 1: Understanding Multimodal AI</li>
+                  <li>Chapter 2: Business Applications & Use Cases</li>
+                  <li>Chapter 3: Technology Landscape</li>
+                  <li>Chapter 4: ROI & Business Case Development</li>
+                </ul>
+>>>>>>> cursor/create-and-deploy-new-content-ce90
               </div>
               
               <div>
@@ -626,13 +618,11 @@ export default function AIMultimodalImplementationGuide2025() {
                 </div>
               </div>
 <<<<<<< HEAD
-=======
               <p className="text-gray-700 italic">
                 "The case studies were incredibly valuable. We used the retail visual search example 
                 as a foundation for our e-commerce platform and saw 40% increase in conversion rates."
               </p>
 >>>>>>> cursor/create-and-deploy-new-content-47dd
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
             </div>
           </div>
         </section>
@@ -1089,31 +1079,6 @@ export default function AIMultimodalImplementationGuide2025() {
             </Link>
           </div>
 <<<<<<< HEAD
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
-          <h2 className="text-2xl font-bold mb-4">Need Help with Implementation?</h2>
-          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-            Our team of AI experts can help you implement multimodal AI solutions tailored to your 
-            specific business needs. Get personalized guidance and support.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/services/ai-services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              View AI Services
-            </Link>
-          </div>
-        </section>
-=======
 <<<<<<< HEAD
         </section>
             Master the art of multimodal AI implementation with our comprehensive guide. 
@@ -1438,7 +1403,32 @@ export default function AIMultimodalImplementationGuide2025() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-47dd
         </div>
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
+=======
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">Need Help with Implementation?</h2>
+          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+            Our team of AI experts can help you implement multimodal AI solutions tailored to your 
+            specific business needs. Get personalized guidance and support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              href="/services/ai-services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              View AI Services
+            </Link>
+          </div>
+        </section>
+>>>>>>> cursor/create-and-deploy-new-content-ce90
       </div>
     </div>
   );
