@@ -12,7 +12,120 @@ interface ContentItem {
   featured: boolean;
 }
 
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  type: 'blog' | 'resource' | 'case-study';
+  url: string;
+  readTime: string;
+  category: string;
+  featured: boolean;
+  publishDate: string;
+}
+
+const contentItems: ContentItem[] = [
+  {
+    id: '1',
+    title: 'AI Agents 2025: The Next Generation of Autonomous Intelligence',
+    description: 'Discover how advanced AI agents are revolutionizing business operations with autonomous decision-making, multi-modal capabilities, and enterprise-grade reliability.',
+    type: 'blog',
+    url: '/blog/ai-2025-advanced-ai-agents',
+    readTime: '12 min',
+    category: 'AI Agents',
+    featured: true,
+    publishDate: '2025-01-20'
+  },
+  {
+    id: '2',
+    title: 'AI Smart Manufacturing Revolution 2025: Industry 4.0 Transformation',
+    description: 'Discover how AI is revolutionizing manufacturing with predictive maintenance, quality control, and autonomous production systems achieving 40-60% efficiency gains.',
+    type: 'blog',
+    url: '/blog/ai-2025-smart-manufacturing-revolution',
+    readTime: '15 min',
+    category: 'Smart Manufacturing',
+    featured: true,
+    publishDate: '2025-01-18'
+  },
+  {
+    id: '3',
+    title: 'Fortune 500 Financial Services AI Transformation: 450% ROI Success Story',
+    description: 'Discover how a major financial services company achieved 450% ROI through comprehensive AI transformation, including fraud detection, customer service automation, and risk management.',
+    type: 'case-study',
+    url: '/case-studies/ai-2025-financial-services-ai-transformation-success',
+    readTime: '20 min',
+    category: 'Financial Services',
+    featured: true,
+    publishDate: '2025-01-16'
+  },
+  {
+    id: '4',
+    title: 'AI Implementation Master Checklist 2025: Complete Enterprise Guide',
+    description: 'Comprehensive checklist for successful AI implementation in enterprise environments. Step-by-step guide covering strategy, technology, deployment, and optimization.',
+    type: 'resource',
+    url: '/resources/ai-2025-implementation-master-checklist',
+    readTime: '30 min',
+    category: 'Implementation',
+    featured: true,
+    publishDate: '2025-01-15'
+  },
+  {
+    id: '5',
+    title: 'AI Advanced Automation 2025: Complete Business Transformation Guide',
+    description: 'Discover how advanced AI automation is revolutionizing businesses with real-world case studies and implementation strategies.',
+    type: 'blog',
+    url: '/blog/ai-2025-advanced-automation',
+    readTime: '15 min',
+    category: 'AI & Automation',
+    featured: true,
+    publishDate: '2025-01-15'
+  },
+  {
+    id: '6',
+    title: 'Multimodal AI Revolution: Beyond Text and Images',
+    description: 'Learn how multimodal AI is creating new possibilities by combining text, images, audio, and video processing.',
+    type: 'blog',
+    url: '/blog/ai-2025-multimodal-revolution',
+    readTime: '12 min',
+    category: 'AI Innovation',
+    featured: false,
+    publishDate: '2025-01-12'
+  },
+  {
+    id: '7',
+    title: 'Enterprise AI Security: Advanced Threat Protection',
+    description: 'Comprehensive guide to securing AI systems in enterprise environments with advanced threat detection and prevention.',
+    type: 'resource',
+    url: '/resources/ai-enterprise-security-2025',
+    readTime: '30 min',
+    category: 'Security',
+    featured: false,
+    publishDate: '2025-01-11'
+  }
+];
+
 const EnhancedContentPromotionBanner: React.FC = () => {
+
+const getTypeIcon = (type: string) => {
+  switch (type) {
+    case 'blog': return '📝';
+    case 'resource': return '📚';
+    case 'case-study': return '📊';
+    default: return '📄';
+  }
+};
+
+const getTypeColor = (type: string) => {
+  switch (type) {
+    case 'blog': return 'from-blue-500 to-blue-600';
+    case 'resource': return 'from-green-500 to-green-600';
+    case 'case-study': return 'from-purple-500 to-purple-600';
+    default: return 'from-gray-500 to-gray-600';
+  }
+};
+
+export default function EnhancedContentPromotionBanner() {
+>>>>>>> cursor/create-and-deploy-new-content-2248
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
