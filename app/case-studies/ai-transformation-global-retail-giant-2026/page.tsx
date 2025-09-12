@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
-export default function AITransformationGlobalRetailGiant2026() {
+export default function GlobalRetailAITransformation() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <SEO
