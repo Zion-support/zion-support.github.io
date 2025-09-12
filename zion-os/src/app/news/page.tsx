@@ -10,13 +10,13 @@ export default function NewsPage() {
       gradient: "from-amber-500 to-yellow-600",
     },
     {
-      emoji: "🧠",
-      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
+      emoji: "⚡",
+      title: "Zion OS 1.3: Agents, RAG, and UX Upgrades",
       excerpt:
-        "Major upgrade delivers 10x larger context, a native Tools API, and faster, cheaper inference.",
-      date: "Sep 12, 2025",
-      href: "/news/ziongpt-core-v2",
-      gradient: "from-fuchsia-600 to-purple-600",
+        "New agent framework, enhanced RAG capabilities, and improved user experience in 1.3.",
+      date: "Sep 11, 2025",
+      href: "/news/zion-os-1-3-upgrades",
+      gradient: "from-blue-500 to-indigo-600",
     },
     {
       emoji: "🧠",
