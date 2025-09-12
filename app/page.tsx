@@ -142,6 +142,15 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
+// New AI 2037-2038 Transcendent Content Components
+import AI2037TranscendentPromotionBanner from '../components/AI2037TranscendentPromotionBanner';
+import AI2037TranscendentContentShowcase from '../components/AI2037TranscendentContentShowcase';
+import AI2038SingularityPromotionBanner from '../components/AI2038SingularityPromotionBanner';
+
+// New AI 2039-2040 Ultimate Content Components
+import AI2039OmniversalPromotionBanner from '../components/AI2039OmniversalPromotionBanner';
+import AI2040UltimatePromotionBanner from '../components/AI2040UltimatePromotionBanner';
+
 // Additional Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
 import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
@@ -166,6 +175,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2040 ULTIMATE PROMOTION BANNER - ULTIMATE CONTENT */}
+        <AI2040UltimatePromotionBanner />
+        
+        {/* AI 2039 OMNIVERSAL PROMOTION BANNER - LATEST CONTENT */}
+        <AI2039OmniversalPromotionBanner />
+        
+        {/* AI 2038 SINGULARITY PROMOTION BANNER - TRANSCENDENT CONTENT */}
+        <AI2038SingularityPromotionBanner />
+        
+        {/* AI 2037 TRANSCENDENT PROMOTION BANNER - BREAKTHROUGH CONTENT */}
+        <AI2037TranscendentPromotionBanner />
+        
+        {/* AI 2037 TRANSCENDENT CONTENT SHOWCASE */}
+        <AI2037TranscendentContentShowcase />
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
         

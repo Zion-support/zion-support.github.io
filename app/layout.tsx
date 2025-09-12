@@ -316,6 +316,46 @@ function Header() {
           </div>
           <div className="relative group">
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              AI 2039-2040
+              <span className="absolute -top-2 -right-2 bg-gradient-to-r from-amber-500 to-slate-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                ULTIMATE
+              </span>
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/ai-2040-ultimate-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-slate-50 to-gray-50 border-l-4 border-slate-500">
+                  🏆 AI 2040 Ultimate (ULTIMATE)
+                </Link>
+                <Link href="/ai-2039-omniversal-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500">
+                  🌟 AI 2039 Omniversal (TRANSCENDENT)
+                </Link>
+                <Link href="/omniversal-consciousness-2039" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-500">
+                  🌌 Omniversal Consciousness (ULTIMATE)
+                </Link>
+                <Link href="/reality-override-2040" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-slate-50 to-zinc-50 border-l-4 border-slate-500">
+                  ⚛️ Reality Override (REVOLUTIONARY)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/case-studies/ai-2040-ultimate-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 Ultimate Transformation (∞ ROI)
+                </Link>
+                <Link href="/case-studies/ai-2039-omniversal-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🌟 Omniversal Success (∞ ROI)
+                </Link>
+                <Link href="/resources/ai-2040-ultimate-implementation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2040 Ultimate Guide (ULTIMATE)
+                </Link>
+                <Link href="/tools/ai-2040-ultimate-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 AI 2040 Ultimate Calculator (NEW)
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
               AI 2037-2038
               <span className="absolute -top-2 -right-2 bg-gradient-to-r from-violet-500 to-rose-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
                 TRANSCENDENT
