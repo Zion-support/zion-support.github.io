@@ -17,33 +17,33 @@ const NewContentPromoBanner: React.FC = () => {
   const newContent: ContentItem[] = [
     {
       id: '1',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
+      title: 'AI 2025 Breakthrough Innovations',
+      description: 'Discover revolutionary AI technologies reshaping industries: quantum AI, autonomous systems, and edge intelligence.',
+      href: '/blog/ai-2025-breakthrough-innovations',
       type: 'blog',
       featured: true
     },
     {
       id: '2',
-      title: 'AI Cybersecurity Threats 2025',
-      description: 'Protect your organization from emerging AI cybersecurity threats with comprehensive defense strategies.',
-      href: '/blog/ai-2025-cybersecurity-threats',
+      title: 'AI Sustainability & Green Tech 2025',
+      description: 'Learn how to build eco-friendly AI systems that reduce environmental impact while maintaining performance.',
+      href: '/blog/ai-sustainability-green-tech-2025',
       type: 'blog',
       featured: true
     },
     {
       id: '3',
-      title: 'AI Financial Services Transformation Success',
-      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
+      title: '$200M Manufacturing Success Case Study',
+      description: 'Complete case study: How a Fortune 500 company achieved $200M savings through autonomous AI systems.',
+      href: '/case-studies/ai-autonomous-manufacturing-success-2025',
       type: 'case-study',
       featured: true
     },
     {
       id: '4',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      title: 'AI Robotics & Automation 2025',
+      description: 'Explore the future of intelligent machines transforming manufacturing, healthcare, and service industries.',
+      href: '/blog/ai-robotics-automation-2025',
       type: 'blog',
       featured: true
     },
