@@ -155,6 +155,18 @@ function Header() {
                 <Link href="/mega-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Mega Content Showcase 2026
                 </Link>
+                <Link href="/blog/ai-2026-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📝 Enterprise Automation Mastery (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2026-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📊 Fortune 500 Case Study (NEW)
+                </Link>
+                <Link href="/resources/ai-2026-implementation-toolkit-ultimate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <Link href="/tools/ai-roi-calculator-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🧮 AI ROI Calculator 2026 (NEW)
+                </Link>
                 <Link href="/content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 All Content
                 </Link>
