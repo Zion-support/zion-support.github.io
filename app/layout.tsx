@@ -167,6 +167,15 @@ function Header() {
                   🌐 Edge Computing Revolution
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2028-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2028 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2028-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚗 AI 2028 Automotive Breakthrough (3000% ROI)
+                </Link>
+                <Link href="/resources/ai-2028-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2028 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2027 Future Predictions (NEW)
                 </Link>
@@ -228,6 +237,15 @@ function Header() {
                   ⭐ Featured Content
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2028-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2028 Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2028-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚗 AI 2028 Automotive Case Study (3000% ROI)
+                </Link>
+                <Link href="/resources/ai-2028-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2028 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2027 Predictions (NEW)
                 </Link>

@@ -69,6 +69,8 @@ import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 =======
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
 >>>>>>> cursor/create-and-deploy-new-content-e5f9
 
 // Lazy load heavy components
@@ -86,6 +88,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2028 CONTENT PROMOTION BANNER */}
+        <AI2028ContentPromotionBanner />
+        
+        {/* AI 2028 CONTENT SHOWCASE */}
+        <AI2028ContentShowcase />
+        
         {/* AI 2027 CONTENT PROMOTION BANNER */}
         <AI2027ContentPromotionBanner />
         
