@@ -132,8 +132,95 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest Content Spotlight */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <div className='inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🚀 JUST PUBLISHED - JANUARY 30, 2025</span>
+            </div>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+              Fresh AI Content Just Dropped
+            </h2>
+            <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+              Discover our latest expert insights, case studies, and implementation guides. 
+              Everything you need to accelerate your AI transformation in 2025.
+            </p>
+          </div>
+
+          <div className='grid md:grid-cols-3 gap-8'>
+            <Link href='/blog/ai-2025-enterprise-implementation-masterclass' className='group'>
+              <div className='bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎓</div>
+                <div className='flex items-center gap-2 mb-3'>
+                  <span className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium'>NEW</span>
+                  <span className='text-sm text-gray-500'>45 min read</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors'>
+                  AI Enterprise Implementation Masterclass
+                </h3>
+                <p className='text-gray-600 mb-4'>
+                  Complete guide to implementing AI in enterprise environments with proven strategies and real case studies.
+                </p>
+                <div className='flex items-center text-blue-600 font-medium group-hover:underline'>
+                  Read Masterclass →
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-transformation-fortune-500-breakthrough-2025' className='group'>
+              <div className='bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
+                <div className='flex items-center gap-2 mb-3'>
+                  <span className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium'>HOT</span>
+                  <span className='text-sm text-gray-500'>Case Study</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors'>
+                  Fortune 500 AI Success Story
+                </h3>
+                <p className='text-gray-600 mb-4'>
+                  $50M savings and 300% ROI in 18 months - complete transformation case study.
+                </p>
+                <div className='flex items-center text-green-600 font-medium group-hover:underline'>
+                  Read Case Study →
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-2025-implementation-master-checklist' className='group'>
+              <div className='bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <div className='flex items-center gap-2 mb-3'>
+                  <span className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium'>FREE</span>
+                  <span className='text-sm text-gray-500'>150+ items</span>
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors'>
+                  AI Implementation Master Checklist
+                </h3>
+                <p className='text-gray-600 mb-4'>
+                  150+ actionable items for successful AI deployment with detailed guidance and templates.
+                </p>
+                <div className='flex items-center text-purple-600 font-medium group-hover:underline'>
+                  Download Checklist →
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='text-center mt-8'>
+            <Link
+              href='/content-showcase'
+              className='inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+            >
+              View All Content
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Dynamic Content Carousel */}
-      <section className='py-20'>
+      <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <DynamicContentCarousel />
         </div>
