@@ -17,9 +17,6 @@ import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/Su
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
-import PerformanceMetrics from '../components/PerformanceMetrics';
-import TechnologyStack from '../components/TechnologyStack';
-
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -386,7 +383,7 @@ const HomePage = memo(function HomePage() {
       </section>
 
       {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
+      <NewContentBanner variant="default" />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -551,30 +548,46 @@ const HomePage = memo(function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            <Card
-              title='Micro SaaS'
-              href='/services/micro-saas'
-              description='End-to-end product engineering with billing, auth, analytics and growth.'
-              icon='🚀'
-            />
-            <Card
-              title='AI Services'
-              href='/services/ai-services'
-              description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
-              icon='🤖'
-            />
-            <Card
-              title='Edge Computing'
-              href='/services/edge-computing'
-              description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
-              icon='⚡'
-            />
-            <Card
-              title='IT Services'
-              href='/services/it-services'
-              description='Cloud migration, DevOps, SRE, security hardening and cost optimization.'
-              icon='⚙️'
-            />
+            <Card>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>
+                <p className="text-gray-600 mb-4">End-to-end product engineering with billing, auth, analytics and growth.</p>
+                <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </Link>
+              </div>
+            </Card>
+            <Card>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-semibold mb-2">AI Services</h3>
+                <p className="text-gray-600 mb-4">LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.</p>
+                <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </Link>
+              </div>
+            </Card>
+            <Card>
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-semibold mb-2">Edge Computing</h3>
+                <p className="text-gray-600 mb-4">Real-time processing, IoT integration, and distributed infrastructure solutions.</p>
+                <Link href="/services/edge-computing" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </Link>
+              </div>
+            </Card>
+            <Card>
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚙️</div>
+                <h3 className="text-xl font-semibold mb-2">IT Services</h3>
+                <p className="text-gray-600 mb-4">Cloud migration, DevOps, SRE, security hardening and cost optimization.</p>
+                <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </Link>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -715,25 +728,22 @@ const HomePage = memo(function HomePage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <TestimonialCard
+              name="Sarah Chen"
+              role="CTO"
               company="TechStart Inc."
-              industry="SaaS"
-              result="300% increase in customer satisfaction"
-              description="AI automation reduced support response time from 4 hours to 2 minutes"
-              savings="$50K monthly savings"
+              content="AI automation reduced support response time from 4 hours to 2 minutes, resulting in 300% increase in customer satisfaction and $50K monthly savings."
             />
             <TestimonialCard
+              name="Michael Rodriguez"
+              role="Operations Director"
               company="RetailMax"
-              industry="E-commerce"
-              result="90% reduction in manual tasks"
-              description="Automated inventory management and order processing systems"
-              savings="$75K annual cost reduction"
+              content="Automated inventory management and order processing systems achieved 90% reduction in manual tasks and $75K annual cost reduction."
             />
             <TestimonialCard
+              name="Jennifer Walsh"
+              role="Managing Partner"
               company="ConsultPro"
-              industry="Professional Services"
-              result="40% increase in proposal win rate"
-              description="AI-powered proposal generation and client management"
-              savings="20 hours saved per week"
+              content="AI-powered proposal generation and client management increased proposal win rate by 40% and saved 20 hours per week."
             />
           </div>
         </div>
