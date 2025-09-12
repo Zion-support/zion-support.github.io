@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, ThumbsUp } from 'lucide-react';
 
 export default function EdgeAIAgentsArticle() {

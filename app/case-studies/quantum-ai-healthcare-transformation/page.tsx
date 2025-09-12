@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { ArrowLeft, Calendar, User, Clock, Share2, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Healthcare Transformation: 85% Faster Drug Discovery',

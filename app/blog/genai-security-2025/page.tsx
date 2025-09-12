@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'GenAI Security in 2025: Practical Controls That Actually Work',
