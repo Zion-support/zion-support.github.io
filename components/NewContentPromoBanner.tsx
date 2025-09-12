@@ -1,179 +1,127 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Rocket, BookOpen } from 'lucide-react';
+import { X, ArrowRight, Star, Calendar, BookOpen, FileText, Lightbulb } from 'lucide-react';
 
-interface NewContentPromoBannerProps {
-  variant?: 'default' | 'featured' | 'trending';
-  className?: string;
-}
+const NewContentPromoBanner = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-export default function NewContentPromoBanner({ 
-  variant = 'default', 
-  className = '' 
-}: NewContentPromoBannerProps) {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'featured':
-        return {
-          container: 'bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600',
-          text: 'text-white',
-          button: 'bg-white text-purple-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-purple-600'
-        };
-      case 'trending':
-        return {
-          container: 'bg-gradient-to-r from-orange-500 via-red-500 to-pink-500',
-          text: 'text-white',
-          button: 'bg-white text-orange-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-orange-600'
-        };
-      default:
-        return {
-          container: 'bg-gradient-to-r from-blue-600 to-purple-600',
-          text: 'text-white',
-          button: 'bg-white text-blue-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-blue-600'
-        };
-    }
-  };
+  useEffect(() => {
+    // Show banner after a short delay
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
 
-  const styles = getVariantStyles();
+    return () => clearTimeout(timer);
+  }, []);
 
   const newContent = [
     {
-      title: "AI-Quantum Computing Breakthrough",
-      description: "Revolutionary convergence unlocking unprecedented power",
-      href: "/blog/ai-quantum-computing-breakthrough-2025",
-      icon: "⚛️",
-      category: "Quantum AI",
-      isNew: true
+      title: 'AI 2025: Revolutionary Trends',
+      description: 'Discover the groundbreaking AI trends shaping the future',
+      type: 'Blog Post',
+      href: '/blog/ai-2025-revolutionary-trends',
+      icon: <Lightbulb className="w-6 h-6" />,
+      badge: 'Trending',
+      badgeColor: 'bg-red-500'
     },
     {
-      title: "AI Space Technology Revolution",
-      description: "Transforming space exploration with autonomous missions",
-      href: "/blog/ai-space-technology-revolution-2025",
-      icon: "🚀",
-      category: "Space AI",
-      isNew: true
+      title: 'Fortune 500 AI Success Story',
+      description: '300% ROI and $50M savings through AI transformation',
+      type: 'Case Study',
+      href: '/case-studies/ai-transformation-fortune-500-success-2025',
+      icon: <Star className="w-6 h-6" />,
+      badge: 'Featured',
+      badgeColor: 'bg-blue-500'
     },
     {
-      title: "Manufacturing AI Success Story",
-      description: "300% productivity increase and $50M savings",
-      href: "/case-studies/ai-manufacturing-transformation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing AI",
-      isNew: true
-    },
-    {
-      title: "AI Implementation Master Guide",
-      description: "Complete roadmap for successful AI transformation",
-      href: "/resources/ai-implementation-master-guide-2026",
-      icon: "📚",
-      category: "Implementation Guide",
-      isNew: true
+      title: 'AI Implementation Master Guide',
+      description: 'Complete guide to implementing AI in your organization',
+      type: 'Resource',
+      href: '/resources/ai-implementation-master-guide-2026',
+      icon: <BookOpen className="w-6 h-6" />,
+      badge: 'New',
+      badgeColor: 'bg-green-500'
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % newContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [newContent.length]);
+
+  if (!isVisible) return null;
+
+  const currentContent = newContent[currentSlide];
+
   return (
-    <section className={`py-16 ${styles.container} ${className} relative overflow-hidden`}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-48 translate-x-48"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
-          </div>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.text}`}>
-            Revolutionary New Content
-          </h2>
-          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.text} opacity-90`}>
-            Discover the latest breakthroughs in AI technology, quantum computing, space exploration, 
-            and real-world transformation success stories.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className={`${styles.button} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg shadow-lg hover:shadow-xl`}
-            >
-              <BookOpen className="inline w-5 h-5 mr-2" />
-              Explore All Content
-            </Link>
-            <Link
-              href="/resources"
-              className={`${styles.buttonSecondary} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg`}
-            >
-              <Zap className="inline w-5 h-5 mr-2" />
-              Download Resources
-            </Link>
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {newContent.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-3">
+          <div className="flex items-center space-x-4 flex-1">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium">New Content Available</span>
+            </div>
+            
+            <div className="flex items-center space-x-4 flex-1">
+              <div className="flex items-center space-x-3">
+                <div className="text-blue-200">
+                  {currentContent.icon}
                 </div>
-                <div className="flex items-center mb-2">
-                  <span className="text-xs font-medium bg-white/20 px-2 py-1 rounded-full">
-                    {item.category}
-                  </span>
-                  {item.isNew && (
-                    <span className="ml-2 text-xs font-bold bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full">
-                      NEW
+                <div>
+                  <div className="flex items-center space-x-2">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${currentContent.badgeColor} text-white`}>
+                      {currentContent.badge}
                     </span>
-                  )}
-                </div>
-                <h3 className={`text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors ${styles.text}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm opacity-90 ${styles.text}`}>
-                  {item.description}
-                </p>
-                <div className="flex items-center mt-4 text-sm font-medium opacity-75 group-hover:opacity-100 transition-opacity">
-                  <span className={styles.text}>Read More</span>
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <span className="text-sm text-blue-200">{currentContent.type}</span>
+                  </div>
+                  <h3 className="font-semibold text-sm">{currentContent.title}</h3>
                 </div>
               </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className={`text-2xl font-bold mb-4 ${styles.text}`}>
-              Ready to Transform Your Business with AI?
-            </h3>
-            <p className={`text-lg mb-6 opacity-90 ${styles.text}`}>
-              Join thousands of companies already using our proven AI implementation strategies 
-              to achieve breakthrough results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className={`${styles.button} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg shadow-lg hover:shadow-xl`}
-              >
-                <Rocket className="inline w-5 h-5 mr-2" />
-                Start Your AI Journey
-              </Link>
-              <Link
-                href="/case-studies"
-                className={`${styles.buttonSecondary} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg`}
-              >
-                View Success Stories
-              </Link>
+              
+              <div className="hidden sm:block">
+                <p className="text-sm text-blue-100 max-w-md">{currentContent.description}</p>
+              </div>
             </div>
           </div>
+
+          <div className="flex items-center space-x-3">
+            <Link
+              href={currentContent.href}
+              className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition-colors flex items-center space-x-2"
+            >
+              <span>Read Now</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-blue-200 hover:text-white transition-colors p-1"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Slide indicators */}
+        <div className="flex justify-center space-x-2 pb-2">
+          {newContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-blue-300'
+              }`}
+            />
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default NewContentPromoBanner;
