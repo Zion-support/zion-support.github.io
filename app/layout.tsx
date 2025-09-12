@@ -9,6 +9,9 @@ import EnhancedContentPromotionBanner from '../components/EnhancedContentPromoti
 import AI2035ContentPromotionBanner from '../components/AI2035ContentPromotionBanner';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2025BreakthroughContentBanner from '../components/AI2025BreakthroughContentBanner';
+import AI2030RevolutionaryPromotionBanner from '../components/AI2030RevolutionaryPromotionBanner';
+import AI2040OmniversalPromotionBanner from '../components/AI2040OmniversalPromotionBanner';
+import UltimateServiceShowcase2025 from '../components/UltimateServiceShowcase2025';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
@@ -148,6 +151,12 @@ function Header() {
               <div className="py-2">
                 <Link href="/ai-2026-2030-future-predictions-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2026-2030 Future Predictions Showcase (NEW)
+                </Link>
+                <Link href="/ai-2030-future-revolutionary-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-500">
+                  🌌 AI 2030+ Revolutionary Showcase (BREAKTHROUGH)
+                </Link>
+                <Link href="/ai-2040-omniversal-consciousness-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  ∞ AI 2040+ Omniversal Consciousness (TRANSCENDENT)
                 </Link>
                 <Link href="/ai-2026-breakthrough-revolutionary-content" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🚀 AI 2026 Breakthrough Content (REVOLUTIONARY)
@@ -934,6 +943,9 @@ function Header() {
                 <Link href="/tools/ai-roi-calculator-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🧮 AI ROI Calculator 2026 (NEW)
                 </Link>
+                <Link href="/revolutionary-content-hub-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  🚀 Revolutionary Content Hub 2025 (ULTIMATE)
+                </Link>
                 <Link href="/content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 All Content
                 </Link>
@@ -1196,6 +1208,9 @@ export default function RootLayout({
         <ErrorBoundary>
           <AI2025UltimateBreakthroughPromotionBanner />
           <AI2025BreakthroughContentBanner />
+          <AI2030RevolutionaryPromotionBanner />
+          <AI2040OmniversalPromotionBanner />
+          <UltimateServiceShowcase2025 />
           <AI2035ContentPromotionBanner />
           <EnhancedContentPromotionBanner />
           <EnhancedNavigationWithContentDiscovery />
