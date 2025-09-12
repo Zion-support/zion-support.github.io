@@ -5,121 +5,119 @@ const AI2025NewContentPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentContent, setCurrentContent] = useState(0);
 
-  const featuredContent = [
+  const newContent = [
     {
       title: "🚀 AI 2025 Next-Generation Breakthroughs",
       description: "Discover revolutionary AI technologies delivering 5,000-15,000% ROI",
-      href: "/blog/ai-2025-next-generation-breakthroughs",
+      link: "/blog/ai-2025-next-generation-breakthroughs",
       badge: "BREAKTHROUGH",
-      badgeColor: "bg-red-500"
+      color: "from-red-500 to-pink-500"
     },
     {
-      title: "🏆 Global Tech Giant: 900% ROI Success",
-      description: "Fortune 500 company achieves unprecedented AI transformation results",
-      href: "/case-studies/ai-2025-global-tech-giant-transformation",
+      title: "🏆 Global Tech Giant Transformation: 900% ROI",
+      description: "Learn how Fortune 500 companies achieve unprecedented success",
+      link: "/case-studies/ai-2025-global-tech-giant-transformation",
       badge: "SUCCESS STORY",
-      badgeColor: "bg-green-500"
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "📚 Ultimate Implementation Master Guide",
-      description: "Complete guide to implementing AI solutions with proven methodologies",
-      href: "/resources/ai-2025-ultimate-implementation-master-guide",
+      title: "📚 AI 2025 Ultimate Implementation Master Guide",
+      description: "Complete step-by-step guide to achieving breakthrough results",
+      link: "/resources/ai-2025-ultimate-implementation-master-guide",
       badge: "MASTER GUIDE",
-      badgeColor: "bg-purple-500"
-    },
-    {
-      title: "⚛️ Quantum AI Integration Breakthrough",
-      description: "Revolutionary quantum-neural fusion delivering 15,000% ROI",
-      href: "/blog/ai-2025-quantum-ai-breakthrough",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-indigo-500"
-    },
-    {
-      title: "🤖 Autonomous Systems Revolution",
-      description: "Self-evolving AI systems achieving 2,000-5,000% ROI",
-      href: "/blog/ai-2025-autonomous-systems-revolution",
-      badge: "NEW",
-      badgeColor: "bg-orange-500"
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
   useEffect(() => {
     setIsVisible(true);
-    
     const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
+      setCurrentContent((prev) => (prev + 1) % newContent.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
   if (!isVisible) return null;
 
-  const current = featuredContent[currentContent];
+  const current = newContent[currentContent];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+    <div className="relative overflow-hidden">
+      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-4">
-                <div className="flex-shrink-0">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold ${current.badgeColor} text-white animate-pulse`}>
-                    {current.badge}
-                  </span>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-bold text-white mb-1">
-                    <Link 
-                      href={current.href}
-                      className="hover:text-yellow-300 transition-colors duration-200"
-                    >
-                      {current.title}
-                    </Link>
-                  </h3>
-                  <p className="text-sm text-blue-100 mb-2">
-                    {current.description}
-                  </p>
-                </div>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold">NEW CONTENT</span>
+              </div>
+              <div className="hidden md:block w-px h-6 bg-gray-400"></div>
+              <div className="flex-1 min-w-0">
+                <Link 
+                  href={current.link}
+                  className="group block hover:opacity-90 transition-opacity"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r ${current.color} text-white`}>
+                        {current.badge}
+                      </span>
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-sm font-semibold truncate group-hover:text-blue-300 transition-colors">
+                        {current.title}
+                      </h3>
+                      <p className="text-xs text-gray-300 truncate">
+                        {current.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
             
             <div className="flex items-center space-x-4">
-              <div className="hidden md:flex items-center space-x-2">
-                {featuredContent.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentContent(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                      index === currentContent ? 'bg-yellow-400 scale-125' : 'bg-white opacity-50'
-                    }`}
-                    aria-label={`Go to content ${index + 1}`}
-                  />
-                ))}
+              <div className="hidden sm:flex items-center space-x-2 text-xs text-gray-300">
+                <span>Featured Content:</span>
+                <div className="flex space-x-1">
+                  {newContent.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentContent(index)}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentContent ? 'bg-white' : 'bg-gray-400'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
               
               <Link
-                href={current.href}
-                className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
+                href={current.link}
+                className="bg-white text-gray-900 px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-gray-100 transition-colors"
               >
                 Explore Now
               </Link>
+              
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
-        
-        {/* Progress bar */}
-        <div className="h-1 bg-gradient-to-r from-yellow-400 to-orange-400 animate-pulse"></div>
       </div>
       
       {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
-        <div className="absolute top-8 right-8 w-3 h-3 bg-pink-400 rounded-full animate-ping animation-delay-1000"></div>
-        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-2000"></div>
-        <div className="absolute bottom-8 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-3000"></div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-2 right-8 w-4 h-4 bg-purple-500 rounded-full opacity-30 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-2 left-1/4 w-6 h-6 bg-pink-500 rounded-full opacity-25 animate-pulse delay-2000"></div>
       </div>
     </div>
   );
