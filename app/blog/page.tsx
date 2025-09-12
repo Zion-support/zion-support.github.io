@@ -1,509 +1,55 @@
-import React from 'react';
 import Link from 'next/link';
 
-export default function BlogPage() {
-	const blogPosts = [
-	  {
-	    id: 'product-analytics-2025',
-	    title: 'Product Analytics 2025: From Dashboards to Decisions',
-	    excerpt:
-	      'A concise framework to turn product data into action and roadmap changes.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'Analytics',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'finops-ai-2025',
-	    title: 'FinOps for AI 2025: Cut LLM Spend Without Slowing Teams',
-	    excerpt:
-	      'Caching, quantization, retrieval tuning, and eval-driven budgets that work.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'FinOps',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-roadmap-2026',
-	    title: 'AI Product Roadmap 2026: Ship Impactful Features with Guardrails',
-	    excerpt:
-	      'Outcome-first planning, technical guardrails, and an operating model that scales.',
-	    date: '2026-02-01',
-	    readTime: '12 min read',
-	    category: 'Strategy',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  // New posts (2025-09)
-	  {
-	    id: 'ai-procurement-playbook-2025',
-	    title: 'AI Procurement Playbook 2025: Buy Fast, Avoid Regret',
-	    excerpt:
-	      'Evaluate, pilot, and buy AI software without lock-in, with clear ROI and risk controls.',
-	    date: '2025-09-11',
-	    readTime: '10 min read',
-	    category: 'Procurement',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'agent-safety-guardrails-2025',
-	    title: 'Agent Safety & Guardrails 2025: Ship Reliable Agentic Systems',
-	    excerpt:
-	      'Controls, budgets, approvals, and observability to keep agent systems safe and affordable.',
-	    date: '2025-09-11',
-	    readTime: '11 min read',
-	    category: 'AI Engineering',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
- 	  {
- 	    id: 'ai-productivity-playbook-2025',
- 	    title: 'AI Productivity Playbook 2025: Ship Faster Without Breaking Things',
- 	    excerpt:
- 	      'A pragmatic system to boost throughput with AI while keeping quality, guardrails, and budgets.',
- 	    date: '2025-09-11',
- 	    readTime: '9 min read',
- 	    category: 'AI & Productivity',
- 	    featured: true,
- 	    image: '/api/placeholder/600/400',
- 	  },
- 	  {
- 	    id: 'cloud-cost-optimization-2025',
- 	    title: 'Cloud Cost Optimization 2025: Save 30–50% Without Downtime',
- 	    excerpt:
- 	      'Quick wins and architecture moves that cut spend across compute, storage, and networking.',
- 	    date: '2025-09-11',
- 	    readTime: '8 min read',
- 	    category: 'Cloud & DevOps',
- 	    featured: true,
- 	    image: '/api/placeholder/600/400',
- 	  },
- 	  {
- 	    id: 'edge-ai-retail-2025',
- 	    title: 'Edge AI in Retail 2025: Real-Time CX With Privacy by Design',
- 	    excerpt:
- 	      'On-device intelligence to reduce latency, protect PII, and personalize experiences at scale.',
- 	    date: '2025-09-11',
- 	    readTime: '7 min read',
- 	    category: 'Edge & IoT',
- 	    featured: true,
- 	    image: '/api/placeholder/600/400',
- 	  },
-	  {
-	    id: 'ai-ops-runbooks-2025',
-	    title: 'AI Ops Runbooks 2025: Resolve Incidents Faster with Guardrails',
-	    excerpt:
-	      'Playbooks for LLM incidents: budget spikes, quality regressions, tool failures, and data drift.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'AI Operations',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-seo-content-engine-2025',
-	    title: 'Startup SEO Content Engine 2025: Ship Weekly, Compound Traffic',
-	    excerpt:
-	      'A lean system to ideate, draft, and publish content that converts—without a big team.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'Growth',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-platform-engineering-2025',
-	    title: 'AI Platform Engineering in 2025: Reliable, Governed, Cost-Aware',
-	    excerpt:
-	      'Foundations, guardrails, and patterns to ship AI features safely at scale.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'AI Engineering',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'customer-stories-automation-roi',
-	    title: 'Customer Stories: Real ROI from AI Automation',
-	    excerpt:
-	      'Three concise case studies across support, finance, and operations with measurable ROI.',
-	    date: '2025-09-11',
-	    readTime: '7 min read',
-	    category: 'Case Studies',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'enterprise-rag-architecture-2025',
-	    title: 'Enterprise RAG Architecture 2025: Reliable, Governed, and Cost-Aware',
-	    excerpt:
-	      'Reference patterns for hybrid retrieval, governance, evals, and measurable ROI in production.',
-	    date: '2025-09-11',
-	    readTime: '10 min read',
-	    category: 'Retrieval-Augmented Generation',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  // New posts (2025-09)
-	  {
-	    id: 'ai-architecture-cost-governance-2025',
-	    title: 'AI Architecture & Cost Governance in 2025',
-	    excerpt:
-	      'Guardrails, observability, and budgets that keep systems reliable and affordable.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'AI Engineering',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-pricing-strategy-2025',
-	    title: 'Startup Pricing Strategy 2025: From Free to $1M ARR',
-	    excerpt:
-	      'Validate willingness to pay, package value, and scale pricing with confidence.',
-	    date: '2025-09-11',
-	    readTime: '7 min read',
-	    category: 'Growth',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-content-strategy-2025',
-	    title: 'AI Content Strategy 2025: From Idea to Distribution',
-	    excerpt:
-	      'Plan, generate, and distribute high-quality content with AI guardrails and measurable outcomes.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'Content Strategy',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'llm-evals-in-production-2025',
-	    title: 'LLM Evals in Production: What Actually Works',
-	    excerpt:
-	      'CI evals, judge models, and budgets tied to outcomes and risk—without slowing teams.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'AI Evaluation',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'customer-stories-ai-automation',
-	    title: 'Customer Stories: Real ROI from AI Automation',
-	    excerpt:
-	      'Three concise case studies across support, finance, and operations showing clear ROI.',
-	    date: '2025-09-11',
-	    readTime: '7 min read',
-	    category: 'Case Studies',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-transforming-business-2025',
-	    title: 'How AI is Transforming Business Operations in 2025',
-	    excerpt:
-	      'Discover the latest AI trends reshaping enterprise operations and how companies are leveraging artificial intelligence for competitive advantage.',
-	    date: '2025-01-15',
-	    readTime: '8 min read',
-	    category: 'AI & Technology',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'quantum-computing-business-applications',
-	    title: 'Quantum Computing: The Next Frontier in Business Innovation',
-	    excerpt:
-	      'Explore how quantum computing is revolutionizing industries from finance to healthcare, and discover practical applications that are already delivering real business value.',
-	    date: '2025-01-20',
-	    readTime: '12 min read',
-	    category: 'Quantum Computing',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'edge-computing-iot-revolution',
-	    title: 'Edge Computing and IoT: Revolutionizing Real-Time Business Operations',
-	    excerpt:
-	      'Discover how edge computing and IoT are transforming industries by enabling real-time data processing, reducing latency, and creating new business opportunities.',
-	    date: '2025-01-18',
-	    readTime: '10 min read',
-	    category: 'Edge Computing & IoT',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'sustainable-tech-green-it',
-	    title: 'Sustainable Technology: Building a Greener Future Through Green IT',
-	    excerpt:
-	      'Explore how businesses are leveraging sustainable technology practices to reduce environmental impact while improving operational efficiency and creating long-term value.',
-	    date: '2025-01-22',
-	    readTime: '9 min read',
-	    category: 'Green IT & Sustainability',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-ethics-responsible-innovation',
-	    title: 'AI Ethics and Responsible Innovation: Building Trust in Artificial Intelligence',
-	    excerpt:
-	      'Explore the critical importance of ethical AI development and how businesses can implement responsible innovation practices to build trustworthy AI systems.',
-	    date: '2025-01-25',
-	    readTime: '11 min read',
-	    category: 'AI Ethics & Responsible Innovation',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'micro-saas-success-stories',
-	    title: 'Micro SaaS Success Stories: From Idea to $1M ARR',
-	    excerpt:
-	      'Real case studies of successful micro SaaS businesses and the strategies that helped them scale from zero to seven-figure revenue.',
-	    date: '2025-01-12',
-	    readTime: '12 min read',
-	    category: 'Business Strategy',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'cloud-migration-best-practices',
-	    title: 'Cloud Migration Best Practices: A Complete Guide',
-	    excerpt:
-	      'Everything you need to know about migrating to the cloud successfully, including common pitfalls and proven strategies.',
-	    date: '2025-01-10',
-	    readTime: '15 min read',
-	    category: 'Cloud & DevOps',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'blockchain-business-applications',
-	    title: 'Blockchain Beyond Crypto: Real Business Applications',
-	    excerpt:
-	      'Exploring practical blockchain applications in supply chain, healthcare, and finance that are driving real business value.',
-	    date: '2025-01-08',
-	    readTime: '10 min read',
-	    category: 'Blockchain',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'cybersecurity-2025-trends',
-	    title: 'Cybersecurity Trends Every Business Should Know in 2025',
-	    excerpt:
-	      'The evolving threat landscape and essential security measures every organization needs to implement this year.',
-	    date: '2025-01-05',
-	    readTime: '7 min read',
-	    category: 'Security',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'data-analytics-roi',
-	    title: 'Maximizing ROI with Advanced Data Analytics',
-	    excerpt:
-	      'How to build a data-driven culture and implement analytics solutions that deliver measurable business impact.',
-	    date: '2025-01-03',
-	    readTime: '9 min read',
-	    category: 'Data & Analytics',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  // Keep existing September entries below for continuity
-	  {
-	    id: 'ai-cost-optimization-2025',
-	    title: 'AI Cost Optimization in 2025: Ship Faster, Spend Less',
-	    excerpt:
-	      'Practical techniques to reduce LLM and vector costs without hurting outcomes.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'AI Engineering',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'enterprise-rag-2025-blueprint',
-	    title: 'Enterprise RAG in 2025: A Practical Blueprint',
-	    excerpt:
-	      'Reference architecture, guardrails, and ops to deploy reliable enterprise RAG at scale.',
-	    date: '2025-09-11',
-	    readTime: '10 min read',
-	    category: 'AI Engineering',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-sales-playbook-2025',
-	    title: 'Startup Sales Playbook 2025: From First Meetings to Revenue',
-	    excerpt:
-	      'Cadences, scripts, and minimal tooling to land your first 100 customers.',
-	    date: '2025-09-11',
-	    readTime: '10 min read',
-	    category: 'Growth',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-agents-in-enterprise-2025',
-	    title: 'AI Agents in the Enterprise: Practical Playbooks for 2025',
-	    excerpt:
-	      'Architectures, guardrails, and KPIs to deploy reliable AI agents that move business metrics.',
-	    date: '2025-09-11',
-	    readTime: '11 min read',
-	    category: 'AI & Automation',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-distribution-playbook-2025',
-	    title: 'Startup Distribution in 2025: A Practical Playbook',
-	    excerpt:
-	      'The highest-leverage channels and measurement to get from 0 → 500 customers.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'Growth',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-distribution-tactics-2025',
-	    title: 'Startup Distribution Tactics 2025: Get to 500 Customers',
-	    excerpt:
-	      'Founder-led outbound, SEO content, partners, and measurement to scale revenue.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'Growth',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-governance-blueprint-2025',
-	    title: 'AI Governance Blueprint 2025: Controls that Actually Work',
-	    excerpt:
-	      'Policy, process, and technical controls that reduce risk without blocking the business.',
-	    date: '2025-09-11',
-	    readTime: '10 min read',
-	    category: 'Governance',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'genai-observability-checklist-2025',
-	    title: 'GenAI Observability: The 2025 Checklist',
-	    excerpt:
-	      'Telemetry that matters across prompts, tools, retrieval, costs, and outcomes.',
-	    date: '2025-09-11',
-	    readTime: '7 min read',
-	    category: 'MLOps',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'agentic-workflows-2025',
-	    title: 'Agentic Workflows in 2025: Practical Patterns for Production',
-	    excerpt:
-	      'Guardrails, budgets, approvals, and observability to safely ship agentic systems.',
-	    date: '2025-09-11',
-	    readTime: '10 min read',
-	    category: 'AI Engineering',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'data-engineering-modern-stack',
-	    title: 'Modern Data Engineering Stack: 2025 Reference',
-	    excerpt:
-	      'An opinionated blueprint for reliable, affordable pipelines: ingestion to governance.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'Data Engineering',
-	    featured: false,
-	    image: '/api/placeholder/600/400',
-	  },
-	  // Additional existing featured content preserved from main
-	  {
-	    id: 'ai-automation-enterprise-2025',
-	    title: 'AI Automation in Enterprise: The Complete 2025 Implementation Guide',
-	    excerpt:
-	      'Everything you need to know about implementing AI automation in your enterprise, from planning to optimization.',
-	    date: '2025-01-27',
-	    readTime: '15 min read',
-	    category: 'AI & Technology',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-funding-ai-era',
-	    title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
-	    excerpt:
-	      'Navigate the new funding landscape and position your AI startup for success with this comprehensive guide.',
-	    date: '2025-01-27',
-	    readTime: '12 min read',
-	    category: 'Startup Strategy',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  // New content added
-	  {
-	    id: 'ai-productivity-automation-2025',
-	    title: 'AI Productivity Automation 2025: The Complete Guide',
-	    excerpt:
-	      'Transform your workflow with cutting-edge AI automation tools and strategies. Boost productivity by 300% while reducing manual work by 80%.',
-	    date: '2025-01-28',
-	    readTime: '12 min read',
-	    category: 'AI & Productivity',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'cloud-native-architecture-2025',
-	    title: 'Cloud-Native Architecture 2025: The Complete Blueprint',
-	    excerpt:
-	      'Build scalable, resilient, and cost-effective applications with modern cloud-native patterns and practices.',
-	    date: '2025-01-28',
-	    readTime: '15 min read',
-	    category: 'Cloud Architecture',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'startup-funding-ai-era-2025',
-	    title: 'Startup Funding in the AI Era: A Complete Guide for 2025',
-	    excerpt:
-	      'Navigate the new funding landscape and position your AI startup for success. Learn from successful AI companies and discover the strategies that work in 2025.',
-	    date: '2025-01-28',
-	    readTime: '14 min read',
-	    category: 'Startup Strategy',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'ai-governance-in-practice-2025',
-	    title: 'AI Governance in Practice 2025: Controls That Actually Work',
-	    excerpt:
-	      'Pragmatic policies, processes, and technical controls that reduce risk without blocking delivery.',
-	    date: '2025-09-11',
-	    readTime: '9 min read',
-	    category: 'Governance',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  },
-	  {
-	    id: 'edge-ai-privacy-by-design-2025',
-	    title: 'Edge AI 2025: Privacy by Design, Real-Time Customer Experiences',
-	    excerpt:
-	      'On-device intelligence to reduce latency, cut cloud costs, and protect PII by default.',
-	    date: '2025-09-11',
-	    readTime: '8 min read',
-	    category: 'Edge & IoT',
-	    featured: true,
-	    image: '/api/placeholder/600/400',
-	  }
-	];
+const posts = [
+  {
+    title: 'AI Copilots for Engineering Teams',
+    description:
+      'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
+    date: '2025-09-11',
+    tags: ['AI', 'DevEx', 'Productivity'],
+  },
+  {
+    title: 'Practical AI Agents for Small Businesses',
+    description:
+      'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
+    href: '/blog/ai-agents-for-smbs',
+    date: '2025-09-11',
+    tags: ['AI', 'Automation', 'Agents'],
+  },
+  {
+    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
+    description:
+      'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    href: '/blog/cloud-cost-optimization-2025',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'DevOps'],
+  },
+  {
+    title: 'AI-Powered Customer Support Playbooks',
+    description:
+      'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    href: '/blog/ai-customer-support-playbooks',
+    date: '2025-09-11',
+    tags: ['AI', 'CX', 'Automation'],
+  },
+  {
+    title: 'AI Infrastructure Cost Controls That Actually Work',
+    description:
+      'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
+    href: '/blog/ai-infra-cost-controls',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'AI'],
+  },
+  {
+    title: 'Enterprise RAG Blueprint: From Pilot to Production',
+    description:
+      'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
+    href: '/blog/enterprise-rag-blueprint',
+    date: '2025-09-11',
+    tags: ['RAG', 'LLM', 'Architecture'],
+  },
+];
 
 	const featuredPosts = blogPosts.filter(post => post.featured);
 	const regularPosts = blogPosts.filter(post => !post.featured);

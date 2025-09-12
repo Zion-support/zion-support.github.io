@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// @ts-nocheck
+import React, { Suspense, lazy } from 'react';
+=======
+>>>>>>> origin/backup-main-20250911-182337
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -162,6 +167,28 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+<<<<<<< HEAD
+            <TestimonialCard
+              company="TechStart Inc."
+              industry="SaaS"
+              result="300% increase in customer satisfaction"
+              description="AI automation reduced support response time from 4 hours to 2 minutes"
+              savings="$50K monthly savings"
+            />
+            <TestimonialCard
+              company="RetailMax"
+              industry="E-commerce"
+              result="90% reduction in manual tasks"
+              description="Automated inventory management and order processing systems"
+              savings="$75K annual cost reduction"
+            />
+            <TestimonialCard
+              company="ConsultPro"
+              industry="Professional Services"
+              result="40% increase in proposal win rate"
+              description="AI-powered proposal generation and client management"
+              savings="20 hours saved per week"
+=======
             <Card
               title='AI Copilots for Engineering Teams'
               href='/blog/ai-copilots-for-engineering'
@@ -185,6 +212,7 @@ export default function HomePage() {
               href='/blog/enterprise-rag-blueprint'
               description='Architecture, hybrid retrieval, and rollout plan for regulated environments.'
               icon='📘'
+>>>>>>> origin/backup-main-20250911-182337
             />
           </div>
         </div>
