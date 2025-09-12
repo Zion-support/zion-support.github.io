@@ -77,22 +77,28 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <Link 
-            href="/content-showcase" 
+            href="/blog" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
           >
-            Content Library
-          </Link>
-          <Link 
-            href="/services" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
-          >
-            Services
+            Blog
           </Link>
           <Link 
             href="/case-studies" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Case Studies
+          </Link>
+          <Link 
+            href="/resources" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Resources
+          </Link>
+          <Link 
+            href="/services" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Services
           </Link>
           <Link 
             href="/contact" 
