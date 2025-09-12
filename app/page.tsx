@@ -18,6 +18,7 @@ import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -239,6 +240,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner />
 
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
@@ -743,6 +747,9 @@ export default function HomePage() {
       </section>
       {/* New Content Showcase */}
       <NewContentShowcase variant="featured" maxItems={4} />
+
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
