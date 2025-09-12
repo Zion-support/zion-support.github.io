@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '15',
+      title: 'AI Agent Observability in 2025: Telemetry & Guardrails',
+      description: 'End-to-end visibility for agents with structured telemetry, distributed tracing, inline evals, and policy guardrails.',
+      href: '/blog/ai-2025-ai-agent-observability',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Reliability'
+    },
+    {
       id: '1',
       title: 'Advanced RAG Systems 2025: Production Guide',
       description: 'Master production-ready RAG systems with advanced patterns, optimization techniques, and real-world implementations.',

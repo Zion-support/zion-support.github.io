@@ -15,6 +15,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "AI Agent Observability in 2025: Telemetry, Tracing, Guardrails",
+      description: "Blueprint for end-to-end agent observability with telemetry, tracing, evaluations, and policy guardrails.",
+      href: "/blog/ai-2025-ai-agent-observability",
+      icon: "📈",
+      category: "Reliability",
+      readTime: "19 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
       description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and performance.",
       href: "/blog/ai-2025-edge-agents-in-production",
