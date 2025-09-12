@@ -218,23 +218,29 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1 mb-3'>
-              <span className='text-xs font-medium'>🔥 NEW CONTENT DROP</span>
+              <span className='text-xs font-medium'>🚀 REVOLUTIONARY AI CONTENT</span>
             </div>
             <p className='text-sm md:text-base opacity-90 mb-3'>
-              <strong>AI Workforce Transformation Guide</strong> • <strong>Data Strategy Playbook</strong> • <strong>Manufacturing Success Story</strong>
+              <strong>90% Efficiency Gains</strong> • <strong>15 Breakthrough Technologies</strong> • <strong>$2.5B Revenue Success</strong>
             </p>
             <div className='flex flex-col sm:flex-row gap-2 justify-center'>
               <Link
-                href='/blog/ai-workforce-transformation-2025'
+                href='/blog/ai-2025-enterprise-automation-success'
                 className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
               >
-                Read Workforce Guide
+                Read Success Stories
               </Link>
               <Link
-                href='/resources/ai-workforce-transformation-playbook-2025'
+                href='/blog/ai-2025-revolutionary-breakthroughs'
                 className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
               >
-                Download Free Playbook
+                Discover Breakthroughs
+              </Link>
+              <Link
+                href='/case-studies/ai-2025-retail-transformation-success'
+                className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
+              >
+                View $2.5B Case Study
               </Link>
             </div>
           </div>

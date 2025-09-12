@@ -15,6 +15,36 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
+    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
+    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "90% efficiency gains"
+  },
+  {
+    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
+    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "🚀",
+    stats: "15 breakthrough technologies"
+  },
+  {
+    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
+    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
+    href: "/case-studies/ai-2025-retail-transformation-success",
+    category: "Case Study",
+    readTime: "20 min read",
+    isNew: true,
+    icon: "🛍️",
+    stats: "$2.5B revenue increase"
+  },
+  {
     title: "AI Business Automation 2025: Complete Implementation Guide",
     description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
     href: "/blog/ai-business-automation-2025",
@@ -23,92 +53,72 @@ const featuredContent: ContentItem[] = [
     isNew: true,
     icon: "🤖",
     stats: "40% productivity boost"
-  },
-  {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
-  },
-  {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    category: "Case Study",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
-  },
-  {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-    href: "/resources/ai-implementation-master-guide-2025",
-    category: "Master Guide",
-    readTime: "150 pages",
-    isNew: true,
-    icon: "📚",
-    stats: "500+ companies using this"
   }
 ];
 
 const trendingContent: ContentItem[] = [
   {
-    title: "AI 2025 Predictions: The Future of AI in Business",
-    description: "The future of AI in business - key trends and predictions that will shape the industry in 2025 and beyond.",
-    href: "/blog/ai-2025-predictions",
-    category: "AI Trends",
-    readTime: "20 min read",
+    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
+    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
     isTrending: true,
-    icon: "🔮",
-    stats: "Trending this week"
+    icon: "🚀",
+    stats: "15 breakthrough technologies"
   },
   {
-    title: "AI Automation Trends 2025: Transform Your Operations",
-    description: "Transform your business operations with the latest intelligent automation trends and proven implementation strategies.",
-    href: "/blog/ai-automation-trends-2025",
-    category: "Automation",
-    readTime: "16 min read",
+    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
+    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
+    readTime: "15 min read",
     isTrending: true,
-    icon: "⚡",
-    stats: "300% efficiency gains"
+    icon: "🏢",
+    stats: "90% efficiency gains"
   },
   {
-    title: "AI Enterprise Security 2025: Complete Implementation Guide",
-    description: "Complete implementation guide for securing AI systems in enterprise environments with proven security frameworks.",
-    href: "/blog/ai-enterprise-security-2025",
-    category: "Security",
+    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
+    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
+    href: "/case-studies/ai-2025-retail-transformation-success",
+    category: "Case Study",
     readTime: "20 min read",
     isTrending: true,
-    icon: "🛡️",
-    stats: "Enterprise-grade security"
+    icon: "🛍️",
+    stats: "$2.5B revenue increase"
   }
 ];
 
 const latestContent: ContentItem[] = [
   {
-    title: "AI Productivity Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
-    href: "/blog/ai-productivity-automation-2025",
-    category: "Productivity",
-    readTime: "12 min read",
+    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
+    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
     isNew: true,
     icon: "🚀",
-    stats: "40% productivity boost"
+    stats: "15 breakthrough technologies"
   },
   {
-    title: "Startup Pricing Strategy 2025: Validate Willingness to Pay",
-    description: "Master startup pricing with data-driven strategies. Learn to validate willingness to pay and scale with confidence.",
-    href: "/blog/startup-pricing-strategy-2025",
-    category: "Startup Strategy",
+    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
+    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
     readTime: "15 min read",
     isNew: true,
-    icon: "💡",
-    stats: "Data-driven pricing"
+    icon: "🏢",
+    stats: "90% efficiency gains"
+  },
+  {
+    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
+    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
+    href: "/case-studies/ai-2025-retail-transformation-success",
+    category: "Case Study",
+    readTime: "20 min read",
+    isNew: true,
+    icon: "🛍️",
+    stats: "$2.5B revenue increase"
   },
   {
     title: "AI Healthcare Diagnosis Success: 95% Accuracy",
