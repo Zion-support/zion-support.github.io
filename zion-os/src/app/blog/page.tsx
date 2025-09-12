@@ -24,6 +24,30 @@ export default function BlogIndexPage() {
       date: "2025-09-12",
       tag: "Web3",
     },
+    {
+      slug: "ai-governance-playbook",
+      title: "AI Governance Playbook: Guardrails That Don’t Slow You Down",
+      excerpt:
+        "A lightweight framework for model risk, data privacy, and human-in-the-loop approvals.",
+      date: "2025-09-12",
+      tag: "AI",
+    },
+    {
+      slug: "it-cost-optimization-quick-wins",
+      title: "IT Cost Optimization: 9 Quick Wins for Q4",
+      excerpt:
+        "Practical tactics across cloud, licenses, and automation that cut cost without chaos.",
+      date: "2025-09-12",
+      tag: "IT",
+    },
+    {
+      slug: "token-rewards-growth-loops",
+      title: "Designing Token Reward Growth Loops",
+      excerpt:
+        "How to craft sustainable incentives that compound community engagement and revenue.",
+      date: "2025-09-12",
+      tag: "Web3",
+    },
   ];
 
   return (
