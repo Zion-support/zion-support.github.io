@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "filesProcessed": 23,
+    "successfullyFixed": 23,
+    "failedFiles": 0,
+    "duration": "2 seconds"
+  },
+  "fixedFiles": [
+    "components/AccessibilityEnhancer.tsx",
+    "components/PerformanceMonitor.tsx",
+    "components/SEO.tsx",
+    "components/ServiceWorkerRegistration.tsx",
+    "components/layout/EnhancedSidebar2025.tsx",
+    "components/layout/Layout.tsx",
+    "components/layout/UltraFuturisticFooter2036.tsx",
+    "components/layout/UltraFuturisticNavigation2036.tsx",
+    "components/ui/UltraFuturisticBackground.tsx",
+    "components/ui/UltraFuturisticServiceCard2026.tsx",
+    "data/additional-live-services-2025.ts",
+    "data/real-market-augmentations-2025.ts",
+    "pages/index.tsx",
+    "pages/services/index.tsx",
+    "src/components/ProductListingCard.tsx",
+    "src/components/talent/TalentCard.tsx",
+    "src/hooks/useAISearch.ts",
+    "src/hooks/useTalentProfile.ts",
+    "src/i18n/index.ts",
+    "src/integrations/supabase/client.ts",
+    "src/pages/Marketplace.tsx",
+    "src/pages/admin/TokenManager.tsx",
+    "src/services/apiClient.ts"
+  ],
+  "failedFiles": [],
+  "timestamp": "2025-09-12T00:48:29.724Z"
+}

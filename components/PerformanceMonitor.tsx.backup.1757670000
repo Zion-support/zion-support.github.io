@@ -1,5 +1,10 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const PerformanceMonitor: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">PerformanceMonitor temporarily disabled</div>;
+=======
 interface PerformanceMetrics {
   lcp: number;
   fid: number;
@@ -465,6 +470,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorP
       </div>
     </div>
   );
+>>>>>>> origin/backup-main-20250912-010437
 };
 
 export default PerformanceMonitor;

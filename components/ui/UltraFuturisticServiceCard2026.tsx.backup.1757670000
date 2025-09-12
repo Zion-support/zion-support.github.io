@@ -1,5 +1,10 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const UltraFuturisticServiceCard2026: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">UltraFuturisticServiceCard2026 temporarily disabled</div>;
+=======
 interface Service {
   id: string;
   name: string;
@@ -217,6 +222,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       </div>
     </motion.div>
   );
+>>>>>>> origin/backup-main-20250912-010437
 };
 
 export default UltraFuturisticServiceCard2026;

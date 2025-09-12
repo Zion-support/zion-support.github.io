@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+=======
+>>>>>>> origin/feature/news-content-landing
 
 interface SEOProps {
   title?: string;
@@ -17,11 +21,19 @@ interface SEOProps {
   nofollow?: boolean;
 }
 
+<<<<<<< HEAD
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
+  image = '/images/zion-tech-group-og-image.jpg',
+=======
 const SEO: React.FC<SEOProps></SEOProps> = ({
   title = 'Zion Tech Group - Pioneering the Future of Technology',
   description = 'Leading technology solutions provider specializing in AI, quantum computing, space technology, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords = ['technology', 'AI', 'quantum computing', 'space technology', 'business solutions', 'innovation'],
   image = 'https://ziontechgroup.com/og-image.jpg',
+>>>>>>> origin/backup-main-20250912-010437
   url = 'https://ziontechgroup.com',
   type = 'website',
   publishedTime,
@@ -38,7 +50,11 @@ const SEO: React.FC<SEOProps></SEOProps> = ({
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
   return (
+<<<<<<< HEAD
+    <Head>
+=======
     <>
+>>>>>>> origin/feature/news-content-landing
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -100,6 +116,14 @@ const SEO: React.FC<SEOProps></SEOProps> = ({
         />
       )}
       
+<<<<<<< HEAD
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+    </Head>
+=======
       {/* Default Structured Data if none provided */}
       {!structuredData && (
         <script
@@ -164,6 +188,7 @@ const SEO: React.FC<SEOProps></SEOProps> = ({
         />
       )}
     </>
+>>>>>>> origin/feature/news-content-landing
   );
 };
 

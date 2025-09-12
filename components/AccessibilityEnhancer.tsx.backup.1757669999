@@ -5,6 +5,15 @@ import {
   MousePointer, Monitor
 } from 'lucide-react';
 
+<<<<<<< HEAD
+export default function AccessibilityEnhancer() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [highContrast, setHighContrast] = useState(false);
+  const [largeText, setLargeText] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+=======
 interface AccessibilityEnhancerProps {
   onSettingsChange?: (settings: AccessibilitySettings) => void;
 }
@@ -163,6 +172,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
   }, [settings]);
 
   // Track focus changes
+>>>>>>> origin/backup-main-20250912-010437
   useEffect(() => {
     // Check user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -236,6 +246,41 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
 
   return (
     <>
+<<<<<<< HEAD
+      {/* Skip Links */}
+      <div className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50">
+        <a
+          href="#main-content"
+          className="block px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg"
+          onClick={focusMainContent}
+        >
+          Skip to main content
+        </a>
+        <a
+          href="#navigation"
+          className="block px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg mt-2"
+        >
+          Skip to navigation
+        </a>
+      </div>
+
+      {/* Accessibility Toolbar */}
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed top-20 right-4 z-50 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl p-4 shadow-2xl"
+            role="toolbar"
+            aria-label="Accessibility options"
+          >
+            <div className="space-y-3">
+              <button
+                onClick={toggleMute}
+                className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 w-full"
+                aria-label={isMuted ? 'Unmute audio' : 'Mute audio'}
+=======
       {/* Accessibility Toggle Button */}
       <button
         onClick={() =></button> setIsOpen(!isOpen)}
@@ -274,11 +319,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
                 onClick={() =></button> setIsOpen(false)}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Close accessibility panel"
+>>>>>>> origin/backup-main-20250912-010437
               >
                 {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 <span className="text-sm">{isMuted ? 'Unmute' : 'Mute'}</span>
               </button>
 
+<<<<<<< HEAD
+              <button
+                onClick={toggleHighContrast}
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors duration-200 w-full ${
+                  highContrast 
+                    ? 'text-white bg-cyan-500/20 border border-cyan-500/30' 
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                }`}
+                aria-label={highContrast ? 'Disable high contrast' : 'Enable high contrast'}
+              >
+                <Eye className="w-4 h-4" />
+                <span className="text-sm">High Contrast</span>
+=======
             {/* Settings */}
             <div className="space-y-4"></div>
               {/* High Contrast */}
@@ -406,8 +465,45 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
                 className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white py-2 px-4 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
               ></button>
                 Reset to Default
+>>>>>>> origin/backup-main-20250912-010437
               </button>
 
+<<<<<<< HEAD
+              <button
+                onClick={toggleLargeText}
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors duration-200 w-full ${
+                  largeText 
+                    ? 'text-white bg-cyan-500/20 border border-cyan-500/30' 
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                }`}
+                aria-label={largeText ? 'Disable large text' : 'Enable large text'}
+              >
+                <Monitor className="w-4 h-4" />
+                <span className="text-sm">Large Text</span>
+              </button>
+
+              <button
+                onClick={toggleReducedMotion}
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors duration-200 w-full ${
+                  reducedMotion 
+                    ? 'text-white bg-cyan-500/20 border border-cyan-500/30' 
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                }`}
+                aria-label={reducedMotion ? 'Disable reduced motion' : 'Enable reduced motion'}
+              >
+                <MousePointer className="w-4 h-4" />
+                <span className="text-sm">Reduced Motion</span>
+              </button>
+
+              <button
+                onClick={focusFirstInteractive}
+                className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 w-full"
+                aria-label="Focus first interactive element"
+              >
+                <Keyboard className="w-4 h-4" />
+                <span className="text-sm">Focus First</span>
+              </button>
+=======
             {/* Keyboard Shortcuts Help */}
             <div className="mt-6 p-4 bg-gray-800 rounded-lg"></div>
               <h3 className="font-semibold mb-2">Keyboard Shortcuts</h3>
@@ -416,11 +512,39 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
                 <div>Enter/Space: Activate</div>
                 <div>Escape: Close panel</div>
               </div>
+>>>>>>> origin/backup-main-20250912-010437
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
+      {/* Accessibility Toggle Button */}
+      <motion.button
+        onClick={() => setIsVisible(!isVisible)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed top-20 right-4 z-40 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+        aria-label="Toggle accessibility options"
+        aria-expanded={isVisible}
+        aria-controls="accessibility-toolbar"
+      >
+        <Eye className="w-5 h-5" />
+      </motion.button>
+
+      {/* Keyboard Navigation Instructions */}
+      <div className="sr-only">
+        <h2>Keyboard Navigation</h2>
+        <ul>
+          <li>Tab: Navigate between interactive elements</li>
+          <li>Enter/Space: Activate buttons and links</li>
+          <li>Arrow keys: Navigate within components</li>
+          <li>Escape: Close modals and dropdowns</li>
+          <li>Home: Go to top of page</li>
+          <li>End: Go to bottom of page</li>
+        </ul>
+      </div>
+=======
       {/* Screen Reader Announcements */}
       <div
         aria-live="polite"
@@ -485,6 +609,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
           border: none;
         }
       `}</style>
+>>>>>>> origin/backup-main-20250912-010437
     </>
   );
 }
