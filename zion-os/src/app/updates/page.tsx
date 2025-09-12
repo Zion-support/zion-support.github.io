@@ -14,6 +14,13 @@ type UpdateItem = {
 const updates: UpdateItem[] = [
   {
     date: "2025-09-12",
+    title: "New Blog Articles Published",
+    summary: "Three new guides on AI deployment, pricing bundles, and the enterprise Web3 stack.",
+    href: "/blog",
+    tag: "Content",
+  },
+  {
+    date: "2025-09-12",
     title: "AI Services Catalog Expanded",
     summary: "Added new enterprise AI offerings and pricing tiers across analytics, automation, and security.",
     href: "/services",
