@@ -47,6 +47,9 @@ import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import RevolutionaryBreakthroughPromotionBanner from '../components/RevolutionaryBreakthroughPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -183,6 +186,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER - TOP PRIORITY */}
+        <RevolutionaryBreakthroughPromotionBanner />
+        
         {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER - FEATURED */}
         <NewContent2026UltimatePromotionBanner />
         
@@ -234,6 +240,20 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY */}
         <InteractiveContentDiscovery2026 />
+        
+        {/* REVOLUTIONARY INTERACTIVE CONTENT DISCOVERY */}
+        <div className="py-16 px-4 bg-gradient-to-r from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto">
+            <InteractiveContentDiscovery />
+          </div>
+        </div>
+        
+        {/* DYNAMIC CONTENT CAROUSEL */}
+        <div className="py-16 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <DynamicContentCarousel />
+          </div>
+        </div>
         
         {/* AI 2038 SINGULARITY PROMOTION BANNER - ULTIMATE CONTENT */}
         <AI2038SingularityPromotionBanner />
