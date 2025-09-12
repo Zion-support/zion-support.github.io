@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '11',
+      title: 'Real-time AI Agents 2025: Observability, Guardrails, and SLOs',
+      description: 'Operate real-time agents with production-grade telemetry, safety guardrails, tracing, and SLOs.',
+      href: '/blog/ai-2025-realtime-agents-observability',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Observability'
+    },
+    {
       id: '9',
       title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
       description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
