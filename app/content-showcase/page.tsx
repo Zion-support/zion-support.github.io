@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
-      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, real-world implementations, and the future of quantum-enhanced artificial intelligence.",
       href: "/blog/ai-2025-quantum-computing-breakthrough",
       icon: "⚛️",
       category: "Quantum AI",
@@ -14,78 +14,69 @@ export default function ContentShowcasePage() {
       date: "Jan 30, 2025"
     },
     {
-      title: "AI 2025: Neuromorphic Computing - Brain-Inspired AI Revolution",
-      description: "Explore how neuromorphic computing is revolutionizing AI in 2025. Discover brain-inspired processors, spiking neural networks, and ultra-efficient AI systems that mimic human cognition.",
-      href: "/blog/ai-2025-neuromorphic-computing",
+      title: "AI 2025: Neural Interface Revolution - The Future of Human-AI Interaction",
+      description: "Discover how neural interfaces are revolutionizing human-AI interaction in 2025. Explore brain-computer interfaces, neural prosthetics, and the future of direct brain-to-AI communication.",
+      href: "/blog/ai-2025-neural-interface-revolution",
       icon: "🧠",
-      category: "Neuromorphic AI",
-      readTime: "18 min read",
-      date: "Jan 29, 2025"
-    },
-    {
-      title: "AI 2025: Edge Computing Revolution - Bringing Intelligence to Every Device",
-      description: "Discover how edge computing is revolutionizing AI in 2025. Explore real-time processing, IoT intelligence, and distributed AI systems that bring smart capabilities to every device.",
-      href: "/blog/ai-2025-edge-computing-revolution",
-      icon: "🌐",
-      category: "Edge AI",
+      category: "Neural Interfaces",
       readTime: "20 min read",
       date: "Jan 28, 2025"
     },
     {
-      title: "AI 2025: Governance & Ethics - Building Responsible AI Systems",
-      description: "Explore the critical importance of AI governance and ethics in 2025. Learn about responsible AI development, ethical frameworks, and regulatory compliance for trustworthy AI systems.",
-      href: "/blog/ai-2025-ai-governance-ethics",
-      icon: "⚖️",
-      category: "AI Ethics",
-      readTime: "24 min read",
-      date: "Jan 27, 2025"
+      title: "AI 2025: Autonomous Systems Mastery - The Complete Implementation Guide",
+      description: "Master autonomous AI systems in 2025 with our comprehensive guide. Learn implementation strategies, real-world case studies, and best practices for deploying autonomous systems at scale.",
+      href: "/blog/ai-2025-autonomous-systems-mastery",
+      icon: "🤖",
+      category: "Autonomous Systems",
+      readTime: "25 min read",
+      date: "Jan 25, 2025"
     },
     {
-      title: "AI 2025: Cybersecurity Threats - Protecting AI Systems from Advanced Attacks",
-      description: "Explore the evolving landscape of AI cybersecurity threats in 2025. Learn about adversarial attacks, model poisoning, and advanced defense strategies for AI systems.",
-      href: "/blog/ai-2025-ai-cybersecurity-threats",
-      icon: "🛡️",
-      category: "AI Security",
-      readTime: "16 min read",
-      date: "Jan 26, 2025"
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🚀",
+      category: "AI Innovations",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-      title: "AI Healthcare Diagnosis Breakthrough: 99.7% Accuracy Achieved",
-      description: "A leading healthcare system achieved unprecedented diagnostic accuracy using AI, reducing diagnosis time by 85% and saving $50M annually. Complete case study with implementation details.",
-      href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2025",
-      icon: "🏥",
-      category: "Healthcare AI",
-      result: "99.7% Accuracy",
+      title: "AI 2025: Autonomous Manufacturing Revolution - $500M Success Story",
+      description: "Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems implementation. Complete transformation story with detailed ROI analysis.",
+      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
+      icon: "💰",
+      category: "Autonomous Systems",
+      result: "$500M Savings",
       date: "Jan 30, 2025"
     },
     {
-      title: "AI Financial Services Transformation: $200M Savings Achieved",
-      description: "A major financial institution achieved $200M in annual cost savings and 400% ROI through comprehensive AI transformation. Complete case study with implementation details and results.",
-      href: "/case-studies/ai-financial-services-transformation-2025",
-      icon: "🏦",
-      category: "Financial AI",
-      result: "$200M Savings",
-      date: "Jan 29, 2025"
+      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
+      description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
+      href: "/case-studies/ai-transformation-fortune-500-success-2025",
+      icon: "🏆",
+      category: "Enterprise AI",
+      result: "$50M Savings",
+      date: "Jan 30, 2025"
     },
     {
-      title: "AI Manufacturing Automation Success: 60% Cost Reduction Achieved",
-      description: "A Fortune 500 manufacturing company achieved 60% cost reduction and 300% productivity increase through comprehensive AI automation. Complete case study with implementation details.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing AI",
-      result: "60% Cost Reduction",
-      date: "Jan 28, 2025"
+      title: "AI Retail Transformation Success: 300% Revenue Growth",
+      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
+      href: "/case-studies/ai-retail-transformation-2025",
+      icon: "🛒",
+      category: "Retail AI",
+      result: "300% Growth",
+      date: "Feb 03, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across your organization.",
+      href: "/resources/ai-2025-implementation-master-guide",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
@@ -157,23 +148,23 @@ export default function ContentShowcasePage() {
           <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
+                <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Fresh AI & Tech Content Just Dropped
               </h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-                New this week: AI 2025 Year in Review, Workforce Transformation, 
-                Sustainability Success Stories, and Cybersecurity Case Studies.
+                New this week: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
+                Sustainability Success Stories, and comprehensive implementation resources.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-2025-year-in-review" className="group">
+              <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                  <h3 className="text-lg font-semibold mb-2">AI 2025 Year in Review</h3>
-                  <p className="text-sm opacity-90 mb-3">Comprehensive analysis of AI breakthroughs and trends</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                  <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
+                  <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
@@ -208,13 +199,13 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
 
-              <Link href="/case-studies/ai-cybersecurity-transformation-2025" className="group">
+              <Link href="/resources" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Success</h3>
-                  <p className="text-sm opacity-90 mb-3">99.8% threat detection accuracy achieved</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                  <h3 className="text-lg font-semibold mb-2">Free AI Resources</h3>
+                  <p className="text-sm opacity-90 mb-3">50+ implementation guides and templates</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
+                    <span>Free Download</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
                   </div>
@@ -222,47 +213,7 @@ export default function ContentShowcasePage() {
               </Link>
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
-                <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
-                <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>28 min read</span>
-                  <span className="mx-2">•</span>
-                  <span>NEW</span>
-                </div>
-            </Link>
-            
-            <Link href="/case-studies/ai-enterprise-transformation-breakthrough-2025" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                <h3 className="text-lg font-semibold mb-2">Enterprise AI: $50M Success</h3>
-                <p className="text-sm opacity-90 mb-3">Fortune 500 company achieves unprecedented growth</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>Case Study</span>
-                  <span className="mx-2">•</span>
-                  <span>NEW</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/resources/ai-2025-complete-implementation-playbook" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
-                <h3 className="text-lg font-semibold mb-2">AI Implementation Playbook</h3>
-                <p className="text-sm opacity-90 mb-3">250+ page guide with templates and frameworks</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>Free Download</span>
-                  <span className="mx-2">•</span>
-                  <span>NEW</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
+        </section>
 
         {/* Content Categories */}
         <section className="mb-16">
@@ -497,26 +448,46 @@ export default function ContentShowcasePage() {
           </div>
         </section>
 
-        {/* Newsletter Signup */}
+        {/* Enhanced Newsletter Signup */}
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated with Latest Content</h2>
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">📧 NEWSLETTER</span>
+          </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Ahead with AI Insights</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Get weekly updates on AI trends, implementation guides, and exclusive content 
-            delivered straight to your inbox. Join 10,000+ AI professionals.
+            delivered straight to your inbox. Join 15,000+ AI professionals and get access 
+            to our latest resources first.
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Subscribe
-            </button>
+          <div className="max-w-lg mx-auto">
+            <div className="flex gap-4 mb-4">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300"
+              />
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+                Subscribe Free
+              </button>
+            </div>
+            <p className="text-sm text-gray-500 mb-4">
+              No spam. Unsubscribe anytime. Read our privacy policy.
+            </p>
+            <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <span className="text-green-500">✓</span>
+                <span>Weekly AI insights</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-500">✓</span>
+                <span>Exclusive resources</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-500">✓</span>
+                <span>Early access</span>
+              </div>
+            </div>
           </div>
-          <p className="text-sm text-gray-500 mt-4">
-            No spam. Unsubscribe anytime. Read our privacy policy.
-          </p>
         </section>
       </div>
   );
