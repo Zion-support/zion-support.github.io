@@ -20,71 +20,9 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
-<<<<<<< HEAD
     title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
     description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation. Real case studies, implementation strategies, and ROI metrics.",
     href: "/blog/ai-2025-enterprise-automation-success",
-    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
-    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
-    href: "/blog/ai-2025-enterprise-automation-success",
-    category: "AI & Automation",
-    readTime: "15 min read",
-    isNew: true,
-    icon: "🏢",
-    stats: "90% efficiency gains"
-  },
-  {
-    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
-    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
-    href: "/blog/ai-2025-revolutionary-breakthroughs",
-    category: "AI Innovation",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🚀",
-    stats: "15 breakthrough technologies"
-  },
-  {
-    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
-    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
-    href: "/case-studies/ai-2025-retail-transformation-success",
-    category: "Case Study",
-    readTime: "20 min read",
-    isNew: true,
-    icon: "🛍️",
-    stats: "$2.5B revenue increase"
-    title: "AI Enterprise Readiness 2025: Complete Implementation Guide",
-    description: "Master AI enterprise readiness with our comprehensive 2025 guide. Learn proven strategies, frameworks, and best practices for successful AI transformation at scale.",
-    href: "/blog/ai-2025-enterprise-readiness-comprehensive-guide",
-    category: "Enterprise AI",
-    readTime: "25 min read",
-    isNew: true,
-    icon: "🏢",
-    stats: "500+ enterprises using this"
-  },
-  {
-    title: "AI Multimodal Revolution 2025: Comprehensive Market Analysis",
-    description: "Explore the AI multimodal revolution transforming industries in 2025. Discover breakthrough technologies, market opportunities, and implementation strategies for multimodal AI systems.",
-    href: "/blog/ai-2025-multimodal-revolution-comprehensive-analysis",
-    category: "AI Revolution",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🧠",
-    stats: "$180B market value"
-  },
-  {
-    title: "AI Transformation: Global Retail Giant Achieves $2.3B Revenue Growth",
-    description: "Discover how a Fortune 500 retail giant achieved $2.3B revenue growth and 45% operational efficiency through comprehensive AI transformation. Real results, proven strategies.",
-    href: "/case-studies/ai-transformation-retail-giant-success-2025",
-    category: "Case Study",
-    readTime: "15 min read",
-    isNew: true,
-    icon: "🏪",
-    stats: "$2.3B revenue growth"
-  },
-  {
-    title: "AI Business Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
-    href: "/blog/ai-business-automation-2025",
     category: "AI & Automation",
     readTime: "15 min read",
     isNew: true,
@@ -115,68 +53,20 @@ const featuredContent: ContentItem[] = [
     title: "AI Implementation Master Guide 2025: Complete 200-Page Playbook",
     description: "Master AI implementation with our comprehensive 200-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in any organization.",
     href: "/resources/ai-implementation-master-guide-2025",
-=======
-    title: "AI Enterprise Transformation Success: $2B Revenue Growth Case Study",
-    description: "Discover how a Fortune 500 company achieved $2B revenue growth through comprehensive AI transformation. Learn proven strategies, implementation roadmap, and key success metrics.",
-    href: "/blog/ai-2025-enterprise-transformation-success",
-    category: "Case Study",
-    readTime: "25 min read",
-    isNew: true,
-    icon: "🏢",
-    stats: "$2B revenue growth"
-  },
-  {
-    title: "AI Startup Funding Revolution 2025: $100B Investment Boom",
-    description: "Discover the AI startup funding revolution sweeping 2025. Learn how to secure funding, understand investor priorities, and capitalize on the $100B AI investment boom.",
-    href: "/blog/ai-2025-startup-funding-revolution",
-    category: "Startup Strategy",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "💰",
-    stats: "$100B investment boom"
-  },
-  {
-    title: "AI Cybersecurity Transformation: 99.9% Threat Detection Success",
-    description: "Discover how a Fortune 500 company achieved 99.9% threat detection accuracy and $200M in security cost savings through AI-powered cybersecurity transformation.",
-    href: "/case-studies/ai-cybersecurity-transformation-2025",
-    category: "Cybersecurity",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "🛡️",
-    stats: "99.9% detection rate"
-  },
-  {
-    title: "AI 2025 Comprehensive Implementation Playbook: Complete Guide",
-    description: "Master AI implementation with our comprehensive 200-page playbook. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in 2025.",
-    href: "/resources/ai-2025-comprehensive-implementation-playbook",
->>>>>>> cursor/create-and-deploy-new-content-46f8
     category: "Master Guide",
     readTime: "200 pages",
     isNew: true,
     icon: "📚",
-<<<<<<< HEAD
     stats: "10,000+ downloads"
-    icon: "🤖",
-    stats: "40% productivity boost"
-=======
-    stats: "200+ pages guide"
->>>>>>> cursor/create-and-deploy-new-content-46f8
   }
 ];
 
 const trendingContent: ContentItem[] = [
   {
-<<<<<<< HEAD
     title: "AI 2025 Revolutionary Breakthroughs: The Technologies Reshaping Our World",
     description: "Explore the groundbreaking AI technologies that will define 2025. From quantum AI to autonomous systems, discover the innovations transforming industries.",
-    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
-    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
     href: "/blog/ai-2025-revolutionary-breakthroughs",
     category: "AI Innovation",
-    title: "AI Multimodal Revolution 2025: Comprehensive Market Analysis",
-    description: "Explore the AI multimodal revolution transforming industries in 2025. Discover breakthrough technologies, market opportunities, and implementation strategies for multimodal AI systems.",
-    href: "/blog/ai-2025-multimodal-revolution-comprehensive-analysis",
-    category: "AI Revolution",
     readTime: "18 min read",
     isTrending: true,
     icon: "🧠",
@@ -185,12 +75,6 @@ const trendingContent: ContentItem[] = [
   {
     title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
     description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation with real case studies.",
-    icon: "🚀",
-    stats: "15 breakthrough technologies"
-  },
-  {
-    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
-    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
     href: "/blog/ai-2025-enterprise-automation-success",
     category: "AI & Automation",
     readTime: "15 min read",
@@ -202,160 +86,15 @@ const trendingContent: ContentItem[] = [
     title: "AI Retail Transformation Success: $200M Revenue Boost Case Study 2025",
     description: "Discover how a global retail giant achieved unprecedented success through comprehensive AI transformation with $200M revenue increase.",
     href: "/case-studies/ai-retail-transformation-success-2025",
-    stats: "90% efficiency gains"
-  },
-  {
-    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
-    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
-    href: "/case-studies/ai-2025-retail-transformation-success",
     category: "Case Study",
     readTime: "20 min read",
     isTrending: true,
     icon: "🛍️",
     stats: "$200M revenue boost"
-    stats: "$2.5B revenue increase"
-    title: "AI Enterprise Readiness 2025: Complete Implementation Guide",
-    description: "Master AI enterprise readiness with our comprehensive 2025 guide. Learn proven strategies, frameworks, and best practices for successful AI transformation at scale.",
-    href: "/blog/ai-2025-enterprise-readiness-comprehensive-guide",
-    category: "Enterprise AI",
-    readTime: "25 min read",
-    isTrending: true,
-    icon: "🏢",
-    stats: "500+ enterprises using this"
-  },
-  {
-    title: "AI Transformation: Global Retail Giant Achieves $2.3B Revenue Growth",
-    description: "Discover how a Fortune 500 retail giant achieved $2.3B revenue growth and 45% operational efficiency through comprehensive AI transformation. Real results, proven strategies.",
-    href: "/case-studies/ai-transformation-retail-giant-success-2025",
-    category: "Case Study",
-    readTime: "15 min read",
-    isTrending: true,
-    icon: "🏪",
-    stats: "$2.3B revenue growth"
-=======
-    title: "AI Enterprise Transformation Success: $2B Revenue Growth Case Study",
-    description: "Discover how a Fortune 500 company achieved $2B revenue growth through comprehensive AI transformation. Learn proven strategies, implementation roadmap, and key success metrics.",
-    href: "/blog/ai-2025-enterprise-transformation-success",
-    category: "Case Study",
-    readTime: "25 min read",
-    isTrending: true,
-    icon: "🏢",
-    stats: "Trending this week"
-  },
-  {
-    title: "AI Startup Funding Revolution 2025: $100B Investment Boom",
-    description: "Discover the AI startup funding revolution sweeping 2025. Learn how to secure funding, understand investor priorities, and capitalize on the $100B AI investment boom.",
-    href: "/blog/ai-2025-startup-funding-revolution",
-    category: "Startup Strategy",
-    readTime: "18 min read",
-    isTrending: true,
-    icon: "💰",
-    stats: "300% growth in funding"
-  },
-  {
-    title: "AI Cybersecurity Transformation: 99.9% Threat Detection Success",
-    description: "Discover how a Fortune 500 company achieved 99.9% threat detection accuracy and $200M in security cost savings through AI-powered cybersecurity transformation.",
-    href: "/case-studies/ai-cybersecurity-transformation-2025",
-    category: "Cybersecurity",
-    readTime: "22 min read",
-    isTrending: true,
-    icon: "🛡️",
-    stats: "Zero security breaches"
->>>>>>> cursor/create-and-deploy-new-content-46f8
   }
 ];
 
 const latestContent: ContentItem[] = [
-  {
-<<<<<<< HEAD
-    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
-    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
-    href: "/blog/ai-2025-revolutionary-breakthroughs",
-    category: "AI Innovation",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🚀",
-    stats: "15 breakthrough technologies"
-  },
-  {
-    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
-    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
-    href: "/blog/ai-2025-enterprise-automation-success",
-    category: "AI & Automation",
-    readTime: "15 min read",
-    isNew: true,
-    icon: "🏢",
-    stats: "90% efficiency gains"
-  },
-  {
-    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
-    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
-    href: "/case-studies/ai-2025-retail-transformation-success",
-    category: "Case Study",
-    readTime: "20 min read",
-    isNew: true,
-    icon: "🛍️",
-    stats: "$2.5B revenue increase"
-=======
-    title: "AI 2025 Comprehensive Implementation Playbook: Complete Guide",
-    description: "Master AI implementation with our comprehensive 200-page playbook. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in 2025.",
-    href: "/resources/ai-2025-comprehensive-implementation-playbook",
-    category: "Master Guide",
-    readTime: "200 pages",
-    isNew: true,
-    icon: "📚",
-    stats: "200+ pages guide"
-  },
-  {
-    title: "AI Enterprise Transformation Success: $2B Revenue Growth Case Study",
-    description: "Discover how a Fortune 500 company achieved $2B revenue growth through comprehensive AI transformation. Learn proven strategies, implementation roadmap, and key success metrics.",
-    href: "/blog/ai-2025-enterprise-transformation-success",
-    category: "Case Study",
-    readTime: "25 min read",
-    isNew: true,
-    icon: "🏢",
-    stats: "$2B revenue growth"
->>>>>>> cursor/create-and-deploy-new-content-46f8
-  },
-  {
-    title: "AI Cybersecurity Transformation: 99.9% Threat Detection Success",
-    description: "Discover how a Fortune 500 company achieved 99.9% threat detection accuracy and $200M in security cost savings through AI-powered cybersecurity transformation.",
-    href: "/case-studies/ai-cybersecurity-transformation-2025",
-    category: "Cybersecurity",
-    readTime: "22 min read",
-    isNew: true,
-<<<<<<< HEAD
-    icon: "🏥",
-    stats: "95% accuracy achieved"
-    title: "AI Enterprise Readiness 2025: Complete Implementation Guide",
-    description: "Master AI enterprise readiness with our comprehensive 2025 guide. Learn proven strategies, frameworks, and best practices for successful AI transformation at scale.",
-    href: "/blog/ai-2025-enterprise-readiness-comprehensive-guide",
-    category: "Enterprise AI",
-    readTime: "25 min read",
-    isNew: true,
-    icon: "🏢",
-    stats: "500+ enterprises using this"
-  },
-  {
-    title: "AI Multimodal Revolution 2025: Comprehensive Market Analysis",
-    description: "Explore the AI multimodal revolution transforming industries in 2025. Discover breakthrough technologies, market opportunities, and implementation strategies for multimodal AI systems.",
-    href: "/blog/ai-2025-multimodal-revolution-comprehensive-analysis",
-    category: "AI Revolution",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🧠",
-    stats: "$180B market value"
-  },
-  {
-    title: "AI Transformation: Global Retail Giant Achieves $2.3B Revenue Growth",
-    description: "Discover how a Fortune 500 retail giant achieved $2.3B revenue growth and 45% operational efficiency through comprehensive AI transformation. Real results, proven strategies.",
-    href: "/case-studies/ai-transformation-retail-giant-success-2025",
-    category: "Case Study",
-    readTime: "15 min read",
-    isNew: true,
-    icon: "🏪",
-    stats: "$2.3B revenue growth"
-  },
   {
     title: "AI Productivity Automation 2025: Complete Implementation Guide",
     description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
@@ -365,10 +104,26 @@ const latestContent: ContentItem[] = [
     isNew: true,
     icon: "🚀",
     stats: "40% productivity boost"
-=======
-    icon: "🛡️",
-    stats: "99.9% detection rate"
->>>>>>> cursor/create-and-deploy-new-content-46f8
+  },
+  {
+    title: "Startup Pricing Strategy 2025: Validate Willingness to Pay",
+    description: "Master startup pricing with data-driven strategies. Learn to validate willingness to pay and scale with confidence.",
+    href: "/blog/startup-pricing-strategy-2025",
+    category: "Startup Strategy",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "💡",
+    stats: "Data-driven pricing"
+  },
+  {
+    title: "AI Healthcare Diagnosis Success: 95% Accuracy",
+    description: "Discover how a leading healthcare provider achieved 95% accuracy in medical diagnosis using AI automation.",
+    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+    category: "Healthcare AI",
+    readTime: "8 min read",
+    isNew: true,
+    icon: "🏥",
+    stats: "95% accuracy achieved"
   }
 ];
 
@@ -467,6 +222,51 @@ const EnhancedContentShowcase: React.FC<EnhancedContentShowcaseProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
 
   const contentItems: ContentItem[] = [
+    {
+      title: 'AI Transformation Success: Manufacturing Giant Achieves 400% ROI',
+      description: 'Discover how a Fortune 500 manufacturing company transformed operations with AI, achieving 400% ROI, 60% cost reduction, and $2.3B in savings.',
+      href: '/case-studies/ai-transformation-manufacturing-giant-2025',
+      icon: '🏭',
+      readTime: '10 min read',
+      category: 'Case Study',
+      isNew: true,
+      isTrending: true,
+      type: 'case-study',
+      status: 'featured',
+      publishDate: '2025-01-17',
+      author: 'Zion Tech Group',
+      tags: ['manufacturing', 'ROI', 'transformation', 'Fortune 500']
+    },
+    {
+      title: 'AI Transformation Playbook 2025: Complete Implementation Guide',
+      description: 'Download our comprehensive playbook with proven frameworks, templates, and strategies for enterprise AI transformation success.',
+      href: '/resources/ai-transformation-playbook-2025',
+      icon: '📚',
+      readTime: '45 min read',
+      category: 'Resource',
+      isNew: true,
+      isTrending: true,
+      type: 'resource',
+      status: 'featured',
+      publishDate: '2025-01-17',
+      author: 'Zion Tech Group',
+      tags: ['playbook', 'implementation', 'frameworks', 'templates']
+    },
+    {
+      title: 'AI Transformation Masterclass: Free Live Training',
+      description: 'Join 2,500+ executives for our comprehensive 2-hour masterclass covering proven AI transformation strategies and frameworks.',
+      href: '/webinars/ai-transformation-masterclass',
+      icon: '🎓',
+      readTime: '2 hours',
+      category: 'Webinar',
+      isNew: true,
+      isTrending: true,
+      type: 'resource',
+      status: 'featured',
+      publishDate: '2025-01-25',
+      author: 'Zion Tech Group',
+      tags: ['masterclass', 'live training', 'free', 'executives']
+    },
     {
       title: 'The Generative AI Revolution: How 2025 is Transforming Every Industry',
       description: 'Explore how generative AI is revolutionizing industries in 2025, from healthcare to finance, with real-world applications and future predictions.',
@@ -649,8 +449,8 @@ const EnhancedContentShowcase: React.FC<EnhancedContentShowcaseProps> = ({
     }
   ];
 
-  const categories = ['all', 'AI Innovation', 'AI Automation', 'Case Study', 'Healthcare AI', 'Enterprise AI', 'Cybersecurity', 'Data Engineering', 'Edge Computing', 'AI Ethics', 'Multimodal AI'];
-  const types = ['all', 'article', 'case-study', 'guide', 'resource'];
+  const categories = ['all', 'Case Study', 'Resource', 'Webinar', 'AI Innovation', 'AI Automation', 'Healthcare AI', 'Enterprise AI', 'Cybersecurity', 'Data Engineering', 'Edge Computing', 'AI Ethics', 'Multimodal AI'];
+  const types = ['all', 'case-study', 'resource', 'article', 'guide'];
 
   const filteredContent = contentItems
     .filter(item => {
