@@ -116,6 +116,11 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 // const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 // const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
 
+// New revolutionary content pages
+const AIRevolution2025 = React.lazy(() => import('./pages/AIRevolution2025'));
+const QuantumComputingBreakthrough = React.lazy(() => import('./pages/QuantumComputingBreakthrough'));
+const AutonomousBusinessPlatform = React.lazy(() => import('./pages/AutonomousBusinessPlatform'));
+
 // Comprehensive services showcase - commented out as they don't exist yet
 // const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -287,6 +292,11 @@ function App() {
               {/* Additional routes - commented out as they don't exist yet */}
               {/* <Route path="/api" element={<API />} /> */}
               {/* <Route path="/developers" element={<DeveloperPortal />} /> */}
+              
+              {/* New revolutionary content routes */}
+              <Route path="/ai-revolution-2025" element={<AIRevolution2025 />} />
+              <Route path="/quantum-computing-breakthrough" element={<QuantumComputingBreakthrough />} />
+              <Route path="/autonomous-business-platform" element={<AutonomousBusinessPlatform />} />
               
               {/* Hybrid App Demo */}
               

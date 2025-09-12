@@ -36,12 +36,14 @@ export default function NewContent2025PromotionBanner() {
             <Link
               to="/content-showcase"
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
             >
               🎯 Explore All New Content
             </Link>
             <Link
               to="/resources/ai-implementation-master-guide-2026"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 text-lg backdrop-blur-sm"
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
             >
               📚 Download Master Guide
             </Link>
@@ -99,6 +101,7 @@ export default function NewContent2025PromotionBanner() {
                   <span>25 min read</span>
                   <span className="mx-2">•</span>
                   <span>Security Guide</span>
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
                 </div>
               </div>
             </Link>
@@ -122,6 +125,7 @@ export default function NewContent2025PromotionBanner() {
               <div className="text-2xl font-bold text-yellow-300 mb-1">2025</div>
               <p className="text-sm opacity-75">Latest Strategies</p>
             </div>
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
           </div>
         </div>
       </div>

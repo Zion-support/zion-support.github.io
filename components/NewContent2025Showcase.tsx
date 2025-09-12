@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './ui/Card';
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
 
 export default function NewContent2025Showcase() {
   const newContent = [
@@ -33,13 +34,13 @@ export default function NewContent2025Showcase() {
       readTime: "25 min read",
       featured: true,
       stats: "95% Detection Accuracy"
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
     }
   ];
 
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full px-6 py-2 mb-4">
             <span className="text-sm font-medium">🔥 FRESH CONTENT - JANUARY 2025</span>
@@ -77,6 +78,7 @@ export default function NewContent2025Showcase() {
 
                 {/* Title */}
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
                   {content.title}
                 </h3>
 
@@ -98,6 +100,7 @@ export default function NewContent2025Showcase() {
                   <span className="text-indigo-600 font-medium group-hover:text-indigo-800">
                     Read More →
                   </span>
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
                 </div>
               </Card>
             </Link>
@@ -149,6 +152,7 @@ export default function NewContent2025Showcase() {
             <div className="text-3xl font-bold text-purple-600 mb-2">2025</div>
             <p className="text-sm text-gray-600">Latest Strategies</p>
           </div>
+>>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
         </div>
       </div>
     </section>

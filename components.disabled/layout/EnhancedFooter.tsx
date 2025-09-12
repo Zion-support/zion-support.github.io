@@ -235,8 +235,5 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedFooter;
-=======
 export default EnhancedFooter;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4

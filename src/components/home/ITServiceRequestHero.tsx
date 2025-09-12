@@ -324,8 +324,3 @@ export function ITServiceRequestHero() {
           </motion.div>
         </div>
       </motion.div>
-=======
-      </div>
-    </section>
-  );
-}

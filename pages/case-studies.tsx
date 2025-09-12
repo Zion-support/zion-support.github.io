@@ -275,5 +275,3 @@ export default function CaseStudiesPage() {
     </>
   );
 }
-=======
-export default function CaseStudies(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Case Studies</h1><p>Success stories will be published here.</p></main>);}
