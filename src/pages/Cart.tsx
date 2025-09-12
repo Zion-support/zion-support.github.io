@@ -1,53 +1,60 @@
+import React, { useEffect, useState } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
 import {
   removeItem as removeItemAction,
-  updateQuantity as updateQuantityAction,
-} from '@/store/cartSlice';
-import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+  updateQuantity as updateQuantityAction
+} from "@/store/cartSlice";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
-import { CartItem as CartItemType } from '@/types/cart';
-import { safeStorage } from '@/utils/safeStorage';
+// CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
+// import { CartItem as CartItemType } from '@/types/cart';
+// safeStorage is no longer needed here for reading
+// import { safeStorage } from '@/utils/safeStorage';
 import { getStripe } from '@/utils/getStripe';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
+
+
+
+
+
+import { useWishlist } from '@/hooks/useWishlist';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function CartPage() {
-  const { t } = useTranslation();
-  const reduxItems = useSelector((s: RootState) => s.cart.items);
-  const [items, setItems] = useState<CartItemType[]>(reduxItems);
+  const { t: _t } = useTranslation();
+  const items = useSelector((s: RootState) => s.cart.items);
   const dispatch = useDispatch<AppDispatch>();
-  const { user } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const [loading, setLoading] = useState(false);
   const [guestOpen, setGuestOpen] = useState(false);
-
-  useEffect(() => {
-    if (reduxItems.length > 0) {
-      setItems(reduxItems);
-    } else {
-      const stored = safeStorage.getItem('zion_cart');
-      if (stored) {
-        try {
-          setItems(JSON.parse(stored) as CartItemType[]);
-        } catch {
-          setItems([]);
-        }
-      } else {
-        setItems([]);
-      }
-    }
-  }, [reduxItems]);
+  const { toggle: toggleWishlist, isWishlisted } = useWishlist();
 
   const updateQuantity = (id: string, qty: number) => {
-    dispatch(updateQuantityAction({ id, quantity: qty }));
+    setItems(prev => {
+      const updated = prev.map(i => i.id === id ? { ...i, quantity: qty } : i);
+      safeStorage.setItem('cart', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const removeItem = (id: string) => {
-    dispatch(removeItemAction(id));
+    setItems(prev => {
+      const updated = prev.filter(i => i.id !== id);
+      safeStorage.setItem('cart', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const handleCheckout = async (details?: { email?: string; address?: string }) => {
@@ -66,17 +73,21 @@ export default function CartPage() {
       if (!sessionId) throw new Error('Session ID missing in response');
 
       const { error } = await stripe.redirectToCheckout({ sessionId });
-      if (error) console.error('Stripe redirect error:', error.message);
-    } catch (err: any) {
-      console.error('Checkout error:', err);
-      alert(err.message || 'Checkout failed');
+      if (error) logErrorToProduction('Stripe redirect error:', { data: error.message });
+    } catch (err) {
+      logErrorToProduction('Checkout error:', { data: err });
+      let message = 'Checkout failed';
+      if (err && typeof err === 'object' && 'message' in err && typeof (err as { message?: unknown }).message === 'string') {
+        message = (err as { message: string }).message;
+      }
+      alert(message);
     } finally {
       setLoading(false);
     }
   }; 
 
   const startCheckout = () => {
-    if (!user) {
+    if (!isAuthenticated) {
       setGuestOpen(true);
     } else {
       handleCheckout();
@@ -84,48 +95,51 @@ export default function CartPage() {
   };
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const displaySubtotal = (subtotal * currency.fx_rate).toFixed(2);
 
   if (items.length === 0) {
     return (
       <div className="container py-10 text-center">
-        <img
-          src="/images/empty-cart.svg"
-          alt="Empty cart"
-          className="mx-auto mb-4 w-48 h-36"
-        />
-        <p>{t('cart.empty')}</p>
-        <Button asChild className="mt-4">
-          <Link href="/marketplace">{t('cart.continue_shopping')}</Link>
-        </Button>
+        <p>Your cart is empty.</p>
       </div>
     );
   }
 
   return (
     <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">{t('cart.title')}</h1>
+      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
       <ul className="space-y-4">
         {items.map(item => (
-          <CartItemComponent
-            key={item.id}
-            item={item}
-            onRemove={removeItem}
-            onUpdateQuantity={updateQuantity}
-          />
+          <li key={item.id} className="flex justify-between items-center">
+            <div>
+              <p className="font-medium">{item.name}</p>
+              <p className="text-sm text-muted-foreground">
+                {currency.symbol}
+                {(item.price * currency.fx_rate).toFixed(2)}
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="number"
+                min={1}
+                value={item.quantity}
+                onChange={e => updateQuantity(item.id, parseInt(e.target.value || '1', 10))}
+                className="w-16 bg-transparent border border-input rounded p-1 text-center"
+              />
+              <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
+                Remove
+              </Button>
+            </div>
+          </li>
         ))}
       </ul>
       <div className="flex justify-between mt-6 font-semibold">
-        <span>{t('cart.subtotal')}</span>
-        <span>${subtotal.toFixed(2)}</span>
+        <span>Subtotal</span>
+        <span>{currency.symbol}{displaySubtotal}</span>
       </div>
-      <Button className="mt-4 w-full" onClick={startCheckout} disabled={loading}>
-        {loading ? t('cart.processing') : t('cart.checkout')}
+      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
+        Checkout
       </Button>
-      <GuestCheckoutModal
-        open={guestOpen}
-        onOpenChange={setGuestOpen}
-        onSubmit={(d) => handleCheckout(d)}
-      />
     </div>
   );
 }

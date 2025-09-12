@@ -1,241 +1,230 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import type { AppProps } from 'next/app';
-import { HelmetProvider } from 'react-helmet-async';
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store'; // Changed to named import
-import { WhitelabelProvider } from '@/context/WhitelabelContext'; // Added WhitelabelProvider
-import { WalletProvider } from '@/context/WalletContext'; // Added WalletProvider
-import { AnalyticsProvider } from '@/context/AnalyticsContext'; // Added AnalyticsProvider
-import { CartProvider } from '@/context/CartContext'; // Added CartProvider
-import { ErrorProvider } from '@/context/ErrorContext';
-import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
-import { I18nextProvider } from 'react-i18next';
-import i18n from '@/i18n';
-import { Toaster } from '@/components/ui/toaster';
-import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
-import ErrorBoundary from '@/components/ErrorBoundary';
-import RootErrorBoundary from '@/components/RootErrorBoundary';
-import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
-import { OfflineIndicator } from '@/components/OfflineIndicator';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { AppLayout } from '@/layout/AppLayout';
-import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
-// Import Next.js fonts for optimal loading and CLS prevention
-import { Inter, Montserrat } from 'next/font/google';
-import Head from 'next/head';
-// Import global Tailwind styles so they load before the app renders
-import '../src/index.css';
-import * as Sentry from '@sentry/nextjs';
-import getConfig from 'next/config';
-import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
-import { validateProductionEnvironment, initializeServices } from '@/utils/environmentConfig';
-import { initializePerformanceOptimizations } from '@/utils/performance';
-import '@/utils/globalFetchInterceptor';
-
-// Configure fonts with optimal loading strategies
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-inter',
-});
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-montserrat',
-});
-
-// If you have global CSS, import it here:
-// import '../styles/globals.css';
-
-function MyApp({ Component, pageProps }: AppProps) {
-  console.log('[App] MyApp component rendering started.');
-  const router = useRouter();
-  const [queryClient] = React.useState(() => new QueryClient());
-
-  React.useEffect(() => {
-    console.log('[App] MyApp main useEffect hook started.');
-    
-    try {
-      // Validate environment variables (graceful in development, strict in production)
-      validateProductionEnvironment();
-      
-      // Initialize services based on configuration
-      initializeServices();
-      
-      // Initialize global error handlers
-      initializeGlobalErrorHandlers();
-      
-      // Initialize performance monitoring and optimizations
-      initializePerformanceOptimizations();
-      
-      const { publicRuntimeConfig } = getConfig();
-      console.log('[App] Public Runtime Config:', publicRuntimeConfig);
-      
-      if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE) {
-        Sentry.setTag('release', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE);
-      }
-      if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_ENVIRONMENT) {
-        Sentry.setTag('environment', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_ENVIRONMENT);
-      }
-      
-      console.log("NEXT_PUBLIC_SUPABASE_ANON_KEY:", publicRuntimeConfig.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'SET' : 'NOT_SET');
-      console.log("NEXT_PUBLIC_REOWN_PROJECT_ID:", publicRuntimeConfig.NEXT_PUBLIC_REOWN_PROJECT_ID ? 'SET' : 'NOT_SET');
-    } catch (error) {
-      console.error('[App] Critical initialization error:', error);
-      
-      // Only send to Sentry if it's available and configured
-      try {
-        Sentry.captureException(error);
-      } catch (sentryError) {
-        console.warn('[App] Could not send error to Sentry:', sentryError);
-      }
-      
-      // Don't throw here - let the error boundary handle it in the UI
-    }
-  }, []); // Empty dependency array ensures this runs only once on mount
-
-  React.useEffect(() => {
-    Sentry.setTag('route', router.pathname);
-    Sentry.setContext('query', router.query);
-  }, [router.pathname]);
-
-  // Log initialization messages
-  console.log('[App Provider] Initializing RootErrorBoundary...');
-  console.log('[App Provider] Initializing GlobalErrorBoundary...');
-  console.log('[App Provider] Initializing QueryClientProvider...');
-  console.log('[App Provider] Initializing ReduxProvider...');
-  console.log('[App Provider] Initializing HelmetProvider...');
-  console.log('[App Provider] Initializing ErrorProvider...');
-  console.log('[App Provider] Initializing AuthProvider...');
-  console.log('[App Provider] Initializing WhitelabelProvider...');
-  console.log('[App Provider] Initializing I18nextProvider...');
-  console.log('[App Provider] Initializing WalletProvider...');
-  console.log('[App Provider] Initializing CartProvider...');
-  console.log('[App Provider] Initializing AnalyticsProvider...');
-  console.log('[App Provider] Initializing ThemeProvider...');
-  console.log('[App Provider] Initializing BrowserRouter...');
-  console.log('[App Provider] Initializing ErrorBoundary (wrapping Component)...');
-
-  console.log('[App] Attempting to render component:', Component.name || 'UnnamedComponent');
-
-  // Use ProductionErrorBoundary as the top-level error boundary
-  return (
-    <>
-      <Head>
-        {/* Critical font preloading to prevent CLS */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-          as="style"
-          onLoad={(e) => {
-            const target = e.target as HTMLLinkElement;
-            target.onload = null;
-            target.rel = 'stylesheet';
-          }}
-        />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-          as="style"
-          onLoad={(e) => {
-            const target = e.target as HTMLLinkElement;
-            target.onload = null;
-            target.rel = 'stylesheet';
-          }}
-        />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
-        {/* Font optimization CSS to prevent CLS */}
-        <style jsx global>{`
-          :root {
-            --font-inter: ${inter.style.fontFamily};
-            --font-montserrat: ${montserrat.style.fontFamily};
-          }
-          
-          /* Fallback font adjustments to match Inter/Montserrat metrics */
-          @font-face {
-            font-family: 'Inter Fallback';
-            src: local('Arial'), local('system-ui');
-            size-adjust: 107%;
-            ascent-override: 90%;
-            descent-override: 25%;
-            line-gap-override: 0%;
-          }
-          
-          @font-face {
-            font-family: 'Montserrat Fallback';
-            src: local('Arial'), local('system-ui');
-            size-adjust: 103%;
-            ascent-override: 92%;
-            descent-override: 24%;
-            line-gap-override: 0%;
-          }
-        `}</style>
-      </Head>
-      <div className={`${inter.variable} ${montserrat.variable}`}>
-        <ProductionErrorBoundary>
-          <RootErrorBoundary>
-            <React.Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-              <GlobalErrorBoundary>
-                <QueryClientProvider client={queryClient}>
-                  <ApiErrorBoundary>
-                    <ReduxProvider store={store}>
-                      <HelmetProvider>
-                        <ErrorProvider>
-                          <AuthProvider>
-                            <WhitelabelProvider>
-                              <I18nextProvider i18n={i18n}>
-                                <WalletProvider>
-                                  <CartProvider>
-                                    <AnalyticsProvider>
-                                      <ThemeProvider>
-                                        <AppLayout>
-                                          <ErrorBoundary>
-                                            <Component {...pageProps} productId="example-product-id" />
-                                          </ErrorBoundary>
-                                          <ErrorResetOnRouteChange />
-                                          <Toaster />
-                                          <OfflineIndicator />
-                                        </AppLayout>
-                                      </ThemeProvider>
-                                    </AnalyticsProvider>
-                                  </CartProvider>
-                                </WalletProvider>
-                              </I18nextProvider>
-                            </WhitelabelProvider>
-                          </AuthProvider>
-                        </ErrorProvider>
-                      </HelmetProvider>
-                    </ReduxProvider>
-                  </ApiErrorBoundary>
-                </QueryClientProvider>
-              </GlobalErrorBoundary>
-            </React.Suspense>
-          </RootErrorBoundary>
-        </ProductionErrorBoundary>
-      </div>
-    </>
-  );
+// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
+if (process.env.NODE_ENV === 'development') {
+  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
+  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
+  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
+  console.log('- globalThis.process:', !!(globalThis as any).process);
 }
 
-console.log('[App] Finished attempting to render component:', MyApp.name || 'UnnamedComponent');
+// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
+if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
+  // console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
+}
 
-export default MyApp;
+// Enhanced error logging - import early for comprehensive coverage
+import enhancedErrorLogger from '../src/utils/enhanced-error-logger';
+
+// Add global error handling for undefined components
+if (typeof window !== 'undefined') {
+  window.addEventListener('unhandledrejection', (event) => {
+    if (event.reason?.message?.includes('getInitialProps')) {
+      console.error('Component loading error caught:', event.reason);
+      event.preventDefault(); // Prevent the error from crashing the app
+    }
+  });
+  
+  // Additional error handling for process.env errors
+  window.addEventListener('error', (event) => {
+    if (event.message?.includes('Cannot read properties of undefined')) {
+      console.error('Runtime error caught:', event.error);
+      event.preventDefault();
+    }
+  });
+  
+  // Enhanced error handling for getInitialProps and http errors
+  window.addEventListener('error', (event) => {
+    const errorMessage = event.message || '';
+    const errorSource = event.filename || '';
+    
+    // Handle getInitialProps errors
+    if (errorMessage.includes('getInitialProps') || errorMessage.includes('Cannot read properties of undefined (reading \'getInitialProps\')')) {
+      console.error('getInitialProps error caught:', event.error);
+      event.preventDefault();
+      return;
+    }
+    
+    // Handle http/https errors
+    if (errorMessage.includes('http is not defined') || errorMessage.includes('https is not defined')) {
+      console.error('HTTP/HTTPS error caught:', event.error);
+      event.preventDefault();
+      return;
+    }
+    
+    // Handle TypeScript helper errors
+    if (errorMessage.includes('__extends') || errorMessage.includes('__assign') || errorMessage.includes('Cannot destructure property')) {
+      console.error('TypeScript helper error caught:', event.error);
+      event.preventDefault();
+      return;
+    }
+  });
+  
+  // Enhanced unhandled rejection handling
+  window.addEventListener('unhandledrejection', (event) => {
+    const reason = event.reason;
+    const message = reason?.message || '';
+    
+    // Handle getInitialProps promise rejections
+    if (message.includes('getInitialProps') || message.includes('Cannot read properties of undefined (reading \'getInitialProps\')')) {
+      console.error('getInitialProps promise rejection caught:', reason);
+      event.preventDefault();
+      return;
+    }
+    
+    // Handle component loading errors
+    if (message.includes('Failed to load component') || message.includes('Invalid component')) {
+      console.error('Component loading promise rejection caught:', reason);
+      event.preventDefault();
+      return;
+    }
+  });
+  
+  // Add blank screen detection
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const root = document.getElementById('__next');
+      if (root) {
+        const hasVisible = Array.from(root.children || []).some(
+          (el) => !['SCRIPT', 'STYLE', 'LINK'].includes(el.tagName)
+        );
+        if (!hasVisible && root.innerText.trim() === '') {
+          console.error('Blank screen detected - attempting recovery');
+          // Show a basic fallback with additional instructions
+          root.innerHTML = `
+          <div style="padding: 2rem; text-align: center; font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h1 style="color: #333; margin-bottom: 1rem;">Zion Tech Marketplace</h1>
+            <p style="color: #666; margin-bottom: 1rem;">Loading application...</p>
+            <p style="color: #666; margin-bottom: 1rem;">If refreshing doesn't work, visit <a href='/offline.html'>offline mode</a> for troubleshooting steps.</p>
+            <button onclick="window.location.reload()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+              Reload Page
+            </button>
+          </div>
+        `;
+        }
+      }
+    }, 3000);
+  });
+}
+
+import React, { useState, useEffect } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { Provider } from 'react-redux';
+import { store } from '@/store';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '@/i18n';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { CartProvider } from '@/context/CartContext';
+
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import '../src/index.css'; // Restored main CSS import
+
+// Dynamically import the Toaster component from sonner for client-side rendering only
+const Toaster = dynamic(
+  async () => {
+    try {
+      const mod = await import('sonner');
+      return mod.Toaster;
+    } catch (err) {
+      console.warn('Toaster dependency missing:', err);
+      return () => null;
+    }
+  },
+  { ssr: false }
+);
+
+// Simple loading component
+const SimpleLoading = () => (
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    fontFamily: 'sans-serif',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    color: 'white'
+  }}>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Zion Tech Marketplace</h1>
+      <p>Loading...</p>
+    </div>
+  </div>
+);
+
+// Enhanced error boundary with detailed logging
+const ErrorBoundary: React.FC<{ children: React.ReactNode; name: string }> = ({ children, name }) => {
+  const [hasError, setHasError] = React.useState(false);
+  const [error, setError] = React.useState<Error | null>(null);
+
+  React.useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      console.error(`Error in ${name}:`, event.error);
+      setError(event.error);
+      setHasError(true);
+    };
+
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, [name]);
+
+  if (hasError) {
+    return (
+      <div style={{
+        padding: '1rem',
+        border: '2px solid #ff4444',
+        borderRadius: '8px',
+        backgroundColor: '#fff5f5',
+        color: '#cc0000',
+        margin: '1rem'
+      }}>
+        <h3>Error in {name}</h3>
+        <p>{error?.message || 'Unknown error occurred'}</p>
+        <button 
+          onClick={() => window.location.reload()}
+          style={{
+            backgroundColor: '#ff4444',
+            color: 'white',
+            border: 'none',
+            padding: '0.5rem 1rem',
+            borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          Reload Page
+        </button>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
+};
+
+// Provider wrapper with Redux, React Query, i18n, Auth, and Cart
+const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryClient }> = ({ children, queryClient }) => {
+  return (
+    <ErrorBoundary name="BasicWrapper">
+      <ErrorBoundary name="QueryClientProvider">
+        <QueryClientProvider client={queryClient}>
+          <ErrorBoundary name="ReduxProvider">
+            <Provider store={store}>
+              <ErrorBoundary name="I18nextProvider">
+                <I18nextProvider i18n={i18n}>
+                  <ErrorBoundary name="AuthProvider">
+                    <AuthProvider>
+                      <ErrorBoundary name="CartProvider">
+                        <CartProvider>
+                                                  {children}
+                        </CartProvider>
+                      </ErrorBoundary>
+                    </AuthProvider>
+                  </ErrorBoundary>
+                </I18nextProvider>
+              </ErrorBoundary>
+            </Provider>
+          </ErrorBoundary>
+        </QueryClientProvider>
+      </ErrorBoundary>
+    </ErrorBoundary>
+  );
+}

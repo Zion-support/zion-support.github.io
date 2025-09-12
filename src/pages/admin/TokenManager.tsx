@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import { TokenTransaction } from '@/types/tokens';
+import type { TokenTransaction } from '@/types/tokens';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
+import api from '@/lib/api';
 
 export default function TokenManager() {
+
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
@@ -26,6 +27,7 @@ export default function TokenManager() {
   }, [isAdmin]);
 
   const fetchTransactions = async () => {
+    if (!supabase) throw new Error('Supabase client not initialized');
     const { data, error } = await supabase
       .from('token_transactions')
       .select('*')
@@ -35,28 +37,22 @@ export default function TokenManager() {
   };
 
   const handleIssue = async (type: 'earn' | 'burn') => {
-    if (!userId || amount <= 0 || processing) return;
-    setProcessing(true);
-    try {
-      const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId, amount }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data.error || `Error ${res.status}`);
-      }
+    if (!userId || amount <= 0) return;
+    const res = await api.post(
+      `/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`,
+      { userId, amount }
+    );
+    if (res.status >= 200 && res.status < 300) {
       toast({
         title: 'Success',
         description: 'Transaction processed'
       });
       fetchTransactions();
-    } catch (err: any) {
-      console.error('Failed to process transaction:', err);
+    } else {
+      const err = res.data;
       toast({
         title: 'Error',
-        description: err.message || 'Failed',
+        description: (typeof err === 'object' && err && 'message' in err ? (err as { message?: string }).message : 'Failed') || 'Unknown error occurred',
         variant: 'destructive'
       });
     } finally {
@@ -106,7 +102,6 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
-        <Footer />
       </div>
     </ProtectedRoute>
   );

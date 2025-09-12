@@ -16,8 +16,7 @@
     "menu": "Menu",
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
-    "toggle_mobile_menu": "Toggle mobile menu",
-    "greeting_user": "Hello, {{name}}!"
+    "toggle_mobile_menu": "Toggle mobile menu"
   },
   "nav": {
     "home": "Home",
@@ -42,14 +41,6 @@
     "login_success": "Logged in successfully",
     "logout_success": "Logged out successfully"
   },
-  "cart": {
-    "title": "Your Cart",
-    "empty": "Your cart is empty",
-    "continue_shopping": "Continue Shopping",
-    "subtotal": "Subtotal",
-    "processing": "Processing...",
-    "checkout": "Checkout"
-  },
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
     "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
@@ -71,13 +62,7 @@
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
-    "tool_chat_desc": "Get instant assistance from our AI-powered chat",
-    "header_tagline": "Your gateway to AI & tech solutions",
-    "quick_access_title": "Quick Access",
-    "quick_access_subtitle": "Jump directly to our most popular features",
-    "tool_mobile_app": "Mobile App",
-    "tool_mobile_app_desc": "Zion on the go",
-    "all_features_title": "Explore All Features"
+    "tool_chat_desc": "Get instant assistance from our AI-powered chat"
   },
   "jobs": {
     "post_job_title": "Post a Job",
@@ -123,17 +108,8 @@
     "saved": "Saved",
     "changes_saved": "Translation changes have been saved"
   },
-  "errors": {
-    "page_not_found": "Oops! Page not found",
-    "return_home": "Return to Home",
-    "forgot_password_prompt": "Did you forget your password? You can reset it here:",
-    "reset_password": "Reset Password",
-    "or_return_home": "Or return to Home",
-    "access_denied": "Access Denied",
-    "no_permission": "You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.",
-    "login_different_account": "Login with Different Account",
-    "payment_success_title": "Payment Successful!",
-    "payment_success_message": "Your payment has been processed successfully. You now have access to all the premium features.",
-    "go_to_dashboard": "Go to Dashboard"
+  "error_boundary": {
+    "message": "Something went wrong.",
+    "retry": "Retry"
   }
 }

@@ -2,13 +2,16 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Skeleton from "@/components/ui/skeleton";
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
+
+
+
+
 import { cn } from "@/lib/utils";
-import Link from 'next/link';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
@@ -18,10 +21,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter();
-  const id = router.query.id as string;
+  const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, _setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
@@ -37,7 +39,7 @@ export default function ListingDetail() {
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-                <Link href="/marketplace">Back to Marketplace</Link>
+                <a href="/marketplace">Back to Marketplace</a>
               </Button>
             </div>
           </div>
@@ -291,7 +293,7 @@ export default function ListingDetail() {
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact 
-            email={listing.author.email} // TypeScript now knows this might be undefined
+            email={listing.author.email || ''}
             profileName={listing.author.name}
             profileType="service"
           />

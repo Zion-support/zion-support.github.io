@@ -1,34 +1,42 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { ThemeProvider } from './components/ThemeProvider';
-import { WalletProvider } from './context/WalletContext';
-import OfflineToast from './components/OfflineToast';
-import InstallPrompt from './components/InstallPrompt';
-import { SupportChatbot } from './components/SupportChatbot';
-import RootErrorBoundary from './components/RootErrorBoundary';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { Footer } from './components/Footer';
 
-function ScrollToTop() {
-  const router = useRouter();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [router.pathname]);
-  return null;
-}
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const About = React.lazy(() => import('./pages/AboutPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
-const App = ({ children }: { children?: React.ReactNode }) => {
+const App = () => {
   return (
-    <WalletProvider>
-      <ThemeProvider defaultTheme="dark">
-        <ScrollToTop />
-        <RootErrorBoundary>
-          {children}
-        </RootErrorBoundary>
-        <OfflineToast />
-        <SupportChatbot />
-        <InstallPrompt />
-      </ThemeProvider>
-    </WalletProvider>
+    <Router>
+      <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        <Header />
+        <Sidebar />
+        
+        {/* Main Content with proper spacing for header and sidebar */}
+        <main className="ml-64 pt-20 min-h-screen">
+          <React.Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-cyan-400 text-lg">Loading...</p>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </React.Suspense>
+        </main>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

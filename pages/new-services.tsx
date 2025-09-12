@@ -1,1 +1,3 @@
-export { default } from '@/pages/NewServicesPage';
+import NewServicesPage from '@/pages/NewServicesPage';
+
+export default NewServicesPage;

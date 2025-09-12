@@ -1,19 +1,20 @@
 import React from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { Link, useLocation } from "react-router-dom";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useCart } from '@/context/CartContext';
-import {
-  Home,
-  Search,
-  MessageCircle,
-  Heart,
-  MessageSquare,
-  ShoppingCart,
-  User
-} from "lucide-react";
+import { logWarn } from '@/utils/productionLogger';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
+
+
+
+
+
+
+
 
 interface MobileBottomNavProps {
   unreadCount?: number;
@@ -23,16 +24,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-
-  const cartContextValue = useCart(); // Call hook at top level
-  let cartCount = 0;
-  if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0);
-  } else {
-    // console.warn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.");
-  }
+  const { items } = useCart();
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
   const navItems = [
     {
@@ -106,14 +99,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             )}
           >
             <div className="relative">
-              <item.icon className="h-5 w-5 mb-1" />
+              <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
             </div>
-            <span className="text-xs font-medium">{item.name}</span>
+            <span className="hidden sm:block text-xs font-medium">{item.name}</span>
           </Link>
         ))}
       </div>

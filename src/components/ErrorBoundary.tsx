@@ -1,33 +1,31 @@
 import React from 'react';
-import * as Sentry from '@sentry/nextjs';
-import { Alert } from '@chakra-ui/react';
+import type { ReactNode, ErrorInfo } from 'react';
+import { toast } from 'react-hot-toast';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 interface State {
   hasError: boolean;
 }
 
-export default class ErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+export class ErrorBoundary extends React.Component<Props, State> {
+  state: State = { hasError: false };
 
-  static getDerivedStateFromError() {
+  static getDerivedStateFromError(): State {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error) {
-    Sentry.captureException(error);
+  componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
+    toast.error(error.message || 'An unexpected error occurred');
   }
 
   render() {
     if (this.state.hasError) {
-      return <Alert status="error">Something went wrong.</Alert>;
+      return null;
     }
+
     return this.props.children;
   }
 }

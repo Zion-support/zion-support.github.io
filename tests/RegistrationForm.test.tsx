@@ -2,38 +2,29 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Signup from '@/pages/Signup';
 import * as toastHook from '@/hooks/use-toast';
-import * as router from 'react-router-dom'; // Used to access the mocked useNavigate
+import * as router from 'react-router-dom';
 import { mockFetch } from './__mocks__/server';
-import { vi } from 'vitest'; // Import vi
 
-// Mock useAuth
-vi.mock('@/hooks/useAuth', () => ({
+jest.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
-    loginWithGoogle: vi.fn(),
-    loginWithFacebook: vi.fn(),
-    loginWithTwitter: vi.fn(),
+    loginWithGoogle: jest.fn(),
+    loginWithFacebook: jest.fn(),
+    loginWithTwitter: jest.fn(),
     isAuthenticated: false,
     user: null,
   }),
 }));
 
-// Mock use-toast
-vi.mock('@/hooks/use-toast');
+jest.mock('@/hooks/use-toast');
 
-// Mock react-router-dom
-const navigateMock = vi.fn(); // Define here to be accessible in tests
-vi.mock('react-router-dom', async (importOriginal) => {
-  const actual = await importOriginal<typeof router>();
-  return {
-    ...actual,
-    useNavigate: () => navigateMock, // Ensure useNavigate returns our shared mock
-  };
-});
+jest.mock('react-router-dom', () => ({
+  ...(jest.requireActual('react-router-dom') as any),
+  useNavigate: jest.fn(),
+}));
 
 describe('RegistrationForm', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
-    navigateMock.mockClear(); // Also clear the specific navigateMock
+    jest.clearAllMocks();
   });
 
   it('renders form fields', () => {
@@ -51,8 +42,9 @@ describe('RegistrationForm', () => {
   });
 
   it('submits valid form', async () => {
-    // navigateMock is already configured by the vi.mock above
-    (toastHook.toast.success as vi.Mock).mockImplementation(() => {}); // Cast to vi.Mock
+    const navigateMock = jest.fn();
+    (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
+    (toastHook.toast.success as jest.Mock).mockImplementation(() => {});
     mockFetch({ token: 'jwt' }, 201);
 
     render(
@@ -68,24 +60,14 @@ describe('RegistrationForm', () => {
     fireEvent.click(screen.getByLabelText(/i agree/i));
     fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
 
-    // Wait for async operations to complete
-    await vi.waitFor(() => {
-      expect(global.fetch).toHaveBeenCalledWith(
-        expect.stringContaining('/auth/signup'),
-        expect.objectContaining({ method: 'POST' })
-      );
-    });
-    await vi.waitFor(() => {
-      expect(toastHook.toast.success).toHaveBeenCalledWith('Account created');
-    });
-    await vi.waitFor(() => {
-      expect(navigateMock).toHaveBeenCalledWith('/dashboard');
-    });
+    expect(global.fetch).toHaveBeenCalledWith('/api/auth/register', expect.objectContaining({ method: 'POST' }));
+    expect(toastHook.toast.success).toHaveBeenCalledWith('Account created');
+    expect(navigateMock).toHaveBeenCalledWith('/dashboard');
   });
 
   it('shows error toast on server 400', async () => {
-    (toastHook.toast.error as vi.Mock).mockImplementation(() => {}); // Cast to vi.Mock
-    mockFetch({ message: 'Bad' }, 400);
+    (toastHook.toast.error as jest.Mock).mockImplementation(() => {});
+    mockFetch({ error: 'Bad' }, 400);
 
     render(
       <MemoryRouter>
@@ -100,8 +82,7 @@ describe('RegistrationForm', () => {
     fireEvent.click(screen.getByLabelText(/i agree/i));
     fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
 
-    await vi.waitFor(() => {
-      expect(toastHook.toast.error).toHaveBeenCalledWith('Bad');
-    });
+    expect(toastHook.toast.error).toHaveBeenCalledWith('Bad');
   });
 });
+

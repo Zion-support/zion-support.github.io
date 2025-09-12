@@ -24,16 +24,23 @@ function handler(
         }
       }
 
-      let version = publicRuntimeConfig.NEXT_PUBLIC_APP_VERSION || "unknown";
-      if (version === "unknown") {
-        console.warn("Application version not set (NEXT_PUBLIC_APP_VERSION). Defaulting to 'unknown'.");
+      const version = publicRuntimeConfig.NEXT_PUBLIC_APP_VERSION || 'unknown';
+      if (version === 'unknown') {
+        console.warn(
+          "Application version not set (NEXT_PUBLIC_APP_VERSION). Defaulting to 'unknown'."
+        );
       }
-      const commit = process.env.COMMIT_REF || "unknown"; // COMMIT_REF is not a public var
+      const commit = process.env.COMMIT_REF || 'unknown'; // COMMIT_REF is not a public var
       const timestamp = new Date().toISOString();
-      res.status(200).json({ status: 'ok', version, commit, timestamp, envVariables });
+      res
+        .status(200)
+        .json({ status: 'ok', version, commit, timestamp, envVariables });
     } catch (error) {
       console.error('Failed to retrieve health information:', error);
-      res.status(500).json({ error: 'Failed to retrieve health information.', status: 'error' });
+      res.status(500).json({
+        error: 'Failed to retrieve health information.',
+        status: 'error',
+      });
     }
   } else {
     res.setHeader('Allow', ['GET']);

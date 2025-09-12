@@ -8,23 +8,21 @@ import useSWR from 'swr';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import type { TalentProfile } from '@/types/talent';
 
-interface TalentProfileBasic {
-  id: string;
-  name: string;
-  bio?: string;
-  skills?: string[];
-  portfolio?: string[];
-}
+// API returns `{ profile: TalentProfile }`; swr will store just the profile
+type TalentProfileResponse = { profile: TalentProfile | null };
 
 // fetcher-like function for handling API responses
 const handleApiResponse = async (res: Response) => {
   if (!res.ok) {
     const error = new Error('An error occurred while fetching the data.');
+    // Read response body once and attempt to parse JSON
+    const raw = await res.text();
     try {
-      (error as any).info = await res.json();
-    } catch (e) {
-      (error as any).info = { message: await res.text() };
+      (error as any).info = JSON.parse(raw);
+    } catch {
+      (error as any).info = { message: raw };
     }
     (error as any).status = res.status;
     throw error;
@@ -36,9 +34,12 @@ const TalentPage: React.FC = () => {
   const router = useRouter();
   const { id } = router.query as { id?: string };
 
-  const { data, error, isLoading } = useSWR<TalentProfileBasic>(
+  const { data, error, isLoading } = useSWR<TalentProfile | null>(
     id ? `/api/talent/${id}` : null,
-    (url: string) => fetch(url).then(handleApiResponse)
+    async (url: string) => {
+      const result: TalentProfileResponse = await fetch(url).then(handleApiResponse);
+      return result.profile;
+    }
   );
 
   if (isLoading || !router.isReady || !id) {
@@ -50,9 +51,9 @@ const TalentPage: React.FC = () => {
     return <NotFound />;
   }
 
-  // Other errors (non-404)
-  if (error) {
-    const err: any = error;
+  // Next.js router typing in this project doesn't include `isFallback`.
+  // Cast to any to access the property during static builds.
+  if ((router as any).isFallback) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <h2 className="text-2xl font-semibold mb-2">Error</h2>
@@ -73,23 +74,22 @@ const TalentPage: React.FC = () => {
   return (
     <>
       <NextSeo
-        title={data.name}
-        description={data.bio ?? undefined} // Ensure description is string or undefined
+        title={data?.full_name}
+        description={data?.bio ?? ''}
         openGraph={{
-          images: undefined,
-          title: data.name,
-          description: data.bio ?? undefined // Ensure description is string or undefined
+          title: data?.full_name,
+          description: data?.bio ?? ''
         }}
       />
       <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
         <div className="container mx-auto px-4 space-y-6">
           <div className="flex items-center gap-4">
             <Avatar className="h-20 w-20">
-              <AvatarFallback>{data.name.charAt(0)}</AvatarFallback>
+              <AvatarFallback>{data?.full_name?.charAt(0)}</AvatarFallback>
             </Avatar>
             <div>
               <h1 className="text-3xl font-bold" data-testid="profile-name">
-                {data.name}
+                {data?.full_name}
               </h1>
               {data.bio && <p className="text-zion-slate-light">{data.bio}</p>}
             </div>
@@ -105,12 +105,15 @@ const TalentPage: React.FC = () => {
             </div>
           )}
 
-          {data.portfolio && data.portfolio.length > 0 && (
+          {data.key_projects && data.key_projects.length > 0 && (
             <div>
-              <h2 className="text-xl font-semibold mb-2">Portfolio</h2>
-              <ul className="list-disc ml-5 space-y-1">
-                {data.portfolio.map((item) => (
-                  <li key={item}>{item}</li>
+              <h2 className="text-xl font-semibold mb-2">Key Projects</h2>
+              <ul className="space-y-2">
+                {data.key_projects.map((project, index) => (
+                  <li key={index} className="border-l-2 border-zion-purple pl-4">
+                    <h3 className="font-medium">{project.title}</h3>
+                    <p className="text-zion-slate-light text-sm">{project.description}</p>
+                  </li>
                 ))}
               </ul>
             </div>
