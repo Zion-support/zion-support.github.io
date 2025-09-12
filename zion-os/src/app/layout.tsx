@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-import { Metadata } from "next";
 
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
