@@ -172,24 +172,24 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news/ziongpt-core-v2" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
+            <a href="/news/zion-os-1-0-launch" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🧠</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">ZionGPT Core v2</h3>
                 <p className="text-white/70">10x context, native Tools API, faster and cheaper inference.</p>
               </div>
             </a>
-            <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
+            <a href="/news/academy-opens" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-teal-600 to-cyan-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🏪</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Marketplace Suite GA</h3>
                 <p className="text-white/70">Jobs, proposals, escrow, and anti‑fraud protections.</p>
               </div>
             </a>
-            <a href="/news/compliance-pack-release" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
+            <a href="/news/enterprise-partners" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-orange-600 to-red-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🛡️</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
