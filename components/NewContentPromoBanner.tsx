@@ -25,9 +25,9 @@ const NewContentPromoBanner: React.FC = () => {
     },
     {
       id: '2',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      title: 'AI Cybersecurity Threats 2025',
+      description: 'Protect your organization from emerging AI cybersecurity threats with comprehensive defense strategies.',
+      href: '/blog/ai-2025-cybersecurity-threats',
       type: 'blog',
       featured: true
     },
@@ -41,10 +41,26 @@ const NewContentPromoBanner: React.FC = () => {
     },
     {
       id: '4',
+      title: 'AI Healthcare Diagnosis Breakthrough 2025',
+      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
+      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '5',
       title: 'AI Automation Services',
       description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
       href: '/services/ai-automation',
       type: 'service',
+      featured: true
+    },
+    {
+      id: '6',
+      title: 'AI Implementation Master Guide 2026',
+      description: 'Download our comprehensive 200+ page AI implementation guide with templates and best practices.',
+      href: '/resources/ai-implementation-master-guide-2026',
+      type: 'blog',
       featured: true
     }
   ];
