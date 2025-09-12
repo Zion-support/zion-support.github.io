@@ -11,7 +11,12 @@ import ContentShowcase, { featuredContent, trendingContent, latestContent } from
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
+<<<<<<< HEAD
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+=======
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+>>>>>>> cursor/create-and-deploy-new-content-1bd1
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
@@ -40,11 +45,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTRA CONTENT PROMOTION BANNER */}
+        <UltraContentPromotionBanner />
+        
         {/* Content Promotion Banner */}
         <NewContentPromotionBanner />
         
-        {/* MEGA CONTENT DROP BANNER - JANUARY 2025 */}
-        <section className="py-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+        {/* NEW CONTENT LAUNCH BANNER */}
+        <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -105,6 +113,81 @@ export default function HomePage() {
                   </div>
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Revolutionary Content Showcase */}
+        <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+                <span className="text-sm font-medium">🎉 REVOLUTIONARY CONTENT LAUNCH</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                🚀 Ultra Content Library: 60+ Revolutionary AI Resources
+              </h2>
+              <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+                Discover our most comprehensive collection of AI insights, case studies, and resources. 
+                From Advanced RAG Systems to Multimodal AI Revolution, get everything you need to succeed in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/ultra-content-showcase"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  🎯 Explore Ultra Content
+                </Link>
+                <Link
+                  href="/mega-content-showcase"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  📚 Mega Content Drop
+                </Link>
+              </div>
+            </div>
+            
+            {/* Featured Content Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/blog/ai-2025-advanced-rag-systems" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔍</div>
+                  <h3 className="text-lg font-semibold mb-2">Advanced RAG Systems 2025</h3>
+                  <p className="text-sm opacity-90 mb-3">Production-ready implementation guide for retrieval-augmented generation systems</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>25 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>New</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎭</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Multimodal Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Vision, voice, and text integration transforming human-computer interaction</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>28 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>Featured</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-2025-autonomous-manufacturing-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">$200M Manufacturing Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete case study: Fortune 500 manufacturer achieves massive cost savings</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>Trending</span>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
