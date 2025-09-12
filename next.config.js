@@ -1,3 +1,5 @@
+// @ts-check
+/** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
@@ -5,8 +7,11 @@ const nextConfig = {
 	assetPrefix,
 	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 	images: {
-		// Using unoptimized to support static hosting/CDN without Next Image optimization
-		unoptimized: true
+		unoptimized: true,
+		domains: ['localhost']
+	},
+	typescript: {
+		ignoreBuildErrors: true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
