@@ -28,6 +28,19 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '19',
+      title: 'Data Quality for RAG in Production (2025)',
+      description: 'Data curation, chunking, hybrid search, and evaluations to make RAG reliable and cost‑efficient.',
+      href: '/blog/ai-2025-data-quality-rag',
+      type: 'blog',
+      category: 'RAG',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['RAG', 'Data Quality', 'Evaluations', 'Observability'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
