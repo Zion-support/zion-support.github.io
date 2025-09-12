@@ -5,6 +5,24 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI Advanced Automation 2025: Complete Implementation Guide",
+      description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: "🤖",
+      category: "AI Automation",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Cybersecurity Threats 2025: Complete Defense Guide",
+      description: "Protect your AI systems from emerging cybersecurity threats in 2025. Learn about AI-specific attacks, defense strategies, and security best practices for enterprise AI deployments.",
+      href: "/blog/ai-2025-cybersecurity-threats",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
@@ -21,28 +39,28 @@ export default function ContentShowcasePage() {
       category: "AI Predictions",
       readTime: "28 min read",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
-    },
-    {
-      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
-      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
-      href: "/blog/ai-multimodal-applications-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "12 min read",
-      date: "Jan 28, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Cybersecurity Transformation: 99.8% Threat Detection Success",
+      description: "Discover how a Fortune 500 company achieved 99.8% threat detection accuracy and $15M in cost savings through AI-powered cybersecurity transformation.",
+      href: "/case-studies/ai-cybersecurity-transformation-2025",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      result: "99.8% Accuracy",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Sustainability Transformation: 60% Energy Reduction Success",
+      description: "How a Fortune 500 manufacturing company achieved 60% energy reduction, carbon neutrality, and $12M annual savings through AI-powered sustainability transformation.",
+      href: "/case-studies/ai-sustainability-transformation-2025",
+      icon: "🌱",
+      category: "Sustainability",
+      result: "60% Energy Reduction",
+      date: "Jan 30, 2025"
+    },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
       description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
@@ -51,32 +69,14 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
-    },
-    {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
