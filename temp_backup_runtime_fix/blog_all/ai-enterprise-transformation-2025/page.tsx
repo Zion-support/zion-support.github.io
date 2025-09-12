@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AIEnterpriseTransformation2025() {
@@ -12,52 +13,45 @@ export default function AIEnterpriseTransformation2025() {
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<<<<<<< HEAD:temp_backup_runtime_fix/blog_all/ai-enterprise-transformation-2025/page.tsx
     <div className='min-h-screen bg-white'>
       <article className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
         {/* Header */}
-        <header className='mb-12'>
-          <div className='flex items-center gap-3 mb-6'>
-            <Link href='/blog' className='text-blue-600 hover:text-blue-700 font-medium'>
-              ← Back to Blog
-            </Link>
-          </div>
-          <div className='flex items-center gap-3 mb-4'>
-            <span className='bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
-              Enterprise AI
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+              AI & Enterprise
             </span>
-            <span className='text-gray-500 text-sm'>18 min read</span>
-            <span className='text-gray-500 text-sm'>•</span>
-            <span className='text-gray-500 text-sm'>Jan 28, 2025</span>
+            <span className="text-gray-500 text-sm">18 min read</span>
+            <span className="text-gray-500 text-sm">•</span>
+            <span className="text-gray-500 text-sm">Jan 28, 2025</span>
           </div>
-          <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
-            AI Enterprise Transformation 2025: The Complete Implementation Guide
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            AI Enterprise Transformation 2025: Complete Implementation Guide
           </h1>
           
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Transform your enterprise with AI in 2025. This comprehensive guide covers strategy, 
             implementation, governance, and achieving 340% ROI with real case studies from Fortune 500 companies.
+<<<<<<< HEAD:temp_backup_runtime_fix/blog_all/ai-enterprise-transformation-2025/page.tsx
           <p className='text-xl text-gray-600 leading-relaxed'>
             Transform your enterprise with AI automation, achieve 340% ROI, and implement 
             proven strategies that deliver measurable business impact. Complete with real 
             case studies and actionable frameworks.
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
           </p>
-        </header>
-
-        {/* Key Stats */}
-        <div className='bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-12'>
-          <h2 className='text-2xl font-bold text-gray-900 mb-6'>Key Results from Our Enterprise AI Implementations</h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            <div className='text-center'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>340%</div>
-              <div className='text-gray-600'>Average ROI</div>
+          
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <span className="text-blue-600 font-bold">ZT</span>
             </div>
-            <div className='text-center'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>40%</div>
-              <div className='text-gray-600'>Cost Reduction</div>
-            </div>
-            <div className='text-center'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>6 Months</div>
-              <div className='text-gray-600'>Time to Value</div>
+            <div>
+              <div className="font-semibold text-gray-900">Zion Tech Group</div>
+              <div className="text-sm text-gray-600">AI & Technology Solutions</div>
             </div>
           </div>
         </div>
@@ -316,6 +310,7 @@ export default function AIEnterpriseTransformation2025() {
                 </p>
               </div>
             </Link>
+<<<<<<< HEAD:temp_backup_runtime_fix/blog_all/ai-enterprise-transformation-2025/page.tsx
         <nav className='bg-gray-50 rounded-xl p-6 mb-12'>
           <h2 className='text-xl font-bold text-gray-900 mb-4'>Table of Contents</h2>
           <ul className='space-y-2'>
@@ -744,9 +739,11 @@ export default function AIEnterpriseTransformation2025() {
                 Download Implementation Playbook
               </Link>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
