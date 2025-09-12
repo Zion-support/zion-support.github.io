@@ -16,32 +16,212 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "Sovereign AI Roadmap 2025",
-      description: "Residency, isolation, and policy gateways for sovereign AI without slowing delivery.",
-      href: "/blog/sovereign-ai-roadmap-2025",
-      icon: "🏛️",
-      category: "Governance",
+      title: "AI Evaluation Pipelines in CI: Ship with Confidence (2025)",
+      description: "Automated evals in CI/CD to gate releases on quality, safety, and cost.",
+      href: "/blog/ai-2025-eval-pipelines-ci",
+      icon: "🧪",
+      category: "AI Safety",
       readTime: "17 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "Evaluation Pipelines & Infra 2025",
-      description: "Offline datasets, canary cohorts, and inline evals baked into CI/CD and runtime.",
-      href: "/blog/eval-pipelines-infra-2025",
-      icon: "🧪",
-      category: "Evaluation",
+      title: "Securing AI Tools & Plugins: Sandboxing, Scopes, and Audits",
+      description: "Scopes, sandboxing, approvals, and auditing to minimize tool risk.",
+      href: "/blog/ai-2025-secure-tools-and-plugins",
+      icon: "🛡️",
+      category: "AI Security",
       readTime: "18 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "Foundation Model Cost Optimization: 38% Spend Reduction",
-      description: "Case study: quantization, distillation, caching, and dynamic routing cut spend by 38%.",
-      href: "/case-studies/foundation-models-cost-optimization-impact",
+      title: "Productizing GenAI Platforms: From Pilots to Products (2025)",
+      description: "Roadmap to scale GenAI with governance, budgets, and observability.",
+      href: "/blog/ai-2025-productizing-genai-platforms",
+      icon: "🧱",
+      category: "Platforms",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Enterprise Chatbots with Governance: 28% Deflection, 92% CSAT",
+      description: "Case study: Policy-as-code and evals increased deflection and CSAT.",
+      href: "/case-studies/ai-2025-enterprise-chatbots-governance-impact",
+      icon: "💬",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Analytics Observability Blueprint 2025: Traces, Quality, Cost",
+      description: "Blueprint to observe analytics and AI pipelines: lineage, traces, quality, and cost SLOs.",
+      href: "/blog/ai-2025-analytics-observability-blueprint",
+      icon: "📈",
+      category: "Platforms",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Data Contracts for ML in 2025: Reliability & Governance",
+      description: "Schema-first data contracts to reduce breakages, improve quality, and speed ML delivery.",
+      href: "/blog/ai-2025-data-contracts-for-ml",
+      icon: "📜",
+      category: "Data Platforms",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Platform Engineering Blueprint 2025",
+      description: "Governance, evaluations, routing, observability, and cost controls for enterprise AI platforms.",
+      href: "/blog/ai-2025-ai-platform-engineering-blueprint",
+      icon: "🧱",
+      category: "Platforms",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Customer 360 AI Platform: 23% Lift in Cross-Sell",
+      description: "Case study: Unified profiles, uplift modeling, and guardrailed copilots drove 23% cross-sell lift.",
+      href: "/case-studies/ai-2025-customer-360-platform-impact",
+      icon: "👤",
+      category: "Case Study",
+      readTime: "11 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Enterprise RAG Platforms 2025: Architecture, Quality, and Ops",
+      description: "Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.",
+      href: "/blog/ai-2025-enterprise-rag-platforms",
+      icon: "🔎",
+      category: "RAG",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "LLM Inference Cost Reduction: 38% Savings (2025)",
+      description: "Case study: Quantization, KV cache, and batching cut cost by 38% and improved p95 by 27%.",
+      href: "/case-studies/ai-2025-llm-inference-cost-reduction",
       icon: "💸",
       category: "Case Study",
-      readTime: "9 min read",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "LLM Inference Optimization on GPUs (2025)",
+      description: "Quantization, KV cache, batching, and parallelism to cut latency and cost.",
+      href: "/blog/ai-2025-llm-inference-optimization-gpus",
+      icon: "🧠",
+      category: "Inference",
+      readTime: "15 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Governance 2025: Policy-as-Code and Runtime Enforcement",
+      description: "From policy docs to enforced guardrails across datasets, prompts, tools, and agents.",
+      href: "/blog/ai-2025-governance-policy-as-code",
+      icon: "📜",
+      category: "Governance",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Fleet Management 2025: Reliability, Safety, and Cost",
+      description: "Operate large fleets of AI agents with SLAs: scheduling, guardrails, telemetry, and budgets.",
+      href: "/blog/ai-2025-agent-fleet-management",
+      icon: "🧭",
+      category: "Agents",
+      readTime: "19 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Serverless GenAI Architectures (2025)",
+      description: "Event-driven GenAI with functions, queues, vector DBs, and eval guardrails.",
+      href: "/blog/ai-2025-serverless-genai-architectures",
+      icon: "☁️",
+      category: "Architecture",
+      readTime: "14 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Secure Agent Architectures (2025)",
+      description: "Blueprint for secure agent architectures with policy-as-code, guardrails, and SLAs.",
+      href: "/blog/ai-2025-secure-agent-architectures",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Customer Analytics: 19% Revenue Uplift",
+      description: "Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.",
+      href: "/case-studies/ai-2025-customer-analytics-impact",
+      icon: "📈",
+      category: "Case Study",
+      readTime: "12 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Production Prompt Engineering 2025: Patterns that Scale",
+      description: "Structured prompting, tool calling, retrieval orchestration, evals, and guardrails for reliable, cost‑aware AI.",
+      href: "/blog/ai-2025-production-prompt-engineering",
+      icon: "🧠",
+      category: "Advanced AI",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Governance 2025: Operational Playbook for Enterprises",
+      description: "Decision rights, policy libraries, eval pipelines, and runtime guardrails that fit your SDLC.",
+      href: "/blog/ai-2025-ai-governance-operational-playbook",
+      icon: "🛡️",
+      category: "Governance",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agentic Data Pipelines in Production (2025)",
+      description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
+      href: "/blog/ai-2025-agentic-data-pipelines",
+      icon: "🧩",
+      category: "Data Platforms",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Evaluations in Production (2025): Shipping with Confidence",
+      description: "Online and offline evaluations for AI quality, safety, and cost. Pipelines and metrics.",
+      href: "/blog/ai-2025-evaluations-in-production",
+      icon: "✅",
+      category: "Evaluation",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Reliable Realtime Agents in 2025: Architecture & SLAs",
+      description: "Blueprint for production-grade realtime agents with SLAs, safety, and observability.",
+      href: "/blog/ai-2025-reliable-realtime-agents",
+      icon: "⚡",
+      category: "Reliability",
+      readTime: "20 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -232,8 +412,28 @@ export default function ContentShowcase() {
       icon: "⚡",
       category: "Machine Learning",
       readTime: "24 min read",
-      date: "Jan 15, 2025",
+      date: "Sep 12, 2025",
       featured: false
+    },
+    {
+      title: "Cloud Cost Optimization for AI & Data Workloads (2025)",
+      description: "Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.",
+      href: "/blog/ai-2025-cloud-cost-optimization",
+      icon: "💸",
+      category: "Optimization",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Safety Red-Teaming (2025): Methods & Tooling",
+      description: "Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.",
+      href: "/blog/ai-2025-agent-safety-red-teaming",
+      icon: "🛡️",
+      category: "AI Safety",
+      readTime: "21 min read",
+      date: "Sep 12, 2025",
+      featured: true
     },
     {
       title: "AI Ethics and Responsible Development: A Framework",
@@ -242,7 +442,7 @@ export default function ContentShowcase() {
       icon: "⚖️",
       category: "AI Ethics",
       readTime: "19 min read",
-      date: "Jan 12, 2025",
+      date: "Sep 12, 2025",
       featured: false
     },
     {
@@ -252,7 +452,7 @@ export default function ContentShowcase() {
       icon: "📱",
       category: "Edge Computing",
       readTime: "16 min read",
-      date: "Jan 10, 2025",
+      date: "Sep 12, 2025",
       featured: false
     },
     {
@@ -262,7 +462,7 @@ export default function ContentShowcase() {
       icon: "💰",
       category: "Case Study",
       readTime: "14 min read",
-      date: "Jan 8, 2025",
+      date: "Sep 12, 2025",
       featured: false
     }
   ];
@@ -335,7 +535,7 @@ export default function ContentShowcase() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredContent.filter(content => content.featured).map((content, index) => (
+            {featuredContent.filter(content => content.featured).map((content) => (
               <Link
                 key={content.href}
                 href={content.href}
@@ -398,7 +598,7 @@ export default function ContentShowcase() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredContent.map((content, index) => (
+            {featuredContent.map((content) => (
               <Link
                 key={content.href}
                 href={content.href}
@@ -450,10 +650,10 @@ export default function ContentShowcase() {
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Can't Find What You're Looking For?
+            Can&apos;t Find What You&apos;re Looking For?
           </h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-            Our team creates custom content tailored to your specific needs. Let us know what topics you'd like to explore, and we'll create comprehensive resources just for you.
+            Our team creates custom content tailored to your specific needs. Let us know what topics you&apos;d like to explore, and we&apos;ll create comprehensive resources just for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

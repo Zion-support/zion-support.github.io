@@ -10,6 +10,20 @@ export const metadata = {
 
 const posts = [
   {
+    id: 'ai-2025-data-pipeline-automation',
+    title: 'AI Data Pipeline Automation 2025: Reliable, Real-Time Dataflows',
+    excerpt: 'Streaming, orchestration, and monitoring patterns for dependable AI data pipelines with SLOs, lineage, and cost controls.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '16 min read',
+    category: 'Data Engineering',
+    tags: ['Data', 'Streaming', 'Orchestration'],
+    featured: true,
+    url: '/blog/ai-2025-data-pipeline-automation',
+    image: '🛠️',
+    views: 0
+  },
+  {
     title: 'AI Copilots for Engineering Teams',
     description:
       'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',

@@ -8,6 +8,86 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Agent Governance Starter Pack 2025",
+    description: "Practical policies, audits, and evals to safely ship agent systems",
+    url: "/resources/ai-agent-governance-starter-pack-2025",
+    type: "Resource",
+    category: "Governance",
+    icon: "🧭",
+    featured: true,
+    new: true
+  },
+  {
+    title: "LLM Caching & Routing Playbook",
+    description: "Cut latency and cost 40%+ with caching, distillation, and routing",
+    url: "/blog/ai-2025-llm-caching-routing-playbook",
+    type: "Blog Post",
+    category: "Cost Optimization",
+    icon: "🧮",
+    featured: true,
+    new: true
+  },
+  {
+    title: "GenAI Data Quality Checklist (Free)",
+    description: "Data curation, labeling, drift, and privacy-by-design templates",
+    url: "/resources/genai-data-quality-checklist-2025",
+    type: "Resource",
+    category: "Data Engineering",
+    icon: "🧪",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Voice Agent Guardrails in Production",
+    description: "Safety policies, red-teaming, and real-time evals for voice agents",
+    url: "/blog/ai-2025-voice-agent-guardrails-production",
+    type: "Blog Post",
+    category: "Agents",
+    icon: "🎤",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance FNOL Automation: 6-Month Rollout",
+    description: "Claims triage, fraud checks, and audit trails—enterprise case study",
+    url: "/case-studies/ai-2025-insurance-fnol-automation",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📑",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Governed Agentic Workflows: 2025 Blueprint",
+    description: "Policy gates, audits, and evals for production agent systems",
+    url: "/blog/ai-2025-governed-agentic-workflows",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🧩",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agent Benchmarking Blueprint 2025",
+    description: "Decision-ready evals for quality, latency, cost, and safety",
+    url: "/blog/ai-2025-ai-agent-benchmarking-blueprint",
+    type: "Blog Post",
+    category: "Evaluation",
+    icon: "📊",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Customer Support Automation Success 2025",
+    description: "60% deflection, 45% faster resolution, +22 NPS with agentic workflows",
+    url: "/case-studies/ai-2025-customer-support-automation-success",
+    type: "Case Study",
+    category: "Customer Support",
+    icon: "🤝",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Copilots for Engineering Teams",
     description: "Secure, repo-aware copilots that reduce toil and speed reviews",
     url: "/blog/ai-copilots-for-engineering",
@@ -235,6 +315,36 @@ const newContentItems = [
     category: "Engineering",
     icon: "✅",
     featured: true,
+    new: true
+  },
+  {
+    title: "Foundation Model Fine-Tuning 2025",
+    description: "PEFT, data curation, evals, and cost control for production",
+    url: "/blog/ai-2025-foundation-model-fine-tuning",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🔧",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Evaluation Checklist 2025",
+    description: "Operational evals: safety, latency, cost, reliability templates",
+    url: "/resources/ai-evaluation-checklist-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance Claims Automation: 55% OPEX Reduction",
+    description: "FNOL, triage, fraud checks with agentic workflows",
+    url: "/case-studies/ai-insurance-claims-automation-success-2025",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📄",
+    featured: false,
     new: true
   },
   {
