@@ -8,6 +8,26 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Benchmarking & Evaluation 2025",
+    description: "Practical guide to LLM, agent, and RAG evaluations",
+    url: "/blog/ai-benchmarking-and-evaluation-2025",
+    type: "Blog Post",
+    category: "Evaluation",
+    icon: "🧪",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Evaluation Checklist 2025",
+    description: "120+ checks for quality, safety, latency and cost",
+    url: "/resources/ai-evaluation-checklist-2025",
+    type: "Resource",
+    category: "Checklist",
+    icon: "📋",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI 2025: Breakthrough Innovations",
     description: "Discover revolutionary AI innovations transforming industries",
     url: "/blog/ai-2025-breakthrough-innovations",

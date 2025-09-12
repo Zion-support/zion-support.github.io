@@ -5,6 +5,15 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI Benchmarking & Evaluation 2025: Practical Guide",
+      description: "How to evaluate LLMs, agents, and RAG systems with production-grade metrics and CI gates.",
+      href: "/blog/ai-benchmarking-and-evaluation-2025",
+      icon: "🧪",
+      category: "Evaluation",
+      readTime: "16 min read",
+      date: "Sep 12, 2025"
+    },
+    {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
@@ -73,6 +82,15 @@ export default function ContentShowcasePage() {
   ];
 
   const newResources = [
+    {
+      title: "AI Evaluation Checklist 2025: 120+ Actionable Checks",
+      description: "Free checklist covering metrics, safety, reliability, latency, and cost for LLMs, agents, and RAG.",
+      href: "/resources/ai-evaluation-checklist-2025",
+      icon: "📋",
+      category: "Checklist",
+      type: "Free Download",
+      date: "Sep 12, 2025"
+    },
     {
       title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
