@@ -34,7 +34,18 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '56',
+      id: '70',
+      title: 'Enterprise RAG Platforms 2025: Architecture, Quality, and Ops',
+      description: 'Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.',
+      href: '/blog/ai-2025-enterprise-rag-platforms',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '73',
       title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
       description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
       href: '/blog/ai-2025-enterprise-retrieval-playbook',
@@ -45,7 +56,18 @@ const NewContentPromoBanner = ({
       category: 'RAG'
     },
     {
-      id: '70',
+      id: '71',
+      title: 'AI Governance 2025: Policy-as-Code and Runtime Enforcement',
+      description: 'From policy docs to enforced guardrails across datasets, prompts, tools, and agents.',
+      href: '/blog/ai-2025-governance-policy-as-code',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '74',
       title: 'Production Prompt Engineering 2025: Patterns that Scale',
       description: 'Schema-first prompts, tool calling, retrieval orchestration, evals, and guardrails for reliability.',
       href: '/blog/ai-2025-production-prompt-engineering',
@@ -56,7 +78,7 @@ const NewContentPromoBanner = ({
       category: 'Advanced AI'
     },
     {
-      id: '71',
+      id: '75',
       title: 'AI Governance 2025: Operational Playbook for Enterprises',
       description: 'Practical operating model: policies, evaluations, review boards, and runtime enforcement.',
       href: '/blog/ai-2025-ai-governance-operational-playbook',
@@ -67,6 +89,16 @@ const NewContentPromoBanner = ({
       category: 'Governance'
     },
     {
+      id: '72',
+      title: 'Agent Fleet Management 2025: Reliability, Safety, and Cost',
+      description: 'Operate large fleets of AI agents with SLAs: scheduling, guardrails, telemetry, and budgets.',
+      href: '/blog/ai-2025-agent-fleet-management',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
