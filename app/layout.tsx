@@ -95,6 +95,9 @@ function Header() {
                 <Link href="/ai-2026-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Technology Showcase
                 </Link>
+                <Link href="/blog/ai-2026-enterprise-transformation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🎯 Enterprise Transformation Mastery (NEW)
+                </Link>
                 <Link href="/blog/ai-2026-revolutionary-breakthroughs-future" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Revolutionary Breakthroughs
                 </Link>
@@ -103,6 +106,9 @@ function Header() {
                 </Link>
                 <Link href="/resources/ai-2026-complete-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 Master Implementation Guide
+                </Link>
+                <Link href="/resources/ai-2026-implementation-toolkit-ultimate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
                 </Link>
                 <Link href="/resources/ai-2026-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🛠️ Implementation Toolkit
@@ -115,6 +121,9 @@ function Header() {
                 </Link>
                 <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Automation Revolution
+                </Link>
+                <Link href="/case-studies/ai-2026-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 Fortune 500 Breakthrough (800% ROI) (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2026-global-tech-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Tech Breakthrough (900% ROI)
