@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '13',
+      title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
+      description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
+      href: '/blog/llm-observability-2025',
+      type: 'blog',
+      category: 'Observability',
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Observability', 'Tracing', 'Evaluations', 'Guardrails'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Global retailer cut stockouts by 32% and waste by 18% with AI-driven forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Retail', 'Forecasting', 'Time Series', 'Inventory'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '0',
       title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
       description: 'A practical guide to deploying and operating autonomous AI agents at the edge with strong guardrails and observability.',

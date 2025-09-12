@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '13',
+      title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
+      description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
+      href: '/blog/llm-observability-2025',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Observability'
+    },
+    {
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Case study: Global retailer cut stockouts by 32% and waste by 18% via AI forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '9',
       title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
       description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
