@@ -34,6 +34,8 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -50,6 +52,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 CONTENT PROMOTION BANNER */}
+        <AI2026ContentPromotionBanner />
+        
+        {/* AI 2026 CONTENT SHOWCASE */}
+        <AI2026ContentShowcase />
+        
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
         
