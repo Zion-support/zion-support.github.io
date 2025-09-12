@@ -36,6 +36,8 @@ import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
 import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
 import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
@@ -3568,6 +3570,15 @@ export default function HomePage() {
       <div id="performance-optimization">
         <PerformanceOptimizationShowcase />
       </div>
+
+      {/* AI 2026 QUANTUM NEURAL PROMOTION BANNER - NEW BREAKTHROUGH */}
+      <AI2026QuantumNeuralPromotionBanner />
+
+      {/* AI 2026 CONTENT DISCOVERY WIDGET - ADVANCED CONTENT EXPLORATION */}
+      <AI2026ContentDiscoveryWidget />
+
+      {/* AI 2026 ROI CALCULATOR - INTERACTIVE ROI CALCULATION */}
+      <AI2026ROICalculator />
     </div>
     </EnhancedErrorBoundary>
   );

@@ -174,6 +174,12 @@ function Header() {
                 <Link href="/ai-2026-ultimate-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2026 Ultimate Breakthrough Showcase (NEW)
                 </Link>
+                <Link href="/ai-2026-quantum-neural-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
+                  ⚛️ AI 2026 Quantum Neural Revolution (BREAKTHROUGH)
+                </Link>
+                <Link href="/ai-2025-ultimate-content-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  🚀 AI 2025 Ultimate Content Revolution (ULTIMATE)
+                </Link>
                 <Link href="/ai-2026-future-tech-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500">
                   🔮 AI 2026 Future Tech Preview (REVOLUTIONARY)
                 </Link>

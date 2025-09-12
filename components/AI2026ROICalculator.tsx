@@ -1,264 +1,294 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+interface ROIResult {
+  totalROI: number;
+  monthlySavings: number;
+  annualSavings: number;
+  paybackPeriod: number;
+  netPresentValue: number;
+}
 
 export default function AI2026ROICalculator() {
-  const [inputs, setInputs] = useState({
-    annualRevenue: 10000000,
-    currentEfficiency: 75,
-    aiImplementationCost: 2000000,
-    expectedEfficiencyGain: 25,
-    timeToImplement: 18,
-    industry: 'manufacturing'
+  const [formData, setFormData] = useState({
+    currentRevenue: 1000000,
+    employeeCount: 100,
+    currentEfficiency: 70,
+    industry: 'technology',
+    implementationScope: 'full'
   });
 
-  const [results, setResults] = useState(null);
+  const [roiResult, setRoiResult] = useState<ROIResult | null>(null);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   const industryMultipliers = {
-    manufacturing: 1.2,
-    healthcare: 1.1,
-    finance: 1.3,
-    retail: 1.0,
-    technology: 1.4,
-    logistics: 1.1
+    technology: 1.5,
+    healthcare: 1.8,
+    manufacturing: 2.2,
+    financial: 1.6,
+    retail: 1.4,
+    education: 1.3
+  };
+
+  const scopeMultipliers = {
+    pilot: 0.3,
+    department: 0.6,
+    full: 1.0,
+    enterprise: 1.5
   };
 
   const calculateROI = () => {
-    const {
-      annualRevenue,
-      currentEfficiency,
-      aiImplementationCost,
-      expectedEfficiencyGain,
-      timeToImplement,
-      industry
-    } = inputs;
+    setIsCalculating(true);
+    
+    // Simulate calculation delay
+    setTimeout(() => {
+      const industryMultiplier = industryMultipliers[formData.industry as keyof typeof industryMultipliers];
+      const scopeMultiplier = scopeMultipliers[formData.implementationScope as keyof typeof scopeMultipliers];
+      
+      // Base efficiency improvement
+      const efficiencyImprovement = (100 - formData.currentEfficiency) * 0.8; // 80% of potential improvement
+      
+      // Calculate savings based on revenue and efficiency
+      const baseSavings = formData.currentRevenue * (efficiencyImprovement / 100);
+      const industryAdjustedSavings = baseSavings * industryMultiplier;
+      const scopeAdjustedSavings = industryAdjustedSavings * scopeMultiplier;
+      
+      // Calculate costs (implementation, training, maintenance)
+      const implementationCost = formData.currentRevenue * 0.15 * scopeMultiplier;
+      const annualMaintenanceCost = implementationCost * 0.2;
+      
+      // Calculate results
+      const monthlySavings = scopeAdjustedSavings / 12;
+      const annualSavings = scopeAdjustedSavings - annualMaintenanceCost;
+      const totalROI = ((annualSavings - implementationCost) / implementationCost) * 100;
+      const paybackPeriod = implementationCost / monthlySavings;
+      const netPresentValue = annualSavings - implementationCost;
 
-    const efficiencyGain = expectedEfficiencyGain / 100;
-    const industryMultiplier = industryMultipliers[industry] || 1.0;
-    
-    // Calculate annual savings
-    const currentProductivity = annualRevenue * (currentEfficiency / 100);
-    const newEfficiency = currentEfficiency + expectedEfficiencyGain;
-    const newProductivity = annualRevenue * (newEfficiency / 100);
-    const annualSavings = (newProductivity - currentProductivity) * industryMultiplier;
-    
-    // Calculate ROI
-    const totalSavings = annualSavings * (timeToImplement / 12);
-    const roi = ((totalSavings - aiImplementationCost) / aiImplementationCost) * 100;
-    
-    // Calculate payback period
-    const monthlySavings = annualSavings / 12;
-    const paybackPeriod = aiImplementationCost / monthlySavings;
-
-    setResults({
-      annualSavings: Math.round(annualSavings),
-      totalSavings: Math.round(totalSavings),
-      roi: Math.round(roi),
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-      netBenefit: Math.round(totalSavings - aiImplementationCost)
-    });
+      setRoiResult({
+        totalROI: Math.round(totalROI),
+        monthlySavings: Math.round(monthlySavings),
+        annualSavings: Math.round(annualSavings),
+        paybackPeriod: Math.round(paybackPeriod * 10) / 10,
+        netPresentValue: Math.round(netPresentValue)
+      });
+      
+      setIsCalculating(false);
+    }, 2000);
   };
 
-  const handleInputChange = (field, value) => {
-    setInputs(prev => ({
+  useEffect(() => {
+    calculateROI();
+  }, [formData]);
+
+  const handleInputChange = (field: string, value: number | string) => {
+    setFormData(prev => ({
       ...prev,
-      [field]: parseFloat(value) || 0
+      [field]: value
     }));
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026 ROI Calculator</h2>
-        <p className="text-gray-600">
-          Calculate the potential return on investment for your AI transformation using 2026 technologies
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Input Parameters</h3>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Annual Revenue ($)
-            </label>
-            <input
-              type="number"
-              value={inputs.annualRevenue}
-              onChange={(e) => handleInputChange('annualRevenue', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+    <div className="bg-gradient-to-br from-purple-50 to-blue-50 py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold mb-4">
+            <span className="animate-pulse mr-2">🧮</span>
+            AI 2026 ROI CALCULATOR
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Current Efficiency (%)
-            </label>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              value={inputs.currentEfficiency}
-              onChange={(e) => handleInputChange('currentEfficiency', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Expected Efficiency Gain (%)
-            </label>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              value={inputs.expectedEfficiencyGain}
-              onChange={(e) => handleInputChange('expectedEfficiencyGain', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              AI Implementation Cost ($)
-            </label>
-            <input
-              type="number"
-              value={inputs.aiImplementationCost}
-              onChange={(e) => handleInputChange('aiImplementationCost', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Implementation Timeline (months)
-            </label>
-            <input
-              type="number"
-              min="1"
-              max="60"
-              value={inputs.timeToImplement}
-              onChange={(e) => handleInputChange('timeToImplement', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Industry
-            </label>
-            <select
-              value={inputs.industry}
-              onChange={(e) => handleInputChange('industry', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="manufacturing">Manufacturing</option>
-              <option value="healthcare">Healthcare</option>
-              <option value="finance">Finance</option>
-              <option value="retail">Retail</option>
-              <option value="technology">Technology</option>
-              <option value="logistics">Logistics</option>
-            </select>
-          </div>
-
-          <button
-            onClick={calculateROI}
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Calculate ROI
-          </button>
-        </div>
-
-        <div className="space-y-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Results</h3>
-          
-          {results ? (
-            <div className="space-y-4">
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-1">
-                    {results.roi > 0 ? '+' : ''}{results.roi}%
-                  </div>
-                  <div className="text-sm text-green-700">Return on Investment</div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
-                    ${(results.annualSavings / 1000000).toFixed(1)}M
-                  </div>
-                  <div className="text-xs text-blue-700">Annual Savings</div>
-                </div>
-                <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-purple-600 mb-1">
-                    {results.paybackPeriod}
-                  </div>
-                  <div className="text-xs text-purple-700">Months to Payback</div>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Financial Impact</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Total Savings:</span>
-                    <span className="font-semibold">${(results.totalSavings / 1000000).toFixed(1)}M</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Implementation Cost:</span>
-                    <span className="font-semibold">${(inputs.aiImplementationCost / 1000000).toFixed(1)}M</span>
-                  </div>
-                  <div className="flex justify-between border-t pt-2">
-                    <span className="text-gray-600">Net Benefit:</span>
-                    <span className="font-semibold text-green-600">
-                      ${(results.netBenefit / 1000000).toFixed(1)}M
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                <h4 className="font-semibold text-yellow-800 mb-2">💡 Recommendations</h4>
-                <ul className="text-yellow-700 text-sm space-y-1">
-                  {results.roi > 300 && <li>• Exceptional ROI - Proceed immediately</li>}
-                  {results.roi > 100 && results.roi <= 300 && <li>• Strong ROI - Recommended investment</li>}
-                  {results.roi > 50 && results.roi <= 100 && <li>• Good ROI - Consider pilot program</li>}
-                  {results.roi <= 50 && <li>• Evaluate cost optimization opportunities</li>}
-                  {results.paybackPeriod < 12 && <li>• Quick payback period - Low risk</li>}
-                  {results.paybackPeriod >= 12 && <li>• Consider phased implementation</li>}
-                </ul>
-              </div>
-            </div>
-          ) : (
-            <div className="text-center text-gray-500 py-8">
-              <svg className="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-              <p>Enter your parameters and click "Calculate ROI" to see results</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="mt-8 pt-6 border-t border-gray-200">
-        <div className="text-center">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Ready to Start Your AI Transformation?</h3>
-          <p className="text-gray-600 mb-4">
-            Our expert team can help you implement these technologies and achieve similar results
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Calculate Your AI Investment ROI</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the potential return on investment for implementing our revolutionary AI 2026 technologies
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a 
-              href="/contact" 
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Input Form */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Business Profile</h3>
+            
+            <div className="space-y-6">
+              {/* Annual Revenue */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Annual Revenue ($)
+                </label>
+                <input
+                  type="number"
+                  value={formData.currentRevenue}
+                  onChange={(e) => handleInputChange('currentRevenue', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="1,000,000"
+                />
+              </div>
+
+              {/* Employee Count */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Number of Employees
+                </label>
+                <input
+                  type="number"
+                  value={formData.employeeCount}
+                  onChange={(e) => handleInputChange('employeeCount', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="100"
+                />
+              </div>
+
+              {/* Current Efficiency */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Current Efficiency Level (%)
+                </label>
+                <input
+                  type="range"
+                  min="10"
+                  max="95"
+                  value={formData.currentEfficiency}
+                  onChange={(e) => handleInputChange('currentEfficiency', parseInt(e.target.value))}
+                  className="w-full"
+                />
+                <div className="flex justify-between text-sm text-gray-500 mt-1">
+                  <span>10%</span>
+                  <span className="font-semibold text-purple-600">{formData.currentEfficiency}%</span>
+                  <span>95%</span>
+                </div>
+              </div>
+
+              {/* Industry */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Industry
+                </label>
+                <select
+                  value={formData.industry}
+                  onChange={(e) => handleInputChange('industry', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                >
+                  <option value="technology">Technology</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="financial">Financial Services</option>
+                  <option value="retail">Retail</option>
+                  <option value="education">Education</option>
+                </select>
+              </div>
+
+              {/* Implementation Scope */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Implementation Scope
+                </label>
+                <select
+                  value={formData.implementationScope}
+                  onChange={(e) => handleInputChange('implementationScope', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                >
+                  <option value="pilot">Pilot Project</option>
+                  <option value="department">Department-wide</option>
+                  <option value="full">Full Organization</option>
+                  <option value="enterprise">Enterprise-wide</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Results */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your ROI Projection</h3>
+            
+            {isCalculating ? (
+              <div className="flex items-center justify-center py-12">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
+                <span className="ml-4 text-gray-600">Calculating your ROI...</span>
+              </div>
+            ) : roiResult ? (
+              <div className="space-y-6">
+                {/* Total ROI */}
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-green-600 mb-2">
+                      {roiResult.totalROI.toLocaleString()}%
+                    </div>
+                    <div className="text-gray-700 font-semibold">Total ROI</div>
+                    <div className="text-sm text-gray-500 mt-1">Annual return on investment</div>
+                  </div>
+                </div>
+
+                {/* Monthly Savings */}
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">
+                      ${roiResult.monthlySavings.toLocaleString()}
+                    </div>
+                    <div className="text-gray-700 font-semibold">Monthly Savings</div>
+                    <div className="text-sm text-gray-500 mt-1">Average monthly cost savings</div>
+                  </div>
+                </div>
+
+                {/* Annual Savings */}
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-600 mb-2">
+                      ${roiResult.annualSavings.toLocaleString()}
+                    </div>
+                    <div className="text-gray-700 font-semibold">Annual Savings</div>
+                    <div className="text-sm text-gray-500 mt-1">Net annual cost savings</div>
+                  </div>
+                </div>
+
+                {/* Payback Period */}
+                <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-orange-600 mb-2">
+                      {roiResult.paybackPeriod} months
+                    </div>
+                    <div className="text-gray-700 font-semibold">Payback Period</div>
+                    <div className="text-sm text-gray-500 mt-1">Time to recover investment</div>
+                  </div>
+                </div>
+
+                {/* Net Present Value */}
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-indigo-600 mb-2">
+                      ${roiResult.netPresentValue.toLocaleString()}
+                    </div>
+                    <div className="text-gray-700 font-semibold">Net Present Value</div>
+                    <div className="text-sm text-gray-500 mt-1">Total value after 1 year</div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+
+            {/* CTA */}
+            <div className="mt-8 text-center">
+              <button
+                onClick={calculateROI}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Recalculate ROI
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Info */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-600 mb-4">
+            * ROI calculations are based on industry averages and may vary based on specific implementation factors
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300"
             >
-              Get Started
+              Get Detailed Analysis
             </a>
-            <a 
-              href="/resources/ai-2026-implementation-toolkit" 
-              className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            <a
+              href="/resources/ai-2026-ultimate-implementation-master-guide"
+              className="inline-flex items-center px-6 py-3 border border-indigo-500 text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition-all duration-300"
             >
-              Download Toolkit
+              Download Implementation Guide
             </a>
           </div>
         </div>
