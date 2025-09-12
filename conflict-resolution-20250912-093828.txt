@@ -16,3 +16,6 @@
 2025-09-12 09:39:45 - Resolving conflicts in package-lock.json for branch backup-main-20250910-141800
 2025-09-12 09:39:45 - Resolving conflicts in tsconfig.typecheck.json for branch backup-main-20250910-141800
 2025-09-12 09:39:45 - Resolving conflicts in yarn.lock for branch backup-main-20250910-141800
+2025-09-12 09:39:50 - Merge conflicts detected in backup-main-20250911-182337
+2025-09-12 09:39:50 - Resolving conflicts in app/blog/page.tsx for branch backup-main-20250911-182337
+2025-09-12 09:39:50 - Resolving conflicts in app/page.tsx for branch backup-main-20250911-182337

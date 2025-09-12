@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { Suspense } from 'react';
+import { Metadata } from 'next';
+=======
+>>>>>>> origin/backup-main-20250911-182337
 import Link from 'next/link';
 // import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -770,6 +775,31 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+<<<<<<< HEAD
+            <ContentPreviewCard
+              title='Quantum Computing Business Applications 2025'
+              description='Discover how quantum computing is revolutionizing business operations and creating new opportunities for competitive advantage.'
+              href='/blog/quantum-computing-business-applications-2025'
+              category='Quantum Computing'
+              readTime='12 min read'
+              icon='⚛️'
+            />
+            <ContentPreviewCard
+              title='AI Automation Enterprise Guide'
+              description='Complete implementation guide for AI automation in enterprise. Learn proven strategies and real-world success stories.'
+              href='/blog/ai-automation-enterprise'
+              category='AI Automation'
+              readTime='15 min read'
+              icon='🤖'
+            />
+            <ContentPreviewCard
+              title='Fortune 500 AI Transformation'
+              description='Case study: How we helped a Fortune 500 company achieve 85% efficiency gains and $2M annual savings.'
+              href='/case-studies/fortune-500-ai-transformation'
+              category='Case Study'
+              readTime='8 min read'
+              icon='📈'
+=======
             <Card
               title='AI Copilots for Engineering Teams'
               href='/blog/ai-copilots-for-engineering'
@@ -793,6 +823,7 @@ export default function HomePage() {
               href='/blog/enterprise-rag-blueprint'
               description='Architecture, hybrid retrieval, and rollout plan for regulated environments.'
               icon='📘'
+>>>>>>> origin/backup-main-20250911-182337
             />
           </div>
           
