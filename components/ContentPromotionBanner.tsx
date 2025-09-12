@@ -34,42 +34,21 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
 
   const promotions: PromotionItem[] = [
     {
-      id: 'generative-ai-revolution',
-      title: 'The Generative AI Revolution 2025: Beyond Text and Images',
-      description: 'Explore how generative AI is revolutionizing content creation, design, and business processes with advanced multimodal capabilities.',
-      type: 'blog',
-      url: '/blog/ai-2025-generative-ai-revolution',
-      featured: true,
-      publishDate: 'January 30, 2025',
-      readTime: '22 min read',
-      views: '3.1K views'
-    },
-    {
       id: 'ai-gtm-2025',
       title: 'AI Go-To-Market Strategy 2025: From Zero to Traction',
       description: 'Positioning, pricing, and distribution playbook to launch and scale AI products in 2025.',
       type: 'blog',
-      url: '/blog/ai-2025-ai-go-to-market-strategy',
-      featured: true,
-      publishDate: 'September 12, 2025',
-      readTime: '12 min read',
-      views: '1.1K views'
+      href: '/blog/ai-2025-ai-go-to-market-strategy',
+      badge: 'JUST PUBLISHED',
+      badgeColor: 'bg-orange-100 text-orange-800',
+      icon: Star,
+      ctaText: 'Read Article',
+      isNew: true
     },
     {
-      id: 'healthcare-diagnosis',
-      title: 'AI Healthcare Diagnosis Revolution 2025: Saving Lives with Precision Medicine',
-      description: 'Discover how AI is revolutionizing healthcare diagnosis with early disease detection and personalized treatment plans.',
-      type: 'blog',
-      url: '/blog/ai-healthcare-diagnosis-revolution-2025',
-      featured: true,
-      publishDate: 'January 30, 2025',
-      readTime: '25 min read',
-      views: '4.2K views'
-    },
-    {
-      id: 'financial-transformation',
-      title: 'AI Financial Services Transformation Success: $2.3B in Value Created',
-      description: 'Comprehensive case study of how a Fortune 500 company achieved unprecedented success through AI transformation.',
+      id: 'case-study-1',
+      title: 'Manufacturing Giant Achieves 400% ROI',
+      description: 'See how a Fortune 500 company saved $2.3B with AI transformation',
       type: 'case-study',
       href: '/case-studies/ai-transformation-manufacturing-giant-2025',
       badge: 'SUCCESS STORY',
