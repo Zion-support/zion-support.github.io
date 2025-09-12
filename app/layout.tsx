@@ -108,6 +108,9 @@ function Header() {
                 <Link href="/blog/ai-2026-revolutionary-breakthroughs-future" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Revolutionary Breakthroughs
                 </Link>
+                <Link href="/blog/ai-2030-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2030 Future Predictions (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2029-quantum-computing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2029 Quantum Revolution (BREAKTHROUGH)
                 </Link>
@@ -126,6 +129,9 @@ function Header() {
                 <Link href="/resources/ai-2026-complete-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 Master Implementation Guide
                 </Link>
+                <Link href="/resources/ai-2030-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2030 Master Guide (BREAKTHROUGH)
+                </Link>
                 <Link href="/resources/ai-2029-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 AI 2029 Master Guide (BREAKTHROUGH)
                 </Link>
@@ -143,6 +149,9 @@ function Header() {
                 </Link>
                 <Link href="/tools/ai-roi-calculator-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   💰 ROI Calculator
+                </Link>
+                <Link href="/case-studies/ai-2030-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  💰 AI 2030 Enterprise Breakthrough (5000% ROI) (BREAKTHROUGH)
                 </Link>
                 <Link href="/case-studies/ai-2029-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   💰 AI 2029 Enterprise Breakthrough (4000% ROI) (BREAKTHROUGH)
@@ -220,6 +229,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2030-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2030 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2030-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  💰 5000% ROI Success Story (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2030-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2030 Master Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2025 Ultimate Trends (NEW)
                 </Link>
