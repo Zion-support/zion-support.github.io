@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+
 import { 
   Search, 
   Filter, 
@@ -17,6 +20,7 @@ import {
   DollarSign,
   ExternalLink
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Comprehensive services data
 const servicesData = {
@@ -172,16 +176,17 @@ export function EnhancedComprehensiveServicesShowcase() {
             </motion.div>
           </div>
 
-          {/* Search and Filter */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
-              <Search className="absolute left-3 top-3 h-6 w-6 text-gray-400" />
-              <input 
-                type="text" 
-                placeholder="Search services, features, or technologies..." 
-                value={searchTerm} 
-                onChange={(e) => setSearchTerm(e.target.value)} 
-                className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+        {/* Search and Filter */}
+        <div className="mb-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative mb-6">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services, features, or use cases..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 py-4 text-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
               />
             </div>
           </div>

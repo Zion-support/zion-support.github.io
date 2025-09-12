@@ -27,7 +27,13 @@ import {
   Video,
   FileText,
   Heart,
-  PanelLeft
+  PanelLeft,
+  ShoppingCart,
+  Settings,
+  LogOut,
+  HelpCircle,
+  BookOpen,
+  FlaskConical
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -101,6 +107,31 @@ export function AppHeader() {
         { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
         { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: FlaskConical,
+      dropdown: [
+        { name: 'Enterprise AI', href: '/solutions/enterprise-ai', description: 'Advanced AI for business' },
+        { name: 'Cybersecurity', href: '/solutions/cybersecurity', description: 'Robust security solutions' },
+        { name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Seamless cloud transition' },
+        { name: 'IoT Platform', href: '/solutions/iot-platform', description: 'End-to-end IoT infrastructure' },
+        { name: 'Blockchain Solutions', href: '/solutions/blockchain', description: 'Secure and transparent transactions' },
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation', description: 'Modernize your operations' }
+      ]
+    },
+    {
+      name: 'Research',
+      href: '/research',
+      icon: Brain,
+      dropdown: [
+        { name: 'AI Research', href: '/research/ai-research', description: 'Latest AI breakthroughs' },
+        { name: 'Quantum Computing', href: '/research/quantum-computing', description: 'Next-generation computing' },
+        { name: 'Blockchain Research', href: '/research/blockchain-research', description: 'Decentralized solutions' },
+        { name: 'IoT Research', href: '/research/iot-research', description: 'Connected device technology' },
+        { name: 'Cloud Research', href: '/research/cloud-research', description: 'Scalable infrastructure' }
       ]
     },
     {

@@ -29,11 +29,103 @@ import {
   Building,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Send,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Shield as SecurityIcon,
+  BookOpen,
+  MessageCircle,
+  FlaskConical
 } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const footerNavigation = {
+  services: {
+    title: 'Services',
+    items: [
+      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine learning and data insights' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure solutions' },
+      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap, description: 'Connected device management' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-generation computing' },
+      { name: 'Blockchain', href: '/services/blockchain', icon: Code, description: 'Decentralized solutions' },
+      { name: 'Digital Twin', href: '/services/digital-twin', icon: Building, description: 'Virtual replica technology' },
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green IT solutions' }
+    ],
+  },
+  solutions: {
+    title: 'Solutions',
+    items: [
+      { name: 'AI & Machine Learning', href: '/solutions#ai-ml', icon: Brain, description: 'Intelligent automation solutions' },
+      { name: 'Cybersecurity', href: '/solutions#cybersecurity', icon: Shield, description: 'Comprehensive security frameworks' },
+      { name: 'Cloud Computing', href: '/solutions#cloud-computing', icon: Cloud, description: 'Scalable cloud infrastructure' },
+      { name: 'Data Analytics', href: '/solutions#data-analytics', icon: Zap, description: 'Advanced data insights' },
+      { name: 'IoT & Edge', href: '/solutions#iot-edge', icon: Rocket, description: 'Connected device ecosystems' },
+      { name: 'Digital Transformation', href: '/solutions#digital-transformation', icon: Code, description: 'Business modernization' }
+    ],
+  },
+  research: {
+    title: 'Research',
+    items: [
+      { name: 'Research Areas', href: '/research-development#research-areas', icon: FlaskConical, description: 'Innovation frontiers' },
+      { name: 'Active Projects', href: '/research-development#active-projects', icon: Rocket, description: 'Current initiatives' },
+      { name: 'Publications', href: '/research-development#publications', icon: BookOpen, description: 'Research insights' },
+      { name: 'Patents', href: '/research-development#patents', icon: Award, description: 'Intellectual property' },
+      { name: 'Case Studies', href: '/case-studies', icon: TrendingUp, description: 'Success stories' },
+      { name: 'Events', href: '/events', icon: MessageCircle, description: 'Research events' }
+    ],
+  },
+  microSaas: {
+    title: 'Micro SAAS',
+    items: [
+      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', description: 'Smart analytics platform' },
+      { name: 'Customer Experience', href: '/micro-saas/customer-experience', description: 'Enhanced customer engagement' },
+      { name: 'Quantum Computing', href: '/micro-saas/quantum-computing', description: 'Quantum-powered solutions' },
+      { name: 'Supply Chain', href: '/micro-saas/supply-chain', description: 'Optimized logistics management' },
+      { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', description: 'Advanced security tools' },
+      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', description: 'Edge device solutions' },
+      { name: 'Content Creation', href: '/micro-saas/content-creation', description: 'AI-powered content tools' },
+      { name: 'HR Platform', href: '/micro-saas/hr-platform', description: 'Human resources automation' }
+    ],
+  },
+  marketplace: {
+    title: 'Marketplace',
+    items: [
+      { name: 'Products', href: '/marketplace/products', description: 'Browse tech products' },
+      { name: 'Services', href: '/services', description: 'Professional services' },
+      { name: 'Talent', href: '/talent', description: 'Find skilled professionals' },
+      { name: 'Equipment', href: '/equipment', description: 'High-tech hardware' },
+      { name: 'Categories', href: '/marketplace', description: 'Browse all categories' },
+      { name: 'Green IT', href: '/green-it', description: 'Eco-friendly solutions' },
+      { name: 'IT Onsite Services', href: '/it-onsite-services', description: 'Local technical support' },
+    ],
+  },
+  company: {
+    title: 'Company',
+    items: [
+      { name: 'About Us', href: '/about', description: 'Learn our story' },
+      { name: 'Blog', href: '/blog', description: 'Latest insights' },
+      { name: 'Partners', href: '/partners', description: 'Strategic alliances' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch' },
+      { name: 'FAQ', href: '/faq', description: 'Common questions' },
+      { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' },
+    ],
+  },
+  support: {
+    title: 'Support & Resources',
+    items: [
+      { name: 'Help Center', href: '/help-center', description: 'Get help and support' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+      { name: 'Contact Support', href: '/contact', description: 'Reach our team' },
+      { name: 'Request Quote', href: '/request-quote', description: 'Get project estimates' },
+      { name: 'Terms of Service', href: '/terms', description: 'Legal terms' },
+      { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
+      { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
+    ],
+  },
+};
 
   const socialLinks = [
     { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
@@ -403,7 +495,7 @@ export function Footer() {
 
       <div className="container-responsive relative z-10">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-12">
           {/* Company info */}
           <div className="lg:col-span-2">
             <motion.div 
@@ -496,6 +588,8 @@ export function Footer() {
             >
               <h4 className="text-lg font-semibold text-white flex items-center gap-2">
                 {section.title === 'Services' && <Zap className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Solutions' && <Rocket className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Research' && <FlaskConical className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Micro SAAS' && <Code className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Marketplace' && <Building className="w-5 h-5 text-zion-blue" />}
                 {section.title === 'Company' && <Users className="w-5 h-5 text-zion-cyan" />}
