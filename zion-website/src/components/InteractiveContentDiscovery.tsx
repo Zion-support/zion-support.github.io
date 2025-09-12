@@ -41,6 +41,32 @@ function InteractiveContentDiscovery() {
       difficulty: 'intermediate'
     },
     {
+      id: '11',
+      title: 'Trust & Safety Guardrails 2025: Practical Patterns',
+      description: 'Practical patterns to design, evaluate, and enforce AI trust & safety guardrails across applications in 2025.',
+      href: '/blog/ai-2025-trust-safety-guardrails',
+      type: 'blog',
+      category: 'AI Safety',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['AI Safety', 'Guardrails', 'Evaluation'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '12',
+      title: 'Financial Services Copilots: 42% Faster Handling',
+      description: 'Tier‑1 bank launched compliant AI copilots across ops, cutting handling time by 42% while meeting strict compliance.',
+      href: '/case-studies/ai-2025-financial-services-copilots',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Financial Services', 'Copilots', 'Compliance'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '9',
       title: 'Foundation Models Cost Optimization 2025',
       description: 'Reduce inference and training spend using quantization, distillation, caching, and dynamic routing.',

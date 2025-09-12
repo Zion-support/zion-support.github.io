@@ -45,6 +45,28 @@ const NewContentPromoBanner = ({
       category: 'Advanced AI'
     },
     {
+      id: '11',
+      title: 'Trust & Safety Guardrails 2025: Practical Patterns',
+      description: 'Design, evaluate, and enforce AI trust & safety guardrails with policy-as-code and runtime controls.',
+      href: '/blog/ai-2025-trust-safety-guardrails',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: '12',
+      title: 'Financial Services Copilots: 42% Faster Handling',
+      description: 'Case study: Tier‑1 bank launched compliant AI copilots across ops, cutting handling time by 42%.',
+      href: '/case-studies/ai-2025-financial-services-copilots',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '9',
       title: 'Foundation Models Cost Optimization 2025',
       description: 'Cut inference and training costs with quantization, distillation, caching, and smart routing in 2025 stacks.',
