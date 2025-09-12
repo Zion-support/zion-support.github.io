@@ -7,32 +7,21 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import { FloatingActionButton } from './components/FloatingActionButton';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
-const Home2026 = React.lazy(() => import('./pages/Home2026'));
 const About = React.lazy(() => import('./pages/About'));
-const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
-const Services2026 = React.lazy(() => import('./pages/Services2026'));
-const Services2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
-const AIServices = React.lazy(() => import('./pages/AIServices'));
-const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const AIServices = React.lazy(() => import('./pages/AIServicesPage'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
-const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
 const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices'));
-const MobileLaunch = React.lazy(() => import('./pages/MobileLaunch'));
+const MobileLaunch = React.lazy(() => import('./pages/MobileLaunchPage'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
-const Match = React.lazy(() => import('./pages/Match'));
-const Solutions = React.lazy(() => import('./pages/solutions'));
+const Match = React.lazy(() => import('./pages/AIMatcher'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -41,49 +30,30 @@ const FAQ = React.lazy(() => import('./pages/FAQ'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Partners = React.lazy(() => import('./pages/Partners'));
-const Team = React.lazy(() => import('./pages/Team'));
-const News = React.lazy(() => import('./pages/News'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
-const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Developers = React.lazy(() => import('./pages/Developers'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
-const Webinars = React.lazy(() => import('./pages/Webinars'));
-const Status = React.lazy(() => import('./pages/Status'));
-const Training = React.lazy(() => import('./pages/Training'));
-const Support = React.lazy(() => import('./pages/Support'));
+const WhitePapers = React.lazy(() => import('./pages/white-papers'));
+const Webinars = React.lazy(() => import('./pages/webinars'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 // Additional simple pages
-const Events = React.lazy(() => import('./pages/Events'));
-const Help = React.lazy(() => import('./pages/Help'));
-const Security = React.lazy(() => import('./pages/Security'));
+const Help = React.lazy(() => import('./pages/HelpCenter'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Talent = React.lazy(() => import('./pages/Talent'));
-const Equipment = React.lazy(() => import('./pages/Equipment'));
+const Talent = React.lazy(() => import('./pages/TalentDirectory'));
+const Equipment = React.lazy(() => import('./pages/EquipmentPage'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
-const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
-const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
-const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
 const LoginPage = React.lazy(() => import('./pages/Login'));
 
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
-const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 
 // Sitemap-aligned pages
-const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
-const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
-const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 
 // Service pages - only import existing ones
@@ -201,33 +171,18 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/events" element={<Events />} />
               <Route path="/partners" element={<Partners />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/team" element={<Team />} />
               <Route path="/help" element={<HelpCenter />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/status" element={<Status />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/talent" element={<Talent />} />
               <Route path="/equipment" element={<Equipment />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/marketplace/products" element={<MarketplaceProducts />} />
-              <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
-              <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
-              <Route path="/marketplace/services" element={<MarketplaceServices />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services2026" element={<Services2026 />} />
-              <Route path="/services2027" element={<Services2027 />} />
               <Route path="/ai-services" element={<AIServices />} />
-              <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/it-services" element={<ITServices />} />
-              <Route path="/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
               <Route path="/mobile-launch" element={<MobileLaunch />} />
               <Route path="/analytics" element={<Analytics />} />
@@ -237,19 +192,12 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/docs" element={<Documentation />} />
               <Route path="/developers" element={<Developers />} />
               <Route path="/white-papers" element={<WhitePapers />} />
               <Route path="/webinars" element={<Webinars />} />
-              <Route path="/training" element={<Training />} />
-              <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/research-development" element={<ResearchDevelopment />} />
               
               {/* New sitemap routes */}
-              <Route path="/ai-solutions" element={<AiSolutions />} />
-              <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
-              <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -313,10 +261,6 @@ function App() {
               <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
               
               {/* New 2026 service routes */}
-              <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
-              <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
-              <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
-              <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
               
               {/* 2028 Pricing */}
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
@@ -327,7 +271,6 @@ function App() {
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-              <Route path="/services/ai" element={<AiSolutions />} />
               
               {/* 2026 Services routes */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
@@ -344,7 +287,6 @@ function App() {
               <Route path="/developers" element={<DeveloperPortal />} />
               
               {/* Hybrid App Demo */}
-              <Route path="/hybrid-demo" element={<ApiDemo />} />
               
               {/* Catch-all */}
               <Route path="*" element={<Home />} />
@@ -354,10 +296,7 @@ function App() {
         <Footer />
         <ChatAssistant />
         <PerformanceOptimizer />
-        <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
-        <MobileExperienceEnhancer enabled={true} />
         <PerformanceMonitor enabled={true} showMetrics={true} />
-        <FloatingActionButton />
       </div>
     </ErrorBoundary>
   );
