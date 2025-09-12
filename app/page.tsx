@@ -58,6 +58,7 @@ import InteractiveContentDiscovery from '../components/InteractiveContentDiscove
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2025UltimateBreakthroughContentShowcase from '../components/AI2025UltimateBreakthroughContentShowcase';
 import AI2026_2030FuturePredictionsPromotionBanner from '../components/AI2026_2030FuturePredictionsPromotionBanner';
 import QuantumComputingAdvancedPromotionBanner from '../components/QuantumComputingAdvancedPromotionBanner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
@@ -290,6 +291,9 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEW */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH CONTENT SHOWCASE - NEW */}
+        <AI2025UltimateBreakthroughContentShowcase />
         
         {/* AI 2025 ULTIMATE CONTENT HUB BANNER - NEW */}
         <AI2025UltimateContentHubBanner />
