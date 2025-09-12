@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
@@ -1524,6 +1523,3 @@ export default function AIImplementationChecklist2025() {
     </>
   );
 }
-=======
-import React from "react"; export default function AIImplementationChecklist2025() { return <div>AI Implementation Checklist 2025</div>; }
->>>>>>> cursor/create-and-deploy-new-content-47dd

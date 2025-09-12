@@ -15,110 +15,110 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
-    title: "AI Business Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
-    href: "/blog/ai-business-automation-2025",
-    category: "AI & Automation",
-    readTime: "12 min read",
-    isNew: true,
-    icon: "🤖",
-    stats: "40% productivity boost"
-  },
-  {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
-  },
-  {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
+    title: "AI Enterprise Transformation Success: $2B Revenue Growth Case Study",
+    description: "Discover how a Fortune 500 company achieved $2B revenue growth through comprehensive AI transformation. Learn proven strategies, implementation roadmap, and key success metrics.",
+    href: "/blog/ai-2025-enterprise-transformation-success",
     category: "Case Study",
+    readTime: "25 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "$2B revenue growth"
+  },
+  {
+    title: "AI Startup Funding Revolution 2025: $100B Investment Boom",
+    description: "Discover the AI startup funding revolution sweeping 2025. Learn how to secure funding, understand investor priorities, and capitalize on the $100B AI investment boom.",
+    href: "/blog/ai-2025-startup-funding-revolution",
+    category: "Startup Strategy",
     readTime: "18 min read",
     isNew: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
+    icon: "💰",
+    stats: "$100B investment boom"
   },
   {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-    href: "/resources/ai-implementation-master-guide-2025",
+    title: "AI Cybersecurity Transformation: 99.9% Threat Detection Success",
+    description: "Discover how a Fortune 500 company achieved 99.9% threat detection accuracy and $200M in security cost savings through AI-powered cybersecurity transformation.",
+    href: "/case-studies/ai-cybersecurity-transformation-2025",
+    category: "Cybersecurity",
+    readTime: "22 min read",
+    isNew: true,
+    icon: "🛡️",
+    stats: "99.9% detection rate"
+  },
+  {
+    title: "AI 2025 Comprehensive Implementation Playbook: Complete Guide",
+    description: "Master AI implementation with our comprehensive 200-page playbook. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in 2025.",
+    href: "/resources/ai-2025-comprehensive-implementation-playbook",
     category: "Master Guide",
-    readTime: "150 pages",
+    readTime: "200 pages",
     isNew: true,
     icon: "📚",
-    stats: "500+ companies using this"
+    stats: "200+ pages guide"
   }
 ];
 
 const trendingContent: ContentItem[] = [
   {
-    title: "AI 2025 Predictions: The Future of AI in Business",
-    description: "The future of AI in business - key trends and predictions that will shape the industry in 2025 and beyond.",
-    href: "/blog/ai-2025-predictions",
-    category: "AI Trends",
-    readTime: "20 min read",
+    title: "AI Enterprise Transformation Success: $2B Revenue Growth Case Study",
+    description: "Discover how a Fortune 500 company achieved $2B revenue growth through comprehensive AI transformation. Learn proven strategies, implementation roadmap, and key success metrics.",
+    href: "/blog/ai-2025-enterprise-transformation-success",
+    category: "Case Study",
+    readTime: "25 min read",
     isTrending: true,
-    icon: "🔮",
+    icon: "🏢",
     stats: "Trending this week"
   },
   {
-    title: "AI Automation Trends 2025: Transform Your Operations",
-    description: "Transform your business operations with the latest intelligent automation trends and proven implementation strategies.",
-    href: "/blog/ai-automation-trends-2025",
-    category: "Automation",
-    readTime: "16 min read",
+    title: "AI Startup Funding Revolution 2025: $100B Investment Boom",
+    description: "Discover the AI startup funding revolution sweeping 2025. Learn how to secure funding, understand investor priorities, and capitalize on the $100B AI investment boom.",
+    href: "/blog/ai-2025-startup-funding-revolution",
+    category: "Startup Strategy",
+    readTime: "18 min read",
     isTrending: true,
-    icon: "⚡",
-    stats: "300% efficiency gains"
+    icon: "💰",
+    stats: "300% growth in funding"
   },
   {
-    title: "AI Enterprise Security 2025: Complete Implementation Guide",
-    description: "Complete implementation guide for securing AI systems in enterprise environments with proven security frameworks.",
-    href: "/blog/ai-enterprise-security-2025",
-    category: "Security",
-    readTime: "20 min read",
+    title: "AI Cybersecurity Transformation: 99.9% Threat Detection Success",
+    description: "Discover how a Fortune 500 company achieved 99.9% threat detection accuracy and $200M in security cost savings through AI-powered cybersecurity transformation.",
+    href: "/case-studies/ai-cybersecurity-transformation-2025",
+    category: "Cybersecurity",
+    readTime: "22 min read",
     isTrending: true,
     icon: "🛡️",
-    stats: "Enterprise-grade security"
+    stats: "Zero security breaches"
   }
 ];
 
 const latestContent: ContentItem[] = [
   {
-    title: "AI Productivity Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
-    href: "/blog/ai-productivity-automation-2025",
-    category: "Productivity",
-    readTime: "12 min read",
+    title: "AI 2025 Comprehensive Implementation Playbook: Complete Guide",
+    description: "Master AI implementation with our comprehensive 200-page playbook. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in 2025.",
+    href: "/resources/ai-2025-comprehensive-implementation-playbook",
+    category: "Master Guide",
+    readTime: "200 pages",
     isNew: true,
-    icon: "🚀",
-    stats: "40% productivity boost"
+    icon: "📚",
+    stats: "200+ pages guide"
   },
   {
-    title: "Startup Pricing Strategy 2025: Validate Willingness to Pay",
-    description: "Master startup pricing with data-driven strategies. Learn to validate willingness to pay and scale with confidence.",
-    href: "/blog/startup-pricing-strategy-2025",
-    category: "Startup Strategy",
-    readTime: "15 min read",
+    title: "AI Enterprise Transformation Success: $2B Revenue Growth Case Study",
+    description: "Discover how a Fortune 500 company achieved $2B revenue growth through comprehensive AI transformation. Learn proven strategies, implementation roadmap, and key success metrics.",
+    href: "/blog/ai-2025-enterprise-transformation-success",
+    category: "Case Study",
+    readTime: "25 min read",
     isNew: true,
-    icon: "💡",
-    stats: "Data-driven pricing"
+    icon: "🏢",
+    stats: "$2B revenue growth"
   },
   {
-    title: "AI Healthcare Diagnosis Success: 95% Accuracy",
-    description: "Discover how a leading healthcare provider achieved 95% accuracy in medical diagnosis using AI automation.",
-    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-    category: "Healthcare AI",
-    readTime: "8 min read",
+    title: "AI Cybersecurity Transformation: 99.9% Threat Detection Success",
+    description: "Discover how a Fortune 500 company achieved 99.9% threat detection accuracy and $200M in security cost savings through AI-powered cybersecurity transformation.",
+    href: "/case-studies/ai-cybersecurity-transformation-2025",
+    category: "Cybersecurity",
+    readTime: "22 min read",
     isNew: true,
-    icon: "🏥",
-    stats: "95% accuracy achieved"
+    icon: "🛡️",
+    stats: "99.9% detection rate"
   }
 ];
 

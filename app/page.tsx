@@ -18,6 +18,7 @@ import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 
 // Define missing components
@@ -279,6 +280,9 @@ export default function HomePage() {
       
       {/* New Content Promotion Banner */}
       <NewContentPromotionBanner />
+      
+      {/* New Content Promotional Banner */}
+      <NewContentPromotionalBanner />
       
       {/* Featured Content Section */}
       <FeaturedContentShowcase />
