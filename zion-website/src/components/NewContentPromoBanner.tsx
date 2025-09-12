@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '31',
+      title: 'Agentic Vendor Management 2025: From Intake to Renewal',
+      description: 'Automate diligence, smarter negotiations, and renewal guardrails with agentic workflows.',
+      href: '/blog/ai-2025-agentic-vendor-management',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
+    },
+    {
+      id: '32',
+      title: 'Agentic Vendor Management: 32% Faster Cycle Time',
+      description: 'Case study: Automated intake, risk, and negotiation cut cycle time by 32% and exceptions by 21%.',
+      href: '/case-studies/ai-2025-vendor-management-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '16',
       title: 'Agent Marketplaces in 2025: Strategy & Governance',
       description: 'Strategy, reference architectures, monetization, and safety for enterprise agent marketplaces.',
