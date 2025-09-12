@@ -1,8 +1,6 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import os from 'os';
+const path = require('path');
+const os = require('os');
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configure CDN asset prefix when running in production
@@ -46,7 +44,6 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-};
 
   modularizeImports: {
     'lucide-react': {
@@ -910,4 +907,4 @@ const nextConfig = {
 
 };
 
-export default nextConfig;
+module.exports = nextConfig;
