@@ -68,6 +68,10 @@ import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceCon
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
 
+// New 2029 Breakthrough Content Components
+import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
+import AI2029BreakthroughContentShowcase from '../components/AI2029BreakthroughContentShowcase';
+
 // New 2028 Breakthrough Content Components
 import AI2028BreakthroughPromotionBanner from '../components/AI2028BreakthroughPromotionBanner';
 import AI2028BreakthroughContentShowcase from '../components/AI2028BreakthroughContentShowcase';
@@ -120,10 +124,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
+        
+        {/* AI 2029 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2029BreakthroughPromotionBanner />
+        
+        {/* AI 2029 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2029BreakthroughContentShowcase />
         
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <div className="py-16 bg-gray-50">
