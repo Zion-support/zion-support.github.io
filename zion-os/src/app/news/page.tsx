@@ -1,6 +1,24 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "⚡",
+      title: "Zion OS 1.4: Performance & Accessibility Upgrades",
+      excerpt:
+        "Faster cold starts, smaller bundles, and WCAG 2.2 improvements ship in 1.4.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-4-performance-accessibility",
+      gradient: "from-amber-500 to-yellow-600",
+    },
+    {
+      emoji: "🧠",
+      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
+      excerpt:
+        "Major upgrade delivers 10x larger context, a native Tools API, and faster, cheaper inference.",
+      date: "Sep 12, 2025",
+      href: "/news/ziongpt-core-v2",
+      gradient: "from-fuchsia-600 to-purple-600",
+    },
+    {
       emoji: "🧠",
       title: "ZionGPT Core v2: Context Windows 10x and Tools API",
       excerpt:
@@ -94,15 +112,6 @@ export default function NewsPage() {
       date: "Sep 05, 2025",
       href: "/news/enterprise-partners",
       gradient: "from-orange-600 to-red-600",
-    },
-    {
-      emoji: "🧠",
-      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
-      excerpt:
-        "Major upgrade delivers 10x larger context, native Tools API, and faster, cheaper inference across the platform.",
-      date: "Sep 12, 2025",
-      href: "/news/ziongpt-core-v2",
-      gradient: "from-fuchsia-600 to-purple-600",
     },
     {
       emoji: "🏪",
