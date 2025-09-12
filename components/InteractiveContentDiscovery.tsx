@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -6,95 +6,215 @@ interface ContentItem {
   title: string;
   description: string;
   href: string;
-  icon: string;
+  type: 'blog' | 'case-study' | 'resource';
   category: string;
   readTime?: string;
-  type?: string;
-  date: string;
+  featured: boolean;
   tags: string[];
 }
 
-interface InteractiveContentDiscoveryProps {
-  className?: string;
-}
+const contentItems: ContentItem[] = [
+  {
+    id: '1',
+    title: 'Advanced AI Architecture Patterns for 2025',
+    description: 'Building scalable, cost-effective systems with 300%+ ROI',
+    href: '/blog/ai-2025-advanced-ai-architecture',
+    category: 'AI Architecture',
+    readTime: '25 min read',
+    difficulty: 'Advanced',
+    tags: ['Architecture', 'Scalability', 'ROI', 'Enterprise'],
+    icon: '🏗️',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '2',
+    title: 'AI Automation Trends 2025',
+    description: 'Complete guide to enterprise transformation with 400%+ ROI',
+    href: '/blog/ai-2025-automation-trends',
+    category: 'AI Automation',
+    readTime: '22 min read',
+    difficulty: 'Intermediate',
+    tags: ['Automation', 'Enterprise', 'Trends', 'ROI'],
+    icon: '🤖',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '3',
+    title: '$200M Manufacturing Success Case Study',
+    description: 'How Fortune 500 achieved 60% efficiency gains with autonomous AI',
+    href: '/case-studies/ai-autonomous-manufacturing-success-2025',
+    category: 'Case Study',
+    readTime: '15 min read',
+    difficulty: 'Intermediate',
+    tags: ['Manufacturing', 'Case Study', 'ROI', 'Success'],
+    icon: '💰',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '4',
+    title: 'AI Implementation Master Guide 2026',
+    description: '200+ page comprehensive guide with frameworks and templates',
+    href: '/resources/ai-implementation-master-guide-2026',
+    category: 'Free Resource',
+    readTime: '200+ pages',
+    difficulty: 'Beginner',
+    tags: ['Guide', 'Implementation', 'Templates', 'Free'],
+    icon: '📚',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '5',
+    title: 'AI Workforce Transformation 2025',
+    description: 'Reskilling strategies for the AI era',
+    href: '/blog/ai-workforce-transformation-2025',
+    category: 'Workforce',
+    readTime: '18 min read',
+    difficulty: 'Intermediate',
+    tags: ['Workforce', 'Transformation', 'Skills', 'Future'],
+    icon: '👥'
+  },
+  {
+    id: '6',
+    title: 'AI Sustainability & Green Tech',
+    description: 'Building eco-friendly AI systems',
+    href: '/blog/ai-sustainability-green-tech-2025',
+    category: 'Sustainability',
+    readTime: '20 min read',
+    difficulty: 'Intermediate',
+    tags: ['Sustainability', 'Green Tech', 'Environment', 'AI'],
+    icon: '🌱'
+  },
+  {
+    id: '7',
+    title: 'AI Cybersecurity Checklist 2025',
+    description: '150+ security items for secure AI implementation',
+    href: '/resources/ai-cybersecurity-checklist-2025',
+    category: 'Security',
+    readTime: 'Free Download',
+    difficulty: 'Advanced',
+    tags: ['Security', 'Checklist', 'Compliance', 'Free'],
+    icon: '🛡️'
+  },
+  {
+    id: '8',
+    title: 'Edge AI: Privacy by Design',
+    description: 'On-device intelligence for instant, compliant CX',
+    href: '/blog/edge-ai-privacy-by-design-2025',
+    category: 'Edge Computing',
+    readTime: '8 min read',
+    difficulty: 'Advanced',
+    tags: ['Edge Computing', 'Privacy', 'On-device', 'Compliance'],
+    icon: '🔐'
+  }
+];
 
-const InteractiveContentDiscovery: React.FC<InteractiveContentDiscoveryProps> = ({ className = '' }) => {
+const categories = ['All', 'AI Architecture', 'AI Automation', 'Case Study', 'Free Resource', 'Workforce', 'Sustainability', 'Security', 'Edge Computing'];
+const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+
+const InteractiveContentDiscovery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
 
   const contentItems: ContentItem[] = [
     {
-      id: 'quantum-ai',
+      id: '1',
       title: 'AI 2025: Quantum Computing Breakthrough',
-      description: 'Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications and quantum machine learning.',
+      description: 'Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications and real-world implementations.',
       href: '/blog/ai-2025-quantum-computing-breakthrough',
-      icon: '⚛️',
-      category: 'Quantum AI',
-      readTime: '28 min read',
-      date: 'Jan 30, 2025',
-      tags: ['quantum', 'computing', 'breakthrough', 'AI', 'machine learning']
-    },
-    {
-      id: 'neural-interface',
-      title: 'AI 2025: Neural Interface Revolution',
-      description: 'Explore revolutionary neural interface technologies transforming healthcare, communication, and human-AI interaction.',
-      href: '/blog/ai-2025-neural-interface-revolution',
-      icon: '🧠',
-      category: 'Neural AI',
-      readTime: '32 min read',
-      date: 'Jan 31, 2025',
-      tags: ['neural', 'interface', 'brain-computer', 'healthcare', 'AI']
-    },
-    {
-      id: 'space-exploration',
-      title: 'AI Space Exploration Breakthrough 2025',
-      description: 'How AI-powered autonomous spacecraft achieved unprecedented success in deep space exploration with $2B mission value.',
-      href: '/case-studies/ai-space-exploration-breakthrough-2025',
-      icon: '🚀',
-      category: 'Space AI',
-      type: 'Case Study',
-      date: 'Feb 01, 2025',
-      tags: ['space', 'exploration', 'autonomous', 'spacecraft', 'AI']
-    },
-    {
-      id: 'implementation-guide',
-      title: 'AI Implementation Master Guide 2025',
-      description: 'Complete 200+ page resource with step-by-step instructions, templates, and best practices for successful AI deployment.',
-      href: '/resources/ai-2025-implementation-master-guide',
-      icon: '📚',
-      category: 'Master Guide',
-      type: 'Free Download',
-      date: 'Feb 01, 2025',
-      tags: ['implementation', 'guide', 'templates', 'checklist', 'AI']
-    },
-    {
-      id: 'breakthrough-innovations',
-      title: 'AI Breakthrough Innovations 2025',
-      description: 'Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI technologies.',
-      href: '/blog/ai-2025-breakthrough-innovations',
-      icon: '🚀',
+      type: 'blog',
       category: 'AI Innovations',
-      readTime: '25 min read',
-      date: 'Jan 30, 2025',
-      tags: ['breakthrough', 'innovations', 'AGI', 'quantum', 'AI']
+      readTime: '22 min read',
+      featured: true,
+      tags: ['quantum computing', 'AI breakthrough', 'technology trends']
     },
     {
-      id: 'sustainability',
-      title: 'AI Sustainability & Green Tech 2025',
-      description: 'Building eco-friendly AI systems for the future. Learn about sustainable AI practices and green technology solutions.',
-      href: '/blog/ai-sustainability-green-tech-2025',
-      icon: '🌱',
-      category: 'Sustainability',
+      id: '2',
+      title: 'AI 2025: Neural Interface Revolution',
+      description: 'Discover how neural interfaces are revolutionizing human-AI interaction in 2025. Explore brain-computer interfaces and neural prosthetics.',
+      href: '/blog/ai-2025-neural-interface-revolution',
+      type: 'blog',
+      category: 'AI Innovations',
       readTime: '20 min read',
-      date: 'Jan 29, 2025',
-      tags: ['sustainability', 'green tech', 'eco-friendly', 'environment', 'AI']
+      featured: true,
+      tags: ['neural interfaces', 'BCI', 'human-AI interaction']
+    },
+    {
+      id: '3',
+      title: 'AI 2025: Autonomous Systems Mastery',
+      description: 'Master autonomous AI systems in 2025 with our comprehensive guide. Learn implementation strategies and real-world case studies.',
+      href: '/blog/ai-2025-autonomous-systems-mastery',
+      type: 'blog',
+      category: 'Implementation',
+      readTime: '25 min read',
+      featured: true,
+      tags: ['autonomous systems', 'AI implementation', 'automation']
+    },
+    {
+      id: '4',
+      title: 'AI 2025: Autonomous Manufacturing Revolution - $500M Success Story',
+      description: 'Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems.',
+      href: '/case-studies/ai-2025-autonomous-manufacturing-revolution',
+      type: 'case-study',
+      category: 'Case Studies',
+      featured: true,
+      tags: ['manufacturing', 'autonomous AI', 'ROI', 'case study']
+    },
+    {
+      id: '5',
+      title: 'AI Implementation Master Guide 2026',
+      description: 'Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, and best practices.',
+      href: '/resources/ai-implementation-master-guide-2026',
+      type: 'resource',
+      category: 'Resources',
+      featured: true,
+      tags: ['implementation guide', 'templates', 'best practices', 'free download']
+    },
+    {
+      id: '6',
+      title: 'AI Cybersecurity Checklist 2025',
+      description: 'Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems.',
+      href: '/resources/ai-cybersecurity-checklist-2025',
+      type: 'resource',
+      category: 'Security',
+      featured: false,
+      tags: ['cybersecurity', 'AI security', 'checklist', 'compliance']
+    },
+    {
+      id: '7',
+      title: 'AI Workforce Transformation Playbook 2025',
+      description: 'Complete reskilling strategies and implementation guides for the AI era. Transform your workforce for the future.',
+      href: '/resources/ai-workforce-transformation-playbook-2025',
+      type: 'resource',
+      category: 'Workforce',
+      featured: false,
+      tags: ['workforce transformation', 'reskilling', 'AI training', 'human resources']
+    },
+    {
+      id: '8',
+      title: 'AI Financial Services Transformation Success',
+      description: 'Complete case study: How a major bank achieved $50M savings and 300% ROI through strategic AI implementation.',
+      href: '/case-studies/ai-financial-services-transformation-2025',
+      type: 'case-study',
+      category: 'Case Studies',
+      featured: false,
+      tags: ['financial services', 'banking', 'ROI', 'transformation']
     }
   ];
 
-  const categories = ['all', 'Quantum AI', 'Neural AI', 'Space AI', 'AI Innovations', 'Sustainability', 'Master Guide'];
-  const allTags = ['quantum', 'computing', 'neural', 'interface', 'space', 'exploration', 'breakthrough', 'AI', 'machine learning', 'healthcare', 'sustainability', 'green tech', 'implementation', 'guide'];
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'AI Innovations', name: 'AI Innovations', count: contentItems.filter(item => item.category === 'AI Innovations').length },
+    { id: 'Implementation', name: 'Implementation', count: contentItems.filter(item => item.category === 'Implementation').length },
+    { id: 'Case Studies', name: 'Case Studies', count: contentItems.filter(item => item.category === 'Case Studies').length },
+    { id: 'Resources', name: 'Resources', count: contentItems.filter(item => item.category === 'Resources').length },
+    { id: 'Security', name: 'Security', count: contentItems.filter(item => item.category === 'Security').length },
+    { id: 'Workforce', name: 'Workforce', count: contentItems.filter(item => item.category === 'Workforce').length }
+  ];
 
   useEffect(() => {
     let filtered = contentItems;
@@ -102,13 +222,6 @@ const InteractiveContentDiscovery: React.FC<InteractiveContentDiscoveryProps> = 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by tags
-    if (selectedTags.length > 0) {
-      filtered = filtered.filter(item => 
-        selectedTags.some(tag => item.tags.includes(tag))
-      );
     }
 
     // Filter by search query
@@ -121,145 +234,134 @@ const InteractiveContentDiscovery: React.FC<InteractiveContentDiscoveryProps> = 
     }
 
     setFilteredContent(filtered);
-  }, [selectedCategory, selectedTags, searchQuery]);
+  }, [selectedCategory, searchQuery]);
 
-  const handleTagToggle = (tag: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) 
-        ? prev.filter(t => t !== tag)
-        : [...prev, tag]
-    );
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '✨';
+    }
   };
 
-  const clearFilters = () => {
-    setSelectedCategory('all');
-    setSelectedTags([]);
-    setSearchQuery('');
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'resource':
+        return 'from-purple-500 to-pink-500';
+      default:
+        return 'from-gray-500 to-gray-600';
+    }
   };
 
   return (
-    <div className={`bg-white rounded-2xl shadow-lg p-8 ${className}`}>
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">🔍 Interactive Content Discovery</h2>
-        <p className="text-lg text-gray-600">
-          Find the perfect content for your needs. Filter by category, tags, or search for specific topics.
+    <div className="bg-white rounded-2xl shadow-lg p-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          🔍 Discover Your Perfect AI Content
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Use our interactive discovery tool to find the most relevant AI content for your needs. 
+          Filter by category, search by keywords, or explore our featured content.
         </p>
       </div>
 
-      {/* Search Bar */}
-      <div className="mb-6">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search content by title, description, or tags..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <span className="text-gray-400">🔍</span>
+      {/* Search and Filter Controls */}
+      <div className="mb-8">
+        <div className="flex flex-col md:flex-row gap-4 mb-6">
+          {/* Search Input */}
+          <div className="flex-1">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search content by title, description, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Category Filter */}
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">Categories</h3>
+        {/* Category Filters */}
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                selectedCategory === category
+                selectedCategory === category.id
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {category === 'all' ? 'All Content' : category}
+              {category.name} ({category.count})
             </button>
           ))}
         </div>
-      </div>
-
-      {/* Tags Filter */}
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">Tags</h3>
-        <div className="flex flex-wrap gap-2">
-          {allTags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => handleTagToggle(tag)}
-              className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                selectedTags.includes(tag)
-                  ? 'bg-green-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Clear Filters */}
-      {(selectedCategory !== 'all' || selectedTags.length > 0 || searchQuery) && (
-        <div className="mb-6">
-          <button
-            onClick={clearFilters}
-            className="text-blue-600 hover:text-blue-700 font-medium text-sm"
-          >
-            Clear all filters
-          </button>
-        </div>
-      )}
-
-      {/* Results Count */}
-      <div className="mb-6">
-        <p className="text-gray-600">
-          Showing {filteredContent.length} of {contentItems.length} content items
-        </p>
       </div>
 
       {/* Content Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredContent.map((item) => (
           <Link key={item.id} href={item.href} className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-blue-300">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                {item.icon}
-              </div>
-              <div className="mb-3">
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full mb-2">
-                  {item.category}
-                </span>
-                {item.type && (
-                  <span className="inline-block bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full ml-2 mb-2">
-                    {item.type}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">{getTypeIcon(item.type)}</span>
+                  <span className={`text-xs font-medium px-2 py-1 rounded-full bg-gradient-to-r ${getTypeColor(item.type)} text-white`}>
+                    {item.type === 'case-study' ? 'Case Study' : 
+                     item.type === 'resource' ? 'Resource' : 'Article'}
+                  </span>
+                </div>
+                {item.featured && (
+                  <span className="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">
+                    Featured
                   </span>
                 )}
               </div>
+
               <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 {item.title}
               </h3>
+
               <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                 {item.description}
               </p>
+
               <div className="flex items-center justify-between text-xs text-gray-500">
-                <span>{item.date}</span>
-                {item.readTime && <span>{item.readTime}</span>}
+                <span className="bg-gray-100 px-2 py-1 rounded-full">
+                  {item.category}
+                </span>
+                {item.readTime && (
+                  <span>{item.readTime}</span>
+                )}
               </div>
-              <div className="mt-3 flex flex-wrap gap-1">
-                {item.tags.slice(0, 3).map((tag) => (
+
+              <div className="mt-4 flex flex-wrap gap-1">
+                {item.tags.slice(0, 3).map((tag, index) => (
                   <span
-                    key={tag}
-                    className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
+                    key={index}
+                    className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full"
                   >
                     {tag}
                   </span>
                 ))}
                 {item.tags.length > 3 && (
-                  <span className="text-gray-400 text-xs px-2 py-1">
+                  <span className="text-xs text-gray-500">
                     +{item.tags.length - 3} more
                   </span>
                 )}
@@ -269,45 +371,37 @@ const InteractiveContentDiscovery: React.FC<InteractiveContentDiscoveryProps> = 
         ))}
       </div>
 
+      {/* No Results */}
       {filteredContent.length === 0 && (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🔍</div>
           <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
           <p className="text-gray-600 mb-4">
-            Try adjusting your filters or search terms to find more content.
+            Try adjusting your search terms or category filters to find what you're looking for.
           </p>
           <button
-            onClick={clearFilters}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            onClick={() => {
+              setSearchQuery('');
+              setSelectedCategory('all');
+            }}
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
             Clear Filters
           </button>
         </div>
       )}
 
-      {/* Quick Actions */}
-      <div className="mt-8 pt-6 border-t border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            href="/content-showcase"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            View All Content
-          </Link>
-          <Link
-            href="/blog"
-            className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-          >
-            Browse Articles
-          </Link>
-          <Link
-            href="/resources"
-            className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-          >
-            Download Resources
-          </Link>
-        </div>
+      {/* View All Content CTA */}
+      <div className="text-center mt-8 pt-8 border-t border-gray-200">
+        <Link
+          href="/content-showcase"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+        >
+          View All Content
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
     </div>
   );
