@@ -208,37 +208,37 @@ export default function HomePage() {
           </div>
 
           <div className='grid md:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-2025-advanced-robotics' className='group'>
+            <Link href='/blog/ai-2025-advanced-ai-agents' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>Advanced Robotics & AI Integration</h3>
-                <p className='text-sm opacity-90 mb-3'>The future of manufacturing with intelligent robotic systems</p>
+                <h3 className='text-lg font-semibold mb-2'>Advanced AI Agents 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>95% accuracy in autonomous business operations with multi-agent collaboration</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>15 min read</span>
+                  <span>12 min read</span>
                   <span className='mx-2'>•</span>
                   <span className='bg-blue-500 px-2 py-1 rounded-full'>NEW</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/blog/ai-2025-healthcare-diagnosis-revolution' className='group'>
+            <Link href='/blog/ai-2025-multimodal-revolution' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Healthcare Diagnosis Revolution</h3>
-                <p className='text-sm opacity-90 mb-3'>Transforming medical care with AI-powered diagnostics</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎯</div>
+                <h3 className='text-lg font-semibold mb-2'>Multimodal AI Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>300% accuracy boost with advanced vision, language, and audio processing</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>18 min read</span>
+                  <span>15 min read</span>
                   <span className='mx-2'>•</span>
-                  <span className='bg-green-500 px-2 py-1 rounded-full'>NEW</span>
+                  <span className='bg-purple-500 px-2 py-1 rounded-full'>TRENDING</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/case-studies/ai-transformation-retail-giant-success-2025' className='group'>
+            <Link href='/case-studies/ai-2025-global-retail-transformation-success' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
-                <h3 className='text-lg font-semibold mb-2'>$2.8B Retail Transformation</h3>
-                <p className='text-sm opacity-90 mb-3'>Fortune 100 success story with 340% ROI and global scale</p>
+                <h3 className='text-lg font-semibold mb-2'>$2.8B Retail Success</h3>
+                <p className='text-sm opacity-90 mb-3'>Fortune 500 transformation with 30% cost reduction and 95% accuracy</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Case Study</span>
                   <span className='mx-2'>•</span>
