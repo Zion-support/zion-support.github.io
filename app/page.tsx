@@ -20,6 +20,7 @@ import UltraContentPromotionBanner2026 from '../components/UltraContentPromotion
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
+import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
@@ -53,6 +54,9 @@ export default function HomePage() {
         
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2026 */}
+        <DynamicContentCarousel2026 />
         
         {/* ULTRA CONTENT PROMOTION BANNER 2025 */}
         <UltraContentPromotionBanner2025 />
