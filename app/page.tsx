@@ -38,6 +38,13 @@ import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeura
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
+<<<<<<< HEAD
+=======
+import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
+import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
+>>>>>>> cursor/create-and-deploy-new-content-dcba
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
@@ -131,6 +138,66 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
+=======
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* CONTENT DISCOVERY WIDGET 2025 */}
+        <div className="py-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <ContentDiscoveryWidget2025 />
+          </div>
+        </div>
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2025 */}
+        <div className="py-16 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <DynamicContentCarousel2025 />
+          </div>
+        </div>
+        
+        {/* NEW REVOLUTIONARY CONTENT BANNER - LATEST */}
+        <NewContent2026RevolutionaryBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY */}
+        <InteractiveContentDiscovery2026 />
+        
+        {/* AI 2038 SINGULARITY PROMOTION BANNER - ULTIMATE CONTENT */}
+        <AI2038SingularityPromotionBanner />
+        
+        {/* AI 2037 TRANSCENDENT PROMOTION BANNER - LATEST CONTENT */}
+        <AI2037TranscendentPromotionBanner />
+        
+        {/* AI 2037 TRANSCENDENT CONTENT SHOWCASE */}
+        <AI2037TranscendentContentShowcase />
+        
+        {/* AI 2025 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025BreakthroughPromotionBanner />
+        
+        {/* AI 2025 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2025BreakthroughContentShowcase />
+        
+        {/* AI 2033 CONTENT PROMOTION BANNER */}
+        <AI2033ContentPromotionBanner />
+        
+        {/* AI 2033 CONTENT SHOWCASE */}
+        <AI2033ContentShowcase />
+        
+        {/* AI 2036 BREAKTHROUGH PROMOTION BANNER - LATEST CONTENT */}
+        <AI2036BreakthroughPromotionBanner />
+        
+        {/* AI 2036 CONTENT DISCOVERY WIDGET - FLOATING WIDGET */}
+        <AI2036ContentDiscoveryWidget />
+        
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
+        <NewContent2025BreakthroughBanner />
+        
+        {/* AI 2035 REVOLUTIONARY CONTENT SHOWCASE */}
+        <AI2035ContentShowcase />
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughBanner />
         
