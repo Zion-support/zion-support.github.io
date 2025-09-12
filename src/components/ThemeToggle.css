@@ -1,0 +1,66 @@
+/* ThemeToggle.css - Theme toggle component styling */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: var(--border-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.theme-toggle__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 0.5rem;
+    min-width: auto;
+  }
+
+  .theme-toggle__label {
+    display: none;
+  }
+}
+
+/* Dark mode specific styles */
+.dark .theme-toggle {
+  background: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+.dark .theme-toggle:hover {
+  background: var(--border-color);
+}

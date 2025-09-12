@@ -1,254 +1,112 @@
 #!/usr/bin/env node
-/**
- * SEO Optimization Script for Zion Tech Group
- * Analyzes and optimizes SEO aspects of the application
- */
 
 const fs = require('fs');
 const path = require('path');
 
-class SEOOptimizer {
-  constructor() {
-    this.report = {
-      timestamp: new Date().toISOString(),
-      optimizations: [],
-      recommendations: [],
-      metrics: {}
-    };
-  }
+function log(message, type = 'INFO') {
+  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+  console.log(`[${new Date().toISOString()}] [${type}] ${message}`);
+}
 
-  log(message, type = 'INFO') {
-    const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
-    console.log(`${icons[type]} ${message}`);
-  }
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
-  async optimize() {
-    this.log('Starting SEO Optimizer...', 'INFO');
-    
+function findFiles(dir, exts) {
+  if (!fs.existsSync(dir)) return [];
+  const results = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const p = path.join(dir, entry);
+    const stat = fs.statSync(p);
+    if (stat.isDirectory()) {
+      results.push(...findFiles(p, exts));
+    } else if (exts.includes(path.extname(entry).toLowerCase())) {
+      results.push(p);
+    }
+  }
+  return results;
+}
+
+function optimizeSEO(rootDir, report) {
+  const htmlFiles = findFiles(rootDir, ['.html', '.tsx', '.jsx']);
+  let optimizedCount = 0;
+
+  for (const file of htmlFiles) {
     try {
-      await this.analyzeMetaTags();
-      await this.analyzeHeadings();
-      await this.analyzeImages();
-      await this.analyzeLinks();
-      await this.analyzeSitemap();
-      this.generateReport();
-      
-      this.log('SEO optimization complete!', 'SUCCESS');
-      return true;
-    } catch (error) {
-      this.log(`SEO optimization failed: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async analyzeMetaTags() {
-    this.log('Analyzing meta tags...', 'INFO');
-    
-    const htmlFiles = this.findHtmlFiles('dist');
-    let metaIssues = 0;
-    
-    for (const file of htmlFiles) {
       const content = fs.readFileSync(file, 'utf8');
-      
-      // Check for title tag
-      if (!content.includes('<title>')) {
-        this.report.recommendations.push({
-          type: 'meta_tags',
-          message: `Missing title tag in ${file}`,
-          priority: 'high'
-        });
-        metaIssues++;
-      }
-      
-      // Check for meta description
-      if (!content.includes('name="description"')) {
-        this.report.recommendations.push({
-          type: 'meta_tags',
-          message: `Missing meta description in ${file}`,
-          priority: 'high'
-        });
-        metaIssues++;
-      }
-      
-      // Check for viewport meta tag
-      if (!content.includes('name="viewport"')) {
-        this.report.recommendations.push({
-          type: 'meta_tags',
-          message: `Missing viewport meta tag in ${file}`,
-          priority: 'medium'
-        });
-        metaIssues++;
-      }
-    }
-    
-    if (metaIssues === 0) {
-      this.log('Meta tags look good!', 'SUCCESS');
-    } else {
-      this.log(`Found ${metaIssues} meta tag issues`, 'WARNING');
-    }
-  }
+      let updated = content;
+      let modified = false;
 
-  async analyzeHeadings() {
-    this.log('Analyzing heading structure...', 'INFO');
-    
-    const htmlFiles = this.findHtmlFiles('dist');
-    let headingIssues = 0;
-    
-    for (const file of htmlFiles) {
-      const content = fs.readFileSync(file, 'utf8');
-      
-      // Check for h1 tag
-      const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
-      if (h1Count === 0) {
-        this.report.recommendations.push({
-          type: 'headings',
-          message: `Missing h1 tag in ${file}`,
-          priority: 'high'
-        });
-        headingIssues++;
-      } else if (h1Count > 1) {
-        this.report.recommendations.push({
-          type: 'headings',
-          message: `Multiple h1 tags (${h1Count}) in ${file}`,
-          priority: 'medium'
-        });
-        headingIssues++;
-      }
-    }
-    
-    if (headingIssues === 0) {
-      this.log('Heading structure looks good!', 'SUCCESS');
-    } else {
-      this.log(`Found ${headingIssues} heading issues`, 'WARNING');
-    }
-  }
-
-  async analyzeImages() {
-    this.log('Analyzing images...', 'INFO');
-    
-    const htmlFiles = this.findHtmlFiles('dist');
-    let imageIssues = 0;
-    
-    for (const file of htmlFiles) {
-      const content = fs.readFileSync(file, 'utf8');
-      const imgTags = content.match(/<img[^>]*>/gi) || [];
-      
-      for (const imgTag of imgTags) {
-        // Check for alt attribute
-        if (!imgTag.includes('alt=')) {
-          this.report.recommendations.push({
-            type: 'images',
-            message: `Image missing alt attribute in ${file}`,
-            priority: 'high'
-          });
-          imageIssues++;
+      // Add meta description if missing
+      if (
+        !content.includes('name="description"') &&
+        !content.includes('property="og:description"')
+      ) {
+        const metaDescription =
+          '    <meta name="description" content="Zion Tech Group - Advanced AI, IT Solutions, and Digital Transformation Services" />';
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${metaDescription}`);
+          modified = true;
         }
       }
-    }
-    
-    if (imageIssues === 0) {
-      this.log('Images look good!', 'SUCCESS');
-    } else {
-      this.log(`Found ${imageIssues} image issues`, 'WARNING');
-    }
-  }
 
-  async analyzeLinks() {
-    this.log('Analyzing links...', 'INFO');
-    
-    const htmlFiles = this.findHtmlFiles('dist');
-    let linkIssues = 0;
-    
-    for (const file of htmlFiles) {
-      const content = fs.readFileSync(file, 'utf8');
-      const links = content.match(/<a[^>]*>/gi) || [];
-      
-      for (const link of links) {
-        // Check for external links without rel="noopener"
-        if (link.includes('href="http') && !link.includes('rel=')) {
-          this.report.recommendations.push({
-            type: 'links',
-            message: `External link missing rel="noopener" in ${file}`,
-            priority: 'medium'
-          });
-          linkIssues++;
+      // Add Open Graph tags if missing
+      if (!content.includes('property="og:title"')) {
+        const ogTags = `    <meta property="og:title" content="Zion Tech Group" />
+    <meta property="og:description" content="Advanced AI, IT Solutions, and Digital Transformation Services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />`;
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${ogTags}`);
+          modified = true;
         }
       }
-    }
-    
-    if (linkIssues === 0) {
-      this.log('Links look good!', 'SUCCESS');
-    } else {
-      this.log(`Found ${linkIssues} link issues`, 'WARNING');
-    }
-  }
 
-  async analyzeSitemap() {
-    this.log('Analyzing sitemap...', 'INFO');
-    
-    if (fs.existsSync('dist/sitemap.xml')) {
-      this.log('Sitemap found!', 'SUCCESS');
-      this.report.optimizations.push({
-        type: 'sitemap',
-        message: 'Sitemap.xml is present'
-      });
-    } else {
-      this.report.recommendations.push({
-        type: 'sitemap',
-        message: 'Consider adding a sitemap.xml',
-        priority: 'medium'
-      });
-    }
-    
-    if (fs.existsSync('dist/robots.txt')) {
-      this.log('Robots.txt found!', 'SUCCESS');
-      this.report.optimizations.push({
-        type: 'robots',
-        message: 'robots.txt is present'
-      });
-    } else {
-      this.report.recommendations.push({
-        type: 'robots',
-        message: 'Consider adding a robots.txt',
-        priority: 'low'
-      });
-    }
-  }
-
-  findHtmlFiles(dir) {
-    const htmlFiles = [];
-    
-    if (!fs.existsSync(dir)) {
-      return htmlFiles;
-    }
-    
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      if (file.isDirectory()) {
-        htmlFiles.push(...this.findHtmlFiles(fullPath));
-      } else if (file.isFile() && file.name.endsWith('.html')) {
-        htmlFiles.push(fullPath);
+      if (modified) {
+        fs.writeFileSync(file, updated);
+        optimizedCount++;
+        report.actions.push(`Optimized SEO for ${path.basename(file)}`);
       }
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${file}: ${e.message}`);
     }
-    
-    return htmlFiles;
   }
 
-  generateReport() {
-    const reportPath = 'seo-optimization-report.json';
-    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
-    this.log(`SEO report saved to ${reportPath}`, 'SUCCESS');
-  }
+  report.actions.push(`Optimized SEO for ${optimizedCount} files`);
 }
 
-// Run if called directly
-if (require.main === module) {
-  const optimizer = new SEOOptimizer();
-  optimizer.optimize().then(success => {
-    process.exit(success ? 0 : 1);
-  });
+function main() {
+  const root = process.cwd();
+  const timestamp = Date.now();
+  const report = {
+    timestamp,
+    actions: [],
+    modifiedFiles: [],
+    errors: [],
+  };
+
+  log('Starting SEO Optimizer');
+
+  ensureDir(path.join(root, 'automation-reports'));
+
+  // Optimize SEO in src/ directory
+  optimizeSEO(path.join(root, 'src'), report);
+
+  const outFile = path.join(
+    root,
+    `automation-reports/seo-optimizer-report-${timestamp}.json`
+  );
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+
+  log(
+    `SEO optimization complete. Report: ${path.basename(outFile)}`,
+    'SUCCESS'
+  );
 }
 
-module.exports = SEOOptimizer;
+try {
+  main();
+} catch (e) {
+  log(`SEO optimizer failed: ${e.message}`, 'ERROR');
+  process.exit(1);
+}

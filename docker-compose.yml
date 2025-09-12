@@ -1,13 +1,19 @@
 version: '3.9'
 services:
-  devnet:
-    build: .
-    ports:
-      - '3000:3000'
+  postgres:
+    image: postgres:16
     environment:
-      - DEVNET=1
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-    command: npm run dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: zion
+    ports:
+      - '5432:5432'
     volumes:
-      - .:/app
-      - /app/node_modules
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+  redis:
+    image: redis:7
+    ports:
+      - '6379:6379'
+volumes:
+  pgdata:

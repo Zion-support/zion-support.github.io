@@ -1,114 +1,102 @@
-import React from 'react';
 
-const solutions = [];
+import React from 'react';
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-foreground mb-8">
             About Zion Tech Group
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Pioneering the future of technology with innovative solutions and cutting-edge expertise
+          <p className="text-xl text-muted-foreground mb-12">
+            Empowering businesses with cutting-edge technology solutions
           </p>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          <div className="grid md:grid-cols-2 gap-12 text-left">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg text-slate-300 mb-6">
-                At Zion Tech Group, we are committed to pushing the boundaries of what's possible 
-                with technology. Our mission is to deliver innovative solutions that transform 
-                businesses and create lasting value for our clients.
+              <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+              <p className="text-muted-foreground mb-6">
+                To democratize access to world-class technology talent and services, 
+                enabling businesses of all sizes to compete in the digital economy.
               </p>
-              <p className="text-lg text-slate-300">
-                We believe in the power of artificial intelligence, quantum computing, and 
-                cybersecurity to solve complex challenges and drive meaningful change in the world.
+              
+              <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+              <p className="text-muted-foreground mb-6">
+                We connect businesses with verified tech professionals, provide 
+                24/7 IT support, and deliver innovative AI-powered solutions 
+                that drive growth and efficiency.
               </p>
             </div>
-            <div className="bg-slate-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold text-white mb-4">Our Values</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2"></span>
-                  <span className="text-slate-300">Innovation and Excellence</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2"></span>
-                  <span className="text-slate-300">Client-Centric Approach</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2"></span>
-                  <span className="text-slate-300">Ethical Technology Use</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2"></span>
-                  <span className="text-slate-300">Continuous Learning</span>
-                </li>
-              </ul>
+            
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">Global Talent Network</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Access to professionals from 50+ countries
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">24/7 Support</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Round-the-clock technical assistance
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">AI-Powered Solutions</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Cutting-edge artificial intelligence services
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">Verified Professionals</h3>
+                    <p className="text-sm text-muted-foreground">
+                      All talent is thoroughly vetted and certified
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-16">
+            <h2 className="text-2xl font-semibold mb-8">Our Values</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3">Innovation</h3>
+                <p className="text-muted-foreground">
+                  We stay ahead of technology trends to deliver cutting-edge solutions.
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3">Quality</h3>
+                <p className="text-muted-foreground">
+                  We maintain the highest standards in all our services and partnerships.
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3">Trust</h3>
+                <p className="text-muted-foreground">
+                  We build lasting relationships based on transparency and reliability.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Our Team
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold text-white mb-2">AI Specialists</h3>
-              <p className="text-slate-300">Expert in machine learning and artificial intelligence</p>
-            </div>
-            <div className="text-center">
-              <div className="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold text-white mb-2">Quantum Engineers</h3>
-              <p className="text-slate-300">Leading quantum computing research and development</p>
-            </div>
-            <div className="text-center">
-              <div className="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold text-white mb-2">Security Experts</h3>
-              <p className="text-slate-300">Cybersecurity professionals protecting digital assets</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-slate-300">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
-              <div className="text-slate-300">Expert Team Members</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
-              <div className="text-slate-300">Years of Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">100%</div>
-              <div className="text-slate-300">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

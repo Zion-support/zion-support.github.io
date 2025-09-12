@@ -1,73 +1,99 @@
-import React from 'react';
 import Head from 'next/head';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
-  Building, Award, Lock, Server, Network, Monitor
-} from 'lucide-react';
 
-export default function HomePage() {
+export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentService, setCurrentService] = useState(0);
+
+  const services = [
+    {
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence for business transformation",
+      icon: "🤖",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum technology solutions",
+      icon: "⚛️",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced security and threat protection",
+      icon: "🔒",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions for modern businesses",
+      icon: "☁️",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  useEffect(() => {
+    setIsLoaded(true);
+    const interval = setInterval(() => {
+      setCurrentService((prev) => (prev + 1) % services.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Head>
-        <title>Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
-        <meta name="description" content="Zion Tech Group leads the future with revolutionary quantum AI solutions, autonomous systems, and cutting-edge technology platforms. Transform your business with next-generation technology." />
-        <meta name="keywords" content="Zion Tech Group, quantum AI, autonomous systems, technology solutions, AI innovation, quantum computing" />
+        <title>Zion Tech Group - Leading Technology Solutions</title>
+        <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions including AI, quantum computing, cybersecurity, and cloud infrastructure." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Navigation */}
-        <nav className="bg-black/20 backdrop-blur-md border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
-                </div>
-              </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
-                  <Link href="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium">
-                    Home
-                  </Link>
-                  <Link href="/zion-tech-group" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    About
-                  </Link>
-                  <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    Contact
-                  </Link>
-                </div>
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold text-white">Zion Tech Group</h1>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
+                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
               </div>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        {/* Hero Section */}
+      {/* Hero Section */}
+      <main className="pt-16">
         <div className="relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
               <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                    <span className="block">Revolutionary</span>
-                    <span className="block text-purple-400">Quantum AI</span>
-                    <span className="block">Solutions</span>
+                    <span className="block">Transform Your Business</span>
+                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                      With Next-Gen Tech
+                    </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Zion Tech Group leads the future with cutting-edge quantum AI technology, autonomous systems, and revolutionary platforms that transform businesses and industries.
+                    Zion Tech Group delivers cutting-edge technology solutions that drive innovation, 
+                    enhance security, and accelerate your digital transformation journey.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md shadow">
-                      <Link href="/contact" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 md:py-4 md:text-lg md:px-10">
+                      <Link href="/contact" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 md:py-4 md:text-lg md:px-10">
                         Get Started
                       </Link>
                     </div>
                     <div className="mt-3 sm:mt-0 sm:ml-3">
-                      <Link href="/zion-tech-group" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-700 bg-purple-100 hover:bg-purple-200 md:py-4 md:text-lg md:px-10">
+                      <Link href="/services" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-300 bg-blue-900/20 hover:bg-blue-900/30 md:py-4 md:text-lg md:px-10">
                         Learn More
                       </Link>
                     </div>
@@ -78,141 +104,93 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Features Section */}
+        {/* Services Showcase */}
         <div className="py-12 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
-              <h2 className="text-base text-purple-400 font-semibold tracking-wide uppercase">Technology</h2>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
-                Next-Generation Solutions
-              </p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-300 lg:mx-auto">
-                Our cutting-edge technology stack delivers unprecedented performance and capabilities.
+            <div className="text-center">
+              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                Our Core Services
+              </h2>
+              <p className="mt-4 text-lg text-gray-300">
+                Delivering innovative solutions across the technology spectrum
               </p>
             </div>
-
-            <div className="mt-10">
-              <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                <div className="relative">
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                    <Brain className="h-6 w-6" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-white">Quantum AI Intelligence</p>
-                  <p className="mt-2 ml-16 text-base text-gray-300">
-                    Revolutionary quantum computing algorithms that solve complex problems in seconds, not years.
-                  </p>
+            <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className={`relative p-6 rounded-lg bg-gradient-to-br ${service.color} hover:scale-105 transition-transform duration-300 cursor-pointer`}
+                  onClick={() => setCurrentService(index)}
+                >
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                  <p className="text-white/90 text-sm">{service.description}</p>
                 </div>
-
-                <div className="relative">
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                    <Zap className="h-6 w-6" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-white">Autonomous Systems</p>
-                  <p className="mt-2 ml-16 text-base text-gray-300">
-                    Self-learning, self-optimizing systems that continuously improve and adapt to changing environments.
-                  </p>
-                </div>
-
-                <div className="relative">
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                    <Shield className="h-6 w-6" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-white">Advanced Security</p>
-                  <p className="mt-2 ml-16 text-base text-gray-300">
-                    Quantum-resistant encryption and AI-powered threat detection for unparalleled security.
-                  </p>
-                </div>
-
-                <div className="relative">
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                    <Globe className="h-6 w-6" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-white">Global Scale</p>
-                  <p className="mt-2 ml-16 text-base text-gray-300">
-                    Distributed quantum networks that operate seamlessly across continents and time zones.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-purple-600">
-          <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              <span className="block">Ready to Transform Your Business?</span>
-            </h2>
-            <p className="mt-4 text-lg leading-6 text-purple-100">
-              Join the quantum revolution and discover how Zion Tech Group can accelerate your success.
-            </p>
-            <div className="mt-8">
-              <Link href="/contact" className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 sm:w-auto">
-                Contact Us Today
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <footer className="bg-black/40">
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-              <div className="space-y-8 xl:col-span-1">
-                <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
-                <p className="text-gray-300 text-base">
-                  Leading the future with revolutionary quantum AI solutions and autonomous systems.
+        {/* Featured Service */}
+        <div className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+              <div>
+                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                  {services[currentService].title}
+                </h2>
+                <p className="mt-4 text-lg text-gray-300">
+                  {services[currentService].description}
                 </p>
-              </div>
-              <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                    <ul className="mt-4 space-y-4">
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          Quantum AI
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          Autonomous Systems
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          Technology Platforms
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                    <ul className="mt-4 space-y-4">
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          About
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/contact" className="text-base text-gray-300 hover:text-white">
-                          Contact
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="mt-8">
+                  <Link href="/services" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                    Explore Services
+                  </Link>
                 </div>
               </div>
-            </div>
-            <div className="mt-12 border-t border-gray-700 pt-8">
-              <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2025 Zion Tech Group. All rights reserved.
-              </p>
+              <div className="mt-8 lg:mt-0">
+                <div className="text-8xl text-center">{services[currentService].icon}</div>
+              </div>
             </div>
           </div>
-        </footer>
-      </div>
-    </>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-black/40 border-t border-white/10">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+              <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
+              <p className="mt-4 text-gray-300">
+                Leading the way in technological innovation and digital transformation.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <p className="text-center text-gray-400">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }

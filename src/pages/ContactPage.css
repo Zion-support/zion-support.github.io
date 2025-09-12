@@ -1,0 +1,249 @@
+/* ContactPage.css - Contact page styling */
+
+.contact-page {
+  padding: 2rem 0;
+  min-height: 80vh;
+}
+
+.contact-page__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-page__subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-page__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-page__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-info__description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.contact-method:hover {
+  background: var(--surface-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-method__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+}
+
+.contact-method__content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-method__content p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contact-page__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .contact-page__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-page__info {
+    order: 2;
+  }
+
+  .contact-page__form {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 1rem 0;
+  }
+
+  .contact-page__header {
+    margin-bottom: 2rem;
+  }
+
+  .contact-page__title {
+    font-size: 2rem;
+  }
+
+  .contact-page__subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-page__content {
+    gap: 1.5rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-info__title {
+    font-size: 1.25rem;
+  }
+
+  .contact-methods {
+    gap: 1rem;
+  }
+
+  .contact-method {
+    padding: 0.875rem;
+  }
+
+  .contact-method__icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page__title {
+    font-size: 1.75rem;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .contact-method__icon {
+    align-self: center;
+  }
+}
+
+/* Dark mode adjustments */
+.dark .contact-info {
+  background: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+.dark .contact-method {
+  background: var(--background-color);
+  border-color: var(--border-color);
+}
+
+.dark .contact-method:hover {
+  background: var(--surface-color);
+}
+
+/* Animation enhancements */
+.contact-method {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.contact-method:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contact-method:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.contact-method:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .contact-method {
+    animation: none;
+  }
+
+  .contact-method:hover {
+    transform: none;
+  }
+}

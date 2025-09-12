@@ -1,136 +1,137 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
-const features = [];
-const solutions = [];
+import { 
+  Brain, 
+  Users, 
+  Globe, 
+  Shield, 
+  Zap, 
+  Award,
+  TrendingUp,
+  Clock
+} from 'lucide-react';
 
-    "description": "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
-  },;
-  {;
-    "icon": "🔒",;
-    "title": "Enterprise Security",;
-    "description": "Bank-level security protocols and compliance standards to protect your valuable data";
-  },;
-  {;
-    "icon": "🌐",;
-    "title": "Global Scalability",;
-    "description": "Solutions that scale seamlessly from startup to enterprise across multiple regions";
-  },;
-  {;
-    "icon": "🤖",;
-    "title": "AI-Powered Intelligence",;
-    "description": "Smart automation and predictive analytics that adapt to your business requirements";
-  }, {;
-    "icon": "📊",;
-    "title": "Real-Time Analytics",;
-    "description": "Comprehensive insights and reporting to make data-driven decisions instantly";
-  };
+const features = [
+  {
+    icon: Brain,
+    title: "AI-Powered Matching",
+    description: "Advanced algorithms connect you with the perfect tech talent and services",
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    icon: Users,
+    title: "Global Talent Network",
+    description: "Access to verified professionals from around the world",
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    icon: Globe,
+    title: "24/7 Global Services",
+    description: "Round-the-clock IT support and technical services worldwide",
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    icon: Shield,
+    title: "Verified & Secure",
+    description: "All providers are thoroughly vetted and background-checked",
+    color: "from-orange-500 to-red-500"
+  },
+  {
+    icon: Zap,
+    title: "Lightning Fast",
+    description: "Get matched with providers in under 60 seconds",
+    color: "from-yellow-500 to-orange-500"
+  },
+  {
+    icon: Award,
+    title: "Quality Guaranteed",
+    description: "Satisfaction guaranteed or your money back",
+    color: "from-indigo-500 to-purple-500"
+  },
+  {
+    icon: TrendingUp,
+    title: "Market Insights",
+    description: "Real-time pricing and market trend analysis",
+    color: "from-teal-500 to-blue-500"
+  },
+  {
+    icon: Clock,
+    title: "Instant Support",
+    description: "Live chat and emergency response available 24/7",
+    color: "from-pink-500 to-rose-500"
+  }
 ];
-;
-      };
-    };
-  };
-;
-  const _itemVariants = {;
-  "hidden": "{ "opacity": 0", "y": "3 0",;
-  "scale": "0.95;
-"},;
-    "visible": "{;
-      "opacity": 1",;
-      "y": "0",;
-      "scale": "1",;
-      "transition": "{;
-        "duration": 0.6",;
-        "ease": "easeOut";
-      };
-    };
-  };
-;
-  const _achievementVariants = {;
-  "hidden": "{ "opacity": 0",;
-  "scale": "0.8;
-"},;
-    "visible": "{;
-      "opacity": 1",;
-      "scale": "1",;
-      "transition": "{ "duration": 0.5 "};
-    };
-  };
-;
-  const _techVariants = {;
-  "hidden": "{ "opacity": 0",;
-  "x": "-20;
-"},;
-    "visible": "{;
-      "opacity": 1",;
-      "x": "0",;
-      "transition": "{ "duration": 0.5 "};
-    };
-  };
-export function FeatureHighlights("props": "any) {;
-  return (";
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <div className="max-w-7xl mx-auto px-6">;
-        <motion.div          className="text-center mb-16";
-          initial = {;
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
-        >";
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";
-            <Award className="w-4 h-4"   />            <span>Why Choose Zion</span>;
-          </div>;
-";
-          <h2 className="text-3xl "md": "tex t-4xl "lg": tex t-5xl font-bold text-white mb-6">;
-            Built for the Future of Work;
-          </h2>;
-";
-          <p className="text-lg "md": tex t-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">;
-            Experience the next generation of talent marketplace with cutting-edge AI",;
-            global reach, and enterprise-grade security.</p>;
-        </motion.div>;
-";
-        <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8">;
-          {features.map((feature", index (;
-            <motion.div;
-              key={index}
-              variants={itemVariants}
-              whileHover={{;
-                "y": "-5",;
-                "scale": "1.02",;
-                "transition": "{ "duration": 0.3 "}
-              }}";
-              className="group";
-";
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 "hover": "borde r-white/20 transition-all duration-300">;
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color"} rounded-lg flex items-center justify-center mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>`;
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />;
-                </div>;
-";
-                <h3 className="text-xl font-semibold text-white mb-2 group-"hover": "tex t-blue-400 transition-colors duration-300">;
-                  {feature.title"}
-                </h3>;
-";
-                <p className="text-gray-400 group-"hover": "tex t-gray-300 transition-colors duration-300">;
-                  {feature.description"}
-                </p>;
-              </div>;
-              <h3 className="text-xl font-bold text-white mb-3 group-"hover": "tex t-blue-400 transition-colors duration-200">;
-                {feature.title"}
-              </h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;                y: -5,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}"
-              className="group"
-"
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300`}>`
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
 
+export function FeatureHighlights() {
+  return (
+    <section className="py-20 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Experience the future of tech services with our cutting-edge platform designed for businesses and individuals alike.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group"
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300">
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-zion-slate-light mb-6">
+              Join thousands of satisfied customers who trust Zion Tech Group for their technology needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                Start Your Project
+              </button>
+              <button className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                View Services
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

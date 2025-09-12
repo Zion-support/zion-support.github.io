@@ -1,1 +1,0 @@
-// Function to find all files with merge conflicts;
