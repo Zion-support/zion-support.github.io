@@ -37,6 +37,101 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content Update Banner - Top Priority */}
+        <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-6">
+                <span className="text-lg font-bold">🚀 BREAKTHROUGH CONTENT UPDATE - JANUARY 2025</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                🎉 30+ New AI Resources Just Released!
+              </h2>
+              <p className="text-2xl md:text-3xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
+                Discover our latest breakthrough content: Advanced AI Architecture, Autonomous Systems Mastery, 
+                $200M Manufacturing Success Case Study, plus the complete AI Implementation Master Guide 2026. 
+                Get expert insights on the technologies transforming 2025 and beyond.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+                <Link
+                  href="/content-showcase"
+                  className="bg-white text-indigo-600 px-10 py-5 rounded-xl font-bold hover:bg-gray-100 transition-colors text-xl shadow-lg"
+                >
+                  🎯 Explore All New Content
+                </Link>
+                <Link
+                  href="/blog/ai-2025-advanced-ai-architecture"
+                  className="border-2 border-white text-white px-10 py-5 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-colors text-xl"
+                >
+                  🚀 Read Advanced Architecture Guide
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-10 py-5 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-colors text-xl"
+                >
+                  📚 Download Master Guide (200+ pages)
+                </Link>
+              </div>
+              
+              {/* Featured Content Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🏗️</div>
+                    <h3 className="text-xl font-bold mb-2">Advanced AI Architecture</h3>
+                    <p className="text-sm opacity-90 mb-3">Microservices, event-driven design, and distributed AI systems</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>25 min read</span>
+                      <span className="mx-2">•</span>
+                      <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded">NEW</span>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/blog/ai-2025-advanced-automation" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                    <h3 className="text-xl font-bold mb-2">Advanced AI Automation</h3>
+                    <p className="text-sm opacity-90 mb-3">Complete implementation guide with 40-60% cost reduction</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>22 min read</span>
+                      <span className="mx-2">•</span>
+                      <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded">NEW</span>
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">💰</div>
+                    <h3 className="text-xl font-bold mb-2">$200M Manufacturing Success</h3>
+                    <p className="text-sm opacity-90 mb-3">Fortune 500 case study with 60% efficiency gains</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>Case Study</span>
+                      <span className="mx-2">•</span>
+                      <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded">NEW</span>
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/resources/ai-implementation-master-guide-2026" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 className="text-xl font-bold mb-2">AI Master Guide 2026</h3>
+                    <p className="text-sm opacity-90 mb-3">200+ page comprehensive implementation framework</p>
+                    <div className="flex items-center text-xs opacity-75">
+                      <span>Free Download</span>
+                      <span className="mx-2">•</span>
+                      <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded">NEW</span>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Enhanced Content Promotion Banner */}
         <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>

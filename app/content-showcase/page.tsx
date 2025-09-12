@@ -5,6 +5,26 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "Advanced AI Architecture Patterns for 2025: Building Scalable, Resilient Systems",
+      description: "Master advanced AI architecture patterns including microservices, event-driven design, and distributed AI systems. Complete guide with implementation strategies and real-world examples.",
+      href: "/blog/ai-2025-advanced-ai-architecture",
+      icon: "🏗️",
+      category: "AI Architecture",
+      readTime: "25 min read",
+      date: "Jan 28, 2025",
+      isNew: true
+    },
+    {
+      title: "Advanced AI Automation for 2025: Complete Implementation Guide",
+      description: "Master advanced AI automation strategies including RPA, intelligent process automation, and autonomous systems. Real case studies and implementation frameworks for enterprise success.",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: "🤖",
+      category: "AI Automation",
+      readTime: "22 min read",
+      date: "Jan 28, 2025",
+      isNew: true
+    },
+    {
       title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
       description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, real-world implementations, and the future of quantum-enhanced artificial intelligence.",
       href: "/blog/ai-2025-quantum-computing-breakthrough",
@@ -44,6 +64,16 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
+      description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings and 60% efficiency gains through autonomous AI systems. Complete implementation details and ROI analysis.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      icon: "💰",
+      category: "Autonomous Systems",
+      result: "$200M Savings",
+      date: "Jan 28, 2025",
+      isNew: true
+    },
+    {
       title: "AI 2025: Autonomous Manufacturing Revolution - $500M Success Story",
       description: "Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems implementation. Complete transformation story with detailed ROI analysis.",
       href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
@@ -73,6 +103,16 @@ export default function ContentShowcasePage() {
   ];
 
   const newResources = [
+    {
+      title: "AI Implementation Master Guide 2026: Complete Framework for Enterprise Success",
+      description: "The definitive guide to AI implementation in 2026. 200+ page comprehensive framework with checklists, templates, case studies, and step-by-step implementation strategies for enterprise AI success.",
+      href: "/resources/ai-implementation-master-guide-2026",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 28, 2025",
+      isNew: true
+    },
     {
       title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across your organization.",
