@@ -33,13 +33,17 @@ const EnhancedNavigation: React.FC = () => {
       href: '/content-showcase',
       icon: '📚',
       isNew: true,
-      badge: '30+ New',
+      badge: 'Revolutionary 2026',
       dropdown: [
+        { label: 'AI Innovation Hub 2026', href: '/ai-innovation-hub-2026', isNew: true, isHot: true },
+        { label: 'Technology Showcase 2026', href: '/revolutionary-technology-showcase-2026', isNew: true, isHot: true },
+        { label: 'AI Mastery Academy 2026', href: '/ai-mastery-academy-2026', isNew: true, isHot: true },
+        { label: 'Revolutionary Resources 2026', href: '/revolutionary-resources-2026', isNew: true, isHot: true },
         { label: 'All Content', href: '/content-showcase', isNew: true },
-        { label: 'AI Transformation 2025', href: '/blog/ai-transformation-2025', isNew: true, isHot: true },
-        { label: 'Edge Computing Future', href: '/blog/edge-computing-future', isNew: true, isHot: true },
-        { label: 'AI Automation Success', href: '/case-studies/ai-automation-manufacturing', isNew: true, isHot: true },
-        { label: 'AI Implementation Guide', href: '/resources/ai-implementation-guide', isNew: true, isHot: true },
+        { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
+        { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
+        { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
+        { label: 'AI Implementation Master Guide 2026', href: '/resources/ai-implementation-master-guide-2026', isNew: true, isHot: true },
         { label: 'Blog Articles', href: '/blog', isNew: true },
         { label: 'Case Studies', href: '/case-studies', isNew: true },
         { label: 'Resources', href: '/resources', isNew: true },
@@ -60,30 +64,30 @@ const EnhancedNavigation: React.FC = () => {
 
   const featuredContent = [
     {
-      title: "AI Advanced Automation 2025",
-      description: "Complete enterprise implementation guide",
-      href: "/blog/ai-2025-advanced-automation",
-      icon: "🤖",
+      title: "AI Innovation Hub 2026",
+      description: "Revolutionary AI breakthroughs and innovations",
+      href: "/ai-innovation-hub-2026",
+      icon: "🚀",
       isNew: true
     },
     {
-      title: "AI Cybersecurity Threats 2025",
-      description: "Complete defense strategy guide",
-      href: "/blog/ai-2025-cybersecurity-threats",
-      icon: "🛡️",
+      title: "Technology Showcase 2026",
+      description: "Interactive demos of breakthrough technologies",
+      href: "/revolutionary-technology-showcase-2026",
+      icon: "⚡",
       isNew: true
     },
     {
-      title: "$200M Manufacturing Success",
-      description: "Autonomous AI systems case study",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      icon: "💰",
+      title: "AI Mastery Academy 2026",
+      description: "World-class AI education and certification",
+      href: "/ai-mastery-academy-2026",
+      icon: "🎓",
       isNew: true
     },
     {
-      title: "AI Implementation Master Guide",
-      description: "200+ page comprehensive resource",
-      href: "/resources/ai-implementation-master-guide-2026",
+      title: "Revolutionary Resources 2026",
+      description: "Comprehensive AI resource library",
+      href: "/revolutionary-resources-2026",
       icon: "📚",
       isNew: true
     }

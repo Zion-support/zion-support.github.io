@@ -39,6 +39,38 @@ export default function ContentShowcase() {
           </div>
         </div>
 
+        {/* Latest Content Drop */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white mb-12">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔥 JANUARY 2026 CONTENT DROP</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🚀 3 New High-Value Resources Just Released!
+              </h2>
+              <p className="text-lg opacity-90 mb-6 max-w-4xl mx-auto">
+                Master enterprise AI implementation with our complete toolkit, learn from real-world success stories, 
+                and discover proven strategies that deliver measurable results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                >
+                  📚 Download Master Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-enterprise-implementation-masterclass"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  🎯 Start Masterclass
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Featured Content */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🔥 Featured This Week</h2>
@@ -113,20 +145,20 @@ export default function ContentShowcase() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2025-advanced-automation" className="group">
+            <Link href="/blog/ai-2025-multimodal-revolution" className="group">
               <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200">
-                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
                 <div className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  TRENDING
+                  NEW
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                  AI 2025 Advanced Automation
+                  AI 2025 Multimodal Revolution
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
-                  The future of intelligent business operations with 300% efficiency gains and 40% cost reduction.
+                  The future of human-computer interaction with seamless vision, language, and audio processing.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>32 min read</span>
+                  <span>15 min read</span>
                   <span className="text-orange-600 font-medium group-hover:underline">Read →</span>
                 </div>
               </div>
@@ -151,20 +183,20 @@ export default function ContentShowcase() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-enterprise-transformation-2025" className="group">
+            <Link href="/blog/ai-2025-automation-trends" className="group">
               <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200">
-                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
+                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
                 <div className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  POPULAR
+                  NEW
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Enterprise Transformation 2025
+                  AI Automation Trends 2025
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
-                  Complete implementation guide with 340% ROI and real case studies from successful transformations.
+                  The future of intelligent business operations with 300% productivity improvements and 40% cost reductions.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>18 min read</span>
+                  <span>12 min read</span>
                   <span className="text-blue-600 font-medium group-hover:underline">Read →</span>
                 </div>
               </div>
@@ -215,11 +247,14 @@ export default function ContentShowcase() {
             <Link href="/case-studies/ai-manufacturing-transformation-success-2025" className="group">
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-blue-200">
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                <div className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
+                  NEW
+                </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   Manufacturing AI Success
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
-                  40% cost reduction and 60% faster processing through intelligent automation.
+                  40% cost reduction and 60% efficiency gains through comprehensive AI transformation.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
@@ -228,7 +263,7 @@ export default function ContentShowcase() {
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-600">60%</div>
-                    <div className="text-xs text-gray-600">Faster Processing</div>
+                    <div className="text-xs text-gray-600">Efficiency Gains</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between text-sm text-gray-600">
@@ -299,13 +334,13 @@ export default function ContentShowcase() {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-blue-200">
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">📚</div>
                 <div className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  FREE DOWNLOAD
+                  NEW
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Implementation Master Guide
+                  AI Implementation Master Guide 2025
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
-                  Comprehensive 150+ page guide with detailed strategies and best practices.
+                  Complete 150+ page blueprint for enterprise AI success with templates and frameworks.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-600">
                   <span>150+ Pages</span>
