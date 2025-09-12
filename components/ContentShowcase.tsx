@@ -203,7 +203,7 @@ export default function ContentShowcase() {
       </div>
     </section>
   );
-};
+}
 
 // Featured content for homepage
 export const featuredContent = [
