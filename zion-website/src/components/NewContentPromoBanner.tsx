@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'CS-llm-cost-2025',
+      title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
+      description: 'Case study: Quantization, KV cache, and batching cut cost by 38% and p95 by 27%.',
+      href: '/case-studies/ai-2025-llm-inference-cost-reduction',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '70',
       title: 'Enterprise RAG Platforms 2025: Architecture, Quality, and Ops',
       description: 'Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.',
@@ -99,6 +110,7 @@ const NewContentPromoBanner = ({
       date: 'Sep 12, 2025',
       category: 'Agents'
     },
+    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
