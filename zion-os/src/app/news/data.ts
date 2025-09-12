@@ -10,6 +10,17 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "agent-marketplaces-strategy-guide",
+    emoji: "🛒",
+    title: "New Guide: Agent Marketplaces Strategy for 2025",
+    excerpt:
+      "We published a strategy guide on launching enterprise agent marketplaces: architecture, monetization, and governance.",
+    date: "2025-09-12",
+    gradient: "from-violet-600 to-fuchsia-600",
+    content:
+      "Explore our latest guide covering the reference architecture, monetization patterns, safety guardrails, and observability required to ship enterprise agent marketplaces.",
+  },
+  {
     slug: "zion-os-1-5-realtime-agents",
     emoji: "🛰️",
     title: "Zion OS 1.5: Real-Time Agents with First-Class Observability",
@@ -118,6 +129,39 @@ export const newsArticles: NewsArticle[] = [
     gradient: "from-orange-600 to-red-600",
     content:
       "Partners gain access to white-label modules, sandbox environments, and dedicated solution architects.",
+  },
+  {
+    slug: "new-guides-ai-governance-security-web3",
+    emoji: "📚",
+    title: "Five New Guides: Deployment, Governance, Security, Observability, Web3",
+    excerpt:
+      "We released fresh how‑tos covering AI deployment, governance, security, observability, and enterprise Web3.",
+    date: "2025-09-12",
+    gradient: "from-violet-600 to-indigo-600",
+    content:
+      "Dive into our latest series of practical guides to accelerate safe AI rollouts and enterprise Web3 adoption.",
+  },
+  {
+    slug: "pricing-starter-bundles",
+    emoji: "💼",
+    title: "Starter Bundles Now Available",
+    excerpt:
+      "Fixed‑price entry packages for AI assistants, analytics, and Web3 foundations help teams get started fast.",
+    date: "2025-09-12",
+    gradient: "from-emerald-600 to-green-600",
+    content:
+      "Our starter bundles include scoped deliverables, evaluation harnesses, and governance templates to reduce risk.",
+  },
+  {
+    slug: "observability-best-practices",
+    emoji: "📈",
+    title: "Observability Best Practices for LLM Agents",
+    excerpt:
+      "New dashboards and tracing patterns help teams manage quality, cost, and safety at scale.",
+    date: "2025-09-12",
+    gradient: "from-pink-600 to-fuchsia-600",
+    content:
+      "We outline telemetry schemas, SLO strategies, and alerting playbooks for production agent systems.",
   },
 ];
 
