@@ -15,6 +15,36 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   {
+    title: "AI Enterprise Integration Success: 2025 Complete Guide",
+    description: "Master AI enterprise integration with proven strategies, real-world case studies, and step-by-step implementation frameworks for 2025 success.",
+    href: "/blog/ai-2025-enterprise-integration-success",
+    category: "Enterprise AI",
+    readTime: "25 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "300% ROI potential"
+  },
+  {
+    title: "AI Multimodal Revolution 2025: The Future of Human-Computer Interaction",
+    description: "Explore the groundbreaking multimodal AI revolution transforming how humans interact with technology through text, voice, images, and video in 2025.",
+    href: "/blog/ai-2025-multimodal-revolution",
+    category: "AI Innovation",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "🧠",
+    stats: "Revolutionary technology"
+  },
+  {
+    title: "AI Manufacturing Transformation: $75M Cost Savings Success Story",
+    description: "Discover how a global manufacturing company achieved $75M in annual savings and 85% efficiency gains through comprehensive AI transformation.",
+    href: "/case-studies/ai-manufacturing-transformation-2025",
+    category: "Case Study",
+    readTime: "22 min read",
+    isNew: true,
+    icon: "🏭",
+    stats: "$75M savings achieved"
+  },
+  {
     title: "AI Business Automation 2025: Complete Implementation Guide",
     description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
     href: "/blog/ai-business-automation-2025",
@@ -23,69 +53,39 @@ const featuredContent: ContentItem[] = [
     isNew: true,
     icon: "🤖",
     stats: "40% productivity boost"
-  },
-  {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
-  },
-  {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    category: "Case Study",
-    readTime: "18 min read",
-    isNew: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
-  },
-  {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-    href: "/resources/ai-implementation-master-guide-2025",
-    category: "Master Guide",
-    readTime: "150 pages",
-    isNew: true,
-    icon: "📚",
-    stats: "500+ companies using this"
   }
 ];
 
 const trendingContent: ContentItem[] = [
   {
-    title: "AI 2025 Predictions: The Future of AI in Business",
-    description: "The future of AI in business - key trends and predictions that will shape the industry in 2025 and beyond.",
-    href: "/blog/ai-2025-predictions",
-    category: "AI Trends",
-    readTime: "20 min read",
+    title: "AI Multimodal Revolution 2025: The Future of Human-Computer Interaction",
+    description: "Explore the groundbreaking multimodal AI revolution transforming how humans interact with technology through text, voice, images, and video in 2025.",
+    href: "/blog/ai-2025-multimodal-revolution",
+    category: "AI Innovation",
+    readTime: "18 min read",
     isTrending: true,
-    icon: "🔮",
-    stats: "Trending this week"
+    icon: "🧠",
+    stats: "Revolutionary technology"
   },
   {
-    title: "AI Automation Trends 2025: Transform Your Operations",
-    description: "Transform your business operations with the latest intelligent automation trends and proven implementation strategies.",
-    href: "/blog/ai-automation-trends-2025",
-    category: "Automation",
-    readTime: "16 min read",
+    title: "AI Enterprise Integration Success: 2025 Complete Guide",
+    description: "Master AI enterprise integration with proven strategies, real-world case studies, and step-by-step implementation frameworks for 2025 success.",
+    href: "/blog/ai-2025-enterprise-integration-success",
+    category: "Enterprise AI",
+    readTime: "25 min read",
     isTrending: true,
-    icon: "⚡",
-    stats: "300% efficiency gains"
+    icon: "🏢",
+    stats: "300% ROI potential"
   },
   {
-    title: "AI Enterprise Security 2025: Complete Implementation Guide",
-    description: "Complete implementation guide for securing AI systems in enterprise environments with proven security frameworks.",
-    href: "/blog/ai-enterprise-security-2025",
-    category: "Security",
-    readTime: "20 min read",
+    title: "AI Manufacturing Transformation: $75M Cost Savings Success Story",
+    description: "Discover how a global manufacturing company achieved $75M in annual savings and 85% efficiency gains through comprehensive AI transformation.",
+    href: "/case-studies/ai-manufacturing-transformation-2025",
+    category: "Case Study",
+    readTime: "22 min read",
     isTrending: true,
-    icon: "🛡️",
-    stats: "Enterprise-grade security"
+    icon: "🏭",
+    stats: "$75M savings achieved"
   }
 ];
 

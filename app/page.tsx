@@ -17,7 +17,8 @@ import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/Su
 import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -285,6 +286,12 @@ export default function HomePage() {
         showViewAll={true}
         viewAllHref="/blog"
       />
+
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner />
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
 
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
