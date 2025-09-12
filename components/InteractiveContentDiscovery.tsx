@@ -1,395 +1,272 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  TrendingUp, 
-  Star, 
-  Clock, 
-  Calendar, 
-  BookOpen, 
-  Download, 
-  Play,
-  ArrowRight,
-  X,
-  RefreshCw
-} from 'lucide-react';
 
 interface ContentItem {
   id: string;
   title: string;
   description: string;
   href: string;
-  icon: string;
+  type: 'blog' | 'case-study' | 'resource';
   category: string;
-  type: 'Article' | 'Case Study' | 'Free Download' | 'Video' | 'Webinar';
   readTime?: string;
-  publishDate: string;
-  author: string;
+  featured: boolean;
   tags: string[];
-  featured?: boolean;
-  trending?: boolean;
-  views?: number;
-  likes?: number;
 }
 
-interface InteractiveContentDiscoveryProps {
-  content: ContentItem[];
-  maxItems?: number;
-  showFilters?: boolean;
-  showSearch?: boolean;
-  autoRefresh?: boolean;
-  refreshInterval?: number;
-}
+const InteractiveContentDiscovery: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
 
-const InteractiveContentDiscovery: React.FC<InteractiveContentDiscoveryProps> = ({
-  content,
-  maxItems = 12,
-  showFilters = true,
-  showSearch = true,
-  autoRefresh = false,
-  refreshInterval = 30000
-}) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [sortBy, setSortBy] = useState('newest');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>(content);
+  const contentItems: ContentItem[] = [
+    {
+      id: '1',
+      title: 'AI 2025: Quantum Computing Breakthrough',
+      description: 'Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications and real-world implementations.',
+      href: '/blog/ai-2025-quantum-computing-breakthrough',
+      type: 'blog',
+      category: 'AI Innovations',
+      readTime: '22 min read',
+      featured: true,
+      tags: ['quantum computing', 'AI breakthrough', 'technology trends']
+    },
+    {
+      id: '2',
+      title: 'AI 2025: Neural Interface Revolution',
+      description: 'Discover how neural interfaces are revolutionizing human-AI interaction in 2025. Explore brain-computer interfaces and neural prosthetics.',
+      href: '/blog/ai-2025-neural-interface-revolution',
+      type: 'blog',
+      category: 'AI Innovations',
+      readTime: '20 min read',
+      featured: true,
+      tags: ['neural interfaces', 'BCI', 'human-AI interaction']
+    },
+    {
+      id: '3',
+      title: 'AI 2025: Autonomous Systems Mastery',
+      description: 'Master autonomous AI systems in 2025 with our comprehensive guide. Learn implementation strategies and real-world case studies.',
+      href: '/blog/ai-2025-autonomous-systems-mastery',
+      type: 'blog',
+      category: 'Implementation',
+      readTime: '25 min read',
+      featured: true,
+      tags: ['autonomous systems', 'AI implementation', 'automation']
+    },
+    {
+      id: '4',
+      title: 'AI 2025: Autonomous Manufacturing Revolution - $500M Success Story',
+      description: 'Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems.',
+      href: '/case-studies/ai-2025-autonomous-manufacturing-revolution',
+      type: 'case-study',
+      category: 'Case Studies',
+      featured: true,
+      tags: ['manufacturing', 'autonomous AI', 'ROI', 'case study']
+    },
+    {
+      id: '5',
+      title: 'AI Implementation Master Guide 2026',
+      description: 'Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, and best practices.',
+      href: '/resources/ai-implementation-master-guide-2026',
+      type: 'resource',
+      category: 'Resources',
+      featured: true,
+      tags: ['implementation guide', 'templates', 'best practices', 'free download']
+    },
+    {
+      id: '6',
+      title: 'AI Cybersecurity Checklist 2025',
+      description: 'Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems.',
+      href: '/resources/ai-cybersecurity-checklist-2025',
+      type: 'resource',
+      category: 'Security',
+      featured: false,
+      tags: ['cybersecurity', 'AI security', 'checklist', 'compliance']
+    },
+    {
+      id: '7',
+      title: 'AI Workforce Transformation Playbook 2025',
+      description: 'Complete reskilling strategies and implementation guides for the AI era. Transform your workforce for the future.',
+      href: '/resources/ai-workforce-transformation-playbook-2025',
+      type: 'resource',
+      category: 'Workforce',
+      featured: false,
+      tags: ['workforce transformation', 'reskilling', 'AI training', 'human resources']
+    },
+    {
+      id: '8',
+      title: 'AI Financial Services Transformation Success',
+      description: 'Complete case study: How a major bank achieved $50M savings and 300% ROI through strategic AI implementation.',
+      href: '/case-studies/ai-financial-services-transformation-2025',
+      type: 'case-study',
+      category: 'Case Studies',
+      featured: false,
+      tags: ['financial services', 'banking', 'ROI', 'transformation']
+    }
+  ];
 
   const categories = [
-    { id: 'all', name: 'All Categories', count: content.length },
-    { id: 'ai-automation', name: 'AI Automation', count: content.filter(c => c.category === 'ai-automation').length },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: content.filter(c => c.category === 'cybersecurity').length },
-    { id: 'case-studies', name: 'Case Studies', count: content.filter(c => c.category === 'case-studies').length },
-    { id: 'resources', name: 'Resources', count: content.filter(c => c.category === 'resources').length },
-    { id: 'trends', name: 'Trends & Insights', count: content.filter(c => c.category === 'trends').length }
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'AI Innovations', name: 'AI Innovations', count: contentItems.filter(item => item.category === 'AI Innovations').length },
+    { id: 'Implementation', name: 'Implementation', count: contentItems.filter(item => item.category === 'Implementation').length },
+    { id: 'Case Studies', name: 'Case Studies', count: contentItems.filter(item => item.category === 'Case Studies').length },
+    { id: 'Resources', name: 'Resources', count: contentItems.filter(item => item.category === 'Resources').length },
+    { id: 'Security', name: 'Security', count: contentItems.filter(item => item.category === 'Security').length },
+    { id: 'Workforce', name: 'Workforce', count: contentItems.filter(item => item.category === 'Workforce').length }
   ];
 
-  const types = [
-    { id: 'all', name: 'All Types', count: content.length },
-    { id: 'Article', name: 'Articles', count: content.filter(c => c.type === 'Article').length },
-    { id: 'Case Study', name: 'Case Studies', count: content.filter(c => c.type === 'Case Study').length },
-    { id: 'Free Download', name: 'Free Downloads', count: content.filter(c => c.type === 'Free Download').length },
-    { id: 'Video', name: 'Videos', count: content.filter(c => c.type === 'Video').length },
-    { id: 'Webinar', name: 'Webinars', count: content.filter(c => c.type === 'Webinar').length }
-  ];
-
-  const sortOptions = [
-    { id: 'newest', name: 'Newest First' },
-    { id: 'oldest', name: 'Oldest First' },
-    { id: 'trending', name: 'Most Trending' },
-    { id: 'featured', name: 'Featured' },
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'alphabetical', name: 'A-Z' }
-  ];
-
-  // Filter and sort content
   useEffect(() => {
-    let filtered = content.filter(item => {
-      const matchesSearch = searchTerm === '' || 
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      const matchesType = selectedType === 'all' || item.type === selectedType;
-      
-      return matchesSearch && matchesCategory && matchesType;
-    });
+    let filtered = contentItems;
 
-    // Sort content
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'newest':
-          return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-        case 'oldest':
-          return new Date(a.publishDate).getTime() - new Date(b.publishDate).getTime();
-        case 'trending':
-          return (b.trending ? 1 : 0) - (a.trending ? 1 : 0);
-        case 'featured':
-          return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        case 'popular':
-          return (b.views || 0) - (a.views || 0);
-        case 'alphabetical':
-          return a.title.localeCompare(b.title);
-        default:
-          return 0;
-      }
-    });
-
-    setFilteredContent(filtered.slice(0, maxItems));
-  }, [searchTerm, selectedCategory, selectedType, sortBy, content, maxItems]);
-
-  // Auto refresh
-  useEffect(() => {
-    if (autoRefresh) {
-      const interval = setInterval(() => {
-        setIsRefreshing(true);
-        setTimeout(() => setIsRefreshing(false), 1000);
-      }, refreshInterval);
-      return () => clearInterval(interval);
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(item => item.category === selectedCategory);
     }
-  }, [autoRefresh, refreshInterval]);
+
+    // Filter by search query
+    if (searchQuery) {
+      filtered = filtered.filter(item => 
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+
+    setFilteredContent(filtered);
+  }, [selectedCategory, searchQuery]);
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'Article': return <BookOpen className="w-4 h-4" />;
-      case 'Case Study': return <Play className="w-4 h-4" />;
-      case 'Free Download': return <Download className="w-4 h-4" />;
-      case 'Video': return <Play className="w-4 h-4" />;
-      case 'Webinar': return <Play className="w-4 h-4" />;
-      default: return <BookOpen className="w-4 h-4" />;
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '✨';
     }
   };
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'Article': return 'bg-blue-100 text-blue-800';
-      case 'Case Study': return 'bg-green-100 text-green-800';
-      case 'Free Download': return 'bg-purple-100 text-purple-800';
-      case 'Video': return 'bg-red-100 text-red-800';
-      case 'Webinar': return 'bg-orange-100 text-orange-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'resource':
+        return 'from-purple-500 to-pink-500';
+      default:
+        return 'from-gray-500 to-gray-600';
     }
   };
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-8">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            🔍 Interactive Content Discovery
-          </h2>
-          <p className="text-gray-600">
-            Discover the perfect content for your needs with our intelligent search and filtering system
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          {autoRefresh && (
-            <button
-              onClick={() => {
-                setIsRefreshing(true);
-                setTimeout(() => setIsRefreshing(false), 1000);
-              }}
-              className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
-            >
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-            </button>
-          )}
-          <button
-            onClick={() => setShowAdvanced(!showAdvanced)}
-            className="p-2 rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors"
-          >
-            <Filter className="w-5 h-5 text-blue-600" />
-          </button>
-        </div>
-      </div>
-
-      {/* Search and Filters */}
-      <div className="space-y-4 mb-8">
-        {/* Search Bar */}
-        {showSearch && (
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search articles, case studies, and resources..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-        )}
-
-        {/* Basic Filters */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            {categories.map(category => (
-              <option key={category.id} value={category.id}>
-                {category.name} ({category.count})
-              </option>
-            ))}
-          </select>
-
-          <select
-            value={selectedType}
-            onChange={(e) => setSelectedType(e.target.value)}
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            {types.map(type => (
-              <option key={type.id} value={type.id}>
-                {type.name} ({type.count})
-              </option>
-            ))}
-          </select>
-
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            {sortOptions.map(option => (
-              <option key={option.id} value={option.id}>
-                {option.name}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Advanced Filters */}
-        <AnimatePresence>
-          {showAdvanced && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="bg-gray-50 rounded-lg p-4 space-y-4"
-            >
-              <h3 className="font-semibold text-gray-900">Advanced Filters</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Date Range
-                  </label>
-                  <div className="flex gap-2">
-                    <input
-                      type="date"
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                    <input
-                      type="date"
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Read Time
-                  </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option value="">Any length</option>
-                    <option value="short">Under 10 min</option>
-                    <option value="medium">10-20 min</option>
-                    <option value="long">Over 20 min</option>
-                  </select>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
-      {/* Results Count */}
-      <div className="flex items-center justify-between mb-6">
-        <p className="text-gray-600">
-          Showing {filteredContent.length} of {content.length} results
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          🔍 Discover Your Perfect AI Content
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Use our interactive discovery tool to find the most relevant AI content for your needs. 
+          Filter by category, search by keywords, or explore our featured content.
         </p>
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-500">View:</span>
-          <button className="p-2 rounded-lg bg-blue-100 text-blue-600">
-            Grid
-          </button>
-          <button className="p-2 rounded-lg bg-gray-100 text-gray-600">
-            List
-          </button>
+      </div>
+
+      {/* Search and Filter Controls */}
+      <div className="mb-8">
+        <div className="flex flex-col md:flex-row gap-4 mb-6">
+          {/* Search Input */}
+          <div className="flex-1">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search content by title, description, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category Filters */}
+        <div className="flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedCategory === category.id
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              {category.name} ({category.count})
+            </button>
+          ))}
         </div>
       </div>
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <AnimatePresence>
-          {filteredContent.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="group"
-            >
-              <Link href={item.href}>
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-blue-200">
-                  {/* Content Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl group-hover:scale-110 transition-transform">
-                      {item.icon}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {item.trending && (
-                        <TrendingUp className="w-4 h-4 text-orange-500" />
-                      )}
-                      {item.featured && (
-                        <Star className="w-4 h-4 text-yellow-500" />
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Content Details */}
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {item.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.slice(0, 3).map(tag => (
-                      <span key={tag} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Content Footer */}
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <div className="flex items-center gap-3">
-                      {item.readTime && (
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {item.readTime}
-                        </span>
-                      )}
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        {new Date(item.publishDate).toLocaleDateString()}
-                      </span>
-                    </div>
-                    <span className={`px-2 py-1 rounded-full text-xs flex items-center gap-1 ${getTypeColor(item.type)}`}>
-                      {getTypeIcon(item.type)}
-                      {item.type}
-                    </span>
-                  </div>
-
-                  {/* Stats */}
-                  {(item.views || item.likes) && (
-                    <div className="flex items-center gap-4 mt-3 pt-3 border-t border-gray-100">
-                      {item.views && (
-                        <span className="text-xs text-gray-500">
-                          {item.views.toLocaleString()} views
-                        </span>
-                      )}
-                      {item.likes && (
-                        <span className="text-xs text-gray-500">
-                          {item.likes.toLocaleString()} likes
-                        </span>
-                      )}
-                    </div>
-                  )}
+        {filteredContent.map((item) => (
+          <Link key={item.id} href={item.href} className="group">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-blue-300">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">{getTypeIcon(item.type)}</span>
+                  <span className={`text-xs font-medium px-2 py-1 rounded-full bg-gradient-to-r ${getTypeColor(item.type)} text-white`}>
+                    {item.type === 'case-study' ? 'Case Study' : 
+                     item.type === 'resource' ? 'Resource' : 'Article'}
+                  </span>
                 </div>
-              </Link>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+                {item.featured && (
+                  <span className="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">
+                    Featured
+                  </span>
+                )}
+              </div>
+
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                {item.description}
+              </p>
+
+              <div className="flex items-center justify-between text-xs text-gray-500">
+                <span className="bg-gray-100 px-2 py-1 rounded-full">
+                  {item.category}
+                </span>
+                {item.readTime && (
+                  <span>{item.readTime}</span>
+                )}
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-1">
+                {item.tags.slice(0, 3).map((tag, index) => (
+                  <span
+                    key={index}
+                    className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+                {item.tags.length > 3 && (
+                  <span className="text-xs text-gray-500">
+                    +{item.tags.length - 3} more
+                  </span>
+                )}
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
 
       {/* No Results */}
@@ -397,29 +274,33 @@ const InteractiveContentDiscovery: React.FC<InteractiveContentDiscoveryProps> = 
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🔍</div>
           <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
-          <p className="text-gray-600 mb-4">Try adjusting your search terms or filters</p>
+          <p className="text-gray-600 mb-4">
+            Try adjusting your search terms or category filters to find what you're looking for.
+          </p>
           <button
             onClick={() => {
-              setSearchTerm('');
+              setSearchQuery('');
               setSelectedCategory('all');
-              setSelectedType('all');
-              setSortBy('newest');
             }}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
             Clear Filters
           </button>
         </div>
       )}
 
-      {/* Load More */}
-      {filteredContent.length >= maxItems && (
-        <div className="text-center mt-8">
-          <button className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
-            Load More Content
-          </button>
-        </div>
-      )}
+      {/* View All Content CTA */}
+      <div className="text-center mt-8 pt-8 border-t border-gray-200">
+        <Link
+          href="/content-showcase"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+        >
+          View All Content
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </div>
     </div>
   );
 };
