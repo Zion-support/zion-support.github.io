@@ -182,11 +182,17 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner />
       </Suspense>
 
-      {/* Trending Topics Widget */}
+      {/* Trending Content Widget */}
       <section className='py-16 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <Suspense fallback={<LoadingSpinner size="md" text="Loading trending topics..." />}>
-            <TrendingTopicsWidget />
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">🔥 Trending This Week</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See what's capturing attention in the AI community right now.
+            </p>
+          </div>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+            <TrendingContentWidget />
           </Suspense>
         </div>
       </section>
