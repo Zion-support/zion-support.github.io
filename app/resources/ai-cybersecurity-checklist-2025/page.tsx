@@ -6,12 +6,15 @@ export default function AICybersecurityChecklist2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
+<<<<<<< HEAD
         title="AI Cybersecurity Checklist 2025: Essential Security Measures for AI Systems"
         description="Comprehensive cybersecurity checklist for AI systems in 2025. Download our free checklist covering threat detection, model protection, data security, and compliance measures."
         keywords="AI cybersecurity checklist, AI security, cybersecurity checklist, AI protection, security measures, AI compliance"
         title="AI Cybersecurity Checklist 2025 - Free Download"
         description="Comprehensive AI cybersecurity checklist for 2025. Download our free security checklist to protect your AI systems from emerging threats and vulnerabilities."
         keywords="AI cybersecurity checklist, AI security, cybersecurity 2025, free download, security checklist"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
         title="AI Cybersecurity Checklist 2025: Essential Security Measures"
         description="Download our comprehensive AI cybersecurity checklist covering 50+ essential security measures for protecting AI systems in 2025."
         keywords="AI cybersecurity checklist, AI security, cyber threats, AI protection, security measures"
@@ -19,6 +22,10 @@ export default function AICybersecurityChecklist2025() {
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-47dd
         <header className="mb-12 text-center">
           <div className="inline-flex items-center bg-red-100 text-red-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
             🔒 FREE RESOURCE
@@ -285,6 +292,7 @@ export default function AICybersecurityChecklist2025() {
                 View AI Security Services
               </a>
             </div>
+<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-red-100 text-red-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
             <span>🛡️ FREE SECURITY RESOURCE</span>
@@ -565,6 +573,9 @@ export default function AICybersecurityChecklist2025() {
                   <div className="text-sm text-gray-600">Security Director, Healthcare</div>
                 </div>
               </div>
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -775,6 +786,7 @@ export default function AICybersecurityChecklist2025() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Help Securing Your AI Systems?</h3>
           <p className="text-lg text-gray-600 mb-8">
@@ -794,6 +806,8 @@ export default function AICybersecurityChecklist2025() {
             >
               View AI Security Services
             </Link>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
         {/* Related Resources */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
@@ -841,6 +855,10 @@ export default function AICybersecurityChecklist2025() {
             >
               Get Security Consultation
             </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
+>>>>>>> cursor/create-and-deploy-new-content-47dd
           </div>
         </div>
       </div>
