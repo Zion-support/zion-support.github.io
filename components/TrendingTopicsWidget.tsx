@@ -5,182 +5,146 @@ interface TrendingTopic {
   id: string;
   title: string;
   category: string;
-  views: number;
-  trend: 'up' | 'down' | 'stable';
-  changePercent: number;
   url: string;
-  tags: string[];
+  trend: 'up' | 'down' | 'stable';
+  views: number;
+  engagement: number;
   publishDate: string;
-  readTime: string;
 }
 
 const trendingTopics: TrendingTopic[] = [
   {
     id: '1',
-    title: 'AI Advanced Automation 2025: Complete Business Transformation Guide',
-    category: 'AI & Automation',
-    views: 2340,
+    title: 'AI Agents 2025: Autonomous Intelligence Revolution',
+    category: 'AI Agents',
+    url: '/blog/ai-2025-advanced-ai-agents',
     trend: 'up',
-    changePercent: 15,
-    url: '/blog/ai-2025-advanced-automation',
-    tags: ['AI', 'Automation', 'Business', '2025'],
-    publishDate: '2025-01-15',
-    readTime: '15 min'
+    views: 15420,
+    engagement: 89,
+    publishDate: '2025-01-20'
   },
   {
     id: '2',
-    title: 'Quantum Computing Business Revolution 2025: The Next Frontier',
-    category: 'Quantum Technology',
-    views: 1890,
+    title: 'Smart Manufacturing: Industry 4.0 AI Transformation',
+    category: 'Manufacturing',
+    url: '/blog/ai-2025-smart-manufacturing-revolution',
     trend: 'up',
-    changePercent: 22,
-    url: '/blog/quantum-computing-business-revolution-2025',
-    tags: ['Quantum', 'Computing', 'Business', 'Innovation'],
-    publishDate: '2025-01-14',
-    readTime: '18 min'
+    views: 12850,
+    engagement: 92,
+    publishDate: '2025-01-18'
   },
   {
     id: '3',
-    title: 'AI Implementation Success Framework 2025: Complete Guide',
-    category: 'Implementation',
-    views: 3120,
+    title: 'Financial Services AI: 450% ROI Success Story',
+    category: 'Case Study',
+    url: '/case-studies/ai-2025-financial-services-ai-transformation-success',
     trend: 'up',
-    changePercent: 8,
-    url: '/resources/ai-implementation-success-framework-2025',
-    tags: ['AI', 'Implementation', 'Framework', 'Success'],
-    publishDate: '2025-01-13',
-    readTime: '45 min'
+    views: 18750,
+    engagement: 95,
+    publishDate: '2025-01-16'
   },
   {
     id: '4',
-    title: 'Multimodal AI Revolution: Beyond Text and Images',
-    category: 'AI Innovation',
-    views: 1560,
+    title: 'AI Implementation Master Checklist 2025',
+    category: 'Resources',
+    url: '/resources/ai-2025-implementation-master-checklist',
     trend: 'up',
-    changePercent: 12,
-    url: '/blog/ai-2025-multimodal-revolution',
-    tags: ['AI', 'Multimodal', 'Innovation', 'Technology'],
-    publishDate: '2025-01-12',
-    readTime: '12 min'
+    views: 11200,
+    engagement: 87,
+    publishDate: '2025-01-15'
   },
   {
     id: '5',
-    title: 'Enterprise AI Security: Advanced Threat Protection',
-    category: 'Security',
-    views: 2780,
-    trend: 'up',
-    changePercent: 18,
-    url: '/resources/ai-enterprise-security-2025',
-    tags: ['AI', 'Security', 'Enterprise', 'Protection'],
-    publishDate: '2025-01-11',
-    readTime: '30 min'
+    title: 'AI Advanced Automation: Business Transformation',
+    category: 'Automation',
+    url: '/blog/ai-2025-advanced-automation',
+    trend: 'stable',
+    views: 25600,
+    engagement: 91,
+    publishDate: '2025-01-15'
   },
   {
     id: '6',
-    title: 'Robotics & Automation: The Future of Manufacturing',
-    category: 'Robotics',
-    views: 1420,
+    title: 'Quantum Computing Business Revolution 2025',
+    category: 'Quantum Tech',
+    url: '/blog/quantum-computing-business-revolution-2025',
     trend: 'up',
-    changePercent: 25,
-    url: '/blog/ai-2025-robotics-automation',
-    tags: ['Robotics', 'Automation', 'Manufacturing', 'Future'],
-    publishDate: '2025-01-10',
-    readTime: '14 min'
+    views: 9850,
+    engagement: 85,
+    publishDate: '2025-01-14'
   },
   {
     id: '7',
-    title: 'AI Data Strategy: Building Enterprise Data Foundations',
-    category: 'Data Strategy',
-    views: 1980,
+    title: 'AI Healthcare Diagnosis Revolution',
+    category: 'Healthcare',
+    url: '/blog/ai-2025-healthcare-diagnosis-revolution',
     trend: 'up',
-    changePercent: 6,
-    url: '/resources/ai-data-strategy-enterprise-2025',
-    tags: ['AI', 'Data', 'Strategy', 'Enterprise'],
-    publishDate: '2025-01-09',
-    readTime: '35 min'
+    views: 14200,
+    engagement: 88,
+    publishDate: '2025-01-12'
   },
   {
     id: '8',
-    title: 'Sustainability & Green Tech: AI for Environmental Impact',
-    category: 'Sustainability',
-    views: 1650,
+    title: 'AI Cybersecurity Advanced Protection 2025',
+    category: 'Cybersecurity',
+    url: '/blog/ai-2025-cybersecurity-advanced',
     trend: 'up',
-    changePercent: 20,
-    url: '/blog/ai-2025-sustainability-green-tech',
-    tags: ['AI', 'Sustainability', 'Green Tech', 'Environment'],
-    publishDate: '2025-01-08',
-    readTime: '16 min'
+    views: 16800,
+    engagement: 90,
+    publishDate: '2025-01-10'
   }
 ];
 
-const getTrendIcon = (trend: string) => {
-  switch (trend) {
-    case 'up': return '📈';
-    case 'down': return '📉';
-    default: return '➡️';
-  }
-};
+const TrendingTopicsWidget: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [filteredTopics, setFilteredTopics] = useState<TrendingTopic[]>(trendingTopics);
 
-const getTrendColor = (trend: string) => {
-  switch (trend) {
-    case 'up': return 'text-green-600';
-    case 'down': return 'text-red-600';
-    default: return 'text-gray-600';
-  }
-};
+  const categories = ['all', 'AI Agents', 'Manufacturing', 'Case Study', 'Resources', 'Automation', 'Quantum Tech', 'Healthcare', 'Cybersecurity'];
 
-const getCategoryColor = (category: string) => {
-  const colors: { [key: string]: string } = {
-    'AI & Automation': 'bg-blue-100 text-blue-800',
-    'Quantum Technology': 'bg-purple-100 text-purple-800',
-    'Implementation': 'bg-green-100 text-green-800',
-    'AI Innovation': 'bg-pink-100 text-pink-800',
-    'Security': 'bg-red-100 text-red-800',
-    'Robotics': 'bg-orange-100 text-orange-800',
-    'Data Strategy': 'bg-cyan-100 text-cyan-800',
-    'Sustainability': 'bg-emerald-100 text-emerald-800'
-  };
-  return colors[category] || 'bg-gray-100 text-gray-800';
-};
-
-export default function TrendingTopicsWidget() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('views');
-
-  const categories = ['All', ...Array.from(new Set(trendingTopics.map(topic => topic.category)))];
-
-  const filteredTopics = selectedCategory === 'All' 
-    ? trendingTopics 
-    : trendingTopics.filter(topic => topic.category === selectedCategory);
-
-  const sortedTopics = [...filteredTopics].sort((a, b) => {
-    switch (sortBy) {
-      case 'views':
-        return b.views - a.views;
-      case 'trend':
-        return b.changePercent - a.changePercent;
-      case 'recent':
-        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-      default:
-        return 0;
+  useEffect(() => {
+    if (selectedCategory === 'all') {
+      setFilteredTopics(trendingTopics);
+    } else {
+      setFilteredTopics(trendingTopics.filter(topic => topic.category === selectedCategory));
     }
-  });
+  }, [selectedCategory]);
+
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'up':
+        return '📈';
+      case 'down':
+        return '📉';
+      default:
+        return '➡️';
+    }
+  };
+
+  const getTrendColor = (trend: string) => {
+    switch (trend) {
+      case 'up':
+        return 'text-green-600';
+      case 'down':
+        return 'text-red-600';
+      default:
+        return 'text-gray-600';
+    }
+  };
+
+  const formatNumber = (num: number) => {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'k';
+    }
+    return num.toString();
+  };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-gray-900">Trending Topics</h3>
-        <div className="flex items-center space-x-2">
-          <span className="text-sm text-gray-600">Sort by:</span>
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="text-sm border border-gray-300 rounded-lg px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="views">Most Views</option>
-            <option value="trend">Trending</option>
-            <option value="recent">Most Recent</option>
-          </select>
+        <h2 className="text-2xl font-bold text-gray-900">🔥 Trending Topics</h2>
+        <div className="flex items-center text-sm text-gray-600">
+          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+          Live Updates
         </div>
       </div>
 
@@ -190,101 +154,96 @@ export default function TrendingTopicsWidget() {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+            className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
               selectedCategory === category
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
-            {category}
+            {category === 'all' ? 'All Topics' : category}
           </button>
         ))}
       </div>
 
       {/* Trending Topics List */}
       <div className="space-y-4">
-        {sortedTopics.slice(0, 8).map((topic, index) => (
-          <div key={topic.id} className="group">
-            <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">
-                  {index + 1}
-                </div>
-              </div>
-              
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(topic.category)}`}>
+        {filteredTopics.slice(0, 6).map((topic, index) => (
+          <Link
+            key={topic.id}
+            href={topic.url}
+            className="group block p-4 rounded-lg border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-200"
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center mb-2">
+                  <span className="text-lg font-bold text-gray-400 mr-3">#{index + 1}</span>
+                  <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                     {topic.category}
                   </span>
-                  <span className="text-xs text-gray-500">{topic.readTime}</span>
-                  <span className="text-xs text-gray-500">•</span>
-                  <span className="text-xs text-gray-500">{topic.publishDate}</span>
                 </div>
-                
-                <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  <Link href={topic.url}>
-                    {topic.title}
-                  </Link>
-                </h4>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center space-x-1">
-                      <span className="text-sm text-gray-600">👁️</span>
-                      <span className="text-sm font-medium text-gray-900">{topic.views.toLocaleString()}</span>
-                    </div>
-                    <div className={`flex items-center space-x-1 ${getTrendColor(topic.trend)}`}>
-                      <span className="text-sm">{getTrendIcon(topic.trend)}</span>
-                      <span className="text-sm font-medium">+{topic.changePercent}%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2">
-                    {topic.tags.slice(0, 2).map((tag, tagIndex) => (
-                      <span key={tagIndex} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                  {topic.title}
+                </h3>
+                <div className="flex items-center text-sm text-gray-600 space-x-4">
+                  <span className="flex items-center">
+                    👁️ {formatNumber(topic.views)} views
+                  </span>
+                  <span className="flex items-center">
+                    💬 {topic.engagement}% engagement
+                  </span>
+                  <span className="flex items-center">
+                    {getTrendIcon(topic.trend)} <span className={`ml-1 ${getTrendColor(topic.trend)}`}>
+                      Trending {topic.trend}
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div className="ml-4 flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                  {topic.category.charAt(0)}
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       {/* View All Button */}
-      <div className="mt-6 pt-4 border-t border-gray-200">
+      <div className="mt-6 text-center">
         <Link
           href="/content-showcase"
-          className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
         >
           View All Trending Content
+          <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </Link>
       </div>
 
       {/* Stats Summary */}
-      <div className="mt-6 grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-gray-900">
-            {trendingTopics.reduce((sum, topic) => sum + topic.views, 0).toLocaleString()}
+      <div className="mt-6 pt-6 border-t border-gray-200">
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <div className="text-2xl font-bold text-blue-600">{trendingTopics.length}</div>
+            <div className="text-sm text-gray-600">Total Topics</div>
           </div>
-          <div className="text-sm text-gray-600">Total Views</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-gray-900">
-            {trendingTopics.length}
+          <div>
+            <div className="text-2xl font-bold text-green-600">
+              {Math.round(trendingTopics.reduce((acc, topic) => acc + topic.engagement, 0) / trendingTopics.length)}%
+            </div>
+            <div className="text-sm text-gray-600">Avg Engagement</div>
           </div>
-          <div className="text-sm text-gray-600">Active Topics</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-600">
-            +{Math.round(trendingTopics.reduce((sum, topic) => sum + topic.changePercent, 0) / trendingTopics.length)}%
+          <div>
+            <div className="text-2xl font-bold text-purple-600">
+              {formatNumber(trendingTopics.reduce((acc, topic) => acc + topic.views, 0))}
+            </div>
+            <div className="text-sm text-gray-600">Total Views</div>
           </div>
-          <div className="text-sm text-gray-600">Avg Growth</div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default TrendingTopicsWidget;

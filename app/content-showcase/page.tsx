@@ -43,41 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-enterprise-ai-transformation" className="group">
+              <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">Enterprise AI Transformation 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete implementation guide with real-world case studies and proven strategies</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Agents 2025: Autonomous Intelligence</h3>
+                  <p className="text-sm opacity-90 mb-3">Next generation AI agents with autonomous decision-making and multi-modal capabilities</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>12 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🆕 NEW</span>
+                    <span>🔥 HOT</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-healthcare-diagnosis-revolution-2025" className="group">
+              <Link href="/case-studies/ai-2025-financial-services-ai-transformation-success" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Healthcare Diagnosis Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">Transforming medical practice with 67% reduction in diagnostic errors</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏦</div>
+                  <h3 className="text-lg font-semibold mb-2">Financial Services AI: 450% ROI</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 500 success story with fraud detection and customer service automation</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 450% ROI</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-smart-manufacturing-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">Smart Manufacturing Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Industry 4.0 transformation with 40-60% efficiency gains through AI</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>15 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🆕 NEW</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/resources/ai-automation-enterprise-guide-2025" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Automation Enterprise Guide</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete implementation playbook with strategies and best practices</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>Guide</span>
-                    <span className="mx-2">•</span>
-                    <span>🆕 NEW</span>
+                    <span>🏭 Manufacturing</span>
                   </div>
                 </div>
               </Link>
