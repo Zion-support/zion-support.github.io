@@ -5,51 +5,49 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "Advanced AI Architecture Patterns for 2025: Building Scalable, Resilient Systems",
-      description: "Master advanced AI architecture patterns including microservices, event-driven design, and distributed AI systems. Complete guide with implementation strategies and real-world examples.",
-      href: "/blog/ai-2025-advanced-ai-architecture",
-      icon: "🏗️",
-      category: "AI Architecture",
+      title: "AI Multimodal Revolution 2025: Beyond Text to Vision, Audio, and Beyond",
+      description: "Discover how multimodal AI is revolutionizing industries in 2025. From vision-language models to audio synthesis, explore the future of AI that understands and generates across multiple modalities.",
+      href: "/blog/ai-2025-multimodal-revolution",
+      icon: "🎭",
+      category: "Multimodal AI",
       readTime: "25 min read",
-      date: "Jan 28, 2025",
-      isNew: true
-    },
-    {
-      title: "Advanced AI Automation for 2025: Complete Implementation Guide",
-      description: "Master advanced AI automation strategies including RPA, intelligent process automation, and autonomous systems. Real case studies and implementation frameworks for enterprise success.",
-      href: "/blog/ai-2025-advanced-automation",
-      icon: "🤖",
-      category: "AI Automation",
-      readTime: "22 min read",
-      date: "Jan 28, 2025",
-      isNew: true
-    },
-    {
-      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
-      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, real-world implementations, and the future of quantum-enhanced artificial intelligence.",
-      href: "/blog/ai-2025-quantum-computing-breakthrough",
-      icon: "⚛️",
-      category: "Quantum AI",
-      readTime: "22 min read",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI 2025: Neural Interface Revolution - The Future of Human-AI Interaction",
-      description: "Discover how neural interfaces are revolutionizing human-AI interaction in 2025. Explore brain-computer interfaces, neural prosthetics, and the future of direct brain-to-AI communication.",
-      href: "/blog/ai-2025-neural-interface-revolution",
-      icon: "🧠",
-      category: "Neural Interfaces",
-      readTime: "20 min read",
       date: "Jan 28, 2025"
     },
     {
-      title: "AI 2025: Autonomous Systems Mastery - The Complete Implementation Guide",
-      description: "Master autonomous AI systems in 2025 with our comprehensive guide. Learn implementation strategies, real-world case studies, and best practices for deploying autonomous systems at scale.",
-      href: "/blog/ai-2025-autonomous-systems-mastery",
+      title: "AI Neural Interfaces 2025: The Future of Brain-Computer Interaction",
+      description: "Explore the revolutionary world of neural interfaces in 2025. From brain-computer interfaces to thought-controlled devices, discover how AI is bridging the gap between mind and machine.",
+      href: "/blog/ai-2025-neural-interfaces",
+      icon: "🧠",
+      category: "Neural Interfaces",
+      readTime: "28 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Quantum Machine Learning 2025: The Next Frontier of Computing",
+      description: "Discover how quantum computing is revolutionizing machine learning in 2025. From quantum neural networks to quantum advantage in optimization, explore the future of quantum AI.",
+      href: "/blog/ai-2025-quantum-machine-learning",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "30 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Autonomous Systems 2025: The Future of Self-Operating Technology",
+      description: "Explore the revolutionary world of autonomous AI systems in 2025. From self-driving vehicles to autonomous manufacturing, discover how AI is creating truly independent systems.",
+      href: "/blog/ai-2025-autonomous-systems",
       icon: "🤖",
       category: "Autonomous Systems",
-      readTime: "25 min read",
-      date: "Jan 25, 2025"
+      readTime: "32 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Ethical Governance 2025: Building Responsible AI Systems",
+      description: "Navigate the complex landscape of AI ethics and governance in 2025. Learn how to build responsible AI systems, implement ethical frameworks, and ensure compliance with evolving regulations.",
+      href: "/blog/ai-2025-ethical-governance",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "35 min read",
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
@@ -64,81 +62,61 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
-      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
-      description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings and 60% efficiency gains through autonomous AI systems. Complete implementation details and ROI analysis.",
+      title: "AI Autonomous Manufacturing Success: $200M Savings Case Study",
+      description: "How a Fortune 500 manufacturing company achieved $200M in annual savings, 40% cost reduction, and 60% faster processing times through autonomous AI systems.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      icon: "💰",
-      category: "Autonomous Systems",
+      icon: "🏭",
+      category: "Manufacturing",
       result: "$200M Savings",
-      date: "Jan 28, 2025",
-      isNew: true
+      date: "Jan 28, 2025"
     },
     {
-      title: "AI 2025: Autonomous Manufacturing Revolution - $500M Success Story",
-      description: "Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems implementation. Complete transformation story with detailed ROI analysis.",
-      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
-      icon: "💰",
-      category: "Autonomous Systems",
-      result: "$500M Savings",
+      title: "AI Cybersecurity Transformation Breakthrough: 99.8% Threat Detection Success",
+      description: "How a Fortune 500 financial services company achieved 99.8% threat detection accuracy and 85% reduction in security incidents through AI-powered cybersecurity transformation.",
+      href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      result: "99.8% Accuracy",
       date: "Jan 30, 2025"
     },
     {
-      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
-      description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
-      href: "/case-studies/ai-transformation-fortune-500-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
+      title: "AI Sustainability Transformation: 60% Energy Reduction Success",
+      description: "How a major corporation achieved 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives and green technology optimization.",
+      href: "/case-studies/ai-sustainability-transformation-2025",
+      icon: "🌱",
+      category: "Sustainability",
+      result: "60% Energy Reduction",
+      date: "Jan 28, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2026: Complete Framework for Enterprise Success",
-      description: "The definitive guide to AI implementation in 2026. 200+ page comprehensive framework with checklists, templates, case studies, and step-by-step implementation strategies for enterprise AI success.",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Blueprint",
+      description: "The most comprehensive AI implementation guide available. Everything you need to successfully implement AI in your organization, from initial strategy to full deployment and optimization.",
       href: "/resources/ai-implementation-master-guide-2026",
-      icon: "📚",
+      icon: "📖",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 28, 2025",
-      isNew: true
+      date: "Jan 28, 2025"
     },
     {
-      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across your organization.",
-      href: "/resources/ai-2025-implementation-master-guide",
-      icon: "📚",
-      category: "Master Guide",
-      type: "Free Download",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
-      description: "Complete checklist covering every aspect of AI implementation from strategy to deployment, with 150+ actionable items across 7 key categories.",
-      href: "/resources/ai-implementation-checklist-2025",
-      icon: "📋",
-      category: "Checklist",
-      type: "Free Download",
-      date: "Feb 08, 2025"
-    },
-    {
-      title: "AI Security Hardening Checklist: Essential Security Measures",
-      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
-      href: "/resources/ai-security-hardening-checklist",
+      title: "AI Cybersecurity Checklist 2025: 150+ Security Items",
+      description: "Comprehensive cybersecurity checklist for AI implementations. 150+ security items covering data protection, model security, and compliance requirements.",
+      href: "/resources/ai-cybersecurity-checklist-2025",
       icon: "🛡️",
       category: "Security",
       type: "Free Download",
-      date: "Feb 06, 2025"
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Workforce Transformation Playbook 2025: Complete Reskilling Guide",
+      description: "Comprehensive playbook for AI workforce transformation with proven strategies, templates, and implementation frameworks for successful team reskilling.",
+      href: "/resources/ai-workforce-transformation-playbook-2025",
+      icon: "👥",
+      category: "Workforce",
+      type: "Free Download",
+      date: "Jan 28, 2025"
     }
   ];
 
@@ -488,46 +466,26 @@ export default function ContentShowcasePage() {
           </div>
         </section>
 
-        {/* Enhanced Newsletter Signup */}
+        {/* Newsletter Signup */}
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">📧 NEWSLETTER</span>
-          </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Ahead with AI Insights</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated with Latest Content</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Get weekly updates on AI trends, implementation guides, and exclusive content 
-            delivered straight to your inbox. Join 15,000+ AI professionals and get access 
-            to our latest resources first.
+            delivered straight to your inbox. Join 10,000+ AI professionals.
           </p>
-          <div className="max-w-lg mx-auto">
-            <div className="flex gap-4 mb-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300"
-              />
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
-                Subscribe Free
-              </button>
-            </div>
-            <p className="text-sm text-gray-500 mb-4">
-              No spam. Unsubscribe anytime. Read our privacy policy.
-            </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span>Weekly AI insights</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span>Exclusive resources</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span>Early access</span>
-              </div>
-            </div>
+          <div className="max-w-md mx-auto flex gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Subscribe
+            </button>
           </div>
+          <p className="text-sm text-gray-500 mt-4">
+            No spam. Unsubscribe anytime. Read our privacy policy.
+          </p>
         </section>
       </div>
   );
