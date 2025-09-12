@@ -183,6 +183,15 @@ function Header() {
             </span>
           </Link>
           <Link 
+            href="/ai-2026-technology-showcase" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+          >
+            AI 2026 Showcase
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
+          </Link>
+          <Link 
             href="/quantum-computing-solutions" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
@@ -190,6 +199,18 @@ function Header() {
             <span className="absolute -top-2 -right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
               BREAKTHROUGH
             </span>
+          </Link>
+          <Link 
+            href="/ai-innovation-hub-2026" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            AI Innovation Hub
+          </Link>
+          <Link 
+            href="/content-showcase" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Content Showcase
           </Link>
           <Link 
             href="/blog" 
