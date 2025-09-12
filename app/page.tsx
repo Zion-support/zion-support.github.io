@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
+import ContentPromotionBanner from '../components/ContentPromotionBanner';
 
 export default function HomePage() {
   return (
@@ -42,6 +43,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Rotating Promotion Banner */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ContentPromotionBanner className="rounded-xl overflow-hidden" />
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +58,7 @@ export default function HomePage() {
             <p className="text-xl text-gray-600">Comprehensive technology solutions for modern businesses</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Automation</h3>
               <p className="text-gray-600 mb-6">
@@ -92,7 +100,7 @@ export default function HomePage() {
             <p className="text-xl text-gray-600">Stay ahead with our expert analysis and insights</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 <Link href="/blog/ai-2025-revolutionary-breakthroughs" className="hover:text-blue-600">
@@ -131,6 +139,20 @@ export default function HomePage() {
                 Master startup pricing with data-driven strategies that validate customer willingness to pay.
               </p>
               <Link href="/blog/startup-pricing-strategy-2025" className="text-blue-600 font-semibold">
+                Read More →
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <Link href="/blog/ai-2025-generative-ai-revolution" className="hover:text-blue-600">
+                  Generative AI Revolution 2025
+                </Link>
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Explore how generative AI is transforming every industry with real-world playbooks.
+              </p>
+              <Link href="/blog/ai-2025-generative-ai-revolution" className="text-blue-600 font-semibold">
                 Read More →
               </Link>
             </div>
