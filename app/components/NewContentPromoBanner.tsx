@@ -268,6 +268,36 @@ const newContentItems = [
     new: true
   },
   {
+    title: "Foundation Model Fine-Tuning 2025",
+    description: "PEFT, data curation, evals, and cost control for production",
+    url: "/blog/ai-2025-foundation-model-fine-tuning",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🔧",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Evaluation Checklist 2025",
+    description: "Operational evals: safety, latency, cost, reliability templates",
+    url: "/resources/ai-evaluation-checklist-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance Claims Automation: 55% OPEX Reduction",
+    description: "FNOL, triage, fraud checks with agentic workflows",
+    url: "/case-studies/ai-insurance-claims-automation-success-2025",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📄",
+    featured: false,
+    new: true
+  },
+  {
     title: "AI Production Agent Patterns 2025",
     description: "Reliable patterns for deploying AI agents in production",
     url: "/blog/ai-2025-production-agent-patterns",
