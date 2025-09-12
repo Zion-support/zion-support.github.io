@@ -1,4 +1,5 @@
-import FeatureCard from './components/FeatureCard',
+import FeatureCard from './components/FeatureCard';
+
 export default function HomePage() {
   const features = [
     {
@@ -73,7 +74,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen">
@@ -97,6 +98,9 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
+              </a>
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 Read the Latest News
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
@@ -128,11 +132,12 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />;
+              />
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -151,6 +156,46 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Teaser */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-3xl font-bold mb-2">Latest News</h2>
+              <p className="text-white/70">Product releases, academy updates, and ecosystem highlights</p>
+            </div>
+            <a href="/news" className="btn-secondary hover-lift px-6 py-3">View All</a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">⚡</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3 Released</h3>
+                <p className="text-white/70">42% faster deploys, real-time analytics, and smoother UX.</p>
+              </div>
+            </a>
+            <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🏪</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Marketplace Suite GA</h3>
+                <p className="text-white/70">Jobs, proposals, and escrow reach General Availability.</p>
+              </div>
+            </a>
+            <a href="/news/compliance-pack-release" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🛡️</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
+                <p className="text-white/70">SOC 2 playbooks and turnkey KYC/AML integrations.</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -179,5 +224,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

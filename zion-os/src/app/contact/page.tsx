@@ -1,4 +1,3 @@
-import Link from 'next/link';
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -221,52 +220,57 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-              Frequently Asked Questions;
-            </h2>;
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
-              Get quick answers to common questions about our services and processes;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                How quickly can you start a project?;
-              </h3>;
-              <p className="text-gray-600">;
-                Most projects can begin within 1-2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Do you offer ongoing support?;
-              </h3>;
-              <p className="text-gray-600">;
-                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What industries do you serve?;
-              </h3>;
-              <p className="text-gray-600">;
-                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry-agnostic.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Can you work with existing systems?;
-              </h3>;
-              <p className="text-gray-600">;
-                Absolutely! We specialize in integrating with existing infrastructure and can work with your current systems to enhance and optimize them.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Get quick answers to common questions about our services and processes
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                How quickly can you start a project?
+              </h3>
+              <p className="text-gray-600">
+                Most projects can begin within 1-2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Do you offer ongoing support?
+              </h3>
+              <p className="text-gray-600">
+                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                What industries do you serve?
+              </h3>
+              <p className="text-gray-600">
+                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry-agnostic.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Can you work with existing systems?
+              </h3>
+              <p className="text-gray-600">
+                Absolutely! We specialize in integrating with existing infrastructure and can work with your current systems to enhance and optimize them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -287,5 +291,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

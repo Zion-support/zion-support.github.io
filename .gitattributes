@@ -1,3 +1,0 @@
-# Handle temp_exclude directory conflicts by always keeping main branch version
-temp_exclude/** merge=ours
-temp_exclude/ merge=ours

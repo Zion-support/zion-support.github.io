@@ -20,7 +20,6 @@ describe('add to cart', () => {
   it('adds item from marketplace product card icon and stays on page', () => {
     // Visit the marketplace page
     cy.visit('/marketplace');
-
     // Wait for products to load and find the first product card
     // Using a more robust selector if product cards have a specific data-testid
     // For now, assuming the structure from MarketplacePage.tsx
@@ -31,7 +30,6 @@ describe('add to cart', () => {
 
     // Check for the success notification (adjust selector based on actual implementation)
     cy.contains('added', { matchCase: false }).should('be.visible');
-
     // Verify item in localStorage (using 'zion_cart' as per cartSlice.ts)
     cy.window().then((win) => {
       // Wait for localStorage to update
@@ -53,7 +51,6 @@ describe('add to cart', () => {
 
     // Ensure the URL is still /marketplace
     cy.url().should('include', '/marketplace');
-
     // Optional: Check if cart count in header updates if such an element exists
     // cy.get('[data-testid="cart-count"]').should('contain', '1');
   });

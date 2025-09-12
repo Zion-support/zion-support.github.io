@@ -19,10 +19,6 @@ jest.mock('react-router-dom', () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock('@/integrations/supabase/client', () => ({
-  supabase: { functions: { invoke: jest.fn() } }
-}));
-
 describe('MarketplaceCard Buy Now', () => {
   it('navigates to login when unauthenticated', () => {
     const navigateMock = jest.fn();

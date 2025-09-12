@@ -1,1 +1,0 @@
- Sentry.init: ({ dsn import.meta.env.VITE_SENTRY_DS,N, integrations: [new Sentry.BrowserTracing () ], tracesSampleRate: 1.,0}) export /**; * captureException: function, * @param {*} params - Function parameters; * @returns: {*} Function return value; */; function: captureException (error: unknown) { Sentry.captureException (error)}

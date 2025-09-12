@@ -1,6 +1,69 @@
-<<<<<<< HEAD
-=======
-import React from \'react\'; interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> { variant?: \'primary\' | \'secondary\' | \'outline\' | \'ghost\'; size?: \'small\' | \'medium\' | \'large\'; loading?: boolean; icon?: React.ReactNode; iconPosition?: \'left\' | \'right\'} export const Button: React.FC<ButtonProps> = ({ variant = \'primary\',size = \'medium\',loading = false,icon,iconPosition = \'left\',children,disabled,className = \'',...props }) => { const getVariantClasses = () => { switch (variant) { case \'primary\': return \'bg-blue-600 hover:bg-blue-700 text-white border-transparent\'; case \'secondary\': return \'bg-gray-600 hover:bg-gray-700 text-white border-transparent\'; case \'outline\': return \'bg-transparent hover:bg-gray-50 text-gray-700 border-gray-300\'; case \'ghost\': return \'bg-transparent hover:bg-gray-100 text-gray-700 border-transparent\'; default: return \'bg-blue-600 hover:bg-blue-700 text-white border-transparent\'} }; const getSizeClasses = () => { switch (size) { case \'small\': return \'px-3 py-1.5 text-sm\'; case \'large\': return \'px-6 py-3 text-lg\'; default: return \'px-4 py-2 text-base\'} }; const baseClasses = \'inline-flex items-center justify-center font-medium rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed\'; return ( <button className={`${baseClasses} ${getVariantClasses()} ${getSizeClasses()} ${className}`} disabled={disabled || loading} {...props} > {icon && iconPosition === \'left\' && ( <span className=\"mr-2\">{icon}</span> )} {loading ? \'Loading...\' : children} {icon && iconPosition === \'right\' && ( <span className=\"ml-2\">{icon}</span> )} </button> )}; export default Button;
-const React from "react"; interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> { variant?: "primary" | "secondary" | "outline" | "ghost"; size?: "small" | "medium" | "large"; loading?: boolean; icon?: React.ReactNode; iconPosition?: "left" | "right"} export const Button: React.FC<ButtonProps> = ({ variant = "primary",size = "medium",loading = false,icon,iconPosition = "left",children,disabled,className = "",.props }) => { const getVariantClasses = () => { switch (variant) { case primary: return "bg-blue-600 hover:bg-blue-700 text-white border-transparent"; case secondary: return "bg-gray-600 hover:bg-gray-700 text-white border-transparent"; case outline: return "bg-transparent hover:bg-gray-50 text-gray-700 border-gray-300"; case ghost: return "bg-transparent hover:bg-gray-100 text-gray-700 border-transparent"; default: return "bg-blue-600 hover:bg-blue-700 text-white border-transparent"} }; const getSizeClasses = () => { switch (size) { case small: return "px-3 py-1.5 text-sm"; case large: return "px-6 py-3 text-lg"; default: return "px-4 py-2 text-base"} }; const baseClasses = "inline-flex items-center justify-center font-medium rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"; return ( <button className={`${baseClasses} ${getVariantClasses()} ${getSizeClasses()} ${className}`} disabled={disabled | loading} {.props} > {icon && iconPosition === "left" && ( <span className="mr-2">{icon}</span> )} {loading ? "Loading." : children} {icon && iconPosition === "right" && ( <span className="ml-2">{icon}</span> )} </button> )}; export default Button;'"`'"`
-import _React from 'react'; interface ButtonProps extends _React.ButtonHTMLAttributes<HTMLButtonElement> { variant?: 'primary' | 'secondary' | 'outline' | 'ghost'; size?: 'small' | 'medium' | 'large'; loading?: boolean; icon?: _React.ReactNode; iconPosition?: 'left' | 'right'} export const Button: _React.FC<ButtonProps> = ({ variant = 'primary,size = 'medium',loading = false,icon,iconPosition = 'left',children,disabled,className = ',...props }) => { const getVariantClasses = () => { switch (variant) { case 'primary': return 'bg-blue-600 hover:bg-blue-700 text-white border-transparent'; case 'secondary': return 'bg-gray-600 hover:bg-gray-700 text-white border-transparent'; case 'outline': return 'bg-transparent hover:bg-gray-50 text-gray-700 border-gray-300'; case 'ghost': return 'bg-transparent hover:bg-gray-100 text-gray-700 border-transparent'; default: return 'bg-blue-600 hover:bg-blue-700 text-white border-transparent'} }; const getSizeClasses = () => { switch (size) { case 'small': return 'px-3 py-1.5 text-sm'; case 'large': return 'px-6 py-3 text-lg'; default: return 'px-4 py-2 text-base'} }; const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed'; return ( <button className={`${baseClasses} ${getVariantClasses()} ${getSizeClasses()} ${className}`} disabled={disabled || loading} {...props} > {icon && iconPosition === 'left' && ( <span className="mr-2">{icon}</span> )} {loading ? 'Loading...' : children} {icon && iconPosition === 'right' && ( <span className="ml-2">{icon}</span> )} </button> )}; export default Button;
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+import React from 'react';
+import Link from 'next/link';
+
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+  external?: boolean;
+  onClick?: () => void;
+  disabled?: boolean;
+  className?: string;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export default function Button({
+  children,
+  variant = 'primary',
+  size = 'md',
+  href,
+  external = false,
+  onClick,
+  disabled = false,
+  className = '',
+  type = 'button',
+}: ButtonProps) {
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  
+  const variants = {
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:scale-105',
+    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500',
+    outline: 'border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 focus:ring-blue-500',
+    ghost: 'text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+  };
+
+  const sizes = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
+  };
+
+  const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
+
+  if (href) {
+    if (external) {
+      return (
+        <a href={href} className={classes} style={style} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      );
+    }
+    return (
+      <Link href={href} className={classes} style={style} target={target} rel={target === '_blank' ? 'noopener noreferrer' : rel}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      type={type}
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+}

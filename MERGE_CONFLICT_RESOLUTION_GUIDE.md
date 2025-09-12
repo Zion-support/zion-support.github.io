@@ -1,98 +1,179 @@
 # Merge Conflict Resolution and PR Merging Guide
 
-## ✅ Completed Actions
+## Overview
+This guide provides step-by-step instructions to resolve all merge conflicts and merge open PRs into the main branch for the Zion Tech Group website.
 
-### 1. Node.js Version Fix
-- **Issue**: Build failing due to Node.js version mismatch
-- **Solution**: Updated Node.js version from 20.10.0 to 20.18.0 across all configuration files
-- **Files Updated**:
-  - `.nvmrc`: `20.18.0`
-  - `netlify.toml`: `NODE_VERSION = "20.18.0"`
-  - `package.json`: `"node": ">=20.18.0"` (already compatible)
+## Current Status
+- ✅ All missing pages have been created
+- ✅ Build is successful (`npm run build` passes)
+- ✅ Local changes have been committed
+- ⚠️ Terminal connectivity issues preventing direct execution
+- ⚠️ Multiple open PRs need to be merged
 
-### 2. Successfully Merged PRs
-- **PR #12889**: ✅ **MERGED SUCCESSFULLY**
-  - Title: "Changes from background agent bc-52fc9a7e-b362-44a2-943f-995efbcf70d8"
-  - Branch: `cursor/bc-52fc9a7e-b362-44a2-943f-995efbcf70d8-4063`
-  - Conflicts Resolved: `yarn.lock` merge conflict resolved by accepting main branch version
-  - Status: Successfully merged and pushed to main branch
+## Open PRs Found
+Based on the `prs.json` file, there are approximately **50+ open PRs** that need to be processed.
 
-## 🔄 Remaining PRs to Process
+## Step-by-Step Resolution Process
 
-### Open PRs Identified:
-- **PR #12888**: "Build and deploy web application"
-- **PR #12887**: "Check, fix, push, and merge to main"
-- **PR #12886**: "Build and dependency installation failure"
-- **PR #12885**: "Build and dependency installation failure"
-- **PR #12884**: "Build and dependency installation failure"
-
-## 🛠️ Manual Resolution Steps
-
-Due to terminal timeout issues with the large repository, here are the manual steps to complete the remaining merges:
-
-### Option 1: GitHub Web Interface
-1. Go to each PR in the GitHub web interface
-2. Check for merge conflicts
-3. If conflicts exist, resolve them in the web interface
-4. Click "Merge pull request" button
-
-### Option 2: Command Line (if terminal becomes responsive)
+### Step 1: Create Backup Branch
 ```bash
-# For each remaining PR, run:
-git fetch origin
+# Create a backup of the current main branch
+git checkout -b backup-main-$(date +%Y%m%d-%H%M%S)
+git push origin backup-main-$(date +%Y%m%d-%H%M%S)
 git checkout main
-git merge origin/[branch-name] --no-ff -m "Merge PR #[number]"
+```
+
+### Step 2: Resolve Existing Conflicts
+```bash
+# Use the existing conflict resolution script
+./resolve_all_merge_conflicts.sh
+```
+
+### Step 3: Get All Cursor Branches
+```bash
+# List all cursor branches that need to be merged
+git branch -r | grep 'origin/cursor/' | sed 's/origin\///'
+```
+
+### Step 4: Merge Each Branch
+For each branch found in Step 3, run:
+
+```bash
+# Fetch the latest version
+git fetch origin <branch-name>
+
+# Attempt to merge
+git merge --no-commit --no-ff origin/<branch-name>
+
+# If conflicts occur:
+# 1. Resolve conflicts manually in the conflicted files
+# 2. Or run the conflict resolution script again
+# 3. Add resolved files
+git add .
+
+# 4. Commit the merge
+git commit -m "Merge <branch-name> into main - $(date)"
+```
+
+### Step 5: Handle Merge Conflicts
+If merge conflicts occur:
+
+1. **Identify conflicted files:**
+   ```bash
+   git diff --name-only --diff-filter=U
+   ```
+
+2. **Resolve conflicts in each file:**
+   - Look for `<<<<<<< HEAD`, `=======`, and `>>>>>>>` markers
+   - Choose which version to keep or merge both
+   - Remove conflict markers
+
+3. **Use the conflict resolution script:**
+   ```bash
+   ./resolve_all_merge_conflicts.sh
+   ```
+
+### Step 6: Push Changes
+```bash
+# Push all merged changes to main
 git push origin main
 ```
 
-### Option 3: GitHub API (if terminal becomes responsive)
+### Step 7: Clean Up
 ```bash
-# Merge each PR using GitHub API
-curl -X PUT \
-  -H "Authorization: token $GITHUB_TOKEN" \
-  -H "Accept: application/vnd.github.v3+json" \
-  "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/[PR_NUMBER]/merge" \
-  -d '{"commit_title":"Merge PR #[PR_NUMBER]","commit_message":"Automated merge","merge_method":"merge"}'
+# Remove backup files
+find . -name '*.backup.*' -delete
+
+# Remove any remaining conflict markers
+grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git
 ```
 
-## 📊 Current Status
+## Available Scripts
 
-### ✅ Completed:
-- [x] Fixed Node.js version configuration
-- [x] Resolved merge conflicts in PR #12889
-- [x] Successfully merged PR #12889 into main
-- [x] Main branch is up to date and stable
+### 1. `resolve_all_merge_conflicts.sh`
+- Automatically resolves merge conflicts in all files
+- Removes conflict markers
+- Creates backups of conflicted files
 
-### 🔄 In Progress:
-- [ ] Merge remaining PRs (12888, 12887, 12886, 12885, 12884)
+### 2. `resolve-all-conflicts-and-merge-prs.sh`
+- Comprehensive script to handle all conflicts and merges
+- Processes all cursor branches automatically
+- Creates backup branches and handles errors
 
-### 📋 Next Steps:
-1. **Immediate**: The main branch is now stable and ready for development
-2. **Short-term**: Process remaining PRs when terminal operations become responsive
-3. **Long-term**: Implement automated merge conflict resolution for future PRs
+### 3. `step-by-step-merge.sh`
+- Provides manual step-by-step instructions
+- Useful when automatic scripts fail
 
-## 🎯 Key Achievements
+## Conflict Resolution Strategy
 
-1. **Build Issue Resolved**: Node.js version mismatch fixed, Netlify builds should now work
-2. **Merge Conflicts Resolved**: Successfully resolved yarn.lock conflicts
-3. **Main Branch Updated**: Latest changes are now in main branch
-4. **Repository Stability**: Codebase is in a clean, stable state
+### Critical Files (Keep Main Version)
+- `package.json`
+- `package-lock.json`
+- `next.config.js`
+- `tsconfig.json`
+- `tailwind.config.js`
 
-## 🚨 Important Notes
+### Regular Files (Merge Both Versions)
+- Source code files (`.tsx`, `.ts`, `.js`, `.jsx`)
+- Documentation files
+- Configuration files
 
-- The repository is large (80k+ commits), causing terminal operations to timeout
-- All critical merge conflicts have been resolved
-- Main branch is stable and ready for continued development
-- Remaining PRs can be processed individually as needed
+### Backup Strategy
+- Always create a backup branch before starting
+- Create backups of conflicted files before resolving
+- Use descriptive commit messages
 
-## 🔧 Tools Created
+## Expected Outcomes
 
-1. **batch_merge_prs.js**: Node.js script for batch PR merging
-2. **quick_merge.sh**: Shell script for quick PR merging
-3. **merge_prs.sh**: Comprehensive merge script
+### After Successful Resolution:
+- ✅ All open PRs merged into main
+- ✅ No merge conflicts remaining
+- ✅ Build passes successfully
+- ✅ All new pages and features available
+- ✅ Website functionality improved
 
-These tools are ready to use when terminal operations become responsive.
+### Files That Should Be Present:
+- All newly created service pages
+- Updated navigation components
+- Improved header, footer, and sidebar
+- All AI platform pages
+- White papers and webinars pages
+
+## Troubleshooting
+
+### Common Issues:
+1. **Terminal connectivity problems** - Use manual steps
+2. **Merge conflicts in critical files** - Keep main version
+3. **Build failures after merge** - Check for syntax errors
+4. **Missing dependencies** - Run `npm install` after merge
+
+### Recovery Steps:
+1. If merge fails, use `git merge --abort`
+2. Restore from backup branch if needed
+3. Resolve conflicts manually if scripts fail
+4. Test build after each merge
+
+## Next Steps After Resolution
+
+1. **Test the build:**
+   ```bash
+   npm run build
+   ```
+
+2. **Test the application:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Verify all pages load correctly**
+
+4. **Check navigation and links**
+
+5. **Deploy to production**
+
+## Contact Information
+If issues persist, contact the development team or refer to the project documentation.
 
 ---
 
-**Status**: ✅ **CRITICAL MERGE CONFLICTS RESOLVED** - Main branch is stable and ready for development!
+**Note:** This guide assumes you have the necessary permissions to merge PRs and push to the main branch. Always ensure you have proper authorization before proceeding.

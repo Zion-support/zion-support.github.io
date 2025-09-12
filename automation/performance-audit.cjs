@@ -1,209 +1,124 @@
 #!/usr/bin/env node
 
-/**
- * Performance Audit Script
- * Analyzes application performance metrics
- */
-
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
-class PerformanceAuditor {
-  constructor() {
-    this.reportsDir = 'data/reports/performance';
-    this.metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      lighthouseScore: 0,
-      testCoverage: 0
-    };
-  }
+const OUT_DIR = path.join(__dirname, '..', 'public', 'reports', 'performance');
 
-  async runAudit() {
-    console.log('🚀 Starting Performance Audit...');
-    
-    try {
-      // Ensure reports directory exists
-      this.ensureReportsDirectory();
-      
-      // Collect performance metrics
-      await this.collectMetrics();
-      
-      // Generate report
-      const report = this.generateReport();
-      
-      // Save report
-      this.saveReport(report);
-      
-      console.log('✅ Performance audit completed successfully');
-      return report;
-      
-    } catch (error) {
-      console.error('❌ Performance audit failed:', error.message);
-      throw error;
-    }
-  }
+function getBaseUrl() {
+  const url = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
+  return url || '';
+}
 
-  ensureReportsDirectory() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
-  async collectMetrics() {
-    console.log('📊 Collecting performance metrics...');
-    
-    // Simulate collecting various metrics
-    this.metrics.buildTime = this.simulateBuildTime();
-    this.metrics.bundleSize = this.simulateBundleSize();
-    this.metrics.lighthouseScore = this.simulateLighthouseScore();
-    this.metrics.testCoverage = this.simulateTestCoverage();
-    
-    console.log('📈 Metrics collected:', this.metrics);
-  }
-
-  simulateBuildTime() {
-    // Simulate build time between 30 seconds and 5 minutes
-    return Math.floor(Math.random() * 270) + 30;
-  }
-
-  simulateBundleSize() {
-    // Simulate bundle size between 500KB and 2MB
-    return Math.floor(Math.random() * 1500) + 500;
-  }
-
-  simulateLighthouseScore() {
-    // Simulate Lighthouse score between 70 and 100
-    return Math.floor(Math.random() * 30) + 70;
-  }
-
-  simulateTestCoverage() {
-    // Simulate test coverage between 60% and 95%
-    return Math.floor(Math.random() * 35) + 60;
-  }
-
-  generateReport() {
-    const timestamp = new Date().toISOString();
-    const report = {
-      timestamp,
-      metrics: this.metrics,
-      summary: this.generateSummary(),
-      recommendations: this.generateRecommendations()
-    };
-    
-    return report;
-  }
-
-  generateSummary() {
-    const { buildTime, bundleSize, lighthouseScore, testCoverage } = this.metrics;
-    
-    let status = 'good';
-    let issues = [];
-    
-    if (buildTime > 180) {
-      status = 'warning';
-      issues.push('Build time is longer than 3 minutes');
-    }
-    
-    if (bundleSize > 1500) {
-      status = 'warning';
-      issues.push('Bundle size is larger than 1.5MB');
-    }
-    
-    if (lighthouseScore < 80) {
-      status = 'warning';
-      issues.push('Lighthouse score is below 80');
-    }
-    
-    if (testCoverage < 80) {
-      status = 'warning';
-      issues.push('Test coverage is below 80%');
-    }
-    
-    return {
-      status,
-      issues,
-      score: Math.round((lighthouseScore + testCoverage) / 2)
-    };
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-    
-    if (this.metrics.buildTime > 180) {
-      recommendations.push('Optimize build process and consider build caching');
-    }
-    
-    if (this.metrics.bundleSize > 1500) {
-      recommendations.push('Implement code splitting and tree shaking');
-      recommendations.push('Analyze and remove unused dependencies');
-    }
-    
-    if (this.metrics.lighthouseScore < 80) {
-      recommendations.push('Optimize Core Web Vitals');
-      recommendations.push('Implement lazy loading for images and components');
-    }
-    
-    if (this.metrics.testCoverage < 80) {
-      recommendations.push('Increase test coverage for critical components');
-      recommendations.push('Add integration tests for user workflows');
-    }
-    
-    if (recommendations.length === 0) {
-      recommendations.push('Maintain current performance standards');
-      recommendations.push('Continue monitoring for performance regressions');
-    }
-    
-    return recommendations;
-  }
-
-  saveReport(report) {
-    const filename = `performance-audit-${Date.now()}.json`;
-    const filepath = path.join(this.reportsDir, filename);
-    
-    fs.writeFileSync(filepath, JSON.stringify(report, null, 2));
-    console.log(`📄 Report saved to: ${filepath}`);
-  }
-
-  printReport(report) {
-    console.log('\n📊 Performance Audit Report');
-    console.log('============================');
-    console.log(`Timestamp: ${report.timestamp}`);
-    console.log(`Overall Status: ${report.summary.status.toUpperCase()}`);
-    console.log(`Overall Score: ${report.summary.score}/100`);
-    
-    console.log('\n📈 Metrics:');
-    console.log(`  Build Time: ${report.metrics.buildTime}s`);
-    console.log(`  Bundle Size: ${report.metrics.bundleSize}KB`);
-    console.log(`  Lighthouse Score: ${report.metrics.lighthouseScore}/100`);
-    console.log(`  Test Coverage: ${report.metrics.testCoverage}%`);
-    
-    if (report.summary.issues.length > 0) {
-      console.log('\n⚠️ Issues Found:');
-      report.summary.issues.forEach((issue, index) => {
-        console.log(`  ${index + 1}. ${issue}`);
+function fetchJson(url) {
+  return new Promise((resolve, reject) => {
+    const req = https.get(url, { headers: { 'User-Agent': 'zion.app-automation' } }, (res) => {
+      let data = '';
+      res.on('data', (chunk) => { data += chunk; });
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          resolve(json);
+        } catch (e) {
+          reject(new Error(`Invalid JSON from ${url}: ${e.message}`));
+        }
       });
-    }
-    
-    console.log('\n💡 Recommendations:');
-    report.recommendations.forEach((rec, index) => {
-      console.log(`  ${index + 1}. ${rec}`);
     });
+    req.on('error', (err) => reject(err));
+    req.setTimeout(15000, () => { req.destroy(new Error('timeout')); });
+  });
+}
+
+function scoreOf(json, category) {
+  try {
+    const cat = json.lighthouseResult.categories[category];
+    return typeof cat.score === 'number' ? Math.round(cat.score * 100) : null;
+  } catch (_) {
+    return null;
   }
 }
 
-// CLI interface
-if (require.main === module) {
-  const auditor = new PerformanceAuditor();
-  auditor.runAudit()
-    .then(report => {
-      auditor.printReport(report);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('❌ Audit failed:', error.message);
-      process.exit(1);
-    });
+function renderHTML(results) {
+  const rows = results.map(r => `
+    <tr>
+      <td><a href="${r.page}" target="_blank" rel="noopener">${r.page}</a></td>
+      <td>${r.strategy}</td>
+      <td>${r.performance ?? ''}</td>
+      <td>${r.accessibility ?? ''}</td>
+      <td>${r.seo ?? ''}</td>
+      <td>${r.bestPractices ?? ''}</td>
+    </tr>`).join('\n');
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Performance Audit</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; margin: 24px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #e5e7eb; padding: 8px; font-size: 14px; }
+  th { background: #f3f4f6; text-align: left; }
+</style>
+</head>
+<body>
+  <h1>Performance Audit</h1>
+  <p>Autonomously generated via Google PageSpeed Insights. Strategies: mobile and desktop.</p>
+  <table>
+    <thead>
+      <tr><th>Page</th><th>Strategy</th><th>Performance</th><th>Accessibility</th><th>SEO</th><th>Best Practices</th></tr>
+    </thead>
+    <tbody>
+      ${rows}
+    </tbody>
+  </table>
+</body>
+</html>`;
 }
 
-module.exports = PerformanceAuditor;
+async function main() {
+  const base = getBaseUrl();
+  if (!base) {
+    console.log('No base URL available; skipping performance audit');
+    return;
+  }
+  const key = process.env.GOOGLE_API_KEY || '';
+  const pages = ['/', '/main/front', '/newsroom', '/site-health'];
+  const strategies = ['mobile', 'desktop'];
+
+  const results = [];
+  for (const page of pages) {
+    for (const strategy of strategies) {
+      const fullUrl = encodeURIComponent(`${base}${page}`);
+      const api = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${fullUrl}&strategy=${strategy}${key ? `&key=${key}` : ''}`;
+      try {
+        const json = await fetchJson(api);
+        results.push({
+          page: `${base}${page}`,
+          strategy,
+          performance: scoreOf(json, 'performance'),
+          accessibility: scoreOf(json, 'accessibility'),
+          seo: scoreOf(json, 'seo'),
+          bestPractices: scoreOf(json, 'best-practices'),
+        });
+      } catch (e) {
+        results.push({ page: `${base}${page}`, strategy, error: String(e.message || e) });
+      }
+    }
+  }
+
+  ensureDir(OUT_DIR);
+  const payload = { generatedAt: new Date().toISOString(), base, results };
+  fs.writeFileSync(path.join(OUT_DIR, 'latest.json'), JSON.stringify(payload, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderHTML(results));
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exitCode = 1;
+});

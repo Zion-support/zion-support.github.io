@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 type Props = {
@@ -20,4 +18,3 @@ export default function FuturisticCard({ title, description, cta }: Props) {
     </div>
   );
 }
->>>>>>> origin/automation/changelog

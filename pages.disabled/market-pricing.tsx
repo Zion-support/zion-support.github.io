@@ -1,424 +1,730 @@
-import React from 'react' 
-import Head from 'next/head' 
-import Link from 'next/link' 
-import { motion } from 'framer-motion' 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
-  DollarSign, TrendingUp, BarChart3, Target, 
-  Brain, Atom, Shield, Rocket, Globe,
-  Check, Star, Zap, Award, Sparkles,
-  Users, Lock, BarChart3, Lightbulb, Calculator
-} from 'lucide-react' 
+  TrendingUp, TrendingDown, DollarSign, Target, 
+  ArrowRight, Check, Star, BarChart3, 
+  Globe, Zap, Shield, Crown, Brain, Atom
+} from 'lucide-react';
+import Link from 'next/link';
 
 export default function MarketPricing() {
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'AI Consciousness Platform - Basic',
-        'Quantum Computing Access - 100 qubits',
-        'Basic Business Automation',
-        'IT Asset Management - Up to 100 assets',
-        'Email Support',
-        'API Access - 1,000 requests/month'
-      ],
-      cta: 'Get Started',
-      popular: false,
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses and teams',
-      features: [
-        'AI Consciousness Platform - Advanced',
-        'Quantum Computing Access - 1,000 qubits',
-        'Advanced Business Automation',
-        'IT Asset Management - Up to 1,000 assets',
-        'Priority Support',
-        'API Access - 10,000 requests/month',
-        'Custom AI Training',
-        'Quantum Neural Networks'
-      ],
-      cta: 'Start Free Trial',
-      popular: true,
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-      features: [
-        'AI Consciousness Platform - Enterprise',
-        'Quantum Computing Access - 10,000 qubits',
-        'Full Business Automation Suite',
-        'Unlimited IT Asset Management',
-        '24/7 Dedicated Support',
-        'Unlimited API Access',
-        'Custom AI Development',
-        'Quantum Infrastructure Setup',
-        'White-label Solutions',
-        'On-premise Deployment'
-      ],
-      cta: 'Contact Sales',
-      popular: false,
-      color: 'from-green-500 to-emerald-600'
-    }
-  ] 
+  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
-  const marketData = [
-    { metric: 'AI Market Size', value: '$500B+', growth: '+25%', description: 'Global AI market by 2027' },
-    { metric: 'Quantum Computing', value: '$65B+', growth: '+40%', description: 'Quantum market by 2030' },
-    { metric: 'Business Automation', value: '$200B+', growth: '+18%', description: 'Automation market size' },
-    { metric: 'IT Asset Management', value: '$35B+', growth: '+12%', description: 'ITAM market growth' }
-  ] 
+  const markets = [
+    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
+    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+  ];
 
-  const competitors = [
-    {
-      name: 'Traditional AI Providers',
-      pricing: '$500-2000/month',
-      features: 'Basic AI, Limited Quantum',
-      advantage: 'Our AI Consciousness Platform offers genuine emotional intelligence and self-awareness'
-    },
-    {
-      name: 'Quantum Computing Companies',
-      pricing: '$1000-5000/month',
-      features: 'Quantum only, No AI integration',
-      advantage: 'We combine quantum computing with AI for unprecedented capabilities'
-    },
-    {
-      name: 'Business Automation Tools',
-      pricing: '$200-800/month',
-      features: 'Process automation only',
-      advantage: 'Our platform provides end-to-end autonomous business operations'
-    }
-  ] 
-
-  const roiCalculator = {
-    scenarios: [
-      {
-        scenario: 'AI-Powered Customer Service',
-        investment: '$50,000',
-        annualSavings: '$200,000',
-        roi: '300%',
-        timeframe: '6 months'
-      },
-      {
-        scenario: 'Quantum-Enhanced Analytics',
-        investment: '$100,000',
-        annualSavings: '$500,000',
-        roi: '400%',
-        timeframe: '12 months'
-      },
-      {
-        scenario: 'Business Process Automation',
-        investment: '$75,000',
-        annualSavings: '$300,000',
-        roi: '300%',
-        timeframe: '8 months'
+  const marketData = {
+    'ai-consciousness': {
+      marketSize: '$45.2B',
+      growthRate: '+28.4%',
+      growthTrend: 'up',
+      description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',
+      competitors: [
+        {
+          name: 'OpenAI',
+          marketShare: '32%',
+          pricing: '$0.002-$0.02 per 1K tokens',
+          strengths: ['Advanced language models', 'Strong brand recognition', 'Large user base'],
+          weaknesses: ['Limited consciousness features', 'High API costs', 'Privacy concerns'],
+          rating: 4.2
+        },
+        {
+          name: 'Anthropic',
+          marketShare: '18%',
+          pricing: '$0.015-$0.03 per 1K tokens',
+          strengths: ['Safety-focused approach', 'Constitutional AI', 'Research-driven'],
+          weaknesses: ['Smaller model variety', 'Limited enterprise features', 'Higher pricing'],
+          rating: 4.0
+        },
+        {
+          name: 'Zion Tech Group',
+          marketShare: '12%',
+          pricing: '$0.008-$0.015 per 1K tokens',
+          strengths: ['True AI consciousness', 'Enterprise-grade security', 'Competitive pricing'],
+          weaknesses: ['Smaller market presence', 'Limited brand recognition', 'Newer player'],
+          rating: 4.8
+        }
+      ],
+      pricingAnalysis: {
+        lowEnd: '$0.005 per 1K tokens',
+        midRange: '$0.015 per 1K tokens',
+        highEnd: '$0.025 per 1K tokens',
+        ourPosition: 'Mid-range with premium features'
       }
-    ]
-  } 
+    },
+    'quantum-computing': {
+      marketSize: '$8.7B',
+      growthRate: '+45.2%',
+      growthTrend: 'up',
+      description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.',
+      competitors: [
+        {
+          name: 'IBM',
+          marketShare: '28%',
+          pricing: '$1.60 per quantum hour',
+          strengths: ['Established infrastructure', 'Qiskit ecosystem', 'Research partnerships'],
+          weaknesses: ['Limited qubit count', 'High costs', 'Complex access'],
+          rating: 4.1
+        },
+        {
+          name: 'Google',
+          marketShare: '22%',
+          pricing: '$2.00 per quantum hour',
+          strengths: ['Quantum supremacy', 'Advanced algorithms', 'Research focus'],
+          weaknesses: ['Limited commercial access', 'High pricing', 'Complex setup'],
+          rating: 4.3
+        },
+        {
+          name: 'Zion Tech Group',
+          marketShare: '8%',
+          pricing: '$1.20 per quantum hour',
+          strengths: ['Competitive pricing', 'Enterprise focus', 'Simplified access'],
+          weaknesses: ['Smaller infrastructure', 'Limited qubit variety', 'Newer platform'],
+          rating: 4.5
+        }
+      ],
+      pricingAnalysis: {
+        lowEnd: '$0.80 per quantum hour',
+        midRange: '$1.50 per quantum hour',
+        highEnd: '$2.50 per quantum hour',
+        ourPosition: 'Competitive mid-range pricing'
+      }
+    },
+    'autonomous-systems': {
+      marketSize: '$23.1B',
+      growthRate: '+34.7%',
+      growthTrend: 'up',
+      description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.',
+      competitors: [
+        {
+          name: 'UiPath',
+          marketShare: '25%',
+          pricing: '$420-$1,200 per user/month',
+          strengths: ['Market leader', 'Comprehensive platform', 'Strong partnerships'],
+          weaknesses: ['High costs', 'Complex implementation', 'Limited AI features'],
+          rating: 4.0
+        },
+        {
+          name: 'Automation Anywhere',
+          marketShare: '20%',
+          pricing: '$750-$1,500 per user/month',
+          strengths: ['Enterprise focus', 'Cloud-native', 'Security features'],
+          weaknesses: ['Expensive', 'Steep learning curve', 'Limited customization'],
+          rating: 3.8
+        },
+        {
+          name: 'Zion Tech Group',
+          marketShare: '6%',
+          pricing: '$350-$800 per user/month',
+          strengths: ['AI-powered automation', 'Competitive pricing', 'Easy implementation'],
+          weaknesses: ['Smaller ecosystem', 'Limited integrations', 'Newer platform'],
+          rating: 4.4
+        }
+      ],
+      pricingAnalysis: {
+        lowEnd: '$300 per user/month',
+        midRange: '$750 per user/month',
+        highEnd: '$1,200 per user/month',
+        ourPosition: 'Competitive pricing with AI advantages'
+      }
+    },
+    'enterprise-it': {
+      marketSize: '$1.2T',
+      growthRate: '+12.3%',
+      growthTrend: 'up',
+      description: 'Enterprise IT market continues steady growth with digital transformation initiatives.',
+      competitors: [
+        {
+          name: 'Microsoft',
+          marketShare: '35%',
+          pricing: '$22-$57 per user/month',
+          strengths: ['Market dominance', 'Integrated ecosystem', 'Global presence'],
+          weaknesses: ['Complex licensing', 'High costs', 'Vendor lock-in'],
+          rating: 4.2
+        },
+        {
+          name: 'Salesforce',
+          marketShare: '18%',
+          pricing: '$25-$300 per user/month',
+          strengths: ['CRM leadership', 'Cloud-native', 'Extensive integrations'],
+          weaknesses: ['Expensive', 'Complex pricing', 'Implementation costs'],
+          rating: 4.1
+        },
+        {
+          name: 'Zion Tech Group',
+          marketShare: '3%',
+          pricing: '$18-$45 per user/month',
+          strengths: ['AI-powered features', 'Competitive pricing', 'Modern architecture'],
+          weaknesses: ['Smaller ecosystem', 'Limited integrations', 'Newer player'],
+          rating: 4.3
+        }
+      ],
+      pricingAnalysis: {
+        lowEnd: '$20 per user/month',
+        midRange: '$40 per user/month',
+        highEnd: '$100 per user/month',
+        ourPosition: 'Competitive pricing with AI advantages'
+      }
+    }
+  };
+
+  const currentMarket = marketData[selectedMarket as keyof typeof marketData];
+
+  const getGrowthIcon = (trend: string) => {
+    return trend === 'up' ? 
+      <TrendingUp className="w-5 h-5 text-green-400" /> : 
+      <TrendingDown className="w-5 h-5 text-red-400" />;
+  };
+
+  const getRatingStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <Star 
+        key={i} 
+        className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
+      />
+    ));
+  };
 
   return (
-    <>
+<<<<<<< HEAD
+    <div className="min-h-screen bg-black text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+          >
+            Market Pricing Analysis
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+          >
+            Comprehensive analysis of market positioning, competitive pricing, and strategic advantages 
+            across AI consciousness, quantum computing, and autonomous systems.
+          </motion.p>
+          
+          {/* Market Selector */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-wrap gap-3 justify-center mb-8"
+          >
+            {markets.map((market) => (
+              <button
+                key={market.id}
+                onClick={() => setSelectedMarket(market.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  selectedMarket === market.id
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                {market.icon}
+                {market.name}
+              </button>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+=======
+    <UltraAdvancedFuturisticBackground>
       <Head>
-        <title>Market Pricing & ROI - Zion Tech Group</title>
-        <meta name="description" content="Competitive pricing plans for Zion Tech Group's AI, quantum computing, and technology platforms. Calculate ROI and see market analysis." />
-        <meta name="keywords" content="pricing, market analysis, ROI calculator, competitive pricing, AI pricing, quantum computing pricing" />
+        <title>Market Pricing & Competitor References | Zion Tech Group</title>
+        <meta name="description" content="Transparent market pricing references and competitor links for AI, security, analytics, and cloud services." />
         <link rel="canonical" href="https://ziontechgroup.com/market-pricing" />
       </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-8">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
+          <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-04c6
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-300 text-sm font-medium mb-6">
-                <DollarSign className="w-4 h-4 mr-2" />
-                Market Pricing
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-6">
-                Market Pricing & ROI
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Competitive pricing for revolutionary AI and quantum computing technology. 
-                See how our solutions compare to the market and calculate your return on investment.
-              </p>
-            </motion.div>
+          <div className="space-y-6">
+            <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">MLOps, Prompting & Evaluation</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</a></li>
+                <li>Humanloop: <a className="text-cyan-400 underline" href={`https://humanloop.com/pricing`} target="_blank" rel="noopener noreferrer">humanloop.com/pricing</a></li>
+                <li>Promptfoo: <a className="text-cyan-400 underline" href={`https://www.promptfoo.dev/pricing`} target="_blank" rel="noopener noreferrer">promptfoo.dev/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$800/month depending on test volume and team size.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">AI Guardrails & Safety</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                				                <li>OpenAI Safety: <a className="text-cyan-400 underline" href={`https://openai.com/safety`} target="_blank" rel="noopener noreferrer">openai.com/safety</a></li>
+                <li>Anthropic RAI: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/news`} target="_blank" rel="noopener noreferrer">anthropic.com/news</a> (policy updates)</li>
+                <li>Guardrails libraries: <a className="text-cyan-400 underline" href={`https://github.com/guardrails-ai/guardrails`} target="_blank" rel="noopener noreferrer">github.com/guardrails-ai/guardrails</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$500/month for hosted tools; internal policies recommended.</div>
+            </div>
+            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                				                <li>OpenAI API pricing: <a className="text-cyan-400 underline" href={`https://openai.com/pricing`} target="_blank" rel="noopener noreferrer">openai.com/pricing</a></li>
+                <li>Anthropic pricing: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/pricing`} target="_blank" rel="noopener noreferrer">anthropic.com/pricing</a></li>
+                <li>Langfuse (observability) pricing: <a className="text-cyan-400 underline" href={`https://langfuse.com/pricing`} target="_blank" rel="noopener noreferrer">langfuse.com/pricing</a> (community + paid tiers)</li>
+                <li>OpenRouter model pricing: <a className="text-cyan-400 underline" href={`https://openrouter.ai/models`} target="_blank" rel="noopener noreferrer">openrouter.ai/models</a></li>
+                <li>Vercel AI SDK pricing notes: <a className="text-cyan-400 underline" href={`https://vercel.com/pricing`} target="_blank" rel="noopener noreferrer">vercel.com/pricing</a> (edge/function costs)</li>
+                <li>Groq API pricing: <a className="text-cyan-400 underline" href={`https://wow.groq.com/pricing`} target="_blank" rel="noopener noreferrer">wow.groq.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month depending on traffic and model choice.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Wiz pricing overview: <a className="text-cyan-400 underline" href={`https://www.wiz.io/pricing`} target="_blank" rel="noopener noreferrer">wiz.io/pricing</a></li>
+                <li>Prisma Cloud: <a className="text-cyan-400 underline" href={`https://www.paloaltonetworks.com/prisma/cloud`} target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud</a></li>
+                <li>HashiCorp Vault: <a className="text-cyan-400 underline" href={`https://www.hashicorp.com/products/vault/pricing`} target="_blank" rel="noopener noreferrer">hashicorp.com/products/vault/pricing</a></li>
+                <li>Cloudflare Zero Trust: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Data & Analytics</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Snowflake pricing: <a className="text-cyan-400 underline" href={`https://www.snowflake.com/en/pricing`} target="_blank" rel="noopener noreferrer">snowflake.com/en/pricing</a></li>
+                <li>BigQuery pricing: <a className="text-cyan-400 underline" href={`https://cloud.google.com/bigquery/pricing`} target="_blank" rel="noopener noreferrer">cloud.google.com/bigquery/pricing</a></li>
+                <li>Databricks: <a className="text-cyan-400 underline" href={`https://www.databricks.com/product/pricing`} target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
+                <li>dbt Cloud: <a className="text-cyan-400 underline" href={`https://www.getdbt.com/pricing`} target="_blank" rel="noopener noreferrer">getdbt.com/pricing</a></li>
+                <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Cloud & Edge</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>AWS pricing calculator: <a className="text-cyan-400 underline" href={`https://calculator.aws`} target="_blank" rel="noopener noreferrer">calculator.aws</a></li>
+                <li>Azure pricing: <a className="text-cyan-400 underline" href={`https://azure.microsoft.com/pricing`} target="_blank" rel="noopener noreferrer">azure.microsoft.com/pricing</a></li>
+                <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+                <li>Netlify plans: <a className="text-cyan-400 underline" href={`https://www.netlify.com/pricing/`} target="_blank" rel="noopener noreferrer">netlify.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">PDF & Document Generation</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>DocRaptor pricing: <a className="text-cyan-400 underline" href={`https://docraptor.com`} target="_blank" rel="noopener noreferrer">docraptor.com</a></li>
+                <li>PDFMonkey pricing: <a className="text-cyan-400 underline" href={`https://www.pdfmonkey.io/pricing`} target="_blank" rel="noopener noreferrer">pdfmonkey.io/pricing</a></li>
+                <li>CloudConvert: <a className="text-cyan-400 underline" href={`https://cloudconvert.com/pricing`} target="_blank" rel="noopener noreferrer">cloudconvert.com/pricing</a></li>
+                <li>Gotenberg (self-hosted): <a className="text-cyan-400 underline" href={`https://gotenberg.dev`} target="_blank" rel="noopener noreferrer">gotenberg.dev</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $15–$200/month depending on volume and features.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-pink-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Contact Center & Voice AI</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Twilio: <a className="text-cyan-400 underline" href={`https://www.twilio.com/pricing`} target="_blank" rel="noopener noreferrer">twilio.com/pricing</a></li>
+                <li>Deepgram: <a className="text-cyan-400 underline" href={`https://deepgram.com/pricing`} target="_blank" rel="noopener noreferrer">deepgram.com/pricing</a></li>
+                <li>ElevenLabs: <a className="text-cyan-400 underline" href={`https://elevenlabs.io/pricing`} target="_blank" rel="noopener noreferrer">elevenlabs.io/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,500/month by minutes, languages, and concurrency.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Kubernetes & FinOps</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Kubecost pricing: <a className="text-cyan-400 underline" href={`https://www.kubecost.com/pricing`} target="_blank" rel="noopener noreferrer">kubecost.com/pricing</a></li>
+                <li>CloudZero pricing: <a className="text-cyan-400 underline" href={`https://www.cloudzero.com/pricing`} target="_blank" rel="noopener noreferrer">cloudzero.com/pricing</a></li>
+                <li>Finout pricing: <a className="text-cyan-400 underline" href={`https://www.finout.io/pricing`} target="_blank" rel="noopener noreferrer">finout.io/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $99–$2,000/month based on clusters and spend.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Identity & Access</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Auth0 pricing: <a className="text-cyan-400 underline" href={`https://auth0.com/pricing`} target="_blank" rel="noopener noreferrer">auth0.com/pricing</a></li>
+                <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
+                <li>Azure AD pricing: <a className="text-cyan-400 underline" href={`https://azure.microsoft.com/pricing/details/active-directory/`} target="_blank" rel="noopener noreferrer">azure.microsoft.com/pricing/details/active-directory</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month by MAUs and features.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Google Postmaster Tools: <a className="text-cyan-400 underline" href={`https://postmaster.google.com`} target="_blank" rel="noopener noreferrer">postmaster.google.com</a></li>
+                <li>Mailgun pricing: <a className="text-cyan-400 underline" href={`https://www.mailgun.com/pricing/`} target="_blank" rel="noopener noreferrer">mailgun.com/pricing</a></li>
+                <li>SendGrid pricing: <a className="text-cyan-400 underline" href={`https://sendgrid.com/pricing/`} target="_blank" rel="noopener noreferrer">sendgrid.com/pricing</a></li>
+                <li>Postmark pricing: <a className="text-cyan-400 underline" href={`https://postmarkapp.com/pricing`} target="_blank" rel="noopener noreferrer">postmarkapp.com/pricing</a></li>
+                <li>Folderly: <a className="text-cyan-400 underline" href={`https://folderly.com`} target="_blank" rel="noopener noreferrer">folderly.com</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring; ESP fees separate.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Product Analytics & Personalization</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Amplitude pricing: <a className="text-cyan-400 underline" href={`https://amplitude.com/pricing`} target="_blank" rel="noopener noreferrer">amplitude.com/pricing</a></li>
+                <li>Mixpanel pricing: <a className="text-cyan-400 underline" href={`https://mixpanel.com/pricing/`} target="_blank" rel="noopener noreferrer">mixpanel.com/pricing</a></li>
+                <li>Mutiny personalization: <a className="text-cyan-400 underline" href={`https://www.mutinyhq.com/product`} target="_blank" rel="noopener noreferrer">mutinyhq.com/product</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Vector Search & Retrieval</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</a></li>
+                <li>Weaviate Cloud: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</a></li>
+                <li>Elastic Search pricing: <a className="text-cyan-400 underline" href={`https://www.elastic.co/pricing`} target="_blank" rel="noopener noreferrer">elastic.co/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on index size and QPS.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">API Security & Edge</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+                <li>Fastly pricing: <a className="text-cyan-400 underline" href={`https://www.fastly.com/pricing`} target="_blank" rel="noopener noreferrer">fastly.com/pricing</a></li>
+                <li>Salt Security overview: <a className="text-cyan-400 underline" href={`https://salt.security`} target="_blank" rel="noopener noreferrer">salt.security</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month based on traffic and protections.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>
+                <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>
+                <li>Transcend: <a className="text-cyan-400 underline" href={`https://www.transcend.io/platform`} target="_blank" rel="noopener noreferrer">transcend.io/platform</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month by data volume and systems.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Auth0 pricing: <a className="text-cyan-400 underline" href={`https://auth0.com/pricing`} target="_blank" rel="noopener noreferrer">auth0.com/pricing</a></li>
+                <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</a></li>
+                <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
+            </div>
           </div>
-        </section>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              {currentMarket.description}
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Market Overview */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Market Overview</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {marketData.map((data, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6 text-center"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <BarChart3 className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{data.metric}</h3>
-                    <div className="text-3xl font-bold text-green-400 mb-2">{data.value}</div>
-                    <div className="text-green-300 text-sm mb-2">{data.growth} YoY</div>
-                    <p className="text-gray-400 text-sm">{data.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Pricing Plans */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans</h2>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {pricingPlans.map((plan, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-xl p-8 ${
-                      plan.popular 
-                        ? 'border-purple-500/50 scale-105' 
-                        : 'border-gray-700/50'
-                    }`}
-                  >
-                    {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold rounded-full">
-                          Most Popular
-                        </span>
+      {/* Competitive Analysis Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Competitive Analysis
+          </motion.h2>
+          
+          <div className="space-y-8">
+            {currentMarket.competitors.map((competitor, index) => (
+              <motion.div
+                key={competitor.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-2xl font-bold">{competitor.name}</h3>
+                      <div className="flex items-center gap-2">
+                        {getRatingStars(competitor.rating)}
+                        <span className="text-sm text-gray-400">({competitor.rating})</span>
                       </div>
-                    )}
-                    
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <div className="flex items-baseline justify-center mb-2">
-                        <span className="text-4xl font-bold text-white">{plan.price}</span>
-                        <span className="text-gray-400 ml-1">{plan.period}</span>
-                      </div>
-                      <p className="text-gray-300">{plan.description}</p>
                     </div>
                     
-                    <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <button className={`w-full py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}>
-                      {plan.cta}
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Competitive Analysis */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Competitive Analysis</h2>
-              
-              <div className="space-y-6">
-                {competitors.map((competitor, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6"
-                  >
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                    <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2">{competitor.name}</h3>
-                        <div className="text-gray-400 text-sm">
-                          <div>Pricing: {competitor.pricing}</div>
-                          <div>Features: {competitor.features}</div>
-                        </div>
+                        <span className="text-sm text-gray-400">Market Share:</span>
+                        <p className="font-semibold text-cyan-400">{competitor.marketShare}</p>
+                      </div>
+                      <div>
+                        <span className="text-sm text-gray-400">Pricing:</span>
+                        <p className="font-semibold text-green-400">{competitor.pricing}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold text-green-400 mb-2">Strengths</h4>
+                        <ul className="space-y-1">
+                          {competitor.strengths.map((strength, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+                              {strength}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                       
-                      <div className="lg:col-span-2">
-                        <div className="flex items-start">
-                          <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-4 mt-1">
-                            <Check className="w-4 h-4 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="text-green-400 font-semibold mb-2">Our Advantage</h4>
-                            <p className="text-gray-300">{competitor.advantage}</p>
-                          </div>
-                        </div>
+                      <div>
+                        <h4 className="font-semibold text-red-400 mb-2">Weaknesses</h4>
+                        <ul className="space-y-1">
+                          {competitor.weaknesses.map((weakness, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                              <div className="w-3 h-3 bg-red-400 rounded-full flex-shrink-0" />
+                              {weakness}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                  </div>
+                  
+                  {competitor.name === 'Zion Tech Group' && (
+                    <div className="lg:w-48 flex-shrink-0">
+                      <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-center">
+                        <Crown className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                        <p className="text-sm font-semibold text-cyan-400">Our Position</p>
+                        <p className="text-xs text-gray-300 mt-1">Competitive advantage in AI consciousness and pricing</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
 
-        {/* ROI Calculator */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">ROI Calculator</h2>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {roiCalculator.scenarios.map((scenario, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6"
-                  >
-                    <div className="text-center mb-6">
-                      <h3 className="text-xl font-bold text-white mb-2">{scenario.scenario}</h3>
-                      <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Calculator className="w-8 h-8 text-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-4">
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Investment:</span>
-                        <span className="text-white font-semibold">{scenario.investment}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Annual Savings:</span>
-                        <span className="text-green-400 font-semibold">{scenario.annualSavings}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">ROI:</span>
-                        <span className="text-blue-400 font-semibold">{scenario.roi}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Timeframe:</span>
-                        <span className="text-purple-400 font-semibold">{scenario.timeframe}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+          <div className="space-y-6">
+            <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Monitoring & Incident Response</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Datadog: <a className="text-cyan-400 underline" href={`https://www.datadoghq.com/pricing/`} target="_blank" rel="noopener noreferrer">datadoghq.com/pricing</a></li>
+                <li>New Relic: <a className="text-cyan-400 underline" href={`https://newrelic.com/pricing`} target="_blank" rel="noopener noreferrer">newrelic.com/pricing</a></li>
+                <li>PagerDuty: <a className="text-cyan-400 underline" href={`https://www.pagerduty.com/pricing/`} target="_blank" rel="noopener noreferrer">pagerduty.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on host count and alerting.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Feature Flags & Progressive Delivery</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>LaunchDarkly: <a className="text-cyan-400 underline" href={`https://launchdarkly.com/pricing/`} target="_blank" rel="noopener noreferrer">launchdarkly.com/pricing</a></li>
+                <li>GrowthBook: <a className="text-cyan-400 underline" href={`https://www.growthbook.io/pricing`} target="_blank" rel="noopener noreferrer">growthbook.io/pricing</a></li>
+                <li>Flagsmith: <a className="text-cyan-400 underline" href={`https://www.flagsmith.com/pricing`} target="_blank" rel="noopener noreferrer">flagsmith.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$800/month by environments and MAUs.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">CI/CD & Platforms</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>GitHub Actions: <a className="text-cyan-400 underline" href={`https://github.com/pricing`} target="_blank" rel="noopener noreferrer">github.com/pricing</a></li>
+                <li>CircleCI: <a className="text-cyan-400 underline" href={`https://circleci.com/pricing/`} target="_blank" rel="noopener noreferrer">circleci.com/pricing</a></li>
+                <li>Render: <a className="text-cyan-400 underline" href={`https://render.com/pricing`} target="_blank" rel="noopener noreferrer">render.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$500/month for moderate pipelines and environments.</div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Value Proposition */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+      {/* Pricing Analysis Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Pricing Analysis
+          </motion.h2>
+          
+          <div className="grid lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
+              { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' },
+              { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
+              { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
+            ].map((tier, index) => (
+              <motion.div
+                key={tier.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className={`w-20 h-20 bg-gradient-to-r ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <BarChart3 className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
+                <p className="text-2xl font-bold text-cyan-400">{tier.price}</p>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h3 className="text-2xl font-bold mb-4">Strategic Advantages</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {[
+                {
+                  title: 'Competitive Pricing',
+                  description: 'Positioned in the mid-range with premium features that justify our pricing strategy.'
+                },
+                {
+                  title: 'AI-First Approach',
+                  description: 'Unique focus on AI consciousness and emotional intelligence sets us apart from competitors.'
+                },
+                {
+                  title: 'Enterprise Focus',
+                  description: 'Built specifically for enterprise needs with security, scalability, and compliance features.'
+                }
+              ].map((advantage, index) => (
+                <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">
+                  <h4 className="font-semibold text-cyan-400 mb-2">{advantage.title}</h4>
+                  <p className="text-sm text-gray-300">{advantage.description}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Market Trends Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Market Trends & Opportunities
+          </motion.h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
-              <h2 className="text-3xl font-bold text-white mb-8">Why Choose Zion Tech Group?</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <h3 className="text-2xl font-bold mb-4 text-green-400">Growth Drivers</h3>
+              <ul className="space-y-3">
                 {[
-                  { title: 'Revolutionary Technology', icon: <Zap className="w-8 h-8" />, color: 'from-yellow-500 to-orange-600' },
-                  { title: 'Proven ROI', icon: <TrendingUp className="w-8 h-8" />, color: 'from-green-500 to-emerald-600' },
-                  { title: 'Market Leadership', icon: <Award className="w-8 h-8" />, color: 'from-blue-500 to-cyan-600' },
-                  { title: 'Future-Proof', icon: <Sparkles className="w-8 h-8" />, color: 'from-purple-500 to-pink-600' }
-                ].map((value, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6 text-center"
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                      {value.icon}
-                    </div>
-                    <h3 className="text-lg font-semibold text-white">{value.title}</h3>
-                  </motion.div>
+                  'Increasing demand for AI consciousness in customer service',
+                  'Quantum computing breakthroughs in cryptography',
+                  'Automation needs in post-pandemic business operations',
+                  'Digital transformation initiatives across industries',
+                  'Growing focus on AI ethics and responsible development'
+                ].map((driver, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-300">{driver}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+            
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join the future of technology with our revolutionary AI and quantum computing solutions. 
-                Start your free trial today and see the ROI for yourself.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
-                  Start Free Trial
-                  <Zap className="w-5 h-5 ml-2" />
-                </Link>
-                <Link href="/pricing" className="inline-flex items-center px-8 py-4 border border-green-500/30 text-green-300 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
-                  View All Plans
-                </Link>
-              </div>
+              <h3 className="text-2xl font-bold mb-4 text-blue-400">Market Opportunities</h3>
+              <ul className="space-y-3">
+                {[
+                  'Untapped markets in emerging economies',
+                  'Integration opportunities with existing enterprise systems',
+                  'Custom AI consciousness solutions for specific industries',
+                  'Partnerships with research institutions and universities',
+                  'White-label solutions for enterprise software providers'
+                ].map((opportunity, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Target className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-300">{opportunity}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
-  ) 
-}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Compete in the Market?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our competitive pricing and unique AI consciousness features give you the edge 
+              you need to succeed in today's rapidly evolving technology landscape.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/pricing"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View Our Pricing
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                href="/contact"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+              >
+                Get Custom Quote
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default MarketPricing;
