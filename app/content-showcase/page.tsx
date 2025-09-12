@@ -556,48 +556,48 @@ export default function ContentShowcase() {
   content.push(
     {
       id: 13,
-      title: "GenAI Security Blueprint 2025: Production-Grade Guardrails",
-      description: "Practical patterns to secure LLM apps: prompt injection defenses, data leakage prevention, and runtime policy enforcement.",
-      category: "cybersecurity",
+      title: "Real-Time Voice Agents in 2025: Architectures, Safety, and ROI",
+      description: "Low-latency, reliable voice agents with guardrails and observability for production.",
+      category: "ai-automation",
       type: "Article",
-      readTime: "16 min read",
+      readTime: "17 min read",
       publishDate: "2025-09-12",
       author: "Zion Tech Group",
       featured: true,
       trending: true,
-      icon: "🛡️",
-      href: "/blog/genai-security-blueprint-2025",
-      tags: ["GenAI Security", "Guardrails", "Policies", "LLM"]
+      icon: "🎙️",
+      href: "/blog/ai-2025-realtime-voice-agents",
+      tags: ["Voice", "Agents", "Latency", "Guardrails"]
     },
     {
       id: 14,
-      title: "AI Implementation Playbook 2025: Starter Kit (Free)",
-      description: "Download the starter kit with roadmaps, templates, and checklists to kick off AI safely and quickly.",
+      title: "AI Evaluation Checklist 2025 (Free)",
+      description: "Operational evals for safety, reliability, latency, and cost with ready templates.",
       category: "resources",
       type: "Free Download",
-      readTime: "75+ pages",
+      readTime: "Checklist",
       publishDate: "2025-09-12",
       author: "Zion Tech Group",
       featured: true,
       trending: false,
-      icon: "📥",
-      href: "/resources/ai-implementation-starter-kit-2025",
-      tags: ["Templates", "Roadmap", "Checklist", "Free"]
+      icon: "✅",
+      href: "/resources/ai-evaluation-checklist-2025",
+      tags: ["Evals", "Templates", "Checklist", "Reliability"]
     },
     {
       id: 15,
-      title: "Telecom Network Automation: 55% OPEX Reduction with AI Agents",
-      description: "How a global operator automated incidents and changes using AI agents, cutting OPEX by 55% within 6 months.",
+      title: "Insurance Claims Automation: 55% OPEX Reduction",
+      description: "Automating FNOL, triage, and fraud checks with agentic workflows in insurance.",
       category: "case-studies",
       type: "Case Study",
       readTime: "14 min read",
-      publishDate: "2025-09-11",
+      publishDate: "2025-09-12",
       author: "Zion Tech Group",
       featured: false,
       trending: true,
-      icon: "📶",
-      href: "/case-studies/ai-telecom-network-automation-success-2025",
-      tags: ["Telecom", "Automation", "Agents", "OPEX"]
+      icon: "📄",
+      href: "/case-studies/ai-insurance-claims-automation-success-2025",
+      tags: ["Insurance", "Claims", "Agents", "OPEX"]
     }
   );
 
