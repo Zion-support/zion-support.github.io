@@ -83,3 +83,5 @@
 2025-09-12 10:12:40 - Resolving conflicts in public/reports/metadata/index.html for branch backup/sync-2025-08-17T21-21-06-486Z
 2025-09-12 10:12:40 - Resolving conflicts in public/reports/metadata/latest.json for branch backup/sync-2025-08-17T21-21-06-486Z
 2025-09-12 10:12:40 - Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-21-06-486Z
+2025-09-12 10:12:42 - Merge conflicts detected in backup/sync-2025-08-17T21-21-30-376Z
+2025-09-12 10:12:42 - Resolving conflicts in tsconfig.tsbuildinfo for branch backup/sync-2025-08-17T21-21-30-376Z
