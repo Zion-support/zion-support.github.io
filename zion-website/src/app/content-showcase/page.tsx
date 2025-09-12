@@ -16,12 +16,22 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "Foundation Model Cost Optimization 2025",
-      description: "Cut LLM costs 40–70% using smart routing, caching, distillation, and compression while maintaining quality.",
-      href: "/blog/ai-2025-foundation-model-cost-optimization",
-      icon: "💸",
-      category: "MLOps",
-      readTime: "17 min read",
+      title: "LLM Observability 2025: Metrics, Traces, and Guardrails",
+      description: "End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.",
+      href: "/blog/llm-observability-2025",
+      icon: "📈",
+      category: "Observability",
+      readTime: "19 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Retail Demand Forecasting: 32% Stockouts Reduction",
+      description: "Global retailer cut stockouts by 32% and waste by 18% via AI-driven demand forecasting.",
+      href: "/case-studies/ai-2025-retail-demand-forecasting",
+      icon: "🛒",
+      category: "Case Study",
+      readTime: "12 min read",
       date: "Sep 12, 2025",
       featured: true
     },

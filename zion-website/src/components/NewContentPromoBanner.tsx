@@ -34,18 +34,29 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '11',
-      title: 'Real-time AI Agents 2025: Observability, Guardrails, and SLOs',
-      description: 'Operate real-time agents with production-grade telemetry, safety guardrails, tracing, and SLOs.',
-      href: '/blog/ai-2025-realtime-agents-observability',
+      id: '13',
+      title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
+      description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
+      href: '/blog/llm-observability-2025',
       type: 'blog',
       featured: true,
-      readTime: '17 min read',
+      readTime: '19 min read',
       date: 'Sep 12, 2025',
       category: 'Observability'
     },
     {
-      id: '13',
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Case study: Global retailer cut stockouts by 32% and waste by 18% via AI forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '15',
       title: 'Operationalizing AI Governance 2025',
       description: 'Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.',
       href: '/blog/ai-2025-operationalizing-ai-governance',
