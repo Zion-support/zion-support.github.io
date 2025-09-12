@@ -42,6 +42,8 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
+import LatestContentShowcase from '../components/LatestContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -98,6 +100,12 @@ export default function HomePage() {
         
         {/* Content Promotion Banner */}
         <NewContentPromotionBanner />
+        
+        {/* LATEST CONTENT PROMOTION BANNER */}
+        <LatestContentPromotionBanner />
+        
+        {/* LATEST CONTENT SHOWCASE */}
+        <LatestContentShowcase />
         
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
