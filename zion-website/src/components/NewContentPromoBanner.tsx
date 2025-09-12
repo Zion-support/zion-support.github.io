@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '60',
+      title: 'AI Governance Maturity Model (2025)',
+      description: 'Assess and improve AI governance with a pragmatic maturity model across policy, risk, and engineering.',
+      href: '/blog/ai-2025-governance-maturity-model',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '61',
+      title: 'Governance Maturity Rollout: 60% Faster Reviews',
+      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage 35%.',
+      href: '/case-studies/ai-2025-governance-maturity-rollout',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',

@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '60',
+      title: 'AI Governance Maturity Model (2025)',
+      description: 'Assess your governance level and implement pragmatic controls without slowing delivery.',
+      href: '/blog/ai-2025-governance-maturity-model',
+      type: 'blog',
+      category: 'Governance',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Governance', 'Risk', 'Policy-as-code'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
+      id: '61',
+      title: 'Governance Maturity Rollout: 60% Faster Reviews',
+      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage.',
+      href: '/case-studies/ai-2025-governance-maturity-rollout',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Governance', 'Compliance', 'Evaluations'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
