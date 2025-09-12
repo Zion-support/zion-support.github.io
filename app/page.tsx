@@ -28,12 +28,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
+                🎉 Revolutionary AI Content Update: 30+ New Resources Just Released!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
-                Sustainability Success Stories, plus comprehensive implementation guides and free resources. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough content: Quantum AI Breakthrough, Healthcare Revolution, Financial Services Transformation, 
+                plus comprehensive implementation guides and free resources. Get expert insights on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -43,16 +42,16 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
                   Read Latest Article
                 </Link>
                 <Link
-                  href="/resources"
+                  href="/resources/ai-implementation-master-guide-2025"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Download Free Resources
+                  Download Master Guide
                 </Link>
               </div>
             </div>
@@ -136,36 +135,74 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Sustainability & Green Tech Promotion Banner */}
+        {/* Healthcare AI Revolution Banner */}
         <section className="py-6 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🌱 SUSTAINABILITY & GREEN TECH</span>
+                <span className="text-sm font-medium">🏥 HEALTHCARE AI REVOLUTION</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🌍 AI-Powered Sustainability: 60% Energy Reduction Achieved!
+                🏥 AI Healthcare Revolution: 95% Diagnostic Accuracy Achieved!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover how AI is driving sustainability initiatives and reducing carbon footprints. 
-                Learn about smart energy management, intelligent waste management, and climate risk assessment solutions.
+                Discover how AI is revolutionizing healthcare with breakthrough applications in diagnosis, 
+                personalized medicine, drug discovery, and surgical precision. Real-world case studies and implementation guides.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/case-studies/ai-sustainability-transformation-2025"
+                  href="/blog/ai-healthcare-revolution-2025"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Healthcare Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-healthcare-diagnosis-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   View Case Study
                 </Link>
                 <Link
-                  href="/blog/ai-2025-sustainability-green-tech"
+                  href="/resources/ai-healthcare-implementation-guide-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Read Sustainability Guide
+                  Implementation Guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Financial Services AI Transformation Banner */}
+        <section className="py-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">💰 FINANCIAL SERVICES AI</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                💰 AI Financial Services Breakthrough: $2.5B Revenue Growth!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Learn how major financial institutions are achieving unprecedented growth with AI transformation. 
+                Complete case study with implementation details, results, and lessons learned.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/case-studies/ai-financial-services-transformation-breakthrough-2025"
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  View Case Study
                 </Link>
                 <Link
-                  href="/resources/ai-sustainability-implementation-guide"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                  href="/blog/ai-2025-financial-services-transformation"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Read Article
+                </Link>
+                <Link
+                  href="/resources/ai-financial-services-implementation-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   Implementation Guide
                 </Link>
