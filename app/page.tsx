@@ -59,6 +59,8 @@ import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import EnhancedContentShowcaseBanner from '../components/EnhancedContentShowcaseBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
@@ -98,6 +100,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
+        
+        {/* ENHANCED CONTENT SHOWCASE BANNER */}
+        <EnhancedContentShowcaseBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
