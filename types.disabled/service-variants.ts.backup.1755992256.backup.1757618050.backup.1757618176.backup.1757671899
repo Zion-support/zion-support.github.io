@@ -466,6 +466,16 @@ export type ServiceVariant =
   | 'supply-chain-futuristic'
   | 'legal-futuristic'
   | 'healthcare-futuristic'
+<<<<<<< HEAD
+  | 'biotech-futuristic'
+  | 'simulation-futuristic'
+  | 'space-futuristic'
+  | 'neuromorphic-futuristic'
+  | 'dna-futuristic'
+  | 'photonic-futuristic'
+  | 'robotics-futuristic';
+<<<<<<< HEAD:types.disabled/service-variants.ts.backup.1755992256.backup.1757618050.backup.1757618176
+=======
   | 'ai-automation'
   | 'blockchain-futuristic'
   | 'iot-futuristic'
@@ -481,4 +491,6 @@ export type ServiceVariant =
   | 'quantum-cybersecurity'
   | 'quantum-financial-trading'
   | 'ai-climate-prediction';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4748
 =======
+>>>>>>> origin/backup-merged-branches-20250824-010351:types/service-variants.ts
