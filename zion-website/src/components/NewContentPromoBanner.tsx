@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '16',
+      title: 'LLM Safety Evaluations 2025: From Offline to Production',
+      description: 'Blueprint for safety evals: red teaming, canaries, policy-as-code, and live feedback loops.',
+      href: '/blog/ai-2025-safety-evaluations-production',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: '17',
+      title: 'Autonomous Warehouse Orchestration: 38% Throughput Lift',
+      description: 'Case study: Multi-agent orchestration boosted throughput by 38% and cut errors 27%.',
+      href: '/case-studies/ai-2025-warehouse-automation',
+      type: 'case-study',
+      featured: true,
+      readTime: '11 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '13',
       title: 'Real-Time Agents 2025: Observability, Safety, and SLAs',
       description: 'Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.',
