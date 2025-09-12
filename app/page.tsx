@@ -36,6 +36,7 @@ const HomePage = memo(function HomePage() {
         url="/"
       />
       
+<<<<<<< HEAD
       <PerformanceOptimizer>
         <AccessibilityEnhancer />
         <PerformanceMonitor />
@@ -60,9 +61,28 @@ const HomePage = memo(function HomePage() {
                 Discover groundbreaking content: AI Advanced Automation, Cybersecurity Threats, $200M Manufacturing Success, 
                 plus the complete 200+ page AI Implementation Master Guide 2026. Get expert insights on the technologies 
                 reshaping industries and driving unprecedented growth in 2025.
+=======
+      <div className='min-h-screen bg-white'>
+        {/* AI Tools Showcase Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎯 Revolutionary AI Tools Suite: 6 Powerful Tools Now Available!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Transform your AI journey with our comprehensive suite of tools: AI Readiness Assessment, ROI Calculator, 
+                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, and Cost Optimizer. 
+                Get personalized insights and recommendations to maximize your AI success.
+>>>>>>> 5fabaa3cc47e5546458c55a46baa6ab5d50bae79
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
+<<<<<<< HEAD
                   href="/mega-content-showcase"
                   className="bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
                   aria-label="Explore all new content and resources"
@@ -131,6 +151,56 @@ const HomePage = memo(function HomePage() {
                     </div>
                   </div>
                 </Link>
+=======
+                  href="/tools/ai-tools-showcase"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  🛠️ Explore All AI Tools
+                </Link>
+                <Link
+                  href="/tools/ai-readiness-assessment"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  🎯 Take Assessment
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-roadmap-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  🗺️ View Roadmap
+                </Link>
+              </div>
+              
+              {/* Featured Tools Preview */}
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <Link href="/tools/ai-readiness-assessment" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🎯</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Readiness Assessment</h3>
+                    <p className="text-xs opacity-90">Evaluate your AI transformation readiness</p>
+                  </div>
+                </Link>
+                <Link href="/tools/ai-roi-calculator" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">📊</div>
+                    <h3 className="text-sm font-semibold mb-1">AI ROI Calculator</h3>
+                    <p className="text-xs opacity-90">Calculate your AI investment returns</p>
+                  </div>
+                </Link>
+                <Link href="/resources/ai-implementation-roadmap-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🗺️</div>
+                    <h3 className="text-sm font-semibold mb-1">Implementation Roadmap</h3>
+                    <p className="text-xs opacity-90">32-week AI transformation guide</p>
+                  </div>
+                </Link>
+                <Link
+                  href="/resources/ai-automation-implementation-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Download Free Guide
+                </Link>
+>>>>>>> 5fabaa3cc47e5546458c55a46baa6ab5d50bae79
               </div>
             </div>
           </div>
