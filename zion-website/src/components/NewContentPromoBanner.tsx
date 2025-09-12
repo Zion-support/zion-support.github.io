@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '40',
+      title: 'AI 2026 Outlook: Enterprise Agent Roadmap',
+      description: 'Where enterprise AI agents are headed in 2026: architectures, SLAs, governance, and edge.',
+      href: '/blog/ai-2026-enterprise-agent-roadmap',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Strategy'
+    },
+    {
       id: '33',
       title: 'Reliable Realtime Agents in 2025: Architecture & SLAs',
       description: 'Production blueprint for realtime agents with reliability SLAs, safety guardrails, and observability.',
