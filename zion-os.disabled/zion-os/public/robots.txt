@@ -4,6 +4,7 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+<<<<<<< HEAD:zion-os.disabled/zion-os/public/robots.txt
 # Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
@@ -16,3 +17,25 @@ Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1
+=======
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /solutions
+Allow: /research
+Allow: /case-studies
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+
+# Crawl delay (optional)
+Crawl-delay: 1
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/public/robots.txt

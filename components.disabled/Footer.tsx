@@ -106,6 +106,22 @@ const Footer: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+        <nav className="grid grid-cols-2 gap-3">
+          <Link href="/explore" className="hover:text-white">Explore</Link>
+          <Link href="/automation" className="hover:text-white">Automation</Link>
+          <Link href="/reports" className="hover:text-white">Reports</Link>
+          <Link href="/components" className="hover:text-white">Components</Link>
+          <Link href="/newsroom" className="hover:text-white">Newsroom</Link>
+          <Link href="/site-health" className="hover:text-white">Site Health</Link>
+          <Link href="/search" className="hover:text-white">Search</Link>
+          <Link href="/playground" className="hover:text-white">Playground</Link>
+          <a href="/sitemap.xml" className="hover:text-white">Sitemap</a>
+        </nav>
+        <div className="flex items-start gap-4 md:justify-end">
+          <a href="https://github.com/Zion-Holdings/zion" target="_blank" rel="noopener noreferrer" className="rounded-md border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">GitHub</a>
+          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="rounded-md border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">Website</a>
+=======
 
         {/* Newsletter Signup */}
         <div className="border-t border-white/10 pt-8 mb-8">
@@ -147,6 +163,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
+>>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
         </div>
       </div>
 

@@ -1,10 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
 
-export default function AIProductivityAutomation2025() {
+export const metadata: Metadata = {
+  title: 'AI Productivity Automation 2025: 300% Productivity Boost Guide',
+  description: 'Discover how AI automation can boost productivity by 300%.',
+  keywords: 'AI productivity automation, workflow automation, AI efficiency',
+};
+
+export default function AIProductivityAutomation() {
   return (
     <div className="min-h-screen bg-white">
+<<<<<<< HEAD
       <SEO
         title="AI Productivity Automation 2025: Transform Your Business with 300% Productivity Gains"
         description="Discover how AI automation can transform your business operations, reduce costs by 40%, and increase productivity by 300%. Complete implementation guide with real case studies."
@@ -291,6 +297,15 @@ export default function AIProductivityAutomation2025() {
             </Link>
           </div>
         </div>
+=======
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Productivity Automation 2025: 300% Productivity Boost Guide
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Discover how AI automation can boost productivity by 300%.
+        </p>
+>>>>>>> origin/feature/news-content-landing
       </div>
     </div>
   );

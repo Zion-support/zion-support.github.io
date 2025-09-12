@@ -3,268 +3,314 @@ import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, User, Tag, Star, TrendingUp, Filter, Search } from 'lucide-react';
 
 interface ContentItem {
-  id: string;
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'service';
-  category: string;
-  readTime: string;
-  featured: boolean;
-  image?: string;
+  icon: string;
+  readTime?: string;
+  category?: string;
+  isNew?: boolean;
+  isTrending?: boolean;
+  isFeatured?: boolean;
   stats?: {
-    views?: number;
-    likes?: number;
-    shares?: number;
-  };
+    value: string;
+    label: string;
+  }[];
 }
 
-const EnhancedContentShowcase: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'case-study' | 'service'>('all');
+interface EnhancedContentShowcaseProps {
+  title: string;
+  subtitle: string;
+  items: ContentItem[];
+  variant?: 'default' | 'featured' | 'trending' | 'new';
+  showViewAll?: boolean;
+  viewAllHref?: string;
+  className?: string;
+}
 
-  const contentItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains. Learn about cutting-edge tools and implementation strategies.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
-      type: 'blog',
-      category: 'Enterprise AI',
-      readTime: '15 min read',
-      featured: true,
-      stats: { views: 12500, likes: 340, shares: 89 }
-    },
-    {
-      id: '2',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs. Explore the future of healthcare AI.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
-      type: 'blog',
-      category: 'Healthcare AI',
-      readTime: '12 min read',
-      featured: true,
-      stats: { views: 8900, likes: 267, shares: 156 }
-    },
-    {
-      id: '3',
-      title: 'AI Financial Services Transformation Success',
-      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation. Real results and proven strategies.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
-      type: 'case-study',
-      category: 'Financial Services',
-      readTime: '18 min read',
-      featured: true,
-      stats: { views: 15600, likes: 445, shares: 203 }
-    },
-    {
-      id: '4',
-      title: 'AI Automation Services',
-      description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction, 99.9% accuracy.',
-      href: '/services/ai-automation',
-      type: 'service',
-      category: 'AI Services',
-      readTime: '10 min read',
-      featured: true,
-      stats: { views: 22000, likes: 567, shares: 134 }
-    },
-    {
-      id: '5',
-      title: 'AI Retail Personalization Success 2025',
-      description: 'How leading retailers are using AI to create personalized shopping experiences and increase sales by 40%.',
-      href: '/case-studies/ai-retail-personalization-success-2025',
-      type: 'case-study',
-      category: 'Retail AI',
-      readTime: '14 min read',
-      featured: false,
-      stats: { views: 7800, likes: 189, shares: 67 }
-    },
-    {
-      id: '6',
-      title: 'AI Cybersecurity Best Practices 2025',
-      description: 'Essential AI cybersecurity strategies to protect your business from evolving threats. Expert insights and implementation guides.',
-      href: '/blog/ai-cybersecurity-best-practices-2025',
-      type: 'blog',
-      category: 'Cybersecurity',
-      readTime: '11 min read',
-      featured: false,
-      stats: { views: 11200, likes: 298, shares: 145 }
-    }
-  ];
-
-  const filteredContent = activeTab === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.type === activeTab);
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝';
-      case 'case-study':
-        return '📊';
-      case 'service':
-        return '🚀';
+export default function EnhancedContentShowcase({
+  title,
+  subtitle,
+  items,
+  variant = 'default',
+  showViewAll = true,
+  viewAllHref = '/blog',
+  className = ''
+}: EnhancedContentShowcaseProps) {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'featured':
+        return {
+          container: 'bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          cardHover: 'hover:bg-opacity-20',
+          title: 'text-white',
+          subtitle: 'text-white opacity-90',
+          itemTitle: 'text-white',
+          itemDesc: 'text-white opacity-90',
+          meta: 'text-white opacity-75',
+          button: 'bg-white text-indigo-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600',
+          stats: 'bg-white bg-opacity-20'
+        };
+      case 'trending':
+        return {
+          container: 'bg-gradient-to-br from-orange-500 to-red-500 text-white',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          cardHover: 'hover:bg-opacity-20',
+          title: 'text-white',
+          subtitle: 'text-white opacity-90',
+          itemTitle: 'text-white',
+          itemDesc: 'text-white opacity-90',
+          meta: 'text-white opacity-75',
+          button: 'bg-white text-orange-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-orange-600',
+          stats: 'bg-white bg-opacity-20'
+        };
+      case 'new':
+        return {
+          container: 'bg-gradient-to-br from-green-600 to-blue-600 text-white',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
+          cardHover: 'hover:bg-opacity-20',
+          title: 'text-white',
+          subtitle: 'text-white opacity-90',
+          itemTitle: 'text-white',
+          itemDesc: 'text-white opacity-90',
+          meta: 'text-white opacity-75',
+          button: 'bg-white text-green-600 hover:bg-gray-100',
+          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-green-600',
+          stats: 'bg-white bg-opacity-20'
+        };
       default:
-        return '✨';
+        return {
+          container: 'bg-white',
+          badge: 'bg-blue-100 text-blue-800',
+          badgeText: 'text-blue-800',
+          card: 'bg-white border border-gray-200',
+          cardHover: 'hover:shadow-lg',
+          title: 'text-gray-900',
+          subtitle: 'text-gray-600',
+          itemTitle: 'text-gray-900',
+          itemDesc: 'text-gray-600',
+          meta: 'text-gray-500',
+          button: 'bg-blue-600 text-white hover:bg-blue-700',
+          buttonSecondary: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
+          stats: 'bg-gray-50'
+        };
     }
   };
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'from-blue-500 to-cyan-500';
-      case 'case-study':
-        return 'from-green-500 to-emerald-500';
-      case 'service':
-        return 'from-purple-500 to-pink-500';
-      default:
-        return 'from-gray-500 to-gray-600';
-    }
-  };
+  const styles = getVariantStyles();
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+  const getBadgeText = () => {
+    switch (variant) {
+      case 'featured': return '✨ FEATURED CONTENT';
+      case 'trending': return '🔥 TRENDING NOW';
+      case 'new': return '🚀 JUST PUBLISHED';
+      default: return '📚 LATEST CONTENT';
     }
-    return num.toString();
   };
 
   return (
-    <div className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
+    <section className={`py-16 ${styles.container} relative overflow-hidden ${className}`}>
+      {variant !== 'default' && (
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+      )}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest AI Content & Insights
+          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6`}>
+            <span className={`text-sm font-medium ${styles.badgeText}`}>
+              {getBadgeText()}
+            </span>
+          </div>
+          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.title}`}>
+            {title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our comprehensive collection of AI articles, case studies, 
-            and service offerings. Discover the latest trends and proven strategies.
+          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.subtitle}`}>
+            {subtitle}
           </p>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-gray-100 rounded-lg p-1">
-            {[
-              { key: 'all', label: 'All Content', count: contentItems.length },
-              { key: 'blog', label: 'Articles', count: contentItems.filter(item => item.type === 'blog').length },
-              { key: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.type === 'case-study').length },
-              { key: 'service', label: 'Services', count: contentItems.filter(item => item.type === 'service').length }
-            ].map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key as any)}
-                className={`px-6 py-3 rounded-md font-medium transition-all ${
-                  activeTab === tab.key
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+          {showViewAll && (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                href={viewAllHref}
+                className={`${styles.button} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
               >
-                {tab.label} ({tab.count})
-              </button>
-            ))}
-          </div>
+                📚 View All Content
+              </Link>
+              <Link
+                href="/resources"
+                className={`${styles.buttonSecondary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
+              >
+                📋 Download Resources
+              </Link>
+            </div>
+          )}
         </div>
 
-        {/* Featured Content */}
-        {activeTab === 'all' && (
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Featured Content</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              {contentItems.filter(item => item.featured).slice(0, 2).map((item) => (
-                <div key={item.id} className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl border border-indigo-100">
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-3">{getTypeIcon(item.type)}</span>
-                    <div>
-                      <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {item.category}
-                      </span>
-                      <span className="ml-2 text-sm text-gray-600">{item.readTime}</span>
-                    </div>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h4>
-                  <p className="text-gray-700 mb-6">{item.description}</p>
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      href={item.href}
-                      className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                    >
-                      Read More
-                    </Link>
-                    {item.stats && (
-                      <div className="flex items-center space-x-4 text-sm text-gray-600">
-                        <span>👁️ {formatNumber(item.stats.views || 0)}</span>
-                        <span>❤️ {formatNumber(item.stats.likes || 0)}</span>
-                        <span>📤 {formatNumber(item.stats.shares || 0)}</span>
-                      </div>
-                    )}
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((item, index) => (
+            <Link key={index} href={item.href} className="group">
+              <div className={`${styles.card} p-6 rounded-xl transition-all duration-300 ${styles.cardHover}`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
-            <div key={item.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-              <div className={`h-2 bg-gradient-to-r ${getTypeColor(item.type)}`}></div>
-              <div className="p-6">
-                <div className="flex items-center mb-4">
-                  <span className="text-2xl mr-3">{getTypeIcon(item.type)}</span>
-                  <div>
-                    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="flex items-center gap-2 mb-2">
+                  {item.isNew && (
+                    <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      NEW
+                    </span>
+                  )}
+                  {item.isTrending && (
+                    <span className="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      TRENDING
+                    </span>
+                  )}
+                  {item.isFeatured && (
+                    <span className="bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      FEATURED
+                    </span>
+                  )}
+                  {item.category && (
+                    <span className={`${styles.meta} text-xs font-medium`}>
                       {item.category}
                     </span>
-                    <span className="ml-2 text-sm text-gray-600">{item.readTime}</span>
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{item.title}</h4>
-                <p className="text-gray-600 mb-4 line-clamp-3">{item.description}</p>
-                <div className="flex items-center justify-between">
-                  <Link 
-                    href={item.href}
-                    className="text-indigo-600 hover:text-indigo-800 font-medium"
-                  >
-                    Read More →
-                  </Link>
-                  {item.stats && (
-                    <div className="flex items-center space-x-3 text-sm text-gray-500">
-                      <span>👁️ {formatNumber(item.stats.views || 0)}</span>
-                      <span>❤️ {formatNumber(item.stats.likes || 0)}</span>
-                    </div>
                   )}
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+                <h3 className={`text-lg font-semibold mb-2 ${styles.itemTitle}`}>
+                  {item.title}
+                </h3>
+                <p className={`text-sm mb-3 ${styles.itemDesc}`}>
+                  {item.description}
+                </p>
+                
+                {/* Stats Display */}
+                {item.stats && item.stats.length > 0 && (
+                  <div className="mb-3">
+                    <div className="flex flex-wrap gap-2">
+                      {item.stats.map((stat, statIndex) => (
+                        <div key={statIndex} className={`${styles.stats} px-2 py-1 rounded text-xs font-medium`}>
+                          <span className="font-bold">{stat.value}</span> {stat.label}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-12 rounded-2xl">
-            <h3 className="text-3xl font-bold mb-4">
-              Stay Updated with AI Insights
-            </h3>
-            <p className="text-xl mb-8 text-indigo-100">
-              Get the latest AI content, case studies, and industry insights delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
-              />
-              <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
+                <div className="flex items-center text-xs opacity-75">
+                  {item.readTime && (
+                    <>
+                      <span className={styles.meta}>{item.readTime}</span>
+                      <span className={`mx-2 ${styles.meta}`}>•</span>
+                    </>
+                  )}
+                  <span className={styles.meta}>
+                    {item.href.includes('/blog/') ? 'Article' : 
+                     item.href.includes('/case-studies/') ? 'Case Study' : 
+                     item.href.includes('/resources/') ? 'Resource' : 'Content'}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default EnhancedContentShowcase;
+// Enhanced content collections with stats
+export const newFeaturedContent = [
+  {
+    title: "AI Enterprise Transformation 2025",
+    description: "Complete implementation guide: 300% productivity gains, 40% cost reduction, and 95% accuracy improvements",
+    href: "/blog/ai-enterprise-transformation-2025",
+    icon: "🏢",
+    readTime: "18 min read",
+    category: "Enterprise AI",
+    isNew: true,
+    isFeatured: true,
+    stats: [
+      { value: "300%", label: "Productivity" },
+      { value: "40%", label: "Cost Reduction" },
+      { value: "95%", label: "Accuracy" }
+    ]
+  },
+  {
+    title: "AI Customer Experience Revolution",
+    description: "Transform CX with 95% satisfaction, 80% faster resolution, and 60% cost reduction",
+    href: "/blog/ai-customer-experience-revolution-2025",
+    icon: "🎯",
+    readTime: "14 min read",
+    category: "Customer Experience",
+    isNew: true,
+    isTrending: true,
+    stats: [
+      { value: "95%", label: "Satisfaction" },
+      { value: "80%", label: "Faster Resolution" },
+      { value: "60%", label: "Cost Reduction" }
+    ]
+  },
+  {
+    title: "AI Retail Transformation Success",
+    description: "Real case study: 300% revenue growth, 95% customer satisfaction, and 80% cost reduction",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    icon: "🏪",
+    readTime: "Case Study",
+    category: "Retail & E-commerce",
+    isNew: true,
+    isFeatured: true,
+    stats: [
+      { value: "300%", label: "Revenue Growth" },
+      { value: "95%", label: "Satisfaction" },
+      { value: "80%", label: "Cost Reduction" }
+    ]
+  }
+];
+
+export const trendingContent = [
+  {
+    title: "AI Go-To-Market 2025",
+    description: "From zero to traction: positioning, pricing, and distribution strategies",
+    href: "/blog/ai-go-to-market-2025",
+    icon: "📈",
+    readTime: "12 min read",
+    category: "Growth & Marketing",
+    isTrending: true,
+    stats: [
+      { value: "200%", label: "Faster Growth" },
+      { value: "85%", label: "Success Rate" }
+    ]
+  },
+  {
+    title: "LLM Guardrails in Production",
+    description: "Safety without blocking delivery - practical implementation guide",
+    href: "/blog/llm-guardrails-in-production-2025",
+    icon: "🛡️",
+    readTime: "8 min read",
+    category: "AI Engineering",
+    isTrending: true,
+    stats: [
+      { value: "99.9%", label: "Uptime" },
+      { value: "90%", label: "Safety Score" }
+    ]
+  },
+  {
+    title: "Edge AI: Privacy by Design",
+    description: "On-device intelligence for instant, compliant customer experiences",
+    href: "/blog/edge-ai-privacy-by-design-2025",
+    icon: "🔐",
+    readTime: "7 min read",
+    category: "AI & Privacy",
+    isTrending: true,
+    stats: [
+      { value: "100%", label: "Privacy" },
+      { value: "50ms", label: "Response Time" }
+    ]
+  }
+];

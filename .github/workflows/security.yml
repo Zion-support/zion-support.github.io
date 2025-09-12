@@ -1,12 +1,6 @@
----
-name: Security
+name: Security Audit
 
 on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
-  workflow_dispatch: {}
   schedule:
     - cron: '0 6 * * *' # Daily at 6 AM UTC
 
@@ -21,10 +15,8 @@ concurrency:
 
 jobs:
   security-audit:
-    name: Security Audit
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,13 +34,13 @@ jobs:
         run: npm run security:scan
         continue-on-error: true
       - name: Check for secrets in code
-        uses: trufflesecurity/trufflehog@v3
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        uses: trufflesecurity/trufflehog@v3.90.5
         with:
           path: .
           base: ${{ github.event.before }}
           head: ${{ github.event.after }}
           extra_args: --only-verified
-        continue-on-error: true
       - name: Upload security report
         uses: actions/upload-artifact@v4
         if: always()

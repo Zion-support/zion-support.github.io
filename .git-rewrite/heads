@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 refs/heads/cursor/create-and-deploy-new-content-f9ec
+=======
+refs/heads/cursor/build-nextjs-application-with-dependency-installation-1e0d
+>>>>>>> origin/feature/news-content-landing
 refs/heads/main
 refs/remotes/origin/0nylrk-codex/fix-footer-contact-link
 refs/remotes/origin/0parff-codex/centralize-api-error-handling-and-add-errorboundary
@@ -94,7 +98,10 @@ refs/remotes/origin/add-2025-q4-services
 refs/remotes/origin/add-comprehensive-services
 refs/remotes/origin/add-innovative-services-2025
 refs/remotes/origin/add-new-ai-services-2025
+<<<<<<< HEAD
 refs/remotes/origin/add-new-content-and-advertising
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/add-new-innovative-services
 refs/remotes/origin/add-new-innovative-services-2025
 refs/remotes/origin/add-new-innovative-services-2026
@@ -5393,8 +5400,11 @@ refs/remotes/origin/backup-main-20250911-191359
 refs/remotes/origin/backup-main-20250911-193643
 refs/remotes/origin/backup-main-20250911-205354
 refs/remotes/origin/backup-main-20250911-205356
+<<<<<<< HEAD
 refs/remotes/origin/backup-main-20250912-002545
 refs/remotes/origin/backup-main-20250912-010437
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/backup-main-batch-20250826-000344
 refs/remotes/origin/backup-main-batch-20250826-000357
 refs/remotes/origin/backup-main-batch-20250826-000425
@@ -7612,7 +7622,10 @@ refs/remotes/origin/bulk-merge-backup-20250823-230536
 refs/remotes/origin/bulk-merge-backup-20250825-234216
 refs/remotes/origin/bulk-merge-backup-20250911-182444
 refs/remotes/origin/bulk-merge-backup-20250911-190939
+<<<<<<< HEAD
 refs/remotes/origin/bulk-merge-backup-20250912-002059
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/bulk-pr-merge
 refs/remotes/origin/bw06m0-codex/fix-typescript-errors-in-components
 refs/remotes/origin/bwren1-codex/fix-typescript-errors-in-files
@@ -8363,12 +8376,16 @@ refs/remotes/origin/comprehensive-services-showcase
 refs/remotes/origin/comprehensive-website-enhancement-2025
 refs/remotes/origin/conflict-check-branch
 refs/remotes/origin/consolidate-improvements
+<<<<<<< HEAD
 refs/remotes/origin/content-creation-merge
 refs/remotes/origin/content-enhancement-2025
 refs/remotes/origin/content-enhancement-20250912-061851
 refs/remotes/origin/content-enhancement-and-link-fixes
 refs/remotes/origin/content-integration-20250912-025802
 refs/remotes/origin/content-update-20250912
+=======
+refs/remotes/origin/content-enhancement-and-link-fixes
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/content-updates-clean
 refs/remotes/origin/content/add-3-posts-and-advertise
 refs/remotes/origin/content/add-sept-2025-posts
@@ -10461,6 +10478,7 @@ refs/remotes/origin/cursor/crawl-and-fix-site-links-and-pages-f374
 refs/remotes/origin/cursor/crawl-website-for-broken-links-and-missing-content-217b
 refs/remotes/origin/cursor/create-and-automate-service-index-page-b746
 refs/remotes/origin/cursor/create-and-deploy-new-content-0453
+<<<<<<< HEAD
 refs/remotes/origin/cursor/create-and-deploy-new-content-0493
 refs/remotes/origin/cursor/create-and-deploy-new-content-04ba
 refs/remotes/origin/cursor/create-and-deploy-new-content-0718
@@ -10599,11 +10617,60 @@ refs/remotes/origin/cursor/create-and-deploy-new-content-8b81
 refs/remotes/origin/cursor/create-and-deploy-new-content-8ca2
 refs/remotes/origin/cursor/create-and-deploy-new-content-8f18
 refs/remotes/origin/cursor/create-and-deploy-new-content-9046
+=======
+refs/remotes/origin/cursor/create-and-deploy-new-content-04ba
+refs/remotes/origin/cursor/create-and-deploy-new-content-0bc7
+refs/remotes/origin/cursor/create-and-deploy-new-content-0ceb
+refs/remotes/origin/cursor/create-and-deploy-new-content-11bc
+refs/remotes/origin/cursor/create-and-deploy-new-content-1486
+refs/remotes/origin/cursor/create-and-deploy-new-content-1a3c
+refs/remotes/origin/cursor/create-and-deploy-new-content-1b22
+refs/remotes/origin/cursor/create-and-deploy-new-content-1d93
+refs/remotes/origin/cursor/create-and-deploy-new-content-2252
+refs/remotes/origin/cursor/create-and-deploy-new-content-2257
+refs/remotes/origin/cursor/create-and-deploy-new-content-22f4
+refs/remotes/origin/cursor/create-and-deploy-new-content-2752
+refs/remotes/origin/cursor/create-and-deploy-new-content-29d6
+refs/remotes/origin/cursor/create-and-deploy-new-content-2ab4
+refs/remotes/origin/cursor/create-and-deploy-new-content-2ace
+refs/remotes/origin/cursor/create-and-deploy-new-content-2da4
+refs/remotes/origin/cursor/create-and-deploy-new-content-34a2
+refs/remotes/origin/cursor/create-and-deploy-new-content-3734
+refs/remotes/origin/cursor/create-and-deploy-new-content-3dd4
+refs/remotes/origin/cursor/create-and-deploy-new-content-3e0b
+refs/remotes/origin/cursor/create-and-deploy-new-content-40e1
+refs/remotes/origin/cursor/create-and-deploy-new-content-441b
+refs/remotes/origin/cursor/create-and-deploy-new-content-4b09
+refs/remotes/origin/cursor/create-and-deploy-new-content-4ec0
+refs/remotes/origin/cursor/create-and-deploy-new-content-5004
+refs/remotes/origin/cursor/create-and-deploy-new-content-50f9
+refs/remotes/origin/cursor/create-and-deploy-new-content-52cd
+refs/remotes/origin/cursor/create-and-deploy-new-content-531a
+refs/remotes/origin/cursor/create-and-deploy-new-content-53fb
+refs/remotes/origin/cursor/create-and-deploy-new-content-5705
+refs/remotes/origin/cursor/create-and-deploy-new-content-5c3a
+refs/remotes/origin/cursor/create-and-deploy-new-content-5cca
+refs/remotes/origin/cursor/create-and-deploy-new-content-5e7c
+refs/remotes/origin/cursor/create-and-deploy-new-content-5efd
+refs/remotes/origin/cursor/create-and-deploy-new-content-636c
+refs/remotes/origin/cursor/create-and-deploy-new-content-641f
+refs/remotes/origin/cursor/create-and-deploy-new-content-66e0
+refs/remotes/origin/cursor/create-and-deploy-new-content-6932
+refs/remotes/origin/cursor/create-and-deploy-new-content-6a07
+refs/remotes/origin/cursor/create-and-deploy-new-content-7265
+refs/remotes/origin/cursor/create-and-deploy-new-content-737c
+refs/remotes/origin/cursor/create-and-deploy-new-content-77d6
+refs/remotes/origin/cursor/create-and-deploy-new-content-7b81
+refs/remotes/origin/cursor/create-and-deploy-new-content-7cd6
+refs/remotes/origin/cursor/create-and-deploy-new-content-807f
+refs/remotes/origin/cursor/create-and-deploy-new-content-86d5
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/create-and-deploy-new-content-9287
 refs/remotes/origin/cursor/create-and-deploy-new-content-935b
 refs/remotes/origin/cursor/create-and-deploy-new-content-939a
 refs/remotes/origin/cursor/create-and-deploy-new-content-93d2
 refs/remotes/origin/cursor/create-and-deploy-new-content-9462
+<<<<<<< HEAD
 refs/remotes/origin/cursor/create-and-deploy-new-content-9545
 refs/remotes/origin/cursor/create-and-deploy-new-content-95bb
 refs/remotes/origin/cursor/create-and-deploy-new-content-9a9d
@@ -10671,11 +10738,34 @@ refs/remotes/origin/cursor/create-and-deploy-new-content-d5d9
 refs/remotes/origin/cursor/create-and-deploy-new-content-d6c9
 refs/remotes/origin/cursor/create-and-deploy-new-content-d773
 refs/remotes/origin/cursor/create-and-deploy-new-content-d7c8
+=======
+refs/remotes/origin/cursor/create-and-deploy-new-content-9a9d
+refs/remotes/origin/cursor/create-and-deploy-new-content-9b47
+refs/remotes/origin/cursor/create-and-deploy-new-content-9e8d
+refs/remotes/origin/cursor/create-and-deploy-new-content-a143
+refs/remotes/origin/cursor/create-and-deploy-new-content-a29e
+refs/remotes/origin/cursor/create-and-deploy-new-content-a883
+refs/remotes/origin/cursor/create-and-deploy-new-content-a9ee
+refs/remotes/origin/cursor/create-and-deploy-new-content-ad4e
+refs/remotes/origin/cursor/create-and-deploy-new-content-ae24
+refs/remotes/origin/cursor/create-and-deploy-new-content-b66c
+refs/remotes/origin/cursor/create-and-deploy-new-content-b7c8
+refs/remotes/origin/cursor/create-and-deploy-new-content-bb9f
+refs/remotes/origin/cursor/create-and-deploy-new-content-c413
+refs/remotes/origin/cursor/create-and-deploy-new-content-c8db
+refs/remotes/origin/cursor/create-and-deploy-new-content-cafa
+refs/remotes/origin/cursor/create-and-deploy-new-content-ce16
+refs/remotes/origin/cursor/create-and-deploy-new-content-cfef
+refs/remotes/origin/cursor/create-and-deploy-new-content-d04f
+refs/remotes/origin/cursor/create-and-deploy-new-content-d3da
+refs/remotes/origin/cursor/create-and-deploy-new-content-d773
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/create-and-deploy-new-content-db71
 refs/remotes/origin/cursor/create-and-deploy-new-content-dcf6
 refs/remotes/origin/cursor/create-and-deploy-new-content-e052
 refs/remotes/origin/cursor/create-and-deploy-new-content-e0ec
 refs/remotes/origin/cursor/create-and-deploy-new-content-e1a3
+<<<<<<< HEAD
 refs/remotes/origin/cursor/create-and-deploy-new-content-e1b6
 refs/remotes/origin/cursor/create-and-deploy-new-content-e566
 refs/remotes/origin/cursor/create-and-deploy-new-content-e595
@@ -10699,6 +10789,13 @@ refs/remotes/origin/cursor/create-and-deploy-new-content-f728
 refs/remotes/origin/cursor/create-and-deploy-new-content-f8fc
 refs/remotes/origin/cursor/create-and-deploy-new-content-fa2c
 refs/remotes/origin/cursor/create-and-deploy-new-content-fa90
+=======
+refs/remotes/origin/cursor/create-and-deploy-new-content-e595
+refs/remotes/origin/cursor/create-and-deploy-new-content-f190
+refs/remotes/origin/cursor/create-and-deploy-new-content-f6b7
+refs/remotes/origin/cursor/create-and-deploy-new-content-f708
+refs/remotes/origin/cursor/create-and-deploy-new-content-f8fc
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/create-and-deploy-new-content-fb00
 refs/remotes/origin/cursor/create-and-deploy-new-content-fb9f
 refs/remotes/origin/cursor/create-and-merge-new-automation-agent-factories-8365
@@ -12658,6 +12755,10 @@ refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-74ad
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7571
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7703
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7908
+<<<<<<< HEAD
+=======
+refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-792d
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7aa4
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7abd
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7b61
@@ -12811,6 +12912,10 @@ refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ce6e
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-cfc9
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d198
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d1eb
+<<<<<<< HEAD
+=======
+refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d21d
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d272
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d2ac
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d2b2
@@ -12861,12 +12966,20 @@ refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e923
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e930
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e9a7
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e9ad
+<<<<<<< HEAD
+=======
+refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e9f4
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ea38
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ea3f
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ea58
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eacb
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eace
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eb56
+<<<<<<< HEAD
+=======
+refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eba7
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ebac
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ebdd
 refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ebe5
@@ -14907,7 +15020,10 @@ refs/remotes/origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
 refs/remotes/origin/dependabot/npm_and_yarn/jsdom-26.1.0
 refs/remotes/origin/dependabot/npm_and_yarn/lucide-react-0.539.0
 refs/remotes/origin/dependabot/npm_and_yarn/lucide-react-0.541.0
+<<<<<<< HEAD
 refs/remotes/origin/dependabot/npm_and_yarn/lucide-react-0.544.0
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/dependabot/npm_and_yarn/magneticwatermelon/mcp-toolkit-1.1.5
 refs/remotes/origin/dependabot/npm_and_yarn/magneticwatermelon/mcp-toolkit-2.0.1
 refs/remotes/origin/dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
@@ -14921,7 +15037,10 @@ refs/remotes/origin/dependabot/npm_and_yarn/openai-5.15.0
 refs/remotes/origin/dependabot/npm_and_yarn/radix-ui/react-dropdown-menu-2.1.16
 refs/remotes/origin/dependabot/npm_and_yarn/react-datepicker-8.5.0
 refs/remotes/origin/dependabot/npm_and_yarn/react-day-picker-9.9.0
+<<<<<<< HEAD
 refs/remotes/origin/dependabot/npm_and_yarn/sentry/nextjs-10.11.0
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/dependabot/npm_and_yarn/sharp-0.34.3
 refs/remotes/origin/dependabot/npm_and_yarn/supabase/ssr-0.7.0
 refs/remotes/origin/dependabot/npm_and_yarn/supabase/supabase-js-2.56.0
@@ -14930,7 +15049,10 @@ refs/remotes/origin/dependabot/npm_and_yarn/tailwindcss-4.1.12
 refs/remotes/origin/dependabot/npm_and_yarn/testing-library/jest-dom-6.8.0
 refs/remotes/origin/dependabot/npm_and_yarn/testing-library/react-16.3.0
 refs/remotes/origin/dependabot/npm_and_yarn/types/react-datepicker-7.0.0
+<<<<<<< HEAD
 refs/remotes/origin/dependabot/npm_and_yarn/uuid-13.0.0
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/deps-maint
 refs/remotes/origin/design-improvements-clean
 refs/remotes/origin/dg3q2d-codex/fix-npm-eio-error-during-install
@@ -15191,7 +15313,10 @@ refs/remotes/origin/feature/innovative-services-2026
 refs/remotes/origin/feature/market-services-enhancements
 refs/remotes/origin/feature/merge-conflicts-and-improvements
 refs/remotes/origin/feature/new-ai-services-improvements
+<<<<<<< HEAD
 refs/remotes/origin/feature/new-content-and-advertising
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/feature/new-content-and-banner
 refs/remotes/origin/feature/q4-2025-services-ui
 refs/remotes/origin/feature/q4-services-and-ui
@@ -15368,7 +15493,10 @@ refs/remotes/origin/fix/wallet-context-appkit-hooks
 refs/remotes/origin/fix/wallet-context-ts-errors
 refs/remotes/origin/fix/website-audit-redirects
 refs/remotes/origin/fizvbl-codex/fix-errors-and-improve-project
+<<<<<<< HEAD
 refs/remotes/origin/focused-backup-20250911-213519
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/fp32tt-codex/implement-analytics-and-error-tracking
 refs/remotes/origin/fresh-start
 refs/remotes/origin/fuw0wh-codex/fix-react-import-issues
@@ -15533,11 +15661,17 @@ refs/remotes/origin/merge-batch2-backup-20250823-232225
 refs/remotes/origin/merge-batch3-backup-20250823-232546
 refs/remotes/origin/merge-build-fixes
 refs/remotes/origin/merge-conflict-resolution
+<<<<<<< HEAD
 refs/remotes/origin/merge-conflicts-resolved
 refs/remotes/origin/merge-enhanced-services
 refs/remotes/origin/merge-improvements
 refs/remotes/origin/merge-improvements-to-main
 refs/remotes/origin/merge-new-content-to-main-20250912-025505
+=======
+refs/remotes/origin/merge-enhanced-services
+refs/remotes/origin/merge-improvements
+refs/remotes/origin/merge-improvements-to-main
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/merge-new-services-2032
 refs/remotes/origin/merge-new-services-clean
 refs/remotes/origin/merge-new-services-to-main
@@ -15736,7 +15870,10 @@ refs/remotes/origin/n2ujyx-codex/fix-typescript-errors-in-files
 refs/remotes/origin/n9kf8y-codex/fix-ts2614-error-with-suspense-import
 refs/remotes/origin/netlify-build-fixes
 refs/remotes/origin/netlify-build-fixes-final
+<<<<<<< HEAD
 refs/remotes/origin/new-content-and-advertising
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/new-fix
 refs/remotes/origin/new-main
 refs/remotes/origin/new-services-2025
@@ -15991,7 +16128,10 @@ refs/remotes/origin/targeted-backup-20250823-224451
 refs/remotes/origin/targeted-backup-20250823-224737
 refs/remotes/origin/targeted-backup-20250824-011017
 refs/remotes/origin/targeted-backup-20250824-011231
+<<<<<<< HEAD
 refs/remotes/origin/targeted-backup-20250911-213423
+=======
+>>>>>>> origin/feature/news-content-landing
 refs/remotes/origin/targeted-merge-backup-20250827-023901
 refs/remotes/origin/tdh0vb-codex/replace-deprecated-@humanwhocodes/config-array
 refs/remotes/origin/temp-autofix

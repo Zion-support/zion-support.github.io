@@ -1,0 +1,34 @@
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relativePath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relativePath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+<<<<<<< HEAD:netlify/functions/content-freshness-score-runner.js
+exports.config = { schedule: '*/10 * * * *' };
+
+=======
+>>>>>>> origin/backup-critical-fixes-20250824-224408:netlify/functions/repo-radar-metrics.js
+exports.handler = async () => {
+  const logs = [];
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
+  };
+
+<<<<<<< HEAD:netlify/functions/content-freshness-score-runner.js
+  step('content:freshness-score', () => runNode('automation/content-freshness-score.cjs'));
+=======
+  step('repo-radar-metrics', () => runNode('automation/repo-radar-metrics.cjs'));
+>>>>>>> origin/backup-critical-fixes-20250824-224408:netlify/functions/repo-radar-metrics.js
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+};
