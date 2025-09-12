@@ -15,6 +15,8 @@ import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWi
 import EnhancedNavigationWithContentDiscovery from '../components/EnhancedNavigationWithContentDiscovery';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
+import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -1220,6 +1222,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
+          <AI2026BreakthroughPromotionBanner />
+          <NewContentShowcaseBanner />
           <AI2025NewContentPromotionBanner />
           <AI2025UltimateBreakthroughPromotionBanner />
           <AI2025BreakthroughContentBanner />
