@@ -6,6 +6,18 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
+import NewContentShowcase from '../components/NewContentShowcase';
+import EnhancedNewsletter from '../components/EnhancedNewsletter';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
+import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentBanner from '../components/EnhancedContentBanner';
+import ContentPromotionBanner from '../components/ContentPromotionBanner';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -175,6 +187,9 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner />
       
       <div className='min-h-screen bg-white'>
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
