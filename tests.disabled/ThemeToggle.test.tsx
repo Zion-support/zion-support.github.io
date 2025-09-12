@@ -13,7 +13,9 @@ it('applies dark class when toggled', async () => { // Made test async'  render(
       <ModeToggle />
     </ThemeProvider>
   );
+
   const button = document.querySelector('button');  fireEvent.click(button!);
+
   await waitFor(() => { // Added waitFor for the assertion
     expect(document.documentElement.classList.contains('dark')).toBe(true);  });
 });

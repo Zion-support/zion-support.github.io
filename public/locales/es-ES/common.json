@@ -1,3 +1,4 @@
+
 {
   "general": {
     "app_name": "Mercado de IA de Zion",
@@ -18,8 +19,6 @@
     "home": "Inicio",
     "marketplace": "Mercado",
     "categories": "Categorías",
-    "services": "Servicios",
-    "micro-saas": "Micro SAAS",
     "talent": "Talento",
     "equipment": "Equipamiento",
     "community": "Comunidad",

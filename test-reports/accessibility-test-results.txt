@@ -1,5 +1,0 @@
-Lint check failed: Command failed: npm run lint
-(node:31284) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/miami2/zion-app-clone/eslint.config.js?mtime=1756464693585 is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to /Users/miami2/zion-app-clone/package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)

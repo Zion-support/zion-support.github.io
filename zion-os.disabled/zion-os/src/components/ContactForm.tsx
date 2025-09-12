@@ -1,5 +1,7 @@
 'use client';
+
 import { useState } from 'react';
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,8 +11,10 @@ export default function ContactForm() {
     service: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -18,6 +22,7 @@ export default function ContactForm() {
       [name]: value
     }));
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -41,6 +46,7 @@ export default function ContactForm() {
       setSubmitSuccess(false);
     }, 5000);
   };
+
   return (
     <div>
       <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>

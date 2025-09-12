@@ -1,48 +1,40 @@
-import React from 'react';
+import React from 'react'
+import Head from 'next/head'
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
+  title: string
+  description: string
+  keywords?: string[]
+  image?: string
+  url?: string
 }
 
-export const SEO: React.FC<SEOProps> = ({ title, description, keywords, canonical }) => {
-  React.useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    if (keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', keywords);
-    }
-    
-    // Update canonical link
-    if (canonical) {
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', canonical);
-    }
-  }, [title, description, keywords, canonical]);
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords = [],
+  image = '/og-image.jpg',
+  url = 'https://zion.app'
+}) => {
+  const fullTitle = title.includes('Zion') ? title : `${title} | Zion Tech Group`
+  
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+    </Head>
+  )
+}
 
-  return null; // This component doesn't render anything
-};
+export default SEO
