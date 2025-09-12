@@ -64,6 +64,10 @@ import UltimateContentPromotionBanner2026 from '../components/UltimateContentPro
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import NewContent2028PromotionBanner from '../components/NewContent2028PromotionBanner';
+import NewContent2028Showcase from '../components/NewContent2028Showcase';
+import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
+import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 <<<<<<< HEAD
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
@@ -93,6 +97,19 @@ export default function HomePage() {
         
         {/* FORTUNE 500 SUCCESS BANNER 2025 */}
         <Fortune500SuccessBanner2025 />
+        
+        {/* NEW CONTENT 2028 PROMOTION BANNER */}
+        <NewContent2028PromotionBanner />
+        
+        {/* NEW CONTENT 2028 SHOWCASE */}
+        <NewContent2028Showcase />
+        
+        {/* AI 2027 CONTENT PROMOTION BANNER */}
+        <AI2027ContentPromotionBanner />
+        
+        {/* AI 2027 CONTENT SHOWCASE */}
+        <AI2027ContentShowcase />
+>>>>>>> 5afade49541c2807acb5507a5f9e59845933ed3e
         
         {/* NEW CONTENT 2027 PROMOTION BANNER */}
         <NewContent2027PromotionBanner />
