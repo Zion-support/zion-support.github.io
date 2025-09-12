@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'AIFINOPS-2025',
+      title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
+      description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
+      href: '/blog/ai-2025-ai-finops-automation',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: 'SALES-PLAYBOOKS-2025',
+      title: 'Agentic Sales Playbooks 2025: From Leads to Closed Won',
+      description: 'Design reliable, compliant agentic sales workflows across prospecting, demos, proposals, and renewals.',
+      href: '/blog/ai-2025-agentic-sales-playbooks',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
+    },
+    {
       id: 'CS-llm-cost-2025',
       title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
       description: 'Case study: Quantization, KV cache, and batching cut cost by 38% and p95 by 27%.',
