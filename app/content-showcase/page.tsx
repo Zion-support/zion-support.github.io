@@ -480,34 +480,54 @@ export default function ContentShowcase() {
 
         {/* Featured Content */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🔥 Featured This Week</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2025-industry-disruption" className="group">
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
-                <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-3 py-1 text-sm font-medium mb-4">
-                  NEW
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎯 Featured This Week
+              </h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                Our most popular and impactful content, handpicked by our experts to help you 
+                stay ahead in the rapidly evolving AI landscape.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎥</div>
+                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">340% ROI potential with revolutionary AI technology</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🔥 #1 Trending</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  AI Industry Disruption 2025
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  How artificial intelligence is reshaping every sector with real impact data, 
-                  case studies, and actionable insights for business leaders.
-                </p>
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <span>25 min read</span>
-                  <span className="text-purple-600 font-medium group-hover:underline">Read Article →</span>
+              </Link>
+              
+              <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">340% ROI and $12.4M annual savings achieved</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>12 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🏆 Success Story</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-
-            <Link href="/blog/ai-trends-2025-predictions" className="group">
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
-                <div className="inline-flex items-center bg-indigo-100 text-indigo-800 rounded-full px-3 py-1 text-sm font-medium mb-4">
-                  TRENDING
+              </Link>
+              
+              <Link href="/resources/ai-2025-autonomous-systems-implementation-guide" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                  <h3 className="text-lg font-semibold mb-2">Autonomous Systems Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">150+ pages of implementation strategies and templates</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Free Download</span>
+                    <span className="mx-2">•</span>
+                    <span>⭐ New Release</span>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
                   AI Trends 2025 Predictions

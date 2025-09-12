@@ -234,11 +234,89 @@ export const featuredContent = [
     badge: "FUTURE",
     badgeColor: "bg-blue-100 text-blue-800",
     metrics: "Next Decade Tech"
+  },
+  {
+    title: "AI Enterprise Transformation 2025: Complete Implementation Guide",
+    description: "Transform your enterprise with AI in 2025. Learn proven strategies, implementation frameworks, and real-world case studies for successful AI transformation.",
+    href: "/blog/ai-2025-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
+    featured: true,
+    isNew: true,
+    badge: "FEATURED",
+    badgeColor: "bg-indigo-100 text-indigo-800",
+    metrics: "40% Productivity Boost"
+  },
+  {
+    title: "AI Trends 2025: Revolutionary Predictions & Market Analysis",
+    description: "Discover the most impactful AI trends shaping 2025. Expert predictions, market analysis, and actionable insights for businesses and developers.",
+    href: "/blog/ai-2025-trends-predictions",
+    icon: "📈",
+    readTime: "18 min read",
+    category: "AI Trends",
+    featured: true,
+    isNew: true,
+    badge: "TRENDING",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "$1.8T Market Size"
+  },
+  {
+    title: "AI Retail Transformation Success: 300% Revenue Growth Case Study",
+    description: "Discover how a global retail giant achieved 300% revenue growth and 85% cost reduction through comprehensive AI transformation. Real results, proven strategies.",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    icon: "🛍️",
+    readTime: "15 min read",
+    category: "Case Study",
+    featured: true,
+    isNew: true,
+    badge: "SUCCESS",
+    badgeColor: "bg-emerald-100 text-emerald-800",
+    metrics: "300% Revenue Growth"
+  },
+  {
+    title: "AI Implementation Complete Guide 2025: 200-Page Master Playbook",
+    description: "The most comprehensive AI implementation guide for 2025. 200+ pages of proven strategies, frameworks, templates, and real-world case studies for successful AI transformation.",
+    href: "/resources/ai-implementation-complete-guide-2025",
+    icon: "📚",
+    readTime: "200+ pages",
+    category: "Resource Guide",
+    featured: true,
+    isNew: true,
+    badge: "MASTER",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "50+ Case Studies"
   }
 ];
 
 // Trending content
 export const trendingContent = [
+  {
+    title: "AI Trends 2025: Revolutionary Predictions & Market Analysis",
+    description: "Discover the most impactful AI trends shaping 2025. Expert predictions, market analysis, and actionable insights for businesses and developers.",
+    href: "/blog/ai-2025-trends-predictions",
+    icon: "📈",
+    readTime: "18 min read",
+    category: "AI Trends",
+    isTrending: true,
+    isNew: true,
+    badge: "TRENDING",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "$1.8T Market Size"
+  },
+  {
+    title: "AI Enterprise Transformation 2025: Complete Implementation Guide",
+    description: "Transform your enterprise with AI in 2025. Learn proven strategies, implementation frameworks, and real-world case studies for successful AI transformation.",
+    href: "/blog/ai-2025-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
+    isTrending: true,
+    isNew: true,
+    badge: "FEATURED",
+    badgeColor: "bg-indigo-100 text-indigo-800",
+    metrics: "40% Productivity Boost"
+  },
   {
     title: "The Generative AI Revolution: Transforming Business in 2025",
     description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
