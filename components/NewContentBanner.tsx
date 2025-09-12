@@ -258,7 +258,11 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
           </div>
         </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
       </div>
     </section>
   );
@@ -270,4 +274,8 @@ export { hotContent };
 export default NewContentBanner;
 =======
 export { hotContent };
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656

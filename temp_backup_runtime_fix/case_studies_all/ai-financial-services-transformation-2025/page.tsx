@@ -3,7 +3,11 @@ import React from 'react';
 import { Metadata } from 'next';
 =======
 import SEO from '../../../components/SEO';
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/case-studies/ai-financial-services-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/case-studies/ai-financial-services-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
 import Link from 'next/link';
 
 export default function AIFinancialServicesTransformation2025() {
@@ -95,6 +99,17 @@ export default function AIFinancialServicesTransformation2025() {
         <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-xl mb-12">
           <h2 className="text-2xl font-bold mb-6 text-center">Transformation Results</h2>
           <div className="grid md:grid-cols-4 gap-6 text-center">
+<<<<<<< HEAD
+=======
+=======
+        </div>
+
+        {/* Executive Summary */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 Executive Summary</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/case-studies/ai-financial-services-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <div>
               <div className="text-3xl font-bold mb-2">$50M</div>
               <div className="text-sm opacity-90">Additional Annual Revenue</div>
@@ -182,6 +197,10 @@ export default function AIFinancialServicesTransformation2025() {
         {/* Company Background */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Background</h2>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:temp_backup_runtime_fix/case_studies_all/ai-financial-services-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
@@ -817,6 +836,12 @@ export default function AIFinancialServicesTransformation2025() {
 
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-6">Strategic Impact</h3>
+<<<<<<< HEAD
+=======
+=======
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/case-studies/ai-financial-services-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <div className="grid md:grid-cols-3 gap-6">
               <div>
                 <h4 className="text-lg font-semibold mb-3">Competitive Advantage</h4>
@@ -925,6 +950,10 @@ export default function AIFinancialServicesTransformation2025() {
         </article>
 
         {/* Related Case Studies */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:temp_backup_runtime_fix/case_studies_all/ai-financial-services-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
         <section className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -1337,8 +1366,26 @@ export default function AIFinancialServicesTransformation2025() {
 <<<<<<< HEAD:temp_backup_runtime_fix/case_studies_all/ai-financial-services-transformation-2025/page.tsx
       </article>
 =======
+<<<<<<< HEAD
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/case-studies/ai-financial-services-transformation-2025/page.tsx
+=======
+        <div className="border-t border-gray-200 pt-8">
+          <h4 className="text-lg font-semibold text-gray-900 mb-4">Related Case Studies</h4>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/case-studies/ai-automation-manufacturing-2025" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <h5 className="font-semibold text-gray-900 mb-2">AI Manufacturing Automation Success</h5>
+              <p className="text-sm text-gray-600">40% cost reduction and 60% faster processing in manufacturing</p>
+            </Link>
+            <Link href="/case-studies/ai-retail-transformation-2025" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <h5 className="font-semibold text-gray-900 mb-2">AI Retail Transformation</h5>
+              <p className="text-sm text-gray-600">300% revenue growth through AI-powered retail optimization</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/case-studies/ai-financial-services-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
     </div>
   );
 }

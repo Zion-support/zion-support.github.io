@@ -30,7 +30,11 @@ export default function AIStartupFundingGuide2025() {
               ← Back to Blog
             </Link>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-startup-funding-guide-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -51,8 +55,12 @@ export default function AIStartupFundingGuide2025() {
             Navigate the $47B AI funding landscape with proven strategies, pitch templates, 
             and insider insights from successful AI startups that raised $100M+.
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
 >>>>>>> 92eac770117635b4a7df4309cd005c26f4692c0d:temp_backup_build_fix/ai-startup-funding-guide-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-startup-funding-guide-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </p>
           
           <div className="flex items-center gap-4">
@@ -267,7 +275,11 @@ export default function AIStartupFundingGuide2025() {
                   <li>• Scalability & Infrastructure</li>
                   <li>• IP & Patent Strategy</li>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-startup-funding-guide-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
                 </ul>
 >>>>>>> 92eac770117635b4a7df4309cd005c26f4692c0d:temp_backup_build_fix/ai-startup-funding-guide-2025/page.tsx
               </div>
@@ -375,8 +387,12 @@ export default function AIStartupFundingGuide2025() {
 =======
               </div>
             </Link>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
 >>>>>>> 92eac770117635b4a7df4309cd005c26f4692c0d:temp_backup_build_fix/ai-startup-funding-guide-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-startup-funding-guide-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
         </div>
       </article>

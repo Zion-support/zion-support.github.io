@@ -11,7 +11,11 @@ export default function AIDataPrivacy2025() {
         description="Complete guide to AI data privacy compliance in 2025. Learn about GDPR, CCPA, and new privacy regulations affecting AI systems and data processing."
         keywords="AI data privacy, GDPR compliance, CCPA, AI regulations, data protection, privacy by design, AI governance"
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         title="AI Data Privacy in 2025: Balancing Innovation with Protection"
         description="Navigate the complex landscape of AI data privacy in 2025. Learn about new regulations, privacy-preserving techniques, and compliance strategies."
         keywords="AI data privacy, GDPR compliance, privacy-preserving AI, data protection, AI regulations"
@@ -42,7 +46,11 @@ export default function AIDataPrivacy2025() {
             As AI systems process increasing amounts of personal data, compliance with privacy regulations 
             becomes critical. Learn how to build privacy-compliant AI systems that respect user rights.
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-4 py-2 mb-4">
             <span className="text-sm font-medium">🔒 PRIVACY FOCUS</span>
           </div>
@@ -62,7 +70,11 @@ export default function AIDataPrivacy2025() {
             <span>⏱️ 22 min read</span>
             <span>👁️ 1.8k views</span>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <span>⏱️ 15 min read</span>
             <span>👥 1.8K views</span>
           </div>
@@ -277,7 +289,11 @@ export default function AIDataPrivacy2025() {
               </Link>
             </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <h3 className="text-lg font-semibold text-purple-800 mb-2">🎯 Key Insight</h3>
             <p className="text-purple-700">
               Organizations that implement privacy-preserving AI techniques see 25% higher 
@@ -486,7 +502,11 @@ export default function AIDataPrivacy2025() {
                 <div className="text-3xl mb-3">🛡️</div>
                 <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         <div className="mt-16 border-t pt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -526,7 +546,11 @@ export default function AIDataPrivacy2025() {
                 </p>
               </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
         </div>
 

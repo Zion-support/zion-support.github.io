@@ -15,7 +15,11 @@ interface ContentItem {
   type: 'article' | 'case-study' | 'resource' | 'guide';
   status: 'new' | 'popular' | 'trending' | 'featured';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
   type: 'blog' | 'resource' | 'case-study';
   readTime?: string;
   isNew?: boolean;
@@ -39,7 +43,11 @@ interface ContentItem {
   isTrending?: boolean;
   metrics?: string;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
 }
 
 interface ContentShowcaseProps {
@@ -238,7 +246,11 @@ export default function ContentShowcase({
   viewAllHref?: string;
   maxItems?: number;
   className?: string;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
   variant?: 'default' | 'featured' | 'compact';
 }
 
@@ -270,7 +282,11 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 }) => {
   const displayItems = items.slice(0, maxItems);
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':
@@ -416,7 +432,11 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
       default:
         return 'bg-gray-100 text-gray-800';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
   showViewAll = true,
   viewAllHref = '/blog',
   variant = 'default'
@@ -649,7 +669,11 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
                     <div className="text-xs text-gray-500 mt-1">{item.readTime}</div>
                   )}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
                 </div>
               </div>
             </Link>
@@ -855,7 +879,11 @@ export const latestContent = [
         )}
       </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
     );
   }
 
@@ -1185,7 +1213,11 @@ export const latestContent = [
             >
               View All Content
               <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             </Link>
           </div>
         )}
@@ -1360,4 +1392,8 @@ export const featuredCaseStudies: ContentItem[] = [
 }
 =======
 export default ContentShowcase;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656

@@ -142,7 +142,11 @@ export default function ContentPromoBanner() {
               className="flex-1 border border-white text-white px-3 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center text-sm"
             >
               Download Free
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             </Link>
           </div>
         </div>
@@ -185,4 +189,8 @@ export const contentPromoBanners = {
 };
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656

@@ -154,7 +154,11 @@ interface EnhancedContentBannerProps {
 }
 
 interface EnhancedContentBannerProps {
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
   title: string;
   subtitle: string;
   items: BannerItem[];
@@ -229,7 +233,11 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
           outline: 'border-blue-600 text-blue-600',
           accent: 'text-blue-100',
           hover: 'hover:from-blue-700 hover:to-purple-700'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         };
     }
   };
@@ -474,7 +482,11 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
             <div className="text-3xl font-bold mb-2">24/7</div>
             <div className="text-sm opacity-75">Fresh Content</div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
         )}
       </div>
@@ -487,4 +499,8 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
 export default EnhancedContentBanner;
 =======
 export default EnhancedContentBanner;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656

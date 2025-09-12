@@ -17,7 +17,11 @@ export default function AIEnterpriseTransformation2025() {
     <div className='min-h-screen bg-white'>
       <article className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-enterprise-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -42,7 +46,11 @@ export default function AIEnterpriseTransformation2025() {
             proven strategies that deliver measurable business impact. Complete with real 
             case studies and actionable frameworks.
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-enterprise-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </p>
           
           <div className="flex items-center gap-4">
@@ -740,7 +748,11 @@ export default function AIEnterpriseTransformation2025() {
               </Link>
             </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-enterprise-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
         </div>
       </div>

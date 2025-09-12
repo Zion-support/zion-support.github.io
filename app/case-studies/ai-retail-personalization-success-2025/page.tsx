@@ -17,7 +17,11 @@ export default function AIRetailPersonalizationSuccess2025() {
         title="AI Retail Personalization Success: 45% Conversion Increase Case Study | Zion Tech Group"
         description="Discover how a Fortune 500 retailer achieved 45% conversion increase and $5.8M additional revenue through AI-powered personalization. Complete case study with implementation details and results."
         keywords="AI retail personalization, e-commerce AI, retail case study, personalization ROI, AI conversion optimization, retail automation success"
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         url="/case-studies/ai-retail-personalization-success-2025"
       />
       
@@ -76,7 +80,11 @@ export default function AIRetailPersonalizationSuccess2025() {
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             How a Fortune 500 retailer transformed their customer experience and achieved unprecedented 
             results through AI-powered personalization, generating $5.8M in additional revenue.
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </p>
           
           <div className="flex items-center gap-6 text-sm text-gray-500 mb-8">
@@ -1171,7 +1179,11 @@ export default function AIRetailPersonalizationSuccess2025() {
             </div>
           </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         </div>
 
         {/* Key Results Banner */}

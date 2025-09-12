@@ -654,7 +654,11 @@ export default function AIWorkforceTransformationPlaybook2025() {
                   In-depth article on workforce transformation strategies
                 </p>
               </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             </Link>
           </div>
         </div>

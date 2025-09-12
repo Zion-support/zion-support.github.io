@@ -6,7 +6,11 @@ import SEO from '../../../components/SEO';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-workforce-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-workforce-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
 
 export default function AIWorkforceTransformation2025() {
   return (
@@ -553,7 +557,11 @@ export default function AIWorkforceTransformation2025() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-workforce-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-workforce-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <Link href="/blog/ai-enterprise-transformation-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
@@ -564,7 +572,11 @@ export default function AIWorkforceTransformation2025() {
                   Complete implementation guide with 340% ROI and real case studies
 =======
                   Complete guide to transforming your organization with AI
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-workforce-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-workforce-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
                 </p>
               </div>
             </Link>
@@ -578,7 +590,11 @@ export default function AIWorkforceTransformation2025() {
                   Controls that reduce risk without blocking delivery
 =======
                   Implementing responsible AI practices across your organization
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-workforce-transformation-2025/page.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5:app/blog/ai-workforce-transformation-2025/page.tsx
+>>>>>>> cursor/create-and-deploy-new-content-3656
                 </p>
               </div>
             </Link>

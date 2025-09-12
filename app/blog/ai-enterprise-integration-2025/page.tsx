@@ -69,7 +69,11 @@ export default function AIEnterpriseIntegration2025() {
               <User className="w-4 h-4" />
               <span>Zion Tech Group</span>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
@@ -115,7 +119,11 @@ export default function AIEnterpriseIntegration2025() {
               <Tag className="w-3 h-3" />
               Digital Transformation
             </span>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
         </header>
 
@@ -770,7 +778,11 @@ export default function AIEnterpriseIntegration2025() {
                 Specializing in AI implementation, enterprise integration, and business transformation for modern organizations.
               </p>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
           </div>
         </div>
       </div>

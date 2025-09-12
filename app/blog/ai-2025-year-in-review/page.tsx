@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 };
 =======
 import SEO from '../../../components/SEO';
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
 
 export default function AI2025YearInReview() {
   return (
@@ -64,7 +68,11 @@ export default function AI2025YearInReview() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
               AI & Technology
             </span>
@@ -980,7 +988,11 @@ export default function AI2025YearInReview() {
             </p>
           </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         </div>
 
         <div className="prose prose-lg max-w-none">
@@ -1269,7 +1281,11 @@ export default function AI2025YearInReview() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
     </div>
   );
 }

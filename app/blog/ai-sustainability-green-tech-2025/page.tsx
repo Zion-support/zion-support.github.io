@@ -21,7 +21,11 @@ export default function AISustainabilityGreenTech2025() {
         title="AI Sustainability & Green Tech 2025: Building Eco-Friendly AI"
         description="Discover how to build sustainable AI systems that reduce environmental impact. Learn green AI practices, energy optimization, and carbon-neutral strategies."
         keywords="AI sustainability, green AI, carbon neutral AI, sustainable technology, energy efficient AI, environmental AI, green tech"
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         url="/blog/ai-sustainability-green-tech-2025"
       />
       
@@ -69,7 +73,11 @@ export default function AISustainabilityGreenTech2025() {
               <div className="text-sm text-gray-600">Sustainability & AI Research</div>
 =======
           <div className="flex items-center gap-3 mb-4">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Blog
             </Link>
@@ -116,7 +124,11 @@ export default function AISustainabilityGreenTech2025() {
           
           <div className="flex items-center gap-6 text-sm text-gray-500">
             <span>20 min read</span>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <span>•</span>
             <span>Sustainability</span>
             <span>•</span>
@@ -170,7 +182,11 @@ export default function AISustainabilityGreenTech2025() {
             AI systems consume massive amounts of energy, but they also offer unprecedented opportunities 
             to address climate change and environmental challenges.
           </p>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
 
           <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
             <h3 className="text-lg font-semibold text-red-800 mb-2">Environmental Challenges</h3>
@@ -451,7 +467,11 @@ export default function AISustainabilityGreenTech2025() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
 
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Environmental Monitoring</h3>
@@ -761,7 +781,11 @@ export default function AISustainabilityGreenTech2025() {
                   <li>• Sustainability reporting</li>
                   <li>• International standards</li>
                 </ul>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
               </div>
             </div>
           </div>
@@ -1324,7 +1348,11 @@ export default function AISustainabilityGreenTech2025() {
           </ul>
 =======
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
 
           <p className="text-lg text-gray-700 mb-6">
             Building sustainable AI systems is not just an environmental imperative—it's a business 
@@ -1774,7 +1802,11 @@ export default function AISustainabilityGreenTech2025() {
             >
               Download Free Guide
               <span>→</span>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             </Link>
           </div>
         </article>
@@ -1852,7 +1884,11 @@ export default function AISustainabilityGreenTech2025() {
         <div className="mt-16 pt-8 border-t border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
             <Link href="/blog/ai-cost-optimization-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
@@ -1889,7 +1925,11 @@ export default function AISustainabilityGreenTech2025() {
                 </h4>
                 <p className="text-gray-600 text-sm">
                   Building privacy-preserving AI systems at the edge
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
                 </p>
               </div>
             </Link>
@@ -1897,7 +1937,11 @@ export default function AISustainabilityGreenTech2025() {
 <<<<<<< HEAD
         </section>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-47dd
+=======
+>>>>>>> cursor/create-and-deploy-new-content-28f5
+>>>>>>> cursor/create-and-deploy-new-content-3656
         </div>
       </div>
     </div>
