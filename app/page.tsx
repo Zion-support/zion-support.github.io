@@ -43,34 +43,34 @@ export default function HomePage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT UPDATE</span>
+                <span className="text-sm font-medium">🧠 NEURAL INTERFACE BREAKTHROUGH</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 25+ New AI Resources Just Released - January 2025!
+                🎉 Neural Interface Revolution: Direct Brain-to-AI Communication Now Live!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: Quantum Computing AI, Neural Interface Revolution, 
-                Autonomous Systems Mastery, plus new case studies and 200+ page implementation guides. 
-                Get expert insights on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough: Neural Interface Revolution 2025, Healthcare Case Study with $500M savings, 
+                and complete 150+ page Implementation Guide. Direct brain-to-AI communication is transforming healthcare, 
+                accessibility, and human-computer interaction right now.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/content-showcase"
+                  href="/blog/ai-2025-neural-interfaces-revolution"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
-                  🎯 Explore All New Content
+                  🧠 Read Neural Interface Article
                 </Link>
                 <Link
-                  href="/blog/ai-2025-quantum-computing-breakthrough"
+                  href="/case-studies/ai-neural-interface-healthcare-breakthrough-2025"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  🚀 Read Quantum AI Article
+                  🏥 View $500M Case Study
                 </Link>
                 <Link
-                  href="/resources/ai-2025-implementation-master-guide"
+                  href="/resources/ai-neural-interface-implementation-guide-2025"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  📚 Download Master Guide
+                  📚 Download Implementation Guide
                 </Link>
               </div>
             </div>
