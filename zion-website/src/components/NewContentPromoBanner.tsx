@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '36',
+      title: 'Agentic Data Pipelines in Production (2025)',
+      description: 'Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.',
+      href: '/blog/ai-2025-agentic-data-pipelines',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Data Platforms'
+    },
+    {
+      id: '35',
+      title: 'Evaluations in Production (2025): Shipping with Confidence',
+      description: 'Online and offline evaluations for AI quality, safety, and cost. Pipelines and metrics.',
+      href: '/blog/ai-2025-evaluations-in-production',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
       id: '33',
       title: 'Reliable Realtime Agents in 2025: Architecture & SLAs',
       description: 'Production blueprint for realtime agents with reliability SLAs, safety guardrails, and observability.',

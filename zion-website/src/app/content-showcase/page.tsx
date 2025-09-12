@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Agentic Data Pipelines in Production (2025)",
+      description: "Design reliable, cost‑efficient, and safe agentic data pipelines from ingestion to orchestration.",
+      href: "/blog/ai-2025-agentic-data-pipelines",
+      icon: "🧩",
+      category: "Data Platforms",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Evaluations in Production (2025): Shipping with Confidence",
+      description: "Online and offline evaluations for AI quality, safety, and cost. Pipelines and metrics.",
+      href: "/blog/ai-2025-evaluations-in-production",
+      icon: "✅",
+      category: "Evaluation",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Reliable Realtime Agents in 2025: Architecture & SLAs",
       description: "Blueprint for production-grade realtime agents with SLAs, safety, and observability.",
       href: "/blog/ai-2025-reliable-realtime-agents",
