@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '26',
+      title: 'Agentic Workflows & Copilots in 2025: From Pilots to Production',
+      description: 'Blueprint to launch and scale agentic workflows and copilots with safety, evals, and SLOs.',
+      href: '/blog/ai-2025-agentic-workflows-copilots',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',

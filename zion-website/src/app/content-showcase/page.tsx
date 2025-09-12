@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Agentic Workflows & Copilots in 2025: From Pilots to Production",
+      description: "Blueprint to launch and scale agentic workflows and copilots with safety, evals, and SLOs.",
+      href: "/blog/ai-2025-agentic-workflows-copilots",
+      icon: "🤝",
+      category: "Agents",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Privacy-Preserving AI in Production (2025)",
       description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
       href: "/blog/ai-2025-privacy-preserving-ai",
