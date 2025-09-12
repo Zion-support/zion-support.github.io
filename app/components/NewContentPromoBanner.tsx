@@ -8,6 +8,56 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI Agent Governance Starter Pack 2025",
+    description: "Practical policies, audits, and evals to safely ship agent systems",
+    url: "/resources/ai-agent-governance-starter-pack-2025",
+    type: "Resource",
+    category: "Governance",
+    icon: "🧭",
+    featured: true,
+    new: true
+  },
+  {
+    title: "LLM Caching & Routing Playbook",
+    description: "Cut latency and cost 40%+ with caching, distillation, and routing",
+    url: "/blog/ai-2025-llm-caching-routing-playbook",
+    type: "Blog Post",
+    category: "Cost Optimization",
+    icon: "🧮",
+    featured: true,
+    new: true
+  },
+  {
+    title: "GenAI Data Quality Checklist (Free)",
+    description: "Data curation, labeling, drift, and privacy-by-design templates",
+    url: "/resources/genai-data-quality-checklist-2025",
+    type: "Resource",
+    category: "Data Engineering",
+    icon: "🧪",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Voice Agent Guardrails in Production",
+    description: "Safety policies, red-teaming, and real-time evals for voice agents",
+    url: "/blog/ai-2025-voice-agent-guardrails-production",
+    type: "Blog Post",
+    category: "Agents",
+    icon: "🎤",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance FNOL Automation: 6-Month Rollout",
+    description: "Claims triage, fraud checks, and audit trails—enterprise case study",
+    url: "/case-studies/ai-2025-insurance-fnol-automation",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📑",
+    featured: false,
+    new: true
+  },
+  {
     title: "Governed Agentic Workflows: 2025 Blueprint",
     description: "Policy gates, audits, and evals for production agent systems",
     url: "/blog/ai-2025-governed-agentic-workflows",
