@@ -10,6 +10,28 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "production-prompt-engineering-2025",
+    emoji: "🧠",
+    title: "New Guide: Production Prompt Engineering 2025",
+    excerpt:
+      "We published a production-focused guide: schemas, tool calling, retrieval, evals, and guardrails.",
+    date: "2025-09-12",
+    gradient: "from-indigo-600 to-pink-600",
+    content:
+      "This guide focuses on operational patterns to scale prompt engineering reliably: schema-first prompts, function/tool calling, retrieval orchestration, automated evaluations, and runtime guardrails."
+  },
+  {
+    slug: "ai-governance-operational-playbook-2025",
+    emoji: "🛡️",
+    title: "New Guide: AI Governance 2025 Operational Playbook",
+    excerpt:
+      "Decision rights, policy libraries, evaluation pipelines, and runtime enforcement integrated with SDLCs.",
+    date: "2025-09-12",
+    gradient: "from-violet-600 to-fuchsia-600",
+    content:
+      "A practical operating model for AI governance that includes policy libraries, review boards, automated evaluations in CI/CD, and runtime enforcement with policy-as-code guardrails."
+  },
+  {
     slug: "mlops-best-practices-2025",
     emoji: "🛠️",
     title: "New Guide: MLOps Best Practices 2025",
