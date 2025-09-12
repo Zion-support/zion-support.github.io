@@ -1,125 +1,170 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface ContentRecommendationWidgetProps {
-  title?: string;
-  showTitle?: boolean;
-  maxItems?: number;
-  category?: 'all' | 'blog' | 'case-studies' | 'resources';
+interface ContentItem {
+  title: string;
+  href: string;
+  type: 'blog' | 'case-study' | 'resource';
+  category: string;
+  readTime: string;
+  description: string;
+  featured?: boolean;
+  new?: boolean;
 }
 
-export default function ContentRecommendationWidget({ 
-  title = "Recommended for You",
-  showTitle = true,
-  maxItems = 3,
-  category = 'all'
-}: ContentRecommendationWidgetProps) {
-  const contentItems = [
-    {
-      id: 'advanced-robotics',
-      title: 'Advanced Robotics & AI Integration',
-      description: 'Humanoid robots and autonomous systems revolutionizing industries',
-      url: '/blog/ai-2025-advanced-robotics',
-      type: 'blog',
-      readTime: '18 min read',
-      icon: '🤖',
-      badge: 'New',
-      badgeColor: 'bg-green-500'
-    },
-    {
-      id: 'neural-interfaces',
-      title: 'Neural Interfaces & BCI',
-      description: 'Direct brain-computer communication enabling human enhancement',
-      url: '/blog/ai-2025-neural-interfaces',
-      type: 'blog',
-      readTime: '20 min read',
-      icon: '🧠',
-      badge: 'Hot',
-      badgeColor: 'bg-blue-500'
-    },
-    {
-      id: 'space-technology',
-      title: 'AI-Powered Space Technology',
-      description: 'Revolutionary space exploration with autonomous spacecraft and mining',
-      url: '/blog/ai-2025-space-technology',
-      type: 'blog',
-      readTime: '16 min read',
-      icon: '🚀',
-      badge: 'Trending',
-      badgeColor: 'bg-purple-500'
-    },
-    {
-      id: 'autonomous-vehicles',
-      title: 'Autonomous Vehicles Success',
-      description: '95% reduction in accidents, $2.3T market value created',
-      url: '/case-studies/ai-2025-autonomous-vehicles-success',
-      type: 'case-study',
-      readTime: 'Case Study',
-      icon: '🚗',
-      badge: 'Featured',
-      badgeColor: 'bg-orange-500'
-    },
-    {
-      id: 'manufacturing-automation',
-      title: 'Manufacturing Automation Success',
-      description: '40% productivity increase with AI-powered robotic systems',
-      url: '/case-studies/ai-2025-manufacturing-automation-success',
-      type: 'case-study',
-      readTime: 'Case Study',
-      icon: '🏭',
-      badge: 'Award Winner',
-      badgeColor: 'bg-green-500'
-    },
-    {
-      id: 'financial-transformation',
-      title: 'Financial Services Transformation',
-      description: 'Real-time fraud detection and personalized banking experiences',
-      url: '/case-studies/ai-2025-financial-services-transformation-success',
-      type: 'case-study',
-      readTime: 'Case Study',
-      icon: '💰',
-      badge: 'Success Story',
-      badgeColor: 'bg-blue-500'
+const contentRecommendations: ContentItem[] = [
+  {
+    title: 'Advanced Neural Networks 2025',
+    href: '/blog/ai-2025-advanced-neural-networks',
+    type: 'blog',
+    category: 'AI Architecture',
+    readTime: '25 min',
+    description: 'Next-generation AI architecture with quantum-enhanced models and self-evolving networks',
+    featured: true,
+    new: true
+  },
+  {
+    title: 'Enterprise AI Governance Framework',
+    href: '/blog/ai-2025-enterprise-ai-governance',
+    type: 'blog',
+    category: 'AI Ethics',
+    readTime: '20 min',
+    description: 'Comprehensive framework for building trust and compliance in AI systems',
+    featured: true,
+    new: true
+  },
+  {
+    title: '$2.3B Manufacturing Success Story',
+    href: '/case-studies/ai-transformation-global-manufacturing-giant-2025',
+    type: 'case-study',
+    category: 'Manufacturing',
+    readTime: '30 min',
+    description: 'Fortune 100 manufacturing giant achieves unprecedented growth through AI transformation',
+    featured: true
+  },
+  {
+    title: 'AI Implementation Success Framework',
+    href: '/resources/ai-implementation-success-framework-2025',
+    type: 'resource',
+    category: 'Implementation',
+    readTime: '35 min',
+    description: 'Complete guide to successful AI implementation in enterprise environments',
+    featured: true,
+    new: true
+  },
+  {
+    title: 'AI Healthcare Diagnosis Revolution',
+    href: '/blog/ai-2025-healthcare-diagnosis-revolution',
+    type: 'blog',
+    category: 'Healthcare',
+    readTime: '22 min',
+    description: '95-98% diagnostic accuracy transforming medical care worldwide'
+  },
+  {
+    title: 'Quantum Computing Business Impact',
+    href: '/blog/quantum-computing-business-impact-2025',
+    type: 'blog',
+    category: 'Quantum Computing',
+    readTime: '18 min',
+    description: 'How quantum computing is revolutionizing business operations and AI capabilities'
+  }
+];
+
+const ContentRecommendationWidget: React.FC = () => {
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '📄';
     }
-  ];
+  };
 
-  // Filter content based on category
-  const filteredItems = category === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.type === category);
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-blue-100 text-blue-800';
+      case 'case-study':
+        return 'bg-orange-100 text-orange-800';
+      case 'resource':
+        return 'bg-green-100 text-green-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
 
-  // Take only the requested number of items
-  const displayItems = filteredItems.slice(0, maxItems);
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI Architecture':
+        return 'bg-purple-100 text-purple-800';
+      case 'AI Ethics':
+        return 'bg-green-100 text-green-800';
+      case 'Manufacturing':
+        return 'bg-orange-100 text-orange-800';
+      case 'Implementation':
+        return 'bg-blue-100 text-blue-800';
+      case 'Healthcare':
+        return 'bg-red-100 text-red-800';
+      case 'Quantum Computing':
+        return 'bg-indigo-100 text-indigo-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-      {showTitle && (
-        <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      )}
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-xl font-bold text-gray-900">💡 Recommended for You</h3>
+        <div className="text-sm text-gray-500">
+          Based on your interests
+        </div>
+      </div>
       
       <div className="space-y-4">
-        {displayItems.map((item) => (
-          <Link key={item.id} href={item.url} className="group block">
-            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-              <div className="text-2xl group-hover:scale-110 transition-transform">
-                {item.icon}
+        {contentRecommendations.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className="group block p-4 rounded-lg hover:bg-gray-50 transition-colors border border-gray-100 hover:border-blue-200"
+          >
+            <div className="flex items-start space-x-3">
+              <div className="flex-shrink-0">
+                <div className="text-2xl">{getTypeIcon(item.type)}</div>
               </div>
               <div className="flex-1 min-w-0">
-                <div className="flex items-center space-x-2 mb-1">
-                  <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
+                <div className="flex items-center space-x-2 mb-2">
+                  <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
                     {item.title}
                   </h4>
-                  <span className={`${item.badgeColor} text-white text-xs px-2 py-1 rounded-full`}>
-                    {item.badge}
-                  </span>
+                  {item.featured && (
+                    <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">
+                      FEATURED
+                    </span>
+                  )}
+                  {item.new && (
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                      NEW
+                    </span>
+                  )}
                 </div>
-                <p className="text-xs text-gray-600 mb-2 line-clamp-2">
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                   {item.description}
                 </p>
-                <div className="flex items-center text-xs text-gray-500">
-                  <span>{item.readTime}</span>
-                  <span className="mx-1">•</span>
-                  <span className="capitalize">{item.type.replace('-', ' ')}</span>
+                <div className="flex items-center space-x-3">
+                  <span className={`text-xs px-2 py-1 rounded-full ${getTypeColor(item.type)}`}>
+                    {item.type.toUpperCase()}
+                  </span>
+                  <span className={`text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>
+                    {item.category}
+                  </span>
+                  <span className="text-xs text-gray-500">
+                    {item.readTime}
+                  </span>
                 </div>
               </div>
             </div>
@@ -127,14 +172,21 @@ export default function ContentRecommendationWidget({
         ))}
       </div>
       
-      <div className="mt-4 pt-4 border-t border-gray-100">
-        <Link 
-          href="/content-showcase" 
-          className="text-sm text-blue-600 hover:text-blue-800 font-medium"
-        >
-          View All Content →
-        </Link>
+      <div className="mt-6 pt-4 border-t border-gray-200">
+        <div className="flex justify-between items-center">
+          <Link
+            href="/content-showcase"
+            className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+          >
+            Explore All Content →
+          </Link>
+          <button className="text-sm text-gray-500 hover:text-gray-700">
+            Refresh Recommendations
+          </button>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default ContentRecommendationWidget;

@@ -16,6 +16,7 @@ const ContentPromotionBanner = lazy(() => import('../components/ContentPromotion
 const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
 const TrendingTopicsWidget = lazy(() => import('../components/TrendingTopicsWidget'));
+const ContentRecommendationWidget = lazy(() => import('../components/ContentRecommendationWidget'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 
 // Card component
@@ -79,32 +80,39 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* Content Promotion Banner */}
-        <section className="py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🚀 FRESH CONTENT - JANUARY 2025</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 NEW: AI Advanced Automation & Healthcare Revolution Content!
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎉 NEW: Advanced Neural Networks, AI Governance & $2.3B Success Stories!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Just released: Complete AI Automation Enterprise Guide (40-60% efficiency gains), 
-                AI Healthcare Diagnosis Revolution (95-98% accuracy), plus Fortune 500 success case studies. 
-                Get expert insights on the technologies transforming 2025 and beyond.
+              <p className="text-lg opacity-90 mb-6 max-w-5xl mx-auto">
+                Just released: Advanced Neural Networks 2025, Enterprise AI Governance Framework, 
+                Fortune 100 Manufacturing Transformation ($2.3B revenue impact), plus comprehensive 
+                AI Implementation Success Framework. Discover the cutting-edge technologies and 
+                proven methodologies transforming businesses in 2025.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
-                  Explore New Content
+                  Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-advanced-automation"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  href="/blog/ai-2025-advanced-neural-networks"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read Latest Article
+                  Read Latest: Neural Networks
+                </Link>
+                <Link
+                  href="/case-studies/ai-transformation-global-manufacturing-giant-2025"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  $2.3B Success Story
                 </Link>
               </div>
             </div>
@@ -191,28 +199,41 @@ export default function HomePage() {
           </div>
 
           <div className='grid md:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-2025-advanced-automation' className='group'>
+            <Link href='/blog/ai-2025-advanced-neural-networks' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Advanced Automation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete enterprise guide with 40-60% efficiency gains and 300-500% ROI</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧠</div>
+                <h3 className='text-lg font-semibold mb-2'>Advanced Neural Networks 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Next-generation AI architecture with quantum-enhanced models and self-evolving networks</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>18 min read</span>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span className='bg-purple-500 px-2 py-1 rounded-full'>HOT</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-2025-enterprise-ai-governance' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>Enterprise AI Governance 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive framework for building trust and compliance in AI systems</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
                   <span className='mx-2'>•</span>
                   <span className='bg-green-500 px-2 py-1 rounded-full'>NEW</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/blog/ai-healthcare-diagnosis-revolution-2025' className='group'>
+            <Link href='/case-studies/ai-transformation-global-manufacturing-giant-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Healthcare Diagnosis Revolution</h3>
-                <p className='text-sm opacity-90 mb-3'>95-98% diagnostic accuracy transforming medical care worldwide</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
+                <h3 className='text-lg font-semibold mb-2'>$2.3B Manufacturing Success</h3>
+                <p className='text-sm opacity-90 mb-3'>Fortune 100 manufacturing giant achieves unprecedented growth through AI transformation</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>22 min read</span>
+                  <span>30 min read</span>
                   <span className='mx-2'>•</span>
-                  <span className='bg-blue-500 px-2 py-1 rounded-full'>Healthcare</span>
+                  <span className='bg-orange-500 px-2 py-1 rounded-full'>CASE STUDY</span>
                 </div>
               </div>
             </Link>
@@ -2066,12 +2087,17 @@ export default function HomePage() {
         <FeaturedContentShowcase />
       </Suspense>
 
-      {/* Trending Topics Widget */}
+      {/* Trending Topics & Content Recommendations */}
       <section className='py-16 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <Suspense fallback={<LoadingSpinner size="lg" text="Loading trending topics..." />}>
-            <TrendingTopicsWidget />
-          </Suspense>
+          <div className='grid lg:grid-cols-2 gap-8'>
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading trending topics..." />}>
+              <TrendingTopicsWidget />
+            </Suspense>
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading recommendations..." />}>
+              <ContentRecommendationWidget />
+            </Suspense>
+          </div>
         </div>
       </section>
 
