@@ -165,7 +165,50 @@ const blogPosts: BlogPost[] = [
     image: '⚡',
     views: 987
   },
-  // New content added September 2025
+  // New content added January 2025
+  {
+    id: 'ai-2025-breakthrough-innovations',
+    title: 'AI 2025 Breakthrough Innovations: Revolutionary Technologies Reshaping Business',
+    excerpt: 'Discover the groundbreaking AI innovations of 2025 that are revolutionizing industries, from autonomous systems to quantum-enhanced machine learning and beyond.',
+    author: 'Zion Tech Group',
+    date: '2025-01-20',
+    readTime: '15 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI', 'Innovation', 'Technology', 'Business Transformation'],
+    featured: true,
+    url: '/blog/ai-2025-breakthrough-innovations',
+    image: '🚀',
+    views: 0
+  },
+  {
+    id: 'ai-2025-sustainability-green-tech',
+    title: 'AI-Powered Sustainability: Green Technology Solutions for 2025',
+    excerpt: 'Explore how artificial intelligence is driving sustainability initiatives, reducing carbon footprints, and creating eco-friendly business solutions.',
+    author: 'Zion Tech Group',
+    date: '2025-01-19',
+    readTime: '12 min read',
+    category: 'Sustainability',
+    tags: ['Sustainability', 'Green Tech', 'AI', 'Environment'],
+    featured: true,
+    url: '/blog/ai-2025-sustainability-green-tech',
+    image: '🌱',
+    views: 0
+  },
+  {
+    id: 'ai-2025-robotics-automation',
+    title: 'AI-Powered Robotics & Automation: The Future of Manufacturing and Beyond',
+    excerpt: 'Explore how AI-driven robotics and automation are revolutionizing manufacturing, healthcare, logistics, and service industries with unprecedented precision.',
+    author: 'Zion Tech Group',
+    date: '2025-01-18',
+    readTime: '14 min read',
+    category: 'Robotics & Automation',
+    tags: ['Robotics', 'Automation', 'AI', 'Manufacturing'],
+    featured: false,
+    url: '/blog/ai-2025-robotics-automation',
+    image: '🤖',
+    views: 0
+  },
+  // Previous content
   {
     id: 'ai-go-to-market-2025',
     title: 'AI Go-To-Market 2025: From Zero to Traction',
@@ -175,7 +218,7 @@ const blogPosts: BlogPost[] = [
     readTime: '12 min read',
     category: 'Growth & Marketing',
     tags: ['Go-To-Market', 'Pricing', 'Growth', 'AI'],
-    featured: true,
+    featured: false,
     url: '/blog/ai-go-to-market-2025',
     image: '📈',
     views: 0
