@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '24',
+      title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
+      description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',
+      href: '/blog/ai-2025-ai-supply-chain-resilience',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '25',
+      title: 'AI Supply Chain Orchestration: 27% Expedited Costs Reduced, +6 pts OTIF',
+      description: 'Case study: forecasting + optimization + agentic workflows cut costs and improved service.',
+      href: '/case-studies/ai-2025-supply-chain-orchestration-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '23',
       title: 'Privacy-Preserving AI in Production (2025)',
       description: 'Ship AI with differential privacy, federated learning, and privacy-by-design guardrails.',

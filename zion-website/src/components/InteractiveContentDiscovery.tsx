@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '24',
+      title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
+      description: 'Resilient supply chains with AI: early signals, dynamic safety stock, and agent workflows.',
+      href: '/blog/ai-2025-ai-supply-chain-resilience',
+      type: 'blog',
+      category: 'Advanced AI',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Supply Chain', 'Forecasting', 'Optimization', 'Agents'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '25',
+      title: 'AI Supply Chain Orchestration: 27% Expedited Costs Reduced, +6 pts OTIF',
+      description: 'Case study: forecasting + optimization + exception agents reduced costs and boosted service.',
+      href: '/case-studies/ai-2025-supply-chain-orchestration-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Supply Chain', 'Optimization', 'Agents', 'OTIF'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '19',
       title: 'Data Quality for RAG in Production (2025)',
       description: 'Data curation, chunking, hybrid search, and evaluations to make RAG reliable and cost‑efficient.',
