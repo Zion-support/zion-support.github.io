@@ -8,13 +8,43 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI 2025 Breakthrough Innovations",
+    description: "Revolutionary AI technologies reshaping industries",
+    url: "/blog/ai-2025-breakthrough-innovations",
+    type: "Blog Post",
+    category: "AI Innovation",
+    icon: "🚀",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Production Agent Patterns 2025",
+    description: "Reliable patterns for deploying AI agents in production",
+    url: "/blog/ai-2025-production-agent-patterns",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🧭",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Sustainability & Green Tech 2025",
+    description: "Building eco-friendly AI systems for a sustainable future",
+    url: "/blog/ai-sustainability-green-tech-2025",
+    type: "Blog Post",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
     title: "Agentic Orchestration Blueprint 2025",
     description: "Practical patterns for reliable, cost-efficient agent systems",
     url: "/blog/ai-2025-agentic-orchestration-blueprint",
     type: "Blog Post",
     category: "AI Engineering",
     icon: "🧩",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -58,13 +88,23 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Sustainability Transformation: 60% Energy Reduction",
+    description: "Fortune 500 company achieves carbon neutrality with AI",
+    url: "/case-studies/ai-sustainability-transformation-2025",
+    type: "Case Study",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Supply Chain Optimization: $150M Success",
     description: "Fortune 500 company achieves unprecedented cost savings",
     url: "/case-studies/ai-supply-chain-optimization-success-2025",
     type: "Case Study",
     category: "Supply Chain",
     icon: "📦",
-    featured: true,
+    featured: false,
     new: true
   },
   {
