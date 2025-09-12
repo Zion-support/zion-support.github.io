@@ -12,6 +12,7 @@ import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -224,6 +225,22 @@ const HomePage = memo(function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Content Discovery Widget */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              🎯 Discover Your Perfect Content
+            </h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Use our intelligent content discovery tool to find exactly what you need. 
+              Filter by category, type, and trending topics.
+            </p>
+          </div>
+          <InteractiveContentDiscovery className="max-w-6xl mx-auto" />
         </div>
       </section>
 
