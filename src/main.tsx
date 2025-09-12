@@ -1,14 +1,10 @@
-import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
-import { ErrorBoundary } from 'react-error-boundary';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
-import './styles.css';
+import './index.css';
 
-window.addEventListener('unhandledrejection', (event) => {
-  const reason = event.reason;
-  const errorMessage = typeof reason === 'string' ? reason : 'Unknown error';
-  handleGlobalError(new Error(errorMessage));
-});
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Failed to find the root element');
 
 const root = createRoot(rootElement);
 root.render(

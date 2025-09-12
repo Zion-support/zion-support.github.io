@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header } from '@/components/Header';
+import Header from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';

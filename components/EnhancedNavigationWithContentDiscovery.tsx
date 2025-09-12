@@ -7,6 +7,16 @@ export default function EnhancedNavigationWithContentDiscovery() {
 
   const contentCategories = [
     {
+      title: "AI 2035 Revolutionary",
+      items: [
+        { name: "Revolutionary Breakthroughs", href: "/blog/ai-2035-revolutionary-breakthroughs", featured: true },
+        { name: "Universal Transformation Case Study", href: "/case-studies/ai-2035-universal-transformation-breakthrough", featured: true },
+        { name: "Ultimate Implementation Guide", href: "/resources/ai-2035-ultimate-implementation-master-guide", featured: true },
+        { name: "Consciousness Transfer Technology", href: "/blog/ai-2035-revolutionary-breakthroughs", featured: false },
+        { name: "Matter Manipulation AI", href: "/blog/ai-2035-revolutionary-breakthroughs", featured: false }
+      ]
+    },
+    {
       title: "AI 2026 Breakthroughs",
       items: [
         { name: "Breakthrough Innovations", href: "/blog/ai-2026-breakthrough-innovations", featured: true },

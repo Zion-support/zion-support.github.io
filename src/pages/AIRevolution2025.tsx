@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { Card } from '../components/ui/Card';
+import { Card } from '../components/ui/card';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Shield, Globe } from 'lucide-react';
 
