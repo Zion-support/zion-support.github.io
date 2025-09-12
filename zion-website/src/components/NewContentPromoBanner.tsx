@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '60',
+      title: 'AI Guardrails in Production (2025)',
+      description: 'Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.',
+      href: '/blog/ai-2025-guardrails-in-production',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: '61',
+      title: 'AI Governance Operating Model (2025)',
+      description: 'Roles, decision rights, and automated controls to scale AI with confidence.',
+      href: '/blog/ai-2025-ai-governance-operating-model',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '62',
+      title: 'AI Governance Operating Model Impact: 35% Faster Delivery',
+      description: 'Case study: Governance operating model cut incidents 28% and accelerated delivery 35%.',
+      href: '/case-studies/ai-2025-governance-operating-model-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
