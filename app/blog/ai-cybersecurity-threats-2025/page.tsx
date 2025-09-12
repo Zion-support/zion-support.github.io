@@ -1,8 +1,7 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
-import Link from 'next/link';
 =======
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI Cybersecurity Threats 2025: Complete Defense Guide',
@@ -13,46 +12,7 @@ export const metadata: Metadata = {
 export default function AICybersecurityThreats2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Cybersecurity Threats in 2025: Defending Against Next-Gen Attacks"
-        description="Comprehensive guide to AI-powered cybersecurity threats in 2025. Learn about emerging attack vectors, defense strategies, and how to protect your organization from AI-driven threats."
-        keywords="AI cybersecurity, cyber threats 2025, AI security, cyber attacks, threat detection, security AI, cyber defense, AI vulnerabilities"
-        url="/blog/ai-cybersecurity-threats-2025"
-      />
-      
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
-              Cybersecurity & AI
-            </span>
-            <span className="text-gray-500 text-sm">18 min read</span>
-            <span className="text-gray-500 text-sm">•</span>
-            <span className="text-gray-500 text-sm">Jan 30, 2025</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI Cybersecurity Threats in 2025: Defending Against Next-Gen Attacks
-          </h1>
-          
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            As AI becomes more sophisticated, so do the threats it enables. Discover the 
-            emerging cybersecurity landscape in 2025, where AI-powered attacks are becoming 
-            more frequent, sophisticated, and dangerous than ever before.
-          </p>
-          
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-              <span className="text-red-600 font-bold">ZT</span>
-            </div>
-            <div>
-              <div className="font-semibold text-gray-900">Zion Tech Group</div>
-              <div className="text-sm text-gray-600">AI & Technology Solutions</div>
-            </div>
-          </div>
-        </header>
-
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -493,7 +453,6 @@ export default function AICybersecurityThreats2025() {
           </div>
         </div>
       </article>
-=======
         title="AI Cybersecurity Threats 2025: Protecting Against Next-Gen Attacks"
         description="Comprehensive guide to AI-powered cybersecurity threats in 2025. Learn about adversarial AI, deepfakes, automated attacks, and defense strategies."
         keywords="AI cybersecurity, adversarial AI, deepfakes, AI security threats, cyber defense, 2025 security trends"
@@ -1088,6 +1047,7 @@ export default function AICybersecurityThreats2025() {
           </div>
         </section>
       </article>
+=======
     </div>
   );
 }

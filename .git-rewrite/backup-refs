@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+50f41383c1e045349bd449533577d9e054875d54 commit	refs/heads/cursor/create-and-deploy-new-content-f9ec
+=======
 2f566cde8887cb5df644da72c34e05cc0eaf7d41 commit	refs/heads/cursor/build-nextjs-application-with-dependency-installation-1e0d
+>>>>>>> origin/feature/news-content-landing
 0988488aaee044f8bf9be5b20ae2306140858d72 commit	refs/heads/main
 f5a4dd431920df5bfb2b4832ddabae6caaea8b13 commit	refs/remotes/origin/0nylrk-codex/fix-footer-contact-link
 f5a4dd431920df5bfb2b4832ddabae6caaea8b13 commit	refs/remotes/origin/0parff-codex/centralize-api-error-handling-and-add-errorboundary
@@ -79,13 +83,21 @@ c628bf095a2905019dd6d1f962074c147f051ea0 commit	refs/remotes/origin/908rx5-codex
 522823bd6012dfcc2ee62ce9568eaf2124f9d337 commit	refs/remotes/origin/96xhsm-codex/fix-accessibility-issues
 6b3655c750e1d34c6b35d08a80ae10feee7aa82d commit	refs/remotes/origin/9kvoyx-codex/fix-client-side-rendering-and-javascript-errors
 f273ac882390ba36c7f4854832a31c91098be447 commit	refs/remotes/origin/9lfw2u-codex/render-filled-stars-for-ratings
+<<<<<<< HEAD
+90c001e2c5e8ad872b1ff225fee766642ffed9bc commit	refs/remotes/origin/9llxiv-codex/implement-analytics-and-error-tracking
+=======
 04b4bde4b7e8cf64edd30c8ea12e4933a88916bb commit	refs/remotes/origin/9llxiv-codex/implement-analytics-and-error-tracking
+>>>>>>> origin/feature/news-content-landing
 8b4cf5bb8fc184ef012ce626f9542bd44d4123b2 commit	refs/remotes/origin/9njm0n-codex/implement-feature-flags-and-a/b-testing
 8ac7fbda471d45afa401984a0dd676d9db6b059b commit	refs/remotes/origin/9pfskl-codex/check-logs-and-fix-errors
 dc508650b61852bdeffa64c45109223ee54d3ece commit	refs/remotes/origin/9qozr5-codex/implement-light/dark-theme-with-persistence
 b2ed70e2e27a52adf646f19c228e3f18e65a4e29 commit	refs/remotes/origin/9ta744-codex/implement-analytics-and-error-tracking
 e53863053fa75e912f7a3d8c42e71d2f3800992c commit	refs/remotes/origin/9zcb49-codex/fix-npm-eio-error-during-install
+<<<<<<< HEAD
+91c5bacd587f50166721bfb628bc1ed36bced646 commit	refs/remotes/origin/HEAD
+=======
 9f547074f8acf766c0e38bab2fe7aecb38aed381 commit	refs/remotes/origin/HEAD
+>>>>>>> origin/feature/news-content-landing
 39f4885fc886548a7430999e9feab04e41946fe9 commit	refs/remotes/origin/a12zhz-codex/support-metric--imperial-units
 f0fd4787dc539756f54e61cddc3edbdde1b2dc7e commit	refs/remotes/origin/a1b34d-codex/add-test-for-failed-login-toast
 a92de83aa62fdfc73e0564dcf426da39090fb36b commit	refs/remotes/origin/a5b989-codex/add-promotions-support-with-coupons-and-gift-cards
@@ -94,6 +106,10 @@ a92de83aa62fdfc73e0564dcf426da39090fb36b commit	refs/remotes/origin/a5b989-codex
 08792f84ca9cb2fb90f10990fb43876e4d3887bc commit	refs/remotes/origin/add-comprehensive-services
 633c501dcffee817a7ea4878c8fbf3eab75e92e8 commit	refs/remotes/origin/add-innovative-services-2025
 4183669f3e78d2858d268f8aeab456426b805c3a commit	refs/remotes/origin/add-new-ai-services-2025
+<<<<<<< HEAD
+a3d513ef269f0292ba943fd735dfcc8710780a20 commit	refs/remotes/origin/add-new-content-and-advertising
+=======
+>>>>>>> origin/feature/news-content-landing
 bf50c5cac0cbf0fcf6ba0d8da13927c57024c2df commit	refs/remotes/origin/add-new-innovative-services
 7064ee0edb09ba13fab6d8f6534bcd7aa96aab8f commit	refs/remotes/origin/add-new-innovative-services-2025
 2473779f483500bca90118e0bafa3f3493880b5c commit	refs/remotes/origin/add-new-innovative-services-2026
@@ -170,7 +186,11 @@ ffb14dd53d54b4208074afbd9e8b9582ffdfab5b commit	refs/remotes/origin/automation-c
 6d611f556b5862363458619102a32d12520d7f6b commit	refs/remotes/origin/automation-improvements-1757244538193
 7a4b66766537c0c44109e020a0ae6e78673a9ca0 commit	refs/remotes/origin/automation-improvements-final
 d4c00f9a67b4470c6438d60562b4fe5b358bf27a commit	refs/remotes/origin/automation/advanced-git-sync-temp
+<<<<<<< HEAD
+b59f3641068efa0217a9b7038519a7db574da5d6 commit	refs/remotes/origin/automation/auto-fix
+=======
 d3a5878c0a135d10c4b19e5dcf83bdf739b22058 commit	refs/remotes/origin/automation/auto-fix
+>>>>>>> origin/feature/news-content-landing
 6fab480c3e8188c3498091843e2b044b2e5c0a04 commit	refs/remotes/origin/automation/bundle-report
 770e81664d08899fee50178149d09e7ca24bb450 commit	refs/remotes/origin/automation/changelog
 a6c3acf0a998687b920c54a6833e3bee19966945 commit	refs/remotes/origin/automation/cloud-adaptive-knowledge
@@ -5032,7 +5052,11 @@ c8b04fa06972ce8fa059c01a2d39b74a89d443dc commit	refs/remotes/origin/automation/g
 0b8a9c58a16ed4f6f5a712ca81969ea5699294c6 commit	refs/remotes/origin/automation/git-sync/2025-08-17T01-49-58-253Z
 bba021de4059d7e56555d4d33602709523609da8 commit	refs/remotes/origin/automation/git-sync/2025-08-17T03-08-14-463Z
 1bc43a16160c31d4bf98c92d725bc68171e88871 commit	refs/remotes/origin/automation/self-heal-build
+<<<<<<< HEAD
+f5d414e1b67c1cfcd0240b0a7adcaad677429c27 commit	refs/remotes/origin/automation/workflow-auto-heal
+=======
 0f4b5b20c8f7d51c291f2c57541a3fd198bb9d74 commit	refs/remotes/origin/automation/workflow-auto-heal
+>>>>>>> origin/feature/news-content-landing
 6208189b9d73a8237ce12302e4e9c5bcd40309ff commit	refs/remotes/origin/automations-fixes
 0c79a1004a2868c9c7178998b998bcb0710bf940 commit	refs/remotes/origin/b029y5-codex/fix-errors-and-improve-project
 16ae40797eab3b0902e1c07e50795f9acf3a6763 commit	refs/remotes/origin/b71j7n-codex/fix-unsupported-shell-syntax-in-setup.sh
@@ -5392,6 +5416,11 @@ a00a0c31d7ed0b7343fbf0912eb72538866419cf commit	refs/remotes/origin/backup-main-
 d097537ccea80b5f245156ba8afd0f983aa0e476 commit	refs/remotes/origin/backup-main-20250911-193643
 5d40064896a5408a7f23cf2e82764fc5c19c7e75 commit	refs/remotes/origin/backup-main-20250911-205354
 ef54728194a74aa958cdafbde4ab8fa48ed37dbc commit	refs/remotes/origin/backup-main-20250911-205356
+<<<<<<< HEAD
+a85692ce425828a945db786dbba92c89305a79eb commit	refs/remotes/origin/backup-main-20250912-002545
+eef075739c678add91e0e324f7aae3d47994f20a commit	refs/remotes/origin/backup-main-20250912-010437
+=======
+>>>>>>> origin/feature/news-content-landing
 28d11e6d861d8bb39fe52f50c67ecd431e946053 commit	refs/remotes/origin/backup-main-batch-20250826-000344
 28d11e6d861d8bb39fe52f50c67ecd431e946053 commit	refs/remotes/origin/backup-main-batch-20250826-000357
 28d11e6d861d8bb39fe52f50c67ecd431e946053 commit	refs/remotes/origin/backup-main-batch-20250826-000425
@@ -7609,6 +7638,10 @@ c53fff0bb4c1c484a19779e304fbae6d6c9d6bc0 commit	refs/remotes/origin/bulk-merge-2
 7d100f32fe8543185db49b1ae8ab252bb170b94c commit	refs/remotes/origin/bulk-merge-backup-20250825-234216
 bc4bebd007a400be75ad2371b178994a3476bcab commit	refs/remotes/origin/bulk-merge-backup-20250911-182444
 d059cc5cdfa26c4b6a683152802acba653f84ef6 commit	refs/remotes/origin/bulk-merge-backup-20250911-190939
+<<<<<<< HEAD
+d9fac6141d3b8a6151b3119341455d864a6034ae commit	refs/remotes/origin/bulk-merge-backup-20250912-002059
+=======
+>>>>>>> origin/feature/news-content-landing
 4f3fd6bb5f4b6729b8d93575020fc0968f8c84e9 commit	refs/remotes/origin/bulk-pr-merge
 892c1496ee10205f6814a748afe93f0bb6886f2b commit	refs/remotes/origin/bw06m0-codex/fix-typescript-errors-in-components
 ddec9b05359a94e72755ee550dcc45857189cda7 commit	refs/remotes/origin/bwren1-codex/fix-typescript-errors-in-files
@@ -8359,7 +8392,16 @@ c67a7a8c377cb0ca99fc259210225a03f5cfca8b commit	refs/remotes/origin/comprehensiv
 922f88d7d851e6b761eca0e434e6ff4fcbe5cacd commit	refs/remotes/origin/comprehensive-website-enhancement-2025
 957fba8732223c2d2ea19a7fd97fe5544d76042c commit	refs/remotes/origin/conflict-check-branch
 d973ae538f169a7afea678ac79003966c2e2419e commit	refs/remotes/origin/consolidate-improvements
+<<<<<<< HEAD
+63dc02931a047edb97ded8cf213ad8663aee1586 commit	refs/remotes/origin/content-creation-merge
+592c0d1abbfa5d0a21da6bfb785948695a0820e7 commit	refs/remotes/origin/content-enhancement-2025
+462146701a62d53b6ef609f6147a33c583d9c0ed commit	refs/remotes/origin/content-enhancement-20250912-061851
 0fe1437283da47f2a54889a38b458e7460f16f5b commit	refs/remotes/origin/content-enhancement-and-link-fixes
+38a071608bc2323465d514387e57605d069320ec commit	refs/remotes/origin/content-integration-20250912-025802
+69991fb878fe71b4ecfac30aea5ace4bc4f44e58 commit	refs/remotes/origin/content-update-20250912
+=======
+0fe1437283da47f2a54889a38b458e7460f16f5b commit	refs/remotes/origin/content-enhancement-and-link-fixes
+>>>>>>> origin/feature/news-content-landing
 394c83d5da5aaf112e3f80f36bdfefa03eb1e60c commit	refs/remotes/origin/content-updates-clean
 25547688f6e1ebf6ec38dc8686678833cc17f540 commit	refs/remotes/origin/content/add-3-posts-and-advertise
 aae81aaca6f7116fbcfeb4e8e966afa04b9eb702 commit	refs/remotes/origin/content/add-sept-2025-posts
@@ -10452,6 +10494,146 @@ c9e0165d545427e99a9ee3fed09173facbd1fca5 commit	refs/remotes/origin/cursor/crawl
 4571e958205c6e7da98cb273aac621ed14657de1 commit	refs/remotes/origin/cursor/crawl-website-for-broken-links-and-missing-content-217b
 3420d1519627cd05b03cfce104c59c6d3521830a commit	refs/remotes/origin/cursor/create-and-automate-service-index-page-b746
 ca4ad2b9f0944d300b12d0439600f165b5dc983f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0453
+<<<<<<< HEAD
+73e828f102225a241b9ec6f193935c9b07794919 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0493
+b8830bdc1b2045e2ed079955708fca8568400aff commit	refs/remotes/origin/cursor/create-and-deploy-new-content-04ba
+7c04c8f24d81286a8feadd21257b17b46d5ebf44 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0718
+54404d89df7785cef4c4f94a9df6a343b37c1c05 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-07f4
+f11659b87e3b89c02fa9386d8d5ac907fffb73ae commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0817
+02a6dc7a0a142cbea52d9e74ff23c24bd87dc49b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0862
+5b00abb906d04a8a066ff0aa8b58651753b16c59 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0bc7
+3a1b063f722e3b29b6e2838d37bda3ebbeb8192d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0ceb
+33e1b67c07ff2a62835e9c07db232c7e32713029 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0d17
+504efc622c46d3d77cee4cf9f8aa6aa1ceffb5fe commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0d42
+bfdbac81c4f2a80a4d2635b30303e8cbb5b584d4 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1047
+aa1acfecb43a54a96fbe6808a78ea48c66543644 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1127
+3416c083b02432ed0f7cea88f417ef8d2363f55c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-11bc
+01252c843adc8c44b9544711bc381e2d2b786a55 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-123d
+d2fa1944e7a153cea499962f78170d3c75d01001 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1486
+7315eebf510c669c1656554ebbaf650eb12ba069 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-15d9
+18f1a95281286480bd18fe6cebd5ac2405d4c87f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-165e
+5c4a970d383fac47a935895b0cefe71d7f73f39c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-176b
+57d656fe5b528755be0fc4010dec7f76feaeb79e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-17aa
+42a9995f041133ee21a8e5fa7bbb17e40eadc23d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1a3c
+4be4403cf1a368a32d26405a7f6e24f68e4f4e02 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1ad9
+777d871d002bbb06c871ac4bf0c0c45258648483 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1b22
+e0ded38a1ef0fc805d2fef6dde61f8135b92163b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1c35
+c4f3384f8dc7329f095186a904030ba7633ce9d3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1d11
+2deba8fda631f1832f5df4737d42563a79985847 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1d93
+5bf1f24f71ceeedd9e7a2c0a2a34567ccfe1f51e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1eb5
+84bb39963d57d5fafee955d4b5eec494bd7b9d5b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-1f08
+523adb970eef1a802ceed4a21d8b4dca87566dd6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2044
+2c2ede7ffdc63238a96328ef46c1d2b7682a62f8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-209f
+cc2033faaf96bd534b0f9d70c8fa8222b742ff92 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-21bf
+0e01fd92a099e54830d099d5a9bed6b91705cc1d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2248
+70cf1d766f612a8a185e50f2f398a8915851a0da commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2252
+37b69629a12afa02a4d2c803207627e58ccbc60e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2257
+117ae0859c8bb8d06d7d192280d88e52a056e9e1 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-22f4
+686bab3f1bade8afadf751c6c6ed75d9489c2646 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2387
+f9808e259d0bc2c81b4341caf19bc44cfb5b960e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-240f
+2319ccead11b7c120e9ed123d432eaa0229b42b7 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2680
+4b70e281fb82f9b1752234c59249bc05835f947e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2752
+a6ff8776d3c3fd936817c61ea6ddcad9530a1d26 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-287c
+e7d5b7893dc0c2f4a9afe4a0acacc14031a4f1d4 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-28f5
+e02741cfe0d315313b34e7c9d917a52e6d8a7e80 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-29d6
+1c4165c990e6645f97988896d629301d47cc7e5c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2a03
+cabe6d393834d3c4728d1e0cb35d6a96db41201f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2ab4
+8d6d71c284bc19f84fbb34b1b988c7ca0d57780a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2ace
+b47a58ab3374bc0d2b8c0292a9a80abb40a4b0ed commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2b7d
+9e5959154679f0fbc14b93e6b5860d5453a98224 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2c54
+1ceecba87afb2ee879f7ee2bddbb558eb2956dbd commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2c6f
+b2061baec7c8c4b9ef8f47970b8733205ac8d860 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2da4
+3fdc32e07f388728dde76a62738a008f130e5138 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-2e82
+c8c815a9ebaaaaeebb4e942f3a19b4aaecdd9e02 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3191
+81d48b9a2a14ef88cb329ea27b6cd519b59cb5a6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3247
+39f2dd9aedfe5302427d56f473a926aa560b3fb9 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-34cd
+93cfe3bc61d38bcffea0a5228b12ad0243ad880e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-34f4
+756812e38942921cd786ed7a08821e5d1baca253 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-36b0
+cb9f0c4d2004d763527a63dd7a3f4f2bbb1313e6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3734
+95ab4167d193d061a88a4ea572195842f0399a8a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-37db
+af1bde1dcabdef684de294717e6d7a7c03dbc2ec commit	refs/remotes/origin/cursor/create-and-deploy-new-content-381e
+b514f520cb8a88ec6e25be6b8bc7cac02ac514ca commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3a44
+0c670e4975b6268d1eae46c6828ceec80a18eb2a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3c26
+b5baefb5d60a210ff1a2bca0dd9b7ca0a9d93b23 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3cd2
+8b946adafc74cdaf0ec987b1951eb775f1ada277 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3dd4
+f042b9cdcf0497d13c491e547e8121930ea8291a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3e54
+38c85c45bcd211d910a9e29c3b8a176cebb0f464 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-3f34
+c680aaa0a3f2bdd8f6d5e0a014184e20e15645e3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-40e1
+5253b7711d1d2592a7cfce51d86ef6d72caf214b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-43d7
+bd6c30cacb02305f7574c7de0964dd0f37bbee81 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-441b
+0fbcc463318728e353daf809547bca9d33adb1f3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-46f8
+eb0286e98f31f667798e4cb19908dfc29305e85e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4965
+21f68a6d275deb8584a54be87efe82c4b50d74f3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-49e3
+e9fcd89836014eb60648b50279d091e1798d09b4 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4a34
+8c1b615c9ec976e61c0f353154be22a482d4b90e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4ae4
+8558569a3be6268841c7da6c4790a801193a6055 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4b09
+76f84853639d3ca276320ec4e35ccf12e0228c91 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4db2
+8a7c6c879e1ddd7f499d346154f5256621cfd834 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4ec0
+75dff498e92f20a6d3ea983deacef835eb6f2ab1 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-4ef8
+a5e15ab454f40ead1769ddb8e7f3710a122965b9 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5004
+c7439b1555cb2bea9f3acee3099d29b06d2da102 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-502b
+eb1ad26309d7234b2c11a77fcdce544dda70f258 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-50f9
+642b1b1d0a5588d9a90a8cc37b7ca53cde820015 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5249
+97d98a7d16aa505898e9e175c902963efe3783db commit	refs/remotes/origin/cursor/create-and-deploy-new-content-527f
+9f7924472ec000f1cfe1c48c03cff64aab31d840 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-52cd
+f1fd9f7cd3dabe8732854b673e8f368f52b3e841 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-531a
+fb6805279b0c78287ca5173b311482bd475745c8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-53d8
+32fcbcaa49fbd531188e447121c0bfa3e6934228 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-53fb
+aaa06f43caf23a9ccee8e5fcafafe94b5c76437e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5705
+1748f430a77ba0dbd29af18cece524c9a0c39e60 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-578b
+73df3803cb91cdeb5b1e7bf8d25114c1bbe6b4bd commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5ad4
+8d19b21e2aed9f871bb71312fcf33984c7ce77b6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5c3a
+3a0d58ca61dce314bed5532b8c4be5d098254c9a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5cca
+721d3a2702eaad4c036aa381680b2f0d9d6a8b66 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5de1
+3c7ad12e1c5b8759bf210b5df00407bc0d1016fe commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5e7c
+7d0a58acfeee1f2c071afe14f88ecb8855490dba commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5eac
+8214fcf52c1e38fc52c91651093b18098404c0a6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-5efd
+d3055e52bd0608156632ccbb4eaf60e29809cb20 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6009
+5245e6bf6ec290665c5a30e238f690d77a604e88 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-62c8
+243891ec9d784b63d905a4f6362888b0ad62403f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6326
+68a22fb1bcaa5360a990fcbdac448a4ae9ddebd2 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-636c
+67a4cdaba39eeda4a9e94c569d723bf43580eb9b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-63dd
+31b77d67deb4aa906fbaa15f626636bd498d08d5 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6472
+043dd9fec422be7e530fc5bc38783e28b15e7e95 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-64c5
+0ae7bb5dc314f2438f4894d9e92efd69e3a868ed commit	refs/remotes/origin/cursor/create-and-deploy-new-content-64e1
+0b256b71dff9f6a646dec53b79bef2396ba6770b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-66e0
+0e34ab46448c79eec89b7f3dc1f84dabd7276d87 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-673d
+f0952de87fa42564a96ec78c709a942a82ff8e72 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6932
+49d009a8f6b9e459e825c3ca549275293e9562be commit	refs/remotes/origin/cursor/create-and-deploy-new-content-69eb
+3a5467f5ca902f1d3a8e4470ce8b490a00b33222 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6a07
+ee9cfbb57612eaa1790b5fadfbfa0131c500957d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6d53
+dfc3657772df3c517a091cd27ee0db40f75207e8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-6fbd
+45f906e4be927cee0dcbece3359ee19e69497245 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7057
+ebef41c672fa1280a2340a51b68a6ccb3820cb80 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7262
+6489d6a1495bf500c7a079d1e39f9be4665dbabf commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7265
+493bc96de747705232d3e2cd46dc666b43ed51a1 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-737c
+6951912c6e2190e617def3040c7b2f1d33b3bd88 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-75f4
+d96af925df1a1ca58983f9c373a0cd3f875a6d97 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7623
+f8749aa5a36d58ad1e595cfb43a6684f3dbca41a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-76e3
+b2deb6b7b428cc20a0e1b07a393f14cbc0e1ff69 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-77d6
+09f37a6424506751b428155c5ff566ac813f6731 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-78b0
+c8f925f56e97a4891625e7d4307f68af946f7d04 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7aa6
+7bbb3f6893f279d10d0e3ee2631094dee9b3aa0d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7ac0
+b1919d47a0dd2182da2dc15556bf92c557594e2a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7b60
+295d6f06f7affb430038250a4cf6d5c708cc0496 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7b81
+3b3d3bd8e72d563a6a6ffa42d04e806e3ef089a0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7cd6
+7df67b62832a634ab0a03575371bdc1ac08af243 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7ef0
+e7dc2803bff7070c624e48039b579ab35eb84fc0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8022
+64d3819703db164fdc1abc0461d943ea5dbea025 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-807f
+8198cbc50737bd799aace867ec3397a9662aabb0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-80b1
+1f6ee8fd21ff1d85d63e36fc9c2f8eaa9a9ed9da commit	refs/remotes/origin/cursor/create-and-deploy-new-content-826e
+d2439879b9b0e2283e666ee9ad05fee02e4b654b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8495
+f528efbe4bcc2de5cfb07523b8d40e2ef8aaf022 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8564
+768287f53f1a03fc73e6226fdaf823ed45ba113c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-865a
+3a8fea3c1bbc5e86436c49f129c6ce3a05b30d25 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-86d5
+db178afdc3eeeeb460a6475376c8912c4bf92f95 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-894f
+c271359dafb612f4357c0e96ab24fd60dced38bb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-895e
+dedfc9e1d3158200c1dc8f2f21fb856c8b079f1e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8a98
+dffb9712388188df914f5dfad802c0aebfa305f4 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8b81
+41209f4338730633cd46ab225b05ae4f0b7399cc commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8ca2
+612b2eaa51dbe8fcb3a1e580636181ae6838ac40 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-8f18
+63c0fc6e33622a49f0fe29e97868b1a74f45c396 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9046
+=======
 b8830bdc1b2045e2ed079955708fca8568400aff commit	refs/remotes/origin/cursor/create-and-deploy-new-content-04ba
 5b00abb906d04a8a066ff0aa8b58651753b16c59 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0bc7
 3a1b063f722e3b29b6e2838d37bda3ebbeb8192d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-0ceb
@@ -10498,11 +10680,81 @@ b2deb6b7b428cc20a0e1b07a393f14cbc0e1ff69 commit	refs/remotes/origin/cursor/creat
 3b3d3bd8e72d563a6a6ffa42d04e806e3ef089a0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-7cd6
 64d3819703db164fdc1abc0461d943ea5dbea025 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-807f
 3a8fea3c1bbc5e86436c49f129c6ce3a05b30d25 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-86d5
+>>>>>>> origin/feature/news-content-landing
 28dea9cd03e53c2b25b746165ed6b7f02011054d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9287
 52ceedb867e4d3a3e949d16ab8b2c86f45a6cda0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-935b
 c41b9a37a37460f4e3df23ee410a50fd23b3eb57 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-939a
 9773b6e941760b030fa7be3942a581bb3885f11f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-93d2
 e2a3c70a8436a1fa5506e4240beafa4b3b120ca0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9462
+<<<<<<< HEAD
+63a9b589746e64afad24b91c454bffb4bddd8099 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9545
+927ffdb433251c135e1c387fe2beea1d7ad6eb05 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-95bb
+06cc333aba3f70e4835be7751328e332508fc3a6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9a9d
+9e421304145208c14d0583e9f2aa1c6c91d3ffeb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9b47
+cc319da6c2b8df2bf1789ac64b7c5090467862d0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9be7
+50f1c9dceae8231da87c170dd0748d46f1db955a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9bef
+54ac1ec31c685721d82546323ba95b9340218063 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9d46
+b2eec30642fa48aae0c5fc72d84ad25fe3f65662 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9dda
+c8b5a5ba3bd3e6dc1ee0dc13f4c5747ffada33fb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9e8d
+bc42a10c75872c320b9f388b4668e82b6927e1aa commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9e97
+efca0fcfd6e4e366956db47899c6b18ad2afba84 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9ff5
+3893ad79237fcd6dcc6b74b208d67202bbbe13ba commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a143
+f0a1bc528b161e53dc3546b24e594a3688d406d3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a1f8
+4f186f802eab433dab73c71fb69811bd6c22fefb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a22c
+527e84cfb771bf29561563b23b272a16d0357c50 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a29e
+7197f3eb03a299b1772d2c57c5f8c5a42ad257ea commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a423
+2abc20998834268f9952e2ec77fed35333541b5c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a53b
+a4ba7c2f1415536bbf6b140bf28f0f0ad33d3598 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a5ea
+767f92098f5201cbc2d5f75ff1eecf011e5aabb9 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a66a
+1ee0efcfd1d4dee4cc1aeca657ea1280e2f55917 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a7c7
+cf46b1bf2c87accd8bd1a4f9d006bcefb6d2eeff commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a883
+e707d426bb074fa932e663717ddbee8e82abb506 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a90c
+d12c61f494d67c7980aca7db6af0095e80d9452f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a976
+752895a3dda6331872615f86ad4f91ffb7f8035f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a98d
+44ab337edfcc889436d7a017bddd03154bd72b8e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-a9ee
+aea9cf59a71fda2dad6ef3deecae3b3a2504c415 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-aa8f
+e95bfb80774c77e718f8e82c94a6cdcaf74ebad5 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ad4e
+9e45e0e510f810dfa1c38745abbee4b21927cb50 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ae24
+0f867cbbdba1e30d178c5573fb40d5807e0f9505 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ae67
+dc5a84be0e4ed097c4fb16bf64423641397de5f6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-aef8
+0e90e4cb2529147a46b67ac367ab7707783e0644 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b203
+b7972acf3734f2832d6560423e1bd4bb83739bf8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b379
+9c15a1de5a37ea629dba469ea30f6dbfd2a3dbf5 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b39d
+ffb5f6a6d00d4b0b417cf7dd685e64e20a4ac7e3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b56b
+57236c91bfeb21fdc921300a54863854d81cea6e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b59c
+6873c9ffb8223ae0568c4f6912c8b4fb3e638d96 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b5fb
+576f740a265ef145405fb51369f2e9abae74e2f8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b66c
+54d32b2ba7ae604f94e63e76f20a87289088fc76 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b6bf
+e85d3f8013e2aa708a1000ba06b04f6551f9854b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b7c8
+74273569dc7e093265e39ecf413326066b94cf79 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b9b1
+baefe6f16f4f1f6ebf787c78e4276507fef91c02 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-b9d0
+8eca2f817dc3d5a5ed47bb7c1ee44b709694c4b3 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-bb9f
+33884c573ee972f2014c2637113cc3483a26b1fb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-bffb
+773ea5f129b8fce8a3607998481bc9d58c7d1a70 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c057
+c51429abd5e425188a827ef850755e8f913ae2ea commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c0f9
+57add9c030d0d6f40a71ad2d819f7f5f7b1af448 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c413
+554bd19a4655eb1cafff31d5e3a5f5025623ba9c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c668
+4bd5f4e9db293cc4417a20553bee765e8157de4b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c699
+99f456e968acac7538ecb4f338ddaaa0151c1578 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c87b
+828bc6222b38abef310b9a65060bf27fb2455aef commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c87f
+4193bbd3bb976c0b60f76a3f9d6e88a96e1ea37e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c8af
+0b72944cee8f00733efc7bebb746442e82087a2f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-c8db
+f0818eb50448abc06e641c4b905bb1d37e209347 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-cafa
+29dc4f37ceb1bd33459a6b3e95131b6ae66b8aed commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ce16
+eaaffb4c07872dc13ba028b4018f8213a0af93b5 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ce78
+e1c0baea345aef7f7593c22ab26d183c2cca82b0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-cfef
+98b5bf1ec571c9ea55c22746f801565c5c09a5d8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d04f
+70c9f73e6eb7f817d3b7c2205414dc8c31cf0645 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d299
+77d71da3847e38c87d3fdb60a082fbeb436de95d commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d344
+e5e76b287adcb54af20eeecc9fe13722ba8a3d12 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d367
+df1b3a7ebad155bde50420dbd3178469ba28313f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d3ca
+98c039e0457eaf315cf91f876a6367caafc7402c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d3da
+480caec2bb65b8d3c370331208e2af52b0dcb78c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d5cd
+32fc2478018f5d3535973d50e7d02c1ef55a243e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d5d9
+560b1ca02e0155a74570b3295009c5c6f3f19aaf commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d6c9
+2ce2507642ccce3c9d348023561987e93afef1f9 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d773
+7ebca09aca84eaa12b6404930f668318aa50aa6f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d7c8
+=======
 06cc333aba3f70e4835be7751328e332508fc3a6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9a9d
 9e421304145208c14d0583e9f2aa1c6c91d3ffeb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9b47
 c8b5a5ba3bd3e6dc1ee0dc13f4c5747ffada33fb commit	refs/remotes/origin/cursor/create-and-deploy-new-content-9e8d
@@ -10523,16 +10775,43 @@ e1c0baea345aef7f7593c22ab26d183c2cca82b0 commit	refs/remotes/origin/cursor/creat
 98b5bf1ec571c9ea55c22746f801565c5c09a5d8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d04f
 98c039e0457eaf315cf91f876a6367caafc7402c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d3da
 2ce2507642ccce3c9d348023561987e93afef1f9 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-d773
+>>>>>>> origin/feature/news-content-landing
 22696ad6211536b6b8e9ea51ee522bcedd02f588 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-db71
 039a2d844e503d972e60723eff94e54bd7a580c8 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-dcf6
 7fddd34c00781bbda7e356b9aa15a873b08473f5 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e052
 cc36c18358fb910d1f7ad92613fe55f35b4cd35e commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e0ec
 c2b94abda39f2a9f284281d5231548ba8ec23fa2 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e1a3
+<<<<<<< HEAD
+585d765464a0522f5dd966ba80d7f9b1e3bc8745 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e1b6
+47d53bd0410f5c77e187eea47fde0bf44e596de7 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e566
+6b97635bac293fc1586a91f988d8754368b8d90f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e595
+f342b1d37675e4c5adb0e3825031522bc18c310c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e601
+40228236128b1a5634361ebbbd5fa3f08729e50c commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e64b
+0ebfaff5c8ec86b0b92a1f2e6e625598e49d49c6 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e6cf
+67619e25f8aeee301577f395a75802e702055261 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e786
+eeed0a301f12ea81b909088909a650c12f920b60 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e8e2
+0d184034ff71012d78f52936312bfa6a49144ac0 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e969
+f80af84b633143b78e54be58c5dfcdb098387993 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e9c2
+2db3254552b9d38d0593d042d054b7defea5463b commit	refs/remotes/origin/cursor/create-and-deploy-new-content-eaa7
+c26f42cc88efb0ef0ba4ef9424129c4325c80897 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ed4a
+27454ad561ec8d2c8bebda2ba46d545de9858351 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-ede6
+270374be3bf37c3405880263c355e6d4e797d60a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-eee6
+c38a9153b800f036b49b662b6c1b1ac60adf51e7 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f184
+c91aa6dc62a4cb854eaf0a197a75ba6e48b8d84f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f190
+66b3b6dbf02e02f307ddbb10b0f26e884b086476 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f66b
+c58022cb5c043994b46f25bebe4d3d6f81c3da9a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f6b7
+cc0e541e696fbaa48b5e9842e165d731b9f99c89 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f708
+3f3f310ffd0705a9f63367dec412ed7d1590bf4a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f728
+8d307b2c0a65e221bd8a53e5e5a1c4ada0d3d19a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f8fc
+0ccb0d9f64ffaea4a6dc620ce54d7c44419a59b4 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-fa2c
+ea5e8c18f56281c8727a4071fe0a66c829ef36c7 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-fa90
+=======
 6b97635bac293fc1586a91f988d8754368b8d90f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-e595
 c91aa6dc62a4cb854eaf0a197a75ba6e48b8d84f commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f190
 c58022cb5c043994b46f25bebe4d3d6f81c3da9a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f6b7
 cc0e541e696fbaa48b5e9842e165d731b9f99c89 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f708
 8d307b2c0a65e221bd8a53e5e5a1c4ada0d3d19a commit	refs/remotes/origin/cursor/create-and-deploy-new-content-f8fc
+>>>>>>> origin/feature/news-content-landing
 6076b4acf9aff5275c4631bef577a6e693ec3029 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-fb00
 9aa325b6bdf356bf540b1a8a49e738c10132bcf2 commit	refs/remotes/origin/cursor/create-and-deploy-new-content-fb9f
 4a98b466eafc01457e950977ee0c628207487b26 commit	refs/remotes/origin/cursor/create-and-merge-new-automation-agent-factories-8365
@@ -12492,7 +12771,10 @@ a4b3f4487d698cc11e0b5c9a7a448afeee065db9 commit	refs/remotes/origin/cursor/fix-n
 783303fc3aecb71239663f33687301a33281e471 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7571
 783303fc3aecb71239663f33687301a33281e471 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7703
 e41904f6d2a2c2e845bb14a2c7426afea901e37c commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7908
+<<<<<<< HEAD
+=======
 b0fc151bef6e6da035bfecba247a45f46d4d39f5 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-792d
+>>>>>>> origin/feature/news-content-landing
 9393edd9d06afc7f5f554d1411c06d83b831e38f commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7aa4
 07da026ebbf4e02fdc279515d554bb4cd6da86fa commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7abd
 fed5819b306a6e5ab324f0ebc4a2c05df438f700 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-7b61
@@ -12646,7 +12928,10 @@ f5b4f48b9a766d3c54a8bf432ab0737f773c326a commit	refs/remotes/origin/cursor/fix-n
 4cb8e92f065565365f390550c3c9991d574edb45 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-cfc9
 8f95e421275d7bc6f1838756ea8f11953588c8cf commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d198
 35cee4ee4d4a8d4893c5573c8aae9ecb944b4b9d commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d1eb
+<<<<<<< HEAD
+=======
 bdc212968856c1849fccfed9aa6ffbeced7f1fe5 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d21d
+>>>>>>> origin/feature/news-content-landing
 4447b808ebb830ae314d785952c51b2311f8cb7f commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d272
 523b5e00e4903d4501880eb7105e8a5251cff185 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d2ac
 f2c59d73a583c96dd5dd707857383cb7cf63e973 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d2b2
@@ -12697,14 +12982,20 @@ afaf83206565d4e7a6034c591d940462518ab5c3 commit	refs/remotes/origin/cursor/fix-n
 6aaa69eecf1af410574fec6e38de681f4edf76e5 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e930
 f5d5591a30e0be7a6aacfe24fb2b7296dbe00488 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e9a7
 01fd2aadfcf2a0fb849b7cb26264c5fae2adfd61 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e9ad
+<<<<<<< HEAD
+=======
 684a9fdd6bba04c636688b484c9f15a5172b6650 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-e9f4
+>>>>>>> origin/feature/news-content-landing
 f512f758f8b997419dad4ed515143634069faef2 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ea38
 9b6a9069bd41c7ebf7a81fe0147280cb49ab6bef commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ea3f
 f512f758f8b997419dad4ed515143634069faef2 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ea58
 89e456d8a14e1ee3906174a41f4622a6e066e908 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eacb
 b4cffb3413be11bb940f03d37ed92603e607cac9 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eace
 8292e5fa4278a3f7921aa587550822b0e9d0008e commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eb56
+<<<<<<< HEAD
+=======
 e871d858fb216707fc0a465f64110868bec55bfe commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-eba7
+>>>>>>> origin/feature/news-content-landing
 f512f758f8b997419dad4ed515143634069faef2 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ebac
 991d62d354b5f165702806a135e2ade9f3059b25 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ebdd
 a4b3f4487d698cc11e0b5c9a7a448afeee065db9 commit	refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-ebe5
@@ -14745,6 +15036,10 @@ b07802d8c8457508bfcc02ddd6f7912712992170 commit	refs/remotes/origin/dependabot/n
 fe3d93db7f7aa226ba7231d3f784d1f3ca401b29 commit	refs/remotes/origin/dependabot/npm_and_yarn/jsdom-26.1.0
 547a38559e55b357ae2170d34d7ebdb579c4d28c commit	refs/remotes/origin/dependabot/npm_and_yarn/lucide-react-0.539.0
 e6704429ae86eebfeb42a0d94531d2c074e657b3 commit	refs/remotes/origin/dependabot/npm_and_yarn/lucide-react-0.541.0
+<<<<<<< HEAD
+673b1b4f97f838da69b150189efb24ec1b9cf7c4 commit	refs/remotes/origin/dependabot/npm_and_yarn/lucide-react-0.544.0
+=======
+>>>>>>> origin/feature/news-content-landing
 0d253c6476486450585e920d01a6227c5abd833a commit	refs/remotes/origin/dependabot/npm_and_yarn/magneticwatermelon/mcp-toolkit-1.1.5
 f94246d81bb0e43a1c69645d25ca98288f626bf3 commit	refs/remotes/origin/dependabot/npm_and_yarn/magneticwatermelon/mcp-toolkit-2.0.1
 00bbb6854ff6ab47f9d777e6c22078161fe0937f commit	refs/remotes/origin/dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
@@ -14758,6 +15053,10 @@ a34d9beb30581bc216eb9b942e8435b6bf6fc4bc commit	refs/remotes/origin/dependabot/n
 36586fc113aab25fe5607dc12c7e6009fbab1f9d commit	refs/remotes/origin/dependabot/npm_and_yarn/radix-ui/react-dropdown-menu-2.1.16
 d5f86aca7f15b2898758804af18f48ce9fd8a3ac commit	refs/remotes/origin/dependabot/npm_and_yarn/react-datepicker-8.5.0
 1578b4948c9dd50a564d39cc7797c7092f94daa2 commit	refs/remotes/origin/dependabot/npm_and_yarn/react-day-picker-9.9.0
+<<<<<<< HEAD
+1d17e03d8e207162f3bfd5b99b1e39369e2a7141 commit	refs/remotes/origin/dependabot/npm_and_yarn/sentry/nextjs-10.11.0
+=======
+>>>>>>> origin/feature/news-content-landing
 cdb009006aacb65491b6938f5d9c0a323bcdfa0a commit	refs/remotes/origin/dependabot/npm_and_yarn/sharp-0.34.3
 b33fbd1fb475255f6c01af2afd0bf5db2b57c324 commit	refs/remotes/origin/dependabot/npm_and_yarn/supabase/ssr-0.7.0
 45be8484e1d11095a024ee7400dc36fec0846361 commit	refs/remotes/origin/dependabot/npm_and_yarn/supabase/supabase-js-2.56.0
@@ -14766,6 +15065,10 @@ b33fbd1fb475255f6c01af2afd0bf5db2b57c324 commit	refs/remotes/origin/dependabot/n
 9945c27d0a66e0f3aadde72350d51a52bcbeb0c4 commit	refs/remotes/origin/dependabot/npm_and_yarn/testing-library/jest-dom-6.8.0
 d0f70a7cd13bdbb65ac0fa2ff842c13e33193c54 commit	refs/remotes/origin/dependabot/npm_and_yarn/testing-library/react-16.3.0
 5cf5bfe754a6385ef709082f442b035795b20c2c commit	refs/remotes/origin/dependabot/npm_and_yarn/types/react-datepicker-7.0.0
+<<<<<<< HEAD
+962d3112123ca341ac78a2d692057a9386300960 commit	refs/remotes/origin/dependabot/npm_and_yarn/uuid-13.0.0
+=======
+>>>>>>> origin/feature/news-content-landing
 f6af0d37f288efa399c688ce75ad44cefd10fa17 commit	refs/remotes/origin/deps-maint
 e7eb40a32e07b4768b7be5093fb75930c7deb487 commit	refs/remotes/origin/design-improvements-clean
 169261dbd662dbd7ee6bf49f69f8685fec40f172 commit	refs/remotes/origin/dg3q2d-codex/fix-npm-eio-error-during-install
@@ -15026,6 +15329,10 @@ d133ee219e8abb77825d4b7e05c65189ad2856ba commit	refs/remotes/origin/feature/home
 3fb35ada509d92c51cc2bcc8c09c2435fef56e4a commit	refs/remotes/origin/feature/market-services-enhancements
 24a05e69f4ed423782d1eff1cc49e90c1c1b069c commit	refs/remotes/origin/feature/merge-conflicts-and-improvements
 c4b7773ab6c67f0982569e9909fcb8548d261e79 commit	refs/remotes/origin/feature/new-ai-services-improvements
+<<<<<<< HEAD
+6c967c6159f01e65b0f627aec87c0e222ce0aa17 commit	refs/remotes/origin/feature/new-content-and-advertising
+=======
+>>>>>>> origin/feature/news-content-landing
 27766d51fdf318d23bb76053e44be61712beaa49 commit	refs/remotes/origin/feature/new-content-and-banner
 00056f3e16543b2004cda788aa1db2d42fadab9b commit	refs/remotes/origin/feature/q4-2025-services-ui
 f359098425adbe0576a2cb117e707908ac55ef2e commit	refs/remotes/origin/feature/q4-services-and-ui
@@ -15202,6 +15509,10 @@ c760da2f3a54befe5249dab76b475f73a859d026 commit	refs/remotes/origin/fix/talent-d
 2f1efc68434fa32f6c145a33f1c5d56efa01463a commit	refs/remotes/origin/fix/wallet-context-ts-errors
 b53c43234cc739ef686dbe8665b696396c84ba62 commit	refs/remotes/origin/fix/website-audit-redirects
 9d62a7fbfc224e75893a6e16c52a237bded98a33 commit	refs/remotes/origin/fizvbl-codex/fix-errors-and-improve-project
+<<<<<<< HEAD
+2fb3cfc31411f6e9e5819751bbcc65036f3bb742 commit	refs/remotes/origin/focused-backup-20250911-213519
+=======
+>>>>>>> origin/feature/news-content-landing
 43b598b79728d0adc5c2eb97a44c7db7a1ac595d commit	refs/remotes/origin/fp32tt-codex/implement-analytics-and-error-tracking
 a88dbae00f59e2f38eb6c72927a951603c93cd08 commit	refs/remotes/origin/fresh-start
 3f82323eec51ccc63f89ee3f162f3cc42f7c8cca commit	refs/remotes/origin/fuw0wh-codex/fix-react-import-issues
@@ -15332,7 +15643,11 @@ c5678f78feca6815a1f492b227a2e44f639bdddc commit	refs/remotes/origin/lxowqt-codex
 34fd2237f3e9d33689606d9de37ffc04f6fe89e0 commit	refs/remotes/origin/m4o27d-codex/fix-react-import-issues
 80ae213bdf70c03cafc062590e4567711a04f210 commit	refs/remotes/origin/m97e62-codex/introduce-automated-testing-with-jest-and-cypress
 7b2f8a2436ba80a474ac73030a84c4a7b474c487 commit	refs/remotes/origin/ma83ue-codex/fix-errors-and-improve-project
+<<<<<<< HEAD
+91c5bacd587f50166721bfb628bc1ed36bced646 commit	refs/remotes/origin/main
+=======
 9f547074f8acf766c0e38bab2fe7aecb38aed381 commit	refs/remotes/origin/main
+>>>>>>> origin/feature/news-content-landing
 d8a83a93dea66723a26214d3aab2140642adc697 commit	refs/remotes/origin/main-backup-1756997704
 23a518273246c2cb7a692292c5649a0710aaa8bb commit	refs/remotes/origin/main-backup-20250826-113608
 c1081dda44dac5c04d4975915f2792fc5ab69198 commit	refs/remotes/origin/main-backup-20250826-113940
@@ -15366,9 +15681,17 @@ f0e7f84c8f92e38d087d006cdcd035dd96180836 commit	refs/remotes/origin/merge-backup
 5f48a381108fa3a8a43c189dd4b043133ce9307e commit	refs/remotes/origin/merge-batch3-backup-20250823-232546
 f683b8057b4c63465f61e7a9fc0497e7f4dd9975 commit	refs/remotes/origin/merge-build-fixes
 0b5af570ce15217c1d3cf5039db1a19183de684c commit	refs/remotes/origin/merge-conflict-resolution
+<<<<<<< HEAD
+7162af8dfea4385693a47428ba08bb1e0820e117 commit	refs/remotes/origin/merge-conflicts-resolved
 1e86141d943f7ae1f9dfa9173fc2a030c15e75cc commit	refs/remotes/origin/merge-enhanced-services
 c3b8e7ca35dbd0ad94ea301cb04c8cfae42833fb commit	refs/remotes/origin/merge-improvements
 7273a82cf01b389d9422659d99447601f460ee18 commit	refs/remotes/origin/merge-improvements-to-main
+082a0a07aa44a68d07ed3c7d76b46da3d994e813 commit	refs/remotes/origin/merge-new-content-to-main-20250912-025505
+=======
+1e86141d943f7ae1f9dfa9173fc2a030c15e75cc commit	refs/remotes/origin/merge-enhanced-services
+c3b8e7ca35dbd0ad94ea301cb04c8cfae42833fb commit	refs/remotes/origin/merge-improvements
+7273a82cf01b389d9422659d99447601f460ee18 commit	refs/remotes/origin/merge-improvements-to-main
+>>>>>>> origin/feature/news-content-landing
 d6392e8824eed832ba85356dfa71a5ce7655cf36 commit	refs/remotes/origin/merge-new-services-2032
 8d679117972483c102fef3e65c3a59066a399d96 commit	refs/remotes/origin/merge-new-services-clean
 3a1885b5ce05019290df521207bbbc341a22f36b commit	refs/remotes/origin/merge-new-services-to-main
@@ -15567,6 +15890,10 @@ e4bb37d241d3aecbaf73987ac7651e4297fc97cf commit	refs/remotes/origin/merged-prs-2
 d24f5d591b3afc4d8cd73aa48ef6ea25964b5540 commit	refs/remotes/origin/n9kf8y-codex/fix-ts2614-error-with-suspense-import
 48cac94eed4bd4b96d84599de3d24ca784ce0283 commit	refs/remotes/origin/netlify-build-fixes
 ebfee7b346ad793ccfc40bdde54ae7a2d580b80d commit	refs/remotes/origin/netlify-build-fixes-final
+<<<<<<< HEAD
+d6cdfc2a4ae9435dea2db19b1c838397f56092fc commit	refs/remotes/origin/new-content-and-advertising
+=======
+>>>>>>> origin/feature/news-content-landing
 be694053202bb706eb65964b1205df96c10357cc commit	refs/remotes/origin/new-fix
 2941bcafe583e24216c94b4dccfad92196dee648 commit	refs/remotes/origin/new-main
 1172c2c254f378bbd1b5b37369ae7df30c22b181 commit	refs/remotes/origin/new-services-2025
@@ -15821,6 +16148,10 @@ bbed85ae08780c6ec357a18f91fa724b82c9fa70 commit	refs/remotes/origin/t1lmik-codex
 2d4d481f1493a231e1d090623f77d5e17a4d5961 commit	refs/remotes/origin/targeted-backup-20250823-224737
 8cf98eb3e67f642e2bb906f0ea68dbad659d35c0 commit	refs/remotes/origin/targeted-backup-20250824-011017
 c8533efcf4018d0a43c2471775b0ba19fc089daa commit	refs/remotes/origin/targeted-backup-20250824-011231
+<<<<<<< HEAD
+2fb3cfc31411f6e9e5819751bbcc65036f3bb742 commit	refs/remotes/origin/targeted-backup-20250911-213423
+=======
+>>>>>>> origin/feature/news-content-landing
 a53e44d7be4e9a15735853428be6483d1a043638 commit	refs/remotes/origin/targeted-merge-backup-20250827-023901
 1f58866cba152f6aeec0d62bebffa58b11a28919 commit	refs/remotes/origin/tdh0vb-codex/replace-deprecated-@humanwhocodes/config-array
 1801b8514acda3c73c40c718aeb4917c6e4682e6 commit	refs/remotes/origin/temp-autofix

@@ -1,62 +1,56 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
-    "useDefineForClassFields": true,
+    "target": "es5",
     "lib": [
-      "ES2024",
-      "DOM",
-      "DOM.Iterable",
-      "WebWorker",
-      "WebWorker.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
-    "module": "esnext",
+    "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "allowJs": true,
-    "incremental": true,
-    "jsx": "preserve",
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
     "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    /* Modern TypeScript Features */
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "useUnknownInCatchVariables": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    /* Performance optimizations */
-    "assumeChangesOnlyAffectDirectDependencies": true,
-    "disableSourceOfProjectReferenceRedirect": true,
-    "disableSizeLimit": true,
-    "generateCpuProfile": "profile.cpuprofile",
-    "listEmittedFiles": false,
-    "listFiles": false,
-    "traceResolution": false,
-    /* Advanced features */
-    "allowArbitraryExtensions": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     "forceConsistentCasingInFileNames": true,
-    "preserveConstEnums": true,
-    "verbatimModuleSyntax": true
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
-  "include": ["src", "src/types/offline-shims.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "automation",
+    "scripts",
+    "fix_*.js",
+    "fix_*.cjs",
+    "*.fix.js",
+    "*.fix.cjs"
+  ]
 }

@@ -1,14 +1,17 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+=======
+// @ts-nocheck
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
     }),
+    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
@@ -26,6 +29,16 @@ export default defineConfig({
       '@context': resolve(__dirname, 'src/context'),
       '@constants': resolve(__dirname, 'src/constants')
     }
+  },
+  css: {
+    postcss: './postcss.config.cjs',
+    devSourcemap: true,
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
+    jsx: 'automatic',
   },
   build: {
     target: 'esnext',
@@ -105,9 +118,9 @@ export default defineConfig({
     exclude: ['@radix-ui/react-icons']
   },
   server: {
-    port: Number(process.env.PORT) || 3000,
+    port: 3000,
     host: true,
-    open: false,
+    open: true,
     cors: true,
     hmr: {
       overlay: false,
@@ -118,10 +131,7 @@ export default defineConfig({
     host: true,
     open: true
   },
-  css: {
-    devSourcemap: true,
-    postcss: './postcss.config.cjs'
-  },
+  
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),

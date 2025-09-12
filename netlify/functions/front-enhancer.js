@@ -8,7 +8,7 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-  schedule: '*/10 * * * *', // every 10 minutes
+  schedule: '*/20 * * * *', // every 20 minutes
 };
 
 exports.handler = async () => {
@@ -24,9 +24,6 @@ exports.handler = async () => {
 
   // Update the front page auto-generated section
   logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
-
-  // Optional: feature marketing refresh
-  logStep('feature-marketing:once', () => runNode('automation/feature-marketing-orchestrator.cjs', ['once']));
 
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));

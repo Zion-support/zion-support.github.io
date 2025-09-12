@@ -1,0 +1,86 @@
+{
+  "compilerOptions": {
+<<<<<<< HEAD
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+    "allowJs": true,
+=======
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+>>>>>>> origin/backup-main-20250826-120740
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+<<<<<<< HEAD
+=======
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
+    "jsx": "preserve",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+>>>>>>> origin/backup-main-20250826-120740
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+<<<<<<< HEAD
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+=======
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "dao/**",
+    "zion-os/**",
+    "zion_academy/**",
+    "cypress/**",
+    "data/2025-innovative-ai-automation-services.ts",
+    "data/2025-innovative-ai-services-enhanced.ts",
+    "data/2025-innovative-ai-services-expansion-v2.ts"
+>>>>>>> origin/backup-main-20250826-120740
+  ]
+}

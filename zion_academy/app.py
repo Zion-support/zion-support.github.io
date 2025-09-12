@@ -35,7 +35,16 @@ def init_db_command():
 @app.route('/academy')
 @app.route('/learn')
 def index():
-    return render_template('index.html', title='Welcome to Zion Academy')
+    """Homepage with featured and latest courses."""
+    with app.app_context():
+        latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
+        featured_courses = Course.query.filter_by(is_premium_tier=False).order_by(desc(Course.created_at)).limit(3).all()
+    return render_template(
+        'index.html',
+        title='Welcome to Zion Academy',
+        latest_courses=latest_courses,
+        featured_courses=featured_courses,
+    )
 
 @app.route('/academy/founder-course')
 @app.route('/learn/launch')

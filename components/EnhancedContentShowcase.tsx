@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { ArrowRight, Calendar, Clock, User, Tag, Star, TrendingUp, Filter, Search } from 'lucide-react';
 
 interface ContentItem {
   title: string;
@@ -219,7 +220,7 @@ export default function EnhancedContentShowcase({
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
