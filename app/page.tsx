@@ -61,6 +61,9 @@ import AI2026_2030FuturePredictionsPromotionBanner from '../components/AI2026_20
 import QuantumComputingAdvancedPromotionBanner from '../components/QuantumComputingAdvancedPromotionBanner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import AdvancedContentDiscoveryWidget from '../components/AdvancedContentDiscoveryWidget';
+import AI2025UltimateContentHubBanner from '../components/AI2025UltimateContentHubBanner';
+import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictionsBanner';
+import MegaContentShowcase2026Banner from '../components/MegaContentShowcase2026Banner';
 import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -252,11 +255,20 @@ export default function HomePage() {
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEW */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
+        {/* AI 2025 ULTIMATE CONTENT HUB BANNER - NEW */}
+        <AI2025UltimateContentHubBanner />
+        
         {/* AI 2026-2030 FUTURE PREDICTIONS PROMOTION BANNER - REVOLUTIONARY */}
         <AI2026_2030FuturePredictionsPromotionBanner />
         
+        {/* AI 2026 FUTURE PREDICTIONS BANNER - INTERACTIVE */}
+        <AI2026FuturePredictionsBanner />
+        
         {/* QUANTUM COMPUTING ADVANCED PROMOTION BANNER - BREAKTHROUGH */}
         <QuantumComputingAdvancedPromotionBanner />
+        
+        {/* MEGA CONTENT SHOWCASE 2026 BANNER - COMPREHENSIVE */}
+        <MegaContentShowcase2026Banner />
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER - BREAKTHROUGH */}
         <AI2026QuantumNeuralPromotionBanner />
