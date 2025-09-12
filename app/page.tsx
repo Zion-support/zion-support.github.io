@@ -6,6 +6,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -129,6 +130,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Promotion Banner */}
+      <NewContentPromoBanner />
 
       {/* Latest Content Mega Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
