@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2025BreakthroughPromotionBanner() {
   return (
@@ -174,12 +173,10 @@ const AI2025BreakthroughPromotionBanner: React.FC = () => {
             >
               <X className="w-5 h-5" />
             </button>
->>>>>>> origin/main
           </div>
         </div>
       </div>
       
-<<<<<<< HEAD
       {/* Floating Elements */}
       <div className="absolute top-4 left-4 text-4xl animate-bounce">🚀</div>
       <div className="absolute top-8 right-8 text-3xl animate-pulse">⚡</div>
@@ -201,4 +198,3 @@ const AI2025BreakthroughPromotionBanner: React.FC = () => {
 };
 
 export default AI2025BreakthroughPromotionBanner;
->>>>>>> origin/main

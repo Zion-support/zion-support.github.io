@@ -381,14 +381,11 @@ export default function HomePage() {
         {/* ENHANCED CONTENT DISCOVERY WIDGET 2026 */}
         <EnhancedContentDiscoveryWidget2026 />
         
-=======
         {/* AI 2035 BREAKTHROUGH PROMOTION BANNER */}
         <AI2035BreakthroughPromotionBanner />
         
         {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2035BreakthroughContentShowcase />
-        
->>>>>>> origin/cursor/create-and-deploy-new-content-57d1
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
