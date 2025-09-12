@@ -38,8 +38,9 @@ const Navigation = () => {
     { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Services', href: '/services', icon: '🚀' },
     { name: 'Products', href: '/products', icon: '💎' },
-    { name: 'Case Studies', href: '/case-studies', icon: '📊' },
-    { name: 'Blog', href: '/blog', icon: '📝' },
+    { name: 'Content', href: '/content-showcase', icon: '📚', new: true },
+    { name: 'Case Studies', href: '/case-studies', icon: '📊', new: true },
+    { name: 'Blog', href: '/blog', icon: '📝', new: true },
     { name: 'Resources', href: '/resources', icon: '📋' },
     { name: 'Testimonials', href: '/testimonials', icon: '⭐' },
     { name: 'Careers', href: '/careers', icon: '💼' },
@@ -77,7 +78,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 relative ${
                   isActive(item.href)
                     ? 'bg-blue-600 text-white shadow-lg'
                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
@@ -85,6 +86,11 @@ const Navigation = () => {
               >
                 <span className="text-sm">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
+                {item.new && (
+                  <span className="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold animate-pulse">
+                    NEW
+                  </span>
+                )}
               </Link>
             ))}
           </div>
@@ -136,7 +142,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 relative ${
                   isActive(item.href)
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
@@ -144,6 +150,11 @@ const Navigation = () => {
               >
                 <span className="text-lg">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
+                {item.new && (
+                  <span className="ml-auto bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    NEW
+                  </span>
+                )}
               </Link>
             ))}
             <div className="pt-4 space-y-3">
