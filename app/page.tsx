@@ -35,6 +35,7 @@ import TechnologyStack from '../components/TechnologyStack';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -51,6 +52,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2026 */}
+        <NewContentPromotionBanner2026 />
+        
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
         
@@ -64,6 +68,9 @@ export default function HomePage() {
         <RevolutionaryContentShowcase2026 />
         
         {/* DYNAMIC CONTENT CAROUSEL 2026 */}
+        <DynamicContentCarousel2026 />
+        
+        {/* NEW CONTENT CAROUSEL 2026 */}
         <DynamicContentCarousel2026 />
         
         {/* ULTRA CONTENT PROMOTION BANNER 2025 */}
