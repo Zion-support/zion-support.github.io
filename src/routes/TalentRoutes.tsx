@@ -1,15 +1,50 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import TalentDirectory from "../pages/TalentDirectory";
+import TalentsPage from "../pages/TalentsPage";
+import SavedTalentsPage from "../pages/SavedTalentsPage";
+import CreateTalentProfile from "../pages/CreateTalentProfile";
+import ProfilePage from "../pages/ProfilePage";
 
-export default function TalentRoutes() {
+const TalentProfilePage = lazy(() => import("../pages/TalentProfilePage"));
+
+const TalentRoutes = () => {
   return (
     <Routes>
-      <Route path="directory" element={<div>Talent Directory</div>} />
-      <Route path="list" element={<div>Talents List</div>} />
-      <Route path="profile/:id" element={<div>Talent Profile</div>} />
-      <Route path="saved" element={<div>Saved Talents</div>} />
-      <Route path="create" element={<div>Create Profile</div>} />
-      <Route path="my-profile" element={<div>My Profile</div>} />
+      {/* Talent Routes */}
+      <Route path="/talent" element={<TalentDirectory />} />
+      <Route path="/talents" element={<TalentsPage />} />
+      <Route
+        path="/talent/:id"
+        element={
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+            <ErrorBoundary fallback={<div className="p-4 text-center">Profile not found</div>}>
+              <TalentProfilePage />
+            </ErrorBoundary>
+          </Suspense>
+        }
+      />
+      <Route 
+        path="/saved-talents" 
+        element={
+          <ProtectedRoute>
+            <SavedTalentsPage />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/create-talent-profile" 
+        element={
+          <ProtectedRoute>
+            <CreateTalentProfile />
+          </ProtectedRoute>
+        } 
+      />
+      <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
   );
-}
+};
+
+export default TalentRoutes;

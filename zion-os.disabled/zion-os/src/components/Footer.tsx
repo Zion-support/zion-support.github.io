@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
   const footerSections = [
     {
-      title: 'Comp',
+      title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Leadership', href: '/leadership' },
@@ -35,27 +37,29 @@ export default function Footer() {
     {
       title: 'Resources',
       links: [
-        { name: 'Case Studies', href: '/case-studies' },;
-        { name: 'White Papers', href: '/white-papers' },;
-        { name: 'Documentation', href: '/docs' },;
-        { name: 'Webinars', href: '/webinars' },;
-        { name: 'Events', href: '/events' },;
-      ],;
-    },;
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Events', href: '/events' },
+      ],
+    },
   ];
-  const socialLinks = [;
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'LinkedIn' },;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'GitHub' },;
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: 'YouTube' },;
-    { name: 'Discord', href: 'https://discord.gg/ziontechgroup', icon: 'Discord' },;
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'LinkedIn' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'GitHub' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: 'YouTube' },
+    { name: 'Discord', href: 'https://discord.gg/ziontechgroup', icon: 'Discord' },
   ];
+
   return (
-    <footer className = "bg-black/90 border-t border-white/10">
+    <footer className="bg-black/90 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
-          {/* Comp Info */}
+          {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
@@ -77,12 +81,13 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label={social.name}
-
+                >
                   {social.icon}
                 </a>
               ))}
             </div>
           </div>
+
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
@@ -93,7 +98,7 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -102,6 +107,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
+
         {/* Bottom Footer */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -119,12 +125,12 @@ export default function Footer() {
                 Cookie Policy
               </Link>
               <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Accessibility;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
+                Accessibility
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

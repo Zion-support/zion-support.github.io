@@ -1,4 +1,5 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from '../types/service-variants';
+
 export interface AdvancedInnovativeService {
   id: string;
   name: string;
@@ -30,35 +31,23 @@ export interface AdvancedInnovativeService {
     mobile: string;
     email: string;
     address: string;
-    website: string};
+    website: string;
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;
+}
 
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
+
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
     id: 'metaverse-development-platform',
@@ -67,7 +56,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$599',
     period: '/month',
     description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive 3D virtual worlds, games, and social experiences with built-in AI and blockchain integration.',
-    features[
+    features: [
       '3D world building tools',
       'AI-powered NPCs and interactions',
       'Blockchain integration for digital assets',
@@ -89,11 +78,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1-2 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology['3D Graphics, AI/ML, Blockchain, VR/AR'],
-    integrations['Unity, Unreal Engine, Meta Quest, Steam VR'],
-    useCases['Virtual events, Gaming, Education, Brand experiences'],
+    technology: ['3D Graphics, AI/ML, Blockchain, VR/AR'],
+    integrations: ['Unity, Unreal Engine, Meta Quest, Steam VR'],
+    useCases: ['Virtual events, Gaming, Education, Brand experiences'],
     roi: 'Create immersive experiences that increase engagement by 200-400%.',
-    competitors['Roblox, Unity, Unreal Engine, Decentraland'],
+    competitors: ['Roblox, Unity, Unreal Engine, Decentraland'],
     marketSize: '$45B metaverse',
     growthRate: '65% YoY',
     variant: 'metaverse-futuristic',
@@ -112,7 +101,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced quantum computing platform specifically designed for biological simulations, protein folding, drug discovery, and molecular modeling, leveraging quantum algorithms for unprecedented accuracy.',
-    features[
+    features: [
       'Protein folding simulations',
       'Drug molecule optimization',
       'Biological pathway modeling',
@@ -134,11 +123,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1 month',
     category: 'Quantum Computing & Biotechnology',
     realService: true,
-    technology['Quantum Computing, Bioinformatics, Molecular Modeling'],
-    integrations['PubChem, PDB, DrugBank, Research databases'],
-    useCases['Drug discovery, Protein research, Personalized medicine'],
+    technology: ['Quantum Computing, Bioinformatics, Molecular Modeling'],
+    integrations: ['PubChem, PDB, DrugBank, Research databases'],
+    useCases: ['Drug discovery, Protein research, Personalized medicine'],
     roi: 'Accelerate drug discovery by 5-10x and reduce development costs by 30-50%.',
-    competitors['IBM Quantum, Google Quantum, D-Wave, Rigetti'],
+    competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti'],
     marketSize: '$6B quantum bio-computing',
     growthRate: '58% YoY',
     variant: 'quantum-bio-enterprise',
@@ -157,7 +146,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$399',
     period: '/month',
     description: 'Comprehensive legal automation platform that uses AI to analyze contracts, conduct legal research, automate compliance checks, and streamline legal workflows for law firms and corporate legal departments.',
-    features[
+    features: [
       'AI contract analysis and review',
       'Legal research automation',
       'Compliance monitoring',
@@ -179,11 +168,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Legal Technology',
     realService: true,
-    technology['AI/ML, NLP, Legal Analytics, Automation'],
-    integrations['Clio, PracticePanther, LexisNexis, Westlaw'],
-    useCases['Contract review, Legal research, Compliance automation'],
+    technology: ['AI/ML, NLP, Legal Analytics, Automation'],
+    integrations: ['Clio, PracticePanther, LexisNexis, Westlaw'],
+    useCases: ['Contract review, Legal research, Compliance automation'],
     roi: 'Reduce legal research time by 60-80% and improve contract review efficiency by 40-60%.',
-    competitors['LexisNexis, Westlaw, ContractPodAi, Kira Systems'],
+    competitors: ['LexisNexis, Westlaw, ContractPodAi, Kira Systems'],
     marketSize: '$28B legal technology',
     growthRate: '24% YoY',
     variant: 'legal-futuristic',
@@ -202,7 +191,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$699',
     period: '/month',
     description: 'Advanced logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and resource allocation problems in real-time for global supply chains.',
-    features[
+    features: [
       'Quantum route optimization',
       'Real-time scheduling algorithms',
       'Resource allocation optimization',
@@ -224,11 +213,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & Logistics',
     realService: true,
-    technology['Quantum Computing, Logistics Optimization, AI/ML'],
-    integrations['TMS, WMS, ERP systems, IoT platforms'],
-    useCases['Route optimization, Resource planning, Cost reduction'],
+    technology: ['Quantum Computing, Logistics Optimization, AI/ML'],
+    integrations: ['TMS, WMS, ERP systems, IoT platforms'],
+    useCases: ['Route optimization, Resource planning, Cost reduction'],
     roi: 'Reduce logistics costs by 20-35% and improve delivery efficiency by 30-50%.',
-    competitors['Manhattan Associates, Blue Yonder, SAP SCM'],
+    competitors: ['Manhattan Associates, Blue Yonder, SAP SCM'],
     marketSize: '$15B logistics optimization',
     growthRate: '32% YoY',
     variant: 'quantum-logistics',
@@ -247,7 +236,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$299',
     period: '/month',
     description: 'Intelligent research assistant that autonomously conducts research, analyzes data, generates hypotheses, and discovers insights across scientific, business, and academic domains.',
-    features[
+    features: [
       'Autonomous research planning',
       'Multi-source data analysis',
       'Hypothesis generation',
@@ -269,11 +258,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1 week',
     category: 'AI & Research',
     realService: true,
-    technology['AI/ML, NLP, Knowledge Graphs, Automation'],
-    integrations['PubMed, arXiv, Google Scholar, Research databases'],
-    useCases['Scientific research, Market analysis, Academic studies'],
+    technology: ['AI/ML, NLP, Knowledge Graphs, Automation'],
+    integrations: ['PubMed, arXiv, Google Scholar, Research databases'],
+    useCases: ['Scientific research, Market analysis, Academic studies'],
     roi: 'Accelerate research by 3-5x and discover insights that would be missed manually.',
-    competitors['Semantic Scholar, ResearchGate, Academia.edu'],
+    competitors: ['Semantic Scholar, ResearchGate, Academia.edu'],
     marketSize: '$8B research tools',
     growthRate: '28% YoY',
     variant: 'ai-autonomous',
@@ -292,7 +281,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced energy optimization platform that uses quantum computing to optimize energy grids, manage renewable energy sources, and improve energy efficiency across complex energy systems.',
-    features[
+    features: [
       'Grid optimization algorithms',
       'Renewable energy forecasting',
       'Demand response optimization',
@@ -314,11 +303,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1 month',
     category: 'Quantum Computing & Energy',
     realService: true,
-    technology['Quantum Computing, Energy Optimization, IoT, AI/ML'],
-    integrations['SCADA systems, Smart meters, Energy trading platforms'],
-    useCases['Grid optimization, Renewable energy management, Cost reduction'],
+    technology: ['Quantum Computing, Energy Optimization, IoT, AI/ML'],
+    integrations: ['SCADA systems, Smart meters, Energy trading platforms'],
+    useCases: ['Grid optimization, Renewable energy management, Cost reduction'],
     roi: 'Reduce energy costs by 15-30% and improve grid efficiency by 25-40%.',
-    competitors['GE Digital, Siemens, ABB, Schneider Electric'],
+    competitors: ['GE Digital, Siemens, ABB, Schneider Electric'],
     marketSize: '$18B energy optimization',
     growthRate: '35% YoY',
     variant: 'quantum-energy',
@@ -337,7 +326,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$249',
     period: '/month',
     description: 'Comprehensive creative design platform that uses AI to generate designs, automate creative workflows, and facilitate collaboration between designers and stakeholders.',
-    features[
+    features: [
       'AI design generation',
       'Brand consistency automation',
       'Design collaboration tools',
@@ -359,11 +348,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1 day',
     category: 'Creative & Design',
     realService: true,
-    technology['AI/ML, Computer Vision, Design Automation'],
-    integrations['Figma, Adobe Creative Suite, Canva, Slack'],
-    useCases['Design automation, Brand consistency, Creative collaboration'],
+    technology: ['AI/ML, Computer Vision, Design Automation'],
+    integrations: ['Figma, Adobe Creative Suite, Canva, Slack'],
+    useCases: ['Design automation, Brand consistency, Creative collaboration'],
     roi: 'Increase design production by 200-400% and improve brand consistency by 40-60%.',
-    competitors['Canva, Figma, Adobe Creative Suite, Sketch'],
+    competitors: ['Canva, Figma, Adobe Creative Suite, Sketch'],
     marketSize: '$14B design tools',
     growthRate: '32% YoY',
     variant: 'ai-creative',
@@ -382,7 +371,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced quantum neural network platform that leverages quantum computing to train and optimize neural networks, enabling breakthroughs in machine learning and AI applications.',
-    features[
+    features: [
       'Quantum neural network training',
       'Hybrid quantum-classical ML',
       'Quantum feature selection',
@@ -404,11 +393,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology['Quantum Computing, Neural Networks, Machine Learning'],
-    integrations['TensorFlow, PyTorch, Scikit-learn, Jupyter'],
-    useCases['Advanced ML training, Research breakthroughs, Performance optimization'],
+    technology: ['Quantum Computing, Neural Networks, Machine Learning'],
+    integrations: ['TensorFlow, PyTorch, Scikit-learn, Jupyter'],
+    useCases: ['Advanced ML training, Research breakthroughs, Performance optimization'],
     roi: 'Solve previously intractable ML problems; accelerate AI research and development.',
-    competitors['IBM Quantum, Google Quantum, Rigetti, D-Wave'],
+    competitors: ['IBM Quantum, Google Quantum, Rigetti, D-Wave'],
     marketSize: '$4B quantum ML',
     growthRate: '62% YoY',
     variant: 'quantum-neural',
@@ -427,7 +416,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$399',
     period: '/month',
     description: 'Comprehensive financial planning platform that uses AI to provide personalized financial advice, optimize investment portfolios, and help users achieve their financial goals.',
-    features[
+    features: [
       'AI financial planning',
       'Investment portfolio optimization',
       'Risk assessment and management',
@@ -449,11 +438,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1 week',
     category: 'Financial Technology',
     realService: true,
-    technology['AI/ML, Financial Analytics, Portfolio Optimization'],
-    integrations['Plaid, Yodlee, Financial institutions, Trading platforms'],
-    useCases['Financial planning, Investment optimization, Wealth management'],
+    technology: ['AI/ML, Financial Analytics, Portfolio Optimization'],
+    integrations: ['Plaid, Yodlee, Financial institutions, Trading platforms'],
+    useCases: ['Financial planning, Investment optimization, Wealth management'],
     roi: 'Improve investment returns by 15-25% and reduce financial planning costs by 40-60%.',
-    competitors['Betterment, Wealthfront, Personal Capital, Mint'],
+    competitors: ['Betterment, Wealthfront, Personal Capital, Mint'],
     marketSize: '$25B fintech',
     growthRate: '28% YoY',
     variant: 'ai-futuristic',
@@ -472,7 +461,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$549',
     period: '/month',
     description: 'Advanced IoT security platform that implements quantum-resistant cryptography and quantum key distribution to protect IoT devices and networks from current and future threats.',
-    features[
+    features: [
       'Quantum-resistant encryption',
       'IoT device authentication',
       'Network security monitoring',
@@ -494,11 +483,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & IoT Security',
     realService: true,
-    technology['Quantum Computing, IoT Security, Post-Quantum Cryptography'],
-    integrations['AWS IoT, Azure IoT, Google Cloud IoT, MQTT'],
-    useCases['Device security, Network protection, Compliance'],
+    technology: ['Quantum Computing, IoT Security, Post-Quantum Cryptography'],
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT'],
+    useCases: ['Device security, Network protection, Compliance'],
     roi: 'Future-proof IoT security investment; avoid costly migrations later.',
-    competitors['Armis, Palo Alto Networks, Check Point, Fortinet'],
+    competitors: ['Armis, Palo Alto Networks, Check Point, Fortinet'],
     marketSize: '$12B IoT security',
     growthRate: '38% YoY',
     variant: 'quantum-iot',
@@ -517,7 +506,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$199',
     period: '/month',
     description: 'Comprehensive AI-powered education platform that provides personalized learning experiences, adaptive curriculum, and intelligent tutoring to improve student outcomes and engagement.',
-    features[
+    features: [
       'Personalized learning paths',
       'Adaptive curriculum generation',
       'Intelligent tutoring system',
@@ -539,11 +528,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1-2 weeks',
     category: 'Education Technology',
     realService: true,
-    technology['AI/ML, Adaptive Learning, NLP, Analytics'],
-    integrations['Canvas, Blackboard, Moodle, Google Classroom'],
-    useCases['Personalized learning, Adaptive curriculum, Student engagement'],
+    technology: ['AI/ML, Adaptive Learning, NLP, Analytics'],
+    integrations: ['Canvas, Blackboard, Moodle, Google Classroom'],
+    useCases: ['Personalized learning, Adaptive curriculum, Student engagement'],
     roi: 'Improve student outcomes by 25-40% and increase engagement by 30-50%.',
-    competitors['Coursera, Udemy, Khan Academy, Duolingo'],
+    competitors: ['Coursera, Udemy, Khan Academy, Duolingo'],
     marketSize: '$20B edtech',
     growthRate: '26% YoY',
     variant: 'ai-futuristic',
@@ -562,7 +551,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$1,199',
     period: '/month',
     description: 'Advanced quantum computing platform designed for space applications, including satellite constellation optimization, space mission planning, and astronomical data analysis.',
-    features[
+    features: [
       'Satellite constellation optimization',
       'Space mission planning',
       'Astronomical data analysis',
@@ -584,11 +573,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1 month',
     category: 'Quantum Computing & Space Technology',
     realService: true,
-    technology['Quantum Computing, Space Technology, Orbital Mechanics'],
-    integrations['Satellite systems, Ground stations, Space databases'],
-    useCases['Satellite optimization, Mission planning, Space research'],
+    technology: ['Quantum Computing, Space Technology, Orbital Mechanics'],
+    integrations: ['Satellite systems, Ground stations, Space databases'],
+    useCases: ['Satellite optimization, Mission planning, Space research'],
     roi: 'Optimize space operations and reduce mission costs by 20-40%.',
-    competitors['NASA, SpaceX, Boeing, Lockheed Martin'],
+    competitors: ['NASA, SpaceX, Boeing, Lockheed Martin'],
     marketSize: '$8B space technology',
     growthRate: '45% YoY',
     variant: 'quantum-space',
@@ -607,7 +596,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$499',
     period: '/month',
     description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, assist in diagnosis, and provide clinical decision support to healthcare professionals.',
-    features[
+    features: [
       'Medical image analysis',
       'Diagnostic assistance',
       'Clinical decision support',
@@ -629,11 +618,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Healthcare & AI',
     realService: true,
-    technology['AI/ML, Computer Vision, Medical Imaging, NLP'],
-    integrations['Epic, Cerner, PACS systems, EHR platforms'],
-    useCases['Medical diagnosis, Treatment planning, Patient care'],
+    technology: ['AI/ML, Computer Vision, Medical Imaging, NLP'],
+    integrations: ['Epic, Cerner, PACS systems, EHR platforms'],
+    useCases: ['Medical diagnosis, Treatment planning, Patient care'],
     roi: 'Improve diagnostic accuracy by 15-25% and reduce diagnosis time by 30-50%.',
-    competitors['IBM Watson Health, Google Health, Aidoc, Zebra Medical'],
+    competitors: ['IBM Watson Health, Google Health, Aidoc, Zebra Medical'],
     marketSize: '$35B AI healthcare',
     growthRate: '42% YoY',
     variant: 'ai-healthcare',
@@ -652,7 +641,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced materials discovery platform that leverages quantum computing to simulate and discover new materials with specific properties for applications in electronics, energy, and manufacturing.',
-    features[
+    features: [
       'Quantum materials simulation',
       'Property prediction algorithms',
       'Materials database integration',
@@ -674,11 +663,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & Materials Science',
     realService: true,
-    technology['Quantum Computing, Materials Science, Simulation'],
-    integrations['Materials databases, Research tools, Patent databases'],
-    useCases['Materials discovery, Property optimization, Research acceleration'],
+    technology: ['Quantum Computing, Materials Science, Simulation'],
+    integrations: ['Materials databases, Research tools, Patent databases'],
+    useCases: ['Materials discovery, Property optimization, Research acceleration'],
     roi: 'Accelerate materials discovery by 5-10x and reduce research costs by 30-50%.',
-    competitors['Materials Project, Citrine Informatics, Schrödinger'],
+    competitors: ['Materials Project, Citrine Informatics, Schrödinger'],
     marketSize: '$5B materials informatics',
     growthRate: '38% YoY',
     variant: 'quantum-materials-enterprise',
@@ -697,7 +686,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$349',
     period: '/month',
     description: 'Comprehensive automotive platform that uses AI to provide vehicle diagnostics, predictive maintenance, fleet management, and driver safety monitoring for automotive companies and fleet operators.',
-    features[
+    features: [
       'Vehicle diagnostics and monitoring',
       'Predictive maintenance alerts',
       'Fleet management optimization',
@@ -719,11 +708,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1-2 weeks',
     category: 'Automotive & Transportation',
     realService: true,
-    technology['AI/ML, IoT, Vehicle Diagnostics, Fleet Management'],
-    integrations['OBD-II systems, GPS, Fleet management platforms'],
-    useCases['Vehicle maintenance, Fleet optimization, Driver safety'],
+    technology: ['AI/ML, IoT, Vehicle Diagnostics, Fleet Management'],
+    integrations: ['OBD-II systems, GPS, Fleet management platforms'],
+    useCases: ['Vehicle maintenance, Fleet optimization, Driver safety'],
     roi: 'Reduce maintenance costs by 20-35% and improve fleet efficiency by 25-40%.',
-    competitors['Geotab, Fleet Complete, Samsara, Verizon Connect'],
+    competitors: ['Geotab, Fleet Complete, Samsara, Verizon Connect'],
     marketSize: '$22B fleet management',
     growthRate: '24% YoY',
     variant: 'ai-futuristic',
@@ -742,7 +731,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     price: '$699',
     period: '/month',
     description: 'Advanced climate modeling platform that leverages quantum computing to create more accurate climate models, predict environmental changes, and optimize sustainability strategies.',
-    features[
+    features: [
       'Quantum climate modeling',
       'Environmental impact analysis',
       'Sustainability optimization',
@@ -764,11 +753,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & Environmental Science',
     realService: true,
-    technology['Quantum Computing, Climate Modeling, Environmental Science'],
-    integrations['Climate databases, Environmental monitoring systems'],
-    useCases['Climate modeling, Sustainability planning, Policy analysis'],
+    technology: ['Quantum Computing, Climate Modeling, Environmental Science'],
+    integrations: ['Climate databases, Environmental monitoring systems'],
+    useCases: ['Climate modeling, Sustainability planning, Policy analysis'],
     roi: 'Improve climate prediction accuracy and optimize sustainability strategies.',
-    competitors['NOAA, NASA, Climate modeling institutions'],
+    competitors: ['NOAA, NASA, Climate modeling institutions'],
     marketSize: '$6B climate technology',
     growthRate: '35% YoY',
     variant: 'quantum-futuristic',
@@ -779,5 +768,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     customers: 34,
     rating: 4.8,
     reviews: 26
-
-];}}
+  }
+];

@@ -1,4 +1,5 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from '../types/service-variants';
+
 export interface AdvancedFintechSolution2025 {
   id: string;
   name: string;
@@ -30,18 +31,16 @@ export interface AdvancedFintechSolution2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string};
+    website: string;
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;
+}
 
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
   {
     id: 'ai-powered-credit-risk-assessment',
@@ -50,7 +49,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     price: '$1,199',
     period: '/month',
     description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
-    features[
+    features: [
       'Alternative data analysis',
       'Machine learning models',
       'Real-time scoring',
@@ -73,11 +72,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     setupTime: '15-20 days',
     category: 'Fintech',
     realService: true,
-    technology['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],
-    integrations['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],
-    useCases['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],
+    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],
+    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],
+    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],
     roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',
-    competitors['FICO, Experian, TransUnion, Equifax, Upstart'],
+    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
     marketSize: '$35B credit scoring market',
     growthRate: '25% annual growth',
     variant: 'fintech',
@@ -101,7 +100,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced blockchain-based payment processing platform that enables fast, secure, and cost-effective cross-border transactions with real-time settlement.',
-    features[
+    features: [
       'Cross-border payments',
       'Real-time settlement',
       'Multi-currency support',
@@ -124,11 +123,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     setupTime: '10-15 days',
     category: 'Fintech',
     realService: true,
-    technology['Blockchain, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],
-    integrations['Banking systems, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],
-    useCases['Cross-border payments, International transfers, B2B payments, Remittances, Trade finance'],
+    technology: ['Blockchain, Smart Contracts, Cryptocurrency, Payment Processing, Distributed Ledger'],
+    integrations: ['Banking systems, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],
+    useCases: ['Cross-border payments, International transfers, B2B payments, Remittances, Trade finance'],
     roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.',
-    competitors['Ripple, Stellar, Circle, Coinbase, Binance'],
+    competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],
     marketSize: '$28B blockchain payments market',
     growthRate: '55% annual growth',
     variant: 'blockchain-futuristic',
@@ -152,7 +151,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',
-    features[
+    features: [
       'Quantum algorithms',
       'Portfolio optimization',
       'Risk modeling',
@@ -175,11 +174,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     setupTime: '20-30 days',
     category: 'Fintech',
     realService: true,
-    technology['Quantum Computing, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],
-    integrations['Trading platforms, Risk management systems, Data providers, Analytics tools, Reporting systems'],
-    useCases['Portfolio optimization, Risk modeling, Option pricing, Asset allocation, Financial research'],
+    technology: ['Quantum Computing, Financial Modeling, Portfolio Optimization, Risk Analytics, Quantum Algorithms'],
+    integrations: ['Trading platforms, Risk management systems, Data providers, Analytics tools, Reporting systems'],
+    useCases: ['Portfolio optimization, Risk modeling, Option pricing, Asset allocation, Financial research'],
     roi: 'Improve portfolio performance by 15%. Reduce risk by 25%. Speed up calculations by 1000x.',
-    competitors['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
+    competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
     marketSize: '$8B quantum computing market',
     growthRate: '65% annual growth',
     variant: 'quantum-financial',
@@ -203,7 +202,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced AI-powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
-    features[
+    features: [
       'AI risk assessment',
       'Automated underwriting',
       'Predictive modeling',
@@ -226,11 +225,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     setupTime: '10-15 days',
     category: 'Fintech',
     realService: true,
-    technology['Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],
-    integrations['Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools'],
-    useCases['Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],
+    technology: ['Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],
+    integrations: ['Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools'],
+    useCases: ['Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],
     roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.',
-    competitors['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
+    competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
     marketSize: '$20B insurtech market',
     growthRate: '30% annual growth',
     variant: 'fintech',
@@ -254,7 +253,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     price: '$699',
     period: '/month',
     description: 'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.',
-    features[
+    features: [
       'Regulatory monitoring',
       'Automated reporting',
       'Compliance tracking',
@@ -277,11 +276,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     setupTime: '7-10 days',
     category: 'Fintech',
     realService: true,
-    technology['RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],
-    integrations['Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'],
-    useCases['Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'],
+    technology: ['RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'],
+    integrations: ['Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'],
+    useCases: ['Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'],
     roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.',
-    competitors['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],
+    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],
     marketSize: '$15B RegTech market',
     growthRate: '40% annual growth',
     variant: 'fintech',
@@ -297,5 +296,5 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     customers: 89,
     rating: 4.5,
     reviews: 52
-
-];}}
+  }
+];

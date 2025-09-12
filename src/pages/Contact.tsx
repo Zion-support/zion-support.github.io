@@ -1,626 +1,454 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  MessageCircle,
-  Send,
-  CheckCircle,
-  Building,
-  Users,
-  Globe,
-  Shield,
-  Zap,
-  ArrowRight,
-  Linkedin,
-  Twitter,
-  Github,
-  Facebook,
-  Instagram
-} from 'lucide-react';
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { toast } from "@/components/ui/use-toast";
+import { apiClient } from "@/utils/apiClient";
+import z from "zod";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import { AppLayout } from "@/layout/AppLayout";
+import api from '@/lib/api';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
-    company: '',
-    phone: '',
-    service: '',
     message: '',
-    budget: '',
-    timeline: '',
-    howDidYouHear: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
-        timeline: '',
-        howDidYouHear: ''
+    logInfo('[ContactForm] handleSubmit triggered.');
+    logInfo('[ContactForm] formData:', { data:  { data: formData } });
+
+    const schema = z.object({
+      name: z.string().min(2, 'Name must be at least 2 characters'),
+      email: z.string().email('Invalid email address'),
+      message: z.string().min(10, 'Message must be at least 10 characters'),
+    });
+
+    const result = schema.safeParse(formData);
+    logInfo('[ContactForm] Zod validation result:', { data:  { data: result } });
+
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      for (const err of result.error.errors) {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message;
+        }
+      }
+      setErrors(fieldErrors);
+      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again';
+      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } });
+      toast({
+        title: 'Form Validation Error',
+        description: validationErrorMsg,
+        variant: 'destructive',
       });
-    }, 5000);
+      return;
+    }
+
+    setErrors({});
+    setIsSubmitting(true);
+    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).');
+
+    try {
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+        .then(async (res) => {
+          logInfo('[ContactForm] API response status:', { data:  { data: res.status } });
+          const responseBody = await res.text(); // Read as text first to avoid JSON parse error if not JSON
+          logInfo('[ContactForm] API response body:', { data:  { data: responseBody } });
+
+          // Note: setIsSubmitting(false) is called within then/catch of the promise.
+          // If fetch itself or .then/.catch structure has a synchronous error,
+          // the outer try/catch will handle it.
+
+          if (!res.ok) {
+            let errorData = { error: `Request failed with status ${res.status}` };
+            try {
+              errorData = JSON.parse(responseBody);
+            } catch (parseError) {
+              logWarn('[ContactForm] Could not parse error response as JSON.', { data:  { data: parseError } });
+            }
+            logErrorToProduction('[ContactForm] API error response:', { data: errorData });
+            // This throw will be caught by the .catch block below
+            throw new Error(errorData.error || 'Failed to send message');
+          }
+
+          setIsSubmitting(false); // Moved here for success path
+          logInfo('[ContactForm] Message submission successful.');
+          toast({
+            title: 'Message Sent',
+            description:
+              "We've received your message and will get back to you soon.",
+          });
+          setSubmitted(true);
+          setTimeout(() => setSubmitted(false), 2000);
+          setFormData({ name: '', email: '', message: '' });
+        })
+        .catch((err) => {
+          // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
+          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err });
+          setIsSubmitting(false);
+          toast({
+            title: 'Submission Error',
+            description: err.message || 'An unexpected error occurred during submission.',
+            variant: 'destructive',
+          });
+        });
+    } catch (error) {
+      // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
+      // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
+      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error });
+      setIsSubmitting(false);
+      toast({
+        title: 'Critical Submission Error',
+        description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
+        variant: 'destructive',
+      });
+    }
   };
 
-  const contactInfo = {
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
-    emergency: '24/7 Support Available'
+  // Handle sending messages to the AI chat assistant
+  const handleSendMessage = async (message: string): Promise<void> => {
+    try {
+      const response = await api.post(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
+        {
+          messages: [{ role: "user", content: message }]
+        }
+      );
+
+      if (response.status < 200 || response.status >= 300) {
+        throw new Error("Failed to get response from AI assistant");
+      }
+
+      return Promise.resolve();
+    } catch (error) {
+      logErrorToProduction('Error in AI chat', error);
+      toast({
+        title: 'Chat Error',
+        description:
+          'There was an error communicating with our AI assistant. Please try again.',
+        variant: 'destructive',
+      });
+      return Promise.resolve();
+    }
   };
 
-  const services = [
-    'AI Enterprise Orchestrator',
-    'AI Cybersecurity Suite',
-    'Quantum AI Platform',
-    'AI Healthcare Analytics',
-    'Micro SaaS Solutions',
-    'Custom AI Development',
-    'Digital Transformation',
-    'IT Infrastructure',
-    'Other'
+  const offices = [
+    {
+      name: 'Headquarters',
+      address: '123 Tech Avenue, San Francisco, CA 94105',
+      phone: '+1 302 464 0950',
+      email: 'commercial@ziontechgroup.com',
+    },
+    {
+      name: 'East Coast Office',
+      address: '456 Innovation Street, New York, NY 10001',
+      phone: '+1 302 464 0950',
+      email: 'commercial@ziontechgroup.com',
+    },
   ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    'Over $250,000'
-  ];
-
-  const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Long-term (6+ months)',
-    'Flexible'
-  ];
-
-  const howDidYouHear = [
-    'Google Search',
-    'Social Media',
-    'Referral',
-    'Industry Event',
-    'Online Advertisement',
-    'Blog/Article',
-    'Other'
-  ];
-
-  const socialLinks = [
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'from-blue-600 to-blue-700' },
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'from-blue-400 to-blue-500' },
-    { name: 'GitHub', icon: Github, href: '#', color: 'from-gray-600 to-gray-700' },
-    { name: 'Facebook', icon: Facebook, href: '#', color: 'from-blue-600 to-blue-700' },
-    { name: 'Instagram', icon: Instagram, href: '#', color: 'from-pink-500 to-purple-500' }
-  ];
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-futuristic pt-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center py-20">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="bg-green-500/20 border border-green-500/50 rounded-2xl p-12"
-            >
-              <div className="w-20 h-20 bg-green-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <CheckCircle className="h-10 w-10 text-white" />
-              </div>
-              <h1 className="text-4xl font-bold text-white mb-4">Thank You!</h1>
-              <p className="text-xl text-gray-300 mb-6">
-                Your message has been sent successfully. We'll get back to you within 24 hours.
-              </p>
-              <p className="text-gray-400">
-                In the meantime, feel free to explore our services or check out our latest insights.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
-    <div className="min-h-screen bg-futuristic pt-32">
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-bold text-white mb-6"
-            >
-              Get in
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 mb-8"
-            >
-              Ready to transform your business with AI? Let's discuss how we can help you achieve your goals.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form & Info */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700"
-              >
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter your company name"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                        Service of Interest *
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      >
-                        <option value="">Select a service</option>
-                        {services.map((service) => (
-                          <option key={service} value={service}>{service}</option>
-                        ))}
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                        Budget Range
-                      </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      >
-                        <option value="">Select budget range</option>
-                        {budgets.map((budget) => (
-                          <option key={budget} value={budget}>{budget}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Timeline
-                      </label>
-                      <select
-                        id="timeline"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      >
-                        <option value="">Select timeline</option>
-                        {timelines.map((timeline) => (
-                          <option key={timeline} value={timeline}>{timeline}</option>
-                        ))}
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="howDidYouHear" className="block text-sm font-medium text-gray-300 mb-2">
-                        How did you hear about us?
-                      </label>
-                      <select
-                        id="howDidYouHear"
-                        name="howDidYouHear"
-                        value={formData.howDidYouHear}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      >
-                        <option value="">Select option</option>
-                        {howDidYouHear.map((option) => (
-                          <option key={option} value={option}>{option}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us about your project, goals, or any questions you have..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending Message...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-5 w-5" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              </motion.div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="p-2 rounded-lg bg-blue-500/20">
-                      <Phone className="h-5 w-5 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">Phone</p>
-                      <a href={`tel:${contactInfo.phone}`} className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                        {contactInfo.phone}
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="p-2 rounded-lg bg-green-500/20">
-                      <Mail className="h-5 w-5 text-green-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">Email</p>
-                      <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                        {contactInfo.email}
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="p-2 rounded-lg bg-purple-500/20">
-                      <MapPin className="h-5 w-5 text-purple-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">Address</p>
-                      <p className="text-gray-300">{contactInfo.address}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="p-2 rounded-lg bg-yellow-500/20">
-                      <Clock className="h-5 w-5 text-yellow-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">Business Hours</p>
-                      <p className="text-gray-300">{contactInfo.hours}</p>
-                      <p className="text-green-400 text-sm">{contactInfo.emergency}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Quick Actions */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Actions</h3>
-                
-                <div className="space-y-4">
-                  <a
-                    href="/services"
-                    className="flex items-center justify-between p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors duration-200 group"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-blue-500/20">
-                        <Zap className="h-5 w-5 text-blue-400" />
-                      </div>
-                      <span className="text-white font-medium">Explore Services</span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transition-colors duration-200" />
-                  </a>
-                  
-                  <a
-                    href="/request-quote"
-                    className="flex items-center justify-between p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors duration-200 group"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-green-500/20">
-                        <MessageCircle className="h-5 w-5 text-green-400" />
-                      </div>
-                      <span className="text-white font-medium">Request Quote</span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-green-400 transition-colors duration-200" />
-                  </a>
-                  
-                  <a
-                    href="/demo"
-                    className="flex items-center justify-between p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors duration-200 group"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-purple-500/20">
-                        <Building className="h-5 w-5 text-purple-400" />
-                      </div>
-                      <span className="text-white font-medium">Schedule Demo</span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-purple-400 transition-colors duration-200" />
-                  </a>
-                </div>
-              </motion.div>
-
-              {/* Social Media */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
-                
-                <div className="grid grid-cols-2 gap-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      className="flex items-center justify-center p-3 bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-200 group"
-                    >
-                      <social.icon className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors duration-200" />
-                    </a>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-900/50">
+    <>
+      <SEO
+        title="Contact Us - Get Help from Zion Tech Marketplace"
+        description="Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime."
+        keywords="contact Zion, AI marketplace support, tech platform contact"
+        canonical="https://app.ziontechgroup.com/contact"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company. Here's what makes us different.
+            <GradientHeading>Contact Us</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Have questions or want to learn more? We'd love to hear from you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Users,
-                title: 'Expert Team',
-                description: '50+ specialists with advanced degrees and industry certifications'
-              },
-              {
-                icon: Shield,
-                title: 'Proven Track Record',
-                description: '200+ successful AI implementations across industries'
-              },
-              {
-                icon: Globe,
-                title: 'Global Reach',
-                description: 'Serving clients in 25+ countries with localized solutions'
-              },
-              {
-                icon: Zap,
-                title: 'Innovation First',
-                description: 'Cutting-edge AI research and development capabilities'
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20 mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-400" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-zion-slate-light text-lg mb-8">
+                Whether you have a question about our platform, pricing, or
+                anything else, our team is ready to answer all your questions.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-white mb-2">
+                      Your Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      placeholder="John Doe"
+                      required
+                    />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                    )}
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-white mb-2">
+                      Email Address
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      placeholder="john@example.com"
+                      required
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.email}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </motion.div>
-            ))}
+
+                <div>
+                  <label htmlFor="message" className="block text-white mb-2">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    placeholder="Tell us what you'd like to know..."
+                    required
+                  />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.message}
+                    </p>
+                  )}
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+                <AnimatePresence>
+                  {submitted && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="mt-4 text-center space-y-1"
+                    >
+                      <h3 className="text-green-500 text-lg font-bold">
+                        Message Sent!
+                      </h3>
+                      <p className="text-zion-slate-light">
+                        Thanks for reaching out. Our team received your message
+                        and will respond with helpful info as soon as possible
+                        shortly.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </form>
+            </div>
+
+            <div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <h2 className="text-3xl font-bold text-white mb-6">
+                      Our Offices
+                    </h2>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    We list several offices so you can connect with the team
+                    closest to your region for faster support.
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <div className="grid grid-cols-1 gap-6">
+                {offices.map((office, index) => (
+                  <Card
+                    key={index}
+                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
+                  >
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {office.name}
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-zion-slate-light">
+                          {office.address}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <span className="text-zion-slate-light">
+                          {office.phone}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <a
+                          href={`mailto:${office.email}`}
+                          className="text-zion-cyan hover:underline"
+                        >
+                          {office.email}
+                        </a>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zion Office Locations"
+                ></iframe>
+              </div>
+
+              <div className="mt-8">
+                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
+                  <div className="flex items-center">
+                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
+                      <MessageSquare className="h-6 w-6 text-zion-purple" />
+                    </div>
+                    <div>
+                      <h3 className="text-white text-lg font-bold">
+                        Live AI Support
+                      </h3>
+                      <p className="text-zion-slate-light">
+                        Get instant answers to your questions
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => setIsChatOpen(true)}
+                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  >
+                    Chat With Our AI Assistant
+                  </Button>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need immediate assistance?
+            </h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
+              Our customer support team is available 24/7 to help you with any
+              questions.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                onClick={() => setIsChatOpen(true)}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              >
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Chat With AI
+              </Button>
+              <Button
+                variant="outline"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                asChild
+              >
+                <a href="mailto:support@ziontechgroup.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Support
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-zion-slate-light text-lg">
+              Looking for more details about our platform? Visit our{' '}
+              <Link href="/services" className="text-zion-cyan underline">
+                services page
+              </Link>{' '}
+              or explore the{' '}
+              <Link href="/blog" className="text-zion-cyan underline">
+                Zion blog
+              </Link>{' '}
+              for additional insights.
+            </p>
           </div>
         </div>
-      </section>
+      </main>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Don't wait to transform your business. Contact us today and let's discuss how AI can drive your success.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`tel:${contactInfo.phone}`}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Call Us Now
-                <Phone className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
-              >
-                Send Email
-                <Mail className="ml-2 h-5 w-5" />
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+      {/* Chat Assistant Modal */}
+      {isChatOpen && (
+        <ChatAssistant
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          recipient={{
+            id: 'ai-assistant',
+            name: 'AI Assistant',
+            avatarUrl: 'https://placehold.co/64x64?text=AI',
+            role: 'Support Bot',
+          }}
+          onSendMessage={handleSendMessage}
+          starterQuestions={[
+            'How do I list a product?',
+            'What services does Zion offer?',
+            'Where can I view pricing plans?',
+            'How do I create an account?',
+            'Can I talk to a human representative?',
+          ]}
+        />
+      )}
+    </>
   );
 }
