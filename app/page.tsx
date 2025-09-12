@@ -180,13 +180,13 @@ export default function HomePage() {
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: Comprehensive AI Trends, Healthcare Revolution & $2.8B Manufacturing Success!
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎉 Major Content Expansion: 20+ New AI Resources Just Released!
               </h2>
-              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: AI 2025 Comprehensive Trends Analysis ($3.2T market insights), AI Healthcare Diagnosis Revolution (99.7% accuracy), 
-                Global Manufacturing AI Transformation ($2.8B value created), plus detailed implementation roadmaps. 
-                Get expert insights on the cutting-edge technologies transforming 2025.
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: AI Neural Interfaces, Space Technology Revolution, 
+                Augmented Reality 2025, plus new case studies and comprehensive implementation guides. 
+                Get expert insights on the cutting-edge technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
