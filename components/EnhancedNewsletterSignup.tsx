@@ -1,224 +1,211 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 
 interface NewsletterSignupProps {
-  variant?: 'default' | 'featured' | 'minimal';
-  showContentPreview?: boolean;
+  variant?: 'default' | 'compact' | 'hero' | 'sidebar';
+  showBenefits?: boolean;
+  showTestimonials?: boolean;
+  className?: string;
 }
 
-const featuredContent = [
-  {
-    title: 'AI 2025: Year in Review',
-    description: 'Major breakthroughs and industry impact analysis',
-    type: 'Article',
-    readTime: '18 min',
-    icon: '🤖'
-  },
-  {
-    title: 'AI Implementation Master Guide',
-    description: '150-page comprehensive implementation blueprint',
-    type: 'Resource',
-    readTime: 'Download',
-    icon: '📚'
-  },
-  {
-    title: 'AI ROI Calculator 2025',
-    description: 'Measure your business impact with our calculator',
-    type: 'Tool',
-    readTime: 'Interactive',
-    icon: '💰'
-  }
-];
-
-export default function EnhancedNewsletterSignup({ 
-  variant = 'default', 
-  showContentPreview = true 
+export default function EnhancedNewsletterSignup({
+  variant = 'default',
+  showBenefits = true,
+  showTestimonials = true,
+  className = ''
 }: NewsletterSignupProps) {
-  return (
-    <section className={`py-16 ${variant === 'minimal' ? 'bg-white' : 'bg-gradient-to-r from-blue-50 to-indigo-50'}`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Newsletter Signup */}
-          <div>
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-                <span className="text-sm font-medium">📧 NEWSLETTER</span>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Stay Ahead with AI Insights
-              </h2>
-              
-              <p className="text-lg text-gray-600 mb-8">
-                Get weekly updates on AI trends, implementation guides, and exclusive content 
-                delivered straight to your inbox. Join 10,000+ AI professionals.
-              </p>
-            </div>
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-            {/* Newsletter Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name (Optional)
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Your first name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Industry (Optional)
-                  </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option value="">Select your industry</option>
-                    <option value="technology">Technology</option>
-                    <option value="manufacturing">Manufacturing</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="financial">Financial Services</option>
-                    <option value="retail">Retail</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Subscribe to Newsletter
-                </button>
-                
-                <p className="text-sm text-gray-500 text-center">
-                  No spam. Unsubscribe anytime. We respect your privacy.
-                </p>
-              </form>
-            </div>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setIsSubscribed(true);
+    setIsSubmitting(false);
+    setEmail('');
+  };
 
-            {/* Benefits */}
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 text-sm">✓</span>
-                </div>
-                <span className="text-sm text-gray-700">Weekly AI insights</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 text-sm">✓</span>
-                </div>
-                <span className="text-sm text-gray-700">Exclusive case studies</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 text-sm">✓</span>
-                </div>
-                <span className="text-sm text-gray-700">Free resources</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 text-sm">✓</span>
-                </div>
-                <span className="text-sm text-gray-700">Early access</span>
-              </div>
-            </div>
-          </div>
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'hero':
+        return {
+          container: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16',
+          title: 'text-4xl md:text-5xl font-bold mb-4',
+          subtitle: 'text-xl md:text-2xl mb-8 opacity-90',
+          form: 'max-w-md mx-auto',
+          input: 'w-full px-6 py-4 rounded-lg text-gray-900 text-lg',
+          button: 'bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg'
+        };
+      case 'compact':
+        return {
+          container: 'bg-gray-50 py-8',
+          title: 'text-2xl font-bold text-gray-900 mb-2',
+          subtitle: 'text-gray-600 mb-6',
+          form: 'flex flex-col sm:flex-row gap-4 max-w-lg',
+          input: 'flex-1 px-4 py-3 rounded-lg border border-gray-300 text-gray-900',
+          button: 'bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+        };
+      case 'sidebar':
+        return {
+          container: 'bg-white border border-gray-200 p-6 rounded-lg',
+          title: 'text-lg font-semibold text-gray-900 mb-2',
+          subtitle: 'text-sm text-gray-600 mb-4',
+          form: 'space-y-3',
+          input: 'w-full px-3 py-2 rounded border border-gray-300 text-gray-900 text-sm',
+          button: 'w-full bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 transition-colors text-sm'
+        };
+      default:
+        return {
+          container: 'bg-gradient-to-r from-indigo-50 to-purple-50 py-12',
+          title: 'text-3xl font-bold text-gray-900 mb-4',
+          subtitle: 'text-lg text-gray-600 mb-8',
+          form: 'max-w-lg mx-auto',
+          input: 'w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900',
+          button: 'bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+        };
+    }
+  };
 
-          {/* Right Column - Content Preview */}
-          {showContentPreview && (
-            <div>
-              <div className="text-center lg:text-left mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  What You'll Get
-                </h3>
-                <p className="text-gray-600">
-                  Exclusive access to our latest content, insights, and resources
-                </p>
-              </div>
+  const styles = getVariantStyles();
 
-              <div className="space-y-4">
-                {featuredContent.map((content, index) => (
-                  <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">{content.icon}</div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xs font-medium text-blue-700 bg-blue-100 px-2 py-1 rounded-full">
-                            {content.type}
-                          </span>
-                          <span className="text-xs text-gray-500">{content.readTime}</span>
-                        </div>
-                        <h4 className="font-semibold text-gray-900 mb-1">
-                          {content.title}
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          {content.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Social Proof */}
-              <div className="mt-8 bg-gray-50 rounded-lg p-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900 mb-2">10,000+</div>
-                  <div className="text-sm text-gray-600 mb-4">Subscribers</div>
-                  <div className="flex justify-center items-center gap-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
-                      <span>4.9/5 rating</span>
-                    </div>
-                    <span>•</span>
-                    <span>98% open rate</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center">
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Ready to Transform Your Business with AI?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Get personalized AI strategy consultation and implementation support from our expert team.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Get Free Consultation
-              </Link>
-              <Link
-                href="/services/ai-services"
-                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Explore AI Services
-              </Link>
-            </div>
+  if (isSubscribed) {
+    return (
+      <div className={`${styles.container} ${className}`}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-6xl mb-4">🎉</div>
+          <h2 className={`${styles.title} text-green-600`}>
+            Welcome to the AI Revolution!
+          </h2>
+          <p className={`${styles.subtitle} text-green-700`}>
+            You're now part of 50,000+ AI professionals getting exclusive insights, case studies, and implementation guides.
+          </p>
+          <div className="bg-white bg-opacity-20 p-6 rounded-lg max-w-2xl mx-auto mt-6">
+            <h3 className="text-lg font-semibold mb-3">What happens next?</h3>
+            <ul className="text-sm space-y-2 text-left">
+              <li>• You'll receive our weekly AI insights newsletter</li>
+              <li>• Get early access to new case studies and guides</li>
+              <li>• Invitations to exclusive AI strategy webinars</li>
+              <li>• Direct access to our AI implementation templates</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    );
+  }
+
+  return (
+    <div className={`${styles.container} ${className}`}>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <h2 className={styles.title}>
+            Stay Ahead of the AI Revolution
+          </h2>
+          <p className={styles.subtitle}>
+            Join 50,000+ AI professionals getting exclusive insights, case studies, and implementation guides delivered weekly.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Newsletter Form */}
+          <div className={styles.form}>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className={styles.input}
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`${styles.button} w-full disabled:opacity-50`}
+              >
+                {isSubmitting ? 'Subscribing...' : 'Get Free AI Insights'}
+              </button>
+            </form>
+            
+            <p className="text-xs text-gray-500 mt-3 text-center">
+              No spam, unsubscribe anytime. We respect your privacy.
+            </p>
+          </div>
+
+          {/* Benefits or Testimonials */}
+          <div className="space-y-6">
+            {showBenefits && (
+              <div className="bg-white bg-opacity-20 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-4">What you'll get:</h3>
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Weekly AI insights and trend analysis</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Exclusive case studies from Fortune 500 companies</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Free access to AI implementation templates</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Invitations to exclusive AI strategy webinars</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    <span>Early access to new AI tools and resources</span>
+                  </li>
+                </ul>
+              </div>
+            )}
+
+            {showTestimonials && (
+              <div className="space-y-4">
+                <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                  <p className="text-sm italic mb-2">
+                    "The AI insights newsletter has been invaluable for our enterprise transformation. We've implemented 3 strategies that delivered 200% ROI."
+                  </p>
+                  <div className="text-xs font-semibold">- Sarah Chen, CTO at TechCorp</div>
+                </div>
+                <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                  <p className="text-sm italic mb-2">
+                    "Best AI newsletter I've subscribed to. The case studies are incredibly detailed and actionable."
+                  </p>
+                  <div className="text-xs font-semibold">- Michael Rodriguez, AI Director</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div className="text-2xl font-bold">50,000+</div>
+            <div className="text-sm opacity-75">Subscribers</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold">95%</div>
+            <div className="text-sm opacity-75">Open Rate</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold">400%</div>
+            <div className="text-sm opacity-75">Avg ROI</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold">Weekly</div>
+            <div className="text-sm opacity-75">Delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

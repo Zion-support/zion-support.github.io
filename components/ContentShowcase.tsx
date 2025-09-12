@@ -1,15 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Clock, Tag, Star, Zap, Globe, Leaf } from 'lucide-react';
 
 interface ContentItem {
   title: string;
   description: string;
   href: string;
-  icon: string;
+  type: 'blog' | 'resource' | 'case-study';
   readTime?: string;
-  category?: string;
   isNew?: boolean;
+  icon?: string;
+  category?: string;
+  featured?: boolean;
   isTrending?: boolean;
+  badge?: string;
+  badgeColor?: string;
+  metrics?: string;
 }
 
 interface ContentShowcaseProps {
@@ -17,251 +23,298 @@ interface ContentShowcaseProps {
   subtitle: string;
   items: ContentItem[];
   variant?: 'default' | 'featured' | 'trending';
+  className?: string;
   showViewAll?: boolean;
   viewAllHref?: string;
+  viewAllText?: string;
+  columns?: 2 | 3 | 4;
 }
 
-export default function ContentShowcase({
+const ContentShowcase: React.FC<ContentShowcaseProps> = ({
   title,
   subtitle,
   items,
   variant = 'default',
-  showViewAll = true,
-  viewAllHref = '/blog'
-}: ContentShowcaseProps) {
+  className = '',
+  showViewAll = false,
+  viewAllHref = '#',
+  viewAllText = 'View All',
+  columns = 3
+}) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'featured':
         return {
-          container: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white',
-          badge: 'bg-white bg-opacity-20',
-          badgeText: 'text-white',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-          cardHover: 'hover:bg-opacity-20',
-          title: 'text-white',
-          subtitle: 'text-white opacity-90',
-          itemTitle: 'text-white',
-          itemDesc: 'text-white opacity-90',
-          meta: 'text-white opacity-75',
-          button: 'bg-white text-indigo-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600'
+          container: 'bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200',
+          title: 'text-blue-900',
+          subtitle: 'text-blue-700'
         };
       case 'trending':
         return {
-          container: 'bg-gradient-to-r from-orange-500 to-red-500 text-white',
-          badge: 'bg-white bg-opacity-20',
-          badgeText: 'text-white',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-          cardHover: 'hover:bg-opacity-20',
-          title: 'text-white',
-          subtitle: 'text-white opacity-90',
-          itemTitle: 'text-white',
-          itemDesc: 'text-white opacity-90',
-          meta: 'text-white opacity-75',
-          button: 'bg-white text-orange-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-orange-600'
+          container: 'bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200',
+          title: 'text-orange-900',
+          subtitle: 'text-orange-700'
         };
       default:
         return {
-          container: 'bg-white',
-          badge: 'bg-blue-100 text-blue-800',
-          badgeText: 'text-blue-800',
-          card: 'bg-white border border-gray-200',
-          cardHover: 'hover:shadow-lg',
+          container: 'bg-white border border-gray-200',
           title: 'text-gray-900',
-          subtitle: 'text-gray-600',
-          itemTitle: 'text-gray-900',
-          itemDesc: 'text-gray-600',
-          meta: 'text-gray-500',
-          button: 'bg-blue-600 text-white hover:bg-blue-700',
-          buttonSecondary: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+          subtitle: 'text-gray-600'
         };
     }
   };
 
   const styles = getVariantStyles();
 
-  return (
-    <section className={`py-16 ${styles.container} relative overflow-hidden`}>
-      {variant === 'featured' && (
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-      )}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6`}>
-            <span className={`text-sm font-medium ${styles.badgeText}`}>
-              {variant === 'featured' ? '✨ JUST PUBLISHED' : variant === 'trending' ? '🔥 TRENDING NOW' : '📚 LATEST CONTENT'}
-            </span>
-          </div>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.title}`}>
-            {title}
-          </h2>
-          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.subtitle}`}>
-            {subtitle}
-          </p>
-          {showViewAll && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                href={viewAllHref}
-                className={`${styles.button} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
-              >
-                📚 View All Content
-              </Link>
-              <Link
-                href="/resources"
-                className={`${styles.buttonSecondary} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
-              >
-                📋 Download Resources
-              </Link>
-            </div>
-          )}
-        </div>
+  const getGridCols = () => {
+    switch (columns) {
+      case 2: return 'md:grid-cols-2';
+      case 4: return 'md:grid-cols-2 lg:grid-cols-4';
+      default: return 'md:grid-cols-2 lg:grid-cols-3';
+    }
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className={`${styles.card} p-6 rounded-xl transition-all duration-300 ${styles.cardHover}`}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                <div className="flex items-center gap-2 mb-2">
-                  {item.isNew && (
-                    <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                      NEW
-                    </span>
-                  )}
-                  {item.isTrending && (
-                    <span className="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                      TRENDING
-                    </span>
-                  )}
-                  {item.category && (
-                    <span className={`${styles.meta} text-xs font-medium`}>
-                      {item.category}
-                    </span>
-                  )}
-                </div>
-                <h3 className={`text-lg font-semibold mb-2 ${styles.itemTitle}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm mb-3 ${styles.itemDesc}`}>
-                  {item.description}
-                </p>
-                <div className="flex items-center text-xs opacity-75">
-                  {item.readTime && (
-                    <>
-                      <span className={styles.meta}>{item.readTime}</span>
-                      <span className={`mx-2 ${styles.meta}`}>•</span>
-                    </>
-                  )}
-                  <span className={styles.meta}>
-                    {item.href.includes('/blog/') ? 'Article' : 
-                     item.href.includes('/case-studies/') ? 'Case Study' : 
-                     item.href.includes('/resources/') ? 'Resource' : 'Content'}
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog': return '📝';
+      case 'resource': return '📚';
+      case 'case-study': return '📊';
+      default: return '📄';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog': return 'bg-blue-100 text-blue-800';
+      case 'resource': return 'bg-green-100 text-green-800';
+      case 'case-study': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  return (
+    <div className={`rounded-xl p-6 ${styles.container} ${className}`}>
+      <div className="mb-6">
+        <h2 className={`text-2xl font-bold ${styles.title} mb-2`}>
+          {title}
+        </h2>
+        <p className={`${styles.subtitle}`}>
+          {subtitle}
+        </p>
+      </div>
+
+      <div className={`grid gap-6 ${getGridCols()}`}>
+        {items.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className="group block bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
+          >
+            <div className="p-6">
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex items-center space-x-2">
+                  <span className="text-2xl">
+                    {item.icon || getTypeIcon(item.type)}
+                  </span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
+                    {item.type.replace('-', ' ')}
                   </span>
                 </div>
+                {item.isNew && (
+                  <span className="px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">
+                    NEW
+                  </span>
+                )}
               </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
-// Predefined content collections for easy use
+              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                {item.description}
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-4 text-xs text-gray-500">
+                  {item.readTime && (
+                    <div className="flex items-center space-x-1">
+                      <Clock className="w-3 h-3" />
+                      <span>{item.readTime}</span>
+                    </div>
+                  )}
+                  {item.category && (
+                    <div className="flex items-center space-x-1">
+                      <Tag className="w-3 h-3" />
+                      <span>{item.category}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex items-center space-x-1 text-blue-600 group-hover:text-blue-700">
+                  <span className="text-sm font-medium">Read</span>
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+
+              {item.metrics && (
+                <div className="mt-3 pt-3 border-t border-gray-100">
+                  <div className="flex items-center space-x-1 text-xs font-medium text-green-600">
+                    <Zap className="w-3 h-3" />
+                    <span>{item.metrics}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {showViewAll && (
+        <div className="mt-6 text-center">
+          <Link
+            href={viewAllHref}
+            className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+          >
+            <span>{viewAllText}</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Featured content for homepage
 export const featuredContent = [
   {
-    title: "AI Productivity Automation 2025",
-    description: "Transform your business with 300% productivity gains and 40% cost reduction",
-    href: "/blog/ai-productivity-automation-2025",
-    icon: "🤖",
-    readTime: "15 min read",
-    category: "AI & Automation",
-    isNew: true
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
+    isNew: true,
+    badge: "HOT",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
   },
   {
-    title: "Startup Pricing Strategy 2025",
-    description: "Validate willingness to pay and scale with confidence using data-driven strategies",
-    href: "/blog/startup-pricing-strategy-2025",
-    icon: "💰",
-    readTime: "12 min read",
-    category: "Growth Strategy",
-    isNew: true
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
+    icon: "⚖️",
+    readTime: "25 min read",
+    category: "AI Ethics",
+    isNew: true,
+    badge: "CRITICAL",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "95% Trust Score"
   },
   {
-    title: "Healthcare AI Success Story",
-    description: "95% accuracy in medical diagnosis with 80% faster processing times",
-    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-    icon: "🏥",
-    readTime: "Case Study",
-    category: "Healthcare",
-    isNew: true
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
+    isNew: true,
+    badge: "BREAKTHROUGH",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction"
   },
   {
-    title: "AI Implementation Playbook",
-    description: "Complete 150-page guide to successful AI deployment with templates and checklists",
-    href: "/resources/ai-implementation-playbook-2025",
-    icon: "📚",
-    readTime: "Free Download",
-    category: "Resources",
-    isNew: true
+    title: "AI 2025 Breakthrough Innovations: The Future is Here",
+    description: "Discover the groundbreaking AI innovations that will reshape industries in 2025. From quantum-enhanced AI to brain-computer interfaces.",
+    href: "/blog/ai-2025-breakthrough-innovations",
+    icon: "🚀",
+    readTime: "28 min read",
+    category: "AI Innovation",
+    featured: true,
+    badge: "FUTURE",
+    badgeColor: "bg-blue-100 text-blue-800",
+    metrics: "Next Decade Tech"
   }
 ];
 
+// Trending content
 export const trendingContent = [
   {
-    title: "AI Go-To-Market 2025",
-    description: "From zero to traction: positioning, pricing, and distribution strategies",
-    href: "/blog/ai-go-to-market-2025",
-    icon: "📈",
-    readTime: "12 min read",
-    category: "Growth & Marketing",
-    isTrending: true
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
+    isTrending: true,
+    badge: "TRENDING",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
   },
   {
-    title: "LLM Guardrails in Production",
-    description: "Safety without blocking delivery - practical implementation guide",
-    href: "/blog/llm-guardrails-in-production-2025",
-    icon: "🛡️",
-    readTime: "8 min read",
-    category: "AI Engineering",
-    isTrending: true
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
+    isTrending: true,
+    badge: "BREAKTHROUGH",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction"
   },
   {
-    title: "Edge AI: Privacy by Design",
-    description: "On-device intelligence for instant, compliant customer experiences",
-    href: "/blog/edge-ai-privacy-by-design-2025",
-    icon: "🔐",
-    readTime: "7 min read",
-    category: "AI & Privacy",
-    isTrending: true
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
+    icon: "⚖️",
+    readTime: "25 min read",
+    category: "AI Ethics",
+    isTrending: true,
+    badge: "CRITICAL",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "95% Trust Score"
   }
 ];
 
+// Latest content
 export const latestContent = [
   {
-    title: "AI Customer Support Automation",
-    description: "Resolve faster, cut costs, and improve satisfaction with intelligent automation",
-    href: "/blog/ai-customer-support-automation-2025",
-    icon: "🎧",
-    readTime: "9 min read",
-    category: "Customer Experience"
+    title: "The Generative AI Revolution: Transforming Business in 2025",
+    description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+    href: "/blog/ai-2025-generative-ai-revolution",
+    icon: "🎨",
+    readTime: "22 min read",
+    category: "Generative AI",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-purple-100 text-purple-800",
+    metrics: "10x Content Output"
   },
   {
-    title: "AI Governance in Practice",
-    description: "Controls that reduce risk without blocking delivery",
-    href: "/blog/ai-governance-in-practice-2025",
+    title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+    description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+    href: "/blog/ai-2025-ethical-ai-governance",
     icon: "⚖️",
-    readTime: "9 min read",
-    category: "AI Governance"
+    readTime: "25 min read",
+    category: "AI Ethics",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-green-100 text-green-800",
+    metrics: "95% Trust Score"
   },
   {
-    title: "Cloud-Native Architecture Blueprint",
-    description: "Build scalable, resilient applications with modern cloud-native patterns",
-    href: "/blog/cloud-native-architecture-2025",
-    icon: "☁️",
-    readTime: "15 min read",
-    category: "Cloud & DevOps"
+    title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+    description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+    href: "/blog/ai-2025-edge-computing-revolution",
+    icon: "⚡",
+    readTime: "20 min read",
+    category: "Edge Computing",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-orange-100 text-orange-800",
+    metrics: "90% Latency Reduction"
   }
 ];
+
+export default ContentShowcase;
