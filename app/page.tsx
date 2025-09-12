@@ -127,32 +127,32 @@ export default function HomePage() {
               
               {/* Featured Content Preview */}
               <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                <Link href="/blog/ai-2025-multimodal-revolution" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🏗️</div>
-                    <h3 className="text-sm font-semibold mb-1">Advanced AI Architecture</h3>
-                    <p className="text-xs opacity-90">Scalable, resilient systems</p>
+                    <div className="text-2xl mb-2">🎯</div>
+                    <h3 className="text-sm font-semibold mb-1">Multimodal AI Revolution</h3>
+                    <p className="text-xs opacity-90">Human-computer interaction</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                <Link href="/blog/ai-2025-automation-trends" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
-                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                    <div className="text-2xl mb-2">🤖</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Automation Trends</h3>
+                    <p className="text-xs opacity-90">Intelligent business operations</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
+                <Link href="/case-studies/ai-manufacturing-transformation-success-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">⚛️</div>
-                    <h3 className="text-sm font-semibold mb-1">Quantum Computing</h3>
-                    <p className="text-xs opacity-90">Revolutionary breakthroughs</p>
+                    <div className="text-2xl mb-2">🏭</div>
+                    <h3 className="text-sm font-semibold mb-1">40% Cost Reduction</h3>
+                    <p className="text-xs opacity-90">Manufacturing success story</p>
                   </div>
                 </Link>
-                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <Link href="/webinars/ai-implementation-masterclass-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">💰</div>
-                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
-                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                    <div className="text-2xl mb-2">🎓</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Masterclass</h3>
+                    <p className="text-xs opacity-90">Live expert training</p>
                   </div>
                 </Link>
               </div>
