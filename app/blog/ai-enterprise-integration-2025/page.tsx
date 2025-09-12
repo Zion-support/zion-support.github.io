@@ -10,17 +10,6 @@ export const metadata: Metadata = {
 
 export default function AIEnterpriseIntegration2025() {
   return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
-              ← Back to Blog
-            </Link>
-            <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">AI & Enterprise</span>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Back Button */}
@@ -389,7 +378,7 @@ export default function AIEnterpriseIntegration2025() {
 >>>>>>> cursor/create-and-deploy-new-content-47dd
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
