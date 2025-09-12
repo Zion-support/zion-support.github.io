@@ -80,6 +80,16 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo Banner */}
+      <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <span className="font-semibold">New:</span>
+          <span className="opacity-90">3 fresh guides on AI deployment, services pricing, and Web3.</span>
+          <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read the blog →
+          </a>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
