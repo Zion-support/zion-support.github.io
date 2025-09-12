@@ -13,6 +13,8 @@ const Home = React.lazy(() => import('./pages/Home'));
 const NewServices = React.lazy(() => import('./pages/NewServices'));
 const InnovationLab = React.lazy(() => import('./pages/InnovationLab'));
 const TechnologyShowcase = React.lazy(() => import('./pages/TechnologyShowcase'));
+const ServiceShowcase = React.lazy(() => import('./pages/ServiceShowcase'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
 function App() {
   useScrollToTop();
@@ -27,6 +29,8 @@ function App() {
               <Route path="/new-services" element={<NewServices />} />
               <Route path="/innovation-lab" element={<InnovationLab />} />
               <Route path="/technology-showcase" element={<TechnologyShowcase />} />
+              <Route path="/service-showcase" element={<ServiceShowcase />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
             </Routes>
           </Suspense>
           <FloatingCTA />

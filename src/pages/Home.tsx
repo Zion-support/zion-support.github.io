@@ -7,6 +7,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { NewContentBanner } from "@/components/NewContentBanner";
+import { PromotionalBanner, SpecialOfferBanner, AchievementBanner } from "@/components/PromotionalBanner";
 
 export default function Home() {
   return (
@@ -17,13 +18,16 @@ export default function Home() {
         keywords="AI, technology, marketplace, services, talent, IT support, global services, tech professionals" 
         canonical="https://ziontechgroup.com/" 
       />
+      <PromotionalBanner />
       <NewContentBanner />
+      <AchievementBanner />
       <ITServiceRequestHero />
       <HeroSection />
       <EnhancedQuickAccess />
       <FeatureCTAs />
       <FeatureHighlights />
       <TestimonialsSection />
+      <SpecialOfferBanner />
     </div>
   );
 }
