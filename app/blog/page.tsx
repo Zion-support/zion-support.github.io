@@ -49,6 +49,14 @@ const posts = [
     date: '2025-09-11',
     tags: ['RAG', 'LLM', 'Architecture'],
   },
+  {
+    title: 'AI Risk & Compliance 2025: Practical Guardrails That Scale',
+    description:
+      "Deploy AI safely with practical governance, auditability, and controls that don't block delivery.",
+    href: '/blog/ai-risk-and-compliance-2025',
+    date: '2025-09-12',
+    tags: ['AI', 'Governance', 'Security'],
+  },
 ];
 
 	const featuredPosts = blogPosts.filter(post => post.featured);

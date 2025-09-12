@@ -351,6 +351,18 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-risk-and-compliance-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Risk & Compliance 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Guardrails that scale without slowing delivery</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>10 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
             <Link href='/blog/ai-customer-support-automation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎧</div>
@@ -630,6 +642,20 @@ export default function HomePage() {
           <div className='mb-12'>
             <h3 className='text-2xl font-bold text-gray-900 mb-8 text-center'>Trending This Week</h3>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+              <Link href='/blog/ai-risk-and-compliance-2025' className='group'>
+                <div className='bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100'>
+                  <div className='text-3xl mb-3'>🛡️</div>
+                  <div className='text-xs font-medium text-indigo-700 mb-2'>AI Governance</div>
+                  <h4 className='font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors'>
+                    AI Risk & Compliance 2025
+                  </h4>
+                  <p className='text-gray-600 text-sm mb-3'>Practical controls that scale with your roadmap.</p>
+                  <div className='flex items-center justify-between text-xs text-gray-500'>
+                    <span>10 min read</span>
+                    <span>✨ New</span>
+                  </div>
+                </div>
+              </Link>
               <Link href='/blog/startup-growth-hacking-2025' className='group'>
                 <div className='bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100'>
                   <div className='text-3xl mb-3'>🚀</div>
