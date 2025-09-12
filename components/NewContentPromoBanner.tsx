@@ -6,7 +6,7 @@ interface ContentItem {
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'service';
+  type: 'blog' | 'case-study' | 'service' | 'webinar';
   featured: boolean;
 }
 
@@ -17,14 +17,38 @@ const NewContentPromoBanner: React.FC = () => {
   const newContent: ContentItem[] = [
     {
       id: '1',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
+      title: 'AI 2025: The Generative AI Enterprise Revolution',
+      description: 'Discover how generative AI is revolutionizing enterprise operations with 300% ROI and unprecedented efficiency gains.',
+      href: '/blog/ai-2025-generative-ai-enterprise-revolution',
       type: 'blog',
       featured: true
     },
     {
       id: '2',
+      title: 'AI 2025: The Cybersecurity Revolution',
+      description: 'Explore how AI is revolutionizing cybersecurity with 99.7% threat detection accuracy and automated response systems.',
+      href: '/blog/ai-2025-cybersecurity-revolution',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '3',
+      title: 'AI Retail Transformation: 400% Revenue Growth',
+      description: 'Complete case study: How a major retail chain achieved 400% revenue growth through AI-powered personalization.',
+      href: '/case-studies/ai-2025-retail-transformation-breakthrough',
+      type: 'case-study',
+      featured: true
+    },
+    {
+      id: '4',
+      title: 'AI 2025 Implementation Masterclass: Advanced Strategies',
+      description: 'Join our exclusive 6-hour masterclass on advanced AI implementation strategies with industry experts.',
+      href: '/webinars/ai-2025-implementation-masterclass-advanced',
+      type: 'webinar',
+      featured: true
+    },
+    {
+      id: '5',
       title: 'AI Healthcare Diagnosis Breakthrough 2025',
       description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
       href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
@@ -32,15 +56,7 @@ const NewContentPromoBanner: React.FC = () => {
       featured: true
     },
     {
-      id: '3',
-      title: 'AI Financial Services Transformation Success',
-      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
-      type: 'case-study',
-      featured: true
-    },
-    {
-      id: '4',
+      id: '6',
       title: 'AI Automation Services',
       description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
       href: '/services/ai-automation',
@@ -65,6 +81,8 @@ const NewContentPromoBanner: React.FC = () => {
         return '📊';
       case 'service':
         return '🚀';
+      case 'webinar':
+        return '🎓';
       default:
         return '✨';
     }
@@ -78,6 +96,8 @@ const NewContentPromoBanner: React.FC = () => {
         return 'from-green-500 to-emerald-500';
       case 'service':
         return 'from-purple-500 to-pink-500';
+      case 'webinar':
+        return 'from-orange-500 to-red-500';
       default:
         return 'from-gray-500 to-gray-600';
     }
@@ -104,7 +124,8 @@ const NewContentPromoBanner: React.FC = () => {
                 <span className="text-2xl mr-3">{getTypeIcon(currentContent.type)}</span>
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
                   {currentContent.type === 'case-study' ? 'Case Study' : 
-                   currentContent.type === 'service' ? 'Service' : 'New Article'}
+                   currentContent.type === 'service' ? 'Service' : 
+                   currentContent.type === 'webinar' ? 'Webinar' : 'New Article'}
                 </span>
               </div>
               <h3 className="text-2xl font-bold mb-2">
