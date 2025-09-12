@@ -549,6 +549,28 @@ const NewContentPromoBanner = ({
       readTime: '22 min read',
       date: 'Jan 18, 2025',
       category: 'AI Healthcare'
+    },
+    {
+      id: '9991',
+      title: 'LLM Inference Optimization on GPUs (2025)',
+      description: 'Quantization, KV cache strategies, smart batching, and parallelism to cut latency and cost.',
+      href: '/blog/ai-2025-llm-inference-optimization-gpus',
+      type: 'blog',
+      featured: true,
+      readTime: '15 min read',
+      date: 'Sep 12, 2025',
+      category: 'Inference'
+    },
+    {
+      id: '9992',
+      title: 'Serverless GenAI Architectures (2025)',
+      description: 'Event-driven GenAI with functions, queues, vector DBs, and eval guardrails on AWS/GCP/Azure.',
+      href: '/blog/ai-2025-serverless-genai-architectures',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'Architecture'
     }
   ];
 
