@@ -1,0 +1,1 @@
+import React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage'; export default function MobileAppRoutes(props: any) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)}

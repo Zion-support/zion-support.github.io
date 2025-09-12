@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-08-29T19:12:14.092Z",
+  "duration": 9084,
+  "results": {
+    "ci": {
+      "status": "failure",
+      "results": {
+        "linting": "warning",
+        "typeCheck": "warning",
+        "error": "Command failed: npm run build"
+      }
+    },
+    "security": {
+      "status": "success",
+      "results": {
+        "audit": {
+          "status": "failure",
+          "error": "Command failed: npm audit --audit-level moderate --json"
+        },
+        "dependencies": {
+          "status": "failure",
+          "error": "Command failed: npm outdated --json"
+        }
+      }
+    },
+    "testing": {
+      "status": "success",
+      "results": {
+        "unit": {
+          "status": "success",
+          "output": "No unit tests found\n"
+        },
+        "integration": {
+          "status": "success",
+          "output": "No integration tests found\n"
+        },
+        "e2e": {
+          "status": "success",
+          "output": "No E2E tests found\n"
+        }
+      }
+    },
+    "deployment": {
+      "status": "pending",
+      "results": {}
+    },
+    "monitoring": {
+      "status": "success",
+      "results": {
+        "performance": {
+          "status": "success",
+          "message": "Performance tests configured"
+        }
+      }
+    }
+  },
+  "summary": {
+    "total": 5,
+    "success": 3,
+    "failure": 1,
+    "pending": 1
+  }
+}

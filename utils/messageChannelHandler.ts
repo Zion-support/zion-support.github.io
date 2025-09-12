@@ -1,4 +1,9 @@
+// Message channel handler for communication between components
 export const messageChannelHandler = {
-  sendMessage: (message$1 => {},
-  receiveMessage: (callback$1 => {},
+  send: (message: any) => {
+    // Implementation for sending messages
+  },
+  receive: (callback: (message: any) => void) => {
+    // Implementation for receiving messages
+  }
 };
