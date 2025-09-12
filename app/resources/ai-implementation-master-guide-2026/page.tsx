@@ -1,11 +1,12 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
+import SEO from '../../../components/SEO';
 
 export default function AIImplementationMasterGuide2026() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <SEO
+<<<<<<< HEAD
         title="AI Implementation Master Guide 2026: Complete 200+ Page Resource | Zion Tech Group"
         description="Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment with 300%+ ROI."
         keywords="AI implementation guide, AI deployment, AI strategy, AI templates, AI checklists, AI best practices, 2026 guide"
@@ -36,224 +37,124 @@ export default function AIImplementationMasterGuide2026() {
             <span>⬇️ 15K+ downloads</span>
             <span>•</span>
             <span>⭐ 4.9/5 rating</span>
+=======
+        title="AI Implementation Master Guide 2026: Complete Framework & Templates | Zion Tech Group"
+        description="Download our comprehensive 200+ page AI Implementation Master Guide 2026. Includes frameworks, templates, checklists, and step-by-step implementation strategies for successful AI adoption."
+        keywords="AI implementation guide, AI framework, AI templates, AI checklist, AI adoption, AI strategy, AI implementation roadmap"
+        url="/resources/ai-implementation-master-guide-2026"
+      />
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div className="py-20 bg-gradient-to-br from-blue-50 to-purple-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+                <span className="text-sm font-medium">📖 FREE DOWNLOAD</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                AI Implementation Master Guide 2026
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                Complete 200+ page comprehensive guide with frameworks, templates, and step-by-step implementation strategies for successful AI adoption
+              </p>
+              <div className="flex items-center justify-center text-sm text-gray-500">
+                <span>200+ pages</span>
+                <span className="mx-2">•</span>
+                <span>Free Download</span>
+                <span className="mx-2">•</span>
+                <span>Updated January 2025</span>
+              </div>
+            </div>
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
           </div>
         </div>
 
         {/* Resource Content */}
-        <article className="prose prose-lg max-w-none">
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 What You'll Get</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              This comprehensive guide contains everything you need to successfully implement AI in your organization. 
-              From initial strategy development to production deployment and optimization, you'll have access to 
-              proven frameworks, real-world case studies, and actionable templates that have helped organizations 
-              achieve 300%+ ROI and 60% cost reduction.
-            </p>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Guide Contents</h2>
-          
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">📋 Part 1: AI Strategy & Planning (Pages 1-50)</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>AI readiness assessment framework and scoring methodology</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Business case development templates with ROI calculators</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>AI strategy roadmap template (12-month implementation plan)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Stakeholder alignment and change management playbook</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Budget planning and resource allocation guidelines</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🔧 Part 2: Technical Implementation (Pages 51-120)</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>AI architecture design patterns and best practices</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Technology stack selection criteria and evaluation matrix</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Data preparation and quality assurance checklists</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Model development and training workflows</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Testing and validation frameworks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Deployment and integration strategies</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🛡️ Part 3: Security & Governance (Pages 121-150)</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>AI security hardening checklist (150+ items)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Data privacy and compliance frameworks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>AI governance and risk management policies</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Ethical AI guidelines and bias mitigation strategies</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Audit and monitoring procedures</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">📊 Part 4: Operations & Optimization (Pages 151-200)</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Performance monitoring and KPI dashboards</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Cost optimization strategies and tools</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Model retraining and maintenance schedules</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>Scaling and expansion planning</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-3">✓</span>
-                  <span>ROI measurement and reporting templates</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Bonus Resources Included</h2>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">📋 Ready-to-Use Templates</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• AI project charter template</li>
-                <li>• Data quality assessment checklist</li>
-                <li>• Model performance evaluation form</li>
-                <li>• Security audit checklist</li>
-                <li>• ROI calculation spreadsheet</li>
-                <li>• Stakeholder communication templates</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🎯 Implementation Checklists</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Pre-implementation readiness checklist</li>
-                <li>• Technical deployment checklist</li>
-                <li>• Security configuration checklist</li>
-                <li>• Go-live preparation checklist</li>
-                <li>• Post-deployment optimization checklist</li>
-                <li>• Maintenance and monitoring checklist</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Case Studies</h2>
-          
-          <div className="space-y-6 mb-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Case Study 1: Fortune 500 Manufacturing</h3>
-              <p className="text-gray-600 mb-3">
-                How a manufacturing giant achieved $200M in annual savings through AI automation implementation.
+        <article className="py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">What's Included in This Guide</h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Our AI Implementation Master Guide 2026 is the most comprehensive resource available for organizations looking to successfully adopt and implement artificial intelligence. This 200+ page guide includes everything you need to plan, execute, and optimize your AI initiatives.
               </p>
-              <div className="flex items-center text-sm text-gray-500">
-                <span>Result: 340% ROI in 6 months</span>
-                <span className="mx-2">•</span>
-                <span>60% cost reduction</span>
-              </div>
-            </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Case Study 2: Financial Services Transformation</h3>
-              <p className="text-gray-600 mb-3">
-                Complete digital transformation in financial services with 300% efficiency gains and $50M savings.
-              </p>
-              <div className="flex items-center text-sm text-gray-500">
-                <span>Result: 300% efficiency improvement</span>
-                <span className="mx-2">•</span>
-                <span>$50M annual savings</span>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Case Study 3: Healthcare AI Implementation</h3>
-              <p className="text-gray-600 mb-3">
-                AI-powered diagnostic systems that improved accuracy by 40% and reduced diagnosis time by 70%.
-              </p>
-              <div className="flex items-center text-sm text-gray-500">
-                <span>Result: 40% accuracy improvement</span>
-                <span className="mx-2">•</span>
-                <span>70% faster diagnosis</span>
-              </div>
-            </div>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">What Makes This Guide Different</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-green-600 font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Proven Methodologies</h4>
-                  <p className="text-gray-600 text-sm">Based on 500+ successful AI implementations across industries</p>
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-12">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Guide Contents Overview</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">200+</div>
+                    <div className="text-gray-700">Comprehensive pages</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">15</div>
+                    <div className="text-gray-700">Implementation frameworks</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                    <div className="text-gray-700">Ready-to-use templates</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">25</div>
+                    <div className="text-gray-700">Industry case studies</div>
+                  </div>
                 </div>
               </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Chapter Breakdown</h2>
               
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-green-600 font-bold">✓</span>
+              <div className="space-y-6 mb-8">
+                <div className="bg-white border-l-4 border-blue-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Chapter 1: AI Strategy & Planning</h3>
+                  <p className="text-gray-600 mb-3">Learn how to develop a comprehensive AI strategy aligned with your business objectives, including ROI frameworks and success metrics.</p>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• AI readiness assessment framework</li>
+                    <li>• Strategic planning templates</li>
+                    <li>• ROI calculation worksheets</li>
+                  </ul>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Actionable Templates</h4>
-                  <p className="text-gray-600 text-sm">Ready-to-use templates and checklists for immediate implementation</p>
+
+                <div className="bg-white border-l-4 border-green-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Chapter 2: Data Strategy & Preparation</h3>
+                  <p className="text-gray-600 mb-3">Master data collection, cleaning, and preparation techniques essential for successful AI implementation.</p>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Data quality assessment checklist</li>
+                    <li>• Data preparation workflows</li>
+                    <li>• Privacy and compliance guidelines</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white border-l-4 border-purple-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Chapter 3: Technology Selection</h3>
+                  <p className="text-gray-600 mb-3">Navigate the complex landscape of AI technologies and select the right tools for your specific use cases.</p>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Technology evaluation matrix</li>
+                    <li>• Vendor comparison templates</li>
+                    <li>• Architecture design patterns</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white border-l-4 border-orange-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Chapter 4: Implementation Roadmap</h3>
+                  <p className="text-gray-600 mb-3">Step-by-step implementation guide with timelines, milestones, and best practices for successful deployment.</p>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Project timeline templates</li>
+                    <li>• Risk mitigation strategies</li>
+                    <li>• Change management plans</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white border-l-4 border-red-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Chapter 5: Monitoring & Optimization</h3>
+                  <p className="text-gray-600 mb-3">Learn how to monitor AI performance, measure success, and continuously optimize your implementations.</p>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Performance monitoring dashboards</li>
+                    <li>• Optimization frameworks</li>
+                    <li>• Continuous improvement processes</li>
+                  </ul>
                 </div>
               </div>
+<<<<<<< HEAD
               
               <div className="flex items-start">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -400,9 +301,197 @@ export default function AIImplementationMasterGuide2026() {
                 </div>
               </div>
             </Link>
+=======
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Industry-Specific Guides</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                The guide includes specialized sections for different industries, each with tailored strategies, use cases, and implementation approaches.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-green-50 p-6 rounded-xl">
+                  <h4 className="text-lg font-semibold text-green-800 mb-3">Manufacturing</h4>
+                  <ul className="text-green-700 text-sm space-y-2">
+                    <li>• Predictive maintenance strategies</li>
+                    <li>• Quality control optimization</li>
+                    <li>• Supply chain automation</li>
+                    <li>• Safety monitoring systems</li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 p-6 rounded-xl">
+                  <h4 className="text-lg font-semibold text-blue-800 mb-3">Healthcare</h4>
+                  <ul className="text-blue-700 text-sm space-y-2">
+                    <li>• Diagnostic AI implementation</li>
+                    <li>• Patient care optimization</li>
+                    <li>• Drug discovery processes</li>
+                    <li>• Compliance and privacy</li>
+                  </ul>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-xl">
+                  <h4 className="text-lg font-semibold text-purple-800 mb-3">Financial Services</h4>
+                  <ul className="text-purple-700 text-sm space-y-2">
+                    <li>• Fraud detection systems</li>
+                    <li>• Risk assessment models</li>
+                    <li>• Customer service automation</li>
+                    <li>• Regulatory compliance</li>
+                  </ul>
+                </div>
+                <div className="bg-orange-50 p-6 rounded-xl">
+                  <h4 className="text-lg font-semibold text-orange-800 mb-3">Retail & E-commerce</h4>
+                  <ul className="text-orange-700 text-sm space-y-2">
+                    <li>• Recommendation engines</li>
+                    <li>• Inventory optimization</li>
+                    <li>• Customer analytics</li>
+                    <li>• Pricing strategies</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready-to-Use Templates</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                The guide includes 50+ professionally designed templates that you can immediately use in your AI implementation projects.
+              </p>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 mb-12">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Template Categories</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Planning Templates</h4>
+                    <ul className="text-gray-700 text-sm space-y-2">
+                      <li>• AI strategy document template</li>
+                      <li>• Project charter template</li>
+                      <li>• Stakeholder analysis matrix</li>
+                      <li>• Risk assessment worksheet</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Implementation Templates</h4>
+                    <ul className="text-gray-700 text-sm space-y-2">
+                      <li>• Data collection checklist</li>
+                      <li>• Model evaluation framework</li>
+                      <li>• Deployment checklist</li>
+                      <li>• Testing protocols</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Monitoring Templates</h4>
+                    <ul className="text-gray-700 text-sm space-y-2">
+                      <li>• Performance dashboard template</li>
+                      <li>• ROI tracking worksheet</li>
+                      <li>• User feedback form</li>
+                      <li>• Optimization log template</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Governance Templates</h4>
+                    <ul className="text-gray-700 text-sm space-y-2">
+                      <li>• AI ethics framework</li>
+                      <li>• Compliance checklist</li>
+                      <li>• Security assessment</li>
+                      <li>• Audit trail template</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Stories & Case Studies</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Learn from real-world implementations with 25 detailed case studies from organizations that have successfully adopted AI across different industries and use cases.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Expert Insights & Best Practices</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                The guide includes insights from leading AI experts, best practices from successful implementations, and lessons learned from common pitfalls to avoid.
+              </p>
+
+              <div className="bg-gray-900 text-white rounded-2xl p-8 mb-12">
+                <h3 className="text-2xl font-bold mb-4">Download Your Free Copy Today</h3>
+                <p className="text-gray-300 mb-6">
+                  Get instant access to the most comprehensive AI implementation guide available. Join thousands of professionals who have already downloaded this valuable resource.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center text-lg">
+                    📥 Download Free Guide
+                  </button>
+                  <Link
+                    href="/contact"
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center text-lg"
+                  >
+                    Get Implementation Support
+                  </Link>
+                </div>
+                <p className="text-sm text-gray-400 mt-4">
+                  No spam. Instant download. No credit card required.
+                </p>
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">What Readers Are Saying</h2>
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <p className="text-gray-700 mb-4 italic">
+                    "This guide is a game-changer. It provided everything we needed to successfully implement AI in our manufacturing operations. The templates alone saved us months of work."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <span className="text-blue-600 font-bold">JS</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">John Smith</div>
+                      <div className="text-sm text-gray-500">CTO, Manufacturing Co.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <p className="text-gray-700 mb-4 italic">
+                    "The industry-specific sections were incredibly valuable. We were able to adapt the frameworks to our healthcare use case with minimal customization."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                      <span className="text-green-600 font-bold">MJ</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">Maria Johnson</div>
+                      <div className="text-sm text-gray-500">AI Director, Health System</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        {/* Related Resources */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Related Resources</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link href="/resources/ai-cybersecurity-checklist-2025" className="group">
+                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
+                  <div className="text-3xl mb-3">🛡️</div>
+                  <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                    AI Cybersecurity Checklist 2025
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    150+ security items for secure AI implementation
+                  </p>
+                </div>
+              </Link>
+              <Link href="/resources/ai-workforce-transformation-playbook-2025" className="group">
+                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
+                  <div className="text-3xl mb-3">👥</div>
+                  <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                    AI Workforce Transformation Playbook
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Complete reskilling strategies and implementation guides
+                  </p>
+                </div>
+              </Link>
+            </div>
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 }

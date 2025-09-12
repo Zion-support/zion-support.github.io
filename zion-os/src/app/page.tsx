@@ -1,4 +1,5 @@
 import FeatureCard from './components/FeatureCard';
+import { getLatestArticles } from './news/data';
 
 export default function HomePage() {
   const features = [
@@ -173,6 +174,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
               <div className="p-6">
@@ -221,6 +223,18 @@ export default function HomePage() {
 >>>>>>> 94c34cf87ce80fe1dec962245ab12c3fa6ded719
               </div>
             </a>
+=======
+            {getLatestArticles(3).map((article, index) => (
+              <a key={index} href={`/news/${article.slug}`} className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+                <div className={`h-2 bg-gradient-to-r ${article.gradient}`} />
+                <div className="p-6">
+                  <div className="text-2xl mb-2">{article.emoji}</div>
+                  <h3 className="text-lg font-semibold mb-1 group-hover:text-white">{article.title}</h3>
+                  <p className="text-white/70">{article.excerpt}</p>
+                </div>
+              </a>
+            ))}
+>>>>>>> eeadc7135fa1d00c9e6745c2bfdd5df450b12512
           </div>
         </div>
       </section>
