@@ -34,6 +34,89 @@ export default function ContentShowcasePage() {
             <p className="text-xl text-gray-600">Expert insights and analysis on AI and technology trends</p>
           </div>
           
+          {/* New September 2025 Drops */}
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">☁️ ARCHITECTURE</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/cloud-native-architecture-2025" className="hover:text-blue-600">
+                    Cloud-Native Architecture 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Modern patterns for scale, resilience and cost governance.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/cloud-native-architecture-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🧠 VECTOR</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-vector-databases-2025" className="hover:text-blue-600">
+                    AI Vector Databases 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Retrieval strategies and production RAG patterns.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/ai-vector-databases-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-pink-100 to-purple-100 text-pink-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🤖 AGENTS</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-agents-production-2025" className="hover:text-blue-600">
+                    AI Agents in Production 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Guardrails, observability and ROI for deployed agents.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/ai-agents-production-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🏭 MANUFACTURING</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-automation-manufacturing-2025" className="hover:text-blue-600">
+                    AI Automation in Manufacturing 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Boost yield and throughput with pragmatic automation.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/ai-automation-manufacturing-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="p-6">
@@ -96,6 +179,51 @@ export default function ContentShowcasePage() {
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">Jan 22, 2025</span>
                   <Link href="/blog/startup-pricing-strategy-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Newly added content cards */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-indigo-100 to-blue-100 text-indigo-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">⚡ EDGE AI</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-2025-edge-ai-acceleration" className="hover:text-blue-600">
+                    AI 2025: Edge AI Acceleration
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How on-device intelligence is transforming operations with millisecond latency and privacy by design.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Jan 27, 2025</span>
+                  <Link href="/blog/ai-2025-edge-ai-acceleration" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🛡️ GOVERNANCE</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-2025-ai-governance-blueprint" className="hover:text-blue-600">
+                    AI 2025: Governance & Risk Blueprint
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  A practical blueprint for responsible AI policies, controls, and monitoring in production.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Jan 27, 2025</span>
+                  <Link href="/blog/ai-2025-ai-governance-blueprint" className="text-blue-600 font-semibold hover:text-blue-700">
                     Read More →
                   </Link>
                 </div>
