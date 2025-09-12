@@ -48,11 +48,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎯 Revolutionary AI Tools Suite: 6 Powerful Tools Now Available!
+                🎯 Revolutionary AI Tools Suite: 7 Powerful Tools Now Available!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
                 Transform your AI journey with our comprehensive suite of tools: AI Readiness Assessment, ROI Calculator, 
-                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, and Cost Optimizer. 
+                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, Cost Optimizer, and Security Assessment. 
                 Get personalized insights and recommendations to maximize your AI success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -105,6 +105,64 @@ export default function HomePage() {
                 >
                   Download Free Guide
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Integration Guide Banner */}
+        <section className="py-8 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">📚 NEW COMPREHENSIVE GUIDE</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 Complete AI Integration Guide 2025: Step-by-Step Implementation
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Master AI integration with our comprehensive guide covering planning, implementation, testing, deployment, and monitoring. 
+                From initial assessment to full-scale optimization - everything you need for successful AI adoption.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Link
+                  href="/resources/ai-integration-guide-2025"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  📖 Read Complete Guide
+                </Link>
+                <Link
+                  href="/tools/ai-readiness-assessment"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  🎯 Start with Assessment
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  📞 Get Expert Help
+                </Link>
+              </div>
+              
+              {/* Guide Features Preview */}
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🎯</div>
+                  <h3 className="text-sm font-semibold mb-1">7-Phase Implementation</h3>
+                  <p className="text-xs opacity-90">From assessment to optimization</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">📊</div>
+                  <h3 className="text-sm font-semibold mb-1">Best Practices</h3>
+                  <p className="text-xs opacity-90">Proven strategies and methodologies</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🛡️</div>
+                  <h3 className="text-sm font-semibold mb-1">Risk Mitigation</h3>
+                  <p className="text-xs opacity-90">Common challenges and solutions</p>
+                </div>
               </div>
             </div>
           </div>
