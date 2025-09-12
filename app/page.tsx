@@ -48,11 +48,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                🚀 25+ New AI Resources Just Released!
+                🚀 30+ New AI Resources Just Released!
               </h1>
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover our biggest content update yet: Advanced AI Automation, Cybersecurity Threats, 
-                Healthcare AI Success Stories, and the complete 200+ page AI Implementation Master Guide 2026. 
+                Discover our biggest content update yet: Quantum AI Breakthroughs, Edge Computing Acceleration, 
+                Smart City Transformations, and the complete 200+ page AI Implementation Master Guide 2026. 
                 Everything you need to succeed with AI in 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -72,27 +72,27 @@ export default function HomePage() {
               
               {/* Featured Content Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                <Link href="/blog/ai-2025-advanced-automation" className="group">
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🤖</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Advanced Automation 2025</h3>
-                    <p className="text-xs opacity-90">Complete implementation guide</p>
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">⚛️</div>
+                    <h3 className="text-sm font-semibold mb-1">Quantum AI Breakthrough</h3>
+                    <p className="text-xs opacity-90">Revolutionary quantum computing</p>
                   </div>
                 </Link>
                 
-                <Link href="/blog/ai-2025-cybersecurity-threats" className="group">
+                <Link href="/blog/ai-2025-edge-computing-acceleration" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity Threats</h3>
-                    <p className="text-xs opacity-90">Complete defense guide</p>
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">⚡</div>
+                    <h3 className="text-sm font-semibold mb-1">Edge AI Acceleration</h3>
+                    <p className="text-xs opacity-90">Real-time intelligence</p>
                   </div>
                 </Link>
                 
-                <Link href="/case-studies/ai-healthcare-diagnosis-success-2025" className="group">
+                <Link href="/case-studies/ai-smart-city-transformation-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🏥</div>
-                    <h3 className="text-sm font-semibold mb-1">Healthcare AI Success</h3>
-                    <p className="text-xs opacity-90">95% accuracy achieved</p>
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🏙️</div>
+                    <h3 className="text-sm font-semibold mb-1">Smart City Success</h3>
+                    <p className="text-xs opacity-90">$500M savings achieved</p>
                   </div>
                 </Link>
                 
