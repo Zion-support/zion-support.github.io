@@ -535,6 +535,149 @@ export default function HomePage() {
       </section>
 
 
+      {/* Enhanced Content Showcase - Latest Additions */}
+      <section className='py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-20'></div>
+        <div className='absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 rounded-full px-8 py-3 mb-8'>
+              <span className='text-lg font-bold'>🔥 JUST ADDED - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              Revolutionary AI Content & Insights
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto'>
+              Discover our latest breakthrough content: Neural interfaces, AI governance, education transformation, 
+              and cutting-edge consulting services that are reshaping the future of technology.
+            </p>
+          </div>
+
+          <div className='grid lg:grid-cols-2 gap-8 mb-12'>
+            {/* Featured Blog Articles */}
+            <div className='space-y-6'>
+              <h3 className='text-2xl font-bold mb-6 text-center'>Latest Blog Articles</h3>
+              
+              <Link href='/blog/ai-2025-neural-interfaces-brain-computer' className='group block'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
+                  <div className='flex items-start space-x-4'>
+                    <div className='text-4xl group-hover:scale-110 transition-transform'>🧠</div>
+                    <div className='flex-1'>
+                      <h4 className='text-xl font-bold mb-2 group-hover:text-blue-300'>Neural Interfaces & Brain-Computer Integration</h4>
+                      <p className='text-sm opacity-90 mb-3'>The next frontier in AI - direct neural communication with AI systems</p>
+                      <div className='flex items-center text-xs opacity-75'>
+                        <span>15 min read</span>
+                        <span className='mx-2'>•</span>
+                        <span className='bg-green-500 px-2 py-1 rounded-full'>New</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/blog/ai-2025-enterprise-ai-governance' className='group block'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
+                  <div className='flex items-start space-x-4'>
+                    <div className='text-4xl group-hover:scale-110 transition-transform'>⚖️</div>
+                    <div className='flex-1'>
+                      <h4 className='text-xl font-bold mb-2 group-hover:text-blue-300'>Enterprise AI Governance</h4>
+                      <p className='text-sm opacity-90 mb-3'>Build trust, compliance, and ethical AI systems in your organization</p>
+                      <div className='flex items-center text-xs opacity-75'>
+                        <span>18 min read</span>
+                        <span className='mx-2'>•</span>
+                        <span className='bg-blue-500 px-2 py-1 rounded-full'>Essential</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Featured Case Studies & Services */}
+            <div className='space-y-6'>
+              <h3 className='text-2xl font-bold mb-6 text-center'>Success Stories & Services</h3>
+              
+              <Link href='/case-studies/ai-transformation-education-sector-2025' className='group block'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
+                  <div className='flex items-start space-x-4'>
+                    <div className='text-4xl group-hover:scale-110 transition-transform'>🎓</div>
+                    <div className='flex-1'>
+                      <h4 className='text-xl font-bold mb-2 group-hover:text-blue-300'>Education AI Transformation</h4>
+                      <p className='text-sm opacity-90 mb-3'>300% learning outcomes improvement with AI-powered personalized learning</p>
+                      <div className='flex items-center text-xs opacity-75'>
+                        <span>Case Study</span>
+                        <span className='mx-2'>•</span>
+                        <span className='bg-purple-500 px-2 py-1 rounded-full'>Success Story</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='/services/ai-consulting' className='group block'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
+                  <div className='flex items-start space-x-4'>
+                    <div className='text-4xl group-hover:scale-110 transition-transform'>🎯</div>
+                    <div className='flex-1'>
+                      <h4 className='text-xl font-bold mb-2 group-hover:text-blue-300'>AI Consulting Services</h4>
+                      <p className='text-sm opacity-90 mb-3'>Strategic AI implementation from strategy to deployment</p>
+                      <div className='flex items-center text-xs opacity-75'>
+                        <span>Service</span>
+                        <span className='mx-2'>•</span>
+                        <span className='bg-orange-500 px-2 py-1 rounded-full'>Expert</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Content Stats */}
+          <div className='grid md:grid-cols-4 gap-6 mb-12'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>25+</div>
+              <div className='text-sm opacity-90'>New Articles</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-green-400 mb-2'>15+</div>
+              <div className='text-sm opacity-90'>Case Studies</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-purple-400 mb-2'>10+</div>
+              <div className='text-sm opacity-90'>Services</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-orange-400 mb-2'>50K+</div>
+              <div className='text-sm opacity-90'>Readers</div>
+            </div>
+          </div>
+
+          <div className='text-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/content-showcase'
+                className='bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-lg shadow-lg hover:shadow-xl'
+              >
+                Explore All Content
+              </Link>
+              <Link
+                href='/blog'
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-slate-900 transition-all duration-300 text-lg'
+              >
+                Read Latest Articles
+              </Link>
+              <Link
+                href='/case-studies'
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-slate-900 transition-all duration-300 text-lg'
+              >
+                View Success Stories
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
