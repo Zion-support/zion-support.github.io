@@ -34,48 +34,70 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '59',
-      title: 'FinOps for GenAI 2025: Cost, Quality, and Risk Controls',
-      description: 'Operator guide to optimize spend while maintaining quality and safety with budgets, SLAs, and guardrails.',
-      href: '/blog/ai-2025-finops-for-genai',
+      id: '60',
+      title: 'AI Governance Maturity Model (2025)',
+      description: 'Assess and improve AI governance with a pragmatic maturity model across policy, risk, and engineering.',
+      href: '/blog/ai-2025-governance-maturity-model',
       type: 'blog',
       featured: true,
-      readTime: '18 min read',
+      readTime: '16 min read',
       date: 'Sep 12, 2025',
-      category: 'Optimization'
+      category: 'Governance'
     },
     {
-      id: '58',
-      title: 'AI Sales Copilots Blueprint 2025',
-      description: 'Design, deploy, and govern AI sales copilots to boost win rates and cycle time—safely.',
-      href: '/blog/ai-2025-ai-sales-copilots-blueprint',
-      type: 'blog',
+      id: '61',
+      title: 'Governance Maturity Rollout: 60% Faster Reviews',
+      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage 35%.',
+      href: '/case-studies/ai-2025-governance-maturity-rollout',
+      type: 'case-study',
       featured: true,
-      readTime: '20 min read',
+      readTime: '10 min read',
       date: 'Sep 12, 2025',
-      category: 'Go-to-Market'
+      category: 'Case Study'
     },
     {
       id: '54',
-      title: 'Knowledge Graph RAG in 2025: Hybrid Retrieval in Production',
-      description: 'Fuse vector search with knowledge graphs for factual, controllable, and policy-aware RAG.',
-      href: '/blog/ai-2025-knowledge-graph-rag',
+      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
+      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
+      href: '/blog/ai-2025-mlops-best-practices',
       type: 'blog',
       featured: true,
-      readTime: '20 min read',
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'MLOps'
+    },
+    {
+      id: '55',
+      title: 'Vector Databases Benchmarks 2025',
+      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
+      href: '/blog/ai-2025-vector-databases-benchmarks',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
       date: 'Sep 12, 2025',
       category: 'RAG'
     },
     {
-      id: '55',
-      title: 'E2E Testing for AI Agents in 2025: Reliability at Scale',
-      description: 'Design robust agent test suites, reduce flakiness, and integrate evaluations into CI.',
-      href: '/blog/ai-2025-e2e-agent-testing',
+      id: '56',
+      title: 'Secure Agent Architectures (2025)',
+      description: 'Blueprint for secure enterprise agent architectures with policy-as-code, guardrails, and SLAs.',
+      href: '/blog/ai-2025-secure-agent-architectures',
       type: 'blog',
       featured: true,
-      readTime: '18 min read',
+      readTime: '17 min read',
       date: 'Sep 12, 2025',
-      category: 'Evaluation'
+      category: 'AI Security'
+    },
+    {
+      id: '57',
+      title: 'AI Customer Analytics: 19% Revenue Uplift',
+      description: 'Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.',
+      href: '/case-studies/ai-2025-customer-analytics-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
     },
     {
       id: '50',
@@ -118,17 +140,6 @@ const NewContentPromoBanner = ({
       type: 'case-study',
       featured: true,
       readTime: '14 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: '60',
-      title: 'AI Sales Cycle Acceleration: 28% Faster Close',
-      description: 'Case study: Copilots sped up approvals and proposals with policy-aware automation.',
-      href: '/case-studies/ai-2025-sales-cycle-acceleration',
-      type: 'case-study',
-      featured: true,
-      readTime: '9 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
     },
