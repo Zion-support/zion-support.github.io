@@ -4,7 +4,7 @@ import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
 import { ProductListing } from "../types/listings";
-import { toast } from "../hooks/use-toast";
+import { useToast } from "../hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "../types/search";
 // import styles from './Marketplace.module.css';
@@ -79,6 +79,7 @@ function ErrorState({ error }: { error: Error }) {
 export default function Marketplace() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { toast } = useToast();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   
   const [products, setProducts] = useState<ProductListing[]>([]);
