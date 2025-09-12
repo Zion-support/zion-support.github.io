@@ -80,12 +80,12 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Promo Banner */}
-      <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
+      <div className="w-full bg-gradient-to-r from-sky-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
           <span className="font-semibold">New:</span>
-          <span className="opacity-90">AI Governance Roadmap 2025 now live — plus guides on AI, pricing, and Web3.</span>
-          <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
-            Read the blog →
+          <span className="opacity-90">Zion OS 1.5 ships Real-Time Agents with trace-level observability and SLAs.</span>
+          <a href="/news/zion-os-1-5-realtime-agents" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read the release →
           </a>
         </div>
       </div>
@@ -113,8 +113,8 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">
                 📰 Read the Latest News
               </a>
-              <a href="/news/zion-os-1-4-performance-accessibility" className="btn-secondary hover-lift">
-                ⚡ New: Zion OS 1.4 Upgrades
+              <a href="/news/zion-os-1-5-realtime-agents" className="btn-secondary hover-lift">
+                🛰️ New: Zion OS 1.5 Real‑Time Agents
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
