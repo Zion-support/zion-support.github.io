@@ -536,7 +536,7 @@ export default function HomePage() {
       <NewContentDiscovery />
 
       {/* New Content Promotional Banner */}
-      <NewContentPromoBanner variant="featured" maxItems={3} />
+      <NewContentPromoBanner variant="featured" maxItems={4} />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>

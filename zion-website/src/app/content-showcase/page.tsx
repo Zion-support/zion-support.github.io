@@ -16,72 +16,12 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "Agentic Workflows & Copilots in 2025: From Pilots to Production",
-      description: "Blueprint to launch and scale agentic workflows and copilots with safety, evals, and SLOs.",
-      href: "/blog/ai-2025-agentic-workflows-copilots",
-      icon: "🤝",
-      category: "Agents",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Privacy-Preserving AI in Production (2025)",
-      description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
-      href: "/blog/ai-2025-privacy-preserving-ai",
-      icon: "🔒",
-      category: "Privacy",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Data Quality for RAG in Production (2025)",
-      description: "Operator guide: curate, chunk, index, evaluate, and govern knowledge for reliable RAG.",
-      href: "/blog/ai-2025-data-quality-rag",
-      icon: "🧠",
-      category: "RAG",
-      readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Agents for IT Operations 2025: Incident Response and SLO Automation",
-      description: "AIOps agents for triage, diagnostics, remediation, and SLO-aware controls reduce toil.",
-      href: "/blog/ai-2025-agents-for-it-ops",
-      icon: "🛠️",
+      title: "LLM Observability 2025: Metrics, Traces, and Guardrails",
+      description: "End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.",
+      href: "/blog/llm-observability-2025",
+      icon: "📈",
       category: "Observability",
-      readTime: "16 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "IT Ops Automation with AI Agents: 41% MTTR Reduction",
-      description: "Case study: Automated runbooks and intelligent triage reduced MTTR by 41% at a SaaS platform.",
-      href: "/case-studies/ai-2025-it-ops-automation-impact",
-      icon: "📉",
-      category: "Case Study",
-      readTime: "10 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Running AI Agents on Kubernetes: Reliability, Cost, and Observability",
-      description: "Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.",
-      href: "/blog/ai-2025-agents-on-kubernetes",
-      icon: "☸️",
-      category: "Agents",
       readTime: "19 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Real-Time Agents 2025: Observability, Safety, and SLAs",
-      description: "Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.",
-      href: "/blog/ai-2025-realtime-agents-observability",
-      icon: "🛰️",
-      category: "Agents",
-      readTime: "17 min read",
       date: "Sep 12, 2025",
       featured: true
     },
