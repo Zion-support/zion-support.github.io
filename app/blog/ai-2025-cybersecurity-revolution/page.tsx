@@ -1,8 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AICybersecurityRevolution2025() {
+=======
+import Link from 'next/link';
+import SEO from '../../../components/SEO';
+
+export default function AI2025CybersecurityRevolution() {
+>>>>>>> cursor/create-and-deploy-new-content-7cf5
   return (
     <div className="min-h-screen bg-white">
       <SEO
@@ -364,6 +371,7 @@ export default function AICybersecurityRevolution2025() {
             comprehensive approach that combines technology, processes, and people.
           </p>
 
+<<<<<<< HEAD
           <div className="bg-red-50 rounded-lg p-6 mb-8">
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Takeaways:</h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
@@ -396,6 +404,39 @@ export default function AICybersecurityRevolution2025() {
             >
               View Case Study
             </Link>
+=======
+          <div className="bg-gray-50 rounded-lg p-6 mb-8">
+            <h3 className="text-lg font-semibold mb-4">Get Started Today</h3>
+            <p className="text-gray-700 mb-4">
+              Download our comprehensive AI Cybersecurity Implementation Guide with detailed strategies, 
+              tool recommendations, and step-by-step implementation plans.
+            </p>
+            <Link 
+              href="/resources/ai-cybersecurity-implementation-guide-2025"
+              className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+            >
+              Download Security Guide
+              <span>→</span>
+            </Link>
+          </div>
+
+          <div className="border-t pt-8 mt-12">
+            <h3 className="text-xl font-semibold mb-4">Related Articles</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link href="/blog/ai-2025-ai-security-hardening" className="group">
+                <div className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                  <h4 className="font-semibold group-hover:text-blue-600">AI Security Hardening Blueprint</h4>
+                  <p className="text-sm text-gray-600">Complete guide to securing AI systems and models</p>
+                </div>
+              </Link>
+              <Link href="/blog/ai-2025-threat-detection" className="group">
+                <div className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                  <h4 className="font-semibold group-hover:text-blue-600">Advanced Threat Detection with AI</h4>
+                  <p className="text-sm text-gray-600">Leverage AI for proactive threat hunting and detection</p>
+                </div>
+              </Link>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-7cf5
           </div>
         </div>
       </div>
