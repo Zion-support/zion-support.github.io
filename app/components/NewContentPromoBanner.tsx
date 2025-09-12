@@ -18,6 +18,26 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Benchmarking Best Practices 2025",
+    description: "Reliable evals for quality, latency, and cost across models and tasks",
+    url: "/resources/ai-benchmarking-best-practices-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "📏",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Customer Success Automation 2025",
+    description: "Playbooks to automate onboarding, QBRs, and proactive retention",
+    url: "/resources/ai-customer-success-automation-2025",
+    type: "Resource",
+    category: "Customer Success",
+    icon: "🤝",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Data Pipeline Automation 2025",
     description: "Streaming, orchestration, and monitoring patterns for reliable AI dataflows",
     url: "/blog/ai-2025-data-pipeline-automation",
