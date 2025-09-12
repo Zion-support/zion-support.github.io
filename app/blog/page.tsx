@@ -740,6 +740,34 @@ const blogPosts: BlogPost[] = [
     views: 2847
   },
   {
+    id: 'ai-2025-generative-agents-in-production',
+    title: 'Generative Agents in Production 2025: Real-World Patterns and ROI',
+    excerpt: 'Architecture patterns, guardrails, observability, and cost controls to run reliable AI agents at scale.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '16 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI Agents', 'Guardrails', 'Observability', 'Cost'],
+    featured: true,
+    url: '/blog/ai-2025-generative-agents-in-production',
+    image: '🤖',
+    views: 0
+  },
+  {
+    id: 'ai-2025-cloud-cost-optimization-blueprint',
+    title: 'Cloud Cost Optimization Blueprint 2025: AI Workloads Without Bill Shock',
+    excerpt: 'FinOps guardrails, model tiering, caching, batching, and KPIs to cut spend without sacrificing quality.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '14 min read',
+    category: 'Cloud & DevOps',
+    tags: ['FinOps', 'Cost', 'Cloud', 'Performance'],
+    featured: false,
+    url: '/blog/ai-2025-cloud-cost-optimization-blueprint',
+    image: '💸',
+    views: 0
+  },
+  {
     id: 'quantum-computing-breakthrough',
     title: 'Quantum Computing Breakthrough: Unlocking the Future of Problem-Solving',
     excerpt: 'Explore how quantum computing is revolutionizing cryptography, optimization, and scientific research, opening new possibilities for businesses worldwide.',
