@@ -190,13 +190,13 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/blog/ai-2025-enterprise-implementation-masterclass' className='group'>
+            <Link href='/blog/foundation-models-enterprise-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>Enterprise AI Masterclass</h3>
-                <p className='text-sm opacity-90 mb-3'>Governance, architecture, security, ROI — end-to-end</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>Foundation Models for the Enterprise</h3>
+                <p className='text-sm opacity-90 mb-3'>Architectures, governance, security, cost, and ROI</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
+                  <span>22 min read</span>
                   <span className='mx-2'>•</span>
                   <span>NEW</span>
                 </div>
@@ -475,13 +475,13 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/blog/ai-enterprise-transformation-2025' className='group'>
+            <Link href='/blog/foundation-models-enterprise-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Transformation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 340% ROI and real case studies</p>
+                <h3 className='text-lg font-semibold mb-2'>Foundation Models for the Enterprise</h3>
+                <p className='text-sm opacity-90 mb-3'>Architecture, governance, safety, and ROI frameworks</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>18 min read</span>
+                  <span>22 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -1054,15 +1054,15 @@ export default function HomePage() {
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-2025-enterprise-implementation-masterclass' className='group'>
+            <Link href='/blog/foundation-models-enterprise-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎓</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Implementation Masterclass</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete guide to implementing AI in enterprise environments</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>Foundation Models for the Enterprise</h3>
+                <p className='text-sm opacity-90 mb-3'>Architectures, governance, safety, and cost controls</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>45 min read</span>
+                  <span>22 min read</span>
                   <span className='mx-2'>•</span>
-                  <span>Masterclass</span>
+                  <span>New</span>
                 </div>
               </div>
             </Link>
