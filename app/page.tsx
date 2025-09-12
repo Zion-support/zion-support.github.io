@@ -17,6 +17,8 @@ import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
 import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
+import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
+import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
@@ -90,6 +92,9 @@ export default function HomePage() {
         
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
+        
+        {/* Enhanced Content Showcase 2025 */}
+        <EnhancedContentShowcase2025 />
         
         {/* Content Promotion Banner */}
         <NewContentPromotionBanner />
