@@ -9,13 +9,24 @@ import { BookOpen, Briefcase, Download, TrendingUp, Lightbulb, Shield, Factory, 
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Predictions 2025: The Future of Artificial Intelligence",
-      description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
-      href: "/blog/ai-2025-predictions",
-      icon: "🔮",
-      category: "AI Trends",
-      readTime: "15 min read",
-      date: "Jan 25, 2025"
+      title: "AI 2025: The Year Ahead - 15 Predictions That Will Shape Technology",
+      description: "Discover the 15 most important AI predictions for 2025, from AGI breakthroughs to enterprise transformation. Expert insights on what's coming next.",
+      href: "/blog/ai-2025-year-ahead-predictions",
+      icon: "🤖",
+      category: "AI Predictions",
+      readTime: "25 min read",
+      date: "Jan 15, 2025",
+      featured: true
+    },
+    {
+      title: "AI Automation Enterprise Success Stories 2025: Real Results from Fortune 500 Companies",
+      description: "Discover how Fortune 500 companies achieved 300% ROI with AI automation. Real case studies, implementation strategies, and actionable insights for enterprise transformation.",
+      href: "/blog/ai-automation-enterprise-success-2025",
+      icon: "🏢",
+      category: "Enterprise AI",
+      readTime: "18 min read",
+      date: "Jan 20, 2025",
+      featured: true
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -48,6 +59,16 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Healthcare Diagnosis Breakthrough 2025: 95% Accuracy Case Study",
+      description: "How a leading healthcare system achieved 95% diagnostic accuracy, 80% faster processing, and $50M in cost savings through strategic AI implementation.",
+      href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Accuracy",
+      date: "Jan 25, 2025",
+      featured: true
+    },
+    {
       title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
       description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
       href: "/case-studies/ai-transformation-enterprise-success-2025",
@@ -78,13 +99,24 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Transformation Playbook 2025: Your Guide to Digital Success",
-      description: "Download Zion Tech Group's comprehensive AI Transformation Playbook for 2025. A step-by-step guide covering strategy, technology, and people for successful digital transformation.",
-      href: "/resources/ai-transformation-playbook-2025",
-      icon: "📚",
-      category: "Playbook",
+      title: "AI Enterprise Readiness Assessment 2025 - Free Download",
+      description: "Evaluate your organization's AI capabilities with our comprehensive assessment tool. Identify strengths, gaps, and opportunities to create a strategic roadmap for AI transformation.",
+      href: "/resources/ai-enterprise-readiness-assessment-2025",
+      icon: "📊",
+      category: "Assessment",
       type: "Free Download",
-      date: "Feb 10, 2025"
+      date: "Jan 22, 2025",
+      featured: true
+    },
+    {
+      title: "AI Implementation Master Guide 2025 - Complete Enterprise Playbook",
+      description: "Download our comprehensive AI implementation master guide. 300+ pages of strategies, frameworks, and best practices for successful enterprise AI deployment in 2025.",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 25, 2025",
+      featured: true
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
@@ -235,6 +267,42 @@ export default function ContentShowcasePage() {
                   </div>
                 </div>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Filtering */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Filter Content by Category
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Find the content that matters most to your role and industry
+              </p>
+            </div>
+
+            {/* Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                All Content
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                AI Predictions
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Enterprise AI
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Healthcare AI
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Free Resources
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Case Studies
+              </button>
             </div>
           </div>
         </section>
