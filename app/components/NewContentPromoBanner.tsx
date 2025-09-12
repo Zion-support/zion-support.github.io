@@ -10,7 +10,7 @@ const newContentItems = [
   {
     title: "Governed Agentic Workflows: 2025 Blueprint",
     description: "Policy gates, audits, and evals for production agent systems",
-    url: "/blog/governed-agentic-workflows",
+    url: "/blog/ai-2025-governed-agentic-workflows",
     type: "Blog Post",
     category: "Governance",
     icon: "🧩",
@@ -20,8 +20,8 @@ const newContentItems = [
   {
     title: "Agent Benchmarking Blueprint 2025",
     description: "Decision-ready evals for quality, latency, cost, and safety",
-    url: "/resources/agent-benchmarking-blueprint-2025",
-    type: "Resource",
+    url: "/blog/ai-2025-ai-agent-benchmarking-blueprint",
+    type: "Blog Post",
     category: "Evaluation",
     icon: "📊",
     featured: true,
