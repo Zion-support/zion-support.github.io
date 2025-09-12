@@ -1029,6 +1029,147 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Spotlight - Latest Additions */}
+      <section className='py-20 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>✨ BRAND NEW - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Latest AI Breakthroughs & Insights
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Fresh content this week: Advanced Prompt Engineering, Cybersecurity AI, Healthcare Breakthroughs, 
+              and comprehensive implementation guides. Stay ahead with cutting-edge AI knowledge.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-orange-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Explore New Articles
+              </Link>
+              <Link
+                href='/case-studies'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors text-lg' 
+              >
+                📊 View Success Stories
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-advanced-prompt-engineering' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
+                <h3 className='text-lg font-semibold mb-2'>Advanced Prompt Engineering 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Master AI communication with 10x better results</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-2025-cybersecurity-advanced-threat-detection' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Advanced threat detection and defense strategies</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>32 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>Essential</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-healthcare-diagnosis-breakthrough-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
+                <h3 className='text-lg font-semibold mb-2'>Healthcare AI Breakthrough</h3>
+                <p className='text-sm opacity-90 mb-3'>95% accuracy in medical diagnosis</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-transformation-global-logistics-giant-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚚</div>
+                <h3 className='text-lg font-semibold mb-2'>Logistics AI Success</h3>
+                <p className='text-sm opacity-90 mb-3'>$2.3B savings and 300% efficiency gains</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Showcase Banner */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>📚 COMPREHENSIVE RESOURCES</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🎯 Complete AI Knowledge Hub
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Access our complete library of AI resources: 50+ articles, 25+ case studies, 
+              30+ implementation guides, and exclusive tools. Everything you need to master AI in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/content-showcase'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                🎯 Explore All Content
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📋 Download Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Content Stats */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center'>
+              <div className='text-3xl font-bold mb-2'>50+</div>
+              <div className='text-sm opacity-90'>Expert Articles</div>
+            </div>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center'>
+              <div className='text-3xl font-bold mb-2'>25+</div>
+              <div className='text-sm opacity-90'>Success Stories</div>
+            </div>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center'>
+              <div className='text-3xl font-bold mb-2'>30+</div>
+              <div className='text-sm opacity-90'>Implementation Guides</div>
+            </div>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center'>
+              <div className='text-3xl font-bold mb-2'>10K+</div>
+              <div className='text-sm opacity-90'>Downloads</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Latest Articles Section */}
       <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
