@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '21',
+      title: 'AI Agents for IT Operations 2025: Incident Response and SLO Automation',
+      description: 'AIOps agents automate triage, remediation, and SLO-aware throttling with policy-as-code.',
+      href: '/blog/ai-2025-agents-for-it-ops',
+      type: 'blog',
+      category: 'Observability',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['AIOps', 'SRE', 'Runbooks', 'SLO'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '22',
+      title: 'IT Ops Automation with AI Agents: 41% MTTR Reduction',
+      description: 'Case study: Automated runbooks and intelligent triage reduced MTTR by 41% at a SaaS platform.',
+      href: '/case-studies/ai-2025-it-ops-automation-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['AIOps', 'SRE', 'MTTR', 'Automation'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',

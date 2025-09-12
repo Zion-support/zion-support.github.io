@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "AI Agents for IT Operations 2025: Incident Response and SLO Automation",
+      description: "AIOps agents for triage, diagnostics, remediation, and SLO-aware controls reduce toil.",
+      href: "/blog/ai-2025-agents-for-it-ops",
+      icon: "🛠️",
+      category: "Observability",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "IT Ops Automation with AI Agents: 41% MTTR Reduction",
+      description: "Case study: Automated runbooks and intelligent triage reduced MTTR by 41% at a SaaS platform.",
+      href: "/case-studies/ai-2025-it-ops-automation-impact",
+      icon: "📉",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Running AI Agents on Kubernetes: Reliability, Cost, and Observability",
       description: "Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.",
       href: "/blog/ai-2025-agents-on-kubernetes",
