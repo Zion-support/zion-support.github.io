@@ -95,6 +95,24 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025, from quantum-enhanced machine learning to autonomous AI agents. Explore how these technologies are transforming industries and creating new opportunities.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🚀",
+      category: "AI Innovation",
+      readTime: "18 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Enterprise Automation 2025: Complete Implementation Guide with 40% Cost Reduction",
+      description: "Transform your enterprise with AI automation. Learn proven strategies, implementation frameworks, and real-world case studies that deliver 40% cost reduction and 300% efficiency gains.",
+      href: "/blog/ai-enterprise-automation-2025",
+      icon: "🏢",
+      category: "Enterprise AI",
+      readTime: "20 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Predictions 2025: The Future of Artificial Intelligence",
       description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
       href: "/blog/ai-2025-predictions",
@@ -111,36 +129,18 @@ export default function ContentShowcasePage() {
       category: "AI Strategy",
       readTime: "18 min read",
       date: "Feb 01, 2025"
-    },
-    {
-      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
-      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
-      href: "/blog/ai-multimodal-applications-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "12 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen Attacks",
-      description: "Comprehensive analysis of emerging AI-powered cyber threats and defense strategies to protect your organization in 2025.",
-      href: "/blog/ai-cybersecurity-threats-2025",
-      icon: "🛡️",
-      category: "Cybersecurity",
-      readTime: "20 min read",
-      date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
-      description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
-      href: "/case-studies/ai-transformation-enterprise-success-2025",
+      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI in 18 Months",
+      description: "Discover how a Fortune 500 manufacturing company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details and lessons learned.",
+      href: "/case-studies/ai-transformation-fortune-500-success-2025",
       icon: "🏆",
       category: "Enterprise AI",
       result: "$50M Savings",
-      date: "Feb 05, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Retail Transformation Success: 300% Revenue Growth",
@@ -164,13 +164,13 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Transformation Playbook 2025: Your Guide to Digital Success",
-      description: "Download Zion Tech Group's comprehensive AI Transformation Playbook for 2025. A step-by-step guide covering strategy, technology, and people for successful digital transformation.",
-      href: "/resources/ai-transformation-playbook-2025",
+      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource with Templates",
+      description: "Download our comprehensive AI Implementation Master Guide 2025. 150+ pages of proven strategies, templates, checklists, and frameworks for successful AI deployment. Free download.",
+      href: "/resources/ai-implementation-master-guide-2025",
       icon: "📚",
-      category: "Playbook",
+      category: "Master Guide",
       type: "Free Download",
-      date: "Feb 10, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
