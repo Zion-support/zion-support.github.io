@@ -231,6 +231,162 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* AI Innovation Showcase Banner */}
+        <section className="py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🚀 AI INNOVATION SHOWCASE</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                💡 Revolutionary AI Breakthroughs: What's Next in 2025
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Explore cutting-edge AI innovations: Autonomous Systems, Edge AI, Multimodal Intelligence, 
+                and Quantum-Enhanced Computing. Discover the technologies that will reshape industries 
+                and create unprecedented opportunities for growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-breakthrough-innovations"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Innovation Report
+                </Link>
+                <Link
+                  href="/blog/ai-2025-trends-predictions"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  View AI Trends 2025
+                </Link>
+                <Link
+                  href="/webinars/ai-implementation-masterclass-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Join Masterclass
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise AI Transformation Banner */}
+        <section className="py-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🏢 ENTERPRISE AI TRANSFORMATION</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎯 Enterprise AI Success: Proven Strategies for Fortune 500 Companies
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Learn from real enterprise AI transformations. Our comprehensive case studies show 
+                how Fortune 500 companies achieved 40% cost reduction, 60% efficiency gains, and 
+                $200M+ in savings through strategic AI implementation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/case-studies"
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  View All Case Studies
+                </Link>
+                <Link
+                  href="/case-studies/ai-automation-manufacturing-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Manufacturing Success Story
+                </Link>
+                <Link
+                  href="/services/ai-consulting"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  Get Enterprise Assessment
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Tools & Resources Banner */}
+        <section className="py-6 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛠️ AI TOOLS & RESOURCES</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎁 50+ Free AI Tools: Calculators, Checklists & Implementation Guides
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Access our complete library of free AI resources: ROI Calculators, Implementation 
+                Checklists, Security Frameworks, Workforce Transformation Guides, and much more. 
+                Everything you need to succeed with AI in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/tools/ai-roi-calculator"
+                  className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Try ROI Calculator
+                </Link>
+                <Link
+                  href="/resources"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                >
+                  Browse All Resources
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                >
+                  Download Master Guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Security & Governance Banner */}
+        <section className="py-6 bg-gradient-to-r from-gray-700 via-gray-800 to-black text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛡️ AI SECURITY & GOVERNANCE</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🔒 Secure AI Implementation: Governance, Ethics & Compliance Framework
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Ensure responsible AI deployment with our comprehensive security and governance 
+                framework. Learn about AI ethics, compliance requirements, risk management, and 
+                best practices for secure AI implementation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/resources/ai-cybersecurity-checklist-2025"
+                  className="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Download Security Checklist
+                </Link>
+                <Link
+                  href="/blog/ai-governance-in-practice-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
+                >
+                  Read Governance Guide
+                </Link>
+                <Link
+                  href="/services/ai-security-consulting"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors"
+                >
+                  Get Security Assessment
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
