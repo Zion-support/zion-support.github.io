@@ -5,241 +5,274 @@ interface ContentItem {
   id: string;
   title: string;
   description: string;
-  type: 'article' | 'case-study' | 'resource';
-  readTime: string;
   href: string;
+  type: 'blog' | 'case-study' | 'resource' | 'service';
+  category: string;
+  readTime?: string;
+  featured: boolean;
   icon: string;
-  badge: string;
-  badgeColor: string;
+  gradient: string;
 }
 
-const contentItems: ContentItem[] = [
-  {
-    id: '1',
-    title: 'AI Enterprise Implementation Masterclass',
-    description: 'Complete 45-minute guide to implementing AI in enterprise environments with proven strategies.',
-    type: 'article',
-    readTime: '45 min read',
-    href: '/blog/ai-2025-enterprise-implementation-masterclass',
-    icon: '🎓',
-    badge: 'NEW',
-    badgeColor: 'bg-green-100 text-green-800'
-  },
-  {
-    id: '2',
-    title: 'AI Market Disruption Analysis 2025',
-    description: 'How AI is reshaping every industry with real impact data and market insights.',
-    type: 'article',
-    readTime: '25 min read',
-    href: '/blog/ai-2025-market-disruption-analysis',
-    icon: '📈',
-    badge: 'TRENDING',
-    badgeColor: 'bg-red-100 text-red-800'
-  },
-  {
-    id: '3',
-    title: 'Fortune 500 AI Transformation Success',
-    description: '$50M savings and 300% ROI in 18 months - complete case study.',
-    type: 'case-study',
-    readTime: '20 min read',
-    href: '/case-studies/ai-transformation-fortune-500-breakthrough-2025',
-    icon: '🏆',
-    badge: 'HOT',
-    badgeColor: 'bg-blue-100 text-blue-800'
-  },
-  {
-    id: '4',
-    title: 'AI Implementation Master Checklist',
-    description: '150+ actionable items for successful AI deployment with detailed guidance.',
-    type: 'resource',
-    readTime: 'Free Download',
-    href: '/resources/ai-2025-implementation-master-checklist',
-    icon: '📋',
-    badge: 'POPULAR',
-    badgeColor: 'bg-purple-100 text-purple-800'
-  },
-  {
-    id: '5',
-    title: 'AI Retail Transformation 2025',
-    description: '$50M revenue increase and 40% customer satisfaction improvement through AI.',
-    type: 'case-study',
-    readTime: '15 min read',
-    href: '/case-studies/ai-retail-transformation-2025',
-    icon: '🛍️',
-    badge: 'NEW',
-    badgeColor: 'bg-green-100 text-green-800'
-  },
-  {
-    id: '6',
-    title: 'AI Workforce Transformation Playbook',
-    description: '150+ pages of templates, checklists, and strategies for workforce transformation.',
-    type: 'resource',
-    readTime: '2 hours',
-    href: '/resources/ai-workforce-transformation-playbook-2025',
-    icon: '👥',
-    badge: 'FREE',
-    badgeColor: 'bg-yellow-100 text-yellow-800'
-  }
-];
-
-export default function DynamicContentCarousel() {
+const DynamicContentCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const contentItems: ContentItem[] = [
+    {
+      id: '1',
+      title: 'AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future',
+      description: 'Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries.',
+      href: '/blog/ai-2025-breakthrough-innovations',
+      type: 'blog',
+      category: 'AI Innovations',
+      readTime: '25 min read',
+      featured: true,
+      icon: '🚀',
+      gradient: 'from-purple-500 to-pink-500'
+    },
+    {
+      id: '2',
+      title: 'AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems',
+      description: 'Discover how AI is driving sustainability initiatives and reducing carbon footprints. Learn about smart energy management and climate solutions.',
+      href: '/blog/ai-sustainability-green-tech-2025',
+      type: 'blog',
+      category: 'Sustainability',
+      readTime: '20 min read',
+      featured: true,
+      icon: '🌱',
+      gradient: 'from-green-500 to-emerald-500'
+    },
+    {
+      id: '3',
+      title: 'AI Sustainability Transformation Success: 60% Energy Reduction & Carbon Neutrality',
+      description: 'Fortune 500 manufacturing company achieves 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives.',
+      href: '/case-studies/ai-sustainability-transformation-2025',
+      type: 'case-study',
+      category: 'Case Study',
+      featured: true,
+      icon: '💰',
+      gradient: 'from-blue-500 to-cyan-500'
+    },
+    {
+      id: '4',
+      title: 'AI Implementation Master Guide 2026: Complete 200+ Page Resource',
+      description: 'Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, and best practices.',
+      href: '/resources/ai-implementation-master-guide-2026',
+      type: 'resource',
+      category: 'Master Guide',
+      featured: true,
+      icon: '📚',
+      gradient: 'from-indigo-500 to-purple-500'
+    },
+    {
+      id: '5',
+      title: 'AI Enterprise Automation Revolution 2025',
+      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
+      href: '/blog/ai-2025-enterprise-automation-revolution',
+      type: 'blog',
+      category: 'Enterprise AI',
+      readTime: '18 min read',
+      featured: true,
+      icon: '🏢',
+      gradient: 'from-orange-500 to-red-500'
+    },
+    {
+      id: '6',
+      title: 'AI Healthcare Diagnosis Breakthrough 2025',
+      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
+      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      type: 'blog',
+      category: 'Healthcare AI',
+      readTime: '22 min read',
+      featured: true,
+      icon: '🏥',
+      gradient: 'from-teal-500 to-cyan-500'
+    }
+  ];
 
   useEffect(() => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-    }, 5000); // Change every 5 seconds
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, [contentItems.length, isAutoPlaying]);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'New Article';
+      case 'case-study':
+        return 'Case Study';
+      case 'resource':
+        return 'Free Resource';
+      case 'service':
+        return 'Service';
+      default:
+        return 'Content';
+    }
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-blue-100 text-blue-800';
+      case 'case-study':
+        return 'bg-green-100 text-green-800';
+      case 'resource':
+        return 'bg-purple-100 text-purple-800';
+      case 'service':
+        return 'bg-orange-100 text-orange-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
   };
 
   const currentItem = contentItems[currentIndex];
 
   return (
-    <div className="relative">
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-2 mb-4">
-          <span className="text-sm font-medium">🔥 TRENDING NOW</span>
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Latest AI Insights & Resources
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Stay ahead with our latest articles, case studies, and implementation guides.
-        </p>
+    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
-      <div 
-        className="relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
-        onMouseEnter={() => setIsAutoPlaying(false)}
-        onMouseLeave={() => setIsAutoPlaying(true)}
-      >
-        <Link href={currentItem.href} className="group block">
-          <div className="aspect-video bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center relative">
-            <div className="text-8xl mb-4 group-hover:scale-110 transition-transform duration-300">
-              {currentItem.icon}
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+              <span className="text-sm font-medium">🔥 HOT CONTENT</span>
             </div>
-            <div className={`absolute top-6 left-6 ${currentItem.badgeColor} px-3 py-1 rounded-full text-sm font-medium`}>
-              {currentItem.badge}
-            </div>
-            <div className="absolute top-6 right-6 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-              {currentItem.readTime}
-            </div>
-          </div>
-          <div className="p-8">
-            <div className="flex items-center gap-2 mb-3">
-              <span className={`px-2 py-1 rounded text-xs font-medium ${
-                currentItem.type === 'article' ? 'bg-blue-100 text-blue-800' :
-                currentItem.type === 'case-study' ? 'bg-green-100 text-green-800' :
-                'bg-purple-100 text-purple-800'
-              }`}>
-                {currentItem.type === 'article' ? 'Article' : 
-                 currentItem.type === 'case-study' ? 'Case Study' : 'Resource'}
-              </span>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-              {currentItem.title}
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              {currentItem.description}
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Latest AI & Tech Insights
+            </h2>
+            <p className="text-lg opacity-90 max-w-3xl mx-auto">
+              Discover our newest breakthrough content, case studies, and resources. 
+              Fresh insights published weekly to keep you ahead of the curve.
             </p>
-            <div className="flex items-center justify-between mt-6">
-              <div className="flex items-center gap-2 text-sm text-gray-500">
-                <span>Read More</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+
+          {/* Main Carousel */}
+          <div className="relative">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="text-4xl">{currentItem.icon}</span>
+                  <div>
+                    <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(currentItem.type)}`}>
+                      {getTypeLabel(currentItem.type)}
+                    </span>
+                    <div className="text-sm opacity-75 mt-1">{currentItem.category}</div>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                  className="text-white/75 hover:text-white transition-colors"
+                  title={isAutoPlaying ? 'Pause auto-play' : 'Resume auto-play'}
+                >
+                  {isAutoPlaying ? (
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                  ) : (
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  )}
+                </button>
               </div>
-              <div className="text-sm text-gray-400">
-                {currentIndex + 1} of {contentItems.length}
+
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                {currentItem.title}
+              </h3>
+              
+              <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                {currentItem.description}
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <Link 
+                    href={currentItem.href}
+                    className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+                  >
+                    {currentItem.type === 'resource' ? 'Download Free' : 'Read More'}
+                  </Link>
+                  <Link 
+                    href="/content-showcase"
+                    className="text-white hover:text-indigo-200 transition-colors"
+                  >
+                    View All Content →
+                  </Link>
+                </div>
+                {currentItem.readTime && (
+                  <div className="text-sm opacity-75">
+                    {currentItem.readTime}
+                  </div>
+                )}
               </div>
             </div>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center space-x-2 mb-6">
+              {contentItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentIndex 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Quick Preview Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {contentItems.map((item, index) => (
+                <button
+                  key={item.id}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`group p-4 rounded-lg transition-all ${
+                    index === currentIndex 
+                      ? 'bg-white bg-opacity-20' 
+                      : 'bg-white bg-opacity-5 hover:bg-opacity-10'
+                  }`}
+                >
+                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <div className="text-xs font-medium mb-1 line-clamp-2">
+                    {item.title.split(':')[0]}
+                  </div>
+                  <div className="text-xs opacity-75">
+                    {getTypeLabel(item.type)}
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
-        </Link>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200"
-        >
-          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200"
-        >
-          <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Dots Indicator */}
-      <div className="flex justify-center gap-2 mt-6">
-        {contentItems.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              index === currentIndex 
-                ? 'bg-blue-600 scale-125' 
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="mt-12">
-        <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">Quick Access</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {contentItems.slice(0, 4).map((item, index) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className={`p-4 rounded-lg border-2 transition-all duration-200 hover:shadow-md ${
-                index === currentIndex 
-                  ? 'border-blue-500 bg-blue-50' 
-                  : 'border-gray-200 hover:border-gray-300'
-              }`}
-            >
-              <div className="text-2xl mb-2">{item.icon}</div>
-              <h4 className="font-medium text-gray-900 text-sm mb-1 line-clamp-2">
-                {item.title}
-              </h4>
-              <div className={`inline-block px-2 py-1 rounded text-xs font-medium ${item.badgeColor}`}>
-                {item.badge}
-              </div>
-            </Link>
-          ))}
         </div>
       </div>
 
-      {/* View All Button */}
-      <div className="text-center mt-8">
-        <Link
-          href="/content-showcase"
-          className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          View All Content
-          <span>→</span>
-        </Link>
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
+        <div 
+          className="h-full bg-white transition-all duration-6000 ease-linear"
+          style={{ 
+            width: `${((currentIndex + 1) / contentItems.length) * 100}%`,
+            animationPlayState: isAutoPlaying ? 'running' : 'paused'
+          }}
+        />
       </div>
     </div>
   );
-}
+};
+
+export default DynamicContentCarousel;
