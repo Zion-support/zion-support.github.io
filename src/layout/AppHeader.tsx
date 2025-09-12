@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import Link from 'next/link';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
@@ -8,47 +9,34 @@ import { Menu, X } from 'lucide-react'
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { useAuth } from '@/hooks/useAuth';
-import { UserMenu } from '@/components/header/UserMenu';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-import { cn } from '@/lib/utils'; // Import cn utility
-import { useRouter } from 'next/router';
 
 export function AppHeader() {
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const router = useRouter();
-  const showTagline = router.pathname === '/';
-
-  // Messaging context (unread message count)
-  const { unreadCount } = useMessaging();
-
-  const openLoginModal = (returnToPath?: string) => {
-    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
-    // using router.push with shallow:true before this function is called.
-    // This function's main job is just to open the modal.
-    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true);
-  };
+  
+  // Try to access the messaging context, but provide a fallback value if it's not available
+  let unreadCount = 0;
+  try {
+    const { unreadCount: count } = useMessaging();
+    unreadCount = count;
+  } catch (error) {
+    console.warn('Messaging context not available');
+  }
   
   return (
     <>
-      <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
-        )}
-      >
+      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
+          {/* Sidebar Toggle */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+            aria-label="Toggle sidebar"
+          >
+            <PanelLeft className="h-5 w-5" />
+          </button>
+          
           <Logo />
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
@@ -136,7 +124,6 @@ export function AppHeader() {
 
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
 }

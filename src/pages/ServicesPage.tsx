@@ -1,24 +1,10 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm';
-import { ProductListing } from '@/types/listings';
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { SERVICES } from '@/data/servicesData';
-import { useCurrency } from '@/hooks/useCurrency';
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Zap } from "lucide-react";
+import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
 // Sample service listings
@@ -252,10 +238,22 @@ export default function ServicesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
-            <Link to="/comprehensive-services">
+            <Link to="/enhanced-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Zap className="h-4 w-4 mr-2" />
-                Comprehensive Services
+                <Globe className="h-4 w-4 mr-2" />
+                Enhanced Services Showcase
+              </Button>
+            </Link>
+            <Link to="/ai-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Brain className="h-4 w-4 mr-2" />
+                AI Services
+              </Button>
+            </Link>
+            <Link to="/cybersecurity-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Shield className="h-4 w-4 mr-2" />
+                Cybersecurity
               </Button>
             </Link>
             <Link to="/it-onsite-services">

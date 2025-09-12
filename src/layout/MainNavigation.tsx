@@ -3,21 +3,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
+import { MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
-import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react';
-
-
-
-
-
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -35,17 +22,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const cartCount = items.length;
   const router = useRouter(); // Changed from useLocation
   const { t } = useTranslation();
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
-
-  const handleCartClick = (e: React.MouseEvent) => {
-    if (!isAuthenticated) {
-      e.preventDefault();
-      setLoginOpen(true);
-      return;
-    }
-    setIsMobileMenuOpen(false);
-  };
 
   const baseLinks = [
     {
@@ -59,9 +35,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
     },
     {
       key: 'talent',
@@ -74,18 +50,23 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
-      key: 'portfolio',
-      href: '/portfolio',
-      matches: (path: string) => path.startsWith('/portfolio')
-    },
-    {
       key: 'community',
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      matches: (path: string) => path.startsWith('/contact')
     }
   ];
 
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
   
   // Add authenticated-only links
   if (isAuthenticated) {
