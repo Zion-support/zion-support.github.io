@@ -158,14 +158,24 @@ function Header() {
                   🌐 Edge Computing Revolution
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2028-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2028 Future Predictions (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2028-energy-sector-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚡ Energy AI Breakthrough (2,400% ROI) (NEW)
+                </Link>
+                <Link href="/resources/ai-2028-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2028 Master Guide (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🔮 AI 2027 Future Predictions (NEW)
+                  🔮 AI 2027 Future Predictions
                 </Link>
                 <Link href="/case-studies/ai-2027-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🚗 Automotive AI Breakthrough (NEW)
+                  🚗 Automotive AI Breakthrough
                 </Link>
                 <Link href="/resources/ai-2027-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  📚 AI 2027 Master Guide (NEW)
+                  📚 AI 2027 Master Guide
                 </Link>
               </div>
             </div>
@@ -210,14 +220,24 @@ function Header() {
                   ⭐ Featured Content
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2028-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2028 Predictions (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2028-energy-sector-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚡ Energy AI Case Study (2,400% ROI) (NEW)
+                </Link>
+                <Link href="/resources/ai-2028-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2028 Master Guide (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🔮 AI 2027 Predictions (NEW)
+                  🔮 AI 2027 Predictions
                 </Link>
                 <Link href="/case-studies/ai-2027-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🚗 Automotive AI Case Study (NEW)
+                  🚗 Automotive AI Case Study
                 </Link>
                 <Link href="/resources/ai-2027-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  📚 AI 2027 Master Guide (NEW)
+                  📚 AI 2027 Master Guide
                 </Link>
               </div>
             </div>

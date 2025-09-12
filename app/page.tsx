@@ -64,6 +64,8 @@ import UltimateContentPromotionBanner2026 from '../components/UltimateContentPro
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import NewContent2028PromotionBanner from '../components/NewContent2028PromotionBanner';
+import NewContent2028Showcase from '../components/NewContent2028Showcase';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 
 // Lazy load heavy components
@@ -81,6 +83,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2028 PROMOTION BANNER */}
+        <NewContent2028PromotionBanner />
+        
+        {/* NEW CONTENT 2028 SHOWCASE */}
+        <NewContent2028Showcase />
+        
         {/* NEW CONTENT 2027 PROMOTION BANNER */}
         <NewContent2027PromotionBanner />
         
