@@ -4,7 +4,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Verifying and Completing Merge Process');
-console.log('==========================================');
 
 // Function to run git commands safely
 function runGitCommand(command, description) {

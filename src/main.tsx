@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
 import App from './App.tsx';
-import './styles.css';
+import '../styles/globals.css';
 
 window.addEventListener('unhandledrejection', (event) => {
   const reason = event.reason;

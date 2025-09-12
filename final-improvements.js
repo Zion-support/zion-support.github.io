@@ -289,7 +289,6 @@ function addSocialMetaTags() {
 // Main execution function
 function main() {
   console.log('🚀 Starting final improvements and optimizations...');
-  console.log('================================================');
   
   try {
     // Run all improvement functions
@@ -303,7 +302,6 @@ function main() {
     
     console.log('');
     console.log('✅ All improvements completed successfully!');
-    console.log('================================================');
     console.log('📊 Summary of improvements:');
     console.log('  ✅ SEO optimizations added');
     console.log('  ✅ Image alt text added');

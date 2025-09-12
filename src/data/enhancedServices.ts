@@ -107,7 +107,6 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     tags: ["AI", "Automation", "Process Optimization", "Machine Learning", "Workflow"],
-=======
     id: "ai-ml-1",
     title: "AI-Powered Customer Service Automation",
     description: "Implement intelligent chatbots and automated customer service solutions using advanced NLP and machine learning to handle 80% of customer inquiries automatically.",
@@ -200,14 +199,11 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group"
     },
-=======
 import { ProductListing } from "@/types/listings";
 
-=======
 import { ProductListing } from "@/types/listings";
 
 // Enhanced Services with real market prices, features, and benefits
-=======
 import { ProductListing } from "@/types/listings";
 
 // Enhanced real micro SAAS services and solutions
@@ -216,10 +212,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-automation-suite",
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-=======
     title: "AI Business Process Automation Suite",
     description: "Complete AI-powered automation solution for business processes including document processing, customer service, and workflow optimization. Features intelligent routing, predictive analytics, and 99.9% accuracy.",
-=======
     title: "AI Process Automation Suite",
     description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.",
     category: "AI Automation",
@@ -238,7 +232,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     rating: 4.9,
     reviewCount: 156,
     featured: true,
-=======
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96
@@ -405,7 +398,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 1299,
     currency: "$",
     tags: ["Business Analytics", "Predictive Analytics", "Dashboard", "Reporting"],
-=======
     id: "ai-customer-insights",
     title: "AI-Powered Customer Insights Platform",
     description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
@@ -461,7 +453,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 91
-=======
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
     reviewCount: 89,
@@ -650,7 +641,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 93
-=======
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-10T15:30:00.000Z",
     rating: 4.7,
@@ -797,7 +787,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Middletown, DE",
     availability: "2-3 Weeks",
     aiScore: 86
-=======
     description: "Complete DevOps automation solution with automated testing, deployment, and monitoring. Includes Docker containerization, Kubernetes orchestration, and infrastructure as code.",
     category: "DevOps",
     subcategory: "Automation",
@@ -1179,7 +1168,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 96
-=======
     images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-30T12:15:00.000Z",
     rating: 4.7,
@@ -1414,7 +1402,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "20-24 Weeks",
     aiScore: 96
-=======
     id: "real-time-data-pipeline",
     title: "Real-Time Data Pipeline Platform",
     description: "Streaming data processing platform for real-time analytics, event processing, and data integration. Supports Apache Kafka, Apache Flink, and provides real-time dashboards and alerts.",
@@ -1646,7 +1633,6 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   professional: { min: 5000, max: 14999, description: "Advanced solutions for growing companies" },
   enterprise: { min: 15000, max: 50000, description: "Custom enterprise-grade solutions" }
 };
-=======
     createdAt: "2024-04-05T14:45:00.000Z",
     rating: 4.9,
     reviewCount: 67,
@@ -1687,7 +1673,6 @@ export const SERVICE_CATEGORIES = [
     id: "ai-services",
     name: "AI & Machine Learning",
     description: "Cutting-edge artificial intelligence solutions",
-=======
     title: "Digital Transformation Strategy & Implementation",
     description: "Complete digital transformation roadmap including technology assessment, change management, staff training, and implementation support. Transforms traditional businesses into digital-first organizations.",
     category: "Digital Transformation",
@@ -2304,7 +2289,6 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
   );
 };
-=======
     id: "cybersecurity",
     name: "Cybersecurity",
     description: "Advanced security solutions for modern digital threats",
@@ -2425,7 +2409,6 @@ export const MARKET_PRICING = {
     competitors: ["Tableau", "Power BI", "Looker"]
   }
 };
-=======
   { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
   { label: 'Cybersecurity', value: 'cybersecurity' },
   { label: 'Data & Analytics', value: 'data-analytics' },

@@ -876,7 +876,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     marketSize: '$25.9B fleet management market',
     growthRate: '11% annual growth',
     variant: 'av-fleet-enterprise',
-=======
     implementationDetails: 'AI-powered supply chain optimization platform with machine learning algorithms for demand forecasting, inventory optimization, and cost reduction.',
     launchDate: '2024-03-15',
     customers: 38,

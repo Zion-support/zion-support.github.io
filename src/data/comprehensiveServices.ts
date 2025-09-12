@@ -18,7 +18,6 @@
   reviewCount: number;
   aiScore: number;
   featured: boolean;
-=======
 export interface ComprehensiveService {
   id: string;
   title: string;
@@ -1666,7 +1665,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
-=======
 import { ProductListing } from "@/types/listings";
 
 // Comprehensive Micro SAAS Services, IT Services, and AI Services
@@ -2001,10 +1999,8 @@ export const SUBSCRIPTION_TIERS = [
     features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"]
   }
 ];
-=======
   website: "https://ziontechgroup.com"
 };
-=======
   "Process Automation",
   "Governance",
   "Quantum Computing",
@@ -2036,7 +2032,6 @@ export const SUBSCRIPTION_TIERS = [
   "Digital Assets",
   "Penetration Testing"
 ];
-=======
     id: "hr-automation-platform",
     name: "HR Automation & Employee Management Platform",
     description: "Comprehensive HR platform with recruitment automation, performance tracking, employee onboarding, and payroll integration. Streamlines HR processes and improves employee experience.",
@@ -2178,7 +2173,6 @@ export const CONTACT_INFO = {
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
   responseTime: "24-48 hours for initial response"
 };
-=======
 
 // Service Pricing Tiers (alias for compatibility)
 export const SERVICE_PRICING_TIERS = PRICING_TIERS;

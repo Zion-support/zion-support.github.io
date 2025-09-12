@@ -298,7 +298,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     customers: 85,
     rating: 4.6,
     reviews: 67
-=======
     implementationDetails: 'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
     launchDate: '2029-03-01',
     customers: 8,

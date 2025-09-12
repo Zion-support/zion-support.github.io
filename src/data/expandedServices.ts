@@ -1,5 +1,3 @@
-=======
-=======
 export interface ExpandedService {
   id: string;
   title: string;
@@ -13,7 +11,6 @@ export interface ExpandedService {
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-=======
   pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
   features: string[];
   benefits: string[];
@@ -37,7 +34,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     price: 2999,
     currency: "$",
     tags: ["Process Automation", "RPA", "Workflow", "AI", "Efficiency"],
-=======
 import { ProductListing } from "@/types/listings";
 
 // AI & Machine Learning Services
@@ -108,7 +104,6 @@ export const AI_SERVICES: ProductListing[] = [
   reviewCount: number;
   isNew?: boolean;
   isFeatured?: boolean;
-=======
     email?: string;
   };
   images: string[];
@@ -122,7 +117,6 @@ export const AI_SERVICES: ProductListing[] = [
   integration?: string[];
   compliance?: string[];
   sla?: string;
-=======
     verified: boolean;
   };
   images: string[];
@@ -166,7 +160,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       "Save 20+ hours per week",
       "Maintain consistent brand voice",
       "Multi-platform content distribution"
-=======
     id: "ai-chatbot-platform",
     title: "AI Chatbot Platform",
     description: "Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration capabilities.",
@@ -265,12 +258,10 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 93
-=======
     description: "Comprehensive zero trust security framework implementation with continuous monitoring, threat detection, and automated response systems.",
     category: "Cybersecurity",
     subcategory: "Zero Trust",
     price: 8500,
-=======
     id: "ai-ml-001",
     title: "Custom AI Chatbot Development",
     description: "Build intelligent, context-aware chatbots for customer service, sales, and support using advanced NLP and machine learning technologies.",
@@ -467,7 +458,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     rating: 4.9,
     reviewCount: 78,
     isNew: true
-=======
       "Email campaigns",
       "Product descriptions",
       "Technical documentation"
@@ -631,7 +621,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       "Automated quality assurance",
       "Faster time to market",
       "Improved team productivity"
-=======
     id: "cloud-migration-suite",
     title: "Cloud Migration Suite",
     description: "End-to-end cloud migration solution with automated tools, expert guidance, and zero-downtime migration strategies.",
@@ -819,7 +808,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 7999,
     currency: "$",
     tags: ["Predictive Maintenance", "IoT", "Machine Learning", "Industrial", "Cost Reduction"],
-=======
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T11:45:00.000Z",
     rating: 4.9,
@@ -923,7 +911,6 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     price: 34999,
     currency: "$",
     tags: ["Digital Transformation", "Strategy", "Change Management", "Technology Consulting", "ROI"],
-=======
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T08:00:00.000Z",
     rating: 4.9,
@@ -1117,7 +1104,6 @@ export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
     tags: ["Mobile Apps", "React Native", "Flutter", "Cross-Platform", "Backend"],
-=======
     createdAt: "2024-01-10T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 234,
@@ -1217,7 +1203,6 @@ export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
     featured: true,
     location: "Global",
     availability: "6-8 Weeks",
-=======
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T14:30:00.000Z",
     rating: 4.8,
@@ -1428,13 +1413,11 @@ export const PRICING_TIERS = [
     features: ["Dedicated support", "Custom features", "White-label options"]
   }
 ];
-=======
     id: "digital-workplace",
     title: "Digital Workplace Transformation",
     description: "Complete digital workplace solution that modernizes employee experience, improves collaboration, and increases productivity through intelligent digital tools.",
     category: "Digital Transformation",
     subcategory: "Workplace Modernization",
-=======
     id: "data-analytics-001",
     title: "Real-Time Data Streaming Platform",
     description: "Build scalable real-time data streaming platforms for processing and analyzing high-volume data streams.",
@@ -1630,7 +1613,6 @@ export const PRICING_TIERS = [
     integration: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "REST APIs"],
     compliance: ["ISO 27001", "GDPR", "Industry-specific standards"],
     sla: "99.9% platform uptime, 5-minute device response time"
-=======
       "Performance analysis and tuning",
       "Query optimization",
       "Index strategy improvement",
@@ -1896,7 +1878,6 @@ export const PRICING_TIERS = [
     integration: ["Python", "R", "TensorFlow", "PyTorch", "MLflow"],
     compliance: ["GDPR", "SOC 2", "Industry-specific regulations"],
     sla: "99.9% platform uptime, 1-hour model deployment time"
-=======
     id: "blockchain-web3-001",
     title: "Smart Contract Development",
     description: "Develop secure and audited smart contracts for DeFi, NFTs, and blockchain applications on multiple platforms.",
@@ -2221,7 +2202,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured);
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
-=======
     id: "ai-services",
     name: "AI Services",
     description: "Artificial Intelligence and Machine Learning solutions",
@@ -2271,7 +2251,6 @@ export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
     subcategories: ["Data Science & ML", "Business Intelligence", "Data Engineering", "Data Governance", "Predictive Analytics"]
   }
 ];
-=======
     name: "AI & Machine Learning",
     description: "Advanced artificial intelligence and machine learning solutions",
     icon: "🤖",
@@ -2341,7 +2320,6 @@ export const PRICING_TIERS = [
     features: ["Full functionality", "24/7 support", "Custom development", "Dedicated team", "SLA guarantees"]
   }
 ];
-=======
   { label: 'Digital Transformation', value: 'digital-transformation' },
   { label: 'IoT & Edge Computing', value: 'iot-edge' },
   { label: 'Blockchain & Web3', value: 'blockchain-web3' }
