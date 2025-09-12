@@ -40,6 +40,7 @@ import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBa
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
 import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
+import AI2026UltimateBreakthroughBanner from '../components/AI2026UltimateBreakthroughBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -281,6 +282,7 @@ export default function HomePage() {
         <AI2025UltimateContentHubBanner />
         {/* AI 2026-2030 FUTURE PREDICTIONS PROMOTION BANNER - REVOLUTIONARY */}
         <AI2026_2030FuturePredictionsPromotionBanner />
+        <AI2026UltimateBreakthroughBanner />
         
         {/* AI 2026 FUTURE PREDICTIONS BANNER - INTERACTIVE */}
         <AI2026FuturePredictionsBanner />
