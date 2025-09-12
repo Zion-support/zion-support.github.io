@@ -12,7 +12,63 @@ const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
+const ContentPromotionBanner = lazy(() => import('../components/ContentPromotionBanner'));
+const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
+const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
+const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
+const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
+const NewContentPromotionBanner = lazy(() => import('../components/NewContentPromotionBanner'));
+const TrendingContentWidget = lazy(() => import('../components/TrendingContentWidget'));
+const EnhancedNewsletterSignup = lazy(() => import('../components/EnhancedNewsletterSignup'));
 
+// Card component
+function Card({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) {
+  return (
+    <Link href={href} className='group'>
+      <div className='bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100'>
+        <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>{icon}</div>
+        <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>{title}</h3>
+        <p className='text-gray-600'>{description}</p>
+      </div>
+    </Link>
+  );
+}
+
+// FeatureCard component
+function FeatureCard({ title, description }: { title: string; description: string }) {
+  return (
+    <div className='bg-white rounded-xl p-6 shadow-sm border border-gray-100'>
+      <h3 className='text-xl font-semibold text-gray-900 mb-3'>{title}</h3>
+      <p className='text-gray-600'>{description}</p>
+    </div>
+  );
+}
+
+// TestimonialCard component
+function TestimonialCard({ company, industry, result, description, savings }: { 
+  company: string; 
+  industry: string; 
+  result: string; 
+  description: string; 
+  savings: string; 
+}) {
+  return (
+    <div className='bg-white rounded-xl p-6 shadow-sm border border-gray-100'>
+      <div className='flex items-center mb-4'>
+        <div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4'>
+          <span className='text-blue-600 font-bold'>{company.charAt(0)}</span>
+        </div>
+        <div>
+          <h4 className='font-semibold text-gray-900'>{company}</h4>
+          <p className='text-sm text-gray-600'>{industry}</p>
+        </div>
+      </div>
+      <p className='text-gray-700 mb-4'>{description}</p>
+      <div className='text-sm text-blue-600 font-medium mb-2'>{result}</div>
+      <div className='text-sm text-green-600 font-medium'>{savings}</div>
+    </div>
+  );
+}
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -24,6 +80,43 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Content Promotion Banner */}
+        <section className="py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎉 Massive Content Update: 15+ New AI Resources Just Released!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: Multimodal AI Revolution, Robotics & Automation, 
+                Sustainability & Green Tech, plus new case studies and implementation guides. Get expert insights 
+                on the technologies transforming 2025 and beyond.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/content-showcase"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Explore New Content
+                </Link>
+                <Link
+                  href="/blog/ai-2025-breakthrough-innovations"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Read Latest Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promotion Banner */}
+        <Suspense fallback={<LoadingSpinner size="md" text="Loading new content..." />}>
+          <NewContentPromotionBanner />
+        </Suspense>
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
             type="Organization" 
