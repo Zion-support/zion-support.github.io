@@ -35,13 +35,12 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
-    { name: 'About', href: '/about', icon: 'ℹ️' },
-    { name: 'Services', href: '/services', icon: '🚀' },
-    { name: 'Products', href: '/products', icon: '💎' },
+    { name: 'Content Showcase', href: '/content-showcase', icon: '✨', isNew: true },
+    { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
     { name: 'Case Studies', href: '/case-studies', icon: '📊' },
-    { name: 'Testimonials', href: '/testimonials', icon: '⭐' },
-    { name: 'Blog', href: '/blog', icon: '📝' },
-    { name: 'Careers', href: '/careers', icon: '💼' },
+    { name: 'Resources', href: '/resources', icon: '📚', isNew: true },
+    { name: 'Services', href: '/services', icon: '🚀' },
+    { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Contact', href: '/contact', icon: '📞' }
   ];
 
@@ -76,7 +75,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 relative ${
                   isActive(item.href)
                     ? 'bg-blue-600 text-white shadow-lg'
                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
@@ -84,6 +83,16 @@ const Navigation = () => {
               >
                 <span className="text-sm">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
+                {item.isNew && (
+                  <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+                    NEW
+                  </span>
+                )}
+                {item.isTrending && (
+                  <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+                    🔥
+                  </span>
+                )}
               </Link>
             ))}
           </div>
@@ -135,7 +144,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 relative ${
                   isActive(item.href)
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
@@ -143,6 +152,16 @@ const Navigation = () => {
               >
                 <span className="text-lg">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
+                {item.isNew && (
+                  <span className="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
+                    NEW
+                  </span>
+                )}
+                {item.isTrending && (
+                  <span className="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
+                    🔥
+                  </span>
+                )}
               </Link>
             ))}
             <div className="pt-4 space-y-3">
