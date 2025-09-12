@@ -1010,6 +1010,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Mega Banner */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🚀 JUST PUBLISHED - JANUARY 30, 2025</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              🎯 Massive Content Drop: 15+ New Resources
+            </h2>
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              We have just released our biggest content update ever! 15+ new articles, guides,
+              and case studies covering everything from AI productivity to enterprise transformation.
+              Get instant access to proven strategies that have generated $500M+ in savings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                href="/content-showcase"
+                className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+              >
+                🎯 View All New Content
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+              >
+                📚 Download Free Resources
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
