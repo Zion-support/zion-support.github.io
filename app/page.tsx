@@ -90,6 +90,12 @@ import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShow
 import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
 import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
 
+// New 2029-2030 Content Components
+import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
+import AI2030FuturePredictionsPromotionBanner from '../components/AI2030FuturePredictionsPromotionBanner';
+import QuantumComputingSolutionsPromotionBanner from '../components/QuantumComputingSolutionsPromotionBanner';
+import EnterpriseAutomationMasteryPromotionBanner from '../components/EnterpriseAutomationMasteryPromotionBanner';
+
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
@@ -122,6 +128,18 @@ export default function HomePage() {
         
         {/* NEW CONTENT NAVIGATION 2026 */}
         <NewContentNavigation2026 />
+        
+        {/* AI 2029 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2029BreakthroughPromotionBanner />
+        
+        {/* AI 2030 FUTURE PREDICTIONS PROMOTION BANNER */}
+        <AI2030FuturePredictionsPromotionBanner />
+        
+        {/* QUANTUM COMPUTING SOLUTIONS PROMOTION BANNER */}
+        <QuantumComputingSolutionsPromotionBanner />
+        
+        {/* ENTERPRISE AUTOMATION MASTERY PROMOTION BANNER */}
+        <EnterpriseAutomationMasteryPromotionBanner />
         
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
