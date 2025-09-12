@@ -26,6 +26,8 @@ export function AppHeader() {
     { name: 'AI Services', href: '/#ai-services-showcase' },
     { name: 'Innovations', href: '/#technology-innovations' },
     { name: 'Success Stories', href: '/#success-stories-showcase' },
+    { name: 'Content Hub', href: '/#advanced-content-hub' },
+    { name: 'Performance', href: '/#performance-optimization' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
