@@ -851,6 +851,95 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Content Promotion Banner */}
+      <section className='py-20 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🎉 NEW CONTENT DROP</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI & Tech Content Just Released
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest expert insights, implementation guides, and success stories. 
+              From AI predictions to manufacturing automation, get the knowledge you need to 
+              succeed in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-orange-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-year-ahead-predictions' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025: Year Ahead Predictions</h3>
+                <p className='text-sm opacity-90 mb-3'>Expert predictions for breakthrough technologies and trends</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-multimodal-revolution-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎭</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Multimodal Revolution 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>The future of intelligent systems across industries</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>22 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-multimodal-implementation-guide-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>Multimodal AI Implementation Guide</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete 180+ page implementation guide</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>180+ pages</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-manufacturing-automation-success-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
+                <h3 className='text-lg font-semibold mb-2'>Manufacturing AI Success Story</h3>
+                <p className='text-sm opacity-90 mb-3'>40% cost reduction, 60% faster processing</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Latest Articles Section */}
       <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
