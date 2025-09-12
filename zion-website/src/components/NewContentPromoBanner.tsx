@@ -133,6 +133,28 @@ const NewContentPromoBanner = ({
       category: 'Case Study'
     },
     {
+      id: '54',
+      title: 'Cloud Cost Optimization for AI & Data Workloads (2025)',
+      description: 'Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.',
+      href: '/blog/ai-2025-cloud-cost-optimization',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: '55',
+      title: 'Agent Safety Red-Teaming (2025): Methods & Tooling',
+      description: 'Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.',
+      href: '/blog/ai-2025-agent-safety-red-teaming',
+      type: 'blog',
+      featured: true,
+      readTime: '21 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
       id: '40',
       title: 'AI 2026 Outlook: Enterprise Agent Roadmap',
       description: 'Where enterprise AI agents are headed in 2026: architectures, SLAs, governance, and edge.',
