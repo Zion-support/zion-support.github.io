@@ -1,42 +1,3 @@
-    ...newOperationalServices2025,
-    ...realServicesQ12025,
-    ...realEnterpriseServices2025,
-    ...verifiedRealServices2025Batch2,
-    ...innovative2025Services,
-    ...emergingTech2025Services,
-    ...realMarketAugmentations2025,
-    ...innovative2026MicroSaasServicesV2,
-    ...innovative2026MicroSaasServicesV4,
-    ...emergingTech2026ServicesV2,
-    ...emergingTech2026ServicesV4,
-    ...enterpriseIT2026ServicesV2,
-    ...enterpriseIT2026ServicesV4,
-    ...aiAutonomousServices2026,
-    ...quantumSpaceTechServices2026,
-    ...metaverseDigitalRealityServices2026,
-    ...ultimate2026Services,
-    ...revolutionary2026Innovations,
-    ...innovative2026MicroSaasServicesV4,
-    ...emergingTech2026ServicesV4,
-    ...enterpriseIT2026ServicesV4,
-    ...innovative2026AIServicesV4
-  ];
-
-  // Categories for filtering
-  const categories = [
-    { id: 'all', name: 'All Services', icon: <Monitor className="w-5 h-5" />, count: allServices.length },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Space')).length },
-    { id: 'emerging', name: 'Emerging Tech', icon: <Star className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: <Building2 className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Infrastructure') || s.category.includes('DevOps')).length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
-    { id: 'robotics', name: 'Robotics & Automation', icon: <Bot className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length },
-    { id: 'biotech', name: 'Biotech & Healthcare', icon: <Dna className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Biotech') || s.category.includes('Healthcare')).length },
-    { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
-  ];
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -69,6 +30,32 @@ import { innovative2025ITServicesExpansionV2 } from '../data/innovative-2025-it-
 import { innovative2025AIServicesExpansionV2 } from '../data/innovative-2025-ai-services-expansion-v2';
 import Link from 'next/link';
 
+=======
+import Link from 'next/link';
+
+// Import our new 2025 service data
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { innovativeAIAutonomousServices2025 } from '../data/2025-innovative-ai-autonomous-services';
+
+// Import our new practical and specialized services
+import { realPracticalMicroSaasServices2025 } from '../data/2025-real-practical-micro-saas-services';
+import { advancedAIITSpecializedServices2025 } from '../data/2025-advanced-ai-it-specialized-services';
+
+// Import our new 2025 enterprise services
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
+
+// Import our new 2025 advanced services
+import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+
+// Import our new real services
+import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
+import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
+import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
+
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -90,43 +77,42 @@ import { advanced2038Services } from '../data/advanced-2038-services';
 import { revolutionary2039Services } from '../data/revolutionary-2039-services';
 import { revolutionary2040FuturisticServices } from '../data/revolutionary-2040-futuristic-services';
 import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-advanced-services';
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { advanced2041EnterpriseServices } from '../data/advanced-2041-enterprise-services';
 import { revolutionary2042MicroSaasServices } from '../data/revolutionary-2042-micro-saas-services';
 
-// Import our new 2025 advanced services
-import { advanced2025MicroSaasExpansion } from '../data/2025-advanced-micro-saas-expansion';
-import { advanced2025ITSolutionsExpansion } from '../data/2025-advanced-it-solutions-expansion';
-import { advanced2025AIServicesExpansion } from '../data/2025-advanced-ai-services-expansion';
-// Import our new 2025 innovative services expansion
-import { innovative2025MicroSaasExpansion } from '../data/innovative-2025-micro-saas-expansion';
-import { innovative2025ITSolutionsExpansion } from '../data/innovative-2025-it-solutions-expansion';
-import { innovative2025AIServicesExpansion } from '../data/innovative-2025-ai-services-expansion';
-
-// Import our new 2025 comprehensive services
-import { advancedEnterpriseSolutions2025 } from '../data/2025-advanced-enterprise-solutions';
-import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+// Import our new 2025 ultimate services expansion
+import { ultimate2025MicroSaasExpansion } from '../data/2025-ultimate-micro-saas-expansion';
+import { ultimate2025ITServicesExpansion } from '../data/2025-ultimate-it-services-expansion';
+import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-services-expansion';
 
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-import { emergingTech2025Innovations } from '../data/emerging-tech-2025-innovations';
 
-// Import additional 2038 services
-import { innovative2038ITMicroSaasServices } from '../data/innovative-2038-it-micro-saas-services';
 
-// Import 2038 innovative services
-import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038IndustryServices } from '../data/innovative-2038-industry-services';
-import { innovative2038ConsultingServices } from '../data/innovative-2038-consulting-services';
+// Import our new innovative 2040 services
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 
-// Import new innovative 2037 services
-import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
-import { innovative2037ITServices } from '../data/innovative-2037-it-services';
-import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
+// Import our new 2025 advanced enterprise services
+import { advancedEnterpriseServices } from '../data/2025-advanced-enterprise-services-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+
+// Import our new 2025 cutting-edge futuristic services
+import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+
+// Import our new 2025 cutting-edge innovative services expansion
+import { cuttingEdgeInnovativeServices2025 } from '../data/2025-cutting-edge-innovative-services-expansion';
+import { advancedITInfrastructureSolutions2025 } from '../data/2025-advanced-it-infrastructure-solutions';
+import { advancedAIAutomationSolutions2025 } from '../data/2025-advanced-ai-automation-solutions';
+
+// Import our new innovative services
+import { advancedCybersecurityAutomationServices2025 } from '../data/2025-advanced-cybersecurity-automation-services';
+import { aiAutomationWorkflowServices2025 } from '../data/2025-ai-automation-workflow-services';
+import { cloudDevOpsAutomationServices2025 } from '../data/2025-cloud-devops-automation-services';
+import { businessIntelligenceAutomationServices2025 } from '../data/2025-business-intelligence-automation-services';
+import { marketingAutomationAIServices2025 } from '../data/2025-marketing-automation-ai-services';
+import { healthcareAISpecializedServices2025 } from '../data/2025-healthcare-ai-specialized-services';
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -141,10 +127,8 @@ import { industryRealServices } from '../data/industry-real-services';
 
 // Helper function to get service category
 const getServiceCategory = (service: any) => {
-  if (typeof service.category === 'string') return service.category;
-  if (typeof service.type === 'string') return service.type;
-  if (typeof service.industry === 'string') return service.industry;
-  if (typeof service.sector === 'string') return service.sector;
+  if (service.category) return service.category;
+  if (service.type) return service.type;
   return 'Other';
 };
 
@@ -153,61 +137,103 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
   return 'Contact for pricing';
 };
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
-  if (Array.isArray(service.features)) return service.features;
-  if (Array.isArray(service.keyFeatures)) return service.keyFeatures;
-  if (Array.isArray(service.capabilities)) return service.capabilities;
-  if (Array.isArray(service.highlights)) return service.highlights;
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
 
 // Helper function to get service description
 const getServiceDescription = (service: any) => {
-  if (typeof service.description === 'string') return service.description;
-  if (typeof service.tagline === 'string') return service.tagline;
-  if (typeof service.summary === 'string') return service.summary;
-  if (typeof service.overview === 'string') return service.overview;
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
   return 'No description available';
 };
 
-// Create unified services array
+// Combine all services including new ones
 const allServices = [
+  // Our new innovative services 2025
+  ...advancedCybersecurityAutomationServices2025,
+  ...aiAutomationWorkflowServices2025,
+  ...cloudDevOpsAutomationServices2025,
+  ...businessIntelligenceAutomationServices2025,
+  ...marketingAutomationAIServices2025,
+  ...healthcareAISpecializedServices2025,
+  
+  // New practical and specialized services
+  ...realPracticalMicroSaasServices2025,
+  ...advancedAIITSpecializedServices2025,
+  
+  // Our new 2025 services
+  ...advancedAIAutomationServices2025,
+  ...innovativeITInfrastructureServices2025,
+  ...innovativeMicroSaasSolutions2025,
+  ...cuttingEdgeAIServices2025,
+  ...realEnterpriseMicroSaas2025,
+  ...innovativeAIAutonomousServices2025,
+  
+  // Our new 2025 advanced services
+  ...advancedBusinessIntelligenceServices2025,
+  ...advancedITInfrastructureServices2025,
+  
+  // Our new real services 2025
+  ...realMicroSaas2025Expansion,
+  ...realITServices2025Expansion,
+  ...realAIServices2025Expansion,
+  
+  // Existing services
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,
+  ...cuttingEdgeFuturisticServices,
+  ...advancedAIAutomationServices,
   ...emergingTechServices,
-  ...advancedEnterpriseSolutions2025,
-  ...innovativeAIAutomationServices2025,
-  ...innovativeITInfrastructureServices2025,
-  ...innovativeMicroSaasSolutions2025,
   ...newRealServices,
   ...realOperationalServices,
   ...marketReadyServices,
   ...marketValidatedServices,
+  // Our new 2025 Q4 innovative services
+  ...innovative2025Q4NewServices,
+  ...advancedITInfrastructureServices2025,
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
   ...real2029Q3Additions,
-  // Add our new 2025 cutting-edge innovative services
-  ...innovative2025CuttingEdgeServices,
-  ...innovative2025EnterpriseSolutions,
-  ...innovative2025IndustrySolutions,
   ...validatedServices2025Q4,
   ...real2035Q2Additions,
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-  // New innovative 2037 services
   ...innovative2037MicroSaasServices,
   ...innovative2037ITServices,
-  ...innovative2037AIServices
+  ...innovative2037AIServices,
+  ...innovative2038CuttingEdgeServices,
+  ...innovative2038ITInfrastructureServices,
+  ...innovative2037Services,
+  ...advanced2038Services,
+  ...revolutionary2039Services,
+  ...revolutionary2040FuturisticServices,
+  ...revolutionary2041AdvancedServices,
+  ...advanced2041EnterpriseServices,
+  ...revolutionary2042MicroSaasServices,
+  ...ultimate2025MicroSaasExpansion,
+  ...ultimate2025ITServicesExpansion,
+  ...ultimate2025AIServicesExpansion,
+  ...innovative2040ITServices,
+  ...innovative2040FuturisticServices,
+  ...advancedEnterpriseServices,
+  ...cuttingEdgeITInfrastructureServices,
+  
+  // Our new 2025 cutting-edge innovative services expansion
+  ...cuttingEdgeInnovativeServices2025,
+  ...advancedITInfrastructureSolutions2025,
+  ...advancedAIAutomationSolutions2025
 ];
 
 const categories = [
@@ -418,521 +444,6 @@ const ServicesPage: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8">
-              ← Back to Home
-            </Link>
-            
-            <section className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Our Services
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Comprehensive AI and automation solutions designed to transform your business and drive innovation
-              </p>
-              
-              {/* Navigation Links */}
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <a href="/about" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
-                  About Us
-                </a>
-                <a href="/case-studies" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
-                  Case Studies
-                </a>
-                <a href="/team" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-                  Our Team
-                </a>
-                <a href="/contact" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
-                  Contact Us
-                </a>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                  <div className="text-4xl mb-4">🤖</div>
-                  <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Development</h3>
-                  <p className="text-white/70 mb-6">
-                    Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
-                  </p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• Machine Learning Models</li>
-                    <li>• Natural Language Processing</li>
-                    <li>• Computer Vision</li>
-                    <li>• Predictive Analytics</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                  <div className="text-4xl mb-4">⚡</div>
-                  <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Automation Systems</h3>
-                  <p className="text-white/70 mb-6">
-                    End-to-end automation solutions that streamline operations and improve efficiency across your organization.
-                  </p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• Process Automation</li>
-                    <li>• Workflow Optimization</li>
-                    <li>• Robotic Process Automation</li>
-                    <li>• Smart Workflows</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                  <div className="text-4xl mb-4">☁️</div>
-                  <h3 className="text-2xl font-bold mb-4 text-green-400">Cloud Infrastructure</h3>
-                  <p className="text-white/70 mb-6">
-                    Scalable cloud solutions with automated deployment, monitoring, and optimization for peak performance.
-                  </p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• Cloud Migration</li>
-                    <li>• Auto-scaling</li>
-                    <li>• Performance Optimization</li>
-                    <li>• Security Hardening</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                  <div className="text-4xl mb-4">🔧</div>
-                  <h3 className="text-2xl font-bold mb-4 text-blue-400">DevOps & CI/CD</h3>
-                  <p className="text-white/70 mb-6">
-                    Streamlined development and deployment pipelines with automated testing, building, and deployment processes.
-                  </p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• CI/CD Pipeline Setup</li>
-                    <li>• Automated Testing</li>
-                    <li>• Infrastructure as Code</li>
-                    <li>• Monitoring & Alerting</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                  <div className="text-4xl mb-4">🛡️</div>
-                  <h3 className="text-2xl font-bold mb-4 text-yellow-400">Security & Compliance</h3>
-                  <p className="text-white/70 mb-6">
-                    Comprehensive security solutions with automated threat detection, response, and compliance monitoring.
-                  </p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• Threat Detection</li>
-                    <li>• Automated Response</li>
-                    <li>• Compliance Monitoring</li>
-                    <li>• Security Auditing</li>
-                  </ul>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                  <div className="text-4xl mb-4">📊</div>
-                  <h3 className="text-2xl font-bold mb-4 text-purple-400">Data Analytics</h3>
-                  <p className="text-white/70 mb-6">
-                    Advanced analytics and business intelligence solutions that turn data into actionable insights.
-                  </p>
-                  <ul className="space-y-2 text-sm text-white/60">
-                    <li>• Business Intelligence</li>
-                    <li>• Data Visualization</li>
-                    <li>• Predictive Analytics</li>
-                    <li>• Real-time Dashboards</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Why Choose Our Services?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-cyan-300 mb-2">Lightning Fast</h3>
-                  <p className="text-white/70">Sub-second response times and 99.9% uptime guarantee</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-fuchsia-300 mb-2">Enterprise Security</h3>
-                  <p className="text-white/70">Bank-grade security with SOC 2 Type II compliance</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-green-300 mb-2">24/7 Support</h3>
-                  <p className="text-white/70">Round-the-clock monitoring and support for your systems</p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Our Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">1</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-cyan-300 mb-2">Discovery</h3>
-                  <p className="text-white/70 text-sm">Understanding your needs and objectives</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">2</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-fuchsia-300 mb-2">Design</h3>
-                  <p className="text-white/70 text-sm">Creating the optimal solution architecture</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">3</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-green-300 mb-2">Development</h3>
-                  <p className="text-white/70 text-sm">Building and testing your solution</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">4</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-blue-300 mb-2">Deployment</h3>
-                  <p className="text-white/70 text-sm">Launching and monitoring your system</p>
-                </div>
-              </div>
-            </div>
-
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 rounded-2xl p-12 border border-cyan-500/30">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                  Let's discuss how our autonomous technology solutions can transform your business
-                  and drive innovation across your organization.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <a 
-                    href="/contact" 
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
-                  >
-                    Get a Free Consultation
-                  </a>
-                  <a 
-                    href="/case-studies" 
-                    className="px-8 py-4 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-200"
-                  >
-                    View Case Studies
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-        </main>
-      </div>
-    </>
-  );
-
-  // Reset to first page when filters/sort change
-  React.useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, sortBy]);
-
-  React.useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const q = (router.query.q as string) || '';
-    const filter = (router.query.filter as string) || (router.query.category as string) || '';
-    const sort = (router.query.sort as string) || '';
-
-    if (q) setSearchQuery(q);
-    if (sort) setSortBy(sort);
-
-    if (filter) {
-      // accept id or category name
-      const byId = categories.find(c => c.id.toLowerCase() === filter.toLowerCase());
-      if (byId) {
-        setSelectedCategory(byId.id);
-      } else {
-        const byName = categories.find(c => c.name.toLowerCase() === decodeURIComponent(filter.toLowerCase()));
-        if (byName) setSelectedCategory(byName.id);
-      }
-    }
-  }, [router.query.q, router.query.filter, router.query.category, router.query.sort]);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'enterprise it':
-      case 'enterprise security':
-      case 'devops & automation':
-      case 'data & analytics':
-      case 'cloud services':
-      case 'cybersecurity':
-        return <Building className="w-6 h-6 text-blue-400" />;
-      case 'ai & consciousness':
-      case 'ai services':
-      case 'artificial intelligence':
-        return <Brain className="w-6 h-6 text-cyan-400" />;
-      case 'quantum':
-      case 'quantum & emerging tech':
-        return <Atom className="w-6 h-6 text-purple-400" />;
-      case 'space':
-      case 'space & metaverse':
-        return <Rocket className="w-6 h-6 text-pink-400" />;
-      case 'micro saas':
-      case 'micro saas solutions':
-        return <Target className="w-6 h-6 text-orange-400" />;
-      case 'creative':
-      case 'creative & media':
-        return <Palette className="w-6 h-6 text-indigo-400" />;
-      case 'healthcare':
-      case 'healthcare & biotech':
-        return <Heart className="w-6 h-6 text-red-400" />;
-      case 'transportation':
-      case 'transportation & logistics':
-        return <Truck className="w-6 h-6 text-blue-400" />;
-      case 'education':
-      case 'education & research':
-        return <GraduationCap className="w-6 h-6 text-yellow-400" />;
-      default:
-        return <Shield className="w-6 h-6 text-gray-400" />;
-    }
-
-    // Sort services
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'name':
-          return a.name.localeCompare(b.name);
-        case 'price': {
-          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-          return priceA - priceB;
-        }
-        case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
-        case 'popularity':
-        default:
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      }
-    });
-
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  return (
-const ServicesPage: React.FC = () => {
-  const mainServices = [
-    {
-      title: "AI Consciousness Evolution",
-      description: "Revolutionary AI systems that develop self-awareness, emotional intelligence, and autonomous learning capabilities.",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600",
-      features: [
-        "Emotional intelligence development",
-        "Self-aware learning systems",
-        "Consciousness evolution algorithms",
-        "Human-AI collaboration frameworks"
-      ],
-      benefits: [
-        "Enhanced decision-making capabilities",
-        "Improved human-AI interaction",
-        "Autonomous problem-solving",
-        "Continuous self-improvement"
-      ]
-    },
-    {
-      title: "Quantum Computing Solutions",
-      description: "Next-generation quantum computing platforms that solve previously impossible computational problems.",
-      icon: <Atom className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-600",
-      features: [
-        "Quantum algorithm optimization",
-        "Hybrid quantum-classical systems",
-        "Cryptography and security",
-        "Complex problem solving"
-      ],
-      benefits: [
-        "1000x faster computation",
-        "Breakthrough research capabilities",
-        "Unbreakable encryption",
-        "Optimization solutions"
-      ]
-    },
-    {
-      title: "Advanced Cybersecurity",
-      description: "AI-powered security systems that provide real-time threat detection and autonomous response capabilities.",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-600",
-      features: [
-        "AI threat intelligence",
-        "Zero-trust architecture",
-        "Automated incident response",
-        "Behavioral analysis"
-      ],
-      benefits: [
-        "99.9% threat detection rate",
-        "Real-time protection",
-        "Reduced false positives",
-        "Compliance assurance"
-      ]
-    },
-    {
-      title: "Space Technology",
-      description: "Autonomous space exploration systems and resource intelligence platforms for the final frontier.",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-orange-500 to-red-600",
-      features: [
-        "Autonomous exploration systems",
-        "Space resource intelligence",
-        "Satellite network management",
-        "Mission planning and execution"
-      ],
-      benefits: [
-        "Reduced mission costs",
-        "Enhanced safety protocols",
-        "Real-time decision making",
-        "Resource optimization"
-      ]
-    }
-    return sortOrder === 'asc' ? comparison : -comparison;
-  });
-
-  const getCategoryIcon = (serviceName: string) => {
-    if (serviceName.toLowerCase().includes('ai')) return <Users className="w-6 h-6" />;
-    if (serviceName.toLowerCase().includes('quantum')) return <Filter className="w-6 h-6" />;
-    if (serviceName.toLowerCase().includes('infrastructure') || serviceName.toLowerCase().includes('devops') || serviceName.toLowerCase().includes('security')) return <ArrowRight className="w-6 h-6" />;
-    return <Award className="w-6 h-6" />;
-  };
-
-  // Reset to first page when filters/sort change
-  React.useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, sortBy]);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'enterprise it':
-      case 'enterprise security':
-      case 'devops & automation':
-      case 'data & analytics':
-      case 'cloud services':
-      case 'cybersecurity':
-        return <Building className="w-6 h-6 text-blue-400" />;
-      case 'ai & consciousness':
-      case 'ai services':
-      case 'artificial intelligence':
-        return <Brain className="w-6 h-6 text-cyan-400" />;
-      case 'quantum':
-      case 'quantum & emerging tech':
-        return <Atom className="w-6 h-6 text-purple-400" />;
-      case 'space':
-      case 'space & metaverse':
-        return <Rocket className="w-6 h-6 text-pink-400" />;
-      case 'micro saas':
-      case 'micro saas solutions':
-        return <Target className="w-6 h-6 text-orange-400" />;
-      case 'creative':
-      case 'creative & media':
-        return <Palette className="w-6 h-6 text-indigo-400" />;
-      case 'healthcare':
-      case 'healthcare & biotech':
-        return <Heart className="w-6 h-6 text-red-400" />;
-      case 'transportation':
-      case 'transportation & logistics':
-        return <Truck className="w-6 h-6 text-blue-400" />;
-      case 'education':
-      case 'education & research':
-        return <GraduationCap className="w-6 h-6 text-yellow-400" />;
-      default:
-        return <Shield className="w-6 h-6 text-gray-400" />;
-    }
-  };
-
-  const toggleSortOrder = () => {
-    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
-  };
-};
-
-const ServicesPage: React.FC = () => {
-  return (
-
-      <div className="min-h-screen bg-black text-white pt-24">
-        {/* Loading State */}
-        <AnimatePresence>
-          {isLoading && (
-            <motion.div
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 bg-black flex items-center justify-center"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-cyan-400 text-lg font-medium">Loading Services...</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Our Services
-                </h1>
-              </div>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Revolutionary technology solutions that redefine what's possible
-              </p>
-              <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-                From AI consciousness evolution to quantum computing breakthroughs, 
-                our services empower organizations to achieve the impossible and shape the future.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Main Services */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Core Technology Services
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our flagship services that represent the cutting edge of technological innovation
-              </p>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </div>
-=======
     <Layout>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -1567,3 +1078,41 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+=======
+      {/* CTA Section */}
+      <section style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
+        textAlign: 'center', background: 'white', marginTop: 40,
+        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
+      }}>
+        <h2 style={{ 
+          fontSize: 32, fontWeight: 700, marginBottom: 16,
+          color: '#1e293b'
+        }}>Ready to Get Started?</h2>
+        <p style={{ 
+          fontSize: 18, color: '#64748b', marginBottom: 32,
+          maxWidth: 600, margin: '0 auto 32px auto'
+        }}>
+          Contact our experts to discuss your project requirements and discover 
+          how our innovative solutions can drive your business forward.
+        </p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{
+            display: 'inline-block', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            transition: 'all 0.3s ease'
+          }}>Request a Quote</Link>
+          <a href="tel:+13024640950" style={{
+            display: 'inline-block', 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            border: '2px solid #22c55e', transition: 'all 0.3s ease'
+          }}>Call +1 302 464 0950</a>
+        </div>
+      </section>
+    </main>
+  );
+}

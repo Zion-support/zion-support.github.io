@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import type { NextPage } from 'next';
+import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
 
 export default function BlogIndexPage() {
@@ -57,122 +57,248 @@ export default function BlogIndexPage() {
 
   const categories = ['All', 'AI & Automation', 'Technology', 'Cloud Computing', 'AI Ethics', 'DevOps', 'Machine Learning'];
 
+  const getCategoryColor = (color: string) => {
+    const colorMap: { [key: string]: string } = {
+      blue: 'bg-blue-100 text-blue-800',
+      purple: 'bg-purple-100 text-purple-800',
+      red: 'bg-red-100 text-red-800',
+      green: 'bg-green-100 text-green-800',
+      yellow: 'bg-yellow-100 text-yellow-800',
+      indigo: 'bg-indigo-100 text-indigo-800',
+      pink: 'bg-pink-100 text-pink-800',
+      teal: 'bg-teal-100 text-teal-800'
+    };
+    return colorMap[color] || 'bg-gray-100 text-gray-800';
+  };
+
   return (
-    <div>
-      <Head>
-        <title>Blog | Zion Tech Group - AI & Technology Insights</title>
-        <meta name="description" content="Explore the latest insights on AI automation, autonomous systems, and cutting-edge technology trends from Zion Tech Group." />
-        <meta property="og:title" content="Blog - Zion Tech Group" />
-        <meta property="og:description" content="Latest insights on AI automation and technology trends." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Technology Blog
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Insights, trends, and deep dives into the world of AI automation, autonomous systems, and cutting-edge technology
+    <MainLayout 
+      title="Blog - Zion Tech Group"
+      description="Stay updated with the latest insights, trends, and best practices in technology from Zion Tech Group's expert team."
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Blog</h1>
+            <p className="text-xl md:text-2xl text-gray-200">
+              Insights, trends, and best practices in technology from our expert team.
             </p>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          {/* Featured Post */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-8 text-center text-white/90">Featured Article</h2>
-            {blogPosts.filter(post => post.featured).map(post => (
-              <div key={post.id} className="bg-gradient-to-r from-white/15 to-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-sm rounded-full border border-cyan-500/30">
-                    {post.category}
-                  </span>
-                  <span className="text-white/60 text-sm">{post.readTime}</span>
-                  <span className="text-white/60 text-sm">{post.date}</span>
+      {/* Featured Posts */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Articles</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our latest insights and expert perspectives on technology trends and innovations.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredPosts.map((post) => (
+              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
+                  <span className="text-white text-lg font-semibold">Featured</span>
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-white">
-                  <Link href={`/blog/${post.id}`} className="hover:text-cyan-400 transition-colors">
-                    {post.title}
-                  </Link>
-                </h3>
-                <p className="text-lg text-white/80 mb-6">{post.excerpt}</p>
-                <Link 
-                  href={`/blog/${post.id}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors"
-                >
-                  Read Full Article
-                  <span aria-hidden>→</span>
-                </Link>
-              </div>
-            ))}
-          </section>
-
-          {/* Category Filter */}
-          <section className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.map(category => (
-                <button
-                  key={category}
-                  className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          {/* Blog Posts Grid */}
-          <section className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => !post.featured).map(post => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 hover:bg-white/15">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-2 py-1 bg-fuchsia-500/20 text-fuchsia-300 text-xs rounded-full border border-fuchsia-500/30">
+                <div className="p-6">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(post.category.toLowerCase().includes('ai') ? 'blue' : post.category.toLowerCase().includes('cloud') ? 'purple' : 'red')}`}>
                       {post.category}
                     </span>
-                    <span className="text-white/60 text-xs">{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">
-                    <Link href={`/blog/${post.id}`} className="hover:text-cyan-400 transition-colors">
-                      {post.title}
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                    <Link href={`/blog/${post.slug}`}>
+                      <span className="hover:text-blue-600 transition-colors cursor-pointer">
+                        {post.title}
+                      </span>
                     </Link>
                   </h3>
-                  <p className="text-white/70 mb-4 text-sm">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-white/60 text-sm">{post.date}</span>
-                    <Link 
-                      href={`/blog/${post.id}`}
-                      className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-                    >
-                      Read More →
-                    </Link>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {post.author}
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {post.date}
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {post.readTime}
+                    </div>
                   </div>
-                </article>
-              ))}
-            </div>
-          </section>
+                  
+                  <Link href={`/blog/${post.slug}`}>
+                    <span className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium cursor-pointer">
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </span>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          {/* Newsletter Signup */}
-          <section className="mt-20 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30">
-              <h2 className="text-2xl font-bold mb-4 text-white">Stay Updated</h2>
-              <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                Get the latest insights on AI automation, autonomous systems, and technology trends delivered to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400"
-                />
-                <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors">
-                  Subscribe
-                </button>
+      {/* Main Content */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Main Content */}
+            <div className="lg:col-span-3">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
+                <p className="text-gray-600">Stay updated with our latest insights and expert perspectives.</p>
+              </div>
+              
+              <div className="space-y-8">
+                {recentPosts.map((post) => (
+                  <article key={post.id} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(post.category.toLowerCase().includes('ai') ? 'blue' : post.category.toLowerCase().includes('cloud') ? 'purple' : post.category.toLowerCase().includes('cyber') ? 'red' : 'green')}`}>
+                            {post.category}
+                          </span>
+                        </div>
+                        
+                        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                          <Link href={`/blog/${post.slug}`}>
+                            <span className="hover:text-blue-600 transition-colors cursor-pointer">
+                              {post.title}
+                            </span>
+                          </Link>
+                        </h3>
+                        
+                        <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-4 text-sm text-gray-500">
+                            <div className="flex items-center">
+                              <User className="w-4 h-4 mr-1" />
+                              {post.author}
+                            </div>
+                            <div className="flex items-center">
+                              <Calendar className="w-4 h-4 mr-1" />
+                              {post.date}
+                            </div>
+                            <div className="flex items-center">
+                              <Clock className="w-4 h-4 mr-1" />
+                              {post.readTime}
+                            </div>
+                          </div>
+                          
+                          <Link href={`/blog/${post.slug}`}>
+                            <span className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium cursor-pointer">
+                              Read More
+                              <ArrowRight className="w-4 h-4 ml-1" />
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              
+              {/* Pagination */}
+              <div className="mt-12 flex justify-center">
+                <nav className="flex items-center space-x-2">
+                  <button className="px-4 py-2 text-gray-500 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                    Previous
+                  </button>
+                  <button className="px-4 py-2 bg-blue-600 text-white border border-blue-600 rounded-lg">
+                    1
+                  </button>
+                  <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                    2
+                  </button>
+                  <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                    3
+                  </button>
+                  <button className="px-4 py-2 text-gray-500 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                    Next
+                  </button>
+                </nav>
               </div>
             </div>
-          </section>
-        </main>
-      </div>
-    </>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              {/* Categories */}
+              <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
+                <div className="space-y-2">
+                  {categories.map((category, index) => (
+                    <Link key={index} href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <span className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
+                        <span className="flex items-center">
+                          <Tag className="w-4 h-4 mr-2" />
+                          {category.name}
+                        </span>
+                        <span className="text-sm text-gray-400">({category.count})</span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Newsletter Signup */}
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+                <h3 className="text-lg font-semibold mb-3">Subscribe to Our Newsletter</h3>
+                <p className="text-blue-100 mb-4 text-sm">
+                  Get the latest insights and updates delivered to your inbox.
+                </p>
+                <div className="space-y-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-2 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  />
+                  <button className="w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4">Stay Updated with Technology Trends</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Subscribe to our newsletter and never miss the latest insights, trends, and best practices in technology.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/contact">
+              <span className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-flex items-center">
+                Get in Touch
+              </span>
+            </Link>
+            <Link href="/services">
+              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-flex items-center">
+                Explore Services
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
   );
-}
+};
+
+export default Blog;

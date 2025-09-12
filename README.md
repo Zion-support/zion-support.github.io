@@ -1,6 +1,3 @@
-
-# Zion Tech Group - Comprehensive Tech & AI Marketplace
-=======
 # Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions
 
 ## 🚀 About Zion Tech Group
@@ -99,144 +96,100 @@ Zion Tech Group is a leading technology solutions provider offering comprehensiv
 - **Custom Solutions**: Tailored implementations for your business
 
 ## 📞 Contact Information
+=======
+# Zion Tech Group - AI-Powered IT Solutions Platform
 
-- **Phone**: +1 302 464 0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
-- **Website**: https://ziontechgroup.com
+# Zion Tech Group - Modern Technology Solutions Platform
 
-## 🔗 Quick Links
+## 🚀 Features
 
-- [Enhanced Services](/enhanced-services) - Complete service catalog
-- [Services Overview](/services-overview) - Detailed service information
-- [Services Pricing](/services-pricing) - Transparent pricing
-- [IT Onsite Services](/it-onsite-services) - Global IT support
-- [Request Quote](/request-quote) - Get custom pricing
+- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
+- **AI Integration**: Google Generative AI, OpenAI integration
+- **Authentication**: Supabase Auth with multiple providers
+- **UI Components**: Radix UI components with custom styling
+- **State Management**: React Query for server state, Context API for client state
+- **Performance**: Optimized builds, code splitting, lazy loading
+- **Testing**: Vitest, Cypress, Playwright for comprehensive testing
+- **Deployment**: Netlify-ready with serverless functions
 
----
+## 🛠️ Tech Stack
 
-# Welcome to your Lovable project
+## ✨ Recent Improvements & Modernization
 
-## Project info
+### 🎯 What We've Accomplished
 
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
+1. **Complete Project Restructuring**
+   - Migrated from a complex, multi-framework setup to a clean, modern Vite + React architecture
+   - Eliminated dependency conflicts and outdated packages
+   - Streamlined build process for faster development and deployment
 
-## How can I edit this code?
+2. **Modern Technology Stack**
+   - **Frontend**: React 18 with TypeScript
+   - **Build Tool**: Vite 5 for lightning-fast builds
+   - **Styling**: Tailwind CSS with custom animations and design system
+   - **Animations**: Framer Motion for smooth, professional animations
+   - **Icons**: Lucide React for consistent, scalable icons
 
-There are several ways of editing your application.
+3. **Enhanced User Experience**
+   - Responsive, mobile-first design
+   - Smooth animations and transitions
+   - Modern, professional UI/UX
+   - Optimized performance with code splitting
+   - Accessibility improvements
 
-**Use Lovable**
+4. **Clean Architecture**
+   - Simplified component structure
+   - Removed unused dependencies
+   - Optimized bundle size
+   - Better code organization
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
+## 🌟 Our Service Portfolio
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend & Services
+- **Supabase** for authentication and database
+- **Netlify Functions** for serverless API
+- **Stripe** for payments
+- **Google Analytics** for tracking
 
-**Use your preferred IDE**
+### Development Tools
+- **TypeScript** for type safety
+- **ESLint** for code linting
+- **Prettier** for code formatting
+- **Vitest** for unit testing
+- **Cypress** for E2E testing
+- **Playwright** for cross-browser testing
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Installation
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
-
-# If you're using OpenAI Codex environments, a convenience script is available:
-./.codex/setup.sh  # Installs dependencies using npm
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
-```
-
-> **IMPORTANT**: This project requires internet access to install dependencies. Without network connectivity, the build process will fail with errors about missing modules like 'react', 'react-router-dom', and 'lucide-react'.
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Integrations
-
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-
-## Troubleshooting
-
-### Network Issues
-
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
-
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
-
-### Package Manager Issues
-
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
-
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
-
-If you see a warning about `glob@7.2.3` or `rimraf@3.0.2` being deprecated, run:
-
-### ⚡ Performance
-- Code splitting and lazy loading
-- Optimized bundle sizes
-- Efficient rendering
-- Minimal re-renders
-- Fast loading times
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, CSS Modules
-- **UI Components**: Radix UI, Custom Components
-- **State Management**: React Context, Custom Hooks
-- **Routing**: React Router v6
-- **Build Tool**: Vite
-- **Package Manager**: npm
+### Frontend
+- **React 18** - Modern React with hooks and concurrent features
+- **TypeScript** - Type-safe development
+- **Vite 5** - Lightning-fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Production-ready motion library
 
-## 📍 Contact Information
+### Development Tools
+- **ESLint** - Code quality and consistency
+- **Prettier** - Code formatting
+- **Vitest** - Fast unit testing framework
 
-- **Phone**: +1 (302) 464-0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-- **Website**: https://ziontechgroup.com
+### Build & Deployment
+- **Vite** - Modern build tool with HMR
+- **Terser** - JavaScript minification
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixing
 
 ## 🚀 Getting Started
 
@@ -248,7 +201,144 @@ If you see a warning about `glob@7.2.3` or `rimraf@3.0.2` being deprecated, run:
 ```bash
 # Clone the repository
 git clone <repository-url>
-=======
+cd zion-tech-group
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Development Commands
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run test         # Run tests
+```
+
+## 📁 Project Structure
+
+```
+zion-tech-group/
+├── src/
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # Application entry point
+│   ├── styles.css           # Global styles and Tailwind imports
+│   └── components/          # Reusable components
+├── public/                  # Static assets
+├── dist/                    # Production build output
+├── package.json             # Dependencies and scripts
+├── vite.config.ts           # Vite configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+└── README.md               # This file
+```
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Cyan (#22ddd2) - Technology and innovation
+- **Secondary**: Blue (#3b82f6) - Trust and reliability
+- **Accent**: Purple (#8b5cf6) - Creativity and excellence
+- **Neutral**: Slate grays for text and backgrounds
+
+### Typography
+- **Headings**: Bold, gradient text with modern fonts
+- **Body**: Clean, readable text optimized for screens
+- **Responsive**: Scales appropriately across all devices
+
+### Animations
+- **Entrance**: Smooth fade-in and slide-up animations
+- **Hover**: Interactive feedback with scale and color transitions
+- **Scroll**: Reveal animations triggered by viewport intersection
+
+## 📱 Responsive Design
+
+- **Mobile First**: Designed for mobile devices first
+- **Breakpoints**: Optimized for all screen sizes
+- **Touch Friendly**: Optimized for touch interactions
+- **Performance**: Fast loading on all devices
+
+## 🚀 Performance Features
+
+- **Code Splitting**: Automatic chunk splitting for optimal loading
+- **Lazy Loading**: Components load only when needed
+- **Optimized Images**: WebP support and responsive images
+- **Minification**: CSS and JavaScript minification for production
+- **Tree Shaking**: Unused code elimination
+
+## 🔧 Configuration
+
+### Environment Variables
+```bash
+# Development
+NODE_ENV=development
+
+# Production
+NODE_ENV=production
+```
+
+### Build Optimization
+- **Bundle Analysis**: Built-in bundle analyzer
+- **Tree Shaking**: Automatic dead code elimination
+- **Minification**: Production-ready minified output
+- **Source Maps**: Optional source maps for debugging
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm run test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+## 📦 Deployment
+
+### Build for Production
+```bash
+npm run build
+```
+
+The build output will be in the `dist/` directory, ready for deployment to any static hosting service.
+
+### Deployment Options
+- **Netlify**: Drag and drop the `dist/` folder
+- **Vercel**: Connect your repository for automatic deployments
+- **AWS S3**: Upload to S3 bucket for static hosting
+- **GitHub Pages**: Deploy directly from GitHub
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 📞 Contact & Support
+
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com
+
 #### Autonomous Customer Experience Optimization Platform
 - **Price:** $1,400/month
 - **Market Price:** $1,400 - $4,800/month
@@ -800,3 +890,17 @@ npx deploy-zion-ipfs
 ```
 
 This updates `rimraf` so it no longer relies on the deprecated `glob` version.
+=======
+## 🔄 Changelog
+
+### Version 0.1.0 (Current)
+- ✅ Complete project modernization
+- ✅ Migration to Vite + React architecture
+- ✅ Modern UI/UX design implementation
+- ✅ Performance optimizations
+- ✅ Responsive design implementation
+- ✅ Clean, maintainable codebase
+
+---
+
+**Built with ❤️ by Zion Tech Group**

@@ -1,16 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import ErrorBoundary from './components/ErrorBoundary'
-import './index.css'
+import React, { Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import { ErrorBoundary } from 'react-error-boundary';
+import App from './App.tsx';
+import './styles.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+window.addEventListener('unhandledrejection', (event) => {
+  const reason = event.reason;
+  const errorMessage = typeof reason === 'string' ? reason : 'Unknown error';
+  handleGlobalError(new Error(errorMessage));
+});
+
+const root = createRoot(rootElement);
+root.render(
 	<React.StrictMode>
-		<ErrorBoundary>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</ErrorBoundary>
-	</React.StrictMode>,
-)
+		<App />
+	</React.StrictMode>
+);

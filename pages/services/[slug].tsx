@@ -8,13 +8,43 @@ import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-sa
 import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
 import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
 
-type Service = typeof ultimateInnovativeServices2026[number];
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
+const ServicePage: React.FC = () => {
+  const params = useParams();
+  const slug = params.slug as string;
+  const service = React.useMemo(
+    () => SERVICES.find((s) => slugify(s.title) === slug) || null,
+    [slug]
+  );
+  if (!service) {
+    return <Custom404 />;
+  }
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    offers: {
+      "@type": "Offer",
+      price: service.price,
+      priceCurrency: service.currency,
+    },
+  };
+  return (
+    <>
+      <NextSeo
+        title={service.title}
+        description={service.description}
+        openGraph={{ title: service.title, description: service.description }}
+      />
+      <Head>
+        <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
+      </Head>
+      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+        <h1>{service.title}</h1>
+        <p>{service.description}</p>
+      </main>
+    </>
+  );
 };
 
 function getAllServices(): Service[] {
