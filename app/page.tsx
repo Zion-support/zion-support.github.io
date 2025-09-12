@@ -61,6 +61,7 @@ import UltimateContentPromotionBanner from '../components/UltimateContentPromoti
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
@@ -392,6 +393,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
+        <InteractiveContentDiscovery2025 />
         
         {/* CONTENT DISCOVERY WIDGET 2026 */}
         <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
