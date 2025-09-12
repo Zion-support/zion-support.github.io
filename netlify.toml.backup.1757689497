@@ -4,8 +4,13 @@
   status = 200
  
 [build]
+<<<<<<< HEAD
+  command = "npm run build"
+  publish = "dist"
+=======
   command = "npm ci --no-audit --no-fund --include=optional && npm run build"
   publish = ".next"
+>>>>>>> origin/backup-main-20250912-093824
   functions = "netlify/functions"
   command_timeout = "30m"
 
@@ -22,6 +27,10 @@
 [context.deploy-preview]
   command = "npm run build"
 
+<<<<<<< HEAD
+[context.branch-deploy]
+  command = "npm run build"
+=======
 [[scheduled.functions]]
   name = "front-enhancer"
   schedule = "*/5 * * * *" # every 5 minutes
@@ -282,3 +291,4 @@
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
+>>>>>>> origin/backup-main-20250912-093824

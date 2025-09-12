@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+// @ts-nocheck
+import React, { Suspense, lazy } from 'react';
+=======
 import React, { Suspense } from 'react';
 import { Metadata } from 'next';
+>>>>>>> origin/backup-main-20250912-093824
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -34,6 +39,454 @@ const StructuredData = lazy(() => import('../components/StructuredData'));
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+    <EnhancedErrorBoundary>
+      <SEO
+        title="Zion Tech Group - AI & Technology Solutions"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
+        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
+        url="/"
+      />
+      
+      <div className='min-h-screen bg-white'>
+        {/* ULTRA CONTENT PROMOTION BANNER */}
+        <UltraContentPromotionBanner />
+        
+        {/* Content Promotion Banner */}
+        <NewContentPromotionBanner />
+        
+        {/* NEW CONTENT LAUNCH BANNER */}
+        <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🚀 25+ New AI Resources Just Released!
+              </h2>
+              <p className="text-lg opacity-90 mb-6 max-w-4xl mx-auto">
+                Discover our biggest content update yet: Advanced AI Architecture, Cybersecurity Defense, 
+                Quantum Computing Breakthroughs, Manufacturing Success Stories, and comprehensive implementation guides. 
+                Everything you need to succeed with AI in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  href="/content-showcase"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                >
+                  🎯 Explore All New Content
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+                >
+                  📚 Download Master Guide
+                </Link>
+              </div>
+              
+              {/* Featured Content Preview */}
+              <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🏗️</div>
+                    <h3 className="text-sm font-semibold mb-1">Advanced AI Architecture</h3>
+                    <p className="text-xs opacity-90">Scalable, resilient systems</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🛡️</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
+                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">⚛️</div>
+                    <h3 className="text-sm font-semibold mb-1">Quantum Computing</h3>
+                    <p className="text-xs opacity-90">Revolutionary breakthroughs</p>
+                  </div>
+                </Link>
+                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">💰</div>
+                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
+                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promotion Banner */}
+        <NewContentPromoBanner />
+
+        {/* Enhanced Content Discovery Banner */}
+        <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔍 ENHANCED CONTENT DISCOVERY</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎯 Discover Revolutionary AI Content with Advanced Search & Filtering
+              </h2>
+              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
+                Explore our comprehensive library of 120+ AI resources with intelligent search, category filtering, 
+                and personalized recommendations. Find exactly what you need to accelerate your AI journey.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/enhanced-content-discovery"
+                  className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center"
+                >
+                  🔍 Explore Enhanced Discovery
+                  <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/ultra-content-showcase"
+                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
+                >
+                  📚 View All Content
+                </Link>
+              </div>
+              
+              {/* Feature Highlights */}
+              <div className="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                  <div className="text-3xl mb-3">🔍</div>
+                  <h3 className="text-lg font-semibold mb-2">Smart Search</h3>
+                  <p className="text-sm opacity-90">Search by title, description, tags, or content type</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                  <div className="text-3xl mb-3">🏷️</div>
+                  <h3 className="text-lg font-semibold mb-2">Category Filtering</h3>
+                  <p className="text-sm opacity-90">Filter by AI automation, cybersecurity, case studies, and more</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                  <div className="text-3xl mb-3">⭐</div>
+                  <h3 className="text-lg font-semibold mb-2">Trending Content</h3>
+                  <p className="text-sm opacity-90">Discover what&apos;s popular and featured by our experts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Tools Showcase Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎯 Revolutionary AI Tools Suite: 6 Powerful Tools Now Available!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Transform your AI journey with our comprehensive suite of tools: AI Readiness Assessment, ROI Calculator, 
+                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, and Cost Optimizer. 
+                Get personalized insights and recommendations to maximize your AI success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Link
+                  href="/tools/ai-tools-showcase"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  🛠️ Explore All AI Tools
+                </Link>
+                <Link
+                  href="/tools/ai-readiness-assessment"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  🎯 Take Assessment
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  📚 Download Master Guide
+                </Link>
+              </div>
+              
+              {/* Featured Tools Preview */}
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <Link href="/tools/ai-readiness-assessment" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🎯</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Readiness Assessment</h3>
+                    <p className="text-xs opacity-90">Evaluate your AI transformation readiness</p>
+                  </div>
+                </Link>
+                <Link href="/tools/ai-roi-calculator" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">📊</div>
+                    <h3 className="text-sm font-semibold mb-1">AI ROI Calculator</h3>
+                    <p className="text-xs opacity-90">Calculate your AI investment returns</p>
+                  </div>
+                </Link>
+                <Link href="/resources/ai-implementation-roadmap-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🗺️</div>
+                    <h3 className="text-sm font-semibold mb-1">Implementation Roadmap</h3>
+                    <p className="text-xs opacity-90">32-week AI transformation guide</p>
+                  </div>
+                </Link>
+                <Link
+                  href="/resources/ai-automation-implementation-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Download Free Guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Latest Content Drop Banner */}
+        <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🔥 JUST PUBLISHED - JANUARY 2025</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 Revolutionary AI Content: Edge Agents, Advanced Architecture & Cybersecurity
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: Edge AI Agents in Production, Advanced AI Architecture Patterns, 
+                AI Cybersecurity Revolution, and the $200M Manufacturing Success Case Study. Expert insights to accelerate your AI success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+                <Link
+                  href="/blog/ai-2025-edge-agents-in-production"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  🤖 Edge AI Agents Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-advanced-ai-architecture"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  🏗️ Architecture Patterns
+                </Link>
+                <Link
+                  href="/blog/ai-2025-cybersecurity-revolution"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  🛡️ Cybersecurity Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  💰 $200M Case Study
+                </Link>
+              </div>
+              
+              {/* Featured Content Preview */}
+              <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <Link href="/blog/ai-2025-edge-agents-in-production" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🤖</div>
+                    <h3 className="text-sm font-semibold mb-1">Edge AI Agents</h3>
+                    <p className="text-xs opacity-90">Production deployment guide</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🏗️</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Architecture</h3>
+                    <p className="text-xs opacity-90">Scalable patterns & design</p>
+                  </div>
+                </Link>
+                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">🛡️</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
+                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                  </div>
+                </Link>
+                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
+                    <div className="text-2xl mb-2">💰</div>
+                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
+                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Autonomous Systems Promotion Banner */}
+        <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🤖 AUTONOMOUS SYSTEMS BREAKTHROUGH</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                💰 $200M Manufacturing Success: Autonomous AI Systems Case Study!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover how Fortune 500 companies are achieving unprecedented results with autonomous AI systems. 
+                Read our new case study showing $200M savings and download our free implementation guide with ROI calculators.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  View Case Study
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  Free Master Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-breakthrough-innovations"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  Read Latest Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sustainability & Green Tech Promotion Banner */}
+        <section className="py-6 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🌱 SUSTAINABILITY & GREEN TECH</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🌍 AI-Powered Sustainability: 40% Energy Reduction Achieved!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover how AI is driving sustainability initiatives and reducing carbon footprints. 
+                Learn about smart energy management, intelligent waste management, and climate risk assessment solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-sustainability-green-tech"
+                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Sustainability Guide
+                </Link>
+                <Link
+                  href="/blog/ai-2025-robotics-automation"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  Robotics & Automation
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
+          <StructuredData 
+            type="Organization" 
+            data={{
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Transforming businesses through cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+              "url": "https://zion.app",
+              "logo": "https://zion.app/images/zion-tech-group-logo.png",
+              "foundingDate": "2020",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-ZION-TECH",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
+                "https://twitter.com/ZionTechGroup",
+                "https://linkedin.com/company/zion-tech-group",
+                "https://github.com/Zion-Holdings"
+              ],
+              "offers": {
+                "@type": "AggregateOffer",
+                "offerCount": "4",
+                "offers": [
+                  {
+                    "@type": "Offer",
+                    "name": "Micro SaaS Development",
+                    "description": "End-to-end product engineering with billing, auth, analytics and growth"
+                  },
+                  {
+                    "@type": "Offer", 
+                    "name": "AI Services",
+                    "description": "LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "Edge Computing",
+                    "description": "Real-time processing, IoT integration, and distributed infrastructure solutions"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "IT Services", 
+                    "description": "Cloud migration, DevOps, SRE, security hardening and cost optimization"
+                  }
+                ]
+              }
+            }} 
+          />
+          <StructuredData 
+            type="WebSite" 
+            data={{
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Zion Tech Group",
+              "url": "https://zion.app",
+              "description": "Leading technology solutions provider specializing in AI, cloud computing, and digital transformation",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://zion.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Zion Tech Group"
+              }
+            }} 
+          />
+          <StructuredData 
+            type="BreadcrumbList"
+            data={{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://zion.app"
+                }
+              ]
+            }}
+          />
+        </Suspense>
+=======
     <div className='min-h-screen bg-white'>
       {/* Skip Navigation for Accessibility */}
       <a 
@@ -42,6 +495,7 @@ export default function HomePage() {
       >
         Skip to main content
       </a>
+>>>>>>> origin/backup-main-20250912-093824
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -72,6 +526,127 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Dynamic Content Carousel */}
+      <DynamicContentCarousel />
+
+      {/* New Content Discovery */}
+      <NewContentDiscovery />
+
+      {/* New Content Promotional Banner */}
+      <NewContentPromoBanner variant="featured" maxItems={4} />
+
+      {/* Featured New Content Showcase */}
+      <FeaturedNewContentShowcase title="Featured in January 2025" subtitle="Fresh articles, resources, and case studies just released" showViewAll={true} viewAllHref="/content-showcase" columns={3} />
+
+      {/* Featured Content Showcase */}
+      <FeaturedContentShowcase />
+
+      {/* NEW CONTENT SPOTLIGHT SECTION */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔥 HOT THIS WEEK - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Revolutionary AI Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest expert insights, case studies, and resources. From AI enterprise implementation 
+              to retail transformation success stories, get the knowledge you need to succeed in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Cards */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-year-in-review' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive analysis of AI breakthroughs and enterprise adoption trends</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-workforce-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Workforce Transformation 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete guide to reskilling strategies for the AI era</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-sustainability-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Sustainability Success</h3>
+                <p className='text-sm opacity-90 mb-3'>60% energy reduction and carbon neutrality achieved</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-implementation-master-guide-2026' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide 2026</h3>
+                <p className='text-sm opacity-90 mb-3'>200+ page comprehensive guide with frameworks and templates</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>200+ pages</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='text-center mt-8'>
+            <Link
+              href='/blog'
+              className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
+            >
+              View All Articles
+            </Link>
+            <Link
+              href='/resources'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block'
+            >
+              Download Resources
+            </Link>
+          </div>
+        </div>
+      </section>
+
+=======
+>>>>>>> origin/backup-main-20250912-093824
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
       {/* Latest Content Drop - Prominent Banner */}
@@ -258,8 +833,13 @@ export default function HomePage() {
           </div>
 
           {/* Featured New Content Grid */}
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-automation-2025-complete-guide' className='group'>
+=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <Link href='/blog/ai-multimodal-revolution-2025' className='group'>
+>>>>>>> origin/backup-main-20250912-093824
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Automation Complete Guide 2025</h3>
@@ -311,6 +891,9 @@ export default function HomePage() {
               </div>
             </Link>
 
+<<<<<<< HEAD
+            <Link href='/resources/ai-implementation-playbook-2025' className='group'>
+=======
             <Link href='/resources/ai-transformation-playbook-2026' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
@@ -351,6 +934,7 @@ export default function HomePage() {
             </Link>
 
             <Link href='/resources/ai-implementation-checklist-2025' className='group'>
+>>>>>>> origin/backup-main-20250912-093824
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Implementation Playbook</h3>
@@ -358,11 +942,42 @@ export default function HomePage() {
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
+<<<<<<< HEAD
+                  <span>New</span>
+=======
                   <span>Checklist</span>
+>>>>>>> origin/backup-main-20250912-093824
                 </div>
               </div>
             </Link>
           </div>
+<<<<<<< HEAD
+
+          <div className='text-center mt-8'>
+            <Link
+              href='/content-showcase'
+              className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
+            >
+              View All New Content
+            </Link>
+            <Link
+              href='/resources'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block'
+            >
+              Download Resources
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Services Section */}
+      <section className='py-16' aria-labelledby="services-heading">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 id="services-heading" className='text-3xl font-bold text-gray-900 mb-4'>
+              Our Services
+=======
         </div>
       </section>
 
@@ -416,6 +1031,7 @@ export default function HomePage() {
             </div>
             <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight'>
               Why Choose Zion Tech Group?
+>>>>>>> origin/backup-main-20250912-093824
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Comprehensive technology solutions tailored to your business needs
@@ -537,6 +1153,10 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Social Proof & Trust Indicators */}
+      <section className='py-16 bg-white'>
+=======
       {/* New Case Study Spotlight */}
       <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -639,6 +1259,7 @@ export default function HomePage() {
       {/* Interactive Stats & Social Proof */}
       <section className='py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden'>
         <div className='absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10'></div>
+>>>>>>> origin/backup-main-20250912-093824
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
@@ -799,7 +1420,11 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+<<<<<<< HEAD
+            <Link href='/blog/ai-workforce-transformation-2025' className='group'>
+=======
             <Link href='/blog/ai-enterprise-integration-2025' className='group'>
+>>>>>>> origin/backup-main-20250912-093824
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Workforce Transformation 2025</h3>
@@ -1500,6 +2125,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
       {/* New Content Spotlight - Latest Drop */}
       <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
@@ -1617,6 +2244,7 @@ export default function HomePage() {
       {/* Trending Content Showcase */}
       <NewContentShowcase variant="trending" maxItems={4} />
 
+>>>>>>> origin/backup-main-20250912-093824
       {/* Enhanced Latest Articles Section */}
       <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1958,6 +2586,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      
+=======
 
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase 
@@ -1986,6 +2617,7 @@ export default function HomePage() {
         variant="latest"
       />
 
+>>>>>>> origin/backup-main-20250912-093824
       {/* Performance Metrics Section */}
       <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
         <PerformanceMetrics />

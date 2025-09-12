@@ -1,26 +1,106 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
- 
+# Netlify build configuration (unified)
 [build]
+<<<<<<< HEAD
+  command = "npm install --no-audit --no-fund && npm run build"
+  publish = "dist"
+  command_timeout = "30m"
+
+[build.environment]
+NODE_VERSION = "22.12.0"
+NODE_OPTIONS = "--max-old-space-size=4096"
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
+SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+
+# API functions (disabled for Vite SPA)
+# [functions]
+# directory = "netlify/functions"
+
+# Long-term caching for static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+=======
   command = "npm ci --no-audit --no-fund --include=optional && npm run build"
   publish = ".next"
   functions = "netlify/functions"
   command_timeout = "30m"
 
+[build.environment]
+  NODE_VERSION = "20"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # When triggering chained builds via build hook, set NETLIFY_RERUN_CHAIN=1 in the hook payload/env
+
+# Skip Husky for CI builds
+[build.processing]
+  skip_processing = false
+
+
 [[plugins]]
-  package = "netlify-plugin-compress"
+  package = "netlify-plugin-cloudinary"
+
+[[plugins]]
+  package = "./netlify/plugins/run-functions-and-rerun"
   [plugins.inputs]
-    gzip = true
-    brotli = true
+    # Optional: comma-separated includes/excludes
+    include = ""
+    exclude = ""
+    concurrency = 6
+    timeoutMs = 180000
 
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
+# Scheduled Functions (new automations replacing some GitHub Actions cadence)
+[[scheduled.functions]]
+  name = "homepage_advertiser"
+  schedule = "*/15 * * * *" # every 15 minutes
 
-[context.deploy-preview]
-  command = "npm run build"
+[[scheduled.functions]]
+  name = "cloud_orchestrator"
+  schedule = "0 */4 * * *" # every 4 hours
 
 [[scheduled.functions]]
   name = "front-enhancer"
@@ -282,3 +362,4 @@
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
+>>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
