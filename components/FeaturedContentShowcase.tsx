@@ -22,6 +22,14 @@ const featuredContent: ContentItem[] = [
     featured: true
   },
   {
+    title: 'AI Agent Economy 2026: How Autonomous Agents Create New Markets',
+    description: 'Why autonomous agents are moving into production and how new marketplaces, protocols, and ROI models are forming.',
+    href: '/blog/ai-2026-agent-economy',
+    type: 'blog',
+    readTime: '18 min read',
+    featured: true
+  },
+  {
     title: 'AI Industry Disruption 2025: How Every Sector is Changing',
     description: 'Deep analysis of AI-driven disruption across 12 industries with quantified impacts, adoption timelines, and risk controls.',
     href: '/blog/ai-2025-industry-disruption',
