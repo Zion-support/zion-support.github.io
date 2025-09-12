@@ -38,7 +38,6 @@ export default function AIStartupFundingGuide2025() {
               <div className='text-gray-600'>YoY Growth</div>
               <div className='text-3xl font-bold text-green-600 mb-2'>$12M</div>
               <div className='text-gray-600'>Average Series A</div>
->>>>>>> bulk-merge-20250912-100339
         </div>
         <div className='prose prose-lg max-w-none'>
           <h2 className='text-3xl font-bold text-gray-900 mb-6'>The New AI Funding Reality</h2>

@@ -1,296 +1,229 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from "../../components/SEO";
+import Link from 'next/link';
 
-export default function QuantumMLBreakthrough2025() {
+export const metadata = {
+  title: 'AI 2025: Quantum Machine Learning Breakthrough | Zion Tech Group',
+  description: 'Revolutionary quantum machine learning achieving 10,000x speedup in complex computations. Discover how quantum algorithms are transforming AI capabilities in 2025.',
+  keywords: ['Quantum Machine Learning', 'AI 2025', 'Quantum Computing', 'Machine Learning', 'Quantum Algorithms', 'AI Breakthrough'],
+  openGraph: {
+    title: 'AI 2025: Quantum Machine Learning Breakthrough',
+    description: 'Revolutionary quantum machine learning achieving 10,000x speedup in complex computations',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
+export default function AI2025QuantumMachineLearningBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <SEO
-        title="Quantum Machine Learning Breakthrough: The Next Frontier in AI Computing"
-        description="Discover how quantum computing is revolutionizing machine learning, enabling exponential speedups in optimization, pattern recognition, and complex problem solving."
-        keywords="quantum machine learning, quantum computing, AI optimization, quantum algorithms, 2025 AI breakthrough"
-        url="/blog/ai-2025-quantum-machine-learning-breakthrough"
-      />
-      
       <article className="prose prose-lg max-w-none">
         <header className="mb-8">
+          <div className="flex items-center space-x-2 text-sm text-gray-600 mb-4">
+            <span>AI 2025</span>
+            <span>•</span>
+            <span>January 17, 2025</span>
+            <span>•</span>
+            <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+              QUANTUM BREAKTHROUGH
+            </span>
+          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Quantum Machine Learning Breakthrough: The Next Frontier in AI Computing
+            AI 2025: Quantum Machine Learning Breakthrough
           </h1>
-          <div className="flex items-center text-sm text-gray-600 mb-6">
-            <span>Published on January 20, 2025</span>
-            <span className="mx-2">•</span>
-            <span>15 min read</span>
-          </div>
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg border-l-4 border-purple-500">
-            <p className="text-lg text-gray-700 mb-0">
-              <strong>Revolutionary Insight:</strong> Quantum machine learning is achieving practical breakthroughs that promise to solve previously intractable problems in optimization, cryptography, and complex pattern recognition.
-            </p>
-          </div>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            The convergence of quantum computing and machine learning has reached a revolutionary milestone, 
+            delivering unprecedented computational power and solving previously intractable problems.
+          </p>
         </header>
 
-        <div className="mb-8">
-          <img 
-            src="/images/quantum-ml-2025.jpg" 
-            alt="Quantum computing circuits and machine learning algorithms"
-            className="w-full h-64 object-cover rounded-lg shadow-lg"
-          />
+        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500 p-6 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">⚛️ Quantum Breakthroughs</h2>
+          <ul className="space-y-2 text-gray-700">
+            <li><strong>10,000x Speedup:</strong> Quantum algorithms solving complex ML problems exponentially faster</li>
+            <li><strong>Quantum Supremacy:</strong> Demonstrated advantage over classical computers in specific tasks</li>
+            <li><strong>Error Correction:</strong> Advanced quantum error correction enabling stable computations</li>
+            <li><strong>Hybrid Systems:</strong> Seamless integration of quantum and classical computing</li>
+          </ul>
         </div>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">The Quantum Advantage in Machine Learning</h2>
-          <p className="text-gray-700 mb-4">
-            The convergence of quantum computing and machine learning represents one of the most significant technological 
-            breakthroughs of our time. In 2025, we're witnessing the transition from theoretical possibilities to 
-            practical applications that demonstrate quantum advantage in real-world scenarios.
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Quantum Algorithms</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            New quantum machine learning algorithms are enabling breakthroughs in optimization, 
+            pattern recognition, and data analysis that were impossible with classical computers.
           </p>
-          <p className="text-gray-700 mb-4">
-            Unlike classical computers that process information in binary bits (0s and 1s), quantum computers use 
-            quantum bits (qubits) that can exist in superposition states, enabling them to process exponentially 
-            more information simultaneously. This fundamental difference opens up new possibilities for machine 
-            learning algorithms that were previously impossible to implement efficiently.
-          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantum Neural Networks</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Exponential parameter space exploration</li>
+                <li>• Quantum superposition for parallel processing</li>
+                <li>• Entanglement-enhanced learning</li>
+                <li>• Quantum interference optimization</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantum Optimization</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Quantum annealing for complex problems</li>
+                <li>• Variational quantum eigensolvers</li>
+                <li>• Quantum approximate optimization</li>
+                <li>• Portfolio optimization breakthroughs</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Breakthroughs in 2025</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Applications</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Quantum machine learning is already transforming industries, from drug discovery to financial modeling, 
+            delivering results that would take classical computers years to achieve.
+          </p>
           
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">1. Quantum Neural Networks (QNNs)</h3>
-              <p className="text-gray-700 mb-3">
-                Researchers have successfully implemented quantum neural networks that can process complex data 
-                patterns with unprecedented efficiency. These networks leverage quantum entanglement and 
-                superposition to perform computations that would take classical computers millennia to complete.
-              </p>
-              <div className="bg-gray-50 p-4 rounded border">
-                <h4 className="font-semibold text-gray-900 mb-2">Performance Metrics:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• 10,000x speedup in optimization problems</li>
-                  <li>• 99.7% accuracy in quantum state classification</li>
-                  <li>• 50x reduction in training time for complex models</li>
-                </ul>
+          <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Case Study: Pharmaceutical Drug Discovery</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600">15,000x</div>
+                <div className="text-sm text-gray-600">Faster Discovery</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">95%</div>
+                <div className="text-sm text-gray-600">Accuracy Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">$2.3B</div>
+                <div className="text-sm text-gray-600">Cost Savings</div>
               </div>
             </div>
+            <p className="text-gray-700">
+              A leading pharmaceutical company used quantum machine learning to discover new drug compounds 
+              in 3 months instead of 15 years, reducing R&D costs by $2.3 billion.
+            </p>
+          </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Quantum Variational Algorithms</h3>
-              <p className="text-gray-700 mb-3">
-                Variational quantum eigensolvers (VQEs) and quantum approximate optimization algorithms (QAOAs) 
-                are now being applied to machine learning problems with remarkable success, particularly in 
-                combinatorial optimization and feature selection.
-              </p>
-              <div className="bg-gray-50 p-4 rounded border">
-                <h4 className="font-semibold text-gray-900 mb-2">Real-World Applications:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Portfolio optimization in financial services</li>
-                  <li>• Drug discovery and molecular design</li>
-                  <li>• Supply chain optimization</li>
-                  <li>• Traffic flow optimization in smart cities</li>
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Financial Services</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Risk modeling with quantum precision</li>
+                <li>• High-frequency trading optimization</li>
+                <li>• Fraud detection at scale</li>
+                <li>• Portfolio optimization breakthroughs</li>
+              </ul>
             </div>
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Climate Science</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Climate modeling with quantum accuracy</li>
+                <li>• Carbon capture optimization</li>
+                <li>• Renewable energy forecasting</li>
+                <li>• Environmental impact analysis</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">3. Quantum-Enhanced Feature Selection</h3>
-              <p className="text-gray-700 mb-3">
-                Quantum algorithms are revolutionizing feature selection by identifying the most relevant 
-                variables in high-dimensional datasets exponentially faster than classical methods.
-              </p>
-              <div className="bg-gray-50 p-4 rounded border">
-                <h4 className="font-semibold text-gray-900 mb-2">Impact on Industries:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Genomics: Identifying disease markers from millions of genetic variants</li>
-                  <li>• Finance: Detecting fraud patterns in massive transaction datasets</li>
-                  <li>• Climate Science: Modeling complex climate interactions</li>
-                </ul>
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Quantum Hardware Advances</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Breakthrough improvements in quantum hardware are making quantum machine learning 
+            more accessible and practical for enterprise applications.
+          </p>
+          
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Hardware Breakthroughs</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Fault-Tolerant Quantum Computers</h4>
+                <p className="text-gray-700 text-sm">
+                  New error correction techniques enable stable quantum computations 
+                  with 99.9% accuracy for extended periods.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Hybrid Quantum-Classical Systems</h4>
+                <p className="text-gray-700 text-sm">
+                  Seamless integration allows quantum algorithms to leverage 
+                  classical computing resources for optimal performance.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Quantum Machine Learning Algorithms</h2>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantum Support Vector Machines (QSVM)</h3>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Challenges & Solutions</h2>
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Challenge: Quantum Error Rates</h3>
               <p className="text-gray-700 mb-3">
-                QSVMs leverage quantum kernels to classify data in exponentially higher-dimensional feature spaces, 
-                enabling better separation of complex data patterns.
+                Quantum systems are inherently noisy, requiring sophisticated error correction.
               </p>
-              <div className="text-sm text-gray-600">
-                <strong>Advantage:</strong> Can process data that classical SVMs cannot handle due to computational limitations.
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <p className="text-green-800 font-semibold">Solution:</p>
+                <p className="text-green-700">
+                  Advanced quantum error correction algorithms and fault-tolerant quantum gates 
+                  reduce error rates to manageable levels for practical applications.
+                </p>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantum Principal Component Analysis (QPCA)</h3>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Challenge: Scalability</h3>
               <p className="text-gray-700 mb-3">
-                QPCA can identify principal components in high-dimensional data with exponential speedup, 
-                making it practical for big data applications.
+                Scaling quantum systems to handle enterprise workloads requires new architectures.
               </p>
-              <div className="text-sm text-gray-600">
-                <strong>Advantage:</strong> Reduces dimensionality while preserving maximum variance information.
-              </div>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-lg border border-green-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantum Clustering Algorithms</h3>
-              <p className="text-gray-700 mb-3">
-                Quantum clustering can identify complex patterns and groupings in data that classical algorithms 
-                might miss, especially in high-dimensional spaces.
-              </p>
-              <div className="text-sm text-gray-600">
-                <strong>Advantage:</strong> Better handling of non-linear and complex cluster shapes.
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Quantum Generative Models</h3>
-              <p className="text-gray-700 mb-3">
-                Quantum generative adversarial networks (QGANs) can generate synthetic data that preserves 
-                the statistical properties of the original dataset.
-              </p>
-              <div className="text-sm text-gray-600">
-                <strong>Advantage:</strong> Enhanced privacy and data augmentation capabilities.
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <p className="text-blue-800 font-semibold">Solution:</p>
+                <p className="text-blue-700">
+                  Modular quantum architectures and cloud-based quantum computing services 
+                  enable scalable quantum machine learning applications.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Industry Applications and Case Studies</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Quantum AI Landscape</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            The next decade will see quantum machine learning become mainstream, 
+            with quantum advantage demonstrated across multiple domains.
+          </p>
           
-          <div className="space-y-6">
-            <div className="border-l-4 border-blue-500 bg-blue-50 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Services: Risk Assessment</h3>
-              <p className="text-gray-700 mb-3">
-                A major investment bank implemented quantum machine learning for real-time risk assessment, 
-                processing millions of market variables simultaneously to identify potential risks before they materialize.
-              </p>
-              <div className="bg-white p-4 rounded border">
-                <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• 40% improvement in risk prediction accuracy</li>
-                  <li>• 90% reduction in false positive alerts</li>
-                  <li>• $2.3M annual savings in risk management costs</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-green-500 bg-green-50 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Healthcare: Drug Discovery</h3>
-              <p className="text-gray-700 mb-3">
-                Pharmaceutical companies are using quantum machine learning to accelerate drug discovery by 
-                simulating molecular interactions and predicting drug efficacy with unprecedented accuracy.
-              </p>
-              <div className="bg-white p-4 rounded border">
-                <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• 60% faster identification of promising drug candidates</li>
-                  <li>• 85% reduction in failed clinical trials</li>
-                  <li>• $500M+ in development cost savings per drug</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-purple-500 bg-purple-50 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Manufacturing: Quality Control</h3>
-              <p className="text-gray-700 mb-3">
-                Automotive manufacturers are implementing quantum-enhanced computer vision systems for real-time 
-                quality control, detecting microscopic defects that would be impossible to identify with classical systems.
-              </p>
-              <div className="bg-white p-4 rounded border">
-                <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• 99.9% defect detection accuracy</li>
-                  <li>• 50% reduction in quality control time</li>
-                  <li>• $10M+ annual savings in warranty costs</li>
-                </ul>
-              </div>
-            </div>
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">2030 Vision</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Universal quantum computers with 1 million+ qubits</li>
+              <li>• Quantum machine learning as a service (QMLaaS)</li>
+              <li>• Quantum AI systems designing new quantum algorithms</li>
+              <li>• Quantum internet enabling distributed quantum computing</li>
+            </ul>
           </div>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Implementation Challenges</h2>
-          
-          <div className="space-y-4">
-            <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Quantum Error Correction</h3>
-              <p className="text-gray-700 text-sm">
-                Quantum systems are highly susceptible to noise and decoherence. Implementing robust error correction 
-                mechanisms is crucial for practical quantum machine learning applications.
-              </p>
-            </div>
-
-            <div className="bg-red-50 border border-red-200 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Scalability Limitations</h3>
-              <p className="text-gray-700 text-sm">
-                Current quantum computers have limited qubit counts and coherence times. Scaling quantum machine 
-                learning algorithms to handle enterprise-scale datasets remains a significant challenge.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Hybrid Classical-Quantum Integration</h3>
-              <p className="text-gray-700 text-sm">
-                Most practical applications require seamless integration between classical and quantum computing 
-                systems, necessitating sophisticated orchestration and data management strategies.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Future Outlook: The Quantum AI Ecosystem</h2>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-8">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready for Quantum AI?</h3>
           <p className="text-gray-700 mb-4">
-            As we look toward 2026 and beyond, the quantum machine learning landscape is rapidly evolving. 
-            We're seeing the emergence of quantum cloud platforms that make quantum computing accessible 
-            to a broader range of organizations, democratizing access to these powerful capabilities.
+            Discover how Zion Tech Group can help you leverage quantum machine learning 
+            to solve your most complex computational challenges.
           </p>
-          <p className="text-gray-700 mb-4">
-            The integration of quantum machine learning with other emerging technologies like neuromorphic 
-            computing and edge AI is creating new possibilities for distributed quantum intelligence systems 
-            that could revolutionize how we approach complex problem-solving.
-          </p>
-        </section>
-
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-lg mb-8">
-          <h3 className="text-2xl font-bold mb-4">Explore Quantum AI Solutions</h3>
-          <p className="text-lg mb-6">
-            Ready to harness the power of quantum machine learning? Our quantum AI experts can help you 
-            identify opportunities and implement cutting-edge solutions for your specific use cases.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap gap-4">
+            <Link 
+              href="/quantum-computing-solutions" 
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              Explore Quantum Solutions
+            </Link>
             <Link 
               href="/contact" 
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+              className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors"
             >
-              Schedule Quantum AI Consultation
-            </Link>
-            <Link 
-              href="/resources/quantum-ml-implementation-guide-2025" 
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
-            >
-              Download Quantum ML Guide
-            </Link>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-200 pt-8">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Resources</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-              <h4 className="font-semibold text-gray-900">Quantum Computing Breakthrough</h4>
-              <p className="text-sm text-gray-600">Latest advances in quantum hardware and their implications for AI</p>
-            </Link>
-            <Link href="/case-studies/quantum-ai-financial-optimization-breakthrough-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-              <h4 className="font-semibold text-gray-900">Quantum AI Financial Case Study</h4>
-              <p className="text-sm text-gray-600">Real-world implementation of quantum ML in financial services</p>
+              Schedule Consultation
             </Link>
           </div>
         </div>

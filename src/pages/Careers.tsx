@@ -78,14 +78,9 @@ export default function Careers() {
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8 text-zion-cyan" />,
       title: "Flexible Work",
       description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
-      icon: (
-        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      )
+      icon: <Zap className="w-8 h-8 text-zion-cyan" />
     },
     {
       title: "Health & Wellness",
@@ -169,7 +164,7 @@ export default function Careers() {
                 </Card>
               ))}
             </div>
-          </div>
+          </section>
           
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
@@ -226,6 +221,4 @@ export default function Careers() {
       </main>
     </>
   );
-};
-
-export default Careers;
+}

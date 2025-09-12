@@ -1,128 +1,157 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Sparkles, TrendingUp, BookOpen, Brain, Zap } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { X, ArrowRight, Sparkles, Zap, Brain, Settings } from 'lucide-react';
+
+const newContentItems = [
+  {
+    title: 'AI 2025 Breakthrough Revolution',
+    description: 'Discover revolutionary AI breakthroughs delivering 15,000% ROI',
+    href: '/ai-2025-breakthrough-revolution',
+    icon: Sparkles,
+    color: 'from-red-500 to-pink-500',
+    badge: 'BREAKTHROUGH'
+  },
+  {
+    title: 'AI 2026 Quantum Neural Fusion',
+    description: 'Experience quantum-neural fusion with 99.9% accuracy',
+    href: '/ai-2026-quantum-neural-fusion',
+    icon: Brain,
+    color: 'from-purple-500 to-blue-500',
+    badge: 'REVOLUTIONARY'
+  },
+  {
+    title: 'Enterprise Automation Mastery 2026',
+    description: 'Master automation with 400% productivity increase',
+    href: '/enterprise-automation-mastery-2026',
+    icon: Settings,
+    color: 'from-blue-500 to-cyan-500',
+    badge: 'MASTERY'
+  }
+];
 
 export default function NewContent2026PromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentItem, setCurrentItem] = useState(0);
+
+  useEffect(() => {
+    // Show banner after 2 seconds
+    const showTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    // Rotate content every 5 seconds
+    const rotateTimer = setInterval(() => {
+      setCurrentItem((prev) => (prev + 1) % newContentItems.length);
+    }, 5000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearInterval(rotateTimer);
+    };
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
+  const currentContent = newContentItems[currentItem];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 py-16">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-4xl w-full mx-4">
+      <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-slide-down">
+        {/* Close button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-4 right-4 z-10 p-2 rounded-full hover:bg-gray-100 transition-colors"
+          aria-label="Close banner"
+        >
+          <X className="w-5 h-5 text-gray-500" />
+        </button>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <Badge className="mb-4 bg-white/20 text-white border-white/30">
-            <Sparkles className="h-3 w-3 mr-1" />
-            NEW IN 2026
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Revolutionary AI Content Hub 2026
-          </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Explore cutting-edge AI tools, master advanced tutorials, and stay ahead with industry insights. 
-            The future of AI starts here.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {/* AI Tools Showcase */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="h-8 w-8 text-blue-300" />
+        {/* Content */}
+        <div className="p-6">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center mb-3">
+                <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${currentContent.color} text-white text-sm font-semibold mr-3 animate-pulse`}>
+                  🚀 {currentContent.badge}
+                </div>
+                <div className="text-sm text-gray-500">NEW CONTENT 2026</div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                AI Tools Showcase
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                {currentContent.title}
               </h3>
-              <p className="text-white/80 text-sm mb-4">
-                Discover revolutionary AI tools from neural interfaces to quantum computing solutions
+              
+              <p className="text-gray-600 mb-4 max-w-2xl">
+                {currentContent.description}
               </p>
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <Badge variant="secondary" className="text-xs">8 Tools</Badge>
-                <Badge variant="secondary" className="text-xs">Enterprise Ready</Badge>
-              </div>
-              <Link href="/ai-tools-showcase-2026">
-                <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white">
-                  Explore Tools
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
 
-          {/* AI Tutorials */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="h-8 w-8 text-green-300" />
+              <div className="flex items-center space-x-4">
+                <Link
+                  href={currentContent.href}
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                
+                <Link
+                  href="/content-showcase"
+                  className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                >
+                  View All Content
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                AI Tutorials 2026
-              </h3>
-              <p className="text-white/80 text-sm mb-4">
-                Master advanced AI technologies with expert-led tutorials and hands-on learning
-              </p>
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <Badge variant="secondary" className="text-xs">50+ Courses</Badge>
-                <Badge variant="secondary" className="text-xs">25K+ Students</Badge>
-              </div>
-              <Link href="/ai-tutorials-2026">
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
-                  Start Learning
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
+            </div>
 
-          {/* Industry Insights */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
-            <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-purple-300" />
+            {/* Icon */}
+            <div className="ml-6">
+              <div className={`p-4 rounded-2xl bg-gradient-to-r ${currentContent.color} text-white`}>
+                <currentContent.icon className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                Industry Insights
-              </h3>
-              <p className="text-white/80 text-sm mb-4">
-                Stay ahead with market analysis, trend predictions, and expert insights
-              </p>
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <Badge variant="secondary" className="text-xs">Weekly Reports</Badge>
-                <Badge variant="secondary" className="text-xs">Expert Analysis</Badge>
-              </div>
-              <Link href="/ai-industry-insights-2026">
-                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">
-                  View Insights
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4">
-            <Button size="lg" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100">
-              <Zap className="mr-2 h-5 w-5" />
-              Get Started Free
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-              Schedule Demo
-            </Button>
+            </div>
           </div>
-          <p className="text-white/70 text-sm mt-4">
-            Join 50,000+ professionals already transforming their businesses with AI
-          </p>
+
+          {/* Progress indicators */}
+          <div className="flex space-x-2 mt-6">
+            {newContentItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentItem(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentItem 
+                    ? 'bg-blue-600 w-8' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to content ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
+
+        {/* Animated background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 opacity-50 -z-10"></div>
       </div>
+
+      <style jsx>{`
+        @keyframes slide-down {
+          from {
+            opacity: 0;
+            transform: translateY(-100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-slide-down {
+          animation: slide-down 0.5s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

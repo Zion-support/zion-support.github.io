@@ -75,7 +75,6 @@ export default function AIROICalculator2026() {
         title="AI ROI Calculator 2026 - Calculate Your AI Investment Returns"
         description="Calculate the ROI of your AI investment with our advanced 2026 calculator. Get detailed projections for cost savings, revenue growth, and productivity gains."
         keywords="AI ROI calculator, AI investment calculator, AI ROI analysis, AI business case, AI financial planning"
->>>>>>> cursor/create-and-deploy-new-content-6fd2
         url="/tools/ai-roi-calculator-2026"
       />
       

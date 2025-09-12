@@ -335,6 +335,5 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       </div>
     </div>
   );
->>>>>>> origin/content/blog-sept12
 };
 export default PerformanceMonitor;
