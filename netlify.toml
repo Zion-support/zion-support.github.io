@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "yarn cache clean && yarn install --frozen-lockfile && yarn build"
+  command = "yarn install --frozen-lockfile && yarn build"
   publish = "dist"
   command_timeout = "30m"
 
