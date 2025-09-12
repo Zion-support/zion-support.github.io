@@ -1,6 +1,14 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "📰",
+      title: "Zion OS v1.2 Launches Autonomous Deployments",
+      excerpt: "One-click orchestration now provisions full AI marketplaces, governance, and analytics out of the box.",
+      date: "Sep 12, 2025",
+      href: "/news/autonomous-deployments",
+      gradient: "from-indigo-600 to-blue-600",
+    },
+    {
       emoji: "🚀",
       title: "Zion OS 1.0 Launches: One-Click Digital Economies",
       excerpt:
@@ -8,14 +16,6 @@ export default function NewsPage() {
       date: "Sep 12, 2025",
       href: "/news/zion-os-1-0-launch",
       gradient: "from-blue-600 to-purple-600",
-    },
-    {
-      emoji: "📰",
-      title: "Zion OS v1.2 Launches Autonomous Deployments",
-      excerpt: "One-click orchestration now provisions full AI marketplaces, governance, and analytics out of the box.",
-      date: "Sep 12, 2025",
-      href: "/news/autonomous-deployments",
-      gradient: "from-indigo-600 to-blue-600",
     },
     {
       emoji: "🤝",
