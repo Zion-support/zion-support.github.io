@@ -1,2 +1,2 @@
 import { AppHeader } from "@/layout/AppHeader";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";

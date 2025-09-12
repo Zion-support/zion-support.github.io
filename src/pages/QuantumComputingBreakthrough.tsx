@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { Card } from '../components/ui/Card';
+import { Card } from '../components/ui/card';
 import { motion } from 'framer-motion';
 import { Atom, Cpu, Lock, TrendingUp, Globe, Zap } from 'lucide-react';
 
