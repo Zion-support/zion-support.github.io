@@ -144,6 +144,8 @@ export default function HomePage() {
               Enterprise Security Guide, and the complete AI Implementation Master Guide. Expert insights to accelerate your success.
               Discover our latest expert insights, case studies, and resources. From AI automation 
               to startup growth strategies, get the knowledge you need to succeed in 2025.
+              Discover our latest expert insights, case studies, and resources. From AI cybersecurity 
+              to sustainability and retail transformation, get the knowledge you need to succeed in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -181,6 +183,11 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Threats 2025</h3>
                 <p className='text-sm opacity-90 mb-3'>Protect against next-gen AI-powered attacks and deepfakes</p>
+            <Link href='/blog/ai-cybersecurity-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Cybersecurity Trends 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Protect your digital assets with cutting-edge AI security strategies</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>18 min read</span>
                   <span className='mx-2'>•</span>
@@ -194,6 +201,25 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Edge Computing & IoT 2025</h3>
                 <p className='text-sm opacity-90 mb-3'>The future of distributed intelligence and real-time processing</p>
+            
+            <Link href='/blog/ai-sustainability-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Sustainability 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Build green AI systems that reduce environmental impact</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>14 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-retail-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛒</div>
+                <h3 className='text-lg font-semibold mb-2'>Retail AI Transformation</h3>
+                <p className='text-sm opacity-90 mb-3'>300% revenue growth with AI-powered personalization</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>16 min read</span>
                   <span className='mx-2'>•</span>
@@ -1751,6 +1777,38 @@ export default function HomePage() {
                   <span>9 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
+      {/* Latest Resources Section */}
+      <section className='py-20 bg-gradient-to-r from-emerald-50 to-teal-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-emerald-100 text-emerald-800 rounded-full px-4 py-2 mb-6'>
+              <span className='text-sm font-medium'>📚 NEW RESOURCES</span>
+            </div>
+            <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+              Free Downloads & Expert Guides
+            </h2>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto mb-8'>
+              Download our latest comprehensive guides, checklists, and templates. 
+              Everything you need to implement AI successfully in 2025.
+            </p>
+          </div>
+
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <Link href='/resources/ai-sustainability-guide-2025' className='group'>
+              <div className='bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <div className='inline-flex items-center bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-medium mb-3'>
+                  NEW
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors'>
+                  AI Sustainability Guide 2025
+                </h3>
+                <p className='text-gray-600 mb-4'>
+                  50-page comprehensive guide to building environmentally responsible AI systems
+                </p>
+                <div className='flex items-center justify-between text-sm text-gray-500'>
+                  <span>50 pages</span>
+                  <span>Free Download</span>
                 </div>
               </div>
             </Link>
@@ -1769,6 +1827,20 @@ export default function HomePage() {
                 <div className='flex items-center justify-between'>
                   <span className='text-sm text-gray-500'>80 items • PDF</span>
                   <span className='text-red-600 font-medium group-hover:underline'>Download Free →</span>
+              <div className='bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <div className='inline-flex items-center bg-red-100 text-red-800 rounded-full px-3 py-1 text-sm font-medium mb-3'>
+                  NEW
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors'>
+                  AI Cybersecurity Checklist
+                </h3>
+                <p className='text-gray-600 mb-4'>
+                  50+ essential security measures to protect your AI systems from emerging threats
+                </p>
+                <div className='flex items-center justify-between text-sm text-gray-500'>
+                  <span>50+ items</span>
+                  <span>Free Download</span>
                 </div>
               </div>
             </Link>
@@ -1787,6 +1859,21 @@ export default function HomePage() {
                 <div className='flex items-center justify-between'>
                   <span className='text-sm text-gray-500'>Case Study</span>
                   <span className='text-blue-600 font-medium group-hover:underline'>Read Story →</span>
+            <Link href='/resources/ai-implementation-checklist-2025' className='group'>
+              <div className='bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <div className='inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-medium mb-3'>
+                  POPULAR
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors'>
+                  AI Implementation Checklist
+                </h3>
+                <p className='text-gray-600 mb-4'>
+                  Step-by-step guide to successfully implementing AI in your organization
+                </p>
+                <div className='flex items-center justify-between text-sm text-gray-500'>
+                  <span>150+ items</span>
+                  <span>Free Download</span>
                 </div>
               </div>
             </Link>
@@ -1816,6 +1903,13 @@ export default function HomePage() {
                   <span>Trending</span>
                 </div>
               </div>
+          <div className='text-center mt-12'>
+            <Link
+              href='/resources'
+              className='inline-flex items-center gap-2 bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors text-lg'
+            >
+              View All Resources
+              <span>→</span>
             </Link>
           </div>
         </div>
