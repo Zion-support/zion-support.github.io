@@ -18,6 +18,39 @@ const featuredContent: ContentItem[] = [
     title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
     description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation. Real case studies, implementation strategies, and ROI metrics.",
     href: "/blog/ai-2025-enterprise-automation-success",
+    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
+    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "90% efficiency gains"
+  },
+  {
+    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
+    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "🚀",
+    stats: "15 breakthrough technologies"
+  },
+  {
+    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
+    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
+    href: "/case-studies/ai-2025-retail-transformation-success",
+    category: "Case Study",
+    readTime: "20 min read",
+    isNew: true,
+    icon: "🛍️",
+    stats: "$2.5B revenue increase"
+  },
+  {
+    title: "AI Business Automation 2025: Complete Implementation Guide",
+    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
+    href: "/blog/ai-business-automation-2025",
     category: "AI & Automation",
     readTime: "15 min read",
     isNew: true,
@@ -53,6 +86,8 @@ const featuredContent: ContentItem[] = [
     isNew: true,
     icon: "📚",
     stats: "10,000+ downloads"
+    icon: "🤖",
+    stats: "40% productivity boost"
   }
 ];
 
@@ -60,6 +95,8 @@ const trendingContent: ContentItem[] = [
   {
     title: "AI 2025 Revolutionary Breakthroughs: The Technologies Reshaping Our World",
     description: "Explore the groundbreaking AI technologies that will define 2025. From quantum AI to autonomous systems, discover the innovations transforming industries.",
+    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
+    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
     href: "/blog/ai-2025-revolutionary-breakthroughs",
     category: "AI Innovation",
     readTime: "18 min read",
@@ -70,6 +107,12 @@ const trendingContent: ContentItem[] = [
   {
     title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
     description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation with real case studies.",
+    icon: "🚀",
+    stats: "15 breakthrough technologies"
+  },
+  {
+    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
+    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
     href: "/blog/ai-2025-enterprise-automation-success",
     category: "AI & Automation",
     readTime: "15 min read",
@@ -81,34 +124,51 @@ const trendingContent: ContentItem[] = [
     title: "AI Retail Transformation Success: $200M Revenue Boost Case Study 2025",
     description: "Discover how a global retail giant achieved unprecedented success through comprehensive AI transformation with $200M revenue increase.",
     href: "/case-studies/ai-retail-transformation-success-2025",
+    stats: "90% efficiency gains"
+  },
+  {
+    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
+    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
+    href: "/case-studies/ai-2025-retail-transformation-success",
     category: "Case Study",
     readTime: "20 min read",
     isTrending: true,
     icon: "🛍️",
     stats: "$200M revenue boost"
+    stats: "$2.5B revenue increase"
   }
 ];
 
 const latestContent: ContentItem[] = [
   {
-    title: "AI Productivity Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
-    href: "/blog/ai-productivity-automation-2025",
-    category: "Productivity",
-    readTime: "12 min read",
+    title: "AI 2025 Revolutionary Breakthroughs: 15 Game-Changing Technologies",
+    description: "Discover the 15 most revolutionary AI breakthroughs of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the future of technology.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
     isNew: true,
     icon: "🚀",
-    stats: "40% productivity boost"
+    stats: "15 breakthrough technologies"
   },
   {
-    title: "Startup Pricing Strategy 2025: Validate Willingness to Pay",
-    description: "Master startup pricing with data-driven strategies. Learn to validate willingness to pay and scale with confidence.",
-    href: "/blog/startup-pricing-strategy-2025",
-    category: "Startup Strategy",
+    title: "AI Enterprise Automation Success Stories 2025: 90% Efficiency Gains",
+    description: "Discover how Fortune 500 companies achieved 90% efficiency gains through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
     readTime: "15 min read",
     isNew: true,
-    icon: "💡",
-    stats: "Data-driven pricing"
+    icon: "🏢",
+    stats: "90% efficiency gains"
+  },
+  {
+    title: "AI Retail Transformation Success: $2.5B Revenue Increase Case Study",
+    description: "How a global retail giant achieved $2.5B revenue increase through AI transformation. Complete implementation strategy, results, and lessons learned.",
+    href: "/case-studies/ai-2025-retail-transformation-success",
+    category: "Case Study",
+    readTime: "20 min read",
+    isNew: true,
+    icon: "🛍️",
+    stats: "$2.5B revenue increase"
   },
   {
     title: "AI Healthcare Diagnosis Success: 95% Accuracy",
