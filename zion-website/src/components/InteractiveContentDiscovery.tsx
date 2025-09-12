@@ -28,17 +28,30 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
-      id: '11',
-      title: 'Real-time AI Agents 2025: Observability, Guardrails, and SLOs',
-      description: 'Blueprint for running real-time agents in production with telemetry, tracing, safety guardrails, and SLOs.',
-      href: '/blog/ai-2025-realtime-agents-observability',
+      id: '13',
+      title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
+      description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
+      href: '/blog/llm-observability-2025',
       type: 'blog',
       category: 'Observability',
-      readTime: '17 min read',
+      readTime: '19 min read',
       date: 'Sep 12, 2025',
-      tags: ['Agents', 'Observability', 'Tracing', 'SLOs', 'Safety'],
+      tags: ['Observability', 'Tracing', 'Evaluations', 'Guardrails'],
       featured: true,
       difficulty: 'intermediate'
+    },
+    {
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Global retailer cut stockouts by 32% and waste by 18% with AI-driven forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Retail', 'Forecasting', 'Time Series', 'Inventory'],
+      featured: true,
+      difficulty: 'beginner'
     },
     {
       id: '12',

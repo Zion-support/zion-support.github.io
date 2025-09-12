@@ -45,7 +45,18 @@ const NewContentPromoBanner = ({
       category: 'Agents'
     },
     {
-      id: '13',
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Case study: Global retailer cut stockouts by 32% and waste by 18% via AI forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '15',
       title: 'Operationalizing AI Governance 2025',
       description: 'Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.',
       href: '/blog/ai-2025-operationalizing-ai-governance',
