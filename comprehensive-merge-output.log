@@ -1,159 +1,449 @@
 🚀 Starting comprehensive merge conflict resolution for all open PRs...
-📊 Total cursor branches to process: 6268
-⏰ Started at: Thu Sep 11 06:29:10 PM UTC 2025
+📊 Started at: Fri Sep 12 02:20:23 PM UTC 2025
 ---
-🔒 Creating backup branch: backup-main-20250911-182910
-Your branch is up to date with 'origin/main'.
+🔒 Creating backup branch: backup-main-20250912-142023
+Switched to a new branch 'backup-main-20250912-142023'
+remote: 
+remote: Create a pull request for 'backup-main-20250912-142023' on GitHub by visiting:        
+remote:      https://github.com/Zion-Holdings/zion.app/pull/new/backup-main-20250912-142023        
+remote: 
+To https://github.com/Zion-Holdings/zion.app
+ * [new branch]                backup-main-20250912-142023 -> backup-main-20250912-142023
+Switched to branch 'main'
+M	comprehensive-merge-output.log
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+📋 Found 11247 branches to process
+---
 🔄 Starting branch processing...
 ---
-📋 Processing branch: cursor/add-2030q1-services-ui-8deb1aee36d
-🔄 Attempting to merge cursor/add-2030q1-services-ui-8deb1aee36d...
-Already up to date.
-✅ Successfully merged cursor/add-2030q1-services-ui-8deb1aee36d
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-2030q1-services-ui-8deb1aee36d processed successfully
-📊 Progress: 1 successful, 0 failed, 0 conflicts resolved
+📋 Processing branch: 0nylrk-codex/fix-footer-contact-link
+⏭️  Skipping 0nylrk-codex/fix-footer-contact-link (already merged, doesn't exist, or no changes)
+📋 Processing branch: 0parff-codex/centralize-api-error-handling-and-add-errorboundary
+⏭️  Skipping 0parff-codex/centralize-api-error-handling-and-add-errorboundary (already merged, doesn't exist, or no changes)
+📋 Processing branch: 0smfo8-codex/fix-404-error-for-non-existent-route
+⏭️  Skipping 0smfo8-codex/fix-404-error-for-non-existent-route (already merged, doesn't exist, or no changes)
+📋 Processing branch: 0t8m4m-codex/update-project-color-palette
+⏭️  Skipping 0t8m4m-codex/update-project-color-palette (already merged, doesn't exist, or no changes)
+📋 Processing branch: 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+⏭️  Skipping 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh (already merged, doesn't exist, or no changes)
+📋 Processing branch: 14gqd5-codex/implement-checkout-flow-with-auth-redirect
+⏭️  Skipping 14gqd5-codex/implement-checkout-flow-with-auth-redirect (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1dcwqi-codex/implement-global-pricing-with-currency-selection
+⏭️  Skipping 1dcwqi-codex/implement-global-pricing-with-currency-selection (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1fjs4s-codex/implement-instant-messaging-for-negotiations
+⏭️  Skipping 1fjs4s-codex/implement-instant-messaging-for-negotiations (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors
+⏭️  Skipping 1m9jcs-codex/fix-client-side-rendering-and-javascript-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1nc0kn-codex/fix-blank-screen-on-app-load
+⏭️  Skipping 1nc0kn-codex/fix-blank-screen-on-app-load (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1nq1ky-codex/render-talent-profiles-with-error-states
+⏭️  Skipping 1nq1ky-codex/render-talent-profiles-with-error-states (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1ry69n-codex/fix-npm-eio-error-during-install
+⏭️  Skipping 1ry69n-codex/fix-npm-eio-error-during-install (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1sqc9r-codex/implement-light/dark-theme-with-persistence
+⏭️  Skipping 1sqc9r-codex/implement-light/dark-theme-with-persistence (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1tg4fy-codex/support-metric--imperial-units
+⏭️  Skipping 1tg4fy-codex/support-metric--imperial-units (already merged, doesn't exist, or no changes)
+📋 Processing branch: 1wzbwr-codex/fix-typescript-errors-in-files
+⏭️  Skipping 1wzbwr-codex/fix-typescript-errors-in-files (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2025-comprehensive-services-expansion
+⏭️  Skipping 2025-comprehensive-services-expansion (already merged, doesn't exist, or no changes)
+📋 Processing branch: 22xuo1-codex/implement-wishlist-functionality
+⏭️  Skipping 22xuo1-codex/implement-wishlist-functionality (already merged, doesn't exist, or no changes)
+📋 Processing branch: 24727i-codex/implement-stripe-checkout-flow
+⏭️  Skipping 24727i-codex/implement-stripe-checkout-flow (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2503nr-codex/fix-ts2614-error-with-suspense-import
+⏭️  Skipping 2503nr-codex/fix-ts2614-error-with-suspense-import (already merged, doesn't exist, or no changes)
+📋 Processing branch: 26ywwb-codex/fix-client-side-rendering-and-javascript-errors
+⏭️  Skipping 26ywwb-codex/fix-client-side-rendering-and-javascript-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2enrzx-codex/implement-feature-flags-and-a/b-testing
+⏭️  Skipping 2enrzx-codex/implement-feature-flags-and-a/b-testing (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2k1ucv-codex/integrate-stripe-test-mode-checkout
+⏭️  Skipping 2k1ucv-codex/integrate-stripe-test-mode-checkout (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2qzh01-codex/fix-npm-eio-error-during-install
+⏭️  Skipping 2qzh01-codex/fix-npm-eio-error-during-install (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+⏭️  Skipping 2xbrce-codex/introduce-automated-testing-with-jest-and-cypress (already merged, doesn't exist, or no changes)
+📋 Processing branch: 2zlocq-codex/fix-login-form-submission
+⏭️  Skipping 2zlocq-codex/fix-login-form-submission (already merged, doesn't exist, or no changes)
+📋 Processing branch: 306ipd-codex/add-new-products-page-with-10-items
+⏭️  Skipping 306ipd-codex/add-new-products-page-with-10-items (already merged, doesn't exist, or no changes)
+📋 Processing branch: 306l03-codex/fix-blank-screen-issue
+⏭️  Skipping 306l03-codex/fix-blank-screen-issue (already merged, doesn't exist, or no changes)
+📋 Processing branch: 3bk25l-codex/fix-test-expectation-for-fetch-rejection
+⏭️  Skipping 3bk25l-codex/fix-test-expectation-for-fetch-rejection (already merged, doesn't exist, or no changes)
+📋 Processing branch: 3bssgk-codex/disable-theme-toggle-and-set-default-dark-theme
+⏭️  Skipping 3bssgk-codex/disable-theme-toggle-and-set-default-dark-theme (already merged, doesn't exist, or no changes)
+📋 Processing branch: 3c7ooo-codex/enable-offline-support-with-pwa
+⏭️  Skipping 3c7ooo-codex/enable-offline-support-with-pwa (already merged, doesn't exist, or no changes)
+📋 Processing branch: 3fnye9-codex/create-signup-component-and-route
+⏭️  Skipping 3fnye9-codex/create-signup-component-and-route (already merged, doesn't exist, or no changes)
+📋 Processing branch: 3ycx6d-codex/implement-global-error-boundary-with-toasts
+⏭️  Skipping 3ycx6d-codex/implement-global-error-boundary-with-toasts (already merged, doesn't exist, or no changes)
+📋 Processing branch: 42l7l1-codex/check-logs-and-fix-errors
+⏭️  Skipping 42l7l1-codex/check-logs-and-fix-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 42zrxf-codex/improve-discoverability-with-seo-features
+⏭️  Skipping 42zrxf-codex/improve-discoverability-with-seo-features (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4b9zsu-codex/surface-api-errors-across-the-app
+⏭️  Skipping 4b9zsu-codex/surface-api-errors-across-the-app (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4cssl2-codex/fix-typescript-errors-in-components
+⏭️  Skipping 4cssl2-codex/fix-typescript-errors-in-components (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4d93zy-codex/fix-npm-eio-error-during-install
+⏭️  Skipping 4d93zy-codex/fix-npm-eio-error-during-install (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4fu9r9-codex/check-logs-and-fix-errors
+⏭️  Skipping 4fu9r9-codex/check-logs-and-fix-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4o9pcp-codex/add-test-for-failed-login-toast
+⏭️  Skipping 4o9pcp-codex/add-test-for-failed-login-toast (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme
+⏭️  Skipping 4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme (already merged, doesn't exist, or no changes)
+📋 Processing branch: 4xe4ab-codex/fix--settheme--not-found-in-usetheme
+⏭️  Skipping 4xe4ab-codex/fix--settheme--not-found-in-usetheme (already merged, doesn't exist, or no changes)
+📋 Processing branch: 51ryr1-codex/implement-eprivacy-directive-consent-banner
+⏭️  Skipping 51ryr1-codex/implement-eprivacy-directive-consent-banner (already merged, doesn't exist, or no changes)
+📋 Processing branch: 54lu0e-codex/fix-component-not-using-api-data
+⏭️  Skipping 54lu0e-codex/fix-component-not-using-api-data (already merged, doesn't exist, or no changes)
+📋 Processing branch: 591ea5-codex/fix-talent-profile-rendering-issues
+⏭️  Skipping 591ea5-codex/fix-talent-profile-rendering-issues (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5dtq58-codex/implement-analytics-and-error-tracking
+⏭️  Skipping 5dtq58-codex/implement-analytics-and-error-tracking (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5i6q3p-codex/add-i18n-support-with-next-i18next
+⏭️  Skipping 5i6q3p-codex/add-i18n-support-with-next-i18next (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
+⏭️  Skipping 5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress
+⏭️  Skipping 5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5smo5s-codex/check-logs-and-fix-errors
+⏭️  Skipping 5smo5s-codex/check-logs-and-fix-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5usi8s-codex/debug-persistent-login-failure
+⏭️  Skipping 5usi8s-codex/debug-persistent-login-failure (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5xrg7t-codex/fix-app-loading-blank-screen
+⏭️  Skipping 5xrg7t-codex/fix-app-loading-blank-screen (already merged, doesn't exist, or no changes)
+📋 Processing branch: 5yaxyc-codex/implement-wishlist-functionality
+⏭️  Skipping 5yaxyc-codex/implement-wishlist-functionality (already merged, doesn't exist, or no changes)
+📋 Processing branch: 63i3ty-codex/fix-talent-profile-rendering-issues
+⏭️  Skipping 63i3ty-codex/fix-talent-profile-rendering-issues (already merged, doesn't exist, or no changes)
+📋 Processing branch: 6tibj2-codex/enable-offline-support-with-pwa
+⏭️  Skipping 6tibj2-codex/enable-offline-support-with-pwa (already merged, doesn't exist, or no changes)
+📋 Processing branch: 6v4ctq-codex/fix-link-under-register-form
+⏭️  Skipping 6v4ctq-codex/fix-link-under-register-form (already merged, doesn't exist, or no changes)
+📋 Processing branch: 6xgubs-codex/fix-blank-screen-issue
+⏭️  Skipping 6xgubs-codex/fix-blank-screen-issue (already merged, doesn't exist, or no changes)
+📋 Processing branch: 74tfm8-codex/implement-instant-messaging-for-negotiations
+⏭️  Skipping 74tfm8-codex/implement-instant-messaging-for-negotiations (already merged, doesn't exist, or no changes)
+📋 Processing branch: 75rlpk-codex/fix-modulenamemapper-configuration-for-tests
+⏭️  Skipping 75rlpk-codex/fix-modulenamemapper-configuration-for-tests (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7dxqey-codex/fix-missing-product-export-from-@prisma/client
+⏭️  Skipping 7dxqey-codex/fix-missing-product-export-from-@prisma/client (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7fnoko-codex/fix-client-side-rendering-and-javascript-errors
+⏭️  Skipping 7fnoko-codex/fix-client-side-rendering-and-javascript-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7ieis8-codex/add-error-handling-and-fallback-data
+⏭️  Skipping 7ieis8-codex/add-error-handling-and-fallback-data (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7wzx4b-codex/fix-ts2554-error-in-disputeform
+⏭️  Skipping 7wzx4b-codex/fix-ts2554-error-in-disputeform (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7xqa4z-codex/implement-checkout-flow-with-auth-redirect
+⏭️  Skipping 7xqa4z-codex/implement-checkout-flow-with-auth-redirect (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7yfp2f-codex/implement-global-error-boundary-with-toasts
+⏭️  Skipping 7yfp2f-codex/implement-global-error-boundary-with-toasts (already merged, doesn't exist, or no changes)
+📋 Processing branch: 7yshjv-codex/implement-eprivacy-directive-consent-banner
+⏭️  Skipping 7yshjv-codex/implement-eprivacy-directive-consent-banner (already merged, doesn't exist, or no changes)
+📋 Processing branch: 85f672-codex/implement-wishlist-functionality
+⏭️  Skipping 85f672-codex/implement-wishlist-functionality (already merged, doesn't exist, or no changes)
+📋 Processing branch: 87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors
+⏭️  Skipping 87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8aozst-codex/implement-cart-functionality-with-react-context
+⏭️  Skipping 8aozst-codex/implement-cart-functionality-with-react-context (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8arrdw-codex/centralize-fetch-error-handling
+⏭️  Skipping 8arrdw-codex/centralize-fetch-error-handling (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8axt14-codex/add-error-handling-and-fallback-data
+⏭️  Skipping 8axt14-codex/add-error-handling-and-fallback-data (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8h6b38-codex/fix-typescript-module-and-type-errors
+⏭️  Skipping 8h6b38-codex/fix-typescript-module-and-type-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8k1pqw-codex/render-full-profile-on-click
+⏭️  Skipping 8k1pqw-codex/render-full-profile-on-click (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8z9e37-codex/implement-light/dark-theme-with-persistence
+⏭️  Skipping 8z9e37-codex/implement-light/dark-theme-with-persistence (already merged, doesn't exist, or no changes)
+📋 Processing branch: 8ztzgg-codex/add-i18n-support-with-next-i18next
+⏭️  Skipping 8ztzgg-codex/add-i18n-support-with-next-i18next (already merged, doesn't exist, or no changes)
+📋 Processing branch: 908rx5-codex/centralize-error-logging
+⏭️  Skipping 908rx5-codex/centralize-error-logging (already merged, doesn't exist, or no changes)
+📋 Processing branch: 92kxb3-codex/populate-forum-category-with-posts
+⏭️  Skipping 92kxb3-codex/populate-forum-category-with-posts (already merged, doesn't exist, or no changes)
+📋 Processing branch: 96xhsm-codex/fix-accessibility-issues
+⏭️  Skipping 96xhsm-codex/fix-accessibility-issues (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9kvoyx-codex/fix-client-side-rendering-and-javascript-errors
+⏭️  Skipping 9kvoyx-codex/fix-client-side-rendering-and-javascript-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9lfw2u-codex/render-filled-stars-for-ratings
+⏭️  Skipping 9lfw2u-codex/render-filled-stars-for-ratings (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9llxiv-codex/implement-analytics-and-error-tracking
+⏭️  Skipping 9llxiv-codex/implement-analytics-and-error-tracking (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9njm0n-codex/implement-feature-flags-and-a/b-testing
+⏭️  Skipping 9njm0n-codex/implement-feature-flags-and-a/b-testing (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9pfskl-codex/check-logs-and-fix-errors
+⏭️  Skipping 9pfskl-codex/check-logs-and-fix-errors (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9qozr5-codex/implement-light/dark-theme-with-persistence
+⏭️  Skipping 9qozr5-codex/implement-light/dark-theme-with-persistence (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9ta744-codex/implement-analytics-and-error-tracking
+⏭️  Skipping 9ta744-codex/implement-analytics-and-error-tracking (already merged, doesn't exist, or no changes)
+📋 Processing branch: 9zcb49-codex/fix-npm-eio-error-during-install
+⏭️  Skipping 9zcb49-codex/fix-npm-eio-error-during-install (already merged, doesn't exist, or no changes)
+📋 Processing branch: a12zhz-codex/support-metric--imperial-units
+⏭️  Skipping a12zhz-codex/support-metric--imperial-units (already merged, doesn't exist, or no changes)
+📋 Processing branch: a1b34d-codex/add-test-for-failed-login-toast
+⏭️  Skipping a1b34d-codex/add-test-for-failed-login-toast (already merged, doesn't exist, or no changes)
+📋 Processing branch: a5b989-codex/add-promotions-support-with-coupons-and-gift-cards
+⏭️  Skipping a5b989-codex/add-promotions-support-with-coupons-and-gift-cards (already merged, doesn't exist, or no changes)
+📋 Processing branch: a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme
+⏭️  Skipping a7jyue-codex/disable-theme-toggle-and-set-default-dark-theme (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-2025-q4-services
+⏭️  Skipping add-2025-q4-services (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-comprehensive-services
+⏭️  Skipping add-comprehensive-services (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-innovative-services-2025
+⏭️  Skipping add-innovative-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-ai-services-2025
+⏭️  Skipping add-new-ai-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-content-and-advertising
+⏭️  Skipping add-new-content-and-advertising (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-innovative-services
+⏭️  Skipping add-new-innovative-services (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-innovative-services-2025
+⏭️  Skipping add-new-innovative-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-innovative-services-2026
+⏭️  Skipping add-new-innovative-services-2026 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-micro-saas-services
+⏭️  Skipping add-new-micro-saas-services (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-micro-saas-services-2025
+⏭️  Skipping add-new-micro-saas-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-micro-saas-services-2026
+⏭️  Skipping add-new-micro-saas-services-2026 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-2024
+⏭️  Skipping add-new-services-2024 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-2025
+⏭️  Skipping add-new-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-and-advertise
+⏭️  Skipping add-new-services-and-advertise (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-and-advertise-2025
+⏭️  Skipping add-new-services-and-advertise-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-and-advertise-2026
+⏭️  Skipping add-new-services-and-advertise-2026 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-and-advertise-them
+⏭️  Skipping add-new-services-and-advertise-them (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-new-services-clean
+⏭️  Skipping add-new-services-clean (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-revolutionary-services-2025
+⏭️  Skipping add-revolutionary-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-revolutionary-services-2025-clean
+⏭️  Skipping add-revolutionary-services-2025-clean (already merged, doesn't exist, or no changes)
+📋 Processing branch: add-ultimate-services-2025
+⏭️  Skipping add-ultimate-services-2025 (already merged, doesn't exist, or no changes)
+📋 Processing branch: adis18-codex/fix-ts2614-error-with-suspense-import
+⏭️  Skipping adis18-codex/fix-ts2614-error-with-suspense-import (already merged, doesn't exist, or no changes)
+📋 Processing branch: ai-it-innovations-automation
+⏭️  Skipping ai-it-innovations-automation (already merged, doesn't exist, or no changes)
+📋 Processing branch: aiqw7a-codex/improve-discoverability-with-seo-features
+⏭️  Skipping aiqw7a-codex/improve-discoverability-with-seo-features (already merged, doesn't exist, or no changes)
+📋 Processing branch: aivbk0-codex/fix-login-form-submission-issues
+⏭️  Skipping aivbk0-codex/fix-login-form-submission-issues (already merged, doesn't exist, or no changes)
+📋 Processing branch: al8dax-codex/fix-npm-eio-error-during-install
+⏭️  Skipping al8dax-codex/fix-npm-eio-error-during-install (already merged, doesn't exist, or no changes)
+📋 Processing branch: amourx-codex/populate-forum-category-with-posts
+⏭️  Skipping amourx-codex/populate-forum-category-with-posts (already merged, doesn't exist, or no changes)
+📋 Processing branch: analyze-improve-deploy
+⏭️  Skipping analyze-improve-deploy (already merged, doesn't exist, or no changes)
+📋 Processing branch: app-improvements-feature
+⏭️  Skipping app-improvements-feature (already merged, doesn't exist, or no changes)
+📋 Processing branch: apply-improvements-to-main
+⏭️  Skipping apply-improvements-to-main (already merged, doesn't exist, or no changes)
+📋 Processing branch: auto/autonomy-17186719616
+🔄 Attempting to merge auto/autonomy-17186719616...
+fatal: couldn't find remote ref auto/autonomy-17186719616
+⚠️  Merge conflicts detected in auto/autonomy-17186719616, resolving...
+❌ No conflicted files found, but merge failed. Aborting...
+fatal: There is no merge to abort (MERGE_HEAD missing).
+❌ Failed to process branch auto/autonomy-17186719616
+📊 Progress: 0 successful, 1 failed, 0 conflicts resolved
 ---
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0357
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0357...
+📋 Processing branch: auto/autonomy-17187611596
+⏭️  Skipping auto/autonomy-17187611596 (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-08-24T03-49-38-332Z
+⏭️  Skipping autobot/2025-08-24T03-49-38-332Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-08-24T03-52-05-968Z
+⏭️  Skipping autobot/2025-08-24T03-52-05-968Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-08-24T03-53-54-036Z
+⏭️  Skipping autobot/2025-08-24T03-53-54-036Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-08-24T03-54-04-073Z
+⏭️  Skipping autobot/2025-08-24T03-54-04-073Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T22-36-37-569Z
+⏭️  Skipping autobot/2025-09-05T22-36-37-569Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T22-36-46-654Z
+⏭️  Skipping autobot/2025-09-05T22-36-46-654Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T22-43-59-547Z
+⏭️  Skipping autobot/2025-09-05T22-43-59-547Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T22-44-16-922Z
+⏭️  Skipping autobot/2025-09-05T22-44-16-922Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T22-44-30-492Z
+⏭️  Skipping autobot/2025-09-05T22-44-30-492Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T23-05-25-892Z
+⏭️  Skipping autobot/2025-09-05T23-05-25-892Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T23-08-12-678Z
+⏭️  Skipping autobot/2025-09-05T23-08-12-678Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T23-08-17-802Z
+⏭️  Skipping autobot/2025-09-05T23-08-17-802Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-05T23-59-19-552Z
+⏭️  Skipping autobot/2025-09-05T23-59-19-552Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-01-56-128Z
+⏭️  Skipping autobot/2025-09-06T00-01-56-128Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-09-07-367Z
+⏭️  Skipping autobot/2025-09-06T00-09-07-367Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-09-36-049Z
+⏭️  Skipping autobot/2025-09-06T00-09-36-049Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-17-11-397Z
+⏭️  Skipping autobot/2025-09-06T00-17-11-397Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-18-59-073Z
+⏭️  Skipping autobot/2025-09-06T00-18-59-073Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-20-17-310Z
+⏭️  Skipping autobot/2025-09-06T00-20-17-310Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-37-41-473Z
+⏭️  Skipping autobot/2025-09-06T00-37-41-473Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-47-19-341Z
+⏭️  Skipping autobot/2025-09-06T00-47-19-341Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T00-56-43-442Z
+⏭️  Skipping autobot/2025-09-06T00-56-43-442Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T01-04-11-722Z
+⏭️  Skipping autobot/2025-09-06T01-04-11-722Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T01-26-08-671Z
+⏭️  Skipping autobot/2025-09-06T01-26-08-671Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T01-39-31-162Z
+⏭️  Skipping autobot/2025-09-06T01-39-31-162Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T01-41-40-654Z
+⏭️  Skipping autobot/2025-09-06T01-41-40-654Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T01-52-44-973Z
+⏭️  Skipping autobot/2025-09-06T01-52-44-973Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T02-03-11-668Z
+⏭️  Skipping autobot/2025-09-06T02-03-11-668Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T03-16-29-905Z
+⏭️  Skipping autobot/2025-09-06T03-16-29-905Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T08-26-49-685Z
+⏭️  Skipping autobot/2025-09-06T08-26-49-685Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: autobot/2025-09-06T08-36-33-406Z
+⏭️  Skipping autobot/2025-09-06T08-36-33-406Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: auto/cache-anchor-tools
+⏭️  Skipping auto/cache-anchor-tools (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/advanced-git-sync-temp
+⏭️  Skipping automation/advanced-git-sync-temp (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/auto-fix
+🔄 Attempting to merge automation/auto-fix...
+fatal: couldn't find remote ref automation/auto-fix
 Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0357
+✅ Successfully merged automation/auto-fix
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   comprehensive-merge-output.log
 
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-0357 processed successfully
-📊 Progress: 2 successful, 0 failed, 0 conflicts resolved
+no changes added to commit (use "git add" and/or "git commit -a")
+✅ Branch automation/auto-fix processed successfully
+📊 Progress: 1 successful, 1 failed, 0 conflicts resolved
 ---
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-03b6
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-03b6...
+📋 Processing branch: automation/autonomous-intelligence
+🔄 Attempting to merge automation/autonomous-intelligence...
+fatal: couldn't find remote ref automation/autonomous-intelligence
 Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-03b6
+✅ Successfully merged automation/autonomous-intelligence
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   comprehensive-merge-output.log
 
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-03b6 processed successfully
-📊 Progress: 3 successful, 0 failed, 0 conflicts resolved
+no changes added to commit (use "git add" and/or "git commit -a")
+✅ Branch automation/autonomous-intelligence processed successfully
+📊 Progress: 2 successful, 1 failed, 0 conflicts resolved
 ---
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-06aa
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-06aa...
+📋 Processing branch: automation/bundle-report
+⏭️  Skipping automation/bundle-report (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/changelog
+⏭️  Skipping automation/changelog (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/ci-auto-heal
+🔄 Attempting to merge automation/ci-auto-heal...
+fatal: couldn't find remote ref automation/ci-auto-heal
 Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-06aa
+✅ Successfully merged automation/ci-auto-heal
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   comprehensive-merge-output.log
 
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-06aa processed successfully
-📊 Progress: 4 successful, 0 failed, 0 conflicts resolved
+no changes added to commit (use "git add" and/or "git commit -a")
+✅ Branch automation/ci-auto-heal processed successfully
+📊 Progress: 3 successful, 1 failed, 0 conflicts resolved
 ---
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0756
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0756...
-Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0756
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-0756 processed successfully
-📊 Progress: 5 successful, 0 failed, 0 conflicts resolved
----
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0c04
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0c04...
-Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0c04
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-0c04 processed successfully
-📊 Progress: 6 successful, 0 failed, 0 conflicts resolved
----
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-0cca
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-0cca...
-Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0cca
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-0cca processed successfully
-📊 Progress: 7 successful, 0 failed, 0 conflicts resolved
----
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-174e
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-174e...
-Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-174e
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-174e processed successfully
-📊 Progress: 8 successful, 0 failed, 0 conflicts resolved
----
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-17cc
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-17cc...
-Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-17cc
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-17cc processed successfully
-📊 Progress: 9 successful, 0 failed, 0 conflicts resolved
----
-📋 Processing branch: cursor/add-and-advertise-new-services-then-build-192f
-🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-192f...
-Already up to date.
-✅ Successfully merged cursor/add-and-advertise-new-services-then-build-192f
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	comprehensive-merge-output.log
-
-nothing added to commit but untracked files present (use "git add" to track)
-✅ Branch cursor/add-and-advertise-new-services-then-build-192f processed successfully
-📊 Progress: 10 successful, 0 failed, 0 conflicts resolved
----
-💾 Pushing progress to remote...
+📋 Processing branch: automation/cloud-adaptive-knowledge
+⏭️  Skipping automation/cloud-adaptive-knowledge (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/cloud-automations
+⏭️  Skipping automation/cloud-automations (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/cloud-autos-new-tools
+⏭️  Skipping automation/cloud-autos-new-tools (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation-cloud-runner
+⏭️  Skipping automation-cloud-runner (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/deploy-autonomous-cloud-automations
+⏭️  Skipping automation/deploy-autonomous-cloud-automations (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation-error-fixes
+⏭️  Skipping automation-error-fixes (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation-fixes
+⏭️  Skipping automation-fixes (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/front-home-advertisers
+⏭️  Skipping automation/front-home-advertisers (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-10T23-29-21-210Z
+⏭️  Skipping automation/git-sync/2025-08-10T23-29-21-210Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T03-27-23-630Z
+⏭️  Skipping automation/git-sync/2025-08-11T03-27-23-630Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T03-27-31-935Z
+⏭️  Skipping automation/git-sync/2025-08-11T03-27-31-935Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T03-58-13-256Z
+⏭️  Skipping automation/git-sync/2025-08-11T03-58-13-256Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T04-09-30-048Z
+⏭️  Skipping automation/git-sync/2025-08-11T04-09-30-048Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T07-36-19-809Z
+⏭️  Skipping automation/git-sync/2025-08-11T07-36-19-809Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T07-36-55-872Z
+⏭️  Skipping automation/git-sync/2025-08-11T07-36-55-872Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T07-37-14-342Z
+⏭️  Skipping automation/git-sync/2025-08-11T07-37-14-342Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T07-40-48-230Z
+⏭️  Skipping automation/git-sync/2025-08-11T07-40-48-230Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T07-41-48-586Z
+⏭️  Skipping automation/git-sync/2025-08-11T07-41-48-586Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T07-58-23-605Z
+⏭️  Skipping automation/git-sync/2025-08-11T07-58-23-605Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T08-14-13-652Z
+⏭️  Skipping automation/git-sync/2025-08-11T08-14-13-652Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T10-13-37-781Z
+⏭️  Skipping automation/git-sync/2025-08-11T10-13-37-781Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T10-15-03-439Z
+⏭️  Skipping automation/git-sync/2025-08-11T10-15-03-439Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T10-16-00-311Z
+⏭️  Skipping automation/git-sync/2025-08-11T10-16-00-311Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T10-16-29-373Z
+⏭️  Skipping automation/git-sync/2025-08-11T10-16-29-373Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T10-18-03-320Z
+⏭️  Skipping automation/git-sync/2025-08-11T10-18-03-320Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T11-21-25-885Z
+⏭️  Skipping automation/git-sync/2025-08-11T11-21-25-885Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T17-47-26-106Z
+⏭️  Skipping automation/git-sync/2025-08-11T17-47-26-106Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T17-47-27-832Z
+⏭️  Skipping automation/git-sync/2025-08-11T17-47-27-832Z (already merged, doesn't exist, or no changes)
+📋 Processing branch: automation/git-sync/2025-08-11T17-48-57-374Z
