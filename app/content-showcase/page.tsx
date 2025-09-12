@@ -5,6 +5,24 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Impact on AI",
+      description: "Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities. Learn about quantum AI algorithms, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "28 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025: Ethical Governance Framework - Responsible AI Implementation",
+      description: "Learn how to implement a comprehensive AI ethical governance framework in 2025. Discover best practices for responsible AI, bias mitigation, transparency, and regulatory compliance.",
+      href: "/blog/ai-2025-ethical-governance-framework",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "32 min read",
+      date: "Jan 31, 2025"
+    },
+    {
       title: "AI Advanced Automation 2025: Complete Implementation Guide",
       description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
       href: "/blog/ai-2025-advanced-automation",
@@ -39,30 +57,20 @@ export default function ContentShowcasePage() {
       category: "Sustainability",
       readTime: "20 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the revolutionary advances in AI-powered robotics and automation. Discover how intelligent machines are transforming manufacturing, healthcare, and service industries with unprecedented capabilities.",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-<<<<<<< HEAD
+      title: "AI Cybersecurity Transformation Breakthrough: 99.8% Threat Detection Success",
+      description: "How a Fortune 500 financial services company achieved 99.8% threat detection accuracy, 85% reduction in false positives, and $12M annual savings through AI-powered cybersecurity transformation.",
+      href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
+      icon: "🛡️",
+      category: "Cybersecurity AI",
+      result: "99.8% Detection",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
@@ -70,7 +78,8 @@ export default function ContentShowcasePage() {
       category: "Manufacturing AI",
       result: "$200M Savings",
       date: "Jan 28, 2025"
-=======
+    },
+    {
       title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
       description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
       href: "/case-studies/ai-healthcare-diagnosis-success-2025",
@@ -78,7 +87,6 @@ export default function ContentShowcasePage() {
       category: "Healthcare AI",
       result: "95% Accuracy",
       date: "Jan 30, 2025"
->>>>>>> cursor/create-and-deploy-new-content-f6c0
     },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
@@ -111,6 +119,24 @@ export default function ContentShowcasePage() {
       date: "Jan 30, 2025"
     },
     {
+      title: "AI Ethical Governance Framework Toolkit: Responsible AI Implementation",
+      description: "Complete toolkit for implementing AI ethical governance including policies, procedures, checklists, and compliance frameworks for responsible AI deployment.",
+      href: "/resources/ai-ethical-governance-framework-2025",
+      icon: "⚖️",
+      category: "AI Ethics",
+      type: "Free Download",
+      date: "Jan 31, 2025"
+    },
+    {
+      title: "Quantum AI Implementation Guide: Revolutionary Technology Deployment",
+      description: "Comprehensive guide to implementing quantum AI solutions including technical requirements, vendor selection, and integration strategies.",
+      href: "/resources/quantum-ai-implementation-guide-2025",
+      icon: "⚛️",
+      category: "Quantum AI",
+      type: "Free Download",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
       description: "Complete checklist covering every aspect of AI implementation from strategy to deployment, with 150+ actionable items across 7 key categories.",
       href: "/resources/ai-implementation-checklist-2025",
@@ -118,15 +144,6 @@ export default function ContentShowcasePage() {
       category: "Checklist",
       type: "Free Download",
       date: "Feb 08, 2025"
-    },
-    {
-      title: "AI Security Hardening Checklist: Essential Security Measures",
-      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
-      href: "/resources/ai-security-hardening-checklist",
-      icon: "🛡️",
-      category: "Security",
-      type: "Free Download",
-      date: "Feb 06, 2025"
     }
   ];
 
