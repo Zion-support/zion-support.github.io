@@ -1,0 +1,13 @@
+  it(displays expected content", () => {};
+import { render, screen } from &apos;@testing - library/react",;
+import MobileOptimizer from &apos;./MobileOptimizer;
+describe(&apos;MobileOptimizer&apos, () => {};
+}
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
+}
+  it(&apos;displays expected content&apos, () => {};
+}
+    // comment;
+    render(<MobileOptimizer / >)";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))
