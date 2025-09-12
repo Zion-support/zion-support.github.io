@@ -1,21 +1,4 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle,
-  X,
-  Settings,
-  BarChart3,
-  Cpu,
-  Memory,
-  HardDrive,
-  Gauge,
-  Network
-} from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
   fps: number;
@@ -34,6 +17,12 @@ interface PerformanceMetrics {
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
+  enabled?: boolean;
+  showMetrics?: boolean;
+  autoOptimize?: boolean;
+  enableLazyLoading?: boolean;
+  enableIntersectionObserver?: boolean;
+  enablePerformanceMonitoring?: boolean;
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -56,128 +45,108 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     coreWebVitals: {
       lcp: 0,
       fid: 0,
-      cls: 0
-    }
+      cls: 0,
+    },
   });
-  
-  const [isVisible, setIsVisible] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
+
   const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
 
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const target = entry.target as HTMLElement;
-              if (target.dataset.src) {
-                target.src = target.dataset.src;
-                target.removeAttribute('data-src');
-                observer.unobserve(target);
-              }
-            }
-          });
-        },
-        {
-          rootMargin: '50px',
-          threshold: 0.1,
-        }
-      );
-
-      // Observe all images with data-src
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-
-      return () => observer.disconnect();
-    }
-  }, []);
-
-  return <>{optimizedChildren}</>;
-};
-
-    // Measure render time
-    const renderStartTime = performance.now();
-    requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStartTime;
-      setMetrics(prev => ({ ...prev, renderTime }));
-    });
-
-    requestAnimationFrame(measureFPS);
+  // FPS measurement
+  const measureFPS = useCallback(() => {
+    if (!enabled) return;
+    
+    let lastTime = performance.now();
+    let frameCount = 0;
+    
+    const countFrames = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        setMetrics(prev => ({ ...prev, fps }));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      if (enabled) {
+        requestAnimationFrame(countFrames);
+      }
+    };
+    
+    requestAnimationFrame(countFrames);
   }, [enabled]);
 
-  // Enhanced auto-optimization logic
-  const performOptimizations = useCallback(async () => {
-    if (isOptimizing) return;
-    
-    setIsOptimizing(true);
-    const newOptimizations: string[] = [];
-
-    try {
-      // Check FPS and suggest optimizations
-      if (metrics.fps < 30) {
-        newOptimizations.push('Low FPS detected - Consider reducing animations');
-      }
-
-      // Check memory usage
-      if (metrics.memoryUsage > 100) {
-        newOptimizations.push('High memory usage - Consider implementing memory cleanup');
-      }
-
-      // Check load time
-      if (metrics.loadTime > 3000) {
-        newOptimizations.push('Slow load time - Consider implementing lazy loading');
-      }
-
-      // Check Core Web Vitals
-      if (metrics.coreWebVitals.lcp > 2500) {
-        newOptimizations.push('Poor LCP - Optimize largest contentful paint');
-      }
-
-      if (metrics.coreWebVitals.fid > 100) {
-        newOptimizations.push('Poor FID - Reduce input delay');
-      }
-
-      if (metrics.coreWebVitals.cls > 0.1) {
-        newOptimizations.push('Poor CLS - Reduce layout shifts');
-      }
-
-      setOptimizations(newOptimizations);
-    } catch (error) {
-      console.warn('Optimization analysis failed:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, [metrics, isOptimizing]);
-
-  // Auto-optimization effect
+  // Performance monitoring
   useEffect(() => {
-    if (enabled && enablePerformanceMonitoring) {
-      const interval = setInterval(measurePerformance, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [enabled, enablePerformanceMonitoring, measurePerformance]);
+    if (!enabled) return;
 
-  // Auto-optimization effect
+    // Measure initial load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
+
+    // Start FPS monitoring
+    measureFPS();
+
+    // Memory usage monitoring
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
+      }));
+    }
+
+    // Network monitoring
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      setMetrics(prev => ({
+        ...prev,
+        networkLatency: connection.rtt || 0,
+      }));
+    }
+  }, [enabled, measureFPS]);
+
+  // Lazy loading setup
   useEffect(() => {
-    if (enabled && enablePerformanceMonitoring) {
-      const interval = setInterval(performOptimizations, 10000);
-      return () => clearInterval(interval);
-    }
-  }, [enabled, enablePerformanceMonitoring, performOptimizations]);
+    if (!enableLazyLoading || !enableIntersectionObserver) return;
 
-  if (!enabled) {
-    return <>{children}</>;
-  }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            if (target.dataset.src) {
+              target.src = target.dataset.src;
+              target.removeAttribute('data-src');
+              observer.unobserve(target);
+            }
+          }
+        });
+      },
+      {
+        rootMargin: '50px',
+        threshold: 0.1,
+      }
+    );
+
+    // Observe all images with data-src
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach((img) => observer.observe(img));
+
+    return () => observer.disconnect();
+  }, [enableLazyLoading, enableIntersectionObserver]);
 
   return (
     <>
+      {children}
       {/* Performance monitoring overlay for development */}
-      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && (
+      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && showMetrics && (
         <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs z-50">
-          <div>Performance Monitor Active</div>
-          <div>Check console for metrics</div>
+          <div>FPS: {metrics.fps}</div>
+          <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>
+          <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
         </div>
       )}
     </>
