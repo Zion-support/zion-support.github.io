@@ -23,6 +23,8 @@ import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBa
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
 import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
+import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import NewContent2025Showcase from '../components/NewContent2025Showcase';
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
@@ -225,6 +227,12 @@ export default function HomePage() {
         
         {/* AI 2031 CONTENT SHOWCASE */}
         <AI2031ContentShowcase />
+        
+        {/* AI 2026 CONTENT PROMOTION BANNER */}
+        <AI2026ContentPromotionBanner />
+        
+        {/* AI 2026 CONTENT SHOWCASE */}
+        <AI2026ContentShowcase />
         
         {/* AI 2030 CONTENT PROMOTION BANNER */}
         <AI2030ContentPromotionBanner />
