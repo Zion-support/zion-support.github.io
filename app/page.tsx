@@ -141,6 +141,9 @@ import EnhancedContentDiscoveryWidget2026 from '../components/EnhancedContentDis
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+import AdvancedContentHub from '../components/AdvancedContentHub';
+import AdvancedContentHubBanner from '../components/AdvancedContentHubBanner';
+import PerformanceOptimizationShowcase from '../components/PerformanceOptimizationShowcase';
 
 // New 2027-2028 Content Components
 import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
@@ -3530,6 +3533,19 @@ export default function HomePage() {
       
       {/* CONTENT NAVIGATION - NEW 2025 FEATURE */}
       <ContentNavigation />
+      
+      {/* ADVANCED CONTENT HUB BANNER - NEW 2025 FEATURE */}
+      <AdvancedContentHubBanner />
+      
+      {/* ADVANCED CONTENT HUB - NEW 2025 FEATURE */}
+      <div id="advanced-content-hub">
+        <AdvancedContentHub />
+      </div>
+      
+      {/* PERFORMANCE OPTIMIZATION SHOWCASE - NEW 2025 FEATURE */}
+      <div id="performance-optimization">
+        <PerformanceOptimizationShowcase />
+      </div>
     </div>
     </EnhancedErrorBoundary>
   );
