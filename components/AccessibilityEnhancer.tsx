@@ -98,9 +98,63 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
       }
     ];
     
-    // Apply accessibility enhancements
-    document.documentElement.setAttribute('data-enhanced-accessibility', 'true');
-    document.body.classList.add('high-contrast');
+    // High contrast
+    if (settings.highContrast) {
+      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--bg-secondary', '#1a1a1a');
+      root.style.setProperty('--text-primary', '#ffffff');
+      root.style.setProperty('--text-secondary', '#e5e5e5');
+      root.style.setProperty('--accent-color', '#ffff00');
+      root.style.setProperty('--border-color', '#ffff00');
+    } else {
+      root.style.removeProperty('--bg-primary');
+      root.style.removeProperty('--bg-secondary');
+      root.style.removeProperty('--text-primary');
+      root.style.removeProperty('--text-secondary');
+      root.style.removeProperty('--accent-color');
+      root.style.removeProperty('--border-color');
+    }
+
+    // Large text
+    if (settings.largeText) {
+      root.style.fontSize = '18px';
+      root.style.setProperty('--text-scale', '1.2');
+    } else {
+      root.style.fontSize = '16px';
+      root.style.setProperty('--text-scale', '1');
+    }
+
+    // Reduced motion
+    if (settings.reducedMotion) {
+      root.style.setProperty('--reduced-motion', 'reduce');
+    } else {
+      root.style.removeProperty('--reduced-motion');
+    }
+
+    // Focus indicator
+    if (settings.focusIndicator) {
+      root.style.setProperty('--focus-outline', '3px solid #0066cc');
+    } else {
+      root.style.setProperty('--focus-outline', 'none');
+    }
+
+    // Color scheme
+    if (settings.colorScheme === 'light') {
+      root.classList.remove('dark');
+      root.classList.add('light');
+    } else if (settings.colorScheme === 'dark') {
+      root.classList.remove('light');
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('light', 'dark');
+    }
+  }, [settings]);
+
+  // Track focus changes
+  useEffect(() => {
+    // Check user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
     // Add skip links
     const skipLink = document.createElement('a');

@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Track Core Web Vitals
-    getCLS((metric) => {
-      console.log('CLS:', metric);
-      // Send to analytics service
-    });
+interface PerformanceMetrics {
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  fcp: number;
+  fmp: number;
+  tti: number;
+}
 
     getFID((metric) => {
       console.log('FID:', metric);
