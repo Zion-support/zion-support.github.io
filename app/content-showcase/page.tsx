@@ -36,6 +36,27 @@ export default function ContentShowcasePage() {
           
           {/* New September 2025 Drops */}
           <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* New: AI Security Hardening */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-red-100 to-pink-100 text-red-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🛡️ SECURITY</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-security-hardening-2025" className="hover:text-blue-600">
+                    AI Security Hardening 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Threat models, layered guardrails, monitoring and compliance for safer AI.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/ai-security-hardening-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* New: RAG in Production */}
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="p-6">
@@ -99,18 +120,18 @@ export default function ContentShowcasePage() {
 
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="p-6">
-                <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 rounded-full px-4 py-2 mb-4">
-                  <span className="text-sm font-bold">🧠 VECTOR</span>
+                <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">💸 COST</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  <Link href="/blog/ai-vector-databases-2025" className="hover:text-blue-600">
-                    AI Vector Databases 2025
+                  <Link href="/blog/llm-cost-optimization-2025" className="hover:text-blue-600">
+                    LLM Cost Optimization 2025
                   </Link>
                 </h3>
-                <p className="text-gray-600 mb-4">Retrieval strategies and production RAG patterns.</p>
+                <p className="text-gray-600 mb-4">Cut spend without quality loss using routing, caching and distillation.</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">Sep 12, 2025</span>
-                  <Link href="/blog/ai-vector-databases-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                  <Link href="/blog/llm-cost-optimization-2025" className="text-blue-600 font-semibold hover:text-blue-700">
                     Read More →
                   </Link>
                 </div>

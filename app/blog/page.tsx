@@ -194,6 +194,35 @@ const blogPosts: BlogPost[] = [
     image: '🧪',
     views: 0
   }
+  ,
+  {
+    id: 'ai-security-hardening-2025',
+    title: 'AI Security Hardening 2025: Threat Models, Guardrails, Compliance',
+    excerpt: 'Practical defenses against prompt injection, data exfiltration, and AI supply chain risk.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '10 min read',
+    category: 'Security & Risk',
+    tags: ['Security', 'Guardrails', 'Compliance'],
+    featured: true,
+    url: '/blog/ai-security-hardening-2025',
+    image: '🛡️',
+    views: 0
+  },
+  {
+    id: 'llm-cost-optimization-2025',
+    title: 'LLM Cost Optimization 2025: Quality, Latency, and Spend Control',
+    excerpt: 'Reduce spend with caching, routing, distillation, and evaluation-driven optimization.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    category: 'MLOps & Platform',
+    tags: ['LLM', 'Cost', 'Optimization'],
+    featured: false,
+    url: '/blog/llm-cost-optimization-2025',
+    image: '💸',
+    views: 0
+  }
 ];
 
 export default function BlogPage() {
