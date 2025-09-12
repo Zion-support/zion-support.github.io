@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Agent Marketplaces in 2025: Strategy & Governance",
+      description: "How to launch enterprise agent marketplaces with reference architectures, monetization, and safety.",
+      href: "/blog/ai-2025-agent-marketplaces-strategy",
+      icon: "🛒",
+      category: "Strategy",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "AI Agent Observability in 2025: Telemetry, Tracing, Guardrails",
       description: "Blueprint for end-to-end agent observability with telemetry, tracing, evaluations, and policy guardrails.",
       href: "/blog/ai-2025-ai-agent-observability",

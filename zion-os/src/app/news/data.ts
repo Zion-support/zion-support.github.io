@@ -10,6 +10,17 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "agent-marketplaces-strategy-guide",
+    emoji: "🛒",
+    title: "New Guide: Agent Marketplaces Strategy for 2025",
+    excerpt:
+      "We published a strategy guide on launching enterprise agent marketplaces: architecture, monetization, and governance.",
+    date: "2025-09-12",
+    gradient: "from-violet-600 to-fuchsia-600",
+    content:
+      "Explore our latest guide covering the reference architecture, monetization patterns, safety guardrails, and observability required to ship enterprise agent marketplaces.",
+  },
+  {
     slug: "zion-os-1-5-realtime-agents",
     emoji: "🛰️",
     title: "Zion OS 1.5: Real-Time Agents with First-Class Observability",
