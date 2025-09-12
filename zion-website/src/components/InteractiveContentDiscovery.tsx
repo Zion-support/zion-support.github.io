@@ -28,6 +28,58 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '50',
+      title: 'Machine Learning Model Optimization: Advanced Techniques',
+      description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
+      href: '/blog/ml-model-optimization',
+      type: 'blog',
+      category: 'Machine Learning',
+      readTime: '24 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Optimization', 'Quantization', 'Pruning', 'Distillation'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '51',
+      title: 'AI Ethics and Responsible Development: A Framework',
+      description: 'Practical framework for fairness, transparency, and accountability without slowing delivery.',
+      href: '/blog/ai-ethics-framework',
+      type: 'blog',
+      category: 'AI Ethics',
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Ethics', 'Fairness', 'Transparency', 'Governance'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
+      id: '52',
+      title: 'Edge AI Deployment: Bringing Intelligence to the Edge',
+      description: 'Deploy AI at the edge with optimized runtimes, secure updates, and hybrid routing.',
+      href: '/blog/edge-ai-deployment',
+      type: 'blog',
+      category: 'Edge Computing',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Edge', 'ONNX', 'TensorRT', 'IoT'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '53',
+      title: 'AI in Financial Services: Risk Management Case Study',
+      description: '40% fraud detection improvement and 25% fewer false positives with AI‑powered risk.',
+      href: '/case-studies/ai-financial-risk-management',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Fraud', 'Graph', 'Risk', 'Financial Services'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '40',
       title: 'AI 2026 Outlook: Enterprise Agent Roadmap',
       description: 'Where enterprise AI agents are headed in 2026: architectures, SLAs, governance, and edge deployments.',
