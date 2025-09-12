@@ -89,8 +89,14 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/ai-2026-advanced-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🔮 Advanced Technology Showcase
+                </Link>
                 <Link href="/ai-2026-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🔮 Technology Showcase
+                  🚀 Technology Showcase
+                </Link>
+                <Link href="/blog/ai-2026-revolutionary-breakthroughs-future" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🔮 Revolutionary Breakthroughs
                 </Link>
                 <Link href="/blog/ai-2026-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Ultimate Trends & Predictions (NEW)
@@ -116,8 +122,13 @@ function Header() {
                 <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Automation Revolution
                 </Link>
+<<<<<<< HEAD
                 <Link href="/case-studies/ai-2026-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Enterprise Success (1200% ROI) (NEW)
+=======
+                <Link href="/case-studies/ai-2026-global-tech-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏢 Global Tech Breakthrough (900% ROI)
+>>>>>>> 97532ba80d6a2232465120469b0cbc1c4a19f48f
                 </Link>
                 <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏢 Global Enterprise Success (800% ROI)

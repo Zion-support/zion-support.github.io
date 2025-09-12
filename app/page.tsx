@@ -57,6 +57,7 @@ import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import LatestContent2026PromotionBanner from '../components/LatestContent2026PromotionBanner';
 import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import NewContent2026AdvancedPromotionBanner from '../components/NewContent2026AdvancedPromotionBanner';
 import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
@@ -79,6 +80,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* ULTIMATE CONTENT 2026 PROMOTION BANNER */}
         <UltimateContent2026PromotionBanner />
+        
+        {/* NEW CONTENT 2026 ADVANCED PROMOTION BANNER */}
+        <NewContent2026AdvancedPromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
