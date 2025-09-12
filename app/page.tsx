@@ -30,6 +30,71 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className='min-h-screen bg-white'>
+    <ErrorBoundary>
+      <SEO
+        title="Zion Tech Group - AI & Technology Solutions"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
+        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
+        url="/"
+      />
+      
+      <div className='min-h-screen bg-white'>
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
+          <StructuredData 
+            type="Organization" 
+            data={{
+              name: "Zion Tech Group",
+              description: "Transforming businesses through cutting-edge technology solutions",
+              url: "https://zion.app",
+              logo: "https://zion.app/images/zion-tech-group-logo.png",
+              sameAs: [
+                "https://twitter.com/ZionTechGroup",
+                "https://linkedin.com/company/zion-tech-group"
+              ]
+            }} 
+          />
+          <StructuredData 
+            type="WebSite" 
+            data={{
+              name: "Zion Tech Group",
+              url: "https://zion.app",
+              potentialAction: {
+                "@type": "SearchAction",
+                "target": "https://zion.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }} 
+          />
+        </Suspense>
+      {/* Top Content Promotion Banner */}
+      <section className='py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1 mb-3'>
+              <span className='text-xs font-medium'>🔥 NEW CONTENT DROP</span>
+            </div>
+            <p className='text-sm md:text-base opacity-90 mb-3'>
+              <strong>AI Workforce Transformation Guide</strong> • <strong>Data Strategy Playbook</strong> • <strong>Manufacturing Success Story</strong>
+            </p>
+            <div className='flex flex-col sm:flex-row gap-2 justify-center'>
+              <Link
+                href='/blog/ai-workforce-transformation-2025'
+                className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
+              >
+                Read Workforce Guide
+              </Link>
+              <Link
+                href='/resources/ai-workforce-transformation-playbook-2025'
+                className='bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-30 transition-colors'
+              >
+                Download Free Playbook
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -972,6 +1037,8 @@ export default function HomePage() {
               and our comprehensive AI Security Checklist. Expert insights to accelerate your growth.
               New this week: AI Implementation Best Practices, AI Security Framework, and comprehensive 150+ item 
               Implementation Checklist. Expert insights to accelerate your AI transformation in 2025.
+              New this week: AI Workforce Transformation Guide, Data Strategy Playbook, Manufacturing Success Story, 
+              and our comprehensive 150-page AI Implementation Checklist. Expert insights to accelerate your growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -1013,6 +1080,72 @@ export default function HomePage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <Link href='/blog/ai-enterprise-integration-2025' className='group'>
             <Link href='/blog/ai-2025-year-in-review' className='group'>
+            <Link href='/blog/ai-workforce-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Workforce Transformation 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Prepare your team for AI success with proven frameworks</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-data-strategy-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Data Strategy 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Build the foundation for intelligent business</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/case-studies/ai-workforce-transformation-success-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
+                <h3 className='text-lg font-semibold mb-2'>Workforce Transformation Success</h3>
+                <p className='text-sm opacity-90 mb-3'>15,000 employees, 89% satisfaction, 45% productivity gain</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-workforce-transformation-playbook-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>Workforce Transformation Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete framework with templates and guides</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/resources/ai-data-strategy-playbook-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🗺️</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Data Strategy Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>Build AI-ready data infrastructure</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-enterprise-transformation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
                 <h3 className='text-lg font-semibold mb-2'>AI 2025: Year in Review</h3>
@@ -1025,7 +1158,7 @@ export default function HomePage() {
                 <div className='flex items-center text-xs opacity-75'>
                   <span>16 min read</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>Popular</span>
                 </div>
               </div>
             </Link>
@@ -1087,12 +1220,13 @@ export default function HomePage() {
                 <div className='flex items-center text-xs opacity-75'>
                   <span>22 min read</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>Trending</span>
                 </div>
               </div>
             </Link>
 
             <Link href='/case-studies/ai-retail-personalization-success-2025' className='group'>
+            <Link href='/case-studies/ai-financial-services-transformation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛍️</div>
                 <h3 className='text-lg font-semibold mb-2'>Retail Personalization Success</h3>
@@ -1100,7 +1234,7 @@ export default function HomePage() {
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Case Study</span>
                   <span className='mx-2'>•</span>
-                  <span>New</span>
+                  <span>Popular</span>
                 </div>
               </div>
             </Link>
