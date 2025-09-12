@@ -65,6 +65,10 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
+import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
+import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -199,6 +203,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 - FEATURED */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE 2025 - NEW CONTENT */}
+        <RevolutionaryTechShowcase2025 />
+        
+        {/* ENTERPRISE SUCCESS BANNER - ADVERTISING */}
+        <EnterpriseSuccessBanner />
+        
+        {/* FUTURE TECH PREVIEW BANNER - NEW CONTENT */}
+        <FutureTechPreviewBanner />
+        
         {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2035BreakthroughPromotionBanner />
         
