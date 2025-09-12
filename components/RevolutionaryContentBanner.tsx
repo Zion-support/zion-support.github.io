@@ -1,286 +1,285 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Clock, TrendingUp, Sparkles, Zap, Globe, Shield } from 'lucide-react';
+
+interface ContentItem {
+  id: number;
+  title: string;
+  description: string;
+  href: string;
+  type: 'blog' | 'case-study' | 'resource';
+  category: string;
+  readTime: string;
+  featured?: boolean;
+  icon: string;
+}
 
 interface RevolutionaryContentBannerProps {
-  variant?: 'default' | 'featured' | 'trending';
+  variant?: 'featured' | 'trending' | 'latest';
   maxItems?: number;
 }
 
-const RevolutionaryContentBanner: React.FC<RevolutionaryContentBannerProps> = ({ 
-  variant = 'default', 
-  maxItems = 6 
-}) => {
-  const featuredContent = [
-    {
-      title: "AI 2025 Breakthrough Innovations",
-      description: "Revolutionary AI technologies reshaping industries",
-      href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🚀",
-      category: "AI Innovation",
-      readTime: "25 min",
-      isNew: true,
-      trending: true
-    },
-    {
-      title: "AI Sustainability & Green Tech 2025",
-      description: "Building eco-friendly AI systems for the future",
-      href: "/blog/ai-sustainability-green-tech-2025",
-      icon: "🌱",
-      category: "Sustainability",
-      readTime: "20 min",
-      isNew: true,
-      trending: false
-    },
-    {
-      title: "AI Robotics & Automation 2025",
-      description: "The future of intelligent machines",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min",
-      isNew: true,
-      trending: true
-    },
-    {
-      title: "$200M Manufacturing Success Story",
-      description: "AI autonomous systems case study",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      icon: "💰",
-      category: "Case Study",
-      readTime: "15 min",
-      isNew: true,
-      trending: true
-    },
-    {
-      title: "AI Workforce Transformation 2025",
-      description: "Reskilling strategies for the AI era",
-      href: "/blog/ai-workforce-transformation-2025",
-      icon: "👥",
-      category: "Workforce",
-      readTime: "18 min",
-      isNew: false,
-      trending: true
-    },
-    {
-      title: "AI Data Privacy & Compliance 2025",
-      description: "Complete guide to AI privacy regulations",
-      href: "/blog/ai-data-privacy-compliance-2025",
-      icon: "🔒",
-      category: "Privacy",
-      readTime: "22 min",
-      isNew: true,
-      trending: false
-    }
-  ];
+const featuredContent: ContentItem[] = [
+  {
+    id: 1,
+    title: "AI Advanced Neural Architectures 2025: Next-Generation Deep Learning Systems",
+    description: "Explore revolutionary neural architectures reshaping AI in 2025. From transformer variants to neuromorphic computing.",
+    href: "/blog/ai-2025-advanced-neural-architectures",
+    type: "blog",
+    category: "AI Architecture",
+    readTime: "35 min read",
+    featured: true,
+    icon: "🧠"
+  },
+  {
+    id: 2,
+    title: "AI Autonomous Systems 2025: The Future of Self-Operating Technology",
+    description: "Discover how AI is creating truly independent systems that operate, learn, and adapt without human intervention.",
+    href: "/blog/ai-2025-autonomous-systems",
+    type: "blog",
+    category: "Autonomous Systems",
+    readTime: "32 min read",
+    featured: true,
+    icon: "🤖"
+  },
+  {
+    id: 3,
+    title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
+    description: "How a Fortune 500 manufacturing company achieved $200M in annual savings with autonomous AI systems.",
+    href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+    type: "case-study",
+    category: "Manufacturing",
+    readTime: "Case Study",
+    featured: true,
+    icon: "🏭"
+  },
+  {
+    id: 4,
+    title: "AI Implementation Master Guide 2026: Complete 200+ Page Blueprint",
+    description: "The most comprehensive AI implementation guide available. Everything you need to successfully implement AI.",
+    href: "/resources/ai-implementation-master-guide-2026",
+    type: "resource",
+    category: "Implementation",
+    readTime: "200+ pages",
+    featured: true,
+    icon: "📖"
+  }
+];
 
-  const getVariantStyles = () => {
+const trendingContent: ContentItem[] = [
+  {
+    id: 5,
+    title: "AI Cybersecurity Transformation: 99.8% Threat Detection Success",
+    description: "How AI-powered cybersecurity achieved 99.8% threat detection accuracy and 85% reduction in security incidents.",
+    href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
+    type: "case-study",
+    category: "Cybersecurity",
+    readTime: "Case Study",
+    icon: "🛡️"
+  },
+  {
+    id: 6,
+    title: "AI Sustainability Transformation: 60% Energy Reduction Success",
+    description: "How a major corporation achieved 60% energy reduction and carbon neutrality through AI optimization.",
+    href: "/case-studies/ai-sustainability-transformation-2025",
+    type: "case-study",
+    category: "Sustainability",
+    readTime: "Case Study",
+    icon: "🌱"
+  },
+  {
+    id: 7,
+    title: "AI Workforce Transformation Playbook 2025: Complete Reskilling Guide",
+    description: "Comprehensive playbook for AI workforce transformation with proven strategies and implementation frameworks.",
+    href: "/resources/ai-workforce-transformation-playbook-2025",
+    type: "resource",
+    category: "Workforce",
+    readTime: "150+ pages",
+    icon: "👥"
+  },
+  {
+    id: 8,
+    title: "AI Cybersecurity Checklist 2025: 150+ Security Items",
+    description: "Comprehensive cybersecurity checklist for AI implementations covering data protection and compliance.",
+    href: "/resources/ai-cybersecurity-checklist-2025",
+    type: "resource",
+    category: "Security",
+    readTime: "150+ items",
+    icon: "🛡️"
+  }
+];
+
+export default function RevolutionaryContentBanner({ variant = 'featured', maxItems = 4 }: RevolutionaryContentBannerProps) {
+  const getContent = () => {
+    switch (variant) {
+      case 'featured':
+        return featuredContent.slice(0, maxItems);
+      case 'trending':
+        return trendingContent.slice(0, maxItems);
+      case 'latest':
+        return [...featuredContent, ...trendingContent].slice(0, maxItems);
+      default:
+        return featuredContent.slice(0, maxItems);
+    }
+  };
+
+  const getBannerConfig = () => {
     switch (variant) {
       case 'featured':
         return {
-          container: "bg-gradient-to-r from-purple-600 via-pink-600 to-red-600",
-          badge: "bg-white bg-opacity-20",
-          badgeText: "text-white",
-          title: "text-white",
-          description: "text-white opacity-90",
-          card: "bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20",
-          cardHover: "hover:bg-opacity-20",
-          text: "text-white",
-          accent: "text-pink-400"
+          title: "🚀 Revolutionary AI Content Drop - January 2025",
+          subtitle: "100+ New AI Resources: The Complete 2025 Transformation Toolkit!",
+          description: "Just released: AI Advanced Neural Architectures, Autonomous Systems, $200M Manufacturing Success Case Study, plus comprehensive implementation guides and expert frameworks.",
+          bgGradient: "from-purple-600 via-pink-600 to-red-600",
+          buttonText: "🚀 Explore All New Content",
+          buttonHref: "/content-showcase"
         };
       case 'trending':
         return {
-          container: "bg-gradient-to-r from-orange-600 via-red-600 to-pink-600",
-          badge: "bg-white bg-opacity-20",
-          badgeText: "text-white",
-          title: "text-white",
-          description: "text-white opacity-90",
-          card: "bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20",
-          cardHover: "hover:bg-opacity-20",
-          text: "text-white",
-          accent: "text-orange-400"
+          title: "🔥 Trending AI Success Stories",
+          subtitle: "Real Results from Real Companies: Proven AI Implementation Success",
+          description: "Discover how leading companies are achieving breakthrough results with AI. From cybersecurity transformations to sustainability initiatives.",
+          bgGradient: "from-green-600 via-blue-600 to-purple-600",
+          buttonText: "📊 View All Case Studies",
+          buttonHref: "/case-studies"
+        };
+      case 'latest':
+        return {
+          title: "✨ Latest AI Insights & Resources",
+          subtitle: "Fresh Content Just Published: Expert Analysis & Implementation Guides",
+          description: "Stay ahead with our latest articles, case studies, and resources covering the most important trends in AI for 2025.",
+          bgGradient: "from-indigo-600 via-purple-600 to-pink-600",
+          buttonText: "📚 Read Latest Articles",
+          buttonHref: "/blog"
         };
       default:
         return {
-          container: "bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600",
-          badge: "bg-white bg-opacity-20",
-          badgeText: "text-white",
-          title: "text-white",
-          description: "text-white opacity-90",
-          card: "bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20",
-          cardHover: "hover:bg-opacity-20",
-          text: "text-white",
-          accent: "text-cyan-400"
+          title: "🚀 Revolutionary AI Content Drop",
+          subtitle: "The Complete 2025 Transformation Toolkit",
+          description: "Discover our comprehensive collection of AI resources, implementation guides, and expert insights.",
+          bgGradient: "from-purple-600 via-pink-600 to-red-600",
+          buttonText: "🚀 Explore All Content",
+          buttonHref: "/content-showcase"
         };
     }
   };
 
-  const styles = getVariantStyles();
-  const displayContent = featuredContent.slice(0, maxItems);
+  const content = getContent();
+  const config = getBannerConfig();
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'resource':
+        return 'from-purple-500 to-pink-500';
+      default:
+        return 'from-gray-500 to-gray-600';
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI Architecture':
+        return 'bg-blue-100 text-blue-800';
+      case 'Autonomous Systems':
+        return 'bg-green-100 text-green-800';
+      case 'Manufacturing':
+        return 'bg-orange-100 text-orange-800';
+      case 'Implementation':
+        return 'bg-purple-100 text-purple-800';
+      case 'Cybersecurity':
+        return 'bg-red-100 text-red-800';
+      case 'Sustainability':
+        return 'bg-emerald-100 text-emerald-800';
+      case 'Workforce':
+        return 'bg-indigo-100 text-indigo-800';
+      case 'Security':
+        return 'bg-pink-100 text-pink-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
 
   return (
-    <section className={`py-20 ${styles.container} text-white relative overflow-hidden`}>
+    <section className={`py-20 bg-gradient-to-r ${config.bgGradient} text-white relative overflow-hidden`}>
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6`}>
-            <Sparkles className="w-4 h-4 mr-2" />
-            <span className={`text-sm font-medium ${styles.badgeText}`}>
-              {variant === 'featured' ? '✨ FEATURED CONTENT' : 
-               variant === 'trending' ? '🔥 TRENDING NOW' : 
-               '🚀 REVOLUTIONARY CONTENT DROP'}
-            </span>
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-6">
+            <span className="text-lg font-bold">{config.title}</span>
           </div>
-          
-          <h2 className={`text-4xl md:text-6xl font-bold mb-6 ${styles.title}`}>
-            {variant === 'featured' ? '🎯 Featured AI & Tech Insights' :
-             variant === 'trending' ? '🔥 Trending This Week' :
-             '🚀 Revolutionary AI Content Just Dropped'}
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+            {config.subtitle}
           </h2>
-          
-          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.description}`}>
-            {variant === 'featured' ? 
-              'Discover our most popular and impactful content covering AI innovations, sustainability, robotics, and breakthrough case studies.' :
-             variant === 'trending' ? 
-              'Explore the most popular and trending AI content this week, from breakthrough innovations to real-world success stories.' :
-              'Discover our latest breakthrough content: AI 2025 Breakthrough Innovations, Sustainability & Green Tech, Robotics & Automation, plus the $200M Manufacturing Success case study. Get expert insights on the technologies transforming 2025 and beyond.'}
+          <p className="text-2xl md:text-3xl opacity-90 mb-10 max-w-6xl mx-auto leading-relaxed">
+            {config.description}
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <Link
-              href="/content-showcase"
-              className={`bg-white ${variant === 'featured' ? 'text-purple-600' : 
-                         variant === 'trending' ? 'text-orange-600' : 'text-indigo-600'} px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg`}
+              href={config.buttonHref}
+              className="bg-white text-purple-600 px-12 py-5 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 text-xl shadow-2xl transform hover:scale-105"
             >
-              🎯 Explore All Content
+              {config.buttonText}
             </Link>
             <Link
-              href="/blog"
-              className={`border-2 border-white ${styles.text} px-10 py-4 rounded-lg font-semibold hover:bg-white ${variant === 'featured' ? 'hover:text-purple-600' : 
-                         variant === 'trending' ? 'hover:text-orange-600' : 'hover:text-indigo-600'} transition-colors text-lg`}
+              href="/resources"
+              className="border-3 border-white text-white px-12 py-5 rounded-xl font-bold hover:bg-white hover:text-purple-600 transition-all duration-300 text-xl"
             >
-              📚 Read Latest Articles
+              📚 Download Free Resources
+            </Link>
+            <Link
+              href="/contact"
+              className="border-3 border-white text-white px-12 py-5 rounded-xl font-bold hover:bg-white hover:text-purple-600 transition-all duration-300 text-xl"
+            >
+              🚀 Get Free Consultation
             </Link>
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {displayContent.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className={`${styles.card} ${styles.cardHover} p-6 rounded-xl transition-all duration-300 border`}>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    {item.isNew && (
-                      <span className="bg-green-500 text-white text-xs font-medium px-2 py-1 rounded-full">
-                        NEW
-                      </span>
-                    )}
-                    {item.trending && (
-                      <span className="bg-orange-500 text-white text-xs font-medium px-2 py-1 rounded-full">
-                        TRENDING
-                      </span>
-                    )}
-                  </div>
-                </div>
-                
-                <div className="mb-3">
-                  <span className={`text-xs font-medium ${styles.accent} bg-white bg-opacity-20 px-2 py-1 rounded-full`}>
+        {/* Featured Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {content.map((item) => (
+            <Link key={item.id} href={item.href} className="group">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{item.icon}</div>
+                <h3 className="text-lg font-semibold mb-2 group-hover:underline">{item.title}</h3>
+                <p className="text-sm opacity-90 mb-3 line-clamp-3">{item.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                     {item.category}
                   </span>
-                </div>
-                
-                <h3 className={`text-lg font-semibold mb-2 group-hover:underline ${styles.text}`}>
-                  {item.title}
-                </h3>
-                
-                <p className={`text-sm mb-4 leading-relaxed ${styles.description}`}>
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between text-xs opacity-75">
-                  <div className="flex items-center">
-                    <Clock className="w-3 h-3 mr-1" />
-                    <span>{item.readTime} read</span>
-                  </div>
-                  <div className="flex items-center">
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  <span className="text-xs opacity-75">{item.readTime}</span>
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8">Content Impact Metrics</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2 flex items-center justify-center">
-                <Star className="w-8 h-8 text-yellow-400 mr-2" />
-                25K+
-              </div>
-              <div className="text-sm opacity-90">Monthly Readers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2 flex items-center justify-center">
-                <TrendingUp className="w-8 h-8 text-green-400 mr-2" />
-                95%
-              </div>
-              <div className="text-sm opacity-90">Reader Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2 flex items-center justify-center">
-                <Zap className="w-8 h-8 text-blue-400 mr-2" />
-                50+
-              </div>
-              <div className="text-sm opacity-90">Expert Articles</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2 flex items-center justify-center">
-                <Globe className="w-8 h-8 text-purple-400 mr-2" />
-                15+
-              </div>
-              <div className="text-sm opacity-90">Countries Reached</div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Stay Ahead with AI Insights</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Get weekly updates on AI trends, implementation guides, and exclusive content 
-              delivered straight to your inbox. Join 10,000+ AI professionals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/newsletter"
-                className={`bg-white ${variant === 'featured' ? 'text-purple-600' : 
-                           variant === 'trending' ? 'text-orange-600' : 'text-indigo-600'} px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors`}
-              >
-                📧 Subscribe to Newsletter
-              </Link>
-              <Link
-                href="/resources"
-                className={`border-2 border-white ${styles.text} px-8 py-3 rounded-lg font-semibold hover:bg-white ${variant === 'featured' ? 'hover:text-purple-600' : 
-                           variant === 'trending' ? 'hover:text-orange-600' : 'hover:text-indigo-600'} transition-colors`}
-              >
-                📋 Download Free Resources
-              </Link>
-            </div>
+        {/* Additional CTA */}
+        <div className="text-center mt-12">
+          <p className="text-lg opacity-90 mb-6">
+            Join 10,000+ AI professionals who are transforming their businesses with our expert guidance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/newsletter"
+              className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-300"
+            >
+              📧 Subscribe to AI Insights
+            </Link>
+            <Link
+              href="/webinars"
+              className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-300"
+            >
+              🎓 Attend Free Webinars
+            </Link>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default RevolutionaryContentBanner;
+}
