@@ -82,6 +82,10 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import UltimateContent2027PromotionBanner from '../components/UltimateContent2027PromotionBanner';
+import FutureTechShowcase2027 from '../components/FutureTechShowcase2027';
+import RevolutionaryTechShowcase2027 from '../components/RevolutionaryTechShowcase2027';
+import UltimateContent2028PromotionBanner from '../components/UltimateContent2028PromotionBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -1174,6 +1178,18 @@ export default function HomePage() {
             <p className="text-sm text-orange-200 mt-4">No commitment required • Instant results • 100% confidential</p>
           </div>
         </section>
+
+        {/* ULTIMATE CONTENT 2027 PROMOTION BANNER */}
+        <UltimateContent2027PromotionBanner />
+        
+        {/* FUTURE TECH SHOWCASE 2027 */}
+        <FutureTechShowcase2027 />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE 2027 */}
+        <RevolutionaryTechShowcase2027 />
+        
+        {/* ULTIMATE CONTENT 2028 PROMOTION BANNER */}
+        <UltimateContent2028PromotionBanner />
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
