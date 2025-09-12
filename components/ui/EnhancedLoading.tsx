@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function EnhancedLoading() {
+export default function EnhancedLoading({ rows = 6 }: { rows?: number }) {
   return (
-    <div className="flex items-center justify-center p-4">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <div className="space-y-3 animate-pulse">
+      {Array.from({ length: rows }).map((_, idx) => (
+        <div key={idx} className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-800" />
+      ))}
     </div>
   );
 }
