@@ -155,7 +155,7 @@ const getTypeLabel = (type: string) => {
       return 'Content';
   }
 };
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
 
 export default function EnhancedContentPromotionBanner() {
   return (
@@ -375,7 +375,7 @@ export default function EnhancedContentPromotionBanner() {
               Download Resources
             </Link>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
         </div>
       </div>
     </section>

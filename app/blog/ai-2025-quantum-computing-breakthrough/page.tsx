@@ -12,7 +12,7 @@ export default function QuantumComputingBreakthroughPage() {
         keywords="quantum computing AI, quantum machine learning, quantum algorithms, AI breakthrough 2025, quantum AI applications, quantum computing revolution"
 =======
         keywords="quantum computing, AI breakthrough, quantum AI, artificial intelligence, quantum algorithms, quantum machine learning, 2025 technology trends"
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
         url="/blog/ai-2025-quantum-computing-breakthrough"
       />
       
@@ -24,7 +24,7 @@ export default function QuantumComputingBreakthroughPage() {
             <span className="text-sm font-medium">🚀 BREAKTHROUGH TECHNOLOGY</span>
 =======
             <span className="text-sm font-medium">⚛️ QUANTUM AI BREAKTHROUGH</span>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -53,7 +53,7 @@ export default function QuantumComputingBreakthroughPage() {
             <span>Jan 30, 2025</span>
             <span>•</span>
             <span>Zion Tech Group</span>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
           </div>
         </div>
 
@@ -150,7 +150,7 @@ export default function QuantumComputingBreakthroughPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
               <div className="text-sm font-medium">Quantum AI Revolution 2025</div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
             </div>
           </div>
 
@@ -496,7 +496,7 @@ export default function QuantumComputingBreakthroughPage() {
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Schedule Consultation
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
             </Link>
           </div>
         </div>
@@ -513,7 +513,7 @@ export default function QuantumComputingBreakthroughPage() {
             <Link href="/blog/ai-2025-neural-interface-revolution" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="text-3xl mb-4">🧠</div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI 2025: Neural Interface Revolution
                 </h4>
@@ -522,7 +522,7 @@ export default function QuantumComputingBreakthroughPage() {
                   Explore the revolutionary AI innovations reshaping industries in 2025.
 =======
                   Discover how neural interfaces are revolutionizing human-AI interaction in 2025.
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
                 </p>
               </div>
             </Link>
@@ -545,7 +545,7 @@ export default function QuantumComputingBreakthroughPage() {
                 </h4>
                 <p className="text-gray-600 text-sm">
                   Master autonomous AI systems with our comprehensive implementation guide.
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
                 </p>
               </div>
             </Link>

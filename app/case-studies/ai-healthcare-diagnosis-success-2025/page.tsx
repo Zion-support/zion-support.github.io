@@ -22,7 +22,7 @@ export default function AIHealthcareDiagnosisSuccess2025() {
       />
       
       <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -43,7 +43,7 @@ export default function AIHealthcareDiagnosisSuccess2025() {
             <span className="text-gray-500 text-sm">Case Study</span>
             <span className="text-gray-500 text-sm">•</span>
             <span className="text-gray-500 text-sm">Jan 28, 2025</span>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -96,7 +96,7 @@ export default function AIHealthcareDiagnosisSuccess2025() {
                 <div className="text-3xl font-bold">40%</div>
                 <div className="text-sm opacity-90">Reduced Errors</div>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
             </div>
             <span>•</span>
             <span>Case Study</span>
@@ -351,7 +351,7 @@ export default function AIHealthcareDiagnosisSuccess2025() {
                   <li>• Bias detection and mitigation</li>
                   <li>• Clinical validation protocols</li>
                   <li>• Regulatory compliance</li>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
                 </ul>
               </div>
             </div>
@@ -1090,7 +1090,7 @@ export default function AIHealthcareDiagnosisSuccess2025() {
           </div>
         </div>
       </article>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
+>>>>>>> cursor/create-and-deploy-new-content-d918
     </div>
   );
 }
