@@ -57,6 +57,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
+        <UltraContentPromotionBanner2026 />
+        
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
