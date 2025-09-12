@@ -16,11 +16,13 @@ import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
+import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import NewContentDiscovery from '../components/NewContentDiscovery';
+import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -45,6 +47,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
+        <UltraContentPromotionBanner2026 />
+        
         {/* ULTRA CONTENT PROMOTION BANNER 2025 */}
         <UltraContentPromotionBanner2025 />
         
@@ -1319,6 +1324,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Content Discovery 2026 */}
+      <EnhancedContentDiscovery2026 />
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
