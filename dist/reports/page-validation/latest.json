@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "totalFiles": 0,
+    "filesWithIssues": 0,
+    "totalIssues": 0,
+    "totalWarnings": 0,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [],
+  "buildBreakingFiles": [],
+<<<<<<< HEAD
+  "generatedAt": "2025-08-20T19:21:03.555Z"
+  "generatedAt": "2025-08-20T20:44:48.331Z"
+
+=======
+  "generatedAt": "2025-08-20T19:03:33.426Z"
+=======
+  "generatedAt": "2025-08-20T19:21:03.555Z"
+>>>>>>> origin/automation/changelog
+}

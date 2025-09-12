@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { useAuth } from '@/hooks/useAuth';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
+import { apiClient } from '@/utils/apiClient';
 
 interface CartItem {
   id: string;
@@ -23,138 +14,159 @@ interface CartItem {
   quantity: number;
 }
 
-interface CheckoutForm {
-  name: string;
-  email: string;
-  address: string;
-  city: string;
-  country: string;
-}
-
 export default function Checkout() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
-  const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
-  const { user } = useAuth();
 
   useEffect(() => {
-    const sku = searchParams.get('sku');
-    if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
-
-    const stored = safeStorage.getItem('cart');
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    const stored = localStorage.getItem('cart');
     if (stored) {
       try {
-        setItems(JSON.parse(stored) as CartItem[]);
+        const parsed = JSON.parse(stored) as CartItem[];
+        if (parsed.length > 0) {
+          setItems(parsed);
+          return;
+        }
       } catch {
-        setItems([]);
+        // ignore parsing errors
       }
     }
-  }, [searchParams]);
+    if (productParam) {
+      setItems([
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
+      ]);
+    } else {
+      // Provide mock data if cart empty
+      setItems([
+        {
+          id: 'prod_mock',
+          name: 'Test Item',
+          price: 25,
+          quantity: 1,
+        },
+      ]);
+    }
+  }, [location.search]);
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-
-  const onSubmit = async (data: CheckoutForm) => {
+  const handleCheckout = async () => {
+    const product = items[0];
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: subtotal }),
+        body: JSON.stringify({ productId: product.id }),
       });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error || 'Failed');
+      const { sessionId } = await response.json();
       const stripe = await getStripe();
-      if (stripe && result.clientSecret) {
-        const payment = await stripe.confirmCardPayment(result.clientSecret, {
-          payment_method: {
-            card: { token: 'tok_visa' },
-            billing_details: { name: data.name, email: data.email },
-          },
-        });
-        if (payment.error) throw payment.error;
-        if (user?.id) {
-          try {
-            await fetch('/api/points/add', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
-            });
-          } catch (e) {
-            console.error('Failed to add points', e);
-          }
-        }
-        safeStorage.removeItem('cart');
-        navigate(`/orders/${result.id}`);
+      if (stripe && sessionId) {
+        await stripe.redirectToCheckout({ sessionId });
       }
+
+      if (!responseData.url) {
+        throw new Error('No checkout URL received from server');
+      }
+
+      window.location.href = responseData.url;
     } catch (err) {
-      console.error('Payment failed', err);
+      logDevError('Checkout error:', err);
+      let message = 'Failed to process checkout. Please try again.';
+      if (err && typeof err === 'object' && 'message' in err && typeof (err as { message?: unknown }).message === 'string') {
+        message = (err as { message: string }).message;
+      }
+      fireEvent('checkout_error', { message });
+      toast({
+        title: 'Checkout failed',
+        description: message,
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
+  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+
   return (
     <div className="container max-w-2xl py-10">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Checkout</h1>
-        <PointsBadge />
-      </div>
+      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>{t('checkout.name')}</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field} placeholder="Enter your full name" autoComplete="name" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-            )} />
-            <FormField name="email" control={form.control} render={({ field }) => (
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }: { field: ControllerRenderProps<CheckoutFormData, 'email'> }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{t('checkout.email')}</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input {...field} type="email" placeholder="Enter your email" autoComplete="email" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-            )} />
-            <FormField name="address" control={form.control} render={({ field }) => (
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="address"
+            render={({ field }: { field: ControllerRenderProps<CheckoutFormData, 'address'> }) => (
               <FormItem>
-                <FormLabel>Address</FormLabel>
+                <FormLabel>{t('checkout.address')}</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field} placeholder="Enter your address" autoComplete="street-address" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-            )} />
-            <FormField name="city" control={form.control} render={({ field }) => (
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="city"
+            render={({ field }: { field: ControllerRenderProps<CheckoutFormData, 'city'> }) => (
               <FormItem>
-                <FormLabel>City</FormLabel>
+                <FormLabel>{t('checkout.city')}</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field} placeholder="Enter your city" autoComplete="address-level2" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-            )} />
-            <FormField name="country" control={form.control} render={({ field }) => (
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="country"
+            render={({ field }: { field: ControllerRenderProps<CheckoutFormData, 'country'> }) => (
               <FormItem>
-                <FormLabel>Country</FormLabel>
+                <FormLabel>{t('checkout.country')}</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field} placeholder="Enter your country" autoComplete="country-name" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )} />
             <div className="border-t pt-4">
               <div className="flex justify-between font-semibold mb-4">
-                <span>Subtotal</span>
+                <span>{t('checkout.subtotal')}</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
               <Button className="w-full" type="submit">
-                Pay with Stripe (test)
+                {t('checkout.pay')}
               </Button>
             </div>
           </form>

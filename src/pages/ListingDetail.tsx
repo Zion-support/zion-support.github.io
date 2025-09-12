@@ -5,9 +5,12 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { MessageSquare, Brain, Shield } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
+
+
+
+
 import { cn } from "@/lib/utils";
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
@@ -20,7 +23,7 @@ export default function ListingDetail() {
   // type argument and cast the result instead to prevent TS2347 errors.
   const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, _setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
@@ -166,7 +169,17 @@ export default function ListingDetail() {
                 
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
-                    <RatingStars value={listing.rating} />
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={cn(
+                            "h-5 w-5",
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          )}
+                        />
+                      ))}
+                    </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
                     </span>
@@ -280,7 +293,7 @@ export default function ListingDetail() {
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact 
-            email={listing.author.email} // TypeScript now knows this might be undefined
+            email={listing.author.email || ''}
             profileName={listing.author.name}
             profileType="service"
           />
