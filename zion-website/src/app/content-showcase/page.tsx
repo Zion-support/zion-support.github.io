@@ -46,6 +46,16 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "Operational Excellence with AI Agents (2025)",
+      description: "Agentic workflows that cut MTTR by 41% and lift OTIF by 6 points.",
+      href: "/blog/ai-2025-operational-excellence-agents",
+      icon: "⚙️",
+      category: "Operations",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Evaluating LLM Agents in 2025: Methods, Metrics, and Tooling",
       description: "Task success, tool correctness, policy adherence, and automated pipelines for agent evaluation.",
       href: "/blog/ai-2025-evaluation-llm-agents",
@@ -113,6 +123,16 @@ export default function ContentShowcase() {
       category: "Case Study",
       readTime: "15 min read",
       date: "Jan 28, 2025",
+      featured: true
+    },
+    {
+      title: "Operations Excellence Impact: 41% MTTR Reduction",
+      description: "Agentic ops automated runbooks, reduced expedites by 27%, +6 pts OTIF.",
+      href: "/case-studies/ai-2025-operations-excellence-impact",
+      icon: "📊",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
       featured: true
     },
     {

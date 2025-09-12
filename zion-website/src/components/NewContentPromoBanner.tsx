@@ -137,12 +137,33 @@ const NewContentPromoBanner = ({
       title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
       description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
       href: '/blog/ai-2025-agents-on-kubernetes',
->>>>>>> feat/new-content-promo-2025
       type: 'blog',
       featured: true,
       readTime: '19 min read',
       date: 'Sep 12, 2025',
       category: 'Reliability'
+    },
+    {
+      id: '28',
+      title: 'Operational Excellence with AI Agents (2025)',
+      description: 'Guide to agentic workflows that cut MTTR by 41% and improve OTIF by 6 points.',
+      href: '/blog/ai-2025-operational-excellence-agents',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
+    },
+    {
+      id: '29',
+      title: 'Operations Excellence Impact: 41% MTTR Reduction',
+      description: 'Case study: Agentic ops automated runbooks, reduced expedites 27%, +6 pts OTIF.',
+      href: '/case-studies/ai-2025-operations-excellence-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
     },
     {
       id: '1',
