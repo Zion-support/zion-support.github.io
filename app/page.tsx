@@ -136,6 +136,11 @@ import NewContentNavigation2026 from '../components/NewContentNavigation2026';
 import AI2025BreakthroughPromotionBanner from '../components/AI2025BreakthroughPromotionBanner';
 import AI2025BreakthroughContentShowcase from '../components/AI2025BreakthroughContentShowcase';
 
+// New AI 2037-2038 Transcendent Content Components
+import AI2037TranscendentPromotionBanner from '../components/AI2037TranscendentPromotionBanner';
+import AI2037TranscendentContentShowcase from '../components/AI2037TranscendentContentShowcase';
+import AI2038SingularityPromotionBanner from '../components/AI2038SingularityPromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -151,6 +156,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2038 SINGULARITY PROMOTION BANNER - ULTIMATE CONTENT */}
+        <AI2038SingularityPromotionBanner />
+        
+        {/* AI 2037 TRANSCENDENT PROMOTION BANNER - LATEST CONTENT */}
+        <AI2037TranscendentPromotionBanner />
+        
+        {/* AI 2037 TRANSCENDENT CONTENT SHOWCASE */}
+        <AI2037TranscendentContentShowcase />
+        
         {/* AI 2025 BREAKTHROUGH PROMOTION BANNER */}
         <AI2025BreakthroughPromotionBanner />
         
