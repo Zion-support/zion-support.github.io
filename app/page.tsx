@@ -18,6 +18,8 @@ const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContent
 const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 const TrendingContentWidget = lazy(() => import('../components/TrendingContentWidget'));
+const TrendingContentCarousel = lazy(() => import('../components/TrendingContentCarousel'));
+const ContentRecommendationWidget = lazy(() => import('../components/ContentRecommendationWidget'));
 const EnhancedNewsletterSignup = lazy(() => import('../components/EnhancedNewsletterSignup'));
 const InteractiveContentDiscovery = lazy(() => import('../components/InteractiveContentDiscovery'));
 const DynamicContentCarousel = lazy(() => import('../components/DynamicContentCarousel'));
@@ -183,14 +185,10 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner />
       </Suspense>
 
-      {/* Dynamic Content Carousel */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
-            <DynamicContentCarousel />
-          </Suspense>
-        </div>
-      </section>
+      {/* Trending Content Carousel */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+        <TrendingContentCarousel />
+      </Suspense>
 
       {/* New Content Spotlight - January 2025 */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
@@ -1321,6 +1319,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Content Recommendation Widget */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading recommendations..." />}>
+            <ContentRecommendationWidget />
+          </Suspense>
+        </div>
+      </section>
+
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

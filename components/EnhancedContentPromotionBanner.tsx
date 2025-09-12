@@ -5,321 +5,205 @@ interface ContentItem {
   id: string;
   title: string;
   description: string;
-  href: string;
-  category: string;
-  readTime: string;
-  isNew: boolean;
-  featured: boolean;
-}
-
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'blog' | 'resource' | 'case-study';
+  type: 'blog' | 'case-study' | 'resource';
   url: string;
-  readTime: string;
-  category: string;
   featured: boolean;
   publishDate: string;
+  readTime: string;
+  category: string;
 }
 
-const contentItems: ContentItem[] = [
-  {
-    id: '1',
-    title: 'AI Agents 2025: The Next Generation of Autonomous Intelligence',
-    description: 'Discover how advanced AI agents are revolutionizing business operations with autonomous decision-making, multi-modal capabilities, and enterprise-grade reliability.',
-    type: 'blog',
-    url: '/blog/ai-2025-advanced-ai-agents',
-    readTime: '12 min',
-    category: 'AI Agents',
-    featured: true,
-    publishDate: '2025-01-20'
-  },
-  {
-    id: '2',
-    title: 'AI Smart Manufacturing Revolution 2025: Industry 4.0 Transformation',
-    description: 'Discover how AI is revolutionizing manufacturing with predictive maintenance, quality control, and autonomous production systems achieving 40-60% efficiency gains.',
-    type: 'blog',
-    url: '/blog/ai-2025-smart-manufacturing-revolution',
-    readTime: '15 min',
-    category: 'Smart Manufacturing',
-    featured: true,
-    publishDate: '2025-01-18'
-  },
-  {
-    id: '3',
-    title: 'Fortune 500 Financial Services AI Transformation: 450% ROI Success Story',
-    description: 'Discover how a major financial services company achieved 450% ROI through comprehensive AI transformation, including fraud detection, customer service automation, and risk management.',
-    type: 'case-study',
-    url: '/case-studies/ai-2025-financial-services-ai-transformation-success',
-    readTime: '20 min',
-    category: 'Financial Services',
-    featured: true,
-    publishDate: '2025-01-16'
-  },
-  {
-    id: '4',
-    title: 'AI Implementation Master Checklist 2025: Complete Enterprise Guide',
-    description: 'Comprehensive checklist for successful AI implementation in enterprise environments. Step-by-step guide covering strategy, technology, deployment, and optimization.',
-    type: 'resource',
-    url: '/resources/ai-2025-implementation-master-checklist',
-    readTime: '30 min',
-    category: 'Implementation',
-    featured: true,
-    publishDate: '2025-01-15'
-  },
-  {
-    id: '5',
-    title: 'AI Advanced Automation 2025: Complete Business Transformation Guide',
-    description: 'Discover how advanced AI automation is revolutionizing businesses with real-world case studies and implementation strategies.',
-    type: 'blog',
-    url: '/blog/ai-2025-advanced-automation',
-    readTime: '15 min',
-    category: 'AI & Automation',
-    featured: true,
-    publishDate: '2025-01-15'
-  },
-  {
-    id: '6',
-    title: 'Multimodal AI Revolution: Beyond Text and Images',
-    description: 'Learn how multimodal AI is creating new possibilities by combining text, images, audio, and video processing.',
-    type: 'blog',
-    url: '/blog/ai-2025-multimodal-revolution',
-    readTime: '12 min',
-    category: 'AI Innovation',
-    featured: false,
-    publishDate: '2025-01-12'
-  },
-  {
-    id: '7',
-    title: 'Enterprise AI Security: Advanced Threat Protection',
-    description: 'Comprehensive guide to securing AI systems in enterprise environments with advanced threat detection and prevention.',
-    type: 'resource',
-    url: '/resources/ai-enterprise-security-2025',
-    readTime: '30 min',
-    category: 'Security',
-    featured: false,
-    publishDate: '2025-01-11'
-  }
-];
-
 const EnhancedContentPromotionBanner: React.FC = () => {
-
-const getTypeIcon = (type: string) => {
-  switch (type) {
-    case 'blog': return '📝';
-    case 'resource': return '📚';
-    case 'case-study': return '📊';
-    default: return '📄';
-  }
-};
-
-const getTypeColor = (type: string) => {
-  switch (type) {
-    case 'blog': return 'from-blue-500 to-blue-600';
-    case 'resource': return 'from-green-500 to-green-600';
-    case 'case-study': return 'from-purple-500 to-purple-600';
-    default: return 'from-gray-500 to-gray-600';
-  }
-};
-
-export default function EnhancedContentPromotionBanner() {
->>>>>>> cursor/create-and-deploy-new-content-2248
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const contentItems: ContentItem[] = [
+  const featuredContent: ContentItem[] = [
     {
-      id: 'neural-architecture-optimization',
-      title: 'Neural Architecture Optimization: The Next Frontier',
-      description: 'Explore how neural architecture search is revolutionizing AI efficiency, reducing costs by 90% while improving performance.',
-      href: '/blog/ai-2025-neural-architecture-optimization',
-      category: 'AI Optimization',
-      readTime: '15 min read',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'space-exploration-breakthrough',
-      title: 'AI-Powered Space Exploration: The Next Giant Leap',
-      description: 'Discover how AI is revolutionizing space exploration, from autonomous spacecraft to Mars colonization and beyond.',
-      href: '/blog/ai-2025-space-exploration-breakthrough',
-      category: 'Space Technology',
-      readTime: '18 min read',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'global-logistics-transformation',
-      title: 'Global Logistics Transformation: 40% Cost Reduction',
-      description: 'Fortune 500 case study showing how AI revolutionized supply chain operations with $2.3B annual savings.',
-      href: '/case-studies/ai-2025-global-logistics-transformation',
-      category: 'Case Study',
-      readTime: '12 min read',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'ai-implementation-masterclass',
-      title: 'AI Implementation Masterclass: Complete Guide',
-      description: 'Master enterprise AI implementation with our comprehensive guide covering strategy, technology, and ROI optimization.',
-      href: '/resources/ai-2025-comprehensive-implementation-masterclass',
-      category: 'Masterclass',
-      readTime: '45 min read',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'enterprise-ai-transformation',
-      title: 'Enterprise AI Transformation 2025',
-      description: 'Complete implementation guide with real-world case studies and proven strategies for enterprise AI adoption.',
-      href: '/blog/ai-2025-enterprise-ai-transformation',
-      category: 'Enterprise AI',
-      readTime: '12 min read',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'healthcare-diagnosis-revolution',
-      title: 'AI Healthcare Diagnosis Revolution',
-      description: 'Discover how AI is transforming medical diagnosis with 67% reduction in errors and 40-60% accuracy improvements.',
-      href: '/blog/ai-healthcare-diagnosis-revolution-2025',
-      category: 'Healthcare AI',
-      readTime: '15 min read',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'ai-automation-guide',
-      title: 'AI Automation Enterprise Guide',
-      description: 'Master enterprise AI automation with comprehensive strategies, tools, and implementation frameworks.',
-      href: '/resources/ai-automation-enterprise-guide-2025',
-      category: 'Automation',
-      readTime: 'Guide',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 'multimodal-ai-revolution',
-      title: 'Multimodal AI Revolution 2025',
-      description: 'Explore the future of AI with multimodal systems that process text, images, audio, and video simultaneously.',
-      href: '/blog/ai-2025-multimodal-revolution',
-      category: 'AI Innovation',
-      readTime: '10 min read',
-      isNew: false,
-      featured: true
-    },
-    {
-      id: 'robotics-automation',
-      title: 'Advanced Robotics & AI Integration',
-      description: 'The future of manufacturing with intelligent robotic systems and autonomous operations.',
-      href: '/blog/ai-2025-advanced-robotics',
-      category: 'Robotics',
+      id: 'quantum-ai-breakthrough',
+      title: 'Quantum AI Breakthrough: Revolutionary Computing Meets AI',
+      description: 'Explore the groundbreaking convergence of quantum computing and AI, unlocking unprecedented computational power.',
+      type: 'blog',
+      url: '/blog/ai-2025-quantum-ai-breakthrough',
+      featured: true,
+      publishDate: '2025-01-17',
       readTime: '8 min read',
-      isNew: false,
-      featured: true
+      category: 'Quantum Technology'
+    },
+    {
+      id: 'advanced-ai-agents',
+      title: 'Advanced AI Agents: The Future of Autonomous Operations',
+      description: 'Discover how advanced AI agents are revolutionizing business operations with autonomous decision-making.',
+      type: 'blog',
+      url: '/blog/ai-2025-advanced-ai-agents',
+      featured: true,
+      publishDate: '2025-01-17',
+      readTime: '10 min read',
+      category: 'AI Technology'
+    },
+    {
+      id: 'fintech-unicorn',
+      title: 'Fintech Unicorn: $3.2B Valuation Through AI Innovation',
+      description: 'How a fintech startup achieved unicorn status through strategic AI implementation across their platform.',
+      type: 'case-study',
+      url: '/case-studies/ai-2025-fintech-unicorn-transformation',
+      featured: true,
+      publishDate: '2025-01-17',
+      readTime: '12 min read',
+      category: 'Success Story'
+    },
+    {
+      id: 'implementation-checklist',
+      title: 'AI Implementation Master Checklist 2025',
+      description: 'The definitive step-by-step checklist for successfully implementing AI solutions in 2025.',
+      type: 'resource',
+      url: '/resources/ai-2025-implementation-master-checklist',
+      featured: true,
+      publishDate: '2025-01-17',
+      readTime: '15 min read',
+      category: 'Implementation Guide'
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [contentItems.length]);
+  }, []);
 
-  const currentItem = contentItems[currentIndex];
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '📄';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'resource':
+        return 'from-purple-500 to-pink-500';
+      default:
+        return 'from-gray-500 to-gray-600';
+    }
+  };
 
   if (!isVisible) return null;
 
-  return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20"></div>
-        <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-8 right-8 w-1 h-1 bg-white/40 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-8 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-pulse delay-3000"></div>
-      </div>
+  const currentContent = featuredContent[currentIndex];
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex items-center justify-between">
-          {/* Left side - Main content */}
-          <div className="flex-1 pr-4">
-            <div className="flex items-center mb-3">
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mr-4">
-                <span className="text-sm font-medium">🚀 NEW CONTENT</span>
+  return (
+    <div className="relative overflow-hidden">
+      {/* Main Banner */}
+      <div className={`bg-gradient-to-r ${getTypeColor(currentContent.type)} text-white py-8 relative`}>
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1">
+                  <span className="text-sm font-medium">🚀 FRESH CONTENT</span>
+                </div>
+                <div className="flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1">
+                  <span className="text-sm font-medium">{getTypeIcon(currentContent.type)} {currentContent.category}</span>
+                </div>
+                <div className="flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1">
+                  <span className="text-sm font-medium">⏱️ {currentContent.readTime}</span>
+                </div>
               </div>
-              <div className="flex space-x-1">
-                {contentItems.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-white' : 'bg-white/40'
+              
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                {currentContent.title}
+              </h2>
+              
+              <p className="text-lg opacity-90 mb-6 max-w-3xl">
+                {currentContent.description}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={currentContent.url}
+                  className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                >
+                  Read Now
+                </Link>
+                <Link
+                  href="/content-showcase"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
+                >
+                  Explore All Content
+                </Link>
+              </div>
+            </div>
+            
+            {/* Content Preview Cards */}
+            <div className="hidden lg:block ml-8">
+              <div className="grid grid-cols-2 gap-3">
+                {featuredContent.slice(0, 4).map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={`bg-white bg-opacity-20 rounded-lg p-3 cursor-pointer transition-all ${
+                      index === currentIndex ? 'bg-white bg-opacity-30 scale-105' : 'hover:bg-white hover:bg-opacity-25'
                     }`}
-                  />
+                    onClick={() => setCurrentIndex(index)}
+                  >
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="text-sm">{getTypeIcon(item.type)}</span>
+                      <span className="text-xs font-medium">{item.category}</span>
+                    </div>
+                    <h4 className="text-sm font-semibold line-clamp-2">{item.title}</h4>
+                  </div>
                 ))}
               </div>
             </div>
-
-            <div className="min-h-[80px]">
-              <h2 className="text-xl md:text-2xl font-bold mb-2 transition-all duration-500">
-                {currentItem.title}
-              </h2>
-              <p className="text-sm md:text-base opacity-90 mb-3 max-w-2xl">
-                {currentItem.description}
-              </p>
-              <div className="flex items-center space-x-4 text-sm opacity-75">
-                <span className="bg-white/20 px-2 py-1 rounded">{currentItem.category}</span>
-                <span>{currentItem.readTime}</span>
-                {currentItem.isNew && (
-                  <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">
-                    NEW
-                  </span>
-                )}
-              </div>
-            </div>
           </div>
-
-          {/* Right side - Action buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href={currentItem.href}
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center whitespace-nowrap"
-            >
-              Read Now
-            </Link>
-            <Link
-              href="/content-showcase"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 text-center whitespace-nowrap"
-            >
-              View All
-            </Link>
-          </div>
-
-          {/* Close button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="ml-4 text-white/70 hover:text-white transition-colors"
-            aria-label="Close banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        </div>
+        
+        {/* Progress Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {featuredContent.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
-        <div 
-          className="h-full bg-white transition-all duration-5000 ease-linear"
-          style={{ width: `${((currentIndex + 1) / contentItems.length) * 100}%` }}
-        />
+      {/* Trending Topics Bar */}
+      <div className="bg-gray-900 text-white py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-6">
+              <span className="text-sm font-medium text-gray-300">🔥 Trending Now:</span>
+              <div className="flex space-x-4 text-sm">
+                <span className="bg-red-600 px-3 py-1 rounded-full">Quantum AI</span>
+                <span className="bg-blue-600 px-3 py-1 rounded-full">AI Agents</span>
+                <span className="bg-green-600 px-3 py-1 rounded-full">Fintech AI</span>
+                <span className="bg-purple-600 px-3 py-1 rounded-full">Implementation</span>
+              </div>
+            </div>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
