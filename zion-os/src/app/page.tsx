@@ -99,9 +99,6 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
-              <a href="/news" className="btn-secondary hover-lift">
-                📰 Read the Latest News
-              </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
@@ -160,42 +157,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest News Teaser */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      {/* Updates Promo */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-3xl font-bold mb-2">Latest News</h2>
-              <p className="text-white/70">Product releases, academy updates, and ecosystem highlights</p>
-            </div>
-            <a href="/news" className="btn-secondary hover-lift px-6 py-3">View All</a>
+          <div className="text-center mb-12 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">What's New in Zion OS</h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">Latest improvements shipped to your AI-powered economy platform.</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">⚡</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3 Released</h3>
-                <p className="text-white/70">42% faster deploys, real-time analytics, and smoother UX.</p>
-              </div>
+            <a href="/updates/ai-orchestrator-v2" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
+              <div className="text-sm text-white/60 mb-2">2025-09-12</div>
+              <h3 className="text-xl font-semibold mb-2">AI Orchestrator v2 Released</h3>
+              <p className="text-white/70">Smarter scheduling, reduced latency, and improved observability across workflows.</p>
             </a>
-            <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🏪</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Marketplace Suite GA</h3>
-                <p className="text-white/70">Jobs, proposals, and escrow reach General Availability.</p>
-              </div>
+            <a href="/updates/marketplace-insights" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
+              <div className="text-sm text-white/60 mb-2">2025-09-10</div>
+              <h3 className="text-xl font-semibold mb-2">New Marketplace Insights Dashboard</h3>
+              <p className="text-white/70">Real-time KPIs for jobs, talent, and token flows with exportable reports.</p>
             </a>
-            <a href="/news/compliance-pack-release" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">🛡️</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
-                <p className="text-white/70">SOC 2 playbooks and turnkey KYC/AML integrations.</p>
-              </div>
+            <a href="/updates/governance-upgrades" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
+              <div className="text-sm text-white/60 mb-2">2025-09-07</div>
+              <h3 className="text-xl font-semibold mb-2">Governance Upgrades: Dual-Vote and Delegates</h3>
+              <p className="text-white/70">Flexible local/global voting, delegate roles, and granular proposal lifecycles.</p>
             </a>
+          </div>
+          <div className="text-center mt-10">
+            <a href="/updates" className="btn-secondary hover-lift">View all updates →</a>
           </div>
         </div>
       </section>
