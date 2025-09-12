@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import { Link } from 'react-router-dom';
 
 export const metadata = {
@@ -39,7 +39,7 @@ export default function Page() {
 }
 
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from "../../components/SEO";
 
 export default function AIBenchmarkingBestPractices2025() {
   return (

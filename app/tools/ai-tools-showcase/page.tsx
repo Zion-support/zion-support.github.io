@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import Card from '../../../components/ui/Card';
 
 export default function AIToolsShowcase() {

@@ -3,27 +3,6 @@ import { Link } from 'react-router-dom';
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      id: 'ai-2026-global-enterprise-transformation-breakthrough',
-      title: 'Global Enterprise AI Transformation: $2.3B Revenue Impact in 6 Months',
-      client: 'Fortune 500 Multinational Corporation',
-      industry: 'Global Manufacturing & Technology',
-      challenge:
-        'Digital disruption, legacy system inefficiencies, and increasing competition requiring comprehensive transformation',
-      solution:
-        'Revolutionary AI ecosystem with quantum-enhanced neural networks, autonomous AI systems, and multimodal intelligence fusion',
-      results: [
-        '$2.3B revenue increase in 6 months',
-        '67% operational cost reduction',
-        '450% productivity gain across all departments',
-        '5,059% ROI achieved',
-      ],
-      technologies: ['Quantum-Enhanced AI', 'Autonomous Systems', 'Multimodal Intelligence', 'Edge Computing', 'Global Orchestration'],
-      duration: '6 months',
-      team: 'Global AI Transformation Team',
-      image: '/api/placeholder/600/400',
-      featured: true,
-    },
-    {
       id: 'fortune-500-ai-transformation',
       title: 'Fortune 500 Manufacturing: AI-Powered Supply Chain Transformation',
       client: 'Global Manufacturing Corp',

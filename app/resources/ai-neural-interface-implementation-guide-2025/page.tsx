@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import { Link } from 'react-router-dom';
 import { Download, ArrowRight, Calendar, Clock, User, CheckCircle, AlertTriangle, BookOpen, Zap } from 'lucide-react';
 

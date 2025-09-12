@@ -40,7 +40,7 @@ export default function Page() {
 }
 
 import React from 'react';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export default function AIEvaluationChecklist2025() {
   return (

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=24"
+    "node": ">=22"
   },
   "scripts": {
     "dev": "vite",
@@ -12,21 +12,13 @@
     "lint": "eslint src --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "build:analyze": "npm run build && npx vite-bundle-analyzer dist",
-    "build:optimize": "npm run build -- --mode production",
-    "dev:fast": "vite --host --port 3000",
-    "preview:fast": "vite preview --port 4173",
-    "lint:fix": "eslint src --fix --max-warnings 0",
-    "type-check": "tsc --noEmit",
-    "audit:fix": "npm audit fix --force"
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.3.4",
-    "@magneticwatermelon/mcp-toolkit": "^2.0.1",
     "@modelcontextprotocol/sdk": "^1.18.0",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
@@ -88,7 +80,7 @@
     "openai": "^5.20.1",
     "path": "^0.12.7",
     "pdfkit": "^0.17.2",
-    "postcss": "^8.4.32",
+    "postcss": "^8.5.6",
     "react": "^18.2.0",
     "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.9.1",

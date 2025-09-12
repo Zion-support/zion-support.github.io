@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export const metadata = {
   title: 'AI 2026 Ultimate Implementation Toolkit - Complete Guide to AI Transformation',

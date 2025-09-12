@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export default function MultimodalAIRevolution2025() {
   return (
@@ -138,8 +138,8 @@ export default function MultimodalAIRevolution2025() {
             <p className="text-gray-700 mb-4">
               Advanced attention mechanisms allow models to focus on relevant information across different modalities, 
               creating more coherent and contextually appropriate responses.
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import SEO from "../../components/SEO";
+import { Link } from 'react-router-dom';
 
 export default function MultimodalAIRevolution2025() {
   return (

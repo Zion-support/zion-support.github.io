@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 import ErrorBoundary from '../../../components/ErrorBoundary';
 import { Card } from '../../../components/ui/card';
 import { Badge } from '../../../components/ui/badge';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import SEO from "../../components/SEO";
 
 export const metadata = {
   title: 'Foundation Models for the Enterprise (2025 Guide) - Zion Tech Group',
