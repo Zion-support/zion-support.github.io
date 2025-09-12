@@ -21,29 +21,68 @@ export default function ContentShowcase() {
 
         {/* Featured Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <Link href="/blog/ai-productivity-automation-2025" className="group">
+          <Link href="/blog/ai-2025-revolutionary-breakthroughs" className="group">
             <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center relative">
-                <div className="text-8xl">🤖</div>
-                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <div className="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center relative">
+                <div className="text-8xl">🚀</div>
+                <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   NEW
                 </div>
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                    AI & Technology
+                  <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                    Revolutionary Breakthroughs
                   </span>
-                  <span className="text-gray-500 text-sm">15 min read</span>
+                  <span className="text-gray-500 text-sm">25 min read</span>
                   <span className="text-gray-500 text-sm">•</span>
-                  <span className="text-gray-500 text-sm">Jan 28, 2025</span>
+                  <span className="text-gray-500 text-sm">Jan 2025</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                  AI Productivity Automation 2025: Transform Your Business with 300% Productivity Gains
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                  AI 2025 Revolutionary Breakthroughs: Transforming Industries Worldwide
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Discover how AI automation can transform your business operations, reduce costs by 40%, 
-                  and increase productivity by 300%. Complete implementation guide with real case studies.
+                  Discover the groundbreaking AI innovations that are revolutionizing industries in 2025. 
+                  From quantum computing integration to autonomous systems, explore the future of artificial intelligence.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <span className="text-purple-600 font-bold text-sm">ZT</span>
+                    </div>
+                    <span className="text-sm text-gray-600">Zion Tech Group</span>
+                  </div>
+                  <span className="text-purple-600 font-medium group-hover:underline">
+                    Read Article →
+                  </span>
+                </div>
+              </div>
+            </article>
+          </Link>
+
+          <Link href="/case-studies/ai-space-exploration-breakthrough-2025" className="group">
+            <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="aspect-video bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center relative">
+                <div className="text-8xl">🚀</div>
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  CASE STUDY
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                    Space Exploration
+                  </span>
+                  <span className="text-gray-500 text-sm">18 min read</span>
+                  <span className="text-gray-500 text-sm">•</span>
+                  <span className="text-gray-500 text-sm">Jan 2025</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  AI Space Exploration Breakthrough: $2.1B Mission Success
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  How AI-powered space exploration achieved a $2.1B mission success with 99.9% 
+                  autonomous operation, revolutionizing the future of space exploration.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -53,7 +92,46 @@ export default function ContentShowcase() {
                     <span className="text-sm text-gray-600">Zion Tech Group</span>
                   </div>
                   <span className="text-blue-600 font-medium group-hover:underline">
-                    Read Article →
+                    Read Case Study →
+                  </span>
+                </div>
+              </div>
+            </article>
+          </Link>
+
+          <Link href="/resources/ai-implementation-master-guide-2026" className="group">
+            <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="aspect-video bg-gradient-to-br from-green-100 to-teal-100 flex items-center justify-center relative">
+                <div className="text-8xl">📚</div>
+                <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  FREE DOWNLOAD
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                    Master Guide
+                  </span>
+                  <span className="text-gray-500 text-sm">200+ pages</span>
+                  <span className="text-gray-500 text-sm">•</span>
+                  <span className="text-gray-500 text-sm">Jan 2026</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                  AI Implementation Master Guide 2026: Complete 200+ Page Resource
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Complete 200+ page resource with proven strategies, templates, and best practices 
+                  for successful AI transformation. Used by Fortune 500 companies to achieve breakthrough results.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-green-600 font-bold text-sm">ZT</span>
+                    </div>
+                    <span className="text-sm text-gray-600">Zion Tech Group</span>
+                  </div>
+                  <span className="text-green-600 font-medium group-hover:underline">
+                    Download Free →
                   </span>
                 </div>
               </div>
