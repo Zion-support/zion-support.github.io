@@ -5,10 +5,28 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, real-world implementations, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "AI Innovations",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025: Neural Interface Revolution - Brain-Computer Integration",
+      description: "Discover the revolutionary neural interface technologies of 2025. Explore brain-computer integration, AI-powered neural prosthetics, and the future of human-AI symbiosis.",
+      href: "/blog/ai-2025-neural-interface-revolution",
+      icon: "🧠",
+      category: "AI Technology",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
       description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🧠",
+      icon: "🚀",
       category: "AI Innovations",
       readTime: "25 min read",
       date: "Jan 30, 2025"
@@ -44,6 +62,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Space Exploration Breakthrough 2025: Autonomous Mission Success",
+      description: "Discover how AI-powered space exploration achieved unprecedented success in 2025. Learn about autonomous spacecraft, AI mission planning, and the future of space technology.",
+      href: "/case-studies/ai-space-exploration-breakthrough-2025",
+      icon: "🚀",
+      category: "Space AI",
+      result: "99.7% Success Rate",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
       description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
       href: "/case-studies/ai-transformation-fortune-500-success-2025",
@@ -74,9 +101,9 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      href: "/resources/ai-2025-implementation-master-guide",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
@@ -99,6 +126,15 @@ export default function ContentShowcasePage() {
       category: "Security",
       type: "Free Download",
       date: "Feb 06, 2025"
+    },
+    {
+      title: "Quantum AI Implementation Guide: Revolutionary Applications",
+      description: "Complete guide to implementing quantum-enhanced AI systems, including hardware requirements, algorithms, and real-world applications.",
+      href: "/resources/quantum-ai-implementation-guide",
+      icon: "⚛️",
+      category: "Quantum AI",
+      type: "Free Download",
+      date: "Jan 30, 2025"
     }
   ];
 
