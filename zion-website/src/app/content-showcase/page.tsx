@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Privacy-Preserving AI in Production (2025)",
+      description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
+      href: "/blog/ai-2025-privacy-preserving-ai",
+      icon: "🔒",
+      category: "Privacy",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Data Quality for RAG in Production (2025)",
       description: "Operator guide: curate, chunk, index, evaluate, and govern knowledge for reliable RAG.",
       href: "/blog/ai-2025-data-quality-rag",
