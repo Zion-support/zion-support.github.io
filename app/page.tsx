@@ -1825,6 +1825,129 @@ export default function HomePage() {
         <TechnologyStack />
       </Suspense>
 
+      {/* Latest Security & Performance Content */}
+      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔒 NEW CONTENT</span>
+            </div>
+            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
+              Latest AI Security & Performance Content
+            </h2>
+            <p className='text-xl opacity-90 max-w-3xl mx-auto'>
+              Discover our newest guides on AI agent safety, edge optimization, and security hardening. 
+              Stay ahead with cutting-edge insights and practical implementation strategies.
+            </p>
+          </div>
+          
+          <div className='grid md:grid-cols-3 gap-8 mb-12'>
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover:bg-opacity-20 transition-all duration-300'>
+              <div className='text-4xl mb-4'>🛡️</div>
+              <h3 className='text-xl font-bold mb-4'>AI Agent Safety & Governance 2025</h3>
+              <p className='text-gray-200 mb-6'>
+                Complete enterprise guide for implementing robust safety controls, governance frameworks, 
+                and compliance mechanisms for AI agents in production.
+              </p>
+              <div className='space-y-2 mb-6'>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>22-minute comprehensive guide</span>
+                </div>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>Practical implementation strategies</span>
+                </div>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>Enterprise-ready frameworks</span>
+                </div>
+              </div>
+              <Link
+                href='/blog/ai-2025-agent-safety-governance'
+                className='inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                Read Guide
+              </Link>
+            </div>
+            
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover:bg-opacity-20 transition-all duration-300'>
+              <div className='text-4xl mb-4'>⚡</div>
+              <h3 className='text-xl font-bold mb-4'>Edge AI Inference Optimization 2025</h3>
+              <p className='text-gray-200 mb-6'>
+                Production-ready strategies for optimizing AI inference at the edge. Model compression, 
+                quantization, hardware acceleration, and real-world performance tuning.
+              </p>
+              <div className='space-y-2 mb-6'>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>18-minute optimization guide</span>
+                </div>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>Code examples and benchmarks</span>
+                </div>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>Hardware acceleration techniques</span>
+                </div>
+              </div>
+              <Link
+                href='/blog/ai-2025-edge-inference-optimization'
+                className='inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                Read Guide
+              </Link>
+            </div>
+            
+            <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover:bg-opacity-20 transition-all duration-300'>
+              <div className='text-4xl mb-4'>🔐</div>
+              <h3 className='text-xl font-bold mb-4'>AI Security Hardening Guide 2025</h3>
+              <p className='text-gray-200 mb-6'>
+                Comprehensive security framework for protecting AI systems. Threat mitigation, 
+                compliance guidelines, and proven security controls for enterprise AI.
+              </p>
+              <div className='space-y-2 mb-6'>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>50-page comprehensive guide</span>
+                </div>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>Implementation checklists</span>
+                </div>
+                <div className='flex items-center text-sm'>
+                  <span className='w-2 h-2 bg-white rounded-full mr-3'></span>
+                  <span>Compliance frameworks</span>
+                </div>
+              </div>
+              <Link
+                href='/resources/ai-security-hardening-guide-2025'
+                className='inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                Download Guide
+              </Link>
+            </div>
+          </div>
+          
+          <div className='text-center'>
+            <Link
+              href='/blog'
+              className='bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors mr-4'
+            >
+              View All Content
+            </Link>
+            <Link
+              href='/resources'
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-colors'
+            >
+              Browse Resources
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
