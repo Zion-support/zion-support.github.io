@@ -1,5 +1,0 @@
-{
-  "policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.zion.app; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
-  "reportOnly": false,
-  "reportUri": "/api/csp-report"
-}

@@ -1,8 +1,0 @@
-{
-  "timestamp": "2025-08-30T04:40:18.011Z",
-  "duration": "167ms",
-  "filesProcessed": 813,
-  "errorsFixed": 45,
-  "success": true,
-  "summary": "Processed 813 files and fixed 45 JSX syntax errors in 167ms"
-}

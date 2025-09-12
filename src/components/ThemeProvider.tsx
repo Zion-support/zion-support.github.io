@@ -1,65 +1,45 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {';
-export const _useTheme = (props: any) => {;';';
-type Theme = 'light' | 'dark' | 'system';';';export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
-export const _useTheme = ("props": "any) => {;
+import React, { createContext, useContext, useState, useEffect } from 'react';
+
 type Theme = 'light' | 'dark' | 'system';
-'type Theme = 'light' | 'dark' | 'system';
-;
-interface ThemeContextType {;
-  "theme": Them e;
-  "setTheme": ("theme": Them e) => void;
-  "isDark": boolean"}
-;
-export;
-  if(context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider');
-  return context};
-;
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {;
-  "children": "React.ReactNode"}
-;
-export const "ThemeProvider": "React.FC<ThemeProviderProps> = ({ children "}) => {;
-  const [theme, setTheme] = useState<Theme>(() => {;
-    if(typeof window !== 'null') {;
-      if(saved && ['light',dark',system'].includes(saved)) {;
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
-export const _useTheme = (props: any) => {;
-type Theme = 'light' | 'dark' | 'system';
-'type Theme = 'light' | 'dark' | 'system';
+
 interface ThemeContextType {
-  theme: Them e;
-  setTheme: (theme: Them e) => void;
-  isDark: boolean}
-export 
-=======
-"use client";
-import * as React from "react";
-const initialState = {
-  theme: "dark",
-    setTheme: () => null,
-  
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}
 
-};
-export const ThemeProvider({ children }) {
-    const [theme] = useState("dark");
-    useEffect(() => {
-        const root = window.document.documentElement;
-        root.classList.remove("light", "dark");
-        root.classList.add("dark")}, []);
-    const value = {
-  theme,
-  setTheme: () => { 
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-},
-    };
-    return (<ThemeContext.Provider value={value}>
+interface ThemeProviderProps {
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+}
+
+export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark');
+
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(theme);
+    }
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
-    </ThemeContext.Provider>)}
-export const useTheme = () => {
-    const context = useContext(ThemeProviderContext);
-    if (context === null)
-        throw new Error("useTheme must be used within a ThemeProvider");
-    return context};
->>>>>>> origin/clean-error-fixing-automation
+    </ThemeContext.Provider>
+  );
+}
+
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+}

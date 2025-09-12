@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Helmet } from 'react-helmet-async';
+const ServicesPage = () => {
+    return (_jsxs(_Fragment, { children: [_jsxs(Helmet, { children: [_jsx("title", { children: "Services - Zion Tech Group" }), _jsx("meta", { name: 'description', content: 'Explore our comprehensive range of technology services including AI, blockchain, cloud computing, and cybersecurity solutions.' })] }), _jsx("div", { className: 'services-page', children: _jsxs("div", { className: 'container', children: [_jsx("h1", { children: "Our Services" }), _jsx("p", { children: "Comprehensive technology solutions to drive your business forward." })] }) })] }));
+};
+export default ServicesPage;

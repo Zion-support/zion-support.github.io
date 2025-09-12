@@ -1,224 +1,100 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
-import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
-import ChatAssistant from './components/ChatAssistant';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { ModernUIEnhancer } from './components/ModernUIEnhancer';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import SEO from './components/SEO';
 
-// Core pages
-const Home = React.lazy(() => import('./pages/Index'));
+// Lazy load pages - only import existing ones
+const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/ContactPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Services = React.lazy(() => import('./pages/Services'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
-const Resources = React.lazy(() => import('./pages/Resources'));
-const Pricing = React.lazy(() => import('./pages/Index')); // Placeholder
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-const RequestQuote = React.lazy(() => import('./pages/Index')); // Placeholder
-const Dashboard = React.lazy(() => import('./pages/Index')); // Placeholder
-const Login = React.lazy(() => import('./pages/Index')); // Placeholder
-const FAQ = React.lazy(() => import('./pages/Index')); // Placeholder
-const Privacy = React.lazy(() => import('./pages/Index')); // Placeholder
-const Terms = React.lazy(() => import('./pages/Index')); // Placeholder
-const Cookies = React.lazy(() => import('./pages/Index')); // Placeholder
-const SearchPage = React.lazy(() => import('./pages/Index')); // Placeholder
-const Partners = React.lazy(() => import('./pages/PartnersPage'));
-const WhitePapers = React.lazy(() => import('./pages/Index')); // Placeholder
-const Webinars = React.lazy(() => import('./pages/Index')); // Placeholder
-const APIDocumentation = React.lazy(() => import('./pages/API'));
-const Developers = React.lazy(() => import('./pages/Index')); // Placeholder
-const Training = React.lazy(() => import('./pages/Index')); // Placeholder
-const Community = React.lazy(() => import('./pages/Community'));
-const Support = React.lazy(() => import('./pages/Index')); // Placeholder
-const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const InvestorRelations = React.lazy(() => import('./pages/Index')); // Placeholder
-const Press = React.lazy(() => import('./pages/Press'));
-const Legal = React.lazy(() => import('./pages/Legal'));
-const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
-const Demo = React.lazy(() => import('./pages/Index')); // Placeholder
 
-// AI Service pages - using placeholders for now
-const AIHealthcarePlatform = React.lazy(() => import('./pages/Index')); // Placeholder
-const AIContentCreation = React.lazy(() => import('./pages/Index')); // Placeholder
-const AICybersecurity = React.lazy(() => import('./pages/Index')); // Placeholder
-const QuantumComputing = React.lazy(() => import('./pages/Index')); // Placeholder
-const IoTEdgeComputing = React.lazy(() => import('./pages/Index')); // Placeholder
-
-// Enhanced services pages - using placeholders for now
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Index')); // Placeholder
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/Index')); // Placeholder
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Index')); // Placeholder
-const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/Index')); // Placeholder
-const EnhancedServicesLanding = React.lazy(() => import('./pages/Index')); // Placeholder
-const RevolutionaryServicesLanding = React.lazy(() => import('./pages/Index')); // Placeholder
-const RevolutionaryPricingGuide = React.lazy(() => import('./pages/Index')); // Placeholder
-const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/Index')); // Placeholder
-const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/Index')); // Placeholder
-const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/Index')); // Placeholder
-const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/Index')); // Placeholder
-
-// Service pages - using existing pages
-const CloudDevOps = React.lazy(() => import('./pages/Index')); // Placeholder
-const DigitalTwin = React.lazy(() => import('./pages/Index')); // Placeholder
-const DataAnalytics = React.lazy(() => import('./pages/Index')); // Placeholder
-const ITInfrastructure = React.lazy(() => import('./pages/Index')); // Placeholder
-const AIBusinessIntelligence = React.lazy(() => import('./pages/Index')); // Placeholder
-const MicroSaaSProducts = React.lazy(() => import('./pages/Index')); // Placeholder
-
-// Import the new pages - using placeholders for non-existent ones
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Index')); // Placeholder
-const Zion2026ServicesOverview = React.lazy(() => import('./pages/Index')); // Placeholder
-const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Index')); // Placeholder
-const Sitemap = React.lazy(() => import('./pages/Index')); // Placeholder
-
-// Simple placeholder pages for missing ones
-const Signup = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Sign Up - Zion Tech Group"
-      description="Join our platform and start building the future with AI-powered solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
-      <p className="text-xl text-gray-300">Join our platform</p>
-      <div className="mt-8">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-          Get Started
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
-      <div className="mt-8">
-        <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-          Browse Solutions
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
+// Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center">
-    <div className="text-center text-white">
-      <LoadingSpinner size="lg" />
-      <p className="mt-4 text-lg">Loading...</p>
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
+    <div className="relative">
+      <div className="w-32 h-32 border-4 border-cyan-500/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-500 font-bold text-lg">
+        ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-500 text-sm animate-pulse">Loading amazing experiences...</div>
+      </div>
     </div>
   </div>
 );
 
-function App() {
+// Enhanced error fallback component with better UX
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900" role="alert">
+    <div className="text-center max-w-md mx-auto p-6">
+      <div className="text-red-500 text-6xl mb-4">⚠️</div>
+      <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
+      <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
+      <details className="text-left mb-6">
+        <summary className="cursor-pointer text-cyan-500 hover:text-cyan-400">
+          Technical Details
+        </summary>
+        <pre className="mt-2 p-3 bg-gray-800 rounded text-xs text-gray-300 overflow-auto">
+          {error.message}
+        </pre>
+      </details>
+      <button
+        onClick={resetErrorBoundary}
+        className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded transition-colors"
+      >
+        Try Again
+      </button>
+    </div>
+  </div>
+);
+
+// Main App component with enhanced error handling and performance
+const App: React.FC = () => {
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.href = '/css/critical.css';
+      criticalCSS.as = 'style';
+      document.head.appendChild(criticalCSS);
+    };
+
+    preloadCriticalResources();
+  }, []);
+
   return (
-    <ErrorBoundary>
-      <Router>
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <ModernUIEnhancer>
-              <div className="min-h-screen bg-futuristic">
-                <AppHeader />
-                
-                <main id="main-content" className="flex-1">
-                  <Suspense fallback={<EnhancedLoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/about" element={<About />} />
-                      <Route path="/contact" element={<Contact />} />
-                      <Route path="/blog" element={<Blog />} />
-                      <Route path="/blog/:slug" element={<BlogPost />} />
-                      <Route path="/faq" element={<FAQ />} />
-                      <Route path="/careers" element={<Careers />} />
-                      <Route path="/privacy" element={<Privacy />} />
-                      <Route path="/terms" element={<Terms />} />
-                      <Route path="/cookies" element={<Cookies />} />
-                      <Route path="/sitemap" element={<Sitemap />} />
-                      <Route path="/partners" element={<Partners />} />
-                      <Route path="/pricing" element={<Pricing />} />
-                      <Route path="/services" element={<Services />} />
-                      <Route path="/solutions" element={<Solutions />} />
-                      <Route path="/resources" element={<Resources />} />
-                      <Route path="/case-studies" element={<CaseStudies />} />
-                      <Route path="/white-papers" element={<WhitePapers />} />
-                      <Route path="/webinars" element={<Webinars />} />
-                      <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
-                      <Route path="/demo" element={<Demo />} />
-                      <Route path="/community" element={<Community />} />
-                      <Route path="/support" element={<Support />} />
-                      <Route path="/schedule-demo" element={<ScheduleDemo />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/signup" element={<Signup />} />
-                      <Route path="/search" element={<SearchPage />} />
-                      <Route path="/api-docs" element={<APIDocumentation />} />
-                      <Route path="/developers" element={<Developers />} />
-                      <Route path="/training" element={<Training />} />
-                      <Route path="/investors" element={<InvestorRelations />} />
-                      <Route path="/press" element={<Press />} />
-                      <Route path="/legal" element={<Legal />} />
-                      <Route path="/marketplace" element={<Marketplace />} />
-                      <Route path="/dashboard" element={<Dashboard />} />
-                      <Route path="/request-quote" element={<RequestQuote />} />
-                      
-                      {/* Enhanced Services Routes */}
-                      <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                      <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
-                      <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                      <Route path="/services/innovative-micro-saas-2025" element={<InnovativeMicroSaasServicesShowcase2025 />} />
-                      <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
-                      <Route path="/services/showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
-                      <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
-                      <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                      <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                      <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-                      <Route path="/zion-2026-services" element={<Zion2026InnovativeServicesShowcase />} />
-                      <Route path="/zion-2026-overview" element={<Zion2026ServicesOverview />} />
-                      <Route path="/zion-2026-pricing" element={<Zion2026ComprehensivePricingGuide />} />
-
-                      {/* Service Routes - only for existing pages */}
-                      <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                      <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                      <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                      <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                      <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                      
-                      {/* AI Service Routes */}
-                      <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
-                      <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-                      <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-                      <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-                      <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
-
-                      {/* Catch all route */}
-                      <Route path="*" element={<Home />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                
-                <Footer />
-                <ChatAssistant />
-              </div>
-            </ModernUIEnhancer>
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
-      </Router>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Router>
+          <div className="App">
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
-}
+};
 
 export default App;

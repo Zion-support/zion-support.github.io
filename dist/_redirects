@@ -19,4 +19,19 @@
 /ai-customer-success-automation /ai-customer-success-platform 301
 /browser-automation-cloud/ /browser-automation-cloud 301
 
+# Main page redirects
+/services      /main/front#capabilities   301!
+/products      /main/front                 301!
+/contact       /newsroom                   302
+
+/main           /   301!
+/front          /   301!
+/front/index    /   301!
+
+# AUTO-GENERATED: SMART_REDIRECTS_START
+/services /main/front#capabilities 301!
+/products /main/front 301!
+/contact /newsroom 301!
+# AUTO-GENERATED: SMART_REDIRECTS_END
+
 # Cache-related headers must be set in _headers, not _redirects

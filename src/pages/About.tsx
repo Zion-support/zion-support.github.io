@@ -1,72 +1,102 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Users, Target, Award, Globe, Zap, Shield, Code, Rocket } from 'lucide-react';
-import SEO from '../components/SEO';
 
 export default function About() {
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-            <SEO 
-                title="About Us - Zion Tech Group"
-                description="Learn about Zion Tech Group's mission to transform businesses through AI, cloud, and technology solutions."
-                keywords="about, company, team, mission, AI, technology, cloud solutions"
-            />
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-foreground mb-8">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-muted-foreground mb-12">
+            Empowering businesses with cutting-edge technology solutions
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-12 text-left">
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+              <p className="text-muted-foreground mb-6">
+                To democratize access to world-class technology talent and services, 
+                enabling businesses of all sizes to compete in the digital economy.
+              </p>
+              
+              <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+              <p className="text-muted-foreground mb-6">
+                We connect businesses with verified tech professionals, provide 
+                24/7 IT support, and deliver innovative AI-powered solutions 
+                that drive growth and efficiency.
+              </p>
+            </div>
             
-            {/* Hero Section */}
-            <section className="py-20 px-4">
-                <div className="container mx-auto text-center">
-                    <motion.h1 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
-                    >
-                        About Zion Tech Group
-                    </motion.h1>
-                    <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"
-                    >
-                        We are a global technology company dedicated to empowering businesses with cutting-edge AI, cloud, and digital transformation solutions.
-                    </motion.p>
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">Global Talent Network</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Access to professionals from 50+ countries
+                    </p>
+                  </div>
                 </div>
-            </section>
-
-            {/* Mission & Vision */}
-            <section className="py-20 px-4">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3 }}
-                        >
-                            <div className="flex items-center mb-6">
-                                <Target className="h-8 w-8 text-blue-400 mr-3" />
-                                <h2 className="text-3xl font-bold">Our Mission</h2>
-                            </div>
-                            <p className="text-lg text-gray-300 leading-relaxed">
-                                To democratize access to advanced technology by providing innovative, scalable, and secure AI and cloud solutions that empower businesses to thrive in the digital age.
-                            </p>
-                        </motion.div>
-
-                        <motion.div 
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.4 }}
-                        >
-                            <div className="flex items-center mb-6">
-                                <Rocket className="h-8 w-8 text-purple-400 mr-3" />
-                                <h2 className="text-3xl font-bold">Our Vision</h2>
-                            </div>
-                            <p className="text-lg text-gray-300 leading-relaxed">
-                                To be the world's leading provider of AI-powered technology solutions, recognized for our innovation, reliability, and commitment to client success.
-                            </p>
-                        </motion.div>
-                    </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">24/7 Support</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Round-the-clock technical assistance
+                    </p>
+                  </div>
                 </div>
-            </section>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">AI-Powered Solutions</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Cutting-edge artificial intelligence services
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-medium">Verified Professionals</h3>
+                    <p className="text-sm text-muted-foreground">
+                      All talent is thoroughly vetted and certified
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-16">
+            <h2 className="text-2xl font-semibold mb-8">Our Values</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3">Innovation</h3>
+                <p className="text-muted-foreground">
+                  We stay ahead of technology trends to deliver cutting-edge solutions.
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3">Quality</h3>
+                <p className="text-muted-foreground">
+                  We maintain the highest standards in all our services and partnerships.
+                </p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3">Trust</h3>
+                <p className="text-muted-foreground">
+                  We build lasting relationships based on transparency and reliability.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
