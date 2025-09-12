@@ -993,6 +993,10 @@ import { ContactSection } from "@/components/ContactSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import PromotionalBanner from "@/components/home/PromotionalBanner";
+import FeaturedContentSection from "@/components/home/FeaturedContentSection";
+import NewsletterSignup from "@/components/home/NewsletterSignup";
+import SocialProofSection from "@/components/home/SocialProofSection";
 
 export default function Home() {
   return (
@@ -1003,15 +1007,28 @@ export default function Home() {
         keywords="AI solutions, IT services, technology consulting, digital transformation, cybersecurity, cloud computing"
       />
       
+      {/* Promotional Banner */}
+      <PromotionalBanner />
+      
       <QuickAccess />
       <FeatureHighlights />
       <ITServiceRequestHero />
+      
+      {/* Featured Content Section */}
+      <FeaturedContentSection />
+      
+      {/* Social Proof Section */}
+      <SocialProofSection />
+      
       <CategoriesSection />
       <BenefitsSection />
       <HowItWorksSection />
       <FeaturedListingsSection />
+      
+      {/* Newsletter Signup with Incentives */}
+      <NewsletterSignup />
+      
       <ContactSection />
-      <NewsletterSection />
 =======
       <HeroSection />
       <ServicesSection />
