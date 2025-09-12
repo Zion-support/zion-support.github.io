@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '31',
+      title: 'Agentic Vendor Management 2025: From Intake to Renewal',
+      description: 'Automate diligence, negotiations, and renewals with agentic workflows and policy‑as‑code.',
+      href: '/blog/ai-2025-agentic-vendor-management',
+      type: 'blog',
+      category: 'Operations',
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Operations', 'Compliance', 'Agents', 'Contracts'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '32',
+      title: 'Agentic Vendor Management: 32% Faster Cycle Time',
+      description: 'Case study: Automated intake, risk, and negotiation cut cycle times and exceptions.',
+      href: '/case-studies/ai-2025-vendor-management-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Operations', 'Compliance', 'Policy-as-code'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: early signals, dynamic safety stock, and agent workflows.',
