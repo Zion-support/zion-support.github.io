@@ -28,6 +28,19 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '11',
+      title: 'Real-time AI Agents 2025: Observability, Guardrails, and SLOs',
+      description: 'Blueprint for running real-time agents in production with telemetry, tracing, safety guardrails, and SLOs.',
+      href: '/blog/ai-2025-realtime-agents-observability',
+      type: 'blog',
+      category: 'Observability',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Agents', 'Observability', 'Tracing', 'SLOs', 'Safety'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
       id: '0',
       title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
       description: 'A practical guide to deploying and operating autonomous AI agents at the edge with strong guardrails and observability.',
@@ -198,7 +211,7 @@ function InteractiveContentDiscovery() {
     }
   ];
 
-  const categories = ['all', 'Advanced AI', 'Multimodal AI', 'Quantum AI', 'AI Infrastructure', 'AI Security', 'AI Healthcare', 'Case Study'];
+  const categories = ['all', 'Observability', 'Advanced AI', 'Multimodal AI', 'Quantum AI', 'AI Infrastructure', 'AI Security', 'AI Healthcare', 'Case Study'];
   const difficulties = ['all', 'beginner', 'intermediate', 'advanced'];
   const types = ['all', 'blog', 'case-study', 'webinar', 'whitepaper'];
 
