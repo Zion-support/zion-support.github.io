@@ -1,6 +1,144 @@
 import React from 'react';
 import SEO from '../../components/SEO';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import StructuredData from '../../components/StructuredData';
+import ErrorBoundary from '../../components/ErrorBoundary';
+import { BookOpen, Briefcase, Download, TrendingUp, Lightbulb, Shield, Factory, DollarSign } from 'lucide-react';
+
+export default function ContentShowcasePage() {
+  const newBlogPosts = [
+    {
+      title: "AI 2025: The Year Ahead - 15 Predictions That Will Shape Technology",
+      description: "Discover the 15 most important AI predictions for 2025, from AGI breakthroughs to enterprise transformation. Expert insights on what's coming next.",
+      href: "/blog/ai-2025-year-ahead-predictions",
+      icon: "🤖",
+      category: "AI Predictions",
+      readTime: "25 min read",
+      date: "Jan 15, 2025",
+      featured: true
+    },
+    {
+      title: "AI Automation Enterprise Success Stories 2025: Real Results from Fortune 500 Companies",
+      description: "Discover how Fortune 500 companies achieved 300% ROI with AI automation. Real case studies, implementation strategies, and actionable insights for enterprise transformation.",
+      href: "/blog/ai-automation-enterprise-success-2025",
+      icon: "🏢",
+      category: "Enterprise AI",
+      readTime: "18 min read",
+      date: "Jan 20, 2025",
+      featured: true
+    },
+    {
+      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
+      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
+      href: "/blog/ai-implementation-success-framework-2025",
+      icon: "✅",
+      category: "AI Strategy",
+      readTime: "18 min read",
+      date: "Feb 01, 2025"
+    },
+    {
+      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
+      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
+      href: "/blog/ai-multimodal-applications-2025",
+      icon: "🎭",
+      category: "AI Technology",
+      readTime: "12 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen Attacks",
+      description: "Comprehensive analysis of emerging AI-powered cyber threats and defense strategies to protect your organization in 2025.",
+      href: "/blog/ai-cybersecurity-threats-2025",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      readTime: "20 min read",
+      date: "Jan 30, 2025"
+    }
+  ];
+
+  const newCaseStudies = [
+    {
+      title: "AI Healthcare Diagnosis Breakthrough 2025: 95% Accuracy Case Study",
+      description: "How a leading healthcare system achieved 95% diagnostic accuracy, 80% faster processing, and $50M in cost savings through strategic AI implementation.",
+      href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Accuracy",
+      date: "Jan 25, 2025",
+      featured: true
+    },
+    {
+      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
+      description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
+      href: "/case-studies/ai-transformation-enterprise-success-2025",
+      icon: "🏆",
+      category: "Enterprise AI",
+      result: "$50M Savings",
+      date: "Feb 05, 2025"
+    },
+    {
+      title: "AI Retail Transformation Success: 300% Revenue Growth",
+      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
+      href: "/case-studies/ai-retail-transformation-2025",
+      icon: "🛒",
+      category: "Retail AI",
+      result: "300% Growth",
+      date: "Feb 03, 2025"
+    },
+    {
+      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
+      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
+      href: "/case-studies/ai-manufacturing-automation-success-2025",
+      icon: "🏭",
+      category: "Manufacturing",
+      result: "40% Cost Reduction",
+      date: "Feb 01, 2025"
+    }
+  ];
+
+  const newResources = [
+    {
+      title: "AI Enterprise Readiness Assessment 2025 - Free Download",
+      description: "Evaluate your organization's AI capabilities with our comprehensive assessment tool. Identify strengths, gaps, and opportunities to create a strategic roadmap for AI transformation.",
+      href: "/resources/ai-enterprise-readiness-assessment-2025",
+      icon: "📊",
+      category: "Assessment",
+      type: "Free Download",
+      date: "Jan 22, 2025",
+      featured: true
+    },
+    {
+      title: "AI Implementation Master Guide 2025 - Complete Enterprise Playbook",
+      description: "Download our comprehensive AI implementation master guide. 300+ pages of strategies, frameworks, and best practices for successful enterprise AI deployment in 2025.",
+      href: "/resources/ai-implementation-master-guide-2025",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 25, 2025",
+      featured: true
+    },
+    {
+      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
+      description: "Complete checklist covering every aspect of AI implementation from strategy to deployment, with 150+ actionable items across 7 key categories.",
+      href: "/resources/ai-implementation-checklist-2025",
+      icon: "📋",
+      category: "Checklist",
+      type: "Free Download",
+      date: "Feb 08, 2025"
+    },
+    {
+      title: "AI Security Hardening Checklist: Essential Security Measures",
+      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
+      href: "/resources/ai-security-hardening-checklist",
+      icon: "🛡️",
+      category: "Security",
+      type: "Free Download",
+      date: "Feb 06, 2025"
+    }
+  ];
+>>>>>>> cursor/create-and-deploy-new-content-d78f
 
 export default function ContentShowcase() {
   return (
@@ -246,6 +384,42 @@ export default function ContentShowcase() {
                   </div>
                 </div>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Filtering */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Filter Content by Category
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Find the content that matters most to your role and industry
+              </p>
+            </div>
+
+            {/* Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                All Content
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                AI Predictions
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Enterprise AI
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Healthcare AI
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Free Resources
+              </button>
+              <button className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Case Studies
+              </button>
             </div>
           </div>
         </section>
