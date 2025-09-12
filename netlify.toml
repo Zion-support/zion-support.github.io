@@ -2,36 +2,17 @@
   from = "/api/*"
   to = "https://backend.example.com/:splat"
   status = 200
- 
-[build]
-<<<<<<< HEAD
-  command = "npm run build"
-  publish = "dist"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
-=======
 [build]
-  # Use `npm ci` for deterministic installs
-  command = "npm ci && npm run build && (n=0; until [ $n -ge 3 ]; do curl -sf --connect-timeout 10 $DEPLOY_PRIME_URL/api/health | grep '\"status\":\"ok\"' && break; n=$((n+1)); echo "Health check attempt $n failed, retrying in 15s..."; sleep 15; done; if [ $n -ge 3 ]; then echo "Health check failed after 3 attempts." && exit 1; fi)"
-=======
-<<<<<<< HEAD
-  command = "npm install --no-audit --no-fund && npm run build"
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-NODE_VERSION = "22.12.0"
-NODE_OPTIONS = "--max-old-space-size=4096"
-NETLIFY_NEXT_PLUGIN_SKIP = "true"
-SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
-
-# API functions (disabled for Vite SPA)
-# [functions]
-# directory = "netlify/functions"
+  NODE_VERSION = "22.12.0"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 # Long-term caching for static assets
 [[headers]]
@@ -83,24 +64,6 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   from = "/*"
   to = "/index.html"
   status = 200
-=======
-  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
->>>>>>> bulk-merge-20250912-100339
-  publish = ".next"
-
-[build] # touch v4.57 to trigger Netlify rebuild
-  # Build the site with Vite and publish the dist folder
-  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
-  command = "npm run build:ci"
-  publish = "dist"
-  functions = "netlify/functions"
-  command_timeout = "30m"
-  # Skip TypeScript checking during build
-
-<<<<<<< HEAD
-# API functions (if needed)
-# [functions]
-# directory = "netlify/functions"
 
 [context.production.environment]
   NODE_ENV = "production"
@@ -108,23 +71,16 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   NODE_VERSION = "22"
 
 [context.deploy-preview]
-<<<<<<< HEAD
-  command = "npm run build:ci"
+  command = "npm run build"
 
 [context.branch-deploy]
-  command = "npm run build:ci"
+  command = "npm run build"
 
-# Next.js configuration - no SPA fallback needed
-=======
-[build.environment]
-  NODE_VERSION = "20"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # When triggering chained builds via build hook, set NETLIFY_RERUN_CHAIN=1 in the hook payload/env
-
-# Skip Husky for CI builds
-[build.processing]
-  skip_processing = false
-
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
@@ -132,105 +88,103 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 [[plugins]]
   package = "./netlify/plugins/run-functions-and-rerun"
   [plugins.inputs]
-    # Optional: comma-separated includes/excludes
     include = ""
     exclude = ""
     concurrency = 6
     timeoutMs = 180000
 
-# Scheduled Functions (new automations replacing some GitHub Actions cadence)
+# Scheduled Functions
 [[scheduled.functions]]
   name = "homepage_advertiser"
-  schedule = "*/15 * * * *" # every 15 minutes
+  schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
   name = "cloud_orchestrator"
-  schedule = "0 */4 * * *" # every 4 hours
+  schedule = "0 */4 * * *"
 
 [[scheduled.functions]]
   name = "front-enhancer"
-  schedule = "*/5 * * * *" # every 5 minutes
+  schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
   name = "front-index-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
+  schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
   name = "frontpage-enhancer"
-  schedule = "*/20 * * * *" # every 20 minutes
+  schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
   name = "marketing-and-features-promo"
-  schedule = "0 */2 * * *" # every 2 hours
+  schedule = "0 */2 * * *"
 
 [[scheduled.functions]]
   name = "link-and-health-scheduler"
-  schedule = "0 */6 * * *" # every 6 hours
+  schedule = "0 */6 * * *"
 
 [[scheduled.functions]]
   name = "sitemap_runner"
-  schedule = "0 */12 * * *" # twice per day
+  schedule = "0 */12 * * *"
 
 [[scheduled.functions]]
   name = "fast-front-promoter"
-  schedule = "*/15 * * * *" # every 15 minutes
+  schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
   name = "fast-orchestrator"
-  schedule = "*/1 * * * *" # every minute
+  schedule = "*/1 * * * *"
 
 [[scheduled.functions]]
   name = "continuous-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
+  schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
   name = "front-visionary-expander"
-  schedule = "*/3 * * * *" # fast refresh for front systems
+  schedule = "*/3 * * * *"
 
 [[scheduled.functions]]
   name = "home-visionary-expander"
-  schedule = "*/4 * * * *" # fast refresh for homepage
+  schedule = "*/4 * * * *"
 
 [[scheduled.functions]]
   name = "ultrafast-orchestrator"
-  schedule = "*/1 * * * *" # every minute
+  schedule = "*/1 * * * *"
 
 [[scheduled.functions]]
   name = "trigger-all-and-commit"
-  schedule = "*/1 * * * *" # every minute
+  schedule = "*/1 * * * *"
 
 [[scheduled.functions]]
   name = "front-maximizer"
-  schedule = "*/5 * * * *" # every 5 minutes
+  schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
   name = "continuous-front-runner"
-  schedule = "*/3 * * * *" # every 3 minutes
+  schedule = "*/3 * * * *"
 
 [[scheduled.functions]]
   name = "readme-advertiser"
-  schedule = "13 */6 * * *" # every 6 hours
+  schedule = "13 */6 * * *"
 
 [[scheduled.functions]]
   name = "front-ads-promoter"
-  schedule = "*/10 * * * *" # every 10 minutes
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
   name = "ultrafast-front-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
+  schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
   name = "autonomous-meta-orchestrator"
-  schedule = "*/1 * * * *" # every minute
+  schedule = "*/1 * * * *"
 
-# New ultra-fast tools
 [[scheduled.functions]]
   name = "features-capabilities-benefits-advertiser"
-  schedule = "*/2 * * * *" # every 2 minutes
+  schedule = "*/2 * * * *"
 
 [[scheduled.functions]]
   name = "hyper-front-index-accelerator"
-  schedule = "*/1 * * * *" # every minute
+  schedule = "*/1 * * * *"
 
 [[scheduled.functions]]
   name = "dead-code-report"
@@ -292,26 +246,25 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   name = "netlify-auto-healer-runner"
   schedule = "*/20 * * * *"
 
-# New intelligent cloud automations
 [[scheduled.functions]]
   name = "innovation-lab"
-  schedule = "*/10 * * * *" # every 10 minutes
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
   name = "broken-image-scanner"
-  schedule = "0 */6 * * *" # every 6 hours
+  schedule = "0 */6 * * *"
 
 [[scheduled.functions]]
   name = "auto-scheduler"
-  schedule = "*/15 * * * *" # every 15 minutes
+  schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
   name = "a11y-alt-text-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
   name = "metadata-optimizer-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
+  schedule = "*/15 * * * *"
 
 [[scheduled.functions]]
   name = "seo-audit-runner"
@@ -329,7 +282,6 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   name = "deps-auto-upgrade-runner"
   schedule = "7 */12 * * *"
 
-# New autonomous cloud scanners
 [[scheduled.functions]]
   name = "unused-media-scanner"
   schedule = "*/10 * * * *"
@@ -348,7 +300,7 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
 
 [[scheduled.functions]]
   name = "pagespeed-insights-runner"
-  schedule = "11 */6 * * *" # every 6 hours, offset
+  schedule = "11 */6 * * *"
 
 [[scheduled.functions]]
   name = "knowledge-pack-runner"
@@ -379,11 +331,6 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   schedule = "*/5 * * * *"
 
 [[scheduled.functions]]
-  name = "pagespeed-insights-runner"
-  schedule = "11 */6 * * *"
-
-# New autonomous orchestrations
-[[scheduled.functions]]
   name = "roadmap-curator"
   schedule = "*/30 * * * *"
 
@@ -403,19 +350,6 @@ SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
   name = "duplicate-media-finder-runner"
   schedule = "0 2 * * *"
 
-# Newly added intelligent meta orchestrator
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
->>>>>>> origin/9llxiv-codex/implement-analytics-and-error-tracking
->>>>>>> bulk-merge-20250912-100339
-=======
-  command = "npm run build"
-  [context.deploy-preview.environment]
-  NODE_VERSION = "22"
-
-[context.branch-deploy]
-  command = "npm run build"
-  [context.branch-deploy.environment]
-  NODE_VERSION = "22"
->>>>>>> 14eca1f1070a8f01fa9716aba945c40febbf2397
