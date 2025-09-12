@@ -802,6 +802,13 @@ const HomePage = memo(function HomePage() {
                 <p className='text-sm opacity-90 mb-3'>Building eco-friendly AI systems</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>20 min read</span>
+            <Link href='/blog/ai-roadmap-2026-deep-dive' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧭</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Roadmap 2026 Deep Dive</h3>
+                <p className='text-sm opacity-90 mb-3'>Capabilities, costs, and controls</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>14 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -815,6 +822,13 @@ const HomePage = memo(function HomePage() {
                 <p className='text-sm opacity-90 mb-3'>60% energy reduction, carbon neutrality</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Case Study</span>
+            <Link href='/blog/enterprise-ai-maturity-model-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>Enterprise AI Maturity 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>From pilots to P&L impact</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>12 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
