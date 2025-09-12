@@ -119,6 +119,10 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
+// New AI 2025 Breakthrough Content Components
+import AI2025BreakthroughPromotionBanner from '../components/AI2025BreakthroughPromotionBanner';
+import AI2025BreakthroughContentShowcase from '../components/AI2025BreakthroughContentShowcase';
+
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
@@ -139,6 +143,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025BreakthroughPromotionBanner />
+        
+        {/* AI 2025 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2025BreakthroughContentShowcase />
+        
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
