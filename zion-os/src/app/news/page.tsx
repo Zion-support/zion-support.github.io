@@ -1,6 +1,15 @@
 export default function NewsPage() {
   const articles = [
     {
+      emoji: "⚡",
+      title: "Zion OS 1.4: Performance & Accessibility Upgrades",
+      excerpt:
+        "Faster cold starts, smaller bundles, and WCAG 2.2 improvements ship in 1.4.",
+      date: "Sep 12, 2025",
+      href: "/news/zion-os-1-4-performance-accessibility",
+      gradient: "from-amber-500 to-yellow-600",
+    },
+    {
       emoji: "🧠",
       title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
       excerpt:
