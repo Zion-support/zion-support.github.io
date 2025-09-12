@@ -19,6 +19,7 @@ import UltraContentPromotionBanner2025 from '../components/UltraContentPromotion
 import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
 import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
+import ContentPromotionalBanner from '../components/ContentPromotionalBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -57,6 +58,14 @@ export default function HomePage() {
         
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
+        
+        {/* NEW CONTENT PROMOTIONAL BANNER */}
+        <div className="container mx-auto px-4 py-8">
+          <ContentPromotionalBanner />
+        </div>
+        
+        {/* NEW CONTENT SHOWCASE */}
+        <NewContentShowcase />
         
         {/* ULTRA CONTENT PROMOTION BANNER 2025 */}
         <UltraContentPromotionBanner2025 />
