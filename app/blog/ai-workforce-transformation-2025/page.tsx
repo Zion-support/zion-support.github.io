@@ -1,15 +1,22 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import BlogSEO from '../../../components/BlogSEO';
 import Link from 'next/link';
 
 export default function AIWorkforceTransformation2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
+      <BlogSEO
         title="AI Workforce Transformation 2025: Reskilling for the Future"
         description="Discover how AI is reshaping the workforce and learn practical strategies for reskilling, upskilling, and preparing your team for the AI-driven future."
-        keywords="AI workforce transformation, reskilling, upskilling, AI training, future of work, digital transformation, employee development"
-        url="/blog/ai-workforce-transformation-2025"
+        slug="ai-workforce-transformation-2025"
+        publishedTime="2025-01-28T00:00:00+00:00"
+        modifiedTime="2025-01-28T00:00:00+00:00"
+        author="Zion Tech Group"
+        tags={["AI workforce transformation", "reskilling", "upskilling", "AI training", "future of work", "digital transformation", "employee development"]}
+        category="AI & Workforce"
+        readingTime={12}
+        wordCount={2800}
+        featuredImage="/images/blog/ai-workforce-transformation-2025.jpg"
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

@@ -1,22 +1,20 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://ziontechgroup.com/sitemap.xml
-Sitemap: https://ziontechgroup.com/sitemap
-
-# Crawl-delay
-Crawl-delay: 1
+# Sitemap
+Sitemap: https://zion.app/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /contact
-Allow: /services
-Allow: /technologies
+Allow: /blog/
+Allow: /resources/
+Allow: /case-studies/
+Allow: /services/
+
+# Crawl delay (optional)
+Crawl-delay: 1
