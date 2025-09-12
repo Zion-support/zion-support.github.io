@@ -1,21 +1,4 @@
 [
-  "accessibility",
-  "ai-autonomous-vehicle-ai-platform",
-  "ai-consciousness-evolution",
-  "ai-content-marketing-automation",
-  "ai-creativity-orchestrator",
-  "ai-customer-intelligence-platform",
-  "ai-customer-success-automation",
-  "ai-dream-interpreter-platform",
-  "ai-ethics-governance",
-  "ai-financial-fraud-detection",
-  "ai-powered-enterprise-security",
-  "autonomous-devops-platform",
-  "autonomous-it-operations",
-  "autonomous-vehicle-ai",
-  "blockchain-enterprise-platform",
-  "compliance",
-=======
 [
   "ai-autonomous-marketing-platform",
   "automated-financial-analytics-platform",
@@ -43,4 +26,8 @@
 =======
   "real-estate-technology-solutions",
   "transportation-logistics-solutions"
+]
+=======
+  "services/data-contracts-hub",
+  "services/serverless-lakehouse-starter"
 ]

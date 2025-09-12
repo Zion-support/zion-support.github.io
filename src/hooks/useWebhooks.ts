@@ -61,7 +61,7 @@ export function useWebhooks() {
       const response = await apiClient(`${getWebhookUrl()}/webhooks`, {
         method: 'GET',
         headers: {
-          ...(authHeader ? { 'Authorization': authHeader } : {}),
+          Authorization: `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         } as HeadersInit,
       });
@@ -99,19 +99,16 @@ export function useWebhooks() {
         return;
       }
 
-      const response = await apiClient(`${getWebhookUrl()}/create`, {
-        method: 'POST',
-        headers: {
-          ...(authHeader ? { 'Authorization': authHeader } : {}),
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name,
-          url,
-          eventTypes,
-          secret
-        })
-      });
+      const response = await api.post(
+        `${getWebhookUrl()}/create`,
+        { name, url, eventTypes, secret },
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
 
       if (response.status < 200 || response.status >= 300) {
         throw new Error(response.data.error || 'Failed to create webhook');
@@ -156,14 +153,16 @@ export function useWebhooks() {
         return;
       }
 
-      const response = await apiClient(`${getWebhookUrl()}/toggle`, {
-        method: 'POST',
-        headers: {
-          ...(authHeader ? { 'Authorization': authHeader } : {}),
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ webhookId, isActive })
-      });
+      const response = await api.post(
+        `${getWebhookUrl()}/toggle`,
+        { webhookId, isActive },
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
 
       if (response.status < 200 || response.status >= 300) {
         throw new Error(response.data.error || 'Failed to update webhook');
@@ -210,14 +209,16 @@ export function useWebhooks() {
         return;
       }
 
-      const response = await apiClient(`${getWebhookUrl()}/delete`, {
-        method: 'POST',
-        headers: {
-          ...(authHeader ? { 'Authorization': authHeader } : {}),
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ webhookId })
-      });
+      const response = await api.post(
+        `${getWebhookUrl()}/delete`,
+        { webhookId },
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
 
       if (response.status < 200 || response.status >= 300) {
         throw new Error(response.data.error || 'Failed to delete webhook');
@@ -263,14 +264,16 @@ export function useWebhooks() {
         return;
       }
 
-      const response = await apiClient(`${getWebhookUrl()}/test`, {
-        method: 'POST',
-        headers: {
-          ...(authHeader ? { 'Authorization': authHeader } : {}),
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ webhookId, eventType })
-      });
+      const response = await api.post(
+        `${getWebhookUrl()}/test`,
+        { webhookId, eventType },
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
 
       if (response.status < 200 || response.status >= 300) {
         throw new Error(response.data.error || 'Failed to test webhook');

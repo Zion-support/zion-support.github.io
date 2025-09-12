@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   Sparkles, ArrowRight, CheckCircle, Star, Users, 
   Zap, Shield, Brain, Atom, Rocket, Globe, Building,
@@ -9,11 +9,6 @@ import {
   Heart, Truck, GraduationCap, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import Link from 'next/link';
-
-// Import our comprehensive service data
-import { innovative2025MicroSaasExpansion } from '../data/innovative-2025-micro-saas-expansion';
-import { innovative2025ITServicesExpansion } from '../data/innovative-2025-it-services-expansion';
-import { innovative2025AIServicesExpansion } from '../data/innovative-2025-ai-services-expansion';
 
 const ComprehensiveServicesShowcase: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -142,9 +137,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             </p>
           </div>
 
-          {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sortedServices.map((service, index) => (
+        {/* Success Metrics */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {successMetrics.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}

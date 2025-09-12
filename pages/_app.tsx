@@ -1,5 +1,10 @@
-// CRITICAL: Import immediate process polyfill FIRST to prevent process.env errors
-import '../src/utils/immediate-process-polyfill';
+// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
+if (process.env.NODE_ENV === 'development') {
+  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
+  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
+  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
+  console.log('- globalThis.process:', !!(globalThis as any).process);
+}
 
 // CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
 if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
@@ -222,19 +227,4 @@ const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryC
       </ErrorBoundary>
     </ErrorBoundary>
   );
-};
-
-export default function App({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
-	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Analytics />
-			<div className={inter.className}>
-				<Layout>
-					<Component {...pageProps} />
-					<DefaultSEO />
-				</Layout>
-			</div>
-		</SEOContext.Provider>
-	);
 }

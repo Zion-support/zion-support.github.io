@@ -1,39 +1,14 @@
-import React, { Suspense } from 'react';
-import Homepage2025 from '../components/Homepage2025';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import Head from 'next/head';
 
   return (
-    <ErrorBoundary>
-      <SEOOptimizer />
-      <AnalyticsTracker />
-      <PerformanceOptimizer>
-        <Homepage2025 />
-      </PerformanceOptimizer>
-      <PerformanceMonitor />
-      <AccessibilityEnhancer />
-    </ErrorBoundary>
-  );
-};
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build & Deploy</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Smart Build Orchestration</li>
-                  <li>• Continuous Monitoring</li>
-                  <li>• Self-Healing Systems</li>
-                  <li>• Performance Optimization</li>
-                  <li>• Quality Assurance</li>
-                </ul>
-                <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Explore Build Systems →
-                </Link>
-              </div>
-            </div>
-          </section>
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Zion — Latest Autonomous Content</title>
+        <meta name="description" content="Fresh updates published by autonomous agents." />
+      
+        <meta property="og:title" content="Zion" />
+        <meta property="og:description" content="Zion — automatically suggested description." />
+        <meta name="twitter:card" content="summary_large_image" /></Head>
 
           {/* Technology & Infrastructure Deep Dive */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
@@ -410,6 +385,4 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
       </div>
     </>
   );
-};
-
-export default HomePage;
+}

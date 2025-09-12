@@ -9,7 +9,6 @@ import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
 import SEOHead from '../SEOHead';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
-import PerformanceOptimizer from '../PerformanceOptimizer';
 
 
 import React from 'react';
@@ -83,7 +82,12 @@ export default function Layout({
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-  useEffect(() => {
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+
     // Check online status
     const updateOnlineStatus = () => {
       setIsOnline(navigator.onLine);
@@ -341,14 +345,7 @@ export default function Layout({ children }: LayoutProps) {
         {/* Footer */}
         <UltraFuturisticFooter2040 />
       </div>
-
-      {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
-      {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-    </div>
+    </>
   );
 }
 ;

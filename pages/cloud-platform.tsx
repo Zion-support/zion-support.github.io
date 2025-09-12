@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Globe, Cloud, Server, Database, Shield, Zap, Brain, Cpu, Users, Target } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-export default function CloudPlatform() {
+const CloudPlatformPage: React.FC = () => {
   const services = [
     {
       icon: Cloud,
@@ -49,16 +50,43 @@ export default function CloudPlatform() {
     }
   ];
 
-  const stats = [
-    { number: '99.99%', label: 'Uptime', icon: Cloud },
-    { number: '24/7', label: 'Monitoring', icon: Shield },
-    { number: '50+', label: 'Cloud Services', icon: Server },
-    { number: '1000+', label: 'Deployments', icon: Zap }
+  const benefits = [
+    {
+      title: 'Cost Optimization',
+      description: 'Reduce infrastructure costs with intelligent resource management and pricing optimization.'
+    },
+    {
+      title: 'Global Reach',
+      description: 'Deploy applications worldwide with our global infrastructure network.'
+    },
+    {
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with SOC2, ISO, and other compliance certifications.'
+    },
+    {
+      name: 'E-commerce Platforms',
+      description: 'High-traffic online retail solutions',
+      icon: <ShoppingCart className="w-6 h-6" />
+    },
+    {
+      name: 'Data Processing',
+      description: 'Big data analytics and processing',
+      icon: <Database className="w-6 h-6" />
+    },
+    {
+      name: 'AI/ML Workloads',
+      description: 'Machine learning model training and deployment',
+      icon: <Brain className="w-6 h-6" />
+    }
   ];
 
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+    <Layout 
+      title="Cloud Platform Services - Zion Tech Group"
+      description="Advanced cloud infrastructure, edge computing, and multi-cloud management solutions for modern businesses"
+      canonicalUrl="https://ziontechgroup.com/cloud-platform"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -129,22 +157,29 @@ export default function CloudPlatform() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
-                  <a href={service.href} className="block">
-                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 h-full hover:bg-gray-700/50 transition-all duration-300 hover:scale-105">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <service.icon className="w-8 h-8 text-blue-400" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                      <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-400">
-                            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="flex items-center mb-4">
+                    {service.icon}
+                    <h3 className="text-xl font-semibold text-white ml-3">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center text-sm text-gray-400">
+                        <Star className="w-4 h-4 text-blue-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={service.href}
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </a>
                 </motion.div>
               ))}

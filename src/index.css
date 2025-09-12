@@ -1,4 +1,9 @@
-/* Tailwind CSS imports are handled by PostCSS */
+/* Fonts are now loaded via Next.js font optimization in _app.tsx */
+@import './styles/navbar.css';
+@import './styles/responsive.css';
+@import './styles/auth-layout.css';
+@import './styles/performance.css';
+@import './styles/responsive-320px.css';
 
 /* Custom styles */
 
@@ -177,7 +182,70 @@ h3 {
   font-weight: 600;
 }
 
-    --sidebar-ring: 146 70% 40%;
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Enhanced content sections */
+.content-section {
+  padding: var(--space-2xl) 0;
+  margin: var(--space-xl) 0;
+}
+
+/* Enhanced modern card styling */
+.card-modern {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card-modern:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Enhanced button styles */
+.button-modern-primary {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-lg);
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.button-modern-secondary {
+  background: transparent;
+  color: hsl(var(--primary));
+  border: 2px solid hsl(var(--primary));
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-lg);
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Enhanced animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }
 

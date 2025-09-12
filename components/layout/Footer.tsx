@@ -29,60 +29,47 @@ const Footer: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-  const footerSections = [
-    {
-      title: 'Revolutionary Services',
-      links: [
-        { name: 'Quantum AI Platform', href: '/quantum-ai-cognitive' },
-        { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Space Technology', href: '/space-technology' },
-        { name: 'Biotech AI', href: '/biotech-ai' },
-        { name: 'Quantum Trading', href: '/quantum-financial-trading' }
-      ]
-    },
-    {
-      title: 'Technology Solutions',
-      links: [
-        { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
-        { name: 'Blockchain & DeFi', href: '/services?category=Blockchain%20%26%20DeFi' },
-        { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' },
-        { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/services?category=Cloud%20Infrastructure' },
-        { name: 'Digital Transformation', href: '/solutions' }
-      ]
-    },
-    {
-      title: 'Industries',
-      links: [
-        { name: 'Financial Services', href: '/solutions#financial' },
-        { name: 'Healthcare', href: '/solutions#healthcare' },
-        { name: 'Manufacturing', href: '/solutions#manufacturing' },
-        { name: 'Government', href: '/solutions#government' },
-        { name: 'Education', href: '/solutions#education' },
-        { name: 'Retail & E-commerce', href: '/solutions#retail' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Research', href: '/research' },
-        { name: 'Support', href: '/support' }
-      ]
-    }
+  const services = [
+    { name: 'AI & Consciousness', href: '/ai-services', icon: Brain },
+    { name: 'Quantum Technology', href: '/quantum-services', icon: Atom },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+    { name: 'Business Solutions', href: '/business-solutions', icon: Target },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cpu },
+    { name: 'Space Technology', href: '/space-tech', icon: Rocket }
   ];
 
-  const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup' }
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Leadership', href: '/leadership' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Press', href: '/press' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const resources = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' }
+  ];
+
+  const social = [
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'GitHub', href: '#', icon: Github },
+    { name: 'YouTube', href: '#', icon: Youtube },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'Facebook', href: '#', icon: Facebook }
   ];
 
   const scrollToTop = () => {

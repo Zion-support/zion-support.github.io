@@ -2,10 +2,10 @@
 import { apiClient } from './apiClient';
 
 export async function rewardOnboarding(userId: string) {
-  await apiClient('/functions/v1/token-manager/earn', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' }),
+  await api.post('/functions/v1/token-manager/earn', {
+    userId,
+    amount: 50,
+    reason: 'Completed onboarding',
   });
 }
 

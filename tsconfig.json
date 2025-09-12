@@ -11,18 +11,9 @@
     ],
     "module": "esnext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "axios": ["./src/lib/axios.ts"],
-      "notistack": ["./src/stubs/notistack.ts"],
-      "@sentry/browser": ["./src/stubs/sentry.ts"]
-    },
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,

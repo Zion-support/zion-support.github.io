@@ -4,7 +4,7 @@ import { MessageSquare } from 'lucide-react';
 
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
-import { apiClient } from "@/utils/apiClient";
+import api from '@/lib/api';
 
 export function ChatAssistantTrigger() {
 

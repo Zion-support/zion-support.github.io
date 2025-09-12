@@ -1,7 +1,17 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2036: React.FC = () => {
+interface UltraFuturisticBackground2036Props {
+  intensity?: 'low' | 'medium' | 'high';
+  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
+  children?: React.ReactNode;
+}
+
+export default function UltraFuturisticBackground2036({ 
+  intensity = 'medium', 
+  theme = 'quantum-neon',
+  children
+}: UltraFuturisticBackground2036Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | null>(null);
@@ -90,8 +100,27 @@ const UltraFuturisticBackground2036: React.FC = () => {
     }
   }, [intensity, getThemeColors]);
 
-  // Enhanced animation loop with better performance
-  const animate = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
+  // Enhanced animation loop with quantum effects and neon pulses
+  const animate = useCallback(() => {
+    if (!canvasRef.current) return;
+    
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Set canvas size
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Clear canvas with enhanced transparency for layering effect
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Create gradient background for enhanced depth
+    const gradient = ctx.createRadialGradient(
+      canvas.width / 2, canvas.height / 2, 0,
+      canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+    );
+    
     const colors = getThemeColors();
     const time = Date.now() * 0.001;
     
@@ -236,12 +265,7 @@ const UltraFuturisticBackground2036: React.FC = () => {
       }
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Initialize and start animation
-    initParticles(canvas, ctx);
-    animate(canvas, ctx);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -252,63 +276,42 @@ const UltraFuturisticBackground2036: React.FC = () => {
   }, [initParticles, animate]);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0">
       <canvas
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: 'transparent'
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.02) 100%)'
         }}
       />
       
-      {/* Additional visual elements */}
+      {/* Enhanced overlay effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-black/5" />
+      
+      {/* Quantum field lines */}
       <div className="absolute inset-0">
-        {/* Gradient overlays */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5" />
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-purple-500/3 via-transparent to-pink-500/3" />
-        
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 right-20 w-32 h-32 border border-cyan-400/10 rounded-full"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.05, 0.15, 0.05]
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-20 left-20 w-24 h-24 border border-blue-400/10 transform rotate-45"
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1],
-            opacity: [0.05, 0.12, 0.05]
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-16 h-16 border border-purple-400/8 rounded-lg"
-          animate={{
-            rotate: [0, 180, 360],
-            scale: [1, 1.15, 1],
-            opacity: [0.03, 0.1, 0.03]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
+        <svg className="w-full h-full" style={{ opacity: 0.1 }}>
+          <defs>
+            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.5" />
+              <stop offset="50%" stopColor="#ff00ff" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#ffff00" stopOpacity="0.5" />
+            </linearGradient>
+          </defs>
+          {Array.from({ length: 20 }).map((_, i) => (
+            <line
+              key={i}
+              x1={Math.random() * 100}
+              y1={Math.random() * 100}
+              x2={Math.random() * 100}
+              y2={Math.random() * 100}
+              stroke="url(#quantumGradient)"
+              strokeWidth="0.5"
+              opacity="0.3"
+            />
+          ))}
+        </svg>
       </div>
       
       {children}
