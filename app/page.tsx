@@ -231,6 +231,120 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Enterprise AI Implementation Success Banner */}
+        <section className="py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🏢 ENTERPRISE AI SUCCESS</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                💰 Fortune 500 AI Success: $200M Manufacturing Savings!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Learn how Fortune 500 companies are achieving unprecedented success with AI implementation. 
+                Real case studies, proven frameworks, and actionable strategies that deliver measurable ROI.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-enterprise-implementation-success"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Success Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  View $200M Case Study
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Download Master Guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Startup Funding Banner */}
+        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">💰 STARTUP FUNDING</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 AI Startup Funding Playbook 2025: Raise $2B+ Capital!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Master the art of raising capital for AI startups in 2025. Proven strategies, pitch deck templates, 
+                and investor insights from successful AI companies that raised over $2B in funding.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-startup-funding-playbook"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Funding Guide
+                </Link>
+                <Link
+                  href="/resources/ai-startup-funding-toolkit-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Download Toolkit
+                </Link>
+                <Link
+                  href="/tools/startup-funding-assessment"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Free Assessment
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Security & Compliance Banner */}
+        <section className="py-6 bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛡️ AI SECURITY & COMPLIANCE</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🔒 AI Cybersecurity Checklist 2025: 150+ Security Items!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Protect your AI systems with our comprehensive cybersecurity checklist. Essential security measures, 
+                compliance guidelines, and best practices to safeguard your AI infrastructure from threats.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/resources/ai-cybersecurity-checklist-2025"
+                  className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Download Security Checklist
+                </Link>
+                <Link
+                  href="/tools/ai-security-assessment"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                >
+                  Free Security Assessment
+                </Link>
+                <Link
+                  href="/blog/ai-security-hardening-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                >
+                  Read Security Guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
