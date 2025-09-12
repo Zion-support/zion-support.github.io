@@ -34,114 +34,26 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '90',
-      title: 'Agentic Finance Automation 2025: From Close to Forecasting',
-      description: 'Automate reconciliations, variance analysis, and forecasting with policy-aware, traceable agents.',
-      href: '/blog/ai-2025-agentic-finance-automation',
+      id: '54',
+      title: 'Knowledge Graph RAG in 2025: Hybrid Retrieval in Production',
+      description: 'Fuse vector search with knowledge graphs for factual, controllable, and policy-aware RAG.',
+      href: '/blog/ai-2025-knowledge-graph-rag',
       type: 'blog',
       featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'Finance'
-    },
-    {
-      id: '91',
-      title: 'End-to-End Guardrails Architecture 2025',
-      description: 'Defense-in-depth guardrails: policy-as-code, online evals, and incident response.',
-      href: '/blog/ai-2025-e2e-guardrails-architecture',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '92',
-      title: 'Evaluations Pipelines Blueprint 2025',
-      description: 'Offline and online eval pipelines with automated gates for safe AI shipping.',
-      href: '/blog/ai-2025-evals-pipelines-blueprint',
-      type: 'blog',
-      featured: true,
-      readTime: '19 min read',
-      date: 'Sep 12, 2025',
-      category: 'Evaluation'
-    },
-    {
-      id: '56',
-      title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
-      description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
-      href: '/blog/ai-2025-enterprise-retrieval-playbook',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
+      readTime: '20 min read',
       date: 'Sep 12, 2025',
       category: 'RAG'
-    },
-    {
-      id: '70',
-      title: 'Production Prompt Engineering 2025: Patterns that Scale',
-      description: 'Schema-first prompts, tool calling, retrieval orchestration, evals, and guardrails for reliability.',
-      href: '/blog/ai-2025-production-prompt-engineering',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Advanced AI'
-    },
-    {
-      id: '71',
-      title: 'AI Governance 2025: Operational Playbook for Enterprises',
-      description: 'Practical operating model: policies, evaluations, review boards, and runtime enforcement.',
-      href: '/blog/ai-2025-ai-governance-operational-playbook',
-      type: 'blog',
-      featured: true,
-      readTime: '18 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '54',
-      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
-      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
-      href: '/blog/ai-2025-mlops-best-practices',
-      type: 'blog',
-      featured: true,
-      readTime: '14 min read',
-      date: 'Sep 12, 2025',
-      category: 'MLOps'
     },
     {
       id: '55',
-      title: 'Vector Databases Benchmarks 2025',
-      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
-      href: '/blog/ai-2025-vector-databases-benchmarks',
+      title: 'E2E Testing for AI Agents in 2025: Reliability at Scale',
+      description: 'Design robust agent test suites, reduce flakiness, and integrate evaluations into CI.',
+      href: '/blog/ai-2025-e2e-agent-testing',
       type: 'blog',
       featured: true,
-      readTime: '16 min read',
+      readTime: '18 min read',
       date: 'Sep 12, 2025',
-      category: 'RAG'
-    },
-    {
-      id: '56',
-      title: 'Secure Agent Architectures (2025)',
-      description: 'Blueprint for secure enterprise agent architectures with policy-as-code, guardrails, and SLAs.',
-      href: '/blog/ai-2025-secure-agent-architectures',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'AI Security'
-    },
-    {
-      id: '57',
-      title: 'AI Customer Analytics: 19% Revenue Uplift',
-      description: 'Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.',
-      href: '/case-studies/ai-2025-customer-analytics-impact',
-      type: 'case-study',
-      featured: true,
-      readTime: '12 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
+      category: 'Evaluation'
     },
     {
       id: '50',
@@ -186,28 +98,6 @@ const NewContentPromoBanner = ({
       readTime: '14 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
-    },
-    {
-      id: '54',
-      title: 'Cloud Cost Optimization for AI & Data Workloads (2025)',
-      description: 'Cut inference, training, and data costs with right-sizing, autoscaling, routing, and caching.',
-      href: '/blog/ai-2025-cloud-cost-optimization',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Optimization'
-    },
-    {
-      id: '55',
-      title: 'Agent Safety Red-Teaming (2025): Methods & Tooling',
-      description: 'Attack libraries, automated harnesses, and policy guardrails for resilient agent systems.',
-      href: '/blog/ai-2025-agent-safety-red-teaming',
-      type: 'blog',
-      featured: true,
-      readTime: '21 min read',
-      date: 'Sep 12, 2025',
-      category: 'AI Safety'
     },
     {
       id: '40',
