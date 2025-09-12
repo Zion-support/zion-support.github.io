@@ -32,6 +32,17 @@ const ContentPromotionBanner: React.FC = () => {
       views: '3.1K views'
     },
     {
+      id: 'ai-gtm-2025',
+      title: 'AI Go-To-Market Strategy 2025: From Zero to Traction',
+      description: 'Positioning, pricing, and distribution playbook to launch and scale AI products in 2025.',
+      type: 'blog',
+      url: '/blog/ai-2025-ai-go-to-market-strategy',
+      featured: true,
+      publishDate: 'September 12, 2025',
+      readTime: '12 min read',
+      views: '1.1K views'
+    },
+    {
       id: 'healthcare-diagnosis',
       title: 'AI Healthcare Diagnosis Revolution 2025: Saving Lives with Precision Medicine',
       description: 'Discover how AI is revolutionizing healthcare diagnosis with early disease detection and personalized treatment plans.',

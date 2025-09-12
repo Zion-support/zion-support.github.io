@@ -318,6 +318,18 @@ export const latestContent = [
     badge: "NEW",
     badgeColor: "bg-orange-100 text-orange-800",
     metrics: "90% Latency Reduction"
+  },
+  {
+    title: "AI Go-To-Market Strategy 2025: From Zero to Traction",
+    description: "Positioning, pricing, and distribution playbook to launch and scale AI products.",
+    href: "/blog/ai-2025-ai-go-to-market-strategy",
+    icon: "📈",
+    readTime: "12 min read",
+    category: "Growth & Marketing",
+    isNew: true,
+    badge: "NEW",
+    badgeColor: "bg-blue-100 text-blue-800",
+    metrics: "Faster time-to-first-value"
   }
 ];
 
