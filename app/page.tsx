@@ -68,6 +68,8 @@ import NewContent2028PromotionBanner from '../components/NewContent2028Promotion
 import NewContent2028Showcase from '../components/NewContent2028Showcase';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
+import AI2029ContentShowcase from '../components/AI2029ContentShowcase';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 
 // Lazy load heavy components
@@ -96,6 +98,12 @@ export default function HomePage() {
         
         {/* AI 2027 CONTENT SHOWCASE */}
         <AI2027ContentShowcase />
+        
+        {/* AI 2029 CONTENT PROMOTION BANNER */}
+        <AI2029ContentPromotionBanner />
+        
+        {/* AI 2029 CONTENT SHOWCASE */}
+        <AI2029ContentShowcase />
         
         {/* NEW CONTENT 2027 PROMOTION BANNER */}
         <NewContent2027PromotionBanner />
