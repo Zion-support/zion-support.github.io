@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'Operations Excellence Impact: 41% MTTR Reduction | Case Study',

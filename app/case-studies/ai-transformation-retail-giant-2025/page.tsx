@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Retail AI Transformation: 300% Revenue Growth Case Study',

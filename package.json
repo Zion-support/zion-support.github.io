@@ -3,13 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build:analyze": "npm run build && npx vite-bundle-analyzer dist",
+    "build:optimize": "npm run build -- --mode production",
+    "dev:fast": "vite --host --port 3000",
+    "preview:fast": "vite preview --port 4173",
+    "lint:fix": "eslint src --fix --max-warnings 0",
+    "type-check": "tsc --noEmit",
+    "audit:fix": "npm audit fix --force"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

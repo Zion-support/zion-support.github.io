@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Zap, Target, Users, TrendingUp, Clock, Shield, Brain, Settings, BarChart3, Play } from 'lucide-react';
 
 export const metadata: Metadata = {

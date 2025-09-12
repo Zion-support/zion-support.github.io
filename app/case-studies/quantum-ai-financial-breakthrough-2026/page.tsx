@@ -1,10 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'Quantum AI Financial Breakthrough 2026 - Case Study',
   description: 'How a Fortune 500 financial institution achieved 1000x performance improvement using quantum-enhanced AI for risk modeling, fraud detection, and algorithmic trading.',
   keywords: 'quantum AI case study, financial AI breakthrough, quantum computing finance, AI risk modeling, algorithmic trading AI, quantum machine learning',
@@ -15,7 +14,6 @@ export const metadata = {
   },
 };
 
-=======
   title: 'Quantum AI Financial Breakthrough 2026 - Case Study | Zion Tech Group',
   description: 'Discover how a Fortune 500 financial services company achieved 1000x performance improvement using quantum AI for portfolio optimization and risk management.',
   keywords: 'quantum AI, financial services, portfolio optimization, risk management, quantum computing, AI case study, financial AI breakthrough',
@@ -193,7 +191,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
     <ErrorBoundary>
       <SEO
         title="Quantum AI Financial Breakthrough 2026 - Case Study"
-<<<<<<< HEAD
         description="How a Fortune 500 financial institution achieved 1000x performance improvement using quantum-enhanced AI for risk modeling, fraud detection, and algorithmic trading."
         keywords="quantum AI case study, financial AI breakthrough, quantum computing finance, AI risk modeling, algorithmic trading AI"
         url="/case-studies/quantum-ai-financial-breakthrough-2026"
@@ -274,7 +271,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-=======
         description="Discover how a Fortune 500 financial services company achieved 1000x performance improvement using quantum AI for portfolio optimization and risk management."
         keywords="quantum AI, financial services, portfolio optimization, risk management, quantum computing, AI case study, financial AI breakthrough"
         url="/case-studies/quantum-ai-financial-breakthrough-2026"
@@ -325,7 +321,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
         </section>
 
         {/* Challenge Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-gray-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -378,7 +373,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
                   <li>• Market volatility challenges</li>
                   <li>• Competitive disadvantage</li>
                 </ul>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-red-50 border-l-4 border-red-400 p-8 rounded-lg">
@@ -422,7 +416,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
         </section>
 
         {/* Solution Section */}
-<<<<<<< HEAD
         <section id="implementation" className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -521,7 +514,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
                   </div>
                 </div>
               </div>
-=======
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -555,7 +547,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
         </section>
 
         {/* Results Section */}
-<<<<<<< HEAD
         <section id="results" className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-gray-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -616,7 +607,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
                     <li>• 200% ROI within first year</li>
                   </ul>
                 </div>
-=======
         <section id="results" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -668,7 +658,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Technology Stack */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -711,7 +700,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
                   <li>• Real-time data processing</li>
                 </ul>
               </div>
-=======
         {/* Implementation Journey */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -788,7 +776,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -801,7 +788,6 @@ export default function QuantumAIFinancialBreakthrough2026() {
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all text-lg shadow-lg"
-=======
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -822,11 +808,10 @@ export default function QuantumAIFinancialBreakthrough2026() {
               </Link>
               <Link
                 href="/resources/ai-2026-implementation-toolkit"
-<<<<<<< HEAD
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all text-lg"
-=======
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
 >>>>>>> origin/cursor/create-and-deploy-new-content-3af0
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all text-lg"
               >
                 Download Implementation Toolkit
               </Link>

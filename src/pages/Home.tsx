@@ -7,8 +7,8 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { NewContentBanner } from "@/components/NewContentBanner";
-import NewsletterSignup from "@/components/NewsletterSignup";
-import EnhancedPromoBanner from "@/components/EnhancedPromoBanner";
+import { NewContentShowcaseBanner } from "@/components/NewContentShowcaseBanner";
+import { LatestContentPromo } from "@/components/LatestContentPromo";
 
 export default function Home() {
   return (
@@ -19,21 +19,15 @@ export default function Home() {
         keywords="AI, technology, marketplace, services, talent, IT support, global services, tech professionals" 
         canonical="https://ziontechgroup.com/" 
       />
-      <EnhancedPromoBanner />
+      <NewContentBanner />
+      <NewContentShowcaseBanner />
+      <LatestContentPromo />
       <ITServiceRequestHero />
       <HeroSection />
       <EnhancedQuickAccess />
       <FeatureCTAs />
       <FeatureHighlights />
       <TestimonialsSection />
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NewsletterSignup 
-            title="Stay Ahead with AI Innovation"
-            description="Get weekly insights on the latest AI trends, enterprise implementations, and technical breakthroughs."
-          />
-        </div>
-      </section>
     </div>
   );
 }

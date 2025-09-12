@@ -4,7 +4,7 @@ import {
   Brain, Atom, Rocket, Shield, CheckCircle, ArrowRight, Star, 
   Users, Award, Clock, Globe, Zap, Target, BarChart3, Cpu 
 } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Consulting 2025 - Transform Your Business with Revolutionary AI',

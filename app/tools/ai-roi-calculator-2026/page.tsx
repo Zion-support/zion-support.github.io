@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function AIROICalculator2026() {
   const [inputs, setInputs] = useState({
@@ -99,7 +99,6 @@ export default function AIROICalculator2026() {
       />
       
       <div className="mb-8">
-<<<<<<< HEAD
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             AI 2026 ROI Calculator
@@ -133,7 +132,6 @@ export default function AIROICalculator2026() {
               <p className="text-gray-600 text-sm">
                 Includes latest AI breakthroughs like quantum AI and neural interfaces
               </p>
-=======
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           AI ROI Calculator 2026
         </h1>
@@ -344,7 +342,6 @@ export default function AIROICalculator2026() {
                     className="bg-purple-500 h-2 rounded-full" 
                     style={{ width: '15%' }}
                   ></div>
-=======
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
@@ -697,7 +694,6 @@ export default function AIROICalculator2026() {
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
               <h4 className="font-semibold text-yellow-800 mb-2">💡 Key Insights</h4>
               <ul className="text-sm text-yellow-700 space-y-1">
@@ -707,7 +703,6 @@ export default function AIROICalculator2026() {
                 <li>• Conservative estimates for reliability</li>
               </ul>
 >>>>>>> cursor/create-and-deploy-new-content-6fd2
-=======
             {/* Results */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">ROI Projection</h2>
@@ -834,9 +829,7 @@ export default function AIROICalculator2026() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       <AI2026ROICalculator />
 
       <div className="mt-12 grid md:grid-cols-2 gap-8">
@@ -937,7 +930,6 @@ export default function AIROICalculator2026() {
             <h4 className="text-lg font-semibold text-purple-800 mb-2">Healthcare System</h4>
             <div className="text-3xl font-bold text-purple-600 mb-2">350% ROI</div>
             <p className="text-purple-700 text-sm">$850M in savings over 12 months</p>
-=======
       {/* Additional Information */}
       <div className="mt-12 bg-gray-50 border border-gray-200 rounded-lg p-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">How This Calculator Works</h2>
@@ -968,7 +960,6 @@ export default function AIROICalculator2026() {
         </div>
       </div>
 
-<<<<<<< HEAD
       <div className="mt-12 border-t border-gray-200 pt-8">
         <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Tools & Resources</h3>
         <div className="grid md:grid-cols-2 gap-4">
@@ -986,7 +977,6 @@ export default function AIROICalculator2026() {
             <h4 className="font-semibold text-gray-900 mb-2">AI Implementation Toolkit</h4>
             <p className="text-gray-600 text-sm">Complete guide to implementing AI 2026 technologies</p>
           </Link>
-=======
       <div className="mt-8 text-center">
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Ready to Start Your AI Transformation?</h3>
@@ -1002,7 +992,6 @@ export default function AIROICalculator2026() {
         </div>
       </div>
     </div>
-=======
     </ErrorBoundary>
 >>>>>>> origin/cursor/create-and-deploy-new-content-3af0
   );

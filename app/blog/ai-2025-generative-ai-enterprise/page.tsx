@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'Generative AI in Enterprise 2025: Strategic Implementation Guide | Zion Tech Group',

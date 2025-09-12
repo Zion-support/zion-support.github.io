@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Insurance Claims Automation 2025: 55% OPEX Reduction with AI Agents',

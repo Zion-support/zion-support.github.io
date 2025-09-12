@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, Leaf, TrendingDown, Zap, Award } from 'lucide-react';
 
 export default function AISustainabilityTransformation2025() {
