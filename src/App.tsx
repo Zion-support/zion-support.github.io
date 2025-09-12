@@ -1,71 +1,42 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes
-} from './routes';
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { Footer } from './components/Footer';
+
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const About = React.lazy(() => import('./pages/AboutPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
 const App = () => {
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/match" element={<AIMatcherPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/talent" element={<TalentDirectory />} />
-          <Route path="/talents" element={<TalentsPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/equipment" element={<EquipmentPage />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-          <Route path="/community" element={<CommunityPage />} />
-          <Route path="/auth/*" element={<AuthRoutes />} />
-          <Route path="/dashboard/*" element={<DashboardRoutes />} />
-          <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-          <Route path="/talent/*" element={<TalentRoutes />} />
-          <Route path="/admin/*" element={<AdminRoutes />} />
-          <Route path="/mobile/*" element={<MobileAppRoutes />} />
-          <Route path="/content/*" element={<ContentRoutes />} />
-          <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-          <Route path="/community/*" element={<CommunityRoutes />} />
-          <Route path="/developers/*" element={<DeveloperRoutes />} />
-          <Route path="*" element={<ErrorRoutes />} />
-        </Routes>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-      </ThemeProvider>
-    </WhitelabelProvider>
+    <Router>
+      <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        <Header />
+        <Sidebar />
+        
+        {/* Main Content with proper spacing for header and sidebar */}
+        <main className="ml-64 pt-20 min-h-screen">
+          <React.Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-cyan-400 text-lg">Loading...</p>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </React.Suspense>
+        </main>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

@@ -11,7 +11,9 @@
     "yes": "Sí",
     "no": "No",
     "success": "Éxito",
-    "error": "Error"
+    "error": "Error",
+    "open_main_menu": "Abrir menú principal",
+    "toggle_mobile_menu": "Alternar menú móvil"
   },
   "nav": {
     "home": "Inicio",
@@ -19,9 +21,11 @@
     "categories": "Categorías",
     "talent": "Talento",
     "equipment": "Equipamiento",
+    "community": "Comunidad",
     "dashboard": "Panel",
     "messages": "Mensajes",
-    "post_job": "Publicar Trabajo"
+    "post_job": "Publicar Trabajo",
+    "analytics": "Analíticas"
   },
   "auth": {
     "login": "Iniciar Sesión",
@@ -59,5 +63,9 @@
     "ar": "العربية",
     "language_changed": "Idioma cambiado a {{language}}",
     "switch_to_detected": "¿Cambiar a {{language}}?"
+  },
+  "error_boundary": {
+    "message": "Algo salió mal.",
+    "retry": "Reintentar"
   }
 }

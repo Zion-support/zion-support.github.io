@@ -1,31 +1,114 @@
 import { createClient } from '@supabase/supabase-js';
+import api from '@/lib/api';
 
-export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Get actual environment variables
+const envSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const envSupabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
+// Fallback credentials
+const fallbackSupabaseUrl = 'https://gnwtggeptzkqnduuthto.supabase.co';
+const fallbackSupabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdud3RnZ2VwdHprcW5kdXV0aHRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0MTQyMjcsImV4cCI6MjA2MDk5MDIyN30.mIyYJWh3S1FLCmjwoJ7FNHz0XLRiUHBd3r9we-E4DIY';
+
+// Determine if user-provided credentials are valid
+const userProvidedUrlIsValid = !!(envSupabaseUrl && envSupabaseUrl.includes('supabase.co') && !envSupabaseUrl.includes('your-project'));
+const userProvidedKeyIsValid = !!(envSupabaseAnonKey && envSupabaseAnonKey.startsWith('eyJ') && !envSupabaseAnonKey.includes('your-anon-key'));
+
+export const isUsingUserProvidedSupabaseCredentials = userProvidedUrlIsValid && userProvidedKeyIsValid;
+
+// Determine the credentials to be used (either user-provided or fallback)
+const activeSupabaseUrl = isUsingUserProvidedSupabaseCredentials ? envSupabaseUrl : fallbackSupabaseUrl;
+const activeSupabaseAnonKey = isUsingUserProvidedSupabaseCredentials ? envSupabaseAnonKey : fallbackSupabaseAnonKey;
+
+// Check if the actual client instance from '@/utils/supabase/client' was successfully initialized.
+// A successfully initialized client should not be null and should have an 'auth' property.
+const clientInstanceSuccessfullyInitialized = !!(actualSupabaseClientFromUtils && typeof actualSupabaseClientFromUtils.auth !== 'undefined');
+
+// isSupabaseConfigured now checks:
+// 1. If the active credentials (user-provided or fallback) *appear* to be valid.
+// 2. If the Supabase client instance itself was *actually* initialized successfully.
+export const isSupabaseConfigured = !!(
+  activeSupabaseUrl &&
+  activeSupabaseAnonKey &&
+  activeSupabaseUrl.includes('supabase.co') && // Basic check on URL format
+  activeSupabaseAnonKey.startsWith('eyJ') &&   // Basic check on key format
+  clientInstanceSuccessfullyInitialized        // Crucial check on actual client instantiation
+);
+
+// Only log in development and when debug is enabled
+if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === 'true') {
+  logDebug('Supabase integration details (src/integrations/supabase/client.ts):', { data: {
+    activeUrlUsed: `${(activeSupabaseUrl ?? '').substring(0, 30)}...`,
+    isSupabaseConfiguredFinal: isSupabaseConfigured,
+    credentialsAppearValid: !!(activeSupabaseUrl && activeSupabaseAnonKey && activeSupabaseUrl.includes('supabase.co') && activeSupabaseAnonKey.startsWith('eyJ')),
+    clientInstanceInitialized: clientInstanceSuccessfullyInitialized,
+    isUsingUserProvided: isUsingUserProvidedSupabaseCredentials,
+    envUrlActuallyProvided: !!envSupabaseUrl,
+    envKeyActuallyProvided: !!envSupabaseAnonKey,
+    actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'
+  }});
 }
 
-// Custom fetch wrapper to provide clearer errors when network requests fail
-const safeFetch: typeof fetch = async (input, init) => {
-  // If running in the browser, check if the user is offline first
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    throw new Error('No internet connection');
-  }
 
-  try {
-    return await fetch(input, init);
-  } catch (err) {
-    // Log the original error for debugging
-    console.error('Supabase fetch failed:', err);
+// Enhanced helper function to check online status
+async function checkOnline(): Promise<boolean> {
+  if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
+    return navigator.onLine;
+  }
+  // Assume online if navigator.onLine is not available (e.g., in Node.js environment for tests)
+  return true;
+}
+
+// Optimized safeFetch for development mode with better error handling
+export async function safeFetch(url: string, options: RequestInit = {}) {
+  if (!(await checkOnline())) {
     throw new Error('Failed to connect to Supabase');
   }
-};
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  global: { fetch: safeFetch }
-});
+  const headers =
+    options.headers instanceof Headers
+      ? options.headers
+      : new Headers(options.headers);
 
-// Helper function to get profiles table
-export const getFromProfiles = () => supabase.from('profiles');
+  if (!headers.has('apikey')) {
+    headers.set('apikey', supabaseAnonKey);
+  }
+
+  const maxRetries = 3;
+  let lastError: any;
+
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await api({
+        url,
+        method: options.method as any,
+        data: (options as any).body,
+        headers: Object.fromEntries(headers.entries()),
+      });
+
+      if (response.status < 200 || response.status >= 300) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return response;
+    } catch (error) {
+      lastError = error;
+      // Wait before retrying (exponential backoff)
+      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+    }
+    
+    // Use real fetch for other cases
+    return fetch(url, options);
+  } catch (error) {
+    logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error });
+    return {
+      ok: false,
+      status: 500, // Or a more appropriate error code like 0 for network error
+      json: async () => ({ error: 'Fetch failed due to network or other issue' }),
+      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' }),
+    } as Response;
+  }
+}
+
+  captureException(lastError);
+  throw new Error('Failed to connect to Supabase');
+}

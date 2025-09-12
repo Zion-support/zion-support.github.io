@@ -1,16 +1,21 @@
-
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { AlertCircle } from "lucide-react";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react';
+
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {logErrorToProduction} from '@/utils/productionLogger';
 
 export function SignUpForm() {
-  const navigate = useNavigate();
-  const { signup, login, loginWithGoogle } = useAuth();
+
+  const router = useRouter();
+  const { signUp, login, loginWithGoogle } = useAuth();
   
   const [formData, setFormData] = useState({
     email: "",
@@ -20,40 +25,94 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string; password?: string; name?: string }>({});
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("");
+    setFieldErrors(prev => ({ ...prev, [name]: "" }));
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setFieldErrors({});
     setIsLoading(true);
+
+    const errors: { email?: string; password?: string; name?: string } = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required';
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Invalid email address';
+    }
+
+    if (!formData.password) {
+      errors.password = 'Password is required';
+    } else if (!strongPasswordRegex.test(formData.password)) {
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setIsLoading(false);
+      return;
+    }
     
     try {
+      setShowVerificationMessage(false); // Reset verification message
       if (signupMode) {
-        const { error } = await signup(formData.email, formData.password, {
+        const result = await signUp(formData.email, formData.password, {
           name: formData.name,
         });
-        
-        if (error) {
-          throw new Error(error);
+
+        if (result?.error) {
+          let errorMsg: string;
+          if (typeof result.error === 'string') {
+            errorMsg = result.error;
+          } else if (typeof result.error === 'object' && result.error !== null && 'message' in result.error && typeof (result.error as { message?: unknown }).message === 'string') {
+            errorMsg = (result.error as { message: string }).message;
+          } else {
+            errorMsg = 'Signup failed. Please try again.';
+          }
+          throw new Error(errorMsg);
         }
-        
-        navigate("/mobile");
+
+        if (result?.emailVerificationRequired) {
+          setShowVerificationMessage(true);
+        } else {
+          // Only navigate if email verification is not required
+          router.push("/mobile");
+        }
       } else {
         const { error } = await login(formData.email, formData.password);
         
         if (error) {
-          throw new Error(error);
+          let errorMsg: string;
+          if (typeof error === 'string') {
+            errorMsg = error;
+          } else if (typeof error === 'object' && error !== null && 'message' in error && typeof (error as { message?: unknown }).message === 'string') {
+            errorMsg = (error as { message: string }).message;
+          } else {
+            errorMsg = 'Login failed. Please try again.';
+          }
+          throw new Error(errorMsg);
         }
         
-        navigate("/mobile");
+        router.push("/mobile");
       }
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      logErrorToProduction('Signup/Login error:', { data: err });
+      const message = err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.';
+      setError(message);
     } finally {
       setIsLoading(false);
     }
@@ -62,8 +121,9 @@ export function SignUpForm() {
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle();
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Google login failed';
+      setError(message);
     }
   };
   
@@ -105,10 +165,21 @@ export function SignUpForm() {
         <div className="flex-grow border-t border-border"></div>
       </div>
       
+      {/* Error Alert */}
       {error && (
-        <Alert variant="destructive">
+        <Alert variant="destructive" className="mb-4">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
+
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb-4 border-blue-500 bg-blue-50">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>
+            Please check your email and click the verification link before signing in.
+          </AlertDescription>
         </Alert>
       )}
       
@@ -122,11 +193,15 @@ export function SignUpForm() {
               value={formData.name}
               onChange={handleInputChange}
               required
+              aria-invalid={!!fieldErrors.name}
               placeholder="Enter your full name"
             />
+            {fieldErrors.name && (
+              <p className="text-red-500 text-sm">{fieldErrors.name}</p>
+            )}
           </div>
         )}
-        
+
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
           <Input
@@ -136,10 +211,14 @@ export function SignUpForm() {
             value={formData.email}
             onChange={handleInputChange}
             required
+            aria-invalid={!!fieldErrors.email}
             placeholder="Enter your email"
           />
+          {fieldErrors.email && (
+            <p className="text-red-500 text-sm">{fieldErrors.email}</p>
+          )}
         </div>
-        
+
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <Input
@@ -149,21 +228,28 @@ export function SignUpForm() {
             value={formData.password}
             onChange={handleInputChange}
             required
+            aria-invalid={!!fieldErrors.password}
             placeholder="Create a password"
           />
+          <PasswordStrengthMeter password={formData.password} />
+          {fieldErrors.password && (
+            <p className="text-red-500 text-sm">{fieldErrors.password}</p>
+          )}
         </div>
         
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           className="w-full py-6"
           disabled={isLoading}
         >
-          {isLoading 
-            ? "Please wait..." 
-            : signupMode 
-              ? "Create Account" 
-              : "Sign In"
-          }
+          {isLoading ? (
+            <>
+              <LoadingSpinner size="sm" className="mr-2" />
+              Please wait...
+            </>
+          ) : (
+            signupMode ? "Create Account" : "Sign In"
+          )}
         </Button>
       </form>
       
@@ -172,13 +258,13 @@ export function SignUpForm() {
           ? "Already have an account? "
           : "Don't have an account? "
         }
-        <Button
-          variant="link"
-          className="p-0 h-auto"
-          onClick={() => setSignupMode(!signupMode)}
+        {/* Link directly to the login page instead of toggling form state */}
+        <Link
+          to="/login"
+          className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer"
         >
-          {signupMode ? "Sign In" : "Sign Up"}
-        </Button>
+          Sign In
+        </Link>
       </p>
     </div>
   );

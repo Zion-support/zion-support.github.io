@@ -1,0 +1,393 @@
+# Netlify build configuration (unified)
+[build]
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+  command_timeout = "30m"
+
+[build.environment]
+<<<<<<< HEAD
+  NODE_OPTIONS = "--no-deprecation --max-old-space-size=6144 --no-warnings"
+  NPM_FLAGS = "--prefer-offline --legacy-peer-deps"
+  NEXT_PUBLIC_APP_ENV = "production"
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+  CI = "true"
+  SKIP_TYPE_CHECK = "true"
+  
+  # Performance optimizations for large builds (with Netlify plugin)
+  NEXT_DISABLE_CSS_INLINE = "true"
+  NEXT_DISABLE_SOURCE_MAPS = "true"
+  GENERATE_SOURCEMAP = "false"
+  NEXT_BUILD_WORKERS = "1"
+  NEXT_PRIVATE_BUILD_CACHE = "false"
+  NEXT_PRIVATE_STATIC_OPTIMIZATION = "false"
+  
+  # CRITICAL FIX: Completely disable build trace collection to prevent hanging
+  NEXT_DISABLE_TRACE_COLLECTION = "true"
+  NEXT_PRIVATE_OUTPUT_TRACE = "false"
+  # NEXT_PRIVATE_OUTPUT_FILE_TRACING = "false" # Allowing Next.js default / plugin to manage this
+  UV_THREADPOOL_SIZE = "4"
+  NODE_NO_WARNINGS = "1"
+  NEXT_PRIVATE_MINIMIZE_BUILD_TIME = "true"
+  
+  # Configure secrets scanning to omit legitimate public environment variables
+  # NEXT_PUBLIC_* variables are meant to be public and embedded in client bundles
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,SENTRY_DSN"
+  
+=======
+  NODE_VERSION = "20"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # When triggering chained builds via build hook, set NETLIFY_RERUN_CHAIN=1 in the hook payload/env
+>>>>>>> origin/backup-main-20250823-225952
+
+# Skip Husky for CI builds
+[build.processing]
+  skip_processing = false
+
+<<<<<<< HEAD
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Deploy contexts for different environments
+
+# Headers for security and performance
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[functions.healthCheckCron]
+    schedule = "*/5 * * * *"
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+=======
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+[[plugins]]
+  package = "./netlify/plugins/run-functions-and-rerun"
+  [plugins.inputs]
+    # Optional: comma-separated includes/excludes
+    include = ""
+    exclude = ""
+    concurrency = 6
+    timeoutMs = 180000
+
+# Scheduled Functions (new automations replacing some GitHub Actions cadence)
+[[scheduled.functions]]
+  name = "homepage_advertiser"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "cloud_orchestrator"
+  schedule = "0 */4 * * *" # every 4 hours
+
+[[scheduled.functions]]
+  name = "front-enhancer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "front-index-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "frontpage-enhancer"
+  schedule = "*/20 * * * *" # every 20 minutes
+
+[[scheduled.functions]]
+  name = "marketing-and-features-promo"
+  schedule = "0 */2 * * *" # every 2 hours
+
+[[scheduled.functions]]
+  name = "link-and-health-scheduler"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "sitemap_runner"
+  schedule = "0 */12 * * *" # twice per day
+
+[[scheduled.functions]]
+  name = "fast-front-promoter"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "fast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "continuous-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "front-visionary-expander"
+  schedule = "*/3 * * * *" # fast refresh for front systems
+
+[[scheduled.functions]]
+  name = "home-visionary-expander"
+  schedule = "*/4 * * * *" # fast refresh for homepage
+
+[[scheduled.functions]]
+  name = "ultrafast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "trigger-all-and-commit"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "front-maximizer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "continuous-front-runner"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "readme-advertiser"
+  schedule = "13 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "front-ads-promoter"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "ultrafast-front-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "autonomous-meta-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+# New ultra-fast tools
+[[scheduled.functions]]
+  name = "features-capabilities-benefits-advertiser"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "hyper-front-index-accelerator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "dead-code-report"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "security-audit-runner"
+  schedule = "19 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-index-runner"
+  schedule = "11 */4 * * *"
+
+[[scheduled.functions]]
+  name = "repo-knowledge-graph-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "image-optimizer-runner"
+  schedule = "29 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ai-changelog-runner"
+  schedule = "41 */6 * * *"
+
+[[scheduled.functions]]
+  name = "newsroom-runner"
+  schedule = "37 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-scanner-runner"
+  schedule = "13 */6 * * *"
+
+[[scheduled.functions]]
+  name = "broken-image-scanner-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "external-link-check-runner"
+  schedule = "31 */6 * * *"
+
+[[scheduled.functions]]
+  name = "repo-radar-runner"
+  schedule = "43 */6 * * *"
+
+[[scheduled.functions]]
+  name = "og-image-update-runner"
+  schedule = "47 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-search-index-runner"
+  schedule = "53 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-summary-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "netlify-auto-healer-runner"
+  schedule = "*/20 * * * *"
+
+# New intelligent cloud automations
+[[scheduled.functions]]
+  name = "innovation-lab"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "broken-image-scanner"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "a11y-alt-text-runner"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "metadata-optimizer-runner"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "0 */2 * * *"
+
+[[scheduled.functions]]
+  name = "ai-trends-radar-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "stale-content-auditor-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "deps-auto-upgrade-runner"
+  schedule = "7 */12 * * *"
+
+# New autonomous cloud scanners
+[[scheduled.functions]]
+  name = "unused-media-scanner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "orphan-pages-detector"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "component-size-report"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "license-compliance-auditor"
+  schedule = "0 2 * * 1"
+
+[[scheduled.functions]]
+  name = "pagespeed-insights-runner"
+  schedule = "11 */6 * * *" # every 6 hours, offset
+
+[[scheduled.functions]]
+  name = "knowledge-pack-runner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "adaptive-orchestrator"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "site-404-map-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "component-coupling-graph-runner"
+  schedule = "29 */6 * * *"
+
+[[scheduled.functions]]
+  name = "content-freshness-score-runner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "internal-link-graph-runner"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "anchor-links-auto-fixer"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "pagespeed-insights-runner"
+  schedule = "11 */6 * * *"
+
+# New autonomous orchestrations
+[[scheduled.functions]]
+  name = "roadmap-curator"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "revenue-ideas-lab"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "auto-discovery-runner"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "code-smell-audit-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "duplicate-media-finder-runner"
+  schedule = "0 2 * * *"
+
+# Newly added intelligent meta orchestrator
+[[scheduled.functions]]
+  name = "intelligent-meta-orchestrator"
+  schedule = "*/3 * * * *"
+>>>>>>> origin/backup-main-20250823-225952
