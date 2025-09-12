@@ -3245,7 +3245,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* AI 2026 Quantum-Neural Fusion Promotion Banner */}
+      <AI2026QuantumNeuralPromotionBanner />
+
+      {/* AI 2026 Quantum-Neural Content Showcase */}
+      <AI2026QuantumNeuralContentShowcase />
+
+      {/* AI 2027 Future Predictions Promotion Banner */}
+      <AI2027FuturePredictionsPromotionBanner />
+
       {/* Interactive Content Discovery Widget */}
+      <InteractiveContentDiscoveryWidget2026 />
       <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
