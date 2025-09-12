@@ -25,6 +25,8 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
 
 export default function FAQ() {
   const faqData = [
