@@ -18,6 +18,36 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Agent Cost Optimization 2025",
+    description: "Model routing, caching, batching, and evals to cut spend 35–55%",
+    url: "/blog/ai-2025-agent-cost-optimization",
+    type: "Blog Post",
+    category: "Cost Optimization",
+    icon: "💸",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance Underwriting Agents",
+    description: "42% cycle time reduction with agentic workflows and guardrails",
+    url: "/case-studies/ai-2025-insurance-underwriting-agents",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "🛡️",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Customer Journey Orchestration 2025",
+    description: "Playbooks, prompts, and evaluators to scale lifecycle coordination",
+    url: "/resources/ai-2025-customer-journey-orchestration",
+    type: "Resource",
+    category: "Growth",
+    icon: "🧭",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Data Pipeline Automation 2025",
     description: "Streaming, orchestration, and monitoring patterns for reliable AI dataflows",
     url: "/blog/ai-2025-data-pipeline-automation",
