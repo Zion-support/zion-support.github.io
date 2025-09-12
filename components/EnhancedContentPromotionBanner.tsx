@@ -18,6 +18,46 @@ const EnhancedContentPromotionBanner: React.FC = () => {
 
   const contentItems: ContentItem[] = [
     {
+      id: 'neural-architecture-optimization',
+      title: 'Neural Architecture Optimization: The Next Frontier',
+      description: 'Explore how neural architecture search is revolutionizing AI efficiency, reducing costs by 90% while improving performance.',
+      href: '/blog/ai-2025-neural-architecture-optimization',
+      category: 'AI Optimization',
+      readTime: '15 min read',
+      isNew: true,
+      featured: true
+    },
+    {
+      id: 'space-exploration-breakthrough',
+      title: 'AI-Powered Space Exploration: The Next Giant Leap',
+      description: 'Discover how AI is revolutionizing space exploration, from autonomous spacecraft to Mars colonization and beyond.',
+      href: '/blog/ai-2025-space-exploration-breakthrough',
+      category: 'Space Technology',
+      readTime: '18 min read',
+      isNew: true,
+      featured: true
+    },
+    {
+      id: 'global-logistics-transformation',
+      title: 'Global Logistics Transformation: 40% Cost Reduction',
+      description: 'Fortune 500 case study showing how AI revolutionized supply chain operations with $2.3B annual savings.',
+      href: '/case-studies/ai-2025-global-logistics-transformation',
+      category: 'Case Study',
+      readTime: '12 min read',
+      isNew: true,
+      featured: true
+    },
+    {
+      id: 'ai-implementation-masterclass',
+      title: 'AI Implementation Masterclass: Complete Guide',
+      description: 'Master enterprise AI implementation with our comprehensive guide covering strategy, technology, and ROI optimization.',
+      href: '/resources/ai-2025-comprehensive-implementation-masterclass',
+      category: 'Masterclass',
+      readTime: '45 min read',
+      isNew: true,
+      featured: true
+    },
+    {
       id: 'enterprise-ai-transformation',
       title: 'Enterprise AI Transformation 2025',
       description: 'Complete implementation guide with real-world case studies and proven strategies for enterprise AI adoption.',

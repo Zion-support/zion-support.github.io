@@ -17,6 +17,8 @@ const EnhancedContentPromotionBanner = lazy(() => import('../components/Enhanced
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
 const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
+const InteractiveContentDiscovery = lazy(() => import('../components/InteractiveContentDiscovery'));
+const DynamicContentCarousel = lazy(() => import('../components/DynamicContentCarousel'));
 
 // Card component
 function Card({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) {
@@ -172,6 +174,15 @@ export default function HomePage() {
       <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
         <EnhancedContentPromotionBanner />
       </Suspense>
+
+      {/* Dynamic Content Carousel */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
+            <DynamicContentCarousel />
+          </Suspense>
+        </div>
+      </section>
 
       {/* New Content Spotlight - January 2025 */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
@@ -2065,6 +2076,15 @@ export default function HomePage() {
       <Suspense fallback={<LoadingSpinner size="lg" text="Loading content showcase..." />}>
         <EnhancedContentShowcase />
       </Suspense>
+
+      {/* Interactive Content Discovery */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Suspense fallback={<LoadingSpinner size="lg" text="Loading content discovery..." />}>
+            <InteractiveContentDiscovery />
+          </Suspense>
+        </div>
+      </section>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
