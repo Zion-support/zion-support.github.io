@@ -14,6 +14,12 @@ const PerformanceMonitor: React.FC = () => {
       // Send to analytics service
     });
 
+<<<<<<< HEAD
+    getFCP((metric) => {
+      console.log('FCP:', metric);
+      // Send to analytics service
+    });
+=======
 const PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
   showUI = false,
   autoHide = true,
@@ -38,6 +44,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorP
   const [performanceIssues, setPerformanceIssues] = useState<string[]></string>([]);
   const observerRef = useRef<PerformanceObserver | null></PerformanceObserver>(null);
   const metricsRef = useRef<PerformanceMetrics></PerformanceMetrics>(metrics);
+>>>>>>> origin/backup-main-20250912-010437
 
     getLCP((metric) => {
       console.log('LCP:', metric);
@@ -58,6 +65,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorP
     }
   }, []);
 
+<<<<<<< HEAD
+  return null; // This component doesn't render anything
+=======
   // Initialize monitoring
   useEffect(() => {
     if (enableRealTime) {
@@ -336,6 +346,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorP
       </div>
     </div>
   );
+>>>>>>> origin/backup-main-20250912-010437
 };
 
 export default PerformanceMonitor;

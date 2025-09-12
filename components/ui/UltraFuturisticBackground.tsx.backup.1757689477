@@ -11,9 +11,14 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps></Ultra
   children, 
   className = '' 
 }) => {
+<<<<<<< HEAD
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number | null>(null);
+=======
   const canvasRef = useRef<HTMLCanvasElement></HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement></HTMLDivElement>(null);
   const animationRef = useRef<number | null></number>(null);
+>>>>>>> origin/backup-main-20250912-010437
 
   useEffect(() => {
     const canvas = canvasRef.current;

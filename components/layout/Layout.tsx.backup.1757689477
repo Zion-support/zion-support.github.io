@@ -254,6 +254,8 @@ export default function Layout({ children }: LayoutProps) {
     }
   };
 
+<<<<<<< HEAD
+=======
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden"></div>
       {/* SEO Head */}
@@ -331,6 +333,7 @@ export default function Layout({ children }: LayoutProps) {
 }
 ;
 =======
+>>>>>>> origin/backup-main-20250912-010437
 
 
   "./Footer"import Footer  from "react./Footer,;
@@ -400,6 +403,8 @@ export default function Layout({ children }: LayoutProps) {
 }
 
 
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -440,3 +445,4 @@ export default Layout;
 }
 =======
 =======;
+>>>>>>> origin/backup-main-20250912-010437
