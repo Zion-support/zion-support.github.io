@@ -136,14 +136,14 @@ export default function HomePage() {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>✨ JUST PUBLISHED - JANUARY 2025</span>
+              <span className='text-sm font-medium'>✨ JUST PUBLISHED - JANUARY 30, 2025</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
-              🚀 Fresh AI & Business Insights
+              🚀 Fresh AI & Business Insights Just Dropped
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Enterprise Automation Guide, Startup Funding Playbook, Customer Support Automation, 
-              and our comprehensive implementation playbook. Expert insights to accelerate your growth.
+              New this week: AI Business Revolution, Comprehensive Trends Analysis, Fortune 500 Success Story, 
+              and our 200+ page AI Implementation Master Guide. Expert insights to accelerate your growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -163,49 +163,49 @@ export default function HomePage() {
 
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/ai-enterprise-automation-2025' className='group'>
+            <Link href='/blog/ai-2025-business-revolution' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Automation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 40% cost reduction</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025: Business Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>How AI is reshaping every industry with real impact data</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>20 min read</span>
+                  <span>15 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/ai-startup-funding-playbook-2025' className='group'>
+            <Link href='/blog/ai-trends-2025-comprehensive-analysis' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Startup Funding Playbook 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Master the $47B funding landscape with proven strategies</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Trends 2025: Comprehensive Analysis</h3>
+                <p className='text-sm opacity-90 mb-3'>Deep dive into the most important AI trends shaping 2025</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>25 min read</span>
+                  <span>22 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/ai-customer-support-automation-2025' className='group'>
+            <Link href='/case-studies/ai-transformation-fortune-500-success-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎧</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Customer Support Automation</h3>
-                <p className='text-sm opacity-90 mb-3'>80% faster response times, 60% cost reduction</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
+                <h3 className='text-lg font-semibold mb-2'>Fortune 500 AI Success</h3>
+                <p className='text-sm opacity-90 mb-3'>$50M savings and 300% ROI in 18 months</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
+                  <span>Case Study</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
 
-            <Link href='/resources/ai-implementation-playbook-2025' className='group'>
+            <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Playbook</h3>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
                 <p className='text-sm opacity-90 mb-3'>200+ pages with proven strategies and templates</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
@@ -820,6 +820,96 @@ export default function HomePage() {
                   <span>Checklist</span>
                 </div>
               </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Content Spotlight */}
+      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔥 HOT THIS WEEK</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              📚 Fresh Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest expert insights, case studies, and resources. From AI business transformation 
+              to comprehensive trend analysis, get the knowledge you need to succeed in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured Content Cards */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-2025-business-revolution' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025: Business Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>How AI is reshaping every industry with real impact data</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>15 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-trends-2025-comprehensive-analysis' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Trends 2025: Comprehensive Analysis</h3>
+                <p className='text-sm opacity-90 mb-3'>Deep dive into the most important AI trends shaping 2025</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>22 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-transformation-fortune-500-success-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
+                <h3 className='text-lg font-semibold mb-2'>Fortune 500 AI Success</h3>
+                <p className='text-sm opacity-90 mb-3'>$50M savings and 300% ROI in 18 months</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='text-center mt-8'>
+            <Link
+              href='/content-showcase'
+              className='bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
+            >
+              View All New Content
+            </Link>
+            <Link
+              href='/resources'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors inline-block'
+            >
+              Download Resources
             </Link>
           </div>
         </div>
