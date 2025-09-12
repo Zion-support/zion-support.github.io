@@ -5,6 +5,24 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI Advanced Automation 2025: Complete Implementation Guide",
+      description: "Discover how advanced AI automation is transforming businesses in 2025. Learn implementation strategies, real-world case studies, and practical frameworks that deliver measurable results.",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: "🤖",
+      category: "AI Automation",
+      readTime: "18 min read",
+      date: "Feb 5, 2025"
+    },
+    {
+      title: "AI Cybersecurity Innovation 2025: Next-Gen Defense Strategies",
+      description: "Explore the revolutionary AI cybersecurity innovations reshaping digital defense in 2025. From autonomous threat hunting to AI-powered security orchestration, discover how next-generation technologies are protecting organizations.",
+      href: "/blog/ai-2025-cybersecurity-innovation",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      readTime: "24 min read",
+      date: "Feb 3, 2025"
+    },
+    {
       title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies Reshaping Industries",
       description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions that are revolutionizing business operations.",
       href: "/blog/ai-2025-breakthrough-innovations",
@@ -44,6 +62,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Healthcare Diagnosis Breakthrough 2025: 95% Accuracy Achievement",
+      description: "How a major healthcare system transformed patient care with AI-powered diagnostic systems, achieving 95% diagnostic accuracy, 70% faster diagnosis times, and saving thousands of lives through early detection and treatment.",
+      href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Accuracy",
+      date: "Feb 2, 2025"
+    },
+    {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
@@ -73,6 +100,15 @@ export default function ContentShowcasePage() {
   ];
 
   const newResources = [
+    {
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "The most comprehensive AI implementation resource available. This 200+ page master guide provides everything you need to successfully plan, deploy, and scale AI solutions in your organization.",
+      href: "/resources/ai-implementation-master-guide-2026",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Feb 5, 2025"
+    },
     {
       title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
       description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
