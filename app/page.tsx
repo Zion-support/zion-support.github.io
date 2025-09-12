@@ -48,11 +48,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🛠️ NEW AI TOOLS JUST LAUNCHED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎯 Revolutionary AI Tools Suite: 7 Powerful Tools Now Available!
+                🎯 Revolutionary AI Tools Suite: 8 Powerful Tools Now Available!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
                 Transform your AI journey with our comprehensive suite of tools: AI Readiness Assessment, ROI Calculator, 
-                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, Cost Optimizer, and Security Assessment. 
+                Implementation Roadmap Generator, Model Performance Monitor, Ethics Compliance Checker, Cost Optimizer, Security Assessment, and Strategy Planner. 
                 Get personalized insights and recommendations to maximize your AI success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -105,6 +105,64 @@ export default function HomePage() {
                 >
                   Download Free Guide
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MLOps Best Practices Banner */}
+        <section className="py-8 bg-gradient-to-r from-green-600 to-blue-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🔧 MLOPS BEST PRACTICES</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🏗️ MLOps Best Practices Guide 2025: Master ML Operations
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Learn industry-leading MLOps practices for infrastructure, data pipelines, model lifecycle, monitoring, and governance. 
+                From foundation setup to advanced optimization - everything you need for successful ML operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Link
+                  href="/resources/ai-mlops-best-practices-2025"
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  📖 Read MLOps Guide
+                </Link>
+                <Link
+                  href="/tools/ai-model-monitor"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  📊 Model Monitor
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  🔧 MLOps Consultation
+                </Link>
+              </div>
+              
+              {/* MLOps Features Preview */}
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🏗️</div>
+                  <h3 className="text-sm font-semibold mb-1">5-Phase Implementation</h3>
+                  <p className="text-xs opacity-90">From foundation to optimization</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">📊</div>
+                  <h3 className="text-sm font-semibold mb-1">Data Pipeline Automation</h3>
+                  <p className="text-xs opacity-90">Automated processing and monitoring</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg">
+                  <div className="text-2xl mb-2">🔄</div>
+                  <h3 className="text-sm font-semibold mb-1">Model Lifecycle</h3>
+                  <p className="text-xs opacity-90">End-to-end automation</p>
+                </div>
               </div>
             </div>
           </div>
