@@ -122,6 +122,12 @@ function Header() {
                 <Link href="/blog/ai-2025-edge-computing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🌐 Edge Computing Revolution
                 </Link>
+                <Link href="/blog/ai-2026-advanced-autonomous-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🤖 Advanced Autonomous Systems
+                </Link>
+                <Link href="/case-studies/ai-2026-global-logistics-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📈 Global Logistics Success
+                </Link>
               </div>
             </div>
           </div>
