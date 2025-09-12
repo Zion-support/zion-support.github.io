@@ -403,62 +403,58 @@ export default function ContentShowcase() {
 >>>>>>> cursor/create-and-deploy-new-content-47dd
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newCaseStudies.map((study, index) => (
-                <Link key={index} href={study.href} className="group">
-                  <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center relative">
-                      <div className="text-8xl">{study.icon}</div>
-                      <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        NEW
-                      </div>
-                    </div>
-                    <div className="p-8">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-                          {study.category}
-                        </span>
-                        <span className="text-gray-500 text-sm">Case Study</span>
-                        <span className="text-gray-500 text-sm">•</span>
-                        <span className="text-gray-500 text-sm">{study.date}</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
-                        {study.title}
-                      </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {study.description}
-                      </p>
-                      <div className="grid grid-cols-1 gap-4 mb-6">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-green-600">{study.result}</div>
-                          <div className="text-sm text-gray-600">Achieved Result</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                            <span className="text-green-600 font-bold text-sm">ZT</span>
-                          </div>
-                          <span className="text-sm text-gray-600">Zion Tech Group</span>
-                        </div>
-                        <span className="text-green-600 font-medium group-hover:underline">
-                          Read Case Study →
-                        </span>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-lg"
-              >
-                View All Case Studies
-                <span>→</span>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link href="/blog/ai-2025-advanced-ai-agents-enterprise" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">Advanced AI Agents</h3>
+                  <p className="text-sm opacity-90 mb-3">300-500% efficiency gains with autonomous enterprise decision-making</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🆕 NEW</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-healthcare-diagnosis-revolution-advanced" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-lg font-semibold mb-2">Healthcare AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">95% diagnostic accuracy with 70% faster diagnosis times</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>18 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🔥 HOT</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-2025-fortune-500-manufacturing-transformation" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">$3.2B Manufacturing Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 500 transformation with 45% cost reduction and 60% efficiency gains</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 $3.2B Value</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-cybersecurity-advanced-threat-detection" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">Advanced threat detection with 94% reduction in false positives</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>16 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🚀 TRENDING</span>
+                  </div>
+                </div>
               </Link>
             </div>
 =======

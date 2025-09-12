@@ -183,6 +183,45 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Content Promotion Banner */}
+        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎉 NEW: Advanced AI Agents, Healthcare AI Revolution & $3.2B Manufacturing Success!
+              </h2>
+              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
+                Just released: Advanced AI Agents for Enterprise (300-500% efficiency gains), Healthcare AI Diagnosis Revolution (95% accuracy), 
+                Fortune 500 Manufacturing Transformation ($3.2B value creation), plus cutting-edge implementation strategies. 
+                Discover the breakthrough AI technologies reshaping industries in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/content-showcase"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                >
+                  Explore All New Content
+                </Link>
+                <Link
+                  href="/blog/ai-2025-advanced-ai-agents-enterprise"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  Read AI Agents Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-2025-fortune-500-manufacturing-transformation"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  View $3.2B Success Story
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
             type="Organization" 
