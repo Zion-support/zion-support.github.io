@@ -1,70 +1,66 @@
-import React, { useState } from 'react';
-export /**;
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
-export default function Page("props": "any) {;
-",;
-  {;
-";
-    "title": "24/7 Support",";
-    "description": "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",";
-    "icon": "<Clock className="w-8 h-8"   />",";
-    "color": "from-zion-blue to-zion-blue-dark",";
-    "bgColor": "from-zion-blue/20 to-zion-blue-dark/20","    "stats": "99.9% Uptime",;
-    "features": "[";
-      "Round-the-clock assistance"",";
-      "Expert technical support",";
-      "Rapid response times",";
-      "Proactive monitoring";
-    ];
-  },;
-  {;
-";
-    "title": "Cost Reduction",";
-    "description": "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",";
-    "icon": "<TrendingDown className="w-8 h-8"   />",";
-    "color": "from-zion-green to-zion-green-dark",";
-    "bgColor": "from-zion-green/20 to-zion-green-dark/20","    "stats": "40% Cost Savings",;
-    "features": "[";
-      "Direct provider connections"",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure";
-    ];
-import React,{ useState } from &apos;react&apos;; export /**&apos;; export default BenefitsSection}}}}</motion.div></motion.div></motion.div>} import { GradientHeading } from &apos;./ui / GradientHeading&apos;; export default function Page($1) { ,{ &quot; title: &quot;24/7 Support&quot;,&quot; description: &quot;Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.&quot;,&quot; icon: <Clock className=&quot;w-8 h-8&quot; />,&quot; color: &quot;from-zion-blue to-zion-blue-dark&quot;,&quot; bgColor: &quot;from-zion-blue/20 to-zion-blue-dark/20&quot;,&quot; stats: &quot;99.9% Uptime&quot;,features: [&quot; &quot;Round-the-clock assistance&quot;,&quot; &quot;Expert technical support&quot;,&quot; &quot;Rapid response times&quot;,&quot; &quot;Proactive monitoring&quot; ] },{ &quot; title: &quot;Cost Reduction&quot;,&quot; description: &quot;Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.&quot;,&quot; icon: <TrendingDown className=&quot;w-8 h-8&quot; />,&quot; color: &quot;from-zion-green to-zion-green-dark&quot;,&quot; bgColor: &quot;from-zion-green/20 to-zion-green-dark/20&quot;,&quot; stats: &quot;40% Cost Savings&quot;,features: [&quot; &quot;Direct provider connections&quot;,&quot; &quot;Competitive pricing&quot;,&quot; &quot;Bulk discount options&quot;,&quot; &quot;Transparent cost structure&quot; ] ;&apos;;&apos;;
-const React,{ useState } from "react"; export /**"; export default BenefitsSection}}}}</motion.div></motion.div></motion.div>} import { GradientHeading } from "./ui / GradientHeading"; export default function Page($1) { ,{"
-  " title:"
-  "24/7 Support","
-  " description:"
-  "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
-  " icon: <Clock className="w-8 h-8" />,"
-  " color:"
-  "from-zion-blue to-zion-blue-dark","
-  " bgColor:"
-  "from-zion-blue/20 to-zion-blue-dark/20","
-  " stats:"
-  "99.9% Uptime",features: ["
-  " "Round-the-clock assistance","
-  " "Expert technical support","
-  " "Rapid response times","
-  " "Proactive monitoring" ] },{"
-  " title:"
-  "Cost Reduction","
-  " description:"
-  "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
-  " icon: <TrendingDown className="w-8 h-8" />,"
-  " color:"
-  "from-zion-green to-zion-green-dark","
-  " bgColor:"
-  "from-zion-green/20 to-zion-green-dark/20","
-  " stats:"
-  "40% Cost Savings",features: ["
-  " "Direct provider connections","
-  " "Competitive pricing","
-  " "Bulk discount options","
-  " "Transparent cost structure" ] ;"
-  ";"
-  ";"
-  """
-import { useState } from 'react';,
-import _React,{ useState } from 'react'; export /**'; export default BenefitsSection}}}}</motion.div></motion.div></motion.div>} import { GradientHeading } from './ui / GradientHeading'; export default function Page(_) { ,{ " title: "24/7 Support"," description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."," icon: <Clock className="w-8 h-8" />," color: "from-zion-blue to-zion-blue-dark"," bgColor: "from-zion-blue/20 to-zion-blue-dark/20"," stats: "99.9% Uptime",features: [" "Round-the-clock assistance"," "Expert technical support"," "Rapid response times"," "Proactive monitoring" ] },{ " title: "Cost Reduction"," description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."," icon: <TrendingDown className="w-8 h-8" />," color: "from-zion-green to-zion-green-dark"," bgColor: "from-zion-green/20 to-zion-green-dark/20"," stats: "40% Cost Savings",features: [" "Direct provider connections"," "Competitive pricing"," "Bulk discount options"," "Transparent cost structure" ] ;';';
+import React from 'react';
+
+const BenefitsSection = () => {
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of experienced professionals brings deep expertise in AI, cloud computing, and digital transformation.",
+      icon: "👥",
+      stats: "50+ Experts"
+    },
+    {
+      title: "Proven Results",
+      description: "We've successfully delivered 500+ projects with a 99% client satisfaction rate and measurable business impact.",
+      icon: "📈",
+      stats: "500+ Projects"
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support ensures your systems run smoothly and any issues are resolved quickly.",
+      icon: "🛡️",
+      stats: "24/7 Available"
+    },
+    {
+      title: "Scalable Solutions",
+      description: "Our solutions grow with your business, from startup to enterprise scale, ensuring long-term value.",
+      icon: "🚀",
+      stats: "Unlimited Scale"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We deliver exceptional value through our expertise, proven track record, and commitment to your success.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="text-center group">
+              <div className="bg-blue-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-100 transition-colors">
+                <span className="text-3xl">{benefit.icon}</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {benefit.title}
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                {benefit.description}
+              </p>
+              <div className="text-2xl font-bold text-blue-600">
+                {benefit.stats}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BenefitsSection;

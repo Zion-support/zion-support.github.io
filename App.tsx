@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -11,7 +11,9 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
+export default function App(): JSX.Element {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   const services = [
     {
       title: 'AI Solutions',
@@ -55,14 +57,72 @@ export default function App() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-export default function App(): JSX.Element {
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   return (
-    <main>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <ParticleBackground />
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 text-center">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Business with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              {' '}AI-Powered Solutions
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Zion Tech Group delivers enterprise-grade AI, micro SaaS, and IT services that accelerate your digital transformation. 
+            Build faster, scale smarter, and innovate with confidence.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Get Started Today
+            </button>
+            <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+              View Our Services
+            </button>
+          </div>
+        </div>
+      </section>
 
-    </main>
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to drive your business forward
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <ServiceCard key={index} service={service} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <BenefitsSection />
+
+      {/* How It Works Section */}
+      <HowItWorksSection />
+
+      {/* Testimonials Section */}
+      <TestimonialCarousel />
+
+      {/* FAQ Section */}
+      <FaqSection />
+
+      {/* Contact Section */}
+      <ContactSection />
+
+      <Footer />
+      <ChatAssistant />
+      <ScrollToTop />
+    </div>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
