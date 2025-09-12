@@ -9,10 +9,6 @@ import {
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
-<<<<<<< HEAD
-  Leaf, Sun, Moon, Wind, Droplets, Mountain,
-  Code, Wrench, Smartphone, BarChart3
-=======
   Leaf, Sun, Moon, Wind, Droplets, Mountain, Code,
   Wrench, Smartphone, BarChart3
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1bb4
@@ -160,17 +156,6 @@ const companyLinks = [
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
 
-<<<<<<< HEAD
-const serviceLinks = [
-  { name: '🎯 Business Solutions', href: '/business-solutions', icon: Target },
-  { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
-  { name: '⚛️ Quantum Tech', href: '/quantum-technology', icon: Atom },
-  { name: '🌌 Space Technology', href: '/space-technology', icon: Globe },
-  { name: '🏢 Enterprise IT', href: '/enterprise-it', icon: Shield },
-  { name: '📱 Micro SAAS', href: '/micro-saas', icon: Zap }
-];
-
-=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1bb4
 const resourceLinks = [
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },

@@ -8,6 +8,7 @@ import NewContentBanner from '../components/NewContentBanner';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
+import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -89,6 +90,29 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2031-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚀 AI 2031 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2031-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 10,000% ROI Enterprise Success (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2031-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2031 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2025-advanced-ai-architecture" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏗️ Advanced AI Architecture (NEW)
+                </Link>
+                <Link href="/blog/ai-2025-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🤖 AI Automation Revolution (NEW)
+                </Link>
+                <Link href="/case-studies/ai-manufacturing-transformation-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏭 Manufacturing Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2029-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🚀 AI 2029 Future Predictions (BREAKTHROUGH)
                 </Link>
@@ -107,6 +131,28 @@ function Header() {
                 </Link>
                 <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2026-breakthrough-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2026 Breakthrough Predictions (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2026-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏆 5000% ROI Enterprise Success (NEW)
+                </Link>
+                <Link href="/resources/ai-2026-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit (NEW)
+                </Link>
+                <Link href="/blog/ai-2026-next-generation-ai-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧠 Next-Generation AI Systems (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2026-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏢 Enterprise Transformation: 2000% ROI (BREAKTHROUGH)
+                </Link>
+                <Link href="/tools/ai-2026-readiness-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🎯 AI 2026 Readiness Assessment (NEW)
+                </Link>
+                <Link href="/webinars/ai-2026-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Revolutionary Breakthroughs Webinar (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2026-advanced-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -553,7 +599,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
           <EnhancedContentPromotionBanner />
-          <EnhancedNavigationWithContent />
+          <EnhancedNavigationWithNewContent />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
           </main>

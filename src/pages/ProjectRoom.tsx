@@ -1,7 +1,3 @@
-<<<<<<<< HEAD:src.broken/pages/ProjectRoom.tsx.backup.1756001042.backup.1757660787
-<<<<<<< HEAD
-
-========
 >>>>>>>> origin/content/blog-sept12:src/pages/ProjectRoom.tsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
@@ -237,14 +233,5 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
     </>
-=======
-import React from 'react';
-export function ProjectRoom() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

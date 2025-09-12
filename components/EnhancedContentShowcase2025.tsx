@@ -1,212 +1,275 @@
 import React from 'react';
 import Link from 'next/link';
+import { Card } from './ui/Card';
+import { Badge } from './ui/Badge';
+import { Button } from './ui/Button';
+import { ArrowRight, Star, TrendingUp, Zap, Target, Award, Clock, Users, BarChart3, Lightbulb, Globe, CheckCircle, BookOpen, Play, FileText, Calculator, Eye, Heart, Share2 } from 'lucide-react';
 
 export default function EnhancedContentShowcase2025() {
   const featuredContent = [
     {
-      title: "AI 2025: Enterprise Automation Mastery",
-      description: "Master enterprise AI automation with our comprehensive 2025 guide. Learn advanced strategies, implementation frameworks, and real-world success patterns.",
-      href: "/blog/ai-2025-enterprise-automation-mastery",
-      type: "Blog Post",
-      category: "AI Automation",
-      readTime: "15 min read",
-      isNew: true,
-      badge: "MASTERY GUIDE"
+      id: 1,
+      title: "AI 2025 Comprehensive Trends Analysis",
+      description: "Deep dive into the most significant AI trends shaping 2025. From enterprise automation to quantum computing breakthroughs.",
+      type: "blog",
+      category: "Trends",
+      readTime: "15 min",
+      views: "12.5k",
+      likes: "892",
+      url: "/blog/ai-2025-comprehensive-trends-analysis",
+      badge: "NEW",
+      badgeColor: "bg-blue-500/20 text-blue-300 border-blue-400/30",
+      icon: TrendingUp,
+      iconColor: "text-blue-400",
+      bgColor: "bg-blue-500/10",
+      featured: true
     },
     {
-      title: "Global Enterprise Transformation Breakthrough",
-      description: "Discover how a global enterprise achieved 1200% ROI through comprehensive AI transformation. Learn the strategies and results that drove this breakthrough success.",
-      href: "/case-studies/ai-2025-global-enterprise-transformation-breakthrough",
-      type: "Case Study",
-      category: "Success Story",
-      readTime: "12 min read",
-      isNew: true,
-      badge: "1200% ROI"
+      id: 2,
+      title: "Energy Sector AI Transformation: 2,500% ROI",
+      description: "How a leading energy company achieved unprecedented efficiency gains through comprehensive AI transformation.",
+      type: "case-study",
+      category: "Energy",
+      readTime: "12 min",
+      views: "8.7k",
+      likes: "634",
+      url: "/case-studies/ai-2025-energy-sector-transformation-breakthrough",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-green-500/20 text-green-300 border-green-400/30",
+      icon: Award,
+      iconColor: "text-green-400",
+      bgColor: "bg-green-500/10",
+      featured: true
     },
     {
-      title: "Ultimate Implementation Toolkit",
-      description: "The most comprehensive AI implementation toolkit for 2025. Get everything you need to successfully implement AI across your enterprise.",
-      href: "/resources/ai-2025-ultimate-implementation-toolkit",
-      type: "Resource",
+      id: 3,
+      title: "AI 2025 Comprehensive Implementation Playbook",
+      description: "The complete, step-by-step guide to implementing AI in your organization. From strategy to execution.",
+      type: "resource",
       category: "Implementation",
-      readTime: "Toolkit",
-      isNew: true,
-      badge: "ULTIMATE"
+      readTime: "45 min",
+      views: "15.2k",
+      likes: "1.2k",
+      url: "/resources/ai-2025-comprehensive-implementation-playbook",
+      badge: "ESSENTIAL",
+      badgeColor: "bg-purple-500/20 text-purple-300 border-purple-400/30",
+      icon: Target,
+      iconColor: "text-purple-400",
+      bgColor: "bg-purple-500/10",
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Manufacturing AI Breakthrough: 1,800% ROI",
+      description: "How a manufacturing giant achieved record efficiency through AI automation and predictive maintenance.",
+      type: "case-study",
+      category: "Manufacturing",
+      readTime: "10 min",
+      views: "6.3k",
+      likes: "445",
+      url: "/case-studies/ai-2025-manufacturing-automation-breakthrough",
+      badge: "SUCCESS",
+      badgeColor: "bg-orange-500/20 text-orange-300 border-orange-400/30",
+      icon: Zap,
+      iconColor: "text-orange-400",
+      bgColor: "bg-orange-500/10",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "AI Security & Governance Framework 2025",
+      description: "Complete security framework and governance guidelines to ensure safe and compliant AI implementation.",
+      type: "resource",
+      category: "Security",
+      readTime: "20 min",
+      views: "9.1k",
+      likes: "567",
+      url: "/resources/ai-2025-security-governance-framework",
+      badge: "CRITICAL",
+      badgeColor: "bg-red-500/20 text-red-300 border-red-400/30",
+      icon: Shield,
+      iconColor: "text-red-400",
+      bgColor: "bg-red-500/10",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Healthcare AI Revolution: 1,500% ROI",
+      description: "Medical AI breakthrough achieving unprecedented patient outcomes and operational efficiency.",
+      type: "case-study",
+      category: "Healthcare",
+      readTime: "14 min",
+      views: "7.8k",
+      likes: "523",
+      url: "/case-studies/ai-2025-healthcare-diagnostic-revolution",
+      badge: "REVOLUTIONARY",
+      badgeColor: "bg-pink-500/20 text-pink-300 border-pink-400/30",
+      icon: Heart,
+      iconColor: "text-pink-400",
+      bgColor: "bg-pink-500/10",
+      featured: false
     }
   ];
 
-  const trendingContent = [
-    {
-      title: "AI 2026: Revolutionary Breakthroughs",
-      description: "Explore the revolutionary AI breakthroughs that will define 2026 and beyond.",
-      href: "/blog/ai-2026-revolutionary-breakthroughs-future",
-      type: "Blog Post",
-      category: "Future Tech",
-      readTime: "10 min read"
-    },
-    {
-      title: "Fortune 500 AI Transformation",
-      description: "Learn how Fortune 500 companies are achieving 900% ROI through strategic AI implementation.",
-      href: "/case-studies/ai-2026-fortune-500-transformation-breakthrough",
-      type: "Case Study",
-      category: "Enterprise",
-      readTime: "8 min read"
-    },
-    {
-      title: "AI Implementation Master Guide",
-      description: "Complete step-by-step guide for enterprise AI implementation with proven frameworks.",
-      href: "/resources/ai-2026-ultimate-implementation-toolkit",
-      type: "Resource",
-      category: "Implementation",
-      readTime: "Guide"
-    }
+  const categories = [
+    { name: "All", count: 30, active: true },
+    { name: "Blog Posts", count: 15, active: false },
+    { name: "Case Studies", count: 8, active: false },
+    { name: "Resources", count: 7, active: false }
   ];
 
   return (
-    <div className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            🚀 New Content Showcase 2025
+        <div className="text-center mb-16">
+          <Badge className="mb-4 bg-indigo-100 text-indigo-800 border-indigo-200">
+            🚀 LATEST CONTENT
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Our Latest AI Resources
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest AI content, case studies, and resources designed to help you master enterprise AI automation and achieve breakthrough results.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+            Stay ahead with cutting-edge AI insights, proven case studies, and comprehensive guides. 
+            Our latest content drop includes 30+ new resources to accelerate your AI journey.
           </p>
-        </div>
-
-        {/* Featured Content */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-bold text-gray-900">⭐ Featured Content</h3>
-            <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-              JUST RELEASED
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-indigo-600 mb-1">30+</div>
+              <div className="text-sm text-gray-600">New Resources</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 mb-1">2,500%</div>
+              <div className="text-sm text-gray-600">Max ROI Achieved</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-1">500+</div>
+              <div className="text-sm text-gray-600">Pages of Content</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600 mb-1">95%</div>
+              <div className="text-sm text-gray-600">Success Rate</div>
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredContent.map((content, index) => (
-              <div key={index} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:border-blue-300 group">
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category, index) => (
+            <Button
+              key={index}
+              variant={category.active ? "default" : "outline"}
+              className={`px-6 py-2 ${category.active ? 'bg-indigo-600 text-white' : 'text-gray-600 hover:text-indigo-600'}`}
+            >
+              {category.name}
+              <Badge variant="secondary" className="ml-2">
+                {category.count}
+              </Badge>
+            </Button>
+          ))}
+        </div>
+
+        {/* Featured Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {featuredContent.map((content) => (
+            <Link key={content.id} href={content.url} className="group">
+              <Card className={`p-6 hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${content.bgColor} border-0`}>
+                {/* Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                      {content.type}
-                    </span>
-                    {content.isNew && (
-                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
-                        NEW
-                      </span>
-                    )}
+                  <div className="flex items-center">
+                    <div className={`w-12 h-12 ${content.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+                      <content.icon className={`w-6 h-6 ${content.iconColor}`} />
+                    </div>
+                    <div>
+                      <Badge className={`${content.badgeColor} mb-2`}>
+                        {content.badge}
+                      </Badge>
+                      <div className="text-sm text-gray-600 font-medium">
+                        {content.category}
+                      </div>
+                    </div>
                   </div>
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    {content.badge}
-                  </span>
+                  {content.featured && (
+                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  )}
                 </div>
-                
-                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+
+                {/* Content */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
                   {content.title}
-                </h4>
-                
+                </h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {content.description}
                 </p>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-500">{content.category}</span>
-                  <span className="text-sm text-gray-500">{content.readTime}</span>
-                </div>
-                
-                <Link 
-                  href={content.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold group-hover:underline"
-                >
-                  Read More
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Trending Content */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">🔥 Trending Content</h3>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {trendingContent.map((content, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors group">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs font-semibold">
-                    {content.type}
-                  </span>
-                  <span className="text-sm text-gray-500">{content.readTime}</span>
+                {/* Stats */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {content.readTime}
+                    </div>
+                    <div className="flex items-center">
+                      <Eye className="w-4 h-4 mr-1" />
+                      {content.views}
+                    </div>
+                    <div className="flex items-center">
+                      <Heart className="w-4 h-4 mr-1" />
+                      {content.likes}
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Button size="sm" variant="ghost" className="p-2">
+                      <Share2 className="w-4 h-4" />
+                    </Button>
+                    <Button size="sm" variant="ghost" className="p-2">
+                      <Heart className="w-4 h-4" />
+                    </Button>
+                  </div>
                 </div>
-                
-                <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {content.title}
-                </h4>
-                
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {content.description}
-                </p>
-                
-                <Link 
-                  href={content.href}
-                  className="text-blue-600 hover:text-blue-800 font-semibold text-sm group-hover:underline"
-                >
-                  Read More →
-                </Link>
-              </div>
-            ))}
-          </div>
+
+                {/* Footer */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-indigo-600 font-medium group-hover:text-indigo-800">
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    {content.type === 'blog' && '📝 Article'}
+                    {content.type === 'case-study' && '🏆 Case Study'}
+                    {content.type === 'resource' && '📚 Resource'}
+                  </div>
+                </div>
+              </Card>
+            </Link>
+          ))}
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Organization?
-          </h3>
-          <p className="text-xl mb-8 text-blue-100">
-            Get started with our comprehensive AI implementation toolkit and expert consultation services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/resources/ai-2025-ultimate-implementation-toolkit"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Download Toolkit
-            </Link>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Schedule Consultation
-            </Link>
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8 text-center">
-          <div>
-            <h4 className="text-3xl font-bold text-blue-600 mb-2">50+</h4>
-            <p className="text-gray-600">Implementation Templates</p>
-          </div>
-          <div>
-            <h4 className="text-3xl font-bold text-green-600 mb-2">1200%</h4>
-            <p className="text-gray-600">Average ROI Achieved</p>
-          </div>
-          <div>
-            <h4 className="text-3xl font-bold text-purple-600 mb-2">200+</h4>
-            <p className="text-gray-600">Success Stories</p>
-          </div>
-          <div>
-            <h4 className="text-3xl font-bold text-orange-600 mb-2">47</h4>
-            <p className="text-gray-600">Countries Served</p>
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Transform Your Business with AI?
+            </h3>
+            <p className="text-lg text-indigo-100 mb-6 max-w-2xl mx-auto">
+              Join thousands of professionals who are already using our resources to achieve 
+              breakthrough results with AI implementation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100">
+                <BookOpen className="w-5 h-5 mr-2" />
+                Explore All Content
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-indigo-600">
+                <Users className="w-5 h-5 mr-2" />
+                Join Community
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

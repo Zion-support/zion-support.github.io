@@ -16,9 +16,6 @@ interface ServiceCategory {
   services: Service[];
 }
 
-<<<<<<< HEAD
-const UltraAdvancedNavigation2026: React.FC = () => {
-=======
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },

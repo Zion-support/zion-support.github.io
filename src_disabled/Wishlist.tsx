@@ -21,28 +21,6 @@ export default function WishlistPage() {
     if (!isAuthLoading && !user) {
       router.push('/login');
     }
-<<<<<<< HEAD
-  }, [user, isAuthLoading, router]);
-
-  if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null; // Or a loading spinner
-  }
-
-  const { items, dispatch } = useCart();
-
-  const addToCart = (item: { id: string; title?: string; price?: number }) => {
-    if (items.some(i => i.id === item.id)) return;
-    dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1
-      }
-    });
-    toast.success(`1× ${item.title || 'Item'} added`);
-=======
     dispatch(loadWishlistFromDB(user.id!));
   }, [user, dispatch, navigate, location]);
 

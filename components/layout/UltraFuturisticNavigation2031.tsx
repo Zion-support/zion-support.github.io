@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UltraFuturisticNavigation2031: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticNavigation2031 temporarily disabled</div>;
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -32,5 +25,4 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 >>>>>>> origin/content/blog-sept12
 };
-
 export default UltraFuturisticNavigation2031;
