@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     extend: {
+<<<<<<< HEAD
       screens: {
         xs: "475px",
         sm: "640px",
@@ -51,6 +52,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Zion brand colors
+        'zion-blue': '#2e73ea',
+        'zion-blue-light': '#8ab1f3',
+        'zion-blue-dark': '#172d67',
+        'zion-purple': '#8c15e9',
+        'zion-purple-light': '#b971f2',
+        'zion-purple-dark': '#530c8b',
+        'zion-cyan': '#22ddd2',
+        'zion-cyan-light': '#7aeae4',
+        'zion-cyan-dark': '#14847e',
+        'zion-slate': '#17072b',
+        'zion-slate-light': '#451582',
+        'zion-slate-dark': '#000000',
+        'zion-green': '#10b981',
+        'zion-orange': '#f59e0b',
+        'zion-red': '#ef4444',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -58,6 +75,7 @@ export default {
         display: ['Poppins', 'system-ui', 'sans-serif'],
       },
       animation: {
+<<<<<<< HEAD
         'fade-in': 'fadeIn 0.5s ease-out',
         'fade-in-up': 'fadeInUp 0.5s ease-out',
         'slide-in-up': 'slideInUp 0.5s ease-out',
@@ -93,6 +111,8 @@ export default {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
         },
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
     },
   },
