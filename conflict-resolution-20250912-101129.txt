@@ -60,3 +60,6 @@
 2025-09-12 10:12:02 - Resolving conflicts in public/reports/metadata/index.html for branch backup/sync-2025-08-17T21-12-06-183Z
 2025-09-12 10:12:02 - Resolving conflicts in public/reports/metadata/latest.json for branch backup/sync-2025-08-17T21-12-06-183Z
 2025-09-12 10:12:02 - Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-12-06-183Z
+2025-09-12 10:12:04 - Merge conflicts detected in backup/sync-2025-08-17T21-13-06-221Z
+2025-09-12 10:12:08 - Merge conflicts detected in backup/sync-2025-08-17T21-14-04-187Z
+2025-09-12 10:12:08 - Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-14-04-187Z
