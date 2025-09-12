@@ -43,45 +43,132 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
+              <Link href="/blog/ai-2025-llm-optimization-masterclass" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                  <h3 className="text-lg font-semibold mb-2">Advanced AI Agents Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">Autonomous intelligence systems with 300-500% efficiency improvements and multi-agent collaboration</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                  <h3 className="text-lg font-semibold mb-2">LLM Optimization Masterclass</h3>
+                  <p className="text-sm opacity-90 mb-3">10x performance with advanced techniques: prompt engineering, fine-tuning, RAG optimization</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>15 min read</span>
+                    <span>25 min read</span>
                     <span className="mx-2">•</span>
                     <span>🆕 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/quantum-computing-business-revolution-2025" className="group">
+              <Link href="/blog/ai-2025-automation-enterprise-transformation" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
-                  <h3 className="text-lg font-semibold mb-2">Quantum Computing Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">10,000x speedups in optimization with breakthrough quantum algorithms transforming business operations</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Automation Enterprise Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete implementation guide for 300-500% efficiency gains through strategic AI automation</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>18 min read</span>
+                    <span>30 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🚀 TRENDING</span>
+                    <span>🔥 HOT</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-2025-fortune-500-quantum-transformation" className="group">
+              <Link href="/case-studies/ai-2025-global-tech-unicorn-transformation" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <h3 className="text-lg font-semibold mb-2">$3.2B Quantum AI Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Fortune 500 transformation with 45% efficiency gains and 340% ROI through quantum AI implementation</p>
+                  <h3 className="text-lg font-semibold mb-2">$2.8B Unicorn Transformation</h3>
+                  <p className="text-sm opacity-90 mb-3">Global tech unicorn achieves 340% ROI and market leadership through comprehensive AI transformation</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>💰 $3.2B Value</span>
+                    <span>💰 $2.8B Value</span>
                   </div>
                 </div>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Latest Content Grid */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Latest AI Insights & Success Stories</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Blog Posts */}
+            <Link href="/blog/ai-2025-advanced-ai-agents" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🤖</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">Advanced AI Agents Revolution</h3>
+                <p className="text-gray-600 text-sm mb-3">Autonomous intelligence systems with 300-500% efficiency improvements</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>15 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>🆕 NEW</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/quantum-computing-business-revolution-2025" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">Quantum Computing Revolution</h3>
+                <p className="text-gray-600 text-sm mb-3">10,000x speedups with breakthrough quantum algorithms</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>18 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>🚀 TRENDING</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2025-enterprise-implementation-masterclass" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">Enterprise Implementation Masterclass</h3>
+                <p className="text-gray-600 text-sm mb-3">Complete guide to enterprise AI implementation strategies</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>22 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>📖 GUIDE</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Case Studies */}
+            <Link href="/case-studies/ai-2025-fortune-500-quantum-transformation" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏆</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600">$3.2B Fortune 500 Success</h3>
+                <p className="text-gray-600 text-sm mb-3">Quantum AI transformation with 45% efficiency gains</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>Case Study</span>
+                  <span className="mx-2">•</span>
+                  <span>💰 $3.2B Value</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/ai-2025-fintech-unicorn-transformation" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">💳</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600">Fintech Unicorn Revolution</h3>
+                <p className="text-gray-600 text-sm mb-3">500% efficiency gains through AI automation</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>Case Study</span>
+                  <span className="mx-2">•</span>
+                  <span>📈 500% Gains</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/ai-2025-manufacturing-transformation-success" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏭</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600">Manufacturing AI Success</h3>
+                <p className="text-gray-600 text-sm mb-3">Smart manufacturing transformation with 60% cost reduction</p>
+                <div className="flex items-center text-xs text-gray-500">
+                  <span>Case Study</span>
+                  <span className="mx-2">•</span>
+                  <span>🏭 Manufacturing</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
