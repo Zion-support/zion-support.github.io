@@ -22,7 +22,6 @@ import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBa
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
 import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
 import AI2031ContentDiscoveryWidget from '../components/AI2031ContentDiscoveryWidget';
->>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -182,6 +181,9 @@ import UltimateContent2027PromotionBanner from '../components/UltimateContent202
 import FutureTechShowcase2027 from '../components/FutureTechShowcase2027';
 import RevolutionaryTechShowcase2027 from '../components/RevolutionaryTechShowcase2027';
 import UltimateContent2028PromotionBanner from '../components/UltimateContent2028PromotionBanner';
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import NewContentDiscoveryWidget from '../components/NewContentDiscoveryWidget';
+import AI2025ROICalculator from '../components/AI2025ROICalculator';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -198,11 +200,30 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* AI 2026 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2026BreakthroughPromotionBanner />
         
         {/* AI 2027 FUTURE PREDICTIONS PROMOTION BANNER - NEW CONTENT */}
         <AI2027FuturePredictionsPromotionBanner />
+=======
+        {/* AI 2025 REVOLUTIONARY CONTENT BANNER */}
+        <AI2025RevolutionaryContentBanner />
+        
+        {/* NEW CONTENT DISCOVERY WIDGET */}
+        <div className="py-12 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <NewContentDiscoveryWidget />
+          </div>
+        </div>
+        
+        {/* AI 2025 ROI CALCULATOR */}
+        <div className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <AI2025ROICalculator />
+          </div>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-d214
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
