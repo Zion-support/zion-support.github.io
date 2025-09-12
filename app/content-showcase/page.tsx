@@ -5,6 +5,33 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
+      description: "Master AI automation in 2025 with our comprehensive guide. Learn advanced automation strategies, implementation frameworks, and real-world case studies for enterprise success.",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: "🤖",
+      category: "AI Automation",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Cybersecurity Threats 2025: Complete Defense Strategy Guide",
+      description: "Protect your organization from emerging AI cybersecurity threats in 2025. Learn about advanced attack vectors, defense strategies, and security best practices for AI systems.",
+      href: "/blog/ai-2025-cybersecurity-threats",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      readTime: "28 min read",
+      date: "Jan 31, 2025"
+    },
+    {
+      title: "AI Startup Funding Playbook 2025: Complete Guide to Raising Capital",
+      description: "Master AI startup funding in 2025 with our comprehensive playbook. Learn funding strategies, pitch templates, investor insights, and success stories from $47B AI market.",
+      href: "/blog/ai-2025-startup-funding-playbook",
+      icon: "💰",
+      category: "Startup Strategy",
+      readTime: "25 min read",
+      date: "Feb 01, 2025"
+    },
+    {
       title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies Reshaping Industries",
       description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions that are revolutionizing business operations.",
       href: "/blog/ai-2025-breakthrough-innovations",
@@ -30,19 +57,19 @@ export default function ContentShowcasePage() {
       category: "Robotics",
       readTime: "22 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Cybersecurity Transformation Breakthrough 2025: 99.8% Threat Detection Success",
+      description: "Discover how a Fortune 500 company achieved 99.8% threat detection accuracy and 75% reduction in security incidents through AI-powered cybersecurity transformation.",
+      href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
+      icon: "🛡️",
+      category: "Cybersecurity AI",
+      result: "99.8% Detection",
+      date: "Feb 02, 2025"
+    },
     {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
@@ -74,13 +101,13 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Feb 03, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
@@ -99,6 +126,15 @@ export default function ContentShowcasePage() {
       category: "Security",
       type: "Free Download",
       date: "Feb 06, 2025"
+    },
+    {
+      title: "AI Startup Funding Toolkit 2025: Complete Fundraising Resource",
+      description: "Complete toolkit for AI startups including pitch deck templates, investor lists, valuation frameworks, and negotiation guides.",
+      href: "/resources/ai-startup-funding-toolkit-2025",
+      icon: "💰",
+      category: "Startup Toolkit",
+      type: "Free Download",
+      date: "Feb 01, 2025"
     }
   ];
 
