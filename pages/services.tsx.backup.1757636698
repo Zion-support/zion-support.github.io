@@ -16,6 +16,8 @@ const Services: React.FC = () => {
 import { realInnovativeMicroSaasServices2025 } from '../data/2025-real-innovative-micro-saas-expansion';
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services-expansion';
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services-expansion';
+<<<<<<< HEAD
+=======
 
 // Import our new 2025 advanced services
 import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
@@ -50,6 +52,7 @@ import { revolutionary2041AdvancedServices } from '../data/revolutionary-2041-ad
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { advanced2041EnterpriseServices } from '../data/advanced-2041-enterprise-services';
 import { revolutionary2042MicroSaasServices } from '../data/revolutionary-2042-micro-saas-services';
+>>>>>>> origin/backup-main-20250823-224858
 
 // Import our new 2025 advanced services
 import { advanced2025MicroSaasExpansion } from '../data/2025-advanced-micro-saas-expansion';
@@ -60,6 +63,43 @@ import { innovative2025MicroSaasExpansion } from '../data/innovative-2025-micro-
 import { innovative2025ITSolutionsExpansion } from '../data/innovative-2025-it-solutions-expansion';
 import { innovative2025AIServicesExpansion } from '../data/innovative-2025-ai-services-expansion';
 
+<<<<<<< HEAD
+// Import our new real services
+import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
+import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
+import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
+
+// Import our new service data
+import { enterpriseITSolutions } from '../data/2025-enterprise-it-solutions';
+import { innovativeMicroSaasSolutions } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices } from '../data/2025-cutting-edge-ai-services';
+import { advancedAIAutomationServices } from '../data/2025-advanced-ai-automation-services';
+import { innovativeITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
+import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+import { enterpriseITSolutions2034Additions } from '../data/augment-2034-enterprise-it-additions';
+import { innovativeMicroSaasSolutions2034Additions } from '../data/augment-2034-micro-saas-additions';
+import { cuttingEdgeAIServices2034Additions } from '../data/augment-2034-ai-services-additions';
+import { aiAutonomousEcosystemServices2029Additions, emergingTechBreakthroughServices2029Additions, practicalBusinessSolutionServices2029Additions } from '../data/augment-2029-ecosystem-additions';
+
+// Import our latest innovative services
+import { advancedAIServices } from '../data/advanced-ai-services-2025';
+import { innovativeITInfrastructureServices } from '../data/innovative-it-infrastructure-2025';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-2025';
+import { quantumSpaceTechServices } from '../data/quantum-space-tech-services-2025';
+
+// Import our new 2027 services
+import { innovativeAIServices2027 } from '../data/innovative-2027-ai-services';
+import { innovativeITServices2027 } from '../data/innovative-2027-it-services';
+import { innovativeMicroSaasServices2027 } from '../data/innovative-2027-micro-saas-services';
+
+// Import 2025 advanced services
+import { real2025AdvancedMicroSaas } from '../data/real-2025-advanced-micro-saas';
+import { real2025AdvancedITServices } from '../data/real-2025-advanced-it-services';
+import { real2025AdvancedAIServices } from '../data/real-2025-advanced-ai-services';
+import { real2025EmergingTechServices } from '../data/real-2025-emerging-tech-services';
+
+=======
 // Import our new 2025 innovative services expansion V2
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025V2 } from '../data/2025-innovative-it-services-expansion-v2';
@@ -74,6 +114,7 @@ import { comprehensiveServicesAdvertising2025 } from '../data/comprehensive-serv
 import { comprehensiveServicesExpansion } from '../data/2025-comprehensive-services-expansion';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services';
 
+>>>>>>> origin/backup-main-20250823-224858
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -181,6 +222,16 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
+<<<<<<< HEAD
+  ...innovative2037MicroSaasServices,
+  ...innovative2037ITServices,
+  ...innovative2037AIServices,
+  // 2025 Advanced Services
+  ...real2025AdvancedMicroSaas,
+  ...real2025AdvancedITServices,
+  ...real2025AdvancedAIServices,
+  ...real2025EmergingTechServices
+=======
   // Our new 2025 advanced services
   ...advanced2025MicroSaasExpansion,
   ...advanced2025ITSolutionsExpansion,
@@ -214,6 +265,7 @@ const allServices = [
   ...innovativeMicroSaasServices2025V2,
   ...innovativeITServices2025V2,
   ...innovativeAIServices2025V2
+>>>>>>> origin/backup-main-20250823-224858
 ];
 
 const categories = [
@@ -324,6 +376,55 @@ const categories = [
     description: 'Learning and research platforms'
   },
   {
+<<<<<<< HEAD
+    id: 'healthcare-biotech',
+    name: 'Healthcare & Biotech',
+    icon: <Heart className="w-6 h-6" />,
+    color: 'from-red-500 to-pink-500',
+    description: 'Advanced healthcare and biotechnology solutions'
+  },
+  {
+    id: 'fintech-banking',
+    name: 'FinTech & Banking',
+    icon: <Building className="w-6 h-6" />,
+    color: 'from-green-500 to-blue-500',
+    description: 'Financial technology and digital banking solutions'
+  },
+  {
+    id: 'manufacturing-industry',
+    name: 'Manufacturing & Industry 4.0',
+    icon: <Cpu className="w-6 h-6" />,
+    color: 'from-gray-500 to-blue-500',
+    description: 'Smart manufacturing and industrial automation'
+  },
+  {
+    id: 'retail-ecommerce',
+    name: 'Retail & E-commerce',
+    icon: <ShoppingCart className="w-6 h-6" />,
+    color: 'from-pink-500 to-purple-500',
+    description: 'Omnichannel retail and e-commerce solutions'
+  },
+  {
+    id: 'legal-compliance',
+    name: 'Legal & Compliance',
+    icon: <Shield className="w-6 h-6" />,
+    color: 'from-gray-500 to-blue-500',
+    description: 'Legal technology and compliance automation'
+  },
+  {
+    id: 'marketing-advertising',
+    name: 'Marketing & Advertising',
+    icon: <Target className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'AI-powered marketing and advertising solutions'
+  },
+  {
+    id: 'hr-talent',
+    name: 'HR & Talent Management',
+    icon: <Users className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Human resources and talent management solutions'
+=======
     id: 'innovative-ai',
     name: 'Innovative AI Solutions',
     icon: <Brain className="w-6 h-6" />,
@@ -378,6 +479,7 @@ const categories = [
     icon: <Target className="w-6 h-6" />,
     color: 'from-orange-600 to-red-700',
     description: 'Revolutionary services with comprehensive advertising and marketing content'
+>>>>>>> origin/backup-main-20250823-224858
   }
 ];
 
@@ -441,6 +543,7 @@ export default function Services() {
         return (((b as any).rating || 0) as number) - (((a as any).rating || 0) as number);
       default:
         return 0;
+>>>>>>> origin/clean-website-enhancement
     }
   ];
 
@@ -483,6 +586,28 @@ export default function Services() {
     }
   ];
 
+<<<<<<< HEAD
+  const serviceFeatures = [
+    {
+      title: "Scalable Architecture",
+      description: "Our services are built to grow with your business, from startup to enterprise.",
+      icon: <Network className="w-6 h-6" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock technical support and monitoring for all our services.",
+      icon: <Star className="w-6 h-6" />
+    },
+    {
+      title: "Custom Development",
+      description: "Tailored solutions designed specifically for your unique requirements.",
+      icon: <Microscope className="w-6 h-6" />
+    },
+    {
+      title: "Integration Services",
+      description: "Seamless integration with your existing systems and workflows.",
+      icon: <Database className="w-6 h-6" />
+=======
   // Reset to first page when filters/sort change
   React.useEffect(() => {
     setCurrentPage(1);
@@ -529,6 +654,7 @@ export default function Services() {
         return <Cpu className="w-6 h-6 text-emerald-400" />;
       default:
         return <Shield className="w-6 h-6 text-gray-400" />;
+>>>>>>> origin/backup-main-20250823-224858
     }
   ];
 
