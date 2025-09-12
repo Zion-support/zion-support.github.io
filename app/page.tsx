@@ -213,8 +213,8 @@ export default function HomePage() {
               🎯 Don't Miss Our Latest AI Insights
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Fresh content published this week: AI 2025 Predictions, Automation Trends Guide, 
-              Implementation Master Guide, and Retail Success Story. Get ahead with expert insights.
+              Discover our latest expert insights, case studies, and resources. From AI enterprise implementation 
+              to retail transformation success stories, get the knowledge you need to succeed in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -286,12 +286,12 @@ export default function HomePage() {
           </div>
 
           {/* Featured New Content Cards */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <Link href='/blog/ai-2025-year-ahead-predictions' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔮</div>
-                <h3 className='text-lg font-semibold mb-2'>AI 2025 Predictions</h3>
-                <p className='text-sm opacity-90 mb-3'>Comprehensive look at AI trends and breakthroughs coming this year</p>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025: The Year Ahead</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive predictions for breakthrough technologies and enterprise adoption</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>25 min read</span>
                   <span className='mx-2'>•</span>
@@ -316,8 +316,8 @@ export default function HomePage() {
             <Link href='/case-studies/ai-retail-transformation-success-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛍️</div>
-                <h3 className='text-lg font-semibold mb-2'>Retail AI Success</h3>
-                <p className='text-sm opacity-90 mb-3'>300% revenue growth and 60% cost reduction case study</p>
+                <h3 className='text-lg font-semibold mb-2'>Retail AI Transformation Success</h3>
+                <p className='text-sm opacity-90 mb-3'>45% revenue growth, 60% cost reduction, 80% customer satisfaction improvement</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Case Study</span>
                   <span className='mx-2'>•</span>
@@ -1471,8 +1471,8 @@ export default function HomePage() {
               📚 New Implementation Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Download our latest comprehensive guides: AI Workforce Transformation Playbook, 
-              Green AI Implementation Guide, and Privacy Compliance Checklists. Everything you 
+              Download our latest comprehensive guides: AI Enterprise Implementation Guide, 
+              AI Workforce Transformation Playbook, and Privacy Compliance Checklists. Everything you 
               need to succeed with AI in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
@@ -1493,6 +1493,19 @@ export default function HomePage() {
 
           {/* Featured Resources Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <Link href='/resources/ai-enterprise-implementation-guide-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Implementation Guide</h3>
+                <p className='text-sm opacity-90 mb-3'>200+ pages of proven strategies and frameworks for successful AI transformation</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>200+ pages</span>
+                </div>
+              </div>
+            </Link>
+            
             <Link href='/resources/ai-workforce-transformation-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👥</div>
@@ -1502,19 +1515,6 @@ export default function HomePage() {
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
                   <span>150+ pages</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/resources/green-ai-implementation-guide-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
-                <h3 className='text-lg font-semibold mb-2'>Green AI Implementation Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>Build sustainable AI systems with 60% energy reduction</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>120+ pages</span>
                 </div>
               </div>
             </Link>
