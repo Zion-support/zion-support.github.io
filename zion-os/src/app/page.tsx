@@ -113,6 +113,9 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">
                 📰 Read the Latest News
               </a>
+              <a href="/news/zion-os-1-4-performance-accessibility" className="btn-secondary hover-lift">
+                ⚡ New: Zion OS 1.4 Upgrades
+              </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>

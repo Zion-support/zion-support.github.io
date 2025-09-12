@@ -8,12 +8,32 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "AI 2025 Breakthrough Innovations",
+    description: "Revolutionary AI technologies reshaping industries",
+    url: "/blog/ai-2025-breakthrough-innovations",
+    type: "Blog Post",
+    category: "AI Innovation",
+    icon: "🚀",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Model Evaluation Playbook 2025",
     description: "Production-ready evals for LLM apps and agent systems",
     url: "/blog/ai-2025-model-evaluation-playbook",
     type: "Blog Post",
     category: "Engineering",
     icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Production Agent Patterns 2025",
+    description: "Reliable patterns for deploying AI agents in production",
+    url: "/blog/ai-2025-production-agent-patterns",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🧭",
     featured: true,
     new: true
   },
@@ -28,6 +48,46 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Sustainability & Green Tech 2025",
+    description: "Building eco-friendly AI systems for a sustainable future",
+    url: "/blog/ai-sustainability-green-tech-2025",
+    type: "Blog Post",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Enterprise GenAI Blueprint 2025",
+    description: "Governance, cost, and performance optimization for GenAI at scale",
+    url: "/blog/ai-2025-enterprise-genai-blueprint",
+    type: "Blog Post",
+    category: "Enterprise AI",
+    icon: "🏢",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Sustainability Transformation: 60% Energy Reduction",
+    description: "Fortune 500 company achieves carbon neutrality with AI",
+    url: "/case-studies/ai-sustainability-transformation-2025",
+    type: "Case Study",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agentic Orchestration Blueprint 2025",
+    description: "Practical patterns for reliable, cost-efficient agent systems",
+    url: "/blog/ai-2025-agentic-orchestration-blueprint",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🧩",
+    featured: false,
+    new: true
+  },
+  {
     title: "Startup Distribution Playbook 2025",
     description: "Channels, motions, and metrics that compound",
     url: "/blog/startup-distribution-playbook-2025",
@@ -38,53 +98,13 @@ const newContentItems = [
     new: true
   },
   {
-    title: "AI Agents in Production 2025",
-    description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
-    url: "/blog/ai-2025-production-agent-patterns",
-    type: "Blog Post",
-    category: "Engineering",
-    icon: "🧭",
-    featured: true,
-    new: true
-  },
-  {
-    title: "GenAI Security Blueprint 2025",
-    description: "Enterprise-grade practices to secure GenAI systems in production",
-    url: "/blog/genai-security-blueprint-2025",
-    type: "Blog Post",
-    category: "Security",
-    icon: "🛡️",
-    featured: true,
-    new: true
-  },
-  {
-    title: "AI Implementation Starter Kit 2025",
-    description: "Free templates, roadmaps, and checklists to kickstart AI",
-    url: "/resources/ai-implementation-starter-kit-2025",
-    type: "Resource",
-    category: "Implementation",
-    icon: "📥",
-    featured: true,
-    new: true
-  },
-  {
-    title: "Telecom Network Automation: 55% OPEX Reduction",
-    description: "Global operator automates incidents and changes with AI agents",
-    url: "/case-studies/ai-telecom-network-automation-success-2025",
-    type: "Case Study",
-    category: "Telecom",
-    icon: "📶",
-    featured: false,
-    new: true
-  },
-  {
     title: "AI 2025: Breakthrough Innovations",
     description: "Discover revolutionary AI innovations transforming industries",
     url: "/blog/ai-2025-breakthrough-innovations",
     type: "Blog Post",
     category: "AI Trends",
     icon: "🚀",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -94,7 +114,7 @@ const newContentItems = [
     type: "Blog Post",
     category: "AI Governance",
     icon: "⚖️",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -104,7 +124,7 @@ const newContentItems = [
     type: "Blog Post",
     category: "AI Automation",
     icon: "🤖",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -114,7 +134,7 @@ const newContentItems = [
     type: "Case Study",
     category: "Supply Chain",
     icon: "📦",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -124,7 +144,7 @@ const newContentItems = [
     type: "Resource",
     category: "Implementation",
     icon: "📋",
-    featured: true,
+    featured: false,
     new: true
   },
   {
