@@ -155,6 +155,15 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
+// New 2028 Revolutionary Components
+import AI2028RevolutionaryPromotionBanner from '../components/AI2028RevolutionaryPromotionBanner';
+import AI2028ContentDiscoveryWidget from '../components/AI2028ContentDiscoveryWidget';
+import AI2028DynamicContentCarousel from '../components/AI2028DynamicContentCarousel';
+
+// Revolutionary Content Showcase
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+
 // New AI 2025 Breakthrough Content Components
 import AI2025BreakthroughPromotionBanner from '../components/AI2025BreakthroughPromotionBanner';
 import AI2025BreakthroughContentShowcase from '../components/AI2025BreakthroughContentShowcase';
@@ -214,7 +223,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* AI 2025 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2025BreakthroughPromotionBanner />
         
@@ -410,6 +418,9 @@ export default function HomePage() {
         {/* AI 2028 BREAKTHROUGH PROMOTION BANNER */}
         <AI2028BreakthroughPromotionBanner />
         
+        {/* AI 2028 REVOLUTIONARY PROMOTION BANNER */}
+        <AI2028RevolutionaryPromotionBanner />
+        
         {/* AI 2028 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2028BreakthroughContentShowcase />
         
@@ -430,6 +441,20 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2028 */}
         <InteractiveContentDiscovery2028 />
+        
+        {/* AI 2028 CONTENT DISCOVERY WIDGET */}
+        <div className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <AI2028ContentDiscoveryWidget />
+          </div>
+        </div>
+        
+        {/* AI 2028 DYNAMIC CONTENT CAROUSEL */}
+        <div className="py-16 bg-gradient-to-br from-gray-900 to-blue-900">
+          <div className="container mx-auto px-4">
+            <AI2028DynamicContentCarousel />
+          </div>
+        </div>
         
         {/* AI 2027 BREAKTHROUGH PROMOTION BANNER */}
         <AI2027BreakthroughPromotionBanner />
