@@ -13,6 +13,9 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Services = React.lazy(() => import('./pages/Services'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Resources = React.lazy(() => import('./pages/Resources'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -87,6 +90,9 @@ const App: React.FC = () => {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/ai-solutions" element={<AISolutions />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/resources" element={<Resources />} />
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>

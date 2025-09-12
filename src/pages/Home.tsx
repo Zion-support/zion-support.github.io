@@ -12,6 +12,8 @@ import { ServicesShowcase } from "@/components/ServicesShowcase";
 import { EnhancedServicesOverview } from "@/components/home/EnhancedServicesOverview";
 import { EnhancedComprehensiveServicesShowcase } from "@/components/EnhancedComprehensiveServicesShowcase";
 import { ContactSection } from "@/components/ContactSection";
+import { PromoBanner } from "@/components/PromoBanner";
+import { FeaturedContentBanner } from "@/components/PromoBanner";
 
 export default function Home() {
   return (
@@ -34,6 +36,9 @@ export default function Home() {
       <EnhancedComprehensiveServicesShowcase />
       
       <EnhancedServicesOverview />
+      
+      {/* Featured Content Banner */}
+      <FeaturedContentBanner />
       
       <CategoriesSection />
       <BenefitsSection />
