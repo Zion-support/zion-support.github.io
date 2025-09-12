@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '70',
+      title: 'Enterprise RAG Platforms 2025: Architecture, Quality, and Ops',
+      description: 'Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.',
+      href: '/blog/ai-2025-enterprise-rag-platforms',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '71',
+      title: 'AI Governance 2025: Policy-as-Code and Runtime Enforcement',
+      description: 'From policy docs to enforced guardrails across datasets, prompts, tools, and agents.',
+      href: '/blog/ai-2025-governance-policy-as-code',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '72',
+      title: 'Agent Fleet Management 2025: Reliability, Safety, and Cost',
+      description: 'Operate large fleets of AI agents with SLAs: scheduling, guardrails, telemetry, and budgets.',
+      href: '/blog/ai-2025-agent-fleet-management',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',

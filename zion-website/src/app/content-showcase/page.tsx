@@ -16,6 +16,36 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Enterprise RAG Platforms 2025: Architecture, Quality, and Ops",
+      description: "Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.",
+      href: "/blog/ai-2025-enterprise-rag-platforms",
+      icon: "🔎",
+      category: "RAG",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Governance 2025: Policy-as-Code and Runtime Enforcement",
+      description: "From policy docs to enforced guardrails across datasets, prompts, tools, and agents.",
+      href: "/blog/ai-2025-governance-policy-as-code",
+      icon: "📜",
+      category: "Governance",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Fleet Management 2025: Reliability, Safety, and Cost",
+      description: "Operate large fleets of AI agents with SLAs: scheduling, guardrails, telemetry, and budgets.",
+      href: "/blog/ai-2025-agent-fleet-management",
+      icon: "🧭",
+      category: "Agents",
+      readTime: "19 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Secure Agent Architectures (2025)",
       description: "Blueprint for secure agent architectures with policy-as-code, guardrails, and SLAs.",
       href: "/blog/ai-2025-secure-agent-architectures",
