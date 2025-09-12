@@ -6,14 +6,25 @@ export default function ContentShowcase() {
   const featuredContent = [
     {
       id: 1,
-      title: "AI Enterprise Automation Revolution 2025",
-      description: "How Fortune 500 companies achieved 300% ROI through strategic AI implementation. Real case studies, implementation strategies, and ROI frameworks.",
-      href: "/blog/ai-2025-enterprise-automation-revolution",
+      title: "AI Advanced Automation 2025: Complete Implementation Guide",
+      description: "Master advanced AI automation with comprehensive strategies, best practices, and real-world case studies for enterprise success.",
+      href: "/blog/ai-2025-advanced-automation",
       type: "blog",
       category: "Automation",
       readTime: "25 min read",
       featured: true,
-      icon: "🏢"
+      icon: "🤖"
+    },
+    {
+      id: 2,
+      title: "AI Cybersecurity Threats 2025: Complete Defense Guide",
+      description: "Protect your organization from emerging AI cybersecurity threats with advanced defense strategies and security best practices.",
+      href: "/blog/ai-2025-cybersecurity-threats",
+      type: "blog",
+      category: "Cybersecurity",
+      readTime: "22 min read",
+      featured: true,
+      icon: "🛡️"
     },
     {
       id: 2,
@@ -28,25 +39,25 @@ export default function ContentShowcase() {
     },
     {
       id: 3,
-      title: "AI Financial Services Transformation 2025",
-      description: "Complete case study: How a major bank achieved 300% ROI through strategic AI implementation. Real results, implementation strategies, and lessons learned.",
-      href: "/case-studies/ai-financial-services-transformation-2025",
+      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
+      description: "How a Fortune 500 manufacturing company achieved $200M savings, 60% faster processing, and 99.7% uptime with autonomous AI systems.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
       type: "case-study",
-      category: "Finance",
+      category: "Manufacturing",
       readTime: "18 min read",
       featured: true,
       icon: "💰"
     },
     {
       id: 4,
-      title: "AI Implementation Master Guide 2026",
-      description: "The most comprehensive AI implementation guide available. 200+ pages of proven frameworks, checklists, templates, and step-by-step strategies.",
-      href: "/resources/ai-implementation-master-guide-2026",
+      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
+      description: "Complete checklist covering every aspect of AI implementation with 150+ actionable items across 7 key categories.",
+      href: "/resources/ai-implementation-checklist-2025",
       type: "resource",
       category: "Implementation",
-      readTime: "200+ pages",
+      readTime: "35 min read",
       featured: true,
-      icon: "📚"
+      icon: "📋"
     }
   ];
 
