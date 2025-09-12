@@ -1,14 +1,13 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
-<<<<<<< HEAD
 import ContentShowcase from '../components/ContentShowcase';
-=======
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import NewContentPromoBanner2025 from '../components/NewContentPromoBanner2025';
+import MegaContentDropBanner from '../components/MegaContentDropBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -17,18 +16,16 @@ import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
->>>>>>> cursor/create-and-deploy-new-content-fd62
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 
-// Lazy load heavy components
-const ROICalculator = lazy(() => import('../components/ROICalculator'));
-const StructuredData = lazy(() => import('../components/StructuredData'));
+// Import components directly
+import InteractiveROICalculator from '../components/InteractiveROICalculator';
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -37,6 +34,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* MEGA CONTENT DROP BANNER */}
+        <MegaContentDropBanner />
+        
         {/* NEW CONTENT PROMO BANNER 2025 */}
         <NewContentPromoBanner2025 />
         
@@ -44,7 +44,7 @@ export default function HomePage() {
         <UltraContentPromotionBanner />
         
         {/* Content Promotion Banner */}
-        <NewContentPromotionBanner />
+        <NewContentPromoBanner />
         
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
@@ -81,6 +81,30 @@ export default function HomePage() {
 
         {/* Content Promotion Banner */}
         <NewContentPromoBanner variant="featured" maxItems={3} />
+
+        {/* Featured New Content Showcase */}
+        <FeaturedNewContentShowcase />
+
+        {/* Dynamic Content Carousel */}
+        <DynamicContentCarousel />
+
+        {/* Content Discovery Section */}
+        <ContentDiscoverySection />
+
+        {/* Success Metrics */}
+        <section className="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                🎯 Proven Results
+              </h2>
+              <p className="text-lg text-gray-600">
+                Real metrics from our successful AI implementations
+              </p>
+            </div>
+            <SuccessMetrics metrics={contentMetrics} />
+          </div>
+        </section>
 
         {/* Featured Services */}
         <section className="py-20 bg-gray-50">
@@ -194,9 +218,37 @@ export default function HomePage() {
             <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
               Discover the potential return on investment for your AI transformation
             </p>
-            <Suspense fallback={<LoadingSpinner />}>
-              <ROICalculator />
-            </Suspense>
+            <InteractiveROICalculator />
+          </div>
+        </section>
+
+        {/* Enhanced Newsletter Section */}
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">
+                🚀 Stay Ahead with Latest AI Insights
+              </h2>
+              <p className="text-lg opacity-90 max-w-2xl mx-auto">
+                Get exclusive access to cutting-edge AI resources, case studies, and industry insights delivered directly to your inbox.
+              </p>
+            </div>
+            <EnhancedNewsletter />
+          </div>
+        </section>
+
+        {/* New Content Discovery */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                🔍 Discover More Content
+              </h2>
+              <p className="text-lg text-gray-600">
+                Explore our comprehensive library of AI resources and solutions
+              </p>
+            </div>
+            <NewContentDiscovery />
           </div>
         </section>
 
@@ -226,11 +278,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Structured Data */}
-        <Suspense fallback={null}>
-          <StructuredData />
-        </Suspense>
+        {/* Structured Data - removed for now */}
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

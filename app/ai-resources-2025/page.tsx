@@ -3,208 +3,287 @@ import Link from 'next/link';
 import SEO from '../components/SEO';
 
 export default function AIResources2025() {
-  const featuredResources = [
+  const resources = [
     {
-      title: "AI Implementation Master Guide 2026",
-      description: "The most comprehensive AI implementation guide available. 200+ pages of proven frameworks, checklists, templates, and step-by-step strategies.",
-      href: "/resources/ai-implementation-master-guide-2026",
-      icon: "📚",
-      category: "Master Guide",
-      type: "Free Download",
-      pages: "200+ pages"
+      category: "AI Automation",
+      title: "Complete AI Automation Guide 2025",
+      description: "Master the art of AI automation with our comprehensive guide covering strategies, tools, and implementation best practices.",
+      type: "Guide",
+      readTime: "25 min",
+      featured: true
     },
     {
-      title: "AI Cybersecurity Checklist 2025",
-      description: "150+ security items for secure AI implementation and compliance with industry standards.",
-      href: "/resources/ai-cybersecurity-checklist-2025",
-      icon: "🛡️",
-      category: "Security",
-      type: "Free Download",
-      pages: "150+ items"
+      category: "Quantum Computing",
+      title: "Quantum AI Integration Strategies",
+      description: "Learn how to integrate quantum computing with AI for next-generation business solutions.",
+      type: "Technical Paper",
+      readTime: "18 min",
+      featured: true
     },
     {
-      title: "AI Workforce Transformation Playbook",
-      description: "Complete reskilling strategies and implementation guides for transforming your workforce for the AI era.",
-      href: "/resources/ai-workforce-transformation-playbook-2025",
-      icon: "👥",
-      category: "Workforce",
-      type: "Free Download",
-      pages: "150+ pages"
+      category: "Cybersecurity",
+      title: "AI-Powered Security Defense Systems",
+      description: "Build robust cybersecurity defenses using artificial intelligence and machine learning.",
+      type: "Case Study",
+      readTime: "12 min",
+      featured: false
     },
     {
-      title: "AI ROI Calculator Tool",
-      description: "Calculate the potential return on investment for your AI projects with our comprehensive calculator.",
-      href: "/tools/ai-roi-calculator",
-      icon: "💰",
-      category: "Tools",
-      type: "Interactive Tool"
+      category: "Enterprise Solutions",
+      title: "Large-Scale AI Implementation",
+      description: "Navigate the complexities of implementing AI solutions across enterprise organizations.",
+      type: "Framework",
+      readTime: "30 min",
+      featured: true
+    },
+    {
+      category: "Edge Computing",
+      title: "Edge AI Deployment Strategies",
+      description: "Deploy AI models at the edge for real-time processing and reduced latency.",
+      type: "Technical Guide",
+      readTime: "20 min",
+      featured: false
+    },
+    {
+      category: "Data Analytics",
+      title: "Advanced AI Analytics Dashboard",
+      description: "Create powerful analytics dashboards using AI for better business insights.",
+      type: "Tutorial",
+      readTime: "15 min",
+      featured: false
     }
   ];
 
-  const latestArticles = [
+  const services = [
     {
-      title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
-      description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
-      href: "/blog/ai-2025-advanced-automation",
+      title: "AI Consulting & Strategy",
+      description: "Strategic guidance for AI implementation across your organization",
+      icon: "🧠",
+      features: ["AI Readiness Assessment", "Strategy Development", "ROI Analysis", "Implementation Planning"]
+    },
+    {
+      title: "Quantum AI Solutions",
+      description: "Next-generation computing solutions combining quantum and AI technologies",
+      icon: "⚛️",
+      features: ["Quantum Algorithm Design", "AI Model Optimization", "Hybrid Computing", "Performance Tuning"]
+    },
+    {
+      title: "Enterprise Automation",
+      description: "Comprehensive automation solutions for large-scale business operations",
       icon: "🤖",
-      category: "AI Automation",
-      readTime: "25 min read",
-      isNew: true
+      features: ["Process Automation", "Workflow Optimization", "Integration Services", "Monitoring & Analytics"]
     },
     {
-      title: "AI Cybersecurity Threats 2025: Complete Defense Strategy",
-      description: "Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.",
-      href: "/blog/ai-2025-cybersecurity-threats",
+      title: "Cybersecurity AI",
+      description: "AI-powered security solutions to protect your digital assets",
       icon: "🛡️",
-      category: "Cybersecurity",
-      readTime: "22 min read",
-      isNew: true
-    },
-    {
-      title: "AI Healthcare Diagnosis Breakthrough 2025",
-      description: "Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs. Real implementation strategies and case studies.",
-      href: "/blog/ai-2025-healthcare-diagnosis-breakthrough",
-      icon: "🏥",
-      category: "Healthcare",
-      readTime: "22 min read",
-      isNew: true
-    },
-    {
-      title: "AI Financial Services Transformation 2025",
-      description: "Complete case study: How a major bank achieved 300% ROI through strategic AI implementation. Real results, implementation strategies, and lessons learned.",
-      href: "/case-studies/ai-financial-services-transformation-2025",
-      icon: "💰",
-      category: "Finance",
-      readTime: "18 min read",
-      isNew: true
+      features: ["Threat Detection", "Automated Response", "Security Analytics", "Compliance Management"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI Resources 2025 - Complete Collection of AI Guides, Tools & Case Studies"
-        description="Discover our comprehensive collection of AI resources for 2025. Free guides, tools, case studies, and implementation frameworks to accelerate your AI journey."
-        keywords="AI resources 2025, AI guides, AI tools, AI case studies, AI implementation, free AI resources"
+        title="AI Resources 2025 - Cutting-Edge Technology Solutions"
+        description="Explore our comprehensive collection of AI resources, guides, and services for 2025. Stay ahead with the latest in AI automation, quantum computing, and enterprise solutions."
+        keywords="AI resources 2025, artificial intelligence, quantum computing, enterprise automation, cybersecurity AI"
         url="/ai-resources-2025"
       />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-bold">🚀 COMPLETE AI RESOURCE COLLECTION 2025</span>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🚀 NEW: January 2025 Collection</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              AI Resources 2025
+            </h1>
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
+              Discover cutting-edge AI solutions, comprehensive guides, and revolutionary technologies 
+              that will transform your business in 2025 and beyond.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#resources"
+                className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+              >
+                Explore Resources
+              </Link>
+              <Link
+                href="#services"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105"
+              >
+                View Services
+              </Link>
+            </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            AI Resources 2025: Your Complete Toolkit
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Everything you need to succeed with AI in 2025. Free guides, tools, case studies, 
-            and implementation frameworks from industry experts.
-          </p>
-        </header>
+        </div>
+      </section>
 
-        {/* Featured Resources */}
-        <section className="mb-20">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Featured Resources</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-blue-500 to-purple-500"></div>
+      {/* Featured Resources */}
+      <section id="resources" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              🎯 Featured Resources
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hand-picked resources covering the most important AI and technology topics for 2025
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredResources.map((resource, index) => (
-              <Link key={index} href={resource.href} className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 h-full">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {resource.icon}
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {resources.map((resource, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${
+                  resource.featured ? 'ring-2 ring-purple-500' : ''
+                }`}
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {resource.category}
+                    </span>
+                    {resource.featured && (
+                      <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
+                        ⭐ Featured
+                      </span>
+                    )}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {resource.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4">
                     {resource.description}
                   </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">
-                        {resource.category}
-                      </span>
-                      {resource.pages && (
-                        <span className="text-gray-500">{resource.pages}</span>
-                      )}
-                    </div>
-                    <span className="text-blue-600 font-medium group-hover:underline">
-                      {resource.type} →
-                    </span>
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>{resource.type}</span>
+                    <span>{resource.readTime} read</span>
                   </div>
+                  <Link
+                    href="#"
+                    className="block w-full bg-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  >
+                    Read More
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Latest Articles */}
-        <section className="mb-20">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Latest Articles</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-green-500 to-blue-500"></div>
+      {/* Services Section */}
+      <section id="services" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              🚀 Professional Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with our expert AI consulting and implementation services
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
-            {latestArticles.map((article, index) => (
-              <Link key={index} href={article.href} className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
-                  <div className="p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                        {article.category}
-                      </span>
-                      {article.isNew && (
-                        <span className="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
-                          NEW
-                        </span>
-                      )}
-                      <span className="text-gray-500 text-sm">{article.readTime}</span>
-                    </div>
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {article.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {article.title}
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="text-4xl mr-4">{service.icon}</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {service.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {article.description}
+                    <p className="text-gray-600">
+                      {service.description}
                     </p>
                   </div>
                 </div>
-              </Link>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-700">
+                      <span className="text-green-500 mr-2">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Get Started
+                </Link>
+              </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Call to Action */}
-        <section className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Get expert guidance on implementing AI solutions that drive real business value. 
-            Our team has helped 500+ companies achieve AI success.
+      {/* Statistics Section */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              📊 Our Impact
+            </h2>
+            <p className="text-xl opacity-90">
+              Measurable results from our AI implementations
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">500+</div>
+              <div className="text-lg opacity-90">Projects Completed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">$50M+</div>
+              <div className="text-lg opacity-90">Client Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">98%</div>
+              <div className="text-lg opacity-90">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">24/7</div>
+              <div className="text-lg opacity-90">Support Available</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies that have already transformed their operations with our AI solutions. 
+            Get started with a free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg"
+              className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition-colors"
             >
-              Get Free AI Consultation
+              Get Free Consultation
             </Link>
             <Link
-              href="/resources"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+              href="/services"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-colors"
             >
-              Download All Resources
+              Explore All Services
             </Link>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
