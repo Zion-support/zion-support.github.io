@@ -117,7 +117,14 @@ import AI2025RevolutionaryContentShowcase from '../components/AI2025Revolutionar
 
 // New AI 2026 Quantum-Neural Components
 import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
+import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
 import EnhancedContentDiscoveryWidget2026 from '../components/EnhancedContentDiscoveryWidget2026';
+
+// New AI 2025 Breakthrough Components
+import AI2025BreakthroughPromotionBanner from '../components/AI2025BreakthroughPromotionBanner';
+
+// New AI 2027 Future Predictions Components
+import AI2027FuturePredictionsPromotionBanner from '../components/AI2027FuturePredictionsPromotionBanner';
 
 // New 2029-2030 Content Components
 import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
@@ -151,6 +158,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025BreakthroughPromotionBanner />
+        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughBanner />
         
@@ -192,6 +202,9 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM-NEURAL FUSION CONTENT SHOWCASE */}
         <AI2026QuantumNeuralContentShowcase />
+        
+        {/* AI 2027 FUTURE PREDICTIONS PROMOTION BANNER */}
+        <AI2027FuturePredictionsPromotionBanner />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
