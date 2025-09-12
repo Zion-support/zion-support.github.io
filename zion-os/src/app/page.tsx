@@ -1,7 +1,5 @@
 import FeatureCard from './components/FeatureCard';
 
-import { latestUpdatesTeaser } from './updates/page';
-
 export default function HomePage() {
   const features = [
     {
@@ -80,22 +78,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Promo Banner */}
-      <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-          <span className="font-semibold">New on the blog:</span>
-          <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
-            <a href="/blog/ai-governance-playbook" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">AI Governance Playbook</a>
-            <span className="hidden sm:inline">•</span>
-            <a href="/blog/it-cost-optimization-quick-wins" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">IT Cost Optimization</a>
-            <span className="hidden sm:inline">•</span>
-            <a href="/blog/token-rewards-growth-loops" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">Token Reward Loops</a>
-          </div>
-          <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
-            Read all →
-          </a>
-        </div>
-      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -116,6 +98,9 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
+              </a>
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 Read the Latest News
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
@@ -175,21 +160,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Updates Teaser */}
+      {/* Latest News Teaser */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold">Latest Updates</h2>
-            <a href="/updates" className="text-blue-400 hover:text-blue-300">View all →</a>
+            <div>
+              <h2 className="text-3xl font-bold mb-2">Latest News</h2>
+              <p className="text-white/70">Product releases, academy updates, and ecosystem highlights</p>
+            </div>
+            <a href="/news" className="btn-secondary hover-lift px-6 py-3">View All</a>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {latestUpdatesTeaser.map((u) => (
-              <a key={`${u.date}-${u.title}`} href={u.href || '/updates'} className="block rounded-xl border border-white/10 hover:border-blue-500 transition-colors p-6 bg-zinc-900/40">
-                <div className="text-sm text-white/60">{u.date}</div>
-                <div className="mt-1 text-lg font-semibold">{u.title}</div>
-                <div className="mt-2 text-white/70 line-clamp-3">{u.summary}</div>
-              </a>
-            ))}
+            <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">⚡</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3 Released</h3>
+                <p className="text-white/70">42% faster deploys, real-time analytics, and smoother UX.</p>
+              </div>
+            </a>
+            <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🏪</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Marketplace Suite GA</h3>
+                <p className="text-white/70">Jobs, proposals, and escrow reach General Availability.</p>
+              </div>
+            </a>
+            <a href="/news/compliance-pack-release" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
+              <div className="p-6">
+                <div className="text-2xl mb-2">🛡️</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
+                <p className="text-white/70">SOC 2 playbooks and turnkey KYC/AML integrations.</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>

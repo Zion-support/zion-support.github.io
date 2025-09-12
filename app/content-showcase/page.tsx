@@ -5,12 +5,56 @@ import SEO from '../../components/SEO';
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      id: 1,
-      title: "AI Enterprise Automation Revolution 2025",
-      description: "How Fortune 500 companies achieved 300% ROI through strategic AI implementation. Real case studies, implementation strategies, and ROI frameworks.",
-      href: "/blog/ai-2025-enterprise-automation-revolution",
-      type: "blog",
-      category: "Automation",
+      title: "AI Multimodal Revolution 2025: Beyond Text to Vision, Audio, and Beyond",
+      description: "Discover how multimodal AI is revolutionizing industries in 2025. From vision-language models to audio synthesis, explore the future of AI that understands and generates across multiple modalities.",
+      href: "/blog/ai-2025-multimodal-revolution",
+      icon: "🎭",
+      category: "Multimodal AI",
+      readTime: "25 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Neural Interfaces 2025: The Future of Brain-Computer Interaction",
+      description: "Explore the revolutionary world of neural interfaces in 2025. From brain-computer interfaces to thought-controlled devices, discover how AI is bridging the gap between mind and machine.",
+      href: "/blog/ai-2025-neural-interfaces",
+      icon: "🧠",
+      category: "Neural Interfaces",
+      readTime: "28 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Quantum Machine Learning 2025: The Next Frontier of Computing",
+      description: "Discover how quantum computing is revolutionizing machine learning in 2025. From quantum neural networks to quantum advantage in optimization, explore the future of quantum AI.",
+      href: "/blog/ai-2025-quantum-machine-learning",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "30 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Autonomous Systems 2025: The Future of Self-Operating Technology",
+      description: "Explore the revolutionary world of autonomous AI systems in 2025. From self-driving vehicles to autonomous manufacturing, discover how AI is creating truly independent systems.",
+      href: "/blog/ai-2025-autonomous-systems",
+      icon: "🤖",
+      category: "Autonomous Systems",
+      readTime: "32 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Ethical Governance 2025: Building Responsible AI Systems",
+      description: "Navigate the complex landscape of AI ethics and governance in 2025. Learn how to build responsible AI systems, implement ethical frameworks, and ensure compliance with evolving regulations.",
+      href: "/blog/ai-2025-ethical-governance",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "35 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🚀",
+      category: "AI Innovations",
       readTime: "25 min read",
       featured: true,
       icon: "🏢"
@@ -52,87 +96,61 @@ export default function ContentShowcase() {
 
   const latestContent = [
     {
-      id: 5,
-      title: "AI Trends 2025 Predictions",
-      description: "15 predictions shaping the future of AI in 2025, from breakthrough innovations to enterprise adoption trends.",
-      href: "/blog/ai-2025-trends-predictions",
-      type: "blog",
-      category: "Trends",
-      readTime: "28 min read",
-      icon: "🔮"
+      title: "AI Autonomous Manufacturing Success: $200M Savings Case Study",
+      description: "How a Fortune 500 manufacturing company achieved $200M in annual savings, 40% cost reduction, and 60% faster processing times through autonomous AI systems.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      icon: "🏭",
+      category: "Manufacturing",
+      result: "$200M Savings",
+      date: "Jan 28, 2025"
     },
     {
-      id: 6,
-      title: "AI Workforce Transformation 2025",
-      description: "Complete guide to reskilling strategies for the AI era, including implementation frameworks and success stories.",
-      href: "/blog/ai-2025-workforce-transformation",
-      type: "blog",
-      category: "Workforce",
-      readTime: "20 min read",
-      icon: "👥"
+      title: "AI Cybersecurity Transformation Breakthrough: 99.8% Threat Detection Success",
+      description: "How a Fortune 500 financial services company achieved 99.8% threat detection accuracy and 85% reduction in security incidents through AI-powered cybersecurity transformation.",
+      href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      result: "99.8% Accuracy",
+      date: "Jan 30, 2025"
     },
     {
-      id: 7,
-      title: "AI Sustainability & Green Tech",
-      description: "Building eco-friendly AI systems for the future. Learn about energy optimization and sustainable AI practices.",
-      href: "/blog/ai-2025-sustainability-green-tech",
-      type: "blog",
+      title: "AI Sustainability Transformation: 60% Energy Reduction Success",
+      description: "How a major corporation achieved 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives and green technology optimization.",
+      href: "/case-studies/ai-sustainability-transformation-2025",
+      icon: "🌱",
       category: "Sustainability",
-      readTime: "18 min read",
-      icon: "🌱"
-    },
-    {
-      id: 8,
-      title: "AI Go-To-Market Strategy 2025",
-      description: "Positioning, pricing, and distribution strategies that work for AI products in 2025. From zero to traction playbook.",
-      href: "/blog/ai-2025-ai-go-to-market",
-      type: "blog",
-      category: "Strategy",
-      readTime: "15 min read",
-      icon: "📈"
+      result: "60% Energy Reduction",
+      date: "Jan 28, 2025"
     }
   ];
 
   const resources = [
     {
-      id: 9,
-      title: "AI Cybersecurity Checklist 2025",
-      description: "150+ security items for secure AI implementation and compliance with industry standards.",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Blueprint",
+      description: "The most comprehensive AI implementation guide available. Everything you need to successfully implement AI in your organization, from initial strategy to full deployment and optimization.",
+      href: "/resources/ai-implementation-master-guide-2026",
+      icon: "📖",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Cybersecurity Checklist 2025: 150+ Security Items",
+      description: "Comprehensive cybersecurity checklist for AI implementations. 150+ security items covering data protection, model security, and compliance requirements.",
       href: "/resources/ai-cybersecurity-checklist-2025",
-      type: "resource",
+      icon: "🛡️",
       category: "Security",
-      readTime: "150+ items",
-      icon: "🔒"
+      type: "Free Download",
+      date: "Jan 28, 2025"
     },
     {
-      id: 10,
-      title: "AI Workforce Transformation Playbook",
-      description: "Complete reskilling strategies and implementation guides for organizations transitioning to AI-driven operations.",
+      title: "AI Workforce Transformation Playbook 2025: Complete Reskilling Guide",
+      description: "Comprehensive playbook for AI workforce transformation with proven strategies, templates, and implementation frameworks for successful team reskilling.",
       href: "/resources/ai-workforce-transformation-playbook-2025",
-      type: "resource",
+      icon: "👥",
       category: "Workforce",
-      readTime: "150+ pages",
-      icon: "👨‍💼"
-    },
-    {
-      id: 11,
-      title: "AI ROI Calculator",
-      description: "Calculate potential return on AI investments with our comprehensive ROI calculator and financial modeling tools.",
-      href: "/tools/ai-roi-calculator",
-      type: "tool",
-      category: "Finance",
-      readTime: "Interactive",
-      icon: "💰"
-    },
-    {
-      id: 12,
-      title: "AI Implementation Checklist",
-      description: "Step-by-step checklist for successful AI implementation, from planning to deployment and optimization.",
-      href: "/resources/ai-implementation-checklist-2025",
-      type: "resource",
-      category: "Implementation",
-      readTime: "100+ items",
-      icon: "✅"
+      type: "Free Download",
+      date: "Jan 28, 2025"
     }
   ];
 
