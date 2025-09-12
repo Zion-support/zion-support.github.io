@@ -13,6 +13,8 @@ import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentPromoBanner2026 from '../components/NewContentPromoBanner2026';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
@@ -117,6 +119,9 @@ export default function HomePage() {
 
         {/* New Content Promotion Banner */}
         <NewContentPromoBanner />
+        
+        {/* NEW 2026 CONTENT PROMOTION BANNER */}
+        <NewContentPromoBanner2026 />
 
         {/* AI Tools Showcase Banner */}
         <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
@@ -469,6 +474,9 @@ export default function HomePage() {
 
       {/* Featured Content Showcase */}
       <FeaturedContentShowcase />
+      
+      {/* NEW 2026 CONTENT SHOWCASE */}
+      <NewContentShowcase2026 />
 
       {/* NEW CONTENT SPOTLIGHT SECTION */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
