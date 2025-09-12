@@ -1,31 +1,20 @@
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
+  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^vitest$': '<rootDir>/tests/vitest-mock.ts',
+    '^notistack$': '<rootDir>/src/stubs/notistack.tsx',
+    '^@sentry/browser$': '<rootDir>/src/stubs/sentry.ts',
   },
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { 
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        ['@babel/preset-react', { runtime: 'automatic' }],
-        '@babel/preset-typescript'
-      ] 
-    }],
+  roots: ['<rootDir>/tests', '<rootDir>/__tests__'],
+  coverageThreshold: {
+    global: {
+      lines: 80,
+      functions: 80,
+    },
   },
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  testMatch: ['**/__tests__/**/*.(js|jsx|ts|tsx)', '**/*.(test|spec).(js|jsx|ts|tsx)'],
-  testPathIgnorePatterns: ['/node_modules/', '/tests.disabled/'],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/main.tsx',
-    '!src/App.jsx',
-  ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  transformIgnorePatterns: [
-    'node_modules/(?!(react-router-dom|@testing-library)/)'
-  ],
 };
+
