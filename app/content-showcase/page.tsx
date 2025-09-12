@@ -5,70 +5,79 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
-      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
-      href: "/blog/ai-2025-breakthrough-innovations",
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025: Neuromorphic Computing - Brain-Inspired AI Revolution",
+      description: "Explore how neuromorphic computing is revolutionizing AI in 2025. Discover brain-inspired processors, spiking neural networks, and ultra-efficient AI systems that mimic human cognition.",
+      href: "/blog/ai-2025-neuromorphic-computing",
       icon: "🧠",
-      category: "AI Innovations",
-      readTime: "25 min read",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Trends 2025: 15 Predictions That Will Shape the Future of Technology",
-      description: "Discover the most important AI trends and predictions for 2025. From AGI breakthroughs to quantum AI, explore what's coming next in artificial intelligence.",
-      href: "/blog/ai-2025-trends-predictions",
-      icon: "🔮",
-      category: "AI Predictions",
-      readTime: "28 min read",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
+      category: "Neuromorphic AI",
       readTime: "18 min read",
-      date: "Feb 01, 2025"
+      date: "Jan 29, 2025"
     },
     {
-      title: "AI Multimodal Applications 2025: Beyond Text to Vision and Audio",
-      description: "Complete guide to building multimodal AI systems that process text, images, audio, and video for enhanced user experiences and business applications.",
-      href: "/blog/ai-multimodal-applications-2025",
-      icon: "🎭",
-      category: "AI Technology",
-      readTime: "12 min read",
+      title: "AI 2025: Edge Computing Revolution - Bringing Intelligence to Every Device",
+      description: "Discover how edge computing is revolutionizing AI in 2025. Explore real-time processing, IoT intelligence, and distributed AI systems that bring smart capabilities to every device.",
+      href: "/blog/ai-2025-edge-computing-revolution",
+      icon: "🌐",
+      category: "Edge AI",
+      readTime: "20 min read",
       date: "Jan 28, 2025"
+    },
+    {
+      title: "AI 2025: Governance & Ethics - Building Responsible AI Systems",
+      description: "Explore the critical importance of AI governance and ethics in 2025. Learn about responsible AI development, ethical frameworks, and regulatory compliance for trustworthy AI systems.",
+      href: "/blog/ai-2025-ai-governance-ethics",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "24 min read",
+      date: "Jan 27, 2025"
+    },
+    {
+      title: "AI 2025: Cybersecurity Threats - Protecting AI Systems from Advanced Attacks",
+      description: "Explore the evolving landscape of AI cybersecurity threats in 2025. Learn about adversarial attacks, model poisoning, and advanced defense strategies for AI systems.",
+      href: "/blog/ai-2025-ai-cybersecurity-threats",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "16 min read",
+      date: "Jan 26, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
-      description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
-      href: "/case-studies/ai-transformation-fortune-500-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
+      title: "AI Healthcare Diagnosis Breakthrough: 99.7% Accuracy Achieved",
+      description: "A leading healthcare system achieved unprecedented diagnostic accuracy using AI, reducing diagnosis time by 85% and saving $50M annually. Complete case study with implementation details.",
+      href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "99.7% Accuracy",
       date: "Jan 30, 2025"
     },
     {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
+      title: "AI Financial Services Transformation: $200M Savings Achieved",
+      description: "A major financial institution achieved $200M in annual cost savings and 400% ROI through comprehensive AI transformation. Complete case study with implementation details and results.",
+      href: "/case-studies/ai-financial-services-transformation-2025",
+      icon: "🏦",
+      category: "Financial AI",
+      result: "$200M Savings",
+      date: "Jan 29, 2025"
     },
     {
-      title: "AI Manufacturing Automation: 40% Cost Reduction Success",
-      description: "Fortune 500 manufacturing company achieves 40% cost reduction and 60% faster processing through intelligent automation and predictive maintenance.",
+      title: "AI Manufacturing Automation Success: 60% Cost Reduction Achieved",
+      description: "A Fortune 500 manufacturing company achieved 60% cost reduction and 300% productivity increase through comprehensive AI automation. Complete case study with implementation details.",
       href: "/case-studies/ai-manufacturing-automation-success-2025",
       icon: "🏭",
-      category: "Manufacturing",
-      result: "40% Cost Reduction",
-      date: "Feb 01, 2025"
+      category: "Manufacturing AI",
+      result: "60% Cost Reduction",
+      date: "Jan 28, 2025"
     }
   ];
 
