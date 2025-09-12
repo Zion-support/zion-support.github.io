@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'ANALYTICS-OBS-2025',
+      title: 'Analytics Observability Blueprint 2025: Traces, Quality, Cost',
+      description: 'End-to-end visibility for analytics and AI: lineage, traces, data quality, and cost SLOs.',
+      href: '/blog/ai-2025-analytics-observability-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platforms'
+    },
+    {
+      id: 'DATA-CONTRACTS-2025',
+      title: 'Data Contracts for ML in 2025: Reliability & Governance',
+      description: 'Schema-first contracts to reduce breakages, improve quality, and speed ML delivery.',
+      href: '/blog/ai-2025-data-contracts-for-ml',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Data Platforms'
+    },
+    {
       id: 'AIFINOPS-2025',
       title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
       description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
