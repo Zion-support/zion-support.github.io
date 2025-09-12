@@ -1,9 +1,32 @@
-=======
 // @ts-nocheck
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+function resolve(dir: string, ...paths: string[]) {
+  return path.resolve(__dirname, dir, ...paths)
+}
+
+function splitVendorChunkPlugin() {
+  return {
+    name: 'split-vendor-chunk',
+    config(config: any) {
+      config.build = config.build || {}
+      config.build.rollupOptions = config.build.rollupOptions || {}
+      config.build.rollupOptions.output = config.build.rollupOptions.output || {}
+      config.build.rollupOptions.output.manualChunks = config.build.rollupOptions.output.manualChunks || {}
+      
+      config.build.rollupOptions.output.manualChunks = {
+        'react-vendor': ['react', 'react-dom'],
+        'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
+        'utils-vendor': ['clsx', 'tailwind-merge', 'framer-motion']
+      }
+    }
+  }
+}
 
 export default defineConfig({
   plugins: [
@@ -15,19 +38,19 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@layout': resolve(__dirname, 'src/layout'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@assets': resolve(__dirname, 'src/assets'),
-      '@styles': resolve(__dirname, 'src/styles'),
-      '@data': resolve(__dirname, 'src/data'),
-      '@services': resolve(__dirname, 'src/services'),
-      '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
+      '@': resolve('src'),
+      '@components': resolve('src/components'),
+      '@pages': resolve('src/pages'),
+      '@layout': resolve('src/layout'),
+      '@utils': resolve('src/utils'),
+      '@hooks': resolve('src/hooks'),
+      '@types': resolve('src/types'),
+      '@assets': resolve('src/assets'),
+      '@styles': resolve('src/styles'),
+      '@data': resolve('src/data'),
+      '@services': resolve('src/services'),
+      '@context': resolve('src/context'),
+      '@constants': resolve('src/constants')
     }
   },
   css: {
@@ -98,7 +121,6 @@ export default defineConfig({
       '@radix-ui/react-alert-dialog',
       '@radix-ui/react-avatar',
       '@radix-ui/react-checkbox',
-      '@radix-ui/react-collapsible',
       '@radix-ui/react-dialog',
       '@radix-ui/react-dropdown-menu',
       '@radix-ui/react-label',
