@@ -119,6 +119,16 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
+// New AI 2035 Breakthrough Content Components
+import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
+import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
+
+// Advanced Technology Content Components
+import AdvancedQuantumComputingPromotionBanner from '../components/AdvancedQuantumComputingPromotionBanner';
+import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
+import AutonomousSystemsRevolutionBanner from '../components/AutonomousSystemsRevolutionBanner';
+import EdgeComputingIOTBanner from '../components/EdgeComputingIOTBanner';
+
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
@@ -139,6 +149,24 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
+        <AI2035BreakthroughContentShowcase />
+        
+        {/* ADVANCED QUANTUM COMPUTING PROMOTION BANNER - NEW CONTENT */}
+        <AdvancedQuantumComputingPromotionBanner />
+        
+        {/* NEURAL INTERFACE REVOLUTION BANNER - NEW CONTENT */}
+        <NeuralInterfaceRevolutionBanner />
+        
+        {/* AUTONOMOUS SYSTEMS REVOLUTION BANNER - NEW CONTENT */}
+        <AutonomousSystemsRevolutionBanner />
+        
+        {/* EDGE COMPUTING & IoT BANNER - NEW CONTENT */}
+        <EdgeComputingIOTBanner />
+        
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
