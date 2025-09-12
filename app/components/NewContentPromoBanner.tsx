@@ -18,33 +18,26 @@ const newContentItems = [
     new: true
   },
   {
-<<<<<<< HEAD
-    title: "AI Benchmarking Best Practices 2025",
-    description: "Reliable evals for quality, latency, and cost across models and tasks",
-    url: "/resources/ai-benchmarking-best-practices-2025",
-    type: "Resource",
-    category: "Evaluation",
-    icon: "📏",
-=======
     title: "AI Agent Cost Optimization 2025",
     description: "Model routing, caching, batching, and evals to cut spend 35–55%",
     url: "/blog/ai-2025-agent-cost-optimization",
     type: "Blog Post",
     category: "Cost Optimization",
     icon: "💸",
->>>>>>> cursor/create-and-deploy-new-content-7119
     featured: true,
     new: true
   },
   {
-<<<<<<< HEAD
-    title: "AI Customer Success Automation 2025",
-    description: "Playbooks to automate onboarding, QBRs, and proactive retention",
-    url: "/resources/ai-customer-success-automation-2025",
+    title: "AI Benchmarking Best Practices 2025",
+    description: "Reliable evals for quality, latency, and cost across models and tasks",
+    url: "/resources/ai-benchmarking-best-practices-2025",
     type: "Resource",
-    category: "Customer Success",
-    icon: "🤝",
-=======
+    category: "Evaluation",
+    icon: "📏",
+    featured: true,
+    new: true
+  },
+  {
     title: "Insurance Underwriting Agents",
     description: "42% cycle time reduction with agentic workflows and guardrails",
     url: "/case-studies/ai-2025-insurance-underwriting-agents",
@@ -61,7 +54,16 @@ const newContentItems = [
     type: "Resource",
     category: "Growth",
     icon: "🧭",
->>>>>>> cursor/create-and-deploy-new-content-7119
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Customer Success Automation 2025",
+    description: "Playbooks to automate onboarding, QBRs, and proactive retention",
+    url: "/resources/ai-customer-success-automation-2025",
+    type: "Resource",
+    category: "Customer Success",
+    icon: "🤝",
     featured: true,
     new: true
   },
