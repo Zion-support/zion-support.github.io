@@ -34,20 +34,74 @@ export default function ContentShowcase() {
           <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎯 Featured This Week
+                🔥 Latest Breakthrough Content
               </h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Our most popular and impactful content, handpicked by our experts to help you 
-                stay ahead in the rapidly evolving AI landscape.
+                Our newest and most impactful content featuring AI 2026 predictions, enterprise success stories, 
+                and comprehensive implementation roadmaps to accelerate your AI transformation.
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <Link href="/blog/ai-2026-future-predictions-and-trends" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Readiness 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete assessment & implementation guide with 340% ROI</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
+                  <h3 className="text-lg font-semibold mb-2">AI 2026: Future Predictions</h3>
+                  <p className="text-sm opacity-90 mb-3">Quantum AI, brain-computer interfaces, AGI breakthroughs - the future of AI</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>18 min read</span>
+                    <span className="mx-2">•</span>
+                    <span className="bg-red-500 px-2 py-1 rounded-full">Hot</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-enterprise-ai-transformation-success" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💼</div>
+                  <h3 className="text-lg font-semibold mb-2">Enterprise AI Success Stories</h3>
+                  <p className="text-sm opacity-90 mb-3">How Fortune 500 companies achieved 300% ROI through strategic AI implementation</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span className="bg-green-500 px-2 py-1 rounded-full">New</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/resources/ai-2026-implementation-roadmap" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🗺️</div>
+                  <h3 className="text-lg font-semibold mb-2">AI 2026 Implementation Roadmap</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete step-by-step guide for successful AI implementation in 2026</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>25 min read</span>
+                    <span className="mx-2">•</span>
+                    <span className="bg-blue-500 px-2 py-1 rounded-full">Guide</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Spotlight */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              ✨ Just Released - January 30, 2025
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Fresh insights and breakthrough content to keep you ahead of the AI curve
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
+                <h3 className="text-lg font-semibold mb-2">AI Enterprise Readiness 2025</h3>
+                <p className="text-sm text-gray-600 mb-3">Complete assessment & implementation guide with 340% ROI</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
