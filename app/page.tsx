@@ -38,6 +38,7 @@ import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContent
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 import NewContent2026Banner from '../components/NewContent2026Banner';
 import ContentShowcase2026 from '../components/ContentShowcase2026';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -54,6 +55,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
         
