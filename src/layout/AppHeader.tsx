@@ -1,202 +1,117 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+
+import { useState } from 'react';
+import { useMessaging } from '@/context/MessagingContext';
+import { MainNavigation } from './MainNavigation';
+import { Logo } from '@/components/header/Logo';
+import { Container } from '@/components/Container';
+import { useTranslation } from 'react-i18next';
+import { Menu, X } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Navigate to search results
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
-  };
-
-  const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
-  ];
-
-  const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
-  ];
-
+  const isMobile = useIsMobile();
+  
+  // Try to access the messaging context, but provide a fallback value if it's not available
+  let unreadCount = 0;
+  try {
+    const { unreadCount: count } = useMessaging();
+    unreadCount = count;
+  } catch (error) {
+    console.warn('Messaging context not available');
+  }
+  
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-            </Link>
+      <header
+        style={{ "--nav-height": "64px" } as React.CSSProperties}
+        className={cn(
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
+          { "bg-red-500": mobileMenuOpen }
+        )}
+      >
+        <Container className="flex h-16 items-center">
+          <Logo />
+          <div className="ml-6 flex-1 hidden md:block">
+            <MainNavigation unreadCount={unreadCount} />
           </div>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex ml-8 space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
-            
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
-                className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                Services
-                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {servicesDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
-                  onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
-                >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {services.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group"
-                        >
-                          <div className="flex-1">
-                            <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
-                              {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400">
-                              {service.description}
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-slate-700/50">
-                      <Link
-                        to="/services"
-                        className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-                      >
-                        View All Services →
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </nav>
-
-          {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex ml-6 flex-1 max-w-md">
-            <form onSubmit={handleSearch} className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search services, talent, equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-800/20 border border-slate-700/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Search className="h-4 h-4" />
-              </button>
-            </form>
-          </div>
-
-          {/* Right side actions */}
-          <div className="ml-6 flex items-center space-x-4">
-            {/* Notifications */}
-            <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
-              <Bell className="h-5 w-5" />
-            </button>
-
-            {/* User menu */}
-            <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
-              <User className="h-5 w-5" />
-            </button>
-
-            {/* Mobile menu button */}
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
+              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle mobile menu"
             >
+              <span className="sr-only">Open main menu</span>
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>
-        </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-slate-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
-              {/* Mobile Services */}
-              <div className="px-3 py-2">
-                <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
-                <div className="space-y-1">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.href}
-                      className="block text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="px-3 py-2">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-slate-700/50 border border-slate-600/50 rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </form>
+          <PointsBadge />
+          {!isLoggedIn && (
+            <div className="ml-4 relative z-10 flex items-center">
+              <Link
+                href="/auth/login"
+                className="text-sm font-medium text-foreground/70 hover:text-foreground"
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // For the main login link, we might not have a specific returnTo beyond current page,
+                  // or we could default to dashboard.
+                  // For consistency with how sub-menus now set it:
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true });
+                  openLoginModal(router.asPath);
+                }}
+              >
+                {t('auth.login')}
+              </Link>
+              <Link
+                href="/signup"
+                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
+                aria-label={t('auth.signup')}
+                data-testid="signup-nav-link"
+              >
+                {t('auth.signup')}
+              </Link>
             </div>
-          </div>
-        )}
+          )}
+          {/* User avatar menu */}
+          {isLoggedIn && (
+            <div className="ml-4">
+              <UserMenu />
+            </div>
+          )}
+        </Container>
       </header>
+      
+      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-40 pt-16">
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-gray-900 border-t border-green-700/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+              unreadCount={unreadCount} 
+              onClose={() => setMobileMenuOpen(false)} 
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   );
 }

@@ -1,96 +1,43 @@
-import React, { Suspense, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.jsx';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { Footer } from './components/Footer';
 
-// Lazy load pages with better chunking
-const Home = React.lazy(() => import('./pages/Home.jsx'));
-const About = React.lazy(() => import('./pages/About.jsx'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
-const Contact = React.lazy(() => import('./pages/Contact.jsx'));
-const Login = React.lazy(() => import('./pages/Login.jsx'));
-const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const About = React.lazy(() => import('./pages/AboutPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
-// Enhanced loading spinner with accessibility
-const LoadingSpinner = () => (
-  <div 
-    className="min-h-screen bg-futuristic flex items-center justify-center"
-    role="status"
-    aria-label="Loading page content"
-  >
-    <div className="text-center">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-zion-cyan text-lg">Loading...</p>
-      <div className="sr-only">Loading page content, please wait...</div>
-    </div>
-  </div>
-);
-
-// Error boundary component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center p-4">
-    <div className="text-center max-w-md">
-      <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
-      <p className="text-zion-slate-light mb-6">{error.message}</p>
-      <button
-        onClick={resetErrorBoundary}
-        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
-      >
-        Try again
-      </button>
-    </div>
-  </div>
-);
-
-function App() {
-  // Performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
-      
-      return () => observer.disconnect();
-    }
-  }, []);
-
+const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-        <AppHeader />
-        <main className="flex-1" role="main">
-          <Suspense fallback={<LoadingSpinner />}>
+      <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        <Header />
+        <Sidebar />
+        
+        {/* Main Content with proper spacing for header and sidebar */}
+        <main className="ml-64 pt-20 min-h-screen">
+          <React.Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-cyan-400 text-lg">Loading...</p>
+            </div>
+          }>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
-              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
-              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
             </Routes>
-          </Suspense>
+          </React.Suspense>
         </main>
+        
         <Footer />
-        <ChatAssistant />
-        <PerformanceMonitor />
       </div>
     </Router>
   );
-}
+};
 
 export default App;

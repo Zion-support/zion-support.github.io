@@ -3,17 +3,13 @@ export interface AdditionalLiveService2025 {
   name: string;
   tagline: string;
   price: string;
-  features: string[];
-}
-
+  features: string[]}
 export const additionalLiveServices2025: AdditionalLiveService2025[] = [
-  {
-    id: 'live-service-1',
-    name: 'Live Service 1',
-    tagline: 'Real-time service delivery',
-    price: '$199',
-    features: ['Real-time monitoring', 'Live support', 'Performance tracking']
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  }
+  {;
+    id: "live-service-1"
+    name: "Live Service 1"
+    tagline: "Real-time service delivery"
+    price: "$199"
+    features: ["Real-time monitoring", "Live support", "Performance tracking"],
+}
 ];

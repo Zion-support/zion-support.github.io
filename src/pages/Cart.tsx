@@ -1,115 +1,109 @@
+import React, { useEffect, useState } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
-import Skeleton from '@/components/ui/skeleton';
+import { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
-import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+import type { RootState, AppDispatch } from '@/store';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
+import {
+  removeItem as removeItemAction,
+  updateQuantity as updateQuantityAction
+} from "@/store/cartSlice";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
+// CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
+// import { CartItem as CartItemType } from '@/types/cart';
+// safeStorage is no longer needed here for reading
+// import { safeStorage } from '@/utils/safeStorage';
+import { getStripe } from '@/utils/getStripe';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
+
+
+
+
+
+import { useWishlist } from '@/hooks/useWishlist';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function CartPage() {
-  const navigate = useNavigate();
-  const { items, dispatch } = useCart();
-  const { user } = useAuth();
+  const { t: _t } = useTranslation();
+  const items = useSelector((s: RootState) => s.cart.items);
+  const dispatch = useDispatch<AppDispatch>();
+  const { user, isAuthenticated } = useAuth();
   const [loading, setLoading] = useState(false);
-  const [cartLoading, setCartLoading] = useState(true);
-  const [showEmpty, setShowEmpty] = useState(false);
-
-  useEffect(() => {
-    if (reduxItems.length > 0) {
-      setItems(reduxItems);
-      setCartLoading(false);
-    } else {
-      const stored = safeStorage.getItem('zion_cart');
-      if (stored) {
-        try {
-          dispatch(setItemsAction(JSON.parse(stored) as CartItemType[]));
-        } catch {
-          dispatch(setItemsAction([]));
-        }
-      } else {
-        dispatch(setItemsAction([]));
-      }
-    };
-    load();
-  }, [user, dispatch]);
-
-  const updateQuantity = async (id: string, qty: number) => {
-    dispatch(updateQuantityAction({ id, quantity: qty }));
-    if (user) {
-      try {
-        await fetch('/api/cart', {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id, quantity: qty }),
-        });
-      } catch (err) {
-        console.error('Failed to update cart', err);
-      }
-    }
-    setCartLoading(false);
-  }, [reduxItems]);
-
-  useEffect(() => {
-    if (!cartLoading && items.length === 0) {
-      setShowEmpty(true);
-    }
-  }, [cartLoading, items]);
+  const [guestOpen, setGuestOpen] = useState(false);
+  const { toggle: toggleWishlist, isWishlisted } = useWishlist();
 
   const updateQuantity = (id: string, qty: number) => {
-    dispatch(updateQuantityAction({ id, quantity: qty }));
+    setItems(prev => {
+      const updated = prev.map(i => i.id === id ? { ...i, quantity: qty } : i);
+      safeStorage.setItem('cart', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const removeItem = (id: string) => {
-    dispatch(removeItemAction(id));
+    setItems(prev => {
+      const updated = prev.filter(i => i.id !== id);
+      safeStorage.setItem('cart', JSON.stringify(updated));
+      return updated;
+    });
   };
 
-  const handleCheckout = () => {
-    router.push('/checkout');
-  };
-
-  const applyCode = async () => {
+  const handleCheckout = async (details?: { email?: string; address?: string }) => {
+    setLoading(true);
     try {
-      const res = await apiClient.post('/coupons/validate', {
-        code,
-        amount: subtotal,
+      const stripe = await getStripe();
+      if (!stripe) throw new Error('Stripe.js failed to load');
+
+      const { data } = await axios.post('/api/checkout-session', {
+        cartItems: items,
+        customer_email: details?.email || user?.email,
+        shipping_address: details?.address,
       });
-      setDiscount(res.data.discount || 0);
-    } catch (e) {
-      setDiscount(0);
+
+      const sessionId = data.sessionId as string | undefined;
+      if (!sessionId) throw new Error('Session ID missing in response');
+
+      const { error } = await stripe.redirectToCheckout({ sessionId });
+      if (error) logErrorToProduction('Stripe redirect error:', { data: error.message });
+    } catch (err) {
+      logErrorToProduction('Checkout error:', { data: err });
+      let message = 'Checkout failed';
+      if (err && typeof err === 'object' && 'message' in err && typeof (err as { message?: unknown }).message === 'string') {
+        message = (err as { message: string }).message;
+      }
+      alert(message);
+    } finally {
+      setLoading(false);
+    }
+  }; 
+
+  const startCheckout = () => {
+    if (!isAuthenticated) {
+      setGuestOpen(true);
+    } else {
+      handleCheckout();
     }
   };
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const total = subtotal - discount;
+  const displaySubtotal = (subtotal * currency.fx_rate).toFixed(2);
 
-  if (cartLoading) {
-    return (
-      <div className="container py-10 space-y-4">
-        <Skeleton className="h-8 w-1/3" />
-        <Skeleton className="h-32 w-full" />
-      </div>
-    );
-  }
-
-  if (showEmpty) {
+  if (items.length === 0) {
     return (
       <div className="container py-10 text-center">
-        <img loading="lazy"
-          src="/images/empty-cart.svg"
-          alt="Empty cart"
-          className="mx-auto mb-4 w-48 h-36"
-        />
-        <p>{t('cart.empty')}</p>
-        <Button asChild className="mt-4">
-          <Link href="/marketplace">Browse Marketplace</Link>
-        </Button>
+        <p>Your cart is empty.</p>
       </div>
     );
   }
-
-  const tax = subtotal * 0.1;
-  const total = subtotal + tax;
 
   return (
     <div className="container max-w-2xl py-10">
@@ -119,7 +113,10 @@ export default function CartPage() {
           <li key={item.id} className="flex justify-between items-center">
             <div>
               <p className="font-medium">{item.name}</p>
-              <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
+              <p className="text-sm text-muted-foreground">
+                {currency.symbol}
+                {(item.price * currency.fx_rate).toFixed(2)}
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <input
@@ -136,29 +133,12 @@ export default function CartPage() {
           </li>
         ))}
       </ul>
-      <div className="mt-6 flex items-center gap-2">
-        <input
-          type="text"
-          value={code}
-          onChange={e => setCode(e.target.value)}
-          placeholder="Apply Coupon / Gift Card"
-          className="flex-1 bg-transparent border border-input rounded p-2"
-        />
-        <Button variant="outline" onClick={applyCode}>
-          Apply
-        </Button>
-      </div>
       <div className="flex justify-between mt-6 font-semibold">
         <span>Subtotal</span>
-        <span>${subtotal.toFixed(2)}</span>
+        <span>{currency.symbol}{displaySubtotal}</span>
       </div>
-      <Button
-        className="mt-4 w-full"
-        onClick={() =>
-          user ? navigate('/checkout') : navigate('/login?next=/checkout')
-        }
-      >
-        {user ? 'Checkout' : 'Login to Checkout'}
+      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
+        Checkout
       </Button>
     </div>
   );

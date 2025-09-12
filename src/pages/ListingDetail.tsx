@@ -2,14 +2,16 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Skeleton from "@/components/ui/skeleton";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
+
+
+
+
 import { cn } from "@/lib/utils";
-import Link from 'next/link';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
@@ -19,10 +21,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter();
-  const id = router.query.id as string;
+  const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, _setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
@@ -32,20 +33,18 @@ export default function ListingDetail() {
 
   if (!listing) {
     return (
-      
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center py-20">
+            <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-                <Link href="/marketplace">Back to Marketplace</Link>
+                <a href="/marketplace">Back to Marketplace</a>
               </Button>
             </div>
           </div>
         </div>
-      
-    );
+      );
   }
 
   const handleContact = () => {
@@ -57,7 +56,7 @@ export default function ListingDetail() {
   };
 
   return (
-    
+    <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -66,11 +65,14 @@ export default function ListingDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
-                    <ImageWithRetry
-                      src={listing.images[selectedImageIndex]}
-                      alt={listing.title}
+                    <img 
+                      src={listing.images[selectedImageIndex]} 
+                      alt={listing.title} 
                       className="w-full h-full object-cover"
-                      fallbackSrc="/placeholder.svg"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";
+                      }}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
@@ -90,11 +92,14 @@ export default function ListingDetail() {
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
-                        <ImageWithRetry
-                          src={image}
-                          alt={`${listing.title} - image ${index + 1}`}
+                        <img 
+                          src={image} 
+                          alt={`${listing.title} - image ${index + 1}`} 
                           className="w-full h-full object-cover"
-                          fallbackSrc="/placeholder.svg"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "/placeholder.svg";
+                          }}
                         />
                       </div>
                     ))}
@@ -236,7 +241,7 @@ export default function ListingDetail() {
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
-                      <img loading="lazy" 
+                      <img 
                         src={listing.author.avatarUrl} 
                         alt={listing.author.name} 
                         className="h-12 w-12 rounded-full"
@@ -288,12 +293,12 @@ export default function ListingDetail() {
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact 
-            email={listing.author.email} // TypeScript now knows this might be undefined
+            email={listing.author.email || ''}
             profileName={listing.author.name}
             profileType="service"
           />
         </DialogContent>
       </Dialog>
-    
+    </>
   );
 }

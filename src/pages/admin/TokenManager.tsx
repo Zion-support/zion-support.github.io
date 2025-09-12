@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react';
+import { Header } from '@/components/Header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import { TokenTransaction } from '@/types/tokens';
+import type { TokenTransaction } from '@/types/tokens';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
-import { apiClient } from '@/utils/apiClient';
+import api from '@/lib/api';
 
 export default function TokenManager() {
+
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
+  const [processing, setProcessing] = useState(false);
 
   const isAdmin = user?.userType === 'admin';
 
@@ -24,6 +27,7 @@ export default function TokenManager() {
   }, [isAdmin]);
 
   const fetchTransactions = async () => {
+    if (!supabase) throw new Error('Supabase client not initialized');
     const { data, error } = await supabase
       .from('token_transactions')
       .select('*')
@@ -34,56 +38,61 @@ export default function TokenManager() {
 
   const handleIssue = async (type: 'earn' | 'burn') => {
     if (!userId || amount <= 0) return;
-    const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, amount }),
-    });
-    if (res.ok) {
+    const res = await api.post(
+      `/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`,
+      { userId, amount }
+    );
+    if (res.status >= 200 && res.status < 300) {
       toast({
         title: 'Success',
         description: 'Transaction processed'
       });
       fetchTransactions();
     } else {
-      const err = await res.json();
+      const err = res.data;
       toast({
         title: 'Error',
-        description: err.error || 'Failed',
+        description: (typeof err === 'object' && err && 'message' in err ? (err as { message?: string }).message : 'Failed') || 'Unknown error occurred',
         variant: 'destructive'
       });
+    } finally {
+      setProcessing(false);
     }
   };
 
   return (
-    <ProtectedRoute adminOnly>
-      <div>
-        
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
+    <ProtectedRoute adminOnly></ProtectedRoute>
+      <div></div>
+        <Header />
+        <div className="min-h-screen bg-zion-blue px-4 py-8"></div>
+          <div className="container mx-auto"></div>
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
-            <Card className="mb-6">
-              <CardHeader>
+            <Card className="mb-6"></Card>
+              <CardHeader></CardHeader>
                 <CardTitle>Issue or Revoke Tokens</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4"></CardContent>
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
-                <div className="flex gap-2">
-                  <Button onClick={() => handleIssue('earn')}>Issue</Button>
-                  <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>
+                <div className="flex gap-2"></div>
+                  <Button onClick={() => handleIssue('earn')} disabled={processing}>
+                    {processing ? 'Processing...' : 'Issue'}
+                  
+                  <Button variant="destructive" onClick={() => handleIssue('burn')} disabled={processing}>
+                    {processing ? 'Processing...' : 'Revoke'}
+                  
                 </div>
               </CardContent>
             </Card>
 
-            <Tabs defaultValue="history">
-              <TabsList>
+            <Tabs defaultValue="history"></Tabs>
+              <TabsList></TabsList>
                 <TabsTrigger value="history">Transaction History</TabsTrigger>
               </TabsList>
-              <TabsContent value="history">
-                <ul className="space-y-2">
+              <TabsContent value="history"></TabsContent>
+                <ul className="space-y-2"></ul>
                   {transactions.map(tx => (
-                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">
+                    <li key={tx.id} className="flex justify-between border-b py-2 text-white"></li>
                       <span>{tx.user_id}</span>
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
                     </li>
@@ -93,7 +102,6 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
-        
       </div>
     </ProtectedRoute>
   );

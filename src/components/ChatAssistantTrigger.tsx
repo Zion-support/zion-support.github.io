@@ -1,11 +1,13 @@
 
 import { useState } from "react";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare } from 'lucide-react';
+
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
-import { apiClient } from "@/utils/apiClient";
+import api from '@/lib/api';
 
 export function ChatAssistantTrigger() {
+
   const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
@@ -27,7 +29,7 @@ export function ChatAssistantTrigger() {
       
       return Promise.resolve();
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      logErrorToProduction('Error in AI chat:', { data: error });
       return Promise.resolve();
     }
   };
@@ -41,7 +43,7 @@ export function ChatAssistantTrigger() {
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
         aria-label="Open chat assistant"
       >
-        <MessageSquare aria-hidden="true" className="h-5 w-5" />
+        <MessageSquare className="h-5 w-5" />
       </Button>
       
       {isOpen && (
