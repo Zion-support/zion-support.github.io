@@ -35,67 +35,34 @@ const NewContentPromoBanner = ({
   const newContent: ContentItem[] = [
     {
       id: '60',
-      title: 'AI Governance Maturity Model (2025)',
-      description: 'Assess and improve AI governance with a pragmatic maturity model across policy, risk, and engineering.',
-      href: '/blog/ai-2025-governance-maturity-model',
+      title: 'AI Guardrails in Production (2025)',
+      description: 'Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.',
+      href: '/blog/ai-2025-guardrails-in-production',
       type: 'blog',
       featured: true,
-      readTime: '16 min read',
+      readTime: '18 min read',
       date: 'Sep 12, 2025',
-      category: 'Governance'
+      category: 'AI Safety'
     },
     {
       id: '61',
-      title: 'Governance Maturity Rollout: 60% Faster Reviews',
-      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage 35%.',
-      href: '/case-studies/ai-2025-governance-maturity-rollout',
-      type: 'case-study',
-      featured: true,
-      readTime: '10 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: '54',
-      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
-      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
-      href: '/blog/ai-2025-mlops-best-practices',
-      type: 'blog',
-      featured: true,
-      readTime: '14 min read',
-      date: 'Sep 12, 2025',
-      category: 'MLOps'
-    },
-    {
-      id: '55',
-      title: 'Vector Databases Benchmarks 2025',
-      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
-      href: '/blog/ai-2025-vector-databases-benchmarks',
-      type: 'blog',
-      featured: true,
-      readTime: '16 min read',
-      date: 'Sep 12, 2025',
-      category: 'RAG'
-    },
-    {
-      id: '56',
-      title: 'Secure Agent Architectures (2025)',
-      description: 'Blueprint for secure enterprise agent architectures with policy-as-code, guardrails, and SLAs.',
-      href: '/blog/ai-2025-secure-agent-architectures',
+      title: 'AI Governance Operating Model (2025)',
+      description: 'Roles, decision rights, and automated controls to scale AI with confidence.',
+      href: '/blog/ai-2025-ai-governance-operating-model',
       type: 'blog',
       featured: true,
       readTime: '17 min read',
       date: 'Sep 12, 2025',
-      category: 'AI Security'
+      category: 'Governance'
     },
     {
-      id: '57',
-      title: 'AI Customer Analytics: 19% Revenue Uplift',
-      description: 'Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.',
-      href: '/case-studies/ai-2025-customer-analytics-impact',
+      id: '62',
+      title: 'AI Governance Operating Model Impact: 35% Faster Delivery',
+      description: 'Case study: Governance operating model cut incidents 28% and accelerated delivery 35%.',
+      href: '/case-studies/ai-2025-governance-operating-model-impact',
       type: 'case-study',
       featured: true,
-      readTime: '12 min read',
+      readTime: '10 min read',
       date: 'Sep 12, 2025',
       category: 'Case Study'
     },

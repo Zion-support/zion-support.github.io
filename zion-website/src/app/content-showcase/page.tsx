@@ -16,52 +16,32 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "FinOps for GenAI 2025: Cost, Quality, and Risk Controls",
-      description: "Optimize spend while maintaining quality and safety with budgets, SLAs, and guardrails.",
-      href: "/blog/ai-2025-finops-for-genai",
-      icon: "💸",
-      category: "Optimization",
+      title: "AI Guardrails in Production (2025)",
+      description: "Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.",
+      href: "/blog/ai-2025-guardrails-in-production",
+      icon: "🛡️",
+      category: "AI Safety",
       readTime: "18 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "AI Sales Copilots Blueprint 2025",
-      description: "Design and govern AI sales copilots to boost win rates and speed cycles—safely.",
-      href: "/blog/ai-2025-ai-sales-copilots-blueprint",
-      icon: "🧭",
-      category: "Go-to-Market",
-      readTime: "20 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Sales Cycle Acceleration: 28% Faster Close",
-      description: "Case study: Copilots sped up approvals and proposals with policy-aware automation.",
-      href: "/case-studies/ai-2025-sales-cycle-acceleration",
-      icon: "📈",
-      category: "Case Study",
-      readTime: "9 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "Secure Agent Architectures (2025)",
-      description: "Blueprint for secure agent architectures with policy-as-code, guardrails, and SLAs.",
-      href: "/blog/ai-2025-secure-agent-architectures",
-      icon: "🛡️",
-      category: "AI Security",
+      title: "AI Governance Operating Model (2025)",
+      description: "Roles, decision rights, and automated controls to scale AI with confidence.",
+      href: "/blog/ai-2025-ai-governance-operating-model",
+      icon: "🏛️",
+      category: "Governance",
       readTime: "17 min read",
       date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "AI Customer Analytics: 19% Revenue Uplift",
-      description: "Case study: Personalization, uplift modeling, and agentic orchestration delivered +19% revenue.",
-      href: "/case-studies/ai-2025-customer-analytics-impact",
-      icon: "📈",
+      title: "AI Governance Operating Model Impact: 35% Faster Delivery",
+      description: "Case study: Governance operating model cut incidents 28% and accelerated delivery 35%.",
+      href: "/case-studies/ai-2025-governance-operating-model-impact",
+      icon: "📊",
       category: "Case Study",
-      readTime: "12 min read",
+      readTime: "10 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -385,7 +365,7 @@ export default function ContentShowcase() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredContent.filter(content => content.featured).map((content) => (
+            {featuredContent.filter(content => content.featured).map((content, index) => (
               <Link
                 key={content.href}
                 href={content.href}
@@ -448,7 +428,7 @@ export default function ContentShowcase() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredContent.map((content) => (
+            {featuredContent.map((content, index) => (
               <Link
                 key={content.href}
                 href={content.href}
@@ -500,10 +480,10 @@ export default function ContentShowcase() {
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Can&apos;t Find What You&apos;re Looking For?
+            Can't Find What You're Looking For?
           </h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-            Our team creates custom content tailored to your specific needs. Let us know what topics you&apos;d like to explore, and we&apos;ll create comprehensive resources just for you.
+            Our team creates custom content tailored to your specific needs. Let us know what topics you'd like to explore, and we'll create comprehensive resources just for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
