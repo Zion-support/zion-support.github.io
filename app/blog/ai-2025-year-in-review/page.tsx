@@ -584,6 +584,98 @@ export default function AI2025YearInReview() {
                   </p>
                   <div className="text-2xl font-bold text-blue-600">18%</div>
                   <div className="text-sm text-gray-600">average revenue increase</div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Investment Trends</h3>
+            <p className="text-gray-700 mb-6">
+              Venture capital investment in AI companies reached record levels, with particular 
+              focus on enterprise applications and infrastructure.
+            </p>
+
+            <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+              <li>Enterprise AI platforms received 40% of total AI investment</li>
+              <li>AI infrastructure and tooling companies saw 200% increase in funding</li>
+              <li>Healthcare AI startups raised $45B in total funding</li>
+              <li>AI security companies emerged as a new investment category</li>
+            </ul>
+          </section>
+
+          <section id="industry-impact" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">4. Industry-Specific Impact</h2>
+            
+            <p className="text-lg text-gray-700 mb-6">
+              AI's impact varied significantly across industries, with some sectors experiencing 
+              more dramatic transformations than others.
+            </p>
+
+            <div className="space-y-8">
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">🏥 Healthcare & Life Sciences</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Developments:</h4>
+                    <ul className="text-gray-700 space-y-1 text-sm">
+                      <li>• AI drug discovery accelerated by 300%</li>
+                      <li>• Personalized medicine became mainstream</li>
+                      <li>• Robotic surgery success rates reached 99.2%</li>
+                      <li>• Mental health AI tools helped 2M+ patients</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Business Impact:</h4>
+                    <ul className="text-gray-700 space-y-1 text-sm">
+                      <li>• $50B in healthcare cost savings</li>
+                      <li>• 25% reduction in hospital readmissions</li>
+                      <li>• 40% faster drug development cycles</li>
+                      <li>• 60% improvement in diagnostic accuracy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">🏭 Manufacturing & Industrial</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Developments:</h4>
+                    <ul className="text-gray-700 space-y-1 text-sm">
+                      <li>• Fully autonomous production lines</li>
+                      <li>• AI-powered quality control systems</li>
+                      <li>• Predictive maintenance at scale</li>
+                      <li>• Smart supply chain optimization</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Business Impact:</h4>
+                    <ul className="text-gray-700 space-y-1 text-sm">
+                      <li>• 35% increase in production efficiency</li>
+                      <li>• 50% reduction in waste and defects</li>
+                      <li>• $2.3M average annual savings per facility</li>
+                      <li>• 80% reduction in unplanned downtime</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">💰 Financial Services</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Developments:</h4>
+                    <ul className="text-gray-700 space-y-1 text-sm">
+                      <li>• AI-powered trading algorithms</li>
+                      <li>• Automated risk assessment</li>
+                      <li>• Personalized financial advice</li>
+                      <li>• Real-time fraud detection</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Business Impact:</h4>
+                    <ul className="text-gray-700 space-y-1 text-sm">
+                      <li>• 40% improvement in fraud detection</li>
+                      <li>• 25% reduction in operational costs</li>
+                      <li>• 60% faster loan processing</li>
+                      <li>• $15B in prevented fraud losses</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -775,6 +867,97 @@ export default function AI2025YearInReview() {
                   </p>
                 </div>
               </div>
+          <section id="challenges" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">5. Challenges & Lessons Learned</h2>
+            
+            <p className="text-lg text-gray-700 mb-6">
+              Despite the remarkable progress, 2025 also brought significant challenges that 
+              organizations had to navigate.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Talent Shortage</h3>
+            <p className="text-gray-700 mb-6">
+              The demand for AI talent far exceeded supply, with companies competing fiercely 
+              for skilled professionals. This led to:
+            </p>
+
+            <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+              <li>300% increase in AI engineer salaries</li>
+              <li>6-month average time to fill AI positions</li>
+              <li>Rise of AI training programs and bootcamps</li>
+              <li>Increased focus on upskilling existing employees</li>
+            </ul>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Ethical and Regulatory Challenges</h3>
+            <p className="text-gray-700 mb-6">
+              As AI became more powerful, ethical considerations and regulatory frameworks 
+              became increasingly important.
+            </p>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+              <h4 className="font-semibold text-yellow-900 mb-2">Key Regulatory Developments:</h4>
+              <ul className="text-yellow-800 space-y-1">
+                <li>• EU AI Act implementation began</li>
+                <li>• US AI Executive Order expanded</li>
+                <li>• Industry self-regulation frameworks emerged</li>
+                <li>• AI bias detection became mandatory</li>
+              </ul>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Integration Complexity</h3>
+            <p className="text-gray-700 mb-6">
+              Many organizations struggled with integrating AI into existing systems and 
+              workflows, leading to:
+            </p>
+
+            <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+              <li>Longer implementation timelines than expected</li>
+              <li>Data quality and integration challenges</li>
+              <li>Change management difficulties</li>
+              <li>ROI realization delays</li>
+            </ul>
+          </section>
+
+          <section id="2026-predictions" className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">6. Looking Ahead to 2026</h2>
+            
+            <p className="text-lg text-gray-700 mb-6">
+              Based on the trends and developments of 2025, here are our predictions for 
+              what to expect in 2026.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-blue-900 mb-4">🚀 Technology Trends</h3>
+                <ul className="text-blue-800 space-y-2">
+                  <li>• AGI (Artificial General Intelligence) prototypes</li>
+                  <li>• Quantum-AI hybrid systems</li>
+                  <li>• Brain-computer interfaces</li>
+                  <li>• Autonomous AI agents</li>
+                  <li>• Real-time AI model updates</li>
+                </ul>
+              </div>
+              <div className="bg-green-50 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-green-900 mb-4">📈 Business Impact</h3>
+                <ul className="text-green-800 space-y-2">
+                  <li>• 50% of businesses will be AI-first</li>
+                  <li>• $2T global AI market size</li>
+                  <li>• 80% of customer interactions AI-powered</li>
+                  <li>• 60% reduction in manual processes</li>
+                  <li>• New AI-native business models</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Recommendations for 2026</h3>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <ol className="list-decimal list-inside text-gray-700 space-y-3">
+                <li><strong>Invest in AI Talent:</strong> Focus on building internal AI capabilities through training and strategic hiring.</li>
+                <li><strong>Data Strategy:</strong> Develop comprehensive data governance and quality frameworks.</li>
+                <li><strong>Ethical AI:</strong> Implement robust AI ethics and bias detection systems.</li>
+                <li><strong>Partnership Strategy:</strong> Consider strategic partnerships with AI vendors and consultants.</li>
+                <li><strong>Change Management:</strong> Prepare for organizational transformation and upskilling programs.</li>
+              </ol>
             </div>
           </section>
 
@@ -908,6 +1091,31 @@ export default function AI2025YearInReview() {
                 </p>
                 <div className="text-xs text-gray-500">18 min read</div>
               </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="mt-16 bg-gray-50 rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Don't get left behind in the AI revolution. Our expert team can help you 
+            develop and implement AI strategies that drive real business results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Get Free AI Assessment
+            </Link>
+            <Link
+              href="/services/ai-services"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Explore AI Services
             </Link>
           </div>
         </section>
