@@ -136,7 +136,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           initial={{ opacity: 0, x: 300 }}
           animate={{ opacity: 1, x: 0 }}
           className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs"
->>>>>>> origin/content/blog-sept12
         >
           {children}
         </motion.div>

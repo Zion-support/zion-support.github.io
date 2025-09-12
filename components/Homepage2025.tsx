@@ -6,7 +6,6 @@ import {
   Shield,
   Globe,
   TrendingUp
->>>>>>> origin/content/blog-sept12
 } from 'lucide-react';
 
 const Homepage2025: React.FC = () => {

@@ -244,7 +244,6 @@ const EnhancedNavigation: React.FC = () => {
       return { initial: {}, animate: {}, exit: {}, transition: {} };
     return navigationAnimations[animationType];
   };
->>>>>>> origin/content/blog-sept12
 export default function EnhancedNavigation() {
   return (
     <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
->>>>>>> origin/content/blog-sept12
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 

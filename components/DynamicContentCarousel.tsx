@@ -1,301 +1,247 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, User, Calendar, TrendingUp, Star, Eye } from 'lucide-react';
 
-interface ContentItem {
+interface CarouselItem {
   id: string;
   title: string;
   description: string;
+  image: string;
   href: string;
-  type: 'blog' | 'case-study' | 'resource';
+  badge: string;
   category: string;
-  readTime: string;
-  publishDate: string;
-  icon: string;
-  featured: boolean;
-  trending: boolean;
+  roi?: string;
+  gradient: string;
 }
 
-const DynamicContentCarousel: React.FC = () => {
+const carouselItems: CarouselItem[] = [
+  {
+    id: 'breakthrough-announcement',
+    title: 'AI 2025 Revolutionary Breakthrough',
+    description: 'The most significant AI advancement of our generation is here. Transform your business with unprecedented ROI.',
+    image: '/images/ai-breakthrough-2025.jpg',
+    href: '/blog/ai-2025-revolutionary-breakthrough-announcement',
+    badge: 'BREAKTHROUGH',
+    category: 'AI 2025',
+    roi: '2000%',
+    gradient: 'from-red-500 to-pink-500'
+  },
+  {
+    id: 'breakthrough-success',
+    title: 'Revolutionary Success Story',
+    description: 'Fortune 500 company achieves 2000% ROI with our revolutionary AI breakthrough technology.',
+    image: '/images/success-story-2025.jpg',
+    href: '/case-studies/ai-2025-revolutionary-breakthrough-success',
+    badge: 'SUCCESS',
+    category: 'Case Study',
+    roi: '2000%',
+    gradient: 'from-green-500 to-emerald-500'
+  },
+  {
+    id: 'quantum-neural-fusion',
+    title: 'AI 2026 Quantum-Neural Fusion',
+    description: 'Breakthrough quantum computing integration that solves complex problems in seconds, not hours.',
+    image: '/images/quantum-neural-2026.jpg',
+    href: '/blog/ai-2026-quantum-neural-fusion-breakthrough',
+    badge: 'REVOLUTIONARY',
+    category: 'AI 2026',
+    roi: '15000%',
+    gradient: 'from-purple-500 to-indigo-500'
+  },
+  {
+    id: 'implementation-guide',
+    title: 'Revolutionary Implementation Guide',
+    description: 'Complete guide to implementing breakthrough AI in your organization with proven methodologies.',
+    image: '/images/implementation-guide.jpg',
+    href: '/resources/ai-2025-revolutionary-implementation-guide',
+    badge: 'ESSENTIAL',
+    category: 'Implementation',
+    roi: 'Guaranteed',
+    gradient: 'from-blue-500 to-cyan-500'
+  },
+  {
+    id: 'fortune-500-transformation',
+    title: 'Fortune 500 Transformation',
+    description: 'Global enterprise achieves 1500% ROI breakthrough with autonomous AI decision systems.',
+    image: '/images/fortune-500-transformation.jpg',
+    href: '/case-studies/ai-2025-fortune-500-transformation-breakthrough',
+    badge: 'TRANSFORMATION',
+    category: 'Enterprise',
+    roi: '1500%',
+    gradient: 'from-orange-500 to-red-500'
+  }
+];
+
+export default function DynamicContentCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const contentItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'Advanced AI Architecture Patterns for 2025',
-      description: 'Master production-ready AI systems with advanced architecture patterns, microservices design, and real-world implementation strategies.',
-      href: '/blog/ai-2025-advanced-ai-architecture',
-      type: 'blog',
-      category: 'AI Architecture',
-      readTime: '25 min read',
-      publishDate: '2025-01-17',
-      icon: '🏗️',
-      featured: true,
-      trending: true
-    },
-    {
-      id: '2',
-      title: 'Multimodal AI Applications in 2025',
-      description: 'Explore revolutionary multimodal AI applications combining text, vision, audio, and more for unprecedented user experiences.',
-      href: '/blog/ai-2025-multimodal-ai-applications',
-      type: 'blog',
-      category: 'Multimodal AI',
-      readTime: '22 min read',
-      publishDate: '2025-01-17',
-      icon: '🎭',
-      featured: true,
-      trending: true
-    },
-    {
-      id: '3',
-      title: 'AI-Powered Retail Transformation: $150M Success',
-      description: 'Discover how a major retail chain achieved $150M revenue increase through AI-powered personalization and optimization.',
-      href: '/case-studies/ai-2025-retail-transformation-success',
-      type: 'case-study',
-      category: 'Retail AI',
-      readTime: '18 min read',
-      publishDate: '2025-01-17',
-      icon: '🏪',
-      featured: true,
-      trending: false
-    },
-    {
-      id: '4',
-      title: 'AI Enterprise Implementation Playbook 2025',
-      description: 'Complete guide to successful enterprise AI implementation with proven strategies, templates, and best practices.',
-      href: '/resources/ai-2025-enterprise-implementation-playbook',
-      type: 'resource',
-      category: 'Implementation',
-      readTime: '45 min read',
-      publishDate: '2025-01-17',
-      icon: '📋',
-      featured: true,
-      trending: true
-    },
-    {
-      id: '5',
-      title: 'AI 2025 Breakthrough Innovations',
-      description: 'Revolutionary AI technologies and breakthrough innovations that are reshaping industries in 2025.',
-      href: '/blog/ai-2025-breakthrough-innovations',
-      type: 'blog',
-      category: 'AI Innovation',
-      readTime: '25 min read',
-      publishDate: '2025-01-15',
-      icon: '🚀',
-      featured: false,
-      trending: true
-    },
-    {
-      id: '6',
-      title: 'AI Sustainability & Green Tech 2025',
-      description: 'Building eco-friendly AI systems and sustainable technology solutions for a greener future.',
-      href: '/blog/ai-2025-sustainability-green-tech',
-      type: 'blog',
-      category: 'Sustainability',
-      readTime: '20 min read',
-      publishDate: '2025-01-14',
-      icon: '🌱',
-      featured: false,
-      trending: false
-    }
-  ];
-
-  const featuredItems = contentItems.filter(item => item.featured);
-  const trendingItems = contentItems.filter(item => item.trending);
-
   useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredItems.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, featuredItems.length]);
+    if (!isAutoPlaying) return;
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'from-blue-500 to-cyan-500';
-      case 'case-study': return 'from-green-500 to-emerald-500';
-      case 'resource': return 'from-purple-500 to-pink-500';
-      default: return 'from-gray-500 to-gray-600';
-    }
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog': return 'Article';
-      case 'case-study': return 'Case Study';
-      case 'resource': return 'Resource';
-      default: return 'Content';
-    }
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + carouselItems.length) % carouselItems.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const currentItem = carouselItems[currentIndex];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 HOT THIS WEEK</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Latest AI & Technology Content
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our newest articles, case studies, and resources covering the latest trends 
-            in AI, technology, and digital transformation.
-          </p>
-        </div>
-
-        {/* Featured Content Carousel */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Content</h3>
-          <div className="relative">
-            <div className="overflow-hidden rounded-2xl">
+    <div className="relative w-full h-96 md:h-[500px] overflow-hidden rounded-lg shadow-xl">
+      {/* Main Carousel Content */}
+      <div className="relative h-full">
+        <div 
+          className="flex transition-transform duration-500 ease-in-out h-full"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {carouselItems.map((item) => (
+            <div
+              key={item.id}
+              className="w-full h-full flex-shrink-0 relative"
+            >
+              <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} opacity-90`} />
               <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
-                {featuredItems.map((item, index) => (
-                  <div key={item.id} className="w-full flex-shrink-0">
-                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                      <div className="md:flex">
-                        {/* Image/Icon Section */}
-                        <div className="md:w-1/3 bg-gradient-to-br from-indigo-500 to-purple-600 p-12 flex items-center justify-center">
-                          <div className="text-center text-white">
-                            <div className="text-8xl mb-4">{item.icon}</div>
-                            <div className="text-sm font-medium opacity-90">{item.category}</div>
-                          </div>
-                        </div>
-                        
-                        {/* Content Section */}
-                        <div className="md:w-2/3 p-8">
-                          <div className="flex items-center gap-3 mb-4">
-                            <span className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTypeColor(item.type)}`}>
-                              {getTypeLabel(item.type)}
-                            </span>
-                            {item.trending && (
-                              <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                🔥 Trending
-                              </span>
-                            )}
-                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                              ✨ New
-                            </span>
-                          </div>
-                          
-                          <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                            {item.title}
-                          </h4>
-                          
-                          <p className="text-gray-600 mb-6 leading-relaxed">
-                            {item.description}
-                          </p>
-                          
-                          <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
-                            <div className="flex items-center gap-2">
-                              <Clock className="w-4 h-4" />
-                              <span>{item.readTime}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Calendar className="w-4 h-4" />
-                              <span>{new Date(item.publishDate).toLocaleDateString()}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <User className="w-4 h-4" />
-                              <span>Zion Tech Group</span>
-                            </div>
-                          </div>
-                          
-                          <Link
-                            href={item.href}
-                            className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
-                          >
-                            <span>Read More</span>
-                            <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {featuredItems.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-indigo-600' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Trending Content Grid */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Trending Now</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trendingItems.slice(0, 3).map((item) => (
-              <Link key={item.id} href={item.href} className="group">
-                <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTypeColor(item.type)}`}>
-                        {getTypeLabel(item.type)}
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${item.image})`
+                }}
+              />
+              
+              <div className="relative z-10 h-full flex items-center">
+                <div className="max-w-4xl mx-auto px-6 text-white">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
+                      {item.category}
+                    </span>
+                    <span className={`bg-gradient-to-r ${item.gradient} px-3 py-1 rounded-full text-sm font-bold`}>
+                      {item.badge}
+                    </span>
+                    {item.roi && (
+                      <span className="bg-green-500/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold">
+                        {item.roi} ROI
                       </span>
-                      <div className="flex items-center gap-1 text-yellow-500">
-                        <Star className="w-4 h-4 fill-current" />
-                        <span className="text-sm font-medium">Trending</span>
-                      </div>
-                    </div>
-                    
-                    <div className="text-3xl mb-3">{item.icon}</div>
-                    
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                      {item.title}
-                    </h4>
-                    
-                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                      {item.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center gap-4">
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {item.readTime}
-                        </span>
-                        <span>{item.category}</span>
-                      </div>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    )}
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                    {item.title}
+                  </h2>
+                  
+                  <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl">
+                    {item.description}
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link
+                      href={item.href}
+                      className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-center"
+                    >
+                      Explore Now
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 text-center"
+                    >
+                      Get Started
+                    </Link>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-          >
-            <span>Explore All Content</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
 
-export default DynamicContentCarousel;
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-20"
+        aria-label="Previous slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-20"
+        aria-label="Next slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {carouselItems.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? 'bg-white scale-125'
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20">
+        <div 
+          className="h-full bg-white transition-all duration-100 ease-linear"
+          style={{
+            width: isAutoPlaying ? `${((currentIndex + 1) / carouselItems.length) * 100}%` : '100%'
+          }}
+        />
+      </div>
+
+      {/* Auto-play Indicator */}
+      <div className="absolute top-4 right-4 z-20">
+        <button
+          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+          className={`p-2 rounded-full backdrop-blur-sm transition-all duration-300 ${
+            isAutoPlaying 
+              ? 'bg-green-500/80 hover:bg-green-500' 
+              : 'bg-gray-500/80 hover:bg-gray-500'
+          } text-white`}
+          aria-label={isAutoPlaying ? 'Pause auto-play' : 'Resume auto-play'}
+        >
+          {isAutoPlaying ? (
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+            </svg>
+          )}
+        </button>
+      </div>
+    </div>
+  );
+}

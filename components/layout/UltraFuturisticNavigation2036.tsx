@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
->>>>>>> origin/content/blog-sept12
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, ArrowRight,
