@@ -19,6 +19,8 @@ import UltraContentPromotionBanner2025 from '../components/UltraContentPromotion
 import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
 import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
 import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
+import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
+import AI2031ContentDiscoveryWidget from '../components/AI2031ContentDiscoveryWidget';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -49,6 +51,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2031 CONTENT PROMOTION BANNER - BREAKTHROUGH */}
+        <AI2031ContentPromotionBanner />
+        
+        {/* AI 2031 CONTENT DISCOVERY WIDGET */}
+        <AI2031ContentDiscoveryWidget />
+        
 <<<<<<< HEAD
         {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
         <NewContent2025UltimatePromotionBanner />
