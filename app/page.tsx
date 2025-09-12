@@ -376,8 +376,6 @@ export default function HomePage() {
       {/* Enhanced Content Promotion Banner */}
       <EnhancedContentPromotionBanner />
 
-<<<<<<< HEAD
-=======
       {/* Revolutionary Content Banner */}
       <RevolutionaryContentBanner variant="featured" maxItems={6} />
 
@@ -541,7 +539,6 @@ export default function HomePage() {
         </div>
       </section>
 
->>>>>>> cursor/create-and-deploy-new-content-4625
       {/* Services Section */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -917,8 +914,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* New Resources Promotion Banner */}
       <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
@@ -1117,7 +1112,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/create-and-deploy-new-content-4625
       {/* Enhanced Latest Articles Section */}
       <section className='py-20 bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
