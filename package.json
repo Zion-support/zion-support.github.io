@@ -38,7 +38,7 @@
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
-    "axios": "^1.11.0",
+    "axios": "^1.12.0",
     "chalk": "^5.5.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
