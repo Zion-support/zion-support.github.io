@@ -134,6 +134,8 @@ import AI2034RevolutionaryContentShowcase from '../components/AI2034Revolutionar
 // New AI 2035 Breakthrough Content Components
 import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
 import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
+import AI2035ContentPromotionBanner from '../components/AI2035ContentPromotionBanner';
+import AI2035ContentShowcase from '../components/AI2035ContentShowcase';
 
 // Advanced Technology Content Components
 import AdvancedQuantumComputingPromotionBanner from '../components/AdvancedQuantumComputingPromotionBanner';
@@ -168,6 +170,12 @@ export default function HomePage() {
         
         {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
         <AI2035BreakthroughContentShowcase />
+        
+        {/* AI 2035 CONTENT PROMOTION BANNER - NEW CONTENT */}
+        <AI2035ContentPromotionBanner />
+        
+        {/* AI 2035 CONTENT SHOWCASE - NEW CONTENT */}
+        <AI2035ContentShowcase />
         
         {/* ADVANCED QUANTUM COMPUTING PROMOTION BANNER - NEW CONTENT */}
         <AdvancedQuantumComputingPromotionBanner />
