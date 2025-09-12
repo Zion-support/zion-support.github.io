@@ -1,272 +1,326 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
+export const metadata: Metadata = {
+  title: 'Free AI Resources & Guides - Zion Tech Group',
+  description: 'Download our comprehensive AI implementation guides, templates, and resources. Free tools to accelerate your AI transformation journey.',
+  keywords: 'AI resources, free guides, AI templates, implementation guides, AI tools, business resources',
+};
+
+const resources = [
+  {
+    id: 'ai-implementation-master-guide-2025',
+    title: 'AI Implementation Master Guide 2025',
+    description: 'Complete 200+ page guide covering AI strategy, implementation, and best practices for enterprise organizations.',
+    type: 'PDF Guide',
+    pages: '200+',
+    downloads: '15,000+',
+    category: 'Implementation',
+    emoji: '📚',
+    featured: true,
+    href: '/resources/ai-implementation-master-guide-2025',
+  },
+  {
+    id: 'ai-transformation-playbook-2026',
+    title: 'AI Transformation Playbook 2026',
+    description: 'Step-by-step playbook for successful AI transformation with templates, checklists, and real-world examples.',
+    type: 'PDF Playbook',
+    pages: '150+',
+    downloads: '12,000+',
+    category: 'Transformation',
+    emoji: '🎯',
+    featured: true,
+    href: '/resources/ai-transformation-playbook-2026',
+  },
+  {
+    id: 'ai-productivity-automation-templates',
+    title: 'AI Productivity Automation Templates',
+    description: 'Ready-to-use templates for automating common business processes with AI tools and workflows.',
+    type: 'Templates',
+    pages: '50+',
+    downloads: '8,500+',
+    category: 'Productivity',
+    emoji: '⚡',
+    featured: true,
+    href: '/resources/ai-productivity-automation-templates',
+  },
+  {
+    id: 'ai-cybersecurity-checklist',
+    title: 'AI Cybersecurity Checklist 2025',
+    description: 'Comprehensive security checklist to protect your organization from AI-powered cyber threats.',
+    type: 'Checklist',
+    pages: '25',
+    downloads: '6,200+',
+    category: 'Security',
+    emoji: '🛡️',
+    featured: false,
+    href: '/resources/ai-cybersecurity-checklist',
+  },
+  {
+    id: 'ai-roi-calculator',
+    title: 'AI ROI Calculator & Template',
+    description: 'Interactive calculator and template to measure and project AI implementation ROI.',
+    type: 'Calculator',
+    pages: '15',
+    downloads: '4,800+',
+    category: 'Business',
+    emoji: '💰',
+    featured: false,
+    href: '/resources/ai-roi-calculator',
+  },
+  {
+    id: 'ai-vendor-evaluation-framework',
+    title: 'AI Vendor Evaluation Framework',
+    description: 'Comprehensive framework for evaluating and selecting AI vendors and solutions.',
+    type: 'Framework',
+    pages: '40',
+    downloads: '3,900+',
+    category: 'Vendor Selection',
+    emoji: '🔍',
+    featured: false,
+    href: '/resources/ai-vendor-evaluation-framework',
+  },
+  {
+    id: 'ai-ethics-guidelines',
+    title: 'AI Ethics Guidelines & Framework',
+    description: 'Ethical AI implementation guidelines and framework for responsible AI development.',
+    type: 'Guidelines',
+    pages: '60',
+    downloads: '2,700+',
+    category: 'Ethics',
+    emoji: '⚖️',
+    featured: false,
+    href: '/resources/ai-ethics-guidelines',
+  },
+  {
+    id: 'ai-data-governance-template',
+    title: 'AI Data Governance Template',
+    description: 'Complete template for implementing AI data governance policies and procedures.',
+    type: 'Template',
+    pages: '30',
+    downloads: '2,100+',
+    category: 'Data Governance',
+    emoji: '📊',
+    featured: false,
+    href: '/resources/ai-data-governance-template',
+  },
+];
+
+const getCategoryColor = (category: string) => {
+  switch (category) {
+    case 'Implementation':
+      return 'bg-blue-100 text-blue-800';
+    case 'Transformation':
+      return 'bg-purple-100 text-purple-800';
+    case 'Productivity':
+      return 'bg-green-100 text-green-800';
+    case 'Security':
+      return 'bg-red-100 text-red-800';
+    case 'Business':
+      return 'bg-yellow-100 text-yellow-800';
+    case 'Vendor Selection':
+      return 'bg-indigo-100 text-indigo-800';
+    case 'Ethics':
+      return 'bg-pink-100 text-pink-800';
+    case 'Data Governance':
+      return 'bg-gray-100 text-gray-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
+
 export default function ResourcesPage() {
+  const featuredResources = resources.filter(resource => resource.featured);
+  const otherResources = resources.filter(resource => !resource.featured);
+
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Free AI Resources & Implementation Guides 2025 - Zion Tech Group"
-        description="Download free AI implementation guides, templates, checklists, and tools. Expert resources to accelerate your AI transformation journey in 2025."
-        keywords="AI resources, implementation guides, AI templates, free downloads, AI tools, business transformation"
-        url="/resources"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">📚 FREE RESOURCES - JANUARY 2025</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Free AI Resources & Implementation Guides
-          </h1>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Download our comprehensive collection of AI implementation guides, templates, 
-            checklists, and tools. Expert resources designed to accelerate your AI 
-            transformation journey in 2025.
-          </p>
-        </header>
-
-        {/* Featured Resources */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎯 Featured This Week
-              </h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Our most popular and impactful resources, handpicked by our experts to help you 
-                get started with AI implementation immediately.
-              </p>
+      {/* Header */}
+      <header className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+              <span className="text-sm font-medium">📚 FREE RESOURCES</span>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
-                <div className="text-4xl mb-4">📋</div>
-                <h3 className="text-lg font-semibold mb-2">AI Implementation Roadmap 2025</h3>
-                <p className="text-sm opacity-90 mb-3">Complete 12-month roadmap with milestones, checklists, and success metrics</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs opacity-75">200+ pages</span>
-                  <button className="bg-white text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors">
-                    Download Free
-                  </button>
-                </div>
-              </div>
-              
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-lg font-semibold mb-2">ROI Calculator & Templates</h3>
-                <p className="text-sm opacity-90 mb-3">Interactive ROI calculator and financial projection templates</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs opacity-75">Excel + PDF</span>
-                  <button className="bg-white text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors">
-                    Download Free
-                  </button>
-                </div>
-              </div>
-              
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
-                <div className="text-4xl mb-4">🔧</div>
-                <h3 className="text-lg font-semibold mb-2">AI Technology Selection Guide</h3>
-                <p className="text-sm opacity-90 mb-3">Comprehensive guide to choosing the right AI platforms and tools</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs opacity-75">150+ pages</span>
-                  <button className="bg-white text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors">
-                    Download Free
-                  </button>
-                </div>
-              </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Resources & Guides
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+              Download our comprehensive AI implementation guides, templates, and tools. 
+              Everything you need to accelerate your AI transformation journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Custom Consultation
+              </Link>
+              <Link 
+                href="/blog" 
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                Read Latest Articles
+              </Link>
             </div>
           </div>
         </div>
+      </header>
 
-        {/* Resource Categories */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Resource Categories</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Implementation Guides */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">📚</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Guides</h3>
-              <p className="text-gray-600 mb-6">Step-by-step guides for implementing AI across different business functions</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Enterprise Readiness Guide</span>
-                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PDF</span>
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Trusted by Thousands of Organizations
+            </h2>
+            <p className="text-lg text-gray-600">
+              Our resources have been downloaded and used by organizations worldwide
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">55,000+</div>
+              <div className="text-gray-600">Total Downloads</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-600 mb-2">200+</div>
+              <div className="text-gray-600">Pages of Content</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
+              <div className="text-gray-600">Templates & Tools</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-600 mb-2">98%</div>
+              <div className="text-gray-600">User Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Resources */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-6">
+              <span className="text-sm font-medium">⭐ FEATURED RESOURCES</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Most Popular Resources
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our most downloaded and highly-rated resources for AI implementation and transformation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredResources.map((resource) => (
+              <Link key={resource.id} href={resource.href} className="group">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
+                  <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative">
+                    <div className="text-8xl">{resource.emoji}</div>
+                    <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      FEATURED
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className={`text-sm font-medium px-3 py-1 rounded-full ${getCategoryColor(resource.category)}`}>
+                        {resource.category}
+                      </span>
+                      <span className="text-gray-500 text-sm">{resource.type}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {resource.description}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <span>{resource.pages} pages</span>
+                      <span>{resource.downloads} downloads</span>
+                    </div>
+                    <div className="flex items-center text-blue-600 font-medium group-hover:underline">
+                      Download Resource →
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Generative AI Implementation</span>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All Resources */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              All Resources
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete collection of our AI resources, guides, and tools
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {otherResources.map((resource) => (
+              <Link key={resource.id} href={resource.href} className="group">
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100 h-full">
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-3xl">{resource.emoji}</span>
+                      <span className={`text-sm font-medium px-3 py-1 rounded-full ${getCategoryColor(resource.category)}`}>
+                        {resource.category}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                      {resource.description}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <span>{resource.pages} pages</span>
+                      <span>{resource.downloads} downloads</span>
+                    </div>
+                    <div className="flex items-center text-blue-600 font-medium group-hover:underline text-sm">
+                      Download →
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Automation Roadmap Template</span>
-                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">DOCX</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm text-gray-700">AI Security Best Practices</span>
-                  <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">PDF</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                View All Guides
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Stay Updated with New Resources
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Get notified when we release new AI resources, guides, and tools. 
+              Join thousands of professionals staying ahead of the AI curve.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+              />
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
               </button>
             </div>
-
-            {/* Templates & Checklists */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">📋</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Templates & Checklists</h3>
-              <p className="text-gray-600 mb-6">Ready-to-use templates and checklists to streamline your AI projects</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Project Charter Template</span>
-                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">DOCX</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Data Quality Assessment</span>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">XLSX</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Ethics Checklist</span>
-                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm text-gray-700">Change Management Plan</span>
-                  <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">DOCX</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                View All Templates
-              </button>
-            </div>
-
-            {/* Tools & Calculators */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">🔧</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Tools & Calculators</h3>
-              <p className="text-gray-600 mb-6">Interactive tools and calculators to help with AI planning and ROI analysis</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI ROI Calculator</span>
-                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">XLSX</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Technology Selection Matrix</span>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">XLSX</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Risk Assessment Tool</span>
-                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm text-gray-700">Implementation Timeline</span>
-                  <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">XLSX</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                View All Tools
-              </button>
-            </div>
-
-            {/* Case Studies */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">🏆</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Case Studies</h3>
-              <p className="text-gray-600 mb-6">Detailed case studies showcasing real-world AI implementations and results</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Healthcare AI Success Story</span>
-                  <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Manufacturing Automation</span>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Financial Services AI</span>
-                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm text-gray-700">Retail AI Transformation</span>
-                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">PDF</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                View All Case Studies
-              </button>
-            </div>
-
-            {/* Whitepapers */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">📄</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Whitepapers</h3>
-              <p className="text-gray-600 mb-6">In-depth research and analysis on AI trends, technologies, and best practices</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Trends 2025 Report</span>
-                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">Generative AI Business Impact</span>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Ethics & Governance</span>
-                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">PDF</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm text-gray-700">Future of Work with AI</span>
-                  <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">PDF</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-                View All Whitepapers
-              </button>
-            </div>
-
-            {/* Webinars & Videos */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-5xl mb-4">🎥</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Webinars & Videos</h3>
-              <p className="text-gray-600 mb-6">Expert-led webinars and video tutorials on AI implementation and best practices</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Implementation Masterclass</span>
-                  <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Video</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">ROI Measurement Best Practices</span>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Video</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm text-gray-700">AI Security & Compliance</span>
-                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Video</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm text-gray-700">Change Management Strategies</span>
-                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Video</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-pink-600 text-white py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
-                View All Videos
-              </button>
-            </div>
+            <p className="text-sm opacity-75 mt-4">
+              No spam. Unsubscribe at any time.
+            </p>
           </div>
         </section>
 

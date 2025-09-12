@@ -281,8 +281,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Promotion Banner */}
-      <NewContentPromoBanner />
+      {/* New Content Banner - Top */}
+      <NewContentBanner variant="featured" maxItems={4} />
 
       {/* Latest Content Mega Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -3954,6 +3954,8 @@ export default function HomePage() {
         viewAllHref="/blog"
       />
 
+      {/* Trending Content Showcase */}
+      <NewContentBanner variant="trending" maxItems={4} />
 
       {/* Performance Metrics Section */}
       <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
