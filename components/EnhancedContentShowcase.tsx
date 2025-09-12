@@ -18,6 +18,190 @@ interface ContentItem {
   tags: string[];
 }
 
+const featuredContent: ContentItem[] = [
+  {
+    title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
+    description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation. Real case studies, implementation strategies, and ROI metrics.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "🏢",
+    stats: "300% productivity gain"
+  },
+  {
+    title: "AI 2025 Revolutionary Breakthroughs: The Technologies Reshaping Our World",
+    description: "Explore the groundbreaking AI technologies that will define 2025. From quantum AI to autonomous systems, discover the innovations transforming industries and creating unprecedented opportunities.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
+    isNew: true,
+    icon: "🧠",
+    stats: "Revolutionary breakthroughs"
+  },
+  {
+    title: "AI Retail Transformation Success: $200M Revenue Boost Case Study 2025",
+    description: "Discover how a global retail giant achieved unprecedented success through comprehensive AI transformation, resulting in $200M revenue increase and 150% customer satisfaction improvement.",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    category: "Case Study",
+    readTime: "20 min read",
+    isNew: true,
+    icon: "🛍️",
+    stats: "$200M revenue boost"
+  },
+  {
+    title: "AI Implementation Master Guide 2025: Complete 200-Page Playbook",
+    description: "Master AI implementation with our comprehensive 200-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation in any organization.",
+    href: "/resources/ai-implementation-master-guide-2025",
+    category: "Master Guide",
+    readTime: "200 pages",
+    isNew: true,
+    icon: "📚",
+    stats: "10,000+ downloads"
+  }
+];
+
+const trendingContent: ContentItem[] = [
+  {
+    title: "AI 2025 Revolutionary Breakthroughs: The Technologies Reshaping Our World",
+    description: "Explore the groundbreaking AI technologies that will define 2025. From quantum AI to autonomous systems, discover the innovations transforming industries.",
+    href: "/blog/ai-2025-revolutionary-breakthroughs",
+    category: "AI Innovation",
+    readTime: "18 min read",
+    isTrending: true,
+    icon: "🧠",
+    stats: "Trending this week"
+  },
+  {
+    title: "AI Enterprise Automation Success Stories 2025: Real-World Transformations",
+    description: "Discover how Fortune 500 companies achieved 300% productivity gains and $50M+ cost savings through AI automation with real case studies.",
+    href: "/blog/ai-2025-enterprise-automation-success",
+    category: "AI & Automation",
+    readTime: "15 min read",
+    isTrending: true,
+    icon: "🏢",
+    stats: "300% productivity gain"
+  },
+  {
+    title: "AI Retail Transformation Success: $200M Revenue Boost Case Study 2025",
+    description: "Discover how a global retail giant achieved unprecedented success through comprehensive AI transformation with $200M revenue increase.",
+    href: "/case-studies/ai-retail-transformation-success-2025",
+    category: "Case Study",
+    readTime: "20 min read",
+    isTrending: true,
+    icon: "🛍️",
+    stats: "$200M revenue boost"
+  }
+];
+
+const latestContent: ContentItem[] = [
+  {
+    title: "AI Productivity Automation 2025: Complete Implementation Guide",
+    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
+    href: "/blog/ai-productivity-automation-2025",
+    category: "Productivity",
+    readTime: "12 min read",
+    isNew: true,
+    icon: "🚀",
+    stats: "40% productivity boost"
+  },
+  {
+    title: "Startup Pricing Strategy 2025: Validate Willingness to Pay",
+    description: "Master startup pricing with data-driven strategies. Learn to validate willingness to pay and scale with confidence.",
+    href: "/blog/startup-pricing-strategy-2025",
+    category: "Startup Strategy",
+    readTime: "15 min read",
+    isNew: true,
+    icon: "💡",
+    stats: "Data-driven pricing"
+  },
+  {
+    title: "AI Healthcare Diagnosis Success: 95% Accuracy",
+    description: "Discover how a leading healthcare provider achieved 95% accuracy in medical diagnosis using AI automation.",
+    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+    category: "Healthcare AI",
+    readTime: "8 min read",
+    isNew: true,
+    icon: "🏥",
+    stats: "95% accuracy achieved"
+  }
+];
+
+interface ContentCardProps {
+  item: ContentItem;
+  variant?: 'default' | 'featured' | 'compact';
+}
+
+const ContentCard: React.FC<ContentCardProps> = ({ item, variant = 'default' }) => {
+  const baseClasses = "group relative overflow-hidden rounded-xl transition-all duration-300 hover:shadow-xl";
+  
+  const variantClasses = {
+    default: "bg-white border border-gray-200 hover:border-blue-300",
+    featured: "bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 hover:border-blue-400",
+    compact: "bg-white border border-gray-200 hover:border-gray-300"
+  };
+
+  return (
+    <Link href={item.href} className={`${baseClasses} ${variantClasses[variant]}`}>
+      <div className="p-6">
+        {/* Header with icon and badges */}
+        <div className="flex items-start justify-between mb-4">
+          <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+            {item.icon}
+          </div>
+          <div className="flex gap-2">
+            {item.isNew && (
+              <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                NEW
+              </span>
+            )}
+            {item.isTrending && (
+              <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full">
+                TRENDING
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Category and stats */}
+        <div className="flex items-center gap-3 mb-3">
+          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
+            {item.category}
+          </span>
+          {item.stats && (
+            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+              {item.stats}
+            </span>
+          )}
+        </div>
+
+        {/* Title */}
+        <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+          {item.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+          {item.description}
+        </p>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <span>{item.readTime}</span>
+            <span>•</span>
+            <span>Jan 28, 2025</span>
+          </div>
+          <span className="text-blue-600 font-medium group-hover:underline text-sm">
+            {item.category === 'Case Study' ? 'Read Case Study →' : 
+             item.category === 'Master Guide' ? 'Download Guide →' : 'Read Article →'}
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
 interface EnhancedContentShowcaseProps {
   title?: string;
   subtitle?: string;

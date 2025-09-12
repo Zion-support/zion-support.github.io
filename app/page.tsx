@@ -54,13 +54,30 @@ function TestimonialCard({ company, industry, result, description, savings }: {
           <h4 className='font-semibold text-gray-900'>{company}</h4>
           <p className='text-sm text-gray-600'>{industry}</p>
         </div>
-      </div>
-      <p className='text-gray-700 mb-4'>{description}</p>
-      <div className='text-sm text-blue-600 font-medium mb-2'>{result}</div>
-      <div className='text-sm text-green-600 font-medium'>{savings}</div>
-    </div>
-  );
-}
+      </>
+    ) : (
+      <>
+        <div className='mb-4'>
+          <h3 className='font-semibold text-lg'>{company}</h3>
+          <p className='text-sm text-gray-500'>{industry}</p>
+        </div>
+        <p className='text-gray-600 mb-4'>{description}</p>
+        <div className='space-y-2'>
+          <div className='text-green-600 font-semibold'>{result}</div>
+          <div className='text-blue-600 font-semibold'>{savings}</div>
+        </div>
+      </>
+    )}
+  </div>
+);
+import ContentPromoBanner, { contentPromoBanners } from '../components/ContentPromoBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+  keywords: 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+};
 
 export default function HomePage() {
   return (
@@ -100,6 +117,9 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
+
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
