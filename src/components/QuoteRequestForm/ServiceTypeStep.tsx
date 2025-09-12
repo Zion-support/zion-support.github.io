@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import type { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
+import { Search } from 'lucide-react';
+
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { SAMPLE_SERVICES } from "@/data/sampleServices";
-import { captureException } from "@/utils/sentry";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
+import api from '@/lib/api';
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -21,6 +19,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [listings, setListings] = useState<ListingItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const isMounted = useIsMounted();
 
   // Fetch services when the service type or query changes
   useEffect(() => {
@@ -31,49 +30,23 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
     const fetchServices = async () => {
       setLoading(true);
-      setError(null);
-      const url = `/api/public/services?category=${encodeURIComponent(
-        formData.serviceType
-      )}&q=${encodeURIComponent(debouncedQuery)}`;
-      const maxRetries = 3;
-
-      for (let attempt = 0; attempt < maxRetries; attempt++) {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error('Failed to fetch');
-          const data = await response.json();
-          setListings(data as ListingItem[]);
-          setError(null);
-          setLoading(false);
-          return;
-        } catch (err) {
-          if (attempt === maxRetries - 1) {
-            if (process.env.NODE_ENV === 'development') {
-              console.error('Failed to load services:', err);
-              setListings(
-                SAMPLE_SERVICES.filter(
-                  (item) =>
-                    item.category === formData.serviceType &&
-                    item.title
-                      .toLowerCase()
-                      .includes(debouncedQuery.toLowerCase())
-                )
-              );
-            } else {
-              captureException(err);
-              setListings([]);
-            }
-            setError('Failed to load services');
-            setLoading(false);
-          } else {
-            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-          }
-        }
+      try {
+        const response = await api.get(
+          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
+        );
+        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
+        const data = response.data;
+        setListings(data as ListingItem[]);
+      } catch (err) {
+        // Fallback to sample data on error
+        setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchServices();
-  }, [formData.serviceType, debouncedQuery]);
+  }, [formData.serviceType, debouncedQuery, isMounted]);
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -87,12 +60,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const sourceListings =
-    listings.length > 0
-      ? listings
-      : process.env.NODE_ENV === 'development'
-      ? SAMPLE_SERVICES
-      : [];
+  const sourceListings = listings;
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
@@ -164,13 +132,10 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <div className="text-center text-red-400 text-sm">
-              {error}
-              {process.env.NODE_ENV === 'development' && ' Showing sample data.'}
-            </div>
+            <div className="text-center text-red-400 text-sm">{error}</div>
           )}
           
-          <div className="grid grid-cols-1 gap-4 mt-4">
+          <div className="grid grid-cols-1 gap-4 mt-4" aria-busy={loading}>
             {loading ? (
               <>
                 <Skeleton className="h-[120px] w-full" />

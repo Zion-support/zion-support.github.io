@@ -26,8 +26,6 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
       return { items: [] };
-    case 'SET_ITEMS':
-      return { items: action.payload };
     default:
       return state;
   }
@@ -42,21 +40,18 @@ export function useCart(): CartContextType {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-
-  useEffect(() => {
-    const stored = safeStorage.getItem('cart');
-    if (stored) {
+  const [state, dispatch] = useReducer(
+    cartReducer,
+    initialState,
+    () => {
       try {
-        const items = JSON.parse(stored) as CartItem[];
-        if (items.length) {
-          dispatch({ type: 'SET_ITEMS', payload: items });
-        }
+        const stored = safeStorage.getItem('cart');
+        return stored ? { items: JSON.parse(stored) as CartItem[] } : initialState;
       } catch {
-        /* ignore */
+        return initialState;
       }
     }
-  }, []);
+  );
 
   useEffect(() => {
     safeStorage.setItem('cart', JSON.stringify(state.items));

@@ -1,22 +1,25 @@
 
 import { useState } from "react";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare } from 'lucide-react';
+
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
+import api from '@/lib/api';
 
 export function ChatAssistantTrigger() {
+
   const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+      const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+        body: JSON.stringify({
+          messages: [{ role: "user", content: message }]
         }),
       });
       
@@ -26,7 +29,7 @@ export function ChatAssistantTrigger() {
       
       return Promise.resolve();
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      logErrorToProduction('Error in AI chat:', { data: error });
       return Promise.resolve();
     }
   };

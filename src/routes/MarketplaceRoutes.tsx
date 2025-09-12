@@ -21,7 +21,7 @@ import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Checkout from "@/pages/Checkout";
 import NewProductsPage from "@/pages/NewProductsPage";
-import NewServicesPage from "@/pages/NewServicesPage";
+import MoreProductsPage from "@/pages/MoreProductsPage";
 
 const MarketplaceRoutes = () => {
   return (
@@ -38,7 +38,7 @@ const MarketplaceRoutes = () => {
       <Route path="/equipment" element={<EquipmentPage />} />
       <Route path="/equipment/:id" element={<EquipmentDetail />} />
       <Route path="/new-products" element={<NewProductsPage />} />
-      <Route path="/new-services" element={<NewServicesPage />} />
+      <Route path="/more-products" element={<MoreProductsPage />} />
       
       {/* Job Routes */}
       <Route
@@ -68,7 +68,6 @@ const MarketplaceRoutes = () => {
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
-      <Route path="/it-onsite-services/:country" element={<ITOnsiteServicesPage />} />
       <Route path="/request-quote" element={<RequestQuote />} />
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
       
