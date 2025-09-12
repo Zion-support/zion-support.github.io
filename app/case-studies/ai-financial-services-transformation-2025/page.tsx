@@ -1,5 +1,4 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
 import Link from 'next/link';
 
 export default function AIFinancialServicesTransformation2025() {
@@ -80,7 +79,6 @@ export default function AIFinancialServicesTransformation2025() {
                 <li>• 45% improvement in customer satisfaction</li>
               </ul>
             </div>
-          </section>
 
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Challenge</h2>
