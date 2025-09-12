@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '54',
+      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
+      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
+      href: '/blog/ai-2025-mlops-best-practices',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'MLOps'
+    },
+    {
+      id: '55',
+      title: 'Vector Databases Benchmarks 2025',
+      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
+      href: '/blog/ai-2025-vector-databases-benchmarks',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',
