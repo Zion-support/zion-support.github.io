@@ -1,302 +1,306 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, FileText, Video, Headphones, Download, ExternalLink, ArrowRight, Brain, Rocket, Shield, Zap, Target, Award, Globe, Users, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Github, Globe as GlobeIcon, BookOpen as BookOpenIcon, Video as VideoIcon, Headphones as HeadphonesIcon } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import { 
+  BookOpen, 
+  FileText, 
+  Video, 
+  Award, 
+  Download, 
+  ExternalLink,
+  ArrowRight,
+  ChevronRight,
+  Search,
+  Filter,
+  Star,
+  Clock,
+  User,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Database,
+  Code
+} from 'lucide-react';
+import Link from 'next/link';
 
-const resourceCategories = [
-  {
-    id: 'documentation',
-    title: 'Documentation',
-    description: 'Comprehensive guides, API references, and technical documentation',
-    icon: <FileText className="w-12 h-12 text-cyan-400" />,
-    color: 'text-cyan-400',
-    bgColor: 'bg-cyan-400/10',
-    resources: [
-      {
-        title: 'AI Services API Reference',
-        description: 'Complete API documentation for all AI consciousness and automation services',
-        type: 'API Docs',
-        link: '/docs/ai-services-api',
-        icon: <Brain className="w-6 h-6" />
-      },
-      {
-        title: 'Quantum Computing Guide',
-        description: 'Introduction to quantum computing concepts and our quantum services',
-        type: 'Guide',
-        link: '/docs/quantum-computing',
-        icon: <Rocket className="w-6 h-6" />
-      },
-      {
-        title: 'Autonomous Systems Manual',
-        description: 'How to implement and manage autonomous IT infrastructure',
-        type: 'Manual',
-        link: '/docs/autonomous-systems',
-        icon: <Shield className="w-6 h-6" />
-      },
-      {
-        title: 'Security Best Practices',
-        description: 'Security guidelines and best practices for enterprise deployments',
-        type: 'Guide',
-        link: '/docs/security-best-practices',
-        icon: <Shield className="w-6 h-6" />
-      }
-    ]
-  },
-  {
-    id: 'sdks',
-    title: 'SDKs & Libraries',
-    description: 'Client libraries and development tools for easy integration',
-    icon: <Code className="w-12 h-12 text-blue-400" />,
-    color: 'text-blue-400',
-    bgColor: 'bg-blue-400/10',
-    resources: [
-      {
-        title: 'Python SDK',
-        description: 'Official Python client library for Zion Tech Group services',
-        type: 'SDK',
-        link: 'https://github.com/ziontechgroup/python-sdk',
-        icon: <Code className="w-6 h-6" />,
-        external: true
-      },
-      {
-        title: 'JavaScript SDK',
-        description: 'Node.js and browser JavaScript client library',
-        type: 'SDK',
-        link: 'https://github.com/ziontechgroup/javascript-sdk',
-        icon: <Code className="w-6 h-6" />,
-        external: true
-      },
-      {
-        title: 'Go SDK',
-        description: 'Go client library for high-performance applications',
-        type: 'SDK',
-        link: 'https://github.com/ziontechgroup/go-sdk',
-        icon: <Code className="w-6 h-6" />,
-        external: true
-      },
-      {
-        title: 'REST API Client',
-        description: 'Lightweight REST API client for any programming language',
-        type: 'Client',
-        link: '/docs/rest-api-client',
-        icon: <Code className="w-6 h-6" />
-      }
-    ]
-  },
-  {
-    id: 'tools',
-    title: 'Developer Tools',
-    description: 'Tools and utilities to accelerate development and testing',
-    icon: <Zap className="w-12 h-12 text-purple-400" />,
-    color: 'text-purple-400',
-    bgColor: 'bg-purple-400/10',
-    resources: [
-      {
-        title: 'AI Model Testing Suite',
-        description: 'Comprehensive testing framework for AI models and services',
-        type: 'Tool',
-        link: '/tools/ai-testing-suite',
-        icon: <Brain className="w-6 h-6" />
-      },
-      {
-        title: 'Quantum Simulator',
-        description: 'Local quantum computing simulator for development and testing',
-        type: 'Tool',
-        link: '/tools/quantum-simulator',
-        icon: <Rocket className="w-6 h-6" />
-      },
-      {
-        title: 'Performance Monitor',
-        description: 'Real-time performance monitoring and optimization tools',
-        type: 'Tool',
-        link: '/tools/performance-monitor',
-        icon: <Monitor className="w-6 h-6" />
-      },
-      {
-        title: 'Security Scanner',
-        description: 'Automated security vulnerability scanning and assessment',
-        type: 'Tool',
-        link: '/tools/security-scanner',
-        icon: <Shield className="w-6 h-6" />
-      }
-    ]
-  },
-  {
-    id: 'learning',
-    title: 'Learning Resources',
-    description: 'Tutorials, courses, and educational content',
-    icon: <BookOpen className="w-12 h-12 text-green-400" />,
-    color: 'text-green-400',
-    bgColor: 'bg-green-400/10',
-    resources: [
-      {
-        title: 'AI Consciousness Course',
-        description: 'Learn about AI consciousness and emotional intelligence',
-        type: 'Course',
-        link: '/learning/ai-consciousness',
-        icon: <Brain className="w-6 h-6" />
-      },
-      {
-        title: 'Quantum Computing Fundamentals',
-        description: 'Introduction to quantum computing principles and applications',
-        type: 'Course',
-        link: '/learning/quantum-computing',
-        icon: <Rocket className="w-6 h-6" />
-      },
-      {
-        title: 'Autonomous Systems Workshop',
-        description: 'Hands-on workshop for building autonomous IT infrastructure',
-        type: 'Workshop',
-        link: '/learning/autonomous-systems',
-        icon: <Shield className="w-6 h-6" />
-      },
-      {
-        title: 'Space Technology Primer',
-        description: 'Overview of space technology and resource mining concepts',
-        type: 'Guide',
-        link: '/learning/space-technology',
-        icon: <Globe className="w-6 h-6" />
-      }
-    ]
-  }
-];
+const ResourcesPage: React.FC = () => {
+  const resourceCategories = [
+    {
+      title: 'Documentation',
+      description: 'Comprehensive technical guides and API references',
+      icon: FileText,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      icon: <BookOpen className="w-8 h-8" />,
+      title: 'Documentation',
+      description: 'Technical documentation, API references, and implementation guides',
+      href: '/docs',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: <Video className="w-8 h-8" />,
+      title: 'Webinars',
+      description: 'Educational webinars and training sessions on cutting-edge technologies',
+      href: '/webinars',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Case Studies',
+      description: 'Real-world implementations and success stories',
+      icon: Award,
+      color: 'from-orange-500 to-red-500',
+      items: [
+        {
+          title: 'Healthcare AI Transformation',
+          description: 'AI-powered patient care system',
+          type: 'Case Study',
+          difficulty: 'All Levels',
+          time: '15 min',
+          link: '/case-studies/healthcare-ai'
+        },
+        {
+          title: 'Financial Services Innovation',
+          description: 'Quantum computing in fintech',
+          type: 'Case Study',
+          difficulty: 'All Levels',
+          time: '12 min',
+          link: '/case-studies/fintech-quantum'
+        },
+        {
+          title: 'Manufacturing IoT Success',
+          description: 'Smart factory implementation',
+          type: 'Case Study',
+          difficulty: 'All Levels',
+          time: '18 min',
+          link: '/case-studies/manufacturing-iot'
+        }
+      ]
+    }
+  ];
 
-const featuredResources = [
-  {
-    title: 'Getting Started Guide',
-    description: 'Quick start guide for new users to get up and running with our services',
-    type: 'Guide',
-    link: '/docs/getting-started',
-    icon: <BookOpenIcon className="w-8 h-8" />,
-    color: 'text-cyan-400',
-    bgColor: 'bg-cyan-400/10'
-  },
-  {
-    title: 'API Playground',
-    description: 'Interactive API testing environment to explore our services',
-    type: 'Tool',
-    link: '/tools/api-playground',
-    icon: <Code className="w-8 h-8" />,
-    color: 'text-blue-400',
-    bgColor: 'bg-blue-400/10'
-  },
-  {
-    title: 'Video Tutorials',
-    description: 'Step-by-step video tutorials for common use cases',
-    type: 'Videos',
-    link: '/resources/videos',
-    icon: <VideoIcon className="w-8 h-8" />,
-    color: 'text-purple-400',
-    bgColor: 'bg-purple-400/10'
-  },
-  {
-    title: 'Community Forum',
-    description: 'Connect with other developers and get help from our team',
-    type: 'Community',
-    link: '/community',
-    icon: <Users className="w-8 h-8" />,
-    color: 'text-green-400',
-    bgColor: 'bg-green-400/10'
-  }
-];
+  const quickLinks = [
+    { label: 'API Documentation', href: '/docs/api', icon: Code },
+    { label: 'SDK Downloads', href: '/docs/sdks', icon: Download },
+    { label: 'Video Tutorials', href: '/docs/tutorials', icon: Video },
+    { label: 'Community Forum', href: '/community', icon: User },
+    { label: 'Support Center', href: '/support', icon: Shield },
+    { label: 'Developer Blog', href: '/blog', icon: BookOpen }
+  ];
 
-const quickLinks = [
-  { name: 'API Reference', href: '/docs/api', icon: <FileText className="w-5 h-5" /> },
-  { name: 'SDK Downloads', href: '/downloads', icon: <Download className="w-5 h-5" /> },
-  { name: 'Support Center', href: '/support', icon: <MessageCircle className="w-5 h-5" /> },
-  { name: 'GitHub Repos', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" />, external: true },
-  { name: 'Status Page', href: '/status', icon: <Monitor className="w-5 h-5" /> },
-  { name: 'Blog', href: '/blog', icon: <BookOpen className="w-5 h-5" /> }
-];
-
-export default function Resources() {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Resources Hub
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to build with our revolutionary AI consciousness, quantum computing, 
-                and autonomous systems. From documentation to tools, we've got you covered.
+              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                Access comprehensive documentation, tutorials, case studies, and insights 
+                to help you succeed with Zion Tech Group technologies.
               </p>
-            </motion.div>
+            </header>
+            
+            {/* Tab Navigation */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {Object.keys(resources).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    activeTab === tab
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-400 text-white shadow-lg'
+                      : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              ))}
+            </div>
+            
+            {/* Resource Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {resources[activeTab].map((resource, index) => renderResourceCard(resource, index))}
+            </div>
+            
+            {/* Additional Resources Section */}
+            <section className="mt-20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4 text-white">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-white/80 max-w-2xl mx-auto">
+                  Join thousands of developers and organizations already building the future with autonomous systems.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center p-8 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-2xl border border-cyan-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Free Learning Path</h3>
+                  <p className="text-white/80 mb-4">
+                    Start with our comprehensive learning path designed for beginners
+                  </p>
+                  <Link 
+                    href="/contact"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-300"
+                  >
+                    Start Learning
+                  </Link>
+                </div>
+                
+                <div className="text-center p-8 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-2xl border border-purple-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Join Community</h3>
+                  <p className="text-white/80 mb-4">
+                    Connect with like-minded professionals and share knowledge
+                  </p>
+                  <Link 
+                    href="/contact"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
+                  >
+                    Join Now
+                  </Link>
+                </div>
+                
+                <div className="text-center p-8 bg-gradient-to-br from-green-400/10 to-emerald-400/10 rounded-2xl border border-green-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Get Support</h3>
+                  <p className="text-white/80 mb-4">
+                    Need help? Our experts are here to support your automation journey
+                  </p>
+                  <Link 
+                    href="/contact"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-400 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-500 transition-all duration-300"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
 
         {/* Quick Links */}
-        <section className="py-12 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-16 bg-gradient-to-b from-black via-gray-900 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4"
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              {quickLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target={link.external ? '_blank' : undefined}
-                  rel={link.external ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-3 px-6 py-3 bg-black/40 border border-gray-800 rounded-full text-gray-300 hover:bg-cyan-500/10 hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300"
-                >
-                  {link.icon}
-                  <span>{link.name}</span>
-                  {link.external && <ExternalLink className="w-4 h-4" />}
-                </a>
-              ))}
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Quick Access
+              </h2>
+              <p className="text-xl text-gray-300">
+                Popular resources and frequently accessed content
+              </p>
             </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {quickLinks.map((link, index) => (
+                <motion.a
+                  key={link.label}
+                  href={link.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-4 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group"
+                >
+                  <link.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                    {link.label}
+                  </span>
+                </motion.a>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Featured Resources */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-white mb-4">Featured Resources</h2>
-              <p className="text-xl text-gray-300">Essential tools and guides to get you started</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Featured Resources
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Start with these essential guides and resources to get up and running quickly.
+              </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredResources.map((resource, index) => (
                 <motion.div
-                  key={index}
+                  key={resource.title}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
-                  className="group"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-500/50 transition-all duration-300 group"
                 >
-                  <a href={resource.link}>
-                    <div className={`p-6 rounded-2xl border border-gray-800 bg-black/40 hover:bg-black/60 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/10`}>
-                      <div className={`${resource.bgColor} w-16 h-16 rounded-2xl flex items-center justify-center mb-4`}>
-                        <div className={resource.color}>{resource.icon}</div>
-                      </div>
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                        {resource.title}
-                      </h3>
-                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                        {resource.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-cyan-400 font-medium">{resource.type}</span>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-300" />
-                      </div>
-                    </div>
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium mb-4">
+                    <Star className="w-4 h-4 mr-1" />
+                    Featured
+                  </div>
+                  
+                  <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <resource.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-xs">
+                      {resource.category}
+                    </span>
+                  </div>
+                  
+                  <a
+                    href={resource.link}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transition-transform duration-300"
+                  >
+                    Access Resource
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
                   </a>
                 </motion.div>
               ))}
@@ -305,68 +309,95 @@ export default function Resources() {
         </section>
 
         {/* Resource Categories */}
-        <section className="py-20 px-4 bg-black/30">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-white mb-4">Resource Categories</h2>
-              <p className="text-xl text-gray-300">Organized resources to help you find what you need</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Browse by Category
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive collection of resources organized by topic and type.
+              </p>
             </motion.div>
 
             <div className="space-y-12">
               {resourceCategories.map((category, categoryIndex) => (
                 <motion.div
-                  key={category.id}
+                  key={category.title}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 1.0 + categoryIndex * 0.2 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-gray-700/50"
                 >
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className={`${category.bgColor} w-16 h-16 rounded-2xl flex items-center justify-center`}>
-                      {category.icon}
+                  <div className="flex items-center mb-8">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mr-6`}>
+                      <category.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div>
-                      <h3 className={`text-3xl font-bold ${category.color}`}>{category.title}</h3>
-                      <p className="text-xl text-gray-300">{category.description}</p>
+                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                      {category.title}
+                    </h3>
+                    <p className="text-gray-300 text-lg mb-6">{category.description}</p>
+                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                      <span className="font-medium">Explore</span>
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {category.resources.map((resource, resourceIndex) => (
-                      <motion.div
-                        key={resourceIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 1.2 + categoryIndex * 0.2 + resourceIndex * 0.1 }}
-                        className="group"
-                      >
-                        <a
-                          href={resource.link}
-                          target={resource.external ? '_blank' : undefined}
-                          rel={resource.external ? 'noopener noreferrer' : undefined}
-                        >
-                          <div className="p-6 bg-black/40 border border-gray-800 rounded-xl hover:border-cyan-500/50 transition-all duration-300 group-hover:bg-black/60">
-                            <div className="flex items-start justify-between mb-4">
-                              <div className="flex items-center gap-3">
-                                <div className="text-cyan-400">{resource.icon}</div>
-                                <span className="text-xs text-cyan-400 font-medium bg-cyan-400/10 px-2 py-1 rounded-full">
-                                  {resource.type}
-                                </span>
-                              </div>
-                              {resource.external && <ExternalLink className="w-4 h-4 text-gray-400" />}
-                            </div>
-                            <h4 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                              {resource.title}
-                            </h4>
-                            <p className="text-gray-300 text-sm leading-relaxed">
-                              {resource.description}
-                            </p>
-                          </div>
-                        </a>
+      {/* Featured Resources */}
+      <section className="py-20 px-4 bg-gradient-to-br from-cyan-500/5 to-blue-500/5">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Featured Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our most popular and valuable resources
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-6">
+            {featuredResources.map((resource, index) => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link href={resource.href}>
+                  <div className="p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300 hover:scale-105">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className={`px-3 py-1 text-sm font-medium bg-gradient-to-r ${resource.color} text-white rounded-full`}>
+                            {resource.category}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
+                          {resource.title}
+                        </h3>
+                        <p className="text-gray-300 text-lg mb-6">{resource.description}</p>
+                        <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                          <span className="font-medium">Read More</span>
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -374,102 +405,38 @@ export default function Resources() {
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Community & Support */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Community & Support</h2>
-              <p className="text-xl text-gray-300">Connect with developers and get the help you need</p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Developer Community',
-                  description: 'Join our community of developers building the future with AI and quantum computing',
-                  icon: <Users className="w-12 h-12 text-cyan-400" />,
-                  link: '/community',
-                  features: ['Discussion forums', 'Code sharing', 'Project showcases', 'Networking events']
-                },
-                {
-                  title: 'Technical Support',
-                  description: 'Get expert help with implementation, troubleshooting, and optimization',
-                  icon: <MessageCircle className="w-12 h-12 text-blue-400" />,
-                  link: '/support',
-                  features: ['24/7 support', 'Expert engineers', 'Documentation updates', 'Best practices']
-                },
-                {
-                  title: 'Training & Workshops',
-                  description: 'Hands-on training sessions and workshops for teams and organizations',
-                  icon: <BookOpen className="w-12 h-12 text-purple-400" />,
-                  link: '/training',
-                  features: ['Custom training', 'Workshop materials', 'Certification programs', 'Team building']
-                }
-              ].map((community, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
-                  className="p-8 bg-black/40 border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-6">{community.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center">{community.title}</h3>
-                  <p className="text-gray-300 text-center mb-6 leading-relaxed">{community.description}</p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {community.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <a
-                    href={community.link}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-black/30">
-          <div className="container mx-auto max-w-4xl text-center">
+        <section className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 2.0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">Need Something Specific?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Can't find what you're looking for? Our team is here to help you get the resources you need.
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Need Help Finding Resources?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Our team is here to help you find the right resources and get the most 
+                out of our technology platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a 
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Support
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a
-                  href="/support"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+                  href="/docs"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
-                  Visit Support Center
+                  Browse Documentation
                 </a>
               </div>
             </motion.div>
@@ -478,4 +445,6 @@ export default function Resources() {
       </div>
     </Layout>
   );
-}
+};
+
+export default Resources;

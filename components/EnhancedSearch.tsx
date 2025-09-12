@@ -28,12 +28,17 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     // Load recent searches from localStorage
     const saved = localStorage.getItem('recentSearches');
     if (saved) {
-      setRecentSearches(JSON.parse(saved));
+      try {
+        setSearchHistory(JSON.parse(saved));
+      } catch {
+        // Failed to parse search history
+      }
     }
 
       // Close search on outside click
@@ -69,7 +74,15 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       // Default behavior: navigate to search results page
       window.location.href = `/services?search=${encodeURIComponent(searchTerm)}`;
     }
-  };
+  }, [suggestions, selectedIndex, query, handleSearch]);
+
+  // Close search on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,4 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  CheckCircle, 
+  Mail, 
+  Clock, 
+  Users, 
+  ArrowRight,
+  Home,
+  Briefcase,
+  Phone
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
@@ -8,7 +20,7 @@ export default function ThankYouPage() {
 
 	return (
 		<>
-			<SEO title={pageTitle} description={pageDescription} canonical="/thank-you" />
+			<SEO title={pageTitle} description={pageDescription} canonical="/thank-you" noIndex nofollow />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4 max-w-2xl text-center">
 					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">Thank you</h1>

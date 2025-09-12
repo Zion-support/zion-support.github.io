@@ -37,6 +37,7 @@ import { real2028ServiceExpansions } from '../../data/real-2028-service-expansio
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
 import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
+import { real2029Q4Additions } from '../../data/real-2029-q4-additions';
 import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
 import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
 import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
@@ -59,10 +60,20 @@ import { innovative2025ITEnterpriseBatch } from '../../data/innovative-2025-it-e
 import { innovativeMicroSaasServices } from '../../data/innovative-2025-micro-saas-expansions';
 import { innovativeITServices } from '../../data/innovative-2025-it-services-expansions';
 import { innovativeAIServices } from '../../data/innovative-2025-ai-services-expansions';
-// Import our new 2025 Q4 innovative services expansion
-import { innovativeServicesExpansionQ4 } from '../../data/2025-innovative-services-expansion-q4';
-import { advancedITSolutionsExpansion } from '../../data/2025-advanced-it-solutions-expansion';
-import { advancedAIServicesExpansion } from '../../data/2025-advanced-ai-services-expansion';
+// Import our new 2025 advanced services
+import { advanced2025MicroSaasExpansion } from '../../data/2025-advanced-micro-saas-expansion';
+import { advanced2025ITSolutionsExpansion } from '../../data/2025-advanced-it-solutions-expansion';
+import { advancedAIServicesExpansion2025 } from '../../data/2025-advanced-ai-services-expansion';
+
+// Import our new 2025 innovative services
+import { innovativeMicroSaasExpansion2025 } from '../../data/2025-innovative-micro-saas-expansion';
+import { innovative2025ITSolutionsExpansion } from '../../data/2025-innovative-it-solutions-expansion';
+import { innovative2025AISolutionsExpansion } from '../../data/2025-innovative-ai-solutions-expansion';
+
+// Import our new 2025 innovative services V3
+import { innovativeMicroSaasExpansionV32025 } from '../../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../../data/2025-innovative-ai-services-expansion-v3';
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -152,30 +163,26 @@ export default function ServicesIndexPage() {
     .concat(innovativeMicroSaasServices as unknown[])
     .concat(innovativeITServices as unknown[])
     .concat(innovativeAIServices as unknown[])
-    // Our new 2025 Q4 innovative services expansion
-    .concat(innovativeServicesExpansionQ4 as unknown[])
-    .concat(advancedITSolutionsExpansion as unknown[])
-    .concat(advancedAIServicesExpansion as unknown[]);
+    // Our new 2025 advanced services
+    .concat(advanced2025MicroSaasExpansion as unknown[])
+    .concat(advanced2025ITSolutionsExpansion as unknown[])
+    .concat(advanced2025AIServicesExpansion as unknown[])
+    // Our new 2025 innovative services
+    .concat(innovativeMicroSaasExpansion2025 as unknown[])
+    .concat(innovative2025ITSolutionsExpansion as unknown[])
+    .concat(innovative2025AISolutionsExpansion as unknown[])
+    // Our new 2025 advanced services V2
+    // .concat(advancedMicroSaasExpansion2025V2 as unknown[])
+    // .concat(advancedITInfrastructureExpansion2025V2 as unknown[])
+    // .concat(advancedAIServicesExpansion2025V2 as unknown[])
+    // Our new 2025 innovative services V3
+    .concat(innovativeMicroSaasExpansionV32025 as unknown[])
+    .concat(innovativeITServicesExpansion2025V3 as unknown[])
+    .concat(innovativeAIServicesExpansion2025V3 as unknown[])
+    ;
 
-  // Filter out services without required properties
-  const validServices = all.filter(service => 
-    service && 
-    typeof service === 'object' && 
-    'name' in service && 
-    'description' in service &&
-    'price' in service
-  );
+  const [shownCounts, setShownCounts] = React.useState<Record<string, number></Record>>(() => Object.fromEntries(categories.map(c => [c, 12])));
 
-  // Group services by category
-  const servicesByCategory = categories.reduce((acc, category) => {
-    acc[category] = validServices.filter((service: any) => 
-      service.category && service.category.toLowerCase().includes(category.toLowerCase().replace(/\s+/g, ''))
-    );
-    return acc;
-  }, {} as Record<string, any[]>);
-
-  // Get featured services (marked as popular)
-  const featuredServices = validServices.filter((service: any) => service.popular).slice(0, 6);
 
   // Get latest services (assuming they have a launchDate)
   const latestServices = validServices
@@ -183,64 +190,15 @@ export default function ServicesIndexPage() {
     .sort((a: any, b: any) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
     .slice(0, 6);
 
-  return (
-    <div className="min-h-screen bg-black text-white">
-      <SEO 
-        title="Services - Zion Tech Group"
-        description="Discover our comprehensive suite of cutting-edge technology solutions including AI, Quantum Computing, Space Technology, and more."
-        keywords={["AI services", "quantum computing", "space technology", "metaverse", "cybersecurity", "IT services", "micro SAAS"]}
-      />
-      
-      <UltraFuturisticBackground>
-        <div className="relative z-10 pt-32 pb-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header */}
-            <div className="text-center mb-20">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Our Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-                Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business and drive innovation
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-300">
-                  {validServices.length}+ Services
-                </span>
-                <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300">
-                  {categories.length} Categories
-                </span>
-                <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300">
-                  Latest 2036 Tech
-                </span>
-              </div>
-            </div>
 
-            {/* Featured Services */}
-            {featuredServices.length > 0 && (
-              <section className="mb-20">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Featured Services
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {featuredServices.map((service: any, index: number) => (
-                    <UltraFuturisticServiceCard2026
-                      key={`${service.id || service.name}-${index}`}
-                      service={service}
-                      variant="quantum"
-                      theme="quantum"
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
 
             {/* Latest Services */}
             {latestServices.length > 0 && (
-              <section className="mb-20">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              <section className="mb-20"></section>
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"></h2>
                   Latest Services (2026)
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   {latestServices.map((service: any, index: number) => (
                     <UltraFuturisticServiceCard2026
                       key={`${service.id || service.name}-${index}`}
@@ -254,19 +212,19 @@ export default function ServicesIndexPage() {
             )}
 
             {/* Services by Category */}
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+            <section className="mb-20"></section>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"></h2>
                 Services by Category
               </h2>
-              <div className="space-y-12">
+              <div className="space-y-12"></div>
                 {categories.map((category) => {
                   const categoryServices = servicesByCategory[category];
                   if (!categoryServices || categoryServices.length === 0) return null;
 
                   return (
-                    <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                        <span className="text-3xl">
+                    <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm"></div>
+                      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3"></h3>
+                        <span className="text-3xl"></span>
                           {category === 'AI & Data' && '🧠'}
                           {category === 'Developer Tools' && '⚙️'}
                           {category === 'Cloud & FinOps' && '☁️'}
@@ -287,11 +245,11 @@ export default function ServicesIndexPage() {
                           {category === 'Transportation' && '🚗'}
                         </span>
                         {category}
-                        <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
+                        <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300"></span>
                           {categoryServices.length} services
                         </span>
                       </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                         {categoryServices.slice(0, 6).map((service: any, index: number) => (
                           <UltraFuturisticServiceCard2026
                             key={`${service.id || service.name}-${index}`}
@@ -302,13 +260,13 @@ export default function ServicesIndexPage() {
                         ))}
                       </div>
                       {categoryServices.length > 6 && (
-                        <div className="mt-6 text-center">
+                        <div className="mt-6 text-center"></div>
                           <Link
                             href={`/services/category/${toSlug(category)}`}
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                          >
+                          ></Link>
                             View All {category} Services
-                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                           </Link>
@@ -321,26 +279,26 @@ export default function ServicesIndexPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <section className="text-center"></section>
+              <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12"></div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h2>
                   Need a Custom Solution?
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
                   Our team of experts can help you build custom solutions tailored to your specific needs. 
                   Let's discuss how we can transform your business with cutting-edge technology.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <Link
                     href="/contact"
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                  >
+                  ></Link>
                     Get Started
                   </Link>
                   <Link
                     href="/contact"
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                  >
+                  ></Link>
                     Schedule Demo
                   </Link>
                 </div>
@@ -350,24 +308,24 @@ export default function ServicesIndexPage() {
         </div>
       </UltraFuturisticBackground>
 
-      <div className="relative z-10 pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 pt-32 pb-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           {/* Header */}
-          <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <div className="text-center mb-20"></div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"></h1>
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto"></p>
               Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business and drive innovation
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-300">
+            <div className="mt-8 flex flex-wrap justify-center gap-4"></div>
+              <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-300"></span>
                 {validServices.length}+ Services
               </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300">
+              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300"></span>
                 {categories.length} Categories
               </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300">
+              <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300"></span>
                 Latest 2036 Tech
               </span>
             </div>
@@ -375,11 +333,11 @@ export default function ServicesIndexPage() {
 
           {/* Featured Services */}
           {featuredServices.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <section className="mb-20"></section>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h2>
                 Featured Services
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {featuredServices.map((service: any, index: number) => (
                   <UltraFuturisticServiceCard2026
                     key={`${service.id || service.name}-${index}`}
@@ -394,11 +352,11 @@ export default function ServicesIndexPage() {
 
           {/* Latest Services */}
           {latestServices.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <section className="mb-20"></section>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"></h2>
                 Latest Services (2026)
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {latestServices.map((service: any, index: number) => (
                   <UltraFuturisticServiceCard2026
                     key={`${service.id || service.name}-${index}`}
@@ -412,19 +370,19 @@ export default function ServicesIndexPage() {
           )}
 
           {/* Services by Category */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+          <section className="mb-20"></section>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"></h2>
               Services by Category
             </h2>
-            <div className="space-y-12">
+            <div className="space-y-12"></div>
               {categories.map((category) => {
                 const categoryServices = servicesByCategory[category];
                 if (!categoryServices || categoryServices.length === 0) return null;
 
                 return (
-                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                      <span className="text-3xl">
+                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm"></div>
+                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3"></h3>
+                      <span className="text-3xl"></span>
                         {category === 'AI & Data' && '🧠'}
                         {category === 'Developer Tools' && '⚙️'}
                         {category === 'Cloud & FinOps' && '☁️'}
@@ -445,11 +403,11 @@ export default function ServicesIndexPage() {
                         {category === 'Transportation' && '🚗'}
                       </span>
                       {category}
-                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
+                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full"></span>
                         {categoryServices.length} services
                       </span>
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                       {categoryServices.slice(0, 6).map((service: any, index: number) => (
                         <UltraFuturisticServiceCard2026
                           key={`${service.id || service.name}-${index}`}
@@ -460,11 +418,11 @@ export default function ServicesIndexPage() {
                       ))}
                     </div>
                     {categoryServices.length > 6 && (
-                      <div className="text-center mt-6">
+                      <div className="text-center mt-6"></div>
                         <Link
                           href={`/services/category/${toSlug(category)}`}
                           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
-                        >
+                        ></Link>
                           View All {category} Services ({categoryServices.length})
                         </Link>
                       </div>
@@ -476,25 +434,25 @@ export default function ServicesIndexPage() {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 border border-cyan-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          <section className="text-center"></section>
+            <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 border border-cyan-500/20 rounded-2xl p-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></h2>
                 Need a Custom Solution?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
                 Can't find exactly what you're looking for? Our team can create custom solutions tailored to your specific needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                >
+                ></Link>
                   Contact Us
                 </Link>
                 <Link
                   href="/get-started"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                >
+                ></Link>
                   Get Started
                 </Link>
               </div>

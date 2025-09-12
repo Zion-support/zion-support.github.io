@@ -1,6 +1,219 @@
-# bolt.new.zion.app
+# Zion Tech Group - Leading-Edge Technology Solutions
 
-![Automations: 227](https://img.shields.io/badge/Automations-227-informational) ![Pages: 2960](https://img.shields.io/badge/Pages-2960-success) ![Components: 12](https://img.shields.io/badge/Components-12-blue)
+A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, showcasing cutting-edge technology solutions in AI, quantum computing, and cybersecurity.
+
+## 🚀 Features
+
+- **Modern Design**: Beautiful, responsive design with gradient backgrounds and glassmorphism effects
+- **Performance Optimized**: Built with Next.js for optimal performance and SEO
+- **TypeScript**: Full type safety and better development experience
+- **Responsive**: Mobile-first design that works on all devices
+- **Animations**: Smooth animations powered by Framer Motion
+- **Accessibility**: Built with accessibility best practices
+
+## 🛠️ Tech Stack
+
+-   **Frontend:** Next.js, React, TypeScript, Redux Toolkit, Chakra UI, Radix UI, Tailwind CSS
+-   **Backend (Django):** Python, Django, Django REST Framework, PostgreSQL
+-   **Backend (Node.js):** Node.js, Express.js, TypeScript, MongoDB (for `server/`), Next.js API Routes
+-   **Database/BaaS:** PostgreSQL, MongoDB, Supabase, Prisma
+-   **Authentication:** Supabase Auth (handles login, signup, password reset, social auth) with optional two-factor authentication for the IPO portal
+-   **Monitoring:** Custom Node.js service, Sentry, Datadog
+-   **CI/CD:** GitHub Actions, Netlify (including Lighthouse CI)
+-   **Other:** IPFS, OrbitDB, Ethers.js, Elasticsearch
+
+### **Key Highlights:**
+- **Real Implementation**: Production-ready services with proven ROI
+- **Competitive Pricing**: Starting from $199/month with free trials
+- **Market Leadership**: Competing with industry leaders (Tableau, HubSpot, Salesforce)
+- **AI-First Approach**: Cutting-edge technology across all services
+
+## Environment Configuration
+
+⚠️ **IMPORTANT**: This project uses **Supabase for authentication** and **Netlify for environment variable management**. Proper configuration is essential for the application to function correctly.
+
+### Authentication Setup
+
+The application uses Supabase for all authentication functionality:
+- User registration and login
+- Email verification and password reset
+- Social authentication (Google, Facebook, GitHub, Microsoft, Twitter)
+- Session management and profile handling
+
+### Required Environment Variables
+
+A comprehensive list of environment variables can be found in the `.env.example` file. For local development, copy this file to `.env.local` and populate it with the necessary values. **Do not commit `.env.local` to version control.**
+
+For production deployments, all variables are configured directly in Netlify's UI, so the repository no longer contains a `.env.local` file with secrets.
+
+**Key variables include:**
+
+-   **Supabase Configuration:**
+    -   `NEXT_PUBLIC_SUPABASE_URL`
+    -   `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+    -   `SUPABASE_SERVICE_ROLE_KEY` (for server-side operations)
+-   **NextAuth.js Configuration:**
+    -   `NEXTAUTH_SECRET` (a randomly generated string for signing tokens)
+    -   `NEXTAUTH_URL` (the canonical URL of your application)
+-   **OAuth Provider Credentials:**
+    -   `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`
+    -   `FACEBOOK_CLIENT_ID` & `FACEBOOK_CLIENT_SECRET`
+    -   `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`
+    -   `MICROSOFT_CLIENT_ID` & `MICROSOFT_CLIENT_SECRET` (and potentially `MICROSOFT_TENANT_ID`)
+    -   Other provider credentials as needed.
+-   **Internal Authentication Service:**
+    -   `INTERNAL_AUTH_SERVICE_URL` (if used for specific flows like registration)
+
+Ensure all variables marked as required in `.env.example` or in specific documentation (like `docs/SUPABASE_AUTHENTICATION_SETUP.md`) are correctly set.
+
+### 📚 Detailed Setup Guides
+
+- **[Supabase Authentication Setup](docs/SUPABASE_AUTHENTICATION_SETUP.md)** - Complete guide for configuring Supabase authentication
+- **[Netlify Deployment Guide](docs/NETLIFY_DEPLOYMENT_GUIDE.md)** - Step-by-step Netlify deployment with environment variables
+- **[Optional Two-Factor Authentication](TWO_FACTOR_AUTHENTICATION_SUMMARY.md)** - Overview of enabling 2FA in the IPO portal
+- **[Logging Guidelines](docs/LOGGING_GUIDELINES.md)** - Usage instructions for the project logger
+- **Collect Logs** - `npm run logs:collect` bundles recent logs under `logs/archive/`
+- **Analyze Logs** - `npm run logs:summary` scans collected `.log` and `.txt` files, reports missing translation keys, and flags router context errors like `useNavigate()` without a `<Router>`
+- **Improved Analysis** - The log analyzer now highlights TypeScript compilation issues such as `Cannot find name` errors
+- **Health Check** - `npm run logs:health` prints a quick system status report
+- You can skip external connectivity tests by setting `DISABLE_EXTERNAL_SERVICE_CHECKS=true` when running
+  the health check (useful for offline environments)
+- **Health Summary** - `npm run logs:health:summary` writes a detailed report to `logs/health-summary.json`
+  including an overall project grade
+- **Missing Key Log** - Any translation keys not found at runtime are appended to `logs/missing-keys.log`
+- **Check for Missing Translations** - `npm run i18n:missing` verifies that all locales contain the same translation keys
+
+### CDN for Static Assets
+
+To improve performance, the application can serve static assets from a CDN.
+Set `NEXT_PUBLIC_CDN_URL` to your CDN domain (e.g., `https://cdn.yourdomain.com`).
+When this variable is provided in production builds, Next.js will prefix asset
+URLs so they are loaded from the CDN.
+
+### Quick Setup Verification
+
+After setting up environment variables, verify your configuration:
+
+```bash
+# Check environment setup
+npx ts-node --transpile-only scripts/check-env.ts
+
+# Test Supabase connection (in browser console)
+console.log('Supabase configured:', !!window.location.origin.includes('localhost') || !!process.env.NEXT_PUBLIC_SUPABASE_URL)
+```
+zion-tech-group/
+├── components/                 # Reusable UI components
+│   ├── EnhancedNavigation.tsx # Main navigation component
+│   ├── EnhancedFooter.tsx     # Footer component
+│   ├── EnhancedServicesShowcase.tsx # Services showcase
+│   └── EnhancedTestimonialsSection.tsx # Testimonials
+├── pages/                     # Next.js pages
+│   ├── index.tsx             # Homepage
+│   ├── about.tsx             # About page
+│   ├── contact.tsx           # Contact page
+│   ├── _app.tsx              # App wrapper
+│   ├── _document.tsx         # Document wrapper
+│   └── 404.tsx               # 404 error page
+├── data/                      # Data files
+│   └── enhanced-micro-saas-services-2025.ts
+├── public/                    # Static assets
+├── styles/                    # Global styles
+├── babel.config.js           # Babel configuration
+├── next.config.js            # Next.js configuration
+├── package.json              # Dependencies and scripts
+└── tailwind.config.js        # Tailwind CSS configuration
+```
+
+### Key Optimizations Applied
+1. **Image Optimization**: Fixed 400 errors, added comprehensive domain support
+2. **Webpack Configuration**: Optimized chunking, reduced serialization warnings
+3. **Sentry Integration**: Conditional loading, graceful fallbacks
+4. **Environment Handling**: Enhanced validation, placeholder detection
+5. **CSS Optimization**: Production-only to avoid development conflicts
+6. **Error Handling**: Improved user experience, reduced console spam
+
+### Monitoring Dashboard
+The application includes built-in monitoring for:
+- Server health and response times
+- Image optimization performance
+- File system integrity
+- Environment configuration validation
+- Error reporting and analytics
+
+### Troubleshooting Blank Screens
+If the application loads with a completely empty page, it usually means
+the required `node_modules` directory is missing. Check `next_dev_server.log`
+for errors and reinstall dependencies:
+
+```bash
+./setup.sh npm
+npm run build && npm run dev
+```
+
+If you don't have network connectivity, run `npm run dev:offline` (which calls
+`./offline-dev.sh`) to start a minimal offline server until you can reinstall
+the packages.
+
+Refer to the more detailed [Blank Screen Troubleshooting Guide](docs/BLANK_SCREEN_FIX_GUIDE.md)
+for additional steps and diagnostics if the issue persists.
+
+### Self-Maintenance Automation
+The project includes several automations that help it heal itself and stay up to date:
+
+- **Watchdog self‑healing** triggers `git pull && npm install && npm run build && pm2 restart all` when logs or resource usage indicate problems.
+- **Codex autofix** workflows open issues for failing tests and automatically apply patches suggested by OpenAI.
+- **Scheduled audits** run weekly to check dependencies and performance.
+
+For detailed setup instructions see [docs/SELF_MAINTENANCE_AUTOMATION.md](docs/SELF_MAINTENANCE_AUTOMATION.md).
+
+---
+
+## 🌟 Featured Services
+
+### **AI & Data Solutions**
+- AI Business Intelligence Suite ($399/month)
+- AI Customer Experience Platform ($449/month)
+- AI Marketing Automation Suite ($449/month)
+
+### **Cybersecurity & Compliance**
+- Zero Trust Security Orchestrator ($599/month)
+- FinTech Compliance Automation ($799/month)
+- Quantum Cybersecurity Platform ($699/month)
+
+### **Emerging Technologies**
+- Quantum Computing as a Service ($1,299/month)
+- Enterprise Blockchain Platform ($799/month)
+- Space Data Analytics Platform ($599/month)
+
+### **Industry Solutions**
+- Smart Manufacturing Platform ($699/month)
+- Healthcare Analytics Platform ($799/month)
+- Digital Banking Platform ($999/month)
+
+---
+
+## 📖 Documentation
+
+- **[Complete Services Portfolio](NEW_SERVICES_SUMMARY_2025.md)** - Detailed overview of all 36+ services
+- **[Services Showcase](/innovative-services-showcase-2025)** - Interactive showcase of new services
+- **[Main Services Page](/services)** - Complete portfolio with search and filtering
+
+---
+
+## 🚀 Getting Started
+
+1. **Browse Services**: Explore our comprehensive portfolio
+2. **Free Trials**: Most services offer 14-30 day free trials
+3. **Expert Consultation**: Get personalized recommendations
+4. **Implementation**: Dedicated support for deployment and integration
+
+---
+
+*Transform your business with the cutting edge of technology solutions. All services designed for real ROI and measurable business impact.*
+
+---
+
+# bolt.new.zion.app
 
 Autonomous, cloud‑native app with self‑running automations.
 
@@ -3219,5 +3432,41 @@ Home: https://github.com/Zion-Holdings/zion.app#readme
 - `npm run sitemap` – Regenerate sitemap
 - `npm run readme:generate` – Refresh this README
 
----
-This README is auto-generated. Do not edit manually.# Triggering GitHub Actions workflows for testing
+If the app logs **"Error loading tenant"** during startup, the request to the
+Supabase edge function that provides whitelabel settings failed. Confirm that
+`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
+that you have network connectivity. The tenant hook will retry a few times
+before giving up.
+
+## Testing
+
+Run unit tests with:
+
+```sh
+npm run test
+```
+
+To watch tests during development:
+
+```sh
+npm run test:watch
+```
+
+### End-to-End Tests
+
+Open Cypress for interactive debugging:
+
+```sh
+npm run cypress:open
+```
+
+Run the Cypress suite headlessly:
+
+```sh
+npm run cypress:run
+```
+
+### Coverage Report
+
+After running `npm run test`, open `coverage/lcov-report/index.html` in your
+browser to view detailed coverage information.
