@@ -5,8 +5,26 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI 2025 Breakthrough Innovations: Revolutionary Technologies Reshaping Industries",
-      description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions that are revolutionizing business operations.",
+      title: "AI Advanced Automation 2025: Complete Implementation Guide",
+      description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: "🤖",
+      category: "AI Automation",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Cybersecurity Threats 2025: Complete Defense Guide",
+      description: "Protect your organization from emerging AI cybersecurity threats in 2025. Learn about AI-powered attacks, defense strategies, and security best practices.",
+      href: "/blog/ai-2025-cybersecurity-threats",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      readTime: "22 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
       href: "/blog/ai-2025-breakthrough-innovations",
       icon: "🚀",
       category: "AI Innovations",
@@ -44,6 +62,15 @@ export default function ContentShowcasePage() {
 
   const newCaseStudies = [
     {
+      title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
+      description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
+      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Accuracy",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
@@ -60,27 +87,18 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 30, 2025"
+      date: "Jan 28, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
@@ -151,11 +169,11 @@ export default function ContentShowcasePage() {
                 <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🚀 Revolutionary AI Content Just Dropped
+                Fresh AI & Tech Content Just Dropped
               </h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-                New this week: AI Breakthrough Innovations 2025, Sustainability & Green Tech, 
-                $200M Manufacturing Success Story, and comprehensive implementation resources.
+                New this week: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
+                Sustainability Success Stories, and comprehensive implementation resources.
               </p>
             </div>
 
@@ -164,7 +182,7 @@ export default function ContentShowcasePage() {
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
                   <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
-                  <p className="text-sm opacity-90 mb-3">Revolutionary AI technologies reshaping industries</p>
+                  <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
@@ -173,24 +191,24 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
 
-              <Link href="/blog/ai-sustainability-green-tech-2025" className="group">
+              <Link href="/blog/ai-workforce-transformation-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Sustainability & Green Tech</h3>
-                  <p className="text-sm opacity-90 mb-3">Building eco-friendly AI systems for the future</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">👥</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Workforce Transformation</h3>
+                  <p className="text-sm opacity-90 mb-3">Complete reskilling strategies for the AI era</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>20 min read</span>
+                    <span>18 min read</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
                   </div>
                 </div>
               </Link>
 
-              <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+              <Link href="/case-studies/ai-sustainability-transformation-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💰</div>
-                  <h3 className="text-lg font-semibold mb-2">$200M Manufacturing Success</h3>
-                  <p className="text-sm opacity-90 mb-3">Real case study with autonomous AI systems</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🌱</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Sustainability Success</h3>
+                  <p className="text-sm opacity-90 mb-3">60% energy reduction and carbon neutrality</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Case Study</span>
                     <span className="mx-2">•</span>

@@ -1,210 +1,182 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
-  id: string;
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'resource' | 'service';
-  featured: boolean;
+  icon: string;
   category: string;
   readTime?: string;
-  icon: string;
+  type?: string;
+  isNew?: boolean;
+  isTrending?: boolean;
 }
 
-const EnhancedContentPromotionBanner: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+interface EnhancedContentPromotionBannerProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  content: ContentItem[];
+  variant?: 'default' | 'featured' | 'trending';
+  maxItems?: number;
+  className?: string;
+}
 
-  const featuredContent: ContentItem[] = [
-    {
-      id: '1',
-      title: 'AI 2025 Quantum Computing Breakthrough',
-      description: 'Revolutionary quantum AI applications achieving unprecedented results in drug discovery, finance, and climate modeling.',
-      href: '/blog/ai-2025-quantum-computing-breakthrough',
-      type: 'blog',
-      featured: true,
-      category: 'AI & Technology',
-      readTime: '15 min read',
-      icon: '⚡'
-    },
-    {
-      id: '2',
-      title: 'AI Workforce Transformation 2025',
-      description: 'Complete reskilling guide with proven strategies for thriving in the AI-powered economy. 85M jobs displaced, 97M created.',
-      href: '/blog/ai-workforce-transformation-2025',
-      type: 'blog',
-      featured: true,
-      category: 'Career & Strategy',
-      readTime: '18 min read',
-      icon: '👥'
-    },
-    {
-      id: '3',
-      title: 'AI Manufacturing Success: $200M Savings',
-      description: 'Fortune 500 case study showing how autonomous AI systems achieved 60% faster processing and 40% cost reduction.',
-      href: '/case-studies/ai-autonomous-manufacturing-success-2025',
-      type: 'case-study',
-      featured: true,
-      category: 'Case Study',
-      readTime: '12 min read',
-      icon: '🏭'
-    },
-    {
-      id: '4',
-      title: 'AI Implementation Master Guide 2026',
-      description: '200+ page comprehensive resource with frameworks, templates, and step-by-step implementation instructions.',
-      href: '/resources/ai-implementation-master-guide-2026',
-      type: 'resource',
-      featured: true,
-      category: 'Free Resource',
-      readTime: '200+ pages',
-      icon: '📚'
-    },
-    {
-      id: '5',
-      title: 'AI Enterprise Automation Services',
-      description: 'Transform your business with cutting-edge AI automation. 90% faster processing, 60% cost reduction guaranteed.',
-      href: '/services/ai-automation',
-      type: 'service',
-      featured: true,
-      category: 'Service',
-      readTime: 'Get Quote',
-      icon: '🚀'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [featuredContent.length]);
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'from-blue-500 to-cyan-500';
-      case 'case-study':
-        return 'from-green-500 to-emerald-500';
-      case 'resource':
-        return 'from-purple-500 to-pink-500';
-      case 'service':
-        return 'from-orange-500 to-red-500';
+export default function EnhancedContentPromotionBanner({
+  title,
+  subtitle,
+  description,
+  content,
+  variant = 'default',
+  maxItems = 4,
+  className = ''
+}: EnhancedContentPromotionBannerProps) {
+  const displayedContent = content.slice(0, maxItems);
+  
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'featured':
+        return {
+          container: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          title: 'text-white',
+          subtitle: 'text-white',
+          description: 'text-white opacity-90',
+          button: 'bg-white text-indigo-600 hover:bg-gray-100',
+          buttonOutline: 'border-2 border-white text-white hover:bg-white hover:text-indigo-600',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20',
+          cardText: 'text-white',
+          cardSubtext: 'text-white opacity-75'
+        };
+      case 'trending':
+        return {
+          container: 'bg-gradient-to-r from-orange-600 via-red-600 to-pink-600',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          title: 'text-white',
+          subtitle: 'text-white',
+          description: 'text-white opacity-90',
+          button: 'bg-white text-orange-600 hover:bg-gray-100',
+          buttonOutline: 'border-2 border-white text-white hover:bg-white hover:text-orange-600',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20',
+          cardText: 'text-white',
+          cardSubtext: 'text-white opacity-75'
+        };
       default:
-        return 'from-gray-500 to-gray-600';
+        return {
+          container: 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600',
+          badge: 'bg-white bg-opacity-20',
+          badgeText: 'text-white',
+          title: 'text-white',
+          subtitle: 'text-white',
+          description: 'text-white opacity-90',
+          button: 'bg-white text-blue-600 hover:bg-gray-100',
+          buttonOutline: 'border-2 border-white text-white hover:bg-white hover:text-blue-600',
+          card: 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20',
+          cardText: 'text-white',
+          cardSubtext: 'text-white opacity-75'
+        };
     }
   };
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'New Article';
-      case 'case-study':
-        return 'Case Study';
-      case 'resource':
-        return 'Free Resource';
-      case 'service':
-        return 'Service';
-      default:
-        return 'Content';
-    }
-  };
-
-  if (!isVisible) return null;
-
-  const currentContent = featuredContent[currentIndex];
+  const styles = getVariantStyles();
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-      </div>
-
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="flex items-center justify-between">
-            {/* Content */}
-            <div className="flex-1 pr-8">
-              <div className="flex items-center mb-3">
-                <span className="text-3xl mr-3">{currentContent.icon}</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
-                  {getTypeLabel(currentContent.type)}
-                </span>
-                <span className="ml-3 text-sm opacity-75">{currentContent.category}</span>
-              </div>
-              <h3 className="text-3xl font-bold mb-3">
-                {currentContent.title}
-              </h3>
-              <p className="text-lg text-indigo-100 mb-6 max-w-2xl">
-                {currentContent.description}
-              </p>
-              <div className="flex items-center space-x-4">
-                <Link 
-                  href={currentContent.href}
-                  className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors text-lg"
-                >
-                  {currentContent.type === 'resource' ? 'Download Free' : 
-                   currentContent.type === 'service' ? 'Get Started' : 'Read More'}
-                </Link>
-                <Link 
-                  href="/content-showcase"
-                  className="text-white hover:text-indigo-200 transition-colors font-medium"
-                >
-                  View All Content →
-                </Link>
-              </div>
-              <div className="mt-4 text-sm opacity-75">
-                {currentContent.readTime} • Featured Content
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="flex flex-col space-y-3">
-              {featuredContent.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-4 h-4 rounded-full transition-all ${
-                    index === currentIndex 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white/50 hover:bg-white/75'
-                  }`}
-                />
-              ))}
-            </div>
+    <section className={`py-20 ${styles.container} text-white relative overflow-hidden ${className}`}>
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className={`inline-flex items-center ${styles.badge} rounded-full px-6 py-2 mb-6`}>
+            <span className={`text-sm font-medium ${styles.badgeText}`}>{subtitle}</span>
+          </div>
+          
+          <h2 className={`text-4xl md:text-6xl font-bold mb-6 ${styles.title}`}>
+            {title}
+          </h2>
+          
+          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.description}`}>
+            {description}
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/content-showcase"
+              className={`px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg ${styles.button}`}
+            >
+              🎯 Explore All Content
+            </Link>
+            <Link
+              href="/blog"
+              className={`px-10 py-4 rounded-lg font-semibold transition-colors text-lg ${styles.buttonOutline}`}
+            >
+              📚 Read Latest Articles
+            </Link>
           </div>
         </div>
 
-        {/* Close Button */}
-        <button
-          onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayedContent.map((item, index) => (
+            <Link key={index} href={item.href} className="group">
+              <div className={`${styles.card} p-6 rounded-xl transition-all duration-300 border border-white border-opacity-20`}>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className={`text-lg font-semibold mb-2 ${styles.cardText}`}>
+                  {item.title}
+                </h3>
+                <p className={`text-sm mb-3 ${styles.cardSubtext}`}>
+                  {item.description}
+                </p>
+                <div className="flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    {item.isNew && (
+                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        NEW
+                      </span>
+                    )}
+                    {item.isTrending && (
+                      <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        TRENDING
+                      </span>
+                    )}
+                    <span className={styles.cardSubtext}>{item.category}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {item.readTime && (
+                      <span className={styles.cardSubtext}>{item.readTime}</span>
+                    )}
+                    {item.type && (
+                      <>
+                        <span className={styles.cardSubtext}>•</span>
+                        <span className={styles.cardSubtext}>{item.type}</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
-        <div 
-          className="h-full bg-white transition-all duration-6000 ease-linear"
-          style={{ width: `${((currentIndex + 1) / featuredContent.length) * 100}%` }}
-        />
+        {/* Additional CTA */}
+        <div className="text-center mt-12">
+          <Link
+            href="/resources"
+            className={`px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4 ${styles.button}`}
+          >
+            📋 Download Free Resources
+          </Link>
+          <Link
+            href="/case-studies"
+            className={`px-8 py-3 rounded-lg font-semibold transition-colors inline-block ${styles.buttonOutline}`}
+          >
+            📊 View Case Studies
+          </Link>
+        </div>
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-white/5 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 right-10 w-12 h-12 bg-white/5 rounded-full animate-pulse delay-2000"></div>
-    </div>
+    </section>
   );
-};
-
-export default EnhancedContentPromotionBanner;
+}

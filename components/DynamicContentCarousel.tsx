@@ -1,301 +1,246 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, User, Calendar, TrendingUp, Star, Eye } from 'lucide-react';
 
 interface ContentItem {
   id: string;
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'resource';
-  category: string;
-  readTime: string;
-  publishDate: string;
   icon: string;
-  featured: boolean;
-  trending: boolean;
+  category: string;
+  readTime?: string;
+  type?: string;
+  isNew?: boolean;
+  isTrending?: boolean;
+  image?: string;
 }
 
-const DynamicContentCarousel: React.FC = () => {
+interface DynamicContentCarouselProps {
+  content: ContentItem[];
+  autoPlay?: boolean;
+  interval?: number;
+  showDots?: boolean;
+  showArrows?: boolean;
+  className?: string;
+}
+
+export default function DynamicContentCarousel({
+  content,
+  autoPlay = true,
+  interval = 5000,
+  showDots = true,
+  showArrows = true,
+  className = ''
+}: DynamicContentCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const contentItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'Advanced AI Architecture Patterns for 2025',
-      description: 'Master production-ready AI systems with advanced architecture patterns, microservices design, and real-world implementation strategies.',
-      href: '/blog/ai-2025-advanced-ai-architecture',
-      type: 'blog',
-      category: 'AI Architecture',
-      readTime: '25 min read',
-      publishDate: '2025-01-17',
-      icon: '🏗️',
-      featured: true,
-      trending: true
-    },
-    {
-      id: '2',
-      title: 'Multimodal AI Applications in 2025',
-      description: 'Explore revolutionary multimodal AI applications combining text, vision, audio, and more for unprecedented user experiences.',
-      href: '/blog/ai-2025-multimodal-ai-applications',
-      type: 'blog',
-      category: 'Multimodal AI',
-      readTime: '22 min read',
-      publishDate: '2025-01-17',
-      icon: '🎭',
-      featured: true,
-      trending: true
-    },
-    {
-      id: '3',
-      title: 'AI-Powered Retail Transformation: $150M Success',
-      description: 'Discover how a major retail chain achieved $150M revenue increase through AI-powered personalization and optimization.',
-      href: '/case-studies/ai-2025-retail-transformation-success',
-      type: 'case-study',
-      category: 'Retail AI',
-      readTime: '18 min read',
-      publishDate: '2025-01-17',
-      icon: '🏪',
-      featured: true,
-      trending: false
-    },
-    {
-      id: '4',
-      title: 'AI Enterprise Implementation Playbook 2025',
-      description: 'Complete guide to successful enterprise AI implementation with proven strategies, templates, and best practices.',
-      href: '/resources/ai-2025-enterprise-implementation-playbook',
-      type: 'resource',
-      category: 'Implementation',
-      readTime: '45 min read',
-      publishDate: '2025-01-17',
-      icon: '📋',
-      featured: true,
-      trending: true
-    },
-    {
-      id: '5',
-      title: 'AI 2025 Breakthrough Innovations',
-      description: 'Revolutionary AI technologies and breakthrough innovations that are reshaping industries in 2025.',
-      href: '/blog/ai-2025-breakthrough-innovations',
-      type: 'blog',
-      category: 'AI Innovation',
-      readTime: '25 min read',
-      publishDate: '2025-01-15',
-      icon: '🚀',
-      featured: false,
-      trending: true
-    },
-    {
-      id: '6',
-      title: 'AI Sustainability & Green Tech 2025',
-      description: 'Building eco-friendly AI systems and sustainable technology solutions for a greener future.',
-      href: '/blog/ai-2025-sustainability-green-tech',
-      type: 'blog',
-      category: 'Sustainability',
-      readTime: '20 min read',
-      publishDate: '2025-01-14',
-      icon: '🌱',
-      featured: false,
-      trending: false
-    }
-  ];
-
-  const featuredItems = contentItems.filter(item => item.featured);
-  const trendingItems = contentItems.filter(item => item.trending);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredItems.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, featuredItems.length]);
+    if (!autoPlay || isHovered) return;
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'from-blue-500 to-cyan-500';
-      case 'case-study': return 'from-green-500 to-emerald-500';
-      case 'resource': return 'from-purple-500 to-pink-500';
-      default: return 'from-gray-500 to-gray-600';
-    }
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === content.length - 1 ? 0 : prevIndex + 1
+      );
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [autoPlay, interval, isHovered, content.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
   };
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog': return 'Article';
-      case 'case-study': return 'Case Study';
-      case 'resource': return 'Resource';
-      default: return 'Content';
-    }
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? content.length - 1 : currentIndex - 1);
   };
+
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === content.length - 1 ? 0 : currentIndex + 1);
+  };
+
+  if (!content || content.length === 0) return null;
+
+  const currentItem = content[currentIndex];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className={`py-16 bg-gradient-to-r from-gray-50 to-blue-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 HOT THIS WEEK</span>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
+            <span className="text-sm font-medium">🔥 FEATURED CONTENT</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Latest AI & Technology Content
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Discover Our Latest AI & Tech Insights
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our newest articles, case studies, and resources covering the latest trends 
-            in AI, technology, and digital transformation.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Stay ahead with expert analysis, real-world case studies, and actionable resources 
+            that help you succeed in the AI-driven future.
           </p>
         </div>
 
-        {/* Featured Content Carousel */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Content</h3>
-          <div className="relative">
-            <div className="overflow-hidden rounded-2xl">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
-                {featuredItems.map((item, index) => (
-                  <div key={item.id} className="w-full flex-shrink-0">
-                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                      <div className="md:flex">
-                        {/* Image/Icon Section */}
-                        <div className="md:w-1/3 bg-gradient-to-br from-indigo-500 to-purple-600 p-12 flex items-center justify-center">
-                          <div className="text-center text-white">
-                            <div className="text-8xl mb-4">{item.icon}</div>
-                            <div className="text-sm font-medium opacity-90">{item.category}</div>
-                          </div>
-                        </div>
-                        
-                        {/* Content Section */}
-                        <div className="md:w-2/3 p-8">
-                          <div className="flex items-center gap-3 mb-4">
-                            <span className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTypeColor(item.type)}`}>
-                              {getTypeLabel(item.type)}
-                            </span>
-                            {item.trending && (
-                              <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                🔥 Trending
-                              </span>
-                            )}
-                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                              ✨ New
-                            </span>
-                          </div>
-                          
-                          <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                            {item.title}
-                          </h4>
-                          
-                          <p className="text-gray-600 mb-6 leading-relaxed">
-                            {item.description}
-                          </p>
-                          
-                          <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
-                            <div className="flex items-center gap-2">
-                              <Clock className="w-4 h-4" />
-                              <span>{item.readTime}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Calendar className="w-4 h-4" />
-                              <span>{new Date(item.publishDate).toLocaleDateString()}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <User className="w-4 h-4" />
-                              <span>Zion Tech Group</span>
-                            </div>
-                          </div>
-                          
-                          <Link
-                            href={item.href}
-                            className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
-                          >
-                            <span>Read More</span>
-                            <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+        <div 
+          className="relative bg-white rounded-2xl shadow-xl overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* Main Content */}
+          <div className="grid md:grid-cols-2 gap-0">
+            {/* Content Details */}
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">{currentItem.icon}</div>
+                <div className="flex items-center gap-2">
+                  {currentItem.isNew && (
+                    <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      NEW
+                    </span>
+                  )}
+                  {currentItem.isTrending && (
+                    <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                      TRENDING
+                    </span>
+                  )}
+                  <span className="text-sm text-gray-500">{currentItem.category}</span>
+                </div>
+              </div>
+              
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                {currentItem.title}
+              </h3>
+              
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                {currentItem.description}
+              </p>
+              
+              <div className="flex items-center gap-4 mb-6">
+                {currentItem.readTime && (
+                  <span className="text-sm text-gray-500">{currentItem.readTime}</span>
+                )}
+                {currentItem.type && (
+                  <>
+                    <span className="text-gray-300">•</span>
+                    <span className="text-sm text-gray-500">{currentItem.type}</span>
+                  </>
+                )}
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={currentItem.href}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                >
+                  Read More →
+                </Link>
+                <Link
+                  href="/content-showcase"
+                  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
+                >
+                  View All Content
+                </Link>
               </div>
             </div>
-            
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {featuredItems.map((_, index) => (
+
+            {/* Visual Element */}
+            <div className="bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-8 md:p-12">
+              <div className="text-8xl opacity-80">
+                {currentItem.icon}
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          {showArrows && content.length > 1 && (
+            <>
+              <button
+                onClick={goToPrevious}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200"
+                aria-label="Previous content"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={goToNext}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200"
+                aria-label="Next content"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </>
+          )}
+
+          {/* Dots Indicator */}
+          {showDots && content.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {content.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-indigo-600' : 'bg-gray-300'
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    index === currentIndex 
+                      ? 'bg-blue-600' 
+                      : 'bg-white bg-opacity-50 hover:bg-opacity-75'
                   }`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Trending Content Grid */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Trending Now</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trendingItems.slice(0, 3).map((item) => (
-              <Link key={item.id} href={item.href} className="group">
-                <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTypeColor(item.type)}`}>
-                        {getTypeLabel(item.type)}
+        {/* Content Preview Grid */}
+        <div className="mt-12">
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">More Featured Content</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {content.slice(0, 3).map((item, index) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                className={`group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border ${
+                  index === currentIndex ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'
+                }`}
+                onClick={() => goToSlide(index)}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="text-2xl">{item.icon}</div>
+                  <div className="flex items-center gap-2">
+                    {item.isNew && (
+                      <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">
+                        NEW
                       </span>
-                      <div className="flex items-center gap-1 text-yellow-500">
-                        <Star className="w-4 h-4 fill-current" />
-                        <span className="text-sm font-medium">Trending</span>
-                      </div>
-                    </div>
-                    
-                    <div className="text-3xl mb-3">{item.icon}</div>
-                    
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                      {item.title}
-                    </h4>
-                    
-                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                      {item.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center gap-4">
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {item.readTime}
-                        </span>
-                        <span>{item.category}</span>
-                      </div>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    )}
+                    {item.isTrending && (
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">
+                        TRENDING
+                      </span>
+                    )}
                   </div>
+                </div>
+                
+                <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
+                  {item.title}
+                </h4>
+                
+                <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between text-xs text-gray-500">
+                  <span>{item.category}</span>
+                  {item.readTime && (
+                    <span>{item.readTime}</span>
+                  )}
                 </div>
               </Link>
             ))}
           </div>
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-          >
-            <span>Explore All Content</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
       </div>
     </section>
   );
-};
-
-export default DynamicContentCarousel;
+}
