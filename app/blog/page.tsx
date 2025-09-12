@@ -165,6 +165,35 @@ const blogPosts: BlogPost[] = [
     image: '☁️',
     views: 0
   }
+  ,
+  {
+    id: 'rag-in-production-2025',
+    title: 'RAG in Production 2025: Patterns, Guardrails, ROI',
+    excerpt: 'A pragmatic guide to production-grade RAG: architectures, evaluation, guardrails, and ROI.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '13 min read',
+    category: 'AI & Machine Learning',
+    tags: ['RAG', 'Retrieval', 'LLM', 'Production'],
+    featured: true,
+    url: '/blog/rag-in-production-2025',
+    image: '📚',
+    views: 0
+  },
+  {
+    id: 'data-quality-playbook-2025',
+    title: 'Data Quality Playbook 2025: Trustworthy AI Starts with Better Data',
+    excerpt: 'Contracts, lineage, validation, and drift remediation to power reliable AI systems.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    category: 'Data & MLOps',
+    tags: ['Data Quality', 'MLOps', 'Governance'],
+    featured: false,
+    url: '/blog/data-quality-playbook-2025',
+    image: '🧪',
+    views: 0
+  }
 ];
 
 export default function BlogPage() {

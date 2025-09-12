@@ -36,6 +36,47 @@ export default function ContentShowcasePage() {
           
           {/* New September 2025 Drops */}
           <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* New: RAG in Production */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">📚 RAG</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/rag-in-production-2025" className="hover:text-blue-600">
+                    RAG in Production 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Patterns, guardrails, and ROI for production-grade RAG systems.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/rag-in-production-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* New: Data Quality Playbook */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-blue-100 text-green-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🧪 DATA</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/data-quality-playbook-2025" className="hover:text-blue-600">
+                    Data Quality Playbook 2025
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">Contracts, lineage, validation, and drift remediation for trustworthy AI.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/data-quality-playbook-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="p-6">
                 <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 rounded-full px-4 py-2 mb-4">
