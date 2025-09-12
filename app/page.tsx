@@ -286,6 +286,39 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* New Content Spotlight */}
+          <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12'>
+            <div className='text-center mb-8'>
+              <h3 className='text-3xl font-bold mb-4'>✨ Just Published: AI Funding Masterclass</h3>
+              <p className='text-xl opacity-90 mb-6'>
+                Master the $47B AI funding landscape with our comprehensive playbook. 
+                Includes pitch templates, investor database, and proven strategies.
+              </p>
+              <Link
+                href='/resources/ai-startup-funding-playbook-2025'
+                className='inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                🎯 Download Free Playbook
+                <span className='text-sm opacity-75'>(150+ pages)</span>
+              </Link>
+            </div>
+            
+            <div className='grid md:grid-cols-3 gap-6'>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>500+</div>
+                <div className='text-sm opacity-90'>AI Investors Listed</div>
+              </div>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>$2B+</div>
+                <div className='text-sm opacity-90'>Raised by Our Clients</div>
+              </div>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>340%</div>
+                <div className='text-sm opacity-90'>Average ROI</div>
+              </div>
+            </div>
+          </div>
+
           {/* Featured New Content Cards */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <Link href='/blog/ai-customer-support-automation-2025' className='group'>
@@ -1426,7 +1459,44 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Featured New Content Cards */}
+          {/* Featured Case Study Banner */}
+          <div className='bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 mb-12'>
+            <div className='text-center mb-8'>
+              <h3 className='text-3xl font-bold mb-4'>🏆 New Case Study: $50M Financial Services Transformation</h3>
+              <p className='text-xl opacity-90 mb-6'>
+                See how a leading financial services firm achieved 300% efficiency gains and $50M in cost savings 
+                through strategic AI implementation. Complete with ROI analysis and implementation details.
+              </p>
+              <Link
+                href='/case-studies/ai-financial-services-transformation-2025'
+                className='inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📊 Read Full Case Study
+                <span className='text-sm opacity-75'>(12 min read)</span>
+              </Link>
+            </div>
+            
+            <div className='grid md:grid-cols-4 gap-6'>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>$50M</div>
+                <div className='text-sm opacity-90'>Annual Savings</div>
+              </div>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>300%</div>
+                <div className='text-sm opacity-90'>Efficiency Gain</div>
+              </div>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>18</div>
+                <div className='text-sm opacity-90'>Months to ROI</div>
+              </div>
+              <div className='bg-white bg-opacity-10 p-4 rounded-lg text-center'>
+                <div className='text-2xl font-bold mb-1'>95%</div>
+                <div className='text-sm opacity-90'>Customer Satisfaction</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <Link href='/blog/ai-multimodal-applications-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>

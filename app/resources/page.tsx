@@ -6,7 +6,124 @@ import ErrorBoundary from '../../components/ErrorBoundary';
 import AIROICalculator from '../../components/AIROICalculator';
 import AIReadinessAssessment from '../../components/AIReadinessAssessment';
 
-export default function Resources() {
+export default function ResourcesPage() {
+  const resources = [
+    {
+      id: 'ai-implementation-checklist-2025',
+      title: 'AI Implementation Checklist 2025',
+      description: 'A comprehensive step-by-step guide to successfully implementing AI in your organization. Avoid common pitfalls and maximize your AI ROI.',
+      category: 'AI Implementation',
+      type: 'Checklist',
+      downloadCount: '2,500+',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'ai-security-hardening-checklist',
+      title: 'AI Security Hardening Checklist',
+      description: 'Essential security measures for AI systems and data protection. Ensure your AI implementation is secure and compliant.',
+      category: 'Security',
+      type: 'Checklist',
+      downloadCount: '1,800+',
+      rating: 4.8,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'ai-roi-calculator-2025',
+      title: 'AI ROI Calculator 2025',
+      description: 'Calculate the potential return on investment for your AI automation projects. Get detailed projections and business case analysis.',
+      category: 'Business Tools',
+      type: 'Calculator',
+      downloadCount: '5,200+',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'ai-automation-checklist-2025',
+      title: 'AI Automation Checklist 2025',
+      description: 'Your comprehensive guide to successfully implementing AI automation in your business. 150+ actionable items for guaranteed success.',
+      category: 'AI Implementation',
+      type: 'Checklist',
+      downloadCount: '8,500+',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
+    // New resource added January 2025
+    {
+      id: 'ai-startup-funding-playbook-2025',
+      title: 'AI Startup Funding Playbook 2025',
+      description: 'Master the $47B AI funding landscape with our comprehensive playbook. Includes pitch templates, investor database, and proven strategies.',
+      category: 'Startup Strategy',
+      type: 'Playbook',
+      downloadCount: '3,200+',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'ai-governance-framework',
+      title: 'AI Governance Framework',
+      description: 'Complete framework for responsible AI governance and compliance. Ensure ethical and compliant AI implementation.',
+      category: 'Governance',
+      type: 'Framework',
+      downloadCount: '1,500+',
+      rating: 4.7,
+      featured: false,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'cloud-native-checklist',
+      title: 'Cloud-Native Architecture Checklist',
+      description: 'Essential checklist for building scalable, resilient cloud-native applications. Follow industry best practices.',
+      category: 'Cloud Architecture',
+      type: 'Checklist',
+      downloadCount: '2,100+',
+      rating: 4.8,
+      featured: false,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'startup-funding-checklist',
+      title: 'Startup Funding Checklist 2025',
+      description: 'Complete guide to securing funding for your AI startup. Navigate the funding landscape with confidence.',
+      category: 'Startup Strategy',
+      type: 'Checklist',
+      downloadCount: '1,900+',
+      rating: 4.9,
+      featured: false,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'microservices-best-practices',
+      title: 'Microservices Best Practices Guide',
+      description: 'Comprehensive guide to building scalable microservices architectures. Learn from real-world implementations.',
+      category: 'Architecture',
+      type: 'Guide',
+      downloadCount: '1,600+',
+      rating: 4.6,
+      featured: false,
+      image: '/api/placeholder/400/300',
+    },
+    {
+      id: 'devops-transformation-playbook',
+      title: 'DevOps Transformation Playbook',
+      description: 'Step-by-step guide to implementing DevOps culture and practices in your organization.',
+      category: 'DevOps',
+      type: 'Playbook',
+      downloadCount: '1,400+',
+      rating: 4.7,
+      featured: false,
+      image: '/api/placeholder/400/300',
+    },
+  ];
+
+  const featuredResources = resources.filter(resource => resource.featured);
+  const regularResources = resources.filter(resource => !resource.featured);
+
   return (
     <div className="min-h-screen bg-white">
       <SEO
