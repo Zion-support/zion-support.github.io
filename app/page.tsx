@@ -51,11 +51,8 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-<<<<<<< HEAD
-import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
-import LatestContentShowcase from '../components/LatestContentShowcase';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+// New 2025 Content Components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
@@ -72,58 +69,37 @@ import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePro
 import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
-import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
-import AI2025NewContentShowcase from '../components/AI2025NewContentShowcase';
 
-// New 2029 Breakthrough Content Components
-import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
-import AI2029BreakthroughContentShowcase from '../components/AI2029BreakthroughContentShowcase';
-
-// New 2028 Breakthrough Content Components
-import AI2028BreakthroughPromotionBanner from '../components/AI2028BreakthroughPromotionBanner';
-import AI2028BreakthroughContentShowcase from '../components/AI2028BreakthroughContentShowcase';
-import EnhancedContentDiscovery2028 from '../components/EnhancedContentDiscovery2028';
-import AI2028ROICalculator from '../components/AI2028ROICalculator';
-import AI2028NewsletterSignup from '../components/AI2028NewsletterSignup';
-
-// New 2027 Breakthrough Content Components
-import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
-import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
-import QuantumComputingBreakthroughShowcase from '../components/QuantumComputingBreakthroughShowcase';
-import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomationMasteryShowcase';
-import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
-import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
-import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
-
-// Revolutionary Content Showcase
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
-
-// New 2025 Content Components
-import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
-import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
-import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
-import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
-import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
-import LatestContent2025PromotionBanner from '../components/LatestContent2025PromotionBanner';
-import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
+// New 2026 Content Components
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
-
-// New AI 2025 Revolutionary Breakthrough Components
-import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
-import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-
-// New AI 2026 Quantum-Neural Components
 import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
 import EnhancedContentDiscoveryWidget2026 from '../components/EnhancedContentDiscoveryWidget2026';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+
+// New 2027-2028 Content Components
+import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
+import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
+import AI2028BreakthroughPromotionBanner from '../components/AI2028BreakthroughPromotionBanner';
+import AI2028BreakthroughContentShowcase from '../components/AI2028BreakthroughContentShowcase';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import EnhancedContentDiscovery2028 from '../components/EnhancedContentDiscovery2028';
+import AI2028ROICalculator from '../components/AI2028ROICalculator';
+import AI2028NewsletterSignup from '../components/AI2028NewsletterSignup';
+import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
 
 // New 2029-2030 Content Components
 import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
+import AI2029BreakthroughContentShowcase from '../components/AI2029BreakthroughContentShowcase';
 import AI2030FuturePredictionsPromotionBanner from '../components/AI2030FuturePredictionsPromotionBanner';
 import QuantumComputingSolutionsPromotionBanner from '../components/QuantumComputingSolutionsPromotionBanner';
 import EnterpriseAutomationMasteryPromotionBanner from '../components/EnterpriseAutomationMasteryPromotionBanner';
+import QuantumComputingBreakthroughShowcase from '../components/QuantumComputingBreakthroughShowcase';
+import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomationMasteryShowcase';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
 // New AI 2033-2034 Revolutionary Content Components
 import AI2033BreakthroughPromotionBanner from '../components/AI2033BreakthroughPromotionBanner';
@@ -131,10 +107,14 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
-// New 2026 Content Components
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
-import NewContentNavigation2026 from '../components/NewContentNavigation2026';
+// Additional Content Components
+import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
+import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
+import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
+import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
+import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -322,7 +302,6 @@ export default function HomePage() {
         {/* NEW CONTENT 2025 SHOWCASE */}
         <NewContent2025Showcase />
         
-<<<<<<< HEAD
         {/* AI 2026 BREAKTHROUGH PROMOTION BANNER */}
         <AI2026BreakthroughPromotionBanner />
         
@@ -331,13 +310,6 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <AI2026ContentDiscoveryWidget />
-        
-<<<<<<< HEAD
-        {/* AI 2026 CONTENT PROMOTION BANNER */}
-        <AI2026ContentPromotionBanner />
-        
-        {/* AI 2026 CONTENT SHOWCASE */}
-        <AI2026ContentShowcase />
         
         {/* REVOLUTIONARY TECH 2025 PROMOTION BANNER */}
         <RevolutionaryTech2025PromotionBanner />
@@ -350,6 +322,7 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY 2025 */}
         <UltimateContentDiscovery2025 />
+        
         {/* LATEST CONTENT 2025 PROMOTION BANNER */}
         <LatestContent2025PromotionBanner />
         
