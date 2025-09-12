@@ -5,268 +5,192 @@ export default function AITransformationReadinessAssessment2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="AI Transformation Readiness Assessment 2025 - Free Tool"
-        description="Evaluate your organization's readiness for AI transformation with our comprehensive assessment tool. Get personalized recommendations and a detailed roadmap for success."
-        keywords="AI readiness assessment, AI transformation, digital transformation, AI implementation, business assessment"
+        title="AI Transformation Readiness Assessment 2025 - Free Download"
+        description="Evaluate your organization's AI readiness with our comprehensive assessment tool. Get personalized recommendations and implementation roadmap."
+        keywords="AI readiness assessment, AI transformation, digital transformation, AI implementation, business readiness"
         url="/resources/ai-transformation-readiness-assessment-2025"
       />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+            <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
               Free Resource
             </span>
-            <span className="text-gray-500 text-sm">Interactive Tool</span>
+            <span className="text-gray-500 text-sm">Assessment Tool</span>
             <span className="text-gray-500 text-sm">•</span>
-            <span className="text-gray-500 text-sm">Jan 30, 2025</span>
+            <span className="text-gray-500 text-sm">Jan 15, 2025</span>
           </div>
+          
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             AI Transformation Readiness Assessment 2025
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Evaluate your organization's readiness for AI transformation with our comprehensive 
-            assessment tool. Get personalized recommendations and a detailed roadmap for success.
+          
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
+            Evaluate your organization's AI readiness with our comprehensive assessment tool. Get personalized 
+            recommendations and a detailed implementation roadmap to accelerate your AI transformation.
           </p>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 What You'll Get</h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>Comprehensive readiness score across 8 key dimensions</li>
+              <li>Personalized recommendations for improvement</li>
+              <li>90-day implementation roadmap</li>
+              <li>Industry benchmarking and best practices</li>
+              <li>ROI projections and business case templates</li>
+            </ul>
+          </div>
         </div>
 
         <div className="prose prose-lg max-w-none">
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 What You'll Get</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Assessment Overview</h2>
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            Our AI Transformation Readiness Assessment evaluates your organization across eight critical 
+            dimensions that determine AI implementation success. This comprehensive tool helps you identify 
+            strengths, weaknesses, and opportunities for improvement.
+          </p>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Assessment Dimensions</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">1. Leadership & Strategy</h3>
+              <p className="text-gray-700 text-sm">
+                Evaluate AI vision, executive support, and strategic alignment across the organization.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Data Infrastructure</h3>
+              <p className="text-gray-700 text-sm">
+                Assess data quality, availability, governance, and technical infrastructure readiness.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">3. Talent & Skills</h3>
+              <p className="text-gray-700 text-sm">
+                Review AI talent availability, skill gaps, and training programs in place.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">4. Technology Stack</h3>
+              <p className="text-gray-700 text-sm">
+                Examine current technology capabilities and AI tool integration readiness.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">5. Use Case Readiness</h3>
+              <p className="text-gray-700 text-sm">
+                Identify high-impact AI use cases and assess implementation feasibility.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">6. Change Management</h3>
+              <p className="text-gray-700 text-sm">
+                Evaluate organizational change readiness and employee adoption strategies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">7. Governance & Ethics</h3>
+              <p className="text-gray-700 text-sm">
+                Review AI governance frameworks, ethical guidelines, and compliance readiness.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">8. ROI & Measurement</h3>
+              <p className="text-gray-700 text-sm">
+                Assess measurement capabilities, success metrics, and ROI tracking systems.
+              </p>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How It Works</h2>
+          <div className="space-y-6 mb-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">📊 Comprehensive Analysis</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Current AI maturity level assessment</li>
-                  <li>• Technology infrastructure evaluation</li>
-                  <li>• Data quality and availability analysis</li>
-                  <li>• Organizational readiness scoring</li>
-                </ul>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Complete the Assessment</h3>
+                <p className="text-gray-700">Answer 50+ questions across all dimensions (takes 15-20 minutes)</p>
               </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">🗺️ Personalized Roadmap</h3>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Step-by-step implementation plan</li>
-                  <li>• Priority use case recommendations</li>
-                  <li>• Resource and timeline estimates</li>
-                  <li>• Risk mitigation strategies</li>
-                </ul>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Get Your Score</h3>
+                <p className="text-gray-700">Receive detailed scores and analysis for each dimension</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Receive Recommendations</h3>
+                <p className="text-gray-700">Get personalized action items and implementation roadmap</p>
               </div>
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">🔍 Assessment Categories</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">🏢 Organizational Readiness</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-600 mt-1">•</span>
-                  <span>Leadership commitment and vision</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-600 mt-1">•</span>
-                  <span>Change management capabilities</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-600 mt-1">•</span>
-                  <span>Employee skills and training</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-600 mt-1">•</span>
-                  <span>Cultural readiness for AI adoption</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">💻 Technology Infrastructure</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Cloud computing capabilities</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Data storage and processing power</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Security and compliance frameworks</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Integration capabilities</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">📊 Data Readiness</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Data quality and completeness</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Data governance and management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Data accessibility and integration</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Privacy and security compliance</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">🎯 Use Case Potential</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-600 mt-1">•</span>
-                  <span>Business process automation opportunities</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-600 mt-1">•</span>
-                  <span>Customer experience enhancement</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-600 mt-1">•</span>
-                  <span>Operational efficiency improvements</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange-600 mt-1">•</span>
-                  <span>Revenue growth opportunities</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">🚀 How It Works</h2>
-          
-          <div className="bg-gray-50 rounded-xl p-6 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Sample Results</h2>
+          <div className="bg-gray-50 p-6 rounded-lg mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Example Assessment Results</h3>
             <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-blue-600 font-bold text-sm">1</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Complete the Assessment</h4>
-                  <p className="text-gray-700">
-                    Answer 50+ questions across 4 key categories to evaluate your current 
-                    AI readiness level.
-                  </p>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-700">Leadership & Strategy</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-32 bg-gray-200 rounded-full h-2">
+                    <div className="bg-green-500 h-2 rounded-full" style={{width: '75%'}}></div>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">75%</span>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-green-600 font-bold text-sm">2</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Get Your Score</h4>
-                  <p className="text-gray-700">
-                    Receive a detailed score breakdown with strengths, weaknesses, and 
-                    improvement opportunities.
-                  </p>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-700">Data Infrastructure</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-32 bg-gray-200 rounded-full h-2">
+                    <div className="bg-yellow-500 h-2 rounded-full" style={{width: '60%'}}></div>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">60%</span>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-purple-600 font-bold text-sm">3</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Receive Recommendations</h4>
-                  <p className="text-gray-700">
-                    Get personalized recommendations and a step-by-step roadmap for 
-                    your AI transformation journey.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-orange-600 font-bold text-sm">4</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Take Action</h4>
-                  <p className="text-gray-700">
-                    Use your personalized roadmap to start your AI transformation 
-                    with confidence and clear direction.
-                  </p>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-700">Talent & Skills</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-32 bg-gray-200 rounded-full h-2">
+                    <div className="bg-red-500 h-2 rounded-full" style={{width: '40%'}}></div>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">40%</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">📈 Sample Results</h2>
-          
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Typical Assessment Results</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">📊 Readiness Scores</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Organizational Readiness</span>
-                    <span className="text-blue-600 font-semibold">75/100</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Technology Infrastructure</span>
-                    <span className="text-green-600 font-semibold">68/100</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Data Readiness</span>
-                    <span className="text-purple-600 font-semibold">82/100</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Use Case Potential</span>
-                    <span className="text-orange-600 font-semibold">71/100</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">🎯 Priority Actions</h4>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Upgrade cloud infrastructure for AI workloads</li>
-                  <li>• Implement data governance framework</li>
-                  <li>• Train employees on AI concepts and tools</li>
-                  <li>• Start with high-impact, low-risk use cases</li>
-                  <li>• Establish AI ethics and governance policies</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white mt-12">
-            <h3 className="text-2xl font-bold mb-4">Start Your AI Transformation Journey</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Take our free assessment to understand your AI readiness and get a personalized 
-              roadmap for success. No commitment required.
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🚀 Ready to Assess Your AI Readiness?</h2>
+            <p className="text-gray-700 mb-6">
+              Take the first step toward successful AI transformation. Download our comprehensive 
+              assessment tool and get personalized recommendations for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/contact"
-                className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-              >
-                Take Free Assessment
-              </a>
-              <a
-                href="/resources/ai-implementation-checklist-2025"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
-              >
-                Download Implementation Checklist
-              </a>
+              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                Download Assessment Tool
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
+                Schedule Consultation
+              </button>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   );
 }
