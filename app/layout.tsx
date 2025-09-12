@@ -89,6 +89,7 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+<<<<<<< HEAD
                 <Link href="/blog/ai-2031-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2031 Future Predictions (BREAKTHROUGH)
                 </Link>
@@ -96,6 +97,18 @@ function Header() {
                   🏆 10,000% ROI Quantum AI (BREAKTHROUGH)
                 </Link>
                 <Link href="/resources/ai-2031-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+=======
+                <Link href="/ai-2031-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-red-600">
+                  🚀 AI 2031 Breakthrough Showcase (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2031-quantum-breakthrough-15000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏆 15,000% ROI Quantum AI (BREAKTHROUGH)
+                </Link>
+                <Link href="/blog/ai-2031-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  🔮 AI 2031 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2031-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+>>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
                   📚 AI 2031 Ultimate Master Guide (BREAKTHROUGH)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
@@ -118,7 +131,10 @@ function Header() {
                   📚 AI 2029 Ultimate Master Guide (BREAKTHROUGH)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-0491
+=======
+>>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
                 <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2025 Ultimate Trends (NEW)
                 </Link>
