@@ -28,6 +28,58 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: 'EVAL-CI-2025',
+      title: 'AI Evaluation Pipelines in CI: Ship with Confidence (2025)',
+      description: 'Automated evals in CI/CD to gate releases on quality, safety, and cost.',
+      href: '/blog/ai-2025-eval-pipelines-ci',
+      type: 'blog',
+      category: 'AI Safety',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Evaluations', 'CI/CD', 'Guardrails', 'Quality'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: 'SECURE-TOOLS-2025',
+      title: 'Securing AI Tools & Plugins: Sandboxing, Scopes, and Audits (2025)',
+      description: 'Scopes, sandboxing, approvals, and auditing to minimize tool risk.',
+      href: '/blog/ai-2025-secure-tools-and-plugins',
+      type: 'blog',
+      category: 'AI Security',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Security', 'Tool Calling', 'Sandbox', 'Audit'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: 'PRODUCTIZING-GENAI-2025',
+      title: 'Productizing GenAI Platforms: From Pilots to Products (2025)',
+      description: 'Roadmap to scale GenAI with governance, budgets, and observability.',
+      href: '/blog/ai-2025-productizing-genai-platforms',
+      type: 'blog',
+      category: 'Platforms',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Platforms', 'Governance', 'Product'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
+      id: 'CS-CHATBOTS-GOV-2025',
+      title: 'Enterprise Chatbots with Governance: 28% Deflection, 92% CSAT',
+      description: 'Case study: Policy-as-code and evals increased deflection and CSAT.',
+      href: '/case-studies/ai-2025-enterprise-chatbots-governance-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Chatbots', 'Governance', 'CSAT'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: 'AIFINOPS-2025',
       title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
       description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',

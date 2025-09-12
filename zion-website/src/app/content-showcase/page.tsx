@@ -16,6 +16,46 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "AI Evaluation Pipelines in CI: Ship with Confidence (2025)",
+      description: "Automated evals in CI/CD to gate releases on quality, safety, and cost.",
+      href: "/blog/ai-2025-eval-pipelines-ci",
+      icon: "🧪",
+      category: "AI Safety",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Securing AI Tools & Plugins: Sandboxing, Scopes, and Audits",
+      description: "Scopes, sandboxing, approvals, and auditing to minimize tool risk.",
+      href: "/blog/ai-2025-secure-tools-and-plugins",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Productizing GenAI Platforms: From Pilots to Products (2025)",
+      description: "Roadmap to scale GenAI with governance, budgets, and observability.",
+      href: "/blog/ai-2025-productizing-genai-platforms",
+      icon: "🧱",
+      category: "Platforms",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Enterprise Chatbots with Governance: 28% Deflection, 92% CSAT",
+      description: "Case study: Policy-as-code and evals increased deflection and CSAT.",
+      href: "/case-studies/ai-2025-enterprise-chatbots-governance-impact",
+      icon: "💬",
+      category: "Case Study",
+      readTime: "10 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Analytics Observability Blueprint 2025: Traces, Quality, Cost",
       description: "Blueprint to observe analytics and AI pipelines: lineage, traces, quality, and cost SLOs.",
       href: "/blog/ai-2025-analytics-observability-blueprint",
