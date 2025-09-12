@@ -6,9 +6,12 @@ export default function AIDataPrivacy2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
+<<<<<<< HEAD
         title="AI Data Privacy 2025: Navigating GDPR, CCPA, and Emerging Privacy Regulations"
         description="Complete guide to AI data privacy compliance in 2025. Learn about GDPR, CCPA, and new privacy regulations affecting AI systems and data processing."
         keywords="AI data privacy, GDPR compliance, CCPA, AI regulations, data protection, privacy by design, AI governance"
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
         title="AI Data Privacy in 2025: Balancing Innovation with Protection"
         description="Navigate the complex landscape of AI data privacy in 2025. Learn about new regulations, privacy-preserving techniques, and compliance strategies."
         keywords="AI data privacy, GDPR compliance, privacy-preserving AI, data protection, AI regulations"
@@ -26,6 +29,7 @@ export default function AIDataPrivacy2025() {
             <span className="text-sm text-gray-600">AI & Privacy</span>
           </div>
           
+<<<<<<< HEAD
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-4 py-2 mb-6">
             <span className="text-sm font-medium">🔒 ESSENTIAL</span>
           </div>
@@ -37,6 +41,8 @@ export default function AIDataPrivacy2025() {
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             As AI systems process increasing amounts of personal data, compliance with privacy regulations 
             becomes critical. Learn how to build privacy-compliant AI systems that respect user rights.
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-4 py-2 mb-4">
             <span className="text-sm font-medium">🔒 PRIVACY FOCUS</span>
           </div>
@@ -52,8 +58,11 @@ export default function AIDataPrivacy2025() {
           
           <div className="flex items-center gap-6 text-sm text-gray-500">
             <span>📅 January 28, 2025</span>
+<<<<<<< HEAD
             <span>⏱️ 22 min read</span>
             <span>👁️ 1.8k views</span>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
             <span>⏱️ 15 min read</span>
             <span>👥 1.8K views</span>
           </div>
@@ -62,6 +71,7 @@ export default function AIDataPrivacy2025() {
         {/* Article Content */}
         <article className="prose prose-lg max-w-none">
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500 p-6 mb-8">
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold text-purple-800 mb-2">📊 Privacy Compliance Statistics</h3>
             <p className="text-purple-700">
               Organizations that implement privacy-by-design AI systems see 60% fewer compliance issues 
@@ -266,6 +276,8 @@ export default function AIDataPrivacy2025() {
                 Download Privacy Checklist
               </Link>
             </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
             <h3 className="text-lg font-semibold text-purple-800 mb-2">🎯 Key Insight</h3>
             <p className="text-purple-700">
               Organizations that implement privacy-preserving AI techniques see 25% higher 
@@ -465,6 +477,7 @@ export default function AIDataPrivacy2025() {
         </article>
 
         {/* Related Articles */}
+<<<<<<< HEAD
         <div className="mt-16 border-t border-gray-200 pt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -472,6 +485,8 @@ export default function AIDataPrivacy2025() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="text-3xl mb-3">🛡️</div>
                 <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
         <div className="mt-16 border-t pt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -498,6 +513,7 @@ export default function AIDataPrivacy2025() {
                 </p>
               </div>
             </Link>
+<<<<<<< HEAD
             
             <Link href="/blog/edge-ai-privacy-by-design-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
@@ -509,6 +525,8 @@ export default function AIDataPrivacy2025() {
                   Building privacy-first AI systems at the edge
                 </p>
               </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
           </div>
         </div>
 

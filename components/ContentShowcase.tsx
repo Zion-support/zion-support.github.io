@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Clock, Tag, Star } from 'lucide-react';
 
 interface ContentItem {
   title: string;
   description: string;
   href: string;
+<<<<<<< HEAD
   icon: string;
   readTime?: string;
   category?: string;
@@ -12,10 +14,16 @@ interface ContentItem {
   isTrending?: boolean;
   type: 'article' | 'case-study' | 'resource' | 'guide';
   status: 'new' | 'popular' | 'trending' | 'featured';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
   type: 'blog' | 'resource' | 'case-study';
   readTime?: string;
   isNew?: boolean;
+  icon?: string;
+  category?: string;
+  featured?: boolean;
   isTrending?: boolean;
+<<<<<<< HEAD
   icon: string;
   category: string;
   type: 'article' | 'resource' | 'case-study';
@@ -30,12 +38,15 @@ interface ContentItem {
   isNew?: boolean;
   isTrending?: boolean;
   metrics?: string;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
 }
 
 interface ContentShowcaseProps {
   title: string;
   subtitle: string;
   items: ContentItem[];
+<<<<<<< HEAD
   variant?: 'default' | 'featured' | 'trending';
   className?: string;
   showViewAll?: boolean;
@@ -222,6 +233,12 @@ export default function ContentShowcase({
                      item.href.includes('/resources/') ? 'Resource' : 'Content'}
   showViewAll?: boolean;
   viewAllHref?: string;
+=======
+  showViewAll?: boolean;
+  viewAllHref?: string;
+  maxItems?: number;
+  className?: string;
+>>>>>>> cursor/create-and-deploy-new-content-47dd
   variant?: 'default' | 'featured' | 'compact';
 }
 
@@ -229,6 +246,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
   title,
   subtitle,
   items,
+<<<<<<< HEAD
   className = '',
   showViewAll = true,
   viewAllHref = '/blog'
@@ -243,10 +261,21 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
         return 'bg-purple-100 text-purple-800';
       case 'featured':
         return 'bg-orange-100 text-orange-800';
+=======
+  showViewAll = false,
+  viewAllHref = '/blog',
+  maxItems = 6,
+  className = '',
+  variant = 'default'
+}) => {
+  const displayItems = items.slice(0, maxItems);
+
+>>>>>>> cursor/create-and-deploy-new-content-47dd
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':
         return 'bg-blue-100 text-blue-800';
+<<<<<<< HEAD
       case 'case-study':
         return 'bg-green-100 text-green-800';
       case 'resource':
@@ -379,6 +408,15 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
                   <span className="text-blue-600 font-medium group-hover:underline text-sm">
                     Read More →
                   </span>
+=======
+      case 'resource':
+        return 'bg-green-100 text-green-800';
+      case 'case-study':
+        return 'bg-purple-100 text-purple-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
   showViewAll = true,
   viewAllHref = '/blog',
   variant = 'default'
@@ -389,11 +427,106 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
       case 'resource': return 'bg-green-100 text-green-800';
       case 'case-study': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9f48
     }
   };
 
   const getTypeLabel = (type: string) => {
     switch (type) {
+      case 'blog':
+        return 'Article';
+      case 'resource':
+        return 'Resource';
+      case 'case-study':
+        return 'Case Study';
+      default:
+        return 'Content';
+    }
+  };
+
+  return (
+    <section className={`py-16 ${className}`}>
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {title}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {subtitle}
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {displayItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200"
+            >
+              {/* Featured Badge */}
+              {item.featured && (
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-semibold rounded-full">
+                    <Star className="w-3 h-3" />
+                    Featured
+                  </span>
+                </div>
+              )}
+
+              {/* New Badge */}
+              {item.isNew && (
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-sm font-semibold rounded-full">
+                    New
+                  </span>
+                </div>
+              )}
+
+              <div className="p-6">
+                {/* Type and Category */}
+                <div className="flex items-center gap-2 mb-4">
+                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
+                    {getTypeLabel(item.type)}
+                  </span>
+                  {item.category && (
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">
+                      <Tag className="w-3 h-3" />
+                      {item.category}
+                    </span>
+                  )}
+                </div>
+
+                {/* Icon */}
+                {item.icon && (
+                  <div className="text-3xl mb-4">
+                    {item.icon}
+                  </div>
+                )}
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+
+                {/* Meta Information */}
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  {item.readTime && (
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{item.readTime}</span>
+                    </div>
+                  )}
+                  <div className="flex items-center gap-1 text-blue-600 group-hover:text-blue-800">
+                    <span>Read more</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+=======
       case 'blog': return 'Article';
       case 'resource': return 'Resource';
       case 'case-study': return 'Case Study';
@@ -459,6 +592,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
                   <p className="text-gray-600 text-xs mt-1 line-clamp-2">
                     {item.description}
                   </p>
+<<<<<<< HEAD
         <div className={`grid ${getGridClasses()} gap-6 mb-8`}>
           {items.map((item, index) => (
             <Link key={index} href={item.href} className="group">
@@ -514,12 +648,15 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
                   {item.readTime && (
                     <div className="text-xs text-gray-500 mt-1">{item.readTime}</div>
                   )}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
                 </div>
               </div>
             </Link>
           ))}
         </div>
       </div>
+<<<<<<< HEAD
     </section>
   );
 }
@@ -717,6 +854,8 @@ export const latestContent = [
           </div>
         )}
       </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-47dd
     );
   }
 
@@ -828,6 +967,7 @@ export const latestContent = [
                     <span className="text-blue-600 font-medium group-hover:underline">
                       Read More →
                     </span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-9f48
                   </div>
                 </div>
               </div>
@@ -914,7 +1054,10 @@ export const latestContent = [
           ))}
         </div>
 
+<<<<<<< HEAD
+        {/* View All Button */}
         {showViewAll && (
+<<<<<<< HEAD
           <div className="text-center mt-12">
             <Link
               href={viewAllHref}
@@ -1034,6 +1177,15 @@ export const latestContent = [
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
             >
               View All Content
+=======
+          <div className="text-center">
+            <Link
+              href={viewAllHref}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              View All Content
+              <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/create-and-deploy-new-content-47dd
             </Link>
           </div>
         )}
@@ -1042,6 +1194,7 @@ export const latestContent = [
   );
 };
 
+<<<<<<< HEAD
 export default ContentShowcase;
     </div>
   );
@@ -1205,3 +1358,6 @@ export const featuredCaseStudies: ContentItem[] = [
     </section>
   );
 }
+=======
+export default ContentShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-47dd
