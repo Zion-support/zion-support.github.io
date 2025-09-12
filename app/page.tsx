@@ -84,6 +84,11 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
 
+// New 2028 Revolutionary Components
+import AI2028RevolutionaryPromotionBanner from '../components/AI2028RevolutionaryPromotionBanner';
+import AI2028ContentDiscoveryWidget from '../components/AI2028ContentDiscoveryWidget';
+import AI2028DynamicContentCarousel from '../components/AI2028DynamicContentCarousel';
+
 // Revolutionary Content Showcase
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
@@ -141,6 +146,9 @@ export default function HomePage() {
         {/* AI 2028 BREAKTHROUGH PROMOTION BANNER */}
         <AI2028BreakthroughPromotionBanner />
         
+        {/* AI 2028 REVOLUTIONARY PROMOTION BANNER */}
+        <AI2028RevolutionaryPromotionBanner />
+        
         {/* AI 2028 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2028BreakthroughContentShowcase />
         
@@ -161,6 +169,20 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2028 */}
         <InteractiveContentDiscovery2028 />
+        
+        {/* AI 2028 CONTENT DISCOVERY WIDGET */}
+        <div className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <AI2028ContentDiscoveryWidget />
+          </div>
+        </div>
+        
+        {/* AI 2028 DYNAMIC CONTENT CAROUSEL */}
+        <div className="py-16 bg-gradient-to-br from-gray-900 to-blue-900">
+          <div className="container mx-auto px-4">
+            <AI2028DynamicContentCarousel />
+          </div>
+        </div>
         
         {/* AI 2027 BREAKTHROUGH PROMOTION BANNER */}
         <AI2027BreakthroughPromotionBanner />
