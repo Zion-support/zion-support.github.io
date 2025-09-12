@@ -14,10 +14,8 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
-import ContentShowcase from '../components/ContentShowcase';
-import EnhancedContentBanner from '../components/EnhancedContentBanner';
-import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import ContentPromotionalBanner from '../components/ContentPromotionalBanner';
+import TrendingContentShowcase from '../components/TrendingContentShowcase';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -276,6 +274,9 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* Content Promotional Banner */}
+      <ContentPromotionalBanner variant="featured" />
+      
       {/* Featured Content Section */}
       <ContentShowcase
         title="Latest AI Insights & Case Studies"
@@ -285,6 +286,9 @@ export default function HomePage() {
         showViewAll={true}
         viewAllHref="/blog"
       />
+      
+      {/* Trending Content Showcase */}
+      <TrendingContentShowcase />
 
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
