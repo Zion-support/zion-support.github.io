@@ -8,6 +8,16 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "Agentic Orchestration Blueprint 2025",
+    description: "Practical patterns for reliable, cost-efficient agent systems",
+    url: "/blog/ai-2025-agentic-orchestration-blueprint",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🧩",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Agents in Production 2025",
     description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
     url: "/blog/ai-2025-production-agent-patterns",
