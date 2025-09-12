@@ -86,6 +86,9 @@ import UltimateContent2027PromotionBanner from '../components/UltimateContent202
 import FutureTechShowcase2027 from '../components/FutureTechShowcase2027';
 import RevolutionaryTechShowcase2027 from '../components/RevolutionaryTechShowcase2027';
 import UltimateContent2028PromotionBanner from '../components/UltimateContent2028PromotionBanner';
+import DynamicContentPromotionBanner from '../components/DynamicContentPromotionBanner';
+import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
+import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -102,6 +105,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* DYNAMIC CONTENT PROMOTION BANNER */}
+        <DynamicContentPromotionBanner />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2026 */}
+        <DynamicContentCarousel2026 />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
@@ -373,6 +382,13 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
+        
+        {/* CONTENT DISCOVERY WIDGET 2026 */}
+        <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <ContentDiscoveryWidget2026 />
+          </div>
+        </div>
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
         <RevolutionaryContentShowcase2026 />
