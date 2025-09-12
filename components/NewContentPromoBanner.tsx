@@ -17,34 +17,50 @@ const NewContentPromoBanner: React.FC = () => {
   const newContent: ContentItem[] = [
     {
       id: '1',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
+      title: 'Advanced AI Architecture 2025: Building Scalable Enterprise Systems',
+      description: 'Comprehensive guide to designing and implementing advanced AI architectures for enterprise-scale applications with microservices and MLOps.',
+      href: '/blog/ai-2025-advanced-ai-architecture',
       type: 'blog',
       featured: true
     },
     {
       id: '2',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      title: 'AI Multimodal Revolution 2025: The Future of Human-Computer Interaction',
+      description: 'Explore groundbreaking advances in multimodal AI systems that can see, hear, understand, and respond like humans.',
+      href: '/blog/ai-2025-multimodal-revolution',
       type: 'blog',
       featured: true
     },
     {
       id: '3',
-      title: 'AI Financial Services Transformation Success',
-      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
-      type: 'case-study',
+      title: 'Quantum Machine Learning 2025: The Next Frontier of AI Computing',
+      description: 'Discover how quantum computing is revolutionizing machine learning with exponential speedups and breakthrough capabilities.',
+      href: '/blog/ai-2025-quantum-machine-learning',
+      type: 'blog',
       featured: true
     },
     {
       id: '4',
+      title: 'AI Enterprise Transformation Success: 300% ROI in 6 Months',
+      description: 'Real case study: How a Fortune 500 company achieved 300% ROI through strategic AI implementation, reducing costs by 60%.',
+      href: '/case-studies/ai-enterprise-transformation-success-2025',
+      type: 'case-study',
+      featured: true
+    },
+    {
+      id: '5',
       title: 'AI Automation Services',
       description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
       href: '/services/ai-automation',
       type: 'service',
+      featured: true
+    },
+    {
+      id: '6',
+      title: 'AI Healthcare Diagnosis Breakthrough 2025',
+      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
+      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      type: 'blog',
       featured: true
     }
   ];
@@ -52,10 +68,22 @@ const NewContentPromoBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % newContent.length);
-    }, 5000);
+    }, 4000); // Faster rotation for better engagement
 
     return () => clearInterval(interval);
   }, [newContent.length]);
+
+  // Add click tracking for analytics
+  const handleContentClick = (content: ContentItem) => {
+    // Track content engagement
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'content_click', {
+        content_title: content.title,
+        content_type: content.type,
+        content_id: content.id
+      });
+    }
+  };
 
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -83,6 +111,18 @@ const NewContentPromoBanner: React.FC = () => {
     }
   };
 
+  const getUrgencyText = (index: number) => {
+    const urgencyTexts = [
+      '🔥 Trending Now',
+      '✨ Just Published',
+      '🚀 Must Read',
+      '💡 Latest Insights',
+      '🎯 Featured Content',
+      '⭐ Editor\'s Choice'
+    ];
+    return urgencyTexts[index % urgencyTexts.length];
+  };
+
   if (!isVisible) return null;
 
   const currentContent = newContent[currentIndex];
@@ -100,14 +140,19 @@ const NewContentPromoBanner: React.FC = () => {
           <div className="flex items-center justify-between">
             {/* Content */}
             <div className="flex-1 pr-8">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-3">{getTypeIcon(currentContent.type)}</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-                  {currentContent.type === 'case-study' ? 'Case Study' : 
-                   currentContent.type === 'service' ? 'Service' : 'New Article'}
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center">
+                  <span className="text-2xl mr-3">{getTypeIcon(currentContent.type)}</span>
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                    {currentContent.type === 'case-study' ? 'Case Study' : 
+                     currentContent.type === 'service' ? 'Service' : 'New Article'}
+                  </span>
+                </div>
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                  {getUrgencyText(currentIndex)}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold mb-2">
+              <h3 className="text-2xl font-bold mb-2 hover:text-indigo-100 transition-colors">
                 {currentContent.title}
               </h3>
               <p className="text-lg text-indigo-100 mb-4">
@@ -116,13 +161,14 @@ const NewContentPromoBanner: React.FC = () => {
               <div className="flex items-center space-x-4">
                 <Link 
                   href={currentContent.href}
-                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+                  onClick={() => handleContentClick(currentContent)}
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   Read More
                 </Link>
                 <Link 
                   href="/content-showcase"
-                  className="text-white hover:text-indigo-200 transition-colors"
+                  className="text-white hover:text-indigo-200 transition-colors border border-white/30 px-4 py-2 rounded-lg hover:bg-white/10"
                 >
                   View All Content →
                 </Link>

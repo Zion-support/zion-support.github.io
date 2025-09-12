@@ -133,6 +133,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Dynamic Content Promotion Banner */}
+        <NewContentPromoBanner />
+
         {/* Enhanced Content Promotion Banner */}
         <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>

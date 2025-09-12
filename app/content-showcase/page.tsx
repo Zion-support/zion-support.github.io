@@ -5,13 +5,34 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Multimodal Revolution 2025: Beyond Text to Vision, Audio, and Beyond",
-      description: "Discover how multimodal AI is revolutionizing industries in 2025. From vision-language models to audio synthesis, explore the future of AI that understands and generates across multiple modalities.",
+      title: "Advanced AI Architecture 2025: Building Scalable Enterprise Systems",
+      description: "Comprehensive guide to designing and implementing advanced AI architectures for enterprise-scale applications with microservices, MLOps, and distributed systems.",
+      href: "/blog/ai-2025-advanced-ai-architecture",
+      icon: "🏗️",
+      category: "AI Architecture",
+      readTime: "12 min read",
+      date: "Jan 17, 2025",
+      featured: true
+    },
+    {
+      title: "AI Multimodal Revolution 2025: The Future of Human-Computer Interaction",
+      description: "Explore groundbreaking advances in multimodal AI systems that can see, hear, understand, and respond like humans, transforming industries worldwide.",
       href: "/blog/ai-2025-multimodal-revolution",
       icon: "🎭",
       category: "Multimodal AI",
-      readTime: "25 min read",
-      date: "Jan 28, 2025"
+      readTime: "15 min read",
+      date: "Jan 17, 2025",
+      featured: true
+    },
+    {
+      title: "Quantum Machine Learning 2025: The Next Frontier of AI Computing",
+      description: "Discover how quantum computing is revolutionizing machine learning with exponential speedups, quantum algorithms, and breakthrough capabilities for AI systems.",
+      href: "/blog/ai-2025-quantum-machine-learning",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "18 min read",
+      date: "Jan 17, 2025",
+      featured: true
     },
     {
       title: "AI Neural Interfaces 2025: The Future of Brain-Computer Interaction",
@@ -61,6 +82,16 @@ export default function ContentShowcasePage() {
   ];
 
   const newCaseStudies = [
+    {
+      title: "AI Enterprise Transformation Success: 300% ROI in 6 Months",
+      description: "Real case study: How a Fortune 500 company achieved 300% ROI through strategic AI implementation, reducing costs by 60% and increasing productivity by 250%.",
+      href: "/case-studies/ai-enterprise-transformation-success-2025",
+      icon: "💰",
+      category: "Enterprise AI",
+      result: "300% ROI",
+      date: "Jan 17, 2025",
+      featured: true
+    },
     {
       title: "AI Autonomous Manufacturing Success: $200M Savings Case Study",
       description: "How a Fortune 500 manufacturing company achieved $200M in annual savings, 40% cost reduction, and 60% faster processing times through autonomous AI systems.",
