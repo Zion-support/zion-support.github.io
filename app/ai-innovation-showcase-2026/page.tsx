@@ -1,546 +1,397 @@
-import React from 'react';
-import { Metadata } from 'next';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Rocket, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Award, 
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Lightbulb,
-  BarChart3,
-  Globe,
-  Shield,
-  Cloud,
-  Code,
-  Database,
-  Cpu,
-  Sparkles,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  MessageCircle,
-  Clock,
-  Eye
-} from 'lucide-react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Innovation Showcase 2026 | Zion Tech Group - Cutting-Edge AI Solutions',
-  description: 'Explore our revolutionary AI and machine learning solutions. From automation to predictive analytics, discover how AI can transform your business operations and drive unprecedented growth.',
-  keywords: [
-    'AI solutions',
-    'machine learning',
-    'artificial intelligence',
-    'business automation',
-    'predictive analytics',
-    'AI consulting',
-    'intelligent automation',
-    'AI transformation',
-    'machine learning platform',
-    'AI services'
-  ],
-  openGraph: {
-    title: 'AI Innovation Showcase 2026 | Zion Tech Group',
-    description: 'Revolutionary AI and machine learning solutions that transform businesses worldwide.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/ai-innovation-showcase-2026',
-    images: [
-      {
-        url: '/api/placeholder/1200/630',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group AI Innovation Showcase 2026'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Innovation Showcase 2026 | Zion Tech Group',
-    description: 'Revolutionary AI and machine learning solutions that transform businesses worldwide.',
-    images: ['/api/placeholder/1200/630']
-  },
-  alternates: {
-    canonical: 'https://ziontechgroup.com/ai-innovation-showcase-2026'
-  }
-};
+export default function AIInnovationShowcase2026() {
+  const [selectedInnovation, setSelectedInnovation] = useState(0);
 
-const AIInnovationShowcase2026 = () => {
-  const aiServices = [
+  const innovations = [
     {
-      id: 1,
-      title: "AI-Powered Business Process Automation Suite",
-      description: "Revolutionary automation platform that reduces operational costs by 40-60% and increases productivity by 300% with guaranteed ROI within 3 months.",
-      price: "$299/month",
-      marketPrice: "$500-800/month",
+      title: "Quantum AI Processing",
+      description: "Revolutionary quantum computing integration with AI for 1000x faster processing",
+      category: "Computing",
+      impact: "Breakthrough",
+      icon: "⚛️",
       features: [
-        "Intelligent workflow automation",
-        "Natural language processing",
-        "Predictive analytics",
-        "Real-time optimization",
-        "Multi-language support",
-        "Custom AI model training"
+        "Quantum neural networks",
+        "Quantum machine learning algorithms", 
+        "Quantum optimization techniques",
+        "Quantum cryptography integration"
       ],
       benefits: [
-        "40-60% cost reduction",
-        "300% productivity increase",
-        "3-month ROI guarantee",
-        "24/7 automated operations"
+        "1000x faster processing speeds",
+        "Exponential problem-solving capabilities",
+        "Unbreakable security protocols",
+        "Revolutionary optimization results"
       ],
-      image: "/api/placeholder/600/400",
-      rating: 4.9,
-      reviews: 1247,
-      badge: "Most Popular",
-      badgeColor: "bg-gradient-to-r from-yellow-400 to-orange-500",
-      icon: Brain,
-      category: "Automation"
+      applications: ["Drug discovery", "Financial modeling", "Climate research", "Cryptography"],
+      timeline: "Q2 2026",
+      status: "In Development"
     },
     {
-      id: 2,
-      title: "Enterprise AI Content Generation Platform",
-      description: "Advanced AI content creation platform that saves 80% on content creation time and improves SEO rankings by 200% with consistent brand messaging.",
-      price: "$199/month",
-      marketPrice: "$300-600/month",
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces enabling thought-controlled AI systems",
+      category: "Human-AI Interaction",
+      impact: "Transformative",
+      icon: "🧠",
       features: [
-        "Multi-language content generation",
-        "SEO optimization",
-        "Brand voice customization",
-        "Plagiarism-free content",
-        "Content scheduling",
-        "Analytics and insights"
+        "Non-invasive neural reading",
+        "Thought-to-text conversion",
+        "AI-assisted cognitive enhancement",
+        "Emotional state recognition"
       ],
       benefits: [
-        "80% time savings",
-        "200% SEO improvement",
-        "Consistent brand voice",
-        "Scalable content production"
+        "Hands-free AI interaction",
+        "Enhanced cognitive abilities",
+        "Accessibility improvements",
+        "Real-time mental health monitoring"
       ],
-      image: "/api/placeholder/600/400",
-      rating: 4.8,
-      reviews: 892,
-      badge: "Content Leader",
-      badgeColor: "bg-gradient-to-r from-blue-400 to-cyan-500",
-      icon: Code,
-      category: "Content"
+      applications: ["Healthcare", "Accessibility", "Gaming", "Education"],
+      timeline: "Q4 2026",
+      status: "Research Phase"
     },
     {
-      id: 3,
-      title: "AI Customer Behavior Analytics & Insights Platform",
-      description: "Advanced analytics platform that increases customer retention by 35% and boosts customer lifetime value by 200% with AI-powered insights.",
-      price: "$449/month",
-      marketPrice: "$600-1200/month",
+      title: "Autonomous AI Agents",
+      description: "Self-evolving AI agents capable of independent decision-making and learning",
+      category: "Autonomous Systems",
+      impact: "Revolutionary",
+      icon: "🤖",
       features: [
-        "Behavioral pattern analysis",
-        "Predictive customer modeling",
-        "Real-time insights",
-        "Personalization engine",
-        "Churn prediction",
-        "Revenue optimization"
+        "Self-modifying code capabilities",
+        "Independent goal setting",
+        "Cross-domain knowledge transfer",
+        "Ethical decision-making frameworks"
       ],
       benefits: [
-        "35% retention increase",
-        "200% lifetime value boost",
-        "50% churn reduction",
-        "Data-driven decisions"
+        "True AI autonomy",
+        "Continuous self-improvement",
+        "Complex problem-solving",
+        "Reduced human intervention needs"
       ],
-      image: "/api/placeholder/600/400",
-      rating: 4.7,
-      reviews: 1156,
-      badge: "Analytics Pro",
-      badgeColor: "bg-gradient-to-r from-green-400 to-emerald-500",
-      icon: BarChart3,
-      category: "Analytics"
+      applications: ["Space exploration", "Scientific research", "Emergency response", "Business automation"],
+      timeline: "Q3 2026",
+      status: "Prototype Ready"
     },
     {
-      id: 4,
-      title: "AI-Powered Legal Contract Analysis & Risk Assessment",
-      description: "Intelligent contract analysis platform that reduces contract review time by 80% and identifies risks with 95% accuracy using advanced NLP.",
-      price: "$1,100/month",
-      marketPrice: "$1100-3800/month",
+      title: "Molecular AI Computing",
+      description: "DNA-based computing systems with AI for unprecedented data processing",
+      category: "Biocomputing",
+      impact: "Breakthrough",
+      icon: "🧬",
       features: [
-        "Contract risk analysis",
-        "Clause identification",
-        "Compliance checking",
-        "Automated summaries",
-        "Risk scoring",
-        "Legal insights"
+        "DNA storage systems",
+        "Molecular logic gates",
+        "Biological neural networks",
+        "Self-replicating algorithms"
       ],
       benefits: [
-        "80% time reduction",
-        "95% accuracy rate",
-        "Risk identification",
-        "Compliance assurance"
+        "Massive data storage capacity",
+        "Energy-efficient processing",
+        "Self-healing systems",
+        "Biological integration"
       ],
-      image: "/api/placeholder/600/400",
-      rating: 4.9,
-      reviews: 743,
-      badge: "Legal Tech",
-      badgeColor: "bg-gradient-to-r from-purple-400 to-pink-500",
-      icon: Shield,
-      category: "Legal"
-    },
-    {
-      id: 5,
-      title: "AI-Powered Educational Personalization & Learning Analytics",
-      description: "Personalized learning platform that improves student performance by 35% and increases engagement by 50% through adaptive AI algorithms.",
-      price: "$750/month",
-      marketPrice: "$750-2800/month",
-      features: [
-        "Personalized learning paths",
-        "Adaptive content delivery",
-        "Progress tracking",
-        "Performance analytics",
-        "Learning recommendations",
-        "Engagement optimization"
-      ],
-      benefits: [
-        "35% performance improvement",
-        "50% engagement increase",
-        "Personalized learning",
-        "Data-driven insights"
-      ],
-      image: "/api/placeholder/600/400",
-      rating: 4.8,
-      reviews: 634,
-      badge: "EdTech Leader",
-      badgeColor: "bg-gradient-to-r from-indigo-400 to-purple-500",
-      icon: Lightbulb,
-      category: "Education"
-    },
-    {
-      id: 6,
-      title: "AI-Powered Marketing Automation & Customer Journey Orchestration",
-      description: "Advanced marketing automation that increases conversion rates by 50% and reduces marketing costs by 40% through intelligent customer journey mapping.",
-      price: "$850/month",
-      marketPrice: "$850-3200/month",
-      features: [
-        "Customer journey mapping",
-        "Multi-channel automation",
-        "Personalization engine",
-        "Campaign optimization",
-        "Lead scoring",
-        "ROI tracking"
-      ],
-      benefits: [
-        "50% conversion increase",
-        "40% cost reduction",
-        "Automated campaigns",
-        "Personalized experiences"
-      ],
-      image: "/api/placeholder/600/400",
-      rating: 4.7,
-      reviews: 967,
-      badge: "Marketing Pro",
-      badgeColor: "bg-gradient-to-r from-pink-400 to-rose-500",
-      icon: Target,
-      category: "Marketing"
+      applications: ["Data archiving", "Medical diagnostics", "Environmental monitoring", "Biological research"],
+      timeline: "Q1 2027",
+      status: "Concept Phase"
     }
   ];
 
-  const aiStats = [
-    { label: "AI Models Deployed", value: "10,000+", icon: Brain },
-    { label: "Businesses Transformed", value: "5,000+", icon: Rocket },
-    { label: "Cost Savings Generated", value: "$1.2B+", icon: TrendingUp },
-    { label: "Accuracy Rate", value: "98.5%", icon: Award }
+  const breakthroughMetrics = [
+    { metric: "Processing Speed", improvement: "1000x", icon: "⚡" },
+    { metric: "Data Storage", improvement: "1M TB", icon: "💾" },
+    { metric: "Energy Efficiency", improvement: "99%", icon: "🔋" },
+    { metric: "Accuracy Rate", improvement: "99.9%", icon: "🎯" }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "CTO, TechCorp",
-      content: "Zion's AI automation suite transformed our operations completely. We achieved 45% cost reduction and 280% productivity increase within just 2 months. The ROI was immediate.",
-      rating: 5,
-      avatar: "/api/placeholder/60/60",
-      company: "TechCorp"
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Marketing Director, GrowthCo",
-      content: "The AI marketing automation platform revolutionized our campaigns. We saw 55% increase in conversions and 45% reduction in marketing costs. Game-changer!",
-      rating: 5,
-      avatar: "/api/placeholder/60/60",
-      company: "GrowthCo"
-    },
-    {
-      name: "Dr. Emily Watson",
-      role: "Principal, Innovation Academy",
-      content: "Our students' performance improved by 40% after implementing the AI personalization platform. Engagement levels are at an all-time high.",
-      rating: 5,
-      avatar: "/api/placeholder/60/60",
-      company: "Innovation Academy"
-    }
+  const innovationCategories = [
+    { id: 'all', name: 'All Innovations', icon: '🌐', count: innovations.length },
+    { id: 'Computing', name: 'Computing', icon: '💻', count: innovations.filter(i => i.category === 'Computing').length },
+    { id: 'Human-AI Interaction', name: 'Human-AI', icon: '🧠', count: innovations.filter(i => i.category === 'Human-AI Interaction').length },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: innovations.filter(i => i.category === 'Autonomous Systems').length },
+    { id: 'Biocomputing', name: 'Biocomputing', icon: '🧬', count: innovations.filter(i => i.category === 'Biocomputing').length }
   ];
+
+  const currentInnovation = innovations[selectedInnovation];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-5xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
-              <Brain className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-medium text-blue-800">AI Innovation Showcase 2026</span>
+      <section className="py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium animate-pulse">🚀 BREAKTHROUGH INNOVATIONS - 2026</span>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Revolutionary AI
-              </span>
-              <br />
-              <span className="text-slate-800">Solutions</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              🧠 AI Innovation Showcase 2026
             </h1>
-            
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-4xl mx-auto">
-              Discover our cutting-edge AI and machine learning solutions that are transforming businesses worldwide. 
-              From intelligent automation to predictive analytics, we deliver AI innovations that drive real results.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
+              Discover the revolutionary AI innovations that will reshape our world. 
+              From quantum computing to neural interfaces - the future is here.
             </p>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {aiStats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-slate-200"
-                >
-                  <stat.icon className="w-6 h-6 text-blue-600" />
-                  <div>
-                    <div className="font-bold text-slate-800">{stat.value}</div>
-                    <div className="text-sm text-slate-600">{stat.label}</div>
-                  </div>
-                </motion.div>
+            
+            {/* Innovation Metrics */}
+            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {breakthroughMetrics.map((metric, index) => (
+                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+                  <div className="text-4xl mb-2">{metric.icon}</div>
+                  <div className="text-2xl font-bold mb-1">{metric.improvement}</div>
+                  <div className="text-sm opacity-90">{metric.metric}</div>
+                </div>
               ))}
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
-              >
-                Explore AI Solutions
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-slate-800 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 flex items-center gap-2"
-              >
-                <Play className="w-5 h-5" />
-                Watch Demo
-              </motion.button>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* AI Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
+      {/* Innovation Categories */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Our AI Solutions Portfolio</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive AI services designed to transform every aspect of your business operations
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              🌟 Innovation Categories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore breakthrough innovations across different AI domains
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-200"
-              >
-                {/* Badge */}
-                <div className={`absolute top-4 right-4 z-10 px-3 py-1 ${service.badgeColor} text-white text-xs font-bold rounded-full`}>
-                  {service.badge}
-                </div>
-
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute top-4 left-4 p-2 bg-white/20 backdrop-blur-sm rounded-full">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="px-3 py-1 bg-blue-100 border border-blue-200 rounded-full">
-                      <span className="text-sm font-medium text-blue-800">{service.category}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm font-medium text-slate-600">{service.rating}</span>
-                      <span className="text-sm text-slate-400">({service.reviews})</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-slate-600 mb-4 line-clamp-3">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-slate-700 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-slate-600 flex items-center gap-2">
-                          <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-slate-700 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-green-600 flex items-center gap-2">
-                          <TrendingUp className="w-3 h-3 text-green-500 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Pricing */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <div className="text-2xl font-bold text-slate-800">{service.price}</div>
-                      <div className="text-sm text-slate-500">Market: {service.marketPrice}</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-medium text-green-600">Save up to 70%</div>
-                      <div className="text-xs text-slate-400">vs market rate</div>
-                    </div>
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
-                      Learn More
-                    </button>
-                    <button className="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg hover:bg-slate-200 transition-colors">
-                      <Heart className="w-4 h-4" />
-                    </button>
-                    <button className="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg hover:bg-slate-200 transition-colors">
-                      <Share2 className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
+          
+          <div className="grid md:grid-cols-5 gap-6">
+            {innovationCategories.map((category) => (
+              <div key={category.id} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="text-4xl mb-3">{category.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{category.name}</h3>
+                <div className="text-sm text-gray-600">{category.count} Innovations</div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="container mx-auto px-6">
+      {/* Featured Innovation Showcase */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">What Our AI Clients Say</h2>
-            <p className="text-xl text-slate-600">Real results from businesses using our AI solutions</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              🔬 Featured Innovation
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Deep dive into our most groundbreaking AI innovation
+            </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.5 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-slate-600 mb-6 italic">"{testimonial.content}"</p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full"
-                  />
-                  <div>
-                    <div className="font-semibold text-slate-800">{testimonial.name}</div>
-                    <div className="text-sm text-slate-600">{testimonial.role}</div>
-                    <div className="text-xs text-blue-600">{testimonial.company}</div>
+          
+          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-0">
+              {/* Innovation Details */}
+              <div className="p-12">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-6xl">{currentInnovation.icon}</div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full font-semibold">
+                        {currentInnovation.category}
+                      </span>
+                      <span className={`text-sm px-3 py-1 rounded-full font-semibold ${
+                        currentInnovation.impact === 'Breakthrough' 
+                          ? 'bg-red-100 text-red-800'
+                          : currentInnovation.impact === 'Transformative'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
+                      }`}>
+                        {currentInnovation.impact}
+                      </span>
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-2">{currentInnovation.title}</h3>
+                    <p className="text-gray-600 text-lg">{currentInnovation.description}</p>
                   </div>
                 </div>
-              </motion.div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {currentInnovation.features.map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                          <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      {currentInnovation.benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                          <span>{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Applications:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {currentInnovation.applications.map((app, index) => (
+                        <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                          {app}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Innovation Visual/Stats */}
+              <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-12 text-white">
+                <div className="h-full flex flex-col justify-center">
+                  <div className="text-center mb-8">
+                    <div className="text-8xl mb-4">{currentInnovation.icon}</div>
+                    <h3 className="text-2xl font-bold mb-2">{currentInnovation.title}</h3>
+                    <p className="text-purple-100">{currentInnovation.description}</p>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+                      <h4 className="text-lg font-semibold mb-3">Development Status</h4>
+                      <div className="flex items-center gap-3">
+                        <div className={`w-3 h-3 rounded-full ${
+                          currentInnovation.status === 'In Development' ? 'bg-yellow-400' :
+                          currentInnovation.status === 'Prototype Ready' ? 'bg-green-400' :
+                          currentInnovation.status === 'Research Phase' ? 'bg-blue-400' :
+                          'bg-gray-400'
+                        }`}></div>
+                        <span>{currentInnovation.status}</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+                      <h4 className="text-lg font-semibold mb-3">Expected Timeline</h4>
+                      <div className="text-2xl font-bold">{currentInnovation.timeline}</div>
+                    </div>
+
+                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+                      <h4 className="text-lg font-semibold mb-3">Impact Level</h4>
+                      <div className="text-2xl font-bold">{currentInnovation.impact}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Innovation Navigation */}
+          <div className="flex justify-center gap-4 mt-8">
+            {innovations.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedInnovation(index)}
+                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                  selectedInnovation === index ? 'bg-purple-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All Innovations Grid */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              🚀 All Breakthrough Innovations
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore all our revolutionary AI innovations and their potential impact
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {innovations.map((innovation, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-5xl">{innovation.icon}</div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
+                        {innovation.category}
+                      </span>
+                      <span className={`text-xs px-2 py-1 rounded-full ${
+                        innovation.impact === 'Breakthrough' 
+                          ? 'bg-red-100 text-red-800'
+                          : innovation.impact === 'Transformative'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
+                      }`}>
+                        {innovation.impact}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{innovation.title}</h3>
+                    <p className="text-gray-600">{innovation.description}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {innovation.features.slice(0, 2).map((feature, idx) => (
+                        <span key={idx} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                          {feature}
+                        </span>
+                      ))}
+                      {innovation.features.length > 2 && (
+                        <span className="text-gray-400 text-xs">+{innovation.features.length - 2} more</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500">
+                    Timeline: {innovation.timeline}
+                  </div>
+                  <button
+                    onClick={() => setSelectedInnovation(index)}
+                    className="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-sm"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using our revolutionary AI solutions to drive growth and innovation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
-              >
-                Start AI Transformation
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center gap-2"
-              >
-                <Play className="w-5 h-5" />
-                Schedule Demo
-              </motion.button>
-            </div>
-          </motion.div>
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Be Part of the AI Revolution
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join us in shaping the future with breakthrough AI innovations
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg"
+            >
+              🚀 Partner With Us
+            </Link>
+            <Link
+              to="/ai-interactive-learning-hub"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+            >
+              🎓 Learn More
+            </Link>
+          </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default AIInnovationShowcase2026;
+}
