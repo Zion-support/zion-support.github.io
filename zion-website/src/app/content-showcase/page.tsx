@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import NewContentPromoBanner from '../../components/NewContentPromoBanner';
 
 export const metadata = {
   title: 'Content Showcase - AI & Technology Resources | Zion Tech Group',
@@ -14,6 +15,26 @@ export const metadata = {
 
 export default function ContentShowcase() {
   const featuredContent = [
+    {
+      title: "Generative AI Evaluation 2025: Reliable Metrics and Methods",
+      description: "Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.",
+      href: "/blog/ai-2025-genai-evaluation",
+      icon: "📏",
+      category: "Evaluation",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Governance 2025: Best Practices for Responsible AI",
+      description: "A concise playbook for practical AI governance across policy, risk, compliance, and engineering.",
+      href: "/blog/ai-2025-ai-governance-best-practices",
+      icon: "🛡️",
+      category: "Governance",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
     {
       title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
       description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and performance.",
@@ -149,6 +170,8 @@ export default function ContentShowcase() {
   const categories = [
     { name: 'All', count: featuredContent.length, active: true },
     { name: 'Advanced AI', count: featuredContent.filter(c => c.category === 'Advanced AI').length, active: false },
+    { name: 'Evaluation', count: featuredContent.filter(c => c.category === 'Evaluation').length, active: false },
+    { name: 'Governance', count: featuredContent.filter(c => c.category === 'Governance').length, active: false },
     { name: 'Multimodal AI', count: featuredContent.filter(c => c.category === 'Multimodal AI').length, active: false },
     { name: 'Quantum AI', count: featuredContent.filter(c => c.category === 'Quantum AI').length, active: false },
     { name: 'Case Study', count: featuredContent.filter(c => c.category === 'Case Study').length, active: false },
@@ -175,6 +198,9 @@ export default function ContentShowcase() {
           </div>
         </div>
       </div>
+
+      {/* Promo Banner */}
+      <NewContentPromoBanner variant="featured" maxItems={4} />
 
       {/* Categories Filter */}
       <div className="bg-gray-50 py-8">
