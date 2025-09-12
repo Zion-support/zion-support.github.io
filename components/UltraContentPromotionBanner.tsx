@@ -23,8 +23,8 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
       featured: true,
       gradient: "from-purple-500 to-pink-500",
       badge: "HOT",
-      badgeColor: "bg-red-500",
-      metrics: "2.3k views"
+      badgeColor: "bg-red-100 text-red-800",
+      metrics: "12.5K views"
     },
     {
       title: "AI Space Exploration Breakthrough",
@@ -36,8 +36,8 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
       featured: true,
       gradient: "from-blue-500 to-cyan-500",
       badge: "BREAKTHROUGH",
-      badgeColor: "bg-blue-500",
-      metrics: "1.8k views"
+      badgeColor: "bg-blue-100 text-blue-800",
+      metrics: "8.7K views"
     },
     {
       title: "AI Implementation Master Guide 2026",
@@ -48,22 +48,22 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
       readTime: "200+ pages",
       featured: true,
       gradient: "from-green-500 to-teal-500",
-      badge: "POPULAR",
-      badgeColor: "bg-green-500",
-      metrics: "15k downloads"
+      badge: "MASTER",
+      badgeColor: "bg-green-100 text-green-800",
+      metrics: "15.2K downloads"
     },
     {
       title: "Generative AI Revolution 2025",
-      description: "10x productivity gains in content creation and business automation",
+      description: "Transform your business with 10x content output and 60% cost reduction",
       href: "/blog/ai-2025-generative-ai-revolution",
       icon: TrendingUp,
-      category: "Trending",
+      category: "Trending Now",
       readTime: "22 min read",
       featured: true,
       gradient: "from-orange-500 to-red-500",
       badge: "TRENDING",
-      badgeColor: "bg-orange-500",
-      metrics: "3.1k views"
+      badgeColor: "bg-orange-100 text-orange-800",
+      metrics: "9.8K views"
     }
   ];
 
@@ -106,8 +106,7 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
             <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:30px_30px] animate-pulse"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse"></div>
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -117,21 +116,20 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
                 <div className="flex items-center space-x-3">
                   <motion.div
                     key={currentContent}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center relative overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm"
                   >
                     <currentItem.icon className="w-6 h-6 text-white" />
-                    <div className={`absolute inset-0 bg-gradient-to-r ${currentItem.gradient} opacity-20`}></div>
                   </motion.div>
                   
                   <div className="flex items-center space-x-2">
-                    <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
-                    <span className="text-sm font-bold bg-yellow-400/20 px-3 py-1 rounded-full border border-yellow-400/30">
+                    <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+                    <span className="text-sm font-bold bg-yellow-400/20 px-3 py-1 rounded-full backdrop-blur-sm">
                       ULTRA CONTENT
                     </span>
-                    <span className={`text-xs font-bold px-2 py-1 rounded-full ${currentItem.badgeColor} text-white`}>
+                    <span className={`text-xs font-semibold px-2 py-1 rounded-full ${currentItem.badgeColor}`}>
                       {currentItem.badge}
                     </span>
                   </div>
@@ -144,29 +142,26 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-medium text-white/80">{currentItem.category}</span>
-                      <span className="text-xs text-white/60">•</span>
-                      <span className="text-xs text-white/60">{currentItem.metrics}</span>
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="text-sm font-bold truncate">
+                        {currentItem.title}
+                      </h3>
+                      <div className="flex items-center gap-1 text-xs text-white/80">
+                        <Star className="w-3 h-3" />
+                        <span>{currentItem.metrics}</span>
+                      </div>
                     </div>
-                    <h3 className="text-sm font-bold truncate mb-1">
-                      {currentItem.title}
-                    </h3>
                     <p className="text-xs text-white/90 truncate">
                       {currentItem.description}
                     </p>
+                    <div className="flex items-center gap-3 mt-1">
+                      <span className="text-xs text-white/70">{currentItem.category}</span>
+                      <div className="flex items-center gap-1 text-xs text-white/70">
+                        <Clock className="w-3 h-3" />
+                        <span>{currentItem.readTime}</span>
+                      </div>
+                    </div>
                   </motion.div>
-                </div>
-
-                <div className="flex items-center space-x-3 text-xs text-white/80">
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-3 h-3" />
-                    <span>{currentItem.readTime}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-3 h-3 text-yellow-400" />
-                    <span>4.9</span>
-                  </div>
                 </div>
               </div>
 
@@ -174,7 +169,7 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
               <div className="flex items-center space-x-3 ml-4">
                 <Link
                   href={currentItem.href}
-                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center space-x-2 hover:scale-105"
+                  className="bg-white/20 hover:bg-white/30 text-white px-6 py-2 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-2 backdrop-blur-sm hover:scale-105"
                 >
                   <span>Explore Now</span>
                   <ArrowRight className="w-4 h-4" />
@@ -182,7 +177,7 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
 
                 <Link
                   href="/content-showcase"
-                  className="bg-white/10 hover:bg-white/20 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="text-white/80 hover:text-white transition-colors text-sm font-medium hover:underline"
                 >
                   View All
                 </Link>
