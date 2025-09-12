@@ -5,6 +5,24 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025 Enterprise Implementation Masterclass: Complete Success Framework",
+      description: "Master enterprise AI implementation with our comprehensive 2025 guide. Learn strategies, frameworks, and best practices for successful AI transformation based on 500+ implementations.",
+      href: "/blog/ai-2025-enterprise-implementation-masterclass",
+      icon: "🎓",
+      category: "Enterprise AI",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025 Cybersecurity Threats & Defense: Complete Protection Guide",
+      description: "Protect your AI systems from emerging cyber threats in 2025. Learn about adversarial attacks, data poisoning, model theft, and comprehensive defense strategies.",
+      href: "/blog/ai-2025-cybersecurity-threats-defense",
+      icon: "🛡️",
+      category: "AI Security",
+      readTime: "20 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
       description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, quantum machine learning, and the future of quantum-enhanced artificial intelligence.",
       href: "/blog/ai-2025-quantum-computing-breakthrough",
@@ -21,28 +39,19 @@ export default function ContentShowcasePage() {
       category: "Healthcare AI",
       readTime: "18 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
-      description: "Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries and creating unprecedented opportunities.",
-      href: "/blog/ai-2025-breakthrough-innovations",
-      icon: "🧠",
-      category: "AI Innovations",
-      readTime: "25 min read",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newCaseStudies = [
+    {
+      title: "$200M AI Autonomous Manufacturing Success: Fortune 500 Transformation",
+      description: "Discover how a Fortune 500 manufacturer achieved $200M in savings using autonomous AI systems. Learn the implementation strategy, challenges overcome, and ROI achieved.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      icon: "💰",
+      category: "Manufacturing AI",
+      result: "$200M Savings",
+      date: "Jan 30, 2025"
+    },
     {
       title: "AI Manufacturing Automation Breakthrough 2025: $200M Savings Case Study",
       description: "Discover how a Fortune 500 manufacturing company achieved $200M in savings through AI automation. Complete case study with implementation details, ROI analysis, and lessons learned.",
@@ -60,25 +69,25 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across industries.",
-      href: "/resources/ai-implementation-master-guide-2025",
+      title: "AI Implementation Master Guide 2026: Complete Enterprise Framework",
+      description: "The most comprehensive AI implementation guide available. 200+ pages of expert insights, practical frameworks, templates, and checklists to ensure your AI transformation succeeds.",
+      href: "/resources/ai-implementation-master-guide-2026",
       icon: "📚",
       category: "Master Guide",
+      type: "Free Download",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Cybersecurity Checklist 2025: 150+ Security Items",
+      description: "Comprehensive security checklist covering 150+ essential security measures for AI systems. Protect against adversarial attacks, data poisoning, and model theft.",
+      href: "/resources/ai-cybersecurity-checklist-2025",
+      icon: "🛡️",
+      category: "Security",
       type: "Free Download",
       date: "Jan 30, 2025"
     },
@@ -90,15 +99,6 @@ export default function ContentShowcasePage() {
       category: "Checklist",
       type: "Free Download",
       date: "Feb 08, 2025"
-    },
-    {
-      title: "AI Security Hardening Checklist: Essential Security Measures",
-      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
-      href: "/resources/ai-security-hardening-checklist",
-      icon: "🛡️",
-      category: "Security",
-      type: "Free Download",
-      date: "Feb 06, 2025"
     }
   ];
 

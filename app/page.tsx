@@ -42,14 +42,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
+                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                🎉 50+ New AI Resources: Trends, Implementation & Success Stories!
+                🎉 75+ New AI Resources: Master Guide 2026, Security Framework & $200M Success Story!
               </h2>
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
-                Just released: AI Trends 2025 Predictions, Implementation Success Framework, Manufacturing Automation Case Study, 
-                plus 200+ page Master Guide, comprehensive checklists, and expert webinars. Everything you need to master AI in 2025.
+                Just released: AI Implementation Master Guide 2026 (200+ pages), Cybersecurity Threats & Defense, 
+                $200M Manufacturing Success Case Study, plus comprehensive frameworks, checklists, and expert insights. 
+                Everything you need to master AI in 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
@@ -59,39 +60,39 @@ export default function HomePage() {
                   🚀 Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-trends-predictions"
+                  href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  📈 Read AI Trends 2025
+                  📚 Download Master Guide 2026
                 </Link>
                 <Link
-                  href="/resources/ai-implementation-master-guide-2025"
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
                   className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  📚 Download Master Guide
+                  💰 Read $200M Success Story
                 </Link>
               </div>
               
               {/* Featured Content Grid */}
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <Link href="/blog/ai-2025-trends-predictions" className="group">
+                <Link href="/resources/ai-implementation-master-guide-2026" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🔮</div>
-                    <h3 className="text-lg font-semibold mb-2">AI Trends 2025 Predictions</h3>
-                    <p className="text-sm opacity-90 mb-3">15 predictions shaping the future of AI</p>
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 className="text-lg font-semibold mb-2">AI Master Guide 2026</h3>
+                    <p className="text-sm opacity-90 mb-3">200+ page comprehensive implementation guide</p>
                     <div className="flex items-center text-xs opacity-75">
-                      <span>28 min read</span>
+                      <span>Free Download</span>
                       <span className="mx-2">•</span>
                       <span>New</span>
                     </div>
                   </div>
                 </Link>
                 
-                <Link href="/case-studies/ai-automation-manufacturing-success-2025" className="group">
+                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏭</div>
-                    <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
-                    <p className="text-sm opacity-90 mb-3">40% cost reduction case study</p>
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">💰</div>
+                    <h3 className="text-lg font-semibold mb-2">$200M Manufacturing Success</h3>
+                    <p className="text-sm opacity-90 mb-3">Fortune 500 autonomous AI case study</p>
                     <div className="flex items-center text-xs opacity-75">
                       <span>Case Study</span>
                       <span className="mx-2">•</span>
@@ -100,17 +101,55 @@ export default function HomePage() {
                   </div>
                 </Link>
                 
-                <Link href="/resources/ai-implementation-master-guide-2025" className="group">
+                <Link href="/blog/ai-2025-cybersecurity-threats-defense" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
-                    <h3 className="text-lg font-semibold mb-2">Master Guide 2025</h3>
-                    <p className="text-sm opacity-90 mb-3">200+ page implementation guide</p>
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🛡️</div>
+                    <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Guide</h3>
+                    <p className="text-sm opacity-90 mb-3">Complete defense strategies for AI threats</p>
                     <div className="flex items-center text-xs opacity-75">
-                      <span>Free Download</span>
+                      <span>20 min read</span>
                       <span className="mx-2">•</span>
                       <span>New</span>
                     </div>
                   </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enterprise Implementation Masterclass Banner */}
+        <section className="py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🎓 ENTERPRISE AI MASTERCLASS</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 AI 2025 Enterprise Implementation Masterclass: Complete Success Framework!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Master enterprise AI implementation with our comprehensive 2025 guide. Learn strategies, frameworks, 
+                and best practices for successful AI transformation. Based on 500+ successful implementations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-enterprise-implementation-masterclass"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Masterclass Guide
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Download 200+ Page Guide
+                </Link>
+                <Link
+                  href="/webinars/ai-implementation-masterclass-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Join Live Webinar
                 </Link>
               </div>
             </div>
