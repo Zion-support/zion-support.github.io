@@ -11,6 +11,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
@@ -40,6 +41,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Dynamic Content Promotion Banner */}
+        <NewContentPromotionBanner />
+        
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -118,6 +122,137 @@ export default function HomePage() {
                   </div>
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Latest Content Showcase */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-full px-6 py-2 mb-6">
+                <span className="text-sm font-medium text-cyan-600">✨ Just Published</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Latest Content & Insights
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay ahead with our newest articles, case studies, and resources covering the latest in AI, technology, and business transformation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Featured Blog Post */}
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="p-8">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
+                      <span className="text-white text-xl">🧠</span>
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium text-cyan-600 bg-cyan-50 px-3 py-1 rounded-full">New Blog Post</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                    AI 2025: The Future of Work Revolution
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Discover how AI is revolutionizing the workplace and creating new opportunities for human-AI collaboration.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span>Jan 27, 2025</span>
+                      <span>•</span>
+                      <span>15 min read</span>
+                    </div>
+                    <Link
+                      href="/blog/ai-2025-future-of-work-revolution"
+                      className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors flex items-center space-x-1"
+                    >
+                      <span>Read More</span>
+                      <span>→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Featured Case Study */}
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="p-8">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
+                      <span className="text-white text-xl">📈</span>
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full">Case Study</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                    Global Tech Giant Achieves 400% ROI
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Comprehensive case study of a Fortune 500 company's successful AI transformation journey.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span>Jan 27, 2025</span>
+                      <span>•</span>
+                      <span>12 min read</span>
+                    </div>
+                    <Link
+                      href="/case-studies/ai-transformation-global-tech-giant-2025"
+                      className="text-green-600 font-semibold hover:text-green-700 transition-colors flex items-center space-x-1"
+                    >
+                      <span>Read More</span>
+                      <span>→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Featured Resource */}
+              <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="p-8">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                      <span className="text-white text-xl">📚</span>
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Free Resource</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                    AI 2025 Complete Implementation Master Guide
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Download our comprehensive 213-page guide covering everything you need for successful AI transformation.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span>Jan 27, 2025</span>
+                      <span>•</span>
+                      <span>213 pages</span>
+                    </div>
+                    <Link
+                      href="/resources/ai-2025-complete-implementation-master-guide"
+                      className="text-purple-600 font-semibold hover:text-purple-700 transition-colors flex items-center space-x-1"
+                    >
+                      <span>Download</span>
+                      <span>→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/blog"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                <span>View All Content</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </section>
