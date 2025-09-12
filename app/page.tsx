@@ -37,6 +37,9 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -117,6 +120,16 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        
+        {/* AI 2026 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026BreakthroughPromotionBanner />
+        
+        {/* FEATURED CONTENT SHOWCASE 2026 */}
+        <FeaturedContentShowcase2026 />
+        
+        {/* CONTENT DISCOVERY WIDGET 2026 */}
+        <ContentDiscoveryWidget2026 />
+        
         {/* AI 2031 CONTENT PROMOTION BANNER */}
         <AI2031ContentPromotionBanner />
         

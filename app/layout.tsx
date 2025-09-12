@@ -9,6 +9,7 @@ import EnhancedContentPromotionBanner from '../components/EnhancedContentPromoti
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
+import EnhancedNavigationWithContentDiscovery from '../components/EnhancedNavigationWithContentDiscovery';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -564,7 +565,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
           <EnhancedContentPromotionBanner />
-          <EnhancedNavigationWithNewContent />
+          <EnhancedNavigationWithContentDiscovery />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
           </main>
