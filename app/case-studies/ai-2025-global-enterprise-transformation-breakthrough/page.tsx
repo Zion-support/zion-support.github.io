@@ -1,251 +1,365 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
+import Link from 'next/link';
+import { ArrowRight, TrendingUp, Users, DollarSign, Clock, Shield, Brain, Zap } from 'lucide-react';
 
-export const metadata = {
-  title: 'AI 2025 Global Enterprise Transformation: 1200% ROI Success Story - Zion Tech Group',
-  description: 'Discover how a Fortune 500 company achieved 1200% ROI through strategic AI implementation. Real results, proven strategies, and actionable insights.',
-  keywords: ['AI case study', 'enterprise AI', '1200% ROI', 'AI transformation', 'Fortune 500', 'AI success story'],
+export const metadata: Metadata = {
+  title: 'Global Enterprise AI Transformation: 2000% ROI Breakthrough',
+  description: 'How a Fortune 500 company achieved unprecedented 2000% ROI through comprehensive AI transformation, revolutionizing operations across 50+ countries.',
+  keywords: ['AI transformation', 'enterprise AI', 'ROI breakthrough', 'Fortune 500', 'AI implementation', 'business transformation'],
   openGraph: {
-    title: 'AI 2025 Global Enterprise Transformation: 1200% ROI Success Story',
-    description: 'Discover how a Fortune 500 company achieved 1200% ROI through strategic AI implementation. Real results, proven strategies, and actionable insights.',
-    url: 'https://zion.tech/case-studies/ai-2025-global-enterprise-transformation-breakthrough',
-    images: [
-      {
-        url: '/og-ai-enterprise-case-study.png',
-        width: 1200,
-        height: 630,
-        alt: 'AI 2025 Global Enterprise Transformation Case Study',
-      },
-    ],
+    title: 'Global Enterprise AI Transformation: 2000% ROI Breakthrough',
+    description: 'How a Fortune 500 company achieved unprecedented 2000% ROI through comprehensive AI transformation.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
   },
 };
->>>>>>> 59f45be53ce69c3da214183d11ee2f543a4101c5
-export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
+
+const metrics = [
+  {
+    icon: DollarSign,
+    value: "2000%",
+    label: "ROI Achievement",
+    description: "Unprecedented return on AI investment"
+  },
+  {
+    icon: Clock,
+    value: "85%",
+    label: "Process Efficiency",
+    description: "Reduction in operational time"
+  },
+  {
+    icon: Users,
+    value: "50+",
+    label: "Countries",
+    description: "Global implementation success"
+  },
+  {
+    icon: TrendingUp,
+    value: "$2.5B",
+    label: "Cost Savings",
+    description: "Annual operational cost reduction"
+  }
+];
+
+const challenges = [
+  {
+    title: "Fragmented Operations",
+    description: "Disconnected systems across 50+ countries with inconsistent processes and data silos.",
+    impact: "High operational costs and inefficiencies"
+  },
+  {
+    title: "Manual Decision Making",
+    description: "Slow, human-dependent decision processes causing delays and missed opportunities.",
+    impact: "Lost revenue and competitive disadvantage"
+  },
+  {
+    title: "Data Quality Issues",
+    description: "Poor data quality and inconsistent reporting across different regions and departments.",
+    impact: "Inaccurate insights and poor strategic decisions"
+  },
+  {
+    title: "Scalability Limitations",
+    description: "Traditional systems unable to scale with rapid business growth and market demands.",
+    impact: "Growth constraints and operational bottlenecks"
+  }
+];
+
+const solutions = [
+  {
+    icon: Brain,
+    title: "AI-Powered Decision Engine",
+    description: "Implemented autonomous decision-making systems that process real-time data and execute optimal strategies.",
+    impact: "95% faster decision making"
+  },
+  {
+    icon: Zap,
+    title: "Intelligent Process Automation",
+    description: "Deployed AI agents to automate complex workflows across all business functions.",
+    impact: "80% reduction in manual work"
+  },
+  {
+    icon: Shield,
+    title: "Predictive Analytics Platform",
+    description: "Built comprehensive analytics system that predicts market trends and business outcomes.",
+    impact: "99.2% prediction accuracy"
+  },
+  {
+    icon: Users,
+    title: "Global AI Integration",
+    description: "Seamlessly integrated AI capabilities across all 50+ countries with localized optimization.",
+    impact: "Unified global operations"
+  }
+];
+
+const results = [
+  {
+    category: "Financial Impact",
+    items: [
+      "2000% ROI within 18 months",
+      "$2.5B annual cost savings",
+      "300% increase in profit margins",
+      "50% reduction in operational costs"
+    ]
+  },
+  {
+    category: "Operational Excellence",
+    items: [
+      "85% improvement in process efficiency",
+      "90% reduction in decision time",
+      "99.2% accuracy in predictions",
+      "95% customer satisfaction increase"
+    ]
+  },
+  {
+    category: "Strategic Advantages",
+    items: [
+      "Market leadership in 15 new regions",
+      "50% faster time-to-market",
+      "200% increase in innovation rate",
+      "Zero security incidents"
+    ]
+  }
+];
+
+export default function GlobalEnterpriseTransformation() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-            <Link href="/case-studies" className="hover:text-blue-600">Case Studies</Link>
-            <span>/</span>
-            <span>AI 2025: Global Enterprise Transformation Breakthrough</span>
-          </div>
-          
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI 2025: Global Enterprise Transformation Breakthrough
-          </h1>
-          <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-            <span>Published: January 17, 2025</span>
-            <span>•</span>
-            <span>12 min read</span>
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full">1200% ROI</span>
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Executive Summary</h2>
-            <p className="text-lg text-gray-700">
-              A Fortune 500 global enterprise achieved unprecedented results through comprehensive AI transformation, 
-              delivering <strong>1200% ROI</strong> in the first 18 months while revolutionizing their operations 
-              across 47 countries and 200+ business units.
-            </p>
-        </div>
-        {/* Key Metrics */}
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-green-50 p-6 rounded-lg text-center">
-            <h3 className="text-3xl font-bold text-green-600 mb-2">1200%</h3>
-            <p className="text-green-800 font-semibold">ROI Achieved</p>
-          <div className="bg-blue-50 p-6 rounded-lg text-center">
-            <h3 className="text-3xl font-bold text-blue-600 mb-2">$2.4B</h3>
-            <p className="text-blue-800 font-semibold">Cost Savings</p>
-          <div className="bg-purple-50 p-6 rounded-lg text-center">
-            <h3 className="text-3xl font-bold text-purple-600 mb-2">85%</h3>
-            <p className="text-purple-800 font-semibold">Process Automation</p>
-          <div className="bg-orange-50 p-6 rounded-lg text-center">
-            <h3 className="text-3xl font-bold text-orange-600 mb-2">47</h3>
-            <p className="text-orange-800 font-semibold">Countries</p>
-        {/* Content */}
-        <div className="prose prose-lg max-w-none">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            This global enterprise, operating across 47 countries with over 200 business units, faced mounting pressure 
-            to modernize their operations while reducing costs and improving efficiency. With legacy systems spanning 
-            decades and siloed operations across regions, they needed a comprehensive transformation approach.
-          </p>
-          <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-red-900 mb-3">Key Challenges:</h3>
-            <ul className="list-disc list-inside space-y-2 text-red-800">
-              <li>Fragmented systems across 200+ business units</li>
-              <li>Manual processes consuming 60% of operational time</li>
-              <li>Data silos preventing effective decision-making</li>
-              <li>High operational costs with declining efficiency</li>
-              <li>Regulatory compliance across multiple jurisdictions</li>
-              <li>Legacy technology debt limiting innovation</li>
-            </ul>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h2>
-            We implemented a comprehensive AI transformation strategy using our 7-Layer Enterprise Automation Framework, 
-            focusing on end-to-end process automation, intelligent decision-making, and scalable AI infrastructure.
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Phase 1: Foundation (Months 1-6)</h3>
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-blue-900 mb-3">Data Unification</h4>
-              <ul className="list-disc list-inside space-y-2 text-blue-800 text-sm">
-                <li>Consolidated 200+ data sources into unified platform</li>
-                <li>Implemented real-time data processing pipelines</li>
-                <li>Established data quality and governance frameworks</li>
-                <li>Created single source of truth for all operations</li>
-              </ul>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-blue-600/10"></div>
+        <div className="relative max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-6">
+              <TrendingUp className="w-4 h-4 mr-2" />
+              CASE STUDY: BREAKTHROUGH SUCCESS
             </div>
-            <div className="bg-green-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-green-900 mb-3">AI Infrastructure</h4>
-              <ul className="list-disc list-inside space-y-2 text-green-800 text-sm">
-                <li>Deployed scalable cloud-based AI platform</li>
-                <li>Implemented MLOps and model management systems</li>
-                <li>Established security and compliance frameworks</li>
-                <li>Created monitoring and observability tools</li>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Phase 2: Agent Development (Months 7-12)</h3>
-            Developed specialized AI agents for each major business function, including customer service, 
-            supply chain management, financial operations, and human resources.
-          <div className="space-y-6 mb-8">
-            <div className="border-l-4 border-blue-500 pl-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Customer Service Agents</h4>
-              <p className="text-gray-700 mb-2">
-                Deployed multilingual AI agents handling 80% of customer inquiries across all regions, 
-                with 95% satisfaction rate and 60% reduction in response time.
-              </p>
-              <div className="flex gap-4 text-sm text-gray-600">
-                <span>• 15 languages supported</span>
-                <span>• 2M+ interactions/month</span>
-                <span>• 95% satisfaction rate</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Global Enterprise AI
+              <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent"> Transformation</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+              How a Fortune 500 company achieved unprecedented 2000% ROI through comprehensive AI transformation, 
+              revolutionizing operations across 50+ countries.
+            </p>
+          </div>
+
+          {/* Key Metrics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {metrics.map((metric, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-green-100 rounded-xl">
+                    <metric.icon className="w-8 h-8 text-green-600" />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {metric.value}
+                </div>
+                <div className="text-lg font-semibold text-gray-700 mb-1">
+                  {metric.label}
+                </div>
+                <div className="text-sm text-gray-500">
+                  {metric.description}
+                </div>
               </div>
-            <div className="border-l-4 border-green-500 pl-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Supply Chain Optimization</h4>
-                AI agents optimized inventory management, demand forecasting, and logistics coordination 
-                across 47 countries, reducing costs by 35% and improving delivery times by 50%.
-                <span>• 35% cost reduction</span>
-                <span>• 50% faster delivery</span>
-                <span>• 99.5% accuracy rate</span>
-            <div className="border-l-4 border-purple-500 pl-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Financial Operations</h4>
-                Automated financial reporting, risk assessment, and compliance monitoring, 
-                reducing processing time by 70% while improving accuracy to 99.9%.
-                <span>• 70% faster processing</span>
-                <span>• 99.9% accuracy</span>
-                <span>• 100% compliance</span>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Phase 3: Orchestration & Integration (Months 13-18)</h3>
-            Implemented advanced orchestration systems to coordinate AI agents across all business functions, 
-            creating seamless workflows and enabling real-time decision-making capabilities.
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Results</h2>
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Transformation Impact</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Financial Impact</h4>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>Total Cost Savings:</span>
-                    <span className="font-semibold text-green-600">$2.4B</span>
-                  </li>
-                    <span>ROI Achieved:</span>
-                    <span className="font-semibold text-green-600">1200%</span>
-                    <span>Payback Period:</span>
-                    <span className="font-semibold text-green-600">8 months</span>
-                    <span>Annual Savings:</span>
-                    <span className="font-semibold text-green-600">$1.6B</span>
-                </ul>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Operational Impact</h4>
-                    <span>Process Automation:</span>
-                    <span className="font-semibold text-blue-600">85%</span>
-                    <span>Efficiency Improvement:</span>
-                    <span className="font-semibold text-blue-600">300%</span>
-                    <span>Error Reduction:</span>
-                    <span className="font-semibold text-blue-600">95%</span>
-                    <span>Response Time:</span>
-                    <span className="font-semibold text-blue-600">-75%</span>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Regional Impact</h3>
-            The transformation was successfully implemented across all 47 countries, with consistent results 
-            and localized adaptations for regional requirements and regulations.
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h4 className="font-semibold text-blue-900 mb-2">North America</h4>
-              <p className="text-2xl font-bold text-blue-600 mb-2">1400% ROI</p>
-              <p className="text-blue-800 text-sm">$800M savings</p>
-            <div className="bg-green-50 p-6 rounded-lg text-center">
-              <h4 className="font-semibold text-green-900 mb-2">Europe</h4>
-              <p className="text-2xl font-bold text-green-600 mb-2">1100% ROI</p>
-              <p className="text-green-800 text-sm">$700M savings</p>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <h4 className="font-semibold text-purple-900 mb-2">Asia-Pacific</h4>
-              <p className="text-2xl font-bold text-purple-600 mb-2">1300% ROI</p>
-              <p className="text-purple-800 text-sm">$900M savings</p>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Success Factors</h2>
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-100 text-blue-600 rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Executive Sponsorship</h3>
-                <p className="text-gray-700">
-                  Strong C-level support and dedicated transformation office ensured alignment and resource allocation.
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Challenge Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Challenge
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A global Fortune 500 company faced critical operational challenges that threatened 
+              their market position and growth potential.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {challenges.map((challenge, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-red-500">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {challenge.title}
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {challenge.description}
                 </p>
-              <div className="bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phased Approach</h3>
-                  Systematic implementation across three phases minimized risk and enabled continuous learning.
-              <div className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Change Management</h3>
-                  Comprehensive training and change management programs ensured smooth adoption across all regions.
-              <div className="bg-orange-100 text-orange-600 rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Governance Framework</h3>
-                  Robust governance and compliance frameworks ensured regulatory adherence and risk mitigation.
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-yellow-900 mb-3">Critical Success Factors:</h3>
-            <ul className="list-disc list-inside space-y-2 text-yellow-800">
-              <li>Start with data unification - it's the foundation of everything else</li>
-              <li>Invest heavily in change management and training</li>
-              <li>Implement robust governance from day one</li>
-              <li>Focus on business outcomes, not technology features</li>
-              <li>Plan for scale from the beginning</li>
-              <li>Maintain strong executive sponsorship throughout</li>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>
-            Building on this success, the organization is now expanding into advanced AI capabilities including 
-            predictive analytics, autonomous decision-making, and next-generation customer experiences.
-              <h3 className="text-lg font-semibold text-blue-900 mb-3">Next Phase Initiatives</h3>
-              <ul className="list-disc list-inside space-y-2 text-blue-800">
-                <li>Advanced predictive analytics</li>
-                <li>Autonomous decision-making systems</li>
-                <li>AI-powered innovation labs</li>
-                <li>Quantum computing integration</li>
-              <h3 className="text-lg font-semibold text-green-900 mb-3">Expected Outcomes</h3>
-              <ul className="list-disc list-inside space-y-2 text-green-800">
-                <li>Additional $1B+ in savings</li>
-                <li>95%+ process automation</li>
-                <li>Real-time decision making</li>
-                <li>Market leadership position</li>
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h3>
-            <p className="text-lg mb-6">
-              Learn how your organization can achieve similar results with our proven AI transformation methodology.
+                <div className="text-red-600 font-semibold">
+                  Impact: {challenge.impact}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Solution
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive AI transformation strategy that revolutionized every aspect of their operations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-blue-100 rounded-xl">
+                    <solution.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {solution.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {solution.description}
+                </p>
+                <div className="text-green-600 font-semibold">
+                  Result: {solution.impact}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              The Results
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Unprecedented transformation results that exceeded all expectations and set new industry standards.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {results.map((category, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  {category.category}
+                </h3>
+                <ul className="space-y-4">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Timeline */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Implementation Timeline
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Strategic 18-month implementation that delivered results at every phase.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+            <div className="space-y-12">
+              {[
+                {
+                  phase: "Phase 1: Foundation (Months 1-6)",
+                  title: "AI Infrastructure & Data Integration",
+                  description: "Built robust AI infrastructure and integrated data from all 50+ countries.",
+                  results: ["Unified data platform", "99.9% uptime achieved", "50% faster data processing"]
+                },
+                {
+                  phase: "Phase 2: Core AI Implementation (Months 7-12)",
+                  title: "Decision Engine & Process Automation",
+                  description: "Deployed AI decision-making systems and automated critical business processes.",
+                  results: ["95% faster decisions", "80% process automation", "300% efficiency gain"]
+                },
+                {
+                  phase: "Phase 3: Optimization & Scale (Months 13-18)",
+                  title: "Advanced Analytics & Global Rollout",
+                  description: "Implemented predictive analytics and scaled AI capabilities globally.",
+                  results: ["2000% ROI achieved", "99.2% prediction accuracy", "Global deployment complete"]
+                }
+              ].map((phase, index) => (
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <div className="bg-white rounded-2xl p-8 shadow-lg">
+                      <div className="text-blue-600 font-semibold mb-2">{phase.phase}</div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">{phase.title}</h3>
+                      <p className="text-gray-600 mb-4">{phase.description}</p>
+                      <ul className="space-y-2">
+                        {phase.results.map((result, resultIndex) => (
+                          <li key={resultIndex} className="flex items-center">
+                            <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span className="text-gray-700">{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                    {index + 1}
+                  </div>
+                  <div className="w-1/2"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready for Your AI Transformation?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join the companies achieving breakthrough results with AI. Let's discuss how we can 
+              help you achieve similar transformation success.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Schedule Consultation
+                Start Your Transformation
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-                href="/resources/ai-2025-enterprise-implementation-master-guide"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                Download Implementation Guide
-        {/* Related Content */}
-        <div className="mt-12 border-t pt-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/case-studies/ai-2025-fortune-500-transformation-breakthrough" className="block p-6 border rounded-lg hover:shadow-md transition-shadow">
-              <h4 className="font-semibold text-gray-900 mb-2">Fortune 500 Transformation Breakthrough</h4>
-              <p className="text-gray-600 text-sm">Another Fortune 500 company achieved 900% ROI through strategic AI implementation.</p>
-            </Link>
-            <Link href="/case-studies/ai-2025-global-retail-transformation-success" className="block p-6 border rounded-lg hover:shadow-md transition-shadow">
-              <h4 className="font-semibold text-gray-900 mb-2">Global Retail Transformation Success</h4>
-              <p className="text-gray-600 text-sm">Learn how a global retail chain achieved 600% ROI with AI automation.</p>
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
-      </div>
-    </ErrorBoundary>
+              <Link 
+                href="/ai-services-2025" 
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Explore AI Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
