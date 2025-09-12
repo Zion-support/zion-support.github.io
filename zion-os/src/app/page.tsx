@@ -152,6 +152,9 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+              <a href="/blog" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 Read the Blog
+              </a>
             </div>
           </div>
         </div>
