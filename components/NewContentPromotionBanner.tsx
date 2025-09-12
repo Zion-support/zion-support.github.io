@@ -1,220 +1,156 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ArrowRight, Star, Calendar, BookOpen, Users, Zap, Brain } from 'lucide-react';
 import Link from 'next/link';
 
 interface ContentItem {
+  id: string;
   title: string;
   description: string;
+  type: 'blog' | 'case-study' | 'service';
   href: string;
-  icon: string;
-  category: string;
-  readTime?: string;
-  type?: string;
-  date: string;
+  icon: React.ComponentType<any>;
+  color: string;
+  featured?: boolean;
 }
 
-interface NewContentPromotionBannerProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  primaryButtonText: string;
-  primaryButtonHref: string;
-  secondaryButtonText: string;
-  secondaryButtonHref: string;
-  contentItems: ContentItem[];
-  variant?: 'default' | 'featured' | 'compact';
-  maxItems?: number;
-  className?: string;
-}
+const NewContentPromotionBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDismissed, setIsDismissed] = useState(false);
 
-export default function NewContentPromotionBanner({
-  title,
-  subtitle,
-  description,
-  primaryButtonText,
-  primaryButtonHref,
-  secondaryButtonText,
-  secondaryButtonHref,
-  contentItems,
-  variant = 'default',
-  maxItems = 4,
-  className = ''
-}: NewContentPromotionBannerProps) {
-  const displayItems = contentItems.slice(0, maxItems);
-  
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'featured':
-        return {
-          container: 'py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden',
-          badge: 'bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6',
-          title: 'text-4xl md:text-6xl font-bold mb-6',
-          description: 'text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed',
-          buttonPrimary: 'bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg',
-          buttonSecondary: 'border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg',
-          grid: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'
-        };
-      case 'compact':
-        return {
-          container: 'py-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white',
-          badge: 'bg-white bg-opacity-20 rounded-full px-4 py-2 mb-4',
-          title: 'text-3xl md:text-4xl font-bold mb-4',
-          description: 'text-lg opacity-90 mb-6 max-w-3xl mx-auto',
-          buttonPrimary: 'bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors',
-          buttonSecondary: 'border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors',
-          grid: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300'
-        };
-      default:
-        return {
-          container: 'py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden',
-          badge: 'bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6',
-          title: 'text-3xl md:text-5xl font-bold mb-6',
-          description: 'text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed',
-          buttonPrimary: 'bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg',
-          buttonSecondary: 'border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg',
-          grid: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'
-        };
+  const contentItems: ContentItem[] = [
+    {
+      id: 'ai-quantum-breakthrough',
+      title: 'Revolutionary AI-Quantum Breakthrough 2025',
+      description: 'Discover our latest quantum AI consciousness platform revolutionizing business intelligence',
+      type: 'blog',
+      href: '/blog/ai-quantum-breakthrough-2025',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-600',
+      featured: true
+    },
+    {
+      id: 'fortune-500-case-study',
+      title: 'Fortune 500 AI Transformation',
+      description: 'See how a Fortune 500 company achieved 300% efficiency increase and $50M+ savings',
+      type: 'case-study',
+      href: '/case-studies/fortune-500-ai-transformation',
+      icon: Users,
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      id: 'ai-quantum-platform',
+      title: 'AI-Quantum Consciousness Platform',
+      description: 'The world\'s first fully conscious AI system powered by quantum computing',
+      type: 'service',
+      href: '/services/ai-quantum-consciousness-platform',
+      icon: Zap,
+      color: 'from-emerald-500 to-teal-600'
     }
+  ];
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('content-promotion-banner-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+    }
+
+    // Auto-rotate content every 8 seconds
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [contentItems.length]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('content-promotion-banner-dismissed', 'true');
   };
 
-  const styles = getVariantStyles();
+  const currentContent = contentItems[currentIndex];
+
+  if (isDismissed || !isVisible) return null;
 
   return (
-    <section className={`${styles.container} ${className}`}>
-      {variant === 'featured' && <div className="absolute inset-0 bg-black opacity-10"></div>}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className={`inline-flex items-center ${styles.badge}`}>
-            <span className="text-sm font-medium">{subtitle}</span>
-          </div>
-          <h2 className={styles.title}>
-            {title}
-          </h2>
-          <p className={styles.description}>
-            {description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href={primaryButtonHref}
-              className={styles.buttonPrimary}
-            >
-              {primaryButtonText}
-            </Link>
-            <Link
-              href={secondaryButtonHref}
-              className={styles.buttonSecondary}
-            >
-              {secondaryButtonText}
-            </Link>
-          </div>
-        </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cyan-500/95 to-purple-600/95 backdrop-blur-lg border-b border-cyan-400/30"
+      >
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4 flex-1">
+              {/* Content Indicator */}
+              <div className="flex gap-2">
+                {contentItems.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentIndex ? 'bg-white' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
 
-        {/* Content Grid */}
-        <div className={styles.grid}>
-          {displayItems.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className={styles.card}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
+              {/* Content Display */}
+              <div className="flex items-center gap-4 flex-1">
+                <div className={`w-12 h-12 bg-gradient-to-r ${currentContent.color} rounded-xl flex items-center justify-center`}>
+                  <currentContent.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm opacity-90 mb-3">
-                  {item.description}
-                </p>
-                <div className="flex items-center text-xs opacity-75">
-                  {item.readTime && (
-                    <>
-                      <span>{item.readTime}</span>
-                      <span className="mx-2">•</span>
-                    </>
-                  )}
-                  {item.type && (
-                    <>
-                      <span>{item.type}</span>
-                      <span className="mx-2">•</span>
-                    </>
-                  )}
-                  <span>{item.category}</span>
+                
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full font-medium">
+                      {currentContent.type === 'blog' ? 'New Blog Post' : 
+                       currentContent.type === 'case-study' ? 'Case Study' : 'New Service'}
+                    </span>
+                    {currentContent.featured && (
+                      <span className="bg-yellow-500/20 text-yellow-300 text-xs px-2 py-1 rounded-full font-medium flex items-center gap-1">
+                        <Star className="w-3 h-3" />
+                        Featured
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-white font-bold text-lg mb-1">
+                    {currentContent.title}
+                  </h3>
+                  <p className="text-white/90 text-sm">
+                    {currentContent.description}
+                  </p>
                 </div>
               </div>
-            </Link>
-          ))}
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-3">
+                <Link href={currentContent.href}>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </motion.button>
+                </Link>
+                
+                <button
+                  onClick={handleDismiss}
+                  className="text-white/70 hover:text-white transition-colors p-2"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </AnimatePresence>
   );
-}
+};
 
-// Pre-configured content items for easy use
-export const featuredContentItems: ContentItem[] = [
-  {
-    title: "AI 2025: Quantum Computing Breakthrough",
-    description: "Revolutionary quantum AI technologies reshaping industries",
-    href: "/blog/ai-2025-quantum-computing-breakthrough",
-    icon: "⚛️",
-    category: "Quantum AI",
-    readTime: "28 min read",
-    date: "Jan 30, 2025"
-  },
-  {
-    title: "AI Ethical Governance Framework",
-    description: "Comprehensive guide to responsible AI implementation",
-    href: "/blog/ai-2025-ethical-governance-framework",
-    icon: "⚖️",
-    category: "AI Ethics",
-    readTime: "32 min read",
-    date: "Jan 31, 2025"
-  },
-  {
-    title: "Cybersecurity AI Success",
-    description: "99.8% threat detection accuracy achieved",
-    href: "/case-studies/ai-cybersecurity-transformation-breakthrough-2025",
-    icon: "🛡️",
-    category: "Case Study",
-    type: "New",
-    date: "Jan 30, 2025"
-  },
-  {
-    title: "AI Implementation Master Guide",
-    description: "200+ page comprehensive resource",
-    href: "/resources/ai-implementation-master-guide-2026",
-    icon: "📚",
-    category: "Free Download",
-    type: "New",
-    date: "Jan 30, 2025"
-  }
-];
-
-export const latestContentItems: ContentItem[] = [
-  {
-    title: "AI Advanced Automation 2025",
-    description: "Complete implementation guide for enterprise automation",
-    href: "/blog/ai-2025-advanced-automation",
-    icon: "🤖",
-    category: "AI Automation",
-    readTime: "25 min read",
-    date: "Jan 30, 2025"
-  },
-  {
-    title: "AI Cybersecurity Threats 2025",
-    description: "Complete defense guide for emerging threats",
-    href: "/blog/ai-2025-cybersecurity-threats",
-    icon: "🛡️",
-    category: "Cybersecurity",
-    readTime: "22 min read",
-    date: "Jan 30, 2025"
-  },
-  {
-    title: "AI Breakthrough Innovations",
-    description: "Revolutionary technologies shaping the future",
-    href: "/blog/ai-2025-breakthrough-innovations",
-    icon: "🚀",
-    category: "AI Innovations",
-    readTime: "25 min read",
-    date: "Jan 28, 2025"
-  }
-];
+export default NewContentPromotionBanner;

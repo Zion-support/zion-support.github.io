@@ -12,6 +12,7 @@ import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -1446,6 +1447,9 @@ export default function HomePage() {
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
+
+      {/* Featured Content Showcase */}
+      <FeaturedContentShowcase />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
