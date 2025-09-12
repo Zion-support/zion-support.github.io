@@ -1,155 +1,114 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive PR merge process..."
+# Comprehensive PR merging script
+set -e
 
-# Function to check if we're in a git repository
-check_git_repo() {
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
-        echo "❌ Not in a git repository"
-        exit 1
-    fi
-    echo "✅ Git repository detected"
-}
+echo "=== Starting comprehensive PR merge process ==="
 
-# Function to ensure clean working directory
-ensure_clean_working_dir() {
-    local status=$(git status --porcelain)
-    if [ -n "$status" ]; then
-        echo "⚠️  Working directory has changes. Stashing..."
-        git stash push -m "Auto-stash before merge process"
-    fi
-}
-
-# Function to fetch and update main branch
-update_main_branch() {
-    echo "📥 Fetching latest changes..."
-    git fetch --all --prune
+# Function to safely merge a branch
+merge_branch() {
+    local branch_name="$1"
+    local branch_ref="origin/$branch_name"
     
-    echo "🔄 Switching to main branch..."
+    echo "Attempting to merge $branch_ref..."
+    
+    # Create a temporary merge branch
+    local merge_branch="merge-$branch_name-$(date +%s)"
+    
+    # Checkout main and ensure it's up to date
     git checkout main
+    git pull origin main
     
-    echo "📥 Pulling latest changes from main..."
-    git pull origin main --no-rebase
-}
-
-# Function to find and merge unmerged branches
-merge_unmerged_branches() {
-    echo "🔍 Finding unmerged branches..."
+    # Create merge branch
+    git checkout -b "$merge_branch"
     
-    # Get list of unmerged branches
-    local unmerged_branches=$(git branch -r --no-merged origin/main | head -20)
-    
-    if [ -z "$unmerged_branches" ]; then
-        echo "✅ No unmerged branches found"
+    # Try to merge the branch
+    if git merge "$branch_ref" --no-ff --no-edit --allow-unrelated-histories; then
+        echo "✅ Successfully merged $branch_ref"
+        
+        # Merge back to main
+        git checkout main
+        git merge "$merge_branch" --no-ff --no-edit
+        
+        # Push to origin
+        git push origin main
+        
+        # Clean up merge branch
+        git branch -D "$merge_branch"
+        
         return 0
-    fi
-    
-    echo "Found unmerged branches:"
-    echo "$unmerged_branches"
-    
-    local merged_count=0
-    local failed_count=0
-    
-    # Process each unmerged branch
-    while IFS= read -r branch; do
-        if [ -z "$branch" ]; then
-            continue
-        fi
+    else
+        echo "❌ Merge conflict in $branch_ref, trying with -X theirs strategy..."
         
-        echo ""
-        echo "🔄 Processing branch: $branch"
+        # Abort current merge
+        git merge --abort
         
-        # Check if branch has meaningful changes
-        local changes=$(git log --oneline origin/main.."$branch" 2>/dev/null)
-        if [ -z "$changes" ]; then
-            echo "⏭️  Skipping $branch (no changes)"
-            continue
-        fi
-        
-        echo "Changes in $branch:"
-        echo "$changes" | head -5
-        
-        # Try to merge the branch
-        if git merge "$branch" --no-commit --no-ff 2>/dev/null; then
-            echo "✅ Successfully merged $branch"
-            git commit -m "feat: merge $branch
-
-- Integrated changes from $branch
-- Resolved conflicts automatically
-- Enhanced functionality and stability"
-            merged_count=$((merged_count + 1))
+        # Try with theirs strategy
+        if git merge "$branch_ref" --no-ff --no-edit -X theirs --allow-unrelated-histories; then
+            echo "✅ Successfully merged $branch_ref with theirs strategy"
+            
+            # Merge back to main
+            git checkout main
+            git merge "$merge_branch" --no-ff --no-edit
+            
+            # Push to origin
+            git push origin main
+            
+            # Clean up merge branch
+            git branch -D "$merge_branch"
+            
+            return 0
         else
-            echo "⚠️  Merge conflicts in $branch, attempting resolution..."
+            echo "❌ Failed to merge $branch_ref even with theirs strategy"
             
-            # Try to resolve conflicts automatically
-            if resolve_conflicts_automatically; then
-                git add .
-                git commit -m "feat: merge $branch with conflict resolution
-
-- Integrated changes from $branch
-- Resolved merge conflicts automatically
-- Enhanced functionality and stability"
-                merged_count=$((merged_count + 1))
-            else
-                echo "❌ Failed to resolve conflicts in $branch"
-                git merge --abort 2>/dev/null
-                failed_count=$((failed_count + 1))
-            fi
+            # Clean up merge branch
+            git checkout main
+            git branch -D "$merge_branch"
+            
+            return 1
         fi
-    done <<< "$unmerged_branches"
-    
-    echo ""
-    echo "📊 Merge Summary:"
-    echo "✅ Successfully merged: $merged_count"
-    echo "❌ Failed to merge: $failed_count"
+    fi
 }
 
-# Function to resolve conflicts automatically
-resolve_conflicts_automatically() {
-    local conflict_files=$(git diff --name-only --diff-filter=U 2>/dev/null)
+# Get list of unmerged branches (excluding backups)
+branches=$(git branch -r --no-merged origin/main | grep -v backup | sed 's/origin\///' | head -20)
+
+echo "Found unmerged branches:"
+echo "$branches"
+echo ""
+
+# Count total branches
+total_branches=$(echo "$branches" | wc -l)
+echo "Total branches to process: $total_branches"
+echo ""
+
+# Initialize counters
+merged=0
+failed=0
+
+# Process each branch
+for branch in $branches; do
+    echo "Processing branch: $branch"
     
-    if [ -z "$conflict_files" ]; then
-        return 0
+    if merge_branch "$branch"; then
+        ((merged++))
+        echo "✅ Successfully merged $branch"
+    else
+        ((failed++))
+        echo "❌ Failed to merge $branch"
     fi
     
-    echo "Found merge conflicts in: $conflict_files"
-    
-    # Resolve conflicts by accepting appropriate versions
-    for file in $conflict_files; do
-        if [ -f "$file" ]; then
-            echo "Resolving conflicts in: $file"
-            
-            # Try to resolve by accepting our version first, then theirs
-            if ! git checkout --ours "$file" 2>/dev/null; then
-                git checkout --theirs "$file" 2>/dev/null
-            fi
-            
-            git add "$file"
-        fi
-    done
-    
-    return 0
-}
+    echo "Progress: $((merged + failed))/$total_branches"
+    echo "---"
+done
 
-# Function to push changes
-push_changes() {
-    echo "📤 Pushing changes to remote..."
-    git push origin main
-}
+echo ""
+echo "=== Merge Summary ==="
+echo "✅ Successfully merged: $merged"
+echo "❌ Failed to merge: $failed"
+echo "Total processed: $((merged + failed))"
 
-# Main execution
-main() {
-    echo "🚀 Starting comprehensive PR merge process..."
-    
-    check_git_repo
-    ensure_clean_working_dir
-    update_main_branch
-    merge_unmerged_branches
-    push_changes
-    
-    echo "✅ Comprehensive merge process completed!"
-    echo "🎉 All changes have been merged into main branch"
-}
-
-# Run main function
-main "$@"
+# Final status check
+echo ""
+echo "=== Final Status ==="
+git status
