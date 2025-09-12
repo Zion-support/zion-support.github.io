@@ -15,8 +15,8 @@ importers:
         specifier: ^0.24.1
         version: 0.24.1
       '@magneticwatermelon/mcp-toolkit':
-        specifier: ^1.1.4
-        version: 1.1.5(typescript@5.9.2)
+        specifier: ^2.0.1
+        version: 2.0.1(typescript@5.9.2)
       '@modelcontextprotocol/sdk':
         specifier: ^1.18.0
         version: 1.18.0
@@ -469,8 +469,9 @@ packages:
   '@js-sdsl/ordered-map@4.4.2':
     resolution: {integrity: sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==}
 
-  '@magneticwatermelon/mcp-toolkit@1.1.5':
-    resolution: {integrity: sha512-vEyyBuA/qFuuN09OiQbmr+AOK7Ym8EWa8wrmcNey7+bZT+PQbFGI/MhhNRph9j7fqWThY1aBtAm27gz0FP+3tg==}
+  '@magneticwatermelon/mcp-toolkit@2.0.1':
+    resolution: {integrity: sha512-xBmRiz47vjLeSmJcjg4uuy0G1m8guTVLyE99+ba9oBW8ItzhYnqbM9cw0xS23JOJ2jUVnP2rOD/s0SPQd+k1bQ==}
+    engines: {node: '>=24.0.0'}
     hasBin: true
     peerDependencies:
       typescript: ^5
@@ -4245,7 +4246,7 @@ snapshots:
 
   '@js-sdsl/ordered-map@4.4.2': {}
 
-  '@magneticwatermelon/mcp-toolkit@1.1.5(typescript@5.9.2)':
+  '@magneticwatermelon/mcp-toolkit@2.0.1(typescript@5.9.2)':
     dependencies:
       '@modelcontextprotocol/sdk': 1.18.0
       '@types/prompts': 2.4.9
