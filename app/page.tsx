@@ -44,6 +44,10 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
+import RevolutionaryTech2025PromotionBanner from '../components/RevolutionaryTech2025PromotionBanner';
+import RevolutionaryTech2025Showcase from '../components/RevolutionaryTech2025Showcase';
+import FutureTechInnovationBanner from '../components/FutureTechInnovationBanner';
+import UltimateContentDiscovery2025 from '../components/UltimateContentDiscovery2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -74,6 +78,19 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <AI2026ContentDiscoveryWidget />
+        
+        {/* REVOLUTIONARY TECH 2025 PROMOTION BANNER */}
+        <RevolutionaryTech2025PromotionBanner />
+        
+        {/* REVOLUTIONARY TECH 2025 SHOWCASE */}
+        <RevolutionaryTech2025Showcase />
+        
+        {/* FUTURE TECH INNOVATION BANNER */}
+        <FutureTechInnovationBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY 2025 */}
+        <UltimateContentDiscovery2025 />
+        
         {/* AI 2031 CONTENT PROMOTION BANNER */}
         <AI2031ContentPromotionBanner />
         
