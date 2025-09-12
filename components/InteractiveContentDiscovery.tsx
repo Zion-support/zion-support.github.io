@@ -1,159 +1,173 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Star, Clock, TrendingUp, BookOpen, FileText, Award } from 'lucide-react';
 
 interface ContentItem {
   id: string;
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'service' | 'webinar';
+  icon: string;
   category: string;
-  readTime: string;
-  featured: boolean;
+  type: 'blog' | 'case-study' | 'resource' | 'tool';
+  readTime?: string;
+  isNew?: boolean;
+  isTrending?: boolean;
+  isPopular?: boolean;
   tags: string[];
 }
 
-const InteractiveContentDiscovery: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
+const contentItems: ContentItem[] = [
+  {
+    id: '1',
+    title: 'AI Advanced Automation 2025: Complete Enterprise Implementation Guide',
+    description: 'Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.',
+    href: '/blog/ai-2025-advanced-automation',
+    icon: '🤖',
+    category: 'AI Automation',
+    type: 'blog',
+    readTime: '25 min read',
+    isNew: true,
+    tags: ['automation', 'enterprise', 'implementation', 'ROI']
+  },
+  {
+    id: '2',
+    title: 'AI Cybersecurity Threats 2025: Complete Defense Strategy',
+    description: 'Protect your organization from emerging AI cybersecurity threats. Learn about advanced attack vectors, defense strategies, and security best practices.',
+    href: '/blog/ai-2025-cybersecurity-threats',
+    icon: '🛡️',
+    category: 'Cybersecurity',
+    type: 'blog',
+    readTime: '22 min read',
+    isNew: true,
+    tags: ['security', 'threats', 'defense', 'cybersecurity']
+  },
+  {
+    id: '3',
+    title: '$200M Manufacturing Success: Autonomous AI Systems Case Study',
+    description: 'Discover how a Fortune 500 manufacturing company achieved $200M savings and 40% cost reduction with autonomous AI systems.',
+    href: '/case-studies/ai-autonomous-manufacturing-success-2025',
+    icon: '💰',
+    category: 'Case Study',
+    type: 'case-study',
+    readTime: '15 min read',
+    isTrending: true,
+    tags: ['manufacturing', 'success', 'case-study', 'ROI']
+  },
+  {
+    id: '4',
+    title: 'AI Implementation Master Guide 2026: Complete 200+ Page Resource',
+    description: 'Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.',
+    href: '/resources/ai-implementation-master-guide-2026',
+    icon: '📚',
+    category: 'Master Guide',
+    type: 'resource',
+    readTime: '200+ pages',
+    isNew: true,
+    tags: ['guide', 'implementation', 'templates', 'checklist']
+  },
+  {
+    id: '5',
+    title: 'AI 2025 Breakthrough Innovations: Revolutionary Technologies',
+    description: 'Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions.',
+    href: '/blog/ai-2025-breakthrough-innovations',
+    icon: '🚀',
+    category: 'AI Innovations',
+    type: 'blog',
+    readTime: '25 min read',
+    isTrending: true,
+    tags: ['innovations', 'technology', 'future', 'breakthrough']
+  },
+  {
+    id: '6',
+    title: 'AI Workforce Transformation 2025: Complete Reskilling Guide',
+    description: 'Learn how to transform your workforce for the AI era with comprehensive reskilling strategies, training programs, and change management approaches.',
+    href: '/blog/ai-workforce-transformation-2025',
+    icon: '👥',
+    category: 'Workforce',
+    type: 'blog',
+    readTime: '18 min read',
+    isNew: true,
+    tags: ['workforce', 'transformation', 'reskilling', 'training']
+  },
+  {
+    id: '7',
+    title: 'AI Data Privacy & Compliance 2025: Complete Guide',
+    description: 'Navigate the complex landscape of AI data privacy regulations with our comprehensive compliance guide and best practices.',
+    href: '/blog/ai-data-privacy-compliance-2025',
+    icon: '🔒',
+    category: 'Privacy',
+    type: 'blog',
+    readTime: '22 min read',
+    isTrending: true,
+    tags: ['privacy', 'compliance', 'data', 'regulations']
+  },
+  {
+    id: '8',
+    title: 'AI Sustainability & Green Tech 2025: Building Eco-Friendly AI',
+    description: 'Learn how to build sustainable AI systems that reduce environmental impact while maintaining high performance.',
+    href: '/blog/ai-sustainability-green-tech-2025',
+    icon: '🌱',
+    category: 'Sustainability',
+    type: 'blog',
+    readTime: '20 min read',
+    isNew: true,
+    tags: ['sustainability', 'green-tech', 'environment', 'eco-friendly']
+  }
+];
 
-  const contentItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'Advanced RAG Systems 2025: Production Guide',
-      description: 'Master production-ready RAG systems with advanced patterns, optimization techniques, and real-world implementations.',
-      href: '/blog/ai-2025-advanced-rag-systems',
-      type: 'blog',
-      category: 'Advanced AI',
-      readTime: '25 min read',
-      featured: true,
-      tags: ['RAG', 'Production', 'AI Architecture', 'Vector Databases']
-    },
-    {
-      id: '2',
-      title: 'AI Multimodal Revolution 2025',
-      description: 'Explore how vision, voice, and text integration is revolutionizing human-computer interaction and AI applications.',
-      href: '/blog/ai-2025-multimodal-revolution',
-      type: 'blog',
-      category: 'Multimodal AI',
-      readTime: '28 min read',
-      featured: true,
-      tags: ['Multimodal', 'Computer Vision', 'Voice AI', 'Integration']
-    },
-    {
-      id: '3',
-      title: 'Quantum Machine Learning 2025',
-      description: 'Discover quantum computing breakthroughs in machine learning, enabling exponential speedups for complex problems.',
-      href: '/blog/ai-2025-quantum-machine-learning',
-      type: 'blog',
-      category: 'Quantum AI',
-      readTime: '32 min read',
-      featured: true,
-      tags: ['Quantum Computing', 'Machine Learning', 'Optimization', 'Algorithms']
-    },
-    {
-      id: '4',
-      title: 'AI Autonomous Manufacturing: $200M Success',
-      description: 'Complete case study: How a Fortune 500 manufacturer achieved $200M savings and 300% productivity gains.',
-      href: '/case-studies/ai-2025-autonomous-manufacturing-revolution',
-      type: 'case-study',
-      category: 'Case Study',
-      readTime: '15 min read',
-      featured: true,
-      tags: ['Manufacturing', 'Automation', 'ROI', 'Success Story']
-    },
-    {
-      id: '5',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
-      type: 'blog',
-      category: 'Enterprise AI',
-      readTime: '22 min read',
-      featured: false,
-      tags: ['Enterprise', 'Automation', 'ROI', 'Efficiency']
-    },
-    {
-      id: '6',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
-      type: 'blog',
-      category: 'Healthcare AI',
-      readTime: '20 min read',
-      featured: false,
-      tags: ['Healthcare', 'Diagnosis', 'Medical AI', 'Accuracy']
-    },
-    {
-      id: '7',
-      title: 'AI Financial Services Transformation',
-      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
-      type: 'case-study',
-      category: 'Case Study',
-      readTime: '18 min read',
-      featured: false,
-      tags: ['Finance', 'Banking', 'Transformation', 'ROI']
-    },
-    {
-      id: '8',
-      title: 'AI Implementation Masterclass 2025',
-      description: 'Comprehensive webinar covering end-to-end AI implementation strategies, best practices, and real-world success stories.',
-      href: '/webinars/ai-2025-implementation-masterclass',
-      type: 'webinar',
-      category: 'Webinar',
-      readTime: '90 min watch',
-      featured: false,
-      tags: ['Masterclass', 'Implementation', 'Strategy', 'Best Practices']
-    }
-  ];
+const categories = [
+  'All',
+  'AI Automation',
+  'Cybersecurity',
+  'Case Study',
+  'Master Guide',
+  'AI Innovations',
+  'Workforce',
+  'Privacy',
+  'Sustainability'
+];
 
-  const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'Advanced AI', name: 'Advanced AI', count: contentItems.filter(item => item.category === 'Advanced AI').length },
-    { id: 'Multimodal AI', name: 'Multimodal AI', count: contentItems.filter(item => item.category === 'Multimodal AI').length },
-    { id: 'Quantum AI', name: 'Quantum AI', count: contentItems.filter(item => item.category === 'Quantum AI').length },
-    { id: 'Case Study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'Case Study').length },
-    { id: 'Enterprise AI', name: 'Enterprise AI', count: contentItems.filter(item => item.category === 'Enterprise AI').length },
-    { id: 'Healthcare AI', name: 'Healthcare AI', count: contentItems.filter(item => item.category === 'Healthcare AI').length },
-    { id: 'Webinar', name: 'Webinars', count: contentItems.filter(item => item.category === 'Webinar').length }
-  ];
+const types = [
+  'All',
+  'Blog',
+  'Case Study',
+  'Resource',
+  'Tool'
+];
+
+export default function InteractiveContentDiscovery() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedType, setSelectedType] = useState('All');
+  const [filteredContent, setFilteredContent] = useState(contentItems);
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     let filtered = contentItems;
 
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by search query
-    if (searchQuery) {
-      filtered = filtered.filter(item => 
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(item =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
 
-    setFilteredContent(filtered);
-  }, [selectedCategory, searchQuery]);
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝';
-      case 'case-study':
-        return '📊';
-      case 'service':
-        return '🚀';
-      case 'webinar':
-        return '🎥';
-      default:
-        return '✨';
+    // Filter by category
+    if (selectedCategory !== 'All') {
+      filtered = filtered.filter(item => item.category === selectedCategory);
     }
-  };
+
+    // Filter by type
+    if (selectedType !== 'All') {
+      filtered = filtered.filter(item => item.type === selectedType);
+    }
+
+    setFilteredContent(filtered);
+  }, [searchTerm, selectedCategory, selectedType]);
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -161,173 +175,277 @@ const InteractiveContentDiscovery: React.FC = () => {
         return 'from-blue-500 to-cyan-500';
       case 'case-study':
         return 'from-green-500 to-emerald-500';
-      case 'service':
+      case 'resource':
         return 'from-purple-500 to-pink-500';
-      case 'webinar':
+      case 'tool':
         return 'from-orange-500 to-red-500';
       default:
         return 'from-gray-500 to-gray-600';
     }
   };
 
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      'AI Automation': 'bg-blue-100 text-blue-800',
+      'Cybersecurity': 'bg-red-100 text-red-800',
+      'Case Study': 'bg-green-100 text-green-800',
+      'Master Guide': 'bg-purple-100 text-purple-800',
+      'AI Innovations': 'bg-yellow-100 text-yellow-800',
+      'Workforce': 'bg-indigo-100 text-indigo-800',
+      'Privacy': 'bg-gray-100 text-gray-800',
+      'Sustainability': 'bg-emerald-100 text-emerald-800'
+    };
+    return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+  };
+
+  const getStatusBadge = (item: ContentItem) => {
+    if (item.isNew) return { text: 'NEW', color: 'bg-green-500 text-white' };
+    if (item.isTrending) return { text: 'TRENDING', color: 'bg-orange-500 text-white' };
+    if (item.isPopular) return { text: 'POPULAR', color: 'bg-blue-500 text-white' };
+    return null;
+  };
+
   return (
-    <div className="bg-white py-16">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Discover Our Latest AI Content
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            🔍 Discover Your Perfect AI Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore cutting-edge AI insights, case studies, and implementation guides 
-            from industry experts. Find exactly what you need to accelerate your AI journey.
+            Use our interactive discovery tool to find exactly the AI resources, guides, and insights you need. 
+            Filter by category, type, or search for specific topics.
           </p>
-        </div>
+        </motion.div>
 
         {/* Search and Filters */}
-        <div className="mb-8">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
-            {/* Search Bar */}
-            <div className="flex-1">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search content, tags, or topics..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-              </div>
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for AI content, topics, or keywords..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
-          </div>
-
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredContent.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-all duration-300"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl">{getTypeIcon(item.type)}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getTypeColor(item.type)} text-white`}>
-                    {item.type === 'case-study' ? 'Case Study' : 
-                     item.type === 'webinar' ? 'Webinar' : 
-                     item.type === 'service' ? 'Service' : 'Article'}
-                  </span>
-                </div>
-                {item.featured && (
-                  <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
-                    Featured
-                  </span>
-                )}
-              </div>
-
-              <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {item.title}
-              </h3>
-              
-              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                {item.description}
-              </p>
-
-              <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                <span>{item.readTime}</span>
-                <span>{item.category}</span>
-              </div>
-
-              <div className="flex flex-wrap gap-1">
-                {item.tags.slice(0, 3).map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-                {item.tags.length > 3 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                    +{item.tags.length - 3} more
-                  </span>
-                )}
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* No Results */}
-        {filteredContent.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
-            <p className="text-gray-600 mb-4">
-              Try adjusting your search terms or category filters
-            </p>
             <button
-              onClick={() => {
-                setSearchQuery('');
-                setSelectedCategory('all');
-              }}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
             >
-              Clear Filters
+              <Filter className="w-5 h-5" />
+              Filters
             </button>
           </div>
-        )}
+
+          <AnimatePresence>
+            {showFilters && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="border-t border-gray-200 pt-6"
+              >
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-3">Category</label>
+                    <div className="flex flex-wrap gap-2">
+                      {categories.map((category) => (
+                        <button
+                          key={category}
+                          onClick={() => setSelectedCategory(category)}
+                          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                            selectedCategory === category
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {category}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-3">Type</label>
+                    <div className="flex flex-wrap gap-2">
+                      {types.map((type) => (
+                        <button
+                          key={type}
+                          onClick={() => setSelectedType(type)}
+                          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                            selectedType === type
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {type}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Results */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl font-bold text-gray-900">
+              {filteredContent.length} Content {filteredContent.length === 1 ? 'Item' : 'Items'} Found
+            </h3>
+            {(selectedCategory !== 'All' || selectedType !== 'All' || searchTerm) && (
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('All');
+                  setSelectedType('All');
+                }}
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Clear Filters
+              </button>
+            )}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`${selectedCategory}-${selectedType}-${searchTerm}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {filteredContent.map((item, index) => {
+                const statusBadge = getStatusBadge(item);
+                
+                return (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ y: -5, scale: 1.02 }}
+                  >
+                    <Link href={item.href} className="group block">
+                      <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 h-full">
+                        {statusBadge && (
+                          <div className="flex justify-end mb-4">
+                            <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusBadge.color}`}>
+                              {statusBadge.text}
+                            </span>
+                          </div>
+                        )}
+                        
+                        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                          {item.icon}
+                        </div>
+                        
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                            {item.category}
+                          </span>
+                          {item.readTime && (
+                            <span className="text-xs text-gray-500 flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              {item.readTime}
+                            </span>
+                          )}
+                        </div>
+                        
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                          {item.title}
+                        </h3>
+                        
+                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                          {item.description}
+                        </p>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2 text-xs text-gray-500">
+                            {item.type === 'blog' && <BookOpen className="w-3 h-3" />}
+                            {item.type === 'case-study' && <Award className="w-3 h-3" />}
+                            {item.type === 'resource' && <FileText className="w-3 h-3" />}
+                            {item.type === 'tool' && <TrendingUp className="w-3 h-3" />}
+                            <span className="capitalize">{item.type.replace('-', ' ')}</span>
+                          </div>
+                          <div className="flex items-center gap-1 text-blue-600 group-hover:gap-2 transition-all">
+                            <span className="text-sm font-medium">Read More</span>
+                            <span>→</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+
+          {filteredContent.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
+              <p className="text-gray-600 mb-4">Try adjusting your search terms or filters</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('All');
+                  setSelectedType('All');
+                }}
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Clear all filters
+              </button>
+            </motion.div>
+          )}
+        </div>
 
         {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Can't Find What You're Looking For?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Our AI experts can create custom content tailored to your specific needs and challenges.
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Can't Find What You're Looking For?</h3>
+            <p className="text-lg opacity-90 mb-6">
+              Our content library is constantly growing. Let us know what specific AI topics or resources you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services/ai-consulting"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Request Custom Content
+                Request Content
               </Link>
               <Link
-                href="/contact"
-                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                href="/content-showcase"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Contact Our Experts
+                Browse All Content
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default InteractiveContentDiscovery;
+}
