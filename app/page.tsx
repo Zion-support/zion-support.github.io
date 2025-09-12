@@ -17,7 +17,8 @@ import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/Su
 import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -184,6 +185,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        <NewContentPromoBanner />
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
           <StructuredData 
             type="Organization" 
@@ -275,6 +277,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Featured Content Showcase */}
+      <FeaturedContentShowcase />
       
       {/* Featured Content Section */}
       <ContentShowcase
