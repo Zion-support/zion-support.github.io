@@ -17,9 +17,10 @@ const EnhancedContentPromotionBanner = lazy(() => import('../components/Enhanced
 const FeaturedContentShowcase = lazy(() => import('../components/FeaturedContentShowcase'));
 const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContentShowcase'));
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
-const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
 const TrendingContentWidget = lazy(() => import('../components/TrendingContentWidget'));
 const EnhancedNewsletterSignup = lazy(() => import('../components/EnhancedNewsletterSignup'));
+const InteractiveContentDiscovery = lazy(() => import('../components/InteractiveContentDiscovery'));
+const DynamicContentCarousel = lazy(() => import('../components/DynamicContentCarousel'));
 
 // Card component
 function Card({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) {
@@ -182,11 +183,11 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner />
       </Suspense>
 
-      {/* Trending Topics Widget */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <Suspense fallback={<LoadingSpinner size="md" text="Loading trending topics..." />}>
-            <TrendingTopicsWidget />
+      {/* Dynamic Content Carousel */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
+            <DynamicContentCarousel />
           </Suspense>
         </div>
       </section>
@@ -209,7 +210,6 @@ export default function HomePage() {
           </div>
 
           <div className='grid md:grid-cols-3 gap-6'>
-<<<<<<< HEAD
             <Link href='/blog/ai-2025-advanced-robotics' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
@@ -228,39 +228,15 @@ export default function HomePage() {
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
                 <h3 className='text-lg font-semibold mb-2'>AI Healthcare Diagnosis Revolution</h3>
                 <p className='text-sm opacity-90 mb-3'>Transforming medical care with AI-powered diagnostics</p>
-=======
-            <Link href='/blog/ai-2025-enterprise-ai-governance' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏛️</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Governance</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete ethical AI governance framework with 340% ROI</p>
->>>>>>> cursor/create-and-deploy-new-content-5db4
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>25 min read</span>
+                  <span>18 min read</span>
                   <span className='mx-2'>•</span>
-                  <span className='bg-purple-500 px-2 py-1 rounded-full'>NEW</span>
+                  <span className='bg-green-500 px-2 py-1 rounded-full'>NEW</span>
                 </div>
               </div>
             </Link>
 
-<<<<<<< HEAD
             <Link href='/case-studies/ai-transformation-retail-giant-success-2025' className='group'>
-=======
-            <Link href='/blog/ai-2025-multimodal-revolution' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>👁️</div>
-                <h3 className='text-lg font-semibold mb-2'>Multimodal AI Revolution</h3>
-                <p className='text-sm opacity-90 mb-3'>300% accuracy boost with vision, audio & sensor fusion</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>28 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span className='bg-pink-500 px-2 py-1 rounded-full'>TRENDING</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/case-studies/ai-2025-global-retail-transformation-success' className='group'>
->>>>>>> cursor/create-and-deploy-new-content-5db4
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏆</div>
                 <h3 className='text-lg font-semibold mb-2'>$2.8B Retail Transformation</h3>
@@ -2197,24 +2173,12 @@ export default function HomePage() {
         <EnhancedContentShowcase />
       </Suspense>
 
-      {/* Trending Content Section */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-              🔥 What's Trending Right Now
-            </h2>
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Discover the most popular AI content, case studies, and resources 
-              that are helping businesses transform in 2025.
-            </p>
-          </div>
-          
-          <div className='max-w-4xl mx-auto'>
-            <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
-              <TrendingContentWidget />
-            </Suspense>
-          </div>
+      {/* Interactive Content Discovery */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Suspense fallback={<LoadingSpinner size="lg" text="Loading content discovery..." />}>
+            <InteractiveContentDiscovery />
+          </Suspense>
         </div>
       </section>
 
