@@ -137,6 +137,16 @@ function Header() {
                 <Link href="/blog/ai-2025-edge-computing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🌐 Edge Computing Revolution
                 </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2027 Future Predictions (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2027-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚗 Automotive AI Breakthrough (NEW)
+                </Link>
+                <Link href="/resources/ai-2027-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2027 Master Guide (NEW)
+                </Link>
               </div>
             </div>
           </div>
@@ -169,6 +179,16 @@ function Header() {
                 </Link>
                 <Link href="/revolutionary-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   ⭐ Featured Content
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/ai-2027-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2027 Predictions (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2027-automotive-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚗 Automotive AI Case Study (NEW)
+                </Link>
+                <Link href="/resources/ai-2027-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2027 Master Guide (NEW)
                 </Link>
               </div>
             </div>
