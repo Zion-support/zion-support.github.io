@@ -1,104 +1,308 @@
 {
   "summary": {
-<<<<<<< HEAD
-    "totalFiles": 4,
-    "filesWithIssues": 4,
-    "totalIssues": 0,
-    "totalWarnings": 4,
-    "buildBreakingFiles": 0,
-    "canBuild": true
-  },
-  "results": [
-    {
-      "file": "pages/api/email-validator.ts",
-=======
-    "totalFiles": 36,
-    "filesWithIssues": 36,
-    "totalIssues": 31,
-    "totalWarnings": 36,
-    "buildBreakingFiles": 11,
+    "totalFiles": 332,
+    "filesWithIssues": 332,
+    "totalIssues": 401,
+    "totalWarnings": 129,
+    "buildBreakingFiles": 275,
     "canBuild": false
   },
   "results": [
     {
+          "line": 0,
+=======
+      "file": "pages/403.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/ProductsList.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_COMPONENT_DECLARATION",
+          "message": "Missing component function/class declaration",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_RETURN_STATEMENT",
+          "message": "Missing return statement or JSX",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "PAGE_TOO_SHORT",
+          "message": "Page content seems too short, may be incomplete",
+          "line": 0,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/admin/kpi.tsx",
+=======
       "file": "pages/_app.js",
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-<<<<<<< HEAD
-          "line": 81,
+          "line": 0,
 =======
           "line": 0,
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
           "severity": "warning"
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "file": "pages/api/password-strength.ts",
+      "file": "pages/ai-consciousness-evolution-2025.tsx",
+      "issues": [],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+          "line": 6,
+=======
+      "file": "pages/academy/futurescape.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/academy/storybook.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/account.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/activity-log.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/admin/_middleware.ts",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 1,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_COMPONENT_DECLARATION",
+          "message": "Missing component function/class declaration",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_RETURN_STATEMENT",
+          "message": "Missing return statement or JSX",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "PAGE_TOO_SHORT",
+          "message": "Page content seems too short, may be incomplete",
+          "line": 0,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/ai-customer-service-platform.tsx",
 =======
       "file": "pages/admin/kpi.tsx",
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-<<<<<<< HEAD
-          "line": 68,
 =======
           "line": 0,
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
           "severity": "warning"
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "file": "pages/api/text-analyzer.ts",
-=======
+      "file": "pages/admin/logs.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/admin/performance.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/admin/pitch-generator.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/admin/products.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "file": "pages/admin/quotes/automation-status.tsx",
+      "issues": [],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "PAGE_TOO_SHORT",
+          "message": "Page content seems too short, may be incomplete",
+          "line": 0,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/admin/vault.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
       "file": "pages/ai-consciousness-evolution-2025.tsx",
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-<<<<<<< HEAD
-          "line": 71,
-=======
           "line": 6,
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
           "severity": "warning"
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "file": "pages/api/url-shortener.ts",
-=======
       "file": "pages/ai-customer-service-platform.tsx",
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-<<<<<<< HEAD
-          "line": 31,
-=======
           "line": 6,
           "severity": "warning"
         }
       ]
+    },
+    {
+      "file": "pages/ai-customer-success-platform.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
     },
     {
       "file": "pages/ai-healthcare-analytics.tsx",
@@ -153,6 +357,19 @@
       ]
     },
     {
+      "file": "pages/ai-sales-intelligence-platform.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": []
+    },
+    {
       "file": "pages/ai-supply-chain-optimization.tsx",
       "issues": [],
       "warnings": [
@@ -166,100 +383,21 @@
       ]
     },
     {
-      "file": "pages/autonomous-it-operations-center.tsx",
+      "file": "pages/api/admin/[type].ts",
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-          "line": 6,
+          "line": 88,
           "severity": "warning"
         }
       ]
     },
     {
-      "file": "pages/dashboard/api-access.tsx",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/dashboard/metrics.tsx",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/edge-computing-orchestration-platform.tsx",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 8,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/events/global.tsx",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/expo.tsx",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/features/ai-content-generation.tsx",
+      "file": "pages/api/admin/analyze-feedback.ts",
       "issues": [
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_EXPORT_DEFAULT",
-          "message": "Missing export default statement",
-          "line": 0,
-          "severity": "error"
-        },
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_COMPONENT_DECLARATION",
-          "message": "Missing component function/class declaration",
-          "line": 0,
-          "severity": "error"
-        },
         {
           "type": "CRITICAL",
           "code": "MISSING_RETURN_STATEMENT",
@@ -271,62 +409,25 @@
       "warnings": [
         {
           "type": "WARNING",
-          "code": "PAGE_TOO_SHORT",
-          "message": "Page content seems too short, may be incomplete",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/franchise-portal/index.tsx",
-      "issues": [
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_EXPORT_DEFAULT",
-          "message": "Missing export default statement",
-          "line": 1,
-          "severity": "error"
-        },
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_COMPONENT_DECLARATION",
-          "message": "Missing component function/class declaration",
-          "line": 0,
-          "severity": "error"
-        },
-        {
-          "type": "CRITICAL",
-          "code": "MISSING_RETURN_STATEMENT",
-          "message": "Missing return statement or JSX",
-          "line": 0,
-          "severity": "error"
-        }
-      ],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "PAGE_TOO_SHORT",
-          "message": "Page content seems too short, may be incomplete",
-          "line": 0,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/governance/org-chart.tsx",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-          "line": 0,
+          "line": 15,
           "severity": "warning"
         }
       ]
     },
     {
+    "totalFiles": 1,
+    "filesWithIssues": 1,
+    "totalIssues": 0,
+    "totalWarnings": 1,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [
+    {
+      "file": "pages/_app.tsx",
+=======
       "file": "pages/index.page.tsx",
       "issues": [
         {
@@ -740,32 +841,19 @@
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
           "line": 0,
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
           "severity": "warning"
         }
       ]
     }
   ],
-<<<<<<< HEAD
+    }
+  ],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T13:10:22.438Z"
+=======
   "results": [],
   "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T19:03:33.426Z"
+=======
   "generatedAt": "2025-08-20T19:21:03.555Z"
-=======
-  "generatedAt": "2025-08-20T20:44:48.331Z"
-=======
-  "buildBreakingFiles": [
-    "pages/features/ai-content-generation.tsx",
-    "pages/franchise-portal/index.tsx",
-    "pages/index.page.tsx",
-    "pages/investors/index.tsx",
-    "pages/mobile-launch.page.tsx",
-    "pages/more-products.tsx",
-    "pages/open-app.page.tsx",
-    "pages/revolutionary-home.tsx",
-    "pages/roadmap.tsx",
-    "pages/token/model.tsx",
-    "pages/zion/ipfs.tsx"
-  ],
-  "generatedAt": "2025-08-24T03:18:48.442Z"
->>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
 }

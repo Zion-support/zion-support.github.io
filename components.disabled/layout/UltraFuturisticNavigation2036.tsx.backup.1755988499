@@ -201,57 +201,37 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Showcase & Pricing',
-<<<<<<< HEAD
-    href: '/2036-innovative-services-showcase',
-=======
     href: '/pricing',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
     icon: <Star className="w-5 h-5" />,
     description: 'Service showcases and pricing',
     badge: 'Featured',
     category: 'showcase',
     children: [
       { 
-<<<<<<< HEAD
-        name: '2036 Innovation Showcase', 
-        href: '/2036-innovative-services-showcase', 
-        description: 'Cutting-edge 2036 services',
-        icon: <Sparkles className="w-4 h-4" />,
-=======
         name: 'Pricing Plans', 
         href: '/pricing', 
         description: 'Service pricing information',
         icon: <DollarSign className="w-4 h-4" />,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
         featured: true
       },
       { 
         name: 'Services Showcase', 
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete services overview',
-<<<<<<< HEAD
-        icon: <Grid className="w-4 h-4" />,
-      },
-      {
-        name: '2026 Services Showcase',
-        href: '/revolutionary-2026-services-showcase',
-        description: 'Next-generation solutions',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      {
-        name: 'Ultimate 2025 Micro SAAS',
-        href: '/ultimate-2025-micro-saas-showcase',
-        description: 'Comprehensive micro SaaS portfolio',
-        icon: <Layers className="w-4 h-4" />
-      },
-      {
-        name: 'Pricing Plans',
-        href: '/pricing',
-        description: 'Transparent pricing structure',
-        icon: <DollarSign className="w-4 h-4" />
-=======
         icon: <Grid className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+=======
+      { 
+        name: 'Innovative 2037 Services', 
+        href: '/innovative-2037-services-showcase', 
+        description: 'Cutting-edge 2037 services',
+        icon: <Sparkles className="w-4 h-4" />,
+        featured: true
+      },
+      { 
+        name: 'Pricing Plans', 
+        href: '/pricing', 
+        description: 'Service pricing information',
+        icon: <DollarSign className="w-4 h-4" />
       },
       { 
         name: 'Market Pricing', 

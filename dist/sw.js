@@ -1,6 +1,7 @@
 const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
+<<<<<<< HEAD
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
@@ -30,12 +31,38 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request);
       }
     )
+=======
+  '/index.html',
+  '/manifest.json',
+=======
+  '/favicon.ico',
+  '/images/zion-logo.png',
+  '/images/placeholder.jpg'
+];
+
+// Install event - cache static files
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(STATIC_CACHE_NAME)
+      .then((cache) => {
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Static files cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static files:', error);
+      })
+>>>>>>> cursor/create-and-deploy-new-content-d63f
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
+<<<<<<< HEAD
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -46,6 +73,25 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
+=======
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE_NAME && 
+                cacheName !== DYNAMIC_CACHE_NAME && 
+                cacheName !== CACHE_NAME) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service worker activated');
+        return self.clients.claim();
+      })
+>>>>>>> cursor/create-and-deploy-new-content-d63f
   );
 });
 
@@ -89,9 +135,15 @@ async function getStoredRequests() {
   return stored ? JSON.parse(stored) : [];
 }
 
+<<<<<<< HEAD
 // Remove stored request
 async function removeStoredRequest(id) {
   const requests = await getStoredRequests();
   const filtered = requests.filter(req => req.id !== id);
   localStorage.setItem('offline-requests', JSON.stringify(filtered));
 }
+=======
+self.addEventListener('unhandledrejection', (event) => {
+  console.error('Service worker unhandled rejection:', event.reason);
+});
+>>>>>>> cursor/create-and-deploy-new-content-d63f

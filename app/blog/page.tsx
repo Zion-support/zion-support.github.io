@@ -108,6 +108,49 @@ const blogPosts: BlogPost[] = [
     image: '⚡',
     views: 987
   }
+  ,
+  {
+    id: 'ai-governance-playbook',
+    title: 'AI Governance Playbook: Guardrails That Don’t Slow You Down',
+    excerpt: 'A lightweight framework for model risk, data privacy, and human-in-the-loop approvals.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI', 'Governance', 'Risk'],
+    featured: false,
+    url: '/blog/ai-governance-playbook',
+    image: '🛡️',
+    views: 0
+  },
+  {
+    id: 'it-cost-optimization-quick-wins',
+    title: 'IT Cost Optimization: 9 Quick Wins for Q4',
+    excerpt: 'Practical tactics across cloud, licenses, and automation that cut cost without chaos.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '10 min read',
+    category: 'IT & Cloud',
+    tags: ['IT', 'FinOps', 'Optimization'],
+    featured: false,
+    url: '/blog/it-cost-optimization-quick-wins',
+    image: '💸',
+    views: 0
+  },
+  {
+    id: 'token-rewards-growth-loops',
+    title: 'Designing Token Reward Growth Loops',
+    excerpt: 'How to craft sustainable incentives that compound community engagement and revenue.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '11 min read',
+    category: 'Blockchain & Web3',
+    tags: ['Web3', 'Tokenomics', 'Growth'],
+    featured: false,
+    url: '/blog/token-rewards-growth-loops',
+    image: '🪙',
+    views: 0
+  }
 ];
 
 export default function BlogPage() {

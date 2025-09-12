@@ -1,0 +1,354 @@
+
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  ChevronDown, 
+  Phone, 
+  Linkedin, 
+  Twitter, 
+  Github, 
+  Youtube,
+  Home,
+  Briefcase,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Target,
+  Building,
+  Users,
+  BookOpen,
+  FileText,
+  Video,
+  Code,
+  Sparkles,
+  Zap,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink
+} from 'lucide-react';
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+// Define Node type for DOM event handling
+type Node = HTMLElement | null;
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  icon: React.ReactNode;
+  description?: string;
+  children?: NavigationItem[];
+  badge?: string;
+  featured?: boolean;
+  neonColor?: string;
+  category?: string;
+}
+
+// Enhanced navigation items with better organization and accessibility
+const navigationItems: NavigationItem[] = [
+  {
+    label: 'Home',
+    href: '/',
+    icon: <Home className="w-4 h-4" />,
+    neonColor: 'shadow-cyan-400/50',
+    description: 'Return to homepage'
+  },
+  {
+    label: 'Services',
+    href: '/services',
+    icon: <Briefcase className="w-4 h-4" />,
+    description: 'Explore our comprehensive technology solutions',
+    badge: 'New',
+    neonColor: 'shadow-blue-400/50',
+    children: [
+      {
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai-ml',
+        icon: <Brain className="w-4 h-4" />,
+        description: 'Advanced AI solutions for enterprise',
+        featured: true,
+        neonColor: 'shadow-purple-400/50',
+        category: 'AI Services'
+      },
+      {
+        label: 'Quantum Computing',
+        href: '/services?category=quantum',
+        icon: <Atom className="w-4 h-4" />,
+        description: 'Next-generation quantum solutions',
+        featured: true,
+        neonColor: 'shadow-blue-400/50',
+        category: 'Quantum Technology'
+      },
+      {
+        label: 'Space Technology',
+        href: '/services?category=space-tech',
+        icon: <Rocket className="w-4 h-4" />,
+        description: 'Innovative space tech applications',
+        featured: true,
+        neonColor: 'shadow-pink-400/50',
+        category: 'Space Technology'
+      },
+      {
+        label: 'Cybersecurity',
+        href: '/services?category=cybersecurity',
+        icon: <Shield className="w-4 h-4" />,
+        description: 'Advanced security solutions',
+        featured: true,
+        neonColor: 'shadow-red-400/50',
+        category: 'Security'
+      },
+      {
+        label: 'Cloud & DevOps',
+        href: '/services?category=cloud-devops',
+        icon: <Cloud className="w-4 h-4" />,
+        description: 'Cloud infrastructure and automation',
+        neonColor: 'shadow-green-400/50',
+        category: 'Infrastructure'
+      },
+      {
+        label: 'Business Solutions',
+        href: '/services?category=business',
+        icon: <Target className="w-4 h-4" />,
+        description: 'Business optimization and automation',
+        neonColor: 'shadow-emerald-400/50',
+        category: 'Business'
+      }
+    ]
+  },
+  {
+    label: 'About',
+    href: '/about',
+    icon: <Building className="w-4 h-4" />,
+    description: 'Learn about our company and mission',
+    children: [
+      {
+        label: 'Our Story',
+        href: '/about#story',
+        icon: <BookOpen className="w-4 h-4" />,
+        description: 'Company history and vision'
+      },
+      {
+        label: 'Team',
+        href: '/team',
+        icon: <Users className="w-4 h-4" />,
+        description: 'Meet our expert team'
+      },
+      {
+        label: 'Careers',
+        href: '/careers',
+        icon: <Award className="w-4 h-4" />,
+        description: 'Join our team'
+      }
+    ]
+  },
+  {
+    label: 'Resources',
+    href: '/resources',
+    icon: <FileText className="w-4 h-4" />,
+    description: 'Educational content and tools',
+    children: [
+      {
+        label: 'Blog',
+        href: '/blog',
+        icon: <BookOpen className="w-4 h-4" />,
+        description: 'Latest insights and updates'
+      },
+      {
+        label: 'Documentation',
+        href: '/docs',
+        icon: <Code className="w-4 h-4" />,
+        description: 'Technical documentation'
+      },
+      {
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Video className="w-4 h-4" />,
+        description: 'Educational webinars'
+      },
+      {
+        label: 'White Papers',
+        href: '/white-papers',
+        icon: <FileText className="w-4 h-4" />,
+        description: 'In-depth research papers'
+      },
+      {
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <FileText className="w-4 h-4" />,
+        description: 'Success stories and implementations'
+      },
+      {
+        label: 'Training',
+        href: '/training',
+        icon: <Award className="w-4 h-4" />,
+        description: 'Professional development courses'
+      }
+    ]
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-4 h-4" />,
+    description: 'Get in touch with our team'
+  }
+];
+
+// Enhanced social links
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/zion-tech-group',
+    icon: <Linkedin className="w-5 h-5" />,
+    description: 'Follow us on LinkedIn'
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/ziontechgroup',
+    icon: <Twitter className="w-5 h-5" />,
+    description: 'Follow us on Twitter'
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/Zion-Holdings',
+    icon: <Github className="w-5 h-5" />,
+    description: 'View our open source projects'
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: <Youtube className="w-5 h-5" />,
+    description: 'Watch our videos'
+  }
+];
+
+// Performance-optimized animations
+const navigationAnimations = {
+  slideDown: {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+    transition: { duration: 0.2, ease: "easeOut" }
+  },
+  fadeIn: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.15 }
+  }
+};
+
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  
+  const router = useRouter();
+  const navRef = useRef<HTMLElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+  }, []);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [router.asPath]);
+
+  // Handle search focus
+  useEffect(() => {
+    if (isSearchOpen && searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+              const target = event.target as any;
+      if (!target.closest('.navigation-dropdown')) {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Optimized event handlers
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+
+  const toggleDropdown = useCallback((label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  }, [activeDropdown]);
+
+  const closeDropdown = useCallback(() => {
+    setActiveDropdown(null);
+  }, []);
+
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+      setIsSearchOpen(false);
+    }
+  }, [searchQuery, router]);
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setSearchQuery('');
+    }
+  }, [isSearchOpen]);
+
+  // Get animation props based on user preference
+  const getAnimationProps = (animationType: keyof typeof navigationAnimations) => {
+    if (isReducedMotion) {
+      return { initial: {}, animate: {}, exit: {}, transition: {} };
+    }
+    return navigationAnimations[animationType];
+  };
+
+export default function EnhancedNavigation() {
+  return (
+    <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">
+      <div className="container mx-auto px-4 h-14 flex items-center justify-between">
+        <Link href="/">
+          <a className="font-semibold">Zion</a>
+        </Link>
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/about"><a>About</a></Link>
+          <Link href="/blog"><a>Blog</a></Link>
+          <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/settings/account"><a>Account</a></Link>
+          <Web3LoginButton />
+        </div>
+      </div>
+    </nav>
+  );
+}

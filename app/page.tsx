@@ -160,6 +160,15 @@ export default function HomePage() {
                 📖 Download Master Playbook
               </Link>
             </div>
+            {/* Blog promo for new posts */}
+            <div className='mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm'>
+              <span className='opacity-90'>New on the blog:</span>
+              <Link href='/blog/ai-governance-playbook' className='underline decoration-white/60 underline-offset-4 hover:decoration-white'>AI Governance Playbook</Link>
+              <span className='hidden sm:inline'>•</span>
+              <Link href='/blog/it-cost-optimization-quick-wins' className='underline decoration-white/60 underline-offset-4 hover:decoration-white'>IT Cost Optimization</Link>
+              <span className='hidden sm:inline'>•</span>
+              <Link href='/blog/token-rewards-growth-loops' className='underline decoration-white/60 underline-offset-4 hover:decoration-white'>Token Reward Loops</Link>
+            </div>
           </div>
 
           {/* Featured New Content Grid */}

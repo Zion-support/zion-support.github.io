@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
-  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom
+  Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
+  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
 } from 'lucide-react';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
 
@@ -10,16 +10,120 @@ export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️' },
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
-    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️' },
-    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' }
+=======
+const EnhancedServicesShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const services: Service[] = [
+    {
+      id: 'ai-bi',
+      name: 'AI Business Intelligence',
+      tagline: 'Transform data into actionable insights with AI-powered analytics',
+      category: 'AI & Analytics',
+      price: '$499',
+      period: '/month',
+      setupTime: '2-3 weeks',
+      customers: '150+',
+      features: ['AI-powered dashboards', 'Predictive analytics', 'Real-time insights', 'Custom reporting'],
+      benefits: ['30% faster decision making', 'Improved data accuracy', 'Cost reduction'],
+      roi: 'Average 3.2x ROI within 6 months',
+      marketSize: '$25B',
+      growthRate: '25% YoY',
+      popular: true,
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      id: 'quantum-cyber',
+      name: 'Quantum Cybersecurity',
+      tagline: 'Future-proof security with quantum-resistant encryption and AI threat detection',
+      category: 'Security',
+      price: '$799',
+      period: '/month',
+      setupTime: '4-6 weeks',
+      customers: '75+',
+      features: ['Quantum-resistant encryption', 'AI threat detection', 'Zero-trust architecture', '24/7 monitoring'],
+      benefits: ['99.99% threat prevention', 'Compliance ready', 'Reduced security incidents'],
+      roi: 'Average 4.1x ROI within 8 months',
+      marketSize: '$18B',
+      growthRate: '32% YoY',
+      popular: false,
+      icon: Shield,
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      id: 'edge-computing',
+      name: 'Edge Computing Orchestration',
+      tagline: 'Deploy and manage applications at the edge with intelligent orchestration',
+      category: 'Infrastructure',
+      price: '$349',
+      period: '/month',
+      setupTime: '1-2 weeks',
+      customers: '200+',
+      features: ['Edge node management', 'IoT device management', 'Real-time monitoring', 'Auto-scaling'],
+      benefits: ['50% latency reduction', 'Improved reliability', 'Cost optimization'],
+      roi: 'Average 2.8x ROI within 4 months',
+      marketSize: '$12B',
+      growthRate: '28% YoY',
+      popular: false,
+      icon: Cpu,
+      color: 'from-emerald-500 to-teal-500'
+    },
+    {
+      id: 'space-tech',
+      name: 'Space Technology Innovation',
+      tagline: 'Accelerate space exploration with cutting-edge technology solutions',
+      category: 'Space Tech',
+      price: '$2,499',
+      period: '/month',
+      setupTime: '8-12 weeks',
+      customers: '25+',
+      features: ['Satellite management', 'AI mission planning', 'Quantum communication', 'Space analytics'],
+      benefits: ['Mission success rate 95%+', 'Reduced launch costs', 'Advanced capabilities'],
+      roi: 'Average 5.2x ROI within 12 months',
+      marketSize: '$8B',
+      growthRate: '45% YoY',
+      popular: true,
+      icon: Rocket,
+      color: 'from-violet-500 to-purple-500'
+    },
+    {
+      id: 'neural-interface',
+      name: 'Neural Interface Development',
+      tagline: 'Build the future of human-computer interaction with neural interfaces',
+      category: 'Emerging Tech',
+      price: '$899',
+      period: '/month',
+      setupTime: '6-8 weeks',
+      customers: '40+',
+      features: ['BCI development tools', 'Neural signal processing', 'AI pattern recognition', 'Safety protocols'],
+      benefits: ['Revolutionary UX', 'Accessibility improvements', 'Research advancement'],
+      roi: 'Average 6.8x ROI within 18 months',
+      marketSize: '$3B',
+      growthRate: '67% YoY',
+      popular: false,
+      icon: Brain,
+      color: 'from-pink-500 to-rose-500'
+    },
+    {
+      id: 'quantum-ai',
+      name: 'Quantum AI Neural Networks',
+      tagline: 'Quantum-powered AI with advanced consciousness capabilities',
+      category: 'Quantum AI',
+      price: '$1,299',
+      period: '/month',
+      setupTime: '10-14 weeks',
+      customers: '15+',
+      features: ['Quantum neural networks', 'Consciousness simulation', 'Advanced learning', 'Quantum optimization'],
+      benefits: ['Unprecedented AI capabilities', 'Breakthrough research', 'Competitive advantage'],
+      roi: 'Average 8.5x ROI within 24 months',
+      marketSize: '$2B',
+      growthRate: '89% YoY',
+      popular: true,
+      icon: Atom,
+      color: 'from-blue-500 to-cyan-500'
+    }
   ];
 
   const filteredServices = selectedCategory === 'all' 
@@ -88,23 +192,18 @@ export default function EnhancedServicesShowcase() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-              >
-                {/* Popular Badge */}
-                {service.popular && (
-                  <div className="absolute top-4 right-4 z-20">
-                    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                      <Star className="w-3 h-3" />
-                      Popular
-                    </div>
+=======
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
                   </div>
                 )}
 
@@ -228,8 +327,8 @@ export default function EnhancedServicesShowcase() {
             <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-white/70 mb-8">
-              Join hundreds of companies already using Zion Tech Group's revolutionary micro SAAS services
+            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+              Let's discuss how our cutting-edge technology solutions can accelerate your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

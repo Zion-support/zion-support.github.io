@@ -114,16 +114,6 @@ export type ServiceVariant =
   | 'project-management'
   | 'financial-automation'
   | 'ai-consciousness'
-<<<<<<< HEAD
-  | 'quantum-teleportation'
-  | 'space-colony'
-  | 'neural-ecosystem'
-  | 'ai-corporation'
-  | 'quantum-materials'
-  | 'metaverse-economy'
-  | 'ai-research'
-  | 'quantum-neural'
-  | 'space-manufacturing';
 =======
   | 'quantum-reality'
   | 'temporal-analytics'
@@ -150,4 +140,3 @@ export type ServiceVariant =
   | 'multiversal-tech'
   | 'autonomous-ai'
   | 'quantum-reality-fusion';
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-a421

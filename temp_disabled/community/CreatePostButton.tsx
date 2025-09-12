@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
@@ -47,3 +48,14 @@ export function CreatePostButton({ categoryId, className }: CreatePostButtonProp
 }
 
 export default CreatePostButton;
+=======
+import React from 'react';
+export function ListingScoreCard() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3

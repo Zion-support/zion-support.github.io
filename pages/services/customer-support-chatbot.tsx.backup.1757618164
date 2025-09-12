@@ -1,0 +1,30 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const FeedbackWidget = dynamic(() => import('../../components/feedback/FeedbackWidget'), { ssr: false });
+
+const CustomerSupportChatbot: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>CustomerSupportChatbot - Zion Tech Solutions</title>
+        <meta name="description" content="CustomerSupportChatbot service" />
+      </Head>
+      
+      <main>
+        <h1>CustomerSupportChatbot</h1>
+        <p>Service details coming soon...</p>
+<<<<<<< HEAD
+        <Link href="/services"><a>Back to Services</a></Link>
+=======
+        <FeedbackWidget />
+        <Link href="/services">Back to Services</Link>
+>>>>>>> origin/backup-critical-fixes-20250824-224408
+      </main>
+    </div>
+  );
+};
+
+export default CustomerSupportChatbot;

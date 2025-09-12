@@ -1,10 +1,13 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Container from '../components/ui/Container';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  TrendingUp, Users, Building, Globe, ArrowRight, 
+  Brain, Atom, Shield, Rocket, Star,
+  CheckCircle, Award, Sparkles, ExternalLink,
+  BarChart3, Clock, Target
+} from 'lucide-react';
 
+export default function CaseStudies() {
   const caseStudies = [
     {
       title: 'Global E-commerce Platform',
@@ -314,10 +317,6 @@ import Button from '../components/ui/Button';
       </section>
     </>
   );
-};
-
-export default CaseStudiesPage;
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -333,4 +332,5 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>
   );
 }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1967
+=======
+}

@@ -1,0 +1,72 @@
+<<<<<<< HEAD
+=======
+/** @type {import('next').NextConfig} */
+>>>>>>> origin/backup-20250824-222848
+const path = require('path');
+
+module.exports = {
+  reactStrictMode: true,
+<<<<<<< HEAD
+  
+  // Environment configuration
+  env: {
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+  },
+
+  // Image optimization
+=======
+>>>>>>> origin/backup-20250824-222848
+  images: {
+    domains: ["localhost"],
+  },
+<<<<<<< HEAD
+
+  // Headers for performance and security
+  async headers() {
+=======
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  async redirects() {
+>>>>>>> origin/backup-20250824-222848
+    return [
+      { source: '/zion/gitbook', destination: '/docs/gitbook', permanent: true },
+    ];
+  },
+<<<<<<< HEAD
+
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+
+  webpack: (config, { dev, isServer }) => {
+    // Simple webpack configuration
+    if (!isServer) {
+      // Client-side optimizations
+      config.resolve.fallback = {
+        fs: false,
+        net: false,
+        tls: false,
+        crypto: false,
+      };
+    }
+
+    return config;
+  },
+};
+
+module.exports = withSentryConfig(baseConfig);
+=======
+  webpack: (config) => {
+    // Support TS path alias '@/...' by mapping it to the project root
+    config.resolve = config.resolve || {};
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
+  },
+};
+>>>>>>> origin/backup-20250824-222848

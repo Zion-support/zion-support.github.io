@@ -1,11 +1,17 @@
 {
+<<<<<<< HEAD:zion-os.disabled/zion-os/package.json
   "name": "zion-os",
   "version": "0.1.0",
+=======
+  "name": "zion-tech-group-website",
+  "version": "1.0.0",
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/package.json
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
+<<<<<<< HEAD:zion-os.disabled/zion-os/package.json
     "lint": "next lint",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
@@ -21,6 +27,23 @@
     "react-dom": "18.3.1",
     "uuid": "9.0.1",
     "zod": "3.23.8"
+=======
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@prisma/client": "5.16.1",
+    "bcryptjs": "2.4.3",
+    "jsonwebtoken": "9.0.2",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "uuid": "9.0.1",
+    "zod": "3.23.8",
+    "lucide-react": "^0.263.1",
+    "framer-motion": "^10.16.4",
+    "@headlessui/react": "^1.7.17"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/package.json
   },
   "devDependencies": {
     "@types/node": "24.2.1",
@@ -29,7 +52,10 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "postcss": "8.4.40",
+<<<<<<< HEAD:zion-os.disabled/zion-os/package.json
     "prisma": "5.16.1",
+=======
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/package.json
     "tailwindcss": "3.4.7",
     "typescript": "5.4.5"
   }

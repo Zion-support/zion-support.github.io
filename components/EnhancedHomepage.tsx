@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -520,6 +521,13 @@ const EnhancedHomepage: React.FC = () => {
       </AnimatePresence>
     </>
   );
+=======
+import React from 'react';
+
+const EnhancedHomepage: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">EnhancedHomepage temporarily disabled</div>;
+>>>>>>> cursor/create-and-deploy-new-content-d63f
 };
 
 export default EnhancedHomepage;

@@ -1,27 +1,32 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { loadWishlistFromDB, removeFromWishlist } from '@/store/wishlistSlice';
-import { useAuth } from '@/hooks/useAuth';
+import { useFavorites } from '@/hooks/useFavorites';
+import { X } from 'lucide-react'
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import { useEffect } from 'react'; // Added useEffect
 
-export default function Wishlist() {
-  const dispatch = useAppDispatch();
-  const items = useAppSelector((s) => s.wishlist.items);
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+export default function WishlistPage() {
+  const { favorites, loading, toggleFavorite } = useFavorites();
+  const { user, isLoading: isAuthLoading } = useAuth(); // Added isAuthLoading
+  const router = useRouter(); // Changed from navigate
 
   useEffect(() => {
     if (!user) {
       navigate(`/login?next=${encodeURIComponent(location.pathname)}`);
       return;
     }
-    void dispatch(loadWishlistFromDB(user.id!));
+    dispatch(loadWishlistFromDB(user.id!));
   }, [user, dispatch, navigate, location]);
 
   const handleRemove = (id: string) => {
     dispatch(removeFromWishlist({ id }));
+    fetch(`${getApiUrl()}/wishlist/${id}`, { method: 'DELETE' }).catch(() => {});
   };
 
   const pathForItem = (item: { id: string; type: string }) => {

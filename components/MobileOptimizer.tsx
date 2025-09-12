@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, Tablet, Monitor, RotateCcw, 
@@ -7,6 +7,20 @@ import {
 } from 'lucide-react';
 
 // TouchEvent types are already defined in DOM
+
+interface MobileOptimizerProps {
+  showPanel?: boolean;
+  autoOptimize?: boolean;
+}
+
+interface DeviceInfo {
+  type: 'mobile' | 'tablet' | 'desktop';
+  orientation: 'portrait' | 'landscape';
+  screenSize: { width: number; height: number };
+  pixelRatio: number;
+  touchSupport: boolean;
+  userAgent: string;
+}
 
 interface MobileOptimizerProps {
   children: React.ReactNode;
