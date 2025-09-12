@@ -476,6 +476,117 @@ export default function ContentShowcasePage() {
           </div>
         </section>
 
+        {/* AI Content Revolution Banner */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🚀 CONTENT REVOLUTION - JANUARY 2025</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                The AI Content Revolution is Here
+              </h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
+                Discover how AI is transforming content creation with 500% production increases, 
+                95% time savings, and $10M+ annual cost reductions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/blog/ai-2025-content-revolution"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  📖 Read About Content Revolution
+                </Link>
+                <Link
+                  href="/case-studies/ai-content-automation-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  📊 View Success Stories
+                </Link>
+              </div>
+            </div>
+
+            {/* Content Revolution Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center">
+                <div className="text-3xl font-bold mb-2">500%</div>
+                <div className="text-sm opacity-90">Production Increase</div>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center">
+                <div className="text-3xl font-bold mb-2">95%</div>
+                <div className="text-sm opacity-90">Time Reduction</div>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center">
+                <div className="text-3xl font-bold mb-2">$10M</div>
+                <div className="text-sm opacity-90">Cost Savings</div>
+              </div>
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl text-center">
+                <div className="text-3xl font-bold mb-2">300%</div>
+                <div className="text-sm opacity-90">Quality Improvement</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mega Content Drop Section */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                25+ New AI Resources Just Released!
+              </h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
+                Our biggest content update yet: Advanced AI Automation, Cybersecurity Threats, 
+                Healthcare AI Success Stories, and the complete 200+ page AI Implementation Master Guide 2026.
+              </p>
+              <Link
+                href="/blog/ai-2025-mega-content-drop"
+                className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              >
+                🎯 Explore Mega Content Drop
+              </Link>
+            </div>
+
+            {/* Featured Content Quick Links */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <Link href="/blog/ai-2025-advanced-automation" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🤖</div>
+                  <h3 className="text-sm font-semibold mb-1">AI Advanced Automation</h3>
+                  <p className="text-xs opacity-90">Complete implementation guide</p>
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-cybersecurity-threats" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🛡️</div>
+                  <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
+                  <p className="text-xs opacity-90">Complete defense guide</p>
+                </div>
+              </Link>
+              
+              <Link href="/case-studies/ai-healthcare-diagnosis-success-2025" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">🏥</div>
+                  <h3 className="text-sm font-semibold mb-1">Healthcare AI Success</h3>
+                  <p className="text-xs opacity-90">95% accuracy achieved</p>
+                </div>
+              </Link>
+              
+              <Link href="/resources/ai-implementation-master-guide-2026" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">📖</div>
+                  <h3 className="text-sm font-semibold mb-1">Master Guide 2026</h3>
+                  <p className="text-xs opacity-90">200+ pages free</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Newsletter Signup */}
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated with Latest Content</h2>
