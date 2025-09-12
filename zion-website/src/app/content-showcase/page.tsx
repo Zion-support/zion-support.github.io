@@ -16,14 +16,6 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-<<<<<<< HEAD
-      title: "Real-Time Agents 2025: Observability, Safety, and SLAs",
-      description: "Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.",
-      href: "/blog/ai-2025-realtime-agents-observability",
-      icon: "🛰️",
-      category: "Agents",
-      readTime: "17 min read",
-=======
       title: "LLM Observability 2025: Metrics, Traces, and Guardrails",
       description: "End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.",
       href: "/blog/llm-observability-2025",
@@ -40,7 +32,6 @@ export default function ContentShowcase() {
       icon: "🛒",
       category: "Case Study",
       readTime: "12 min read",
->>>>>>> bba005c3c1cd6669ade670552d32c425289c5fbb
       date: "Sep 12, 2025",
       featured: true
     },

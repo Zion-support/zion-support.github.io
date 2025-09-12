@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '16',
+      title: 'AI 2025 Year in Review',
+      description: 'Breakthroughs, enterprise adoption patterns, unit economics, and the road to 2026.',
+      href: '/blog/ai-2025-year-in-review',
+      type: 'blog',
+      featured: true,
+      readTime: '25 min read',
+      date: 'Sep 12, 2025',
+      category: 'Strategy'
+    },
+    {
+      id: '17',
+      title: 'AI Workforce Transformation 2025',
+      description: 'Practical blueprint for reskilling at scale with measurable enterprise outcomes.',
+      href: '/blog/ai-workforce-transformation-2025',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Workforce'
+    },
+    {
+      id: '18',
+      title: 'AI Sustainability Transformation: 60% Energy Reduction',
+      description: 'Case study: energy optimization, peak load reduction, and carbon neutrality with AI.',
+      href: '/case-studies/ai-sustainability-transformation-2025',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '13',
       title: 'Real-Time Agents 2025: Observability, Safety, and SLAs',
       description: 'Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.',

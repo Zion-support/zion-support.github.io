@@ -415,7 +415,7 @@ export default function HomePage() {
       <DynamicContentCarousel />
 
       {/* New Content Promotional Banner */}
-      <NewContentPromoBanner variant="featured" maxItems={3} />
+      <NewContentPromoBanner variant="featured" maxItems={4} />
 
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
