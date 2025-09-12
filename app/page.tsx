@@ -19,6 +19,8 @@ import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import EnhancedPromotionalBanner from '../components/EnhancedPromotionalBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -215,6 +217,9 @@ export default function HomePage() {
         </Suspense>
       {/* New Content Promotion Banner */}
       <NewContentPromotionBanner />
+      
+      {/* Enhanced Promotional Banner */}
+      <EnhancedPromotionalBanner variant="premium" autoHide={true} hideDelay={15000} />
 
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
@@ -4000,6 +4005,9 @@ export default function HomePage() {
         showStats={true}
         showSearch={true}
       />
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
 
       {/* Newsletter Signup */}
       <EnhancedNewsletterSignup
