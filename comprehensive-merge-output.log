@@ -1,11 +1,12 @@
 🚀 Starting comprehensive merge conflict resolution for all open PRs...
-📊 Total cursor branches to process: 6468
-⏰ Started at: Fri Sep 12 08:10:01 AM UTC 2025
+📊 Total cursor branches to process: 5660
+⏰ Started at: Fri Sep 12 10:20:16 AM UTC 2025
 ---
-🔒 Creating backup branch: backup-main-20250912-081001
+🔒 Creating backup branch: backup-main-20250912-102016
 M	comprehensive-merge-output.log
+M	core
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
   (use "git pull" if you want to integrate the remote branch with yours)
 🔄 Starting branch processing...
 ---
@@ -15,12 +16,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-2030q1-services-ui-8deb1aee36d
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-2030q1-services-ui-8deb1aee36d processed successfully
@@ -32,12 +34,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0357
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-0357 processed successfully
@@ -49,12 +52,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-03b6
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-03b6 processed successfully
@@ -66,12 +70,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-06aa
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-06aa processed successfully
@@ -83,12 +88,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0756
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-0756 processed successfully
@@ -100,12 +106,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0c04
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-0c04 processed successfully
@@ -117,12 +124,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-0cca
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-0cca processed successfully
@@ -134,12 +142,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-174e
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-174e processed successfully
@@ -151,12 +160,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-17cc
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-17cc processed successfully
@@ -168,12 +178,13 @@ Already up to date.
 ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-192f
 On branch main
 Your branch and 'origin/main' have diverged,
-and have 1 and 375 different commits each, respectively.
+and have 2 and 1444 different commits each, respectively.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   comprehensive-merge-output.log
+	modified:   core
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ✅ Branch cursor/add-and-advertise-new-services-then-build-192f processed successfully
