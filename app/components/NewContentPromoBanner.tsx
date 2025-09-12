@@ -18,6 +18,16 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Sales Enablement Copilots 2025",
+    description: "Prospecting, live coaching, and follow-ups with governance and evals",
+    url: "/blog/ai-sales-enablement-copilots-2025",
+    type: "Blog Post",
+    category: "Sales Copilots",
+    icon: "🎯",
+    featured: true,
+    new: true
+  },
+  {
     title: "Real-Time Voice Agents: Architectures, Guardrails, ROI",
     description: "Low-latency agents with streaming evals, safety policies, and observability",
     url: "/blog/ai-2025-realtime-agents-observability",
@@ -94,6 +104,16 @@ const newContentItems = [
     type: "Resource",
     category: "Evaluation",
     icon: "📏",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Agent Safety Evaluator Kit 2025",
+    description: "Evaluators, policies, and red-team corpus for safe agent systems",
+    url: "/resources/ai-2025-agent-safety-evaluator-kit",
+    type: "Resource",
+    category: "Safety",
+    icon: "🛡️",
     featured: true,
     new: true
   },
