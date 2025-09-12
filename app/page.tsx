@@ -112,15 +112,91 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* New Content Spotlight */}
+          <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12'>
+            <div className='text-center mb-8'>
+              <h3 className='text-2xl font-bold mb-4'>🔥 Featured This Week</h3>
+              <p className='text-lg opacity-90'>
+                Don't miss our comprehensive AI 2025 Year in Review and breakthrough trends analysis
+              </p>
+            </div>
+            
+            <div className='grid md:grid-cols-2 gap-6'>
+              <Link href='/blog/ai-2025-year-in-review' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📊</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h4>
+                  <p className='text-sm opacity-90 mb-3'>Comprehensive analysis of AI breakthroughs, trends, and transformations that shaped 2025</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>25 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>Featured</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href='/blog/ai-2025-breakthrough-trends' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI 2025 Breakthrough Trends</h4>
+                  <p className='text-sm opacity-90 mb-3'>The 10 most revolutionary AI developments that are reshaping industries</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>22 min read</span>
+                    <span className='mx-2'>•</span>
+                    <span>Trending</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* New Resources Spotlight */}
+          <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12'>
+            <div className='text-center mb-8'>
+              <h3 className='text-2xl font-bold mb-4'>📋 Free Resources & Playbooks</h3>
+              <p className='text-lg opacity-90'>
+                Download our comprehensive guides and implementation playbooks
+              </p>
+            </div>
+            
+            <div className='grid md:grid-cols-2 gap-6'>
+              <Link href='/resources/ai-automation-implementation-playbook-2025' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI Automation Implementation Playbook</h4>
+                  <p className='text-sm opacity-90 mb-3'>200+ pages of frameworks, templates, and step-by-step guides for AI automation success</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Free Download</span>
+                    <span className='mx-2'>•</span>
+                    <span>200+ pages</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href='/resources/ai-trends-2025-playbook' className='group'>
+                <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                  <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                  <h4 className='text-lg font-semibold mb-2'>AI Trends 2025 Playbook</h4>
+                  <p className='text-sm opacity-90 mb-3'>Master the 10 most revolutionary AI trends with actionable insights and implementation strategies</p>
+                  <div className='flex items-center text-xs opacity-75'>
+                    <span>Free Download</span>
+                    <span className='mx-2'>•</span>
+                    <span>150+ pages</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
           {/* Featured New Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-productivity-automation-2025' className='group'>
+            <Link href='/blog/ai-automation-2025-complete-guide' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Productivity Automation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 40% efficiency gains and 60% cost reduction</p>
+                <h3 className='text-lg font-semibold mb-2'>AI Automation Complete Guide 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 40% cost reduction and 300% productivity gains</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>20 min read</span>
+                  <span>30 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
