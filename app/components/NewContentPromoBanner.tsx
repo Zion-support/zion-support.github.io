@@ -18,6 +18,16 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Model Evaluation Playbook 2025",
+    description: "Production-ready evals for LLM apps and agent systems",
+    url: "/blog/ai-2025-model-evaluation-playbook",
+    type: "Blog Post",
+    category: "Engineering",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Production Agent Patterns 2025",
     description: "Reliable patterns for deploying AI agents in production",
     url: "/blog/ai-2025-production-agent-patterns",
@@ -28,10 +38,40 @@ const newContentItems = [
     new: true
   },
   {
+    title: "Edge AI Governance Blueprint 2025",
+    description: "Privacy-by-design controls for compliant edge intelligence",
+    url: "/blog/ai-2025-edge-governance-blueprint",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Sustainability & Green Tech 2025",
     description: "Building eco-friendly AI systems for a sustainable future",
     url: "/blog/ai-sustainability-green-tech-2025",
     type: "Blog Post",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Enterprise GenAI Blueprint 2025",
+    description: "Governance, cost, and performance optimization for GenAI at scale",
+    url: "/blog/ai-2025-enterprise-genai-blueprint",
+    type: "Blog Post",
+    category: "Enterprise AI",
+    icon: "🏢",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Sustainability Transformation: 60% Energy Reduction",
+    description: "Fortune 500 company achieves carbon neutrality with AI",
+    url: "/case-studies/ai-sustainability-transformation-2025",
+    type: "Case Study",
     category: "Sustainability",
     icon: "🌱",
     featured: true,
@@ -48,13 +88,13 @@ const newContentItems = [
     new: true
   },
   {
-    title: "AI Agents in Production 2025",
-    description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
-    url: "/blog/ai-2025-production-agent-patterns",
+    title: "Startup Distribution Playbook 2025",
+    description: "Channels, motions, and metrics that compound",
+    url: "/blog/startup-distribution-playbook-2025",
     type: "Blog Post",
-    category: "Engineering",
-    icon: "🧭",
-    featured: true,
+    category: "Growth",
+    icon: "📈",
+    featured: false,
     new: true
   },
   {
@@ -64,7 +104,7 @@ const newContentItems = [
     type: "Blog Post",
     category: "AI Trends",
     icon: "🚀",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -74,7 +114,7 @@ const newContentItems = [
     type: "Blog Post",
     category: "AI Governance",
     icon: "⚖️",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -84,17 +124,7 @@ const newContentItems = [
     type: "Blog Post",
     category: "AI Automation",
     icon: "🤖",
-    featured: true,
-    new: true
-  },
-  {
-    title: "AI Sustainability Transformation: 60% Energy Reduction",
-    description: "Fortune 500 company achieves carbon neutrality with AI",
-    url: "/case-studies/ai-sustainability-transformation-2025",
-    type: "Case Study",
-    category: "Sustainability",
-    icon: "🌱",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -114,7 +144,7 @@ const newContentItems = [
     type: "Resource",
     category: "Implementation",
     icon: "📋",
-    featured: true,
+    featured: false,
     new: true
   },
   {

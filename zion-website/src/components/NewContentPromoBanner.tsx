@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '9',
+      title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
+      description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
+      href: '/blog/ai-2025-genai-evaluation',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: '10',
+      title: 'AI Governance 2025: Best Practices for Responsible AI',
+      description: 'A concise playbook for practical AI governance across policy, risk, compliance, and engineering.',
+      href: '/blog/ai-2025-ai-governance-best-practices',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
       id: '1',
       title: 'Advanced RAG Systems 2025: Production Guide',
       description: 'Master production-ready RAG systems with advanced patterns, optimization techniques, and real-world implementations.',
@@ -96,7 +118,7 @@ const NewContentPromoBanner = ({
       type: 'blog',
       featured: true,
       readTime: '21 min read',
-      date: 'Sep 12, 2025',
+      date: 'Sep 05, 2025',
       category: 'Edge AI'
     },
     {
