@@ -17,7 +17,8 @@ import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/Su
 import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -276,7 +277,13 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
+      
       {/* Featured Content Section */}
+      <FeaturedContentShowcase />
+      
+      {/* Additional Content Showcase */}
       <ContentShowcase
         title="Latest AI Insights & Case Studies"
         subtitle="Discover proven strategies, real-world success stories, and actionable guides from industry experts"
