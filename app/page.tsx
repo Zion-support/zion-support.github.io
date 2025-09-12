@@ -215,6 +215,32 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+
+            {/* Newly added content */}
+            <Link href='/blog/ai-2025-ai-go-to-market' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📈</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Go-To-Market 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>From zero to traction with modern GTM playbooks</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>12 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>NEW</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/resources/ai-gtm-starter-kit-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧰</div>
+                <h3 className='text-lg font-semibold mb-2'>AI GTM Starter Kit 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Templates, checklists, and scorecards to launch faster</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>NEW</span>
+                </div>
+              </div>
+            </Link>
           </div>
 
           <div className='text-center mt-8'>
