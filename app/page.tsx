@@ -4,6 +4,8 @@ import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import NewContentPromoBanner2025 from '../components/NewContentPromoBanner2025';
+import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import MegaContentDropBanner from '../components/MegaContentDropBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
@@ -38,7 +40,7 @@ export default function HomePage() {
         <UltraContentPromotionBanner />
         
         {/* Content Promotion Banner */}
-        <NewContentPromotionBanner />
+        <NewContentPromoBanner />
         
         {/* NEW CONTENT LAUNCH BANNER */}
         <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
