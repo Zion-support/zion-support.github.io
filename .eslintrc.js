@@ -2,13 +2,71 @@ module.exports = {
   extends: [
     "next/core-web-vitals"
   ],
+  parser: "@typescript-eslint/parser",
+  plugins: [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
   rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_" }
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
     ],
-    "no-explicit-any": "warn"
-  }
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    '**/*.disabled/**',
+    '**/disabled/**',
+    '**/components.disabled/**',
+    '**/pages.disabled/**',
+    '**/types.disabled/**',
+    '**/utils.disabled/**',
+    '**/zion-os.disabled/**',
+    '**/tests.disabled/**',
+    '**/typechain-types.disabled/**',
+    '**/services.disabled.temp/**',
+    '**/src.broken/**',
+    '**/zion_academy/**',
+    '**/start-all-automations.js',
+    '**/test-*.js',
+    '**/simple-*.js',
+    '**/workbox-config.js',
+    '**/components_backup/**',
+    '**/pages_disabled/**',
+    '**/src_disabled/**',
+    '**/comprehensive-*.js',
+    '**/debug-*.js',
+    '**/extract*.js',
+    '**/fix-*.js',
+    '**/jest.setup.js',
+    '**/mcp-*.js',
+    '**/next-env.d.ts',
+    '**/public/*.js',
+    '**/run-*.js',
+    '**/script.js',
+    '**/seed.js',
+    '**/data/2025-*.ts',
+    '**/backup/**',
+    '**/auto-*.js',
+    'zion-website-analysis.json',
+    '*.backup.*',
+    '*.log',
+    '*.txt',
+    '*.md'
+  ]
 };

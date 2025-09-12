@@ -1,0 +1,187 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const About: NextPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <Head>
+        <title>About Us - Zion Tech Solutions | Leading Technology Company</title>
+        <meta name="description" content="Learn about Zion Tech Solutions - our mission, team, and commitment to delivering cutting-edge technology solutions that transform businesses worldwide." />
+        <meta name="keywords" content="about us, technology company, AI development team, cloud experts, digital transformation" />
+        <meta property="og:title" content="About Us - Zion Tech Solutions" />
+        <meta property="og:description" content="Discover our story, mission, and the expert team behind Zion Tech Solutions' innovative technology solutions." />
+      </Head>
+      
+      <main className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center text-white mb-20">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            About Zion Tech Solutions
+          </h1>
+          <p className="text-2xl max-w-4xl mx-auto leading-relaxed">
+            Empowering businesses through innovative technology solutions since 2020
+          </p>
+        </div>
+
+        {/* Company Story */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+          <div>
+            <h2 className="text-4xl font-bold mb-8 text-white">Our Story</h2>
+            <div className="space-y-6 text-gray-200 text-lg leading-relaxed">
+              <p>
+                Founded in 2020, Zion Tech Solutions emerged from a simple yet powerful vision: to bridge the gap between 
+                cutting-edge technology and real-world business needs. Our founders, a group of passionate engineers and 
+                entrepreneurs, recognized that many companies were struggling to keep pace with rapid technological advancement.
+              </p>
+              <p>
+                What started as a small team of five has grown into a global force of 50+ experts, serving clients across 
+                multiple continents. We've completed over 500 projects, from AI-powered chatbots for startups to enterprise-level 
+                cloud migrations for Fortune 500 companies.
+              </p>
+              <p>
+                Today, we're proud to be at the forefront of digital transformation, helping businesses not just adapt to 
+                change, but thrive in an increasingly digital world.
+              </p>
+            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-white">Our Mission</h3>
+            <p className="text-gray-200 text-lg mb-6">
+              To democratize access to cutting-edge technology by providing affordable, scalable, and innovative solutions 
+              that empower businesses of all sizes to compete and succeed in the digital age.
+            </p>
+            <h3 className="text-2xl font-bold mb-6 text-white">Our Vision</h3>
+            <p className="text-gray-200 text-lg">
+              A world where every business, regardless of size or industry, has access to the technology tools they need 
+              to innovate, grow, and make a positive impact on their communities.
+            </p>
+          </div>
+        </div>
+
+        {/* Values */}
+        <div className="mb-24">
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">Our Core Values</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all">
+              <div className="text-5xl mb-4">🎯</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Excellence</h3>
+              <p className="text-gray-200">
+                We strive for excellence in everything we do, from code quality to client relationships. 
+                Our commitment to high standards drives our success.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all">
+              <div className="text-5xl mb-4">🤝</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Collaboration</h3>
+              <p className="text-gray-200">
+                We believe the best solutions come from working closely with our clients as partners, 
+                understanding their unique challenges and goals.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/20 transition-all">
+              <div className="text-5xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Innovation</h3>
+              <p className="text-gray-200">
+                We stay at the cutting edge of technology, constantly learning and adapting to bring 
+                the latest innovations to our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div className="mb-24">
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">Meet Our Leadership Team</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
+              <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                AJ
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-white">Alex Johnson</h3>
+              <p className="text-blue-400 mb-4">CEO & Co-Founder</p>
+              <p className="text-gray-200 text-sm">
+                Former Google engineer with 15+ years in AI and machine learning. Led the development of 
+                enterprise AI solutions for Fortune 500 companies.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
+              <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                SC
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-white">Sarah Chen</h3>
+              <p className="text-blue-400 mb-4">CTO & Co-Founder</p>
+              <p className="text-gray-200 text-sm">
+                Cloud architecture expert with extensive experience in AWS, Azure, and GCP. 
+                Previously led infrastructure teams at Microsoft and Amazon.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
+              <div className="w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                MR
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-white">Michael Rodriguez</h3>
+              <p className="text-blue-400 mb-4">VP of Engineering</p>
+              <p className="text-gray-200 text-sm">
+                Full-stack development expert with a passion for creating scalable, maintainable code. 
+                Leads our development teams and ensures code quality standards.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-24">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Impact in Numbers</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">500+</div>
+              <div className="text-white">Projects Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">200+</div>
+              <div className="text-white">Happy Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-green-400 mb-2">50+</div>
+              <div className="text-white">Team Members</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-yellow-400 mb-2">98%</div>
+              <div className="text-white">Success Rate</div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6 text-white">Ready to Work With Us?</h2>
+          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+            Join the hundreds of companies that have transformed their business with our innovative technology solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+              Get Started Today
+            </Link>
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+              View Our Services
+            </Link>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default About;
+=======
+import React from 'react';
+
+export default function AboutPage() {
+  return (
+    <div>
+      <h1 className="text-2xl font-bold">About</h1>
+      <p className="text-gray-600 dark:text-gray-300">Zion app.</p>
+    </div>
+  );
+}
