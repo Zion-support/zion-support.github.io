@@ -70,6 +70,8 @@ import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePro
 import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import AI2025NewContentShowcase from '../components/AI2025NewContentShowcase';
 
 // New 2029 Breakthrough Content Components
 import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
