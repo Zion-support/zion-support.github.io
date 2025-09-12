@@ -353,3 +353,6 @@
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
+# Skip Husky for CI builds
+[build.processing]
+  skip_processing = false
