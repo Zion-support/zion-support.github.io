@@ -32,6 +32,22 @@ export default function BlogIndexPage() {
       date: "2025-09-12",
       tag: "Web3",
     },
+    {
+      slug: "sovereign-ai-security-basics",
+      title: "Sovereign AI Security Basics",
+      excerpt:
+        "Threat models, secrets handling, and guardrails every AI deployment should implement.",
+      date: "2025-09-12",
+      tag: "Security",
+    },
+    {
+      slug: "observability-for-llm-agents",
+      title: "Observability for LLM Agents",
+      excerpt:
+        "How to trace prompts, tools, and costs with actionable SLOs for production agents.",
+      date: "2025-09-12",
+      tag: "Ops",
+    },
   ];
 
   return (
