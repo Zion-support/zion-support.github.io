@@ -28,6 +28,36 @@ const newContentItems = [
     new: true
   },
   {
+    title: "Data Governance for LLM Apps in 2025",
+    description: "Lineage, privacy-by-design, access controls, policy engines, and audits",
+    url: "/blog/ai-2025-data-governance-llm-apps",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "End-to-End Evaluation for AI Systems in 2025",
+    description: "Quality, latency, cost, safety, and reliability—continuous operational evals",
+    url: "/blog/ai-2025-end-to-end-evaluation",
+    type: "Blog Post",
+    category: "Evaluation",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Retrieval Augmentation at Scale in 2025",
+    description: "Hybrid search, indexing, routing, chunking, caching, and observability",
+    url: "/blog/ai-2025-retrieval-augmentation-at-scale",
+    type: "Blog Post",
+    category: "RAG",
+    icon: "🔎",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Benchmarking Best Practices 2025",
     description: "Reliable evals for quality, latency, and cost across models and tasks",
     url: "/resources/ai-benchmarking-best-practices-2025",
