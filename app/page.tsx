@@ -117,6 +117,7 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
 import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
+import AI2025EnterpriseAutomationPromotionBanner from '../components/AI2025EnterpriseAutomationPromotionBanner';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025NewContentShowcase from '../components/AI2025NewContentShowcase';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
@@ -254,6 +255,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT 2025 BREAKTHROUGH BANNER */}
         <NewContent2025BreakthroughBanner />
+        
+        {/* AI 2025 ENTERPRISE AUTOMATION PROMOTION BANNER - NEW */}
+        <AI2025EnterpriseAutomationPromotionBanner />
         
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
