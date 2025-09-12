@@ -101,6 +101,10 @@ import DynamicContentPromotionBanner from '../components/DynamicContentPromotion
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
+// New Revolutionary Content Components
+import NewContent2026RevolutionaryBanner from '../components/NewContent2026RevolutionaryBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+
 // AI 2025 Revolutionary Breakthrough Components
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
@@ -137,6 +141,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW REVOLUTIONARY CONTENT BANNER - LATEST */}
+        <NewContent2026RevolutionaryBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY */}
+        <InteractiveContentDiscovery2026 />
+        
         {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
         <NewContent2025BreakthroughBanner />
         
