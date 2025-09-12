@@ -38,32 +38,38 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* Content Promotion Banner */}
-        <section className="py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Revolutionary AI Content Update: 20+ New Resources Just Released!
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations, Sustainability & Green Tech, 
-                Robotics & Automation, plus new case studies and implementation guides. Get expert insights 
+              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
+                Sustainability Success Stories, plus comprehensive implementation guides and free resources. Get expert insights 
                 on the technologies transforming 2025 and beyond.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   Explore New Content
                 </Link>
                 <Link
                   href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
                   Read Latest Article
+                </Link>
+                <Link
+                  href="/resources"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  Download Free Resources
                 </Link>
               </div>
             </div>
@@ -108,6 +114,45 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Free Resources Promotion Banner */}
+        <section className="py-6 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">📚 FREE RESOURCES</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎁 50+ Free AI Resources: Implementation Guides, Checklists & Templates!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Download our comprehensive collection of free AI resources: Implementation Master Guide 2026, 
+                Cybersecurity Checklist, Workforce Transformation Playbook, ROI Calculator, and much more. 
+                Everything you need to succeed with AI in 2025.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/resources"
+                  className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Download All Resources
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                >
+                  Master Guide 2026
+                </Link>
+                <Link
+                  href="/resources/ai-cybersecurity-checklist-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                >
+                  Security Checklist
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Sustainability & Green Tech Promotion Banner */}
         <section className="py-6 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,7 +161,7 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🌱 SUSTAINABILITY & GREEN TECH</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🌍 AI-Powered Sustainability: 40% Energy Reduction Achieved!
+                🌍 AI-Powered Sustainability: 60% Energy Reduction Achieved!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
                 Discover how AI is driving sustainability initiatives and reducing carbon footprints. 
@@ -124,16 +169,22 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/blog/ai-2025-sustainability-green-tech"
+                  href="/case-studies/ai-sustainability-transformation-2025"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  View Case Study
+                </Link>
+                <Link
+                  href="/blog/ai-2025-sustainability-green-tech"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Read Sustainability Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-robotics-automation"
+                  href="/resources/ai-sustainability-implementation-guide"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Robotics & Automation
+                  Implementation Guide
                 </Link>
               </div>
             </div>

@@ -148,23 +148,23 @@ export default function ContentShowcasePage() {
           <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
+                <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Fresh AI & Tech Content Just Dropped
               </h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-                New this week: AI 2025 Year in Review, Workforce Transformation, 
-                Sustainability Success Stories, and Cybersecurity Case Studies.
+                New this week: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
+                Sustainability Success Stories, and comprehensive implementation resources.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link href="/blog/ai-2025-year-in-review" className="group">
+              <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                  <h3 className="text-lg font-semibold mb-2">AI 2025 Year in Review</h3>
-                  <p className="text-sm opacity-90 mb-3">Comprehensive analysis of AI breakthroughs and trends</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                  <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
+                  <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
                     <span className="mx-2">•</span>
@@ -199,13 +199,13 @@ export default function ContentShowcasePage() {
                 </div>
               </Link>
 
-              <Link href="/case-studies/ai-cybersecurity-transformation-2025" className="group">
+              <Link href="/resources" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Cybersecurity Success</h3>
-                  <p className="text-sm opacity-90 mb-3">99.8% threat detection accuracy achieved</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                  <h3 className="text-lg font-semibold mb-2">Free AI Resources</h3>
+                  <p className="text-sm opacity-90 mb-3">50+ implementation guides and templates</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
+                    <span>Free Download</span>
                     <span className="mx-2">•</span>
                     <span>New</span>
                   </div>
@@ -213,47 +213,7 @@ export default function ContentShowcasePage() {
               </Link>
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
-                <h3 className="text-lg font-semibold mb-2">AI 2025: Breakthrough Innovations</h3>
-                <p className="text-sm opacity-90 mb-3">Revolutionary AI innovations transforming industries</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>28 min read</span>
-                  <span className="mx-2">•</span>
-                  <span>NEW</span>
-                </div>
-            </Link>
-            
-            <Link href="/case-studies/ai-enterprise-transformation-breakthrough-2025" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                <h3 className="text-lg font-semibold mb-2">Enterprise AI: $50M Success</h3>
-                <p className="text-sm opacity-90 mb-3">Fortune 500 company achieves unprecedented growth</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>Case Study</span>
-                  <span className="mx-2">•</span>
-                  <span>NEW</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/resources/ai-2025-complete-implementation-playbook" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
-                <h3 className="text-lg font-semibold mb-2">AI Implementation Playbook</h3>
-                <p className="text-sm opacity-90 mb-3">250+ page guide with templates and frameworks</p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>Free Download</span>
-                  <span className="mx-2">•</span>
-                  <span>NEW</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
+        </section>
 
         {/* Content Categories */}
         <section className="mb-16">
