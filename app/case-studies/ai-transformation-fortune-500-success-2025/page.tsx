@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function AITransformationFortune500Success2025() {
@@ -10,17 +9,6 @@ export default function AITransformationFortune500Success2025() {
         title="Fortune 500 AI Transformation: $50M Savings and 300% ROI in 18 Months"
         description="Discover how a Fortune 500 manufacturing company achieved unprecedented results with AI transformation, saving $50M and achieving 300% ROI in just 18 months."
         keywords="AI transformation case study, Fortune 500 AI success, AI ROI, manufacturing AI, enterprise AI implementation"
-=======
-import ErrorBoundary from '../../../components/ErrorBoundary';
-
-export default function AITransformationFortune500Success2025() {
-  return (
-    <ErrorBoundary>
-      <SEO
-        title="Fortune 500 AI Transformation Success: $50M Savings & 300% ROI in 18 Months"
-        description="Discover how a Fortune 500 manufacturing company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details and lessons learned."
-        keywords="Fortune 500 AI transformation, enterprise AI success, AI case study, manufacturing AI, cost savings, ROI, AI implementation"
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
         url="/case-studies/ai-transformation-fortune-500-success-2025"
       />
       

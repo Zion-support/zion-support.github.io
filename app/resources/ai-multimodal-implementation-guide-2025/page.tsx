@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../../../components/SEO';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
-=======
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
->>>>>>> cursor/create-and-deploy-new-content-47dd
->>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
 
 export default function AIMultimodalImplementationGuide2025() {
   return (
