@@ -13,11 +13,8 @@ interface ContentItem {
   category?: string;
   featured?: boolean;
   isTrending?: boolean;
-<<<<<<< HEAD
   badge?: string;
   badgeColor?: string;
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
   metrics?: string;
 }
 
@@ -29,13 +26,11 @@ interface ContentShowcaseProps {
   className?: string;
   showViewAll?: boolean;
   viewAllHref?: string;
-<<<<<<< HEAD
   viewAllText?: string;
   columns?: 2 | 3 | 4;
 }
 
 const ContentShowcase: React.FC<ContentShowcaseProps> = ({
-=======
 }
 
 const featuredContent: ContentItem[] = [
@@ -165,28 +160,23 @@ const latestContent: ContentItem[] = [
 ];
 
 export default function ContentShowcase({
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
   title,
   subtitle,
   items,
   variant = 'default',
   className = '',
-<<<<<<< HEAD
   showViewAll = false,
   viewAllHref = '#',
   viewAllText = 'View All',
   columns = 3
 }) => {
-=======
   showViewAll = true,
   viewAllHref = '/blog'
 }: ContentShowcaseProps) {
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
   const getVariantStyles = () => {
     switch (variant) {
       case 'featured':
         return {
-<<<<<<< HEAD
           container: 'bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200',
           title: 'text-blue-900',
           subtitle: 'text-blue-700'
@@ -202,7 +192,6 @@ export default function ContentShowcase({
           container: 'bg-white border border-gray-200',
           title: 'text-gray-900',
           subtitle: 'text-gray-600'
-=======
           container: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white',
           badge: 'bg-white bg-opacity-20',
           badgeText: 'text-white',
@@ -236,14 +225,12 @@ export default function ContentShowcase({
           subtitle: 'text-gray-600',
           text: 'text-gray-700',
           link: 'text-blue-600 hover:text-blue-800'
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
         };
     }
   };
 
   const styles = getVariantStyles();
 
-<<<<<<< HEAD
   const getGridCols = () => {
     switch (columns) {
       case 2: return 'md:grid-cols-2';
@@ -496,7 +483,6 @@ export const latestContent = [
 ];
 
 export default ContentShowcase;
-=======
   return (
     <section className={`py-16 ${styles.container} ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -585,4 +571,3 @@ export default ContentShowcase;
 }
 
 export { featuredContent, trendingContent, latestContent };
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4

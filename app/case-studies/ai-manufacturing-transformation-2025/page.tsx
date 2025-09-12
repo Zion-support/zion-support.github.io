@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
 
 export const metadata: Metadata = {
   title: 'AI Manufacturing Transformation: 75% Efficiency Gain Case Study',
@@ -593,7 +592,6 @@ export default function AIManufacturingTransformation2025() {
           </div>
         </section>
       </article>
-=======
 import { ArrowRight, Calendar, Clock, User, Tag, TrendingUp, Factory, Zap, Shield, Target, DollarSign, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -1121,7 +1119,6 @@ export default function AIManufacturingTransformation() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
     </div>
   );
 }

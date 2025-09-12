@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { X, ArrowRight, Star, Calendar, BookOpen, FileText, Lightbulb } from 'lucide-react';
@@ -119,7 +118,6 @@ const NewContentPromoBanner = () => {
               }`}
             />
           ))}
-=======
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
@@ -208,15 +206,11 @@ export default function NewContentPromoBanner() {
               Get Updates
             </Link>
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default NewContentPromoBanner;
-=======
 }
->>>>>>> origin/cursor/create-and-deploy-new-content-10f4
