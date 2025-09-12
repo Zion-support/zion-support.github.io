@@ -16,6 +16,16 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Data Quality for RAG in Production (2025)",
+      description: "Operator guide: curate, chunk, index, evaluate, and govern knowledge for reliable RAG.",
+      href: "/blog/ai-2025-data-quality-rag",
+      icon: "🧠",
+      category: "RAG",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Running AI Agents on Kubernetes: Reliability, Cost, and Observability",
       description: "Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.",
       href: "/blog/ai-2025-agents-on-kubernetes",
