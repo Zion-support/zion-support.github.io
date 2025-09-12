@@ -15,6 +15,8 @@ import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
+import ContentPromotionBanner from '../components/ContentPromotionBanner';
+import ContentShowcase from '../components/ContentShowcase';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -132,6 +134,62 @@ export default function HomePage() {
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
       {/* NEW: Enhanced Content Showcase - Latest 2025 Content */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* Enhanced Content Promotion Banner */}
+      <ContentPromotionBanner
+        title="🚀 Fresh AI & Business Insights"
+        subtitle="JUST PUBLISHED - JANUARY 2025"
+        description="New this week: AI Enterprise Integration Guide, Customer Support Automation, LLM Guardrails, and our comprehensive AI Architecture & Cost Governance framework. Expert insights to accelerate your growth."
+        ctaText="📚 Read Latest Articles"
+        ctaLink="/blog"
+        secondaryCtaText="📋 Download Free Resources"
+        secondaryCtaLink="/resources"
+        gradient="from-indigo-600 via-purple-600 to-pink-600"
+        featuredContent={[
+          {
+            title: "AI Enterprise Integration 2025",
+            description: "Complete implementation guide with 340% ROI and real case studies",
+            link: "/blog/ai-enterprise-integration-2025",
+            icon: "🏢",
+            readTime: "18 min read",
+            type: "New"
+          },
+          {
+            title: "AI Customer Support Automation 2025",
+            description: "Transform support with 40% cost reduction and improved satisfaction",
+            link: "/blog/ai-customer-support-automation-2025",
+            icon: "🎧",
+            readTime: "9 min read",
+            type: "New"
+          },
+          {
+            title: "LLM Guardrails in Production 2025",
+            description: "Safety without blocking delivery - proven production patterns",
+            link: "/blog/llm-guardrails-in-production-2025",
+            icon: "🛡️",
+            readTime: "8 min read",
+            type: "Trending"
+          },
+          {
+            title: "AI Architecture & Cost Governance",
+            description: "Complete framework for reliable and affordable AI systems",
+            link: "/resources/ai-architecture-cost-governance-2025",
+            icon: "🧩",
+            readTime: "45 min read",
+            type: "Free Download"
+          },
+          {
+            title: "Financial Services AI Success",
+            description: "$50M cost savings, 300% efficiency gains - complete case study",
+            link: "/case-studies/ai-financial-services-transformation-2025",
+            icon: "🏦",
+            readTime: "12 min read",
+            type: "Case Study"
+          }
+        ]}
+      />
+
+      {/* New Content Showcase Banner */}
+      <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -1623,6 +1681,68 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Enhanced Content Showcase */}
+      <ContentShowcase
+        title="Latest Insights & Expert Analysis"
+        subtitle="TRENDING NOW"
+        description="Stay ahead with our latest articles on AI, cloud architecture, growth strategies, and emerging technologies. Fresh content published weekly."
+        content={[
+          {
+            title: "AI Enterprise Integration 2025: Complete Implementation Guide",
+            description: "Master AI enterprise integration with our comprehensive 2025 guide. Learn best practices, architecture patterns, and real-world implementation strategies for seamless AI adoption.",
+            link: "/blog/ai-enterprise-integration-2025",
+            category: "AI & Technology",
+            readTime: "18 min read",
+            publishDate: "Jan 28, 2025",
+            new: true
+          },
+          {
+            title: "AI Customer Support Automation 2025: Complete Implementation Guide",
+            description: "Transform your customer support with AI automation. Learn proven strategies to reduce costs by 40% while improving customer satisfaction and response times.",
+            link: "/blog/ai-customer-support-automation-2025",
+            category: "AI & Customer Experience",
+            readTime: "9 min read",
+            publishDate: "Jan 28, 2025",
+            new: true
+          },
+          {
+            title: "LLM Guardrails in Production 2025: Safety Without Blocking Delivery",
+            description: "Implement effective LLM guardrails in production without slowing down development. Learn proven patterns, tools, and strategies for safe AI deployment at scale.",
+            link: "/blog/llm-guardrails-in-production-2025",
+            category: "AI Engineering & Security",
+            readTime: "8 min read",
+            publishDate: "Jan 28, 2025",
+            trending: true
+          },
+          {
+            title: "AI Architecture & Cost Governance 2025: Complete Framework",
+            description: "Master AI architecture and cost governance with our comprehensive framework. Learn proven patterns, tools, and strategies for building reliable and affordable AI systems.",
+            link: "/resources/ai-architecture-cost-governance-2025",
+            category: "Resources & Frameworks",
+            readTime: "45 min read",
+            publishDate: "Jan 28, 2025",
+            featured: true
+          },
+          {
+            title: "AI Financial Services Transformation 2025: $50M Cost Savings Case Study",
+            description: "Discover how a Fortune 500 financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
+            link: "/case-studies/ai-financial-services-transformation-2025",
+            category: "Case Studies",
+            readTime: "12 min read",
+            publishDate: "Jan 28, 2025",
+            featured: true
+          },
+          {
+            title: "Cloud-Native Architecture in 2025: Building for Scale and Resilience",
+            description: "Explore the latest trends and best practices in cloud-native architecture for 2025. Learn how to build scalable, resilient, and cost-effective systems.",
+            link: "/blog/cloud-native-architecture-2025",
+            category: "Cloud & DevOps",
+            readTime: "14 min read",
+            publishDate: "Jan 28, 2025",
+            new: true
+          }
+        ]}
+      />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
