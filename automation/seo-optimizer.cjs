@@ -1,84 +1,112 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting SEO Optimizer...');
-
-class SEOOptimizer {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async optimizeSEO() {
-    const seoOptimizations = [
-      { name: 'Sitemap Generation', command: 'npm run sitemap:generate', description: 'Generating sitemap for search engines' },
-      { name: 'Search Index', command: 'npm run search:index', description: 'Generating search index' },
-      { name: 'Meta Tags Check', command: 'npm run test:accessibility', description: 'Checking meta tags and accessibility' },
-      { name: 'Robots.txt Check', command: 'ls -la public/robots.txt', description: 'Checking robots.txt file' }
-    ];
-
-    const results = [];
-    let successfulOptimizations = 0;
-
-    for (const optimization of seoOptimizations) {
-      try {
-        this.log(`🔧 Running ${optimization.name}...`);
-        this.log(`📝 ${optimization.description}`);
-        
-        execSync(optimization.command, { stdio: 'pipe' });
-        
-        console.log(`✅ ${optimization.name} completed successfully`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'success', 
-          description: optimization.description,
-          error: null 
-        });
-        successfulOptimizations++;
-      } catch (error) {
-        console.log(`❌ ${optimization.name} failed`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'failed', 
-          description: optimization.description,
-          error: error.message 
-        });
-      }
-    }
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalOptimizations: seoOptimizations.length,
-      successfulOptimizations,
-      failedOptimizations: seoOptimizations.length - successfulOptimizations,
-      results,
-      seoScore: Math.round((successfulOptimizations / seoOptimizations.length) * 100)
-    };
-
-    const reportPath = path.join(this.reportsDir, 'seo-optimization-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 SEO optimization completed! Report saved to: ${reportPath}`);
-    this.log(`🔍 SEO Score: ${report.seoScore}% (${successfulOptimizations}/${seoOptimizations.length} optimizations successful)`);
-    
-    return report;
-  }
+function log(message, type = 'INFO') {
+  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+  console.log(`[${new Date().toISOString()}] [${type}] ${message}`);
 }
 
-// Run SEO optimization
-const optimizer = new SEOOptimizer();
-optimizer.optimizeSEO().catch(console.error);
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function findFiles(dir, exts) {
+  if (!fs.existsSync(dir)) return [];
+  const results = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const p = path.join(dir, entry);
+    const stat = fs.statSync(p);
+    if (stat.isDirectory()) {
+      results.push(...findFiles(p, exts));
+    } else if (exts.includes(path.extname(entry).toLowerCase())) {
+      results.push(p);
+    }
+  }
+  return results;
+}
+
+function optimizeSEO(rootDir, report) {
+  const htmlFiles = findFiles(rootDir, ['.html', '.tsx', '.jsx']);
+  let optimizedCount = 0;
+
+  for (const file of htmlFiles) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      let updated = content;
+      let modified = false;
+
+      // Add meta description if missing
+      if (
+        !content.includes('name="description"') &&
+        !content.includes('property="og:description"')
+      ) {
+        const metaDescription =
+          '    <meta name="description" content="Zion Tech Group - Advanced AI, IT Solutions, and Digital Transformation Services" />';
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${metaDescription}`);
+          modified = true;
+        }
+      }
+
+      // Add Open Graph tags if missing
+      if (!content.includes('property="og:title"')) {
+        const ogTags = `    <meta property="og:title" content="Zion Tech Group" />
+    <meta property="og:description" content="Advanced AI, IT Solutions, and Digital Transformation Services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />`;
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${ogTags}`);
+          modified = true;
+        }
+      }
+
+      if (modified) {
+        fs.writeFileSync(file, updated);
+        optimizedCount++;
+        report.actions.push(`Optimized SEO for ${path.basename(file)}`);
+      }
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${file}: ${e.message}`);
+    }
+  }
+
+  report.actions.push(`Optimized SEO for ${optimizedCount} files`);
+}
+
+function main() {
+  const root = process.cwd();
+  const timestamp = Date.now();
+  const report = {
+    timestamp,
+    actions: [],
+    modifiedFiles: [],
+    errors: [],
+  };
+
+  log('Starting SEO Optimizer');
+
+  ensureDir(path.join(root, 'automation-reports'));
+
+  // Optimize SEO in src/ directory
+  optimizeSEO(path.join(root, 'src'), report);
+
+  const outFile = path.join(
+    root,
+    `automation-reports/seo-optimizer-report-${timestamp}.json`
+  );
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+
+  log(
+    `SEO optimization complete. Report: ${path.basename(outFile)}`,
+    'SUCCESS'
+  );
+}
+
+try {
+  main();
+} catch (e) {
+  log(`SEO optimizer failed: ${e.message}`, 'ERROR');
+  process.exit(1);
+}

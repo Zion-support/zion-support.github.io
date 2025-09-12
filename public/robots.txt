@@ -3,11 +3,20 @@ Allow: /
 
 Sitemap: https://zion.app/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
 
-# Crawl-delay for respectful crawling
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /resources/
+Allow: /blog/
+
+# Crawl delay for better server performance
 Crawl-delay: 1
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 

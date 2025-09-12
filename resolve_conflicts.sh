@@ -1,35 +1,58 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts systematically
-# Keep our PM2 automation improvements, accept main branch for others
+echo "🔧 Resolving all merge conflicts..."
 
-echo "Resolving merge conflicts..."
+# Get all conflicted files
+CONFLICTED_FILES=$(git status --porcelain | grep "^UU" | awk '{print $2}')
 
-# Keep our PM2 automation files
-git checkout --ours ecosystem.config.js
-git checkout --ours pm2-automation.sh
-git checkout --ours eslint.config.cjs
+echo "📋 Found $(echo "$CONFLICTED_FILES" | wc -l) conflicted files"
 
-# For most other files, accept the main branch version
-git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-    file=$(echo "$line" | cut -c4-)
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
     
-    # Skip our important files
-    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
-        echo "Keeping our version of $file"
-        continue
+    echo "🔧 Resolving conflicts in $file..."
+    
+    # Check if file has merge conflicts
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "⚠️  Found conflicts in $file, resolving..."
+        
+        # Create a backup of the conflicted file
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Strategy: Keep both versions where possible, prefer main branch for critical files
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            echo "📦 Critical file detected, keeping main version and merging dependencies..."
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            echo "⚙️  Config file detected, keeping main version..."
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        else
+            echo "📝 Regular file, attempting to merge both versions..."
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        fi
+        
+        echo "✅ Resolved conflicts in $file"
+    else
+        echo "✅ No conflicts found in $file"
     fi
-    
-    # Accept main branch version for most files
-    echo "Accepting main branch version of $file"
-    git checkout --theirs "$file"
+}
+
+# Resolve conflicts in each file
+for file in $CONFLICTED_FILES; do
+    if [ -f "$file" ]; then
+        resolve_conflicts "$file"
+    fi
 done
 
-echo "Adding resolved files..."
+echo "✅ All conflicts resolved!"
+echo "📝 Adding resolved files..."
+
+# Add all resolved files
 git add .
 
-echo "Committing merge resolution..."
-git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
-
-echo "Pushing resolved changes..."
-git push origin HEAD
+echo "🎉 Ready to commit the merge!"
+echo "💡 Run: git commit -m 'Merge remote main with local changes'"

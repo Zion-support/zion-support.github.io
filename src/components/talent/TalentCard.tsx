@@ -1,58 +1,85 @@
 import React from 'react';
-import { useRouter  } from 'next/router';
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from "@/components/FavoriteButton",
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Heart, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
-import { RatingStars  } from '@/components/RatingStars';
-import { useAuth  } from '@/context/auth/AuthProvider';
-import { useCart } from '@/context/CartContext';
+import { useAppDispatch } from "@/store/hooks";
+import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
+
 export interface TalentCardProps {
-<<<<<<< HEAD
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
-  isAuthenticated: boolean
+  isAuthenticated: boolean;
 }
 
-const TalentCardComponent = null;
-=======
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isAuthenticated: boolean
-}
 const TalentCardComponent = ({
-  talent
-  onViewProfile
-  onRequestHire
+  talent,
+  onViewProfile,
+  onRequestHire,
   isAuthenticated
-}: TalentCardProps,) => {
-  const router = useRouter()
+}: TalentCardProps) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { toast } = useToast();
+  const dispatch = useAppDispatch();
+  
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`)
+    router.push(`/talent/${talent.id}`);
+    
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(talent.id)
+      onViewProfile(talent.id);
     }
-  }
-  const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault()
-    e.stopPropagation()
+  };
+
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (onRequestHire) {
-      onRequestHire(talent)
+      onRequestHire(talent);
     }
-  }
+  };
+
+  const handleToggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+        variant: "destructive"
+      });
+      const next = encodeURIComponent(location.pathname + location.search);
+      navigate(`/login?next=${next}`);
+      return;
+    }
+
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved);
+    }
+
+    dispatch(addToWishlist({ id: talent.id, type: 'talent', data: talent }));
+    fetch(`${getApiUrl()}/wishlist`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: talent.id, type: 'talent' })
+    }).catch(() => {});
+  };
+
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[]
+  const skills = talent.skills?.slice(0, 5) || [];
+
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
-      onClick = {handleViewProfile,}
-      tabIndex = {0,}
+      onClick={handleViewProfile}
+      tabIndex={0}
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -61,14 +88,14 @@ const TalentCardComponent = ({
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img
-                  src = {talent.profile_picture_url,}
-                  alt = {talent.full_name,}
+                  src={talent.profile_picture_url}
+                  alt={talent.full_name}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) |"T"}
+                  {talent.full_name?.charAt(0) || "T"}
                 </div>
               )}
             </div>
@@ -78,13 +105,24 @@ const TalentCardComponent = ({
               </div>
             )}
           </div>
+          
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
-              <FavoriteButton itemId={talent.id} className="-mt-1" />
+              <Button
+                variant="ghost"
+                size="sm"
+                aria-label="save-to-wishlist"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+                onClick={handleToggleSave}
+              >
+                <Heart className={`h-5 w-5 ${isSaved ? 'fill-red-500 text-red-500' : ''}`} />
+                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
+              </Button>
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
+            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -102,26 +140,28 @@ const TalentCardComponent = ({
             </div>
           </div>
         </div>
+        
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index,) => (
-                <span
-                  key = {index,}
+              {skills.map((skill, index) => (
+                <span 
+                  key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
                 </span>
               ))}
-              {(talent.skills?.length |0) > 5 && (
+              {(talent.skills?.length || 0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
+                  +{(talent.skills?.length || 0) - 5} more
                 </span>
               )}
             </div>
           </div>
         )}
+        
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -134,12 +174,13 @@ const TalentCardComponent = ({
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
+          
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
                 size="sm"
                 variant="secondary"
-                onClick = {handleRequestHire,}
+                onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -148,11 +189,11 @@ const TalentCardComponent = ({
             <Button
               size="sm"
               variant="ghost"
-              onClick={(e,) => {
-                e.stopPropagation()
-                handleViewProfile()
+              onClick={(e) => {
+                e.stopPropagation();
+                handleViewProfile();
               }}
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -160,10 +201,8 @@ const TalentCardComponent = ({
         </div>
       </div>
     </Card>
-  )
-}
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};
+
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard';
