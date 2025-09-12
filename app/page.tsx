@@ -169,6 +169,12 @@ import NewContent2026PromotionBanner from '../components/NewContent2026Promotion
 import AI2026ContentRecommendationEngine from '../components/AI2026ContentRecommendationEngine';
 import InteractiveContentDiscovery2028 from '../components/InteractiveContentDiscovery2028';
 
+// New 2027 Latest Content Components
+import AI2027LatestBreakthroughsPromotionBanner from '../components/AI2027LatestBreakthroughsPromotionBanner';
+import InteractiveTechShowcase2027 from '../components/InteractiveTechShowcase2027';
+import FutureTechTrendsBanner from '../components/FutureTechTrendsBanner';
+import EnhancedContentDiscovery2027 from '../components/EnhancedContentDiscovery2027';
+
 // New 2029-2030 Content Components
 import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
 import AI2029BreakthroughContentShowcase from '../components/AI2029BreakthroughContentShowcase';
@@ -255,6 +261,15 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
+        
+        {/* AI 2027 LATEST BREAKTHROUGHS PROMOTION BANNER - NEWEST CONTENT */}
+        <AI2027LatestBreakthroughsPromotionBanner />
+        
+        {/* INTERACTIVE TECH SHOWCASE 2027 - REVOLUTIONARY CONTENT */}
+        <InteractiveTechShowcase2027 />
+        
+        {/* FUTURE TECH TRENDS BANNER - TRENDING CONTENT */}
+        <FutureTechTrendsBanner />
         
         {/* NEW CONTENT 2025 BREAKTHROUGH BANNER */}
         <NewContent2025BreakthroughBanner />
@@ -374,6 +389,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY */}
         <InteractiveContentDiscovery2026 />
+        
+        {/* ENHANCED CONTENT DISCOVERY 2027 - NEW FEATURE */}
+        <EnhancedContentDiscovery2027 />
         
         {/* REVOLUTIONARY INTERACTIVE CONTENT DISCOVERY */}
         <div className="py-16 px-4 bg-gradient-to-r from-gray-50 to-blue-50">
