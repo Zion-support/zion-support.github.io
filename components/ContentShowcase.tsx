@@ -664,13 +664,49 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 // Predefined content collections for easy use
 export const featuredContent = [
   {
+    title: "AI-Quantum Computing Breakthrough 2025",
+    description: "Revolutionary convergence of AI and quantum computing unlocking unprecedented computational power",
+    href: "/blog/ai-quantum-computing-breakthrough-2025",
+    icon: "⚛️",
+    readTime: "28 min read",
+    category: "Quantum AI",
+    isNew: true
+  },
+  {
+    title: "AI Space Technology Revolution 2025",
+    description: "Transforming space exploration with autonomous missions and advanced satellite networks",
+    href: "/blog/ai-space-technology-revolution-2025",
+    icon: "🚀",
+    readTime: "24 min read",
+    category: "Space AI",
+    isNew: true
+  },
+  {
+    title: "AI Manufacturing Transformation Success",
+    description: "300% productivity increase and $50M cost savings through comprehensive AI transformation",
+    href: "/case-studies/ai-manufacturing-transformation-success-2025",
+    icon: "🏭",
+    readTime: "20 min read",
+    category: "Manufacturing AI",
+    isNew: true
+  },
+  {
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete roadmap for successful AI implementation with proven strategies and case studies",
+    href: "/resources/ai-implementation-master-guide-2026",
+    icon: "📚",
+    readTime: "35 min read",
+    category: "Implementation Guide",
+    isNew: true
+  },
+  {
     title: "AI Enterprise Transformation 2026",
     description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
     href: "/blog/ai-2026-enterprise-transformation",
     icon: "🏢",
     readTime: "25 min read",
     category: "Enterprise AI",
-    isNew: true
+    isNew: false
   },
   {
     title: "AI Breakthrough Predictions 2026",
@@ -703,13 +739,49 @@ export const featuredContent = [
 
 export const trendingContent = [
   {
+    title: "AI-Quantum Computing Breakthrough 2025",
+    description: "Revolutionary convergence of AI and quantum computing unlocking unprecedented computational power",
+    href: "/blog/ai-quantum-computing-breakthrough-2025",
+    icon: "⚛️",
+    readTime: "28 min read",
+    category: "Quantum AI",
+    isTrending: true
+  },
+  {
+    title: "AI Space Technology Revolution 2025",
+    description: "Transforming space exploration with autonomous missions and advanced satellite networks",
+    href: "/blog/ai-space-technology-revolution-2025",
+    icon: "🚀",
+    readTime: "24 min read",
+    category: "Space AI",
+    isTrending: true
+  },
+  {
+    title: "AI Manufacturing Transformation Success",
+    description: "300% productivity increase and $50M cost savings through comprehensive AI transformation",
+    href: "/case-studies/ai-manufacturing-transformation-success-2025",
+    icon: "🏭",
+    readTime: "20 min read",
+    category: "Manufacturing AI",
+    isTrending: true
+  },
+  {
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete roadmap for successful AI implementation with proven strategies and case studies",
+    href: "/resources/ai-implementation-master-guide-2026",
+    icon: "📚",
+    readTime: "35 min read",
+    category: "Implementation Guide",
+    isTrending: true
+  },
+  {
     title: "AI Breakthrough Predictions 2026",
     description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
     href: "/blog/ai-2026-breakthrough-predictions",
     icon: "🔮",
     readTime: "22 min read",
     category: "AI Predictions",
-    isTrending: true
+    isTrending: false
   },
   {
     title: "AI Healthcare Diagnosis Breakthrough",
