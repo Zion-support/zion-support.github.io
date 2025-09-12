@@ -118,6 +118,61 @@ export default function HomePage() {
         {/* New Content Promotion Banner */}
         <NewContentPromoBanner />
 
+        {/* Enhanced Content Discovery Banner */}
+        <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+                <span className="text-sm font-medium">🔍 ENHANCED CONTENT DISCOVERY</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎯 Discover Revolutionary AI Content with Advanced Search & Filtering
+              </h2>
+              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
+                Explore our comprehensive library of 120+ AI resources with intelligent search, category filtering, 
+                and personalized recommendations. Find exactly what you need to accelerate your AI journey.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/enhanced-content-discovery"
+                  className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center"
+                >
+                  🔍 Explore Enhanced Discovery
+                  <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/ultra-content-showcase"
+                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
+                >
+                  📚 View All Content
+                </Link>
+              </div>
+              
+              {/* Feature Highlights */}
+              <div className="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                  <div className="text-3xl mb-3">🔍</div>
+                  <h3 className="text-lg font-semibold mb-2">Smart Search</h3>
+                  <p className="text-sm opacity-90">Search by title, description, tags, or content type</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                  <div className="text-3xl mb-3">🏷️</div>
+                  <h3 className="text-lg font-semibold mb-2">Category Filtering</h3>
+                  <p className="text-sm opacity-90">Filter by AI automation, cybersecurity, case studies, and more</p>
+                </div>
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">
+                  <div className="text-3xl mb-3">⭐</div>
+                  <h3 className="text-lg font-semibold mb-2">Trending Content</h3>
+                  <p className="text-sm opacity-90">Discover what&apos;s popular and featured by our experts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* AI Tools Showcase Banner */}
         <section className="py-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
