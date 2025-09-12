@@ -41,6 +41,32 @@ function InteractiveContentDiscovery() {
       difficulty: 'intermediate'
     },
     {
+      id: '9',
+      title: 'Foundation Models Cost Optimization 2025',
+      description: 'Reduce inference and training spend using quantization, distillation, caching, and dynamic routing.',
+      href: '/blog/ai-2025-foundation-models-cost-optimization',
+      type: 'blog',
+      category: 'Optimization',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Optimization', 'Inference', 'Quantization', 'Distillation'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '10',
+      title: 'AI-Powered Customer Service: 90% Satisfaction Case Study',
+      description: 'Deflection flows, AI assistants, and smart escalation delivered 90% CSAT and a 60% cost reduction.',
+      href: '/case-studies/ai-customer-service-transformation',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '12 min read',
+      date: 'Jan 20, 2025',
+      tags: ['Customer Service', 'Automation', 'CSAT'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '1',
       title: 'Advanced RAG Systems 2025: Production-Ready Implementation Guide',
       description: 'Master advanced RAG (Retrieval-Augmented Generation) systems with our comprehensive 2025 guide. Learn production patterns, optimization techniques, and real-world implementations.',
