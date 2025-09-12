@@ -35,7 +35,6 @@ import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
 import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
 import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
-import AI2029ContentPromotionBanner from '../components/AI2029ContentPromotionBanner';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -50,8 +49,13 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+<<<<<<< HEAD
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
+<<<<<<< HEAD
+<<<<<<< HEAD
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
@@ -206,9 +210,6 @@ export default function HomePage() {
         {/* AI 2028 BREAKTHROUGH PROMOTION BANNER */}
         <AI2028BreakthroughPromotionBanner />
         
-        {/* AI 2029 CONTENT PROMOTION BANNER */}
-        <AI2029ContentPromotionBanner />
-        
         {/* AI 2028 BREAKTHROUGH CONTENT SHOWCASE */}
         <AI2028BreakthroughContentShowcase />
         
@@ -301,6 +302,7 @@ export default function HomePage() {
         {/* NEW CONTENT 2025 SHOWCASE */}
         <NewContent2025Showcase />
         
+<<<<<<< HEAD
         {/* AI 2026 BREAKTHROUGH PROMOTION BANNER */}
         <AI2026BreakthroughPromotionBanner />
         
@@ -310,14 +312,12 @@ export default function HomePage() {
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <AI2026ContentDiscoveryWidget />
         
+<<<<<<< HEAD
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
-        
-        {/* AI 2029 CONTENT PROMOTION BANNER */}
-        <AI2029ContentPromotionBanner />
         
         {/* REVOLUTIONARY TECH 2025 PROMOTION BANNER */}
         <RevolutionaryTech2025PromotionBanner />
@@ -1072,6 +1072,9 @@ export default function HomePage() {
         </Suspense>
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
+        {/* AI 2025 Revolutionary Breakthrough Banner */}
+        <AI2025RevolutionaryBreakthroughBanner />
+
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <h1 id="hero-heading" className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight'>
@@ -2299,6 +2302,9 @@ export default function HomePage() {
 
         {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
+        {/* AI 2025 Revolutionary Content Showcase */}
+        <AI2025RevolutionaryContentShowcase />
+
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold mb-4'>
