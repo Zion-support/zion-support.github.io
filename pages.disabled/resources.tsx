@@ -12,6 +12,7 @@ import {
 export default function Resources() {
   const resources = [
     {
+<<<<<<< HEAD
       title: 'Complete Platform Guide',
       description: 'Everything you need to know about our autonomous technology platform.',
       type: 'Comprehensive Guide',
@@ -41,6 +42,90 @@ export default function Resources() {
       icon: '⚡',
       color: 'bg-gradient-to-br from-purple-400 to-pink-500',
     },
+=======
+      title: 'The Future of AI Consciousness: A Comprehensive Guide',
+      type: 'Whitepaper',
+      category: 'AI & Consciousness',
+      description: 'Deep dive into the evolution of artificial consciousness, emotional intelligence, and the future of human-AI interaction.',
+      downloadCount: '2,847',
+      fileSize: '2.3 MB',
+      icon: <Brain className="w-8 h-8 text-violet-500" />,
+      featured: true,
+      downloadUrl: '/resources/ai-consciousness-whitepaper.pdf'
+    },
+    {
+      title: 'Quantum Computing in Enterprise: Implementation Guide',
+      type: 'Guide',
+      category: 'Quantum Technology',
+      description: 'Practical guide for implementing quantum computing solutions in enterprise environments.',
+      downloadCount: '1,956',
+      fileSize: '1.8 MB',
+      icon: <Atom className="w-8 h-8 text-blue-500" />,
+      featured: false,
+      downloadUrl: '/resources/quantum-enterprise-guide.pdf'
+    },
+    {
+      title: 'Autonomous Business Operations: ROI Analysis',
+      type: 'Report',
+      category: 'Business Automation',
+      description: 'Comprehensive analysis of return on investment for autonomous business operations platforms.',
+      downloadCount: '3,124',
+      fileSize: '3.1 MB',
+      icon: <Rocket className="w-8 h-8 text-teal-500" />,
+      featured: false,
+      downloadUrl: '/resources/autonomous-business-roi.pdf'
+    },
+    {
+      title: 'AI-Powered IT Asset Management Best Practices',
+      type: 'Guide',
+      category: 'IT Management',
+      description: 'Best practices for implementing AI-powered IT asset management in modern enterprises.',
+      downloadCount: '1,732',
+      fileSize: '1.5 MB',
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      featured: false,
+      downloadUrl: '/resources/ai-it-asset-management-guide.pdf'
+    },
+    {
+      title: 'Quantum Neural Networks: Technical Deep Dive',
+      type: 'Technical Paper',
+      category: 'Quantum AI',
+      description: 'Technical exploration of quantum neural networks and their applications in artificial intelligence.',
+      downloadCount: '892',
+      fileSize: '4.2 MB',
+      icon: <Brain className="w-8 h-8 text-purple-500" />,
+      featured: false,
+      downloadUrl: '/resources/quantum-neural-networks-paper.pdf'
+    },
+    {
+      title: 'Cybersecurity in the Age of AI: Threat Landscape 2025',
+      type: 'Report',
+      category: 'Cybersecurity',
+      description: 'Analysis of emerging cybersecurity threats and AI-powered defense strategies.',
+      downloadCount: '2,156',
+      fileSize: '2.7 MB',
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      featured: false,
+      downloadUrl: '/resources/ai-cybersecurity-2025.pdf'
+    }
+  ];
+
+  const categories = [
+    { name: 'All Resources', count: resources.length, active: true },
+    { name: 'AI & Consciousness', count: 1, active: false },
+    { name: 'Quantum Technology', count: 1, active: false },
+    { name: 'Business Automation', count: 1, active: false },
+    { name: 'IT Management', count: 1, active: false },
+    { name: 'Quantum AI', count: 1, active: false },
+    { name: 'Cybersecurity', count: 1, active: false }
+  ];
+
+  const resourceTypes = [
+    { name: 'Whitepapers', icon: <FileText className="w-6 h-6" />, count: 1 },
+    { name: 'Guides', icon: <BookOpen className="w-6 h-6" />, count: 2 },
+    { name: 'Reports', icon: <TrendingUp className="w-6 h-6" />, count: 2 },
+    { name: 'Technical Papers', icon: <Database className="w-6 h-6" />, count: 1 }
+>>>>>>> origin/content/blog-sept12
   ];
 
   const categories = [
@@ -182,141 +267,27 @@ export default function Resources() {
                     </div>
                   </div>
                 </div>
-              </Card>
-            ))}
+              ))}
+            </motion.div>
           </div>
-        </Container>
-      </section>
+        </section>
 
-      {/* Resource Categories */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find the resources you need organized by topic and type
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.map((category, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className={`w-full h-32 ${category.color} flex items-center justify-center`}>
-                  <span className="text-5xl">{category.icon}</span>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {category.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    {category.description}
-                  </p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {category.resources.slice(0, 3).map((resource, resourceIndex) => (
-                      <div key={resourceIndex} className="flex items-center justify-between text-sm">
-                        <span className="text-gray-700">{resource.name}</span>
-                        <span className="text-gray-500">{resource.size}</span>
-                      </div>
-                    ))}
-                    {category.resources.length > 3 && (
-                      <div className="text-sm text-blue-600 font-medium">
-                        +{category.resources.length - 3} more resources
-                      </div>
-                    )}
-                  </div>
-                  
-                  <Button href={`/resources/${category.title.toLowerCase().replace(/ /g, '-')}`} variant="outline" className="w-full">
-                    View All
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Quick Access Tools */}
-      <section className="py-16 lg:py-24 bg-white">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Quick Access Tools
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Essential tools and utilities to help you get started quickly
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🔍</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Search Resources</h3>
-              <p className="text-gray-600 text-sm mb-4">Find exactly what you need</p>
-              <Button href="/resources/search" variant="ghost" size="sm">
-                Search Now
-              </Button>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📥</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Download Center</h3>
-              <p className="text-gray-600 text-sm mb-4">Access all resources</p>
-              <Button href="/resources/downloads" variant="ghost" size="sm">
-                Browse All
-              </Button>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💬</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Get Support</h3>
-              <p className="text-gray-600 text-sm mb-4">Expert help when you need it</p>
-              <Button href="/contact" variant="ghost" size="sm">
-                Contact Us
-              </Button>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📧</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Newsletter</h3>
-              <p className="text-gray-600 text-sm mb-4">Stay updated on new resources</p>
-              <Button href="/resources/newsletter" variant="ghost" size="sm">
-                Subscribe
-              </Button>
-            </Card>
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-purple-600">
-        <Container>
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Need Help Finding Resources?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Our team of experts is here to help you find the right resources for your project
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="secondary" size="lg">
-                Get Expert Help
-              </Button>
-              <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
-                Explore Services
-              </Button>
+        {/* Categories Filter */}
+        <section className="py-10 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                    category.active
+                      ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
             </div>
           </div>
         </section>

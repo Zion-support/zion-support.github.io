@@ -9,14 +9,6 @@ export default function BlogIndexPage() {
       tag: "AI",
     },
     {
-      slug: "ai-governance-roadmap-2025",
-      title: "AI Governance Roadmap 2025",
-      excerpt:
-        "Implement safe, auditable, sovereign AI with policy, oversight, telemetry, and controls.",
-      date: "2025-09-12",
-      tag: "Governance",
-    },
-    {
       slug: "service-pricing-starters-for-smbs",
       title: "Starter Pricing: AI, IT, and Web3 Service Bundles",
       excerpt:
@@ -33,20 +25,28 @@ export default function BlogIndexPage() {
       tag: "Web3",
     },
     {
-      slug: "sovereign-ai-security-basics",
-      title: "Sovereign AI Security Basics",
+      slug: "ai-governance-playbook",
+      title: "AI Governance Playbook: Guardrails That Don’t Slow You Down",
       excerpt:
-        "Threat models, secrets handling, and guardrails every AI deployment should implement.",
+        "A lightweight framework for model risk, data privacy, and human-in-the-loop approvals.",
       date: "2025-09-12",
-      tag: "Security",
+      tag: "AI",
     },
     {
-      slug: "observability-for-llm-agents",
-      title: "Observability for LLM Agents",
+      slug: "it-cost-optimization-quick-wins",
+      title: "IT Cost Optimization: 9 Quick Wins for Q4",
       excerpt:
-        "How to trace prompts, tools, and costs with actionable SLOs for production agents.",
+        "Practical tactics across cloud, licenses, and automation that cut cost without chaos.",
       date: "2025-09-12",
-      tag: "Ops",
+      tag: "IT",
+    },
+    {
+      slug: "token-rewards-growth-loops",
+      title: "Designing Token Reward Growth Loops",
+      excerpt:
+        "How to craft sustainable incentives that compound community engagement and revenue.",
+      date: "2025-09-12",
+      tag: "Web3",
     },
   ];
 

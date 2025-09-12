@@ -34,70 +34,26 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '70',
-      title: 'Autonomous Enterprise Agents 2025',
-      description: 'Build AI agents that operate independently while maintaining enterprise security and compliance.',
-      href: '/blog/ai-2025-autonomous-enterprise-agents',
-      type: 'blog',
-      featured: true,
-      readTime: '22 min read',
-      date: 'Sep 15, 2025',
-      category: 'Autonomous AI'
-    },
-    {
-      id: '71',
-      title: 'Generative AI Platforms 2025',
-      description: 'Build enterprise-grade generative AI platforms that scale with governance and cost optimization.',
-      href: '/blog/ai-2025-generative-ai-platforms',
+      id: '55',
+      title: 'Evaluations at Scale for GenAI Systems (2025)',
+      description: 'Automated pipelines for quality, safety, and cost in CI/CD with online and offline evals.',
+      href: '/blog/ai-2025-evaluations-at-scale',
       type: 'blog',
       featured: true,
       readTime: '20 min read',
-      date: 'Sep 15, 2025',
-      category: 'AI Platforms'
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
     },
     {
-      id: '72',
-      title: 'Autonomous Enterprise Transformation: 85% Efficiency Gains',
-      description: 'Case study: Fortune 500 company achieves massive efficiency improvements through autonomous AI agents.',
-      href: '/case-studies/ai-2025-autonomous-enterprise-transformation',
-      type: 'case-study',
-      featured: true,
-      readTime: '12 min read',
-      date: 'Sep 15, 2025',
-      category: 'Case Study'
-    },
-    {
-      id: '60',
-      title: 'AI Guardrails in Production (2025)',
-      description: 'Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.',
-      href: '/blog/ai-2025-guardrails-in-production',
+      id: '54',
+      title: 'Knowledge Graphs for Reliable RAG in 2025',
+      description: 'Combine graphs with vectors to boost precision, add provenance, and reduce hallucinations.',
+      href: '/blog/ai-2025-knowledge-graphs-for-rag',
       type: 'blog',
       featured: true,
       readTime: '18 min read',
       date: 'Sep 12, 2025',
-      category: 'AI Safety'
-    },
-    {
-      id: '61',
-      title: 'AI Governance Operating Model (2025)',
-      description: 'Roles, decision rights, and automated controls to scale AI with confidence.',
-      href: '/blog/ai-2025-ai-governance-operating-model',
-      type: 'blog',
-      featured: true,
-      readTime: '17 min read',
-      date: 'Sep 12, 2025',
-      category: 'Governance'
-    },
-    {
-      id: '62',
-      title: 'AI Governance Operating Model Impact: 35% Faster Delivery',
-      description: 'Case study: Governance operating model cut incidents 28% and accelerated delivery 35%.',
-      href: '/case-studies/ai-2025-governance-operating-model-impact',
-      type: 'case-study',
-      featured: true,
-      readTime: '10 min read',
-      date: 'Sep 12, 2025',
-      category: 'Case Study'
+      category: 'RAG'
     },
     {
       id: '50',

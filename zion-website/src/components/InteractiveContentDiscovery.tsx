@@ -28,30 +28,30 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
-      id: '60',
-      title: 'AI Governance Maturity Model (2025)',
-      description: 'Assess your governance level and implement pragmatic controls without slowing delivery.',
-      href: '/blog/ai-2025-governance-maturity-model',
+      id: '55',
+      title: 'Evaluations at Scale for GenAI Systems (2025)',
+      description: 'Automated pipelines for quality, safety, and cost in CI/CD with online and offline evals.',
+      href: '/blog/ai-2025-evaluations-at-scale',
       type: 'blog',
-      category: 'Governance',
-      readTime: '16 min read',
+      category: 'Evaluation',
+      readTime: '20 min read',
       date: 'Sep 12, 2025',
-      tags: ['Governance', 'Risk', 'Policy-as-code'],
+      tags: ['Evaluations', 'Safety', 'CI/CD', 'Guardrails'],
       featured: true,
-      difficulty: 'beginner'
+      difficulty: 'intermediate'
     },
     {
-      id: '61',
-      title: 'Governance Maturity Rollout: 60% Faster Reviews',
-      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage.',
-      href: '/case-studies/ai-2025-governance-maturity-rollout',
-      type: 'case-study',
-      category: 'Case Study',
-      readTime: '10 min read',
+      id: '54',
+      title: 'Knowledge Graphs for Reliable RAG in 2025',
+      description: 'Combine knowledge graphs with vector search to add provenance and reduce hallucinations.',
+      href: '/blog/ai-2025-knowledge-graphs-for-rag',
+      type: 'blog',
+      category: 'RAG',
+      readTime: '18 min read',
       date: 'Sep 12, 2025',
-      tags: ['Governance', 'Compliance', 'Evaluations'],
+      tags: ['RAG', 'Knowledge Graphs', 'Provenance', 'Vector Search'],
       featured: true,
-      difficulty: 'beginner'
+      difficulty: 'intermediate'
     },
     {
       id: '50',
@@ -209,6 +209,7 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',

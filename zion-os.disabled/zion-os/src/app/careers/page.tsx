@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 =======
+=======
+=======
+
+=======
+>>>>>>> origin/content/blog-sept12
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of innovators at Zion Tech Group. Explore exciting career opportunities in AI, quantum computing, and technology solutions.',
@@ -312,6 +318,30 @@ export default function CareersPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Open Positions */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
+        <div className="space-y-6">
+          {openPositions.map((position, index) => (
+            <div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
+                  <div className="flex flex-wrap gap-4 text-sm opacity-70">
+                    <span>{position.department}</span>
+                    <span>•</span>
+                    <span>{position.location}</span>
+                    <span>•</span>
+                    <span className="text-blue-400">{position.type}</span>
+                  </div>
+                </div>
+                <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+                  Apply Now
+                </button>
+=======
+>>>>>>> origin/content/blog-sept12
               We foster an environment of innovation, collaboration, and continuous learning
             </p>
           </div>
@@ -321,49 +351,7 @@ export default function CareersPage() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🚀</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation First</h3>
-              <p className="text-gray-600">We encourage creative thinking and bold ideas that push the boundaries of what's possible.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🤝</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Collaboration</h3>
-              <p className="text-gray-600">We believe the best solutions come from diverse perspectives working together.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📚</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Continuous Learning</h3>
-              <p className="text-gray-600">We invest in your growth with ongoing education and development opportunities.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🌍</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Impact</h3>
-              <p className="text-gray-600">We focus on creating meaningful, real-world impact through our technology.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Integrity</h3>
-              <p className="text-gray-600">We operate with honesty, transparency, and ethical principles.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">⭐</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Excellence</h3>
-              <p className="text-gray-600">We maintain the highest standards of quality in everything we do.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

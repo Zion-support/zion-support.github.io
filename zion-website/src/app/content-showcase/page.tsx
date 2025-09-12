@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import NewContentPromoBanner from '../../components/NewContentPromoBanner';
-import NewsletterSignup from '../../components/NewsletterSignup';
 
 export const metadata = {
   title: 'Content Showcase - AI & Technology Resources | Zion Tech Group',
@@ -17,62 +16,22 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "Autonomous Enterprise Agents 2025",
-      description: "Build AI agents that operate independently while maintaining enterprise security and compliance.",
-      href: "/blog/ai-2025-autonomous-enterprise-agents",
-      icon: "🤖",
-      category: "Autonomous AI",
-      readTime: "22 min read",
-      date: "Sep 15, 2025",
-      featured: true
-    },
-    {
-      title: "Generative AI Platforms 2025",
-      description: "Build enterprise-grade generative AI platforms that scale with governance and cost optimization.",
-      href: "/blog/ai-2025-generative-ai-platforms",
-      icon: "🏗️",
-      category: "AI Platforms",
+      title: "Evaluations at Scale for GenAI Systems (2025)",
+      description: "Automated pipelines for quality, safety, and cost in CI/CD with online and offline evals.",
+      href: "/blog/ai-2025-evaluations-at-scale",
+      icon: "🧪",
+      category: "Evaluation",
       readTime: "20 min read",
-      date: "Sep 15, 2025",
+      date: "Sep 12, 2025",
       featured: true
     },
     {
-      title: "Autonomous Enterprise Transformation: 85% Efficiency Gains",
-      description: "Case study: Fortune 500 company achieves massive efficiency improvements through autonomous AI agents.",
-      href: "/case-studies/ai-2025-autonomous-enterprise-transformation",
-      icon: "📊",
-      category: "Case Study",
-      readTime: "12 min read",
-      date: "Sep 15, 2025",
-      featured: true
-    },
-    {
-      title: "AI Guardrails in Production (2025)",
-      description: "Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.",
-      href: "/blog/ai-2025-guardrails-in-production",
-      icon: "🛡️",
-      category: "AI Safety",
+      title: "Knowledge Graphs for Reliable RAG in 2025",
+      description: "Combine graphs with vectors to boost precision, add provenance, and reduce hallucinations.",
+      href: "/blog/ai-2025-knowledge-graphs-for-rag",
+      icon: "🕸️",
+      category: "RAG",
       readTime: "18 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Governance Operating Model (2025)",
-      description: "Roles, decision rights, and automated controls to scale AI with confidence.",
-      href: "/blog/ai-2025-ai-governance-operating-model",
-      icon: "🏛️",
-      category: "Governance",
-      readTime: "17 min read",
-      date: "Sep 12, 2025",
-      featured: true
-    },
-    {
-      title: "AI Governance Operating Model Impact: 35% Faster Delivery",
-      description: "Case study: Governance operating model cut incidents 28% and accelerated delivery 35%.",
-      href: "/case-studies/ai-2025-governance-operating-model-impact",
-      icon: "📊",
-      category: "Case Study",
-      readTime: "10 min read",
       date: "Sep 12, 2025",
       featured: true
     },
@@ -330,8 +289,6 @@ export default function ContentShowcase() {
 
   const categories = [
     { name: 'All', count: featuredContent.length, active: true },
-    { name: 'Autonomous AI', count: featuredContent.filter(c => c.category === 'Autonomous AI').length, active: false },
-    { name: 'AI Platforms', count: featuredContent.filter(c => c.category === 'AI Platforms').length, active: false },
     { name: 'Advanced AI', count: featuredContent.filter(c => c.category === 'Advanced AI').length, active: false },
     { name: 'Evaluation', count: featuredContent.filter(c => c.category === 'Evaluation').length, active: false },
     { name: 'Governance', count: featuredContent.filter(c => c.category === 'Governance').length, active: false },
@@ -364,13 +321,6 @@ export default function ContentShowcase() {
 
       {/* Promo Banner */}
       <NewContentPromoBanner variant="featured" maxItems={4} />
-
-      {/* Newsletter Signup */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NewsletterSignup />
-        </div>
-      </div>
 
       {/* Categories Filter */}
       <div className="bg-gray-50 py-8">

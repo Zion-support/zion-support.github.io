@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface AdvancedAIAutomationService {
+export interface AdvancedAIAutomationService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface AdvancedAIAutomationService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  variant: string;
+  variant: ServiceVariant;
   contactInfo: {
     mobile: string;
     email: string;
@@ -88,6 +88,25 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+    popular: true,
+    icon: '🚀',
+    color: 'from-purple-600 to-violet-600',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/ai-devops-intelligence-platform',
+    marketPosition: 'Competes with GitLab ($19/user/month), GitHub Enterprise ($21/user/month). Our advantage: 60% faster deployments and 80% reduction in incidents.',
+    targetAudience: 'DevOps teams, Development teams, IT operations, Cloud engineers',
+    trialDays: 21,
+    setupTime: '2-3 hours',
+    category: 'AI DevOps & Automation',
+    realService: true,
+    technology: ['React, Python, TensorFlow, Kubernetes, Docker, AI/ML'],
+    integrations: ['GitHub, GitLab, Jenkins, AWS, Azure, GCP, Kubernetes'],
+    useCases: ['CI/CD automation, Infrastructure management, Monitoring and alerting, Performance optimization, Security automation'],
+    roi: 'DevOps teams achieve 350% ROI through faster deployments and reduced operational overhead.',
+    competitors: ['GitLab, GitHub Enterprise, Jenkins, Azure DevOps'],
+    marketSize: '$8.2B DevOps market',
+    growthRate: '24% annual growth',
+=======
     implementationDetails: 'Cloud-native AI code generation platform with advanced language models, security scanning, and team collaboration features.',
     launchDate: '2024-10-15',
     customers: 78,
@@ -168,37 +187,24 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Knowledge base automation',
       'Escalation management'
     ],
-    popular: true,
-    icon: '🤖',
-    color: 'from-blue-600 to-cyan-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-customer-support-automation',
-    marketPosition: 'Competes with Intercom ($39/month), Zendesk ($25/month), Freshdesk ($15/month). Our advantage: AI-powered automation, predictive analytics, and multi-language support.',
-    targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies, B2B services, Enterprise companies',
-    trialDays: 14,
-    setupTime: '1-3 days',
-    category: 'Customer Support & Automation',
-    realService: true,
-    technology: ['OpenAI GPT-4, Claude, React, Node.js, Python, PostgreSQL, Redis'],
-    integrations: ['Salesforce, HubSpot, Zendesk, Intercom, Slack, Microsoft Teams'],
-    useCases: ['24/7 customer support, Ticket automation, Customer satisfaction improvement, Support team efficiency, Multi-language support'],
-    roi: 'Companies report 280% ROI through reduced support costs and improved customer satisfaction.',
-    competitors: ['Intercom, Zendesk, Freshdesk, Help Scout, Zoho Desk'],
-    marketSize: '$18.5B customer support market',
-    growthRate: '18% annual growth',
-    variant: 'ai-support-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Cloud-native AI customer support platform with advanced NLP, sentiment analysis, and predictive capabilities.',
-    launchDate: '2024-11-10',
-    customers: 92,
-    rating: 4.6,
-    reviews: 41
+    useCases: [
+      'Manufacturing companies',
+      'Financial services',
+      'Healthcare organizations',
+      'Retail businesses',
+      'Logistics providers',
+      'Insurance companies',
+      'Government agencies',
+      'Educational institutions'
+    ],
+    marketSize: '$19.6B by 2025',
+    targetAudience: 'Operations managers, process engineers, automation specialists, business analysts',
+    competitiveAdvantage: 'Combined RPA and AI with intelligent decision making and comprehensive process optimization',
+    contact: 'kleber@ziontechgroup.com',
+    mobile: '+1 302 464 0950',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    slug: '/intelligent-process-automation'
   },
 
   // AI-Powered Marketing Automation
@@ -214,6 +220,44 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       professional: '$649/month',
       enterprise: '$1,599/month',
       custom: 'Contact for pricing'
+<<<<<<< HEAD
+=======
+    },
+    features: [
+      'AI-powered personalization',
+      'Predictive analytics',
+      'Automated campaign management',
+      'Content optimization',
+      'Lead scoring',
+      'Email automation',
+      'Social media automation',
+      'Email marketing optimization'
+    ],
+    popular: true,
+    icon: '📈',
+    color: 'from-pink-600 to-rose-600',
+    textColor: 'text-pink-400',
+    link: 'https://ziontechgroup.com/ai-marketing-automation',
+    marketPosition: 'Competes with HubSpot ($45/month), Marketo ($1,250/month), Pardot ($1,250/month). Our advantage: AI-powered optimization, predictive analytics, and affordable pricing.',
+    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, B2B companies, Startups',
+    trialDays: 21,
+    setupTime: '3-5 days',
+    category: 'Marketing & Automation',
+    realService: true,
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
+    integrations: ['HubSpot, Salesforce, Mailchimp, Facebook Ads, Google Ads, LinkedIn'],
+    useCases: ['Campaign automation, Customer personalization, Lead generation, ROI optimization, Multi-channel marketing'],
+    roi: 'Marketing teams report 320% ROI through improved campaign performance and customer engagement.',
+    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
+    marketSize: '$25.1B marketing automation market',
+    growthRate: '22% annual growth',
+    variant: 'ai-marketing-enterprise',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+>>>>>>> origin/content/blog-sept12
     },
     features: [
       'AI-powered personalization',
@@ -305,6 +349,13 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+    realImplementation: true,
+    implementationDetails: 'Advanced AI HR automation platform with recruitment optimization, employee management, and comprehensive HR analytics.',
+    launchDate: '2024-09-01',
+    customers: 89,
+    rating: 4.7,
+    reviews: 45
+=======
     implementationDetails: 'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
     launchDate: '2024-10-01',
     customers: 89,

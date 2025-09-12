@@ -5,7 +5,6 @@ set -euo pipefail
 echo "Starting to merge open pull requests into main branch..."
 echo "=================================================="
 
-=======
 echo "Merge process completed!"
 echo "Total branches processed: $TOTAL_BRANCHES"
 echo "Successful merges: $SUCCESSFUL"

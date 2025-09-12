@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const EnhancedNavigation2025: React.FC = () => {
   // Temporarily simplified to avoid build issues
   return <div className="sr-only">EnhancedNavigation2025 temporarily disabled</div>;
@@ -7,6 +8,8 @@ const EnhancedNavigation2025: React.FC = () => {
 
 export default EnhancedNavigation2025;
 =======
+=======
+>>>>>>> origin/content/blog-sept12
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -364,6 +367,20 @@ const navigationItems = [
   }
 ];
 
+<<<<<<< HEAD
+=======
+            <div className="flex items-center space-x-2">
+              {quickActions.map((action) => (
+                <a
+                  key={action.name}
+                  href={action.href}
+                  className={`px-2 py-1 rounded text-xs font-medium bg-gradient-to-r ${action.color} text-white hover:scale-105 transition-all duration-200`}
+                >
+                  {action.name}
+                </a>
+              ))}
+=======
+>>>>>>> origin/content/blog-sept12
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -430,6 +447,7 @@ export default function EnhancedNavigation2025() {
                 <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
                 <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
               </div>
+<<<<<<< HEAD
             </Link>
 
             {/* Desktop Navigation */}
@@ -450,11 +468,50 @@ export default function EnhancedNavigation2025() {
                   {/* Submenu */}
                   <AnimatePresence>
                     {activeSubmenu === item.name && (
+=======
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative group">
+                {item.children ? (
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 group"
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={closeMobileMenu}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg px-3 py-2"
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.children && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+>>>>>>> origin/content/blog-sept12
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
+<<<<<<< HEAD
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
                       >
                         <div className="p-6">
@@ -499,6 +556,40 @@ export default function EnhancedNavigation2025() {
                               </div>
                             </Link>
                           ))}
+=======
+                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl z-50"
+                        onMouseLeave={closeDropdown}
+                      >
+                        <div className="p-4">
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.name}
+                                href={child.href}
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-200 group"
+                              >
+                                <div className="flex-shrink-0">
+                                  {child.icon}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">
+                                    {child.name}
+                                  </p>
+                                  {child.description && (
+                                    <p className="text-xs text-gray-400 mt-1">
+                                      {child.description}
+                                    </p>
+                                  )}
+                                </div>
+                                {child.featured && (
+                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-500/20 text-cyan-300">
+                                    Featured
+                                  </span>
+                                )}
+                              </Link>
+                            ))}
+                          </div>
+>>>>>>> origin/content/blog-sept12
                         </div>
                       </motion.div>
                     )}
@@ -528,12 +619,44 @@ export default function EnhancedNavigation2025() {
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
             >
+<<<<<<< HEAD
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </nav>
 
+=======
+              Contact Sales
+            </Link>
+            <Link
+              href="/get-started"
+              className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg"
+              aria-label="Toggle mobile menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+=======
+>>>>>>> origin/content/blog-sept12
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -581,6 +704,7 @@ export default function EnhancedNavigation2025() {
               ))}
 
               {/* Mobile CTA */}
+<<<<<<< HEAD
               <div className="pt-4">
                 <Link
                   href="/contact"
@@ -691,15 +815,29 @@ export default function EnhancedNavigation2025() {
                     </div>
                   </div>
                 </div>
+=======
+              <div className="pt-4 border-t border-cyan-500/20">
+                <Link
+                  href="/contact"
+                  className="block w-full px-4 py-3 text-center text-sm font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact Sales
+                </Link>
+>>>>>>> origin/content/blog-sept12
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
 
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
+=======
+    </nav>
+>>>>>>> origin/content/blog-sept12
   );
 };
 

@@ -6,9 +6,17 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
+<<<<<<< HEAD
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+=======
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /automation/
+Disallow: /scripts/
+>>>>>>> origin/content/blog-sept12
 
 # Allow important pages
 Allow: /services/

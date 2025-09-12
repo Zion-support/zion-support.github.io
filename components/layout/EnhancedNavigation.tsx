@@ -1,31 +1,348 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-<<<<<<< HEAD
 const Web3LoginButton = dynamic(() => import('../auth/Web3LoginButton'), { ssr: false });
 =======
+
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  ChevronDown, 
+  Phone, 
+  Linkedin, 
+  Twitter, 
+  Github, 
+  Youtube,
+  Home,
+  Briefcase,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Target,
+  Building,
+  Users,
+  BookOpen,
+  FileText,
+  Video,
+  Code,
+  Sparkles,
+  Zap,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink
+} from 'lucide-react';
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+// Define Node type for DOM event handling
+type Node = HTMLElement | null;
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  icon: React.ReactNode;
+  description?: string;
+  children?: NavigationItem[];
+  badge?: string;
+  featured?: boolean;
+  neonColor?: string;
+  category?: string;
+}
+
+// Enhanced navigation items with better organization and accessibility
+const navigationItems: NavigationItem[] = [
+  {
+    label: 'Home',
+    href: '/',
+    icon: <Home className="w-4 h-4" />,
+    neonColor: 'shadow-cyan-400/50',
+    description: 'Return to homepage'
+  },
+  {
+    label: 'Services',
+    href: '/services',
+    icon: <Briefcase className="w-4 h-4" />,
+    description: 'Explore our comprehensive technology solutions',
+    badge: 'New',
+    neonColor: 'shadow-blue-400/50',
+    children: [
+      {
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai-ml',
+        icon: <Brain className="w-4 h-4" />,
+        description: 'Advanced AI solutions for enterprise',
+        featured: true,
+        neonColor: 'shadow-purple-400/50',
+        category: 'AI Services'
+      },
+      {
+        label: 'Quantum Computing',
+        href: '/services?category=quantum',
+        icon: <Atom className="w-4 h-4" />,
+        description: 'Next-generation quantum solutions',
+        featured: true,
+        neonColor: 'shadow-blue-400/50',
+        category: 'Quantum Technology'
+      },
+      {
+        label: 'Space Technology',
+        href: '/services?category=space-tech',
+        icon: <Rocket className="w-4 h-4" />,
+        description: 'Innovative space tech applications',
+        featured: true,
+        neonColor: 'shadow-pink-400/50',
+        category: 'Space Technology'
+      },
+      {
+        label: 'Cybersecurity',
+        href: '/services?category=cybersecurity',
+        icon: <Shield className="w-4 h-4" />,
+        description: 'Advanced security solutions',
+        featured: true,
+        neonColor: 'shadow-red-400/50',
+        category: 'Security'
+      },
+      {
+        label: 'Cloud & DevOps',
+        href: '/services?category=cloud-devops',
+        icon: <Cloud className="w-4 h-4" />,
+        description: 'Cloud infrastructure and automation',
+        neonColor: 'shadow-green-400/50',
+        category: 'Infrastructure'
+      },
+      {
+        label: 'Business Solutions',
+        href: '/services?category=business',
+        icon: <Target className="w-4 h-4" />,
+        description: 'Business optimization and automation',
+        neonColor: 'shadow-emerald-400/50',
+        category: 'Business'
+      }
+    ]
+  },
+  {
+    label: 'About',
+    href: '/about',
+    icon: <Building className="w-4 h-4" />,
+    description: 'Learn about our company and mission',
+    children: [
+      {
+        label: 'Our Story',
+        href: '/about#story',
+        icon: <BookOpen className="w-4 h-4" />,
+        description: 'Company history and vision'
+      },
+      {
+        label: 'Team',
+        href: '/team',
+        icon: <Users className="w-4 h-4" />,
+        description: 'Meet our expert team'
+      },
+      {
+        label: 'Careers',
+        href: '/careers',
+        icon: <Award className="w-4 h-4" />,
+        description: 'Join our team'
+      }
+    ]
+  },
+  {
+    label: 'Resources',
+    href: '/resources',
+    icon: <FileText className="w-4 h-4" />,
+    description: 'Educational content and tools',
+    children: [
+      {
+        label: 'Blog',
+        href: '/blog',
+        icon: <BookOpen className="w-4 h-4" />,
+        description: 'Latest insights and updates'
+      },
+      {
+        label: 'Documentation',
+        href: '/docs',
+        icon: <Code className="w-4 h-4" />,
+        description: 'Technical documentation'
+      },
+      {
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Video className="w-4 h-4" />,
+        description: 'Educational webinars'
+      },
+      {
+        label: 'White Papers',
+        href: '/white-papers',
+        icon: <FileText className="w-4 h-4" />,
+        description: 'In-depth research papers'
+      },
+      {
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <FileText className="w-4 h-4" />,
+        description: 'Success stories and implementations'
+      },
+      {
+        label: 'Training',
+        href: '/training',
+        icon: <Award className="w-4 h-4" />,
+        description: 'Professional development courses'
+      }
+    ]
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-4 h-4" />,
+    description: 'Get in touch with our team'
+  }
+];
+
+// Enhanced social links
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/zion-tech-group',
+    icon: <Linkedin className="w-5 h-5" />,
+    description: 'Follow us on LinkedIn'
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/ziontechgroup',
+    icon: <Twitter className="w-5 h-5" />,
+    description: 'Follow us on Twitter'
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/Zion-Holdings',
+    icon: <Github className="w-5 h-5" />,
+    description: 'View our open source projects'
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: <Youtube className="w-5 h-5" />,
+    description: 'Watch our videos'
+  }
+];
+
+// Performance-optimized animations
+const navigationAnimations = {
+  slideDown: {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+    transition: { duration: 0.2, ease: "easeOut" }
+  },
+  fadeIn: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.15 }
+  }
+};
+
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  
+  const router = useRouter();
+  const navRef = useRef<HTMLElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Platform Engineering', href: '/services/it/platform-engineering' },
-    { name: 'Cybersecurity', href: '/services/it/cybersecurity' },
-  ];
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+  }, []);
 
-  const products = [
-    { name: 'Revenue AI Copilot', href: '/products' },
-    { name: 'Cloud FinOps Toolkit', href: '/products' },
-    { name: 'SOC-as-a-Service', href: '/products' },
-  ];
->>>>>>> origin/services-expansion-2025
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [router.asPath]);
+
+  // Handle search focus
+  useEffect(() => {
+    if (isSearchOpen && searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+              const target = event.target as any;
+      if (!target.closest('.navigation-dropdown')) {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Optimized event handlers
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+
+  const toggleDropdown = useCallback((label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  }, [activeDropdown]);
+
+  const closeDropdown = useCallback(() => {
+    setActiveDropdown(null);
+  }, []);
+
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+      setIsSearchOpen(false);
+    }
+  }, [searchQuery, router]);
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setSearchQuery('');
+    }
+  }, [isSearchOpen]);
+
+  // Get animation props based on user preference
+  const getAnimationProps = (animationType: keyof typeof navigationAnimations) => {
+    if (isReducedMotion) {
+      return { initial: {}, animate: {}, exit: {}, transition: {} };
+    }
+    return navigationAnimations[animationType];
+  };
+>>>>>>> origin/content/blog-sept12
 
 export default function EnhancedNavigation() {
   return (
-<<<<<<< HEAD
     <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
         <Link href="/">
@@ -42,112 +359,3 @@ export default function EnhancedNavigation() {
     </nav>
   );
 }
-=======
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/">
-            <div className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
-            </div>
-          </Link>
-
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/"><span className="text-gray-600 hover:text-blue-600 transition-colors">Home</span></Link>
-
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                Services
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <div
-                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${servicesOpen ? 'opacity-100 visible' : ''}`}
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                {services.map((service) => (
-                  <Link key={service.name} href={service.href}>
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                      {service.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative group">
-              <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
-                Products
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {products.map((product) => (
-                  <Link key={product.name} href={product.href}>
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                      {product.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <Link href="/about"><span className="text-gray-600 hover:text-blue-600 transition-colors">About</span></Link>
-            <Link href="/blog"><span className="text-gray-600 hover:text-blue-600 transition-colors">Blog</span></Link>
-            <Link href="/talent"><span className="text-gray-600 hover:text-blue-600 transition-colors">Careers</span></Link>
-            <Link href="/contact"><span className="text-gray-600 hover:text-blue-600 transition-colors">Contact</span></Link>
-          </div>
-
-          <div className="hidden lg:block">
-            <Link href="/contact"><span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Get Started</span></Link>
-          </div>
-
-          <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <div className="space-y-2">
-              <Link href="/"><span className="block py-2 text-gray-600 hover:text-blue-600">Home</span></Link>
-
-              <div className="space-y-2">
-                <div className="font-semibold text-gray-800 py-2">Services</div>
-                {services.map((service) => (
-                  <Link key={service.name} href={service.href}>
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600">{service.name}</span>
-                  </Link>
-                ))}
-              </div>
-
-              <div className="space-y-2">
-                <div className="font-semibold text-gray-800 py-2">Products</div>
-                {products.map((product) => (
-                  <Link key={product.name} href={product.href}>
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600">{product.name}</span>
-                  </Link>
-                ))}
-              </div>
-
-              <Link href="/about"><span className="block py-2 text-gray-600 hover:text-blue-600">About</span></Link>
-              <Link href="/blog"><span className="block py-2 text-gray-600 hover:text-blue-600">Blog</span></Link>
-              <Link href="/talent"><span className="block py-2 text-gray-600 hover:text-blue-600">Careers</span></Link>
-              <Link href="/contact"><span className="block py-2 text-gray-600 hover:text-blue-600">Contact</span></Link>
-              <Link href="/contact"><span className="block py-2 bg-blue-600 text-white text-center rounded-lg font-semibold">Get Started</span></Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-export default EnhancedNavigation;
->>>>>>> origin/services-expansion-2025

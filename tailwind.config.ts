@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+=======
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Zion color palette (consolidated)
+=======
+        'zion-blue': {
+          DEFAULT: '#0a0f1f',
+          light: '#1e263b',
+          dark: '#090c1a',
+        },
+        'zion-purple': {
+          DEFAULT: '#a855f7',
+          light: '#d8b4fe',
+          dark: '#9333ea',
+        },
+        'zion-cyan': {
+          DEFAULT: '#00e5ff',
+          light: '#7df9ff',
+          dark: '#00c4cc',
+        },
+        'zion-slate': {
+          DEFAULT: '#94A3B8',
+          light: '#CBD5E1',
+          dark: '#64748B',
+        },
+        // New futuristic colors
+        'neon-pink': '#ff0080',
+        'neon-green': '#00ff41',
+        'neon-orange': '#ff6b35',
+        'neon-yellow': '#ffff00',
+        'quantum-blue': '#1e40af',
+        'quantum-purple': '#7c3aed',
+        'quantum-cyan': '#0891b2',
+=======
+>>>>>>> origin/content/blog-sept12
 =======
         // Custom Zion colors
         "zion-blue": {
@@ -83,10 +120,25 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  darkMode: "class",
+>>>>>>> origin/content/blog-sept12
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
+<<<<<<< HEAD
+=======
+  safelist: ['border-border'],
+=======
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12
   theme: {
     extend: {
       colors: {
@@ -120,9 +172,26 @@ const config: Config = {
           foreground: 'hsl(var(--popover-foreground))',
         },
         card: {
+<<<<<<< HEAD
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+=======
+<<<<<<< HEAD
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        // Custom Zion colors
+        "zion-blue": {
+          DEFAULT: "#0a0f1f",
+          light: "#1e263b",
+          dark: "#090c1a",
+=======
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+        },
+>>>>>>> origin/content/blog-sept12
         // Enhanced Zion Tech Group color palette
         "zion": {
           blue: {
@@ -167,7 +236,23 @@ const config: Config = {
             dark: "#dc2626",
             neon: "#ff4757",
           },
+<<<<<<< HEAD
+=======
         },
+<<<<<<< HEAD
+        "zion-cyan": {
+          DEFAULT: "#00e5ff",
+          light: "#7df9ff",
+          dark: "#00c4cc",
+        },
+        "zion-slate": {
+          DEFAULT: "#94A3B8",
+          light: "#CBD5E1",
+          dark: "#64748B",
+>>>>>>> origin/content/blog-sept12
+        },
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d63f
       },
       borderRadius: {
         lg: "var(--radius)",
