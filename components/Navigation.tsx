@@ -6,23 +6,16 @@ const Navigation: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      dropdown: [
-        { name: 'AI Development', href: '/services/ai-development', featured: true },
-        { name: 'Cloud Architecture', href: '/services/cloud-services' },
-        { name: 'Web Development', href: '/services/web-application-development' },
-        { name: 'Mobile Apps', href: '/services/mobile-app-development' },
-        { name: 'Blockchain', href: '/services/blockchain' },
-        { name: 'Data Analytics', href: '/services/data-analytics' }
-      ]
-    },
-    { name: 'Case Studies', href: '/portfolio' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Home', href: '/', icon: '🏠' },
+    { name: 'About', href: '/about', icon: 'ℹ️' },
+    { name: 'Services', href: '/services', icon: '🚀' },
+    { name: 'Products', href: '/products', icon: '💎' },
+    { name: 'Content', href: '/content-showcase', icon: '📚' },
+    { name: 'Case Studies', href: '/case-studies', icon: '📊' },
+    { name: 'Testimonials', href: '/testimonials', icon: '⭐' },
+    { name: 'Blog', href: '/blog', icon: '📝' },
+    { name: 'Careers', href: '/careers', icon: '💼' },
+    { name: 'Contact', href: '/contact', icon: '📞' }
   ];
 
   return (
