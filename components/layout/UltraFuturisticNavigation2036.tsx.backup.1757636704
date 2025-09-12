@@ -119,7 +119,11 @@ const navigationItems: NavigationItem[] = [
         name: 'IT Solutions', 
         href: '/it-services', 
         description: 'Enterprise IT infrastructure',
+<<<<<<< HEAD
+        icon: <Cpu className="w-4 h-4" />
+=======
         icon: <Play className="w-4 h-4" />
+>>>>>>> origin/backup-main-20250823-225110
       },
       { 
         name: 'Specialized Solutions', 
@@ -271,6 +275,8 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+<<<<<<< HEAD
+=======
   }, [activeDropdown]);
 
   // Handle keyboard navigation
@@ -279,6 +285,7 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
       setActiveDropdown(null);
       setMobileMenuOpen(false);
     }
+>>>>>>> origin/backup-main-20250823-225110
   }, []);
 
   return (

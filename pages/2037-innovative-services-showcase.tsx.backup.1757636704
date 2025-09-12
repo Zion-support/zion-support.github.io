@@ -1,9 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  Brain, Atom, Cpu, Zap, 
+  Rocket, Star, CheckCircle
+=======
   Brain, Atom, Rocket, Shield, Zap, Target, Star,
   ArrowRight, Check, TrendingUp, Users, Globe, Cpu,
   Database, Cloud, Lock, Settings, Eye, Award, Clock
+>>>>>>> origin/backup-main-20250823-225110
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -26,8 +31,13 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
     transition={{ duration: 0.5, delay: index * 0.1 }}
     className="relative group"
   >
+<<<<<<< HEAD
+    <div className={`absolute inset-0 bg-gradient-to-r ${service.color || 'from-blue-500 to-purple-500'} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-20`}></div>
+    <div className={`relative bg-gradient-to-r ${service.color ? service.color.replace('from-', 'from-').replace('to-', 'to-') : 'from-blue-500 to-purple-500'} bg-opacity-10 border border-opacity-30 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-300 h-full`}>
+=======
     <div className={`absolute inset-0 bg-gradient-to-r ${service.color || 'from-blue-500 to-purple-600'} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-20`}></div>
     <div className={`relative bg-gradient-to-r ${(service.color || 'from-blue-500 to-purple-600').replace('from-', 'from-').replace('to-', 'to-')} bg-opacity-10 border border-opacity-30 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-300 h-full`}>
+>>>>>>> origin/backup-main-20250823-225110
       <div className="flex items-start justify-between mb-6">
         <div className="text-4xl">{service.icon}</div>
         {service.popular && (
@@ -43,7 +53,11 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
       <div className="space-y-3 mb-6">
         {service.features.slice(0, 4).map((feature: string, idx: number) => (
           <div key={idx} className="flex items-center space-x-2">
+<<<<<<< HEAD
+            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+=======
             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+>>>>>>> origin/backup-main-20250823-225110
             <span className="text-gray-300 text-sm">{feature}</span>
           </div>
         ))}
@@ -57,16 +71,34 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
         <div className="text-right">
           <div className="flex items-center space-x-1 text-yellow-400">
             {[...Array(5)].map((_, i) => (
+<<<<<<< HEAD
+              <Star key={i} className="w-4 h-4" />
+            ))}
+          </div>
+          <span className="text-gray-400 text-xs">5/5 (100+ reviews)</span>
+=======
               <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`} />
             ))}
           </div>
           <span className="text-gray-400 text-xs">{service.rating}/5 ({service.reviews} reviews)</span>
+>>>>>>> origin/backup-main-20250823-225110
         </div>
       </div>
       
       <div className="space-y-3 mb-6 text-xs text-gray-400">
         <div className="flex justify-between">
           <span>Setup Time:</span>
+<<<<<<< HEAD
+          <span>{service.setupTime || 'N/A'}</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Trial:</span>
+          <span>{service.trialDays || 0} days</span>
+        </div>
+        <div className="flex justify-between">
+          <span>Customers:</span>
+          <span>{service.customers ? service.customers.toLocaleString() : '0'}</span>
+=======
           <span>{service.setupTime}</span>
         </div>
         <div className="flex justify-between">
@@ -76,6 +108,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
         <div className="flex justify-between">
           <span>Customers:</span>
           <span>{service.customers ? service.customers.toLocaleString() : 'N/A'}</span>
+>>>>>>> origin/backup-main-20250823-225110
         </div>
       </div>
       

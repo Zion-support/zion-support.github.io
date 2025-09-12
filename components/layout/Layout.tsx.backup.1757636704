@@ -12,9 +12,12 @@ import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
 import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
+<<<<<<< HEAD
+=======
 import ThemeToggle from '../ThemeToggle';
 import LoadingSpinner from '../LoadingSpinner';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
+>>>>>>> origin/backup-main-20250823-225110
 
 
 import React from 'react';
@@ -74,6 +77,9 @@ interface LayoutProps {;
   noIndex?: boolean;
 }
 
+<<<<<<< HEAD
+
+=======
 export default function Layout({
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
@@ -86,6 +92,7 @@ export default function Layout({
   noIndex = false
 =======
 =======
+>>>>>>> origin/backup-main-20250823-225110
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Revolutionary 2045 Technology",
@@ -94,11 +101,14 @@ export default function Layout({
   ogImage = "/og-image.jpg",
   canonicalUrl
 }: LayoutProps) {
+<<<<<<< HEAD
+=======
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
+>>>>>>> origin/backup-main-20250823-225110
   useEffect(() => {
     // Check online status
     const updateOnlineStatus = () => {
