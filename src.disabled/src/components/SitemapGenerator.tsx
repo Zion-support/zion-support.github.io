@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import { FileText,Download,Globe,Zap,Brain,Shield,Cloud,Users,ShoppingCart,BookOpen,MessageCircle,HelpCircle,Star,Atom,Network,Eye,PenTool,TrendingUp,Rocket,Heart,Crown,Sparkles,Flame,DollarSign,Workflow,Settings,Lock,BarChart3,Cpu,Building,Server,Activity,GraduationCap,Newspaper,Target,Briefcase,Phone,MapPin,Mail} from \'lucide-react\';
-const { FileText,Download,Globe,Zap,Brain,Shield,Cloud,Users,ShoppingCart,BookOpen,MessageCircle,HelpCircle,Star,Atom,Network,Eye,PenTool,TrendingUp,Rocket,Heart,Crown,Sparkles,Flame,DollarSign,Workflow,Settings,Lock,BarChart3,Cpu,Building,Server,Activity,GraduationCap,Newspaper,Target,Briefcase,Phone,MapPin,Mail} from "lucide-react";''"
-import { FileText,Download,Globe,Zap,Brain,Shield,Cloud,Users,ShoppingCart,BookOpen,MessageCircle,HelpCircle,Star,Atom,Network,Eye,PenTool,TrendingUp,Rocket,Heart,Crown,Sparkles,Flame,DollarSign,Workflow,Settings,Lock,BarChart3,Cpu,Building,Server,Activity,GraduationCap,Newspaper,Target,Briefcase,Phone,MapPin,Mail} from 'lucide-react';''
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

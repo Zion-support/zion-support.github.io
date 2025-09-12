@@ -1,3 +1,0 @@
-import React,{ useState,useEffect } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from \'@heroicons/react/24/
-const React,{ useState,useEffect } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from "@heroicons/react/24/
-import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from '@heroicons/react/24/

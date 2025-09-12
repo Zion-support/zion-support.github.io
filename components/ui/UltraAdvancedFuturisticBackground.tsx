@@ -36,7 +36,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       vx: number;
       vy: number;
       size: number;
-      opacity: number;
       color: string;
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     }> = [];

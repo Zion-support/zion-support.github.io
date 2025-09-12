@@ -1,41 +1,91 @@
 import React from 'react';
+<<<<<<< HEAD
+import EnhancedNavigation from '../components/EnhancedNavigation';
+=======
 import Link from 'next/link';
 import './globals.css';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
+import NewContentBanner from '../components/NewContentBanner';
+>>>>>>> cursor/create-and-deploy-new-content-3130
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+	title: 'Zion Tech Group',
+	description: 'AI & Technology Solutions',
+	metadataBase: new URL('https://zion.tech'),
+	applicationName: 'Zion Tech Group',
+	generator: 'Next.js',
+	authors: [{ name: 'Zion Tech Group' }],
+	keywords: [
+		'AI',
+		'Artificial Intelligence',
+		'Edge Computing',
+		'Autonomous Systems',
+		'Consulting',
+		'Case Studies',
+		'Implementation Guide',
+	],
+	openGraph: {
+		title: 'Zion Tech Group — AI & Technology Solutions',
+		description: 'Strategy, implementation, and measurable ROI from modern AI systems.',
+		url: 'https://zion.tech',
+		siteName: 'Zion Tech Group',
+		images: [
+			{
+				url: '/og-image.png',
+				width: 1200,
+				height: 630,
+				alt: 'Zion Tech Group',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		creator: '@ZionTech',
+		title: 'Zion Tech Group — AI & Technology Solutions',
+		description: 'Strategy, implementation, and measurable ROI from modern AI systems.',
+		images: ['/og-image.png'],
+	},
+	icons: {
+		icon: [
+			{ url: '/favicon.ico' },
+			{ url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+			{ url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+		],
+		apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+	},
+	themeColor: [
+		{ media: '(prefers-color-scheme: light)', color: '#ffffff' },
+		{ media: '(prefers-color-scheme: dark)', color: '#0b1020' },
+	],
+	alternates: {
+		canonical: 'https://zion.tech',
+	},
 };
 
+<<<<<<< HEAD
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+	return (
+		<html lang="en">
+			<head>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+				<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+				<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+				<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+			</head>
+			<body>
+				<EnhancedNavigation />
+				{children}
+			</body>
+		</html>
+	);
+}
+
+=======
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -49,16 +99,22 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <Link 
-            href="/about" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+            href="/content-showcase" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
           >
-            About
+            Content Library
           </Link>
           <Link 
             href="/services" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Services
+          </Link>
+          <Link 
+            href="/case-studies" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Case Studies
           </Link>
           <Link 
             href="/contact" 
@@ -185,6 +241,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
+          <NewContentBanner />
           <Header />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
@@ -199,3 +256,4 @@ export default function RootLayout({
     </html>
   );
 }
+>>>>>>> cursor/create-and-deploy-new-content-3130

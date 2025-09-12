@@ -17,26 +17,21 @@ export default function UltraFuturisticBackground2037({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
-
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const resizeCanvas = () => {
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (rect) {
-        canvas.width = rect.width * (window.devicePixelRatio || 1);
-        canvas.height = rect.height * (window.devicePixelRatio || 1);
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-      }
-    };
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    let animationFrameId: number;
+    let particles: Particle[] = [];
+    let quantumFields: QuantumField[] = [];
 
     // Enhanced theme-based color schemes
     const getThemeColors = () => {
@@ -69,7 +64,7 @@ export default function UltraFuturisticBackground2037({
             accent: ['#ff4080', '#ffff40', '#ff40ff', '#40ffff', '#ff6b6b'],
             neon: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff']
           };
-        default: // quantum
+        default: // quantum-neon
           return {
             primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b'],
             secondary: ['#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
@@ -88,7 +83,6 @@ export default function UltraFuturisticBackground2037({
       vx: number;
       vy: number;
       size: number;
-      opacity: number;
       color: string;
       type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'quantum-neon';
       life: number;
@@ -99,7 +93,8 @@ export default function UltraFuturisticBackground2037({
       amplitude: number;
       frequency: number;
       quantumState: number;
-      entanglement: number[];
+      neonIntensity: number;
+      hologramOpacity: number;
     }> = [];
 
     // Initialize particles with quantum properties
@@ -155,11 +150,8 @@ export default function UltraFuturisticBackground2037({
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Create gradient background
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0,
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-      );
+      ctx.save();
+      ctx.translate(x, y);
       
       if (theme === 'quantum-neon') {
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
@@ -173,7 +165,26 @@ export default function UltraFuturisticBackground2037({
       }
       
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.arc(0, 0, radius * 2, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Quantum state indicator
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(0, 0, size, 0, Math.PI * 2);
+      ctx.stroke();
+      
+      // Quantum spin
+      const spinAngle = quantumState * 3;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(spinAngle) * size, Math.sin(spinAngle) * size);
+      ctx.lineTo(Math.cos(spinAngle + Math.PI) * size, Math.sin(spinAngle + Math.PI) * size);
+      ctx.stroke();
+      
+      ctx.restore();
+    };
 
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -362,14 +373,24 @@ export default function UltraFuturisticBackground2037({
       requestAnimationFrame(animate);
     };
 
-    initParticles();
-    animate();
+    animate(0);
+
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+    }
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       canvas.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [intensity, theme]);
+  }, []);
 
   return (
     <div ref={containerRef} className="fixed inset-0 w-full h-full pointer-events-none">
@@ -383,4 +404,6 @@ export default function UltraFuturisticBackground2037({
       {children}
     </div>
   );
-}
+};
+
+export default UltraFuturisticBackground2037;

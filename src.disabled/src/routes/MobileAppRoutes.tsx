@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React from \'react\'; import { Route,Routes } from \'react-router-dom\'; import MobileAppPage from \'../pages/MobileAppPage\'; import MobileLaunchPage from \'../pages/MobileLaunchPage\'; import OpenAppRedirect from \'../pages/OpenAppRedirect\'; export default function MobileAppRoutes() {; return(; <>; <Route path = \"launch\" element={<MobileLaunchPage />} />;\";\" </>;\";\" );\" }\";\";
-const React from "react"; import { Route,Routes } from "react-router-dom"; import MobileAppPage from "./pages/MobileAppPage"; import MobileLaunchPage from "./pages/MobileLaunchPage"; import OpenAppRedirect from "./pages/OpenAppRedirect"; export default function MobileAppRoutes() {; return(; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" );" }";";'"'"
-import _React from 'react'; import { Route,Routes } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; export default function MobileAppRoutes() {; return(; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" );" }";";
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

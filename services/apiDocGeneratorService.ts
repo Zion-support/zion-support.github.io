@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-module.exports = {};
-=======
 export interface APIDocumentation {
   id: string;
   name: string;
@@ -645,4 +642,3 @@ export class APIDocGeneratorService {
 }
 
 export const apiDocGeneratorService = new APIDocGeneratorService();
->>>>>>> origin/automation/changelog

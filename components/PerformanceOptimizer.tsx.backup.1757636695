@@ -1,0 +1,177 @@
+import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+}
+
+// Performance entry types for Core Web Vitals
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: any;
+>>>>>>> origin/backup-main-20250823-224841
+}
+
+// Performance optimization component with lazy loading and intersection observer
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+<<<<<<< HEAD
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasLoaded) {
+          setIsVisible(true);
+          setHasLoaded(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    const element = document.getElementById('performance-optimizer');
+    if (element) {
+      observer.observe(element);
+    }
+=======
+  // Measure performance metrics
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined' || !window.performance) return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    const layoutShiftEntries = performance.getEntriesByType('layout-shift');
+
+    const newMetrics: PerformanceMetrics = {
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + (entry as PerformanceLayoutShift).value, 0)
+    };
+
+    // Measure LCP if supported
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        newMetrics.largestContentfulPaint = lastEntry.startTime;
+        setMetrics(newMetrics);
+        onMetricsUpdate?.(newMetrics);
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    }
+
+    setMetrics(newMetrics);
+    onMetricsUpdate?.(newMetrics);
+  }, [onMetricsUpdate]);
+
+  // Optimize images and resources
+  const optimizeResources = useCallback(() => {
+    setIsOptimizing(true);
+    
+    // Lazy load images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      document.head.appendChild(link);
+    });
+
+    setIsOptimizing(false);
+  }, []);
+
+  // Monitor performance
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Measure initial performance
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    // Optimize resources after initial load
+    const timer = setTimeout(optimizeResources, 1000);
+>>>>>>> origin/backup-main-20250823-224841
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, [hasLoaded]);
+
+  return (
+<<<<<<< HEAD
+    <div id="performance-optimizer" className="w-full">
+      {isVisible ? children : (
+        <div className="w-full h-64 bg-gray-100 animate-pulse rounded-lg flex items-center justify-center">
+          <div className="text-gray-400">Loading...</div>
+        </div>
+=======
+    <>
+      {children}
+      <PerformanceWarning />
+      
+      {/* Performance Debug Panel (only in development) */}
+      {process.env.NODE_ENV === 'development' && metrics && (
+        <motion.div
+          initial={{ opacity: 0, x: 300 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs"
+        >
+          <div className="text-sm font-bold mb-2">Performance Metrics</div>
+          <div className="text-xs space-y-1">
+            <div>Load Time: {Math.round(metrics.loadTime)}ms</div>
+            <div>DOM Ready: {Math.round(metrics.domContentLoaded)}ms</div>
+            <div>FCP: {Math.round(metrics.firstContentfulPaint)}ms</div>
+            <div>LCP: {Math.round(metrics.largestContentfulPaint)}ms</div>
+            <div>CLS: {metrics.cumulativeLayoutShift.toFixed(3)}</div>
+          </div>
+          {isOptimizing && (
+            <div className="text-cyan-400 text-xs mt-2">Optimizing resources...</div>
+          )}
+        </motion.div>
+>>>>>>> origin/backup-main-20250823-224841
+      )}
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;

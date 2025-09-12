@@ -1,4 +1,6 @@
-import FeatureCard from './components/FeatureCard',
+import FeatureCard from './components/FeatureCard';
+import { getLatestArticles } from './news/data';
+
 export default function HomePage() {
   const features = [
     {
@@ -73,10 +75,20 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen">
+      {/* Promo Banner */}
+      <div className="w-full bg-gradient-to-r from-sky-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <span className="font-semibold">New:</span>
+          <span className="opacity-90">Zion OS 1.5 ships Real-Time Agents with trace-level observability and SLAs.</span>
+          <a href="/news/zion-os-1-5-realtime-agents" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read the release →
+          </a>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -97,6 +109,12 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
+              </a>
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 Read the Latest News
+              </a>
+              <a href="/news/zion-os-1-5-realtime-agents" className="btn-secondary hover-lift">
+                🛰️ New: Zion OS 1.5 Real‑Time Agents
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
@@ -128,11 +146,12 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />;
+              />
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -151,6 +170,32 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Teaser */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-3xl font-bold mb-2">Latest News</h2>
+              <p className="text-white/70">Product releases, academy updates, and ecosystem highlights</p>
+            </div>
+            <a href="/news" className="btn-secondary hover-lift px-6 py-3">View All</a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {getLatestArticles(3).map((article, index) => (
+              <a key={index} href={`/news/${article.slug}`} className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+                <div className={`h-2 bg-gradient-to-r ${article.gradient}`} />
+                <div className="p-6">
+                  <div className="text-2xl mb-2">{article.emoji}</div>
+                  <h3 className="text-lg font-semibold mb-1 group-hover:text-white">{article.title}</h3>
+                  <p className="text-white/70">{article.excerpt}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -179,5 +224,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

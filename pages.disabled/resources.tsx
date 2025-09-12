@@ -1,83 +1,47 @@
-import React from 'react' 
-import Head from 'next/head' 
-import Link from 'next/link' 
-import { motion } from 'framer-motion' 
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
+=======
   FileText, Download, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
   TrendingUp, Award, Sparkles, ExternalLink,
   BookOpen, Video, Presentation, Database
-} from 'lucide-react' 
+} from 'lucide-react';
 
 export default function Resources() {
   const resources = [
     {
-      title: 'The Future of AI Consciousness: A Comprehensive Guide',
-      type: 'Whitepaper',
-      category: 'AI & Consciousness',
-      description: 'Deep dive into the evolution of artificial consciousness, emotional intelligence, and the future of human-AI interaction.',
-      downloadCount: '2,847',
-      fileSize: '2.3 MB',
-      icon: <Brain className="w-8 h-8 text-violet-500" />,
-      featured: true,
-      downloadUrl: '/resources/ai-consciousness-whitepaper.pdf'
+      title: 'Complete Platform Guide',
+      description: 'Everything you need to know about our autonomous technology platform.',
+      type: 'Comprehensive Guide',
+      size: '15.2 MB',
+      downloads: '2,847',
+      rating: 4.9,
+      icon: '📖',
+      color: 'bg-gradient-to-br from-blue-400 to-indigo-500',
     },
     {
-      title: 'Quantum Computing in Enterprise: Implementation Guide',
-      type: 'Guide',
-      category: 'Quantum Technology',
-      description: 'Practical guide for implementing quantum computing solutions in enterprise environments.',
-      downloadCount: '1,956',
-      fileSize: '1.8 MB',
-      icon: <Atom className="w-8 h-8 text-blue-500" />,
-      featured: false,
-      downloadUrl: '/resources/quantum-enterprise-guide.pdf'
+      title: 'AI Implementation Playbook',
+      description: 'Step-by-step guide to implementing AI automation in your organization.',
+      type: 'Implementation Guide',
+      size: '8.7 MB',
+      downloads: '1,923',
+      rating: 4.8,
+      icon: '🤖',
+      color: 'bg-gradient-to-br from-green-400 to-emerald-500',
     },
     {
-      title: 'Autonomous Business Operations: ROI Analysis',
-      type: 'Report',
-      category: 'Business Automation',
-      description: 'Comprehensive analysis of return on investment for autonomous business operations platforms.',
-      downloadCount: '3,124',
-      fileSize: '3.1 MB',
-      icon: <Rocket className="w-8 h-8 text-teal-500" />,
-      featured: false,
-      downloadUrl: '/resources/autonomous-business-roi.pdf'
+      title: 'Performance Optimization Handbook',
+      description: 'Advanced techniques for optimizing autonomous systems performance.',
+      type: 'Technical Guide',
+      size: '6.3 MB',
+      downloads: '1,456',
+      rating: 4.7,
+      icon: '⚡',
+      color: 'bg-gradient-to-br from-purple-400 to-pink-500',
     },
-    {
-      title: 'AI-Powered IT Asset Management Best Practices',
-      type: 'Guide',
-      category: 'IT Management',
-      description: 'Best practices for implementing AI-powered IT asset management in modern enterprises.',
-      downloadCount: '1,732',
-      fileSize: '1.5 MB',
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      featured: false,
-      downloadUrl: '/resources/ai-it-asset-management-guide.pdf'
-    },
-    {
-      title: 'Quantum Neural Networks: Technical Deep Dive',
-      type: 'Technical Paper',
-      category: 'Quantum AI',
-      description: 'Technical exploration of quantum neural networks and their applications in artificial intelligence.',
-      downloadCount: '892',
-      fileSize: '4.2 MB',
-      icon: <Brain className="w-8 h-8 text-purple-500" />,
-      featured: false,
-      downloadUrl: '/resources/quantum-neural-networks-paper.pdf'
-    },
-    {
-      title: 'Cybersecurity in the Age of AI: Threat Landscape 2025',
-      type: 'Report',
-      category: 'Cybersecurity',
-      description: 'Analysis of emerging cybersecurity threats and AI-powered defense strategies.',
-      downloadCount: '2,156',
-      fileSize: '2.7 MB',
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      featured: false,
-      downloadUrl: '/resources/ai-cybersecurity-2025.pdf'
-    }
-  ] 
+  ];
 
   const categories = [
     { name: 'All Resources', count: resources.length, active: true },
@@ -87,20 +51,20 @@ export default function Resources() {
     { name: 'IT Management', count: 1, active: false },
     { name: 'Quantum AI', count: 1, active: false },
     { name: 'Cybersecurity', count: 1, active: false }
-  ] 
+  ];
 
   const resourceTypes = [
     { name: 'Whitepapers', icon: <FileText className="w-6 h-6" />, count: 1 },
     { name: 'Guides', icon: <BookOpen className="w-6 h-6" />, count: 2 },
     { name: 'Reports', icon: <TrendingUp className="w-6 h-6" />, count: 2 },
     { name: 'Technical Papers', icon: <Database className="w-6 h-6" />, count: 1 }
-  ] 
+  ];
 
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
   return (
     <>
       <Head>
         <title>Resources - Zion Tech Group</title>
+=======
         <meta name="description" content="Access exclusive whitepapers, guides, and educational resources from Zion Tech Group. Learn about AI, quantum computing, and technology innovation." />
         <meta name="keywords" content="resources, whitepapers, guides, AI guides, quantum computing resources, technology education, business automation guides" />
         <link rel="canonical" href="https://ziontechgroup.com/resources" />
@@ -110,13 +74,13 @@ export default function Resources() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+=======
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 text-orange-300 text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
                 Educational Resources
@@ -159,7 +123,6 @@ export default function Resources() {
                     <p className="text-gray-400 text-sm">{type.count} resources</p>
                   </motion.div>
                 ))}
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
               </div>
             </motion.div>
           </div>
@@ -168,7 +131,6 @@ export default function Resources() {
         {/* Featured Resource */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -220,32 +182,146 @@ export default function Resources() {
                     </div>
                   </div>
                 </div>
-              ))}
-            </motion.div>
+              </Card>
+            ))}
           </div>
-        </section>
+        </Container>
+      </section>
 
-        {/* Categories Filter */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                    category.active
-                      ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
-              ))}
+      {/* Resource Categories */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Browse by Category
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Find the resources you need organized by topic and type
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {resourceCategories.map((category, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className={`w-full h-32 ${category.color} flex items-center justify-center`}>
+                  <span className="text-5xl">{category.icon}</span>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {category.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {category.description}
+                  </p>
+                  
+                  <div className="space-y-3 mb-6">
+                    {category.resources.slice(0, 3).map((resource, resourceIndex) => (
+                      <div key={resourceIndex} className="flex items-center justify-between text-sm">
+                        <span className="text-gray-700">{resource.name}</span>
+                        <span className="text-gray-500">{resource.size}</span>
+                      </div>
+                    ))}
+                    {category.resources.length > 3 && (
+                      <div className="text-sm text-blue-600 font-medium">
+                        +{category.resources.length - 3} more resources
+                      </div>
+                    )}
+                  </div>
+                  
+                  <Button href={`/resources/${category.title.toLowerCase().replace(/ /g, '-')}`} variant="outline" className="w-full">
+                    View All
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Quick Access Tools */}
+      <section className="py-16 lg:py-24 bg-white">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Quick Access Tools
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Essential tools and utilities to help you get started quickly
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🔍</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Search Resources</h3>
+              <p className="text-gray-600 text-sm mb-4">Find exactly what you need</p>
+              <Button href="/resources/search" variant="ghost" size="sm">
+                Search Now
+              </Button>
+            </Card>
+
+            <Card className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">📥</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Download Center</h3>
+              <p className="text-gray-600 text-sm mb-4">Access all resources</p>
+              <Button href="/resources/downloads" variant="ghost" size="sm">
+                Browse All
+              </Button>
+            </Card>
+
+            <Card className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">💬</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Get Support</h3>
+              <p className="text-gray-600 text-sm mb-4">Expert help when you need it</p>
+              <Button href="/contact" variant="ghost" size="sm">
+                Contact Us
+              </Button>
+            </Card>
+
+            <Card className="text-center">
+              <div className="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">📧</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Newsletter</h3>
+              <p className="text-gray-600 text-sm mb-4">Stay updated on new resources</p>
+              <Button href="/resources/newsletter" variant="ghost" size="sm">
+                Subscribe
+              </Button>
+            </Card>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Need Help Finding Resources?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Our team of experts is here to help you find the right resources for your project
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/contact" variant="secondary" size="lg">
+                Get Expert Help
+              </Button>
+              <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+                Explore Services
+              </Button>
             </div>
           </div>
         </section>
 
+=======
         {/* Resources Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -306,12 +382,12 @@ export default function Resources() {
         {/* Newsletter Signup */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Stay Informed
               </h2>
@@ -329,12 +405,46 @@ export default function Resources() {
                 <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
                   Subscribe
                 </button>
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  ) 
-}
+=======
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+
+export default function ResourcesPage() {
+  return (
+    <UltraFuturisticBackground intensity="high" variant="quantum">
+      <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
+      <div className="container mx-auto px-4 py-16 text-white">
+        <div className="text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
+          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
+        </div>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
+            { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
+            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' },
+            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
+            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
+          ].map((it) => (
+            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
+              <div className="text-sm text-gray-400">Resource</div>
+              <h3 className="text-xl font-semibold text-white">{it.name}</h3>
+              <p className="mt-1 text-gray-300">{it.blurb}</p>
+              <div className="mt-3 text-cyan-300">Open →</div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+  );
+};
+
+export default ResourcesPage;
