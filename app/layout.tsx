@@ -486,6 +486,7 @@ function Header() {
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link href="/blog/ai-2033-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2033 Future Predictions (BREAKTHROUGH)
                 </Link>
@@ -572,6 +573,19 @@ function Header() {
                 </Link>
                 <Link href="/resources/ai-2031-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 AI 2031 Ultimate Master Guide (BREAKTHROUGH)
+=======
+                <Link href="/ai-2032-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-red-600">
+                  🚀 AI 2032 Breakthrough Showcase (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2032-quantum-breakthrough-50000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏆 50,000% ROI Quantum AI (BREAKTHROUGH)
+                </Link>
+                <Link href="/ai-2032-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  🔮 AI 2032 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2032-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  📚 AI 2032 Ultimate Master Guide (BREAKTHROUGH)
+>>>>>>> cursor/create-and-deploy-new-content-68c7
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2025-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
@@ -799,6 +813,7 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+<<<<<<< HEAD
                 <Link href="/blog/ai-2025-generative-ai-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Generative AI Revolution (BREAKTHROUGH)
                 </Link>
@@ -829,6 +844,21 @@ function Header() {
                   📚 AI 2029 Ultimate Master Guide (BREAKTHROUGH)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+=======
+                <Link href="/ai-2032-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-red-600">
+                  🚀 AI 2032 Breakthrough Showcase (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2032-quantum-breakthrough-50000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏆 50,000% ROI Quantum AI (BREAKTHROUGH)
+                </Link>
+                <Link href="/ai-2032-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  🔮 AI 2032 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2032-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  📚 AI 2032 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+>>>>>>> cursor/create-and-deploy-new-content-68c7
                 <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2025 Ultimate Trends (NEW)
                 </Link>
