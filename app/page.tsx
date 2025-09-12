@@ -92,12 +92,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 FRESH CONTENT - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: AI Governance, Multimodal Revolution & $2.8B Success Stories!
+                🎉 NEW: Advanced AI Agents, Quantum Computing & $3.2B Success Stories!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: Enterprise AI Governance Master Guide, Multimodal AI Revolution (300% accuracy boost), 
-                Fortune 100 Retail Transformation ($2.8B value created), plus comprehensive implementation playbooks. 
-                Get expert insights on the technologies and strategies transforming 2025.
+                Just released: Advanced AI Agents Revolution (300-500% efficiency gains), Quantum Computing Business Revolution (10,000x speedups), 
+                Fortune 500 Quantum AI Transformation ($3.2B value created), plus comprehensive implementation strategies. 
+                Get expert insights on the cutting-edge technologies transforming 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -107,16 +107,16 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-enterprise-ai-governance"
+                  href="/blog/ai-2025-advanced-ai-agents"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read AI Governance Guide
+                  Read AI Agents Guide
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-global-retail-transformation-success"
+                  href="/case-studies/ai-2025-fortune-500-quantum-transformation"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $2.8B Success Story
+                  View $3.2B Success Story
                 </Link>
               </div>
             </div>
