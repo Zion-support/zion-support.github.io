@@ -82,6 +82,8 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import AI2032ContentPromotionBanner from '../components/AI2032ContentPromotionBanner';
+import AI2032ContentShowcase from '../components/AI2032ContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -98,6 +100,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2032 BREAKTHROUGH CONTENT PROMOTION BANNER - NEWEST */}
+        <AI2032ContentPromotionBanner />
+        
+        {/* AI 2032 CONTENT SHOWCASE - NEWEST */}
+        <AI2032ContentShowcase />
+        
 <<<<<<< HEAD
         {/* AI 2031 BREAKTHROUGH CONTENT PROMOTION BANNER */}
         <AI2031ContentPromotionBanner />

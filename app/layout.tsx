@@ -79,9 +79,9 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <div className="relative group">
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
-              AI 2026
+              AI 2032
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                NEW
+                BREAKTHROUGH
               </span>
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -89,6 +89,18 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <div className="px-4 py-2 text-xs font-bold text-purple-600 uppercase tracking-wide">AI 2032 BREAKTHROUGHS</div>
+                <Link href="/ai-2032-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-red-600">
+                  🚀 AI 2032 Breakthrough Showcase (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2032-quantum-breakthrough-20000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏆 20,000% ROI Quantum AI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2032-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  📚 AI 2032 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <div className="px-4 py-2 text-xs font-bold text-purple-600 uppercase tracking-wide">AI 2031 BREAKTHROUGHS</div>
 <<<<<<< HEAD
                 <Link href="/blog/ai-2031-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2031 Future Predictions (BREAKTHROUGH)
