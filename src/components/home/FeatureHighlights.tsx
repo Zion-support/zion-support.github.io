@@ -1,13 +1,3 @@
-import { Check } from 'lucide-react'
-import { cn } from "@/lib/utils";
-
-interface FeatureHighlightsProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = [
 =======
 import React from 'react';
 import { Brain, Shield, Zap, Globe, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
