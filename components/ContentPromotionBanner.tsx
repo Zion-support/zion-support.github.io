@@ -1,196 +1,196 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { X, ArrowRight, BookOpen, Case, Wrench } from 'lucide-react';
 
-interface ContentPromotionBannerProps {
+interface ContentItem {
+  id: string;
   title: string;
-  subtitle: string;
   description: string;
-  ctaText: string;
-  ctaHref: string;
-  secondaryCtaText?: string;
-  secondaryCtaHref?: string;
-  variant?: 'gradient' | 'solid' | 'outline';
-  gradient?: string;
-  icon?: string;
-  stats?: Array<{
-    value: string;
-    label: string;
-  ctaLink: string;
-  secondaryCtaText?: string;
-  secondaryCtaLink?: string;
-  gradient?: string;
-  featuredContent?: Array<{
-    title: string;
-    description: string;
-    link: string;
-    icon: string;
-    readTime?: string;
-    type?: string;
-  }>;
+  type: 'blog' | 'case-study' | 'resource';
+  url: string;
+  featured: boolean;
+  publishDate: string;
+  readTime: string;
+  views: string;
 }
 
-export default function ContentPromotionBanner({
-  title,
-  subtitle,
-  description,
-  ctaText,
-  ctaHref,
-  secondaryCtaText,
-  secondaryCtaHref,
-  variant = 'gradient',
-  gradient = 'from-blue-600 via-purple-600 to-pink-600',
-  icon = '🚀',
-  stats = []
-}: ContentPromotionBannerProps) {
-  const getVariantClasses = () => {
-    switch (variant) {
-      case 'solid':
-        return 'bg-blue-600 text-white';
-      case 'outline':
-        return 'bg-white border-2 border-blue-600 text-blue-600';
+const ContentPromotionBanner: React.FC = () => {
+  const [currentContent, setCurrentContent] = useState<ContentItem | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const featuredContent: ContentItem[] = [
+    {
+      id: 'generative-ai-revolution',
+      title: 'The Generative AI Revolution 2025: Beyond Text and Images',
+      description: 'Explore how generative AI is revolutionizing content creation, design, and business processes with advanced multimodal capabilities.',
+      type: 'blog',
+      url: '/blog/ai-2025-generative-ai-revolution',
+      featured: true,
+      publishDate: 'January 30, 2025',
+      readTime: '22 min read',
+      views: '3.1K views'
+    },
+    {
+      id: 'healthcare-diagnosis',
+      title: 'AI Healthcare Diagnosis Revolution 2025: Saving Lives with Precision Medicine',
+      description: 'Discover how AI is revolutionizing healthcare diagnosis with early disease detection and personalized treatment plans.',
+      type: 'blog',
+      url: '/blog/ai-healthcare-diagnosis-revolution-2025',
+      featured: true,
+      publishDate: 'January 30, 2025',
+      readTime: '25 min read',
+      views: '4.2K views'
+    },
+    {
+      id: 'financial-transformation',
+      title: 'AI Financial Services Transformation Success: $2.3B in Value Created',
+      description: 'Comprehensive case study of how a Fortune 500 company achieved unprecedented success through AI transformation.',
+      type: 'case-study',
+      url: '/case-studies/ai-financial-services-transformation-success-2025',
+      featured: true,
+      publishDate: 'January 30, 2025',
+      readTime: '28 min read',
+      views: '5.7K views'
+    },
+    {
+      id: 'ai-tools-frameworks',
+      title: 'AI Tools & Frameworks 2025: Complete Developer Resource Guide',
+      description: 'Comprehensive guide to the best AI tools, frameworks, and libraries for developers in 2025.',
+      type: 'resource',
+      url: '/resources/ai-tools-frameworks-2025',
+      featured: true,
+      publishDate: 'January 30, 2025',
+      readTime: '35 min read',
+      views: '8.9K views'
+    }
+  ];
+
+  useEffect(() => {
+    setCurrentContent(featuredContent[0]);
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
+      setCurrentContent(featuredContent[(currentIndex + 1) % featuredContent.length]);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return <BookOpen className="w-4 h-4" />;
+      case 'case-study':
+        return <Case className="w-4 h-4" />;
+      case 'resource':
+        return <Wrench className="w-4 h-4" />;
       default:
-        return `bg-gradient-to-r ${gradient} text-white`;
+        return <BookOpen className="w-4 h-4" />;
     }
   };
 
-  const getCtaClasses = () => {
-    switch (variant) {
-      case 'outline':
-        return 'bg-blue-600 text-white hover:bg-blue-700';
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-purple-100 text-purple-800';
+      case 'case-study':
+        return 'bg-blue-100 text-blue-800';
+      case 'resource':
+        return 'bg-green-100 text-green-800';
       default:
-        return 'bg-white text-blue-600 hover:bg-gray-100';
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
-  const getSecondaryCtaClasses = () => {
-    switch (variant) {
-      case 'outline':
-        return 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white';
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'BLOG POST';
+      case 'case-study':
+        return 'CASE STUDY';
+      case 'resource':
+        return 'RESOURCE';
       default:
-        return 'border-2 border-white text-white hover:bg-white hover:text-blue-600';
+        return 'CONTENT';
     }
   };
+
+  if (!isVisible || !currentContent) return null;
 
   return (
-    <section className={`py-16 relative overflow-hidden ${getVariantClasses()}`}>
-      {variant === 'gradient' && (
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-      )}
+    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 transform rotate-12 scale-150"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-indigo-400 to-pink-400 transform -rotate-12 scale-150"></div>
+      </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          {icon && (
-            <div className="text-6xl mb-6">{icon}</div>
-          )}
-          
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">{subtitle}</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {title}
-          </h2>
-          
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {description}
-          </p>
-
-          {stats.length > 0 && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-sm opacity-75">{stat.label}</div>
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-between">
+            <div className="flex-1 pr-8">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(currentContent.type)}`}>
+                  {getTypeIcon(currentContent.type)}
+                  <span className="ml-2">{getTypeLabel(currentContent.type)}</span>
                 </div>
-              ))}
+                <div className="text-sm opacity-90">
+                  {currentContent.publishDate} • {currentContent.readTime} • {currentContent.views}
+                </div>
+              </div>
+              
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                {currentContent.title}
+              </h2>
+              
+              <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                {currentContent.description}
+              </p>
+              
+              <div className="flex items-center space-x-4">
+                <Link
+                  href={currentContent.url}
+                  className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  View All Content
+                </Link>
+              </div>
             </div>
-          )}
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={ctaHref}
-              className={`px-8 py-4 rounded-lg font-semibold transition-colors text-lg ${getCtaClasses()}`}
-            >
-              {ctaText}
-            </Link>
-            {secondaryCtaText && secondaryCtaHref && (
-              <Link
-                href={secondaryCtaHref}
-                className={`px-8 py-4 rounded-lg font-semibold transition-colors text-lg ${getSecondaryCtaClasses()}`}
-  ctaLink,
-  secondaryCtaText,
-  secondaryCtaLink,
-  gradient = "from-blue-600 via-purple-600 to-pink-600",
-  featuredContent = []
-}: ContentPromotionBannerProps) {
-  return (
-    <section className={`py-20 bg-gradient-to-r ${gradient} text-white relative overflow-hidden`}>
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            {title}
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href={ctaLink}
-              className="bg-white text-blue-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-            >
-              {ctaText}
-            </Link>
-            {secondaryCtaText && secondaryCtaLink && (
-              <Link
-                href={secondaryCtaLink}
-                className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
-              >
-                {secondaryCtaText}
-              </Link>
-            )}
-          </div>
-        </div>
-
-        {featuredContent.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredContent.map((content, index) => (
-              <Link key={index} href={content.link} className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                    {content.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{content.title}</h3>
-                  <p className="text-sm opacity-90 mb-3">{content.description}</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    {content.readTime && <span>{content.readTime}</span>}
-                    {content.readTime && content.type && <span className="mx-2">•</span>}
-                    {content.type && <span>{content.type}</span>}
-                  </div>
+            
+            <div className="hidden lg:block">
+              <div className="w-64 h-64 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
+                <div className="text-6xl">
+                  {getTypeIcon(currentContent.type)}
                 </div>
-              </Link>
-            ))}
+              </div>
+            </div>
           </div>
-        )}
-
-        <div className="text-center mt-8">
-          <Link
-            href="/blog"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4"
-          >
-            View All Articles
-          </Link>
-          <Link
-            href="/resources"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block"
-          >
-            Download Resources
-          </Link>
         </div>
       </div>
-    </section>
+      
+      {/* Close Button */}
+      <button
+        onClick={() => setIsVisible(false)}
+        className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors"
+        aria-label="Close banner"
+      >
+        <X className="w-5 h-5" />
+      </button>
+      
+      {/* Progress Indicator */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white bg-opacity-20">
+        <div className="h-full bg-white bg-opacity-60 animate-pulse"></div>
+      </div>
+    </div>
   );
-}
+};
+
+export default ContentPromotionBanner;
