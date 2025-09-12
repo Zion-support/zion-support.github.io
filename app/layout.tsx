@@ -98,6 +98,16 @@ function Header() {
                 </Link>
                 <Link href="/resources/ai-2031-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
 =======
+                <Link href="/ai-2032-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  🔮 AI 2032 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2032-quantum-breakthrough-25000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏆 25,000% ROI Quantum AI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2032-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  📚 AI 2032 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2031-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-red-600">
                   🚀 AI 2031 Breakthrough Showcase (BREAKTHROUGH)
                 </Link>
@@ -271,6 +281,16 @@ function Header() {
               <div className="py-2">
 <<<<<<< HEAD
 =======
+                <Link href="/ai-2032-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  🔮 AI 2032 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2032-quantum-breakthrough-25000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏆 25,000% ROI Quantum AI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2032-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  📚 AI 2032 Ultimate Master Guide (BREAKTHROUGH)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2031-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2031 Future Predictions (BREAKTHROUGH)
                 </Link>
