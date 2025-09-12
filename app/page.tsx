@@ -12,6 +12,159 @@ const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
+// Define missing components
+const PerformanceMetrics = () => (
+  <section className='py-16 bg-gray-50'>
+    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='text-center mb-12'>
+        <h2 className='text-3xl font-bold text-gray-900 mb-4'>Performance Metrics</h2>
+        <p className='text-lg text-gray-600'>Real-time performance insights</p>
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        <div className='bg-white p-6 rounded-lg shadow-md'>
+          <h3 className='text-xl font-semibold mb-2'>99.9% Uptime</h3>
+          <p className='text-gray-600'>Reliable service delivery</p>
+        </div>
+        <div className='bg-white p-6 rounded-lg shadow-md'>
+          <h3 className='text-xl font-semibold mb-2'>&lt; 100ms Response</h3>
+          <p className='text-gray-600'>Lightning-fast performance</p>
+        </div>
+        <div className='bg-white p-6 rounded-lg shadow-md'>
+          <h3 className='text-xl font-semibold mb-2'>24/7 Support</h3>
+          <p className='text-gray-600'>Always available assistance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const TechnologyStack = () => (
+  <section className='py-16 bg-white'>
+    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='text-center mb-12'>
+        <h2 className='text-3xl font-bold text-gray-900 mb-4'>Technology Stack</h2>
+        <p className='text-lg text-gray-600'>Cutting-edge technologies we use</p>
+      </div>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+        <div className='text-center'>
+          <div className='text-4xl mb-2'>⚛️</div>
+          <h3 className='font-semibold'>React</h3>
+        </div>
+        <div className='text-center'>
+          <div className='text-4xl mb-2'>🟢</div>
+          <h3 className='font-semibold'>Node.js</h3>
+        </div>
+        <div className='text-center'>
+          <div className='text-4xl mb-2'>☁️</div>
+          <h3 className='font-semibold'>AWS</h3>
+        </div>
+        <div className='text-center'>
+          <div className='text-4xl mb-2'>🤖</div>
+          <h3 className='font-semibold'>AI/ML</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+// Define missing card components
+const Card = ({ 
+  children, 
+  className = '', 
+  title, 
+  href, 
+  description, 
+  icon 
+}: { 
+  children?: React.ReactNode; 
+  className?: string; 
+  title?: string; 
+  href?: string; 
+  description?: string; 
+  icon?: string; 
+}) => (
+  <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+    {children || (
+      <div className='text-center'>
+        {icon && <div className='text-4xl mb-4'>{icon}</div>}
+        {title && <h3 className='text-xl font-semibold mb-2'>{title}</h3>}
+        {description && <p className='text-gray-600 mb-4'>{description}</p>}
+        {href && (
+          <Link href={href} className='text-blue-600 hover:text-blue-800 font-medium'>
+            Learn More →
+          </Link>
+        )}
+      </div>
+    )}
+  </div>
+);
+
+const FeatureCard = ({ icon, title, description, className = '' }: { 
+  icon: string; 
+  title: string; 
+  description: string; 
+  className?: string; 
+}) => (
+  <div className={`text-center p-6 ${className}`}>
+    <div className='text-4xl mb-4'>{icon}</div>
+    <h3 className='text-xl font-semibold mb-2'>{title}</h3>
+    <p className='text-gray-600'>{description}</p>
+  </div>
+);
+
+const TestimonialCard = ({ 
+  name, 
+  role, 
+  content, 
+  className = '', 
+  company, 
+  industry, 
+  result, 
+  description, 
+  savings 
+}: { 
+  name?: string; 
+  role?: string; 
+  content?: string; 
+  className?: string; 
+  company?: string; 
+  industry?: string; 
+  result?: string; 
+  description?: string; 
+  savings?: string; 
+}) => (
+  <div className={`bg-white p-6 rounded-lg shadow-md ${className}`}>
+    {content ? (
+      <>
+        <p className='text-gray-600 mb-4 italic'>"{content}"</p>
+        <div>
+          <div className='font-semibold'>{name}</div>
+          <div className='text-sm text-gray-500'>{role}</div>
+        </div>
+      </>
+    ) : (
+      <>
+        <div className='mb-4'>
+          <h3 className='font-semibold text-lg'>{company}</h3>
+          <p className='text-sm text-gray-500'>{industry}</p>
+        </div>
+        <p className='text-gray-600 mb-4'>{description}</p>
+        <div className='space-y-2'>
+          <div className='text-green-600 font-semibold'>{result}</div>
+          <div className='text-blue-600 font-semibold'>{savings}</div>
+        </div>
+      </>
+    )}
+  </div>
+);
+import ContentPromoBanner, { contentPromoBanners } from '../components/ContentPromoBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+  keywords: 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+};
 
 export default function HomePage() {
   return (
@@ -51,6 +204,9 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
+
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
