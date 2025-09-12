@@ -77,19 +77,22 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <Link 
-            href="/ai-innovation-hub-2026" 
+            href="/content-showcase" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
-            AI Innovation Hub 2026
+            Content Library
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
               NEW
             </span>
           </Link>
           <Link 
-            href="/content-showcase" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+            href="/ai-innovation-hub-2026" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
-            Content Library
+            AI Innovation Hub
+            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              2026
+            </span>
           </Link>
           <Link 
             href="/blog" 
