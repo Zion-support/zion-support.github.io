@@ -113,20 +113,20 @@ export default function ContentShowcase() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2025-advanced-automation" className="group">
+            <Link href="/blog/ai-2025-multimodal-revolution" className="group">
               <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200">
-                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
                 <div className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  TRENDING
+                  NEW
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                  AI 2025 Advanced Automation
+                  AI 2025 Multimodal Revolution
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
-                  The future of intelligent business operations with 300% efficiency gains and 40% cost reduction.
+                  The future of human-computer interaction with text, image, audio, and video processing breakthroughs.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>32 min read</span>
+                  <span>15 min read</span>
                   <span className="text-orange-600 font-medium group-hover:underline">Read →</span>
                 </div>
               </div>
@@ -151,21 +151,21 @@ export default function ContentShowcase() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-enterprise-transformation-2025" className="group">
+            <Link href="/blog/ai-2025-quantum-machine-learning" className="group">
               <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200">
-                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                <div className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  POPULAR
+                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                <div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
+                  NEW
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Enterprise Transformation 2025
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  AI 2025 Quantum Machine Learning
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
-                  Complete implementation guide with 340% ROI and real case studies from successful transformations.
+                  The next computing paradigm with exponential speedups for optimization problems.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>18 min read</span>
-                  <span className="text-blue-600 font-medium group-hover:underline">Read →</span>
+                  <span>12 min read</span>
+                  <span className="text-purple-600 font-medium group-hover:underline">Read →</span>
                 </div>
               </div>
             </Link>
@@ -215,6 +215,9 @@ export default function ContentShowcase() {
             <Link href="/case-studies/ai-manufacturing-transformation-success-2025" className="group">
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-blue-200">
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                <div className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
+                  NEW
+                </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   Manufacturing AI Success
                 </h3>
@@ -298,11 +301,11 @@ export default function ContentShowcase() {
             <Link href="/resources/ai-implementation-master-guide-2025" className="group">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-blue-200">
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                <div className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
-                  FREE DOWNLOAD
+                <div className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
+                  NEW
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Implementation Master Guide
+                  AI Implementation Master Guide 2025
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
                   Comprehensive 150+ page guide with detailed strategies and best practices.

@@ -63,11 +63,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🔥 MEGA CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🚀 25+ New AI Resources Just Released!
+                🚀 30+ New AI Resources Just Released!
               </h2>
               <p className="text-lg opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our biggest content update yet: Advanced AI Architecture, Cybersecurity Defense, 
-                Quantum Computing Breakthroughs, Manufacturing Success Stories, and comprehensive implementation guides. 
+                Discover our biggest content update yet: Multimodal AI Revolution, Quantum Machine Learning, 
+                Neural Interfaces, Manufacturing Success Stories, Live Webinars, and comprehensive implementation guides. 
                 Everything you need to succeed with AI in 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -87,32 +87,32 @@ export default function HomePage() {
               
               {/* Featured Content Preview */}
               <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                <Link href="/blog/ai-2025-multimodal-revolution" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🏗️</div>
-                    <h3 className="text-sm font-semibold mb-1">Advanced AI Architecture</h3>
-                    <p className="text-xs opacity-90">Scalable, resilient systems</p>
+                    <div className="text-2xl mb-2">🧠</div>
+                    <h3 className="text-sm font-semibold mb-1">Multimodal AI Revolution</h3>
+                    <p className="text-xs opacity-90">Human-computer interaction</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                <Link href="/blog/ai-2025-quantum-machine-learning" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
-                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                    <div className="text-2xl mb-2">⚡</div>
+                    <h3 className="text-sm font-semibold mb-1">Quantum Machine Learning</h3>
+                    <p className="text-xs opacity-90">Next computing paradigm</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
+                <Link href="/blog/ai-2025-neural-interfaces-revolution" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">⚛️</div>
-                    <h3 className="text-sm font-semibold mb-1">Quantum Computing</h3>
-                    <p className="text-xs opacity-90">Revolutionary breakthroughs</p>
+                    <div className="text-2xl mb-2">🔌</div>
+                    <h3 className="text-sm font-semibold mb-1">Neural Interfaces</h3>
+                    <p className="text-xs opacity-90">Brain-computer integration</p>
                   </div>
                 </Link>
-                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <Link href="/webinars/ai-2025-enterprise-transformation-masterclass" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">💰</div>
-                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
-                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                    <div className="text-2xl mb-2">🎓</div>
+                    <h3 className="text-sm font-semibold mb-1">Live Webinar Series</h3>
+                    <p className="text-xs opacity-90">3-part masterclass</p>
                   </div>
                 </Link>
               </div>
