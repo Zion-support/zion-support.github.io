@@ -1,123 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, Calendar, BookOpen, FileText, Lightbulb } from 'lucide-react';
 
-const NewContentPromoBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    // Show banner after a short delay
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const newContent = [
-    {
-      title: 'AI 2025: Revolutionary Trends',
-      description: 'Discover the groundbreaking AI trends shaping the future',
-      type: 'Blog Post',
-      href: '/blog/ai-2025-revolutionary-trends',
-      icon: <Lightbulb className="w-6 h-6" />,
-      badge: 'Trending',
-      badgeColor: 'bg-red-500'
-    },
-    {
-      title: 'Fortune 500 AI Success Story',
-      description: '300% ROI and $50M savings through AI transformation',
-      type: 'Case Study',
-      href: '/case-studies/ai-transformation-fortune-500-success-2025',
-      icon: <Star className="w-6 h-6" />,
-      badge: 'Featured',
-      badgeColor: 'bg-blue-500'
-    },
-    {
-      title: 'AI Implementation Master Guide',
-      description: 'Complete guide to implementing AI in your organization',
-      type: 'Resource',
-      href: '/resources/ai-implementation-master-guide-2026',
-      icon: <BookOpen className="w-6 h-6" />,
-      badge: 'New',
-      badgeColor: 'bg-green-500'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % newContent.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [newContent.length]);
-
-  if (!isVisible) return null;
-
-  const currentContent = newContent[currentSlide];
-
+export default function NewContentPromoBanner() {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white shadow-lg">
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
-          <div className="flex items-center space-x-4 flex-1">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">New Content Available</span>
-            </div>
-            
-            <div className="flex items-center space-x-4 flex-1">
-              <div className="flex items-center space-x-3">
-                <div className="text-blue-200">
-                  {currentContent.icon}
-                </div>
-                <div>
-                  <div className="flex items-center space-x-2">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${currentContent.badgeColor} text-white`}>
-                      {currentContent.badge}
-                    </span>
-                    <span className="text-sm text-blue-200">{currentContent.type}</span>
-                  </div>
-                  <h3 className="font-semibold text-sm">{currentContent.title}</h3>
-                </div>
-              </div>
-              
-              <div className="hidden sm:block">
-                <p className="text-sm text-blue-100 max-w-md">{currentContent.description}</p>
-              </div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="text-2xl">🚀</div>
+            <div>
+              <h3 className="text-lg font-bold">NEW: AI Content Hub 2025</h3>
+              <p className="text-sm opacity-90">
+                Fresh articles, case studies, and resources added weekly
+              </p>
             </div>
           </div>
-
-          <div className="flex items-center space-x-3">
-            <Link
-              href={currentContent.href}
-              className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition-colors flex items-center space-x-2"
+          
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link 
+              href="/blog/ai-2025-generative-ai-enterprise-adoption"
+              className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
             >
-              <span>Read Now</span>
-              <ArrowRight className="w-4 h-4" />
+              🤖 Generative AI Guide
             </Link>
-            
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-blue-200 hover:text-white transition-colors p-1"
+            <Link 
+              href="/blog/ai-2025-automation-revolution"
+              className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
             >
-              <X className="w-5 h-5" />
-            </button>
+              ⚡ Automation Revolution
+            </Link>
+            <Link 
+              href="/case-studies/ai-healthcare-diagnosis-revolution-2025"
+              className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+            >
+              🏥 Healthcare Success
+            </Link>
+            <Link 
+              href="/resources"
+              className="bg-white text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors"
+            >
+              📚 Free Resources
+            </Link>
           </div>
-        </div>
-
-        {/* Slide indicators */}
-        <div className="flex justify-center space-x-2 pb-2">
-          {newContent.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-blue-300'
-              }`}
-            />
-          ))}
         </div>
       </div>
     </div>
