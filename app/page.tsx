@@ -64,17 +64,17 @@ import UltimateContentPromotionBanner2026 from '../components/UltimateContentPro
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
-import NewContent2028PromotionBanner from '../components/NewContent2028PromotionBanner';
-import NewContent2028Showcase from '../components/NewContent2028Showcase';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
-import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
 import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
 import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
+import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
+import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -103,6 +103,12 @@ export default function HomePage() {
         {/* REVOLUTIONARY AI 2025 SHOWCASE */}
         <RevolutionaryAI2025Showcase />
         
+        {/* AI 2028 CONTENT PROMOTION BANNER */}
+        <AI2028ContentPromotionBanner />
+        
+        {/* AI 2028 CONTENT SHOWCASE */}
+        <AI2028ContentShowcase />
+        
         {/* NEW CONTENT 2028 PROMOTION BANNER */}
         <NewContent2028PromotionBanner />
         
@@ -114,9 +120,6 @@ export default function HomePage() {
         
         {/* AI 2027 CONTENT SHOWCASE */}
         <AI2027ContentShowcase />
-        
-        {/* NEW CONTENT 2027 PROMOTION BANNER */}
-        <NewContent2027PromotionBanner />
         
         {/* ULTIMATE CONTENT 2026 PROMOTION BANNER */}
         <UltimateContent2026PromotionBanner />
