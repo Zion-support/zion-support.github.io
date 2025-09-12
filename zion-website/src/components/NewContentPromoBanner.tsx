@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'KG-2025',
+      title: 'Enterprise Knowledge Graphs 2025: Unified Search & Reasoning',
+      description: 'Design and operate enterprise knowledge graphs for semantic search, RAG, and governed reasoning.',
+      href: '/blog/ai-2025-enterprise-knowledge-graphs',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Knowledge'
+    },
+    {
+      id: 'CS-graph-search-2025',
+      title: 'Enterprise Graph Search: 21% Case Resolution Lift',
+      description: 'Case study: Graph + hybrid search improved first‑contact resolution by 21% and cut AHT by 18%.',
+      href: '/case-studies/ai-2025-enterprise-graph-search-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: 'AIFINOPS-2025',
       title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
       description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
