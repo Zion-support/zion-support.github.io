@@ -6,33 +6,33 @@ export default function ContentShowcase() {
   const featuredContent = [
     {
       id: 1,
-      title: "Advanced AI Architecture 2025",
-      description: "Master the latest AI architecture patterns for 2025. Learn about microservices, MLOps, vector databases, and production deployment strategies that scale.",
-      href: "/blog/ai-2025-advanced-ai-architecture",
+      title: "AI Enterprise Automation Revolution 2025",
+      description: "How Fortune 500 companies achieved 300% ROI through strategic AI implementation. Real case studies, implementation strategies, and ROI frameworks.",
+      href: "/blog/ai-2025-enterprise-automation-revolution",
       type: "blog",
-      category: "Architecture",
+      category: "Automation",
       readTime: "25 min read",
       featured: true,
-      icon: "🏗️"
+      icon: "🏢"
     },
     {
       id: 2,
-      title: "AI Cybersecurity Revolution 2025",
-      description: "Discover the latest AI cybersecurity threats and defense strategies for 2025. Learn about adversarial attacks, AI-powered security tools, and enterprise protection frameworks.",
-      href: "/blog/ai-2025-cybersecurity-revolution",
+      title: "AI Healthcare Diagnosis Breakthrough 2025",
+      description: "Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs. Real implementation strategies and case studies.",
+      href: "/blog/ai-healthcare-diagnosis-breakthrough-2025",
       type: "blog",
-      category: "Security",
+      category: "Healthcare",
       readTime: "22 min read",
       featured: true,
-      icon: "🛡️"
+      icon: "🏥"
     },
     {
       id: 3,
-      title: "$200M Manufacturing Success Case Study",
-      description: "How a Fortune 500 manufacturing giant transformed their operations with autonomous AI systems, achieving unprecedented cost savings and efficiency gains.",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      title: "AI Financial Services Transformation 2025",
+      description: "Complete case study: How a major bank achieved 300% ROI through strategic AI implementation. Real results, implementation strategies, and lessons learned.",
+      href: "/case-studies/ai-financial-services-transformation-2025",
       type: "case-study",
-      category: "Manufacturing",
+      category: "Finance",
       readTime: "18 min read",
       featured: true,
       icon: "💰"
@@ -171,6 +171,10 @@ export default function ContentShowcase() {
         return 'bg-pink-100 text-pink-800';
       case 'Finance':
         return 'bg-orange-100 text-orange-800';
+      case 'Automation':
+        return 'bg-cyan-100 text-cyan-800';
+      case 'Healthcare':
+        return 'bg-teal-100 text-teal-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
