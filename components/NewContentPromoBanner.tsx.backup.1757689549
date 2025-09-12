@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Star, Clock, Sparkles, Rocket, Brain, Zap } from 'lucide-react';
 
+<<<<<<< HEAD
+interface NewContentPromoBannerProps {
+  className?: string;
+=======
 interface ContentItem {
   id: string;
   title: string;
@@ -11,13 +15,18 @@ interface ContentItem {
   href: string;
   type: 'blog' | 'case-study' | 'service';
   featured: boolean;
+>>>>>>> origin/backup-main-20250912-123301
 }
 
 const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className = '' }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentContent, setCurrentContent] = useState(0);
 
+<<<<<<< HEAD
+  const newContent = [
+=======
   const newContent: ContentItem[] = [
+>>>>>>> origin/backup-main-20250912-123301
     {
       title: "AI 2025 Revolutionary Breakthroughs",
       description: "Discover groundbreaking AI innovations transforming industries worldwide",
@@ -167,6 +176,10 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+      </motion.div>
+    </AnimatePresence>
+=======
 
         {/* Close Button */}
         <button
@@ -187,6 +200,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className
         />
       </div>
     </div>
+>>>>>>> origin/backup-main-20250912-123301
   );
 };
 

@@ -840,8 +840,14 @@ export default function ContentShowcase() {
           <p className="text-sm text-gray-500 mt-4">
             No spam. Unsubscribe anytime. Read our privacy policy.
           </p>
+<<<<<<< HEAD
+        </div>
+      </section>
+    </div>
+=======
         </section>
       </div>
+>>>>>>> origin/backup-main-20250912-123301
   );
 }
 export default function ContentShowcasePage() {
