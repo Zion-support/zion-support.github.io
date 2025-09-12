@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '90',
+      title: 'Agentic Finance Automation 2025: From Close to Forecasting',
+      description: 'Automate reconciliations, variance analysis, and forecasting with policy-aware, traceable agents.',
+      href: '/blog/ai-2025-agentic-finance-automation',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Finance'
+    },
+    {
+      id: '91',
+      title: 'End-to-End Guardrails Architecture 2025',
+      description: 'Defense-in-depth guardrails: policy-as-code, online evals, and incident response.',
+      href: '/blog/ai-2025-e2e-guardrails-architecture',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: '92',
+      title: 'Evaluations Pipelines Blueprint 2025',
+      description: 'Offline and online eval pipelines with automated gates for safe AI shipping.',
+      href: '/blog/ai-2025-evals-pipelines-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
       id: '56',
       title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
       description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
