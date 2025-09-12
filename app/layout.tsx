@@ -81,6 +81,43 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <div className="relative group">
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              AI 2025
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                BREAKTHROUGH
+              </span>
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/blog/ai-2025-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 AI 2025 Revolutionary Breakthroughs (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Enterprise Success (2000% ROI)
+                </Link>
+                <Link href="/blog/ai-2025-comprehensive-trends-analysis" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 AI 2025 Comprehensive Trends Analysis
+                </Link>
+                <Link href="/case-studies/ai-2025-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🏢 Fortune 500 Transformation (1500% ROI)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ Ultimate Implementation Toolkit
+                </Link>
+                <Link href="/tools/ai-2025-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 AI 2025 ROI Calculator
+                </Link>
+                <Link href="/webinars/ai-2025-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Revolutionary Breakthroughs Webinar
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
               AI 2028
               <span className="absolute -top-2 -right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
                 REVOLUTIONARY
