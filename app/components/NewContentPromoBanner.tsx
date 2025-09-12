@@ -8,22 +8,22 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
-    title: "Agent & LLM Benchmarking Best Practices 2025",
-    description: "Design trustworthy evals with latency, cost, and safety signals",
-    url: "/blog/ai-2025-agent-benchmarking-best-practices",
+    title: "Governed Agentic Workflows: 2025 Blueprint",
+    description: "Policy gates, audits, and evals for production agent systems",
+    url: "/blog/ai-2025-governed-agentic-workflows",
     type: "Blog Post",
-    category: "Evaluation",
-    icon: "📏",
+    category: "Governance",
+    icon: "🧩",
     featured: true,
     new: true
   },
   {
-    title: "AI Evaluation Maturity Model 2025",
-    description: "Assess and level-up evals across metrics, data, and governance",
-    url: "/resources/ai-2025-evaluation-maturity-model",
-    type: "Resource",
+    title: "Agent Benchmarking Blueprint 2025",
+    description: "Decision-ready evals for quality, latency, cost, and safety",
+    url: "/blog/ai-2025-ai-agent-benchmarking-blueprint",
+    type: "Blog Post",
     category: "Evaluation",
-    icon: "📚",
+    icon: "📊",
     featured: true,
     new: true
   },
@@ -265,6 +265,36 @@ const newContentItems = [
     category: "Engineering",
     icon: "✅",
     featured: true,
+    new: true
+  },
+  {
+    title: "Foundation Model Fine-Tuning 2025",
+    description: "PEFT, data curation, evals, and cost control for production",
+    url: "/blog/ai-2025-foundation-model-fine-tuning",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🔧",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Evaluation Checklist 2025",
+    description: "Operational evals: safety, latency, cost, reliability templates",
+    url: "/resources/ai-evaluation-checklist-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance Claims Automation: 55% OPEX Reduction",
+    description: "FNOL, triage, fraud checks with agentic workflows",
+    url: "/case-studies/ai-insurance-claims-automation-success-2025",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📄",
+    featured: false,
     new: true
   },
   {
