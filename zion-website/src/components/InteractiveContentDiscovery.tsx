@@ -28,6 +28,109 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: '24',
+      title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
+      description: 'Resilient supply chains with AI: early signals, dynamic safety stock, and agent workflows.',
+      href: '/blog/ai-2025-ai-supply-chain-resilience',
+      type: 'blog',
+      category: 'Advanced AI',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Supply Chain', 'Forecasting', 'Optimization', 'Agents'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '25',
+      title: 'AI Supply Chain Orchestration: 27% Expedited Costs Reduced, +6 pts OTIF',
+      description: 'Case study: forecasting + optimization + exception agents reduced costs and boosted service.',
+      href: '/case-studies/ai-2025-supply-chain-orchestration-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Supply Chain', 'Optimization', 'Agents', 'OTIF'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
+      id: '19',
+      title: 'Data Quality for RAG in Production (2025)',
+      description: 'Data curation, chunking, hybrid search, and evaluations to make RAG reliable and cost‑efficient.',
+      href: '/blog/ai-2025-data-quality-rag',
+      type: 'blog',
+      category: 'RAG',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['RAG', 'Data Quality', 'Evaluations', 'Observability'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '21',
+      title: 'AI Agents for IT Operations 2025: Incident Response and SLO Automation',
+      description: 'AIOps agents automate triage, remediation, and SLO-aware throttling with policy-as-code.',
+      href: '/blog/ai-2025-agents-for-it-ops',
+      type: 'blog',
+      category: 'Observability',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['AIOps', 'SRE', 'Runbooks', 'SLO'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '22',
+      title: 'IT Ops Automation with AI Agents: 41% MTTR Reduction',
+      description: 'Case study: Automated runbooks and intelligent triage reduced MTTR by 41% at a SaaS platform.',
+      href: '/case-studies/ai-2025-it-ops-automation-impact',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      tags: ['AIOps', 'SRE', 'MTTR', 'Automation'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+      id: '13',
+      title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
+      description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',
+      href: '/blog/llm-observability-2025',
+      type: 'blog',
+      category: 'Observability',
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Observability', 'Tracing', 'Evaluations', 'Guardrails'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Global retailer cut stockouts by 32% and waste by 18% with AI-driven forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Retail', 'Forecasting', 'Time Series', 'Inventory'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
+      id: '12',
+      title: 'Operationalizing AI Governance 2025',
+      description: 'Practical frameworks to embed responsible AI into engineering, product, and operations without slowing delivery.',
+      href: '/blog/ai-2025-operationalizing-ai-governance',
+      type: 'blog',
+      category: 'Governance',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Governance', 'Risk', 'Compliance', 'Policy-as-code'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '0',
       title: 'Edge AI Agents 2025: Running Autonomous Agents in Production',
       description: 'A practical guide to deploying and operating autonomous AI agents at the edge with strong guardrails and observability.',
@@ -39,6 +142,32 @@ function InteractiveContentDiscovery() {
       tags: ['Edge AI', 'Agents', 'Observability', 'Safety'],
       featured: true,
       difficulty: 'intermediate'
+    },
+    {
+      id: '11',
+      title: 'Trust & Safety Guardrails 2025: Practical Patterns',
+      description: 'Practical patterns to design, evaluate, and enforce AI trust & safety guardrails across applications in 2025.',
+      href: '/blog/ai-2025-trust-safety-guardrails',
+      type: 'blog',
+      category: 'AI Safety',
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      tags: ['AI Safety', 'Guardrails', 'Evaluation'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: '12',
+      title: 'Financial Services Copilots: 42% Faster Handling',
+      description: 'Tier‑1 bank launched compliant AI copilots across ops, cutting handling time by 42% while meeting strict compliance.',
+      href: '/case-studies/ai-2025-financial-services-copilots',
+      type: 'case-study',
+      category: 'Case Study',
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Financial Services', 'Copilots', 'Compliance'],
+      featured: true,
+      difficulty: 'beginner'
     },
     {
       id: '9',
@@ -172,7 +301,7 @@ function InteractiveContentDiscovery() {
     }
   ];
 
-  const categories = ['all', 'Advanced AI', 'Multimodal AI', 'Quantum AI', 'AI Infrastructure', 'AI Security', 'AI Healthcare', 'Case Study'];
+  const categories = ['all', 'Observability', 'Advanced AI', 'Multimodal AI', 'Quantum AI', 'AI Infrastructure', 'AI Security', 'AI Healthcare', 'Case Study'];
   const difficulties = ['all', 'beginner', 'intermediate', 'advanced'];
   const types = ['all', 'blog', 'case-study', 'webinar', 'whitepaper'];
 

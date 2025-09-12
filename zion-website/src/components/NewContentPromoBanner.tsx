@@ -34,6 +34,138 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '24',
+      title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
+      description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',
+      href: '/blog/ai-2025-ai-supply-chain-resilience',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '25',
+      title: 'AI Supply Chain Orchestration: 27% Expedited Costs Reduced, +6 pts OTIF',
+      description: 'Case study: forecasting + optimization + agentic workflows cut costs and improved service.',
+      href: '/case-studies/ai-2025-supply-chain-orchestration-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '23',
+      title: 'Privacy-Preserving AI in Production (2025)',
+      description: 'Ship AI with differential privacy, federated learning, and privacy-by-design guardrails.',
+      href: '/blog/ai-2025-privacy-preserving-ai',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Privacy'
+    },
+    {
+      id: '19',
+      title: 'Data Quality for RAG in Production (2025)',
+      description: 'Operator guide to curating, evaluating, and governing high-quality knowledge for reliable RAG.',
+      href: '/blog/ai-2025-data-quality-rag',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '21',
+      title: 'AI Agents for IT Operations 2025: Incident Response and SLO Automation',
+      description: 'Reduce toil with AIOps agents for triage, diagnostics, remediation, and SLO-aware controls.',
+      href: '/blog/ai-2025-agents-for-it-ops',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AIOps'
+    },
+    {
+      id: '22',
+      title: 'IT Ops Automation with AI Agents: 41% MTTR Reduction',
+      description: 'Case study: AI agents automated runbooks and cut MTTR by 41% at a global SaaS platform.',
+      href: '/case-studies/ai-2025-it-ops-automation-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '18',
+      title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
+      description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
+      href: '/blog/ai-2025-agents-on-kubernetes',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: '16',
+      title: 'LLM Safety Evaluations 2025: From Offline to Production',
+      description: 'Blueprint for safety evals: red teaming, canaries, policy-as-code, and live feedback loops.',
+      href: '/blog/ai-2025-safety-evaluations-production',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: '17',
+      title: 'Autonomous Warehouse Orchestration: 38% Throughput Lift',
+      description: 'Case study: Multi-agent orchestration boosted throughput by 38% and cut errors 27%.',
+      href: '/case-studies/ai-2025-warehouse-automation',
+      type: 'case-study',
+      featured: true,
+      readTime: '11 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '13',
+      title: 'Real-Time Agents 2025: Observability, Safety, and SLAs',
+      description: 'Blueprints for production agents: telemetry, guardrails, incident response, and reliability engineering.',
+      href: '/blog/ai-2025-realtime-agents-observability',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: '14',
+      title: 'AI Retail Demand Forecasting: 32% Stockouts Reduction',
+      description: 'Case study: Global retailer cut stockouts by 32% and waste by 18% via AI forecasting.',
+      href: '/case-studies/ai-2025-retail-demand-forecasting',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '15',
+      title: 'Operationalizing AI Governance 2025',
+      description: 'Turn policies into practice with developer-first guardrails, risk-tiering, and policy-as-code.',
+      href: '/blog/ai-2025-operationalizing-ai-governance',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
       id: '9',
       title: 'Generative AI Evaluation 2025: Reliable Metrics and Methods',
       description: 'Practical evaluation patterns for GenAI systems: offline metrics, human review, and production feedback loops.',
@@ -65,6 +197,28 @@ const NewContentPromoBanner = ({
       readTime: '25 min read',
       date: 'Jan 28, 2025',
       category: 'Advanced AI'
+    },
+    {
+      id: '11',
+      title: 'Trust & Safety Guardrails 2025: Practical Patterns',
+      description: 'Design, evaluate, and enforce AI trust & safety guardrails with policy-as-code and runtime controls.',
+      href: '/blog/ai-2025-trust-safety-guardrails',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: '12',
+      title: 'Financial Services Copilots: 42% Faster Handling',
+      description: 'Case study: Tier‑1 bank launched compliant AI copilots across ops, cutting handling time by 42%.',
+      href: '/case-studies/ai-2025-financial-services-copilots',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
     },
     {
       id: '9',
