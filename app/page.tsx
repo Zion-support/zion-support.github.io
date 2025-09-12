@@ -18,6 +18,8 @@ import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import ContentPromotionalBanner from '../components/ContentPromotionalBanner';
+import TrendingContentShowcase from '../components/TrendingContentShowcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -296,6 +298,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Content Promotional Banner */}
+      <ContentPromotionalBanner variant="featured" />
+      
+      {/* Featured Content Section */}
+      <ContentShowcase
+        title="Latest AI Insights & Case Studies"
+        subtitle="Discover proven strategies, real-world success stories, and actionable guides from industry experts"
+        items={featuredContent}
+        variant="featured"
+        showViewAll={true}
+        viewAllHref="/blog"
+      />
+      
+      {/* Trending Content Showcase */}
+      <TrendingContentShowcase />
 
       {/* Enhanced Content Showcase Banner */}
       <section className='py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>

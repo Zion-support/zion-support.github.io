@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock, Tag, Star, Zap, Globe, Leaf } from 'lucide-react';
+import { ArrowRight, Clock, Tag, Star, TrendingUp, Eye, Download } from 'lucide-react';
 
 interface ContentItem {
   title: string;
@@ -16,6 +17,11 @@ interface ContentItem {
   badge?: string;
   badgeColor?: string;
   metrics?: string;
+  views?: string;
+  downloads?: string;
+  rating?: number;
+  badge?: string;
+  badgeColor?: string;
 }
 
 interface ContentShowcaseProps {
@@ -27,6 +33,13 @@ interface ContentShowcaseProps {
   showViewAll?: boolean;
   viewAllHref?: string;
   viewAllText?: string;
+  variant?: 'default' | 'featured' | 'trending' | 'promotional';
+  className?: string;
+  showViewAll?: boolean;
+  viewAllHref?: string;
+  showPromotionalBanner?: boolean;
+  promotionalText?: string;
+  promotionalLink?: string;
   columns?: 2 | 3 | 4;
 }
 
@@ -327,6 +340,192 @@ export default function ContentShowcase({
                   <div className="flex items-center space-x-1 text-xs font-medium text-green-600">
                     <Zap className="w-3 h-3" />
                     <span>{item.metrics}</span>
+// Predefined content collections for easy use
+export const featuredContent = [
+  {
+    title: "AI Enterprise Adoption Trends 2025: Complete Market Analysis",
+    description: "Discover the latest AI enterprise adoption trends for 2025. Learn how Fortune 500 companies are implementing AI, key success factors, and market predictions.",
+    href: "/blog/ai-2025-enterprise-adoption-trends",
+    icon: "📈",
+    readTime: "15 min read",
+    category: "Enterprise AI",
+    isNew: true,
+    views: "2.3k views",
+    rating: 4.9,
+    badge: "Trending",
+    badgeColor: "bg-red-100 text-red-800"
+  },
+  {
+    title: "AI Workflow Automation 2025: Complete Optimization Guide",
+    description: "Master AI workflow automation with our comprehensive 2025 guide. Learn proven strategies to optimize business processes, reduce costs by 60%, and boost productivity by 40%.",
+    href: "/blog/ai-automation-workflow-optimization-2025",
+    icon: "⚡",
+    readTime: "18 min read",
+    category: "AI Automation",
+    isNew: true,
+    views: "3.1k views",
+    rating: 4.8,
+    badge: "New",
+    badgeColor: "bg-green-100 text-green-800"
+  },
+  {
+    title: "AI Manufacturing Transformation: $2.8B Cost Savings Case Study",
+    description: "Discover how a Fortune 500 manufacturing company achieved $2.8B in cost savings and 45% efficiency gains through comprehensive AI transformation.",
+    href: "/case-studies/ai-manufacturing-transformation-2025",
+    icon: "🏭",
+    readTime: "20 min read",
+    category: "Case Study",
+    isNew: true,
+    views: "4.2k views",
+    rating: 4.9,
+    badge: "Featured",
+    badgeColor: "bg-blue-100 text-blue-800"
+  },
+  {
+    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
+    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+    href: "/resources/ai-implementation-master-guide-2025",
+    icon: "📚",
+    readTime: "Free Download",
+    category: "Resources",
+    isNew: true,
+    downloads: "12.5k downloads",
+    rating: 4.9,
+    badge: "Popular",
+    badgeColor: "bg-purple-100 text-purple-800"
+  }
+];
+
+export const trendingContent = [
+  {
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions",
+    isTrending: true
+  },
+  {
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
+    readTime: "18 min read",
+    category: "Healthcare AI",
+    isTrending: true
+  },
+  {
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
+    isTrending: true
+  }
+];
+
+export const latestContent = [
+  {
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
+    readTime: "18 min read",
+    category: "Healthcare AI"
+  },
+  {
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions"
+  },
+  {
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI"
+  }
+];
+  backgroundColor = 'bg-gray-50',
+  textColor = 'text-gray-900',
+  showViewAll = true,
+  viewAllHref = '/blog',
+  viewAllText = 'View All'
+}: ContentShowcaseProps) {
+  const getTypeStyles = (type: string) => {
+    switch (type) {
+      case 'article':
+        return {
+          badge: 'Article',
+          badgeColor: 'text-blue-700',
+          hoverColor: 'group-hover:text-blue-600'
+        };
+      case 'resource':
+        return {
+          badge: 'Free Resource',
+          badgeColor: 'text-green-700',
+          hoverColor: 'group-hover:text-green-600'
+        };
+      case 'case-study':
+        return {
+          badge: 'Success Story',
+          badgeColor: 'text-purple-700',
+          hoverColor: 'group-hover:text-purple-600'
+        };
+      default:
+        return {
+          badge: 'Content',
+          badgeColor: 'text-gray-700',
+          hoverColor: 'group-hover:text-gray-600'
+        };
+    }
+  };
+
+  return (
+    <section className={`py-20 ${backgroundColor}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className={`text-4xl md:text-5xl font-bold ${textColor} mb-6`}>
+            {title}
+          </h2>
+          <p className={`text-xl ${textColor.replace('900', '600')} max-w-3xl mx-auto mb-8`}>
+            {subtitle}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {items.map((item, index) => {
+            const typeStyles = getTypeStyles(item.type);
+            return (
+              <Link key={index} href={item.href} className="group">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <div className={`text-sm font-medium ${typeStyles.badgeColor} mb-2`}>
+                    {item.badge || typeStyles.badge}
+                  </div>
+                  <h3 className={`text-xl font-bold ${textColor} mb-3 ${typeStyles.hoverColor} transition-colors`}>
+                    {item.title}
+                  </h3>
+                  <p className={`${textColor.replace('900', '600')} mb-4`}>
+                    {item.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">
+                      {item.readTime && `${item.readTime} • `}
+                      {item.fileSize && `${item.fileSize} • `}
+                      {item.type === 'article' ? 'Article' : item.type === 'resource' ? 'PDF' : 'Case Study'}
+                    </span>
+                    <span className={`${typeStyles.badgeColor} font-medium group-hover:underline`}>
+                      {item.type === 'resource' ? 'Download Free →' : 'Read More →'}
+                    </span>
                   </div>
                 </div>
               )}
