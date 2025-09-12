@@ -19,6 +19,8 @@ import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import { ContentMetricsWidget } from '../components/ContentMetrics';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -353,6 +355,15 @@ export default function HomePage() {
           }
         ]}
       />
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner />
+
+      {/* New Content Showcase */}
+      <NewContentShowcase />
+
+      {/* Content Metrics */}
+      <ContentMetricsWidget />
 
       {/* New Content Showcase Banner */}
       {/* Latest Content Showcase Banner */}
