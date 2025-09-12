@@ -5,13 +5,44 @@ import SEO from '../../components/SEO';
 export default function ContentShowcase() {
   const featuredContent = [
     {
-      title: "AI Multimodal Revolution 2025: Beyond Text to Vision, Audio, and Beyond",
-      description: "Discover how multimodal AI is revolutionizing industries in 2025. From vision-language models to audio synthesis, explore the future of AI that understands and generates across multiple modalities.",
+      title: "Advanced RAG Systems 2025: Production-Ready Implementation Guide",
+      description: "Master advanced RAG (Retrieval-Augmented Generation) systems with our comprehensive 2025 guide. Learn production patterns, optimization techniques, and real-world implementations.",
+      href: "/blog/ai-2025-advanced-rag-systems",
+      icon: "🔍",
+      category: "Advanced AI",
+      readTime: "25 min read",
+      date: "Jan 28, 2025",
+      featured: true
+    },
+    {
+      title: "AI Multimodal Revolution 2025: Vision, Voice, and Text Integration",
+      description: "Explore how multimodal AI is revolutionizing human-computer interaction by seamlessly combining vision, voice, and text processing. Learn about the latest breakthroughs and real-world applications.",
       href: "/blog/ai-2025-multimodal-revolution",
       icon: "🎭",
       category: "Multimodal AI",
-      readTime: "25 min read",
-      date: "Jan 28, 2025"
+      readTime: "28 min read",
+      date: "Jan 28, 2025",
+      featured: true
+    },
+    {
+      title: "Quantum Machine Learning 2025: The Next Frontier of AI",
+      description: "Discover how quantum computing is revolutionizing machine learning, enabling exponential speedups in optimization, pattern recognition, and complex problem solving.",
+      href: "/blog/ai-2025-quantum-machine-learning",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "32 min read",
+      date: "Jan 28, 2025",
+      featured: true
+    },
+    {
+      title: "AI Autonomous Manufacturing Revolution: $200M Success Story",
+      description: "Complete case study: How a Fortune 500 manufacturer achieved $200M in cost savings and 300% productivity gains through AI-powered autonomous manufacturing systems.",
+      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
+      icon: "🏭",
+      category: "Case Study",
+      readTime: "15 min read",
+      date: "Jan 28, 2025",
+      featured: true
     },
     {
       title: "AI Neural Interfaces 2025: The Future of Brain-Computer Interaction",

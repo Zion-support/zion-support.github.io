@@ -17,6 +17,38 @@ const NewContentPromoBanner: React.FC = () => {
   const newContent: ContentItem[] = [
     {
       id: '1',
+      title: 'Advanced RAG Systems 2025: Production Guide',
+      description: 'Master production-ready RAG systems with advanced patterns, optimization techniques, and real-world implementations.',
+      href: '/blog/ai-2025-advanced-rag-systems',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'AI Multimodal Revolution 2025',
+      description: 'Explore how vision, voice, and text integration is revolutionizing human-computer interaction and AI applications.',
+      href: '/blog/ai-2025-multimodal-revolution',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '3',
+      title: 'Quantum Machine Learning 2025',
+      description: 'Discover quantum computing breakthroughs in machine learning, enabling exponential speedups for complex problems.',
+      href: '/blog/ai-2025-quantum-machine-learning',
+      type: 'blog',
+      featured: true
+    },
+    {
+      id: '4',
+      title: 'AI Autonomous Manufacturing: $200M Success',
+      description: 'Complete case study: How a Fortune 500 manufacturer achieved $200M savings and 300% productivity gains.',
+      href: '/case-studies/ai-2025-autonomous-manufacturing-revolution',
+      type: 'case-study',
+      featured: true
+    },
+    {
+      id: '5',
       title: 'AI Enterprise Automation Revolution 2025',
       description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
       href: '/blog/ai-2025-enterprise-automation-revolution',
@@ -24,7 +56,7 @@ const NewContentPromoBanner: React.FC = () => {
       featured: true
     },
     {
-      id: '2',
+      id: '6',
       title: 'AI Healthcare Diagnosis Breakthrough 2025',
       description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
       href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
@@ -32,7 +64,7 @@ const NewContentPromoBanner: React.FC = () => {
       featured: true
     },
     {
-      id: '3',
+      id: '7',
       title: 'AI Financial Services Transformation Success',
       description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
       href: '/case-studies/ai-financial-services-transformation-2025',
@@ -40,7 +72,7 @@ const NewContentPromoBanner: React.FC = () => {
       featured: true
     },
     {
-      id: '4',
+      id: '8',
       title: 'AI Automation Services',
       description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
       href: '/services/ai-automation',

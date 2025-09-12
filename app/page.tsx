@@ -11,6 +11,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
@@ -483,6 +484,9 @@ export default function HomePage() {
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
 
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
