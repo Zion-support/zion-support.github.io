@@ -1321,30 +1321,161 @@ export default function HomePage() {
         colorScheme="blue"
       />
 
+      {/* New Content Spotlight - Latest Drop */}
+      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🚀 JUST PUBLISHED - JANUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              Fresh AI & Tech Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest expert insights, case studies, and resources. From AI multimodal 
+              applications to cybersecurity threats and sustainability solutions - get the knowledge 
+              you need to succeed in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/content-showcase'
+                className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Explore All Content
+              </Link>
+              <Link
+                href='/blog'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
+              >
+                📖 Read Latest Articles
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-2025-year-in-review' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
+                <h3 className='text-lg font-semibold mb-2'>AI 2025 Year in Review</h3>
+                <p className='text-sm opacity-90 mb-3'>Comprehensive review of AI breakthroughs and transformations in 2025</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-multimodal-revolution-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎭</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Multimodal Revolution 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Beyond text to vision, audio, and beyond - the future of AI</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>18 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/case-studies/ai-retail-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛒</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Retail Transformation</h3>
+                <p className='text-sm opacity-90 mb-3'>340% revenue growth, 60% cost reduction - complete case study</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-multimodal-implementation-guide-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Multimodal Implementation Guide</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete 150-page guide with templates and checklists</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/ai-enterprise-integration-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Integration 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with best practices</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/content-showcase' className='group md:col-span-3'>
+              <div className='mt-2 bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>📚</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>View All New Content</h3>
+                <p className='text-sm opacity-90'>Explore our complete library of AI insights, case studies, and resources</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Content Showcase */}
       <ContentShowcase
         title="Latest AI & Technology Insights"
         subtitle="Stay ahead with our latest articles, resources, and case studies covering the most important trends in AI, cloud architecture, and business growth."
         items={[
           {
-            title: "AI Cybersecurity 2025: Protecting Your Digital Assets",
-            description: "Comprehensive guide to AI cybersecurity in 2025. Learn about emerging threats, defense strategies, and best practices for protecting your organization.",
-            href: "/blog/ai-cybersecurity-2025",
+            title: "AI 2025 Year in Review: The Breakthrough Year",
+            description: "Comprehensive review of AI breakthroughs, trends, and transformations in 2025. From GPT-5 to quantum AI, discover what shaped the future of artificial intelligence.",
+            href: "/blog/ai-2025-year-in-review",
+            type: "blog",
+            readTime: "25 min read",
+            isNew: true,
+            icon: "🤖",
+            category: "AI & Technology"
+          },
+          {
+            title: "AI Multimodal Revolution 2025: Beyond Text to Vision, Audio, and Beyond",
+            description: "Explore the multimodal AI revolution transforming how machines understand and interact with the world. From GPT-5 to vision-language models, discover the future of AI.",
+            href: "/blog/ai-multimodal-revolution-2025",
             type: "blog",
             readTime: "18 min read",
             isNew: true,
-            icon: "🛡️",
-            category: "AI & Security"
+            icon: "🎭",
+            category: "AI & Technology"
           },
           {
-            title: "AI Data Privacy 2025: Navigating the New Regulatory Landscape",
-            description: "Comprehensive guide to AI data privacy regulations in 2025. Learn about GDPR, CCPA, and emerging AI-specific privacy laws affecting your business.",
-            href: "/blog/ai-data-privacy-2025",
-            type: "blog",
-            readTime: "15 min read",
+            title: "AI Retail Transformation 2025: How TechMart Increased Revenue by 340%",
+            description: "Discover how TechMart transformed their retail operations with AI, achieving 340% revenue growth, 60% cost reduction, and 95% customer satisfaction through intelligent automation.",
+            href: "/case-studies/ai-retail-transformation-2025",
+            type: "case-study",
+            readTime: "12 min read",
             isNew: true,
-            icon: "🔒",
-            category: "Privacy & Compliance"
+            icon: "🛒",
+            category: "Retail & E-commerce",
+            featured: true
+          },
+          {
+            title: "AI Multimodal Implementation Guide 2025: Complete Step-by-Step Resource",
+            description: "Download our comprehensive 150-page implementation guide with templates, checklists, and best practices for successful multimodal AI deployment.",
+            href: "/resources/ai-multimodal-implementation-guide-2025",
+            type: "resource",
+            readTime: "45 min read",
+            isNew: true,
+            icon: "📋",
+            category: "Templates & Guides"
           },
           {
             title: "AI Enterprise Integration 2025: A Complete Implementation Guide",
@@ -1357,39 +1488,18 @@ export default function HomePage() {
             category: "Enterprise & Integration"
           },
           {
-            title: "AI Integration Playbook 2025: Complete Implementation Guide",
-            description: "Download our comprehensive AI integration playbook for 2025. Step-by-step guide with templates, checklists, and best practices for successful AI implementation.",
-            href: "/resources/ai-integration-playbook-2025",
-            type: "resource",
-            readTime: "45 min read",
+            title: "AI Cybersecurity 2025: Protecting Your Digital Assets",
+            description: "Comprehensive guide to AI cybersecurity in 2025. Learn about emerging threats, defense strategies, and best practices for protecting your organization.",
+            href: "/blog/ai-cybersecurity-2025",
+            type: "blog",
+            readTime: "18 min read",
             isNew: true,
-            icon: "📚",
-            category: "Templates & Guides"
-          },
-          {
-            title: "AI Privacy Compliance Checklist 2025: GDPR, CCPA & More",
-            description: "Download our comprehensive AI privacy compliance checklist for 2025. Ensure your AI systems meet GDPR, CCPA, and emerging AI-specific privacy regulations.",
-            href: "/resources/ai-privacy-compliance-checklist",
-            type: "resource",
-            readTime: "30 min read",
-            isNew: true,
-            icon: "✅",
-            category: "Compliance & Security"
-          },
-          {
-            title: "AI Retail Transformation 2025: How TechMart Increased Revenue by 340%",
-            description: "Discover how TechMart transformed their retail operations with AI, achieving 340% revenue growth, 60% cost reduction, and 95% customer satisfaction through intelligent automation.",
-            href: "/case-studies/ai-retail-transformation-2025",
-            type: "case-study",
-            readTime: "12 min read",
-            isNew: true,
-            icon: "🛒",
-            category: "Retail & E-commerce",
-            featured: true
+            icon: "🛡️",
+            category: "AI & Security"
           }
         ]}
         showViewAll={true}
-        viewAllHref="/blog"
+        viewAllHref="/content-showcase"
       />
     </div>
   );
