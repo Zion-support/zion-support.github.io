@@ -2,7 +2,7 @@ import { render, fireEvent, waitFor } from @testing-library/react'; // Added wai
 // Mock Sentry to prevent errors in test environment
 jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn(),
   init: jest.fn(),
-  // Add  other Sentry functions that might be called by the component or its dependencies
+  // Add any other Sentry functions that might be called by the component or its dependencies
   // For example, if it uses withSentryConfig, Sentry.XYZ, etc.
   // For now, init and captureException are common ones.
 }));
@@ -13,7 +13,9 @@ it('applies dark class when toggled', async () => { // Made test async'  render(
       <ModeToggle />
     </ThemeProvider>
   );
+
   const button = document.querySelector('button');  fireEvent.click(button!);
+
   await waitFor(() => { // Added waitFor for the assertion
     expect(document.documentElement.classList.contains('dark')).toBe(true);  });
 });

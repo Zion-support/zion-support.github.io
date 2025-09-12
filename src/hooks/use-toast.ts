@@ -1,74 +1,73 @@
-import React, { useState } from 'react.ts';
-import { useState, useCallback              } from 'react.ts';
+import React from 'react';
+import { useSnackbar, VariantType, OptionsObject } from 'notistack';
 
-interface Toast {
+export type ToastOptions = OptionsObject & { variant?: VariantType };
 
+export function useToast() {
+  const { enqueueSnackbar } = useSnackbar();
+  const toast = React.useCallback((message: string, options?: ToastOptions) => {
+    enqueueSnackbar(message, options);
+  }, [enqueueSnackbar]);
 
+  toast.error = (msg: string) => enqueueSnackbar(msg, { variant: 'error' });
+  toast.success = (msg: string) => enqueueSnackbar(msg, { variant: 'success' });
 
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  id: string;
-  title?: string;
-  description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-duration?: number;
-
-
-
-
-
-
-
-
-
-
-
-
+  return { toast } as { toast: typeof toast };
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export function useToast(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  const [toasts, setToasts] = useState<any>([]);
-  const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast: Toast = { id, title, description, variant, duration };
-    setToasts(prev => [...prev, newToast]);
-    if (duration > 0) {
-      setTimeout(() => {
-        setToasts(prev => prev.filter(toast => toast.id !== id));
-      }, duration);
+let globalEnqueue: (msg: string, opts?: OptionsObject) => void;
+
+export function ToastInitializer() {
+  const { enqueueSnackbar } = useSnackbar();
+  React.useEffect(() => {
+    globalEnqueue = enqueueSnackbar;
+  }, [enqueueSnackbar]);
+  return null;
+}
+
+export const toast = {
+  error: (msg: string) => globalEnqueue?.(msg, { variant: 'error' }),
+  success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
+};
+
+toastAdapter.warning = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
+  return showToast.warning(message, options);
+};
+
+toastAdapter.dismiss = (toastId?: string | number) => {
+  if (toastId) {
+    globalToastManager.dismissToast(String(toastId));
+  } else {
+    globalToastManager.dismissAll();
+  }
+};
+
+// Enhanced useToast hook with global toast manager integration
+export const useToast = () => ({
+  toast: toastAdapter,
+  dismiss: (toastId?: string) => {
+    if (toastId) {
+      globalToastManager.dismissToast(toastId);
+    } else {
+      globalToastManager.dismissAll();
     }
-    return id;
-  }, []);
+  },
+  
+  // Additional methods from global toast manager
+  showToast: globalToastManager.showToast.bind(globalToastManager),
+  getActiveToasts: globalToastManager.getActiveToasts.bind(globalToastManager),
+  getQueueLength: globalToastManager.getQueueLength.bind(globalToastManager),
+  dismissAll: globalToastManager.dismissAll.bind(globalToastManager),
+  
+  // Convenience methods
+  success: showToast.success,
+  error: showToast.error,
+  warning: showToast.warning,
+  info: showToast.info,
+  networkError: showToast.networkError,
+  authError: showToast.authError,
+  validationError: showToast.validationError,
+  criticalError: showToast.criticalError,
+});
 
-  const dismiss = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }, []);
-  const dismissAll = useCallback(() => {;
-    setToasts([]);
-  }, []);
-  return {
-    toasts,
-    toast,
-    dismiss,
-    dismissAll
-  // // // // // // // console.log('Toast:', { title, description, variant, duration });
-};
-  }}
-// Export a default toast function for backward compatibility
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
-  // In a real implementation, this would dispatch to a global toast system;
-  console.log('Toast:', { title, description, variant, duration });
-};
+export const toast = toastAdapter;

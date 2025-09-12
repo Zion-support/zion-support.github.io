@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
+    <meta name="description" content="You're currently offline. Some features may not be available.">
     <style>
         * {
             margin: 0;
@@ -13,164 +14,183 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #e2e8f0;
+            background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            text-align: center;
+            padding: 20px;
         }
         
         .offline-container {
-            text-align: center;
             max-width: 500px;
-            background: rgba(30, 41, 59, 0.8);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 48px 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
         
         .offline-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 32px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            color: white;
+            font-size: 48px;
+            animation: pulse 2s infinite;
         }
-        
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #06b6d4;
-            font-weight: 600;
+
+        .offline-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        p {
-            font-size: 1.1rem;
+
+        .offline-message {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-bottom: 40px;
             line-height: 1.6;
-            margin-bottom: 25px;
-            color: #cbd5e1;
         }
-        
+
         .retry-button {
-            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
             color: white;
             border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
+            padding: 16px 32px;
+            border-radius: 12px;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+            margin: 16px 8px;
         }
-        
+
         .retry-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+            box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
         }
-        
-        .features {
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .feature {
-            background: rgba(15, 23, 42, 0.5);
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(6, 182, 212, 0.2);
-        }
-        
-        .feature h3 {
-            color: #06b6d4;
-            margin-bottom: 10px;
+
+        .home-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 16px 32px;
+            border-radius: 12px;
             font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 16px 8px;
+            text-decoration: none;
+            display: inline-block;
         }
-        
-        .feature p {
+
+        .home-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .connection-info {
+            margin-top: 32px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .connection-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: #4ecdc4;
+        }
+
+        .connection-info p {
+            color: #a0a0a0;
             font-size: 0.9rem;
-            margin: 0;
-            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 8px;
         }
-        
-        @media (max-width: 600px) {
+
+        .tech-support {
+            margin-top: 24px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(68, 160, 141, 0.1));
+            border-radius: 12px;
+            border: 1px solid rgba(78, 205, 196, 0.2);
+        }
+
+        .tech-support h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: #4ecdc4;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
             .offline-container {
-                padding: 30px 20px;
+                padding: 32px 24px;
+                margin: 20px;
             }
             
             h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
-            
-            .features {
-                grid-template-columns: 1fr;
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .retry-button,
+            .home-button {
+                display: block;
+                width: 100%;
+                margin: 8px 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="offline-container">
-        <div class="offline-icon">
-            📡
-        </div>
-        
-        <h1>You're Offline</h1>
-        <p>Don't worry! Some of our content is available offline. Check your internet connection and try again.</p>
-        
-        <button class="retry-button" onclick="window.location.reload()">
-            Try Again
-        </button>
-        
-        <div class="features">
-            <div class="feature">
-                <h3>🔄 Auto-Sync</h3>
-                <p>Your data will sync automatically when you're back online</p>
-            </div>
-            <div class="feature">
-                <h3>💾 Offline Access</h3>
-                <p>Key features remain available even without internet</p>
-            </div>
-            <div class="feature">
-                <h3>🚀 Fast Loading</h3>
-                <p>Optimized for quick access and smooth performance</p>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        // Check if we're back online
-        window.addEventListener('online', () => {
-            window.location.reload();
-        });
-        
-        // Add some interactivity
-        document.querySelector('.retry-button').addEventListener('click', () => {
-            if (navigator.onLine) {
-                window.location.reload();
-            } else {
-                // Show a message that we're still offline
-                const button = document.querySelector('.retry-button');
-                const originalText = button.textContent;
-                button.textContent = 'Still Offline';
-                button.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = 'linear-gradient(135deg, #06b6d4, #0891b2)';
-                }, 2000);
-            }
-        });
-    </script>
+  <h1>You are offline</h1>
+  <p>Please check your internet connection and try again.</p>
+  <p>If the app still shows a blank screen after reconnecting, run
+    <code>./setup.sh npm</code> to install missing dependencies.</p>
+  <p>Check <code>next_dev_server.log</code> for errors. After installing dependencies, run <code>npm run fix:loading</code> if needed.</p>
 </body>
 </html>

@@ -1,4 +1,5 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from '../types/service-variants';
+
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -30,13 +31,16 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string};
+    website: string;
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number;
+}
+
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform
   {
@@ -52,7 +56,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$4,999/month',
       custom: 'Contact for pricing'
     },
-    features[
+    features: [
       'Quantum-resistant encryption algorithms',
       'Post-quantum cryptography implementation',
       'Advanced threat detection and prevention',
@@ -66,7 +70,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'API-first infrastructure',
       'Enterprise-grade SLA guarantees'
     ],
-    benefits[
+    benefits: [
       'Future-proof against quantum threats',
       'Unprecedented security levels',
       'Compliance with emerging standards',
@@ -76,7 +80,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Advanced threat protection',
       'Global compliance readiness'
     ],
-    useCases[
+    useCases: [
       'Financial services and banking',
       'Healthcare and medical data',
       'Government and defense',
@@ -93,6 +97,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/quantum-safe-cloud-infrastructure-platform'
   },
+
   // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network',
@@ -107,7 +112,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$2,999/month',
       custom: 'Contact for pricing'
     },
-    features[
+    features: [
       'AI-powered edge resource management',
       'Autonomous load balancing and scaling',
       'Predictive performance optimization',
@@ -121,7 +126,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Advanced analytics and insights',
       'Custom edge application deployment'
     ],
-    benefits[
+    benefits: [
       'Reduce latency by 80%',
       'Improve user experience globally',
       'Reduce bandwidth costs by 60%',
@@ -131,7 +136,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Reduce operational overhead',
       'Global edge presence'
     ],
-    useCases[
+    useCases: [
       'Content delivery networks',
       'IoT and edge computing',
       'Mobile applications',
@@ -148,6 +153,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-edge-computing-network'
   },
+
   // Neuromorphic Computing Infrastructure
   {
     id: 'neuromorphic-computing-infrastructure',
@@ -162,7 +168,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$14,999/month',
       custom: 'Contact for pricing'
     },
-    features[
+    features: [
       'Neuromorphic chip architecture',
       'Brain-inspired neural networks',
       'Ultra-low power consumption',
@@ -176,7 +182,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Academic licensing options',
       'Enterprise integration support'
     ],
-    benefits[
+    benefits: [
       '1000x more energy efficient than traditional computing',
       'Real-time learning and adaptation',
       'Unprecedented AI processing speed',
@@ -186,7 +192,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Research and development platform',
       'Competitive technological advantage'
     ],
-    useCases[
+    useCases: [
       'AI research and development',
       'Autonomous vehicles and robotics',
       'Edge AI applications',
@@ -203,6 +209,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/neuromorphic-computing-infrastructure'
   },
+
   // Autonomous Data Center Management Platform
   {
     id: 'autonomous-data-center-management-platform',
@@ -217,7 +224,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$7,999/month',
       custom: 'Contact for pricing'
     },
-    features[
+    features: [
       'Autonomous power management',
       'AI-driven cooling optimization',
       'Predictive maintenance scheduling',
@@ -231,7 +238,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Compliance and audit automation',
       'Custom automation workflows'
     ],
-    benefits[
+    benefits: [
       'Reduce energy costs by 40%',
       'Improve uptime to 99.999%',
       'Reduce operational costs by 60%',
@@ -241,7 +248,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Reduce carbon footprint',
       'Scale operations automatically'
     ],
-    useCases[
+    useCases: [
       'Enterprise data centers',
       'Cloud service providers',
       'Colocation facilities',
@@ -251,11 +258,11 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     ],
     marketSize: '$16.4B by 2025',
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
-    competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',;
-    contact: 'kleber@ziontechgroup.com',;
-    mobile: '+1 302 464 0950',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
-    slug: '/autonomous-data-center-management-platform';
-  };
+    competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',
+    contact: 'kleber@ziontechgroup.com',
+    mobile: '+1 302 464 0950',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    slug: '/autonomous-data-center-management-platform'
+  }
 ];

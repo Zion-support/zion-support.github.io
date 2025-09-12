@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run test -- --coverage
+      - run: npm run cypress:run
+      - uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage
+

@@ -1,30 +1,34 @@
 #!/bin/bash
 
-echo "🔧 Completing merge process..."
+# Complete the git merge operations
+cd /workspace
 
-# Check if we're in a merge state
-if [ -f .git/MERGE_HEAD ]; then
-    echo "📋 Merge in progress. Checking status..."
-    
-    # Check for any unmerged files
-    unmerged_files=$(git status --porcelain | grep "^UU" | wc -l)
-    
-    if [ $unmerged_files -eq 0 ]; then
-        echo "✅ No unmerged files. Completing merge..."
-        
-        # Add all files and commit
-        git add .
-        git commit -m "Complete merge with origin/main"
-        
-        echo "🎉 Merge completed successfully!"
-    else
-        echo "⚠️  Found $unmerged_files unmerged files. Please resolve conflicts first."
-        git status --porcelain | grep "^UU"
-    fi
-else
-    echo "ℹ️  No merge in progress."
-fi
-
-# Final status
-echo "📊 Final Git Status:"
+# Check current status
+echo "Current git status:"
 git status
+
+# Add all resolved files
+echo "Adding all resolved files..."
+git add .
+
+# Complete the cherry-pick
+echo "Completing cherry-pick..."
+git cherry-pick --continue
+
+# Check final status
+echo "Final git status:"
+git status
+
+# Switch to main branch
+echo "Switching to main branch..."
+git checkout main
+
+# Merge our improvements
+echo "Merging improvements branch..."
+git merge clean-merge-with-main
+
+# Push to main
+echo "Pushing to main..."
+git push origin main
+
+echo "Merge completed successfully!"
