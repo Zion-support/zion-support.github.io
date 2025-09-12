@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import Link from 'next/link';
 
@@ -203,6 +202,9 @@ export default function ContentShowcase() {
       </div>
     </section>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 // Featured content for homepage
@@ -354,3 +356,4 @@ export const latestContent = [
 ];
 
 export default ContentShowcase;
+>>>>>>> 21dcf44c2824 (feat(content): add AI Go-To-Market Strategy 2025 article and advertise on homepage banners)

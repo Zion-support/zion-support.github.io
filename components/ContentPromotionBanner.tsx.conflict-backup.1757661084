@@ -34,6 +34,11 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
 
   const promotions: PromotionItem[] = [
     {
+<<<<<<< HEAD
+      id: 'case-study-1',
+      title: 'Manufacturing Giant Achieves 400% ROI',
+      description: 'See how a Fortune 500 company saved $2.3B with AI transformation',
+=======
       id: 'generative-ai-revolution',
       title: 'The Generative AI Revolution 2025: Beyond Text and Images',
       description: 'Explore how generative AI is revolutionizing content creation, design, and business processes with advanced multimodal capabilities.',
@@ -70,6 +75,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
       id: 'financial-transformation',
       title: 'AI Financial Services Transformation Success: $2.3B in Value Created',
       description: 'Comprehensive case study of how a Fortune 500 company achieved unprecedented success through AI transformation.',
+>>>>>>> 21dcf44c2824 (feat(content): add AI Go-To-Market Strategy 2025 article and advertise on homepage banners)
       type: 'case-study',
       href: '/case-studies/ai-transformation-manufacturing-giant-2025',
       badge: 'SUCCESS STORY',
