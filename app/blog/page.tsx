@@ -37,6 +37,28 @@ export default function BlogPage() {
 	    image: '/api/placeholder/600/400',
 	  },
 	  // New posts (2025-09)
+\t  {
+\t    id: 'ai-engineering-best-practices-2025',
+\t    title: 'AI Engineering Best Practices 2025: Reliability, Cost, and Speed',
+\t    excerpt:
+\t      'Concrete patterns to move business metrics with AI without blowing up costs or risk.',
+\t    date: '2025-09-12',
+\t    readTime: '12 min read',
+\t    category: 'AI Engineering',
+\t    featured: true,
+\t    image: '/api/placeholder/600/400',
+\t  },
+\t  {
+\t    id: 'startup-distribution-2026',
+\t    title: 'Startup Distribution 2026: Channels that Compound to $1M ARR',
+\t    excerpt:
+\t      'A week-by-week system to find traction without a big team or budget.',
+\t    date: '2025-09-12',
+\t    readTime: '10 min read',
+\t    category: 'Growth',
+\t    featured: true,
+\t    image: '/api/placeholder/600/400',
+\t  },
 	  {
 	    id: 'ai-procurement-playbook-2025',
 	    title: 'AI Procurement Playbook 2025: Buy Fast, Avoid Regret',
