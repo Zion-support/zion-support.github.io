@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'GENAI-EVAL-2025',
+      title: 'GenAI Evaluation Blueprints (2025)',
+      description: 'Offline/online evals, automated metrics, and policy-as-code guardrails for quality and safety.',
+      href: '/blog/ai-2025-genai-evaluation-blueprints',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: 'AGENT-RISK-2025',
+      title: 'Agent Risk Controls 2025: Policy-as-Code, Budgets, and SLAs',
+      description: 'Runtime guardrails, budget enforcement, RBAC, and exception workflows for safe agents.',
+      href: '/blog/ai-2025-agent-risk-controls',
+      type: 'blog',
+      featured: true,
+      readTime: '14 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
+      id: 'CDP-2025',
+      title: 'Customer Data Platform Blueprint (2025)',
+      description: 'Unified profiles, consent, segmentation, uplift modeling, and agentic activations.',
+      href: '/blog/ai-2025-customer-data-platform-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '15 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platforms'
+    },
+    {
       id: 'AIFINOPS-2025',
       title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
       description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
