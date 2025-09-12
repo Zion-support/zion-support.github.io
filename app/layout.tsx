@@ -15,8 +15,8 @@ import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWi
 import EnhancedNavigationWithContentDiscovery from '../components/EnhancedNavigationWithContentDiscovery';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-import AI2026FuturePredictionsPromotionBanner from '../components/AI2026FuturePredictionsPromotionBanner';
-import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
+import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -152,59 +152,6 @@ function Header() {
                 </Link>
                 <Link href="/webinars/ai-2025-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔥 Revolutionary Breakthroughs Webinar
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="relative group">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
-              Advanced AI 2026
-              <span className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                NEW
-              </span>
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="py-2">
-                <Link href="/ai-2025-advanced-content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  🚀 Advanced AI 2025 Content Showcase (NEW)
-                </Link>
-                <Link href="/ai-2026-ultimate-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  🚀 AI 2026 Ultimate Breakthrough Showcase (NEW)
-                </Link>
-                <Link href="/ai-2026-quantum-neural-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
-                  ⚛️ AI 2026 Quantum Neural Revolution (BREAKTHROUGH)
-                </Link>
-                <Link href="/ai-2025-ultimate-content-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  🚀 AI 2025 Ultimate Content Revolution (ULTIMATE)
-                </Link>
-                <Link href="/ai-2026-future-tech-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500">
-                  🔮 AI 2026 Future Tech Preview (REVOLUTIONARY)
-                </Link>
-                <Link href="/interactive-content-discovery-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
-                  🔍 Interactive Content Discovery (ADVANCED)
-                </Link>
-                <div className="border-t border-gray-200 my-2"></div>
-                <Link href="/blog/ai-2026-neural-interface-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🧠 Neural Interface Revolution (95% Accuracy)
-                </Link>
-                <Link href="/blog/ai-2026-quantum-neural-fusion" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  ⚛️ Quantum-Neural Fusion (15,000% ROI)
-                </Link>
-                <Link href="/blog/ai-2026-deep-learning-architectures" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🧠 Advanced Deep Learning (99.8% Accuracy)
-                </Link>
-                <Link href="/blog/ai-2026-edge-ai-optimization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🌐 Edge AI Optimization (6,200% ROI)
-                </Link>
-                <div className="border-t border-gray-200 my-2"></div>
-                <Link href="/tools/ai-2026-readiness-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🎯 AI 2026 Readiness Assessment (NEW)
-                </Link>
-                <Link href="/tools/ai-2026-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🧮 AI 2026 ROI Calculator (ADVANCED)
                 </Link>
               </div>
             </div>
@@ -687,12 +634,6 @@ function Header() {
                 </Link>
                 <Link href="/case-studies/ai-2026-quantum-neural-fusion-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 15,000% ROI Quantum Success (BREAKTHROUGH)
-                </Link>
-                <Link href="/blog/ai-2026-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  🚀 AI 2026 Revolutionary Breakthroughs (NEW)
-                </Link>
-                <Link href="/resources/ai-2026-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
-                  📚 AI 2026 Implementation Master Guide (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2026-autonomous-manufacturing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500">
                   🏭 8,500% ROI Manufacturing Revolution (NEW)
@@ -1281,8 +1222,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
-          <AI2026FuturePredictionsPromotionBanner />
-          <AI2025UltimateBreakthroughRevolutionBanner />
+          <AI2026BreakthroughPromotionBanner />
+          <NewContentShowcaseBanner />
           <AI2025NewContentPromotionBanner />
           <AI2025UltimateBreakthroughPromotionBanner />
           <AI2025BreakthroughContentBanner />
