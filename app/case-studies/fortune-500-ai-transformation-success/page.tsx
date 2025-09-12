@@ -1,18 +1,20 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI Transformation Success - 40% Cost Reduction Case Study',
+  description: 'How a Fortune 500 manufacturing company achieved 40% cost reduction and 60% faster processing through AI automation. Complete transformation case study.',
+  keywords: 'Fortune 500 AI transformation, manufacturing AI automation, enterprise AI case study, AI cost reduction, manufacturing automation',
+  openGraph: {
+    title: 'Fortune 500 AI Transformation Success - 40% Cost Reduction Case Study',
+    description: 'How a Fortune 500 manufacturing company achieved 40% cost reduction through AI automation.',
+    type: 'article',
+  },
+};
 
 export default function Fortune500AITransformationSuccess() {
   return (
-    <ErrorBoundary>
-      <SEO
-        title="Fortune 500 AI Transformation Success - 40% Cost Reduction Case Study"
-        description="How a Fortune 500 manufacturing company achieved 40% cost reduction and 60% faster processing through AI automation. Complete transformation case study."
-        keywords="Fortune 500 AI transformation, manufacturing AI automation, enterprise AI case study, AI cost reduction, manufacturing automation"
-        url="/case-studies/fortune-500-ai-transformation-success"
-      />
-      
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="mb-8">
             <div className="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
@@ -283,6 +285,5 @@ export default function Fortune500AITransformationSuccess() {
           </div>
         </div>
       </div>
-    </ErrorBoundary>
   );
 }
