@@ -16,6 +16,36 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "FinOps for GenAI 2025: Cost, Quality, and Risk Controls",
+      description: "Optimize spend while maintaining quality and safety with budgets, SLAs, and guardrails.",
+      href: "/blog/ai-2025-finops-for-genai",
+      icon: "💸",
+      category: "Optimization",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Sales Copilots Blueprint 2025",
+      description: "Design and govern AI sales copilots to boost win rates and speed cycles—safely.",
+      href: "/blog/ai-2025-ai-sales-copilots-blueprint",
+      icon: "🧭",
+      category: "Go-to-Market",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Sales Cycle Acceleration: 28% Faster Close",
+      description: "Case study: Copilots sped up approvals and proposals with policy-aware automation.",
+      href: "/case-studies/ai-2025-sales-cycle-acceleration",
+      icon: "📈",
+      category: "Case Study",
+      readTime: "9 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Secure Agent Architectures (2025)",
       description: "Blueprint for secure agent architectures with policy-as-code, guardrails, and SLAs.",
       href: "/blog/ai-2025-secure-agent-architectures",
