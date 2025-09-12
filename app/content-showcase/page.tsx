@@ -69,133 +69,42 @@ export default function ContentShowcase() {
               </Link>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-advanced-prompt-engineering" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
-                  <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-xs font-medium mb-3">
-                    NEW
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/blog/ai-2025-advanced-multimodal-revolution" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+                  <h3 className="text-lg font-semibold mb-2">Advanced Multimodal AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">400% efficiency gains with unified content understanding across text, images, audio, and video</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>15 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🆕 NEW</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    Advanced Prompt Engineering 2025
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Master AI communication with 10x better results using advanced prompt engineering techniques.
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
+                </div>
+              </Link>
+              
+              <Link href="/blog/ai-2025-enterprise-automation-masterclass" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎓</div>
+                  <h3 className="text-lg font-semibold mb-2">Enterprise Automation Masterclass</h3>
+                  <p className="text-sm opacity-90 mb-3">Master the 7-phase framework for enterprise AI automation with 450% efficiency gains and $2.8B value creation</p>
+                  <div className="flex items-center text-xs opacity-75">
                     <span>25 min read</span>
-                    <span>Jan 28, 2025</span>
+                    <span className="mx-2">•</span>
+                    <span>🎓 MASTERCLASS</span>
                   </div>
                 </div>
               </Link>
-
-              <Link href="/blog/ai-2025-cybersecurity-advanced-threat-detection" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
-                  <div className="inline-flex items-center bg-red-100 text-red-800 rounded-full px-3 py-1 text-xs font-medium mb-3">
-                    ESSENTIAL
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    AI Cybersecurity 2025
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Advanced threat detection and defense strategies for protecting AI systems.
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <span>32 min read</span>
-                    <span>Jan 28, 2025</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/blog/ai-2025-market-analysis" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
-                  <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-3 py-1 text-xs font-medium mb-3">
-                    TRENDING
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    AI Market Analysis 2025
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    $47B investment surge and industry transformation insights for 2025.
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <span>32 min read</span>
-                    <span>Jan 28, 2025</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </section>
-
-          {/* Success Stories */}
-          <section>
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">🏆 Success Stories</h2>
-              <Link
-                href="/case-studies"
-                className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2"
-              >
-                View All Case Studies
-                <span>→</span>
-              </Link>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/case-studies/ai-healthcare-diagnosis-breakthrough-2025" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
-                  <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-3 py-1 text-xs font-medium mb-3">
-                    BREAKTHROUGH
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    Healthcare AI Breakthrough
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    95% accuracy in medical diagnosis with 80% faster processing times.
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <span>Healthcare</span>
-                    <span>95% Accuracy</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/case-studies/ai-transformation-global-logistics-giant-2025" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚚</div>
-                  <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-xs font-medium mb-3">
-                    SUCCESS
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    Logistics AI Success
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    $2.3B savings and 300% efficiency gains with AI-powered logistics.
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <span>Logistics</span>
-                    <span>$2.3B Savings</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/case-studies/ai-transformation-fortune-500-success-2025" className="group">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
-                  <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-3 py-1 text-xs font-medium mb-3">
-                    FORTUNE 500
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
-                    Fortune 500 AI Success
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    $50M savings and 300% ROI in 18 months with comprehensive AI transformation.
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <span>Enterprise</span>
-                    <span>300% ROI</span>
+              
+              <Link href="/case-studies/ai-2025-global-ecommerce-transformation" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛒</div>
+                  <h3 className="text-lg font-semibold mb-2">$2.1B E-commerce Transformation</h3>
+                  <p className="text-sm opacity-90 mb-3">Global e-commerce giant achieves 340% revenue increase and 60% cost reduction through comprehensive AI transformation</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>Case Study</span>
+                    <span className="mx-2">•</span>
+                    <span>💰 $2.1B Value</span>
                   </div>
                 </div>
               </Link>

@@ -182,12 +182,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: AI Sustainability Solutions, Climate Tech Guide & Carbon Neutrality Success!
+                🎉 NEW: Multimodal AI, Enterprise Automation & $2.1B E-commerce Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: AI-Powered Climate Solutions (60% emission reduction), Complete Sustainability Implementation Playbook, 
-                Fortune 500 Carbon Neutrality Case Study ($2.3B savings), plus LLM Optimization Masterclass and $2.8B Unicorn Success. 
-                Get expert insights on AI technologies transforming sustainability and business in 2025.
+                Just released: Advanced Multimodal AI Revolution (400% efficiency gains), Enterprise Automation Masterclass (450% efficiency improvements), 
+                Global E-commerce Transformation ($2.1B value created), plus comprehensive implementation frameworks. 
+                Get expert insights on the cutting-edge technologies transforming 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -197,22 +197,16 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-sustainability-climate-solutions-2025"
+                  href="/blog/ai-2025-advanced-multimodal-revolution"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read Climate Solutions
+                  Read Multimodal AI Guide
                 </Link>
                 <Link
-                  href="/resources/ai-sustainability-implementation-playbook-2025"
+                  href="/case-studies/ai-2025-global-ecommerce-transformation"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Get Implementation Guide
-                </Link>
-                <Link
-                  href="/case-studies/ai-sustainability-transformation-2025"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-                >
-                  View Carbon Neutrality Success
+                  View $2.1B Success Story
                 </Link>
               </div>
             </div>
