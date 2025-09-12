@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, Brain, Atom, Zap } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AIQuantumBreakthrough2025: React.FC = () => {
   return (

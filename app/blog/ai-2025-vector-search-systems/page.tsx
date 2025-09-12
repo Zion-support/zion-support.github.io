@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Vector Search Systems 2025: Building Accurate, Fast, and Cost‑Efficient RAG',

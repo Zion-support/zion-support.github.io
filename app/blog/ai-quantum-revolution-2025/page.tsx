@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, Brain, Atom, Rocket } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'The AI Quantum Revolution: How 2025 is Transforming Everything',

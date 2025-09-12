@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { Suspense, lazy } from 'react';
-import Link from 'next/link';
-import SEO from '../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';

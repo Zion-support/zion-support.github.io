@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import Card from '../../../components/ui/Card';
 import { ArrowRight, CheckCircle, TrendingUp, Users, Zap, Target, BarChart3, Lightbulb } from 'lucide-react';
 

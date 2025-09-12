@@ -6,7 +6,7 @@ import {
   ArrowRight, Calendar, User, Tag, Clock as ClockIcon,
   Target, BarChart3, Lightbulb, Rocket, CheckCircle
 } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Future of Work Revolution - Complete Transformation Guide',

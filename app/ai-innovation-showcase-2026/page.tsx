@@ -29,7 +29,7 @@ import {
   Clock,
   Eye
 } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Innovation Showcase 2026 | Zion Tech Group - Cutting-Edge AI Solutions',

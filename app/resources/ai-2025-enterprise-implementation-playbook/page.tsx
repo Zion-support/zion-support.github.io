@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 import { ArrowRight, Clock, User, Calendar, Tag, Share2, Download, ExternalLink, CheckCircle, BookOpen, FileText, Users, Target, Zap, Shield, TrendingUp } from 'lucide-react';
 

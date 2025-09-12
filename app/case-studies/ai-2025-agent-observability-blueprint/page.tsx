@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Agent Observability Blueprint: 38% MTTR Reduction in 90 Days',

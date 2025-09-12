@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, TrendingUp, Users, DollarSign, Clock, CheckCircle, BarChart3, Brain, Zap } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const Fortune500AITransformation: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Star, Users, TrendingUp, Shield } from 'lucide-react';
 import { revolutionaryAIEcosystem2025 } from '../../data/2025-revolutionary-ai-ecosystem';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ClockIcon, UserIcon, TagIcon, ArrowRightIcon, CheckIcon, StarIcon, TrendingUpIcon, DollarSignIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
