@@ -107,6 +107,125 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          {/* Featured Content Section */}
+          <div className="mt-24 mb-16">
+            <h2 className="text-4xl font-bold mb-12 text-center">Featured Content & Solutions</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Latest AI Revolution</h3>
+                <p className="text-gray-200 mb-4 text-sm">Discover how AI is transforming business in 2024 with our comprehensive guide.</p>
+                <Link href="/blog/ai-revolution-2024-chat" className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
+                  Read Article →
+                </Link>
+              </div>
+              <div className="bg-gradient-to-br from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Cloud Trends 2024</h3>
+                <p className="text-gray-200 mb-4 text-sm">Explore the latest cloud computing trends and how they can benefit your business.</p>
+                <Link href="/blog/cloud-computing-trends-2024-chat" className="text-green-400 hover:text-green-300 font-semibold text-sm">
+                  Read Article →
+                </Link>
+              </div>
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-semibold mb-3 text-white">Success Stories</h3>
+                <p className="text-gray-200 mb-4 text-sm">See how we've helped 200+ companies achieve digital transformation success.</p>
+                <Link href="/case-studies" className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
+                  View Case Studies →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Promotional Banner */}
+          <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-yellow-500/30">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <span className="text-2xl">🎉</span>
+                <span className="text-yellow-400 font-bold text-lg">LIMITED TIME OFFER</span>
+                <span className="text-2xl">🎉</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 text-white">Get 30% Off Your First AI Project</h2>
+              <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto">
+                Transform your business with our AI solutions. Book a free consultation and get 30% off your first project. 
+                Offer valid until March 31, 2024.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link href="/contact" className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-bold transition-all transform hover:scale-105">
+                  Claim Your Discount
+                </Link>
+                <Link href="/products" className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black px-8 py-3 rounded-lg font-semibold transition-all">
+                  View Our Products
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Products Showcase */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold mb-12 text-center">Our Top Solutions</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-lg font-semibold mb-2 text-white">AI Analytics Platform</h3>
+                <p className="text-gray-300 text-sm mb-4">Transform data into actionable insights</p>
+                <div className="text-green-400 font-bold mb-4">Starting at $2,999/month</div>
+                <Link href="/products" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm">
+                  Learn More
+                </Link>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-lg font-semibold mb-2 text-white">Cloud Migration</h3>
+                <p className="text-gray-300 text-sm mb-4">Seamless cloud transformation</p>
+                <div className="text-green-400 font-bold mb-4">Starting at $5,999/project</div>
+                <Link href="/products" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm">
+                  Learn More
+                </Link>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">🌐</div>
+                <h3 className="text-lg font-semibold mb-2 text-white">IoT Platform</h3>
+                <p className="text-gray-300 text-sm mb-4">Smart device management</p>
+                <div className="text-green-400 font-bold mb-4">Starting at $1,999/month</div>
+                <Link href="/products" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm">
+                  Learn More
+                </Link>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-lg font-semibold mb-2 text-white">Cybersecurity Shield</h3>
+                <p className="text-gray-300 text-sm mb-4">Advanced threat protection</p>
+                <div className="text-green-400 font-bold mb-4">Starting at $3,999/month</div>
+                <Link href="/products" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm">
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-4 text-white">Stay Ahead with Our Newsletter</h2>
+              <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto">
+                Get the latest technology insights, industry trends, and exclusive offers delivered to your inbox weekly.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-xs text-gray-400 mt-4">Join 10,000+ subscribers. Unsubscribe anytime.</p>
+            </div>
+          </div>
+
           {/* CTA Section */}
           <div className="mt-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
