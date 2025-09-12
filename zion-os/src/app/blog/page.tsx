@@ -9,6 +9,14 @@ export default function BlogIndexPage() {
       tag: "AI",
     },
     {
+      slug: "ai-governance-roadmap-2025",
+      title: "AI Governance Roadmap 2025",
+      excerpt:
+        "Implement safe, auditable, sovereign AI with policy, oversight, telemetry, and controls.",
+      date: "2025-09-12",
+      tag: "Governance",
+    },
+    {
       slug: "service-pricing-starters-for-smbs",
       title: "Starter Pricing: AI, IT, and Web3 Service Bundles",
       excerpt:
