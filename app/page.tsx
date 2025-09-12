@@ -140,10 +140,10 @@ export default function HomePage() {
               <span className='text-sm font-medium'>🚀 JUST RELEASED - SEPTEMBER 12, 2025</span>
             </div>
             <h2 className='text-4xl md:text-6xl font-bold mb-6'>
-              🎯 New: Enterprise Masterclass, Industry Disruption, GTM Playbook
+              🎯 New: Supply Chain Automation, Enterprise Masterclass, GTM Playbook
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Explore our latest high-signal content: Enterprise AI Implementation Masterclass, AI Industry Disruption Report, 
+              Explore our latest high-signal content: AI Supply Chain Automation 2025, Enterprise AI Implementation Masterclass, 
               and the 2025 AI Go-To-Market Playbook. Practical frameworks, templates, and quantified outcomes.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
@@ -177,13 +177,13 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href='/case-studies/ai-transformation-global-financial-services-2025' className='group'>
+            <Link href='/blog/ai-2025-supply-chain-automation' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏦</div>
-                <h3 className='text-lg font-semibold mb-2'>Financial Services AI Success</h3>
-                <p className='text-sm opacity-90 mb-3'>$75M savings and 250% ROI in Fortune 100 transformation</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📦</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Supply Chain Automation 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Forecasting to fulfillment: 30–45% savings, faster cycles</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
+                  <span>14 min read</span>
                   <span className='mx-2'>•</span>
                   <span>NEW</span>
                 </div>

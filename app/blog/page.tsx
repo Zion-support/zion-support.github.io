@@ -39,6 +39,20 @@ const blogPosts: BlogPost[] = [
     views: 2847
   },
   {
+    id: 'ai-2025-supply-chain-automation',
+    title: 'AI Supply Chain Automation 2025: From Forecasting to Fulfillment',
+    excerpt: 'A practical guide to automating the supply chain with AI—demand forecasting, planning, logistics, and quality with measurable ROI.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '14 min read',
+    category: 'Operations & Supply Chain',
+    tags: ['Supply Chain', 'Forecasting', 'Logistics', 'Automation'],
+    featured: true,
+    url: '/blog/ai-2025-supply-chain-automation',
+    image: '📦',
+    views: 0
+  },
+  {
     id: 'quantum-computing-breakthrough',
     title: 'Quantum Computing Breakthrough: Unlocking the Future of Problem-Solving',
     excerpt: 'Explore how quantum computing is revolutionizing cryptography, optimization, and scientific research, opening new possibilities for businesses worldwide.',
