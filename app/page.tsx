@@ -17,7 +17,6 @@ import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/Su
 import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
-import ContentShowcase from '../components/ContentShowcase';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -211,6 +210,9 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
+      {/* Content Promotion Banner */}
+      <ContentPromotionBanner className="sticky top-0 z-50" />
+      
       {/* Top Content Promotion Banner */}
       <section className='py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
@@ -220,7 +222,7 @@ export default function HomePage() {
               <span className='text-xs font-medium'>🔥 NEW CONTENT DROP</span>
             </div>
             <p className='text-sm md:text-base opacity-90 mb-3'>
-              <strong>AI Workforce Transformation Guide</strong> • <strong>Data Strategy Playbook</strong> • <strong>Manufacturing Success Story</strong>
+              <strong>AI Transformation Playbook</strong> • <strong>Manufacturing Success Story</strong> • <strong>Free Masterclass</strong>
             </p>
             <div className='flex flex-col sm:flex-row gap-2 justify-center'>
               <Link
