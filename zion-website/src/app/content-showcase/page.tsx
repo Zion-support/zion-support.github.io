@@ -1,9 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
-import { ClockIcon, TagIcon, ChartBarIcon, StarIcon } from '@heroicons/react/24/outline';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Content Showcase - AI & Technology Resources | Zion Tech Group',
   description: 'Explore our comprehensive library of AI and technology content including blog posts, case studies, webinars, and whitepapers.',
   keywords: 'AI content, technology resources, blog posts, case studies, webinars, whitepapers, AI guides',
@@ -16,6 +14,16 @@ export const metadata: Metadata = {
 
 export default function ContentShowcase() {
   const featuredContent = [
+    {
+      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
+      description: "Architectures and practices for deploying autonomous AI agents at the edge with reliability, safety, and performance.",
+      href: "/blog/ai-2025-edge-agents-in-production",
+      icon: "🤖",
+      category: "Edge AI",
+      readTime: "21 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
     {
       title: "Advanced RAG Systems 2025: Production-Ready Implementation Guide",
       description: "Master advanced RAG (Retrieval-Augmented Generation) systems with our comprehensive 2025 guide. Learn production patterns, optimization techniques, and real-world implementations.",
@@ -211,7 +219,7 @@ export default function ContentShowcase() {
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-4xl">{content.icon}</div>
                     <div className="flex items-center space-x-2">
-                      <StarIcon className="h-5 w-5 text-yellow-400" />
+                      <span className="text-yellow-500">★</span>
                       <span className="text-sm font-medium text-gray-600">Featured</span>
                     </div>
                   </div>
@@ -227,11 +235,11 @@ export default function ContentShowcase() {
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center">
-                        <ClockIcon className="h-4 w-4 mr-1" />
+                        <span className="mr-1">⏱️</span>
                         {content.readTime}
                       </div>
                       <div className="flex items-center">
-                        <TagIcon className="h-4 w-4 mr-1" />
+                        <span className="mr-1">🏷️</span>
                         {content.category}
                       </div>
                     </div>
@@ -295,11 +303,11 @@ export default function ContentShowcase() {
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center">
-                        <ClockIcon className="h-4 w-4 mr-1" />
+                        <span className="mr-1">⏱️</span>
                         {content.readTime}
                       </div>
                       <div className="flex items-center">
-                        <ChartBarIcon className="h-4 w-4 mr-1" />
+                        <span className="mr-1">📊</span>
                         {content.category}
                       </div>
                     </div>
