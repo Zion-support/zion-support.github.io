@@ -37,6 +37,8 @@ import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeura
 import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
+import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -193,6 +195,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
+        <AI2035BreakthroughContentShowcase />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEW */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
@@ -320,6 +328,14 @@ export default function HomePage() {
         {/* ENHANCED CONTENT DISCOVERY WIDGET 2026 */}
         <EnhancedContentDiscoveryWidget2026 />
         
+=======
+        {/* AI 2035 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2035BreakthroughPromotionBanner />
+        
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2035BreakthroughContentShowcase />
+        
+>>>>>>> origin/cursor/create-and-deploy-new-content-57d1
         {/* AI 2034 REVOLUTIONARY PROMOTION BANNER */}
         <AI2034RevolutionaryPromotionBanner />
         
