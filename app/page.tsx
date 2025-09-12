@@ -15,6 +15,7 @@ import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
@@ -224,6 +225,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Revolutionary Content Banner */}
+      <RevolutionaryContentBanner variant="featured" maxItems={6} />
 
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
@@ -1067,6 +1071,9 @@ export default function HomePage() {
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
+
+      {/* Trending Content Banner */}
+      <RevolutionaryContentBanner variant="trending" maxItems={4} />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
