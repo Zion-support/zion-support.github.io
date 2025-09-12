@@ -1,45 +1,5 @@
 import React from 'react';
 import SEO from '../../../components/SEO';
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'AI Benchmarking Best Practices 2025 (Free Resource)',
-  description: 'Reliable benchmarking for AI systems in 2025: methodologies, metrics, datasets, and common pitfalls.',
-};
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Benchmarking Best Practices 2025"
-        description="Reliable evals for quality, latency, and cost across models and tasks."
-        keywords="AI benchmarking 2025, evaluation, datasets, latency, cost, quality"
-        url="/resources/ai-benchmarking-best-practices-2025"
-      />
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-lg">
-        <h1>AI Benchmarking Best Practices 2025</h1>
-        <p className="lead">A concise guide to designing reliable benchmarks and interpreting results for production decision-making.</p>
-
-        <h2>Core Principles</h2>
-        <ul>
-          <li>Define task-relevant, business-aligned metrics</li>
-          <li>Ensure dataset representativeness and versioning</li>
-          <li>Track latency and cost alongside quality</li>
-          <li>Guard against leakage and overfitting</li>
-        </ul>
-
-        <h2>Download</h2>
-        <p>Get the full checklist and templates.</p>
-        <p>
-          See also: <Link href="/resources/ai-evaluation-checklist-2025">AI Evaluation Checklist 2025</Link>
-        </p>
-      </article>
-    </div>
-  );
-}
-
-import React from 'react';
-import SEO from '../../../components/SEO';
 
 export default function AIBenchmarkingBestPractices2025() {
   return (
