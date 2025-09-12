@@ -25,14 +25,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🚀 FRESH CONTENT DROP - FEBRUARY 2025</span>
+                <span className="text-sm font-medium">🚀 MASSIVE CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                🎉 50+ New AI Resources: Trends, Implementation & Success Stories!
+                🎉 100+ New AI Resources: Complete Implementation Ecosystem!
               </h2>
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
-                Just released: AI Trends 2025 Predictions, Implementation Success Framework, Manufacturing Automation Case Study, 
-                plus 200+ page Master Guide, comprehensive checklists, and expert webinars. Everything you need to master AI in 2025.
+                Just released: AI Trends 2025 Predictions, Enterprise Automation Breakthrough Guide, Retail Transformation Case Study, 
+                plus 200+ page Master Guide 2026, comprehensive checklists, ROI calculators, and expert implementation frameworks. 
+                Everything you need to dominate AI in 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
@@ -48,10 +49,10 @@ export default function HomePage() {
                   📈 Read AI Trends 2025
                 </Link>
                 <Link
-                  href="/resources/ai-implementation-master-guide-2025"
+                  href="/resources/ai-implementation-master-guide-2026"
                   className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  📚 Download Master Guide
+                  📚 Download Master Guide 2026
                 </Link>
               </div>
               
@@ -70,23 +71,23 @@ export default function HomePage() {
                   </div>
                 </Link>
                 
-                <Link href="/case-studies/ai-automation-manufacturing-success-2025" className="group">
+                <Link href="/blog/ai-2025-enterprise-automation-breakthrough" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🏭</div>
-                    <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
-                    <p className="text-sm opacity-90 mb-3">40% cost reduction case study</p>
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🤖</div>
+                    <h3 className="text-lg font-semibold mb-2">Enterprise Automation Breakthrough</h3>
+                    <p className="text-sm opacity-90 mb-3">60% cost reduction implementation guide</p>
                     <div className="flex items-center text-xs opacity-75">
-                      <span>Case Study</span>
+                      <span>25 min read</span>
                       <span className="mx-2">•</span>
                       <span>New</span>
                     </div>
                   </div>
                 </Link>
                 
-                <Link href="/resources/ai-implementation-master-guide-2025" className="group">
+                <Link href="/resources/ai-implementation-master-guide-2026" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                     <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
-                    <h3 className="text-lg font-semibold mb-2">Master Guide 2025</h3>
+                    <h3 className="text-lg font-semibold mb-2">Master Guide 2026</h3>
                     <p className="text-sm opacity-90 mb-3">200+ page implementation guide</p>
                     <div className="flex items-center text-xs opacity-75">
                       <span>Free Download</span>
@@ -100,38 +101,38 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Autonomous Systems Promotion Banner */}
+        {/* Retail AI Success Banner */}
         <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
-                <span className="text-sm font-medium">🤖 AUTONOMOUS SYSTEMS BREAKTHROUGH</span>
+                <span className="text-sm font-medium">🛒 RETAIL AI TRANSFORMATION SUCCESS</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                💰 $200M Manufacturing Success: Autonomous AI Systems Case Study!
+                🎯 50% Revenue Increase: Retail AI Automation Case Study!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover how Fortune 500 companies are achieving unprecedented results with autonomous AI systems. 
-                Read our new case study showing $200M savings and download our free implementation guide with ROI calculators.
+                Discover how a major retail chain achieved 50% revenue increase and 60% cost reduction through AI automation. 
+                Read our detailed case study with real implementation details and ROI analysis.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  href="/case-studies/ai-automation-retail-transformation-2025"
                   className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   View Case Study
                 </Link>
                 <Link
-                  href="/resources/autonomous-systems-implementation-guide"
+                  href="/resources/retail-ai-implementation-guide"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Free Implementation Guide
+                  Retail AI Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-enterprise-automation-breakthrough"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Read Latest Article
+                  Read Implementation Guide
                 </Link>
               </div>
             </div>
