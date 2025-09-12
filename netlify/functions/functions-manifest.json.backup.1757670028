@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "generatedAt": "2025-08-11T22:40:05.358Z",
+=======
   "generatedAt": "2025-08-17T21:11:14.570Z",
+>>>>>>> origin/backup/sync-2025-08-17T21-11-30-233Z
   "functions": [
     "ai-changelog-runner",
     "ai-trends-radar-runner",
