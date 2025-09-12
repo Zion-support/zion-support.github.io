@@ -1,117 +1,136 @@
-import React from "react";
-interface StructuredDataProps {;
-  data: any}
+import React from 'react';
+import Head from 'next/head';
 
-export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
-  return ("
-    <script"
-      type = "application/ld+json""
-      dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>
-  />
-  )
+interface StructuredDataProps {
+  type: 'organization' | 'website' | 'service' | 'article';
+  data: Record<string, unknown>;
+}
 
-export const OrganizationSchema = () => {"
-  const organizationData = {},"
-    contactPoint: {""
-      "@type": "ContactPoint","
-      contactType: "customer service","
-      url: "http,"
-    s:// comment;
-    sameAs: [""
-      "http,"
-    s:// comment;
-      "https:// comment;
-    sameAs: ["
-      "https:// comment;
-      "https: // comment;
-      "https:// comment;
-    "foundingDate": "2020","
-    "numberOfEmployees": "50-100","
-    "industry": "Technology Services"
-}"
-    foundingDate: "2020","
-    numberOfEmployees: "50-100","
-    industry: "Technology Services"}
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const generateStructuredData = () => {
+    switch (type) {
+      case 'organization':
+        return {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": "Pioneering the future of technology with cutting-edge AI, quantum computing, and autonomous solutions that transform businesses worldwide.",
+          "foundingDate": "2020",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "info@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Technology Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI & Machine Learning",
+                  "description": "Advanced AI solutions for enterprise automation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Quantum Computing",
+                  "description": "Next-generation computational power"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Cybersecurity",
+                  "description": "Military-grade protection for digital assets"
+                }
+              }
+            ]
+          }
+        };
 
-"
-  return <StructuredData data="{organizationData}"   />
+      case 'website':
+        return {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "description": "Leading technology company specializing in AI, quantum computing, and cybersecurity solutions",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        };
 
+      case 'service':
+        return {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": data.name || "Technology Services",
+          "description": data.description || "Cutting-edge technology solutions",
+          "provider": {
+            "@type": "Organization",
+            "name": "Zion Tech Group"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": data.serviceType || "Technology Consulting"
+        };
 
-export const WebSiteSchema = () => {"
-  const websiteData = {}","
-      "query-input": "required name=search_term_string"
+      case 'article':
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": data.title || "Technology Insights",
+          "description": data.description || "Latest insights from Zion Tech Group",
+          "author": {
+            "@type": "Organization",
+            "name": "Zion Tech Group"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://ziontechgroup.com/logo.png"
+            }
+          },
+          "datePublished": data.datePublished || new Date().toISOString(),
+          "dateModified": data.dateModified || new Date().toISOString()
+        };
 
+      default:
+        return {};
+    }
+  };
 
-  }"
-    "@context": "https:// comment;
-    "@type": "WebSite","
-    "@context": "https:// comment;
-    name: "Zion Tech Group","
-    url: "http,"
-    s:// comment;
-    description: ""
-      "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.","
-    potentialAction: {""
-      "@type": "SearchAction","
-      target: "http,"
-    s:// comment;
-      target: "https:// comment;
-      "query-input": "required name=search_term_string","
-      target: "https:// comment;
-"
-  return <StructuredData data="{websiteData}"   />
+  const structuredData = generateStructuredData();
 
+  return (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+    </Head>
+  );
+};
 
-export const ServiceSchema = () => {"
-  const serviceData = {},"
-    serviceType: "Artificial Intelligence","
-    areaServed: "Worldwide","
-    hasOfferCatalog: {""
-      "@type": "OfferCatalog","
-      name: "AI Services"
-      itemListElement: ["
-        {""
-          "@type": "Offer","
-          itemOffered: {""
-            "@type": "Service","
-            name: "Content Creation"}},"
-        {""
-          "@type": "Offer","
-          itemOffered: {""
-            "@type": "Service","
-            name: "Email Automation"}},"
-        {""
-          "@type": "Offer","
-          itemOffered: {""
-            "@type": "Service","
-            name: "Customer Support"}}
-        {"
-          "@type": "Offer","
-          "itemOffered": {"
-            "@type": "Service","
-            "name": "Business Intelligence"
-
-
-        }
-
-      ]
-
-
-  }
-
-"
-  return <StructuredData data="{serviceData}"   />
-}"
-        {""
-          "@type": "Offer","
-          itemOffered: {""
-            "@type": "Service","
-            name: "Business Intelligence"}}]}}
-
-"
-  return <StructuredData data="{serviceData}"   />
-
-
-"""
-
-export default Component;
+export default StructuredData;

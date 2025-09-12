@@ -1,154 +1,87 @@
-/**
- * Performance optimization utilities
- */
+// Performance optimization utilities
 
-// Debounce function for performance optimization
+// Debounce function for search inputs and other frequent events
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number,
-  immediate = false
+  wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-  
-  return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
-      timeout = null;
-      if (!immediate) func(...args);
-    };
-    
-    const callNow = immediate && !timeout;
-    
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    
-    if (callNow) func(...args);
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
   };
 }
 
-// Throttle function for performance optimization
+// Throttle function for scroll events and other high-frequency events
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  
-  return function executedFunction(this: any, ...args: Parameters<T>) {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
-      func.apply(this, args);
+      func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
   };
 }
 
-// Intersection Observer for lazy loading
-export function createIntersectionObserver(
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-): IntersectionObserver | null {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-    return null;
-  }
-  
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
-    threshold: 0.1,
-    ...options,
-  });
+// Lazy loading utility for images
+export function lazyLoadImage(img: HTMLImageElement, src: string) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          img.src = src;
+          observer.unobserve(img);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(img);
 }
 
-// Performance metrics collection
-export function collectPerformanceMetrics() {
-  if (typeof window === 'undefined' || !('performance' in window)) {
-    return null;
-  }
-
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  
-  if (!navigation) return null;
-
-  return {
-    // Core Web Vitals
-    fcp: performance.getEntriesByName('first-contentful-paint')[0]?.startTime,
-    lcp: performance.getEntriesByName('largest-contentful-paint')[0]?.startTime,
-    fid: (performance.getEntriesByName('first-input')[0] as any)?.processingStart,
-    cls: performance.getEntriesByType('layout-shift').reduce((acc, entry) => acc + (entry as any).value, 0),
-    
-    // Navigation timing
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-    loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-    totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-    
-    // Resource timing
-    resourceCount: performance.getEntriesByType('resource').length,
-    
-    // Memory usage (if available)
-    memory: (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize,
-      total: (performance as any).memory.totalJSHeapSize,
-      limit: (performance as any).memory.jsHeapSizeLimit,
-    } : null,
-  };
+// Performance monitoring
+export function measurePerformance(name: string, fn: () => void) {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`);
 }
 
-// Image lazy loading utility
-export function lazyLoadImage(img: HTMLImageElement, src: string, placeholder?: string) {
-  if (placeholder) {
-    img.src = placeholder;
+// Memory usage monitoring
+export function getMemoryUsage() {
+  if ('memory' in performance) {
+    const memory = (performance as any).memory;
+    return {
+      used: Math.round(memory.usedJSHeapSize / 1048576), // MB
+      total: Math.round(memory.totalJSHeapSize / 1048576), // MB
+      limit: Math.round(memory.jsHeapSizeLimit / 1048576), // MB
+    };
   }
-  
-  const observer = createIntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        img.src = src;
-        img.classList.add('loaded');
-        observer?.unobserve(img);
-      }
-    });
-  });
-  
-  if (observer) {
-    observer.observe(img);
-  } else {
-    // Fallback for browsers without IntersectionObserver
-    img.src = src;
-  }
+  return null;
 }
 
 // Preload critical resources
-export function preloadCriticalResources(resources: string[]) {
-  resources.forEach((resource) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    
-    if (resource.endsWith('.css')) {
-      link.as = 'style';
-    } else if (resource.endsWith('.js')) {
-      link.as = 'script';
-    } else if (resource.match(/\.(jpg|jpeg|png|webp|avif)$/)) {
-      link.as = 'image';
-    }
-    
-    document.head.appendChild(link);
-  });
+export function preloadResource(href: string, as: string) {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);
 }
 
-// Bundle size analyzer
-export function analyzeBundleSize() {
-  if (typeof window === 'undefined') return null;
-  
-  const scripts = Array.from(document.scripts);
-  const stylesheets = Array.from(document.styleSheets);
-  
-  return {
-    scripts: scripts.map(script => ({
-      src: script.src,
-      size: script.textContent?.length || 0,
-    })),
-    stylesheets: stylesheets.map(style => ({
-      href: style.href,
-      rules: style.cssRules?.length || 0,
-    })),
-  };
+// Optimize images based on device pixel ratio
+export function getOptimizedImageSrc(
+  baseSrc: string,
+  sizes: number[] = [1, 2, 3]
+) {
+  const pixelRatio = window.devicePixelRatio || 1;
+  const closestSize = sizes.reduce((prev, curr) =>
+    Math.abs(curr - pixelRatio) < Math.abs(prev - pixelRatio) ? curr : prev
+  );
+
+  return baseSrc.replace(/\.(jpg|jpeg|png|webp)/, `@${closestSize}x.$1`);
 }

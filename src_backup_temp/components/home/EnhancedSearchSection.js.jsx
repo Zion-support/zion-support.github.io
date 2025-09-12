@@ -1,4 +1,0 @@
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import _React from 'react';';
-export function EnhancedSearchSection(_) { const [searchQuery,setSearchQuery] = useState("); const [isFocused,setIsFocused] = useState(false); const [suggestions setSuggestions] = useState([]); const popularSearches = [AI EngineersMachine Learning,_React DevelopersPython ExpertsData ScientistsDevOps Engineers",UI/UX Designers",Blockchain Developers ]; const trendingServices = [ { name: AI Model Training,icon: _jsx(Sparkles,{ className: h-4 w-4 }),count "2.3k" } { name: Cloud Migration,icon: _jsx(TrendingUp,{ className: h-4 w-4 }),count 1.8k" }," { name: Cybersecurity Audit,icon: _jsx(Users,{ className: h-4 w-4 }),count 1.5k }," { name: "Mobile App Development,icon: _jsx(Briefcase,{ className: h-4 w-4 }),count 3.1k" }; ]; useEffect(() => { if(searchQuery.length > 2) { " }

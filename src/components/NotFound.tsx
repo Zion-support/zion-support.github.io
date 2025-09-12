@@ -1,140 +1,47 @@
-<<<<<<< HEAD
-import React from "react";
-import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-
-export default function NotFound(): JSX.Element {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="NotFound - Zion Tech Group" description="Professional NotFound services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">NotFound</h1>
-=======
-export default function NotFound("props": "any) {return (;
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="NotFound - Zion Tech Group" description="Professional NotFound services by Zion Tech Group"   />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">NotFound</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional NotFound services to help your business grow.;
-        </p>;
-      </div>;
-  );""}";</div>
-=======
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
-const NotFound = () => {
-    const popularPages = [
-        { path: '/', label: 'Home', description: 'Main landing page' },
-        { path: '/services', label: 'Services', description: 'All our services' },
-        { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },
-        { path: '/contact', label: 'Contact', description: 'Get in touch with us' },
-        { path: '/blog', label: 'Blog', description: 'Latest insights and news' },
-        { path: '/careers', label: 'Careers', description: 'Join our team' }
-    ];
-    const servicePages = [
-        { path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions' },
-        { path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps' },
-        { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection' },
-        { path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions' }
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
-      <motion.div className="max-w-4xl mx-auto text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        {/* 404 Icon */}
-        <motion.div className="mb-8" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
-          <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
-            <AlertTriangle className="w-16 h-16 text-white"/>
-          </div>
-        </motion.div>
+import Link from 'next/link';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-        {/* Main Message */}
-        <h1 className="text-6xl md:text-8xl font-bold text-white mb-4">
-          404
-        </h1>
-        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-          Page Not Found
-        </h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          The page you're looking for doesn't exist or has been moved. 
-          Let us help you find what you need.
-        </p>
+const NotFound: React.FC = () => {
+  const router = useRouter();
+  const path = router.asPath || '';
+  const title = path && path !== '/' ? `404 – ${path} not found` : '404 – Page Not Found';
+  const description = `The page at ${path || 'this URL'} could not be found.`;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || '';
+  const canonical = baseUrl && path ? `${baseUrl}${path}` : undefined;
 
-        {/* Search Section */}
-        <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-          <div className="max-w-md mx-auto relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
-            <input type="text" placeholder="Search our website..." className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"/>
-          </div>
-        </motion.div>
-
-        {/* Popular Pages */}
-        <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-          <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {popularPages.map((page, index) => (<motion.div key={page.path} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
-                <Link to={page.path} className="block p-4 bg-white/10 border border-white/20 rounded-lg hover:border-blue-400 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="flex items-center justify-between">
-                    <div className="text-left">
-                      <h4 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
-                        {page.label}
-                      </h4>
-                      <p className="text-gray-400 text-sm">{page.description}</p>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300"/>
-                  </div>
-                </Link>
-              </motion.div>))}
-          </div>
-        </motion.div>
-
-        {/* Service Pages */}
-        <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
-          <h3 className="text-2xl font-semibold text-white mb-6">Our Services</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {servicePages.map((service, index) => (<motion.div key={service.path} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
-                <Link to={service.path} className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-lg hover:border-blue-400 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 group">
-                  <div className="flex items-center justify-between">
-                    <div className="text-left">
-                      <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors">
-                        {service.label}
-                      </h4>
-                      <p className="text-gray-300 text-sm">{service.description}</p>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-blue-400 group-hover:text-blue-300 group-hover:translate-x-1 transition-all duration-300"/>
-                  </div>
-                </Link>
-              </motion.div>))}
-          </div>
-        </motion.div>
-
-        {/* CTA Buttons */}
-        <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
-          <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-            <Home className="w-5 h-5"/>
-            Go Home
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {canonical && <meta property="og:url" content={canonical} />}
+      </Head>
+      <div className="flex flex-1 items-center justify-center bg-gray-100">
+        <div className="text-center p-6">
+          <h1 className="text-4xl font-bold mb-4 text-gray-800">404</h1>
+          <p className="text-xl text-gray-700 mb-4">Oops! Page not found</p>
+          <p className="text-lg text-gray-600 mb-4">
+            Did you forget your password? You can reset it here:
+          </p>
+          <Link
+            href="/forgot-password"
+            className="text-blue-600 hover:text-blue-800 underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+          >
+            Reset Password
           </Link>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300">
-            Contact Support
-            <ArrowRight className="w-5 h-5"/>
-          </Link>
-        </motion.div>
-
-        {/* Help Text */}
-        <motion.p className="text-gray-400 mt-8 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>
-          Can't find what you're looking for?{' '}
-          <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">
-            Email us
-          </a>{' '}
-          or call us at{' '}
-          <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 underline">
-            +1 302 464 0950
-          </a>
-        </motion.p>
-      </motion.div>
-    </div>);
+          <p className="mt-4">
+            <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 underline">
+              Or return to Home
+            </Link>
+          </p>
+        </div>
+      </div>
+    </>
+  );
 };
+
 export default NotFound;
->>>>>>> origin/backup-improvements-20250827-015311
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c

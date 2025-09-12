@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-09-11T14:41:15.876Z",
+  "bundleSize": {
+    "totalBytes": 7070616,
+    "totalSize": "6.74 MB",
+    "gzippedEstimate": 2121184,
+    "gzippedSize": "2.02 MB",
+    "fileCount": 205,
+    "recommendations": [
+      "Consider code splitting to reduce initial bundle size",
+      "Consider consolidating small files",
+      "Enable gzip/brotli compression on your server",
+      "Use a CDN for static assets"
+    ]
+  },
+  "imageOptimization": {
+    "totalImages": 43,
+    "optimizedImages": 0,
+    "totalSize": "17.30 KB",
+    "recommendations": [
+      "Convert 43 images to WebP/AVIF",
+      "Use responsive images with srcset",
+      "Implement lazy loading for images"
+    ]
+  },
+  "dependencies": {
+    "totalDependencies": 120,
+    "productionDependencies": 93,
+    "devDependencies": 27,
+    "potentialUnused": []
+  },
+  "recommendations": [
+    "Bundle is large; enable tree-shaking and split by routes",
+    "Convert heavy images to modern formats",
+    "Review dependencies and remove unused packages",
+    "Use React.lazy and Suspense for route-based code splitting"
+  ]
+}

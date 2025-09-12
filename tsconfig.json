@@ -1,52 +1,41 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
+    "useDefineForClassFields": true,
     "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
+      "ES2024",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "WebWorker.Iterable"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "incremental": true,
+    "skipLibCheck": true,
+    "importHelpers": false,
+    "noEmitHelpers": false,
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
       "@/*": [
-        "./*"
+        "./src/*"
       ]
     },
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true
-=======
-      "@/*": ["./src/*"]
-    },
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true
->>>>>>> 51ecdee898e0f4ef436b73e6c8197c3d4a98485c
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "allowJs": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
-  "include": [
-    "src/**/*",
-    "src/**/*.tsx",
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

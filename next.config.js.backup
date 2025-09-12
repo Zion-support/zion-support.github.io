@@ -1,24 +1,12 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-		// Add custom webpack rule to ignore apps directory
-		config.module.rules.push({
-			test: /\.(ts|tsx|js|jsx)$/,
-			include: /apps\//,
-			use: 'ignore-loader'
-		});
-
-		return config;
+	reactStrictMode: true,
+	swcMinify: true,
+	optimizeFonts: false,
+	output: 'export',
+	trailingSlash: true,
+	images: {
+		unoptimized: true
 	}
 };
 
-export default nextConfig;
-
-=======
-        ],
-      };
-    }
-    return config;
-  },
-};
-
-export default nextConfig;
+module.exports = nextConfig;
