@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2025-01-28T00:00:00Z',
     authors: ['Zion Tech Group'],
+<<<<<<< HEAD
 import { ArrowRight, Factory, TrendingUp, Clock, DollarSign, CheckCircle, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export const metadata: Metadata = {
     description: 'Discover how a Fortune 500 manufacturing company achieved $2.8B in cost savings and 45% efficiency gains through comprehensive AI transformation. Real results, proven strategies.',
     type: 'article',
     publishedTime: '2025-01-17T00:00:00.000Z',
+=======
+>>>>>>> cursor/create-and-deploy-new-content-46f8
   },
 };
 
@@ -603,6 +606,7 @@ export default function AIManufacturingTransformation2025() {
           </div>
         </section>
       </article>
+<<<<<<< HEAD
 import { ArrowRight, Calendar, Clock, User, Tag, TrendingUp, Factory, Zap, Shield, Target, DollarSign, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -1513,6 +1517,8 @@ export default function AIManufacturingTransformation() {
         </div>
       </section>
       </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-46f8
     </div>
   );
 }

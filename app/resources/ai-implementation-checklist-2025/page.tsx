@@ -1236,4 +1236,8 @@ export default function AIImplementationChecklist2025() {
       </article>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-46f8

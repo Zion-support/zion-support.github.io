@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock, Tag, Star, Zap, Globe, Leaf } from 'lucide-react';
+<<<<<<< HEAD
 import { ArrowRight, Clock, Tag, Star, TrendingUp, Eye, Download } from 'lucide-react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-46f8
 
 interface ContentItem {
   title: string;
@@ -17,11 +20,14 @@ interface ContentItem {
   badge?: string;
   badgeColor?: string;
   metrics?: string;
+<<<<<<< HEAD
   views?: string;
   downloads?: string;
   rating?: number;
   badge?: string;
   badgeColor?: string;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-46f8
 }
 
 interface ContentShowcaseProps {
@@ -33,6 +39,7 @@ interface ContentShowcaseProps {
   showViewAll?: boolean;
   viewAllHref?: string;
   viewAllText?: string;
+<<<<<<< HEAD
   variant?: 'default' | 'featured' | 'trending' | 'promotional';
   className?: string;
   showViewAll?: boolean;
@@ -44,6 +51,9 @@ interface ContentShowcaseProps {
 }
 
 const ContentShowcase: React.FC<ContentShowcaseProps> = ({
+=======
+  columns?: 2 | 3 | 4;
+>>>>>>> cursor/create-and-deploy-new-content-46f8
 }
 
 const featuredContent: ContentItem[] = [
@@ -340,6 +350,7 @@ export default function ContentShowcase({
                   <div className="flex items-center space-x-1 text-xs font-medium text-green-600">
                     <Zap className="w-3 h-3" />
                     <span>{item.metrics}</span>
+<<<<<<< HEAD
 // Predefined content collections for easy use
 export const featuredContent = [
   {
@@ -526,6 +537,8 @@ export const latestContent = [
                     <span className={`${typeStyles.badgeColor} font-medium group-hover:underline`}>
                       {item.type === 'resource' ? 'Download Free →' : 'Read More →'}
                     </span>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-46f8
                   </div>
                 </div>
               )}
