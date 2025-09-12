@@ -101,6 +101,51 @@ export default function ContentShowcasePage() {
                 </div>
               </div>
             </div>
+
+            {/* Newly added content cards */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-indigo-100 to-blue-100 text-indigo-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">⚡ EDGE AI</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-2025-edge-ai-acceleration" className="hover:text-blue-600">
+                    AI 2025: Edge AI Acceleration
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How on-device intelligence is transforming operations with millisecond latency and privacy by design.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Jan 27, 2025</span>
+                  <Link href="/blog/ai-2025-edge-ai-acceleration" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-bold">🛡️ GOVERNANCE</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <Link href="/blog/ai-2025-ai-governance-blueprint" className="hover:text-blue-600">
+                    AI 2025: Governance & Risk Blueprint
+                  </Link>
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  A practical blueprint for responsible AI policies, controls, and monitoring in production.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Jan 27, 2025</span>
+                  <Link href="/blog/ai-2025-ai-governance-blueprint" className="text-blue-600 font-semibold hover:text-blue-700">
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

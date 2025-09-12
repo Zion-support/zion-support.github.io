@@ -2,21 +2,24 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
-import ErrorBoundary from '../components/ErrorBoundary';
+// import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ContentShowcase from '../components/ContentShowcase';
+import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import SuccessMetrics, { contentMetrics } from '../components/SuccessMetrics';
 
 // Lazy load heavy components
-const ROICalculator = lazy(() => import('../components/ROICalculator'));
+const ROICalculator = lazy(() => import('../components/AIROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -152,7 +155,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      </section>
       
       {/* Latest Content Promotion Banner */}
       <LatestContentPromotionBanner />
@@ -170,7 +172,32 @@ export default function HomePage() {
       <ContentShowcase
         title="Latest AI Insights & Case Studies"
         subtitle="Discover proven strategies, real-world success stories, and actionable guides from industry experts"
-        items={featuredContent}
+        items={[
+          {
+            id: 'edge-ai-acceleration',
+            title: 'AI 2025: Edge AI Acceleration',
+            description: 'On-device intelligence with millisecond latency and privacy by design',
+            type: 'blog',
+            href: '/blog/ai-2025-edge-ai-acceleration',
+            category: 'Edge AI',
+            readTime: '10 min read',
+            isNew: true,
+            icon: '⚡',
+            featured: true
+          },
+          {
+            id: 'ai-governance-blueprint',
+            title: 'AI 2025: Governance & Risk Blueprint',
+            description: 'Policies, controls, and monitoring to run AI responsibly in production',
+            type: 'blog',
+            href: '/blog/ai-2025-ai-governance-blueprint',
+            category: 'Governance',
+            readTime: '12 min read',
+            isNew: true,
+            icon: '🛡️',
+            featured: true
+          }
+        ]}
         variant="featured"
         showViewAll={true}
         viewAllHref="/blog"
@@ -2287,6 +2314,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-    </ErrorBoundary>
+    </>
   );
 }
