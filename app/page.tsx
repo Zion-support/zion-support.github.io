@@ -77,6 +77,7 @@ import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
 import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
@@ -104,6 +105,12 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
 <<<<<<< HEAD
+        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT BANNER 2026 */}
+        <RevolutionaryContentBanner2026 />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
