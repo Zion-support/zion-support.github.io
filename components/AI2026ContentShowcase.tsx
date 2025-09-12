@@ -4,157 +4,105 @@ import Link from 'next/link';
 export default function AI2026ContentShowcase() {
   const featuredContent = [
     {
-      title: "AI Neural Interface Revolution 2026",
-      description: "Explore the groundbreaking neural interface technologies that will transform how humans interact with AI systems in 2026.",
-      category: "Blog Post",
-      readTime: "15 min read",
-      href: "/blog/ai-2026-neural-interface-revolution",
-      image: "🧠",
-      gradient: "from-purple-500 to-pink-500",
-      badge: "BREAKTHROUGH"
-    },
-    {
-      title: "AI Quantum Breakthrough 2026",
-      description: "Discover how quantum computing is revolutionizing AI capabilities with unprecedented computational power and new algorithms.",
-      category: "Blog Post",
-      readTime: "18 min read",
-      href: "/blog/ai-2026-quantum-ai-breakthrough",
-      image: "⚡",
-      gradient: "from-indigo-500 to-purple-500",
-      badge: "REVOLUTIONARY"
-    },
-    {
-      title: "AI 2026 Implementation Master Guide",
-      description: "The definitive guide to implementing AI in 2026. Comprehensive roadmap covering strategy, technology selection, and scaling.",
-      category: "Resource",
-      readTime: "45 min read",
-      href: "/resources/ai-2026-implementation-master-guide",
-      image: "📚",
-      gradient: "from-blue-500 to-cyan-500",
-      badge: "MASTER GUIDE"
-    },
-    {
-      title: "Global Tech Transformation Success",
-      description: "How a Fortune 500 company achieved $2.3B in value creation through comprehensive AI transformation across 50+ countries.",
-      category: "Case Study",
-      readTime: "12 min read",
-      href: "/case-studies/ai-2026-global-tech-transformation",
-      image: "🏢",
-      gradient: "from-green-500 to-teal-500",
-      badge: "SUCCESS STORY"
-    },
-    {
-      title: "AI 2026 Future Masterclass",
-      description: "Join industry leaders for an exclusive deep-dive into next-generation AI systems, quantum AI, and neural interfaces.",
-      category: "Webinar",
-      readTime: "2 hours",
-      href: "/webinars/ai-2026-future-masterclass",
-      image: "🎓",
-      gradient: "from-orange-500 to-red-500",
-      badge: "MASTERCLASS"
-    },
-    {
       title: "Next-Generation AI Systems",
-      description: "Discover the latest AI architectures and capabilities that will power the next decade of artificial intelligence innovation.",
-      category: "Blog Post",
-      readTime: "20 min read",
+      description: "Discover revolutionary AI architectures that will power the future of artificial intelligence.",
       href: "/blog/ai-2026-next-generation-ai-systems",
-      image: "🤖",
-      gradient: "from-pink-500 to-rose-500",
-      badge: "FUTURE TECH"
+      category: "Blog Post",
+      icon: "🧠",
+      readTime: "15 min read",
+      isNew: true
+    },
+    {
+      title: "Enterprise Transformation: 2000% ROI",
+      description: "How a Fortune 500 company achieved unprecedented results through AI 2026 implementation.",
+      href: "/case-studies/ai-2026-enterprise-transformation-breakthrough",
+      category: "Case Study",
+      icon: "🏢",
+      readTime: "12 min read",
+      isNew: true
+    },
+    {
+      title: "AI 2026 Readiness Assessment",
+      description: "Evaluate your organization's readiness for next-generation AI systems with our comprehensive tool.",
+      href: "/tools/ai-2026-readiness-assessment",
+      category: "AI Tool",
+      icon: "🎯",
+      readTime: "5 min assessment",
+      isNew: true
+    },
+    {
+      title: "Revolutionary Breakthroughs Webinar",
+      description: "Join our exclusive webinar on AI 2026 breakthroughs and get insights from industry experts.",
+      href: "/webinars/ai-2026-revolutionary-breakthroughs",
+      category: "Webinar",
+      icon: "🔥",
+      readTime: "60 min webinar",
+      isNew: true
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-indigo-100 text-indigo-800 rounded-full px-4 py-2 mb-4">
-            <span className="text-sm font-medium">🚀 NEW AI 2026 CONTENT</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Explore the Future of AI
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            🚀 AI 2026 Content Showcase
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover breakthrough technologies, revolutionary applications, and strategic insights 
-            that will shape the next decade of artificial intelligence innovation.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Explore our latest AI 2026 content featuring next-generation systems, real-world success stories, 
+            assessment tools, and exclusive webinars. Stay ahead of the AI revolution.
           </p>
         </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuredContent.map((content, index) => (
-            <Link
-              key={index}
-              href={content.href}
-              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-            >
-              {/* Image/Icon Header */}
-              <div className={`h-32 bg-gradient-to-r ${content.gradient} flex items-center justify-center relative overflow-hidden`}>
-                <div className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
-                  {content.image}
+            <Link key={index} href={content.href} className="group">
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 h-full">
+                <div className="flex items-center mb-4">
+                  <div className="text-3xl mr-3">{content.icon}</div>
+                  <div className="flex-1">
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                      content.category === 'Blog Post' ? 'bg-blue-100 text-blue-800' :
+                      content.category === 'Case Study' ? 'bg-green-100 text-green-800' :
+                      content.category === 'AI Tool' ? 'bg-purple-100 text-purple-800' :
+                      'bg-orange-100 text-orange-800'
+                    }`}>
+                      {content.category}
+                    </span>
+                    {content.isNew && (
+                      <span className="ml-2 bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
+                        NEW
+                      </span>
+                    )}
+                  </div>
                 </div>
-                {/* Badge */}
-                <div className="absolute top-3 right-3">
-                  <span className="bg-white/90 text-gray-800 text-xs font-bold px-2 py-1 rounded-full">
-                    {content.badge}
-                  </span>
-                </div>
-                {/* Category */}
-                <div className="absolute bottom-3 left-3">
-                  <span className="bg-black/20 text-white text-xs font-medium px-2 py-1 rounded">
-                    {content.category}
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {content.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {content.description}
                 </p>
-                
-                {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500">
                   <span>{content.readTime}</span>
-                  <span className="text-indigo-600 font-medium group-hover:text-indigo-700">
-                    Read More →
+                  <span className="group-hover:text-blue-600 transition-colors">
+                    Learn More →
                   </span>
                 </div>
               </div>
             </Link>
           ))}
         </div>
-
-        {/* Bottom CTA */}
+        
         <div className="text-center mt-12">
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Organization with AI?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Get access to our complete library of AI resources, case studies, and expert guidance 
-              to accelerate your AI transformation journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/resources"
-                className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                Browse All Resources
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
-              >
-                Get Expert Consultation
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/content-showcase"
+            className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg"
+          >
+            🎯 View All AI 2026 Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
