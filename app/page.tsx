@@ -50,6 +50,7 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import UltimateContentShowcaseBanner2025 from '../components/UltimateContentShowcaseBanner2025';
 import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 import NewContentDiscovery from '../components/NewContentDiscovery';
@@ -260,6 +261,12 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE BANNER 2025 - FEATURED */}
+        <UltimateContentShowcaseBanner2025 />
+        
+        {/* DYNAMIC CONTENT CAROUSEL 2025 - NEW CONTENT */}
+        <DynamicContentCarousel2025 />
         
         {/* NEW CONTENT PROMOTION BANNER 2025 - LATEST CONTENT */}
         <NewContentPromotionBanner2025 />
@@ -3568,6 +3575,7 @@ export default function HomePage() {
       {/* ENHANCED NEWSLETTER SIGNUP 2025 - LEAD CAPTURE */}
       <EnhancedNewsletterSignup2025 />
       
+<<<<<<< HEAD
       {/* CONTENT NAVIGATION - NEW 2025 FEATURE */}
       <ContentNavigation />
       
@@ -3583,6 +3591,14 @@ export default function HomePage() {
       <div id="performance-optimization">
         <PerformanceOptimizationShowcase />
       </div>
+=======
+      {/* NEWSLETTER SIGNUP 2025 - CONTENT PROMOTION */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="max-w-6xl mx-auto px-4">
+          <NewsletterSignup2025 />
+        </div>
+      </section>
+>>>>>>> origin/cursor/create-and-deploy-new-content-1498
     </div>
     </EnhancedErrorBoundary>
   );
