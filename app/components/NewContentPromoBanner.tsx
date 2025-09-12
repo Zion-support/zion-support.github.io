@@ -18,23 +18,53 @@ const newContentItems = [
     new: true
   },
   {
+    title: "AI Ethical Governance Framework 2025",
+    description: "Comprehensive guide to implementing ethical AI governance frameworks",
+    url: "/blog/ai-2025-ethical-ai-governance",
+    type: "Blog Post",
+    category: "AI Governance",
+    icon: "⚖️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Automation Trends 2025",
+    description: "The future of intelligent automation and autonomous systems",
+    url: "/blog/ai-2025-automation-trends",
+    type: "Blog Post",
+    category: "AI Automation",
+    icon: "🤖",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Supply Chain Optimization: $150M Success",
+    description: "Fortune 500 company achieves unprecedented cost savings",
+    url: "/case-studies/ai-supply-chain-optimization-success-2025",
+    type: "Case Study",
+    category: "Supply Chain",
+    icon: "📦",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Automation Implementation Guide 2025",
+    description: "180+ page comprehensive playbook with frameworks and templates",
+    url: "/resources/ai-automation-implementation-guide-2025",
+    type: "Resource",
+    category: "Implementation",
+    icon: "📋",
+    featured: true,
+    new: true
+  },
+  {
     title: "Enterprise AI Transformation: $50M Success",
     description: "Fortune 500 company achieves unprecedented growth",
     url: "/case-studies/ai-enterprise-transformation-breakthrough-2025",
     type: "Case Study",
     category: "Success Story",
     icon: "🏆",
-    featured: true,
-    new: true
-  },
-  {
-    title: "AI 2025: Complete Implementation Playbook",
-    description: "250+ page guide with templates, frameworks & case studies",
-    url: "/resources/ai-2025-complete-implementation-playbook",
-    type: "Resource",
-    category: "Guide",
-    icon: "📋",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -44,7 +74,7 @@ const newContentItems = [
     type: "Blog Post",
     category: "Security",
     icon: "🛡️",
-    featured: true,
+    featured: false,
     new: true
   },
   {
@@ -66,8 +96,7 @@ const newContentItems = [
     icon: "🏭",
     featured: false,
     new: true
-  }
-  ,
+  },
   {
     title: "Telecom Network Automation: 55% OPEX Reduction",
     description: "Global operator automates incidents and changes with AI agents",
@@ -77,8 +106,7 @@ const newContentItems = [
     icon: "📶",
     featured: false,
     new: true
-  }
-  ,
+  },
   {
     title: "AI Governance Starter Kit 2025",
     description: "Templates and policies to operationalize responsible AI",
@@ -86,7 +114,7 @@ const newContentItems = [
     type: "Resource",
     category: "Governance",
     icon: "📋",
-    featured: true,
+    featured: false,
     new: true
   }
 ];
