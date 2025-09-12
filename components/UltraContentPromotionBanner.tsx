@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Star, Clock, Calendar, ArrowRight, X, Play, BookOpen, Download } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Clock, Calendar, Eye, Download, BookOpen, Play, Zap } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -38,7 +38,7 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
   maxItems = 6,
   className = '',
   autoRotate = true,
-  rotationInterval = 6000
+  rotationInterval = 8000
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -47,14 +47,14 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
   const displayedContent = content.slice(0, maxItems);
 
   useEffect(() => {
-    if (!autoRotate || displayedContent.length <= 1) return;
+    if (autoRotate && displayedContent.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedContent.length);
+      }, rotationInterval);
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedContent.length);
-    }, rotationInterval);
-
-    return () => clearInterval(interval);
-  }, [displayedContent.length, autoRotate, rotationInterval]);
+      return () => clearInterval(interval);
+    }
+  }, [autoRotate, displayedContent.length, rotationInterval]);
 
   const getVariantStyles = () => {
     switch (variant) {
@@ -105,21 +105,23 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
         return <BookOpen className="w-4 h-4" />;
       case 'Free Download':
         return <Download className="w-4 h-4" />;
-      default:
+      case 'Video':
         return <Play className="w-4 h-4" />;
+      default:
+        return <BookOpen className="w-4 h-4" />;
     }
   };
 
-  if (!isVisible) return null;
-
   const styles = getVariantStyles();
+
+  if (!isVisible) return null;
 
   return (
     <div className={`relative bg-gradient-to-r ${styles.gradient} text-white overflow-hidden ${className}`}>
-      {/* Background Pattern */}
+      {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
       </div>
 
       <div className="relative z-10">
@@ -142,49 +144,60 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {displayedContent.map((item, index) => {
               const statusBadge = getStatusBadge(item);
+              const isHovered = hoveredItem === index;
               
               return (
                 <Link 
                   key={item.id} 
-                  href={item.href} 
+                  href={item.href}
                   className="group"
                   onMouseEnter={() => setHoveredItem(index)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 relative overflow-hidden">
-                    {/* Status Badge */}
-                    {statusBadge && (
-                      <div className={`absolute top-4 right-4 ${statusBadge.color} text-white px-2 py-1 rounded-full text-xs font-medium`}>
-                        {statusBadge.text}
+                  <div className={`
+                    bg-white/10 backdrop-blur-sm rounded-xl p-6 
+                    hover:bg-white/20 transition-all duration-300 
+                    border border-white/20 hover:border-white/40
+                    transform hover:scale-105 hover:shadow-2xl
+                    ${isHovered ? 'ring-2 ring-white/50' : ''}
+                  `}>
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                        {item.icon}
                       </div>
-                    )}
-
-                    {/* Icon */}
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                      {item.icon}
+                      <div className="flex items-center gap-2">
+                        {statusBadge && (
+                          <span className={`${statusBadge.color} text-white px-2 py-1 rounded-full text-xs font-medium`}>
+                            {statusBadge.text}
+                          </span>
+                        )}
+                        {item.isTrending && <TrendingUp className="w-4 h-4 text-orange-300" />}
+                        {item.featured && <Star className="w-4 h-4 text-yellow-300" />}
+                      </div>
                     </div>
 
-                    {/* Category */}
-                    <div className="text-sm font-medium text-white/80 mb-2">
-                      {item.category}
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-lg font-semibold mb-3 group-hover:text-yellow-300 transition-colors line-clamp-2">
+                    {/* Content */}
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-200 transition-colors line-clamp-2">
                       {item.title}
                     </h3>
-
-                    {/* Description */}
-                    <p className="text-sm text-white/90 mb-4 line-clamp-3">
+                    <p className="text-sm opacity-90 mb-4 line-clamp-3">
                       {item.description}
                     </p>
 
-                    {/* Meta Info */}
-                    <div className="flex items-center justify-between text-xs text-white/75">
-                      <div className="flex items-center gap-3">
+                    {/* Category */}
+                    <div className="mb-4">
+                      <span className="bg-white/20 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        {item.category}
+                      </span>
+                    </div>
+
+                    {/* Footer */}
+                    <div className="flex items-center justify-between text-sm opacity-75">
+                      <div className="flex items-center gap-4">
                         {item.readTime && (
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
+                            <Clock className="w-4 h-4" />
                             {item.readTime}
                           </span>
                         )}
@@ -197,9 +210,6 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
                       </div>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
-
-                    {/* Hover Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${hoveredItem === index ? 'opacity-100' : ''}`}></div>
                   </div>
                 </Link>
               );
@@ -211,22 +221,29 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/content-showcase"
-                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg inline-flex items-center gap-2"
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg flex items-center justify-center"
               >
-                <BookOpen className="w-5 h-5" />
-                Explore All Content
+                <Eye className="w-5 h-5 mr-2" />
+                View All Content
               </Link>
               <Link
                 href="/blog"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-lg inline-flex items-center gap-2"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-lg flex items-center justify-center"
               >
-                <TrendingUp className="w-5 h-5" />
-                View Latest Articles
+                <BookOpen className="w-5 h-5 mr-2" />
+                Read Latest Articles
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-lg flex items-center justify-center"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resources
               </Link>
             </div>
           </div>
 
-          {/* Navigation Dots (if auto-rotating) */}
+          {/* Progress Indicators */}
           {autoRotate && displayedContent.length > 1 && (
             <div className="flex justify-center mt-8 space-x-2">
               {displayedContent.map((_, index) => (
@@ -249,15 +266,20 @@ const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = 
           onClick={() => setIsVisible(false)}
           className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors z-20"
         >
-          <X className="w-6 h-6" />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
 
-        {/* Progress Bar */}
+        {/* Animated Progress Bar */}
         {autoRotate && displayedContent.length > 1 && (
           <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
             <div 
-              className="h-full bg-white transition-all duration-1000 ease-linear"
-              style={{ width: `${((currentIndex + 1) / displayedContent.length) * 100}%` }}
+              className="h-full bg-white transition-all ease-linear"
+              style={{ 
+                width: `${((currentIndex + 1) / displayedContent.length) * 100}%`,
+                transitionDuration: `${rotationInterval}ms`
+              }}
             />
           </div>
         )}
