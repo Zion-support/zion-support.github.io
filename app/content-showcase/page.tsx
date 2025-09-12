@@ -5,22 +5,31 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Advanced Automation 2025: Complete Implementation Guide",
-      description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
-      href: "/blog/ai-2025-advanced-automation",
-      icon: "🤖",
-      category: "AI Automation",
-      readTime: "25 min read",
+      title: "AI 2025: Quantum Computing Breakthrough - The Next Frontier",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Explore breakthrough applications, real-world implementations, and the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "22 min read",
       date: "Jan 30, 2025"
     },
     {
-      title: "AI Cybersecurity Threats 2025: Complete Defense Guide",
-      description: "Protect your organization from emerging AI cybersecurity threats in 2025. Learn about AI-powered attacks, defense strategies, and security best practices.",
-      href: "/blog/ai-2025-cybersecurity-threats",
-      icon: "🛡️",
-      category: "Cybersecurity",
-      readTime: "22 min read",
-      date: "Jan 30, 2025"
+      title: "AI 2025: Neural Interface Revolution - The Future of Human-AI Interaction",
+      description: "Discover how neural interfaces are revolutionizing human-AI interaction in 2025. Explore brain-computer interfaces, neural prosthetics, and the future of direct brain-to-AI communication.",
+      href: "/blog/ai-2025-neural-interface-revolution",
+      icon: "🧠",
+      category: "Neural Interfaces",
+      readTime: "20 min read",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI 2025: Autonomous Systems Mastery - The Complete Implementation Guide",
+      description: "Master autonomous AI systems in 2025 with our comprehensive guide. Learn implementation strategies, real-world case studies, and best practices for deploying autonomous systems at scale.",
+      href: "/blog/ai-2025-autonomous-systems-mastery",
+      icon: "🤖",
+      category: "Autonomous Systems",
+      readTime: "25 min read",
+      date: "Jan 25, 2025"
     },
     {
       title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
@@ -29,55 +38,19 @@ export default function ContentShowcasePage() {
       icon: "🚀",
       category: "AI Innovations",
       readTime: "25 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems",
-      description: "Discover how AI is driving sustainability initiatives and reducing carbon footprints. Learn about smart energy management, intelligent waste management, and climate risk assessment solutions.",
-      href: "/blog/ai-sustainability-green-tech-2025",
-      icon: "🌱",
-      category: "Sustainability",
-      readTime: "20 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the revolutionary advances in AI-powered robotics and automation. Discover how intelligent machines are transforming manufacturing, healthcare, and service industries with unprecedented capabilities.",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
+      date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-      title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
-      description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
-      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-      icon: "🏥",
-      category: "Healthcare AI",
-      result: "95% Accuracy",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
-      description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      title: "AI 2025: Autonomous Manufacturing Revolution - $500M Success Story",
+      description: "Discover how a Fortune 500 manufacturing company achieved $500M in annual savings through comprehensive autonomous AI systems implementation. Complete transformation story with detailed ROI analysis.",
+      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
       icon: "💰",
-      category: "Manufacturing AI",
-      result: "$200M Savings",
-      date: "Jan 28, 2025"
+      category: "Autonomous Systems",
+      result: "$500M Savings",
+      date: "Jan 30, 2025"
     },
     {
       title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
@@ -87,18 +60,27 @@ export default function ContentShowcasePage() {
       category: "Enterprise AI",
       result: "$50M Savings",
       date: "Jan 30, 2025"
+    },
+    {
+      title: "AI Retail Transformation Success: 300% Revenue Growth",
+      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
+      href: "/case-studies/ai-retail-transformation-2025",
+      icon: "🛒",
+      category: "Retail AI",
+      result: "300% Growth",
+      date: "Feb 03, 2025"
     }
   ];
 
   const newResources = [
     {
-      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
-      href: "/resources/ai-implementation-master-guide-2026",
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment across your organization.",
+      href: "/resources/ai-2025-implementation-master-guide",
       icon: "📚",
       category: "Master Guide",
       type: "Free Download",
-      date: "Jan 28, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
@@ -466,26 +448,46 @@ export default function ContentShowcasePage() {
           </div>
         </section>
 
-        {/* Newsletter Signup */}
+        {/* Enhanced Newsletter Signup */}
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated with Latest Content</h2>
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">📧 NEWSLETTER</span>
+          </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Ahead with AI Insights</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Get weekly updates on AI trends, implementation guides, and exclusive content 
-            delivered straight to your inbox. Join 10,000+ AI professionals.
+            delivered straight to your inbox. Join 15,000+ AI professionals and get access 
+            to our latest resources first.
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Subscribe
-            </button>
+          <div className="max-w-lg mx-auto">
+            <div className="flex gap-4 mb-4">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300"
+              />
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+                Subscribe Free
+              </button>
+            </div>
+            <p className="text-sm text-gray-500 mb-4">
+              No spam. Unsubscribe anytime. Read our privacy policy.
+            </p>
+            <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <span className="text-green-500">✓</span>
+                <span>Weekly AI insights</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-500">✓</span>
+                <span>Exclusive resources</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-500">✓</span>
+                <span>Early access</span>
+              </div>
+            </div>
           </div>
-          <p className="text-sm text-gray-500 mt-4">
-            No spam. Unsubscribe anytime. Read our privacy policy.
-          </p>
         </section>
       </div>
   );
