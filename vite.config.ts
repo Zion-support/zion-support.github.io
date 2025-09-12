@@ -1,19 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
-import { splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
-export default defineConfig(async () => ({
+export default defineConfig({
   plugins: [
-    react(),
-    splitVendorChunkPlugin(),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: false,
-      gzipSize: true,
-      brotliSize: true,
+    react({
+      include: '**/*.{jsx,js,ts,tsx}',
+      fastRefresh: true,
     }),
   ],
   resolve: {
@@ -21,123 +15,77 @@ export default defineConfig(async () => ({
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
       '@utils': resolve(__dirname, 'src/utils'),
       '@hooks': resolve(__dirname, 'src/hooks'),
       '@types': resolve(__dirname, 'src/types'),
-      '@store': resolve(__dirname, 'src/store'),
-      '@lib': resolve(__dirname, 'src/lib'),
-    },
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
   },
   build: {
-    target: 'es2015',
+    target: 'esnext',
     minify: 'terser',
+    sourcemap: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
+    emptyOutDir: true,
+    assetsInlineLimit: 4096,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.name || '';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        }
+      }
+    },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
       },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // Core React libraries
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          
-          // UI Component libraries
-          'ui-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-aspect-ratio',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-context-menu',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-label',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
-            '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
-            '@radix-ui/react-tooltip',
-          ],
-          
-          // Animation and motion libraries
-          'animation-vendor': ['framer-motion', 'embla-carousel-react'],
-          
-          // Form and validation libraries
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          
-          // State management
-          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-          
-          // Data visualization and charts
-          'chart-vendor': ['recharts'],
-          
-          // Drag and drop
-          'dnd-vendor': ['@hello-pangea/dnd'],
-          
-          // Internationalization
-          'i18n-vendor': ['i18next', 'i18next-browser-languagedetector', 'react-i18next'],
-          
-          // Input components
-          'input-vendor': ['input-otp', 'react-day-picker', 'date-fns'],
-          
-          // Utility libraries
-          'utility-vendor': ['axios', 'clsx', 'tailwind-merge', 'class-variance-authority', 'cmdk'],
-          
-          // Icon libraries
-          'icon-vendor': ['lucide-react', 'react-icons'],
-          
-          // PDF and document generation
-          'pdf-vendor': ['jspdf', 'jspdf-autotable'],
-          
-          // Payment processing
-          'stripe-vendor': ['@stripe/stripe-js'],
-          
-          // Database and backend
-          'supabase-vendor': ['@supabase/supabase-js'],
-          
-          // Query management
-          'query-vendor': ['@tanstack/react-query'],
-        },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
-          return `js/[name]-[hash].js`;
-        },
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `images/[name]-[hash][extname]`;
-          }
-          if (/css/i.test(ext)) {
-            return `css/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-    sourcemap: false,
+      mangle: {
+        safari10: true,
+        properties: {}
+      }
+    }
   },
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'clsx',
+      'tailwind-merge',
       '@radix-ui/react-accordion',
       '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-aspect-ratio',
       '@radix-ui/react-avatar',
       '@radix-ui/react-checkbox',
-      '@radix-ui/react-context-menu',
+      '@radix-ui/react-collapsible',
       '@radix-ui/react-dialog',
       '@radix-ui/react-dropdown-menu',
       '@radix-ui/react-label',
@@ -152,54 +100,30 @@ export default defineConfig(async () => ({
       '@radix-ui/react-switch',
       '@radix-ui/react-tabs',
       '@radix-ui/react-toast',
-      '@radix-ui/react-tooltip',
-      'framer-motion',
-      'embla-carousel-react',
-      'react-hook-form',
-      '@hookform/resolvers',
-      'zod',
-      '@reduxjs/toolkit',
-      'react-redux',
-      'recharts',
-      '@hello-pangea/dnd',
-      'i18next',
-      'i18next-browser-languagedetector',
-      'react-i18next',
-      'input-otp',
-      'react-day-picker',
-      'date-fns',
-      'axios',
-      'clsx',
-      'tailwind-merge',
-      'class-variance-authority',
-      'cmdk',
-      'lucide-react',
-      'react-icons',
-      'jspdf',
-      'jspdf-autotable',
-      '@stripe/stripe-js',
-      '@supabase/supabase-js',
-      '@tanstack/react-query',
+      '@radix-ui/react-tooltip'
     ],
+    exclude: ['@radix-ui/react-icons']
   },
   server: {
-    port: 3000,
+    port: Number(process.env.PORT) || 3000,
     host: true,
-    open: true,
+    open: false,
+    cors: true,
+    hmr: {
+      overlay: false,
+    }
   },
   preview: {
     port: 4173,
     host: true,
+    open: true
   },
   css: {
-    postcss: {
-      plugins: [
-        (await import('tailwindcss')).default,
-        (await import('autoprefixer')).default,
-      ],
-    },
+    devSourcemap: true,
+    postcss: './postcss.config.cjs'
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-  },
-}))
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  }
+});

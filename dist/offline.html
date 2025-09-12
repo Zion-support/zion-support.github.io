@@ -5,311 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
     <style>
-        * {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
         }
-
-        .offline-container {
+        .container {
             text-align: center;
             max-width: 600px;
             padding: 2rem;
         }
-
-        .offline-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        .offline-title {
-            font-size: 2.5rem;
+        .logo {
+            font-size: 3rem;
             font-weight: bold;
+            background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-
-        .offline-message {
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
             font-size: 1.2rem;
+            color: #94a3b8;
             margin-bottom: 2rem;
-            opacity: 0.9;
             line-height: 1.6;
         }
-
-        .offline-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
+        .retry-btn {
+            background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+            color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .status-indicator {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
-        }
-
-        .status-text {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .retry-countdown {
-            font-weight: bold;
-            color: #ff6b6b;
-        }
-
-        .features-list {
-            text-align: left;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
-        }
-
-        .features-list h3 {
-            margin-bottom: 1rem;
+            padding: 1rem 2rem;
             font-size: 1.1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
-
-        .features-list ul {
-            list-style: none;
-            padding-left: 0;
+        .retry-btn:hover {
+            transform: translateY(-2px);
         }
-
-        .features-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
+        .features {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
-
-        .features-list li:last-child {
-            border-bottom: none;
+        .feature {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
         }
-
-        .feature-icon {
-            margin-right: 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        @media (max-width: 768px) {
-            .offline-container {
-                padding: 1rem;
-            }
-
-            .offline-title {
-                font-size: 2rem;
-            }
-
-            .offline-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
+        .feature h3 {
+            color: #06b6d4;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
-    <div class="offline-container">
-        <div class="offline-icon">📡</div>
+    <div class="container">
+        <div class="logo">Zion Tech Group</div>
+        <h1>You're Offline</h1>
+        <p>It looks like you've lost your internet connection. Don't worry, some features are still available offline.</p>
         
-        <h1 class="offline-title">You're Offline</h1>
+        <button class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </button>
         
-        <p class="offline-message">
-            It looks like you've lost your internet connection. Don't worry! 
-            Zion Tech Group is designed to work offline, and we'll automatically 
-            reconnect when you're back online.
-        </p>
-
-        <div class="status-indicator">
-            <div class="status-text">
-                Connection Status: <span style="color: #ff6b6b;">Offline</span>
+        <div class="features">
+            <div class="feature">
+                <h3>AI Solutions</h3>
+                <p>Explore our AI development services</p>
             </div>
-            <div class="status-text">
-                Auto-retry in: <span class="retry-countdown" id="countdown">30</span> seconds
+            <div class="feature">
+                <h3>Cybersecurity</h3>
+                <p>Protect your business with our security solutions</p>
             </div>
-        </div>
-
-        <div class="features-list">
-            <h3>What's Available Offline:</h3>
-            <ul>
-                <li>
-                    <span class="feature-icon">📱</span>
-                    Previously visited pages
-                </li>
-                <li>
-                    <span class="feature-icon">💾</span>
-                    Cached content and resources
-                </li>
-                <li>
-                    <span class="feature-icon">🔍</span>
-                    Service information and details
-                </li>
-                <li>
-                    <span class="feature-icon">📞</span>
-                    Contact information
-                </li>
-            </ul>
-        </div>
-
-        <div class="offline-actions">
-            <button class="btn btn-primary" onclick="retryConnection()">
-                🔄 Try Again
-            </button>
-            <button class="btn btn-secondary" onclick="goToCachedPage()">
-                📚 Browse Cached Content
-            </button>
-        </div>
-
-        <div style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
-            <p>Need immediate assistance? Contact us:</p>
-            <p style="margin-top: 0.5rem;">
-                📞 +1 (302) 464-0950<br>
-                ✉️ kleber@ziontechgroup.com
-            </p>
+            <div class="feature">
+                <h3>Cloud Computing</h3>
+                <p>Scale your infrastructure with our cloud services</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        let countdown = 30;
-        const countdownElement = document.getElementById('countdown');
-        
-        // Countdown timer
-        const timer = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
-            
-            if (countdown <= 0) {
-                clearInterval(timer);
-                retryConnection();
-            }
-        }, 1000);
-
-        // Retry connection
-        function retryConnection() {
-            countdownElement.textContent = 'Checking...';
-            
-            // Check if we're back online
-            if (navigator.onLine) {
-                window.location.reload();
-            } else {
-                // Reset countdown
-                countdown = 30;
-                countdownElement.textContent = countdown;
-                
-                // Restart timer
-                clearInterval(timer);
-                const newTimer = setInterval(() => {
-                    countdown--;
-                    countdownElement.textContent = countdown;
-                    
-                    if (countdown <= 0) {
-                        clearInterval(newTimer);
-                        retryConnection();
-                    }
-                }, 1000);
-            }
-        }
-
-        // Go to cached page
-        function goToCachedPage() {
-            // Try to navigate to a cached page
-            if ('caches' in window) {
-                caches.keys().then(cacheNames => {
-                    if (cacheNames.length > 0) {
-                        // Try to load the homepage from cache
-                        caches.match('/').then(response => {
-                            if (response) {
-                                response.text().then(html => {
-                                    document.open();
-                                    document.write(html);
-                                    document.close();
-                                });
-                            }
-                        });
-                    }
-                });
-            }
-        }
-
-        // Listen for online/offline events
-        window.addEventListener('online', () => {
-            window.location.reload();
-        });
-
-        window.addEventListener('offline', () => {
-            // Already on offline page
-        });
-
-        // Service Worker registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('Service Worker registered:', registration);
-                })
-                .catch(error => {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
-    </script>
 </body>
 </html>

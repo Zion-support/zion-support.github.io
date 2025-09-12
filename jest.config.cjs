@@ -6,7 +6,7 @@ module.exports = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
   },
-  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/tests.disabled/'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/'],
   coverageDirectory: 'coverage',
   collectCoverage: true,
   coverageReporters: ['text', 'lcov'],

@@ -1,82 +1,129 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import React from 'react';
+import { NextSeo } from '@/components/NextSeo';
+import { useRouter } from 'next/router';
+// Loader2 removed as TalentProfileSkeleton will be used
+import TalentProfileSkeleton from '@/components/talent/TalentProfileSkeleton';
+import NotFound from '@/components/NotFound';
+import useSWR from 'swr';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import type { TalentProfile } from '@/types/talent';
 
-interface TalentProfileWithSocial extends TalentProfileType {
-  social?: Record<string, string>;
-}
+// API returns `{ profile: TalentProfile }`; swr will store just the profile
+type TalentProfileResponse = { profile: TalentProfile | null };
 
-// Simple error component for 404
-const NotFoundError = () => (
-  <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4">404</h1>
-      <p className="text-xl mb-4">Talent Profile Not Found</p>
-      <p className="text-zion-slate-light">The talent profile you're looking for doesn't exist or has been removed.</p>
-    </div>
-  </div>
-);
-
-const TalentProfilePage: React.FC = () => {
-  const { id } = useParams();
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      if (!id) return;
-      setLoading(true);
-      setError(null);
-      try {
-        const res = await fetch(`/api/talent/${id}`);
-        if (res.status === 404) {
-          setError('Talent not found');
-          setProfile(null);
-          return;
-        }
-        if (!res.ok) throw new Error('Failed to load profile');
-        const data = await res.json();
-        setProfile(data.profile);
-      } catch (err) {
-        setError('Talent not found');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (id) {
-      fetchProfile();
+// fetcher-like function for handling API responses
+const handleApiResponse = async (res: Response) => {
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the data.');
+    // Read response body once and attempt to parse JSON
+    const raw = await res.text();
+    try {
+      (error as any).info = JSON.parse(raw);
+    } catch {
+      (error as any).info = { message: raw };
     }
-  }, [id]);
+    (error as any).status = res.status;
+    throw error;
+  }
+  return res.json();
+};
 
-  if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <Navigate to="/404" replace />;
+const TalentPage: React.FC = () => {
+  const router = useRouter();
+  const { id } = router.query as { id?: string };
 
-  return (
-    <main className="min-h-screen bg-zion-blue py-8 text-white">
-      <div className="container mx-auto px-4 space-y-4">
-        <h1 className="text-3xl font-bold" data-testid="profile-name">
-          {profile.full_name}
-        </h1>
-        {profile.skills && profile.skills.length > 0 && (
-          <div>
-            <h2 className="font-semibold">Skills</h2>
-            <ul className="list-disc ml-5">
-              {profile.skills.map(skill => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {profile.availability_type && (
-          <p>Availability: {profile.availability_type}</p>
-        )}
+  const { data, error, isLoading } = useSWR<TalentProfile | null>(
+    id ? `/api/talent/${id}` : null,
+    async (url: string) => {
+      const result: TalentProfileResponse = await fetch(url).then(handleApiResponse);
+      return result.profile;
+    }
+  );
+
+  if (isLoading || !router.isReady || !id) {
+    return <TalentProfileSkeleton />;
+  }
+
+  // Specific 404 error from API
+  if (error && (error as any).status === 404) {
+    return <NotFound />;
+  }
+
+  // Next.js router typing in this project doesn't include `isFallback`.
+  // Cast to any to access the property during static builds.
+  if ((router as any).isFallback) {
+    return (
+      <div className="flex flex-col items-center justify-center py-20 text-center">
+        <h2 className="text-2xl font-semibold mb-2">Error</h2>
+        <p>Failed to load talent profile.</p>
+        {err.status && <p>Status: {err.status}</p>}
+        <p>Message: {err.info?.error || err.info?.message || err.message}</p>
       </div>
-    </main>
+    );
+  }
+
+  // API call was successful (no error thrown) but no profile found
+  // This also implies !isLoading at this point.
+  if (!data) {
+    return <NotFound />;
+  }
+
+  // If we reach here, talent data is available
+  return (
+    <>
+      <NextSeo
+        title={data?.full_name}
+        description={data?.bio ?? ''}
+        openGraph={{
+          title: data?.full_name,
+          description: data?.bio ?? ''
+        }}
+      />
+      <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
+        <div className="container mx-auto px-4 space-y-6">
+          <div className="flex items-center gap-4">
+            <Avatar className="h-20 w-20">
+              <AvatarFallback>{data?.full_name?.charAt(0)}</AvatarFallback>
+            </Avatar>
+            <div>
+              <h1 className="text-3xl font-bold" data-testid="profile-name">
+                {data?.full_name}
+              </h1>
+              {data.bio && <p className="text-zion-slate-light">{data.bio}</p>}
+            </div>
+          </div>
+
+          {data.skills && data.skills.length > 0 && (
+            <div className="flex flex-wrap gap-2" data-testid="skills">
+              {data.skills.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          )}
+
+          {data.key_projects && data.key_projects.length > 0 && (
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Key Projects</h2>
+              <ul className="space-y-2">
+                {data.key_projects.map((project, index) => (
+                  <li key={index} className="border-l-2 border-zion-purple pl-4">
+                    <h3 className="font-medium">{project.title}</h3>
+                    <p className="text-zion-slate-light text-sm">{project.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <Button className="bg-zion-purple text-white">Hire</Button>
+        </div>
+      </main>
+    </>
   );
 };
 
-export default TalentProfilePage;
+export default TalentPage;

@@ -18,13 +18,7 @@ echo "Created merge branch: $MERGE_BRANCH"
 
 # Function to get open PRs
 get_open_prs() {
-    local token="${GH_TOKEN:-${GITHUB_TOKEN}}"
-    if [ -n "$token" ]; then
-      authHeader="-H \"Authorization: token $token\""
-    else
-      authHeader=""
-    fi
-    eval curl -s $authHeader \
+    curl -s -H "Authorization: token ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR" \
          "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" \
          | grep -o '"number":[0-9]*' | sed 's/"number"://' | sed 's/,//' | sort -n
 }
@@ -32,13 +26,7 @@ get_open_prs() {
 # Function to get PR details
 get_pr_details() {
     local pr_number=$1
-    local token="${GH_TOKEN:-${GITHUB_TOKEN}}"
-    if [ -n "$token" ]; then
-      authHeader="-H \"Authorization: token $token\""
-    else
-      authHeader=""
-    fi
-    eval curl -s $authHeader \
+    curl -s -H "Authorization: token ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR" \
          "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number"
 }
 

@@ -2,7 +2,7 @@ name: Master Redundancy Automation
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '*/5 * * * *'  # Every 5 minutes
   workflow_dispatch:
   push:
     branches: [main]

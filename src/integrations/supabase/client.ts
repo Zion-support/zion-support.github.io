@@ -1,70 +1,114 @@
-// Mock Supabase client for development
-// In production, this would be the actual Supabase client
+import { createClient } from '@supabase/supabase-js';
+import api from '@/lib/api';
 
-interface SupabaseClient {
-  auth: {
-    signUp: (credentials: any) => Promise<any>;
-    signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>;
-    user: () => any;
-    onAuthStateChange: (callback: any) => any;
-  };
-  from: (table: string) => any;
-  storage: {
-    from: (bucket: string) => any;
-  };
+// Get actual environment variables
+const envSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const envSupabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+// Fallback credentials
+const fallbackSupabaseUrl = 'https://gnwtggeptzkqnduuthto.supabase.co';
+const fallbackSupabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdud3RnZ2VwdHprcW5kdXV0aHRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0MTQyMjcsImV4cCI6MjA2MDk5MDIyN30.mIyYJWh3S1FLCmjwoJ7FNHz0XLRiUHBd3r9we-E4DIY';
+
+// Determine if user-provided credentials are valid
+const userProvidedUrlIsValid = !!(envSupabaseUrl && envSupabaseUrl.includes('supabase.co') && !envSupabaseUrl.includes('your-project'));
+const userProvidedKeyIsValid = !!(envSupabaseAnonKey && envSupabaseAnonKey.startsWith('eyJ') && !envSupabaseAnonKey.includes('your-anon-key'));
+
+export const isUsingUserProvidedSupabaseCredentials = userProvidedUrlIsValid && userProvidedKeyIsValid;
+
+// Determine the credentials to be used (either user-provided or fallback)
+const activeSupabaseUrl = isUsingUserProvidedSupabaseCredentials ? envSupabaseUrl : fallbackSupabaseUrl;
+const activeSupabaseAnonKey = isUsingUserProvidedSupabaseCredentials ? envSupabaseAnonKey : fallbackSupabaseAnonKey;
+
+// Check if the actual client instance from '@/utils/supabase/client' was successfully initialized.
+// A successfully initialized client should not be null and should have an 'auth' property.
+const clientInstanceSuccessfullyInitialized = !!(actualSupabaseClientFromUtils && typeof actualSupabaseClientFromUtils.auth !== 'undefined');
+
+// isSupabaseConfigured now checks:
+// 1. If the active credentials (user-provided or fallback) *appear* to be valid.
+// 2. If the Supabase client instance itself was *actually* initialized successfully.
+export const isSupabaseConfigured = !!(
+  activeSupabaseUrl &&
+  activeSupabaseAnonKey &&
+  activeSupabaseUrl.includes('supabase.co') && // Basic check on URL format
+  activeSupabaseAnonKey.startsWith('eyJ') &&   // Basic check on key format
+  clientInstanceSuccessfullyInitialized        // Crucial check on actual client instantiation
+);
+
+// Only log in development and when debug is enabled
+if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === 'true') {
+  logDebug('Supabase integration details (src/integrations/supabase/client.ts):', { data: {
+    activeUrlUsed: `${(activeSupabaseUrl ?? '').substring(0, 30)}...`,
+    isSupabaseConfiguredFinal: isSupabaseConfigured,
+    credentialsAppearValid: !!(activeSupabaseUrl && activeSupabaseAnonKey && activeSupabaseUrl.includes('supabase.co') && activeSupabaseAnonKey.startsWith('eyJ')),
+    clientInstanceInitialized: clientInstanceSuccessfullyInitialized,
+    isUsingUserProvided: isUsingUserProvidedSupabaseCredentials,
+    envUrlActuallyProvided: !!envSupabaseUrl,
+    envKeyActuallyProvided: !!envSupabaseAnonKey,
+    actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'
+  }});
 }
 
-// Mock implementation
-const createMockSupabaseClient = (): SupabaseClient => ({
-  auth: {
-    signUp: async (credentials: any) => {
-      console.log('Mock signUp:', credentials);
-      return { data: { user: { id: '1', email: credentials.email } }, error: null };
-    },
-    signIn: async (credentials: any) => {
-      console.log('Mock signIn:', credentials);
-      return { data: { user: { id: '1', email: credentials.email } }, error: null };
-    },
-    signOut: async () => {
-      console.log('Mock signOut');
-      return { error: null };
-    },
-    user: () => ({ id: '1', email: 'user@example.com' }),
-    onAuthStateChange: (callback: any) => {
-      console.log('Mock onAuthStateChange');
-      return { data: { subscription: { unsubscribe: () => {} } } };
-    },
-  },
-  from: (table: string) => ({
-    select: (columns: string) => ({
-      eq: (column: string, value: any) => ({
-        single: async () => ({ data: null, error: null }),
-        execute: async () => ({ data: [], error: null }),
-      }),
-      execute: async () => ({ data: [], error: null }),
-    }),
-    insert: (data: any) => ({
-      execute: async () => ({ data: null, error: null }),
-    }),
-    update: (data: any) => ({
-      eq: (column: string, value: any) => ({
-        execute: async () => ({ data: null, error: null }),
-      }),
-    }),
-    delete: () => ({
-      eq: (column: string, value: any) => ({
-        execute: async () => ({ data: null, error: null }),
-      }),
-    }),
-  }),
-  storage: {
-    from: (bucket: string) => ({
-      upload: async (path: string, file: File) => ({ data: null, error: null }),
-      download: async (path: string) => ({ data: null, error: null }),
-      remove: async (paths: string[]) => ({ data: null, error: null }),
-    }),
-  },
-});
 
-export const supabase = createMockSupabaseClient();
+// Enhanced helper function to check online status
+async function checkOnline(): Promise<boolean></boolean> {
+  if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
+    return navigator.onLine;
+  }
+  // Assume online if navigator.onLine is not available (e.g., in Node.js environment for tests)
+  return true;
+}
+
+// Optimized safeFetch for development mode with better error handling
+export async function safeFetch(url: string, options: RequestInit = {}) {
+  if (!(await checkOnline())) {
+    throw new Error('Failed to connect to Supabase');
+  }
+
+  const headers =
+    options.headers instanceof Headers
+      ? options.headers
+      : new Headers(options.headers);
+
+  if (!headers.has('apikey')) {
+    headers.set('apikey', supabaseAnonKey);
+  }
+
+  const maxRetries = 3;
+  let lastError: any;
+
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await api({
+        url,
+        method: options.method as any,
+        data: (options as any).body,
+        headers: Object.fromEntries(headers.entries()),
+      });
+
+      if (response.status < 200 || response.status >= 300) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return response;
+    } catch (error) {
+      lastError = error;
+      // Wait before retrying (exponential backoff)
+      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+    }
+    
+    // Use real fetch for other cases
+    return fetch(url, options);
+  } catch (error) {
+    logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error });
+    return {
+      ok: false,
+      status: 500, // Or a more appropriate error code like 0 for network error
+      json: async () => ({ error: 'Fetch failed due to network or other issue' }),
+      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' }),
+    } as Response;
+  }
+}
+
+  captureException(lastError);
+  throw new Error('Failed to connect to Supabase');
+}

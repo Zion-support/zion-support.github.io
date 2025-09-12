@@ -1,436 +1,439 @@
-export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
-  address: string;
-}
-
-export interface MicroSaasService {
-  id: number;
-  name: string;
-  category: string;
-  pricing: string;
+export interface EnhancedService {
+  id: string;
+  title: string;
   description: string;
+  category: string;
+  subcategory: string;
   price: number;
-  pricingModel: string;
-  userLimit: string;
+  currency: string;
+  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'per-hour';
   features: string[];
   benefits: string[];
+  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  contactInfo: ServiceContact;
+  estimatedDelivery: string;
+  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technologyStack?: string[];
+  integrations?: string[];
+  compliance?: string[];
 }
 
-export interface ITService {
-  id: number;
-  name: string;
-  category: string;
-  description: string;
-  hourlyRate: number;
-  projectRate: number;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
-  marketPrice: string;
-  responseTime: string;
-  sla: string;
-  certifications: string[];
-}
-
-export interface AIService {
-  id: number;
-  name: string;
-  category: string;
-  description: string;
-  pricing: string;
-  price: number;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
-  marketPrice: string;
-  aiModels: string[];
-  accuracy: string;
-  trainingData: string;
-  compliance: string[];
-}
-
-// Enhanced Micro SAAS Services
-export const enhancedMicroSaasServices: MicroSaasService[] = [
+export const ENHANCED_SERVICES: EnhancedService[] = [
+  // AI & Machine Learning Services
   {
-    id: 1,
-    name: "TaskFlow Pro",
-    category: "Productivity",
-    pricing: "Freemium",
-    description: "AI-powered task management and project collaboration platform with intelligent automation and predictive analytics",
-    price: 29,
-    pricingModel: "monthly",
-    userLimit: "Up to 25 users",
+    id: 'ai-content-generation',
+    title: 'AI Content Generation Platform',
+    description: 'Advanced AI-powered content creation platform for blogs, social media, marketing copy, and technical documentation with SEO optimization.',
+    category: 'AI Services',
+    subcategory: 'Content Creation',
+    price: 299,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "AI task prioritization",
-      "Smart time tracking",
-      "Predictive project timelines",
-      "Advanced reporting",
-      "Mobile app",
-      "API integrations"
+      'GPT-4 powered content generation',
+      'SEO optimization',
+      'Multi-language support',
+      'Brand voice customization',
+      'Content scheduling',
+      'Analytics dashboard'
     ],
     benefits: [
-      "30% productivity increase",
-      "Reduced project delays",
-      "Better resource allocation",
-      "Real-time insights"
+      'Save 70% on content creation costs',
+      'Increase content output by 10x',
+      'Improve SEO rankings',
+      'Maintain consistent brand voice',
+      'Scale content marketing efforts'
     ],
-    targetAudience: ["Small teams", "Startups", "Project managers", "Remote teams"],
-    tags: ["Task Management", "AI", "Productivity", "Collaboration", "Analytics"],
+    useCases: [
+      'Blog content creation',
+      'Social media posts',
+      'Marketing copy',
+      'Technical documentation',
+      'Product descriptions'
+    ],
+    targetAudience: ['Marketing teams', 'Content creators', 'Small businesses', 'Agencies'],
+    tags: ['AI', 'Content', 'Marketing', 'SEO', 'Automation'],
+    estimatedDelivery: '2-3 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$299-599/month',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/taskflow-pro",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$29-89/month",
-    competitors: ["Asana", "Monday.com", "ClickUp"],
-    roi: "300% within 6 months",
-    setupTime: "15 minutes",
-    integrations: ["Slack", "Microsoft Teams", "Google Workspace", "Zapier"]
+    technologyStack: ['OpenAI GPT-4', 'React', 'Node.js', 'MongoDB'],
+    integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp'],
+    compliance: ['GDPR', 'CCPA', 'SOC 2']
   },
   {
-    id: 2,
-    name: "InvoiceGenius AI",
-    category: "Finance",
-    pricing: "Freemium",
-    description: "Next-generation AI-powered financial management platform with automated expense tracking and tax optimization",
-    price: 49,
-    pricingModel: "monthly",
-    userLimit: "Unlimited users",
+    id: 'ai-chatbot-builder',
+    title: 'AI Chatbot Builder Suite',
+    description: 'No-code AI chatbot creation platform with advanced NLP, multi-channel deployment, and analytics dashboard.',
+    category: 'AI Services',
+    subcategory: 'Chatbots',
+    price: 199,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "AI invoice generation",
-      "Expense categorization",
-      "Tax optimization",
-      "Financial forecasting",
-      "Multi-currency support",
-      "Bank reconciliation"
+      'No-code chatbot builder',
+      'Advanced NLP capabilities',
+      'Multi-channel deployment',
+      'Analytics dashboard',
+      'Custom integrations',
+      '24/7 availability'
     ],
     benefits: [
-      "90% time savings on invoicing",
-      "Automatic tax compliance",
-      "Improved cash flow",
-      "Real-time financial insights"
+      'Reduce customer support costs by 60%',
+      'Handle 80% of inquiries automatically',
+      'Improve customer satisfaction',
+      'Scale support operations',
+      'Gather customer insights'
     ],
-    targetAudience: ["Small businesses", "Freelancers", "Consultants", "E-commerce"],
-    tags: ["Invoicing", "AI", "Finance", "Tax", "Automation"],
+    useCases: [
+      'Customer support',
+      'Lead qualification',
+      'Appointment booking',
+      'FAQ handling',
+      'Order tracking'
+    ],
+    targetAudience: ['E-commerce', 'Service businesses', 'Healthcare', 'Education'],
+    tags: ['AI', 'Chatbot', 'Customer Support', 'Automation', 'NLP'],
+    estimatedDelivery: '3-4 weeks',
+    supportLevel: 'standard',
+    marketPrice: '$199-399/month',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/invoicegenius",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$49-199/month",
-    competitors: ["QuickBooks", "FreshBooks", "Xero"],
-    roi: "400% within 3 months",
-    setupTime: "30 minutes",
-    integrations: ["Stripe", "PayPal", "QuickBooks", "Xero", "Bank APIs"]
+    technologyStack: ['Dialogflow', 'React', 'Node.js', 'PostgreSQL'],
+    integrations: ['Slack', 'WhatsApp', 'Facebook Messenger', 'Website'],
+    compliance: ['GDPR', 'HIPAA', 'SOC 2']
   },
   {
-    id: 3,
-    name: "SocialSync Pro",
-    category: "Marketing",
-    pricing: "Freemium",
-    description: "AI-driven social media management platform with predictive content optimization and audience analytics",
-    price: 79,
-    pricingModel: "monthly",
-    userLimit: "Up to 10 users",
+    id: 'ai-business-analytics',
+    title: 'AI-Powered Business Analytics',
+    description: 'Machine learning-driven business intelligence platform with predictive analytics and automated insights.',
+    category: 'AI Services',
+    subcategory: 'Analytics',
+    price: 499,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "AI content generation",
-      "Predictive posting times",
-      "Audience sentiment analysis",
-      "Competitor monitoring",
-      "ROI tracking",
-      "Multi-platform management"
+      'Predictive analytics',
+      'Automated insights',
+      'Real-time dashboards',
+      'Custom reports',
+      'Data visualization',
+      'Machine learning models'
     ],
     benefits: [
-      "3x engagement increase",
-      "50% time savings",
-      "Better audience targeting",
-      "Improved brand consistency"
+      'Improve decision-making accuracy by 40%',
+      'Identify trends before competitors',
+      'Automate data analysis',
+      'Reduce manual reporting time',
+      'Increase revenue through insights'
     ],
-    targetAudience: ["Marketing teams", "Agencies", "Small businesses", "Influencers"],
-    tags: ["Social Media", "AI", "Marketing", "Analytics", "Automation"],
+    useCases: [
+      'Sales forecasting',
+      'Customer behavior analysis',
+      'Risk assessment',
+      'Performance optimization',
+      'Market trend analysis'
+    ],
+    targetAudience: ['Enterprises', 'Financial services', 'Healthcare', 'Retail'],
+    tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning', 'Predictive'],
+    estimatedDelivery: '4-6 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$499-999/month',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/socialsync",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$79-299/month",
-    competitors: ["Hootsuite", "Buffer", "Sprout Social"],
-    roi: "250% within 4 months",
-    setupTime: "45 minutes",
-    integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "Google Analytics"]
+    technologyStack: ['Python', 'TensorFlow', 'React', 'PostgreSQL'],
+    integrations: ['Salesforce', 'HubSpot', 'QuickBooks', 'Google Analytics'],
+    compliance: ['GDPR', 'SOC 2', 'ISO 27001']
+  },
+  // IT Infrastructure Services
+  {
+    id: 'cloud-migration',
+    title: 'Cloud Migration & Optimization',
+    description: 'Complete cloud migration solution for AWS, Azure, or Google Cloud with minimal downtime and cost optimization.',
+    category: 'IT Services',
+    subcategory: 'Cloud',
+    price: 5000,
+    currency: 'USD',
+    pricingModel: 'per-project',
+    features: [
+      'Multi-cloud strategy',
+      'Zero-downtime migration',
+      'Cost optimization',
+      'Security assessment',
+      'Performance monitoring',
+      'Disaster recovery'
+    ],
+    benefits: [
+      'Reduce infrastructure costs by 25-40%',
+      'Improve scalability and flexibility',
+      'Enhance security posture',
+      'Increase performance',
+      'Reduce maintenance overhead'
+    ],
+    useCases: [
+      'Legacy system migration',
+      'Data center consolidation',
+      'Application modernization',
+      'Disaster recovery setup',
+      'Performance optimization'
+    ],
+    targetAudience: ['Enterprises', 'Mid-size companies', 'Healthcare', 'Financial services'],
+    tags: ['Cloud', 'Migration', 'AWS', 'Azure', 'Optimization'],
+    estimatedDelivery: '8-12 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$5,000-25,000',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['AWS', 'Azure', 'Terraform', 'Docker', 'Kubernetes'],
+    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth'],
+    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS']
   },
   {
-    id: 4,
-    name: "CustomerFlow CRM",
-    category: "CRM",
-    pricing: "Freemium",
-    description: "Intelligent customer relationship management with AI-powered lead scoring and sales forecasting",
-    price: 39,
-    pricingModel: "monthly",
-    userLimit: "Up to 20 users",
+    id: 'cybersecurity-assessment',
+    title: 'Cybersecurity Assessment',
+    description: 'Comprehensive security audit including penetration testing, vulnerability assessment, and compliance review.',
+    category: 'Security',
+    subcategory: 'Assessment',
+    price: 3000,
+    currency: 'USD',
+    pricingModel: 'per-project',
     features: [
-      "AI lead scoring",
-      "Sales forecasting",
-      "Email automation",
-      "Pipeline management",
-      "Customer analytics",
-      "Mobile CRM"
+      'Penetration testing',
+      'Vulnerability assessment',
+      'Compliance review',
+      'Security audit report',
+      'Remediation guidance',
+      'Ongoing monitoring'
     ],
     benefits: [
-      "25% increase in sales",
-      "Better lead conversion",
-      "Improved customer retention",
-      "Automated follow-ups"
+      'Identify security vulnerabilities',
+      'Meet compliance requirements',
+      'Protect customer data',
+      'Reduce security risks',
+      'Improve security posture'
     ],
-    targetAudience: ["Sales teams", "Small businesses", "Startups", "Consultants"],
-    tags: ["CRM", "AI", "Sales", "Automation", "Analytics"],
+    useCases: [
+      'Compliance audits',
+      'Security assessments',
+      'Pre-acquisition due diligence',
+      'Risk management',
+      'Security improvements'
+    ],
+    targetAudience: ['Enterprises', 'Healthcare', 'Financial services', 'E-commerce'],
+    tags: ['Security', 'Cybersecurity', 'Penetration Testing', 'Compliance', 'Audit'],
+    estimatedDelivery: '4-6 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$3,000-15,000',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/customerflow",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$39-159/month",
-    competitors: ["Salesforce", "HubSpot", "Pipedrive"],
-    roi: "350% within 5 months",
-    setupTime: "1 hour",
-    integrations: ["Gmail", "Outlook", "Slack", "Zapier", "Stripe", "QuickBooks"]
+    technologyStack: ['Nmap', 'Metasploit', 'Burp Suite', 'OWASP ZAP'],
+    integrations: ['SIEM systems', 'Vulnerability scanners', 'Security tools'],
+    compliance: ['SOC 2', 'ISO 27001', 'PCI DSS', 'HIPAA']
+  },
+  // Micro SAAS Platforms
+  {
+    id: 'business-process-automation',
+    title: 'Business Process Automation',
+    description: 'End-to-end automation solutions that streamline operations and reduce manual tasks by up to 80%.',
+    category: 'Micro SAAS',
+    subcategory: 'Automation',
+    price: 199,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Workflow automation',
+      'Process mapping',
+      'Integration capabilities',
+      'Analytics dashboard',
+      'Custom workflows',
+      'Mobile access'
+    ],
+    benefits: [
+      'Reduce manual tasks by 80%',
+      'Improve process efficiency',
+      'Reduce errors and delays',
+      'Increase productivity',
+      'Better process visibility'
+    ],
+    useCases: [
+      'Invoice processing',
+      'Employee onboarding',
+      'Customer service workflows',
+      'Approval processes',
+      'Data entry automation'
+    ],
+    targetAudience: ['Small businesses', 'Medium enterprises', 'Service companies', 'Manufacturing'],
+    tags: ['Automation', 'Workflow', 'Process', 'Productivity', 'Integration'],
+    estimatedDelivery: '3-4 weeks',
+    supportLevel: 'standard',
+    marketPrice: '$199-399/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technologyStack: ['Node.js', 'React', 'PostgreSQL', 'Redis'],
+    integrations: ['Slack', 'Microsoft 365', 'Google Workspace', 'Zapier'],
+    compliance: ['GDPR', 'SOC 2']
   },
   {
-    id: 5,
-    name: "DataViz Studio",
-    category: "Analytics",
-    pricing: "Freemium",
-    description: "Advanced data visualization and business intelligence platform with AI-powered insights",
-    price: 89,
-    pricingModel: "monthly",
-    userLimit: "Up to 15 users",
+    id: 'project-management-saas',
+    title: 'Project Management SaaS Platform',
+    description: 'Comprehensive project management solution with task tracking, team collaboration, and resource management.',
+    category: 'Micro SAAS',
+    subcategory: 'Project Management',
+    price: 149,
+    currency: 'USD',
+    pricingModel: 'per-user',
     features: [
-      "AI-powered insights",
-      "Interactive dashboards",
-      "Real-time data",
-      "Custom reports",
-      "Data connectors",
-      "Collaborative analytics"
+      'Task management',
+      'Team collaboration',
+      'Resource allocation',
+      'Time tracking',
+      'Reporting and analytics',
+      'Mobile applications'
     ],
     benefits: [
-      "Faster decision making",
-      "Better data understanding",
-      "Improved reporting",
-      "Real-time insights"
+      'Improve project delivery by 30%',
+      'Enhance team collaboration',
+      'Better resource utilization',
+      'Real-time project visibility',
+      'Reduce project risks'
     ],
-    targetAudience: ["Business analysts", "Data teams", "Executives", "Marketing teams"],
-    tags: ["Analytics", "AI", "Data Visualization", "BI", "Reporting"],
+    useCases: [
+      'Software development',
+      'Marketing campaigns',
+      'Construction projects',
+      'Event planning',
+      'Product launches'
+    ],
+    targetAudience: ['Project teams', 'Agencies', 'Consulting firms', 'Construction'],
+    tags: ['Project Management', 'Collaboration', 'Task Tracking', 'Resource Management'],
+    estimatedDelivery: '4-5 weeks',
+    supportLevel: 'standard',
+    marketPrice: '$149-299/user/month',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/dataviz",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$89-399/month",
-    competitors: ["Tableau", "Power BI", "Looker"],
-    roi: "280% within 6 months",
-    setupTime: "2 hours",
-    integrations: ["Google Analytics", "Salesforce", "HubSpot", "MySQL", "PostgreSQL", "API endpoints"]
-  }
-];
-
-// IT Services
-export const itServices: ITService[] = [
-  {
-    id: 1,
-    name: "Cloud Migration & DevOps",
-    category: "Infrastructure",
-    description: "Complete cloud migration services with CI/CD pipeline setup and infrastructure automation",
-    hourlyRate: 150,
-    projectRate: 15000,
-    features: [
-      "AWS/Azure/GCP migration",
-      "Docker containerization",
-      "Kubernetes orchestration",
-      "CI/CD pipeline setup",
-      "Infrastructure as Code",
-      "Monitoring & alerting"
-    ],
-    benefits: [
-      "50% cost reduction",
-      "Improved scalability",
-      "Faster deployments",
-      "Better security"
-    ],
-    targetAudience: ["Enterprises", "Startups", "Tech companies", "Financial services"],
-    tags: ["Cloud", "DevOps", "Migration", "Automation", "Infrastructure"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cloud-devops",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$150-200/hour",
-    responseTime: "2 hours",
-    sla: "99.9% uptime guarantee",
-    certifications: ["AWS Solutions Architect", "Azure DevOps", "Kubernetes CKA", "Terraform"]
+    technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
+    integrations: ['Slack', 'Microsoft Teams', 'Google Calendar', 'Jira'],
+    compliance: ['GDPR', 'SOC 2']
   },
+  // Development Services
   {
-    id: 2,
-    name: "Cybersecurity & Compliance",
-    category: "Security",
-    description: "Comprehensive cybersecurity services including penetration testing, compliance audits, and security training",
-    hourlyRate: 200,
-    projectRate: 25000,
+    id: 'custom-software-development',
+    title: 'Custom Software Development',
+    description: 'Tailored software solutions built to meet specific business requirements with modern technologies and best practices.',
+    category: 'Development',
+    subcategory: 'Custom Software',
+    price: 150,
+    currency: 'USD',
+    pricingModel: 'per-hour',
     features: [
-      "Penetration testing",
-      "Security audits",
-      "Compliance consulting",
-      "Incident response",
-      "Security training",
-      "Vulnerability assessment"
+      'Custom application development',
+      'Modern tech stack',
+      'Responsive design',
+      'API development',
+      'Testing and QA',
+      'Deployment and maintenance'
     ],
     benefits: [
-      "Regulatory compliance",
-      "Risk reduction",
-      "Customer trust",
-      "Insurance benefits"
+      'Tailored to business needs',
+      'Competitive advantage',
+      'Scalable solutions',
+      'Modern technology',
+      'Ongoing support'
     ],
-    targetAudience: ["Healthcare", "Finance", "E-commerce", "Government"],
-    tags: ["Cybersecurity", "Compliance", "Auditing", "Training", "Risk Management"],
+    useCases: [
+      'Business applications',
+      'E-commerce platforms',
+      'Customer portals',
+      'Internal tools',
+      'Mobile applications'
+    ],
+    targetAudience: ['Businesses', 'Startups', 'Enterprises', 'Government'],
+    tags: ['Development', 'Custom Software', 'Web Apps', 'Mobile Apps', 'APIs'],
+    estimatedDelivery: '8-16 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$150-250/hour',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cybersecurity",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$200-300/hour",
-    responseTime: "1 hour",
-    sla: "24/7 incident response",
-    certifications: ["CISSP", "CEH", "OSCP", "ISO 27001", "SOC 2"]
+    technologyStack: ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'],
+    integrations: ['Third-party APIs', 'Payment gateways', 'Authentication systems'],
+    compliance: ['GDPR', 'SOC 2', 'PCI DSS']
   },
+  // Analytics Services
   {
-    id: 3,
-    name: "Digital Transformation",
-    category: "Consulting",
-    description: "End-to-end digital transformation consulting with technology strategy and implementation",
-    hourlyRate: 175,
-    projectRate: 50000,
+    id: 'data-analytics-platform',
+    title: 'Data Analytics Platform',
+    description: 'Comprehensive data analytics solution with real-time dashboards, predictive modeling, and business intelligence.',
+    category: 'Analytics',
+    subcategory: 'Business Intelligence',
+    price: 399,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Technology assessment",
-      "Digital strategy",
-      "Process optimization",
-      "Change management",
-      "Implementation support",
-      "ROI measurement"
+      'Real-time dashboards',
+      'Data visualization',
+      'Predictive modeling',
+      'Custom reports',
+      'Data integration',
+      'Advanced analytics'
     ],
     benefits: [
-      "Improved efficiency",
-      "Cost reduction",
-      "Competitive advantage",
-      "Customer satisfaction"
+      'Data-driven decision making',
+      'Identify business opportunities',
+      'Improve operational efficiency',
+      'Better customer insights',
+      'Competitive advantage'
     ],
-    targetAudience: ["Manufacturing", "Retail", "Healthcare", "Financial services"],
-    tags: ["Digital Transformation", "Strategy", "Consulting", "Process Optimization"],
+    useCases: [
+      'Sales analytics',
+      'Customer analytics',
+      'Operational analytics',
+      'Financial analytics',
+      'Marketing analytics'
+    ],
+    targetAudience: ['Enterprises', 'Data teams', 'Business analysts', 'Executives'],
+    tags: ['Analytics', 'Business Intelligence', 'Data Visualization', 'Predictive', 'Reporting'],
+    estimatedDelivery: '6-8 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$399-799/month',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/digital-transformation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    marketPrice: "$175-250/hour",
-    responseTime: "4 hours",
-    sla: "Weekly progress reports",
-    certifications: ["PMP", "ITIL", "Six Sigma", "Agile", "Scrum Master"]
-  }
-];
-
-// AI Services
-export const aiServices: AIService[] = [
-  {
-    id: 1,
-    name: "Custom AI Solutions",
-    category: "AI Development",
-    pricing: "Project-based",
-    description: "Bespoke AI solutions including machine learning models, NLP systems, and computer vision applications",
-    price: 50000,
-    pricingModel: "one-time",
-    features: [
-      "Custom ML models",
-      "NLP systems",
-      "Computer vision",
-      "Predictive analytics",
-      "Model training",
-      "API development"
-    ],
-    benefits: [
-      "Competitive advantage",
-      "Process automation",
-      "Data insights",
-      "Scalable solutions"
-    ],
-    targetAudience: ["Enterprises", "Startups", "Research institutions", "Healthcare"],
-    tags: ["AI", "Machine Learning", "NLP", "Computer Vision", "Custom Development"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/custom-ai",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$50,000-500,000",
-    aiModels: ["GPT-4", "BERT", "ResNet", "YOLO", "Custom models"],
-    accuracy: "95%+ accuracy",
-    trainingData: "Custom datasets + public data",
-    compliance: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]
-  },
-  {
-    id: 2,
-    name: "AI Consulting & Strategy",
-    category: "AI Consulting",
-    pricing: "Hourly",
-    description: "Strategic AI consulting to help organizations identify and implement AI opportunities",
-    price: 250,
-    pricingModel: "hourly",
-    features: [
-      "AI strategy development",
-      "Use case identification",
-      "ROI analysis",
-      "Implementation roadmap",
-      "Team training",
-      "Vendor selection"
-    ],
-    benefits: [
-      "Clear AI roadmap",
-      "Risk mitigation",
-      "Cost optimization",
-      "Competitive positioning"
-    ],
-    targetAudience: ["C-level executives", "IT leaders", "Innovation teams", "Consulting firms"],
-    tags: ["AI Strategy", "Consulting", "ROI Analysis", "Implementation", "Training"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-consulting",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$250-400/hour",
-    aiModels: ["Strategic frameworks", "ROI models", "Risk assessment tools"],
-    accuracy: "N/A",
-    trainingData: "Industry best practices",
-    compliance: ["Ethical AI guidelines", "Industry standards"]
+    technologyStack: ['Python', 'React', 'PostgreSQL', 'Redis', 'Apache Spark'],
+    integrations: ['Salesforce', 'HubSpot', 'QuickBooks', 'Google Analytics'],
+    compliance: ['GDPR', 'SOC 2', 'ISO 27001']
   }
 ];

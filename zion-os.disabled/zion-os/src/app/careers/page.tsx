@@ -1,5 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Users, Heart, Zap, Globe, Award, TrendingUp, Lightbulb, Shield, Star, CheckCircle } from 'lucide-react';
 
 export const metadata = {
@@ -132,7 +131,6 @@ export default function CareersPage() {
       </section>
 
       {/* Culture Section */}
-=======
 
 export const metadata = {
   title: 'Careers - Zion Tech Group',
@@ -453,7 +451,6 @@ export default function CareersPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Culture</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
               We're building more than just AI systems - we're building a future where technology serves humanity
             </p>
           </div>
@@ -466,7 +463,6 @@ export default function CareersPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-=======
               We foster an environment of innovation, collaboration, and continuous learning
             </p>
           </div>
@@ -555,7 +551,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -563,7 +558,6 @@ export default function CareersPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Work With Us</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe in taking care of our team so they can focus on building the future
-=======
       {/* Benefits */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -576,7 +570,6 @@ export default function CareersPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -584,7 +577,6 @@ export default function CareersPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-=======
             {benefits.map((category, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>
@@ -604,18 +596,14 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">
-=======
       <section id="open-positions" className="py-20 bg-gray-50">
 >>>>>>> a0daef61051dc7ac77abcb710b25158f7273c42d
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Join our team of AI pioneers, researchers, and innovators
-=======
               Explore our current openings and find your next opportunity
 >>>>>>> a0daef61051dc7ac77abcb710b25158f7273c42d
             </p>
@@ -623,7 +611,6 @@ export default function CareersPage() {
           
           <div className="space-y-8">
             {openPositions.map((position, index) => (
-<<<<<<< HEAD
               <div key={index} className="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div>
@@ -650,7 +637,6 @@ export default function CareersPage() {
                   <Link 
                     href={`/careers/${position.title.toLowerCase().replace(/\s+/g, '-')}`}
                     className="mt-4 lg:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-=======
               <div key={position.id} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="mb-4 lg:mb-0">
@@ -673,7 +659,6 @@ export default function CareersPage() {
                 
                 <p className="text-gray-600 mb-6">{position.description}</p>
                 
-<<<<<<< HEAD
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">Requirements:</h4>
                   <ul className="space-y-2">
@@ -684,7 +669,6 @@ export default function CareersPage() {
                       </li>
                     ))}
                   </ul>
-=======
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-3">Key Responsibilities:</h4>
@@ -728,7 +712,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Team Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -793,7 +776,6 @@ export default function CareersPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Application Process</h2>
             <p className="text-xl text-gray-600">Simple steps to join our team</p>
-=======
       {/* Application Process */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -807,7 +789,6 @@ export default function CareersPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-<<<<<<< HEAD
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
@@ -820,7 +801,6 @@ export default function CareersPage() {
                 <span className="text-2xl font-bold text-purple-600">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Interview</h3>
-=======
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
@@ -846,7 +826,6 @@ export default function CareersPage() {
             </div>
             
             <div className="text-center">
-<<<<<<< HEAD
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-green-600">3</span>
               </div>
@@ -860,7 +839,6 @@ export default function CareersPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Offer</h3>
               <p className="text-gray-600">Welcome to the team!</p>
-=======
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-bold">4</span>
               </div>
@@ -873,7 +851,6 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">Ready to Join Us?</h2>
@@ -892,7 +869,6 @@ export default function CareersPage() {
               className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Email Careers
-=======
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Join Our Team?</h2>

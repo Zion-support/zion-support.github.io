@@ -1,99 +1,40 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import Head from 'next/head'
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
+  title: string
+  description: string
+  keywords?: string[]
+  image?: string
+  url?: string
 }
 
-export const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords,
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
+  keywords = [],
+  image = '/og-image.jpg',
+  url = 'https://zion.app'
 }) => {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteName}`;
-  const defaultKeywords = 'AI, technology, marketplace, services, talent, micro SAAS, digital transformation, Zion Tech Group';
-  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
-
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading technology solutions provider specializing in AI, micro SAAS, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "availableLanguage": "English"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
+  const fullTitle = title.includes('Zion') ? title : `${title} | Zion Tech Group`
+  
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
+    <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={finalKeywords} />
-      <meta name="author" content={siteName} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph Meta Tags */}
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#00e5ff" />
-      <meta name="msapplication-TileColor" content="#00e5ff" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-    </Helmet>
-  );
-};
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+    </Head>
+  )
+}
 
+export default SEO
