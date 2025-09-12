@@ -41,17 +41,16 @@ export default function ContentShowcasePage() {
                   <span className="text-sm font-bold">🚀 BREAKTHROUGH</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  <Link href="/blog/ai-2025-revolutionary-breakthroughs" className="hover:text-blue-600">
-                    AI 2025 Revolutionary Breakthroughs
+                  <Link href="/blog/ai-2025-vector-search-systems" className="hover:text-blue-600">
+                    Vector Search Systems 2025
                   </Link>
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Discover the revolutionary AI breakthroughs of 2025 that are transforming industries 
-                  and reshaping the future of technology.
+                  Build accurate, fast, and cost‑efficient RAG with hybrid retrieval, reranking, and robust evals.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">Jan 25, 2025</span>
-                  <Link href="/blog/ai-2025-revolutionary-breakthroughs" className="text-blue-600 font-semibold hover:text-blue-700">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/ai-2025-vector-search-systems" className="text-blue-600 font-semibold hover:text-blue-700">
                     Read More →
                   </Link>
                 </div>
@@ -64,16 +63,16 @@ export default function ContentShowcasePage() {
                   <span className="text-sm font-bold">🚀 PRODUCTIVITY</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  <Link href="/blog/ai-productivity-automation-2025" className="hover:text-blue-600">
-                    AI Productivity Automation 2025
+                  <Link href="/blog/ai-2025-agentic-automation" className="hover:text-blue-600">
+                    Agentic Automation 2025
                   </Link>
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Transform your business with AI automation achieving 300% productivity gains and 40% cost reduction.
+                  Deploy reliable agent workflows with guardrails, observability, and ROI tracking.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">Jan 25, 2025</span>
-                  <Link href="/blog/ai-productivity-automation-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                  <span className="text-sm text-gray-500">Sep 12, 2025</span>
+                  <Link href="/blog/ai-2025-agentic-automation" className="text-blue-600 font-semibold hover:text-blue-700">
                     Read More →
                   </Link>
                 </div>
@@ -85,17 +84,13 @@ export default function ContentShowcasePage() {
                 <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-blue-100 text-green-800 rounded-full px-4 py-2 mb-4">
                   <span className="text-sm font-bold">💰 STRATEGY</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  <Link href="/blog/startup-pricing-strategy-2025" className="hover:text-blue-600">
-                    Startup Pricing Strategy 2025
-                  </Link>
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Latest Case Study</h3>
                 <p className="text-gray-600 mb-4">
-                  Master startup pricing with data-driven strategies that validate customer willingness to pay.
+                  Explore our newest enterprise transformation case study delivering multimillion‑dollar impact.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">Jan 22, 2025</span>
-                  <Link href="/blog/startup-pricing-strategy-2025" className="text-blue-600 font-semibold hover:text-blue-700">
+                  <span className="text-sm text-gray-500">Sep 2025</span>
+                  <Link href="/case-studies/ai-transformation-fortune-500-breakthrough-2025" className="text-blue-600 font-semibold hover:text-blue-700">
                     Read More →
                   </Link>
                 </div>
