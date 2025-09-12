@@ -177,23 +177,23 @@ export default function HomePage() {
               <div className="p-6">
                 <div className="text-2xl mb-2">🧠</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">ZionGPT Core v2</h3>
-                <p className="text-white/70">10x context windows, native Tools API, faster inference.</p>
+                <p className="text-white/70">10x context windows, Tools API, and faster inference.</p>
               </div>
             </a>
-            <a href="/news/case-study-resume-ai-38-percent-faster" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">📈</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Case Study: 38% Faster Hiring</h3>
-                <p className="text-white/70">Resume AI cut time‑to‑hire while improving conversion.</p>
+                <div className="text-2xl mb-2">🏪</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Marketplace Suite GA</h3>
+                <p className="text-white/70">Jobs, proposals, and escrow reach General Availability.</p>
               </div>
             </a>
-            <a href="/news/zion-os-1-0-launch" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
+            <a href="/news/compliance-pack-release" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🚀</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.0 Launches</h3>
-                <p className="text-white/70">One‑click deployment of AI‑powered digital economies.</p>
+                <div className="text-2xl mb-2">🛡️</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
+                <p className="text-white/70">SOC 2 playbooks and turnkey KYC/AML integrations.</p>
               </div>
             </a>
           </div>

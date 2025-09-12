@@ -83,6 +83,20 @@ const blogPosts: BlogPost[] = [
     views: 0
   },
   {
+    id: 'foundation-models-enterprise-2025',
+    title: 'Foundation Models for the Enterprise: Architecture, Governance, and ROI',
+    excerpt: 'Implementation-first guide to adopting foundation models safely: architectures, guardrails, cost controls, and ROI measurement.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '22 min read',
+    category: 'Enterprise AI',
+    tags: ['Foundation Models', 'Enterprise', 'Governance', 'Security', 'ROI'],
+    featured: true,
+    url: '/blog/foundation-models-enterprise-2025',
+    image: '🏢',
+    views: 0
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'The AI Revolution of 2025: Transformative Technologies Reshaping Business',
     excerpt: 'Discover how cutting-edge AI technologies are revolutionizing industries and creating unprecedented opportunities for business growth and innovation.',
