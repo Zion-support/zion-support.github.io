@@ -34,6 +34,39 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '70',
+      title: 'Autonomous Enterprise Agents 2025',
+      description: 'Build AI agents that operate independently while maintaining enterprise security and compliance.',
+      href: '/blog/ai-2025-autonomous-enterprise-agents',
+      type: 'blog',
+      featured: true,
+      readTime: '22 min read',
+      date: 'Sep 15, 2025',
+      category: 'Autonomous AI'
+    },
+    {
+      id: '71',
+      title: 'Generative AI Platforms 2025',
+      description: 'Build enterprise-grade generative AI platforms that scale with governance and cost optimization.',
+      href: '/blog/ai-2025-generative-ai-platforms',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 15, 2025',
+      category: 'AI Platforms'
+    },
+    {
+      id: '72',
+      title: 'Autonomous Enterprise Transformation: 85% Efficiency Gains',
+      description: 'Case study: Fortune 500 company achieves massive efficiency improvements through autonomous AI agents.',
+      href: '/case-studies/ai-2025-autonomous-enterprise-transformation',
+      type: 'case-study',
+      featured: true,
+      readTime: '12 min read',
+      date: 'Sep 15, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '60',
       title: 'AI Guardrails in Production (2025)',
       description: 'Policy-as-code, runtime controls, and evaluations to ship AI safely at scale.',
