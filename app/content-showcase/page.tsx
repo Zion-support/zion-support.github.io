@@ -102,8 +102,6 @@ export default function ContentShowcasePage() {
       date: "Feb 06, 2025"
     }
   ];
-=======
->>>>>>> cursor/create-and-deploy-new-content-fa2c
 
   return (
     <div className="min-h-screen bg-white">
@@ -251,7 +249,6 @@ export default function ContentShowcasePage() {
                   </div>
                   <div className="text-blue-600 font-medium group-hover:underline">Download Guide →</div>
                 </div>
-              </div>
             </Link>
             
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8">
@@ -297,8 +294,9 @@ export default function ContentShowcasePage() {
               <p className="text-gray-600 mb-4">Expert insights on AI trends, implementation strategies, and business transformation.</p>
               <div className="text-blue-600 font-medium group-hover:underline">Browse Articles →</div>
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </Link>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="/resources/ai-implementation-success-checklist-2025" className="group">
                 <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
@@ -430,7 +428,6 @@ export default function ContentShowcasePage() {
           </section>
         </div>
       </div>
-    </div>
   );
 }
 
