@@ -65,8 +65,8 @@ export default function HomePage() {
               🚀 New AI & Business Content Just Dropped
             </h2>
             <p className='text-lg opacity-90 mb-4 max-w-3xl mx-auto'>
-              Discover our latest expert insights, case studies, and resources. From AI enterprise automation 
-              to startup funding strategies, get the knowledge you need to succeed in 2025.
+              Discover our latest expert insights, case studies, and resources. From AI customer support automation 
+              to financial services transformation, get the knowledge you need to succeed in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-3 justify-center'>
               <Link
@@ -210,7 +210,7 @@ export default function HomePage() {
             <Link href='/blog/ai-customer-support-automation-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎧</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Customer Support Automation</h3>
+                <h3 className='text-lg font-semibold mb-2'>AI Customer Support Automation 2025</h3>
                 <p className='text-sm opacity-90 mb-3'>80% faster response times, 60% cost reduction, 95% satisfaction</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>12 min read</span>
@@ -1012,30 +1012,130 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Spotlight Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>✨ JUST PUBLISHED</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Fresh AI & Business Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              New this week: AI Customer Support Automation, Financial Services Transformation Case Study, 
+              and our comprehensive AI Implementation Checklist. Expert insights to accelerate your growth.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog'
+                className='bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest Articles
+              </Link>
+              <Link
+                href='/resources'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg' 
+              >
+                📋 Download Free Resources
+              </Link>
+            </div>
+          </div>
+
+          {/* Featured New Content Cards */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <Link href='/blog/ai-customer-support-automation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🎧</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Customer Support Automation 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>80% faster response times, 60% cost reduction, 95% satisfaction</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>12 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/case-studies/ai-financial-services-transformation-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏦</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Financial Services Transformation</h3>
+                <p className='text-sm opacity-90 mb-3'>$50M cost savings, 300% efficiency gains - complete case study</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/resources/ai-implementation-checklist-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>150+ actionable items for successful AI deployment</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className='text-center mt-8'>
+            <Link
+              href='/blog'
+              className='bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
+            >
+              View All Articles
+            </Link>
+            <Link
+              href='/resources'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-block'
+            >
+              Download Resources
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Content Showcase */}
       <ContentShowcase
         title="Latest AI & Technology Insights"
         subtitle="Stay ahead with our latest articles, resources, and case studies covering the most important trends in AI, cloud architecture, and business growth."
         items={[
           {
-            title: "AI Cybersecurity 2025: Protecting Your Digital Assets",
-            description: "Comprehensive guide to AI cybersecurity in 2025. Learn about emerging threats, defense strategies, and best practices for protecting your organization.",
-            href: "/blog/ai-cybersecurity-2025",
+            title: "AI Customer Support Automation 2025: 80% Faster Response Times",
+            description: "Transform your customer support with AI automation. Achieve 80% faster response times, 60% cost reduction, and 95% customer satisfaction with our proven implementation guide.",
+            href: "/blog/ai-customer-support-automation-2025",
             type: "blog",
-            readTime: "18 min read",
+            readTime: "12 min read",
             isNew: true,
-            icon: "🛡️",
-            category: "AI & Security"
+            icon: "🎧",
+            category: "AI & Customer Experience"
           },
           {
-            title: "AI Data Privacy 2025: Navigating GDPR, CCPA, and Emerging Regulations",
-            description: "Complete guide to AI data privacy compliance in 2025. Learn about GDPR, CCPA, and new privacy regulations affecting AI systems.",
-            href: "/blog/ai-data-privacy-2025",
-            type: "blog",
-            readTime: "22 min read",
+            title: "AI Financial Services Transformation: $50M Cost Savings Success Story",
+            description: "Discover how a Fortune 500 financial services company achieved $50M cost savings and 300% efficiency gains through AI transformation. Complete case study with implementation details.",
+            href: "/case-studies/ai-financial-services-transformation-2025",
+            type: "case-study",
+            readTime: "15 min read",
             isNew: true,
-            icon: "🔒",
-            category: "AI & Privacy"
+            icon: "🏦",
+            category: "Success Story"
+          },
+          {
+            title: "AI Implementation Checklist 2025: 150+ Actionable Items for Success",
+            description: "Complete AI implementation checklist with 150+ actionable items for successful AI deployment. Download our free comprehensive guide for enterprise AI transformation.",
+            href: "/resources/ai-implementation-checklist-2025",
+            type: "resource",
+            readTime: "2 hours",
+            isNew: true,
+            icon: "📋",
+            category: "Free Download"
           },
           {
             title: "AI Enterprise Integration 2025: Seamlessly Connecting AI with Existing Systems",
@@ -1046,16 +1146,6 @@ export default function HomePage() {
             isNew: true,
             icon: "🏢",
             category: "AI & Enterprise"
-          },
-          {
-            title: "AI Integration Playbook 2025",
-            description: "Complete step-by-step guide to successfully integrating AI systems with your existing enterprise infrastructure.",
-            href: "/resources/ai-integration-playbook-2025",
-            type: "resource",
-            readTime: "2 hours",
-            isNew: true,
-            icon: "📚",
-            category: "Free Download"
           },
           {
             title: "AI Privacy Compliance Checklist 2025",
