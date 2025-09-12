@@ -232,7 +232,7 @@ export default function ContentShowcase() {
       icon: "⚡",
       category: "Machine Learning",
       readTime: "24 min read",
-      date: "Jan 15, 2025",
+      date: "Sep 12, 2025",
       featured: false
     },
     {
@@ -242,7 +242,7 @@ export default function ContentShowcase() {
       icon: "⚖️",
       category: "AI Ethics",
       readTime: "19 min read",
-      date: "Jan 12, 2025",
+      date: "Sep 12, 2025",
       featured: false
     },
     {
@@ -252,7 +252,7 @@ export default function ContentShowcase() {
       icon: "📱",
       category: "Edge Computing",
       readTime: "16 min read",
-      date: "Jan 10, 2025",
+      date: "Sep 12, 2025",
       featured: false
     },
     {
@@ -262,7 +262,7 @@ export default function ContentShowcase() {
       icon: "💰",
       category: "Case Study",
       readTime: "14 min read",
-      date: "Jan 8, 2025",
+      date: "Sep 12, 2025",
       featured: false
     }
   ];
