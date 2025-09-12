@@ -8,6 +8,36 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "Governed Agentic Workflows: 2025 Blueprint",
+    description: "Policy gates, audits, and evals for production agent systems",
+    url: "/blog/governed-agentic-workflows",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🧩",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agent Benchmarking Blueprint 2025",
+    description: "Decision-ready evals for quality, latency, cost, and safety",
+    url: "/resources/agent-benchmarking-blueprint-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "📊",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agent Observability Blueprint: 38% MTTR Reduction",
+    description: "Spans, metrics, and policies that cut outages and costs",
+    url: "/case-studies/ai-2025-agent-observability-blueprint",
+    type: "Case Study",
+    category: "AIOps",
+    icon: "🛰️",
+    featured: true,
+    new: true
+  },
+  {
     title: "AI Copilots for Engineering Teams",
     description: "Secure, repo-aware copilots that reduce toil and speed reviews",
     url: "/blog/ai-copilots-for-engineering",
