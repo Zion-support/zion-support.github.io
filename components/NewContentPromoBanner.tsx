@@ -44,6 +44,39 @@ const NewContentPromoBanner = ({
       category: 'LLMs'
     },
     {
+      id: 'n3',
+      title: 'Data Governance for LLM Apps in 2025',
+      description: 'Lineage, privacy-by-design, access controls, policy engines, and audits.',
+      href: '/blog/ai-2025-data-governance-llm-apps',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Governance'
+    },
+    {
+      id: 'n4',
+      title: 'End-to-End Evaluation for AI Systems in 2025',
+      description: 'Quality, latency, cost, safety, and reliability—continuous, operational evals.',
+      href: '/blog/ai-2025-end-to-end-evaluation',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: 'n5',
+      title: 'Retrieval Augmentation at Scale in 2025',
+      description: 'Hybrid search, indexing, routing, chunking, caching, and observability.',
+      href: '/blog/ai-2025-retrieval-augmentation-at-scale',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: 'n2',
       title: 'Agent Safety & Evals Playbook 2025',
       description: 'Red teaming, jailbreak prevention, policy enforcement, and automated scoring.',
