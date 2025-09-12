@@ -527,36 +527,36 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 // Predefined content collections for easy use
 export const featuredContent = [
   {
-    title: "AI Productivity Automation 2025",
-    description: "Transform your business with 300% productivity gains and 40% cost reduction",
-    href: "/blog/ai-productivity-automation-2025",
-    icon: "🤖",
-    readTime: "15 min read",
-    category: "AI & Automation",
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
     isNew: true
   },
   {
-    title: "Startup Pricing Strategy 2025",
-    description: "Validate willingness to pay and scale with confidence using data-driven strategies",
-    href: "/blog/startup-pricing-strategy-2025",
-    icon: "💰",
-    readTime: "12 min read",
-    category: "Growth Strategy",
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions",
     isNew: true
   },
   {
-    title: "Healthcare AI Success Story",
-    description: "95% accuracy in medical diagnosis with 80% faster processing times",
-    href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
     icon: "🏥",
-    readTime: "Case Study",
-    category: "Healthcare",
+    readTime: "18 min read",
+    category: "Healthcare AI",
     isNew: true
   },
   {
-    title: "AI Implementation Playbook",
-    description: "Complete 150-page guide to successful AI deployment with templates and checklists",
-    href: "/resources/ai-implementation-playbook-2025",
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete 200-page playbook with templates, checklists, and case studies",
+    href: "/resources/ai-implementation-master-guide-2026",
     icon: "📚",
     readTime: "Free Download",
     category: "Resources",
@@ -566,58 +566,58 @@ export const featuredContent = [
 
 export const trendingContent = [
   {
-    title: "AI Go-To-Market 2025",
-    description: "From zero to traction: positioning, pricing, and distribution strategies",
-    href: "/blog/ai-go-to-market-2025",
-    icon: "📈",
-    readTime: "12 min read",
-    category: "Growth & Marketing",
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions",
     isTrending: true
   },
   {
-    title: "LLM Guardrails in Production",
-    description: "Safety without blocking delivery - practical implementation guide",
-    href: "/blog/llm-guardrails-in-production-2025",
-    icon: "🛡️",
-    readTime: "8 min read",
-    category: "AI Engineering",
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
+    readTime: "18 min read",
+    category: "Healthcare AI",
     isTrending: true
   },
   {
-    title: "Edge AI: Privacy by Design",
-    description: "On-device intelligence for instant, compliant customer experiences",
-    href: "/blog/edge-ai-privacy-by-design-2025",
-    icon: "🔐",
-    readTime: "7 min read",
-    category: "AI & Privacy",
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI",
     isTrending: true
   }
 ];
 
 export const latestContent = [
   {
-    title: "AI Customer Support Automation",
-    description: "Resolve faster, cut costs, and improve satisfaction with intelligent automation",
-    href: "/blog/ai-customer-support-automation-2025",
-    icon: "🎧",
-    readTime: "9 min read",
-    category: "Customer Experience"
+    title: "AI Healthcare Diagnosis Breakthrough",
+    description: "95% accuracy case study: How AI saved 2,500+ lives and delivered $50M+ in savings",
+    href: "/case-studies/ai-healthcare-diagnosis-breakthrough-2026",
+    icon: "🏥",
+    readTime: "18 min read",
+    category: "Healthcare AI"
   },
   {
-    title: "AI Governance in Practice",
-    description: "Controls that reduce risk without blocking delivery",
-    href: "/blog/ai-governance-in-practice-2025",
-    icon: "⚖️",
-    readTime: "9 min read",
-    category: "AI Governance"
+    title: "AI Breakthrough Predictions 2026",
+    description: "Discover the most significant AI breakthroughs predicted for 2026 - from AGI to quantum AI",
+    href: "/blog/ai-2026-breakthrough-predictions",
+    icon: "🔮",
+    readTime: "22 min read",
+    category: "AI Predictions"
   },
   {
-    title: "Cloud-Native Architecture Blueprint",
-    description: "Build scalable, resilient applications with modern cloud-native patterns",
-    href: "/blog/cloud-native-architecture-2025",
-    icon: "☁️",
-    readTime: "15 min read",
-    category: "Cloud & DevOps"
+    title: "AI Enterprise Transformation 2026",
+    description: "Complete implementation guide with 400% ROI case studies from Fortune 500 companies",
+    href: "/blog/ai-2026-enterprise-transformation",
+    icon: "🏢",
+    readTime: "25 min read",
+    category: "Enterprise AI"
   }
 ];
   backgroundColor = 'bg-gray-50',
