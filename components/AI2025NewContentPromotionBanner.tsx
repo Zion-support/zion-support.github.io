@@ -5,151 +5,121 @@ const AI2025NewContentPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentContent, setCurrentContent] = useState(0);
 
-  const newContent = [
+  const featuredContent = [
     {
-      title: "AI 2025: Advanced Autonomous Systems Revolution",
-      description: "Breakthrough autonomous systems achieving 99.8% autonomy across industries",
-      href: "/blog/ai-2025-advanced-autonomous-systems",
+      title: "🚀 AI 2025 Next-Generation Breakthroughs",
+      description: "Discover revolutionary AI technologies delivering 5,000-15,000% ROI",
+      href: "/blog/ai-2025-next-generation-breakthroughs",
       badge: "BREAKTHROUGH",
-      color: "from-blue-500 to-indigo-500",
-      icon: "🤖"
+      badgeColor: "bg-red-500"
     },
     {
-      title: "AI 2025: Quantum Machine Learning Breakthrough",
-      description: "Revolutionary quantum ML achieving 10,000x speedup in complex computations",
-      href: "/blog/ai-2025-quantum-machine-learning-breakthrough",
-      badge: "QUANTUM BREAKTHROUGH",
-      color: "from-purple-500 to-pink-500",
-      icon: "⚛️"
+      title: "🏆 Global Tech Giant: 900% ROI Success",
+      description: "Fortune 500 company achieves unprecedented AI transformation results",
+      href: "/case-studies/ai-2025-global-tech-giant-transformation",
+      badge: "SUCCESS STORY",
+      badgeColor: "bg-green-500"
     },
     {
-      title: "AI 2025: Global Finance Transformation",
-      description: "Revolutionary AI transformation achieving 1500% ROI in global finance",
-      href: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
-      badge: "BREAKTHROUGH SUCCESS",
-      color: "from-green-500 to-emerald-500",
-      icon: "💰"
+      title: "📚 Ultimate Implementation Master Guide",
+      description: "Complete guide to implementing AI solutions with proven methodologies",
+      href: "/resources/ai-2025-ultimate-implementation-master-guide",
+      badge: "MASTER GUIDE",
+      badgeColor: "bg-purple-500"
+    },
+    {
+      title: "⚛️ Quantum AI Integration Breakthrough",
+      description: "Revolutionary quantum-neural fusion delivering 15,000% ROI",
+      href: "/blog/ai-2025-quantum-ai-breakthrough",
+      badge: "REVOLUTIONARY",
+      badgeColor: "bg-indigo-500"
+    },
+    {
+      title: "🤖 Autonomous Systems Revolution",
+      description: "Self-evolving AI systems achieving 2,000-5,000% ROI",
+      href: "/blog/ai-2025-autonomous-systems-revolution",
+      badge: "NEW",
+      badgeColor: "bg-orange-500"
     }
   ];
 
   useEffect(() => {
     setIsVisible(true);
+    
     const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % newContent.length);
+      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
   if (!isVisible) return null;
 
-  const current = newContent[currentContent];
+  const current = featuredContent[currentContent];
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-4">
-        <div className="max-w-7xl mx-auto px-4">
+    <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl animate-pulse">🚀</span>
-                <span className="font-bold text-lg">NEW AI 2025 CONTENT</span>
-                <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                  JUST RELEASED
-                </span>
+            <div className="flex-1">
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0">
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold ${current.badgeColor} text-white animate-pulse`}>
+                    {current.badge}
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold text-white mb-1">
+                    <Link 
+                      href={current.href}
+                      className="hover:text-yellow-300 transition-colors duration-200"
+                    >
+                      {current.title}
+                    </Link>
+                  </h3>
+                  <p className="text-sm text-blue-100 mb-2">
+                    {current.description}
+                  </p>
+                </div>
               </div>
             </div>
             
-            <div className="hidden md:flex items-center space-x-4">
-              <div className="text-sm">
-                <div className="font-semibold">{current.title}</div>
-                <div className="text-gray-300 text-xs">{current.description}</div>
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-2">
+                {featuredContent.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentContent(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                      index === currentContent ? 'bg-yellow-400 scale-125' : 'bg-white opacity-50'
+                    }`}
+                    aria-label={`Go to content ${index + 1}`}
+                  />
+                ))}
               </div>
-              <Link 
+              
+              <Link
                 href={current.href}
-                className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
-                Read Now →
+                Explore Now
               </Link>
             </div>
           </div>
         </div>
+        
+        {/* Progress bar */}
+        <div className="h-1 bg-gradient-to-r from-yellow-400 to-orange-400 animate-pulse"></div>
       </div>
       
-      {/* Mobile version */}
-      <div className="md:hidden bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-2">
-              <span className="text-xl animate-pulse">🚀</span>
-              <span className="font-bold">NEW AI 2025 CONTENT</span>
-              <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                JUST RELEASED
-              </span>
-            </div>
-            <div className="text-sm mb-3">
-              <div className="font-semibold">{current.title}</div>
-              <div className="text-gray-300 text-xs">{current.description}</div>
-            </div>
-            <Link 
-              href={current.href}
-              className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-            >
-              Read Now →
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Content showcase section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest AI 2025 Breakthroughs</h2>
-            <p className="text-gray-600">Discover the revolutionary AI technologies transforming industries</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {newContent.map((content, index) => (
-              <div 
-                key={index}
-                className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow ${
-                  index === currentContent ? 'ring-2 ring-blue-500' : ''
-                }`}
-              >
-                <div className={`h-2 bg-gradient-to-r ${content.color}`}></div>
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="text-2xl">{content.icon}</span>
-                    <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
-                      content.badge.includes('QUANTUM') ? 'bg-purple-100 text-purple-800' :
-                      content.badge.includes('SUCCESS') ? 'bg-green-100 text-green-800' :
-                      'bg-blue-100 text-blue-800'
-                    }`}>
-                      {content.badge}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{content.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{content.description}</p>
-                  <Link 
-                    href={content.href}
-                    className={`inline-block w-full text-center py-2 px-4 rounded-lg font-semibold text-white bg-gradient-to-r ${content.color} hover:opacity-90 transition-opacity`}
-                  >
-                    Read Full Article
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-8">
-            <Link 
-              href="/content-showcase"
-              className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-            >
-              View All AI 2025 Content
-            </Link>
-          </div>
-        </div>
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
+        <div className="absolute top-8 right-8 w-3 h-3 bg-pink-400 rounded-full animate-ping animation-delay-1000"></div>
+        <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-2000"></div>
+        <div className="absolute bottom-8 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-3000"></div>
       </div>
     </div>
   );
