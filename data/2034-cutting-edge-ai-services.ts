@@ -1,95 +1,61 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-
-const contact = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
+export type CuttingEdgeAIService = {
+	id: string;
+	name: string;
+	description: string;
+	category:
+		| 'AI Consciousness'
+		| 'AI Emotional Intelligence'
+		| 'AI Creativity'
+		| 'AI Psychology'
+		| 'AI Business Management'
+		| 'AI Healthcare'
+		| 'AI Neural Interfaces'
+		| 'AI Quantum Computing';
+	pricing: { starter: string; professional?: string; enterprise?: string };
+	features: string[];
+	integrations?: string[];
+	useCases?: string[];
+	link: string;
+	rating?: number;
+	launchDate?: string;
+	realService?: boolean;
 };
 
-export const cuttingEdgeAIServices: EnhancedRealMicroSaasService[] = [
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	{
-		id: 'llm-evaluation-orchestrator-2034',
-		name: 'LLM Evaluation Orchestrator',
-		tagline: 'Automate evals, red‑teaming, regression tests, and leaderboards',
-		price: '$99',
-		period: '/month',
-		description: 'Run offline/online evals across OpenAI, Anthropic, and open‑source models with automated datasets, safety tests, and dashboards. Export results to your data warehouse.',
-		features: [
-			'Quality, safety, grounding eval suites',
-			'Regression testing and trend charts',
-			'Red‑teaming prompts and jailbreak checks',
-			'Provider adapters and cost metering',
-			'Leaderboards and model gating',
-			'CI integration and reports'
-		],
-		popular: true,
-		icon: '🧪',
-		color: 'from-cyan-600 to-blue-700',
-		textColor: 'text-cyan-300',
-		link: 'https://ziontechgroup.com/services/ai-evaluation-orchestrator',
-		marketPosition: 'Flexible alternative to bespoke spreadsheets and ad‑hoc evals.',
-		targetAudience: 'AI product, data science, platform teams',
-		trialDays: 14,
-		setupTime: '1 day',
-		category: 'AI & Data',
-		realService: true,
-		technology: ['OpenAI', 'Anthropic', 'Python/JS', 'ClickHouse'],
-		integrations: ['OpenRouter', 'Weights & Biases', 'Datadog'],
-		useCases: ['Model comparisons', 'Release gating', 'Safety audits'],
-		roi: 'Ship safer and cheaper AI features with confidence',
-		competitors: ['W&B Evals', 'Arize Phoenix'],
-		marketSize: '$5B AI Ops',
-		growthRate: '40% YoY',
-		variant: 'ai-futuristic' as any,
-		contactInfo: contact,
-		realImplementation: true,
-		implementationDetails: 'Dataset runners, adapters, dashboards, and CI actions.',
-		launchDate: '2025-03-18',
-		customers: 15,
-		rating: 4.7,
-		reviews: 9
+		id: 'ai-emotional-support-agent',
+		name: 'AI Emotional Support Agent',
+		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
+		category: 'AI Emotional Intelligence',
+		pricing: { starter: '$99/mo' },
+		features: ['CBT-guided prompts', 'Mood tracking', 'Crisis escalation', 'HIPAA-friendly modes'],
+		integrations: ['Twilio', 'Slack'],
+		useCases: ['Employee wellness', '24/7 support'],
+		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
+		realService: true
 	},
 	{
-		id: 'agentic-rag-starter-2034',
-		name: 'Agentic RAG Starter',
-		tagline: 'Retrieval‑augmented generation with tools, evals, and guardrails',
-		price: '$149',
-		period: '/month',
-		description: 'Deploy an agentic RAG stack with ingestion, chunking, vector DB, tool use, and evaluation harness. Includes guardrails and observability.',
-		features: [
-			'Document ingestion and chunking',
-			'Embeddings and vector DB',
-			'Tools and function calls',
-			'Evaluation harness and dashboards',
-			'Guardrails and safety filters',
-			'One‑click deploys'
-		],
-		popular: false,
-		icon: '🧠',
-		color: 'from-purple-600 to-pink-700',
-		textColor: 'text-purple-200',
-		link: 'https://ziontechgroup.com/services/ai-rag-starter-blueprint',
-		marketPosition: 'Faster path to value vs. bespoke agents with no guardrails.',
-		targetAudience: 'Product, data, platform teams',
-		trialDays: 14,
-		setupTime: '1 day',
-		category: 'AI & Data',
-		realService: true,
-		technology: ['Next.js', 'Pinecone/Weaviate/PGVector', 'OpenAI'],
-		integrations: ['Pinecone', 'Weaviate', 'PGVector'],
-		useCases: ['Knowledge bases', 'Support', 'Internal docs'],
-		roi: 'Launch agentic RAG in days, not weeks',
-		competitors: ['LangChain templates', 'LlamaIndex starters'],
-		marketSize: '$2B RAG tooling',
-		growthRate: '45% CAGR',
-		variant: 'holographic-matrix' as any,
-		contactInfo: contact,
-		realImplementation: true,
-		implementationDetails: 'Ingestion workers, vector DB, tools, and eval suite.',
-		launchDate: '2025-03-19',
-		customers: 9,
-		rating: 4.6,
-		reviews: 6
+		id: 'ai-product-spec-writer',
+		name: 'AI Product Spec Writer',
+		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
+		category: 'AI Business Management',
+		pricing: { starter: '$79/mo' },
+		features: ['PRD templates', 'Story generation', 'Acceptance criteria', 'Analytics alignment'],
+		integrations: ['Jira', 'Linear'],
+		useCases: ['Faster planning', 'Better alignment'],
+		link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
+		realService: true
+	},
+	{
+		id: 'ai-creative-studio',
+		name: 'AI Creative Studio',
+		description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
+		category: 'AI Creativity',
+		pricing: { starter: '$149/mo' },
+		features: ['Brand kit', 'Image & video gen', 'Review & approvals', 'Rights management'],
+		integrations: ['Canva', 'Figma'],
+		useCases: ['Marketing velocity', 'Cost savings'],
+		link: 'https://ziontechgroup.com/services/ai-creative-studio',
+		realService: true
 	}
 ];

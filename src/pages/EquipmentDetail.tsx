@@ -4,15 +4,7 @@ import { NextSeo } from '@/components/NextSeo';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-
-
-
-
-
-
-
-
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
@@ -160,21 +152,30 @@ export default function EquipmentDetail() {
     }
 
     setIsAdding(true);
-    dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: equipment.id,
-        name: equipment.name,
-        price: equipment.price,
-        quantity,
-      },
-    });
+    try {
+      dispatch({
+        type: 'ADD_ITEM',
+        payload: {
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+          quantity,
+        },
+      });
 
-    toast({
-      title: "Added to Cart",
-      description: `${equipment.name} has been added to your cart.`,
-    });
-    setIsAdding(false);
+      toast({
+        title: "Added to Cart",
+        description: `${equipment.name} has been added to your cart.`,
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to add item to cart. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsAdding(false);
+    }
   };
 
   const inCart = items.some(item => item.id === equipment?.id);

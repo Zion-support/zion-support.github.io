@@ -1,104 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App.tsx'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </React.StrictMode>,
-);
-
-// Import auth and notification providers
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { NotificationProvider } from './context';
-
-// Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
-
-// Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      onError: (error) => showApiError(error),
-    },
-    mutations: {
-      onError: (error) => showApiError(error),
-    },
-  },
-});
-
-function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
-  const { t } = useTranslation();
-  React.useEffect(() => {
-    captureException(error);
-  }, [error]);
-  return (
-    <div role="alert" className="p-4 text-center">
-      <p className="mb-2">{t('error_boundary.message', 'Something went wrong.')}</p>
-      <button className="rounded bg-blue-600 px-4 py-2 text-white" onClick={resetErrorBoundary}>
-        {t('error_boundary.retry', 'Retry')}
-      </button>
-    </div>
-  );
-}
-
-try {
-  console.log("main.tsx: Before ReactDOM.createRoot");
-  // Render the app with proper provider structure
-  ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <SnackbarProvider maxSnack={3}>
-            <ToastInitializer />
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
-                        <ViewModeProvider>
-                          <CartProvider>
-                            <ReferralMiddleware>
-                              <AppLayout>
-                                <App />
-                              </AppLayout>
-                            </ReferralMiddleware>
-                          </CartProvider>
-                        </ViewModeProvider>
-                        <LanguageDetectionPopup />
-                      </ErrorBoundary>
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-          </SnackbarProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>,
-  );
-  console.log("main.tsx: After ReactDOM.createRoot");
-} catch (error) {
-  console.error("Global error caught in main.tsx:", error);
-  console.log("main.tsx: Global error caught");
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
-        <h1>Application Error</h1>
-        <p>A critical error occurred while loading the application.</p>
-        <p>Error: ${(error as Error).message}</p>
-        <pre>${(error as Error).stack}</pre>
-        <p>Please check the console for more details.</p>
-      </div>
-    `;
-  }
-}
-
-registerServiceWorker();
+)

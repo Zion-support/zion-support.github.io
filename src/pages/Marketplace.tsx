@@ -436,6 +436,6 @@ export default function Marketplace() {
           </motion.button>
         )}
       </AnimatePresence>
-    </main>
+    </div>
   );
 }

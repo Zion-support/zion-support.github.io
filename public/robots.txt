@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zion.app/sitemap.xml
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -19,4 +20,3 @@ Allow: /blog/
 
 # Crawl delay for better server performance
 Crawl-delay: 1
-

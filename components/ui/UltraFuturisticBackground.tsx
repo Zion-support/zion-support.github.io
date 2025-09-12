@@ -12,7 +12,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   className = '' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+<<<<<<< HEAD
   const containerRef = useRef<HTMLDivElement>(null);
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   const animationRef = useRef<number | null>(null);
 
   useEffect(() => {

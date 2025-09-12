@@ -34,3 +34,5 @@ export default function ThankYouPage() {
 		</>
 	);
 }
+
+export default Thankyou;

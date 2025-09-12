@@ -13,16 +13,36 @@ import type { TalentProfile } from '@/types/talent';
 // API returns `{ profile: TalentProfile }`; swr will store just the profile
 type TalentProfileResponse = { profile: TalentProfile | null };
 
-// fetcher-like function for handling API responses
-const handleApiResponse = async (res: Response) => {
-  if (!res.ok) {
-    const error = new Error('An error occurred while fetching the data.');
-    // Read response body once and attempt to parse JSON
-    const raw = await res.text();
-    try {
-      (error as any).info = JSON.parse(raw);
-    } catch {
-      (error as any).info = { message: raw };
+const TalentProfilePage: React.FC = () => {
+  const { id } = useParams();
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (!id) return;
+      setLoading(true);
+      setError(null);
+      try {
+        const res = await fetch(`/api/talent/${id}`);
+        if (res.status === 404) {
+          setError('Talent not found');
+          setProfile(null);
+          return;
+        }
+        if (!res.ok) throw new Error('Failed to load profile');
+        const data = await res.json();
+        setProfile(data.profile);
+      } catch (err) {
+        setError('Talent not found');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
+      fetchProfile();
     }
     (error as any).status = res.status;
     throw error;
@@ -30,9 +50,8 @@ const handleApiResponse = async (res: Response) => {
   return res.json();
 };
 
-const TalentPage: React.FC = () => {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
+  if (loading) return <ProfileLoadingState />;
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 
   const { data, error, isLoading } = useSWR<TalentProfile | null>(
     id ? `/api/talent/${id}` : null,

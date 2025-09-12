@@ -152,6 +152,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return <AlertTriangle className="w-5 h-5 text-red-400" />;
   };
 
+<<<<<<< HEAD
+  // Format time values
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   const formatTime = (ms: number): string => {
     if (ms < 1000) return `${Math.round(ms)}ms`;
     return `${(ms / 1000).toFixed(2)}s`;

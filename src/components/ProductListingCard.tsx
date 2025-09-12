@@ -4,12 +4,15 @@ import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { Star, DollarSign, Heart } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-import { useAuth } from "@/hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { toast } from "sonner";
+import { DollarSign } from 'lucide-react'
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -25,13 +28,10 @@ const ProductListingCardComponent = ({
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { user } = useAuth();
-  const dispatch = useAppDispatch();
-  
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
     ? listing.images[0] 
     : '/placeholder.svg'
   );
@@ -72,9 +72,9 @@ const ProductListingCardComponent = ({
   const handleViewListing = () => {
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
-      logDebug('[ProductCard] Navigating to:', { data:  { path: `${detailBasePath}/${listing.id}` } });
-      logDebug('[ProductCard] Listing ID:', { data:  { id: listing.id } });
-      logDebug('[ProductCard] Listing Title:', { data:  { title: listing.title } });
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` });
+      logDebug('[ProductCard] Listing ID:', { id: listing.id });
+      logDebug('[ProductCard] Listing Title:', { title: listing.title });
     }
     
     // Validate listing ID exists before navigation
@@ -98,11 +98,9 @@ const ProductListingCardComponent = ({
     dispatch(
       addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
     );
-    toast({
-      title: "Added to Cart",
-      description: `1× ${listing.title} added`,
+    toast.success(`1× ${listing.title} added`, {
       action: {
-        label: "View Cart",
+        label: 'View Cart',
         onClick: () => router.push('/cart'),
       },
     });
@@ -118,38 +116,6 @@ const ProductListingCardComponent = ({
     } else {
       router.push(`/request-quote?listing=${listing.id}`);
     }
-  };
-
-  const handleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
-    }
-    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: listing.id, type: 'product' }),
-    }).catch(() => {});
-  };
-
-  const handleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
-    }
-    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: listing.id, type: 'product' }),
-    }).catch(() => {});
   };
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -217,7 +183,7 @@ const ProductListingCardComponent = ({
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount ?? 0} />
+              <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
           </div>
           
@@ -237,11 +203,11 @@ const ProductListingCardComponent = ({
           </p>
           
           {/* Tags */}
-          {Array.isArray(listing.tags) && listing.tags.length > 0 && (
+          {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
-                <span
-                  key={idx}
+                <span 
+                  key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
                   {tag}
@@ -268,17 +234,13 @@ const ProductListingCardComponent = ({
           
           <div className="flex gap-2">
             <Button
-              variant="ghost"
-              size="icon"
-              onClick={handleSave}
-              aria-label="save-to-wishlist"
-              className="text-zion-slate-light hover:text-zion-cyan"
-            >
-              <Heart className="h-5 w-5" />
-            </Button>
-            <Link
-              to={`${detailBasePath}/${listing.id}`}
-              onClick={(e) => e.stopPropagation()}
+              size="sm"
+              className="bg-primary hover:bg-primary/80 text-primary-foreground"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent card click event
+                addToCart();
+              }}
+              disabled={loading}
             >
               {loading ? (
                 <>

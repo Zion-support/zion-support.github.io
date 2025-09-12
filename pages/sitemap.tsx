@@ -422,6 +422,4 @@ const SitemapPage: React.FC = () => {
       </div>
     </Layout>
   );
-};
-
-export default SitemapPage;
+}
