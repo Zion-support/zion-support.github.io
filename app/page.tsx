@@ -75,6 +75,7 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
 import AI2028ContentShowcase from '../components/AI2028ContentShowcase';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -102,6 +103,9 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY AI 2025 SHOWCASE */}
         <RevolutionaryAI2025Showcase />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
         {/* AI 2028 CONTENT PROMOTION BANNER */}
         <AI2028ContentPromotionBanner />
