@@ -14,6 +14,8 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -45,6 +47,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* ULTRA CONTENT PROMOTION BANNER */}
         <UltraContentPromotionBanner />
+        
+        {/* NEW 2026 Content Promotion Banner */}
+        <NewContentPromotionalBanner2026 />
         
         {/* Content Promotion Banner */}
         <NewContentPromotionBanner />
@@ -469,6 +474,9 @@ export default function HomePage() {
 
       {/* Featured Content Showcase */}
       <FeaturedContentShowcase />
+      
+      {/* NEW 2026 Content Showcase */}
+      <NewContentShowcase2026 />
 
       {/* NEW CONTENT SPOTLIGHT SECTION */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
