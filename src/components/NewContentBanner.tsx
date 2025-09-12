@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { X, Sparkles, Rocket, Lightbulb, Cpu } from 'lucide-react';
+import { X, Sparkles, Rocket, Lightbulb, Cpu, Brain, Target } from 'lucide-react';
 
 export const NewContentBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const newContentItems = [
     {
-      title: "Service Showcase",
-      description: "Explore our comprehensive portfolio of technology solutions",
-      link: "/service-showcase",
-      icon: <Rocket className="w-5 h-5" />,
-      color: "from-cyan-500 to-blue-500"
+      title: "AI 2026 Breakthroughs",
+      description: "Revolutionary AI innovations reshaping industries",
+      link: "/blog/ai-2026-revolutionary-breakthroughs-future",
+      icon: <Brain className="w-5 h-5" />,
+      color: "from-emerald-500 to-blue-500"
     },
     {
-      title: "Success Stories",
-      description: "Real results from real clients - see how we transform businesses",
-      link: "/case-studies",
-      icon: <Lightbulb className="w-5 h-5" />,
+      title: "Enterprise Success",
+      description: "$2.3B revenue impact case study - Fortune 500 transformation",
+      link: "/case-studies/ai-2026-global-enterprise-transformation-breakthrough",
+      icon: <Target className="w-5 h-5" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Innovation Lab",
-      description: "Explore breakthrough technologies in development",
-      link: "/innovation-lab",
+      title: "Tech Showcase 2026",
+      description: "Cutting-edge AI technologies and innovations",
+      link: "/ai-innovation-showcase-2026",
       icon: <Cpu className="w-5 h-5" />,
       color: "from-green-500 to-emerald-500"
     }
@@ -69,7 +69,7 @@ export const NewContentBanner = () => {
 
             <div className="flex items-center space-x-4">
               <Link
-                to="/service-showcase"
+                to="/ai-innovation-showcase-2026"
                 className="hidden sm:inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-all duration-200 text-sm font-semibold"
               >
                 Explore Now

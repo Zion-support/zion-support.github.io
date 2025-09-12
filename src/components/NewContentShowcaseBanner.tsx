@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 export const NewContentShowcaseBanner: React.FC = () => {
   const newContent = [
     {
-      title: "🚀 AI Services Comprehensive Guide 2026",
-      description: "Complete enterprise AI solutions with proven ROI",
-      url: "/ai-services-comprehensive-guide-2026",
+      title: "🚀 AI 2026 Revolutionary Breakthroughs",
+      description: "Quantum-enhanced neural networks and autonomous AI ecosystems",
+      url: "/blog/ai-2026-revolutionary-breakthroughs-future",
       isNew: true,
-      category: "AI & ML"
+      category: "AI Innovation"
     },
     {
-      title: "⚛️ Quantum Computing Solutions Showcase",
-      description: "Revolutionary quantum technologies for breakthrough results",
-      url: "/quantum-computing-solutions-showcase-2026", 
+      title: "🏆 $2.3B Enterprise Transformation",
+      description: "Fortune 500 success story with 500% ROI in 6 months",
+      url: "/case-studies/ai-2026-global-enterprise-transformation-breakthrough", 
       isNew: true,
-      category: "Quantum"
+      category: "Case Study"
     },
     {
-      title: "🌟 Revolutionary Technology Showcase",
-      description: "Complete portfolio of cutting-edge tech solutions",
-      url: "/revolutionary-technology-showcase-2026",
+      title: "🌟 AI Innovation Showcase 2026",
+      description: "Cutting-edge technologies transforming industries worldwide",
+      url: "/ai-innovation-showcase-2026",
       isNew: true,
-      category: "All Tech"
+      category: "Tech Showcase"
     }
   ];
 
@@ -68,7 +68,7 @@ export const NewContentShowcaseBanner: React.FC = () => {
 
         <div className="text-center">
           <Link
-            to="/revolutionary-technology-showcase-2026"
+            to="/ai-innovation-showcase-2026"
             className="inline-flex items-center bg-gradient-to-r from-cyan-400 to-pink-400 text-black px-8 py-4 rounded-xl font-bold hover:from-cyan-300 hover:to-pink-300 transition-all duration-300 text-lg shadow-2xl transform hover:scale-105"
           >
             🌟 Explore All New Content
