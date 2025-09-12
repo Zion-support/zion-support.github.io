@@ -1,18 +1,21 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Agent Safety & Guardrails 2025: Reliable Agentic Systems in Production',
+  description: 'Complete guide to implementing safety guardrails for AI agents in production. Learn best practices for monitoring, validation, and risk mitigation in agentic AI systems.',
+  keywords: 'AI agent safety, AI guardrails, agentic AI, AI monitoring, AI risk management, AI governance',
+  openGraph: {
+    title: 'Agent Safety & Guardrails 2025: Reliable Agentic Systems in Production',
+    description: 'Complete guide to implementing safety guardrails for AI agents in production.',
+    type: 'article',
+  },
+};
 
 export default function AgentSafetyGuardrails2025() {
   return (
-    <>
-      <SEO
-        title="Agent Safety & Guardrails 2025: Reliable Agentic Systems in Production"
-        description="Complete guide to implementing safety guardrails for AI agents in production. Learn best practices for monitoring, validation, and risk mitigation in agentic AI systems."
-        keywords="AI agent safety, AI guardrails, agentic AI, AI monitoring, AI risk management, AI governance"
-        url="/blog/agent-safety-guardrails-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="mb-8">
@@ -472,6 +475,5 @@ export default function AgentSafetyGuardrails2025() {
           </article>
         </div>
       </div>
-    </>
   );
 }
