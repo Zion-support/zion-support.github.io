@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '27',
+      title: 'Model Routing Strategies 2025: Cost, Latency, and Quality',
+      description: 'Production patterns for multi-model routing with budgets, SLAs, and caching.',
+      href: '/blog/ai-2025-model-routing-strategies',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: '26',
+      title: 'Agent Evaluation Playbook 2025: Methods and Automation',
+      description: 'Evaluate agents with golden tasks, tool correctness, safety, and CI/CD gates.',
+      href: '/blog/ai-2025-agent-evaluation-playbook',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',

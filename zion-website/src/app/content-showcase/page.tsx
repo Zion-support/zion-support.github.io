@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Model Routing Strategies 2025: Cost, Latency, and Quality",
+      description: "Production patterns for multi-model routing with budgets, SLAs, and caching.",
+      href: "/blog/ai-2025-model-routing-strategies",
+      icon: "🧭",
+      category: "Optimization",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agent Evaluation Playbook 2025: Methods and Automation",
+      description: "Evaluate agents with golden tasks, tool correctness, safety, and CI/CD gates.",
+      href: "/blog/ai-2025-agent-evaluation-playbook",
+      icon: "🧪",
+      category: "AI Safety",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Privacy-Preserving AI in Production (2025)",
       description: "Practical patterns: differential privacy, federated learning, and privacy-by-design controls.",
       href: "/blog/ai-2025-privacy-preserving-ai",

@@ -10,6 +10,28 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
+    slug: "zion-os-1-6-cost-aware-routing",
+    emoji: "🧭",
+    title: "Zion OS 1.6: Cost-Aware Model Routing & Caching",
+    excerpt:
+      "Dynamic multi-model routing with budget guardrails, SLAs, and response caching.",
+    date: "2025-09-12",
+    gradient: "from-indigo-600 to-purple-600",
+    content:
+      "Zion OS 1.6 introduces a policy-driven routing layer that balances quality, latency, and cost. It adds response and embedding caches, shadow traffic, and circuit breakers for reliable production ops.",
+  },
+  {
+    slug: "zion-os-1-6-agent-evaluation-playbook",
+    emoji: "🧪",
+    title: "Zion OS 1.6: Agent Evaluation Playbook Built-In",
+    excerpt:
+      "Golden tasks, red teaming harnesses, and policy-as-code gates integrated into CI/CD.",
+    date: "2025-09-12",
+    gradient: "from-fuchsia-600 to-indigo-600",
+    content:
+      "This release adds first-class agent evaluation: task success scoring, tool correctness checks, and policy gates wired into pipelines with trace-level observability.",
+  },
+  {
     slug: "zion-os-1-5-realtime-agents",
     emoji: "🛰️",
     title: "Zion OS 1.5: Real-Time Agents with First-Class Observability",
