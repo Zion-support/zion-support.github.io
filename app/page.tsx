@@ -77,6 +77,143 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Content Promotion Banner */}
+      <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+              <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
+            </h2>
+            <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
+              Discover our latest breakthrough content: Quantum Computing AI, Neural Interface Revolution, 
+              Space Exploration Breakthroughs, plus comprehensive implementation guides and case studies. 
+              Get expert insights on the technologies transforming 2025 and beyond.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/content-showcase"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+              >
+                🎯 Explore All New Content
+              </Link>
+              <Link
+                href="/blog/ai-2025-quantum-computing-breakthrough"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+              >
+                🧠 Read Quantum AI Article
+              </Link>
+              <Link
+                href="/resources/ai-2025-implementation-master-guide"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+              >
+                📚 Download Master Guide
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Content Showcase - Prominent */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+        <div className='absolute inset-0 bg-black opacity-10'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>🔥 JUST PUBLISHED - FEBRUARY 2025</span>
+            </div>
+            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+              🚀 Revolutionary AI Content Just Dropped
+            </h2>
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Discover our latest breakthrough content: Quantum Computing AI, Neural Interface Revolution, 
+              Space Exploration Breakthroughs, and comprehensive implementation guides. Expert insights 
+              to accelerate your success in 2025.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/content-showcase'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                🎯 Explore All New Content
+              </Link>
+              <Link
+                href='/blog'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📚 Read Latest Articles
+              </Link>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <Link href='/blog/ai-2025-quantum-computing-breakthrough' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚛️</div>
+                <h3 className='text-lg font-semibold mb-2'>Quantum Computing AI Breakthrough</h3>
+                <p className='text-sm opacity-90 mb-3'>Revolutionary quantum AI technologies reshaping industries</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>28 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/blog/ai-2025-neural-interface-revolution' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🧠</div>
+                <h3 className='text-lg font-semibold mb-2'>Neural Interface Revolution</h3>
+                <p className='text-sm opacity-90 mb-3'>Brain-computer integration transforming human-AI interaction</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>32 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/case-studies/ai-space-exploration-breakthrough-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                <h3 className='text-lg font-semibold mb-2'>Space Exploration Breakthrough</h3>
+                <p className='text-sm opacity-90 mb-3'>$2B mission success with AI-powered autonomous spacecraft</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            <Link href='/resources/ai-2025-implementation-master-guide' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
+                <p className='text-sm opacity-90 mb-3'>200+ page comprehensive guide with templates and checklists</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>Free Download</span>
+                  <span className='mx-2'>•</span>
+                  <span>200+ Pages</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className='text-center mt-8'>
+            <Link
+              href='/content-showcase'
+              className='bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
+            >
+              View All New Content
+            </Link>
+            <Link
+              href='/resources'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-block'
+            >
+              Download Free Resources
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
