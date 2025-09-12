@@ -319,6 +319,71 @@ export default function HomePage() {
         description="Discover our latest breakthrough content: AI Advanced Automation, Cybersecurity Threats, Enterprise Success Stories, and comprehensive implementation guides. Expert insights to accelerate your success in 2025."
         content={[
           {
+            title: "AI 2025: Breakthrough Innovations That Will Transform Everything",
+            description: "Discover the revolutionary AI innovations of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the technologies defining the future.",
+            href: "/blog/ai-2025-breakthrough-innovations",
+            icon: "🚀",
+            category: "AI Innovations",
+            readTime: "25 min read",
+            isNew: true
+          },
+          {
+            title: "AI Trends 2025: 15 Predictions That Will Shape the Future",
+            description: "Expert insights on the most important AI trends and predictions for 2025. From AGI breakthroughs to quantum AI, discover what's coming next.",
+            href: "/blog/ai-2025-trends-predictions",
+            icon: "🔮",
+            category: "AI Predictions",
+            readTime: "28 min read",
+            isNew: true
+          },
+          {
+            title: "$200M Manufacturing Success: Autonomous AI Systems Case Study",
+            description: "How a Fortune 500 manufacturing company achieved $200M in annual savings using autonomous AI systems across 15 facilities.",
+            href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+            icon: "💰",
+            category: "Case Study",
+            type: "Success Story",
+            isNew: true
+          },
+          {
+            title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+            description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of proven frameworks, templates, and strategies.",
+            href: "/resources/ai-implementation-master-guide-2026",
+            icon: "📚",
+            category: "Master Guide",
+            type: "Free Download",
+            isNew: true
+          },
+          {
+            title: "AI Workforce Transformation 2025: Complete Reskilling Guide",
+            description: "Learn how to prepare your workforce for the AI era with comprehensive reskilling strategies and implementation frameworks.",
+            href: "/blog/ai-workforce-transformation-2025",
+            icon: "👥",
+            category: "Workforce AI",
+            readTime: "18 min read",
+            isTrending: true
+          },
+          {
+            title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly Systems",
+            description: "Discover how AI is driving sustainability initiatives and reducing carbon footprints with smart energy management solutions.",
+            href: "/blog/ai-sustainability-green-tech-2025",
+            icon: "🌱",
+            category: "Sustainability",
+            readTime: "20 min read",
+            isNew: true
+          }
+        ]}
+        variant="featured"
+        maxItems={6}
+      />
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner
+        title="🚀 Revolutionary AI Content Drop"
+        subtitle="✨ JUST PUBLISHED - JANUARY 2025"
+        description="Discover our latest breakthrough content: AI Advanced Automation, Cybersecurity Threats, Enterprise Success Stories, and comprehensive implementation guides. Expert insights to accelerate your success in 2025."
+        content={[
+          {
             title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
             description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
             href: "/blog/ai-2025-advanced-automation",

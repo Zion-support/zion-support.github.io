@@ -6,272 +6,271 @@ interface ContentItem {
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'resource' | 'service';
+  icon: string;
   category: string;
   readTime?: string;
-  featured: boolean;
-  icon: string;
-  gradient: string;
+  type?: string;
+  isNew?: boolean;
+  isTrending?: boolean;
+  featured?: boolean;
 }
 
 const DynamicContentCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const contentItems: ContentItem[] = [
     {
       id: '1',
-      title: 'AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future',
-      description: 'Discover the most groundbreaking AI innovations of 2025. From AGI breakthroughs to quantum AI, explore technologies that are reshaping industries.',
+      title: 'AI 2025: Breakthrough Innovations That Will Transform Everything',
+      description: 'Discover the revolutionary AI innovations of 2025 that are reshaping industries. From quantum AI to autonomous systems, explore the technologies defining the future.',
       href: '/blog/ai-2025-breakthrough-innovations',
-      type: 'blog',
+      icon: '🚀',
       category: 'AI Innovations',
       readTime: '25 min read',
-      featured: true,
-      icon: '🚀',
-      gradient: 'from-purple-500 to-pink-500'
+      isNew: true,
+      featured: true
     },
     {
       id: '2',
-      title: 'AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems',
-      description: 'Discover how AI is driving sustainability initiatives and reducing carbon footprints. Learn about smart energy management and climate solutions.',
-      href: '/blog/ai-sustainability-green-tech-2025',
-      type: 'blog',
-      category: 'Sustainability',
-      readTime: '20 min read',
-      featured: true,
-      icon: '🌱',
-      gradient: 'from-green-500 to-emerald-500'
+      title: 'AI Trends 2025: 15 Predictions That Will Shape the Future',
+      description: 'Expert insights on the most important AI trends and predictions for 2025. From AGI breakthroughs to quantum AI, discover what\'s coming next.',
+      href: '/blog/ai-2025-trends-predictions',
+      icon: '🔮',
+      category: 'AI Predictions',
+      readTime: '28 min read',
+      isNew: true,
+      featured: true
     },
     {
       id: '3',
-      title: 'AI Sustainability Transformation Success: 60% Energy Reduction & Carbon Neutrality',
-      description: 'Fortune 500 manufacturing company achieves 60% energy reduction and carbon neutrality through AI-powered sustainability initiatives.',
-      href: '/case-studies/ai-sustainability-transformation-2025',
-      type: 'case-study',
-      category: 'Case Study',
-      featured: true,
+      title: '$200M Manufacturing Success: Autonomous AI Systems Case Study',
+      description: 'How a Fortune 500 manufacturing company achieved $200M in annual savings using autonomous AI systems across 15 facilities.',
+      href: '/case-studies/ai-autonomous-manufacturing-success-2025',
       icon: '💰',
-      gradient: 'from-blue-500 to-cyan-500'
+      category: 'Case Study',
+      type: 'Success Story',
+      isNew: true,
+      featured: true
     },
     {
       id: '4',
       title: 'AI Implementation Master Guide 2026: Complete 200+ Page Resource',
-      description: 'Download our comprehensive AI Implementation Master Guide for 2026. Step-by-step instructions, templates, and best practices.',
+      description: 'Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of proven frameworks, templates, and strategies.',
       href: '/resources/ai-implementation-master-guide-2026',
-      type: 'resource',
-      category: 'Master Guide',
-      featured: true,
       icon: '📚',
-      gradient: 'from-indigo-500 to-purple-500'
+      category: 'Master Guide',
+      type: 'Free Download',
+      isNew: true,
+      featured: true
     },
     {
       id: '5',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
-      type: 'blog',
-      category: 'Enterprise AI',
+      title: 'AI Workforce Transformation 2025: Complete Reskilling Guide',
+      description: 'Learn how to prepare your workforce for the AI era with comprehensive reskilling strategies and implementation frameworks.',
+      href: '/blog/ai-workforce-transformation-2025',
+      icon: '👥',
+      category: 'Workforce AI',
       readTime: '18 min read',
-      featured: true,
-      icon: '🏢',
-      gradient: 'from-orange-500 to-red-500'
+      isTrending: true,
+      featured: true
     },
     {
       id: '6',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
-      type: 'blog',
-      category: 'Healthcare AI',
-      readTime: '22 min read',
-      featured: true,
-      icon: '🏥',
-      gradient: 'from-teal-500 to-cyan-500'
+      title: 'AI Sustainability & Green Tech 2025: Building Eco-Friendly Systems',
+      description: 'Discover how AI is driving sustainability initiatives and reducing carbon footprints with smart energy management solutions.',
+      href: '/blog/ai-sustainability-green-tech-2025',
+      icon: '🌱',
+      category: 'Sustainability',
+      readTime: '20 min read',
+      isNew: true,
+      featured: true
     }
   ];
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlay) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-    }, 6000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [contentItems.length, isAutoPlaying]);
+  }, [contentItems.length, isAutoPlay]);
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'New Article';
-      case 'case-study':
-        return 'Case Study';
-      case 'resource':
-        return 'Free Resource';
-      case 'service':
-        return 'Service';
-      default:
-        return 'Content';
-    }
+  const getBadgeColor = (item: ContentItem) => {
+    if (item.isNew) return 'bg-green-100 text-green-800';
+    if (item.isTrending) return 'bg-orange-100 text-orange-800';
+    return 'bg-blue-100 text-blue-800';
   };
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'bg-blue-100 text-blue-800';
-      case 'case-study':
-        return 'bg-green-100 text-green-800';
-      case 'resource':
-        return 'bg-purple-100 text-purple-800';
-      case 'service':
-        return 'bg-orange-100 text-orange-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
+  const getBadgeText = (item: ContentItem) => {
+    if (item.isNew) return 'NEW';
+    if (item.isTrending) return 'TRENDING';
+    return 'FEATURED';
   };
-
-  const currentItem = contentItems[currentIndex];
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-      </div>
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 FEATURED CONTENT</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Latest AI & Technology Insights
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Stay ahead with our latest articles, case studies, and resources covering the most 
+            important trends in AI, automation, and business transformation.
+          </p>
+        </div>
 
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-              <span className="text-sm font-medium">🔥 HOT CONTENT</span>
+        {/* Carousel Container */}
+        <div className="relative">
+          {/* Main Content Card */}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0">
+              {/* Content */}
+              <div className="p-8 lg:p-12">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-4xl">
+                    {contentItems[currentIndex].icon}
+                  </div>
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium ${getBadgeColor(contentItems[currentIndex])}`}>
+                    {getBadgeText(contentItems[currentIndex])}
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  {contentItems[currentIndex].title}
+                </h3>
+                
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  {contentItems[currentIndex].description}
+                </p>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                    {contentItems[currentIndex].category}
+                  </span>
+                  {contentItems[currentIndex].readTime && (
+                    <span className="text-gray-500 text-sm">
+                      {contentItems[currentIndex].readTime}
+                    </span>
+                  )}
+                  {contentItems[currentIndex].type && (
+                    <span className="text-gray-500 text-sm">
+                      • {contentItems[currentIndex].type}
+                    </span>
+                  )}
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href={contentItems[currentIndex].href}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                  >
+                    Read More
+                  </Link>
+                  <Link
+                    href="/content-showcase"
+                    className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
+                  >
+                    View All Content
+                  </Link>
+                </div>
+              </div>
+
+              {/* Visual Element */}
+              <div className="bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-8 lg:p-12">
+                <div className="text-8xl lg:text-9xl opacity-80">
+                  {contentItems[currentIndex].icon}
+                </div>
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Latest AI & Tech Insights
-            </h2>
-            <p className="text-lg opacity-90 max-w-3xl mx-auto">
-              Discover our newest breakthrough content, case studies, and resources. 
-              Fresh insights published weekly to keep you ahead of the curve.
-            </p>
           </div>
 
-          {/* Main Carousel */}
-          <div className="relative">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <span className="text-4xl">{currentItem.icon}</span>
-                  <div>
-                    <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(currentItem.type)}`}>
-                      {getTypeLabel(currentItem.type)}
-                    </span>
-                    <div className="text-sm opacity-75 mt-1">{currentItem.category}</div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                  className="text-white/75 hover:text-white transition-colors"
-                  title={isAutoPlaying ? 'Pause auto-play' : 'Resume auto-play'}
-                >
-                  {isAutoPlaying ? (
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-                    </svg>
-                  ) : (
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  )}
-                </button>
-              </div>
-
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                {currentItem.title}
-              </h3>
-              
-              <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                {currentItem.description}
-              </p>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <Link 
-                    href={currentItem.href}
-                    className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
-                  >
-                    {currentItem.type === 'resource' ? 'Download Free' : 'Read More'}
-                  </Link>
-                  <Link 
-                    href="/content-showcase"
-                    className="text-white hover:text-indigo-200 transition-colors"
-                  >
-                    View All Content →
-                  </Link>
-                </div>
-                {currentItem.readTime && (
-                  <div className="text-sm opacity-75">
-                    {currentItem.readTime}
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center space-x-2 mb-6">
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-between mt-8">
+            <div className="flex space-x-2">
               {contentItems.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => {
+                    setCurrentIndex(index);
+                    setIsAutoPlay(false);
+                  }}
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentIndex 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white/50 hover:bg-white/75'
+                      ? 'bg-blue-600 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                 />
               ))}
             </div>
-
-            {/* Quick Preview Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {contentItems.map((item, index) => (
-                <button
-                  key={item.id}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`group p-4 rounded-lg transition-all ${
-                    index === currentIndex 
-                      ? 'bg-white bg-opacity-20' 
-                      : 'bg-white bg-opacity-5 hover:bg-opacity-10'
-                  }`}
-                >
-                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
-                  <div className="text-xs font-medium mb-1 line-clamp-2">
-                    {item.title.split(':')[0]}
-                  </div>
-                  <div className="text-xs opacity-75">
-                    {getTypeLabel(item.type)}
-                  </div>
-                </button>
-              ))}
+            
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setIsAutoPlay(!isAutoPlay)}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+                title={isAutoPlay ? 'Pause auto-play' : 'Resume auto-play'}
+              >
+                {isAutoPlay ? (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                  </svg>
+                )}
+              </button>
+              
+              <button
+                onClick={() => setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length)}
+                className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={() => setCurrentIndex((prev) => (prev + 1) % contentItems.length)}
+                className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
-        <div 
-          className="h-full bg-white transition-all duration-6000 ease-linear"
-          style={{ 
-            width: `${((currentIndex + 1) / contentItems.length) * 100}%`,
-            animationPlayState: isAutoPlaying ? 'running' : 'paused'
-          }}
-        />
+        {/* Quick Links */}
+        <div className="mt-12 text-center">
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+              📝 All Articles
+            </Link>
+            <Link href="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">
+              📊 Case Studies
+            </Link>
+            <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
+              📋 Resources
+            </Link>
+            <Link href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
+              🚀 Services
+            </Link>
+            <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
+              💬 Contact Us
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
