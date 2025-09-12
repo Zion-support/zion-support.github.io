@@ -92,8 +92,8 @@ function Header() {
                 <Link href="/ai-2026-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Technology Showcase
                 </Link>
-                <Link href="/ai-trends-2026-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  📈 Trends & Predictions
+                <Link href="/blog/ai-2026-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📈 Revolutionary Trends & Predictions
                 </Link>
                 <Link href="/resources/ai-2026-complete-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   📚 Master Implementation Guide
@@ -109,6 +109,9 @@ function Header() {
                 </Link>
                 <Link href="/blog/ai-2026-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🚀 Enterprise Automation Revolution
+                </Link>
+                <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🏢 Global Enterprise Success (800% ROI)
                 </Link>
                 <Link href="/case-studies/ai-2026-global-retail-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🏪 Global Retail Success (600% ROI)
