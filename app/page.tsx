@@ -48,6 +48,8 @@ import NewContentPromotionBanner2025 from '../components/NewContentPromotionBann
 import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
+import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -222,6 +224,9 @@ export default function HomePage() {
         
         {/* FUTURE TECH PREVIEW BANNER - NEW CONTENT */}
         <FutureTechPreviewBanner />
+        
+        {/* AI 2025 ULTIMATE CONTENT PROMOTION BANNER - NEW */}
+        <AI2025UltimateContentPromotionBanner />
         
         {/* NEW 2025 ENHANCED CONTENT - TOP PRIORITY */}
         <AIInnovationPromotionBanner2025 />
