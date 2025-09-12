@@ -1,11 +1,11 @@
-// @ts-nocheck
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, memo } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
@@ -26,7 +26,7 @@ const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
-export default function HomePage() {
+const HomePage = memo(function HomePage() {
   return (
     <ErrorBoundary>
       <SEO
@@ -36,9 +36,17 @@ export default function HomePage() {
         url="/"
       />
       
-      <div className='min-h-screen bg-white'>
+      <PerformanceOptimizer>
+        <AccessibilityEnhancer />
+        <PerformanceMonitor />
+        
+        <div className='min-h-screen bg-white' id="main-content">
         {/* Revolutionary Content Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
+        <section 
+          className="py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden"
+          role="banner"
+          aria-label="Latest content announcement"
+        >
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -56,13 +64,15 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
                   href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
+                  aria-label="Explore all new content and resources"
                 >
                   🎯 Explore All New Content
                 </Link>
                 <Link
                   href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
+                  aria-label="Read the latest breakthrough innovations article"
                 >
                   📖 Read Latest Article
                 </Link>
@@ -1173,8 +1183,7 @@ export default function HomePage() {
                   <h4 className='font-semibold'>AI Implementation Checklist</h4>
                   <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
                 </div>
-              </article>
-            </Link>
+              </div>
 
             <Link href='/blog/cloud-native-architecture-2025' className='group'>
               <article className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100'>
@@ -1473,6 +1482,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+        </div>
+      </PerformanceOptimizer>
+    </ErrorBoundary>
   );
-}
+});
+
+export default HomePage;
