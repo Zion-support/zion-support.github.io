@@ -25,6 +25,26 @@ export default function ContentShowcase() {
       featured: true
     },
     {
+      title: "Reinforcement Learning in Production: 2025 Patterns",
+      description: "Offline RL, simulators, safety constraints, and guardrails to ship RL safely.",
+      href: "/blog/ai-2025-reinforcement-learning-production-patterns",
+      icon: "🎯",
+      category: "Advanced AI",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Evaluating LLM Agents in 2025: Methods, Metrics, and Tooling",
+      description: "Task success, tool correctness, policy adherence, and automated pipelines for agent evaluation.",
+      href: "/blog/ai-2025-evaluation-llm-agents",
+      icon: "🧪",
+      category: "AI Safety",
+      readTime: "22 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Foundation Models Cost Optimization 2025",
       description: "Cut inference and training costs with quantization, distillation, caching, and smart routing.",
       href: "/blog/ai-2025-foundation-models-cost-optimization",

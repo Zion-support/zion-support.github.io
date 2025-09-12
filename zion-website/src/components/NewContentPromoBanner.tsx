@@ -45,6 +45,28 @@ const NewContentPromoBanner = ({
       category: 'Advanced AI'
     },
     {
+      id: '13',
+      title: 'Reinforcement Learning in Production: 2025 Patterns',
+      description: 'Offline RL, simulators, safety constraints, and guardrails to ship RL safely.',
+      href: '/blog/ai-2025-reinforcement-learning-production-patterns',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Advanced AI'
+    },
+    {
+      id: '14',
+      title: 'Evaluating LLM Agents in 2025: Methods and Metrics',
+      description: 'Task success, tool correctness, policy adherence, and automated pipelines.',
+      href: '/blog/ai-2025-evaluation-llm-agents',
+      type: 'blog',
+      featured: true,
+      readTime: '22 min read',
+      date: 'Sep 12, 2025',
+      category: 'AI Safety'
+    },
+    {
       id: '11',
       title: 'Trust & Safety Guardrails 2025: Practical Patterns',
       description: 'Design, evaluate, and enforce AI trust & safety guardrails with policy-as-code and runtime controls.',
