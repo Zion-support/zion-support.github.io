@@ -174,8 +174,14 @@ function Header() {
                 <Link href="/blog/ai-2026-revolutionary-breakthroughs-future" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 Revolutionary Breakthroughs
                 </Link>
-                <Link href="/blog/ai-2025-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🚀 Enterprise Automation Mastery (NEW)
+                <Link href="/blog/ai-2025-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏢 Enterprise Automation Mastery (NEW)
+                </Link>
+                <Link href="/case-studies/ai-enterprise-automation-success-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  🏆 Fortune 500 Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-enterprise-automation-checklist-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  📋 Implementation Checklist (NEW)
                 </Link>
                 <Link href="/blog/ai-2027-future-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 AI 2027 Future Trends (BREAKTHROUGH)

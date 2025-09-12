@@ -78,6 +78,7 @@ import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI202
 import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
 import Fortune500SuccessBanner2025 from '../components/Fortune500SuccessBanner2025';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 import AI2028ContentPromotionBanner from '../components/AI2028ContentPromotionBanner';
@@ -264,11 +265,17 @@ export default function HomePage() {
         <AI2032ContentShowcase />
         
 >>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
-        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
+        {/* ULTIMATE CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025UltimatePromotionBanner />
         
         {/* FORTUNE 500 SUCCESS BANNER 2025 */}
         <Fortune500SuccessBanner2025 />
+        
+        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
         
         {/* REVOLUTIONARY AI 2025 PROMOTION BANNER */}
         <RevolutionaryAI2025PromotionBanner />
