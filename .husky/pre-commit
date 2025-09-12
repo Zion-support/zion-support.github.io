@@ -1,36 +1,25 @@
 #!/usr/bin/env sh
-<<<<<<< HEAD
 
 echo "🔍 Running pre-commit checks..."
 
-# Temporarily disable TypeScript check due to many syntax errors in other files
-# echo "🔍 Running TypeScript type check..."
-# npm run type-check || {
-#     echo "❌ TypeScript type check failed. Please fix the issues before committing."
-#     exit 1
-# }
-
-# Run type checking (non-blocking)
-echo "🔍 Running TypeScript type check..."
-npm run type-check || {
-    echo "⚠️  TypeScript type check failed, but continuing..."
-}
-
-# Run build check (non-blocking)
-echo "🏗️ Running build check..."
-npm run build || {
-    echo "⚠️  Build failed, but continuing..."
-}
-
-# Check for uncommitted changes in package files
-if git diff --cached --name-only | grep -E "package\.json|package-lock\.json" > /dev/null; then
-    echo "📦 Package files changed, running npm install..."
-    npm install
+# Run lint-staged to format/lint staged files
+if [ -x "./node_modules/.bin/lint-staged" ]; then
+  npm run -s lint:staged || {
+    echo "❌ lint-staged failed. Please fix issues before committing."
+    exit 1
+  }
+else
+  echo "ℹ️  Skipping lint-staged (not installed). Run 'npm install' to enable."
 fi
 
-echo "✅ Pre-commit checks completed"
-=======
-. "$(dirname -- "$0")/_/husky.sh"
+# Skip type-check if tsc is not available locally
+if [ -x "./node_modules/.bin/tsc" ]; then
+  npm run -s type-check || {
+    echo "❌ TypeScript type check failed. Please fix issues before committing."
+    exit 1
+  }
+else
+  echo "ℹ️  Skipping type-check (tsc not found). Run 'npm install' to enable."
+fi
 
-npx --yes lint-staged
->>>>>>> origin/automation/changelog
+echo "✅ All pre-commit checks passed!"

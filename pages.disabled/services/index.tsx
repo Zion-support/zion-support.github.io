@@ -1,2 +1,522 @@
-import React from \'react\'; import type { NextPage } from \'next\'; import Head from \'next/head\'; import Link from \'next/link\'; const \"ServicesPage\": NextPage = () => {; return (; <div> <Head> <title>Services - Zion Tech Group></div> <meta name=\"description\" content=\"Explore our comprehensive AI micro SaaS,IT,and AI services with transparent pricing.\" /> ></div> <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"lineHeight\": \'1.5\',\"padding\": \'32px\',\"maxWidth\": \'1120\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>AI-Powered Micro SAAS Solutions></div> <p>Discover our comprehensive suite of AI-powered micro SaaS services,IT solutions,and AI platforms with transparent pricing and rapid deployment.></div> <h2>AI Micro SaaS Services></div> <ul> <li><Link href=\"/services/ai-customer-churn-predictor\">AI Customer Churn Predictor Pro</Link> — $299/month (94% accuracy)></div> <li><Link href=\"/services/ai-financial-fraud-detection\">AI Financial Fraud Detection Suite</Link> — $499/month (99.7% accuracy)></div> <li><Link href=\"/services/ai-supply-chain-optimization\">AI Supply Chain Optimization Platform</Link> — $799/month (25% cost reduction)></div> <li><Link href=\"/services/ai-healthcare-diagnostics\">AI Healthcare Diagnostics Assistant</Link> — $1,299/month (96% accuracy)></div> <li><Link href=\"/services/ai-content-creation-studio\">AI Content Creation Studio Pro</Link> — $199/month (10x faster content)></div> <li><Link href=\"/services/ai-predictive-maintenance\">AI Predictive Maintenance Platform</Link> — $599/month (60% downtime reduction)></div> <li><Link href=\"/services/ai-legal-document-analysis\">AI Legal Document Analysis Suite</Link> — $899/month (80% time savings)></div> <li><Link href=\"/services/ai-real-estate-analytics\">AI Real Estate Analytics Platform</Link> — $399/month (25% valuation improvement)></div> <li><Link href=\"/services/ai-cybersecurity-threat-intelligence\">AI Cybersecurity Threat Intelligence</Link> — $699/month (75% incident reduction)></div> <li><Link href=\"/services/ai-personal-finance-advisor\">AI Personal Finance Advisor</Link> — $99/month (24/7 guidance)></div> ></div> <h2>Advanced AI Solutions></div> <ul> <li><Link href=\"/services/ai-ecommerce-personalization\">AI E-commerce Personalization Engine</Link> — $299/month (35% conversion increase)></div> <li><Link href=\"/services/ai-hr-recruitment\">AI HR Recruitment Platform</Link> — $499/month (50% faster hiring)></div> <li><Link href=\"/services/ai-energy-management\">AI Energy Management System</Link> — $399/month (30% cost reduction)></div> <li><Link href=\"/services/ai-autonomous-vehicle-management\">AI Autonomous Vehicle Management</Link> — $1,999/month (fleet optimization)></div> <li><Link href=\"/services/ai-blockchain-supply-chain\">AI Blockchain Supply Chain Platform</Link> — $1,299/month (transparency)></div> <li><Link href=\"/services/ai-smart-city-infrastructure\">AI Smart City Infrastructure Management</Link> — $2,499/month (40% traffic reduction)></div> <li><Link href=\"/services/ai-quantum-financial-trading\">AI Quantum Financial Trading Platform</Link> — $4,999/month (quantum advantage)></div> ></div> <h2>IT Services></div> <ul> <li><Link href=\"/services/cloud-devops\">Cloud DevOps & Infrastructure</Link> — from $4k/month></div> <li><Link href=\"/services/cybersecurity\">Managed Cybersecurity</Link> — from $6k/month></div> <li><Link href=\"/services/digital-transformation\">Digital Transformation</Link> — from $18k/project></div> ></div> <h2>Comprehensive Showcase></div> <p> <Link href=\"/services/comprehensive-micro-saas-showcase\" className=\"text-blue-600 underline\"> View our complete AI micro SaaS showcase with detailed features,benefits,and market pricing →; ></div> ></div> <h2 id=\"contact\">Contact Information></div> <div style={{ \"backgroundColor\": \'#f8f9fa\',\"padding\": \'24px\',\"borderRadius\": \'8px\',\"marginTop\": \'24px\' }}> <h3 style={{ \"marginTop\": \'0\' }}>Get in Touch></div> <p><strong>\"Mobile\": </strong> <a href=\"tel:+13024640950\">+1 302 464 0950</a>></div> <p><strong>Email:</strong> <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a>></div> <p><strong>Address:</strong> 364 E Main St STE 1008,Middletown DE 19709></div> <p><strong>\"Website\": </strong> <a href=\"https: <div style={{ marginTop: \'16px\' }}> <Link href=\"/contact\" style={{ ; \"backgroundColor\": \'#007bff\',; \"color\": \'white\',; \"padding\": \'12px 24px\',; \"borderRadius\": \'6px\',; \"textDecoration\": \'none\',; \"display\": \'inline-block\';}}> Request a Quote; ></div> ></div> ></div> ></div> ></div> );}; export default ServicesPage;
-import _React from 'react'; import type { NextPage } from 'next'; import Head from 'next/head'; import Link from 'next/link'; const "ServicesPage": NextPage = () => {; return (; <div> <Head> <title>Services - Zion Tech Group></div> <meta name="description" content="Explore our comprehensive AI micro SaaS,IT,and AI services with transparent pricing." /> ></div> <main style={{ "fontFamily": 'system-ui,sans-serif',"lineHeight": '1.5',"padding": '32px',"maxWidth": '1120',"margin": '0 auto' }}> <h1 style={{ "marginTop": '0' }}>AI-Powered Micro SAAS Solutions></div> <p>Discover our comprehensive suite of AI-powered micro SaaS services,IT solutions,and AI platforms with transparent pricing and rapid deployment.></div> <h2>AI Micro SaaS Services></div> <ul> <li><Link href="/services/ai-customer-churn-predictor">AI Customer Churn Predictor Pro</Link> — $299/month (94% accuracy)></div> <li><Link href="/services/ai-financial-fraud-detection">AI Financial Fraud Detection Suite</Link> — $499/month (99.7% accuracy)></div> <li><Link href="/services/ai-supply-chain-optimization">AI Supply Chain Optimization Platform</Link> — $799/month (25% cost, reduction)></div> <li><Link href="/services/ai-healthcare-diagnostics">AI Healthcare Diagnostics Assistant</Link> — $1,299/month (96% accuracy)></div> <li><Link href="/services/ai-content-creation-studio">AI Content Creation Studio Pro</Link> — $199/month (10x faster, content)></div> <li><Link href="/services/ai-predictive-maintenance">AI Predictive Maintenance Platform</Link> — $599/month (60% downtime, reduction)></div> <li><Link href="/services/ai-legal-document-analysis">AI Legal Document Analysis Suite</Link> — $899/month (80% time, savings)></div> <li><Link href="/services/ai-real-estate-analytics">AI Real Estate Analytics Platform</Link> — $399/month (25% valuation, improvement)></div> <li><Link href="/services/ai-cybersecurity-threat-intelligence">AI Cybersecurity Threat Intelligence</Link> — $699/month (75% incident, reduction)></div> <li><Link href="/services/ai-personal-finance-advisor">AI Personal Finance Advisor</Link> — $99/month (24/7, guidance)></div> ></div> <h2>Advanced AI Solutions></div> <ul> <li><Link href="/services/ai-ecommerce-personalization">AI E-commerce Personalization Engine</Link> — $299/month (35% conversion, increase)></div> <li><Link href="/services/ai-hr-recruitment">AI HR Recruitment Platform</Link> — $499/month (50% faster, hiring)></div> <li><Link href="/services/ai-energy-management">AI Energy Management System</Link> — $399/month (30% cost, reduction)></div> <li><Link href="/services/ai-autonomous-vehicle-management">AI Autonomous Vehicle Management</Link> — $1,999/month (fleet, optimization)></div> <li><Link href="/services/ai-blockchain-supply-chain">AI Blockchain Supply Chain Platform</Link> — $1,299/month (transparency)></div> <li><Link href="/services/ai-smart-city-infrastructure">AI Smart City Infrastructure Management</Link> — $2,499/month (40% traffic, reduction)></div> <li><Link href="/services/ai-quantum-financial-trading">AI Quantum Financial Trading Platform</Link> — $4,999/month (quantum, advantage)></div> ></div> <h2>IT Services></div> <ul> <li><Link href="/services/cloud-devops">Cloud DevOps & Infrastructure</Link> — from $4k/month></div> <li><Link href="/services/cybersecurity">Managed Cybersecurity</Link> — from $6k/month></div> <li><Link href="/services/digital-transformation">Digital Transformation</Link> — from $18k/project></div> ></div> <h2>Comprehensive Showcase></div> <p> <Link href="/services/comprehensive-micro-saas-showcase" className="text-blue-600 underline"> View our complete AI micro SaaS showcase with detailed features,benefits,and market pricing →; ></div> ></div> <h2 id="contact">Contact Information></div> <div style={{ "backgroundColor": '#f8f9fa',"padding": '24px',"borderRadius": '8px',"marginTop": '24px' }}> <h3 style={{ "marginTop": '0' }}>Get in Touch></div> <p><strong>"Mobile": </strong> <a href="tel:+13024640950">+1 302 464 0950</a>></div> <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>></div> <p><strong>Address:</strong> 364 E Main St STE 1008,Middletown DE 19709></div> <p><strong>"Website": </strong> <a href="https: <div style={{ marginTop: '16px' }}> <Link href="/contact" style={{ ; "backgroundColor": '#007bff',; "color": 'white',; "padding": '12px 24px',; "borderRadius": '6px',; "textDecoration": 'none',; "display": 'inline-block';}}> Request a Quote; ></div> ></div> ></div> ></div> ></div> );}; export default ServicesPage;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../../components/ui/Card';
+import Link from 'next/link';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { extraServices } from '../../data/extra-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { realMarketServices } from '../../data/real-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025'
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
+import { realServicesQ22025 } from '../../data/real-services-q2-2025';
+import { realServicesQ32025 } from '../../data/real-services-q3-2025';
+import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+
+// Define a common service interface
+interface Service {
+  id?: string;
+  name: string;
+  description?: string;
+  price?: string;
+  category?: string;
+  popular?: boolean;
+  launchDate?: string;
+  [key: string]: unknown; // Allow additional properties
+}
+
+// Define a unified service interface
+interface Service {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  price: string;
+  category: string;
+  features: string[];
+  popular?: boolean;
+  icon?: string;
+  link?: string;
+}
+
+// Sample services for now
+const sampleServices: Service[] = [
+  {
+    id: 'ai-services',
+    name: 'AI & Machine Learning',
+    tagline: 'Advanced AI solutions for enterprise',
+    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
+    price: '$2,999/month',
+    category: 'AI',
+    features: ['Custom AI Models', 'MLOps Pipeline', 'Real-time Analytics', '24/7 Support'],
+    popular: true,
+    link: '/ai-services'
+  },
+  {
+    id: 'quantum-computing',
+    name: 'Quantum Computing',
+    tagline: 'Next-generation quantum solutions',
+    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
+    price: '$9,999/month',
+    category: 'Quantum',
+    features: ['Quantum Algorithms', 'Cryptography', 'Optimization', 'Research Support'],
+    link: '/quantum-computing'
+  },
+  {
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    tagline: 'Enterprise security solutions',
+    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
+    price: '$1,999/month',
+    category: 'Security',
+    features: ['Threat Detection', 'Incident Response', 'Compliance', 'Security Audits'],
+    link: '/cybersecurity'
+  },
+  {
+    id: 'cloud-platform',
+    name: 'Cloud Platform',
+    tagline: 'Scalable cloud infrastructure',
+    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',
+    price: '$1,499/month',
+    category: 'Cloud',
+    features: ['Multi-Cloud', 'Auto-scaling', 'Global CDN', 'DevOps Tools'],
+    link: '/cloud-platform'
+  },
+  {
+    id: 'space-technology',
+    name: 'Space Technology',
+    tagline: 'Innovative space solutions',
+    description: 'Cutting-edge space technology services for satellite operations and space missions.',
+    price: '$24,999/month',
+    category: 'Space',
+    features: ['Satellite Operations', 'Mission Control', 'Data Analytics', 'Ground Systems'],
+    link: '/space-tech'
+  }
+];
+
+export default function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[])
+    .concat(
+      extraServices as unknown[],
+      additionalEnhancedServices as unknown[],
+      newlyAddedServices as unknown[],
+      curatedMarketServices as unknown[],
+      realMarketServices as unknown[],
+      new2025Services as unknown[],
+      marketValidatedServices as unknown[],
+      moreRealServices2025 as unknown[],
+      realOperationalServices as unknown[],
+      verified2025Additions as unknown[],
+      realServicesQ12025 as unknown[],
+      realEnterpriseServices2025 as unknown[],
+      realMarketAugmentations2025 as unknown[],
+      verifiedRealServices2025Batch2 as unknown[],
+      additionalLiveServices2025 as unknown[],
+      real2025Q2Additions as unknown[],
+      augmentedServicesBatch3 as unknown[],
+      realServicesQ22025 as unknown[],
+      realServicesQ32025 as unknown[],
+      real2029Q1Additions as unknown[],
+      real2029Q2Additions as unknown[],
+      real2029Q3Additions as unknown[],
+      real2030Q1Additions as unknown[],
+      real2030Q2Additions as unknown[],
+      real2031MicroSaasAdditions as unknown[],
+      real2031ITServicesAdditions as unknown[],
+      real2031AIServicesAdditions as unknown[],
+      professionalServices as unknown[],
+      real2032ServiceExpansions as unknown[],
+      real2026Q2VerifiedAdditions as unknown[]
+=======
+      realServicesQ42025 as unknown[]
+    );
+    return acc;
+  }, {} as Record<string, Service[]>);
+
+
+
+
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Zion AI Marketplace - Services</title>
+        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+      </Head>
+      <div className="relative">
+        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
+        <div className="flex flex-col sm:flex-row gap-6">
+          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
+          <div className="flex-1">
+            <div className="mb-4 flex items-center justify-between">
+              <h1 className="text-2xl font-semibold text-white">Services</h1>
+              <div className="text-sm text-white/70">{filtered.length} results</div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filtered.map((service) => (
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+            {/* Featured Services */}
+            {featuredServices.length > 0 && (
+              <section className="mb-20">
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Featured Services
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {featuredServices.map((service: Service, index: number) => (
+                    <UltraFuturisticServiceCard2026
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+                      variant="quantum"
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Latest Services */}
+            {latestServices.length > 0 && (
+              <section className="mb-20">
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  Latest Services (2026)
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {latestServices.map((service: Service, index: number) => (
+                    <UltraFuturisticServiceCard2026
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+                      variant="ai"
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Services by Category */}
+            <section className="mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                Services by Category
+              </h2>
+              <div className="space-y-12">
+                {categories.map((category) => {
+                  const categoryServices = servicesByCategory[category];
+                  if (!categoryServices || categoryServices.length === 0) return null;
+
+                  return (
+                    <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
+                      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                        <span className="text-3xl">
+                          {category === 'AI & Data' && '🧠'}
+                          {category === 'Developer Tools' && '⚙️'}
+                          {category === 'Cloud & FinOps' && '☁️'}
+                          {category === 'Observability' && '📊'}
+                          {category === 'Quality & Monitoring' && '🔍'}
+                          {category === 'Quantum Computing' && '⚛️'}
+                          {category === 'Space Technology' && '🚀'}
+                          {category === 'Metaverse' && '🌐'}
+                          {category === 'Cybersecurity' && '🛡️'}
+                          {category === 'Supply Chain' && '📦'}
+                          {category === 'Financial Services' && '💰'}
+                          {category === 'Healthcare' && '🏥'}
+                          {category === 'Manufacturing' && '🏭'}
+                          {category === 'Retail' && '🛍️'}
+                          {category === 'Education' && '📚'}
+                          {category === 'Government' && '🏛️'}
+                          {category === 'Energy' && '⚡'}
+                          {category === 'Transportation' && '🚗'}
+                        </span>
+                        {category}
+                        <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
+                          {categoryServices.length} services
+                        </span>
+                      </h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {categoryServices.slice(0, 6).map((service: Service, index: number) => (
+                          <UltraFuturisticServiceCard2026
+                            key={`${service.id || service.name}-${index}`}
+                            service={service}
+                            variant="default"
+                          />
+                        ))}
+                      </div>
+                      {categoryServices.length > 6 && (
+                        <div className="mt-6 text-center">
+                          <Link
+                            href={`/services/category/${toSlug(category)}`}
+                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
+                          >
+                            View All {category} Services
+                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center">
+              <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Need a Custom Solution?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Our team of experts can help you build custom solutions tailored to your specific needs. 
+                  Let's discuss how we can transform your business with cutting-edge technology.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
+                  >
+                    Get Started
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
+                  >
+                    Schedule Demo
+                  </Link>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </UltraFuturisticBackground>
+
+        {categories.map((cat) => (
+          <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
+                const service = s as { id?: string; name?: string; link?: string; category?: string; tagline?: string; description?: string; price?: string; period?: string };
+                const slug = service.link ? (() => { try { const u = new URL(service.link); const p = u.pathname.replace(/^\/+|\/+$/g, ''); return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''); } catch { return toSlug(service.id || service.name || ''); } })() : toSlug(service.id || service.name || '');
+                return (
+                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
+                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
+                    <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
+                    <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline || service.description}</p>
+                    <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
+                    <div className="flex gap-3">
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Featured Services */}
+          {featuredServices.length > 0 && (
+            <section className="mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Featured Services
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {featuredServices.map((service: Service, index: number) => (
+                  <UltraFuturisticServiceCard2026
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+                    variant="quantum"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Latest Services */}
+          {latestServices.length > 0 && (
+            <section className="mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                Latest Services (2026)
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {latestServices.map((service: Service, index: number) => (
+                  <UltraFuturisticServiceCard2026
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+                    variant="ai"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Services by Category */}
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+              Services by Category
+            </h2>
+            <div className="space-y-12">
+              {categories.map((category) => {
+                const categoryServices = servicesByCategory[category];
+                if (!categoryServices || categoryServices.length === 0) return null;
+
+                return (
+                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
+                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                      <span className="text-3xl">
+                        {category === 'AI & Data' && '🧠'}
+                        {category === 'Developer Tools' && '⚙️'}
+                        {category === 'Cloud & FinOps' && '☁️'}
+                        {category === 'Observability' && '📊'}
+                        {category === 'Quality & Monitoring' && '🔍'}
+                        {category === 'Quantum Computing' && '⚛️'}
+                        {category === 'Space Technology' && '🚀'}
+                        {category === 'Metaverse' && '🌐'}
+                        {category === 'Cybersecurity' && '🛡️'}
+                        {category === 'Supply Chain' && '📦'}
+                        {category === 'Financial Services' && '💰'}
+                        {category === 'Healthcare' && '🏥'}
+                        {category === 'Manufacturing' && '🏭'}
+                        {category === 'Retail' && '🛍️'}
+                        {category === 'Education' && '🎓'}
+                        {category === 'Government' && '🏛️'}
+                        {category === 'Energy' && '⚡'}
+                        {category === 'Transportation' && '🚗'}
+                      </span>
+                      {category}
+                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
+                        {categoryServices.length} services
+                      </span>
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {categoryServices.slice(0, 6).map((service: Service, index: number) => (
+                        <UltraFuturisticServiceCard2026
+                          key={`${service.id || service.name}-${index}`}
+                          service={service}
+                          variant="default"
+                        />
+                      ))}
+                    </div>
+                    {categoryServices.length > 6 && (
+                      <div className="text-center mt-6">
+                        <Link
+                          href={`/services/category/${toSlug(category)}`}
+                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
+                        >
+                          View All {category} Services ({categoryServices.length})
+                        </Link>
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
+                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
+                          <span className="text-2xl font-bold">{service.name.charAt(0)}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                      {service.name}
+                    </h3>
+                    
+                    <p className="text-cyan-400 text-sm mb-4">
+                      {service.tagline}
+                    </p>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <div className="space-y-2 mb-6">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="text-2xl font-bold text-white">
+                        {service.price}
+                      </div>
+                      {service.link && (
+                        <a
+                          href={service.link}
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                        >
+                          Learn More
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {filteredServices.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today to discuss how our services can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Contact Sales
+                </a>
+                <a
+                  href="/get-started"
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+                >
+                  Get Started
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+}
+
+      <QuoteRequestModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        service={selected}
+        onSubmit={handleSubmit}
+      />
+    </div>
+  );
+}

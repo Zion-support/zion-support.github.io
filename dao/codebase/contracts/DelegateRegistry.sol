@@ -1,27 +1,23 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.24;
 
-/// @title DelegateRegistry
-/// @notice Allows token holders to delegate voting power to another address.
 contract DelegateRegistry {
-    mapping(address => address) public delegates;
+    // scope => delegator => delegatee
+    mapping(bytes32 => mapping(address => address)) private _delegates;
 
-    event Delegated(address indexed delegator, address indexed delegate);
+    event Delegated(bytes32 indexed scope, address indexed delegator, address indexed delegatee);
 
-    /// @notice delegate voting power to another address
-    function delegate(address to) external {
-        delegates[msg.sender] = to;
-        emit Delegated(msg.sender, to);
+    function setDelegate(bytes32 scope, address delegatee) external {
+        _delegates[scope][msg.sender] = delegatee;
+        emit Delegated(scope, msg.sender, delegatee);
     }
 
-    /// @notice clear delegation
-    function clearDelegate() external {
-        delegates[msg.sender] = address(0);
-        emit Delegated(msg.sender, address(0));
+    function clearDelegate(bytes32 scope) external {
+        _delegates[scope][msg.sender] = address(0);
+        emit Delegated(scope, msg.sender, address(0));
     }
 
-    /// @notice get delegate for an address
-    function getDelegate(address owner) external view returns (address) {
-        return delegates[owner];
+    function getDelegate(bytes32 scope, address delegator) external view returns (address) {
+        return _delegates[scope][delegator];
     }
 }

@@ -1,7 +1,0 @@
-/* Minimal baseline styles to unblock build */
-html, body, #root {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-

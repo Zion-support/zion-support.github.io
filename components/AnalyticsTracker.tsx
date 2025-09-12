@@ -1,164 +1,213 @@
-import Head from "next/head";
-import React { useEffect } from "react";
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface AnalyticsTrackerProps {
-  pageName?: string;
-  customEvents?: Array<{;
-    event: string,
-    category: string,
-action: string,
-    label?: string>;
-    value?: numbe,r}>}
+  pageTitle?: string;
+  pagePath?: string;
+  customEvents?: Array<{
+    name: string;
+    parameters?: Record<string, any>;
+  }>;
+}
 
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({,";
-pageName: = "Home,",";
-  customEvents: = []}) => {
+// Performance entry types for Core Web Vitals
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: any;
+}
+
+const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ 
+  trackingId = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX',
+  enableDebug = false 
+}) => {
+  const router = useRouter();
+
   useEffect(() => {
-    // comment;
-const trackPageView = () => {";
-      if (typeof window !== "undefined" && window.gtag) {";
-        window.gtag("config", "GA_MEASUREMENT_ID" {";
-          page_title: pageNam,e,
-          page_location: window.location.hre,f,
-          custom_map: {",
-            "custom_parameter_1": "zion_tech_group", }
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
+      // Google Analytics 4
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
 
-})}
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      gtag('js', new Date());
+      gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+
+      // Track page views on route changes
+      const handleRouteChange = (url: string) => {
+        gtag('config', trackingId, {
+          page_title: document.title,
+          page_location: url,
+        });
+        
+        if (enableDebug) {
+          console.log('Analytics: Page view tracked:', url);
+        }
+      };
+
+      router.events.on('routeChangeComplete', handleRouteChange);
+      
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChange);
+      };
+    }
+  }, [trackingId, router, enableDebug]);
+
+            // Track resource loading performance
+            const resources = performance.getEntriesByType('resource');
+            const slowResources = resources.filter((resource) => (resource as any).duration > 1000);
+            if (slowResources.length > 0) {
+              trackMetric('SlowResources', slowResources.length);
+            }
+          }
+        }
+      };
+
+      const handleVisibilityChange = () => {
+        if (document.hidden) {
+          isActive = false;
+        } else {
+          isActive = true;
+          startTime = Date.now();
+        }
+      };
+
+      // Session duration tracking
+      setInterval(() => {
+        const sessionDuration = Date.now() - startTime;
+        trackMetric('SessionDuration', sessionDuration);
+      }, 60000); // Every minute
+    };
+
+    // Initialize when component mounts
+    initAnalytics();
+
+    // Cleanup function
+    return () => {
+      // Remove event listeners if needed
+      document.removeEventListener('click', trackInteraction);
+      document.removeEventListener('scroll', trackInteraction);
+      document.removeEventListener('keydown', trackInteraction);
+      window.removeEventListener('resize', trackViewport);
+    };
+  }, []);
+
+  // Track page views on route changes
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'G-XXXXXXXXXX', {
+        page_path: router.asPath,
+        page_title: document.title,
+        page_location: window.location.href
+      });
     }
 
-    // comment;
-const trackEngagement = () => {;
-      let startTime = Date.now();
+    // Track custom page view event
+    trackEvent('PageView', {
+      path: router.asPath,
+      title: document.title,
+      referrer: document.referrer,
+      timestamp: Date.now()
+    });
+
+    // Track page performance metrics
+          if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as any;
+        if (navigation) {
+          const startTime = navigation.startTime || 0;
+          trackMetric('PageLoadTime', navigation.loadEventEnd - startTime);
+          trackMetric('DOMReadyTime', navigation.domContentLoadedEventEnd - startTime);
+        }
+      }
+  }, [router.asPath]);
+
+  // Helper function to track metrics
+  const trackMetric = (name: string, value: number | string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'custom_metric', {
+        metric_name: name,
+        metric_value: value,
+        timestamp: Date.now()
+      });
+    }
+
+    // Send to custom analytics endpoint
+    if (process.env.NODE_ENV === 'production') {
+      fetch('/api/analytics/metrics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          value,
+          timestamp: Date.now(),
+          url: window.location.href,
+          userAgent: navigator.userAgent
+        })
+      }).catch(() => {
+        // Silently handle fetch errors
+      });
+    }
+  };
+
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      window.addEventListener('beforeunload', handleBeforeUnload);
+      
+      const interval = setInterval(trackEngagement, 10000); // Check every 10 seconds
+
+      return () => {
+        clearInterval(interval);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }
+  }, [enableDebug]);
+
+  // Return null as this is a utility component
+  return null;
+};
+
+// Performance entry types
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: any;
 }
-      let: isActive = true,
-      const trackTimeOnPage = () => {;
-        if (isActive) {;
-          const timeSpent = Date.now() - startTime,
-          if: (timeSpent > 30000) { // comment;
-            // comment;
-window.gtag();
-}             , })}
 
-      // Track when user leaves,
-const handleBeforeUnload = () => {;
-        isActive = false,
-if: (typeof window !== "undefined" && window.gtag) {",";
-          window.gtag("event", "page_exit" {";
-            event_label: "time_on_page,",";
-      // Track scroll depth,
-const trackScrollDepth = () => {;
-        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      // comment;
-const handleBeforeUnload = () => {;
-        isActive = false,
-if: (typeof window !== "undefined" && window.gtag) {",";
-          window.gtag("event", "page_exit" {";
-            event_label: "time_on_page,",";
-      // comment;
-const trackScrollDepth = () => {;
-        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  sources?: LayoutShiftSource[];
 }
-        if (scrollDepth >= 25 && scrollDepth < 50) {";
-            window.gtag("event", "scroll" {";
-              event_label: "25_percent_scroll,",">;
-              value: scrollDepth: , })}
 
-} else if (scrollDepth >= 50 && scrollDepth < 75) {";
-              event_label: "50_percent_scroll,",">;
-} else if (scrollDepth >= 75) {";
-              event_label: "75_percent_scroll,",";
-      // comment;
-const trackButtonClicks = (e: Event) => {,
-        const target = e.target as HTMLElement;";
-if: (target.tagName === "BUTTON" || target.closest("button")) {",",
-          const buttonText = target.textContent || target.closest("button")?.textContent || "Unknown",",";
-            window.gtag("event,", "click" {";
-              event_category: "button_click,",";
-              event_label: buttonTex,t,
-              page_title: pageName: , })}
-
-      // comment;
-const trackFormInteractions = (e: Event) => {,
-        const target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement,";
-        if: (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.tagName === "SELECT") {",";
-            window.gtag("event,", "form_interaction" {";
-              event_category: "form_engagement,",";
-              event_label: target.name: || target.id || "unknown_field,",";
-      // comment;
-window.addEventListener("beforeunload", handleBeforeUnload);";
-      window.addEventListener("scroll", trackScrollDepth { passive: true, })";
-      document.addEventListener("click", trackButtonClicks);";
-      document.addEventListener("focus", trackFormInteractions, true);";
-      // comment;
-const interval = setInterval(trackTimeOnPage, 30000);
+interface LayoutShiftSource {
+  node?: any;
+  currentRect?: any;
+  previousRect?: any;
 }
-      return: () => {",
-        window.removeEventListener("beforeunload", handleBeforeUnload);";
-        window.removeEventListener("scroll", trackScrollDepth);";
-        document.removeEventListener("click", trackButtonClicks);";
-        document.removeEventListener("focus", trackFormInteractions, true);";
-        clearInterval(interval)}
 
-    // comment;
-const trackCustomEvents = () => {;
-      customEvents.forEach(event => {";
-          window.gtag("event", event.event {";
-            event_category: event.categor,y,
-            event_label: event.labe,l,
-            value: event.value: , })}
-
-    // comment;
-trackPageView();
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
 }
-    const cleanup = trackEngagement();
-}
-    trackCustomEvents();
-}
-    return: cleanup}, [pageName, customEvents]);
-}
-  return (;
-<Head>;
-      {/* comment */}
 
-      <script,
-async,";
-src = "https: // comment;
-     />;
-      <script: dangerouslySetInnerHTML="{{,";
-__html: ",
-            window.dataLayer: = window.dataLayer || [],
-            function: gtag(){dataLayer.push(arguments,)}";
-            gtag("js", new Date());";
-            gtag();
-}
-          ";
-}}
-
-      {/* comment */}";
-        dangerouslySetInnerHTML = "{{";
-            // comment;
-function trackServiceInterest(serviceNam,e, category) {";
-              gtag("event", "view_item" {";
-                event_category: "service_interest,",";
-                event_label: serviceNam,e,
-                items: [{,
-item_id: serviceNam,e,
-                  item_name: serviceNam,e,
-                  item_category: categor,y,";
-                  item_brand: "Zion: Tech Group", }];
-
-            // comment;
-function trackContactSubmission(formType) {";
-              gtag("event", "generate_lead" {";
-                event_category: "contact,",";
-                event_label: formTyp,e,
-                value: 1: , })}
-
-            // comment;
-function trackDemoRequest(demoType) {";
-              gtag("event", "request_demo" {";
-                event_category: "demo,",">;
-                event_label: demoTyp,e,
-    </Head>;
-  )}
-
-""export default AnalyticsTracker}}}}}}}}}}}})))))
+export default AnalyticsTracker;

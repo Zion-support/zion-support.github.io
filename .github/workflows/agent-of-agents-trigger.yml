@@ -1,33 +1,43 @@
-name: agent-of-agents-trigger
-'on':
-  workflow_dispatch: {}
+name: Agent of Agents Trigger
+
+on:
   schedule:
-    - cron: 0 */2 * * *
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}
+
 permissions:
   contents: write
-  actions: read
-  pull-requests: write
+
 concurrency:
-  group: workflow-${{ github.ref }}
+  group: agent-of-agents-trigger
   cancel-in-progress: false
+
 jobs:
-  main:
-    name: Main Job
+  run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    env:
+      NETLIFY_BASE_URL: ${{ secrets.NETLIFY_BASE_URL }}
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          persist-credentials: true
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: npm
+          cache: 'npm'
+
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
+        run: npm ci
+
+      - name: Trigger agent-of-agents (if base URL provided)
+        if: ${{ env.NETLIFY_BASE_URL }}
         run: |
-          echo "✅ Workflow completed successfully"
-          
+          echo "Triggering $NETLIFY_BASE_URL/.netlify/functions/agent-of-agents"
+          curl -sSfL --connect-timeout 10 --max-time 20 "$NETLIFY_BASE_URL/.netlify/functions/agent-of-agents" || true
+
+      - name: "Fallback: Trigger via manifest fanout"
+        if: ${{ !env.NETLIFY_BASE_URL }}
+        run: npm run netlify:trigger -- --only agent-of-agents --timeout 20000

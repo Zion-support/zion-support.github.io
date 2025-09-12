@@ -1,1 +1,0 @@
-export const performance = { init: function() { } } export default performance;

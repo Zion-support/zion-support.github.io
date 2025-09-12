@@ -6,41 +6,46 @@ const Tracing = require('@sentry/tracing');
 let tracer;
 try {
   // Check if we're in a CI/build environment where native modules might not be available
-  const isCI = process.env.CI === 'true' || process.env.NODE_ENV === 'production' && process.env.NETLIFY === 'true';
+  const isCI =
+    process.env.CI === 'true' ||
+    (process.env.NODE_ENV === 'production' && process.env.NETLIFY === 'true');
   const skipDatadog = process.env.SKIP_DATADOG === 'true' || isCI;
-  
+
   if (skipDatadog) {
     console.log('🚫 Datadog tracing disabled for CI/build environment');
     // Provide a mock tracer for CI environments
     tracer = {
       init: () => tracer,
       scope: () => ({
-        active: () => null
+        active: () => null,
       }),
-      trace: (name, fn) => fn ? fn() : Promise.resolve(),
+      trace: (name, fn) => (fn ? fn() : Promise.resolve()),
       setUser: () => {},
       addTags: () => {},
       // Add other commonly used methods as no-ops
       wrap: (name, fn) => fn,
-      plugin: () => tracer
+      plugin: () => tracer,
     };
   } else {
     tracer = require('dd-trace').init();
     console.log('✅ Datadog tracing initialized');
   }
 } catch (error) {
-  console.warn('⚠️ Failed to initialize dd-trace, using mock implementation:', error.message);
+  console.warn(
+    '⚠️ Failed to initialize dd-trace, using mock implementation:',
+    error.message
+  );
   // Fallback mock tracer
   tracer = {
     init: () => tracer,
     scope: () => ({
-      active: () => null
+      active: () => null,
     }),
-    trace: (name, fn) => fn ? fn() : Promise.resolve(),
+    trace: (name, fn) => (fn ? fn() : Promise.resolve()),
     setUser: () => {},
     addTags: () => {},
     wrap: (name, fn) => fn,
-    plugin: () => tracer
+    plugin: () => tracer,
   };
 }
 
@@ -108,13 +113,39 @@ app.get('/health', (req, res) => {
 });
 
 app.post('/api/codex/suggest-fix', (req, res) => {
-  const { filePath, errorLog, route } = req.body; // Added filePath and errorLog
+  let { filePath, errorLog, route } = req.body; // Added filePath and errorLog
+
+  // -------------------------------------------------------------------------
+  // Input validation & security
+  // -------------------------------------------------------------------------
+  // 1. Basic sanity check – we only allow relative paths that stay **inside**
+  //    the project directory to prevent path-traversal ("../../etc/passwd").
+  // 2. Restrict to a known subset of folders where source files live to avoid
+  //    arbitrary file references. Adjust `ALLOWED_PREFIXES` if your layout
+  //    changes.
+  const ALLOWED_PREFIXES = ['src/', 'pages/', 'server/', 'backend/', 'public_api/'];
+
+  if (filePath) {
+    const normalizedPath = path.posix.normalize(filePath).replace(/^\/+/, ''); // Remove leading slash
+
+    const isTraversal = normalizedPath.includes('..');
+    const hasAllowedPrefix = ALLOWED_PREFIXES.some((prefix) => normalizedPath.startsWith(prefix));
+
+    if (isTraversal || !hasAllowedPrefix) {
+      return res.status(400).json({ error: 'Invalid file path provided.' });
+    }
+
+    // Use the sanitized path for downstream logic
+    filePath = normalizedPath;
+  }
 
   if (!filePath && !route) {
     // We need at least some context, filePath is preferred for targeted fixes.
     // Route could be a fallback if we want to analyze a general page issue,
     // but the current codex-pipeline.yaml is more file-focused with ESLint.
-    return res.status(400).json({ error: 'Bad Request: filePath or route is required.' });
+    return res
+      .status(400)
+      .json({ error: 'Bad Request: filePath or route is required.' });
   }
 
   // Basic sanitization/validation for filePath if needed (e.g., prevent directory traversal)
@@ -143,19 +174,30 @@ app.post('/api/codex/suggest-fix', (req, res) => {
   }
 
   // Log the action with more details
-  console.log(`Executing Codex command: ${command} with context - File: ${filePath || 'N/A'}, Route: ${route || 'N/A'}, ErrorLog: ${errorLog ? 'Provided' : 'N/A'}`);
+  console.log(
+    `Executing Codex command: ${command} with context - File: ${filePath || 'N/A'}, Route: ${route || 'N/A'}, ErrorLog: ${errorLog ? 'Provided' : 'N/A'}`
+  );
 
-  exec(command, { env: envVars }, (error, stdout, stderr) => { // Pass envVars here
+  exec(command, { env: envVars }, (error, stdout, stderr) => {
+    // Pass envVars here
     if (error) {
       console.error(`Codex execution error: ${error.message}`);
-      logAndAlert(`Codex execution failed. File: ${filePath || route || 'N/A'}. Error: ${error.message}`);
-      return res.status(500).json({ error: 'Codex fix process failed to start or execute.', details: error.message });
+      logAndAlert(
+        `Codex execution failed. File: ${filePath || route || 'N/A'}. Error: ${error.message}`
+      );
+      return res.status(500).json({
+        error: 'Codex fix process failed to start or execute.',
+        details: error.message,
+      });
     }
     if (stderr) {
       console.warn(`Codex execution stderr: ${stderr}`);
     }
     console.log(`Codex execution stdout: ${stdout}`);
-    res.status(200).json({ message: 'Codex fix process triggered successfully.', output: stdout });
+    res.status(200).json({
+      message: 'Codex fix process triggered successfully.',
+      output: stdout,
+    });
   });
 });
 
@@ -193,8 +235,11 @@ app.use((err, req, res, next) => {
 });
 
 // Global unhandled error logging
-process.on('unhandledRejection', (reason) => {
-  const message = reason instanceof Error ? reason.stack || reason.message : JSON.stringify(reason);
+process.on('unhandledRejection', reason => {
+  const message =
+    reason instanceof Error
+      ? reason.stack || reason.message
+      : JSON.stringify(reason);
   console.error('Unhandled Rejection:', message);
   logAndAlert(`Unhandled Rejection: ${message}`);
   logBug({
@@ -209,7 +254,7 @@ process.on('unhandledRejection', (reason) => {
   }
 });
 
-process.on('uncaughtException', (error) => {
+process.on('uncaughtException', error => {
   const message = error.stack || error.message;
   console.error('Uncaught Exception:', message);
   logAndAlert(`Uncaught Exception: ${message}`);

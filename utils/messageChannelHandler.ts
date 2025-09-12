@@ -1,9 +1,20 @@
-// Message channel handler for communication between components
+
 export const messageChannelHandler = {
-  send: (message: any) => {
+  sendMessage: (message: string) => {
     // Implementation for sending messages
-  },
-  receive: (callback: (message: any) => void) => {
+    console.log('Sending message: ', message);
+
+    // Implementation for sending messages
+
+
+
     // Implementation for receiving messages
-  }
+    // eslint-disable-next-line no-console'
+    console.log('Setting up message receiver')}
 };
+
+
+
+
+
+

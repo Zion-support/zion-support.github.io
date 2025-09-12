@@ -1,13 +1,14 @@
-export interface New2025Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  category: string;
-  description?: string;
-}
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-export const new2025Services: New2025Service[] = [
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+// Additional 2025 real micro-SaaS, AI and IT services
+export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
     id: 'llm-safety-observability-suite',
     name: 'LLM Safety & Observability Suite',
@@ -747,3 +748,4 @@ export const new2025Services: New2025Service[] = [
     reviews: 6
   }
 ];
+

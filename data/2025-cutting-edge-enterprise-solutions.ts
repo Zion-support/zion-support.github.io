@@ -1,21 +1,28 @@
 import { UnifiedService } from '../types/unified-service-types';
 
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
     id: 'ai-powered-enterprise-risk-management',
     name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
+    category: 'Enterprise Solutions',
     price: {
       monthly: 899,
       yearly: 8990,
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks',
-      enterprise: 'Custom enterprise pricing available'
+      enterprise: 'Custom pricing available'
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
-    category: 'Enterprise Solutions',
     features: [
       'Real-time risk monitoring',
       'AI risk assessment',
@@ -64,7 +71,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.8,
-    reviews: 67,
+    reviews: 89,
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
     category: 'Enterprise Solutions',
@@ -79,26 +86,27 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     id: 'autonomous-business-process-optimization',
     name: 'Autonomous Business Process Optimization',
     tagline: 'AI-powered business process automation and optimization',
+    category: 'Enterprise Solutions',
     price: {
       monthly: 699,
       yearly: 6990,
       currency: 'USD',
       trialDays: 21,
       setupTime: '2-3 weeks',
-      enterprise: 'Custom enterprise pricing available'
+      enterprise: 'Custom pricing available'
     },
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [
-      'Digital maturity assessment',
-      'Transformation roadmap development',
-      'Technology stack modernization',
-      'Process reengineering',
-      'Change management consulting',
-      'Digital skills training',
-      'Innovation lab setup',
-      'Performance measurement',
-      'Ongoing optimization',
-      'Executive coaching'
+      'Process analysis AI',
+      'Automated optimization',
+      'Workflow automation',
+      'Performance monitoring',
+      'Cost optimization',
+      'Compliance automation',
+      'Integration capabilities',
+      'Real-time analytics',
+      'Custom workflows',
+      'Reporting dashboard'
     ],
     benefits: [
       'Improve process efficiency by 70%',
@@ -136,10 +144,9 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     launchDate: '2025-01-15',
     customers: 38,
     rating: 4.7,
-    reviews: 52,
-    marketSize: '$19.6B business process automation market',
-    growthRate: '31% annual growth',
-    category: 'Enterprise Solutions',
+    reviews: 67,
+    marketSize: '$15B business process automation market',
+    growthRate: '30% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -148,30 +155,23 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     }
   },
   {
-    id: 'ai-enterprise-platform',
-    name: 'AI Enterprise Platform',
-    tagline: 'Enterprise-grade AI platform that scales with your business',
-    description: 'Comprehensive AI platform designed for enterprise use, featuring advanced machine learning, natural language processing, computer vision, and predictive analytics capabilities.',
-    category: 'Enterprise Solutions',
-    price: {
-      monthly: 999,
-      yearly: 9990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2-4 weeks',
-      enterprise: 'Custom enterprise pricing'
-    },
+    id: 'ai-enterprise-knowledge-management',
+    name: 'AI Enterprise Knowledge Management',
+    tagline: 'Intelligent knowledge discovery and management for enterprises',
+    price: '$799',
+    period: '/month',
+    description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',
     features: [
-      'Advanced ML model management',
-      'Real-time AI processing',
-      'Custom model development',
-      'Data pipeline automation',
-      'Model monitoring and governance',
-      'Enterprise security features',
-      'Scalable infrastructure',
-      'API management',
-      'Custom integrations',
-      'Advanced analytics dashboard'
+      'AI knowledge discovery',
+      'Intelligent categorization',
+      'Semantic search',
+      'Knowledge graphs',
+      'Collaborative workspaces',
+      'Version control',
+      'Access control',
+      'Analytics dashboard',
+      'Integration capabilities',
+      'Mobile access'
     ],
     benefits: [
       'Reduce AI development time by 70%',
@@ -180,33 +180,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Ensure enterprise security',
       'Accelerate AI adoption'
     ],
-<<<<<<< HEAD
-    popular: true,
-    icon: '🧠',
-    color: 'from-purple-600 via-violet-600 to-indigo-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',
-    marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',
-    targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',
-    trialDays: 21,
-    setupTime: '2-3 weeks',
-    category: 'Innovation Services',
-    realService: true,
-    technology: ['AI/ML, Natural Language Processing, Knowledge Graphs, Search, Collaboration'],
-    integrations: ['Microsoft Office, Google Workspace, SharePoint, Confluence, Slack, Teams'],
-    useCases: ['Knowledge management, Content discovery, Collaboration, Decision support, Research'],
-    roi: 'Improve knowledge discovery by 80%. Reduce search time by 70%. Enhance collaboration by 60%.',
-    competitors: ['Microsoft SharePoint, Confluence, Notion, Slite, Slab'],
-    marketSize: '$15.3B knowledge management market',
-    growthRate: '24% annual growth',
-    variant: 'ai-autonomous',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-=======
     targetAudience: [
       'Data science teams',
       'AI engineers',
@@ -239,9 +212,76 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     launchDate: '2025-01-20',
     customers: 85,
     rating: 4.8,
-    reviews: 72,
-    marketSize: '$42.8B enterprise AI market',
-    growthRate: '34% annual growth',
+    reviews: 52,
+    marketSize: '$25B enterprise AI platform market',
+    growthRate: '35% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
+  },
+  {
+    id: 'autonomous-enterprise-security-operations',
+    name: 'Autonomous Enterprise Security Operations',
+    tagline: 'AI-powered autonomous security operations center',
+    category: 'Enterprise Solutions',
+    price: {
+      monthly: 1099,
+      yearly: 10990,
+      currency: 'USD',
+      trialDays: 14,
+      setupTime: '2-3 weeks',
+      enterprise: 'Custom pricing available'
+    },
+    description: 'Intelligent security operations platform that autonomously detects, responds to, and mitigates security threats using AI, providing 24/7 protection for enterprise networks.',
+    features: [
+      'Autonomous threat detection',
+      'AI incident response',
+      'Security automation',
+      'Threat intelligence',
+      'Compliance monitoring',
+      'Real-time alerts',
+      'Integration capabilities',
+      'Performance analytics',
+      'Custom workflows',
+      'Reporting dashboard'
+    ],
+    benefits: [
+      '24/7 autonomous security protection',
+      'AI-powered threat detection',
+      'Automated incident response',
+      'Real-time security monitoring',
+      'Compliance automation'
+    ],
+    targetAudience: ['Large enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies'],
+    marketPosition: 'Leading autonomous security operations platform with AI intelligence',
+    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
+    techStack: ['AI/ML', 'Cybersecurity', 'Threat Intelligence', 'Automation', 'Security Analytics'],
+    realImplementation: true,
+    implementationDetails: 'Production-ready autonomous security operations platform with AI intelligence and automated threat response capabilities.',
+    roi: 'Reduce security incidents by 80%. Improve response time by 90%. Cut security costs by 60%.',
+    useCases: [
+      'Threat detection',
+      'Incident response',
+      'Security automation',
+      'Compliance monitoring',
+      'Security analytics'
+    ],
+    integrations: ['SIEM systems', 'Firewalls', 'IDPS', 'EDR platforms', 'Security orchestration tools'],
+    support: '24/7 security support with dedicated security specialists.',
+    compliance: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'SOX', 'PCI DSS', 'HIPAA'],
+    link: 'https://ziontechgroup.com/autonomous-enterprise-security-operations',
+    icon: '🛡️',
+    color: 'from-red-600 via-pink-600 to-purple-600',
+    popular: true,
+    launchDate: '2025-01-15',
+    customers: 67,
+    rating: 4.9,
+    reviews: 43,
+    marketSize: '$18B security operations market',
+    growthRate: '28% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -479,318 +519,5 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-  }
-];
-;
-  }
-];
-;
-    market_size: '$15.2B enterprise content management market';
-    growth_rate: '28% annual growth';
-    customers: 29;
-    rating: 4.6;
-    reviews: 41
-    contactInfo: contact
-  }
-];
-
-import { UnifiedService } from '../types/unified-service-types',;
-const contact = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
-},;
-export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
-  // ENTERPRISE SOLUTIONS;
-  {;
-    id: 'ai-powered-enterprise-risk-management',;
-    name: 'AI-Powered Enterprise Risk Management',;
-    tagline: 'Intelligent risk assessment and mitigation for enterprise',;
-    price: {;
-      monthly: 899,;
-      yearly: 8990,;
-      currency: 'USD',;
-      trialDays: 30,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
-    },,
-  description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
-    features: [;
-      'Real-time risk monitoringAI risk assessmentAutomated mitigationCompliance trackingRisk scoringScenario modelingIncident responseReporting dashboard',;
-      'Integration capabilitiesCustom workflows';
-    ],;
-    benefits: [;
-      'Reduce risk exposure by 60%Improve compliance by 85%Cut risk management costs by 40%Real-time monitoring and alertsAutomated response capabilities';
-    ],;
-    targetAudience: [;
-      'Fortune 500 companiesFinancial institutionsHealthcare organizationsGovernment agencies';
-    ],;
-    marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',;
-    competitors: ['MetricStreamServiceNowIBM OpenPagesRSA ArcherSAP GRC'],;
-    techStack: ['AI/MLMachine LearningRisk AnalyticsComplianceAutomation'],;
-    realImplementation: true,;
-    implementationDetails: 'Advanced AI platform with real-time risk monitoring and automated response capabilities.',;
-    roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',;
-    useCases: [;
-      'Risk assessmentCompliance managementIncident responseBusiness continuityStrategic planning';
-    ],;
-    integrations: ['ERP systemsGRC platformsCompliance toolsSecurity systemsBusiness intelligence tools'],;
-    support: '24/7 enterprise support with dedicated risk management specialists.',;
-    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',;
-    icon: '⚠️',;
-    color: 'from-orange-600 via-red-600 to-pink-600',;
-    popular: true,;
-    launchDate: '2025-01-15',;
-    customers: 45,;
-    rating: 4.8,;
-    reviews: 67,;
-    marketSize: '$12.8B enterprise risk management market',;
-    growthRate: '25% annual growth',;
-    category: 'Enterprise Solutions',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    }
-  },;
-  {;
-    id: 'autonomous-business-process-optimization',;
-    name: 'Autonomous Business Process Optimization',;
-    tagline: 'AI-powered business process automation and optimization',;
-    price: {;
-      monthly: 699,;
-      yearly: 6990,;
-      currency: 'USD',;
-      trialDays: 21,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
-    },,
-  description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
-    features: [;
-      'Process analysis AIAutomated optimizationWorkflow automationPerformance monitoringCost optimizationCompliance automationIntegration capabilitiesReal-time analytics',;
-      'Custom workflowsReporting dashboard';
-    ],;
-    benefits: [;
-      'Improve process efficiency by 70%Reduce operational costs by 45%Increase productivity by 60%Automated workflow managementReal-time performance monitoring';
-    ],;
-    targetAudience: [;
-      'Large enterprisesManufacturing companiesService organizationsGovernment agencies';
-    ],;
-    marketPosition: 'Leading autonomous business process optimization platform with AI intelligence',;
-    competitors: ['UiPathAutomation AnywhereBlue PrismPegaAppian'],;
-    techStack: ['AI/MLMachine LearningProcess MiningAutomationWorkflow Management'],;
-    realImplementation: true,;
-    implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.',;
-    roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',;
-    useCases: [;
-      'Process optimizationWorkflow automationCost reductionEfficiency improvementCompliance';
-    ],;
-    integrations: ['ERP systemsCRM platformsBPM toolsWorkflow enginesBusiness intelligence tools'],;
-    support: '24/7 enterprise support with process optimization specialists.',;
-    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
-    link: 'https://ziontechgroup.com/autonomous-business-process-optimization',;
-    icon: '⚙️',;
-    color: 'from-blue-600 via-cyan-600 to-teal-600',;
-    popular: true,;
-    launchDate: '2025-01-15',;
-    customers: 38,;
-    rating: 4.7,;
-    reviews: 52,;
-    marketSize: '$19.6B business process automation market',;
-    growthRate: '31% annual growth',;
-    category: 'Enterprise Solutions',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    }
-  },;
-  {;
-    id: 'ai-enterprise-knowledge-management',;
-    name: 'AI Enterprise Knowledge Management',;
-    tagline: 'Intelligent knowledge discovery and management for enterprises',;
-    price: '$799',;
-    period: '/month',,
-  description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',;
-    features: [;
-      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard',;
-      'Integration capabilitiesMobile access';
-    ],;
-    popular: true,;
-    icon: '🧠',;
-    color: 'from-purple-600 via-violet-600 to-indigo-600',;
-    textColor: 'text-purple-400',;
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',;
-    marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',;
-    targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',;
-    category: 'AI Automation',;
-    realService: true,;
-    technology: ['AI/MLNatural Language ProcessingKnowledge GraphsMachine LearningSemantic Search'],;
-    integrations: ['Document management systemsCRM platformsERP systemsCollaboration toolsBusiness intelligence tools'],;
-    useCases: ['Knowledge discoveryDocument managementResearch collaborationDecision supportTraining and onboarding'],;
-    roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',;
-    competitors: ['Microsoft SharePointConfluenceNotionSlackBox'],;
-    marketSize: '$15.2B enterprise content management market',;
-    growthRate: '28% annual growth',;
-    customers: 29,;
-    rating: 4.6,;
-    reviews: 41;
-    contactInfo: contact;
-  }
-];
-    contactInfo: contact
-  }
-];
-
-import { UnifiedService } from '../types/unified-service-types',;
-const contact = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
-},;
-export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
-  // ENTERPRISE SOLUTIONS;
-  {;
-    id: 'ai-powered-enterprise-risk-management',;
-    name: 'AI-Powered Enterprise Risk Management',;
-    tagline: 'Intelligent risk assessment and mitigation for enterprise',;
-    price: {;
-      monthly: 899,;
-      yearly: 8990,;
-      currency: 'USD',;
-      trialDays: 30,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
-    },;
-    description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
-    features: [;
-      'Real-time risk monitoringAI risk assessmentAutomated mitigationCompliance trackingRisk scoringScenario modelingIncident responseReporting dashboard',;
-      'Integration capabilitiesCustom workflows';
-    ],;
-    benefits: [;
-      'Reduce risk exposure by 60%Improve compliance by 85%Cut risk management costs by 40%Real-time monitoring and alertsAutomated response capabilities';
-    ],;
-    targetAudience: [;
-      'Fortune 500 companiesFinancial institutionsHealthcare organizationsGovernment agencies';
-    ],;
-    marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',;
-    competitors: ['MetricStreamServiceNowIBM OpenPagesRSA ArcherSAP GRC'],;
-    techStack: ['AI/MLMachine LearningRisk AnalyticsComplianceAutomation'],;
-    realImplementation: true,;
-    implementationDetails: 'Advanced AI platform with real-time risk monitoring and automated response capabilities.',;
-    roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',;
-    useCases: [;
-      'Risk assessmentCompliance managementIncident responseBusiness continuityStrategic planning';
-    ],;
-    integrations: ['ERP systemsGRC platformsCompliance toolsSecurity systemsBusiness intelligence tools'],;
-    support: '24/7 enterprise support with dedicated risk management specialists.',;
-    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',;
-    icon: '⚠️',;
-    color: 'from-orange-600 via-red-600 to-pink-600',;
-    popular: true,;
-    launchDate: '2025-01-15',;
-    customers: 45,;
-    rating: 4.8,;
-    reviews: 67,;
-    marketSize: '$12.8B enterprise risk management market',;
-    growthRate: '25% annual growth',;
-    category: 'Enterprise Solutions',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    }
-  },;
-  {;
-    id: 'autonomous-business-process-optimization',;
-    name: 'Autonomous Business Process Optimization',;
-    tagline: 'AI-powered business process automation and optimization',;
-    price: {;
-      monthly: 699,;
-      yearly: 6990,;
-      currency: 'USD',;
-      trialDays: 21,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
-    },;
-    description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
-    features: [;
-      'Process analysis AIAutomated optimizationWorkflow automationPerformance monitoringCost optimizationCompliance automationIntegration capabilitiesReal-time analytics',;
-      'Custom workflowsReporting dashboard';
-    ],;
-    benefits: [;
-      'Improve process efficiency by 70%Reduce operational costs by 45%Increase productivity by 60%Automated workflow managementReal-time performance monitoring';
-    ],;
-    targetAudience: [;
-      'Large enterprisesManufacturing companiesService organizationsGovernment agencies';
-    ],;
-    marketPosition: 'Leading autonomous business process optimization platform with AI intelligence',;
-    competitors: ['UiPathAutomation AnywhereBlue PrismPegaAppian'],;
-    techStack: ['AI/MLMachine LearningProcess MiningAutomationWorkflow Management'],;
-    realImplementation: true,;
-    implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.',;
-    roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',;
-    useCases: [;
-      'Process optimizationWorkflow automationCost reductionEfficiency improvementCompliance';
-    ],;
-    integrations: ['ERP systemsCRM platformsBPM toolsWorkflow enginesBusiness intelligence tools'],;
-    support: '24/7 enterprise support with process optimization specialists.',;
-    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
-    link: 'https://ziontechgroup.com/autonomous-business-process-optimization',;
-    icon: '⚙️',;
-    color: 'from-blue-600 via-cyan-600 to-teal-600',;
-    popular: true,;
-    launchDate: '2025-01-15',;
-    customers: 38,;
-    rating: 4.7,;
-    reviews: 52,;
-    marketSize: '$19.6B business process automation market',;
-    growthRate: '31% annual growth',;
-    category: 'Enterprise Solutions',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    }
-  },;
-  {;
-    id: 'ai-enterprise-knowledge-management',;
-    name: 'AI Enterprise Knowledge Management',;
-    tagline: 'Intelligent knowledge discovery and management for enterprises',;
-    price: '$799',;
-    period: '/month',;
-    description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',;
-    features: [;
-      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard',;
-      'Integration capabilitiesMobile access';
-    ],;
-    popular: true,;
-    icon: '🧠',;
-    color: 'from-purple-600 via-violet-600 to-indigo-600',;
-    textColor: 'text-purple-400',;
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',;
-    marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',;
-    targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',;
-    category: 'AI Automation',;
-    realService: true,;
-    technology: ['AI/MLNatural Language ProcessingKnowledge GraphsMachine LearningSemantic Search'],;
-    integrations: ['Document management systemsCRM platformsERP systemsCollaboration toolsBusiness intelligence tools'],;
-    useCases: ['Knowledge discoveryDocument managementResearch collaborationDecision supportTraining and onboarding'],;
-    roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',;
-    competitors: ['Microsoft SharePointConfluenceNotionSlackBox'],;
-    marketSize: '$15.2B enterprise content management market',;
-    growthRate: '28% annual growth',;
-    customers: 29,;
-    rating: 4.6,;
-    reviews: 41;
-    contactInfo: contact;
   }
 ];

@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD:zion-os.disabled/zion-os/next.config.mjs
+  reactStrictMode: true,
+  experimental: {
+    serverActions: {
+      allowedOrigins: ["*"],
+    },
+  },
+=======
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react'],
@@ -80,6 +88,7 @@ const nextConfig = {
 
   // Bundle analyzer (optional, uncomment for analysis)
   // bundleAnalyzer: process.env.ANALYZE === 'true',
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/next.config.mjs
 };
 
 export default nextConfig;

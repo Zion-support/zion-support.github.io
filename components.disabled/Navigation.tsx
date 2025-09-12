@@ -1,17 +1,144 @@
-<<<<<<< HEAD
-=======
-import Link from \'next/link\'; import { useState } from \'react\'; interface NavigationProps { className?: string} } export default function Navigation({ className = \'' }: NavigationProps) { const [mobileMenuOpen,setMobileMenuOpen] = useState(false); const [servicesMenuOpen,setServicesMenuOpen] = useState(false); const mainNavItems = [{ \"href\": \'/\',\"label\": \'Home\' },{ \"href\": \'/about\',\"label\": \'About\' },{ \"href\": \'/blog\',\"label\": \'Blog\' },{ \"href\": \'/careers\',\"label\": \'Careers\' },{ \"href\": \'/contact\',\"label\": \'Contact\' },{ \"href\": \'/pricing\',\"label\": \'Pricing\' },{ \"href\": \'/faq\',\"label\": \'FAQ\' },]; const servicesNavItems = [{ \"href\": \'/services\',\"label\": \'All Services\',\"description\": \'Complete overview\' },{ \"href\": \'/micro-saas\',\"label\": \'Micro SaaS\',\"description\": \'150+ Products\' },{ \"href\": \'/ai-services\',\"label\": \'AI Services\',\"description\": \'100+ Solutions\' },{ \"href\": \'/it-services\',\"label\": \'IT Services\',\"description\": \'100+ Solutions\' },{ \"href\": \'/services-catalog\',\"label\": \'Catalog\',\"description\": \'Browse all\' },]; const solutionsNavItems = [{ \"href\": \'/cloud-devops\',\"label\": \'Cloud & DevOps\' },{ \"href\": \'/cybersecurity\',\"label\": \'Cybersecurity\' },{ \"href\": \'/quantum-computing\',\"label\": \'Quantum Computing\' },{ \"href\": \'/docs\',\"label\": \'Documentation\' },]; return ( <nav className={`bg-slate-900/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 ${className}`}> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"flex items-center justify-between h-16\"> {} <Link href=\"/\" className=\"flex-shrink-0\"> <span className=\"text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\"> Zion Tech Group </span> </Link> {} <div className=\"hidden \"lg\": block\"> <div className=\"ml-10 flex items-baseline space-x-4\"> {mainNavItems.map((item) => ( <Link key={item.href} href={item.href} className=\"text-white \"hover\": text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors\" > {item.label} </Link> ))} {} <div className=\"relative group\"> <button className=\"text-white \"hover\": text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center\" onMouseEnter={() => setServicesMenuOpen(true)} onMouseLeave={() => setServicesMenuOpen(false)} > Services <svg className=\"ml-1 h-4 w-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M19 9l-7 7-7-7\" /> </svg> </button> {servicesMenuOpen && ( <div className=\"absolute left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-white/10 py-2 z-50\" onMouseEnter={() => setServicesMenuOpen(true)} onMouseLeave={() => setServicesMenuOpen(false)} > {servicesNavItems.map((item) => ( <Link key={item.href} href={item.href} className=\"block px-4 py-3 text-white \"hover\": bg-slate-700 transition-colors\" > <div className=\"font-medium\">{item.label}</div> <div className=\"text-sm text-slate-400\">{item.description}</div> </Link> ))} </div> )} </div> {} <div className=\"relative group\"> <button className=\"text-white \"hover\": text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center\" > Solutions <svg className=\"ml-1 h-4 w-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M19 9l-7 7-7-7\" /> </svg> </button> <div className=\"absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl border border-white/10 py-2 opacity-0 invisible group-\"hover\": opacity-100 group-hover:visible transition-all duration-200 z-50\"> {solutionsNavItems.map((item) => ( <Link key={item.href} href={item.href} className=\"block px-4 py-2 text-white \"hover\": bg-slate-700 transition-colors\" > {item.label} </Link> ))} </div> </div> </div> </div> {} <div className=\"hidden \"lg\": block\"> <Link href=\"/contact\" className=\"bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl\" > Get Started </Link> </div> {} <div className=\""lg\": hidden\"> <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className=\"text-white \"hover\": text-blue-300 p-2 rounded-md\" aria-label=\"Toggle mobile menu\" > <svg className=\"h-6 w-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> {mobileMenuOpen ? ( <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M6 18L18 6M6 6l12 12\" /> ) : ( <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M4 6h16M4 12h16M4 18h16\" /> )} </svg> </button> </div> </div> {} {mobileMenuOpen && ( <div className=\""lg\": hidden\"> <div className=\"px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2\"> {mainNavItems.map((item) => ( <Link key={item.href} href={item.href} className=\"text-white \"hover\": text-blue-300 block px-3 py-2 rounded-md text-base font-medium\" onClick={() => setMobileMenuOpen(false)} > {item.label} </Link> ))} <div className=\"border-t border-white/10 pt-2\"> <div className=\"text-slate-400 text-sm font-medium px-3 py-2\">Services</div> {servicesNavItems.map((item) => ( <Link key={item.href} href={item.href} className=\"text-white \"hover\": text-blue-300 block px-6 py-2 rounded-md text-sm\" onClick={() => setMobileMenuOpen(false)} > {item.label} </Link> ))} </div> <div className=\"border-t border-white/10 pt-2\"> <div className=\"text-slate-400 text-sm font-medium px-3 py-2\">Solutions</div> {solutionsNavItems.map((item) => ( <Link key={item.href} href={item.href} className=\"text-white \"hover\": text-blue-300 block px-6 py-2 rounded-md text-sm\" onClick={() => setMobileMenuOpen(false)} > {item.label} </Link> ))} </div> <div className=\"border-t border-white/10 pt-2\"> <Link href=\"/contact\" className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center\" onClick={() => setMobileMenuOpen(false)} > Get Started </Link> </div> </div> </div> )} </div> </nav> )}
-const Link from "next/link"; import { useState } from "react"; interface NavigationProps { className?: string} } export default function Navigation({ className = "" }: NavigationProps) { const [mobileMenuOpen,setMobileMenuOpen] = useState(false); const [servicesMenuOpen,setServicesMenuOpen] = useState(false); const mainNavItems = [{ href: "/",label: "Home" },{ href: "/about",label: "About" },{ href: "/blog",label: "Blog" },{ href: "/careers",label: "Careers" },{ href: "/contact",label: "Contact" },{ href: "/pricing",label: "Pricing" },{ href: "/faq",label: "FAQ" },]; const servicesNavItems = [{ href: "/services",label: "All Services",description: "Complete overview" },{ href: "/micro-saas",label: "Micro SaaS",description: "150+ Products" },{ href: "/ai-services",label: "AI Services",description: "100+ Solutions" },{ href: "/it-services",label: "IT Services",description: "100+ Solutions" },{ href: "/services-catalog",label: "Catalog",description: "Browse all" },]; const solutionsNavItems = [{ href: "/cloud-devops",label: "Cloud & DevOps" },{ href: "/cybersecurity",label: "Cybersecurity" },{ href: "/quantum-computing",label: "Quantum Computing" },{ href: "/docs",label: "Documentation" },]; return ( <nav className={`bg-slate-900/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 ${className}`}> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="flex items-center justify-between h-16"> {} <Link href="/" className="flex-shrink-0"> <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Zion Tech Group </span> </Link> {} <div className="hidden lg: block"> <div className="ml-10 flex items-baseline space-x-4"> {mainNavItems.map((item) => ( <Link key={item.href} href={item.href} className="text-white hover: text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors" > {item.label} </Link> ))} {} <div className="relative group"> <button className="text-white hover: text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center" onMouseEnter={() => setServicesMenuOpen(true)} onMouseLeave={() => setServicesMenuOpen(false)} > Services <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> </svg> </button> {servicesMenuOpen && ( <div className="absolute left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-white/10 py-2 z-50" onMouseEnter={() => setServicesMenuOpen(true)} onMouseLeave={() => setServicesMenuOpen(false)} > {servicesNavItems.map((item) => ( <Link key={item.href} href={item.href} className="block px-4 py-3 text-white hover: bg-slate-700 transition-colors" > <div className="font-medium">{item.label}</div> <div className="text-sm text-slate-400">{item.description}</div> </Link> ))} </div> )} </div> {} <div className="relative group"> <button className="text-white hover: text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center" > Solutions <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> </svg> </button> <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl border border-white/10 py-2 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50"> {solutionsNavItems.map((item) => ( <Link key={item.href} href={item.href} className="block px-4 py-2 text-white hover: bg-slate-700 transition-colors" > {item.label} </Link> ))} </div> </div> </div> </div> {} <div className="hidden lg: block"> <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl" > Get Started </Link> </div> {} <div className="lg: hidden"> <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white hover: text-blue-300 p-2 rounded-md" aria-label="Toggle mobile menu" > <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> {mobileMenuOpen ? ( <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /> ) : ( <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /> )} </svg> </button> </div> </div> {} {mobileMenuOpen && ( <div className="lg: hidden"> <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2"> {mainNavItems.map((item) => ( <Link key={item.href} href={item.href} className="text-white hover: text-blue-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setMobileMenuOpen(false)} > {item.label} </Link> ))} <div className="border-t border-white/10 pt-2"> <div className="text-slate-400 text-sm font-medium px-3 py-2">Services</div> {servicesNavItems.map((item) => ( <Link key={item.href} href={item.href} className="text-white hover: text-blue-300 block px-6 py-2 rounded-md text-sm" onClick={() => setMobileMenuOpen(false)} > {item.label} </Link> ))} </div> <div className="border-t border-white/10 pt-2"> <div className="text-slate-400 text-sm font-medium px-3 py-2">Solutions</div> {solutionsNavItems.map((item) => ( <Link key={item.href} href={item.href} className="text-white hover: text-blue-300 block px-6 py-2 rounded-md text-sm" onClick={() => setMobileMenuOpen(false)} > {item.label} </Link> ))} </div> <div className="border-t border-white/10 pt-2"> <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center" onClick={() => setMobileMenuOpen(false)} > Get Started </Link> </div> </div> </div> )} </div> </nav> )}'"`'"`
-import React from 'react';
-interface NavigationProps {
-  // Add props here as needed
-}
-export default function Navigation({ }: NavigationProps) {
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const navigation = [
+    { name: 'Home', href: '/', current: router.pathname === '/' },
+    { name: 'Dashboard', href: '/dashboard', current: router.pathname === '/dashboard' },
+    { name: 'Services', href: '/services', current: router.pathname === '/services' },
+    { name: 'Status', href: '/status', current: router.pathname === '/status' },
+    { name: 'Automation', href: '/automation', current: router.pathname.startsWith('/automation') },
+    { name: 'Reports', href: '/reports', current: router.pathname.startsWith('/reports') },
+    { name: 'About', href: '/about', current: router.pathname === '/about' },
+  ];
+
+  const isCurrentPage = (href: string) => {
+    if (href === '/') {
+      return router.pathname === '/';
+    }
+    return router.pathname.startsWith(href);
+  };
+
   return (
-    <div>
-      <h1>Navigation</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <Link href="/" className="text-xl font-bold text-blue-600">
+                bolt.new.zion.app
+              </Link>
+            </div>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    isCurrentPage(item.href)
+                      ? 'border-blue-500 text-gray-900'
+                      : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          <div className="hidden sm:ml-6 sm:flex sm:items-center">
+            <div className="flex space-x-4">
+              <Link
+                href="/automation/service-factory-dashboard.html"
+                className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Factory Dashboard
+              </Link>
+              <Link
+                href="/services"
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
+              >
+                View Services
+              </Link>
+            </div>
+          </div>
+
+          <div className="-mr-2 flex items-center sm:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            >
+              <span className="sr-only">Open main menu</span>
+              {!isOpen ? (
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              ) : (
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="sm:hidden">
+          <div className="pt-2 pb-3 space-y-1">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
+                  isCurrentPage(item.href)
+                    ? 'bg-blue-50 border-blue-500 text-blue-700'
+                    : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          <div className="pt-4 pb-3 border-t border-gray-200">
+            <div className="flex items-center px-4">
+              <div className="flex-shrink-0">
+                <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center">
+                  <span className="text-white font-medium text-sm">AI</span>
+                </div>
+              </div>
+              <div className="ml-3">
+                <div className="text-base font-medium text-gray-800">AI Service Factory</div>
+                <div className="text-sm font-medium text-gray-500">Automated Service Creation</div>
+              </div>
+            </div>
+            <div className="mt-3 space-y-1">
+              <Link
+                href="/automation/service-factory-dashboard.html"
+                className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100"
+                onClick={() => setIsOpen(false)}
+              >
+                Factory Dashboard
+              </Link>
+              <Link
+                href="/services"
+                className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100"
+                onClick={() => setIsOpen(false)}
+              >
+                View Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
   );
-}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+};
+
+export default Navigation;

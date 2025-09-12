@@ -5,6 +5,7 @@ A comprehensive redundancy and monitoring system that provides backup automation
 ## 🚀 Overview
 
 The Redundancy Automation System is designed to ensure continuous operation of all automation components by providing:
+
 - **PM2 Process Monitoring**: Continuous health checks and automatic restart of PM2 processes
 - **GitHub Actions Monitoring**: Validation and health monitoring of GitHub Actions workflows
 - **Netlify Functions Monitoring**: Health checks and manifest regeneration for Netlify functions
@@ -17,13 +18,13 @@ The Redundancy Automation System is designed to ensure continuous operation of a
 
 ```
 automation/
-├── redundancy-automation-system.cjs # Main system orchestrator
-├── redundancy-health-monitor.cjs # Health monitoring service
-├── redundancy-git-sync.cjs # Git synchronization service
-├── redundancy-build-monitor.cjs # Build system monitor
-└── start-redundancy-system.sh # System startup script
+├── redundancy-automation-system.cjs    # Main system orchestrator
+├── redundancy-health-monitor.cjs       # Health monitoring service
+├── redundancy-git-sync.cjs            # Git synchronization service
+├── redundancy-build-monitor.cjs       # Build system monitor
+└── start-redundancy-system.sh         # System startup script
 
-ecosystem.redundancy.cjs # PM2 ecosystem configuration
+ecosystem.redundancy.cjs                # PM2 ecosystem configuration
 ```
 
 ## 🛠️ Components
@@ -31,6 +32,7 @@ ecosystem.redundancy.cjs # PM2 ecosystem configuration
 ### 1. Redundancy Automation System (`redundancy-automation-system.cjs`)
 
 The main orchestrator that coordinates all redundancy components:
+
 - **PM2 Health Monitoring**: Checks PM2 process status every 30 seconds
 - **GitHub Actions Monitoring**: Validates workflow syntax and configuration every minute
 - **Netlify Functions Monitoring**: Ensures functions manifest is current every 2 minutes
@@ -41,6 +43,7 @@ The main orchestrator that coordinates all redundancy components:
 ### 2. Health Monitor (`redundancy-health-monitor.cjs`)
 
 Dedicated health monitoring service:
+
 - **Comprehensive Health Checks**: Monitors all system components
 - **Failure Tracking**: Tracks consecutive failures and triggers alerts
 - **Performance Metrics**: Monitors system resources and performance
@@ -49,6 +52,7 @@ Dedicated health monitoring service:
 ### 3. Git Sync Service (`redundancy-git-sync.cjs`)
 
 Automated Git synchronization service:
+
 - **Multiple Sync Strategies**: Support for pull, hardreset, and rebase
 - **Conflict Resolution**: Automatic stashing and restoration of local changes
 - **Branch Management**: Automatic branch switching and validation
@@ -57,6 +61,7 @@ Automated Git synchronization service:
 ### 4. Build Monitor (`redundancy-build-monitor.cjs`)
 
 Build system monitoring and recovery:
+
 - **Environment Validation**: Checks Node.js, npm, and dependencies
 - **Build Health Checks**: Runs pre-build validation scripts
 - **Recovery Mechanisms**: Automatic dependency reinstallation and cleanup
@@ -66,6 +71,7 @@ Build system monitoring and recovery:
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 20.18.1 or higher
 - npm 10.0.0 or higher
 - PM2 (install with `npm install -g pm2`)
@@ -74,20 +80,20 @@ Build system monitoring and recovery:
 ### Installation
 
 1. **Clone the repository** (if not already done):
- ```bash
- git clone <repository-url>
- cd <repository-name>
- ```
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
 
 2. **Install dependencies**:
- ```bash
- npm install
- ```
+   ```bash
+   npm install
+   ```
 
 3. **Start the redundancy system**:
- ```bash
- ./automation/start-redundancy-system.sh
- ```
+   ```bash
+   ./automation/start-redundancy-system.sh
+   ```
 
 ### Manual PM2 Management
 
@@ -116,24 +122,24 @@ The system can be configured using environment variables:
 
 ```bash
 # PM2 monitoring intervals
-REDUNDANCY_PM2_CHECK_INTERVAL=30000 # 30 seconds
-REDUNDANCY_GITHUB_CHECK_INTERVAL=60000 # 1 minute
-REDUNDANCY_NETLIFY_CHECK_INTERVAL=120000 # 2 minutes
+REDUNDANCY_PM2_CHECK_INTERVAL=30000        # 30 seconds
+REDUNDANCY_GITHUB_CHECK_INTERVAL=60000     # 1 minute
+REDUNDANCY_NETLIFY_CHECK_INTERVAL=120000   # 2 minutes
 
 # Health monitoring
-HEALTH_CHECK_INTERVAL=300000 # 5 minutes
-ALERT_THRESHOLD=3 # Failure threshold for alerts
+HEALTH_CHECK_INTERVAL=300000               # 5 minutes
+ALERT_THRESHOLD=3                         # Failure threshold for alerts
 
 # Git sync configuration
-GIT_SYNC_REMOTE=origin # Git remote name
-GIT_SYNC_BRANCH=main # Target branch
-GIT_SYNC_STRATEGY=pull # Sync strategy (pull/hardreset/rebase)
-GIT_SYNC_CLEAN=1 # Clean working directory
+GIT_SYNC_REMOTE=origin                    # Git remote name
+GIT_SYNC_BRANCH=main                      # Target branch
+GIT_SYNC_STRATEGY=pull                    # Sync strategy (pull/hardreset/rebase)
+GIT_SYNC_CLEAN=1                          # Clean working directory
 
 # Build monitoring
-BUILD_CHECK_INTERVAL=600000 # 10 minutes
-BUILD_TIMEOUT=300000 # 5 minutes
-MAX_BUILD_FAILURES=3 # Max consecutive failures
+BUILD_CHECK_INTERVAL=600000                # 10 minutes
+BUILD_TIMEOUT=300000                       # 5 minutes
+MAX_BUILD_FAILURES=3                       # Max consecutive failures
 ```
 
 ### PM2 Ecosystem Configuration
@@ -142,19 +148,19 @@ The `ecosystem.redundancy.cjs` file configures all PM2 processes:
 
 ```javascript
 module.exports = {
- apps: [
- {
- name: "redundancy-automation-system",
- script: "automation/redundancy-automation-system.cjs",
- // ... configuration
- },
- {
- name: "redundancy-health-monitor",
- script: "automation/redundancy-health-monitor.cjs",
- // ... configuration
- },
- // ... other processes
- ]
+  apps: [
+    {
+      name: "redundancy-automation-system",
+      script: "automation/redundancy-automation-system.cjs",
+      // ... configuration
+    },
+    {
+      name: "redundancy-health-monitor",
+      script: "automation/redundancy-health-monitor.cjs",
+      // ... configuration
+    },
+    // ... other processes
+  ]
 };
 ```
 
@@ -163,6 +169,7 @@ module.exports = {
 ### Log Files
 
 All system logs are stored in `automation/logs/`:
+
 - `redundancy-system-YYYY-MM-DD.log` - Main system logs
 - `redundancy-health-YYYY-MM-DD.log` - Health monitor logs
 - `redundancy-git-sync-YYYY-MM-DD.log` - Git sync logs
@@ -172,6 +179,7 @@ All system logs are stored in `automation/logs/`:
 ### Log Rotation
 
 The system automatically manages logs:
+
 - **Size Limits**: Individual log files limited to 5-10MB
 - **Retention**: Keeps last 15-30 log files
 - **Compression**: Old logs are compressed and archived
@@ -270,12 +278,14 @@ system.emergencyRecovery();
 ## 📈 Performance and Scaling
 
 ### Resource Usage
+
 - **Memory**: Each process typically uses 50-100MB
 - **CPU**: Minimal CPU usage during normal operation
 - **Disk**: Log files grow at ~1-5MB per day
 - **Network**: Git sync operations use minimal bandwidth
 
 ### Scaling Considerations
+
 - **Multiple Instances**: Can run multiple instances for redundancy
 - **Load Distribution**: Processes can be distributed across servers
 - **Monitoring**: Centralized monitoring for multiple deployments
@@ -283,11 +293,13 @@ system.emergencyRecovery();
 ## 🔒 Security Considerations
 
 ### Access Control
+
 - **Process Isolation**: Each component runs in isolated PM2 processes
 - **File Permissions**: Log files have restricted permissions
 - **Environment Variables**: Sensitive data stored in environment variables
 
 ### Audit Trail
+
 - **Comprehensive Logging**: All operations are logged with timestamps
 - **Change Tracking**: Git operations are tracked and logged
 - **Alert Records**: Health alerts are stored for audit purposes
@@ -297,16 +309,19 @@ system.emergencyRecovery();
 ### PM2 Integration
 
 The redundancy system works alongside existing PM2 processes:
+
 - **Non-Interfering**: Doesn't interfere with existing PM2 processes
 - **Shared Resources**: Uses existing PM2 installation and configuration
 - **Unified Management**: All processes managed through PM2 ecosystem
 
 ### GitHub Actions Integration
+
 - **Workflow Validation**: Ensures GitHub Actions workflows are properly configured
 - **Environment Checks**: Validates required environment variables
 - **Health Monitoring**: Monitors workflow execution health
 
 ### Netlify Integration
+
 - **Function Monitoring**: Ensures Netlify functions are properly generated
 - **Manifest Validation**: Validates functions manifest file
 - **Auto-Regeneration**: Automatically regenerates stale manifests
