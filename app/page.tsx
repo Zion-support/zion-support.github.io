@@ -11,7 +11,6 @@ import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
->>>>>>> cursor/create-and-deploy-new-content-fd62
 import Card from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
@@ -224,8 +223,6 @@ export default function HomePage() {
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
 
-<<<<<<< HEAD
-=======
       {/* Featured New Content Showcase */}
       <FeaturedNewContentShowcase title="Featured in January 2025" subtitle="Fresh articles, resources, and case studies just released" showViewAll={true} viewAllHref="/content-showcase" columns={3} />
 
@@ -338,8 +335,6 @@ export default function HomePage() {
 
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
-
->>>>>>> cursor/create-and-deploy-new-content-0928
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>

@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD:temp_disabled/talent/[id].tsx
 import { SEO } from '@/components/SEO';
-=======
-import { NextSeo } from '@/components/NextSeo';
->>>>>>> origin/backup-main-20250826-120740:src/pages/talent/[id].tsx
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import { ProfileCard } from '@/components/profile/ProfileCard';
@@ -58,11 +54,7 @@ export default function TalentProfilePage() {
 
   return (
     <>
-<<<<<<< HEAD:temp_disabled/talent/[id].tsx
       <SEO title={profile.full_name} description={profile.bio || ''} />
-=======
-      <NextSeo title={profile.full_name} description={profile.bio || ''} />
->>>>>>> origin/backup-main-20250826-120740:src/pages/talent/[id].tsx
       <main className="min-h-screen bg-zion-blue py-8 text-white">
         <div className="container mx-auto px-4 max-w-2xl">
           <ProfileCard profile={profile} />
