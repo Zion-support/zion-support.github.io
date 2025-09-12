@@ -16,6 +16,46 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "Analytics Observability Blueprint 2025: Traces, Quality, Cost",
+      description: "Blueprint to observe analytics and AI pipelines: lineage, traces, quality, and cost SLOs.",
+      href: "/blog/ai-2025-analytics-observability-blueprint",
+      icon: "📈",
+      category: "Platforms",
+      readTime: "16 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Data Contracts for ML in 2025: Reliability & Governance",
+      description: "Schema-first data contracts to reduce breakages, improve quality, and speed ML delivery.",
+      href: "/blog/ai-2025-data-contracts-for-ml",
+      icon: "📜",
+      category: "Data Platforms",
+      readTime: "17 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "AI Platform Engineering Blueprint 2025",
+      description: "Governance, evaluations, routing, observability, and cost controls for enterprise AI platforms.",
+      href: "/blog/ai-2025-ai-platform-engineering-blueprint",
+      icon: "🧱",
+      category: "Platforms",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Customer 360 AI Platform: 23% Lift in Cross-Sell",
+      description: "Case study: Unified profiles, uplift modeling, and guardrailed copilots drove 23% cross-sell lift.",
+      href: "/case-studies/ai-2025-customer-360-platform-impact",
+      icon: "👤",
+      category: "Case Study",
+      readTime: "11 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "Enterprise RAG Platforms 2025: Architecture, Quality, and Ops",
       description: "Design, evaluate, and operate enterprise-grade RAG platforms with quality, safety, and budgets.",
       href: "/blog/ai-2025-enterprise-rag-platforms",

@@ -28,6 +28,32 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
+      id: 'AIFINOPS-2025',
+      title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
+      description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
+      href: '/blog/ai-2025-ai-finops-automation',
+      type: 'blog',
+      category: 'Optimization',
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      tags: ['FinOps', 'Budgets', 'Routing', 'Right‑sizing'],
+      featured: true,
+      difficulty: 'intermediate'
+    },
+    {
+      id: 'SALES-PLAYBOOKS-2025',
+      title: 'Agentic Sales Playbooks 2025: From Leads to Closed Won',
+      description: 'Design reliable, compliant agentic sales workflows across prospecting, demos, proposals, and renewals.',
+      href: '/blog/ai-2025-agentic-sales-playbooks',
+      type: 'blog',
+      category: 'Operations',
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      tags: ['Sales', 'Agents', 'Playbooks', 'Compliance'],
+      featured: true,
+      difficulty: 'beginner'
+    },
+    {
       id: '50',
       title: 'Machine Learning Model Optimization: Advanced Techniques',
       description: 'Hyperparameter tuning, compression, quantization, and serving patterns for faster, cheaper ML.',

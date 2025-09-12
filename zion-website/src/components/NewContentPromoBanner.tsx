@@ -34,6 +34,116 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: 'ANALYTICS-OBS-2025',
+      title: 'Analytics Observability Blueprint 2025: Traces, Quality, Cost',
+      description: 'End-to-end visibility for analytics and AI: lineage, traces, data quality, and cost SLOs.',
+      href: '/blog/ai-2025-analytics-observability-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platforms'
+    },
+    {
+      id: 'DATA-CONTRACTS-2025',
+      title: 'Data Contracts for ML in 2025: Reliability & Governance',
+      description: 'Schema-first contracts to reduce breakages, improve quality, and speed ML delivery.',
+      href: '/blog/ai-2025-data-contracts-for-ml',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Data Platforms'
+    },
+    {
+      id: 'KG-2025',
+      title: 'Enterprise Knowledge Graphs 2025: Unified Search & Reasoning',
+      description: 'Design and operate enterprise knowledge graphs for semantic search, RAG, and governed reasoning.',
+      href: '/blog/ai-2025-enterprise-knowledge-graphs',
+      type: 'blog',
+      featured: true,
+      readTime: '19 min read',
+      date: 'Sep 12, 2025',
+      category: 'Knowledge'
+    },
+    {
+      id: 'CS-graph-search-2025',
+      title: 'Enterprise Graph Search: 21% Case Resolution Lift',
+      description: 'Case study: Graph + hybrid search improved first‑contact resolution by 21% and cut AHT by 18%.',
+      href: '/case-studies/ai-2025-enterprise-graph-search-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '9 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: 'AIFINOPS-2025',
+      title: 'AI FinOps Automation 2025: Budgets, Guardrails, and Savings',
+      description: 'Automate AI cloud cost governance with real‑time budgets, routing, right‑sizing, and guardrails.',
+      href: '/blog/ai-2025-ai-finops-automation',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Optimization'
+    },
+    {
+      id: 'SALES-PLAYBOOKS-2025',
+      title: 'Agentic Sales Playbooks 2025: From Leads to Closed Won',
+      description: 'Design reliable, compliant agentic sales workflows across prospecting, demos, proposals, and renewals.',
+      href: '/blog/ai-2025-agentic-sales-playbooks',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
+    },
+    {
+      id: 'B-plat-2025',
+      title: 'AI Platform Engineering Blueprint 2025',
+      description: 'Governance, evals, routing, observability, and cost controls for enterprise AI platforms.',
+      href: '/blog/ai-2025-ai-platform-engineering-blueprint',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Platforms'
+    },
+    {
+      id: 'CS-c360-2025',
+      title: 'Customer 360 AI Platform: 23% Cross-Sell Lift',
+      description: 'Case study: Unified profiles, uplift modeling, and guardrailed copilots lifted cross-sell by 23%.',
+      href: '/case-studies/ai-2025-customer-360-platform-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '11 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: 'NEW-e2e-agent-testing-2025',
+      title: 'E2E Testing for AI Agents in 2025',
+      description: 'Scenario-driven agent tests with simulators, guardrails, and CI pipelines for reliability.',
+      href: '/blog/ai-2025-e2e-agent-testing',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: 'NEW-data-contracts-genai-2025',
+      title: 'Data Contracts for GenAI in 2025',
+      description: 'Contracts for schemas, quality, and governance that boost RAG reliability and compliance.',
+      href: '/blog/ai-2025-data-contracts-genai',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Data'
+    },
+    {
       id: 'CS-llm-cost-2025',
       title: 'LLM Inference Cost Reduction: 38% Savings (2025)',
       description: 'Case study: Quantization, KV cache, and batching cut cost by 38% and p95 by 27%.',
