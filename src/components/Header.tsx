@@ -26,8 +26,14 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <a href="/services" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               Services
             </a>
-            <a href="/solutions" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Solutions
+            <a href="/ai-solutions" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              AI Solutions
+            </a>
+            <a href="/case-studies" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Case Studies
+            </a>
+            <a href="/resources" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Resources
             </a>
             <a href="/about" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               About
