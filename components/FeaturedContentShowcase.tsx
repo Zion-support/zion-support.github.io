@@ -22,6 +22,29 @@ const featuredContent: ContentItem[] = [
     featured: true
   },
   {
+    title: 'AI Industry Disruption 2025: How Every Sector is Changing',
+    description: 'Deep analysis of AI-driven disruption across 12 industries with quantified impacts, adoption timelines, and risk controls.',
+    href: '/blog/ai-2025-industry-disruption',
+    type: 'blog',
+    readTime: '25 min read',
+    featured: true
+  },
+  {
+    title: 'AI Enterprise Implementation Masterclass 2025',
+    description: 'Comprehensive, 45-minute masterclass covering governance, data, architecture, security, and ROI for enterprise AI.',
+    href: '/blog/ai-2025-enterprise-implementation-masterclass',
+    type: 'blog',
+    readTime: '45 min read',
+    featured: true
+  },
+  {
+    title: 'AI Go-To-Market 2025: From Zero to Traction',
+    description: 'Positioning, pricing, distribution, and growth loops that work for AI products in 2025.',
+    href: '/blog/ai-2025-go-to-market-playbook',
+    type: 'blog',
+    readTime: '22 min read'
+  },
+  {
     title: 'AI Manufacturing Transformation: 75% Efficiency Gain Case Study',
     description: 'How a Fortune 500 manufacturer achieved 75% efficiency gains, 50% cost reduction, and zero-defect production through comprehensive AI transformation.',
     href: '/case-studies/ai-manufacturing-transformation-2025',

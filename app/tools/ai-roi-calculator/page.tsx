@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import SEO from '../../../components/SEO';
 import Link from 'next/link';

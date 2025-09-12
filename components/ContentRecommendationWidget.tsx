@@ -1,157 +1,192 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
+interface Recommendation {
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'guide';
+  type: 'blog' | 'case-study' | 'tool';
+  category: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  estimatedValue: string;
   readTime: string;
-  icon: string;
-  badge: string;
-  badgeColor: string;
 }
 
-const contentItems: ContentItem[] = [
+const recommendations: Recommendation[] = [
+  {
+    title: "AI Trends 2025: Comprehensive Analysis",
+    description: "Master the latest AI technologies transforming industries in 2025",
+    href: "/blog/ai-2025-comprehensive-trends-analysis",
+    type: "blog",
+    category: "AI Strategy",
+    difficulty: "intermediate",
+    estimatedValue: "High",
+    readTime: "15 min"
+  },
+  {
+    title: "Manufacturing Giant $2.1B Transformation",
+    description: "Learn from a Fortune 500's successful AI implementation journey",
+    href: "/case-studies/ai-2025-manufacturing-giant-transformation",
+    type: "case-study",
+    category: "Implementation",
+    difficulty: "advanced",
+    estimatedValue: "Very High",
+    readTime: "12 min"
+  },
+  {
+    title: "AI ROI Calculator",
+    description: "Calculate your potential AI investment returns instantly",
+    href: "/tools/ai-roi-calculator",
+    type: "tool",
+    category: "Planning",
+    difficulty: "beginner",
+    estimatedValue: "High",
+    readTime: "5 min"
+  },
   {
     title: "LLM Optimization Masterclass",
-    description: "10x performance with advanced techniques: prompt engineering, fine-tuning, RAG optimization",
+    description: "Achieve 10x performance gains with large language models",
     href: "/blog/ai-2025-llm-optimization-masterclass",
-    type: "guide",
-    readTime: "25 min read",
-    icon: "🚀",
-    badge: "NEW",
-    badgeColor: "bg-green-100 text-green-800"
+    type: "blog",
+    category: "Technical",
+    difficulty: "advanced",
+    estimatedValue: "Very High",
+    readTime: "20 min"
   },
   {
-    title: "AI Automation Enterprise Guide",
-    description: "Complete implementation guide for 300-500% efficiency gains through strategic AI automation",
-    href: "/blog/ai-2025-automation-enterprise-transformation",
-    type: "guide",
-    readTime: "30 min read",
-    icon: "🤖",
-    badge: "HOT",
-    badgeColor: "bg-red-100 text-red-800"
-  },
-  {
-    title: "$2.8B Unicorn Transformation",
-    description: "Global tech unicorn achieves 340% ROI and market leadership through comprehensive AI transformation",
+    title: "$2.8B Tech Unicorn Success Story",
+    description: "How AI transformed a startup into a global tech unicorn",
     href: "/case-studies/ai-2025-global-tech-unicorn-transformation",
     type: "case-study",
-    readTime: "20 min read",
-    icon: "🏆",
-    badge: "$2.8B Value",
-    badgeColor: "bg-purple-100 text-purple-800"
-  },
-  {
-    title: "Advanced AI Agents Revolution",
-    description: "Autonomous intelligence systems with 300-500% efficiency improvements and multi-agent collaboration",
-    href: "/blog/ai-2025-advanced-ai-agents",
-    type: "blog",
-    readTime: "15 min read",
-    icon: "🤖",
-    badge: "TRENDING",
-    badgeColor: "bg-blue-100 text-blue-800"
-  },
-  {
-    title: "Quantum Computing Revolution",
-    description: "10,000x speedups in optimization with breakthrough quantum algorithms transforming business operations",
-    href: "/blog/quantum-computing-business-revolution-2025",
-    type: "blog",
-    readTime: "18 min read",
-    icon: "⚡",
-    badge: "BREAKTHROUGH",
-    badgeColor: "bg-yellow-100 text-yellow-800"
-  },
-  {
-    title: "$3.2B Fortune 500 Success",
-    description: "Fortune 500 transformation with 45% efficiency gains and 340% ROI through quantum AI implementation",
-    href: "/case-studies/ai-2025-fortune-500-quantum-transformation",
-    type: "case-study",
-    readTime: "22 min read",
-    icon: "🏆",
-    badge: "$3.2B Value",
-    badgeColor: "bg-green-100 text-green-800"
+    category: "Success Stories",
+    difficulty: "intermediate",
+    estimatedValue: "High",
+    readTime: "10 min"
   }
 ];
 
-const getTypeColor = (type: string) => {
-  switch (type) {
-    case 'blog':
-      return 'text-blue-600';
-    case 'case-study':
-      return 'text-purple-600';
-    case 'guide':
+const getDifficultyColor = (difficulty: string) => {
+  switch (difficulty) {
+    case 'beginner':
+      return 'bg-green-100 text-green-800';
+    case 'intermediate':
+      return 'bg-yellow-100 text-yellow-800';
+    case 'advanced':
+      return 'bg-red-100 text-red-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
+
+const getValueColor = (value: string) => {
+  switch (value) {
+    case 'Very High':
       return 'text-green-600';
+    case 'High':
+      return 'text-blue-600';
+    case 'Medium':
+      return 'text-yellow-600';
     default:
       return 'text-gray-600';
   }
 };
 
-const getTypeLabel = (type: string) => {
+const getTypeIcon = (type: string) => {
   switch (type) {
     case 'blog':
-      return 'Article';
+      return '📝';
     case 'case-study':
-      return 'Case Study';
-    case 'guide':
-      return 'Guide';
+      return '📊';
+    case 'tool':
+      return '🧮';
     default:
-      return 'Content';
+      return '📄';
   }
 };
 
-export default function ContentRecommendationWidget() {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-6">
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900">Recommended for You</h3>
-        <Link 
-          href="/content-showcase" 
-          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-        >
-          View All →
-        </Link>
+        <h2 className="text-2xl font-bold text-gray-900">Recommended for You</h2>
+        <div className="text-sm text-gray-500">Based on your interests</div>
       </div>
-      
+
       <div className="space-y-4">
-        {contentItems.slice(0, 3).map((item, index) => (
-          <Link key={index} href={item.href} className="group block">
-            <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-              <div className="text-2xl group-hover:scale-110 transition-transform">
-                {item.icon}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center space-x-2 mb-1">
-                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${item.badgeColor}`}>
-                    {item.badge}
-                  </span>
-                  <span className={`text-xs font-medium ${getTypeColor(item.type)}`}>
-                    {getTypeLabel(item.type)}
-                  </span>
+        {recommendations.slice(0, 3).map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className="block group hover:bg-gray-50 rounded-xl p-4 transition-all hover:shadow-sm"
+          >
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center text-xl">
+                  {getTypeIcon(item.type)}
                 </div>
-                <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-gray-600 mb-2 line-clamp-2">
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <div className="flex items-center space-x-2">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
+                      {item.difficulty}
+                    </span>
+                  </div>
+                </div>
+                
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                   {item.description}
                 </p>
-                <div className="flex items-center text-xs text-gray-500">
-                  <span>{item.readTime}</span>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4 text-xs text-gray-500">
+                    <span className="flex items-center space-x-1">
+                      <span>📂</span>
+                      <span>{item.category}</span>
+                    </span>
+                    <span className="flex items-center space-x-1">
+                      <span>⏱️</span>
+                      <span>{item.readTime}</span>
+                    </span>
+                    <span className={`font-medium ${getValueColor(item.estimatedValue)}`}>
+                      💎 {item.estimatedValue} Value
+                    </span>
+                  </div>
+                  
+                  <div className="text-blue-600 text-sm font-medium group-hover:text-blue-700">
+                    Read More →
+                  </div>
                 </div>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </div>
             </div>
           </Link>
         ))}
       </div>
-      
+
       <div className="mt-6 pt-4 border-t border-gray-200">
-        <Link 
-          href="/content-showcase"
-          className="w-full bg-blue-50 text-blue-600 hover:bg-blue-100 text-center py-2 px-4 rounded-lg font-medium transition-colors block"
-        >
-          Discover More Content
-        </Link>
+        <div className="grid grid-cols-2 gap-3">
+          <Link
+            href="/content-showcase"
+            className="block text-center bg-gray-100 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+          >
+            View All Content
+          </Link>
+          <Link
+            href="/contact"
+            className="block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
+          >
+            Get Personalized Recommendations
+          </Link>
+        </div>
       </div>
     </div>
   );

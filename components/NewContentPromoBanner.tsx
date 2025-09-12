@@ -1,124 +1,168 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, Calendar, BookOpen, FileText, Lightbulb } from 'lucide-react';
 
-const NewContentPromoBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  type: 'blog' | 'case-study' | 'service';
+  featured: boolean;
+}
 
-  useEffect(() => {
-    // Show banner after a short delay
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000);
+const NewContentPromoBanner: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  const newContent = [
+  const newContent: ContentItem[] = [
     {
-      title: 'AI 2025: Revolutionary Trends',
-      description: 'Discover the groundbreaking AI trends shaping the future',
-      type: 'Blog Post',
-      href: '/blog/ai-2025-revolutionary-trends',
-      icon: <Lightbulb className="w-6 h-6" />,
-      badge: 'Trending',
-      badgeColor: 'bg-red-500'
+      id: '1',
+      title: 'AI Enterprise Automation Revolution 2025',
+      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
+      href: '/blog/ai-2025-enterprise-automation-revolution',
+      type: 'blog',
+      featured: true
     },
     {
-      title: 'Fortune 500 AI Success Story',
-      description: '300% ROI and $50M savings through AI transformation',
-      type: 'Case Study',
-      href: '/case-studies/ai-transformation-fortune-500-success-2025',
-      icon: <Star className="w-6 h-6" />,
-      badge: 'Featured',
-      badgeColor: 'bg-blue-500'
+      id: '2',
+      title: 'AI Healthcare Diagnosis Breakthrough 2025',
+      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
+      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
+      type: 'blog',
+      featured: true
     },
     {
-      title: 'AI Implementation Master Guide',
-      description: 'Complete guide to implementing AI in your organization',
-      type: 'Resource',
-      href: '/resources/ai-implementation-master-guide-2026',
-      icon: <BookOpen className="w-6 h-6" />,
-      badge: 'New',
-      badgeColor: 'bg-green-500'
+      id: '3',
+      title: 'AI Financial Services Transformation Success',
+      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
+      href: '/case-studies/ai-financial-services-transformation-2025',
+      type: 'case-study',
+      featured: true
+    },
+    {
+      id: '4',
+      title: 'AI Automation Services',
+      description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
+      href: '/services/ai-automation',
+      type: 'service',
+      featured: true
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % newContent.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % newContent.length);
     }, 5000);
 
     return () => clearInterval(interval);
   }, [newContent.length]);
 
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'service':
+        return '🚀';
+      default:
+        return '✨';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'service':
+        return 'from-purple-500 to-pink-500';
+      default:
+        return 'from-gray-500 to-gray-600';
+    }
+  };
+
   if (!isVisible) return null;
 
-  const currentContent = newContent[currentSlide];
+  const currentContent = newContent[currentIndex];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
-          <div className="flex items-center space-x-4 flex-1">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">New Content Available</span>
-            </div>
-            
-            <div className="flex items-center space-x-4 flex-1">
-              <div className="flex items-center space-x-3">
-                <div className="text-blue-200">
-                  {currentContent.icon}
-                </div>
-                <div>
-                  <div className="flex items-center space-x-2">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${currentContent.badgeColor} text-white`}>
-                      {currentContent.badge}
-                    </span>
-                    <span className="text-sm text-blue-200">{currentContent.type}</span>
-                  </div>
-                  <h3 className="font-semibold text-sm">{currentContent.title}</h3>
-                </div>
-              </div>
-              
-              <div className="hidden sm:block">
-                <p className="text-sm text-blue-100 max-w-md">{currentContent.description}</p>
-              </div>
-            </div>
-          </div>
+    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
 
-          <div className="flex items-center space-x-3">
-            <Link
-              href={currentContent.href}
-              className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition-colors flex items-center space-x-2"
-            >
-              <span>Read Now</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-blue-200 hover:text-white transition-colors p-1"
-            >
-              <X className="w-5 h-5" />
-            </button>
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="flex items-center justify-between">
+            {/* Content */}
+            <div className="flex-1 pr-8">
+              <div className="flex items-center mb-2">
+                <span className="text-2xl mr-3">{getTypeIcon(currentContent.type)}</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                  {currentContent.type === 'case-study' ? 'Case Study' : 
+                   currentContent.type === 'service' ? 'Service' : 'New Article'}
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-2">
+                {currentContent.title}
+              </h3>
+              <p className="text-lg text-indigo-100 mb-4">
+                {currentContent.description}
+              </p>
+              <div className="flex items-center space-x-4">
+                <Link 
+                  href={currentContent.href}
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+                >
+                  Read More
+                </Link>
+                <Link 
+                  href="/content-showcase"
+                  className="text-white hover:text-indigo-200 transition-colors"
+                >
+                  View All Content →
+                </Link>
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="flex flex-col space-y-2">
+              {newContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentIndex 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Slide indicators */}
-        <div className="flex justify-center space-x-2 pb-2">
-          {newContent.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-blue-300'
-              }`}
-            />
-          ))}
-        </div>
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
+        <div 
+          className="h-full bg-white transition-all duration-5000 ease-linear"
+          style={{ width: `${((currentIndex + 1) / newContent.length) * 100}%` }}
+        />
       </div>
     </div>
   );
