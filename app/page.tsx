@@ -11,6 +11,8 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import DynamicContentCarousel from '../components/DynamicContentCarousel';
+import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -196,6 +198,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Dynamic Content Carousel */}
+      <DynamicContentCarousel />
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
@@ -1033,6 +1038,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Content Discovery Section */}
+      <ContentDiscoverySection />
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
