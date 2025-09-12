@@ -11,6 +11,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
@@ -416,6 +417,9 @@ export default function HomePage() {
 
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
+
+      {/* Featured New Content Showcase */}
+      <FeaturedNewContentShowcase title="Featured in September 2025" subtitle="Fresh articles, resources, and case studies just released" showViewAll={true} viewAllHref="/content-showcase" columns={3} />
 
       {/* New Content Banner - Top */}
       <NewContentBanner variant="default" maxItems={4} />
