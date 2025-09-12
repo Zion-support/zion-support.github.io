@@ -1,0 +1,10 @@
+legacy-peer-deps=true
+<<<<<<< HEAD
+strict-peer-dependencies=false
+auto-install-peers=true
+
+# Ensure consistent React versions
+react@18.2.0
+react-dom@18.2.0
+=======
+>>>>>>> origin/backup-main-20250823-224612

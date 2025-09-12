@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": [
       "ES2024",
@@ -11,16 +11,18 @@
     ],
     "module": "esnext",
     "skipLibCheck": true,
-    "importHelpers": false,
-    "noEmitHelpers": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
     },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
@@ -33,9 +35,7 @@
     "allowJs": true,
     "incremental": true,
     "jsx": "preserve",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "allowImportingTsExtensions": true,
     "noEmit": true,
     "isolatedModules": true,
     "plugins": [
@@ -43,22 +43,29 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    /* Modern TypeScript Features */
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "useUnknownInCatchVariables": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    /* Performance optimizations */
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "disableSizeLimit": true,
+    "generateCpuProfile": "profile.cpuprofile",
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "traceResolution": false,
+    /* Advanced features */
+    "allowArbitraryExtensions": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "verbatimModuleSyntax": true
   },
-  "include": [
-    "src",
-    "app",
-    "components",
-    "lib",
-    "types",
-    ".next/types/**/*.ts"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", "src/types/offline-shims.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
