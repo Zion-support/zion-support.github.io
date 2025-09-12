@@ -19,6 +19,8 @@ const EnhancedContentShowcase = lazy(() => import('../components/EnhancedContent
 const NewsletterSignup = lazy(() => import('../components/NewsletterSignup'));
 const EnhancedContentPromotionBanner = lazy(() => import('../components/EnhancedContentPromotionBanner'));
 const TrendingContentWidget = lazy(() => import('../components/TrendingContentWidget'));
+const TrendingContentCarousel = lazy(() => import('../components/TrendingContentCarousel'));
+const ContentRecommendationWidget = lazy(() => import('../components/ContentRecommendationWidget'));
 const EnhancedNewsletterSignup = lazy(() => import('../components/EnhancedNewsletterSignup'));
 
 // Card component
@@ -182,14 +184,10 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner />
       </Suspense>
 
-      {/* Trending Topics Widget */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <Suspense fallback={<LoadingSpinner size="md" text="Loading trending topics..." />}>
-            <TrendingTopicsWidget />
-          </Suspense>
-        </div>
-      </section>
+      {/* Trending Content Carousel */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading trending content..." />}>
+        <TrendingContentCarousel />
+      </Suspense>
 
       {/* New Content Spotlight - January 2025 */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
@@ -1345,6 +1343,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Content Recommendation Widget */}
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <Suspense fallback={<LoadingSpinner size="md" text="Loading recommendations..." />}>
+            <ContentRecommendationWidget />
+          </Suspense>
+        </div>
+      </section>
+
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
