@@ -45,12 +45,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Revolutionary AI Content Update: 20+ New Resources Just Released!
+                🎉 Revolutionary AI Content Update: 30+ New Resources Just Released!
               </h2>
               <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations, Sustainability & Green Tech, 
-                Robotics & Automation, plus new case studies and implementation guides. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough content: Quantum Computing AI Breakthrough, AI Ethics & Governance Framework, 
+                Financial Services AI Transformation Case Study, plus the comprehensive 200+ page AI Implementation Master Guide 2026. 
+                Get expert insights on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -64,6 +64,45 @@ export default function HomePage() {
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Read Latest Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quantum Computing AI Breakthrough Banner */}
+        <section className="py-6 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">⚛️ QUANTUM AI BREAKTHROUGH</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 Quantum Computing AI: Revolutionary Applications Reshaping 2025!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover how quantum computing is revolutionizing AI with breakthrough applications in drug discovery, 
+                cryptography, optimization, and machine learning. Learn about quantum AI implementations delivering 
+                1000x speedups and unprecedented capabilities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Quantum AI Guide
+                </Link>
+                <Link
+                  href="/blog/ai-ethics-governance-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  AI Ethics Framework
+                </Link>
+                <Link
+                  href="/resources/ai-implementation-master-guide-2026"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Master Guide 2026
                 </Link>
               </div>
             </div>
