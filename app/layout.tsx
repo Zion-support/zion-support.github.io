@@ -237,7 +237,6 @@ function Header() {
                 </Link>
                 <Link href="/tools/ai-2029-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2029 ROI Calculator (NEW)
-=======
                 <Link href="/ai-2029-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2029 Breakthrough Showcase (REVOLUTIONARY)
                 </Link>
@@ -259,7 +258,6 @@ function Header() {
                 </Link>
                 <Link href="/webinars/ai-2029-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔥 Revolutionary Breakthroughs Webinar (NEW)
->>>>>>> origin/cursor/create-and-deploy-new-content-3966
                 </Link>
               </div>
             </div>
@@ -300,6 +298,43 @@ function Header() {
                 </Link>
                 <Link href="/tools/ai-2035-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2035 ROI Calculator (NEW)
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              AI 2036
+              <span className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                FUTURE
+              </span>
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/ai-2036-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-pink-50 to-purple-50 border-l-4 border-pink-500">
+                  🔮 AI 2036 Future Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/blog/ai-2036-quantum-consciousness-integration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-500">
+                  ⚛️ Quantum Consciousness Integration (95% Probability)
+                </Link>
+                <Link href="/blog/ai-2036-dimensional-ai-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500">
+                  🌌 Multi-Dimensional AI Systems (88% Probability)
+                </Link>
+                <Link href="/blog/ai-2036-temporal-optimization" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-500">
+                  ⏰ Temporal Optimization Networks (92% Probability)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/resources/ai-2036-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 AI 2036 Implementation Guide (FUTURE)
+                </Link>
+                <Link href="/tools/ai-2036-predictive-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 Predictive Analytics Calculator (NEW)
+                </Link>
+                <Link href="/webinars/ai-2036-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Future Predictions Webinar (LIVE)
                 </Link>
               </div>
             </div>

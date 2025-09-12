@@ -168,20 +168,12 @@ export default function AdvancedNeuralNetworksPage() {
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">💰 Financial Services</h3>
               <p className="text-gray-700 mb-3">
-<<<<<<< HEAD
                 Advanced AI systems are transforming fraud detection, algorithmic trading, and risk assessment.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Real-time fraud detection with 99.8% accuracy</li>
-                <li>• Algorithmic trading strategies</li>
-                <li>• Credit risk assessment automation</li>
-                <li>• Regulatory compliance monitoring</li>
-                Advanced AI systems are transforming risk assessment, fraud detection, and algorithmic trading.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Real-time fraud detection with 99.8% accuracy</li>
                 <li>• Algorithmic trading with 40% better returns</li>
-                <li>• Credit risk assessment improvements</li>
+                <li>• Credit risk assessment automation</li>
                 <li>• Automated compliance monitoring</li>
               </ul>
             </div>
@@ -192,12 +184,7 @@ export default function AdvancedNeuralNetworksPage() {
                 Neural networks power the next generation of autonomous vehicles, drones, and robotic systems.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
-<<<<<<< HEAD
                 <li>• Real-time object detection and classification</li>
-                <li>• Path planning and navigation</li>
-                <li>• Predictive maintenance systems</li>
-                <li>• Human-robot interaction</li>
-                <li>• Real-time object detection and tracking</li>
                 <li>• Path planning and navigation</li>
                 <li>• Predictive maintenance systems</li>
                 <li>• Human-robot collaboration</li>
@@ -215,7 +202,6 @@ export default function AdvancedNeuralNetworksPage() {
 
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg mb-6">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">🚀 Emerging Technologies</h3>
-<<<<<<< HEAD
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">Quantum Neural Networks</h4>

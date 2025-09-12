@@ -8,7 +8,6 @@ export const metadata = {
   openGraph: {
     title: 'AI 2031 Future Predictions: Revolutionary Breakthrough Technologies',
     description: 'Discover the AI technologies that will revolutionize industries by 2031',
->>>>>>> 40261909a15062d6e44e033bd721d855a759e78d
     images: ['/og-ai-2031-predictions.png'],
   },
 };
