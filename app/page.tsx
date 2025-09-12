@@ -20,6 +20,10 @@ import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import ContentPromotionalBanner from '../components/ContentPromotionalBanner';
 import TrendingContentShowcase from '../components/TrendingContentShowcase';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import { ContentMetricsWidget } from '../components/ContentMetrics';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -317,6 +321,79 @@ export default function HomePage() {
 
       {/* Enhanced Content Showcase Banner */}
       <section className='py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
+      {/* New Content Banner - Top */}
+      <NewContentBanner variant="default" maxItems={4} />
+
+      {/* Latest Content Drop - Prominent Banner */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* NEW: Enhanced Content Showcase - Latest 2025 Content */}
+      <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
+      {/* Enhanced Content Promotion Banner */}
+      <ContentPromotionBanner
+        title="🚀 Fresh AI & Business Insights"
+        subtitle="JUST PUBLISHED - JANUARY 2025"
+        description="New this week: AI Enterprise Integration Guide, Customer Support Automation, LLM Guardrails, and our comprehensive AI Architecture & Cost Governance framework. Expert insights to accelerate your growth."
+        ctaText="📚 Read Latest Articles"
+        ctaLink="/blog"
+        secondaryCtaText="📋 Download Free Resources"
+        secondaryCtaLink="/resources"
+        gradient="from-indigo-600 via-purple-600 to-pink-600"
+        featuredContent={[
+          {
+            title: "AI Enterprise Integration 2025",
+            description: "Complete implementation guide with 340% ROI and real case studies",
+            link: "/blog/ai-enterprise-integration-2025",
+            icon: "🏢",
+            readTime: "18 min read",
+            type: "New"
+          },
+          {
+            title: "AI Customer Support Automation 2025",
+            description: "Transform support with 40% cost reduction and improved satisfaction",
+            link: "/blog/ai-customer-support-automation-2025",
+            icon: "🎧",
+            readTime: "9 min read",
+            type: "New"
+          },
+          {
+            title: "LLM Guardrails in Production 2025",
+            description: "Safety without blocking delivery - proven production patterns",
+            link: "/blog/llm-guardrails-in-production-2025",
+            icon: "🛡️",
+            readTime: "8 min read",
+            type: "Trending"
+          },
+          {
+            title: "AI Architecture & Cost Governance",
+            description: "Complete framework for reliable and affordable AI systems",
+            link: "/resources/ai-architecture-cost-governance-2025",
+            icon: "🧩",
+            readTime: "45 min read",
+            type: "Free Download"
+          },
+          {
+            title: "Financial Services AI Success",
+            description: "$50M cost savings, 300% efficiency gains - complete case study",
+            link: "/case-studies/ai-financial-services-transformation-2025",
+            icon: "🏦",
+            readTime: "12 min read",
+            type: "Case Study"
+          }
+        ]}
+      />
+
+      {/* Enhanced Content Promotion Banner */}
+      <EnhancedContentPromotionBanner />
+
+      {/* New Content Showcase */}
+      <NewContentShowcase />
+
+      {/* Content Metrics */}
+      <ContentMetricsWidget />
+
+      {/* New Content Showcase Banner */}
+      {/* Latest Content Showcase Banner */}
+      <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
