@@ -1,129 +1,127 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, TrendingUp, Star } from 'lucide-react';
+import { X, Zap, TrendingUp, Star, ArrowRight, Brain, Rocket, Target } from 'lucide-react';
 
-export default function AI2025RevolutionaryBreakthroughBanner() {
+const AI2025RevolutionaryBreakthroughBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai2025-breakthrough-banner-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    setIsDismissed(true);
+    localStorage.setItem('ai2025-breakthrough-banner-dismissed', 'true');
+  };
+
+  if (!isVisible || isDismissed) return null;
+
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90"></div>
-      
-      {/* Animated Background Elements */}
+    <div className="relative bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-white/10 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-600/20 via-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-4 left-8 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-500"></div>
+        <div className="absolute bottom-8 right-4 w-2 h-2 bg-white rounded-full animate-pulse delay-1500"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-white">
-            <div className="flex items-center mb-4">
-              <div className="flex items-center px-3 py-1 bg-white/20 rounded-full text-sm font-semibold mr-4">
-                <Star className="w-4 h-4 mr-1" />
-                BREAKTHROUGH INNOVATION
-              </div>
-              <div className="flex items-center px-3 py-1 bg-green-500/20 rounded-full text-sm font-semibold">
-                <TrendingUp className="w-4 h-4 mr-1" />
-                NEW CONTENT
-              </div>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              AI 2025: Revolutionary
-              <span className="block text-yellow-300">Breakthroughs</span>
-            </h2>
-            
-            <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-              Discover the most groundbreaking AI innovations of 2025 that are reshaping industries, 
-              from quantum-enhanced neural networks to autonomous business intelligence systems.
-            </p>
-
-            {/* Key Highlights */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="flex items-center">
-                <Brain className="w-5 h-5 text-yellow-300 mr-2" />
-                <span className="text-sm font-semibold">Quantum AI</span>
-              </div>
-              <div className="flex items-center">
-                <Zap className="w-5 h-5 text-yellow-300 mr-2" />
-                <span className="text-sm font-semibold">2000% ROI</span>
-              </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-yellow-300 mr-2" />
-                <span className="text-sm font-semibold">Global Impact</span>
-              </div>
-              <div className="flex items-center">
-                <Star className="w-5 h-5 text-yellow-300 mr-2" />
-                <span className="text-sm font-semibold">Industry First</span>
+      <div className="relative max-w-7xl mx-auto px-4 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4 flex-1">
+            {/* Icon */}
+            <div className="flex-shrink-0">
+              <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                <Zap className="w-6 h-6 text-white animate-pulse" />
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2025-revolutionary-breakthroughs"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
-              >
-                Read Full Article
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                View Case Study
-              </Link>
-            </div>
-          </div>
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">
+                  BREAKTHROUGH
+                </span>
+                <span className="px-3 py-1 bg-yellow-500 text-black text-xs font-bold rounded-full">
+                  NEW
+                </span>
+                <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">
+                  2000% ROI
+                </span>
+              </div>
+              
+              <h2 className="text-xl md:text-2xl font-bold mb-2">
+                🚀 AI 2025 Revolutionary Breakthroughs Are Here!
+              </h2>
+              
+              <p className="text-sm md:text-base text-blue-100 mb-3 max-w-2xl">
+                Discover the most transformative AI technologies of 2025. Quantum-AI fusion, neural interfaces, and autonomous systems delivering unprecedented ROI.
+              </p>
 
-          {/* Visual Elements */}
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-400 rounded-full mb-6">
-                  <Brain className="w-10 h-10 text-blue-600" />
+              {/* Key highlights */}
+              <div className="flex flex-wrap gap-4 text-xs md:text-sm">
+                <div className="flex items-center gap-1">
+                  <Brain className="w-4 h-4 text-yellow-300" />
+                  <span>Quantum-AI Fusion</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Revolutionary AI Breakthroughs
-                </h3>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">Quantum Neural Networks</span>
-                    <span className="text-yellow-300 font-bold">99.7%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">ROI Achievement</span>
-                    <span className="text-green-300 font-bold">2000%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">Global Deployment</span>
-                    <span className="text-blue-300 font-bold">50+</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">Cost Savings</span>
-                    <span className="text-purple-300 font-bold">$2.5B</span>
-                  </div>
+                <div className="flex items-center gap-1">
+                  <Rocket className="w-4 h-4 text-yellow-300" />
+                  <span>Neural Interfaces</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Target className="w-4 h-4 text-yellow-300" />
+                  <span>Autonomous Systems</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <TrendingUp className="w-4 h-4 text-yellow-300" />
+                  <span>2000%+ ROI</span>
                 </div>
               </div>
             </div>
-
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full animate-bounce delay-1000"></div>
-            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-blue-400 rounded-full animate-bounce delay-500"></div>
           </div>
+
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <Link 
+              href="/blog/ai-2025-revolutionary-breakthroughs"
+              className="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 whitespace-nowrap"
+            >
+              <Star className="w-4 h-4" />
+              Read Breakthroughs
+            </Link>
+            <Link 
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="border-2 border-white text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-600 transition-colors flex items-center gap-2 whitespace-nowrap"
+            >
+              Get Toolkit
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Dismiss button */}
+          <button
+            onClick={handleDismiss}
+            className="flex-shrink-0 p-2 hover:bg-white/20 rounded-full transition-colors ml-2"
+            aria-label="Dismiss banner"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 fill-white">
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
-        </svg>
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
+        <div className="h-full bg-gradient-to-r from-yellow-400 to-red-400 animate-pulse"></div>
       </div>
     </div>
   );
-}
+};
+
+export default AI2025RevolutionaryBreakthroughBanner;
