@@ -5,13 +5,22 @@ import SEO from '../../components/SEO';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
-      title: "AI Predictions 2025: The Future of Artificial Intelligence",
-      description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
-      href: "/blog/ai-2025-predictions",
+      title: "AI Breakthrough Innovations 2025: Revolutionary Technologies Shaping the Future",
+      description: "Discover the most groundbreaking AI innovations of 2025, from quantum-enhanced machine learning to brain-computer interfaces. Explore how these technologies are transforming industries.",
+      href: "/blog/ai-2025-breakthrough-innovations",
+      icon: "🚀",
+      category: "AI Innovation",
+      readTime: "18 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025 Year Ahead Predictions: 15 Trends That Will Reshape Business",
+      description: "Explore our comprehensive predictions for AI in 2025. From AGI breakthroughs to enterprise transformation, discover the trends that will define the future of artificial intelligence.",
+      href: "/blog/ai-2025-year-ahead-predictions",
       icon: "🔮",
-      category: "AI Trends",
-      readTime: "15 min read",
-      date: "Jan 25, 2025"
+      category: "AI Predictions",
+      readTime: "25 min read",
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Success Framework 2025: From Strategy to Governance",
@@ -30,27 +39,18 @@ export default function ContentShowcasePage() {
       category: "AI Technology",
       readTime: "12 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Cybersecurity Threats 2025: Defending Against Next-Gen Attacks",
-      description: "Comprehensive analysis of emerging AI-powered cyber threats and defense strategies to protect your organization in 2025.",
-      href: "/blog/ai-cybersecurity-threats-2025",
-      icon: "🛡️",
-      category: "Cybersecurity",
-      readTime: "20 min read",
-      date: "Jan 30, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-      title: "AI Transformation Enterprise Success 2025: Fortune 500 Case Study",
-      description: "Explore a Fortune 500 enterprise's successful AI transformation journey with Zion Tech Group, achieving 300% efficiency gains and $50M in cost savings.",
-      href: "/case-studies/ai-transformation-enterprise-success-2025",
+      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
+      description: "Discover how a Fortune 500 manufacturing company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation with Zion Tech Group.",
+      href: "/case-studies/ai-transformation-fortune-500-success-2025",
       icon: "🏆",
       category: "Enterprise AI",
       result: "$50M Savings",
-      date: "Feb 05, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Retail Transformation Success: 300% Revenue Growth",
@@ -74,13 +74,13 @@ export default function ContentShowcasePage() {
 
   const newResources = [
     {
-      title: "AI Transformation Playbook 2025: Your Guide to Digital Success",
-      description: "Download Zion Tech Group's comprehensive AI Transformation Playbook for 2025. A step-by-step guide covering strategy, technology, and people for successful digital transformation.",
-      href: "/resources/ai-transformation-playbook-2025",
+      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step strategies, templates, and best practices for successful AI transformation.",
+      href: "/resources/ai-implementation-master-guide-2025",
       icon: "📚",
-      category: "Playbook",
+      category: "Master Guide",
       type: "Free Download",
-      date: "Feb 10, 2025"
+      date: "Jan 30, 2025"
     },
     {
       title: "AI Implementation Checklist 2025: 150+ Actionable Items",
