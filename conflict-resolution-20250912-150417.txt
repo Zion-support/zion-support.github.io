@@ -97,3 +97,5 @@
 2025-09-12 15:05:38 - Resolving conflicts in package.json for branch backup-main-20250912-100543
 2025-09-12 15:05:38 - Resolving conflicts in src/App.tsx for branch backup-main-20250912-100543
 2025-09-12 15:05:38 - Resolving conflicts in src/components/Header.tsx for branch backup-main-20250912-100543
+2025-09-12 15:05:41 - Merge conflicts detected in backup-main-20250912-102016
+2025-09-12 15:05:41 - Resolving conflicts in comprehensive-merge-output.log for branch backup-main-20250912-102016
