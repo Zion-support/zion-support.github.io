@@ -144,9 +144,15 @@ import AutonomousSystemsRevolutionBanner from '../components/AutonomousSystemsRe
 import EdgeComputingIOTBanner from '../components/EdgeComputingIOTBanner';
 
 // New 2026 Content Components
->>>>>>> cursor/create-and-deploy-new-content-6671
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+
+// New 2025 Breakthrough Content Components
+import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
+
+// New 2026 Quantum-Neural Content Components
+import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
 import ContentRecommendationWidget2026 from '../components/ContentRecommendationWidget2026';
 import EnhancedSearch2026 from '../components/EnhancedSearch2026';
 import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
@@ -198,6 +204,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
+        <NewContent2025BreakthroughBanner />
+        
+        {/* NEW AI 2025 CONTENT SHOWCASE - LATEST */}
+        <NewContent2025Showcase />
+        
+        {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER - BREAKTHROUGH */}
+        <AI2026QuantumNeuralPromotionBanner />
+        
         {/* AI 2026 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2026BreakthroughPromotionBanner />
         
