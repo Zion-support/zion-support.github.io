@@ -67,66 +67,134 @@ export default function HomePage() {
     { number: "24/7", label: "Support Available", icon: Clock }
 const HomePage: React.FC = () => {
   return (
-import { useRouter } from 'next/router';
-import { useTranslation } from 'react-i18next';
-import Home from '@/pages/Home';
-import type { GetStaticProps } from 'next';
-import * as Sentry from '@sentry/nextjs';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import { logWarn, logError } from '@/utils/productionLogger';
-const stats = [
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
-];
-const services = [
-  {
-    title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions for modern businesses",
-    icon: Brain,
-    href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-    pricing: "Starting at $2,000/month",
-    count: "25+ AI Solutions",
-    popular: true
-  },
-    title: "IT Services",
-    description: "Comprehensive IT solutions to power your digital transformation",
-    icon: Network,
-    href: "/it-services",
-    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
-    pricing: "Starting at $1,500/month",
-    count: "30+ IT Solutions",
-    title: "Micro SaaS",
-    description: "Innovative software as a service solutions for specialized business needs",
-    icon: Cloud,
-    href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
-    pricing: "Starting at $29/month",
-    count: "45+ Products",
-  }
-const benefits = [
-    icon: CheckCircle,
-    title: "Expert Team",
-    description: "Certified professionals with years of experience"
-    icon: Star,
-    title: "Quality Assurance",
-    description: "Rigorous testing and quality control processes"
-    icon: Users,
-    title: "24/7 Support",
-    description: "Round-the-clock technical support"
-    icon: Award,
-    title: "Fast Delivery",
-    description: "Agile development with rapid deployment"
-  const { t } = useTranslation(); // Added this line
-    <Layout
-      title="Zion Tech Group - Leading AI & Technology Solutions"
-      description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
-      keywords="AI services, technology consulting, cloud solutions, digital transformation, machine learning, software development"
-    >
-      {t('test_error_button_text')}
-    </button>
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Zion Tech Group - AI & Cloud Solutions</title>
+        <meta name="description" content="Leading provider of AI, cloud computing, and digital transformation solutions with autonomous content generation." />
+        <meta property="og:title" content="Zion Tech Group - AI & Cloud Solutions" />
+        <meta property="og:description" content="Leading provider of AI, cloud computing, and digital transformation solutions." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      </Head>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-2xl md:text-3xl text-white/80 mb-8 max-w-4xl mx-auto">
+            Autonomous AI & Cloud Solutions with Continuous Content Generation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/components"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              Explore Components
+            </Link>
+            <Link 
+              href="/reports"
+              className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              View Reports
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Reports */}
+      <section className="py-16 bg-slate-900/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Featured Content</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredReports.map((report) => (
+              <Link 
+                key={report.title}
+                href={report.href}
+                className="group bg-slate-800/50 border border-white/10 rounded-lg p-6 hover:border-cyan-400/50 transition-all"
+              >
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
+                  {report.title}
+                </h3>
+                <p className="text-white/70 mb-3">{report.description}</p>
+                <span className="text-cyan-400 text-sm">{report.count}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* New Features */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">New Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {newFeatures.map((feature) => (
+              <Link 
+                key={feature.title}
+                href={feature.href}
+                className="group text-center"
+              >
+                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-white/70">{feature.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      
+{/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
+
+ <section className="mx-auto max-w-7xl px-6 pb-14">
+   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <a href="/reports/updates/update-2025-08-17-1829" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1829</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1828" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1828</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1827" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1827</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1826" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1826</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1825" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1825</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1824" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1824</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+   </div>
+ </section>
+ 
+{/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
+</section>
+    </div>
   );
 };
 const IndexPage: React.FC<HomePageProps> = (props) => {
