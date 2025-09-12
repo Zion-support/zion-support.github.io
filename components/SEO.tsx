@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
@@ -33,7 +33,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullImage = image.startsWith('http') ? image : `https://zion.app${image}`;
 
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -177,7 +177,7 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
-    </Helmet>
+    </Head>
   );
 };
 

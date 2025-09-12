@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+"use client";
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock, Tag, Star } from 'lucide-react';
 
@@ -7,11 +8,11 @@ interface ContentItem {
   title: string;
   description: string;
   type: 'blog' | 'case-study' | 'resource';
-  category: string;
+  href: string;
+  category?: string;
   readTime?: string;
   isNew?: boolean;
   icon?: string;
-  category?: string;
   featured?: boolean;
 }
 
@@ -163,7 +164,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
