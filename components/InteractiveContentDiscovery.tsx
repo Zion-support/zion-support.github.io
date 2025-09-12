@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -12,6 +12,108 @@ interface ContentItem {
   featured: boolean;
   tags: string[];
 }
+
+const contentItems: ContentItem[] = [
+  {
+    id: '1',
+    title: 'Advanced AI Architecture Patterns for 2025',
+    description: 'Building scalable, cost-effective systems with 300%+ ROI',
+    href: '/blog/ai-2025-advanced-ai-architecture',
+    category: 'AI Architecture',
+    readTime: '25 min read',
+    difficulty: 'Advanced',
+    tags: ['Architecture', 'Scalability', 'ROI', 'Enterprise'],
+    icon: '🏗️',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '2',
+    title: 'AI Automation Trends 2025',
+    description: 'Complete guide to enterprise transformation with 400%+ ROI',
+    href: '/blog/ai-2025-automation-trends',
+    category: 'AI Automation',
+    readTime: '22 min read',
+    difficulty: 'Intermediate',
+    tags: ['Automation', 'Enterprise', 'Trends', 'ROI'],
+    icon: '🤖',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '3',
+    title: '$200M Manufacturing Success Case Study',
+    description: 'How Fortune 500 achieved 60% efficiency gains with autonomous AI',
+    href: '/case-studies/ai-autonomous-manufacturing-success-2025',
+    category: 'Case Study',
+    readTime: '15 min read',
+    difficulty: 'Intermediate',
+    tags: ['Manufacturing', 'Case Study', 'ROI', 'Success'],
+    icon: '💰',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '4',
+    title: 'AI Implementation Master Guide 2026',
+    description: '200+ page comprehensive guide with frameworks and templates',
+    href: '/resources/ai-implementation-master-guide-2026',
+    category: 'Free Resource',
+    readTime: '200+ pages',
+    difficulty: 'Beginner',
+    tags: ['Guide', 'Implementation', 'Templates', 'Free'],
+    icon: '📚',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: '5',
+    title: 'AI Workforce Transformation 2025',
+    description: 'Reskilling strategies for the AI era',
+    href: '/blog/ai-workforce-transformation-2025',
+    category: 'Workforce',
+    readTime: '18 min read',
+    difficulty: 'Intermediate',
+    tags: ['Workforce', 'Transformation', 'Skills', 'Future'],
+    icon: '👥'
+  },
+  {
+    id: '6',
+    title: 'AI Sustainability & Green Tech',
+    description: 'Building eco-friendly AI systems',
+    href: '/blog/ai-sustainability-green-tech-2025',
+    category: 'Sustainability',
+    readTime: '20 min read',
+    difficulty: 'Intermediate',
+    tags: ['Sustainability', 'Green Tech', 'Environment', 'AI'],
+    icon: '🌱'
+  },
+  {
+    id: '7',
+    title: 'AI Cybersecurity Checklist 2025',
+    description: '150+ security items for secure AI implementation',
+    href: '/resources/ai-cybersecurity-checklist-2025',
+    category: 'Security',
+    readTime: 'Free Download',
+    difficulty: 'Advanced',
+    tags: ['Security', 'Checklist', 'Compliance', 'Free'],
+    icon: '🛡️'
+  },
+  {
+    id: '8',
+    title: 'Edge AI: Privacy by Design',
+    description: 'On-device intelligence for instant, compliant CX',
+    href: '/blog/edge-ai-privacy-by-design-2025',
+    category: 'Edge Computing',
+    readTime: '8 min read',
+    difficulty: 'Advanced',
+    tags: ['Edge Computing', 'Privacy', 'On-device', 'Compliance'],
+    icon: '🔐'
+  }
+];
+
+const categories = ['All', 'AI Architecture', 'AI Automation', 'Case Study', 'Free Resource', 'Workforce', 'Sustainability', 'Security', 'Edge Computing'];
+const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
 
 const InteractiveContentDiscovery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

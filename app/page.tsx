@@ -169,34 +169,78 @@ export default function HomePage() {
                   📚 Download Master Guide
                 </Link>
               </div>
+              
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="text-4xl mb-4">👨‍💻</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">For Technical Teams</h3>
+                <p className="text-gray-600 mb-6">Deep technical guides, architecture patterns, and implementation frameworks</p>
+                <div className="space-y-3">
+                  <Link href="/blog/ai-2025-cybersecurity-revolution" className="block text-green-600 hover:text-green-800 font-medium">
+                    → AI Security Hardening Guide
+                  </Link>
+                  <Link href="/blog/ai-2025-advanced-rag-systems" className="block text-green-600 hover:text-green-800 font-medium">
+                    → Advanced RAG Systems
+                  </Link>
+                  <Link href="/resources/ai-cybersecurity-checklist-2025" className="block text-green-600 hover:text-green-800 font-medium">
+                    → Security Checklist
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="text-4xl mb-4">🏢</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">For Business Teams</h3>
+                <p className="text-gray-600 mb-6">Business-focused guides, use cases, and practical implementation strategies</p>
+                <div className="space-y-3">
+                  <Link href="/blog/ai-2025-ai-go-to-market" className="block text-purple-600 hover:text-purple-800 font-medium">
+                    → AI Go-To-Market Strategy
+                  </Link>
+                  <Link href="/blog/ai-2025-workforce-transformation" className="block text-purple-600 hover:text-purple-800 font-medium">
+                    → Workforce Transformation
+                  </Link>
+                  <Link href="/resources/ai-workforce-transformation-playbook-2025" className="block text-purple-600 hover:text-purple-800 font-medium">
+                    → Transformation Playbook
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                href="/content-showcase"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 text-lg shadow-lg transform hover:scale-105"
+              >
+                🎯 Find Your Perfect Resources
+                <span className="text-xl">→</span>
+              </Link>
             </div>
           </div>
         </section>
 
         {/* Autonomous Systems Promotion Banner */}
-        <section className="py-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
+        <section className="py-8 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
                 <span className="text-sm font-medium">🤖 AUTONOMOUS SYSTEMS BREAKTHROUGH</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 💰 $200M Manufacturing Success: Autonomous AI Systems Case Study!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
                 Discover how Fortune 500 companies are achieving unprecedented results with autonomous AI systems. 
                 Read our new case study showing $200M savings and download our free implementation guide with ROI calculators.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/case-studies/ai-autonomous-manufacturing-success-2025"
-                  className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
                   View Case Study
                 </Link>
                 <Link
                   href="/resources/autonomous-systems-implementation-guide"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-lg"
                 >
                   Free Implementation Guide
                 </Link>
