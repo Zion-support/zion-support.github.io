@@ -89,6 +89,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-revolutionary-trends-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 Revolutionary AI Trends 2025 (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-energy-sector-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚡ Energy Sector 2000% ROI (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-comprehensive-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Implementation Master Guide (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/ai-2030-vision-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2030 Vision Showcase (BREAKTHROUGH)
                 </Link>
@@ -248,6 +258,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-revolutionary-trends-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔮 Revolutionary AI Trends 2025 (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-energy-sector-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚡ Energy Sector 2000% ROI (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-comprehensive-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  📚 Implementation Master Guide (NEW)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2029-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🚀 AI 2029 Future Predictions (BREAKTHROUGH)
                 </Link>

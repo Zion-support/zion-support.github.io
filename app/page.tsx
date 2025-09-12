@@ -33,6 +33,8 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -49,6 +51,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
+        
         {/* AI 2030 CONTENT PROMOTION BANNER */}
         <AI2030ContentPromotionBanner />
         
