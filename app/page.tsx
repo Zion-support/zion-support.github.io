@@ -92,12 +92,12 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 NEW: LLM Optimization Masterclass, AI Automation Guide & $2.8B Unicorn Success!
+                🎉 NEW: AI Sustainability Solutions, Climate Tech Guide & Carbon Neutrality Success!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-                Just released: LLM Optimization Masterclass (10x performance gains), AI Automation Enterprise Transformation (300-500% efficiency), 
-                Global Tech Unicorn Success Story ($2.8B value creation), plus advanced implementation strategies. 
-                Get expert insights on the cutting-edge AI technologies transforming 2025.
+                Just released: AI-Powered Climate Solutions (60% emission reduction), Complete Sustainability Implementation Playbook, 
+                Fortune 500 Carbon Neutrality Case Study ($2.3B savings), plus LLM Optimization Masterclass and $2.8B Unicorn Success. 
+                Get expert insights on AI technologies transforming sustainability and business in 2025.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -107,16 +107,22 @@ export default function HomePage() {
                   Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-llm-optimization-masterclass"
+                  href="/blog/ai-sustainability-climate-solutions-2025"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  Read LLM Masterclass
+                  Read Climate Solutions
                 </Link>
                 <Link
-                  href="/case-studies/ai-2025-global-tech-unicorn-transformation"
+                  href="/resources/ai-sustainability-implementation-playbook-2025"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
-                  View $2.8B Success Story
+                  Get Implementation Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-sustainability-transformation-2025"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                >
+                  View Carbon Neutrality Success
                 </Link>
               </div>
             </div>
@@ -373,15 +379,15 @@ export default function HomePage() {
                      </div>
                    </Link>
                    
-                   <Link href='/blog/ai-2025-cybersecurity-advanced-threat-detection' className='group'>
+                   <Link href='/blog/ai-sustainability-climate-solutions-2025' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🛡️</div>
-                       <h3 className='text-xl font-bold mb-3'>AI Cybersecurity Revolution</h3>
-                       <p className='text-sm opacity-90 mb-4'>Advanced threat detection with 94% reduction in false positives</p>
+                       <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>🌱</div>
+                       <h3 className='text-xl font-bold mb-3'>AI Climate Solutions</h3>
+                       <p className='text-sm opacity-90 mb-4'>60% emission reduction with AI-powered sustainability transformation</p>
                        <div className='flex items-center text-xs opacity-75'>
-                         <span>16 min read</span>
+                         <span>12 min read</span>
                          <span className='mx-2'>•</span>
-                         <span className='bg-blue-500 px-2 py-1 rounded-full'>🆕 NEW</span>
+                         <span className='bg-green-500 px-2 py-1 rounded-full'>🌍 SUSTAINABILITY</span>
                        </div>
                      </div>
                    </Link>
@@ -412,10 +418,10 @@ export default function HomePage() {
                      </div>
                    </Link>
        
-                   <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
+                   <Link href='/resources/ai-sustainability-implementation-playbook-2025' className='group'>
                      <div className='bg-white bg-opacity-15 backdrop-blur-sm p-8 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
                        <div className='text-5xl mb-6 group-hover:scale-110 transition-transform'>📚</div>
-                       <h3 className='text-xl font-bold mb-3'>AI Implementation Master Guide</h3>
+                       <h3 className='text-xl font-bold mb-3'>Sustainability Implementation Playbook</h3>
                        <p className='text-sm opacity-90 mb-4'>200+ page comprehensive guide with proven strategies and templates</p>
                        <div className='flex items-center text-xs opacity-75'>
                          <span>Free Download</span>
@@ -596,7 +602,7 @@ export default function HomePage() {
 
             <Link href='/resources/ai-2025-implementation-master-guide' className='group'>
               <div className='bg-white bg-opacity-15 backdrop-blur-sm p-6 rounded-2xl hover:bg-opacity-25 transition-all duration-300 border border-white border-opacity-20 hover:scale-105'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
                 <h3 className='text-lg font-bold mb-2'>Implementation Master Guide</h3>
                 <p className='text-sm opacity-90 mb-3'>Complete 45-min enterprise playbook</p>
                 <div className='flex items-center text-xs opacity-75'>
@@ -664,7 +670,7 @@ export default function HomePage() {
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
               New this week: AI Industry Disruption Analysis, 2025 AI Trends Predictions, Fortune 500 Success Story, 
-              and our comprehensive AI Implementation Master Guide. Expert insights to accelerate your growth in 2025.
+              and our comprehensive Sustainability Implementation Playbook. Expert insights to accelerate your growth in 2025.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -724,11 +730,11 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
+            <Link href='/resources/ai-sustainability-implementation-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete 150+ page resource with templates</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <h3 className='text-lg font-semibold mb-2'>Sustainability Implementation Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete guide to carbon neutrality with AI</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
@@ -1431,7 +1437,7 @@ export default function HomePage() {
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
               New this week: AI Industry Disruption Analysis, 2025 AI Trends Predictions, Fortune 500 Success Story, 
-              and our comprehensive AI Implementation Master Guide. Expert insights to accelerate your growth.
+              and our comprehensive Sustainability Implementation Playbook. Expert insights to accelerate your growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -1490,11 +1496,11 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
+            <Link href='/resources/ai-sustainability-implementation-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete 150+ page resource with templates</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                <h3 className='text-lg font-semibold mb-2'>Sustainability Implementation Playbook</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete guide to carbon neutrality with AI</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
@@ -1606,10 +1612,10 @@ export default function HomePage() {
                      </div>
                    </Link>
        
-                   <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
+                   <Link href='/resources/ai-sustainability-implementation-playbook-2025' className='group'>
                      <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                       <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                       <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
+                       <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🌱</div>
+                       <h3 className='text-lg font-semibold mb-2'>Sustainability Implementation Playbook</h3>
                        <p className='text-sm opacity-90 mb-3'>200+ page comprehensive guide with proven strategies</p>
                        <div className='flex items-center text-xs opacity-75'>
                          <span>Free Download</span>
