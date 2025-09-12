@@ -35,6 +35,7 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
+    { name: 'Mega Content', href: '/mega-content-showcase', icon: '🎉', isNew: true, isHot: true },
     { name: 'Content Showcase', href: '/content-showcase', icon: '✨', isNew: true },
     { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
     { name: 'Case Studies', href: '/case-studies', icon: '📊' },

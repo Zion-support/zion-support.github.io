@@ -20,6 +20,21 @@ export default function ContentShowcase() {
 
   const content = [
     {
+      id: 0,
+      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
+      description: "Architectures, safety, and observability for deploying autonomous agents at the edge.",
+      category: "ai-automation",
+      type: "Article",
+      readTime: "21 min read",
+      publishDate: "2025-01-28",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "🤖",
+      href: "/blog/ai-2025-edge-agents-in-production",
+      tags: ["Edge AI", "Agents", "Observability", "Safety"]
+    },
+    {
       id: 1,
       title: "Advanced AI Architecture Patterns for 2025: Building Scalable, Resilient Systems",
       description: "Master advanced AI architecture patterns for 2025. Learn microservices, event-driven design, and distributed AI systems with real-world examples and implementation guides.",
@@ -230,6 +245,55 @@ export default function ContentShowcase() {
       tags: ["Financial Services", "Case Study", "ROI", "Transformation"]
     }
   ];
+
+  // Newly added September 2025 content
+  content.push(
+    {
+      id: 13,
+      title: "GenAI Security Blueprint 2025: Production-Grade Guardrails",
+      description: "Practical patterns to secure LLM apps: prompt injection defenses, data leakage prevention, and runtime policy enforcement.",
+      category: "cybersecurity",
+      type: "Article",
+      readTime: "16 min read",
+      publishDate: "2025-09-12",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "🛡️",
+      href: "/blog/genai-security-blueprint-2025",
+      tags: ["GenAI Security", "Guardrails", "Policies", "LLM"]
+    },
+    {
+      id: 14,
+      title: "AI Implementation Playbook 2025: Starter Kit (Free)",
+      description: "Download the starter kit with roadmaps, templates, and checklists to kick off AI safely and quickly.",
+      category: "resources",
+      type: "Free Download",
+      readTime: "75+ pages",
+      publishDate: "2025-09-12",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: false,
+      icon: "📥",
+      href: "/resources/ai-implementation-starter-kit-2025",
+      tags: ["Templates", "Roadmap", "Checklist", "Free"]
+    },
+    {
+      id: 15,
+      title: "Telecom Network Automation: 55% OPEX Reduction with AI Agents",
+      description: "How a global operator automated incidents and changes using AI agents, cutting OPEX by 55% within 6 months.",
+      category: "case-studies",
+      type: "Case Study",
+      readTime: "14 min read",
+      publishDate: "2025-09-11",
+      author: "Zion Tech Group",
+      featured: false,
+      trending: true,
+      icon: "📶",
+      href: "/case-studies/ai-telecom-network-automation-success-2025",
+      tags: ["Telecom", "Automation", "Agents", "OPEX"]
+    }
+  );
 
   const filteredContent = content.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

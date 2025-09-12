@@ -3,6 +3,7 @@ import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
+import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -13,6 +14,7 @@ import NewContentShowcase from '../components/NewContentShowcase';
 import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
+import NewContentDiscovery from '../components/NewContentDiscovery';
 import EnhancedNewsletter from '../components/EnhancedNewsletter';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
@@ -25,12 +27,10 @@ import TechnologyStack from '../components/TechnologyStack';
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -250,51 +250,113 @@ export default function HomePage() {
           <StructuredData 
             type="Organization" 
             data={{
-              name: "Zion Tech Group",
-              description: "Transforming businesses through cutting-edge technology solutions",
-              url: "https://zion.app",
-              logo: "https://zion.app/images/zion-tech-group-logo.png",
-              sameAs: [
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Transforming businesses through cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+              "url": "https://zion.app",
+              "logo": "https://zion.app/images/zion-tech-group-logo.png",
+              "foundingDate": "2020",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-ZION-TECH",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
                 "https://twitter.com/ZionTechGroup",
-                "https://linkedin.com/company/zion-tech-group"
-              ]
+                "https://linkedin.com/company/zion-tech-group",
+                "https://github.com/Zion-Holdings"
+              ],
+              "offers": {
+                "@type": "AggregateOffer",
+                "offerCount": "4",
+                "offers": [
+                  {
+                    "@type": "Offer",
+                    "name": "Micro SaaS Development",
+                    "description": "End-to-end product engineering with billing, auth, analytics and growth"
+                  },
+                  {
+                    "@type": "Offer", 
+                    "name": "AI Services",
+                    "description": "LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "Edge Computing",
+                    "description": "Real-time processing, IoT integration, and distributed infrastructure solutions"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "IT Services", 
+                    "description": "Cloud migration, DevOps, SRE, security hardening and cost optimization"
+                  }
+                ]
+              }
             }} 
           />
           <StructuredData 
             type="WebSite" 
             data={{
-              name: "Zion Tech Group",
-              url: "https://zion.app",
-              potentialAction: {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Zion Tech Group",
+              "url": "https://zion.app",
+              "description": "Leading technology solutions provider specializing in AI, cloud computing, and digital transformation",
+              "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://zion.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Zion Tech Group"
               }
             }} 
+          />
+          <StructuredData 
+            type="BreadcrumbList"
+            data={{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://zion.app"
+                }
+              ]
+            }}
           />
         </Suspense>
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
-            <h1 id="hero-heading" className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
+            <h1 id="hero-heading" className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight'>
               Zion Tech Group
             </h1>
-            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+            <p className='text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed px-4'>
               Transforming businesses through cutting-edge technology solutions.
               From AI and blockchain to cloud infrastructure and micro SaaS
               platforms.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center px-4'>
               <Link
                 href='/services'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
+                className='bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-base sm:text-lg text-center min-w-[200px]'
               >
                 Explore Services
               </Link>
               <Link
                 href='/contact'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+                className='border-2 border-blue-600 text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-base sm:text-lg text-center min-w-[200px]'
               >
                 Get Started
               </Link>
@@ -306,11 +368,11 @@ export default function HomePage() {
       {/* Dynamic Content Carousel */}
       <DynamicContentCarousel />
 
+      {/* New Content Discovery */}
+      <NewContentDiscovery />
+
       {/* New Content Promotional Banner */}
       <NewContentPromoBanner variant="featured" maxItems={3} />
-
-      {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -388,216 +450,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Showcase Banner */}
-      <section className='py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>✨ JUST PUBLISHED</span>
-            </div>
-            <h2 className='text-4xl md:text-5xl font-bold mb-6'>
-              🚀 Fresh AI & Tech Insights
-            </h2>
-            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Manufacturing Success Story, Cloud-Native Architecture Blueprint, 
-              and AI Implementation Playbook. Expert insights to accelerate your digital transformation.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-              <Link
-                href='/blog'
-                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
-              >
-                📚 Read Latest Articles
-              </Link>
-              <Link
-                href='/resources'
-                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
-              >
-                📋 Download Free Resources
-              </Link>
-            </div>
-          </div>
-
-          {/* Featured New Content Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-automation-manufacturing-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏭</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Manufacturing Success</h3>
-                <p className='text-sm opacity-90 mb-3'>40% cost reduction, 60% faster processing</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/blog/cloud-native-architecture-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>☁️</div>
-                <h3 className='text-lg font-semibold mb-2'>Cloud-Native Architecture</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete blueprint for scalable apps</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>15 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/resources/ai-implementation-playbook-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>Step-by-step implementation guide</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>45 min read</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
-      <section className='py-16'>
+      <section className='py-16' aria-labelledby="services-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+            <h2 id="services-heading" className='text-3xl font-bold text-gray-900 mb-4'>
               Our Services
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
               Comprehensive technology solutions tailored to your business needs
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            <Card
-              title='Micro SaaS'
-              href='/services/micro-saas'
-              description='End-to-end product engineering with billing, auth, analytics and growth.'
-              icon='🚀'
-            />
-            <Card
-              title='AI Services'
-              href='/services/ai-services'
-              description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
-              icon='🤖'
-            />
-            <Card
-              title='Edge Computing'
-              href='/services/edge-computing'
-              description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
-              icon='⚡'
-            />
-            <Card
-              title='IT Services'
-              href='/services/it-services'
-              description='Cloud migration, DevOps, SRE, security hardening and cost optimization.'
-              icon='⚙️'
-            />
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8' role="list" aria-label="Our services">
+            <div role="listitem">
+              <Card
+                title='Micro SaaS'
+                href='/services/micro-saas'
+                description='End-to-end product engineering with billing, auth, analytics and growth.'
+                icon='🚀'
+              />
+            </div>
+            <div role="listitem">
+              <Card
+                title='AI Services'
+                href='/services/ai-services'
+                description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
+                icon='🤖'
+              />
+            </div>
+            <div role="listitem">
+              <Card
+                title='Edge Computing'
+                href='/services/edge-computing'
+                description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
+                icon='⚡'
+              />
+            </div>
+            <div role="listitem">
+              <Card
+                title='IT Services'
+                href='/services/it-services'
+                description='Cloud migration, DevOps, SRE, security hardening and cost optimization.'
+                icon='⚙️'
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* New Content Spotlight Section */}
-      <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
-        <div className='absolute inset-0 bg-black opacity-10'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🔥 HOT THIS WEEK</span>
-            </div>
-            <h2 className='text-4xl md:text-6xl font-bold mb-6'>
-              🚀 Fresh Content Just Dropped
-            </h2>
-            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Discover our latest expert insights, case studies, and resources. From AI enterprise transformation 
-              to startup funding strategies, get the knowledge you need to succeed in 2025.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-              <Link
-                href='/blog'
-                className='bg-white text-emerald-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
-              >
-                📚 Read Latest Articles
-              </Link>
-              <Link
-                href='/resources'
-                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg' 
-              >
-                📋 Download Free Resources
-              </Link>
-            </div>
-          </div>
-
-          {/* Featured New Content Cards */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <Link href='/blog/ai-enterprise-transformation-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏢</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Enterprise Transformation 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Complete implementation guide with 340% ROI and real case studies</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>18 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/blog/ai-startup-funding-guide-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💰</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Startup Funding Guide 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>From seed to Series A with $47B market insights and pitch templates</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>22 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/case-studies/ai-financial-services-transformation-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏦</div>
-                <h3 className='text-lg font-semibold mb-2'>Financial Services AI Success</h3>
-                <p className='text-sm opacity-90 mb-3'>$50M cost savings, 300% efficiency gains - complete case study</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className='text-center mt-8'>
-            <Link
-              href='/blog'
-              className='bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4'
-            >
-              View All Articles
-            </Link>
-            <Link
-              href='/resources'
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors inline-block'
-            >
-              Download Resources
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
-      <section className='py-16 bg-gray-50'>
+      <section className='py-16 bg-gray-50' aria-labelledby="features-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+            <h2 id="features-heading" className='text-3xl font-bold text-gray-900 mb-4'>
               Why Choose Zion Tech Group?
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
@@ -605,23 +512,31 @@ export default function HomePage() {
               solutions that drive real results.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <FeatureCard
-              title='Fast Delivery'
-              description='Rapid prototyping and deployment with modern tools and practices.'
-            />
-            <FeatureCard
-              title='Scalable Architecture'
-              description='Built for growth with cloud-native, microservices architecture.'
-            />
-            <FeatureCard
-              title='24/7 Support'
-              description='Round-the-clock monitoring and support for your critical systems.'
-            />
-            <FeatureCard
-              title='Cost Effective'
-              description='Optimized solutions that reduce operational costs and improve efficiency.'
-            />
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6' role="list" aria-label="Our key features">
+            <div role="listitem">
+              <FeatureCard
+                title='Fast Delivery'
+                description='Rapid prototyping and deployment with modern tools and practices.'
+              />
+            </div>
+            <div role="listitem">
+              <FeatureCard
+                title='Scalable Architecture'
+                description='Built for growth with cloud-native, microservices architecture.'
+              />
+            </div>
+            <div role="listitem">
+              <FeatureCard
+                title='24/7 Support'
+                description='Round-the-clock monitoring and support for your critical systems.'
+              />
+            </div>
+            <div role="listitem">
+              <FeatureCard
+                title='Cost Effective'
+                description='Optimized solutions that reduce operational costs and improve efficiency.'
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -1330,6 +1245,64 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Latest AI Breakthroughs Banner */}
+        <section className='py-20 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden'>
+          <div className='absolute inset-0 bg-black opacity-10'></div>
+          <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+                <span className='text-sm font-medium'>🔥 BREAKTHROUGH INNOVATIONS</span>
+              </div>
+              <h2 className='text-4xl md:text-6xl font-bold mb-6'>
+                🚀 AI 2025 Breakthrough Innovations
+              </h2>
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
+                Discover the most groundbreaking AI innovations of 2025 that are transforming industries. 
+                From quantum AI to autonomous systems, explore the future of artificial intelligence 
+                and how it's reshaping the world.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+                <Link
+                  href='/blog/ai-2025-breakthrough-innovations'
+                  className='bg-white text-cyan-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+                >
+                  📖 Read Full Article
+                </Link>
+                <Link
+                  href='/blog'
+                  className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors text-lg' 
+                >
+                  📚 View All Articles
+                </Link>
+              </div>
+            </div>
+
+            {/* Key Innovations Preview */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20'>
+                <div className='text-4xl mb-4'>⚛️</div>
+                <h3 className='text-lg font-semibold mb-2'>Quantum-Enhanced AI</h3>
+                <p className='text-sm opacity-90'>1000x faster optimization with quantum computing</p>
+              </div>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20'>
+                <div className='text-4xl mb-4'>🤖</div>
+                <h3 className='text-lg font-semibold mb-2'>Autonomous Reasoning</h3>
+                <p className='text-sm opacity-90'>Human-level decision making and adaptation</p>
+              </div>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20'>
+                <div className='text-4xl mb-4'>🎥</div>
+                <h3 className='text-lg font-semibold mb-2'>Multimodal AI</h3>
+                <p className='text-sm opacity-90'>Seamless text, image, audio, and video processing</p>
+              </div>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20'>
+                <div className='text-4xl mb-4'>🔐</div>
+                <h3 className='text-lg font-semibold mb-2'>Edge AI Revolution</h3>
+                <p className='text-sm opacity-90'>Real-time processing with privacy by design</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1751,6 +1724,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }

@@ -8,23 +8,43 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
-    title: "AI Benchmarking & Evaluation 2025",
-    description: "Practical guide to LLM, agent, and RAG evaluations",
-    url: "/blog/ai-benchmarking-and-evaluation-2025",
+    title: "AI Agents in Production 2025",
+    description: "Patterns, guardrails, and monitoring to ship reliable agent systems",
+    url: "/blog/ai-2025-production-agent-patterns",
     type: "Blog Post",
-    category: "Evaluation",
-    icon: "🧪",
+    category: "Engineering",
+    icon: "🧭",
     featured: true,
     new: true
   },
   {
-    title: "AI Evaluation Checklist 2025",
-    description: "120+ checks for quality, safety, latency and cost",
-    url: "/resources/ai-evaluation-checklist-2025",
-    type: "Resource",
-    category: "Checklist",
-    icon: "📋",
+    title: "GenAI Security Blueprint 2025",
+    description: "Enterprise-grade practices to secure GenAI systems in production",
+    url: "/blog/genai-security-blueprint-2025",
+    type: "Blog Post",
+    category: "Security",
+    icon: "🛡️",
     featured: true,
+    new: true
+  },
+  {
+    title: "AI Implementation Starter Kit 2025",
+    description: "Free templates, roadmaps, and checklists to kickstart AI",
+    url: "/resources/ai-implementation-starter-kit-2025",
+    type: "Resource",
+    category: "Implementation",
+    icon: "📥",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Telecom Network Automation: 55% OPEX Reduction",
+    description: "Global operator automates incidents and changes with AI agents",
+    url: "/case-studies/ai-telecom-network-automation-success-2025",
+    type: "Case Study",
+    category: "Telecom",
+    icon: "📶",
+    featured: false,
     new: true
   },
   {
