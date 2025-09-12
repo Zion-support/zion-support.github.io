@@ -33,6 +33,8 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -49,25 +51,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-        {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
-        <NewContent2025UltimatePromotionBanner />
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
         
-        {/* FORTUNE 500 SUCCESS BANNER 2025 */}
-        <Fortune500SuccessBanner2025 />
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
         
-        {/* NEW CONTENT 2028 PROMOTION BANNER */}
-        <NewContent2028PromotionBanner />
+        {/* AI 2030 CONTENT PROMOTION BANNER */}
+        <AI2030ContentPromotionBanner />
         
-        {/* NEW CONTENT 2028 SHOWCASE */}
-        <NewContent2028Showcase />
-        
-        {/* AI 2027 CONTENT PROMOTION BANNER */}
-        <AI2027ContentPromotionBanner />
-        
-        {/* AI 2027 CONTENT SHOWCASE */}
-        <AI2027ContentShowcase />
->>>>>>> 5afade49541c2807acb5507a5f9e59845933ed3e
+        {/* AI 2030 CONTENT SHOWCASE */}
+        <AI2030ContentShowcase />
         
         {/* NEW CONTENT 2027 PROMOTION BANNER */}
         <NewContent2027PromotionBanner />
@@ -150,13 +144,18 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
-=======
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
+        
         {/* AI 2030 CONTENT PROMOTION BANNER */}
         <AI2030ContentPromotionBanner />
         
         {/* AI 2030 CONTENT SHOWCASE */}
         <AI2030ContentShowcase />
->>>>>>> a093a8a78ef4b354df7ee2583253201b7a0b9a36
         
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
