@@ -44,15 +44,15 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT DROP</span>
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT JUST RELEASED</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 20+ Breakthrough AI Resources Just Released!
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
               </h2>
-              <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto leading-relaxed">
-                Discover our latest breakthrough content: AI 2025 Breakthrough Innovations, Sustainability & Green Tech, 
-                Robotics & Automation, plus the $200M Manufacturing Success case study. Get expert insights 
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover our latest breakthrough content: AI Ethical Governance Framework, Automation Trends 2025, 
+                $150M Supply Chain Success Story, and the Complete AI Automation Implementation Guide. Get expert insights
                 on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -60,13 +60,19 @@ export default function HomePage() {
                   href="/content-showcase"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
                 >
-                  🎯 Explore All New Content
+                  Explore All New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                  href="/blog/ai-2025-ethical-ai-governance"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   📖 Read Latest Article
+                </Link>
+                <Link
+                  href="/resources/ai-automation-implementation-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  📋 Download Free Guide
                 </Link>
               </div>
               
@@ -92,6 +98,12 @@ export default function HomePage() {
                     <h3 className="text-sm font-semibold mb-1">Green AI Systems</h3>
                     <p className="text-xs opacity-90">Building eco-friendly AI solutions</p>
                   </div>
+                </Link>
+                <Link
+                  href="/resources/ai-automation-implementation-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Download Free Guide
                 </Link>
               </div>
             </div>
