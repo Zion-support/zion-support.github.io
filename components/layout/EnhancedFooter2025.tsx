@@ -293,65 +293,14 @@ const EnhancedFooter2025: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Contact Information Section */}
-        <div className="border-t border-gray-700/50 pt-8 mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                Contact Us
-              </h3>
-              <div className="space-y-3 text-gray-300">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-cyan-400" />
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                <Globe className="w-5 h-5 text-cyan-400" />
-                Quick Links
-              </h3>
-              <div className="space-y-2">
-                <Link href="/innovative-2025-services-showcase" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                  View 2025 Services
-                </Link>
-                <Link href="/get-started" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                  Get Started
-                </Link>
-                <Link href="/support" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                  Support Center
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                <Shield className="w-5 h-5 text-cyan-400" />
-                Business Hours
-              </h3>
-              <div className="space-y-2 text-gray-300">
-                <div>Monday - Friday: 9:00 AM - 6:00 PM EST</div>
-                <div>Saturday: 10:00 AM - 4:00 PM EST</div>
-                <div>Sunday: Closed</div>
-                <div className="text-cyan-400 font-medium">24/7 Emergency Support Available</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 mb-12 border border-cyan-500/20">
+        {/* Bottom Bar */}
+        <motion.div 
+          className="border-t border-cyan-500/20 bg-black/50 backdrop-blur-sm"
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with the Latest Tech Trends
