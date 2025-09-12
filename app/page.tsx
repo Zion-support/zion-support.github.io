@@ -178,22 +178,34 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                <span className="text-sm font-medium">🚀 NEW CONTENT DROP - JANUARY 2025</span>
+                <span className="text-sm font-medium">🚀 BREAKTHROUGH CONTENT UPDATE</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                🎉 Major Content Expansion: 20+ New AI Resources Just Released!
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                🎉 Revolutionary AI Automation Content: Expert Strategies & Success Stories!
               </h2>
-              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Neural Interfaces, Space Technology Revolution, 
-                Augmented Reality 2025, plus new case studies and comprehensive implementation guides. 
-                Get expert insights on the cutting-edge technologies transforming 2025 and beyond.
+              <p className="text-xl opacity-90 mb-6 max-w-5xl mx-auto">
+                <strong>NEW:</strong> Advanced AI Automation Strategies, Enterprise Workflow Automation Success Story, 
+                AI Automation Consulting Services, and Free Implementation Checklist. Plus comprehensive case studies 
+                showing 85% cost reduction and 10x efficiency gains. Get the expert insights transforming businesses in 2025!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/content-showcase"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  href="/blog/ai-2025-advanced-automation-strategies"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore All New Content
+                  Read Advanced Strategies
+                </Link>
+                <Link
+                  href="/case-studies/ai-enterprise-workflow-automation-success-2025"
+                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  View Success Story
+                </Link>
+                <Link
+                  href="/services/ai-automation-consulting"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Expert Consulting
                 </Link>
                 <Link
                   href="/blog/ai-2025-comprehensive-trends-analysis"

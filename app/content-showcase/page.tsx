@@ -70,11 +70,11 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-neural-interfaces" className="group">
+              <Link href="/blog/ai-2025-advanced-automation-strategies" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🧠</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Neural Interfaces 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">The future of brain-computer integration and direct neural communication</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                  <h3 className="text-lg font-semibold mb-2">Advanced AI Automation Strategies</h3>
+                  <p className="text-sm opacity-90 mb-3">Master enterprise automation with 85% cost reduction strategies</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>18 min read</span>
                     <span className="mx-2">•</span>
@@ -83,90 +83,28 @@ export default function ContentShowcase() {
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-space-technology" className="group">
+              <Link href="/case-studies/ai-enterprise-workflow-automation-success-2025" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Space Technology Revolution</h3>
-                  <p className="text-sm opacity-90 mb-3">Autonomous space missions and interplanetary AI systems</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+                  <h3 className="text-lg font-semibold mb-2">Enterprise Workflow Success</h3>
+                  <p className="text-sm opacity-90 mb-3">Fortune 500 company achieves $12M savings with 10x efficiency</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>22 min read</span>
+                    <span>Case Study</span>
                     <span className="mx-2">•</span>
-                    <span>🌟 Exclusive</span>
+                    <span>🌟 NEW</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-2025-augmented-reality" className="group">
+              <Link href="/services/ai-automation-consulting" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🥽</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Augmented Reality 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">The future of immersive computing and spatial intelligence</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💼</div>
+                  <h3 className="text-lg font-semibold mb-2">AI Automation Consulting</h3>
+                  <p className="text-sm opacity-90 mb-3">Expert implementation services with guaranteed ROI</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>20 min read</span>
+                    <span>Service</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Hot Topic</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </section>
-
-        {/* Latest Case Studies */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Latest Success Stories</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/case-studies/ai-2025-financial-services-transformation" className="group">
-              <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="text-4xl mr-4 group-hover:scale-110 transition-transform">💰</div>
-                  <div>
-                    <h3 className="text-xl font-semibold group-hover:text-green-600">Financial Services AI Transformation</h3>
-                    <p className="text-sm text-gray-600">Fortune 500 Company Success Story</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  Discover how a leading financial services company achieved $2.3B revenue increase 
-                  through comprehensive AI implementation, including customer service automation, 
-                  fraud detection, and personalized financial services.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex space-x-4 text-sm">
-                    <span className="text-green-600 font-semibold">$2.3B Revenue Increase</span>
-                    <span className="text-blue-600 font-semibold">45% Cost Reduction</span>
-                    <span className="text-purple-600 font-semibold">300% ROI</span>
-                  </div>
-                  <div className="text-blue-600 font-medium group-hover:underline">Read Case Study →</div>
-                </div>
-              </div>
-            </Link>
-            
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-              <h3 className="text-xl font-semibold mb-4">More Success Stories Coming Soon</h3>
-              <p className="text-gray-700 mb-4">
-                We're constantly adding new case studies showcasing real-world AI transformations 
-                across various industries. Stay tuned for more inspiring success stories.
-              </p>
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center text-blue-600 font-medium hover:underline"
-              >
-                View All Case Studies →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Resources */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Essential Resources</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/resources/ai-2025-implementation-master-guide" className="group">
-              <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="text-4xl mr-4 group-hover:scale-110 transition-transform">📚</div>
-                  <div>
-                    <h3 className="text-xl font-semibold group-hover:text-blue-600">AI Implementation Master Guide 2025</h3>
-                    <p className="text-sm text-gray-600">Complete Enterprise Roadmap</p>
+                    <span>✨ NEW</span>
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
