@@ -63,6 +63,10 @@ import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceCon
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
 
+// Revolutionary Content Showcase
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+
 // New 2025 Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
 import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
@@ -85,6 +89,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT PROMOTION BANNER */}
+        <UltimateContentPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE */}
+        <RevolutionaryContentShowcase />
+        
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
         
