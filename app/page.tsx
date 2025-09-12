@@ -49,6 +49,8 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 <<<<<<< HEAD
 import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
 import LatestContentShowcase from '../components/LatestContentShowcase';
@@ -1070,6 +1072,9 @@ export default function HomePage() {
         </Suspense>
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
+        {/* AI 2025 Revolutionary Breakthrough Banner */}
+        <AI2025RevolutionaryBreakthroughBanner />
+
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <h1 id="hero-heading" className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight'>
@@ -2297,6 +2302,9 @@ export default function HomePage() {
 
         {/* Newsletter Signup Section */}
       <section className='py-16 bg-gray-900 text-white'>
+        {/* AI 2025 Revolutionary Content Showcase */}
+        <AI2025RevolutionaryContentShowcase />
+
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold mb-4'>
