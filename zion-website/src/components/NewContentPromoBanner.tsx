@@ -40,6 +40,106 @@ const NewContentPromoBanner = ({
       href: '/blog/ai-2025-ai-agent-observability',
       type: 'blog',
       featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Agents'
+    },
+    {
+      id: '26',
+      title: 'Agentic Supply Planning 2025: Forecasting-to-Fulfillment with AI',
+      description: 'Design agentic workflows across demand sensing, planning, and fulfillment to cut expedites and boost OTIF.',
+      href: '/blog/ai-2025-agentic-supply-planning',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '27',
+      title: 'Agentic Supply Planning: 27% Expedites Cut, +6 pts OTIF',
+      description: 'Case study: Agentic planning tied forecasting to fulfillment, reducing expedites and improving service.',
+      href: '/case-studies/ai-2025-agentic-supply-planning-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '24',
+      title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
+      description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',
+      href: '/blog/ai-2025-ai-supply-chain-resilience',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '25',
+      title: 'AI Supply Chain Orchestration: 27% Expedited Costs Reduced, +6 pts OTIF',
+      description: 'Case study: forecasting + optimization + agentic workflows cut costs and improved service.',
+      href: '/case-studies/ai-2025-supply-chain-orchestration-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '23',
+      title: 'Privacy-Preserving AI in Production (2025)',
+      description: 'Ship AI with differential privacy, federated learning, and privacy-by-design guardrails.',
+      href: '/blog/ai-2025-privacy-preserving-ai',
+      type: 'blog',
+      featured: true,
+      readTime: '17 min read',
+      date: 'Sep 12, 2025',
+      category: 'Privacy'
+    },
+    {
+      id: '19',
+      title: 'Data Quality for RAG in Production (2025)',
+      description: 'Operator guide to curating, evaluating, and governing high-quality knowledge for reliable RAG.',
+      href: '/blog/ai-2025-data-quality-rag',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
+      id: '21',
+      title: 'AI Agents for IT Operations 2025: Incident Response and SLO Automation',
+      description: 'Reduce toil with AIOps agents for triage, diagnostics, remediation, and SLO-aware controls.',
+      href: '/blog/ai-2025-agents-for-it-ops',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'AIOps'
+    },
+    {
+      id: '22',
+      title: 'IT Ops Automation with AI Agents: 41% MTTR Reduction',
+      description: 'Case study: AI agents automated runbooks and cut MTTR by 41% at a global SaaS platform.',
+      href: '/case-studies/ai-2025-it-ops-automation-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
+      id: '18',
+      title: 'Running AI Agents on Kubernetes: Reliability, Cost, and Observability',
+      description: 'Production patterns for scheduling, scaling, guardrails, and tracing AI agents on K8s.',
+      href: '/blog/ai-2025-agents-on-kubernetes',
+>>>>>>> feat/new-content-promo-2025
+      type: 'blog',
+      featured: true,
       readTime: '19 min read',
       date: 'Sep 12, 2025',
       category: 'Reliability'
