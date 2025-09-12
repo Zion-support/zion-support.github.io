@@ -322,19 +322,19 @@ export default function AI2025CybersecurityThreatsDefense() {
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Model Performance</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Accuracy drop, confidence scores</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">>5% decrease</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">&gt;5% decrease</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Investigate & retrain</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Input Anomalies</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Unusual patterns, outliers</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">>3σ from mean</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">&gt;3σ from mean</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Block & analyze</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">API Usage</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Request volume, frequency</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">>200% increase</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">&gt;200% increase</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Rate limit & investigate</td>
                 </tr>
                 <tr>

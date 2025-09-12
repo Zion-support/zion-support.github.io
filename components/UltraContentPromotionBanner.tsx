@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Clock, TrendingUp, Download, BookOpen } from 'lucide-react';
+import { TrendingUp, Star, Clock, Calendar, ArrowRight, X, Play, BookOpen, Download } from 'lucide-react';
 
 interface ContentItem {
+  id: string;
   title: string;
   description: string;
   href: string;
@@ -14,8 +14,7 @@ interface ContentItem {
   isNew?: boolean;
   isTrending?: boolean;
   isPopular?: boolean;
-  result?: string;
-  pages?: string;
+  featured?: boolean;
 }
 
 interface UltraContentPromotionBannerProps {
@@ -23,27 +22,47 @@ interface UltraContentPromotionBannerProps {
   subtitle: string;
   description: string;
   content: ContentItem[];
-  variant?: 'featured' | 'trending' | 'new' | 'resources';
+  variant?: 'featured' | 'trending' | 'new' | 'popular';
   maxItems?: number;
   className?: string;
+  autoRotate?: boolean;
+  rotationInterval?: number;
 }
 
-export default function UltraContentPromotionBanner({
+const UltraContentPromotionBanner: React.FC<UltraContentPromotionBannerProps> = ({
   title,
   subtitle,
   description,
   content,
   variant = 'featured',
   maxItems = 6,
-  className = ''
-}: UltraContentPromotionBannerProps) {
+  className = '',
+  autoRotate = true,
+  rotationInterval = 6000
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+
+  const displayedContent = content.slice(0, maxItems);
+
+  useEffect(() => {
+    if (!autoRotate || displayedContent.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedContent.length);
+    }, rotationInterval);
+
+    return () => clearInterval(interval);
+  }, [displayedContent.length, autoRotate, rotationInterval]);
+
   const getVariantStyles = () => {
     switch (variant) {
       case 'featured':
         return {
           gradient: 'from-purple-600 via-pink-600 to-red-600',
           accent: 'purple',
-          icon: '✨'
+          icon: '⭐'
         };
       case 'trending':
         return {
@@ -55,180 +74,196 @@ export default function UltraContentPromotionBanner({
         return {
           gradient: 'from-blue-600 via-indigo-600 to-purple-600',
           accent: 'blue',
-          icon: '🚀'
+          icon: '✨'
         };
-      case 'resources':
+      case 'popular':
         return {
           gradient: 'from-green-600 via-teal-600 to-cyan-600',
           accent: 'green',
-          icon: '📚'
+          icon: '📈'
         };
       default:
         return {
-          gradient: 'from-gray-600 via-blue-600 to-purple-600',
+          gradient: 'from-gray-600 via-gray-700 to-gray-800',
           accent: 'gray',
-          icon: '📄'
+          icon: '📚'
         };
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'AI Automation': 'bg-blue-100 text-blue-800',
-      'Cybersecurity': 'bg-red-100 text-red-800',
-      'Case Study': 'bg-green-100 text-green-800',
-      'Master Guide': 'bg-purple-100 text-purple-800',
-      'AI Innovations': 'bg-yellow-100 text-yellow-800',
-      'Workforce': 'bg-indigo-100 text-indigo-800',
-      'Privacy': 'bg-gray-100 text-gray-800',
-      'Sustainability': 'bg-emerald-100 text-emerald-800',
-      'Customer Service': 'bg-pink-100 text-pink-800',
-      'AI Safety': 'bg-orange-100 text-orange-800',
-      'Security': 'bg-red-100 text-red-800',
-      'Tools': 'bg-cyan-100 text-cyan-800',
-      'Templates': 'bg-violet-100 text-violet-800'
-    };
-    return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
-  };
-
   const getStatusBadge = (item: ContentItem) => {
-    if (item.isNew) return { text: 'NEW', color: 'bg-green-500 text-white' };
-    if (item.isTrending) return { text: 'TRENDING', color: 'bg-orange-500 text-white' };
-    if (item.isPopular) return { text: 'POPULAR', color: 'bg-blue-500 text-white' };
+    if (item.isNew) return { text: 'New', color: 'bg-green-500' };
+    if (item.isTrending) return { text: 'Trending', color: 'bg-orange-500' };
+    if (item.isPopular) return { text: 'Popular', color: 'bg-blue-500' };
+    if (item.featured) return { text: 'Featured', color: 'bg-purple-500' };
     return null;
   };
 
+  const getTypeIcon = (type?: string) => {
+    switch (type) {
+      case 'Case Study':
+        return <BookOpen className="w-4 h-4" />;
+      case 'Free Download':
+        return <Download className="w-4 h-4" />;
+      default:
+        return <Play className="w-4 h-4" />;
+    }
+  };
+
+  if (!isVisible) return null;
+
   const styles = getVariantStyles();
-  const displayContent = content.slice(0, maxItems);
 
   return (
-    <section className={`py-20 bg-gradient-to-r ${styles.gradient} text-white relative overflow-hidden ${className}`}>
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
-            <span className="text-sm font-medium">{styles.icon} {subtitle}</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            {title}
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {description}
-          </p>
-        </motion.div>
+    <div className={`relative bg-gradient-to-r ${styles.gradient} text-white overflow-hidden ${className}`}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayContent.map((item, index) => {
-            const statusBadge = getStatusBadge(item);
-            
-            return (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <Link href={item.href} className="group block">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-4">
+              <span className="text-2xl mr-2">{styles.icon}</span>
+              <span className="text-sm font-medium">{subtitle}</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              {title}
+            </h2>
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              {description}
+            </p>
+          </div>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {displayedContent.map((item, index) => {
+              const statusBadge = getStatusBadge(item);
+              
+              return (
+                <Link 
+                  key={item.id} 
+                  href={item.href} 
+                  className="group"
+                  onMouseEnter={() => setHoveredItem(index)}
+                  onMouseLeave={() => setHoveredItem(null)}
+                >
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 relative overflow-hidden">
+                    {/* Status Badge */}
                     {statusBadge && (
-                      <div className="flex justify-end mb-4">
-                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusBadge.color}`}>
-                          {statusBadge.text}
-                        </span>
+                      <div className={`absolute top-4 right-4 ${statusBadge.color} text-white px-2 py-1 rounded-full text-xs font-medium`}>
+                        {statusBadge.text}
                       </div>
                     )}
-                    
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+
+                    {/* Icon */}
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
                       {item.icon}
                     </div>
-                    
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
-                        {item.category}
-                      </span>
-                      {item.readTime && (
-                        <span className="text-xs text-white opacity-75 flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {item.readTime}
-                        </span>
-                      )}
+
+                    {/* Category */}
+                    <div className="text-sm font-medium text-white/80 mb-2">
+                      {item.category}
                     </div>
-                    
-                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:underline">
+
+                    {/* Title */}
+                    <h3 className="text-lg font-semibold mb-3 group-hover:text-yellow-300 transition-colors line-clamp-2">
                       {item.title}
                     </h3>
-                    
-                    <p className="text-white text-sm opacity-90 mb-4 leading-relaxed">
+
+                    {/* Description */}
+                    <p className="text-sm text-white/90 mb-4 line-clamp-3">
                       {item.description}
                     </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-xs text-white opacity-75">
+
+                    {/* Meta Info */}
+                    <div className="flex items-center justify-between text-xs text-white/75">
+                      <div className="flex items-center gap-3">
+                        {item.readTime && (
+                          <span className="flex items-center gap-1">
+                            <Clock className="w-3 h-3" />
+                            {item.readTime}
+                          </span>
+                        )}
                         {item.type && (
                           <span className="flex items-center gap-1">
-                            <Download className="w-3 h-3" />
+                            {getTypeIcon(item.type)}
                             {item.type}
-                          </span>
-                        )}
-                        {item.result && (
-                          <span className="flex items-center gap-1">
-                            <TrendingUp className="w-3 h-3" />
-                            {item.result}
-                          </span>
-                        )}
-                        {item.pages && (
-                          <span className="flex items-center gap-1">
-                            <BookOpen className="w-3 h-3" />
-                            {item.pages}
                           </span>
                         )}
                       </div>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
+
+                    {/* Hover Effect */}
+                    <div className={`absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${hoveredItem === index ? 'opacity-100' : ''}`}></div>
                   </div>
                 </Link>
-              </motion.div>
-            );
-          })}
+              );
+            })}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/content-showcase"
+                className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg inline-flex items-center gap-2"
+              >
+                <BookOpen className="w-5 h-5" />
+                Explore All Content
+              </Link>
+              <Link
+                href="/blog"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-lg inline-flex items-center gap-2"
+              >
+                <TrendingUp className="w-5 h-5" />
+                View Latest Articles
+              </Link>
+            </div>
+          </div>
+
+          {/* Navigation Dots (if auto-rotating) */}
+          {autoRotate && displayedContent.length > 1 && (
+            <div className="flex justify-center mt-8 space-x-2">
+              {displayedContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentIndex 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors z-20"
         >
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/content-showcase"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-            >
-              🎯 Explore All Content
-            </Link>
-            <Link
-              href="/blog"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-            >
-              📖 Read Latest Articles
-            </Link>
-            <Link
-              href="/resources"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-            >
-              📋 Download Resources
-            </Link>
+          <X className="w-6 h-6" />
+        </button>
+
+        {/* Progress Bar */}
+        {autoRotate && displayedContent.length > 1 && (
+          <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
+            <div 
+              className="h-full bg-white transition-all duration-1000 ease-linear"
+              style={{ width: `${((currentIndex + 1) / displayedContent.length) * 100}%` }}
+            />
           </div>
-        </motion.div>
+        )}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default UltraContentPromotionBanner;

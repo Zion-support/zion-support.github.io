@@ -55,6 +55,20 @@ const blogPosts: BlogPost[] = [
     views: 0
   },
   {
+    id: 'ai-2025-production-agent-patterns',
+    title: 'AI Agents in Production 2025: Patterns, Guardrails, and Monitoring',
+    excerpt: 'Deploy reliable agentic systems with deterministic routing, tool contracts, safety guardrails, observability, and FinOps.',
+    author: 'Zion Tech Group',
+    date: '2025-09-12',
+    readTime: '18 min read',
+    category: 'Engineering',
+    tags: ['Agents', 'Safety', 'Observability', 'FinOps'],
+    featured: true,
+    url: '/blog/ai-2025-production-agent-patterns',
+    image: '🧭',
+    views: 0
+  },
+  {
     id: 'ai-vector-databases-2025',
     title: 'AI Vector Databases 2025: Choosing and Implementing the Right Stack',
     excerpt: 'Vendor-neutral guide to Pinecone, Weaviate, and Elasticsearch vector—schema, embeddings, hybrid search, and ops.',
