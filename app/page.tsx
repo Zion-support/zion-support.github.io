@@ -121,6 +121,9 @@ import AI2025BreakthroughPromotionBanner from '../components/AI2025BreakthroughP
 // New AI 2027 Future Predictions Components
 import AI2027FuturePredictionsPromotionBanner from '../components/AI2027FuturePredictionsPromotionBanner';
 
+// New AI 2026 Breakthrough Components
+import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
+
 // New 2029-2030 Content Components
 import AI2029BreakthroughPromotionBanner from '../components/AI2029BreakthroughPromotionBanner';
 import AI2030FuturePredictionsPromotionBanner from '../components/AI2030FuturePredictionsPromotionBanner';
@@ -165,6 +168,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
+        <AI2026BreakthroughPromotionBanner />
+        
+        {/* AI 2027 FUTURE PREDICTIONS PROMOTION BANNER - NEW CONTENT */}
+        <AI2027FuturePredictionsPromotionBanner />
+        
         {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2035BreakthroughPromotionBanner />
         
