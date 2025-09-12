@@ -5,6 +5,33 @@ import Link from 'next/link';
 export default function ContentShowcasePage() {
   const newBlogPosts = [
     {
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Impact",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. Learn about quantum AI algorithms, quantum machine learning, and the breakthrough technologies transforming industries.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "28 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025: Neural Interfaces - The Future of Human-Computer Interaction",
+      description: "Explore the revolutionary world of neural interfaces in 2025. Learn about brain-computer interfaces, neural prosthetics, and how AI is enabling direct communication between minds and machines.",
+      href: "/blog/ai-2025-neural-interfaces",
+      icon: "🧠",
+      category: "Neural Technology",
+      readTime: "32 min read",
+      date: "Jan 30, 2025"
+    },
+    {
+      title: "AI 2025: Autonomous Vehicles - The Road to Full Autonomy",
+      description: "Discover how AI is revolutionizing autonomous vehicles in 2025. Learn about Level 5 autonomy, AI safety systems, and the future of transportation with self-driving cars, trucks, and drones.",
+      href: "/blog/ai-2025-autonomous-vehicles",
+      icon: "🚗",
+      category: "Autonomous Systems",
+      readTime: "35 min read",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "AI Advanced Automation 2025: Complete Implementation Guide",
       description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
       href: "/blog/ai-2025-advanced-automation",
@@ -30,47 +57,29 @@ export default function ContentShowcasePage() {
       category: "AI Innovations",
       readTime: "25 min read",
       date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Sustainability & Green Tech 2025: Building Eco-Friendly AI Systems",
-      description: "Discover how AI is driving sustainability initiatives and reducing carbon footprints. Learn about smart energy management, intelligent waste management, and climate risk assessment solutions.",
-      href: "/blog/ai-sustainability-green-tech-2025",
-      icon: "🌱",
-      category: "Sustainability",
-      readTime: "20 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Robotics & Automation 2025: The Future of Intelligent Machines",
-      description: "Explore the revolutionary advances in AI-powered robotics and automation. Discover how intelligent machines are transforming manufacturing, healthcare, and service industries with unprecedented capabilities.",
-      href: "/blog/ai-robotics-automation-2025",
-      icon: "🤖",
-      category: "Robotics",
-      readTime: "22 min read",
-      date: "Jan 28, 2025"
-    },
-    {
-      title: "AI Implementation Success Framework 2025: From Strategy to Governance",
-      description: "Discover Zion Tech Group's comprehensive AI Implementation Success Framework for 2025. Learn how to navigate strategy, data, talent, and governance for successful AI adoption.",
-      href: "/blog/ai-implementation-success-framework-2025",
-      icon: "✅",
-      category: "AI Strategy",
-      readTime: "18 min read",
-      date: "Feb 01, 2025"
     }
   ];
 
   const newCaseStudies = [
     {
-<<<<<<< HEAD
+      title: "AI Financial Services Transformation 2025: $50M Savings Case Study",
+      description: "Discover how a Fortune 500 financial services company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details and results.",
+      href: "/case-studies/ai-2025-financial-services-transformation",
+      icon: "💰",
+      category: "Financial AI",
+      result: "$50M Savings",
+      date: "Jan 30, 2025"
+    },
+    {
       title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
       description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
       href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      icon: "💰",
+      icon: "🏭",
       category: "Manufacturing AI",
       result: "$200M Savings",
       date: "Jan 28, 2025"
-=======
+    },
+    {
       title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
       description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
       href: "/case-studies/ai-healthcare-diagnosis-success-2025",
@@ -78,25 +87,6 @@ export default function ContentShowcasePage() {
       category: "Healthcare AI",
       result: "95% Accuracy",
       date: "Jan 30, 2025"
->>>>>>> cursor/create-and-deploy-new-content-f6c0
-    },
-    {
-      title: "Fortune 500 AI Transformation Success: $50M Savings & 300% ROI Case Study",
-      description: "Discover how a Fortune 500 company achieved $50M in cost savings and 300% ROI through comprehensive AI transformation. Complete case study with implementation details.",
-      href: "/case-studies/ai-transformation-fortune-500-success-2025",
-      icon: "🏆",
-      category: "Enterprise AI",
-      result: "$50M Savings",
-      date: "Jan 30, 2025"
-    },
-    {
-      title: "AI Retail Transformation Success: 300% Revenue Growth",
-      description: "How a major retail chain achieved 300% revenue growth through AI-powered personalization, inventory optimization, and customer experience enhancement.",
-      href: "/case-studies/ai-retail-transformation-2025",
-      icon: "🛒",
-      category: "Retail AI",
-      result: "300% Growth",
-      date: "Feb 03, 2025"
     }
   ];
 
