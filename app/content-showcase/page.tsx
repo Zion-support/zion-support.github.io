@@ -43,41 +43,41 @@ export default function ContentShowcase() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/blog/ai-2025-enterprise-readiness" className="group">
+              <Link href="/blog/ai-2025-multimodal-revolution" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Enterprise Readiness 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">Complete assessment & implementation guide with 340% ROI</p>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎥</div>
+                  <h3 className="text-lg font-semibold mb-2">Multimodal AI Revolution</h3>
+                  <p className="text-sm opacity-90 mb-3">340% ROI potential with revolutionary AI technology</p>
                   <div className="flex items-center text-xs opacity-75">
-                    <span>25 min read</span>
+                    <span>15 min read</span>
                     <span className="mx-2">•</span>
-                    <span>🔥 Trending</span>
+                    <span>🔥 #1 Trending</span>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/resources/ai-2025-comprehensive-implementation-guide" className="group">
+              <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
+                  <h3 className="text-lg font-semibold mb-2">Manufacturing AI Success</h3>
+                  <p className="text-sm opacity-90 mb-3">340% ROI and $12.4M annual savings achieved</p>
+                  <div className="flex items-center text-xs opacity-75">
+                    <span>12 min read</span>
+                    <span className="mx-2">•</span>
+                    <span>🏆 Success Story</span>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/resources/ai-2025-autonomous-systems-implementation-guide" className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                  <h3 className="text-lg font-semibold mb-2">AI Implementation Guide 2025</h3>
-                  <p className="text-sm opacity-90 mb-3">200+ pages of strategies, templates, and case studies</p>
+                  <h3 className="text-lg font-semibold mb-2">Autonomous Systems Guide</h3>
+                  <p className="text-sm opacity-90 mb-3">150+ pages of implementation strategies and templates</p>
                   <div className="flex items-center text-xs opacity-75">
                     <span>Free Download</span>
                     <span className="mx-2">•</span>
-                    <span>⭐ Popular</span>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/case-studies/ai-transformation-global-retail-giant-2025" className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🛍️</div>
-                  <h3 className="text-lg font-semibold mb-2">Global Retail AI Transformation</h3>
-                  <p className="text-sm opacity-90 mb-3">300% revenue growth and $2.4B additional revenue</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    <span>Case Study</span>
-                    <span className="mx-2">•</span>
-                    <span>🏆 Success</span>
+                    <span>⭐ New Release</span>
                   </div>
                 </div>
               </Link>
