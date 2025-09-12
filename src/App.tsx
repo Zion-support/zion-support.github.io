@@ -14,6 +14,11 @@ const NewServices = React.lazy(() => import('./pages/NewServices'));
 const InnovationLab = React.lazy(() => import('./pages/InnovationLab'));
 const TechnologyShowcase = React.lazy(() => import('./pages/TechnologyShowcase'));
 
+// Lazy load new content pages
+const AIServicesGuide = React.lazy(() => import('../app/ai-services-comprehensive-guide-2026/page'));
+const QuantumShowcase = React.lazy(() => import('../app/quantum-computing-solutions-showcase-2026/page'));
+const RevolutionaryTechShowcase = React.lazy(() => import('../app/revolutionary-technology-showcase-2026/page'));
+
 function App() {
   useScrollToTop();
   
@@ -27,6 +32,11 @@ function App() {
               <Route path="/new-services" element={<NewServices />} />
               <Route path="/innovation-lab" element={<InnovationLab />} />
               <Route path="/technology-showcase" element={<TechnologyShowcase />} />
+              
+              {/* New Content Routes */}
+              <Route path="/ai-services-comprehensive-guide-2026" element={<AIServicesGuide />} />
+              <Route path="/quantum-computing-solutions-showcase-2026" element={<QuantumShowcase />} />
+              <Route path="/revolutionary-technology-showcase-2026" element={<RevolutionaryTechShowcase />} />
             </Routes>
           </Suspense>
           <FloatingCTA />

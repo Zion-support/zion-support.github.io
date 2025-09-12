@@ -7,6 +7,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { NewContentBanner } from "@/components/NewContentBanner";
+import { NewContentShowcaseBanner } from "@/components/NewContentShowcaseBanner";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         canonical="https://ziontechgroup.com/" 
       />
       <NewContentBanner />
+      <NewContentShowcaseBanner />
       <ITServiceRequestHero />
       <HeroSection />
       <EnhancedQuickAccess />
