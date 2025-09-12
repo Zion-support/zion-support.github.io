@@ -177,7 +177,11 @@ export default function HomePage() {
               <div className="p-6">
                 <div className="text-2xl mb-2">🧠</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">ZionGPT Core v2</h3>
+<<<<<<< HEAD
+                <p className="text-white/70">10x context windows, native Tools API, faster inference.</p>
+=======
                 <p className="text-white/70">10x context windows, Tools API, and faster inference.</p>
+>>>>>>> cursor/create-and-deploy-new-content-9b6a
               </div>
             </a>
             <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
