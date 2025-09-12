@@ -28,12 +28,11 @@ export default function HomePage() {
                 <span className="text-sm font-medium">🚀 NEW CONTENT JUST DROPPED</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🎉 Revolutionary AI Content Update: 25+ New Resources Just Released!
+                🎉 Revolutionary AI Content Update: 30+ New Resources Just Released!
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-                Discover our latest breakthrough content: AI Breakthrough Innovations 2025, Workforce Transformation Guide, 
-                Sustainability Success Stories, plus comprehensive implementation guides and free resources. Get expert insights 
-                on the technologies transforming 2025 and beyond.
+                Discover our latest breakthrough content: Quantum Computing AI, Cybersecurity AI Defense, Autonomous Business Operations, 
+                plus comprehensive implementation guides and free resources. Get expert insights on the technologies transforming 2025 and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -43,7 +42,7 @@ export default function HomePage() {
                   Explore New Content
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
                   Read Latest Article
@@ -53,6 +52,44 @@ export default function HomePage() {
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
                 >
                   Download Free Resources
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New AI Breakthrough Content Banner */}
+        <section className="py-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">⚛️ QUANTUM AI BREAKTHROUGH</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🚀 Quantum Computing AI: Revolutionary Impact in 2025!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Discover how quantum computing is revolutionizing AI with 1000x speedups in machine learning, 
+                drug discovery, and financial modeling. Read our comprehensive guide to quantum-enhanced AI.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-quantum-computing-breakthrough"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Quantum AI Guide
+                </Link>
+                <Link
+                  href="/case-studies/ai-autonomous-manufacturing-success-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  View $200M Case Study
+                </Link>
+                <Link
+                  href="/blog/ai-2025-cybersecurity-ai-defense"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  AI Security Guide
                 </Link>
               </div>
             </div>
@@ -87,10 +124,48 @@ export default function HomePage() {
                   Free Implementation Guide
                 </Link>
                 <Link
-                  href="/blog/ai-2025-breakthrough-innovations"
+                  href="/blog/ai-2025-autonomous-business-operations"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Read Latest Article
+                  Read Autonomous Guide
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Cybersecurity Defense Banner */}
+        <section className="py-6 bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-3">
+                <span className="text-sm font-medium">🛡️ AI CYBERSECURITY DEFENSE</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                🔒 AI-Powered Cybersecurity: 99.8% Threat Detection Success!
+              </h2>
+              <p className="text-lg opacity-90 mb-4 max-w-4xl mx-auto">
+                Protect your organization with next-generation AI cybersecurity systems. Learn how AI is achieving 
+                99.8% threat detection accuracy and reducing response times from hours to seconds.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  href="/blog/ai-2025-cybersecurity-ai-defense"
+                  className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Read Security Guide
+                </Link>
+                <Link
+                  href="/resources/ai-cybersecurity-implementation-guide"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                >
+                  Download Security Checklist
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                >
+                  Security Assessment
                 </Link>
               </div>
             </div>
