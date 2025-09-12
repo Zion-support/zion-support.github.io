@@ -83,6 +83,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Content Promotion Banner */}
+      <section className='py-8 bg-gradient-to-r from-orange-500 to-red-500 text-white'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-1 mb-3'>
+              <span className='text-sm font-medium'>✨ NEW THIS WEEK</span>
+            </div>
+            <h2 className='text-2xl md:text-3xl font-bold mb-3'>
+              🚀 Fresh AI & Tech Content Just Dropped
+            </h2>
+            <p className='text-lg opacity-90 mb-4 max-w-3xl mx-auto'>
+              AI Multimodal Applications, Sustainability Solutions, Cybersecurity Threats, 
+              and Retail Transformation Case Studies - Expert insights to accelerate your growth.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-3 justify-center'>
+              <Link
+                href='/content-showcase'
+                className='bg-white text-orange-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                🎯 View All New Content
+              </Link>
+              <Link
+                href='/blog/ai-multimodal-applications-2025'
+                className='border border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors'
+              >
+                📚 Read Latest Articles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* New Content Showcase Banner */}
       <section className='py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden'>
         <div className='absolute inset-0 bg-black opacity-10'></div>
@@ -98,6 +130,20 @@ export default function HomePage() {
               Discover our latest expert insights, case studies, and resources. From AI automation 
               to startup growth strategies, get the knowledge you need to succeed in 2025.
             </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/content-showcase'
+                className='bg-white text-green-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                🎯 View All New Content
+              </Link>
+              <Link
+                href='/blog'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-lg' 
+              >
+                📚 Read Latest Articles
+              </Link>
+            </div>
           </div>
 
           {/* Featured New Content Cards */}
