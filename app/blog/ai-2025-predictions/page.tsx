@@ -1,14 +1,46 @@
+// @ts-nocheck
 import React from 'react';
+import Link from 'next/link';
 import SEO from '../../../components/SEO';
+import StructuredData from '../../../components/StructuredData';
+import ErrorBoundary from '../../../components/ErrorBoundary';
+import { ChevronRight } from 'lucide-react';
 
-export default function AI2025Predictions() {
+export default function AIPredictions2025Page() {
   return (
-    <>
+    <ErrorBoundary>
       <SEO
-        title="AI 2025 Predictions: The Future of Artificial Intelligence"
-        description="Discover the most important AI trends and predictions for 2025. From AGI breakthroughs to enterprise adoption, get insights from industry experts."
-        keywords="AI predictions 2025, artificial intelligence trends, AGI, machine learning, enterprise AI, AI adoption"
+        title="AI Predictions 2025: The Future of Artificial Intelligence - Zion Tech Group"
+        description="Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI. Stay ahead with Zion Tech Group's expert insights."
+        keywords="AI predictions 2025, future of AI, multimodal AI, ethical AI, AI in healthcare, quantum AI, artificial intelligence trends, Zion Tech Group"
         url="/blog/ai-2025-predictions"
+      />
+      <StructuredData
+        type="Article"
+        data={{
+          headline: "AI Predictions 2025: The Future of Artificial Intelligence",
+          description: "Explore cutting-edge AI predictions for 2025, covering multimodal AI, ethical considerations, healthcare advancements, and the rise of quantum AI.",
+          image: "https://zion.app/images/ai-predictions-2025-banner.jpg",
+          datePublished: "2025-01-25T08:00:00+08:00",
+          dateModified: "2025-01-25T08:00:00+08:00",
+          author: {
+            "@type": "Organization",
+            name: "Zion Tech Group",
+            url: "https://zion.app"
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Zion Tech Group",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://zion.app/images/zion-tech-group-logo.png"
+            }
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": "https://zion.app/blog/ai-2025-predictions"
+          }
+        }}
       />
       
       <div className="min-h-screen bg-white">
@@ -16,16 +48,22 @@ export default function AI2025Predictions() {
           {/* Header */}
           <header className="mb-12">
             <div className="flex items-center gap-3 mb-6">
+              <Link href="/blog" className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                <ChevronRight className="w-4 h-4 rotate-180" />
+                Back to Blog
+              </Link>
+              <span className="text-gray-400">•</span>
               <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
                 AI & Technology
               </span>
+              <span className="text-gray-500 text-sm">•</span>
               <span className="text-gray-500 text-sm">25 min read</span>
               <span className="text-gray-500 text-sm">•</span>
-              <span className="text-gray-500 text-sm">Jan 30, 2025</span>
+              <span className="text-gray-500 text-sm">Jan 25, 2025</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              AI 2025 Predictions: The Future of Artificial Intelligence
+              AI Predictions 2025: The Future of Artificial Intelligence
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -344,22 +382,22 @@ export default function AI2025Predictions() {
               Get a free AI readiness assessment and discover how AI can accelerate your growth in 2025.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Free Assessment
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Download Resources
-              </a>
+              </Link>
             </div>
           </div>
         </article>
       </div>
-    </>
+    </ErrorBoundary>
   );
 }
