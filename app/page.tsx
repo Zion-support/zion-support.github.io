@@ -74,6 +74,8 @@ import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025Revolutio
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
+import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateContentDiscoveryWidget';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -258,6 +260,12 @@ export default function HomePage() {
         
         {/* AI 2025 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2025BreakthroughPromotionBanner />
+        
+        {/* AI 2026 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
+        <AI2026UltimateBreakthroughPromotionBanner />
+        
+        {/* AI 2026 ULTIMATE CONTENT DISCOVERY WIDGET */}
+        <AI2026UltimateContentDiscoveryWidget />
         
         {/* AI 2025 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
         <AI2025BreakthroughContentShowcase />
