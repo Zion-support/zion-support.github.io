@@ -34,6 +34,28 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '26',
+      title: 'Agentic Supply Planning 2025: Forecasting-to-Fulfillment with AI',
+      description: 'Design agentic workflows across demand sensing, planning, and fulfillment to cut expedites and boost OTIF.',
+      href: '/blog/ai-2025-agentic-supply-planning',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'Supply Chain'
+    },
+    {
+      id: '27',
+      title: 'Agentic Supply Planning: 27% Expedites Cut, +6 pts OTIF',
+      description: 'Case study: Agentic planning tied forecasting to fulfillment, reducing expedites and improving service.',
+      href: '/case-studies/ai-2025-agentic-supply-planning-impact',
+      type: 'case-study',
+      featured: true,
+      readTime: '10 min read',
+      date: 'Sep 12, 2025',
+      category: 'Case Study'
+    },
+    {
       id: '24',
       title: 'AI Supply Chain Resilience 2025: Forecasting, Orchestration, and Risk Controls',
       description: 'Resilient supply chains with AI: demand sensing, dynamic safety stock, and agent workflows.',
