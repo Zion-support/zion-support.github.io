@@ -17,6 +17,7 @@ import NewContentPromoBanner from '../components/NewContentPromoBanner';
 import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
 import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
 import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -42,6 +43,14 @@ import ContentShowcase2026 from '../components/ContentShowcase2026';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import ContentRecommendationWidget2026 from '../components/ContentRecommendationWidget2026';
+import EnhancedSearch2026 from '../components/EnhancedSearch2026';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import FutureTechShowcase2026 from '../components/FutureTechShowcase2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -58,14 +67,26 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT PROMOTION BANNER */}
+        <UltimateContentPromotionBanner />
+        
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
         
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
         
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* FUTURE TECH SHOWCASE 2026 */}
+        <FutureTechShowcase2026 />
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
+        
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
@@ -81,6 +102,9 @@ export default function HomePage() {
         
         {/* ULTRA CONTENT PROMOTION BANNER 2026 */}
         <UltraContentPromotionBanner2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
         <RevolutionaryContentShowcase2026 />
@@ -100,8 +124,42 @@ export default function HomePage() {
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
         
-        {/* Content Showcase 2026 */}
-        <ContentShowcase2026 />
+        {/* New Content Showcase 2026 */}
+        <NewContentShowcase2026 />
+        
+        {/* Enhanced Content Showcase 2026 */}
+        <EnhancedContentShowcase2026 />
+        
+        {/* Enhanced Search Section */}
+        <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find the Perfect AI Content for Your Needs
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Search through our comprehensive library of AI insights, case studies, and implementation guides
+            </p>
+            <EnhancedSearch2026 />
+          </div>
+        </section>
+        
+        {/* Content Recommendation Widget */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Latest AI Insights & Case Studies</h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Stay ahead with the latest AI trends, implementation strategies, and real-world success stories from industry leaders.
+                </p>
+                {/* Additional content can be added here */}
+              </div>
+              <div>
+                <ContentRecommendationWidget2026 />
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* Content Promotion Banner */}
         <NewContentPromotionBanner />
@@ -139,32 +197,32 @@ export default function HomePage() {
               
               {/* Featured Content Preview */}
               <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <Link href="/blog/ai-2025-advanced-ai-architecture" className="group">
+                <Link href="/blog/ai-2025-multimodal-revolution" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🏗️</div>
-                    <h3 className="text-sm font-semibold mb-1">Advanced AI Architecture</h3>
-                    <p className="text-xs opacity-90">Scalable, resilient systems</p>
+                    <div className="text-2xl mb-2">🎯</div>
+                    <h3 className="text-sm font-semibold mb-1">Multimodal AI Revolution</h3>
+                    <p className="text-xs opacity-90">Human-computer interaction</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-cybersecurity-revolution" className="group">
+                <Link href="/blog/ai-2025-automation-trends" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">🛡️</div>
-                    <h3 className="text-sm font-semibold mb-1">AI Cybersecurity</h3>
-                    <p className="text-xs opacity-90">Next-gen threat protection</p>
+                    <div className="text-2xl mb-2">🤖</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Automation Trends</h3>
+                    <p className="text-xs opacity-90">Intelligent business operations</p>
                   </div>
                 </Link>
-                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="group">
+                <Link href="/case-studies/ai-manufacturing-transformation-success-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">⚛️</div>
-                    <h3 className="text-sm font-semibold mb-1">Quantum Computing</h3>
-                    <p className="text-xs opacity-90">Revolutionary breakthroughs</p>
+                    <div className="text-2xl mb-2">🏭</div>
+                    <h3 className="text-sm font-semibold mb-1">40% Cost Reduction</h3>
+                    <p className="text-xs opacity-90">Manufacturing success story</p>
                   </div>
                 </Link>
-                <Link href="/case-studies/ai-autonomous-manufacturing-success-2025" className="group">
+                <Link href="/webinars/ai-implementation-masterclass-2025" className="group">
                   <div className="bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg hover:bg-opacity-20 transition-all duration-300">
-                    <div className="text-2xl mb-2">💰</div>
-                    <h3 className="text-sm font-semibold mb-1">$200M Success</h3>
-                    <p className="text-xs opacity-90">Manufacturing case study</p>
+                    <div className="text-2xl mb-2">🎓</div>
+                    <h3 className="text-sm font-semibold mb-1">AI Masterclass</h3>
+                    <p className="text-xs opacity-90">Live expert training</p>
                   </div>
                 </Link>
               </div>

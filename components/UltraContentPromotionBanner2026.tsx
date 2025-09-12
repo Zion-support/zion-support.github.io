@@ -1,7 +1,72 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function UltraContentPromotionBanner2026() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      title: "🚀 NEW: AI Implementation Master Guide 2026",
+      subtitle: "Complete toolkit with templates, frameworks, and proven strategies",
+      href: "/resources/ai-implementation-master-guide-2026",
+      bg: "from-blue-600 via-purple-600 to-indigo-600"
+    },
+    {
+      title: "📊 CASE STUDY: $2.8B Revenue Growth with AI",
+      subtitle: "How a global retail giant transformed operations with AI",
+      href: "/case-studies/ai-transformation-global-retail-giant-2026",
+      bg: "from-green-600 via-teal-600 to-cyan-600"
+    },
+    {
+      title: "🎯 NEW: AI Agent Evaluation Playbook 2025",
+      subtitle: "Comprehensive framework for evaluating and optimizing AI agents",
+      href: "/blog/ai-2025-agent-evaluation-playbook",
+      bg: "from-purple-600 via-pink-600 to-rose-600"
+    },
+    {
+      title: "⚡ LATEST: AI Governance Operating Model",
+      subtitle: "Complete guide to implementing AI governance in enterprise",
+      href: "/blog/ai-2025-ai-governance-operating-model",
+      bg: "from-indigo-600 via-blue-600 to-cyan-600"
+    },
+    {
+      title: "🔥 HOT: AI Agent Marketplaces Strategy",
+      subtitle: "Strategic blueprint for building and scaling AI agent marketplaces",
+      href: "/blog/ai-2025-agent-marketplaces-strategy",
+      bg: "from-orange-600 via-red-600 to-pink-600"
+    }
+  ];
+
+  useEffect(() => {
+    // Show banner after 2 seconds
+    const showTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    // Auto-rotate slides every 5 seconds
+    const slideTimer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearInterval(slideTimer);
+    };
+  }, [slides.length]);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  const handleSlideClick = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  if (!isVisible) return null;
+
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Animated background elements */}
@@ -51,7 +116,6 @@ export default function UltraContentPromotionBanner2026() {
             <br />
             <span className="text-white">Just Released!</span>
           </h1>
-<<<<<<< HEAD
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
@@ -67,61 +131,66 @@ export default function UltraContentPromotionBanner2026() {
               <p className="text-sm text-blue-100">
                 The ultimate 45-minute master guide with templates, checklists, and proven methodologies
               </p>
+    <div className={`fixed top-0 left-0 right-0 z-50 transform transition-all duration-500 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
+      <div className={`bg-gradient-to-r ${slides[currentSlide].bg} text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h2 className="text-sm sm:text-base font-bold truncate">
+                    {slides[currentSlide].title}
+                  </h2>
+                  <p className="text-xs sm:text-sm opacity-90 truncate">
+                    {slides[currentSlide].subtitle}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold mb-2">Quantum AI Breakthrough</h3>
-              <p className="text-sm text-blue-100">
-                Revolutionary case study showing 500% ROI with quantum-enhanced AI in financial services
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🏢</div>
-              <h3 className="text-lg font-bold mb-2">Enterprise Mastery</h3>
-              <p className="text-sm text-blue-100">
-                Proven strategies that helped 200+ enterprises achieve 340% average ROI
-              </p>
+            
+            <div className="flex items-center space-x-4 ml-4">
+              <Link
+                href={slides[currentSlide].href}
+                className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap"
+              >
+                Explore Now
+              </Link>
+              <button
+                onClick={handleClose}
+                className="text-white hover:text-gray-200 transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
           </div>
-
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/resources/ai-2026-complete-implementation-master-guide"
-              className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center"
-            >
-              <span className="mr-2">📖</span>
-              Access Master Guide
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-            <Link 
-              href="/case-studies/quantum-ai-financial-optimization-breakthrough-2026"
-              className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 flex items-center"
-            >
-              <span className="mr-2">⚛️</span>
-              View Case Study
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-          </div>
-
-          {/* Additional info */}
-          <div className="mt-8 text-sm text-blue-200">
-            <p>✨ Free access • Updated daily • Used by 500+ organizations</p>
+          
+          {/* Slide indicators */}
+          <div className="flex justify-center space-x-2 mt-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleSlideClick(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                  index === currentSlide 
+                    ? 'bg-white' 
+                    : 'bg-white bg-opacity-30 hover:bg-opacity-50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
-
-      {/* Floating elements */}
-      <div className="absolute top-1/4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
-      <div className="absolute top-1/3 right-8 w-1 h-1 bg-pink-400 rounded-full animate-bounce delay-1000"></div>
-      <div className="absolute bottom-1/4 left-8 w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce delay-2000"></div>
-      <div className="absolute bottom-1/3 right-4 w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-500"></div>
     </div>
-=======
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">

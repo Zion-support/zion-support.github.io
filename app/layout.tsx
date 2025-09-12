@@ -7,6 +7,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 
 export const metadata = {
 	title: 'Zion Tech Group',
@@ -155,6 +156,12 @@ function Header() {
             Resources
           </Link>
           <Link 
+            href="/webinars" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Webinars
+          </Link>
+          <Link 
             href="/services" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
@@ -286,7 +293,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-gray-900 font-sans">
         <ErrorBoundary>
           <EnhancedContentPromotionBanner />
-          <EnhancedNavigation />
+          <EnhancedNavigationWithContent />
           <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
             {children}
           </main>
