@@ -6,6 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import DynamicContentCarousel from '../components/DynamicContentCarousel';
+import ContentRecommendationWidget from '../components/ContentRecommendationWidget';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -78,6 +80,13 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Dynamic Content Carousel */}
+      <section className='py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <DynamicContentCarousel />
         </div>
       </section>
 
@@ -542,7 +551,7 @@ export default function HomePage() {
               solutions that drive real results.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
             <FeatureCard
               title='Fast Delivery'
               description='Rapid prototyping and deployment with modern tools and practices.'
@@ -559,6 +568,11 @@ export default function HomePage() {
               title='Cost Effective'
               description='Optimized solutions that reduce operational costs and improve efficiency.'
             />
+          </div>
+          
+          {/* Content Recommendation Widget */}
+          <div className='max-w-4xl mx-auto'>
+            <ContentRecommendationWidget maxItems={4} />
           </div>
         </div>
       </section>
