@@ -172,36 +172,20 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            <a href="/news/zion-os-1-4-security-compliance" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-rose-600 to-red-600" />
+            <a href="/news/ai-marketplace-accelerator-1-5" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+              <div className="h-2 bg-gradient-to-r from-indigo-600 to-blue-600" />
               <div className="p-6">
-                <div className="text-2xl mb-2">🛡️</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.4: Security & Compliance</h3>
-                <p className="text-white/70">Compliance templates, audit trails, and security hardening.</p>
+                <div className="text-2xl mb-2">🚀</div>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">AI Marketplace Accelerator</h3>
+                <p className="text-white/70">Launch production marketplaces in hours with presets and seed data.</p>
               </div>
             </a>
-            <a href="/news/enterprise-infra-cost-reduction-50-percent" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-emerald-600 to-teal-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">💼</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Customer Story: 50% Cost Reduction</h3>
-                <p className="text-white/70">Policy‑based scaling and orchestration delivered savings.</p>
-              </div>
-            </a>
-            <a href="/news/zion-os-1-3-agents-rag" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/ziongpt-core-v2" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-fuchsia-600 to-purple-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🧠</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3: Agent Workflows + RAG</h3>
-                <p className="text-white/70">Autonomous workflows and built‑in RAG.</p>
-=======
-            <a href="/news/zion-os-1-3-upgrades" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
-              <div className="p-6">
-                <div className="text-2xl mb-2">⚡</div>
-                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Zion OS 1.3 Released</h3>
-                <p className="text-white/70">42% faster deploys, real-time analytics, and smoother UX.</p>
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-white">ZionGPT Core v2</h3>
+                <p className="text-white/70">10x context windows, Tools API, and faster inference.</p>
               </div>
             </a>
             <a href="/news/marketplace-suite-ga" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
@@ -218,7 +202,6 @@ export default function HomePage() {
                 <div className="text-2xl mb-2">🛡️</div>
                 <h3 className="text-lg font-semibold mb-1 group-hover:text-white">Compliance Pack</h3>
                 <p className="text-white/70">SOC 2 playbooks and turnkey KYC/AML integrations.</p>
->>>>>>> cursor/create-and-deploy-new-content-ddbf
               </div>
             </a>
           </div>
