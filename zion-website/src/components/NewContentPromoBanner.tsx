@@ -34,6 +34,17 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
+      id: '56',
+      title: 'Enterprise Retrieval Playbook 2025: Reliable RAG at Scale',
+      description: 'Corpus curation, chunking, embeddings, hybrid search, routing, evals, and governance for production RAG.',
+      href: '/blog/ai-2025-enterprise-retrieval-playbook',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
+    },
+    {
       id: '54',
       title: 'MLOps Best Practices 2025: Shipping Reliable AI',
       description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
