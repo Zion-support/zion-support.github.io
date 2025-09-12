@@ -6,6 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import PerformanceOptimization from '../components/PerformanceOptimization';
 import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
@@ -1079,6 +1081,15 @@ export default function HomePage() {
 
       {/* Content Discovery Section */}
       <ContentDiscoverySection />
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
+
+      {/* Performance Optimization */}
+      <PerformanceOptimization />
+
+      {/* Accessibility Enhancement */}
+      <AccessibilityEnhancer />
 
         {/* Revolutionary AI Tools Banner */}
         <section className='py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden'>
