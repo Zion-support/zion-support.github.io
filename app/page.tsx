@@ -87,6 +87,7 @@ import AI2026ROICalculator from '../components/AI2026ROICalculator';
 import ContentDiscovery2026 from '../components/ContentDiscovery2026';
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
 import MegaContentShowcase2025 from '../components/MegaContentShowcase2025';
+import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
 import SuperContentPromoBanner2025 from '../components/SuperContentPromoBanner2025';
 import UltimateContent2026PromotionBanner from '../components/UltimateContent2026PromotionBanner';
 import NewContent2027PromotionBanner from '../components/NewContent2027PromotionBanner';
@@ -223,6 +224,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 BREAKTHROUGH BANNER */}
+        <NewContent2025BreakthroughBanner />
+        
         {/* AI 2025 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2025BreakthroughPromotionBanner />
         
