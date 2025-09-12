@@ -167,6 +167,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Updates Promo */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">What's New in Zion OS</h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">Latest improvements shipped to your AI-powered economy platform.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/updates/ai-orchestrator-v2" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
+              <div className="text-sm text-white/60 mb-2">2025-09-12</div>
+              <h3 className="text-xl font-semibold mb-2">AI Orchestrator v2 Released</h3>
+              <p className="text-white/70">Smarter scheduling, reduced latency, and improved observability across workflows.</p>
+            </a>
+            <a href="/updates/marketplace-insights" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
+              <div className="text-sm text-white/60 mb-2">2025-09-10</div>
+              <h3 className="text-xl font-semibold mb-2">New Marketplace Insights Dashboard</h3>
+              <p className="text-white/70">Real-time KPIs for jobs, talent, and token flows with exportable reports.</p>
+            </a>
+            <a href="/updates/governance-upgrades" className="block glass-effect rounded-2xl p-6 hover-lift border border-white/10 hover:border-blue-500 transition-all">
+              <div className="text-sm text-white/60 mb-2">2025-09-07</div>
+              <h3 className="text-xl font-semibold mb-2">Governance Upgrades: Dual-Vote and Delegates</h3>
+              <p className="text-white/70">Flexible local/global voting, delegate roles, and granular proposal lifecycles.</p>
+            </a>
+          </div>
+          <div className="text-center mt-10">
+            <a href="/updates" className="btn-secondary hover-lift">View all updates →</a>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
