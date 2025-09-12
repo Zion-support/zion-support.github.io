@@ -6,19 +6,9 @@ export default function AICybersecurity2025() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-47dd
-        title="AI Cybersecurity 2025: Protecting Your Digital Assets in the Age of Intelligent Threats"
-        description="Comprehensive guide to AI cybersecurity strategies, threat detection, and protection measures for 2025. Learn how to secure AI systems and defend against emerging cyber threats."
-        keywords="AI cybersecurity, AI security, cyber threats 2025, AI protection, cybersecurity strategy, AI governance, threat detection"
-=======
         title="AI Cybersecurity 2025: Protecting Against Next-Generation Threats"
         description="Comprehensive guide to AI-powered cybersecurity in 2025. Learn about advanced threat detection, AI security best practices, and protecting your organization from sophisticated attacks."
         keywords="AI cybersecurity, threat detection, security automation, AI security, cyber threats 2025, security best practices"
->>>>>>> cursor/create-and-deploy-new-content-f7d4
         url="/blog/ai-cybersecurity-2025"
       />
       
@@ -257,6 +247,7 @@ export default function AICybersecurity2025() {
         </div>
       </article>
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
         description="Comprehensive guide to AI cybersecurity in 2025. Learn about emerging threats, defense strategies, and best practices for protecting your organization from AI-powered attacks."
         keywords="AI cybersecurity, machine learning security, AI threats, cybersecurity 2025, AI defense, cyber attacks, data protection"
@@ -696,8 +687,7 @@ export default function AICybersecurity2025() {
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
 >>>>>>> cursor/create-and-deploy-new-content-47dd
-=======
->>>>>>> cursor/create-and-deploy-new-content-f7d4
+>>>>>>> b36efd9279fa5a0d64a5f2812c7abda1ec473b23
     </div>
   );
 }
