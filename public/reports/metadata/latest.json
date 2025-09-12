@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2025-08-17T21:20:01.744Z",
-  "pagesScanned": 8532,
+  "generatedAt": "2025-08-17T21:21:01.102Z",
+  "pagesScanned": 8535,
   "items": [
     {
       "route": "/404",
@@ -33375,6 +33375,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-17-2120",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Guide: FinOps for AI",
+        "description": "Guide: FinOps for AI — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-17T00-00",
       "missing": [
         "og:image"
@@ -62417,7 +62427,20 @@
       }
     },
     {
-      "route": "/reports/updates/update-2025-08-13-1948",
+      "route": "/reports/updates/update-2025-08-17-1821",
+      "missing": [
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:card"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:21",
+        "description": "Autonomous Update — 2025-08-17 18:21 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1830",
       "missing": [
         "og:image"
       ],
@@ -62584,6 +62607,16 @@
       "suggestion": {
         "title": "Autonomous Playbook — AI Service Design (2025-08-17 21:10 UTC)",
         "description": "Autonomous Playbook — AI Service Design (2025-08-17 21:10 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-2120",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Capability Map — AI Service Design (2025-08-17 21:20 UTC)",
+        "description": "Autonomous Capability Map — AI Service Design (2025-08-17 21:20 UTC) — auto-suggested description"
       }
     },
     {
