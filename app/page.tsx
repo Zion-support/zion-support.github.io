@@ -73,6 +73,11 @@ import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 
+// New Revolutionary Tech Components
+import NewYear2025PromotionBanner from '../src/components/NewYear2025PromotionBanner';
+import RevolutionaryTechShowcase from '../src/components/RevolutionaryTechShowcase';
+import InteractiveServiceSelector from '../src/components/InteractiveServiceSelector';
+
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
 import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
@@ -3492,6 +3497,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* NEW YEAR 2025 PROMOTION BANNER - REVOLUTIONARY TECH */}
+      <NewYear2025PromotionBanner />
+
+      {/* REVOLUTIONARY TECHNOLOGY SHOWCASE */}
+      <RevolutionaryTechShowcase />
+
+      {/* INTERACTIVE SERVICE SELECTOR */}
+      <InteractiveServiceSelector />
     </div>
     </EnhancedErrorBoundary>
   );
