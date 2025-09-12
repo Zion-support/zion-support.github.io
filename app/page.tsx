@@ -18,6 +18,7 @@ import ContentShowcase from '../components/ContentShowcase';
 import EnhancedContentBanner from '../components/EnhancedContentBanner';
 import ContentPromotionBanner from '../components/ContentPromotionBanner';
 import ContentShowcase from '../components/ContentShowcase';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 
 // Define missing components
 const PerformanceMetrics = () => (
@@ -275,7 +276,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
+
       {/* Featured Content Section */}
       <ContentShowcase
         title="Latest AI Insights & Case Studies"
@@ -4008,15 +4012,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Interactive Content Section */}
-      <InteractiveContentShowcase
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase
         title="Explore Our AI Content Library"
         subtitle="Discover, filter, and explore our comprehensive collection of AI insights, case studies, and resources"
-        items={[...featuredContent, ...trendingContent, ...latestContent]}
-        variant="interactive"
         showFilters={true}
-        showStats={true}
-        showSearch={true}
+        maxItems={12}
       />
 
       {/* Newsletter Signup */}
