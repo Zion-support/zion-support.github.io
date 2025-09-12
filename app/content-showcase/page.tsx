@@ -9,19 +9,19 @@ export default function ContentShowcase() {
   const [sortBy, setSortBy] = useState('newest');
 
   const categories = [
-    { id: 'all', name: 'All Content', count: 47 },
+    { id: 'all', name: 'All Content', count: 50 },
     { id: 'ai-automation', name: 'AI Automation', count: 12 },
     { id: 'cybersecurity', name: 'Cybersecurity', count: 8 },
-    { id: 'case-studies', name: 'Case Studies', count: 15 },
-    { id: 'resources', name: 'Resources', count: 7 },
+    { id: 'case-studies', name: 'Case Studies', count: 16 },
+    { id: 'resources', name: 'Resources', count: 8 },
     { id: 'trends', name: 'Trends & Insights', count: 5 }
   ];
 
   const content = [
     {
       id: 1,
-      title: "AI Advanced Automation 2025: Complete Enterprise Implementation Guide",
-      description: "Master advanced AI automation with our comprehensive guide. Learn enterprise strategies, implementation frameworks, and real-world case studies for maximum ROI.",
+      title: "AI Enterprise Automation Revolution 2025: Complete Implementation Guide",
+      description: "Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains. Complete implementation guide with real-world case studies.",
       category: "ai-automation",
       type: "Article",
       readTime: "25 min read",
@@ -30,7 +30,7 @@ export default function ContentShowcase() {
       featured: true,
       trending: true,
       icon: "🤖",
-      href: "/blog/ai-2025-advanced-automation",
+      href: "/blog/ai-2025-enterprise-automation-revolution",
       tags: ["AI Automation", "Enterprise", "Implementation", "ROI"]
     },
     {
@@ -167,6 +167,36 @@ export default function ContentShowcase() {
       icon: "📋",
       href: "/resources/ai-cybersecurity-checklist-2025",
       tags: ["Checklist", "Security", "AI Safety", "Free Download"]
+    },
+    {
+      id: 11,
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices.",
+      category: "resources",
+      type: "Free Download",
+      readTime: "200+ pages",
+      publishDate: "2025-01-08",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "📚",
+      href: "/resources/ai-implementation-master-guide-2026",
+      tags: ["Master Guide", "Implementation", "Templates", "Free Download"]
+    },
+    {
+      id: 12,
+      title: "AI Financial Services Transformation Success 2025: 300% ROI Case Study",
+      description: "Complete case study: How a major bank achieved 300% ROI through strategic AI implementation. Learn the strategies, challenges, and results of this transformation.",
+      category: "case-studies",
+      type: "Case Study",
+      readTime: "15 min read",
+      publishDate: "2025-01-10",
+      author: "Zion Tech Group",
+      featured: true,
+      trending: true,
+      icon: "💰",
+      href: "/case-studies/ai-financial-services-transformation-2025",
+      tags: ["Financial Services", "Case Study", "ROI", "Transformation"]
     }
   ];
 
@@ -217,19 +247,19 @@ export default function ContentShowcase() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-blue-600 mb-2">47</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">50</div>
             <div className="text-gray-600">Total Articles</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-green-600 mb-2">15</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">16</div>
             <div className="text-gray-600">Case Studies</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-purple-600 mb-2">7</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">8</div>
             <div className="text-gray-600">Free Resources</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-            <div className="text-3xl font-bold text-orange-600 mb-2">25K+</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">30K+</div>
             <div className="text-gray-600">Downloads</div>
           </div>
         </div>
