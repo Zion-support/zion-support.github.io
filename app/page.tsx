@@ -49,6 +49,13 @@ import RevolutionaryTech2025Showcase from '../components/RevolutionaryTech2025Sh
 import FutureTechInnovationBanner from '../components/FutureTechInnovationBanner';
 import UltimateContentDiscovery2025 from '../components/UltimateContentDiscovery2025';
 
+// New 2025 Content Components
+import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
+import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPromotionBanner2025';
+import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
+import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
+import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -64,6 +71,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* CONTENT DISCOVERY PROMOTION BANNER */}
+        <ContentDiscoveryPromotionBanner2025 />
+        
+        {/* COMPREHENSIVE CONTENT DISCOVERY ENGINE */}
+        <ComprehensiveContentDiscoveryEngine2025 />
+        
+        {/* REVOLUTIONARY AI PROMOTION BANNER */}
+        <RevolutionaryAIPromotionBanner2025 />
+        
+        {/* REVOLUTIONARY AI CONTENT SHOWCASE */}
+        <RevolutionaryAIContentShowcase2025 />
+        
+        {/* INTERACTIVE SERVICE SHOWCASE */}
+        <InteractiveServiceShowcase2025 />
+        
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
