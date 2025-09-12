@@ -147,6 +147,12 @@ import AI2033BreakthroughContentShowcase from '../components/AI2033BreakthroughC
 import AI2034RevolutionaryPromotionBanner from '../components/AI2034RevolutionaryPromotionBanner';
 import AI2034RevolutionaryContentShowcase from '../components/AI2034RevolutionaryContentShowcase';
 
+// New AI 2035 Breakthrough Content Components
+import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
+import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
+import AI2035ContentPromotionBanner from '../components/AI2035ContentPromotionBanner';
+import AI2035ContentShowcase from '../components/AI2035ContentShowcase';
+
 // New AI 2037-2038 Transcendent Content Components
 import AI2037TranscendentPromotionBanner from '../components/AI2037TranscendentPromotionBanner';
 import AI2037TranscendentContentShowcase from '../components/AI2037TranscendentContentShowcase';
@@ -275,8 +281,30 @@ export default function HomePage() {
         {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2035BreakthroughPromotionBanner />
         
+        {/* AI 2035 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
+        <AI2035BreakthroughContentShowcase />
+        
+        {/* AI 2035 CONTENT PROMOTION BANNER - NEW CONTENT */}
+        <AI2035ContentPromotionBanner />
+        
+        {/* AI 2035 CONTENT SHOWCASE - NEW CONTENT */}
+        <AI2035ContentShowcase />
+        
         {/* NEW AI 2025 BREAKTHROUGH CONTENT BANNER - LATEST */}
         <NewContent2025BreakthroughBanner />
+        
+        {/* ADVANCED QUANTUM COMPUTING PROMOTION BANNER - NEW CONTENT */}
+        <AdvancedQuantumComputingPromotionBanner />
+        
+        {/* NEURAL INTERFACE REVOLUTION BANNER - NEW CONTENT */}
+        <NeuralInterfaceRevolutionBanner />
+        
+        {/* AUTONOMOUS SYSTEMS REVOLUTION BANNER - NEW CONTENT */}
+        <AutonomousSystemsRevolutionBanner />
+        
+        {/* EDGE COMPUTING & IoT BANNER - NEW CONTENT */}
+        <EdgeComputingIOTBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-6558
         
         {/* AI 2035 REVOLUTIONARY CONTENT SHOWCASE */}
         <AI2035ContentShowcase />
