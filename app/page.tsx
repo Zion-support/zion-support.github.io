@@ -166,6 +166,7 @@ const TestimonialCard = ({
   </div>
 );
 import ContentPromoBanner, { contentPromoBanners } from '../components/ContentPromoBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -249,6 +250,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       {/* Promotional Banner */}
       <ContentPromoBanner {...contentPromoBanners.newGuide} />
+      
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
       
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
