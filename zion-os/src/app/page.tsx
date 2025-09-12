@@ -172,7 +172,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/zion-os-1-0-launch" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-blue-600 to-purple-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🚀</div>
@@ -180,7 +180,7 @@ export default function HomePage() {
                 <p className="text-white/70">One-click deployment of AI-powered digital economies is here.</p>
               </div>
             </a>
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/academy-opens" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-teal-600 to-cyan-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🎓</div>
@@ -188,7 +188,7 @@ export default function HomePage() {
                 <p className="text-white/70">Courses to help you learn AI, Web3, and launch faster.</p>
               </div>
             </a>
-            <a href="/news" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
+            <a href="/news/enterprise-partners" className="group rounded-xl overflow-hidden border border-white/10 bg-zinc-900 hover:border-white/30 transition-all">
               <div className="h-2 bg-gradient-to-r from-orange-600 to-red-600" />
               <div className="p-6">
                 <div className="text-2xl mb-2">🤝</div>
