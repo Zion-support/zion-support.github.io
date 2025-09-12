@@ -37,6 +37,33 @@ export const blogPosts: BlogPost[] = [
   }
   ,
   {
+    slug: 'genai-sales-copilot-playbook',
+    title: 'GenAI Sales Copilot: Practical Playbook to 2x Pipeline',
+    excerpt: 'Conversation intelligence, auto‑research, and next‑best actions that actually ship revenue.',
+    content:
+      'Teams that operationalize GenAI as a sales copilot see immediate wins: rapid account research, tailored outreach, and objection handling with evidence. This playbook covers workflow design, guardrails, and metrics to double qualified pipeline within a quarter... ',
+    publishedAt: '2025-09-12',
+    tags: ['AI', 'Sales', 'Go-To-Market']
+  },
+  {
+    slug: 'secure-rag-in-production',
+    title: 'Secure RAG in Production: Patterns, Pitfalls, and Policies',
+    excerpt: 'Production‑grade retrieval‑augmented generation with privacy, provenance, and performance.',
+    content:
+      'RAG unlocks better answers, but production requires strong data governance: PII scrubbing, ACL‑aware retrieval, lineage tracking, and caching strategies. We compare vector stores, chunkers, and eval harnesses with a reference architecture... ',
+    publishedAt: '2025-09-12',
+    tags: ['RAG', 'Security', 'MLOps']
+  },
+  {
+    slug: 'sre-runbooks-to-autonomous-ops',
+    title: 'From SRE Runbooks to Autonomous Ops',
+    excerpt: 'Turn tribal knowledge into reliable automations that cut MTTR by 70%+',
+    content:
+      'Capture recurring incidents as structured runbooks, attach observability signals, and promote to safe automations with approvals. We share a maturity model and blueprints to progress from manual pages to autonomous remediation safely... ',
+    publishedAt: '2025-09-11',
+    tags: ['SRE', 'Automation', 'Reliability']
+  },
+  {
     slug: 'edge-ai-on-prem-breakthroughs',
     title: 'Edge AI On‑Prem: Breakthroughs That Cut Latency by 80%+',
     excerpt: 'Why moving inference to the edge slashes costs and accelerates mission‑critical apps.',
