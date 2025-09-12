@@ -703,6 +703,28 @@ const NewContentPromoBanner = ({
       readTime: '14 min read',
       date: 'Sep 12, 2025',
       category: 'Architecture'
+    },
+    {
+      id: 'NEW-ai-quality-eng-2025',
+      title: 'AI Quality Engineering 2025: Evaluations, Guardrails, and SLAs',
+      description: 'End-to-end playbook for AI quality with eval pipelines, policy-as-code, and runtime guardrails.',
+      href: '/blog/ai-2025-ai-quality-engineering',
+      type: 'blog',
+      featured: true,
+      readTime: '20 min read',
+      date: 'Sep 12, 2025',
+      category: 'Evaluation'
+    },
+    {
+      id: 'NEW-agentic-change-mgmt-2025',
+      title: 'Agentic Change Management 2025: Enterprise Adoption Blueprint',
+      description: 'Practical rollout plan for agentic workflows with governance, training, and measurable outcomes.',
+      href: '/blog/ai-2025-agentic-change-management',
+      type: 'blog',
+      featured: true,
+      readTime: '18 min read',
+      date: 'Sep 12, 2025',
+      category: 'Operations'
     }
   ];
 

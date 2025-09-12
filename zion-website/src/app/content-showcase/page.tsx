@@ -16,6 +16,26 @@ export const metadata = {
 export default function ContentShowcase() {
   const featuredContent = [
     {
+      title: "AI Quality Engineering 2025: Evaluations, Guardrails, and SLAs",
+      description: "End-to-end playbook for AI quality with eval pipelines, policy-as-code, and runtime guardrails.",
+      href: "/blog/ai-2025-ai-quality-engineering",
+      icon: "✅",
+      category: "Evaluation",
+      readTime: "20 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
+      title: "Agentic Change Management 2025: Enterprise Adoption Blueprint",
+      description: "Practical rollout plan for agentic workflows with governance, training, and measurable outcomes.",
+      href: "/blog/ai-2025-agentic-change-management",
+      icon: "🗺️",
+      category: "Operations",
+      readTime: "18 min read",
+      date: "Sep 12, 2025",
+      featured: true
+    },
+    {
       title: "AI Platform Engineering Blueprint 2025",
       description: "Governance, evaluations, routing, observability, and cost controls for enterprise AI platforms.",
       href: "/blog/ai-2025-ai-platform-engineering-blueprint",
