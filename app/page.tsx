@@ -50,6 +50,8 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
 import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import AI2025NewContentShowcase from '../components/AI2025NewContentShowcase';
 import RevolutionaryTech2025PromotionBanner from '../components/RevolutionaryTech2025PromotionBanner';
 import RevolutionaryTech2025Showcase from '../components/RevolutionaryTech2025Showcase';
 import FutureTechInnovationBanner from '../components/FutureTechInnovationBanner';
@@ -58,6 +60,26 @@ import LatestContent2025PromotionBanner from '../components/LatestContent2025Pro
 import LatestContent2025Showcase from '../components/LatestContent2025Showcase';
 import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePromotionBanner2026';
 import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
+
+// New 2028 Breakthrough Content Components
+import AI2028BreakthroughPromotionBanner from '../components/AI2028BreakthroughPromotionBanner';
+import AI2028BreakthroughContentShowcase from '../components/AI2028BreakthroughContentShowcase';
+import EnhancedContentDiscovery2028 from '../components/EnhancedContentDiscovery2028';
+import AI2028ROICalculator from '../components/AI2028ROICalculator';
+import AI2028NewsletterSignup from '../components/AI2028NewsletterSignup';
+
+// New 2027 Breakthrough Content Components
+import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
+import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
+import QuantumComputingBreakthroughShowcase from '../components/QuantumComputingBreakthroughShowcase';
+import EnterpriseAutomationMasteryShowcase from '../components/EnterpriseAutomationMasteryShowcase';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
+// Revolutionary Content Showcase
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
 
 // New 2025 Content Components
 import RevolutionaryAIContentShowcase2025 from '../components/RevolutionaryAIContentShowcase2025';
@@ -65,7 +87,6 @@ import RevolutionaryAIPromotionBanner2025 from '../components/RevolutionaryAIPro
 import InteractiveServiceShowcase2025 from '../components/InteractiveServiceShowcase2025';
 import ComprehensiveContentDiscoveryEngine2025 from '../components/ComprehensiveContentDiscoveryEngine2025';
 import ContentDiscoveryPromotionBanner2025 from '../components/ContentDiscoveryPromotionBanner2025';
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -82,6 +103,48 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2028 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2028BreakthroughPromotionBanner />
+        
+        {/* AI 2028 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2028BreakthroughContentShowcase />
+        
+        {/* AI 2028 CONTENT DISCOVERY */}
+        <EnhancedContentDiscovery2028 />
+        
+        {/* AI 2028 ROI CALCULATOR */}
+        <AI2028ROICalculator />
+        
+        {/* AI 2028 NEWSLETTER SIGNUP */}
+        <AI2028NewsletterSignup />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER */}
+        <UltimateContentPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE */}
+        <RevolutionaryContentShowcase />
+        
+        {/* AI 2027 BREAKTHROUGH PROMOTION BANNER */}
+        <AI2027BreakthroughPromotionBanner />
+        
+        {/* AI 2027 BREAKTHROUGH CONTENT SHOWCASE */}
+        <AI2027BreakthroughContentShowcase />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH SHOWCASE */}
+        <QuantumComputingBreakthroughShowcase />
+        
+        {/* ENTERPRISE AUTOMATION MASTERY SHOWCASE */}
+        <EnterpriseAutomationMasteryShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
+        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025NewContentPromotionBanner />
+        
+        {/* NEW AI 2025 CONTENT SHOWCASE */}
+        <AI2025NewContentShowcase />
+        
         {/* NEURAL INTERFACE PROMOTION BANNER 2026 */}
         <NeuralInterfacePromotionBanner2026 />
         
@@ -93,6 +156,12 @@ export default function HomePage() {
         
         {/* AI 2025 CONTENT SHOWCASE */}
         <AI2025ContentShowcase />
+        
+        {/* NEW REVOLUTIONARY CONTENT 2025 BANNER */}
+        <NewContent2025RevolutionaryBanner />
+        
+        {/* NEW REVOLUTIONARY CONTENT 2025 SHOWCASE */}
+        <NewContent2025RevolutionaryShowcase />
         
         {/* CONTENT DISCOVERY PROMOTION BANNER */}
         <ContentDiscoveryPromotionBanner2025 />
@@ -115,7 +184,6 @@ export default function HomePage() {
         {/* LATEST CONTENT 2025 SHOWCASE */}
         <LatestContent2025Showcase />
         
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -154,7 +222,6 @@ export default function HomePage() {
         
         {/* AI 2031 CONTENT SHOWCASE */}
         <AI2031ContentShowcase />
->>>>>>> eb9a9f74a5ab10661c4eea8ff9ae1181b243e0f9
         
         {/* AI 2030 CONTENT PROMOTION BANNER */}
         <AI2030ContentPromotionBanner />
