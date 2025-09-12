@@ -107,6 +107,126 @@ const Home: NextPage = () => {
             </div>
           </div>
 
+          {/* Featured Case Study Banner */}
+          <div className="mt-24 bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 text-green-400 text-sm font-semibold mb-4">
+                <span>⭐</span>
+                <span>SUCCESS STORY</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 text-white">300% Increase in Conversion Rate</h2>
+              <p className="text-lg text-gray-200 mb-6 max-w-3xl mx-auto">
+                See how we transformed TechRetail Inc.'s e-commerce platform with AI-powered personalization, 
+                resulting in massive growth and customer satisfaction improvements.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">300%</div>
+                  <div className="text-sm text-gray-200">Conversion Rate Increase</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">50%</div>
+                  <div className="text-sm text-gray-200">Reduction in Support Queries</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400">$3.5M</div>
+                  <div className="text-sm text-gray-200">Additional Annual Revenue</div>
+                </div>
+              </div>
+              <Link href="/case-studies/ai-ecommerce-platform" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                Read Full Case Study
+              </Link>
+            </div>
+          </div>
+
+          {/* Latest Blog Posts */}
+          <div className="mt-24 mb-16">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">Latest Technology Insights</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-3">
+                  <span>🤖</span>
+                  <span>AI & MACHINE LEARNING</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">The AI Revolution 2024</h3>
+                <p className="text-gray-200 text-sm mb-4">
+                  Discover how artificial intelligence is transforming business operations and creating new opportunities for growth.
+                </p>
+                <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
+                  <span>15 min read</span>
+                  <span>Jan 20, 2024</span>
+                </div>
+                <Link href="/blog/ai-revolution-2024-chat" className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
+                  Read More →
+                </Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-3">
+                  <span>☁️</span>
+                  <span>CLOUD COMPUTING</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">Cloud Computing Trends 2024</h3>
+                <p className="text-gray-200 text-sm mb-4">
+                  Explore the latest cloud computing trends including multi-cloud strategies, edge computing, and AI integration.
+                </p>
+                <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
+                  <span>12 min read</span>
+                  <span>Jan 18, 2024</span>
+                </div>
+                <Link href="/blog/cloud-computing-trends-2024-chat" className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
+                  Read More →
+                </Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+                <div className="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-3">
+                  <span>🔒</span>
+                  <span>CYBERSECURITY</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">Cybersecurity Trends 2024</h3>
+                <p className="text-gray-200 text-sm mb-4">
+                  Stay ahead of emerging threats with our comprehensive guide to the latest cybersecurity trends and strategies.
+                </p>
+                <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
+                  <span>10 min read</span>
+                  <span>Jan 15, 2024</span>
+                </div>
+                <Link href="/blog/cybersecurity-trends-for-2024-and-beyond-chat" className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
+                  Read More →
+                </Link>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Link href="/blog" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                View All Articles
+              </Link>
+            </div>
+          </div>
+
+          {/* Special Offer Banner */}
+          <div className="mt-16 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 text-yellow-400 text-sm font-semibold mb-4">
+                <span>🎉</span>
+                <span>LIMITED TIME OFFER</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 text-white">Free AI Readiness Assessment</h2>
+              <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto">
+                Get a comprehensive evaluation of your organization's AI readiness and receive a detailed roadmap 
+                for your digital transformation journey. Valued at $5,000 - completely free for a limited time.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link href="/contact" className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                  Claim Your Free Assessment
+                </Link>
+                <Link href="/services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                  Learn More About Our Services
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* CTA Section */}
           <div className="mt-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>

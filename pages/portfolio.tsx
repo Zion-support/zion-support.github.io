@@ -12,7 +12,8 @@ const Portfolio: NextPage = () => {
       technologies: ["React", "Node.js", "TensorFlow", "AWS", "MongoDB"],
       image: "🛒",
       results: "300% increase in conversion rate, 50% reduction in customer service queries",
-      client: "TechRetail Inc."
+      client: "TechRetail Inc.",
+      caseStudy: "/case-studies/ai-ecommerce-platform"
     },
     {
       id: 2,
@@ -135,9 +136,12 @@ const Portfolio: NextPage = () => {
                 <p className="text-gray-300">{project.client}</p>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-semibold transition-all">
-                View Case Study
-              </button>
+              <Link 
+                href={project.caseStudy || "#"}
+                className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-semibold transition-all text-center block ${!project.caseStudy ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                {project.caseStudy ? 'View Case Study' : 'Case Study Coming Soon'}
+              </Link>
             </div>
           ))}
         </div>
