@@ -76,14 +76,47 @@ function Header() {
           Zion Tech Group
         </Link>
         <div className="hidden md:flex gap-6">
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              AI 2026
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                NEW
+              </span>
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/ai-2026-technology-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🔮 Technology Showcase
+                </Link>
+                <Link href="/ai-trends-2026-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  📈 Trends & Predictions
+                </Link>
+                <Link href="/resources/ai-2026-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🛠️ Implementation Toolkit
+                </Link>
+                <Link href="/tools/ai-roi-calculator-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  💰 ROI Calculator
+                </Link>
+                <Link href="/case-studies/quantum-ai-financial-breakthrough-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  ⚛️ Quantum AI Case Study
+                </Link>
+                <Link href="/blog/ai-2026-neural-interface-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🧠 Neural Interfaces
+                </Link>
+                <Link href="/blog/ai-2026-quantum-machine-learning-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  ⚛️ Quantum ML
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link 
             href="/content-showcase" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Content Library
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-              NEW
-            </span>
           </Link>
           <Link 
             href="/blog" 

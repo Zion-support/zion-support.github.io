@@ -5,12 +5,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Star, Clock, Sparkles, Rocket, Brain, Zap } from 'lucide-react';
 
 interface ContentItem {
-  id: string;
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'service';
+  icon: any;
+  category: string;
+  readTime: string;
   featured: boolean;
+  gradient: string;
+}
+
+interface NewContentPromoBannerProps {
+  className?: string;
 }
 
 const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className = '' }) => {
@@ -47,6 +53,26 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className
       readTime: "200+ pages",
       featured: true,
       gradient: "from-green-500 to-teal-500"
+    },
+    {
+      title: "AI 2025 Advanced Automation",
+      description: "The future of intelligent business operations with 300% efficiency gains",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: Sparkles,
+      category: "Trending",
+      readTime: "32 min read",
+      featured: true,
+      gradient: "from-orange-500 to-red-500"
+    },
+    {
+      title: "AI Cybersecurity Revolution",
+      description: "Protecting the digital future with 99.9% threat detection accuracy",
+      href: "/blog/ai-2025-cybersecurity-revolution",
+      icon: Star,
+      category: "Critical",
+      readTime: "38 min read",
+      featured: true,
+      gradient: "from-red-500 to-pink-500"
     }
   ];
 
@@ -109,7 +135,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className
                   <div className="flex items-center space-x-2">
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-semibold bg-yellow-400/20 px-2 py-1 rounded-full">
-                      NEW CONTENT
+                      {currentItem.category}
                     </span>
                   </div>
                 </div>
@@ -183,7 +209,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className
       <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
         <div 
           className="h-full bg-white transition-all duration-5000 ease-linear"
-          style={{ width: `${((currentIndex + 1) / newContent.length) * 100}%` }}
+          style={{ width: `${((currentContent + 1) / newContent.length) * 100}%` }}
         />
       </div>
     </div>
