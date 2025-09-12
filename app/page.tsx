@@ -98,6 +98,15 @@ import NewContent2027Showcase from '../components/NewContent2027Showcase';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+
+// New 2025 Content Components
+import AIServicesShowcase2025 from '../components/AIServicesShowcase2025';
+import AIServicesPromotionBanner from '../components/AIServicesPromotionBanner';
+import TechnologyInnovationsShowcase from '../components/TechnologyInnovationsShowcase';
+import TechnologyInnovationsBanner from '../components/TechnologyInnovationsBanner';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
+import SuccessStoriesBanner from '../components/SuccessStoriesBanner';
+import ContentNavigation from '../components/ContentNavigation';
 import RevolutionaryAI2025PromotionBanner from '../components/RevolutionaryAI2025PromotionBanner';
 import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
@@ -211,6 +220,30 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI SERVICES PROMOTION BANNER - NEW 2025 CONTENT */}
+        <AIServicesPromotionBanner />
+        
+        {/* AI SERVICES SHOWCASE 2025 - FEATURED NEW CONTENT */}
+        <div id="ai-services-showcase">
+          <AIServicesShowcase2025 />
+        </div>
+        
+        {/* TECHNOLOGY INNOVATIONS BANNER - NEW 2025 CONTENT */}
+        <TechnologyInnovationsBanner />
+        
+        {/* TECHNOLOGY INNOVATIONS SHOWCASE - FEATURED NEW CONTENT */}
+        <div id="technology-innovations">
+          <TechnologyInnovationsShowcase />
+        </div>
+        
+        {/* SUCCESS STORIES BANNER - NEW 2025 CONTENT */}
+        <SuccessStoriesBanner />
+        
+        {/* SUCCESS STORIES SHOWCASE - FEATURED NEW CONTENT */}
+        <div id="success-stories-showcase">
+          <SuccessStoriesShowcase />
+        </div>
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 - FEATURED */}
         <NewContentPromotionBanner2025 />
         
@@ -3481,6 +3514,9 @@ export default function HomePage() {
 
       {/* ENHANCED NEWSLETTER SIGNUP 2025 - LEAD CAPTURE */}
       <EnhancedNewsletterSignup2025 />
+      
+      {/* CONTENT NAVIGATION - NEW 2025 FEATURE */}
+      <ContentNavigation />
     </div>
     </EnhancedErrorBoundary>
   );
