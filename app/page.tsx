@@ -88,6 +88,11 @@ import InteractiveContentDiscovery2025 from '../components/InteractiveContentDis
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateContentDiscoveryWidget';
 
+// New 2026 Advanced Content Components
+import AI2026AdvancedAutomationPromotionBanner from '../components/AI2026AdvancedAutomationPromotionBanner';
+import AI2026NeuralInterfacePromotionBanner from '../components/AI2026NeuralInterfacePromotionBanner';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
 import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
@@ -3572,6 +3577,15 @@ export default function HomePage() {
       
       {/* AI 2026 FUTURE TECH BANNER - REVOLUTIONARY PREVIEW */}
       <AI2026FutureTechBanner />
+      
+      {/* AI 2026 ADVANCED AUTOMATION MASTERY PROMOTION BANNER - NEW BREAKTHROUGH CONTENT */}
+      <AI2026AdvancedAutomationPromotionBanner />
+      
+      {/* AI 2026 NEURAL INTERFACE REVOLUTION PROMOTION BANNER - REVOLUTIONARY TECH */}
+      <AI2026NeuralInterfacePromotionBanner />
+      
+      {/* AI 2026 CONTENT DISCOVERY WIDGET - ENHANCED CONTENT DISCOVERY */}
+      <AI2026ContentDiscoveryWidget />
       
       {/* INTERACTIVE CONTENT DISCOVERY 2026 - ADVANCED SEARCH */}
       <InteractiveContentDiscovery2026 />
