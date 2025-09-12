@@ -19,7 +19,35 @@ export default function AIEnterpriseIntegration2025() {
               ← Back to Blog
             </Link>
             <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">Enterprise AI</span>
+            <span className="text-sm text-gray-600">AI & Enterprise</span>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        {/* Back Button */}
+        <Link 
+          href="/blog" 
+          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 mb-8 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Blog
+        </Link>
+
+        {/* Article Header */}
+        <header className="mb-8">
+          <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>January 21, 2025</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>20 min read</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <User className="w-4 h-4" />
+              <span>Zion Tech Group</span>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-47dd
           </div>
           
           <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
@@ -34,20 +62,26 @@ export default function AIEnterpriseIntegration2025() {
             Transform your enterprise with AI integration strategies that deliver measurable results. 
             Learn from real-world implementations and avoid common pitfalls.
           </p>
-          
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                <span className="text-blue-600 font-bold text-sm">ZT</span>
-              </div>
-              <span>Zion Tech Group</span>
-            </div>
-            <span>•</span>
-            <span>25 min read</span>
-            <span>•</span>
-            <span>January 2025</span>
-            <span>•</span>
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Updated</span>
+          <div className="flex items-center gap-6 text-sm text-gray-500">
+            <span>📅 January 28, 2025</span>
+            <span>⏱️ 18 min read</span>
+            <span>👁️ 2.3k views</span>
+=======
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
+              <Tag className="w-3 h-3" />
+              AI & Enterprise
+            </span>
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+              <Tag className="w-3 h-3" />
+              Integration
+            </span>
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+              <Tag className="w-3 h-3" />
+              Digital Transformation
+            </span>
+>>>>>>> cursor/create-and-deploy-new-content-47dd
           </div>
         </header>
 
@@ -343,6 +377,16 @@ export default function AIEnterpriseIntegration2025() {
                 Download Resources
               </Link>
             </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900">Zion Tech Group</h3>
+              <p className="text-gray-600 mb-2">
+                Leading provider of AI enterprise integration solutions and digital transformation services.
+              </p>
+              <p className="text-sm text-gray-500">
+                Specializing in AI implementation, enterprise integration, and business transformation for modern organizations.
+              </p>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-47dd
           </div>
         </div>
       </article>

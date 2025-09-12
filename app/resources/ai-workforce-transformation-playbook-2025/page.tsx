@@ -431,6 +431,7 @@ export default function AIWorkforceTransformationPlaybook2025() {
                   Ensure compliance with AI privacy regulations
                 </p>
               </div>
+>>>>>>> cursor/create-and-deploy-new-content-47dd
             </Link>
           </div>
         </div>

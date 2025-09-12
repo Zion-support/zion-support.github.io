@@ -7,10 +7,6 @@ import Link from 'next/link';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 >>>>>>> cursor/create-and-deploy-new-content-47dd
-=======
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
->>>>>>> cursor/create-and-deploy-new-content-ce90
 
 export default function AIMultimodalImplementationGuide2025() {
   return (
@@ -32,11 +28,6 @@ export default function AIMultimodalImplementationGuide2025() {
         description="Complete guide to building multimodal AI applications. Download our free implementation guide with code examples, architecture patterns, and best practices."
         keywords="multimodal AI guide, AI implementation, computer vision, speech recognition, AI development, free resources"
 >>>>>>> cursor/create-and-deploy-new-content-47dd
-=======
-        title="AI Multimodal Implementation Guide 2025 - Free Download - Zion Tech Group"
-        description="Download our comprehensive guide to implementing multimodal AI in your organization. Includes checklists, templates, and step-by-step strategies for 2025."
-        keywords="multimodal AI implementation, AI guide, free download, AI resources, implementation checklist, AI strategy"
->>>>>>> cursor/create-and-deploy-new-content-ce90
         url="/resources/ai-multimodal-implementation-guide-2025"
       />
       
@@ -207,15 +198,6 @@ export default function AIMultimodalImplementationGuide2025() {
           <div className="inline-flex items-center bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
             📋 FREE RESOURCE
 >>>>>>> cursor/create-and-deploy-new-content-47dd
-=======
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <Link href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">
-              ← Back to Resources
-            </Link>
-            <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">Free Download</span>
->>>>>>> cursor/create-and-deploy-new-content-ce90
           </div>
           
           <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-6">
@@ -641,8 +623,6 @@ export default function AIMultimodalImplementationGuide2025() {
                 as a foundation for our e-commerce platform and saw 40% increase in conversion rates."
               </p>
 >>>>>>> cursor/create-and-deploy-new-content-47dd
-=======
->>>>>>> cursor/create-and-deploy-new-content-ce90
             </div>
           </div>
         </section>
