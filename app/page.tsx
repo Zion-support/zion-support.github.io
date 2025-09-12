@@ -96,6 +96,20 @@ export default function HomePage() {
               Discover our latest expert insights, case studies, and resources. From AI automation 
               to startup growth strategies, get the knowledge you need to succeed in 2025.
             </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog/ai-implementation-best-practices-2025'
+                className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read Latest: AI Implementation Guide
+              </Link>
+              <Link
+                href='/resources/ai-implementation-checklist-2025'
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg' 
+              >
+                📋 Download Free Checklist
+              </Link>
+            </div>
           </div>
 
           {/* Featured New Content Cards */}
@@ -133,6 +147,32 @@ export default function HomePage() {
                 <p className='text-sm opacity-90 mb-3'>95% accuracy in medical diagnosis with 80% faster processing</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Case Study</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-implementation-best-practices-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🚀</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Best Practices 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Complete guide with 340% ROI and real case studies</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>25 min read</span>
+                  <span className='mx-2'>•</span>
+                  <span>New</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href='/blog/ai-security-best-practices-2025' className='group'>
+              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🔒</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Security Best Practices 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Protect your AI systems from emerging threats</p>
+                <div className='flex items-center text-xs opacity-75'>
+                  <span>20 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
@@ -216,15 +256,15 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href='/resources/ai-implementation-playbook-2025' className='group'>
+            <Link href='/resources/ai-implementation-checklist-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Playbook</h3>
-                <p className='text-sm opacity-90 mb-3'>Step-by-step implementation guide</p>
+                <h3 className='text-lg font-semibold mb-2'>AI Implementation Checklist 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>150+ item checklist for successful AI implementation</p>
                 <div className='flex items-center text-xs opacity-75'>
                   <span>Free Download</span>
                   <span className='mx-2'>•</span>
-                  <span>45 min read</span>
+                  <span>150+ items</span>
                 </div>
               </div>
             </Link>
@@ -573,9 +613,29 @@ export default function HomePage() {
               🚀 Fresh AI & Business Insights
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Enterprise Transformation Guide, Startup Funding Playbook, Financial Services Case Study, 
-              and our comprehensive 150-page AI Implementation Checklist. Expert insights to accelerate your growth.
+              New this week: AI Implementation Best Practices, AI Security Framework, and comprehensive 150+ item 
+              Implementation Checklist. Expert insights to accelerate your AI transformation in 2025.
             </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+              <Link
+                href='/blog/ai-implementation-best-practices-2025'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                📚 Read: AI Implementation Guide
+              </Link>
+              <Link
+                href='/blog/ai-security-best-practices-2025'
+                className='bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg'
+              >
+                🔒 Read: AI Security Guide
+              </Link>
+              <Link
+                href='/resources/ai-implementation-checklist-2025'
+                className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg' 
+              >
+                📋 Download Free Checklist
+              </Link>
+            </div>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
                 href='/blog'
