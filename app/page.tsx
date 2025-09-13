@@ -31,6 +31,9 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
+// Import new advanced services and tools components
+import AdvancedServicesShowcaseBanner2025 from '../components/AdvancedServicesShowcaseBanner2025';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import FeaturedContentShowcase2025 from '../components/FeaturedContentShowcase2025';
 
@@ -104,6 +107,9 @@ export default function HomePage() {
         
         {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
         <QuantumNeuralFusion2026PromotionBanner />
+        
+        {/* ADVANCED SERVICES SHOWCASE BANNER 2025 */}
+        <AdvancedServicesShowcaseBanner2025 />
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />

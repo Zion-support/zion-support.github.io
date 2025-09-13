@@ -195,6 +195,12 @@ function Header() {
                 <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Global Transformation Breakthrough (10,000% ROI) (NEW)
                 </Link>
+                <Link href="/ai-2025-advanced-services-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500">
+                  🛠️ AI 2025 Advanced Services Showcase (NEW)
+                </Link>
+                <Link href="/ai-2025-tools-utilities" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-500">
+                  🧮 AI 2025 Tools & Utilities (NEW)
+                </Link>
                 <Link href="/case-studies/ai-2025-revolutionary-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Revolutionary Breakthrough Success (2000% ROI)
                 </Link>
