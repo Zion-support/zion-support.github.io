@@ -1,216 +1,211 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Card } from './ui/Card';
-import { Badge } from './ui/Badge';
 
 export default function RevolutionaryContentShowcase2025() {
-  const featuredContent = [
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const contentItems = [
     {
-      title: "AI 2025 Ultimate Breakthrough Trends",
-      description: "Discover the revolutionary AI trends that will reshape industries in 2025. From quantum computing to neural interfaces.",
-      href: "/blog/ai-2025-ultimate-breakthrough-trends",
-      category: "Blog",
-      type: "Trends",
-      icon: "🔮",
-      badge: "NEW",
-      badgeColor: "bg-yellow-500",
-      stats: "50K+ views"
+      id: 1,
+      title: "AI 2025 Ultimate Breakthrough Revolution",
+      description: "The most revolutionary AI breakthrough of 2025 delivering 2,500-5,000% ROI with 99.9% accuracy and 10,000x faster processing.",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      image: "🚀",
+      category: "BREAKTHROUGH",
+      color: "from-purple-600 to-blue-600",
+      stats: "2,500-5,000% ROI"
     },
     {
-      title: "Global Finance Transformation: 1500% ROI",
-      description: "How a global financial services company achieved unprecedented success with comprehensive AI transformation.",
-      href: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
-      category: "Case Study",
-      type: "Finance",
-      icon: "💰",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-green-500",
-      stats: "1500% ROI"
+      id: 2,
+      title: "Global Transformation Success Story",
+      description: "How a Fortune 500 company achieved 10,000% ROI in just 6 months using our revolutionary AI technology.",
+      link: "/case-studies/ai-2025-global-transformation-breakthrough",
+      image: "🏆",
+      category: "SUCCESS STORY",
+      color: "from-green-600 to-blue-600",
+      stats: "10,000% ROI"
     },
     {
-      title: "Enterprise Transformation Master Guide",
-      description: "The complete blueprint for enterprise AI transformation. Everything you need to achieve 1000%+ ROI.",
-      href: "/resources/ai-2025-enterprise-transformation-master-guide",
-      category: "Resource",
-      type: "Guide",
-      icon: "📚",
-      badge: "ESSENTIAL",
-      badgeColor: "bg-blue-500",
-      stats: "500+ companies"
+      id: 3,
+      title: "AI 2025 ROI Calculator",
+      description: "Calculate your potential return on investment with our interactive ROI calculator tool.",
+      link: "/tools/ai-2025-roi-calculator",
+      image: "🧮",
+      category: "INTERACTIVE TOOL",
+      color: "from-blue-600 to-purple-600",
+      stats: "Calculate ROI"
     },
     {
-      title: "Quantum Machine Learning Revolution",
-      description: "Explore how quantum computing is revolutionizing machine learning with 1000x faster processing capabilities.",
-      href: "/blog/ai-2025-quantum-machine-learning-breakthrough",
-      category: "Blog",
-      type: "Technology",
-      icon: "⚛️",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-purple-500",
-      stats: "1000x faster"
+      id: 4,
+      title: "Synthetic Intelligence Revolution",
+      description: "Discover how synthetic intelligence is revolutionizing AI capabilities and delivering unprecedented results.",
+      link: "/ai-2025-synthetic-intelligence-revolution",
+      image: "🧠",
+      category: "REVOLUTIONARY",
+      color: "from-indigo-600 to-purple-600",
+      stats: "99.9% Accuracy"
     },
     {
-      title: "Neural Interface Breakthroughs 2025",
-      description: "The convergence of neuroscience and AI is creating unprecedented opportunities for human-AI collaboration.",
-      href: "/blog/ai-2025-neural-interface-revolution",
-      category: "Blog",
-      type: "Innovation",
-      icon: "🧠",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-pink-500",
-      stats: "95% accuracy"
+      id: 5,
+      title: "Quantum Computing Solutions 2025",
+      description: "Explore the revolutionary quantum computing solutions that are transforming the AI landscape.",
+      link: "/quantum-computing-solutions-2025",
+      image: "⚛️",
+      category: "BREAKTHROUGH",
+      color: "from-cyan-600 to-blue-600",
+      stats: "10,000x Faster"
     },
     {
-      title: "Manufacturing AI Success Story",
-      description: "How AI automation transformed manufacturing operations, achieving 40% efficiency gains and 60% cost reduction.",
-      href: "/case-studies/ai-2025-manufacturing-transformation-breakthrough",
-      category: "Case Study",
-      type: "Manufacturing",
-      icon: "🏭",
-      badge: "SUCCESS",
-      badgeColor: "bg-orange-500",
-      stats: "40% efficiency"
+      id: 6,
+      title: "Ultimate Content Revolution",
+      description: "Experience the ultimate content revolution powered by breakthrough AI technology.",
+      link: "/ai-2025-ultimate-content-revolution",
+      image: "🌟",
+      category: "REVOLUTIONARY",
+      color: "from-pink-600 to-rose-600",
+      stats: "Ultimate Content"
     }
   ];
 
-  const categories = [
-    { name: "All Content", count: "50+", active: true },
-    { name: "Blog Posts", count: "25+", active: false },
-    { name: "Case Studies", count: "15+", active: false },
-    { name: "Resources", count: "10+", active: false }
-  ];
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isHovered, contentItems.length]);
+
+  const currentItem = contentItems[currentIndex];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT SHOWCASE</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 text-sm font-semibold mb-6">
+            🚀 REVOLUTIONARY CONTENT SHOWCASE 2025
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover the Future of AI
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Discover the Future of
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              {' '}AI Technology
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Explore our comprehensive collection of breakthrough AI content, featuring cutting-edge research, 
-            proven case studies, and practical implementation guides that will transform your business.
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            Explore our revolutionary AI 2025 breakthrough content, success stories, and interactive tools 
+            that are transforming businesses worldwide.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                category.active
-                  ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
-              }`}
-            >
-              {category.name}
-              <span className="ml-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">
-                {category.count}
-              </span>
-            </button>
-          ))}
+        {/* Main Showcase */}
+        <div className="relative mb-16">
+          <div 
+            className="bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <div className={`bg-gradient-to-r ${currentItem.color} p-8 text-white`}>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-4">
+                  <div className="text-6xl">{currentItem.image}</div>
+                  <div>
+                    <div className="text-sm font-semibold opacity-90 mb-1">{currentItem.category}</div>
+                    <h3 className="text-3xl font-bold">{currentItem.title}</h3>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold">{currentItem.stats}</div>
+                  <div className="text-sm opacity-90">Key Metric</div>
+                </div>
+              </div>
+              
+              <p className="text-lg opacity-90 mb-8 leading-relaxed">
+                {currentItem.description}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <Link
+                  href={currentItem.link}
+                  className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Now
+                </Link>
+                
+                <div className="flex space-x-2">
+                  {contentItems.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentIndex ? 'bg-white' : 'bg-white/40'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Featured Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <Link key={index} href={content.href} className="group">
-              <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 transform group-hover:scale-105 border-0 bg-white/80 backdrop-blur-sm">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{content.icon}</div>
-                  <Badge className={`${content.badgeColor} text-white text-xs font-semibold`}>
-                    {content.badge}
-                  </Badge>
-                </div>
-                
-                <div className="mb-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                      {content.category}
-                    </span>
-                    <span className="text-xs font-medium text-gray-500">
-                      {content.type}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {content.title}
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contentItems.map((item, index) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="text-4xl">{item.image}</div>
+                <div>
+                  <div className="text-sm font-semibold text-gray-600 mb-1">{item.category}</div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+                    {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {content.description}
-                  </p>
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-green-600">
-                    {content.stats}
-                  </span>
-                  <div className="flex items-center text-blue-600 text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                    Read More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
+              </div>
+              
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                {item.description}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-semibold text-purple-600">{item.stats}</div>
+                <div className="text-purple-600 group-hover:text-purple-700 transition-colors">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
-              </Card>
+              </div>
             </Link>
           ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Content Impact by the Numbers</h3>
-            <p className="opacity-90">Real results from our comprehensive AI content library</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">2M+</div>
-              <div className="text-sm opacity-90">Total Views</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-300 mb-2">500+</div>
-              <div className="text-sm opacity-90">Companies Transformed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-300 mb-2">1500%</div>
-              <div className="text-sm opacity-90">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-300 mb-2">95%</div>
-              <div className="text-sm opacity-90">Success Rate</div>
-            </div>
-          </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join thousands of companies that have already achieved breakthrough results with our 
-            proven AI transformation methodologies and comprehensive content library.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/content-showcase"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              🎯 Explore All Content
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
-            >
-              💬 Get Expert Consultation
-            </Link>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">Ready to Join the Revolution?</h3>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              Don't miss out on the most revolutionary AI breakthrough of 2025. 
+              Transform your business today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Start Your Transformation
+              </Link>
+              <Link
+                href="/ai-2025-ultimate-breakthrough-revolution"
+                className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </div>

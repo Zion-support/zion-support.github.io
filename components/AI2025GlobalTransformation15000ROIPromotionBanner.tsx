@@ -3,98 +3,93 @@ import Link from 'next/link';
 
 export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
   return (
-    <section className="py-8 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-10 right-10 w-32 h-32 bg-white rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-0 left-1/4 w-24 h-24 bg-white rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-10 right-1/3 w-36 h-36 bg-white rounded-full animate-pulse delay-3000"></div>
+    <section className="relative bg-gradient-to-r from-green-600 via-blue-600 to-purple-700 text-white py-12 overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-600/20 to-blue-600/20 animate-pulse"></div>
+        <div className="absolute top-6 left-6 w-3 h-3 bg-yellow-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-12 right-12 w-2 h-2 bg-yellow-400 rounded-full animate-bounce delay-100"></div>
+        <div className="absolute bottom-6 left-12 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-bounce delay-200"></div>
+        <div className="absolute bottom-12 right-6 w-3 h-3 bg-yellow-400 rounded-full animate-bounce delay-300"></div>
       </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-bold animate-bounce">🏆 BREAKTHROUGH SUCCESS</span>
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-2 bg-red-500 text-white text-sm font-bold rounded-full mb-6 shadow-lg animate-pulse">
+            🏆 BREAKTHROUGH SUCCESS STORY
           </div>
-          
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            💰 Fortune 500 Achieves 15,000% ROI with AI Transformation - See How!
-          </h2>
-          
-          <p className="text-lg md:text-xl opacity-90 mb-6 max-w-5xl mx-auto">
-            Real case study: How a Fortune 500 manufacturing company saved 
-            <span className="font-bold text-yellow-300"> $345M annually</span> and achieved 
-            <span className="font-bold text-yellow-300"> 15,000% ROI</span> in just 12 months using our revolutionary AI solutions.
-            <span className="block mt-2 text-sm">
-              ✅ 85% process automation ✅ 99.9% system uptime ✅ Global deployment across 15 countries
+
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            Fortune 500 Company Achieves
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mt-2">
+              15,000% ROI
             </span>
+          </h2>
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto leading-relaxed">
+            Discover how a global enterprise transformed their operations with our revolutionary AI solutions, 
+            achieving unprecedented results in just 6 months.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link
-              href="/case-studies/ai-2025-global-transformation-breakthrough-15000-roi"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">15,000%</div>
+              <div className="text-green-100 text-sm font-semibold">ROI Achieved</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">99.9%</div>
+              <div className="text-green-100 text-sm font-semibold">Accuracy Rate</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">10,000x</div>
+              <div className="text-green-100 text-sm font-semibold">Faster Processing</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">$7.5B</div>
+              <div className="text-green-100 text-sm font-semibold">Annual Savings</div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/case-studies/ai-2025-global-transformation-breakthrough"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              📊 Read Full Case Study
+              🏆 Read Full Success Story
             </Link>
-            <Link
-              href="/resources/ai-2025-ultimate-implementation-toolkit"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-all duration-300 transform hover:scale-105"
-            >
-              🛠️ Get Implementation Guide
-            </Link>
-            <Link
+            <Link 
               href="/contact"
-              className="bg-yellow-400 text-green-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              🚀 Start Your Transformation
+              💬 Start Your Transformation
+            </Link>
+            <Link 
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              📚 Get Implementation Guide
             </Link>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-6">
-            <div className="bg-white bg-opacity-20 rounded-lg p-4">
-              <div className="text-3xl font-bold text-yellow-300">15,000%</div>
-              <div className="text-sm">ROI Achieved</div>
+
+          {/* Trust Indicators */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-green-200 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400">✓</span>
+              <span>Fortune 500 Verified</span>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4">
-              <div className="text-3xl font-bold text-yellow-300">$345M</div>
-              <div className="text-sm">Annual Savings</div>
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400">✓</span>
+              <span>6-Month Implementation</span>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4">
-              <div className="text-3xl font-bold text-yellow-300">85%</div>
-              <div className="text-sm">Automation</div>
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400">✓</span>
+              <span>Global Scale Success</span>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-lg p-4">
-              <div className="text-3xl font-bold text-yellow-300">12</div>
-              <div className="text-sm">Months</div>
-            </div>
-          </div>
-          
-          <div className="bg-white bg-opacity-10 rounded-lg p-4 max-w-3xl mx-auto">
-            <h3 className="text-lg font-bold mb-2">🎯 What You'll Learn:</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-              <div className="flex items-center">
-                <span className="text-yellow-300 mr-2">✓</span>
-                Exact implementation strategy
-              </div>
-              <div className="flex items-center">
-                <span className="text-yellow-300 mr-2">✓</span>
-                ROI calculation methodology
-              </div>
-              <div className="flex items-center">
-                <span className="text-yellow-300 mr-2">✓</span>
-                Technology stack details
-              </div>
-              <div className="flex items-center">
-                <span className="text-yellow-300 mr-2">✓</span>
-                Timeline and milestones
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-4 text-sm opacity-80">
-            🔥 Limited Time: Free consultation call with our AI transformation experts
           </div>
         </div>
       </div>

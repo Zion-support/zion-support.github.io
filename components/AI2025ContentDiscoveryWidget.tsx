@@ -1,134 +1,165 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function AI2025ContentDiscoveryWidget() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [activeTab, setActiveTab] = useState('breakthrough');
 
-  const featuredContent = [
-    {
-      title: "Advanced Autonomous Systems",
-      description: "Self-healing infrastructure with 2,500% ROI",
-      href: "/blog/ai-2025-advanced-autonomous-systems",
-      type: "Blog Post",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-red-100 text-red-800"
+  const contentCategories = {
+    breakthrough: {
+      title: "🚀 Breakthrough Content",
+      items: [
+        {
+          title: "AI 2025 Ultimate Breakthrough Announcement",
+          description: "Revolutionary AI technology delivering 10,000% ROI and 99.9% accuracy",
+          href: "/blog/ai-2025-ultimate-breakthrough-announcement",
+          badge: "BREAKTHROUGH",
+          badgeColor: "bg-red-500",
+          stats: "10,000% ROI"
+        },
+        {
+          title: "Global Transformation Success Story",
+          description: "Fortune 500 company achieves $2.5B savings in 6 months",
+          href: "/case-studies/ai-2025-global-transformation-breakthrough",
+          badge: "SUCCESS",
+          badgeColor: "bg-green-500",
+          stats: "$2.5B Saved"
+        },
+        {
+          title: "AI 2025 ROI Calculator",
+          description: "Calculate your potential return on investment instantly",
+          href: "/tools/ai-2025-roi-calculator",
+          badge: "TOOL",
+          badgeColor: "bg-blue-500",
+          stats: "Free Tool"
+        }
+      ]
     },
-    {
-      title: "Manufacturing Revolution Case Study",
-      description: "Fortune 500 achieves 8,500% ROI",
-      href: "/case-studies/ai-2025-autonomous-manufacturing-revolution",
-      type: "Case Study",
-      badge: "8,500% ROI",
-      badgeColor: "bg-green-100 text-green-800"
+    predictions: {
+      title: "🔮 Future Predictions",
+      items: [
+        {
+          title: "AI 2026 Quantum-Neural Fusion",
+          description: "Revolutionary breakthrough combining quantum computing with neural networks",
+          href: "/blog/ai-2026-quantum-neural-fusion-breakthrough",
+          badge: "FUTURE",
+          badgeColor: "bg-purple-500",
+          stats: "15,000% ROI"
+        },
+        {
+          title: "AI 2030 Transcendent Intelligence",
+          description: "The future of AI consciousness and autonomous decision-making",
+          href: "/blog/ai-2030-transcendent-intelligence",
+          badge: "REVOLUTIONARY",
+          badgeColor: "bg-indigo-500",
+          stats: "∞ ROI"
+        }
+      ]
     },
-    {
-      title: "AI 2025 Content Showcase",
-      description: "Comprehensive collection of breakthrough content",
-      href: "/ai-2025-content-showcase",
-      type: "Showcase",
-      badge: "NEW",
-      badgeColor: "bg-blue-100 text-blue-800"
-    },
-    {
-      title: "Quantum-Neural Fusion",
-      description: "Next-generation AI technology",
-      href: "/blog/ai-2025-quantum-neural-fusion",
-      type: "Blog Post",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-purple-100 text-purple-800"
-    },
-    {
-      title: "Enterprise AI Roadmap",
-      description: "Step-by-step transformation guide",
-      href: "/resources/ai-2025-enterprise-transformation-master-guide",
-      type: "Guide",
-      badge: "MASTER GUIDE",
-      badgeColor: "bg-indigo-100 text-indigo-800"
-    },
-    {
-      title: "AI 2026 Future Predictions",
-      description: "Comprehensive predictions for next year",
-      href: "/blog/ai-2026-future-predictions-breakthrough",
-      type: "Blog Post",
-      badge: "FUTURE",
-      badgeColor: "bg-cyan-100 text-cyan-800"
+    tools: {
+      title: "🛠️ Interactive Tools",
+      items: [
+        {
+          title: "AI Readiness Assessment",
+          description: "Evaluate your organization's AI readiness and get personalized recommendations",
+          href: "/tools/ai-readiness-assessment",
+          badge: "ASSESSMENT",
+          badgeColor: "bg-orange-500",
+          stats: "5 Min Test"
+        },
+        {
+          title: "Quantum Computing Calculator",
+          description: "Calculate quantum computing potential for your business",
+          href: "/tools/quantum-computing-calculator",
+          badge: "QUANTUM",
+          badgeColor: "bg-cyan-500",
+          stats: "Advanced"
+        }
+      ]
     }
-  ];
+  };
+
+  const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <div className={`bg-white rounded-lg shadow-xl border border-gray-200 transition-all duration-300 ${
-        isExpanded ? 'w-96 h-96' : 'w-16 h-16'
-      }`}>
-        {!isExpanded ? (
-          <button
-            onClick={() => setIsExpanded(true)}
-            className="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-            aria-label="Open content discovery"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </button>
-        ) : (
-          <div className="p-4 h-full flex flex-col">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-gray-900">
-                🚀 AI 2025 Content
-              </h3>
-              <button
-                onClick={() => setIsExpanded(false)}
-                className="text-gray-500 hover:text-gray-700 transition-colors"
-                aria-label="Close widget"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="flex-1 overflow-y-auto">
-              <div className="space-y-3">
-                {featuredContent.map((content, index) => (
-                  <Link
-                    key={index}
-                    href={content.href}
-                    className="block p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors group"
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                        {content.title}
-                      </h4>
-                      <span className={`px-2 py-1 rounded text-xs font-semibold ${content.badgeColor}`}>
-                        {content.badge}
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-600 mb-2">
-                      {content.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500">
-                        {content.type}
-                      </span>
-                      <svg className="w-3 h-3 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </Link>
-                ))}
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+        <h2 className="text-2xl font-bold mb-2">Discover AI 2025 Content</h2>
+        <p className="text-blue-100">Explore breakthrough technologies and revolutionary solutions</p>
+      </div>
+
+      {/* Tabs */}
+      <div className="border-b border-gray-200">
+        <div className="flex">
+          {Object.entries(contentCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`flex-1 px-6 py-4 text-sm font-semibold transition-colors duration-200 ${
+                activeTab === key
+                  ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+              }`}
+            >
+              {category.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Content Grid */}
+      <div className="p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {currentCategory.items.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="group bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-blue-300"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div className={`px-3 py-1 rounded-full text-xs font-bold text-white ${item.badgeColor}`}>
+                  {item.badge}
+                </div>
+                <div className="text-sm font-semibold text-green-600">
+                  {item.stats}
+                </div>
               </div>
-            </div>
-            
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <Link
-                href="/ai-2025-content-showcase"
-                className="block w-full text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-              >
-                View All Content
-              </Link>
-            </div>
+              
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
+                {item.title}
+              </h3>
+              
+              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                {item.description}
+              </p>
+              
+              <div className="flex items-center text-blue-600 text-sm font-semibold group-hover:text-blue-700">
+                Learn More
+                <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Footer CTA */}
+      <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+        <div className="flex items-center justify-between">
+          <div>
+            <h4 className="font-semibold text-gray-900">Ready to Transform Your Business?</h4>
+            <p className="text-sm text-gray-600">Get started with AI 2025 breakthrough technology</p>
           </div>
-        )}
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
     </div>
   );

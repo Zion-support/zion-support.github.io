@@ -1,130 +1,129 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SparklesIcon, XMarkIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export default function NewContentPromotionBanner() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const promotions = [
     {
-      id: 1,
-      title: "🚀 NEW: AI 2025 Revolutionary Breakthroughs Guide",
-      subtitle: "Discover the latest AI innovations transforming industries",
-      cta: "Explore Now",
-      href: "/ai-2025-revolutionary-breakthroughs",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🚀"
+      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
+      description: "Experience the most revolutionary AI breakthrough in human history with 10,000% ROI",
+      href: "/ai-2025-ultimate-breakthrough-revolution",
+      gradient: "from-red-500 to-pink-500",
+      bgGradient: "from-red-50 to-pink-50",
+      borderColor: "border-red-200"
     },
     {
-      id: 2,
-      title: "💰 AI Startup Funding Playbook 2025",
-      subtitle: "Master $47B+ AI funding landscape with proven strategies",
-      cta: "Get Playbook",
-      href: "/ai-startup-funding-playbook-2025",
-      gradient: "from-green-600 via-blue-600 to-purple-600",
-      icon: "💰"
+      title: "⚛️ Quantum Computing Breakthroughs 2030",
+      description: "Revolutionary quantum technologies that will reshape reality itself",
+      href: "/quantum-computing-breakthroughs-2030",
+      gradient: "from-cyan-500 to-purple-500",
+      bgGradient: "from-cyan-50 to-purple-50",
+      borderColor: "border-cyan-200"
     },
     {
-      id: 3,
-      title: "🏆 Enterprise AI Transformation Case Study",
-      subtitle: "See how we achieved $100M revenue impact",
-      cta: "View Case Study",
-      href: "/ai-enterprise-transformation-success",
-      gradient: "from-blue-600 via-cyan-600 to-teal-600",
-      icon: "🏆"
-    },
-    {
-      id: 4,
-      title: "📚 FREE: AI Implementation Master Guide",
-      subtitle: "Complete 150+ page resource with templates",
-      cta: "Download Free",
-      href: "/ai-implementation-master-guide-2025",
-      gradient: "from-orange-600 via-red-600 to-pink-600",
-      icon: "📚"
+      title: "🤖 AI 2026 Advanced Automation Mastery",
+      description: "Master the future of automation with 5,000% ROI and autonomous operations",
+      href: "/ai-2026-advanced-automation-mastery",
+      gradient: "from-blue-500 to-purple-500",
+      bgGradient: "from-blue-50 to-purple-50",
+      borderColor: "border-blue-200"
     }
   ];
 
   useEffect(() => {
+    setIsVisible(true);
+    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
-    }, 4000);
+    }, 5000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [promotions.length]);
 
   if (!isVisible) return null;
 
+  const currentPromotion = promotions[currentSlide];
+
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        className="relative overflow-hidden"
-      >
-        <div className={`bg-gradient-to-r ${promotions[currentSlide].gradient} text-white`}>
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <div className="text-3xl animate-pulse">
-                  {promotions[currentSlide].icon}
-                </div>
-                <div>
-                  <motion.h3 
-                    key={currentSlide}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="font-bold text-lg md:text-xl"
-                  >
-                    {promotions[currentSlide].title}
-                  </motion.h3>
-                  <motion.p 
-                    key={`${currentSlide}-subtitle`}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 }}
-                    className="text-white/90 text-sm md:text-base"
-                  >
-                    {promotions[currentSlide].subtitle}
-                  </motion.p>
-                </div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-black py-4">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Left side - Promotion content */}
+          <div className="flex-1">
+            <div className="flex items-center space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></div>
               </div>
-              
-              <div className="flex items-center space-x-4">
-                <Link
-                  to={promotions[currentSlide].href}
-                  className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+              <div className="flex-1">
+                <Link 
+                  href={currentPromotion.href}
+                  className="group block"
                 >
-                  {promotions[currentSlide].cta}
-                  <ArrowRightIcon className="h-4 w-4" />
+                  <div className="flex items-center space-x-3">
+                    <span className="text-sm font-semibold text-white group-hover:text-yellow-300 transition-colors">
+                      NEW CONTENT:
+                    </span>
+                    <span className="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors">
+                      {currentPromotion.title}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mt-1">
+                    {currentPromotion.description}
+                  </p>
                 </Link>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="text-white/80 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
-                  aria-label="Close banner"
-                >
-                  <XMarkIcon className="h-5 w-5" />
-                </button>
               </div>
-            </div>
-            
-            {/* Slide indicators */}
-            <div className="flex justify-center space-x-2 mt-4">
-              {promotions.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/40'
-                  }`}
-                />
-              ))}
             </div>
           </div>
+
+          {/* Right side - CTA buttons */}
+          <div className="flex items-center space-x-3">
+            <Link 
+              href={currentPromotion.href}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-sm rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Now
+            </Link>
+            <button 
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-white transition-colors p-1"
+              aria-label="Close banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+
+        {/* Slide indicators */}
+        <div className="flex justify-center mt-3 space-x-2">
+          {promotions.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-yellow-400 w-6' 
+                  : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Floating elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-2 left-10 w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-4 right-20 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
+        <div className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-4 right-1/3 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
+      </div>
+    </div>
   );
 }
