@@ -1,315 +1,270 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Tag, Clock, Eye, ThumbsUp, Share2, Download, BookOpen, Play, ChevronRight } from 'lucide-react';
+import { 
+  Brain, 
+  Zap, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  Award, 
+  Globe, 
+  ArrowRight, 
+  Play,
+  Download,
+  Share2,
+  BookOpen,
+  Lightbulb,
+  Cpu,
+  Database,
+  Shield,
+  Rocket
+} from 'lucide-react';
 
 const AI2025_2030UltimateContentRevolutionShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('predictions');
 
-  const contentData = {
-    predictions: [
-      {
-        id: 1,
-        title: "AI 2025: The Year of Autonomous Operations",
-        description: "Comprehensive analysis of how AI will revolutionize business operations in 2025, including autonomous decision-making systems and intelligent process automation.",
-        category: "AI Predictions",
-        readTime: "12 min read",
-        views: "15.2k",
-        likes: 892,
-        date: "2025-01-15",
-        author: "Dr. Sarah Chen",
-        tags: ["AI 2025", "Autonomous Systems", "Business Automation"],
-        featured: true,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 2,
-        title: "Quantum Computing Breakthroughs: 2025-2030 Roadmap",
-        description: "Detailed roadmap of quantum computing advancements, including error-corrected quantum computers and quantum internet infrastructure.",
-        category: "Quantum Computing",
-        readTime: "18 min read",
-        views: "23.7k",
-        likes: 1.2e3,
-        date: "2025-01-14",
-        author: "Prof. Michael Rodriguez",
-        tags: ["Quantum Computing", "2025-2030", "Breakthroughs"],
-        featured: true,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 3,
-        title: "The Future of Work: AI-Human Collaboration 2026",
-        description: "Exploring how AI will transform the workplace, creating new opportunities for human-AI collaboration and enhanced productivity.",
-        category: "Future of Work",
-        readTime: "15 min read",
-        views: "19.8k",
-        likes: 945,
-        date: "2025-01-13",
-        author: "Dr. Emily Watson",
-        tags: ["Future of Work", "AI Collaboration", "2026"],
-        featured: false,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 4,
-        title: "Neural Interface Revolution: 2027-2030",
-        description: "Revolutionary developments in brain-computer interfaces and neural augmentation technologies that will reshape human capabilities.",
-        category: "Neural Interfaces",
-        readTime: "20 min read",
-        views: "31.4k",
-        likes: 1.8e3,
-        date: "2025-01-12",
-        author: "Dr. Alex Kim",
-        tags: ["Neural Interfaces", "BCI", "2027-2030"],
-        featured: true,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 5,
-        title: "Space Technology Solutions: 2025-2035",
-        description: "Comprehensive overview of space technology innovations, including satellite networks, space manufacturing, and interplanetary communication.",
-        category: "Space Technology",
-        readTime: "22 min read",
-        views: "27.1k",
-        likes: 1.5e3,
-        date: "2025-01-11",
-        author: "Dr. Maria Santos",
-        tags: ["Space Technology", "Satellites", "2025-2035"],
-        featured: false,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 6,
-        title: "AI Singularity Predictions: 2030-2035",
-        description: "Expert analysis of artificial general intelligence development and the potential for technological singularity in the next decade.",
-        category: "AI Singularity",
-        readTime: "25 min read",
-        views: "42.6k",
-        likes: 2.3e3,
-        date: "2025-01-10",
-        author: "Dr. James Wilson",
-        tags: ["AI Singularity", "AGI", "2030-2035"],
-        featured: true,
-        image: "/api/placeholder/400/250"
-      }
-    ],
-    quantum: [
-      {
-        id: 7,
-        title: "Error-Corrected Quantum Computers: 2025 Breakthrough",
-        description: "Revolutionary advances in quantum error correction that will enable practical quantum computing applications.",
-        category: "Quantum Computing",
-        readTime: "16 min read",
-        views: "28.9k",
-        likes: 1.6e3,
-        date: "2025-01-09",
-        author: "Dr. Quantum Expert",
-        tags: ["Quantum Error Correction", "2025", "Breakthrough"],
-        featured: true,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 8,
-        title: "Quantum Internet: Global Infrastructure 2026-2028",
-        description: "Building the quantum internet infrastructure that will enable secure quantum communication worldwide.",
-        category: "Quantum Internet",
-        readTime: "19 min read",
-        views: "24.3k",
-        likes: 1.4e3,
-        date: "2025-01-08",
-        author: "Dr. Quantum Network",
-        tags: ["Quantum Internet", "Infrastructure", "2026-2028"],
-        featured: false,
-        image: "/api/placeholder/400/250"
-      }
-    ],
-    automation: [
-      {
-        id: 9,
-        title: "Intelligent Process Automation: 2025 Mastery",
-        description: "Advanced automation solutions that combine AI, machine learning, and robotic process automation for maximum efficiency.",
-        category: "Process Automation",
-        readTime: "14 min read",
-        views: "21.7k",
-        likes: 1.1e3,
-        date: "2025-01-07",
-        author: "Dr. Automation Pro",
-        tags: ["Process Automation", "AI", "2025"],
-        featured: true,
-        image: "/api/placeholder/400/250"
-      },
-      {
-        id: 10,
-        title: "Autonomous Business Systems: 2026-2030",
-        description: "Self-managing business systems that can adapt, learn, and optimize operations without human intervention.",
-        category: "Autonomous Systems",
-        readTime: "17 min read",
-        views: "26.5k",
-        likes: 1.7e3,
-        date: "2025-01-06",
-        author: "Dr. System Architect",
-        tags: ["Autonomous Systems", "Business", "2026-2030"],
-        featured: false,
-        image: "/api/placeholder/400/250"
-      }
-    ]
+  const contentSections = {
+    predictions: {
+      title: "AI Predictions 2025-2030",
+      description: "Comprehensive predictions covering the next 5 years of AI development",
+      icon: Brain,
+      color: "blue",
+      content: [
+        {
+          title: "Neural Synthesis Revolution (2025-2026)",
+          description: "Breakthrough in neural network synthesis enabling 10,000x faster processing",
+          impact: "2,500% ROI increase",
+          features: ["Quantum Neural Networks", "Synthetic Intelligence", "Autonomous Learning Systems"]
+        },
+        {
+          title: "Quantum-AI Fusion (2027-2028)",
+          description: "Integration of quantum computing with AI for unprecedented capabilities",
+          impact: "99.9% accuracy rate",
+          features: ["Quantum Machine Learning", "Error-Corrected Processing", "Quantum Internet"]
+        },
+        {
+          title: "Transcendent Intelligence (2029-2030)",
+          description: "Development of AI systems that surpass human cognitive abilities",
+          impact: "50M+ users impacted",
+          features: ["Conscious AI Systems", "Omniversal Intelligence", "Neural Interface Integration"]
+        }
+      ]
+    },
+    quantum: {
+      title: "Quantum Computing Breakthroughs",
+      description: "Revolutionary quantum computing solutions and infrastructure",
+      icon: Zap,
+      color: "purple",
+      content: [
+        {
+          title: "Error-Corrected Quantum Computers",
+          description: "First commercially viable quantum computers with error correction",
+          impact: "1000x computational speedup",
+          features: ["Logical Qubits", "Fault-Tolerant Operations", "Quantum Error Correction"]
+        },
+        {
+          title: "Quantum Internet Infrastructure",
+          description: "Global quantum communication network enabling secure data transmission",
+          impact: "Unbreakable encryption",
+          features: ["Quantum Key Distribution", "Quantum Teleportation", "Quantum Repeaters"]
+        },
+        {
+          title: "Quantum Machine Learning",
+          description: "Machine learning algorithms running on quantum hardware",
+          impact: "Exponential speedup in ML",
+          features: ["Quantum Neural Networks", "Quantum Optimization", "Quantum Feature Maps"]
+        }
+      ]
+    },
+    automation: {
+      title: "Advanced Automation Solutions",
+      description: "Intelligent automation systems transforming business operations",
+      icon: Target,
+      color: "green",
+      content: [
+        {
+          title: "Intelligent Process Automation",
+          description: "AI-powered automation of complex business processes",
+          impact: "80% reduction in manual work",
+          features: ["Cognitive Automation", "Process Mining", "Intelligent Document Processing"]
+        },
+        {
+          title: "Autonomous Decision Systems",
+          description: "AI systems capable of making complex business decisions autonomously",
+          impact: "99.9% decision accuracy",
+          features: ["Real-time Decision Making", "Risk Assessment", "Strategic Planning"]
+        },
+        {
+          title: "Predictive Maintenance AI",
+          description: "AI systems predicting and preventing equipment failures",
+          impact: "90% reduction in downtime",
+          features: ["IoT Integration", "Anomaly Detection", "Maintenance Scheduling"]
+        }
+      ]
+    }
   };
 
-  const tabs = [
-    { id: 'predictions', label: 'AI Predictions', count: contentData.predictions.length },
-    { id: 'quantum', label: 'Quantum Computing', count: contentData.quantum.length },
-    { id: 'automation', label: 'Automation Solutions', count: contentData.automation.length }
-  ];
-
-  const currentContent = contentData[activeTab as keyof typeof contentData];
+  const getColorClasses = (color: string) => {
+    const colors = {
+      blue: {
+        bg: "from-blue-600/20 to-blue-800/20",
+        border: "border-blue-400/30",
+        text: "text-blue-400",
+        button: "from-blue-600 to-blue-700"
+      },
+      purple: {
+        bg: "from-purple-600/20 to-purple-800/20",
+        border: "border-purple-400/30",
+        text: "text-purple-400",
+        button: "from-purple-600 to-purple-700"
+      },
+      green: {
+        bg: "from-green-600/20 to-green-800/20",
+        border: "border-green-400/30",
+        text: "text-green-400",
+        button: "from-green-600 to-green-700"
+      }
+    };
+    return colors[color as keyof typeof colors] || colors.blue;
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ultimate Content Revolution
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Showcase 2025-2030
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Showcase
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the most comprehensive collection of AI predictions, quantum computing breakthroughs, 
-            and automation solutions that will shape the future of technology.
+            Explore the most comprehensive collection of AI predictions, quantum computing breakthroughs, 
+            and automation solutions that will define the next decade.
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              {tab.label}
-              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-sm">
-                {tab.count}
-              </span>
-            </button>
-          ))}
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center mb-12">
+          {Object.entries(contentSections).map(([key, section]) => {
+            const Icon = section.icon;
+            const colors = getColorClasses(section.color);
+            return (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 m-2 ${
+                  activeTab === key
+                    ? `bg-gradient-to-r ${colors.button} text-white`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <Icon className="w-5 h-5 mr-2" />
+                {section.title}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {currentContent.map((item) => (
-            <div
-              key={item.id}
-              className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border transition-all duration-300 hover:transform hover:scale-105 ${
-                item.featured 
-                  ? 'border-purple-400/50 shadow-lg shadow-purple-500/20' 
-                  : 'border-gray-700 hover:border-gray-600'
-              }`}
-            >
-              {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-purple-600 to-blue-600 overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-purple-600/80 text-white text-sm font-medium rounded-full">
-                    {item.category}
-                  </span>
-                </div>
-                {item.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-yellow-500 text-black text-sm font-bold rounded-full">
-                      Featured
-                    </span>
+        {/* Active Content */}
+        {activeTab && contentSections[activeTab as keyof typeof contentSections] && (
+          <div className="mb-16">
+            {(() => {
+              const section = contentSections[activeTab as keyof typeof contentSections];
+              const colors = getColorClasses(section.color);
+              const Icon = section.icon;
+              
+              return (
+                <div className={`bg-gradient-to-br ${colors.bg} rounded-2xl p-8 border ${colors.border}`}>
+                  <div className="flex items-center mb-6">
+                    <Icon className={`w-8 h-8 ${colors.text} mr-4`} />
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{section.title}</h3>
+                      <p className="text-gray-300">{section.description}</p>
+                    </div>
                   </div>
-                )}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-white/80 group-hover:text-white transition-colors" />
-                </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                  {item.description}
-                </p>
-
-                {/* Meta Info */}
-                <div className="flex flex-wrap gap-4 text-xs text-gray-400 mb-4">
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {item.readTime}
-                  </div>
-                  <div className="flex items-center">
-                    <Eye className="w-4 h-4 mr-1" />
-                    {item.views}
-                  </div>
-                  <div className="flex items-center">
-                    <ThumbsUp className="w-4 h-4 mr-1" />
-                    {item.likes}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {section.content.map((item, index) => (
+                      <div key={index} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                        <h4 className="text-lg font-semibold text-white mb-3">{item.title}</h4>
+                        <p className="text-gray-300 mb-4">{item.description}</p>
+                        <div className="mb-4">
+                          <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                            {item.impact}
+                          </span>
+                        </div>
+                        <ul className="space-y-2">
+                          {item.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                              <div className={`w-2 h-2 rounded-full ${colors.text.replace('text-', 'bg-')} mr-3`}></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                 </div>
+              );
+            })()}
+          </div>
+        )}
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 2).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Author and Date */}
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <div className="flex items-center">
-                    <User className="w-4 h-4 mr-1" />
-                    {item.author}
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {new Date(item.date).toLocaleDateString()}
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="flex gap-2">
-                  <Link
-                    to={`/content/${item.id}`}
-                    className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center group"
-                  >
-                    <BookOpen className="w-4 h-4 mr-2" />
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <button className="p-2 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg transition-colors">
-                    <Share2 className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg transition-colors">
-                    <Download className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Interactive Features */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 rounded-xl p-6 border border-blue-400/30 text-center">
+            <Play className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-white mb-2">Interactive Demos</h3>
+            <p className="text-gray-300 text-sm">Experience AI solutions in action</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-xl p-6 border border-purple-400/30 text-center">
+            <Download className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-white mb-2">Download Resources</h3>
+            <p className="text-gray-300 text-sm">Get comprehensive guides and tools</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-green-600/20 to-green-800/20 rounded-xl p-6 border border-green-400/30 text-center">
+            <Share2 className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-white mb-2">Share & Collaborate</h3>
+            <p className="text-gray-300 text-sm">Connect with the community</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 rounded-xl p-6 border border-yellow-400/30 text-center">
+            <BookOpen className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-white mb-2">Learn & Master</h3>
+            <p className="text-gray-300 text-sm">Comprehensive learning paths</p>
+          </div>
         </div>
 
-        {/* View All Button */}
+        {/* Call to Action */}
         <div className="text-center">
-          <Link
-            to="/ai-2025-2030-ultimate-content-revolution"
-            className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
-            View All Ultimate Content
-            <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-400/30">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join millions of users already transforming their businesses with our revolutionary AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/ai-2025-ultimate-content-revolution" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              >
+                Start Your Journey
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/contact" 
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border border-white/30 hover:border-white/50 flex items-center justify-center"
+              >
+                Get Expert Consultation
+                <Rocket className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
