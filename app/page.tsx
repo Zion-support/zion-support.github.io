@@ -64,6 +64,15 @@ import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryC
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new content components
+import AI2025UltimateInnovationShowcase from '../components/AI2025UltimateInnovationShowcase';
+import AI2025UltimateInnovationPromotionBanner from '../components/AI2025UltimateInnovationPromotionBanner';
+import QuantumComputingRevolution2025 from '../components/QuantumComputingRevolution2025';
+import QuantumComputingRevolutionPromotionBanner from '../components/QuantumComputingRevolutionPromotionBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcasePromotionBanner from '../components/UltimateContentShowcasePromotionBanner';
+import RevolutionaryTechAnnouncementBanner from '../components/RevolutionaryTechAnnouncementBanner';
+
 // Import new breakthrough banners
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026BreakthroughRevolutionaryContentBanner from '../components/AI2026BreakthroughRevolutionaryContentBanner';
@@ -315,8 +324,29 @@ export default function HomePage() {
         {/* Structured Data for SEO */}
         <StructuredData2025 />
         
+        {/* REVOLUTIONARY TECH ANNOUNCEMENT BANNER */}
+        <RevolutionaryTechAnnouncementBanner />
+        
         {/* NEW CONTENT 2025 PROMOTION BANNER - LATEST RELEASES */}
         <NewContent2025PromotionBanner />
+        
+        {/* AI 2025 ULTIMATE INNOVATION PROMOTION BANNER */}
+        <AI2025UltimateInnovationPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE INNOVATION SHOWCASE */}
+        <AI2025UltimateInnovationShowcase />
+        
+        {/* QUANTUM COMPUTING REVOLUTION PROMOTION BANNER */}
+        <QuantumComputingRevolutionPromotionBanner />
+        
+        {/* QUANTUM COMPUTING REVOLUTION 2025 */}
+        <QuantumComputingRevolution2025 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcasePromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
         {/* LATEST CONTENT SHOWCASE 2025 */}
         <LatestContentShowcase2025 />
