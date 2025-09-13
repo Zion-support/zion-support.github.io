@@ -181,177 +181,50 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="px-6 py-20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Our Core Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver comprehensive technology solutions that drive innovation and growth for businesses of all sizes.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {feature.description}
-                  </p>
-                  <div className="text-sm text-blue-400 font-medium">
-                    {feature.highlight}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="px-6 py-20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Trusted by leading companies worldwide for our expertise and commitment to excellence.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-6 italic">
-                    "{testimonial.content}"
-                  </p>
-                  <div>
-                    <div className="font-semibold text-white">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {testimonial.role}, {testimonial.company}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="px-6 py-20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Join hundreds of companies that have already revolutionized their operations with our technology solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Your Project Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300">
-                  Explore Our Services
-                  <ChevronRight className="ml-2 w-5 h-5" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="px-6 py-12 border-t border-white/10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-xl font-bold text-white">Zion Tech Group</span>
-                </div>
-                <p className="text-gray-400">
-                  Leading provider of cutting-edge technology solutions for modern businesses.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-4">Services</h3>
-                <ul className="space-y-2">
-                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
-                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Infrastructure</Link></li>
-                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
-                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-4">Company</h3>
-                <ul className="space-y-2">
-                  <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-                  <li><Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</Link></li>
-                  <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-                  <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-4">Contact</h3>
-                <ul className="space-y-2">
-                  <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Get in Touch</Link></li>
-                  <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Support</Link></li>
-                  <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Consultation</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-white/10 mt-8 pt-8 text-center">
-              <p className="text-gray-400">
-                © 2024 Zion Tech Group. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </>
+ <section className="mx-auto max-w-7xl px-6 pb-14">
+   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+   <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <a href="/reports/updates/update-2025-08-17-1839" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1839</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1838" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1838</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1837" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1837</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1836" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1836</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1835" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1835</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+            <a href="/reports/updates/update-2025-08-17-1834" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 17: 1834</h3>
+              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+            </a>
+   </div>
+ </section>
+ 
+{/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
+</section>
+    </div>
   );
 }
