@@ -1,17 +1,10 @@
 #!/bin/bash
 
-# Efficient PR Merge Script - Focus on the most important PRs
+# Final script to merge remaining PRs
 set -e
 
-echo "🚀 Starting efficient PR merge process..."
+echo "🚀 Starting final merge of remaining PRs..."
 echo "⏰ Started at: $(date)"
-
-# Create backup
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
-echo "🔒 Creating backup branch: $BACKUP_BRANCH"
-git checkout -b "$BACKUP_BRANCH"
-git push origin "$BACKUP_BRANCH"
-git checkout main
 
 # Ensure we're on main and it's up to date
 echo "🔄 Ensuring main branch is up to date..."
@@ -24,7 +17,7 @@ FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
 
 # Function to merge a single branch efficiently
-merge_branch_efficiently() {
+merge_branch_final() {
     local branch="$1"
     
     echo "🔄 Processing branch: $branch"
@@ -96,31 +89,31 @@ merge_branch_efficiently() {
     fi
 }
 
-# Get recent cursor branches (most likely to be important)
-echo "📊 Getting recent cursor branches..."
-RECENT_BRANCHES=$(git branch -r | grep "cursor/" | grep -E "(create-and-deploy-new-content|enhance|improve|fix|update)" | sed 's/origin\///' | sort -r | head -50)
+# Get remaining cursor branches
+echo "📊 Getting remaining cursor branches..."
+REMAINING_BRANCHES=$(git branch -r | grep "cursor/" | sed 's/origin\///' | sort)
 
-echo "📊 Processing $RECENT_BRANCHES branches..."
+echo "📊 Processing remaining branches..."
 
 # Process branches in batches
-BATCH_SIZE=10
+BATCH_SIZE=20
 CURRENT=0
-TOTAL=$(echo "$RECENT_BRANCHES" | wc -l)
+TOTAL=$(echo "$REMAINING_BRANCHES" | wc -l)
 
 echo "📊 Total branches to process: $TOTAL"
 
-for branch in $RECENT_BRANCHES; do
+for branch in $REMAINING_BRANCHES; do
     CURRENT=$((CURRENT + 1))
     echo "📋 [$CURRENT/$TOTAL] Processing: $branch"
     
-    if merge_branch_efficiently "$branch"; then
+    if merge_branch_final "$branch"; then
         echo "✅ Successfully processed $branch"
     else
         echo "❌ Failed to process $branch"
     fi
     
-    # Progress update every 10 branches
-    if [ $((CURRENT % 10)) -eq 0 ]; then
+    # Progress update every 20 branches
+    if [ $((CURRENT % 20)) -eq 0 ]; then
         echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
         
         # Push progress periodically
@@ -135,12 +128,11 @@ git push origin main
 
 # Summary
 echo ""
-echo "🎉 Efficient merge process completed!"
+echo "🎉 Final merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
-echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 
 # Show recent commits
@@ -149,4 +141,4 @@ echo "📝 Recent commits:"
 git log --oneline -10
 
 echo ""
-echo "🎯 Efficient PR merge completed!"
+echo "🎯 Final PR merge completed!"
