@@ -4,13 +4,13 @@
   status = 200
 
 [build]
-  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  command = "yarn install --frozen-lockfile && yarn build"
   publish = "dist"
   command_timeout = "30m"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
 
 [build.environment]
-  NODE_VERSION = "22.0.0"
+  NODE_VERSION = "24.0.0"
   NODE_OPTIONS = "--max-old-space-size=4096"
   VITE_NODE_ENV = "production"
   SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
@@ -71,19 +71,13 @@
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
-  NODE_VERSION = "22"
+  NODE_VERSION = "24"
 
 [context.deploy-preview]
-  command = "corepack enable && pnpm build"
+  command = "yarn build"
 
 [context.branch-deploy]
-  command = "corepack enable && pnpm build"
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+  command = "yarn build"
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
