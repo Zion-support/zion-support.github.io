@@ -292,6 +292,7 @@ import AI2025ContentRecommendationEngine from '../components/AI2025ContentRecomm
 import AI2025UltimateContentRevolutionPromotionBanner from '../components/AI2025UltimateContentRevolutionPromotionBanner';
 import AIToolsInteractiveShowcase2025PromotionBanner from '../components/AIToolsInteractiveShowcase2025PromotionBanner';
 import AIInsightsComprehensive2025PromotionBanner from '../components/AIInsightsComprehensive2025PromotionBanner';
+import NewContent2025BreakthroughPromotionBanner from '../components/NewContent2025BreakthroughPromotionBanner';
 
 // Import new quantum consciousness and neural interface banners
 import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
@@ -503,6 +504,9 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNER */}
+        <NewContent2025BreakthroughPromotionBanner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
