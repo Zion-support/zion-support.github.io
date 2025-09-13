@@ -38,6 +38,11 @@ import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase
 import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
 import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
 
+// Import new advanced components
+import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
+import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
+import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
+
 // Neural Consensus 2026 Components
 import NeuralConsensus2026PromotionBanner from '../components/NeuralConsensus2026PromotionBanner';
 import NeuralConsensus2026Showcase from '../components/NeuralConsensus2026Showcase';
@@ -2022,6 +2027,15 @@ export default function HomePage() {
       
       {/* Interactive Demo Request */}
       <InteractiveDemoRequest />
+      
+      {/* Advanced Content Recommendation Engine */}
+      <AdvancedContentRecommendationEngine />
+      
+      {/* Real-Time Performance Dashboard */}
+      <RealTimePerformanceDashboard />
+      
+      {/* Intelligent Search Engine */}
+      <IntelligentSearchEngine />
     </div>
   );
 }
