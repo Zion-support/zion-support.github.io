@@ -18,6 +18,8 @@ const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/Advanced
 const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
+const UltimateContentPromotionBanner = lazy(() => import('../components/UltimateContentPromotionBanner'));
+const InteractiveContentDiscoveryWidget = lazy(() => import('../components/InteractiveContentDiscoveryWidget'));
 
 export default function HomePage() {
   return (
@@ -31,7 +33,9 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
-        <UltimateContentPromotionBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <UltimateContentPromotionBanner />
+        </Suspense>
         
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
@@ -81,6 +85,15 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
         </Suspense>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading Interactive Discovery..." />}>
+              <InteractiveContentDiscoveryWidget />
+            </Suspense>
+          </div>
+        </section>
         
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
