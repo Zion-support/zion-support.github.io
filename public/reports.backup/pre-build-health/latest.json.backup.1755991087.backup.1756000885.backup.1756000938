@@ -6,10 +6,14 @@
     "criticalFailures": 0,
     "canBuild": true,
 <<<<<<< HEAD
+    "timestamp": "2025-08-19T20:24:26.395Z"
+=======
+<<<<<<< HEAD
     "timestamp": "2025-08-19T20:30:50.857Z"
 =======
     "timestamp": "2025-08-19T20:24:26.395Z"
 >>>>>>> origin/cursor/build-and-fix-errors-8b64
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "results": [
     {

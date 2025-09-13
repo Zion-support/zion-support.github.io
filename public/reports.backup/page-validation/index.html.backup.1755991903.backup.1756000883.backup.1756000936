@@ -15,6 +15,8 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <p>Generated 8/20/2025, 6:46:27 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -41,6 +43,7 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h4>Warnings:</h4>
 <div class="pill warning">PAGE_TOO_SHORT: Page content seems too short, may be incomplete</div>
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 <p>Generated 8/20/2025, 6:46:21 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -70,5 +73,8 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h3><code>pages/api/url-shortener.ts</code></h3>
 <h4>Warnings:</h4>
 <div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected (line 31)</div>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 </div>

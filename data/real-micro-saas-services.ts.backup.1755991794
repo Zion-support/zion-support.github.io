@@ -6,6 +6,8 @@ export interface RealMicroSaasService {
   period: string;
   description: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   category: string;
   price: {
     monthly: number;
@@ -17,10 +19,13 @@ export interface RealMicroSaasService {
   period?: string;
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8c70
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   features: string[];
   popular: boolean;
   icon: string;
   color: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   popular: boolean;
   launchDate: string;
@@ -29,6 +34,7 @@ export interface RealMicroSaasService {
   reviews: number;
   period?: string;
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   textColor: string;
   link: string;
   marketPosition: string;
@@ -50,7 +56,10 @@ export interface RealMicroSaasService {
     address: string;
     website: string;
   };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8c70
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 export const realMicroSaasServices: RealMicroSaasService[] = [
@@ -74,6 +83,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Automated legal advice',
       '24/7 legal support'
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     benefits: [
       'Save 20+ hours per week on content creation',
@@ -118,6 +129,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.8,
     reviews: 342
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     popular: true,
     icon: '⚖️',
     color: 'from-blue-500 to-indigo-600',
@@ -142,7 +154,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8c70
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'ai-customer-service-automation',
@@ -152,6 +167,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     period: '/month',
     description: 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.',
     features: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       'Real-time cost monitoring',
       'Automated resource optimization',
@@ -429,18 +446,24 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Multi-channel marketing',
       'ROI optimization',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Multi-language support (50+ languages)',
       'Natural conversation flow',
       'Sentiment analysis',
       'Automatic ticket routing',
       'Knowledge base integration',
       'Voice and text support',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8c70
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Analytics dashboard',
       'Custom branding',
       'API integrations',
       'Real-time learning'
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     benefits: [
       'Increase conversion rates by 35%',
@@ -484,6 +507,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.7,
     reviews: 378
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     popular: true,
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
@@ -552,7 +576,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8c70
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'ai-video-editing-suite',
@@ -661,6 +688,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Integration with job boards',
       'Mobile app access'
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     marketPosition: 'Competes with BambooHR ($6.19-8.75), Workday ($45+), and ADP ($59+). Our advantage: AI-powered automation, cost-effectiveness, and ease of use.',
     competitors: ['BambooHR, Workday, ADP, Gusto, Zenefits'],
@@ -2114,6 +2143,7 @@ export const getServicesByCategory = (category: string): MicroSaasService[] => {
   if (category === 'All') return realMicroSaasServices;
   return realMicroSaasServices.filter(service => service.category === category);
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     popular: true,
     icon: '👥',
     color: 'from-indigo-500 to-purple-600',
@@ -2639,7 +2669,10 @@ export const getServicesByPriceRange = (min: number, max: number) => {
 
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8c70
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 };
 
 export const serviceCategories = [

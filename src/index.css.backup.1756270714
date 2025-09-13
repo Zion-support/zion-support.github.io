@@ -1,0 +1,484 @@
+/* Import enhanced futuristic styles */
+@import './styles/enhanced-futuristic.css';
+
+@tailwind base;
+@tailwind components;
+<<<<<<< HEAD
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+=======
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Orbitron', system-ui, sans-serif;
+    --font-rajdhani: 'Rajdhani', system-ui, sans-serif;
+
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-zion-lg;
+  }
+
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  /* Responsive utilities */
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-margin {
+    @apply my-16 sm:my-20 lg:my-24;
+  }
+
+  /* Grid utilities */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
+  }
+
+  .grid-responsive-4 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8;
+  }
+
+  /* Typography utilities */
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  .text-responsive-2xl {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .text-responsive-3xl {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  /* Spacing utilities */
+  .space-responsive {
+    @apply space-y-8 sm:space-y-12 lg:space-y-16;
+  }
+
+  .gap-responsive {
+    @apply gap-6 sm:gap-8 lg:gap-12;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(34, 221, 210, 0.5);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(34, 221, 210, 0.8);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotateIn {
+    0% {
+      transform: rotate(-180deg) scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Animation utilities */
+  .animate-slide-in-left {
+    animation: slideInFromLeft 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInFromRight 0.6s ease-out;
+  }
+
+  .animate-slide-in-top {
+    animation: slideInFromTop 0.6s ease-out;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slideInFromBottom 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out;
+  }
+
+  .animate-rotate-in {
+    animation: rotateIn 0.6s ease-out;
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(34, 221, 210, 0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Gradient text utilities */
+  .gradient-text-zion {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent;
+  }
+
+  .gradient-text-cyan {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
+  }
+
+  .gradient-text-purple {
+    @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
+  }
+
+  /* Background utilities */
+  .bg-pattern-dots {
+    background-image: radial-gradient(circle, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .bg-pattern-grid {
+    background-image: linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Border utilities */
+  .border-gradient-zion {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #22ddd2, #2e73ea, #8c15e9) 1;
+  }
+
+  /* Filter utilities */
+  .filter-zion {
+    filter: drop-shadow(0 0 10px rgba(34, 221, 210, 0.3));
+  }
+
+  .filter-zion-lg {
+    filter: drop-shadow(0 0 20px rgba(34, 221, 210, 0.5));
+  }
+
+  /* Clip path utilities */
+  .clip-path-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .clip-path-diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+
+  .clip-path-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  /* Transform utilities */
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .rotate-3d-x {
+    transform: rotateX(45deg);
+  }
+
+  .rotate-3d-y {
+    transform: rotateY(45deg);
+  }
+
+  .rotate-3d-z {
+    transform: rotateZ(45deg);
+  }
+
+  /* Transition utilities */
+  .transition-fast {
+    transition: all 0.15s ease-in-out;
+  }
+
+  .transition-normal {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .transition-slow {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .transition-bounce {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Hover utilities */
+  .hover-rotate {
+    @apply transition-transform duration-300 hover:rotate-12;
+  }
+
+  .hover-skew {
+    @apply transition-transform duration-300 hover:skew-y-3;
+  }
+
+  .hover-flip {
+    @apply transition-transform duration-300 hover:scale-y-[-1];
+  }
+
+  /* Focus utilities */
+  .focus-ring-zion {
+    @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-slate-dark;
+  }
+
+  .focus-border-zion {
+    @apply focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20;
+  }
+
+  /* Print utilities */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+    
+    .print-break {
+      page-break-before: always;
+    }
+  }
+
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .zion-card {
+      @apply border-2 border-zion-cyan;
+    }
+    
+    .zion-button-primary {
+      @apply border-2 border-white;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  .large-text h1 { font-size: 2.5em; }
+  .large-text h2 { font-size: 2em; }
+  .large-text h3 { font-size: 1.75em; }
+  .large-text p { font-size: 1.2em; }
+}
+
+/* Zion Tech Group specific styles */
+.zion-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
+}
+
+.zion-text-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.zion-border-gradient {
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%) 1;
+}
+
+/* Animation classes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-delay-1 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.floating-delay-2 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.floating-delay-3 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* LiveKit UI overrides */
+[data-lk-theme='default'] {
+  --lk-color-accent: #06B6D4;
+  --lk-button-background: #06B6D4;
+  --lk-button-background-hover: #0891B2;
+  --lk-bg1: #0B1120;
+  --lk-bg2: #0F172A;
+}
+=======
+@tailwind utilities;

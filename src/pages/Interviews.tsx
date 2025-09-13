@@ -94,6 +94,12 @@ function InterviewsContent() {
 
   return (
     <>
+        </div>));
+    };
+    return (<>
+      <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
+      
+=======
       <SEO 
         title="Interviews | Zion AI Marketplace" 
         description="Manage your scheduled interviews with clients and talent" 

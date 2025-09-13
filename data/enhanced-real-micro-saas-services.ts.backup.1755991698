@@ -99,6 +99,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     price: '$2,999',
     period: '/month',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     description: 'Access to cutting-edge quantum computing resources for AI research, drug discovery, financial modeling, and complex optimization problems. Includes quantum algorithms library and expert consultation.',
     features: [
       'Quantum processing units (QPUs) access',
@@ -112,6 +114,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Patent assistance',
       'Industry partnership facilitation'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     description: 'Revolutionary quantum-enhanced AI platform that combines quantum computing with advanced neural networks to achieve human-like reasoning capabilities. Perfect for research institutions, pharmaceutical companies, and advanced AI research.',
     features: [
       'Quantum neural networks with 1000+ qubits',
@@ -124,17 +127,23 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Research paper generation and analysis',
       'Cross-domain knowledge synthesis',
       'Quantum cryptography integration'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '⚛️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-ai-research',
     marketPosition: 'First-to-market quantum AI platform. Competes with IBM Quantum ($0.10-1.60 per second), Google Quantum AI (research only), and D-Wave (enterprise pricing). Our advantage: AI integration and research support.',
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Government agencies, Technology companies, Academic researchers',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/quantum-ai-cognitive',
     marketPosition: 'First-to-market quantum AI platform. No direct competitors yet. Traditional AI platforms cost $2000+/month with limited capabilities.',
     targetAudience: 'Research institutions, Pharmaceutical companies, AI research labs, Universities, Government agencies, Advanced tech companies',
@@ -379,7 +388,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/api-documentation-generator',
     marketPosition: 'Alternative to ReadMe/Stoplight for SMBs.',
     targetAudience: 'API-first startups, platform teams, docs teams',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 7,
     setupTime: '24-48 hours',
     category: 'Quantum Computing & AI',
@@ -458,9 +470,12 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'biomedical-ai-platform',
     name: 'Biomedical AI Platform',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Quantum-resistant security for the post-quantum era',
@@ -616,7 +631,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'biomedical-ai-research',
     name: 'Biomedical AI Research Platform',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'AI-powered drug discovery and medical research',
     price: '$899',
     period: '/month',
@@ -1146,6 +1164,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     popular: true,
     icon: '💰',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     color: 'from-yellow-500 to-amber-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-optimizer',
@@ -1470,6 +1490,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     growthRate: '280% annual growth',
     variant: 'quantum-holographic-advanced',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
@@ -1487,7 +1508,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$25B algorithmic trading market',
     growthRate: '450% annual growth',
     variant: 'quantum-advanced',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1496,12 +1520,15 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     },
     realImplementation: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     implementationDetails: 'Complete quantum healthcare platform with diagnostic algorithms, medical imaging analysis, and comprehensive clinical support tools.',
     launchDate: '2024-01-30',
     customers: 89,
     rating: 4.9,
     reviews: 178
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Advanced quantum trading platform with real market data integration, quantum algorithms, and comprehensive risk management tools. Includes mobile app and real-time alerts.',
     launchDate: '2024-03-15',
     customers: 95,
@@ -2643,7 +2670,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     customers: 120,
     rating: 4.8,
     reviews: 75
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

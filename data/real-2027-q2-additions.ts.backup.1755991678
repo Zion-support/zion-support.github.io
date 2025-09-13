@@ -1,5 +1,7 @@
 export const real2027Q2Additions = [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   {
     id: 'ai-phone-agent-pro',
     name: 'AI Phone Agent Pro',
@@ -478,6 +480,7 @@ export const real2027Q2Additions = [
     reviews: 16
   }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 	{
 		id: 'ai-powered-email-responder',
 		name: 'AI-Powered Email Responder',
@@ -646,5 +649,8 @@ export const real2027Q2Additions = [
 		launchDate: '2027-05-14',
 		rating: 4.8
 	}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];

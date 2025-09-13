@@ -2692,6 +2692,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     useCases: ['Drug discovery', 'Financial modeling', 'Optimization problems', 'Pattern recognition'],
     roi: '600% average ROI in 18 months',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     competitors: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Amazon Braket'],
     marketSize: '$6B quantum ML market',
     growthRate: '280% annual growth'
@@ -2804,6 +2806,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$20B content marketing market',
     growthRate: '160% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     competitors: ['Siemens', 'GE Digital', 'PTC', 'Dassault Systèmes'],
     marketSize: '$1.9B digital twin market',
     growthRate: '220% annual growth'
@@ -2880,11 +2883,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Atomwise', 'Insilico Medicine', 'BenevolentAI', 'Recursion Pharmaceuticals'],
     marketSize: '$15B emerging market',
     growthRate: '300% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tagline: 'Quantum-resistant security solutions',
     price: '$399',
@@ -3063,6 +3071,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$500M quantum security market',
     growthRate: '250% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'Quantum-resistant encryption and advanced threat protection',
     price: '$449',
     period: '/month',
@@ -3347,7 +3356,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['PTC', 'Siemens', 'Rockwell Automation', 'GE Digital'],
     marketSize: '$14.5B global market',
     growthRate: '170% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -3360,8 +3372,11 @@ export const serviceCategories = [
   'Cloud Infrastructure & DevOps',
   'Emerging Technologies',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Healthcare & Life Sciences'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Quantum Computing',
   'Autonomous Systems',
   'Sustainable Technology',
@@ -3375,7 +3390,10 @@ export const serviceCategories = [
   'Government & Defense',
   'Education & Training',
   'Legal Technology'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

@@ -2118,6 +2118,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['BASF', 'Dow Chemical', '3M', 'DuPont'],
     marketSize: '$1.2B global market',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     growthRate: '400% annual growth'
   },
   {
@@ -3469,6 +3471,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Unlimited potential',
       'Absolute scaling'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '38% annual growth'
   },
 
@@ -3921,12 +3924,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Performance monitoring',
       'Deployment tools',
       'Hardware acceleration'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8009
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '⚡',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/zion-tech-absolute',
     marketPosition: 'Most absolute tech platform, enabling unlimited innovation and growth',
@@ -5095,6 +5103,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$1Q potential market',
     growthRate: '20000000000000000% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/edge-ai-inference',
     marketPosition: 'Advanced edge AI platform, competitive with NVIDIA TensorRT and Intel OpenVINO',
     targetAudience: 'IoT device manufacturers, edge computing companies, and AI deployment teams',
@@ -5433,7 +5442,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
     marketSize: '$28B global business intelligence market',
     growthRate: '30% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8009
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -5459,6 +5471,8 @@ export const serviceCategories = [
   'Travel & Hospitality',
   'Automotive & Transportation',
   'Energy & Utilities',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Research & Development',
   'Government & Defense',
@@ -5510,6 +5524,7 @@ export const serviceCategories = [
   'Cosmic Technology',
   'Godlike Technology'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Agriculture & Farming',
   'Sports & Fitness',
   'Entertainment & Media',
@@ -5520,7 +5535,10 @@ export const serviceCategories = [
   'AR/VR & Immersive Tech',
   'Quantum Computing',
   'Data & Privacy'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8009
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

@@ -8,6 +8,11 @@ interface UltraFuturisticBackgroundProps {
 }
 
 <<<<<<< HEAD
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ 
+  children, 
+  className = '' 
+=======
+<<<<<<< HEAD
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   variant = 'neural',
   intensity = 'medium',
@@ -18,6 +23,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children, 
   className = '' 
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -30,11 +36,14 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     if (!ctx) return;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles: Array<{
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     let animationFrameId: number;
     let particles: Particle[] = [];
     let holographicGrid: GridPoint[] = [];
@@ -42,13 +51,18 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 
     // Particle class for floating elements
     class Particle {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
       color: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       life: number;
       maxLife: number;
@@ -112,6 +126,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         life: Math.random() * 100,
         maxLife: 100
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       alpha: number;
       type: 'energy' | 'data' | 'quantum';
 
@@ -259,6 +274,11 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       holographicGrid.forEach(point => {
         point.update();
         point.draw();
+<<<<<<< HEAD
+      });
+    }
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
       });
     }
@@ -400,6 +420,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     };
 
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       // Draw grid connections
       ctx.save();
       ctx.globalAlpha = 0.1;
@@ -502,11 +523,16 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     animate();
 
     // Event listeners
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     window.addEventListener('resize', handleResize);
 
     // Cleanup
     return () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -518,6 +544,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
@@ -528,7 +555,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       ref={containerRef}
       className={`relative min-h-screen overflow-hidden ${className}`}
     >
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
@@ -543,6 +573,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         }}
       />
       
+<<<<<<< HEAD
+      {/* Overlay gradient for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-slate-800/10 to-slate-900/20 pointer-events-none" />
+=======
 <<<<<<< HEAD
       {/* Additional overlay effects */}
       <div className="absolute inset-0 pointer-events-none z-10">
@@ -574,6 +608,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       {/* Overlay gradient for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-slate-800/10 to-slate-900/20 pointer-events-none" />
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       
       {/* Content */}
       <div className="relative z-20">

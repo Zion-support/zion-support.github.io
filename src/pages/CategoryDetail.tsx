@@ -151,7 +151,8 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ') || 'Category',
           description: 'Explore our collection in this category',
-          icon: <Bot className="w-6 h-6" />};
+          icon: <Bot className="w-6 h-6" />,
+        };
 
         setCategory(currentCategory);
         innovationCounterRef.current = 0;
@@ -179,11 +180,13 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   author: {
                     name: `Provider ${index + 1}`,
                     id: `author-${index + 1}`,
-                    avatarUrl: undefined},
+                    avatarUrl: undefined,
+                  },
                   images: [`/placeholder.svg`],
                   createdAt: new Date().toISOString(),
                   rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)}));
+                  reviewCount: Math.floor(Math.random() * 100),
+                }));
 
         setListings(listingsToShow);
       } catch (err) {
@@ -204,7 +207,8 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       innovationCounterRef.current += 1;
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
-        ...prev]);
+        ...prev,
+      ]);
     }, 120000); // every 2 minutes
 
     return () => clearInterval(interval);

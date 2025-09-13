@@ -4508,6 +4508,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '35% annual growth'
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   {
     id: 'cyber-physical-security',
     name: 'Cyber-Physical Security',
@@ -4652,6 +4654,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$28B global business intelligence market',
     growthRate: '30% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   // Emerging Technology Services
   {
@@ -5309,13 +5312,23 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Siemens', 'GE Digital', 'PTC', 'Dassault Systèmes'],
     marketSize: '$2.1B global market',
     growthRate: '55% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d850
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
 export const serviceCategories = [
   'All',
   'AI & Machine Learning',
+<<<<<<< HEAD
+  'Blockchain & Web3',
+  'AR/VR & Metaverse',
+  'IoT & Connected Devices',
+  'Cloud & Infrastructure',
+  'Cybersecurity',
+=======
 <<<<<<< HEAD
 =======
   'Blockchain & Web3',
@@ -5353,6 +5366,7 @@ export const serviceCategories = [
   'Quantum Computing',
   'Data & Privacy'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Emerging Technology',
   'Space Technology',
   'Biotechnology',
@@ -5364,7 +5378,10 @@ export const serviceCategories = [
   'Autonomous Vehicles',
   'Healthcare & Life Sciences',
   'Financial Technology'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d850
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

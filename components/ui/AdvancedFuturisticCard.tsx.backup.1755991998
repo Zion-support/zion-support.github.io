@@ -1,13 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 <<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+<<<<<<< HEAD
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 =======
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 interface AdvancedFuturisticCardProps {
   children: React.ReactNode;
   className?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   variant?: 'default' | 'premium' | 'enterprise' | 'quantum';
   glow?: boolean;
@@ -15,6 +21,7 @@ interface AdvancedFuturisticCardProps {
   interactive?: boolean;
   theme?: 'cyberpunk' | 'quantum' | 'holographic' | 'neon';
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'quantum-holographic' | 'neural-cyberpunk';
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
   interactive?: boolean;
@@ -22,7 +29,10 @@ interface AdvancedFuturisticCardProps {
   floating?: boolean;
   border?: boolean;
   background?: boolean;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   onClick?: () => void;
 }
 
@@ -30,12 +40,15 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
   children,
   className = '',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   variant = 'default',
   glow = true,
   animated = true,
   interactive = true,
   theme = 'quantum',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   variant = 'quantum-holographic',
   intensity = 'medium',
   interactive = true,
@@ -43,11 +56,16 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
   floating = true,
   border = true,
   background = true,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   onClick
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const cardRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -119,6 +137,7 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
           highlight: 'rgba(16, 185, 129, 0.8)',
           pattern: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%)'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -174,11 +193,16 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
           border: 'border-gray-500/30',
           glow: 'shadow-gray-500/20',
           text: 'text-gray-400'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
         };
     }
   };
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const variantStyles = getVariantStyles();
   const themeStyles = getThemeStyles();
@@ -261,6 +285,7 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
       }
     }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   const getIntensityMultiplier = () => {
     switch (intensity) {
       case 'extreme': return 2.0;
@@ -426,12 +451,17 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
         ? `0 0 30px ${intensity * 2}px ${styles.glow.replace('shadow-', '').replace('/20', '')}`
         : `0 0 20px ${intensity}px ${styles.glow.replace('shadow-', '').replace('/20', '')}`
     };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   };
 
   return (
     <motion.div
       ref={cardRef}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       className={`relative group ${className}`}
       variants={animated ? cardVariants : undefined}
@@ -495,6 +525,7 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
               transform: `translateX(${isHovered ? '100%' : '-100%'})`,
               transition: 'transform 0.6s ease-in-out'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-500 ${
         background ? styles.bg : ''
       } ${border ? `border ${styles.border}` : ''} ${className}`}
@@ -538,20 +569,29 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
             style={{
               background: `linear-gradient(90deg, transparent, ${styles.text}, transparent)`,
               animation: isHovered || isFocused ? 'holographic-sweep 2s linear infinite' : 'none'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
             }}
           />
         </div>
       )}
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
       
 =======
 
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       {/* Content */}
       <div className="relative z-10 p-6">
         {children}
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       
       {/* Corner accents */}
@@ -582,6 +622,7 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
                 delay: i * 0.2,
                 ease: "easeInOut"
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
       {/* Quantum Energy Field */}
       {intensity === 'extreme' && (
@@ -626,7 +667,10 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
               style={{
                 transform: `translateZ(${layer * 10}px)`,
                 animation: `holographic-layer-${layer} ${4 + layer}s ease-in-out infinite`
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
               }}
             />
           ))}
@@ -634,6 +678,9 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
       )}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
       <style jsx>{`
         @keyframes holographic-sweep {
@@ -661,7 +708,10 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
           50% { opacity: 0.06; transform: translateZ(30px) rotateY(2deg); }
         }
       `}</style>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     </motion.div>
   );
 };
@@ -669,5 +719,9 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
 <<<<<<< HEAD
 export default AdvancedFuturisticCard;
 =======
+<<<<<<< HEAD
+export default AdvancedFuturisticCard;
+=======
 export default AdvancedFuturisticCard;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

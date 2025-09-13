@@ -2,7 +2,12 @@ import React, { useState, Suspense } from 'react';
 import {
   Dialog,
   DialogContent,
+<<<<<<< HEAD
+  DialogTrigger,
+} from '@/components/ui/dialog';
+=======
   DialogTrigger} from '@/components/ui/dialog';
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
@@ -12,7 +17,12 @@ const ModelViewer = React.lazy(async () => {
   return {
     default: (props: any) => (
       React.createElement('model-viewer', props)
+<<<<<<< HEAD
+    ),
+  };
+=======
     )};
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 });
 
 interface ProductGalleryProps {

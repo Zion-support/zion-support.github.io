@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Orbitron', system-ui, sans-serif;
+    --font-rajdhani: 'Rajdhani', system-ui, sans-serif;
+
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+=======
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 9% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+
+    /* Custom Zion variables */
+    --zion-cyan: #22ddd2;
+    --zion-blue: #2e73ea;
+    --zion-purple: #8c15e9;
+    --zion-slate: #17072b;
+    --zion-slate-light: #451582;
+    --zion-slate-dark: #000000;
+    
+    /* Accessibility variables */
+    --font-size: 16px;
+    --line-height: 1.5;
+    --letter-spacing: 0px;
+    --reduced-motion: no-preference;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+<<<<<<< HEAD
+    --primary: 262 83% 58%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    --sidebar-background: 220 14.3% 95.9%;
+    --sidebar-foreground: 220.9 39.3% 11%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 220 14.3% 95.9%;
+    --sidebar-accent-foreground: 220.9 39.3% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 262 83% 58%;
+=======
+    --primary: 216 84% 50%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 224 71% 4%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 224 71% 4%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 216 84% 53%;
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 216 84% 53%;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+<<<<<<< HEAD
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+  }
+
+  /* Accessibility Enhancements */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --muted: 0 0% 20%;
+    --accent: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 100%;
+  }
+
+  .high-contrast * {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .show-focus-indicator *:focus {
+    outline: 3px solid var(--zion-cyan) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Screen Reader Only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--zion-cyan);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--zion-blue);
+  }
+
+  /* Focus Management */
+  .focus-visible:focus-visible {
+    outline: 2px solid var(--zion-cyan);
+    outline-offset: 2px;
+  }
+
+  /* Skip Links */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--zion-cyan);
+    color: var(--zion-slate-dark);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+
+  /* Performance Optimizations */
+=======
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Enhanced scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-zion-slate-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zion-cyan/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zion-cyan;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-zion-cyan/20 text-white;
+  }
+
+  /* Focus outline improvements */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-zion-cyan/50 ring-offset-2 ring-offset-zion-slate-dark;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Performance optimizations */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+<<<<<<< HEAD
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(34, 221, 210, 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(34, 221, 210, 0.8);
+=======
+  /* Enhanced animations */
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(34, 221, 210, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(34, 221, 210, 0.6);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+    }
+  }
+
+  @keyframes slide-in-up {
+<<<<<<< HEAD
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+=======
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+    }
+  }
+
+  @keyframes slide-in-left {
+<<<<<<< HEAD
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+=======
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+    }
+  }
+
+  @keyframes slide-in-right {
+<<<<<<< HEAD
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Animation Classes */
+=======
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotate-3d {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    75% {
+      transform: translateY(10px);
+    }
+  }
+
+  /* Animation utility classes */
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+  }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+<<<<<<< HEAD
+  .animate-float-delayed {
+    animation: float-delayed 6s ease-in-out infinite 2s;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.6s ease-out;
+  }
+
+  .animate-slide-in-down {
+    animation: slide-in-down 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out;
+  }
+
+  /* Utility Classes */
+  .bg-futuristic {
+    background: linear-gradient(135deg, var(--zion-slate-dark) 0%, var(--zion-slate) 50%, var(--zion-blue) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-blue) 50%, var(--zion-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, var(--zion-cyan), var(--zion-blue), var(--zion-purple)) 1;
+  }
+
+  /* Enhanced Button Styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 text-zion-cyan hover:bg-zion-cyan/10 rounded-xl transition-all duration-300;
+  }
+
+  /* Card Styles */
+  .card-modern {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25;
+  }
+
+  .card-glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300;
+  }
+
+  /* Input Styles */
+  .input-modern {
+    @apply bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:border-zion-cyan focus:outline-none transition-all duration-300;
+  }
+
+  /* Loading States */
+  .loading-skeleton {
+    @apply animate-pulse bg-white/10 rounded;
+  }
+
+  /* Responsive Utilities */
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Print Styles */
+=======
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(34, 221, 210, 0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.6s ease-out;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out;
+  }
+
+  .animate-rotate-3d {
+    animation: rotate-3d 20s linear infinite;
+  }
+
+  .animate-wave {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(34, 221, 210, 0.15);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(34, 221, 210, 0.4);
+  }
+
+  /* Glass morphism effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 221, 210, 0.2);
+  }
+
+  /* Gradient text utilities */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-zion-blue to-zion-purple bg-clip-text text-transparent;
+  }
+
+  /* Enhanced button styles */
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center px-6 py-3 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:bg-zion-slate-dark/70 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2;
+  }
+
+  /* Input styles */
+  .input-primary {
+    @apply w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 transition-all duration-300;
+  }
+
+  /* Loading states */
+  .loading-skeleton {
+    @apply animate-pulse bg-zion-slate-dark/30 rounded;
+  }
+
+  /* Responsive utilities */
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Grid utilities */
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Spacing utilities */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+
+  .section-margin {
+    @apply my-20 lg:my-32;
+  }
+
+  /* Typography utilities */
+  .heading-1 {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-2xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-medium {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  .body-small {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  /* Accessibility improvements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .focus-visible {
+    @apply outline-none ring-2 ring-zion-cyan/50 ring-offset-2 ring-offset-zion-slate-dark;
+  }
+
+  /* Print styles */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+<<<<<<< HEAD
+    
+    body {
+      background: white !important;
+      color: black !important;
+    }
+  }
+
+  /* High DPI Displays */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .retina-image {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+
+  /* Dark Mode Toggle Animation */
+  .theme-toggle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .theme-toggle:hover {
+    transform: rotate(180deg);
+  }
+
+  /* Accessibility Focus Ring */
+  .focus-ring:focus {
+    outline: 2px solid var(--zion-cyan);
+    outline-offset: 2px;
+  }
+
+  /* Custom Slider Styles */
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .slider::-webkit-slider-track {
+    background: hsl(var(--muted));
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--zion-cyan);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    background: var(--zion-blue);
+    transform: scale(1.1);
+  }
+
+  .slider::-moz-range-track {
+    background: hsl(var(--muted));
+    height: 8px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .slider::-moz-range-thumb {
+    background: var(--zion-cyan);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .slider::-moz-range-thumb:hover {
+    background: var(--zion-blue);
+    transform: scale(1.1);
+=======
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .card {
+      @apply border-2 border-zion-cyan;
+    }
+    
+    .btn-primary {
+      @apply border-2 border-white;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
+  }
+}

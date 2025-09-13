@@ -2964,6 +2964,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 220
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
   // Add new innovative services after the existing ones
   {
@@ -6339,6 +6341,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     reviews: 90
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1ea4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

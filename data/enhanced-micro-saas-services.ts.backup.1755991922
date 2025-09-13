@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+export interface MicroSaasService {
+=======
+<<<<<<< HEAD
 export interface EnhancedMicroSaasService {
 =======
 export interface MicroSaasService {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b1c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   id: string;
   name: string;
   tagline: string;
@@ -29,6 +33,11 @@ export interface MicroSaasService {
   marketSize: string;
   growthRate: string;
 <<<<<<< HEAD
+}
+
+export const enhancedMicroSaasServices: MicroSaasService[] = [
+=======
+<<<<<<< HEAD
   contactInfo: {
     mobile: string;
     email: string;
@@ -43,6 +52,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
 
 export const enhancedMicroSaasServices: MicroSaasService[] = [
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b1c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // AI & Machine Learning Services
   {
     id: 'ai-content-generator-pro',
@@ -78,6 +88,8 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     roi: '300% average ROI in 3 months',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly'],
     marketSize: '$1.2B global market',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     growthRate: '25% annual growth',
     contactInfo: {
@@ -358,6 +370,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Integration with SIEM',
       '24/7 security operations'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '25% annual growth'
   },
   {
@@ -520,12 +533,17 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Compliance reporting',
       'Security orchestration',
       '24/7 monitoring'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b1c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-cybersecurity-sentinel',
     marketPosition: 'Competitive with CrowdStrike ($8.99+), SentinelOne ($2.67+), and Cylance ($2.50+)',
@@ -762,6 +780,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
   },
   // Business Automation
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/ai-cybersecurity-suite',
     marketPosition: 'Advanced AI cybersecurity solution',
     targetAudience: 'Enterprises, financial institutions, healthcare organizations, government agencies',
@@ -849,11 +868,16 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$4.1B data integration market',
     growthRate: '110% annual growth'
   },
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b1c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'autonomous-ai-agents',
     name: 'Autonomous AI Agents',
     tagline: 'Self-learning AI agents for business automation',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     price: '$399',
     period: '/month',
@@ -1366,6 +1390,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     price: '$129',
     period: '/month',
     description: 'Intelligent autonomous AI agents that learn, adapt, and execute complex business processes independently, revolutionizing workflow automation.',
@@ -1433,13 +1458,18 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
     marketSize: '$300M emerging market',
     growthRate: '250% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b1c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
 export const serviceCategories = [
   'All',
   'AI & Machine Learning',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Cloud & Infrastructure',
   'Cybersecurity',
@@ -1488,6 +1518,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   });
 };
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Quantum Computing & AI',
   'Blockchain & AI',
   'Metaverse & AI',
@@ -1515,4 +1546,7 @@ export function getServicesByPriceRange(min: number, max: number) {
     return price >= min && price <= max;
   });
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b1c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
