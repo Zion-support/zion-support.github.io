@@ -51,6 +51,9 @@ import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictions
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
+
+// AI 2025 Ultimate Automation Platform
+import AI2025UltimateAutomationPlatformBanner from '../components/AI2025UltimateAutomationPlatformBanner';
 import InnovativeContentShowcase2026 from '../components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
@@ -221,6 +224,11 @@ const HomePage: React.FC = () => {
               {/* AI 2025 Content Showcase Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025ContentShowcaseBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Automation Platform Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateAutomationPlatformBanner />
               </Suspense>
 
               {/* Content ROI Calculator */}

@@ -43,6 +43,7 @@ const EnhancedNavigation: React.FC = () => {
         { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
         { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
+        { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
         { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
         { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
         { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
@@ -65,6 +66,13 @@ const EnhancedNavigation: React.FC = () => {
   ];
 
   const featuredContent = [
+    {
+      title: "AI 2025 Ultimate Automation Platform",
+      description: "Revolutionary platform for autonomous business operations",
+      href: "/ai-2025-ultimate-automation-platform",
+      icon: "🚀",
+      isNew: true
+    },
     {
       title: "AI Implementation Mastery Guide 2026",
       description: "Complete roadmap to 15,000x performance improvements",
