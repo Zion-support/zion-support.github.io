@@ -96,7 +96,6 @@ export default function AI2025UltimateBreakthroughRevolutionBanner() {
             
             <Link 
               href="/case-studies/ai-2025-global-transformation-breakthrough"
-<<<<<<< HEAD
               className="group bg-transparent border-2 border-white hover:bg-white hover:text-purple-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
             >
               <span className="flex items-center">
@@ -122,11 +121,6 @@ export default function AI2025UltimateBreakthroughRevolutionBanner() {
               <span className="text-green-400 mr-2">✓</span>
               <span>Global Scale Ready</span>
             </div>
-=======
-              className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all duration-300 shadow-lg"
-            >
-              📊 View 10,000% ROI Success Story
-            </Link>
           </div>
 
           {/* Additional links */}
@@ -151,7 +145,7 @@ export default function AI2025UltimateBreakthroughRevolutionBanner() {
             >
               🔥 Live Webinar
             </Link>
->>>>>>> cursor/create-and-deploy-new-content-bcb9
+          </div>
           </div>
         </div>
       </div>
