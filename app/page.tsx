@@ -178,6 +178,12 @@ import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryC
 import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
 import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
 
+// Import new 2026 content components
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentShowcase2026PromotionBanner from '../components/NewContentShowcase2026PromotionBanner';
+import AITrends2026Predictions from '../components/AITrends2026Predictions';
+import AITrends2026PredictionsPromotionBanner from '../components/AITrends2026PredictionsPromotionBanner';
+
 // Import new breakthrough announcement banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
@@ -241,6 +247,12 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <NewContentShowcase2026PromotionBanner />
+        
+        {/* AI TRENDS 2026 PREDICTIONS PROMOTION BANNER */}
+        <AITrends2026PredictionsPromotionBanner />
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
@@ -395,6 +407,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW CONTENT SHOWCASE 2026 */}
+        <NewContentShowcase2026 />
+        
+        {/* AI TRENDS 2026 PREDICTIONS */}
+        <AITrends2026Predictions />
         
         {/* AI SUCCESS STORIES 2025 BANNER */}
         <AISuccessStories2025Banner />
