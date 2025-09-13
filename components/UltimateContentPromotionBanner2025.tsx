@@ -1,128 +1,167 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
 
-export default function UltimateContentPromotionBanner2025() {
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
+
+const UltimateContentPromotionBanner2025 = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    "AI-Powered Automation",
+    "Quantum Computing Solutions",
+    "Neural Interface Technology",
+    "Advanced Cybersecurity",
+    "Global Enterprise Support"
+  ];
+
+  const benefits = [
+    "300% Efficiency Increase",
+    "60% Cost Reduction",
+    "99.9% Uptime Guarantee",
+    "24/7 Expert Support",
+    "Custom Implementation"
+  ];
+
   return (
-    <section className="relative py-16 px-4 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+    <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-500"></div>
+        </div>
       </div>
-      
-      <div className="relative max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6 animate-pulse">
-            🚀 NEW REVOLUTIONARY CONTENT
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ultimate Content Revolution 2025
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-            Discover the most revolutionary AI content of 2025. Explore breakthrough technologies, quantum computing solutions, and future predictions that are transforming industries worldwide.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-bold">
-              🚀 AI 2025 Breakthroughs
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-bold">
-              ⚛️ Quantum Computing
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-bold">
-              🔮 Future Predictions
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-white font-bold">
-              🏆 10,000% ROI
-            </div>
-          </div>
-        </div>
-        
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {/* AI 2025 Breakthrough Revolution */}
-          <Link href="/ai-2025-ultimate-breakthrough-revolution" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
-                AI 2025 Ultimate Breakthrough Revolution
-              </h3>
-              <p className="text-white/80 mb-4">
-                Revolutionary AI breakthroughs transforming industries with 10,000% ROI success stories and quantum-powered autonomous operations.
-              </p>
-              <div className="flex items-center text-white/90 text-sm">
-                <span className="bg-red-500/20 px-3 py-1 rounded-full mr-2">BREAKTHROUGH</span>
-                <span className="bg-green-500/20 px-3 py-1 rounded-full">10,000% ROI</span>
-              </div>
-            </div>
-          </Link>
 
-          {/* AI 2026-2030 Future Predictions */}
-          <Link href="/ai-2026-2030-future-predictions-showcase" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
-              <div className="text-4xl mb-4">🔮</div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
-                AI 2026-2030 Future Predictions Showcase
-              </h3>
-              <p className="text-white/80 mb-4">
-                Explore revolutionary AI predictions for 2026-2030. Discover quantum neural fusion, consciousness AI, and transcendent intelligence.
-              </p>
-              <div className="flex items-center text-white/90 text-sm">
-                <span className="bg-purple-500/20 px-3 py-1 rounded-full mr-2">FUTURE</span>
-                <span className="bg-blue-500/20 px-3 py-1 rounded-full">95% Accuracy</span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Quantum Computing Solutions */}
-          <Link href="/quantum-computing-solutions" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
-                Quantum Computing Solutions
-              </h3>
-              <p className="text-white/80 mb-4">
-                Revolutionary quantum computing solutions delivering 10,000x faster processing, quantum supremacy, and error-corrected quantum computers.
-              </p>
-              <div className="flex items-center text-white/90 text-sm">
-                <span className="bg-indigo-500/20 px-3 py-1 rounded-full mr-2">QUANTUM</span>
-                <span className="bg-cyan-500/20 px-3 py-1 rounded-full">10,000x Faster</span>
-              </div>
-            </div>
-          </Link>
-        </div>
-        
-        {/* Call to Action */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution"
-              className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Explore AI 2025 Breakthroughs
-            </Link>
-            <Link 
-              href="/ai-2026-2030-future-predictions-showcase"
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30"
-            >
-              View Future Predictions
-            </Link>
-            <Link 
-              href="/quantum-computing-solutions"
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30"
-            >
-              Discover Quantum Solutions
-            </Link>
-          </div>
-          
-          <p className="text-white/80 mt-6 text-sm">
-            Join thousands of companies already experiencing the AI revolution. Start your transformation today.
-          </p>
+          {/* Main Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-semibold mb-4">
+              <Star className="w-4 h-4 fill-current" />
+              <span>2025 ULTIMATE BREAKTHROUGH</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Revolutionary AI Solutions
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+                Now Available
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI, quantum computing, and automation technologies that deliver unprecedented results.
+            </p>
+          </motion.div>
+
+          {/* Rotating Feature */}
+          <motion.div
+            key={currentFeature}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 rounded-full text-white text-lg font-semibold">
+              <Zap className="w-5 h-5" />
+              <span>{features[currentFeature]}</span>
+            </div>
+          </motion.div>
+
+          {/* Benefits Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12"
+          >
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-white text-sm font-medium">
+                <CheckCircle className="w-4 h-4 text-green-300" />
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
+          >
+            {[
+              { number: "10,000+", label: "Enterprise Clients", icon: <Users className="w-6 h-6" /> },
+              { number: "150+", label: "Countries Served", icon: <Award className="w-6 h-6" /> },
+              { number: "400%", label: "Average ROI", icon: <TrendingUp className="w-6 h-6" /> },
+              { number: "99.9%", label: "Success Rate", icon: <Star className="w-6 h-6" /> }
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-white mb-2 flex justify-center">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.number}</div>
+                <div className="text-white/80 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <button className="group flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105">
+              Get Started Free
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105">
+              Watch Demo
+            </button>
+          </motion.div>
+
+          {/* Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="mt-12 pt-8 border-t border-white/20"
+          >
+            <p className="text-white/80 text-sm mb-4">Trusted by industry leaders worldwide</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              {["Microsoft", "Google", "Amazon", "IBM", "Oracle", "Salesforce"].map((company, index) => (
+                <div key={index} className="text-white font-semibold text-lg">
+                  {company}
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 right-10 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
+      <div className="absolute bottom-20 left-10 w-3 h-3 bg-white/30 rounded-full animate-ping delay-1000"></div>
+      <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-ping delay-2000"></div>
+    </div>
   );
-}
+};
+
+export default UltimateContentPromotionBanner2025;

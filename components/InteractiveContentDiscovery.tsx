@@ -3,220 +3,181 @@ import Link from 'next/link';
 
 export default function InteractiveContentDiscovery() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const contentItems = [
     {
       id: 1,
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "10,000% ROI with autonomous operations and quantum computing integration",
-      category: "breakthrough",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      badge: "BREAKTHROUGH",
-      color: "from-red-500 to-pink-500",
-      bgColor: "from-red-50 to-pink-50",
-      borderColor: "border-red-200",
-      roi: "10,000% ROI",
-      icon: "🚀"
+      title: 'AI 2025 Ultimate Breakthrough Revolution',
+      description: '15,000% ROI Revolutionary Technology',
+      category: 'ai-2025',
+      url: '/ai-2025-ultimate-breakthrough-revolution',
+      icon: '⚡',
+      color: 'from-red-500 to-pink-500',
+      badge: 'BREAKTHROUGH',
+      metrics: '15,000% ROI'
     },
     {
       id: 2,
-      title: "AI 2026-2030 Future Predictions",
-      description: "Revolutionary predictions: quantum-neural fusion, consciousness AI, infinite ROI",
-      category: "predictions",
-      link: "/ai-2026-2030-future-predictions",
-      badge: "REVOLUTIONARY",
-      color: "from-cyan-500 to-purple-500",
-      bgColor: "from-cyan-50 to-purple-50",
-      borderColor: "border-cyan-200",
-      roi: "∞ ROI",
-      icon: "🔮"
+      title: 'AI 2026-2030 Future Predictions',
+      description: 'Revolutionary Future Technology Forecasts',
+      category: 'ai-2026-2030',
+      url: '/ai-2026-2030-future-predictions-breakthrough',
+      icon: '🔮',
+      color: 'from-cyan-500 to-blue-500',
+      badge: 'REVOLUTIONARY',
+      metrics: '∞ ROI by 2030'
     },
     {
       id: 3,
-      title: "Quantum Computing Breakthroughs 2025",
-      description: "25,000% ROI with quantum supremacy and error-corrected quantum computers",
-      category: "quantum",
-      link: "/quantum-computing-breakthroughs-2025",
-      badge: "QUANTUM",
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-50 to-purple-50",
-      borderColor: "border-indigo-200",
-      roi: "25,000% ROI",
-      icon: "⚛️"
+      title: 'Quantum Computing Breakthrough 2025',
+      description: 'Quantum Supremacy Achieved',
+      category: 'quantum',
+      url: '/quantum-computing-breakthrough-2025',
+      icon: '⚛️',
+      color: 'from-purple-500 to-indigo-500',
+      badge: 'BREAKTHROUGH',
+      metrics: '1,000+ Qubits'
     },
     {
       id: 4,
-      title: "AI 2025 Revolutionary Trends Analysis",
-      description: "Comprehensive analysis of AI trends and predictions for 2025",
-      category: "analysis",
-      link: "/blog/ai-2025-comprehensive-trends-analysis",
-      badge: "ANALYSIS",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-50 to-cyan-50",
-      borderColor: "border-blue-200",
-      roi: "2,500% ROI",
-      icon: "📊"
+      title: 'Neural Interface Revolution 2026',
+      description: 'Direct Brain-Computer Interface',
+      category: 'ai-2026-2030',
+      url: '/neural-interface-revolution-2026',
+      icon: '🧠',
+      color: 'from-green-500 to-teal-500',
+      badge: 'REVOLUTIONARY',
+      metrics: '95% Accuracy'
     },
     {
       id: 5,
-      title: "Enterprise Automation Mastery 2025",
-      description: "Complete guide to enterprise automation with proven ROI strategies",
-      category: "automation",
-      link: "/blog/ai-2025-enterprise-automation-mastery",
-      badge: "MASTERY",
-      color: "from-green-500 to-teal-500",
-      bgColor: "from-green-50 to-teal-50",
-      borderColor: "border-green-200",
-      roi: "5,000% ROI",
-      icon: "🤖"
+      title: 'Autonomous Systems Mastery 2025',
+      description: 'Fully Autonomous Business Operations',
+      category: 'ai-2025',
+      url: '/autonomous-systems-mastery-2025',
+      icon: '🤖',
+      color: 'from-orange-500 to-red-500',
+      badge: 'MASTERY',
+      metrics: '24/7 Operation'
     },
     {
       id: 6,
-      title: "Neural Interface Revolution 2026",
-      description: "Breakthrough neural interface technology with 95% patient recovery success",
-      category: "neural",
-      link: "/blog/ai-2026-neural-interface-revolution",
-      badge: "REVOLUTION",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-50 to-pink-50",
-      borderColor: "border-purple-200",
-      roi: "3,000% ROI",
-      icon: "🧠"
+      title: 'Quantum-AI Fusion 2029',
+      description: 'Consciousness-Level AI Systems',
+      category: 'quantum',
+      url: '/quantum-ai-fusion-2029',
+      icon: '🌌',
+      color: 'from-indigo-500 to-purple-500',
+      badge: 'TRANSCENDENT',
+      metrics: '∞ Processing Power'
     }
   ];
 
   const categories = [
     { id: 'all', name: 'All Content', icon: '📚' },
-    { id: 'breakthrough', name: 'Breakthroughs', icon: '🚀' },
-    { id: 'predictions', name: 'Predictions', icon: '🔮' },
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
-    { id: 'analysis', name: 'Analysis', icon: '📊' },
-    { id: 'automation', name: 'Automation', icon: '🤖' },
-    { id: 'neural', name: 'Neural', icon: '🧠' }
+    { id: 'ai-2025', name: 'AI 2025', icon: '⚡' },
+    { id: 'ai-2026-2030', name: 'AI 2026-2030', icon: '🔮' },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' }
   ];
 
-  const filteredContent = contentItems.filter(item => {
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredItems = selectedCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover Revolutionary Content
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Interactive Content Discovery
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI breakthroughs, predictions, and revolutionary technologies.
+            Explore our revolutionary content library. Use the interactive filters to discover 
+            the most relevant AI breakthroughs and technologies for your business.
           </p>
         </div>
 
-        {/* Search and Filter */}
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4 mb-6">
-            {/* Search */}
-            <div className="flex-1">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search content..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-blue-500 text-white shadow-lg'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                <span className="mr-2">{category.icon}</span>
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredContent.map((item) => (
-            <div
-              key={item.id}
-              className={`bg-gradient-to-br ${item.bgColor} p-6 rounded-2xl border ${item.borderColor} hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
+        {/* Category Filters */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="text-3xl">{item.icon}</div>
-                <span className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white text-xs font-bold rounded-full`}>
-                  {item.badge}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {item.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-4 text-sm">
-                {item.description}
-              </p>
-              
-              <div className="flex items-center justify-between">
-                <div className="text-lg font-bold text-green-600">
-                  {item.roi}
-                </div>
-                <Link
-                  href={item.link}
-                  className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white rounded-lg font-semibold text-sm hover:opacity-90 transition-all duration-300`}
-                >
-                  Explore
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+            </button>
           ))}
         </div>
 
-        {/* No Results */}
-        {filteredContent.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">No content found</h3>
-            <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
-          </div>
-        )}
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.map((item) => (
+            <Link
+              key={item.id}
+              href={item.url}
+              className="group"
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <div className={`bg-gradient-to-br ${item.color} p-6 rounded-xl text-white hover:scale-105 transition-all duration-300 shadow-lg ${
+                hoveredItem === item.id ? 'shadow-2xl' : ''
+              }`}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-3xl">{item.icon}</div>
+                  <div className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs font-bold">
+                    {item.badge}
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-sm opacity-90 mb-4">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-sm font-bold bg-white bg-opacity-20 px-3 py-1 rounded-full">
+                    {item.metrics}
+                  </div>
+                  <div className="text-white group-hover:text-yellow-300 transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-          >
-            View All Content
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <p className="text-lg text-gray-600 mb-6">
+            Can't find what you're looking for? Our AI recommendation engine can help.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
+            >
+              Get Personalized Recommendations
+            </Link>
+            <Link 
+              href="/revolutionary-content-showcase-2025" 
+              className="border-2 border-blue-500 text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-500 hover:text-white transition-colors"
+            >
+              View All Content
+            </Link>
+          </div>
         </div>
       </div>
     </div>
