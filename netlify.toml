@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
+  command = "npm ci && npm run build"
   publish = "dist"
   command_timeout = "30m"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
@@ -74,10 +74,10 @@
   NODE_VERSION = "22"
 
 [context.deploy-preview]
-  command = "corepack enable && pnpm build"
+  command = "npm ci && npm run build"
 
 [context.branch-deploy]
-  command = "corepack enable && pnpm build"
+  command = "npm ci && npm run build"
 
 # Netlify has built-in compression support, no plugin needed
 
