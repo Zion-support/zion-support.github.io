@@ -45,6 +45,11 @@ import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
+// Import new content promotional banners
+import AI2025RevolutionaryTrendsBreakthroughBanner from '../components/AI2025RevolutionaryTrendsBreakthroughBanner';
+import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
+import AI2025GlobalTransformationBreakthroughBanner from '../components/AI2025GlobalTransformationBreakthroughBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -56,6 +61,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 REVOLUTIONARY TRENDS BREAKTHROUGH BANNER */}
+        <AI2025RevolutionaryTrendsBreakthroughBanner />
+        
+        {/* NEW AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+        <AI2026FuturePredictionsBreakthroughBanner />
+        
+        {/* NEW AI 2025 GLOBAL TRANSFORMATION BREAKTHROUGH BANNER */}
+        <AI2025GlobalTransformationBreakthroughBanner />
+        
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
