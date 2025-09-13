@@ -465,6 +465,9 @@ import LatestContentNavigation from '../components/LatestContentNavigation';
 import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
 
+// Import new AI 2025 Ultimate Breakthrough Revolution banner
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -506,6 +509,8 @@ export default function HomePage() {
         <NewContent2025PromotionBanner />
         
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
         {/* NEW PROMOTIONAL BANNERS */}
         <NewContent2025UltimateShowcasePromotionBanner />
         <AI2025RevolutionaryContentBanner />
