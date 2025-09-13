@@ -20,7 +20,7 @@
     "build:fallback": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" NEXT_DISABLE_SWC=1 next build",
     "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" NEXT_SWC_DISABLED=1 NEXT_MINIFY=terser next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint -- --fix || true",
