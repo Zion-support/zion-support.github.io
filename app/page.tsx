@@ -76,6 +76,11 @@ import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025Interac
 import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
 import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
 
+// Import new 2026 ultimate content components
+import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
+import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+
 // New AI 2025 Content Promotion Banner
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 // Import new promotional banners for 2025-2026
@@ -97,6 +102,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER */}
+        <NewContent2026UltimatePromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
+        <UltimateContentDiscoveryWidget2026 />
+        
+        {/* NEWSLETTER SIGNUP 2026 */}
+        <NewsletterSignup2026 />
+        
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
         
