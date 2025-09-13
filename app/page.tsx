@@ -229,6 +229,11 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 import AI2026BreakthroughAnnouncementBanner from '../components/AI2026BreakthroughAnnouncementBanner';
 
+// Import new content components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -256,6 +261,9 @@ export default function HomePage() {
         {/* NEW CONTENT SHOWCASE BANNER 2025 */}
         <NewContentShowcaseBanner2025 />
         
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
         {/* NEW CONTENT 2025 ULTIMATE PROMOTION BANNER */}
         <NewContent2025UltimatePromotionBanner />
         
@@ -264,6 +272,15 @@ export default function HomePage() {
         
         {/* ENHANCED CONTENT DISCOVERY WIDGET 2025 */}
         <EnhancedContentDiscoveryWidget2025 />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
         
         {/* NEW CONTENT SHOWCASE BANNER 2026 */}
         <NewContentShowcase2026Banner />
