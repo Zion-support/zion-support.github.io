@@ -146,6 +146,11 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
+// Import new 2026 content revolution banners
+import AI2026UltimateContentRevolutionBanner from '../components/AI2026UltimateContentRevolutionBanner';
+import QuantumComputingBreakthrough2026Banner from '../components/QuantumComputingBreakthrough2026Banner';
+import AIConsciousnessEvolution2026Banner from '../components/AIConsciousnessEvolution2026Banner';
+
 // Import new 2025 content showcase components
 import AI2025UltimateTechnologyShowcaseBanner from '../components/AI2025UltimateTechnologyShowcaseBanner';
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
@@ -201,6 +206,15 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* AI 2026 ULTIMATE CONTENT REVOLUTION BANNER */}
+        <AI2026UltimateContentRevolutionBanner />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH 2026 BANNER */}
+        <QuantumComputingBreakthrough2026Banner />
+        
+        {/* AI CONSCIOUSNESS EVOLUTION 2026 BANNER */}
+        <AIConsciousnessEvolution2026Banner />
         
         {/* AI 2025 ULTIMATE TECHNOLOGY SHOWCASE BANNER */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
