@@ -147,6 +147,7 @@ import RevolutionaryContentDiscoveryWidget2026 from '../components/Revolutionary
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
 // Import new 2025 content showcase components
+import AI2025UltimateTechnologyShowcaseBanner from '../components/AI2025UltimateTechnologyShowcaseBanner';
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
@@ -200,6 +201,11 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE TECHNOLOGY SHOWCASE BANNER */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <AI2025UltimateTechnologyShowcaseBanner />
+        </div>
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
