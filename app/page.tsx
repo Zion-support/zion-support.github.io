@@ -24,6 +24,9 @@ const InteractiveContentDiscoveryWidget = lazy(() => import('../components/Inter
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 
 export default function HomePage() {
   return (
@@ -41,6 +44,9 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 GLOBAL TRANSFORMATION 15000% ROI PROMOTION BANNER */}
         <AI2025GlobalTransformation15000ROIPromotionBanner />
+        
+        {/* NEW: REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <RevolutionaryContentPromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <Suspense fallback={<LoadingSpinner />}>
@@ -133,16 +139,21 @@ export default function HomePage() {
         {/* Enhanced Content Showcase 2026 */}
         <EnhancedContentShowcase2026 />
         
-        {/* Enhanced Search Section */}
+        {/* NEW: Interactive Content Showcase */}
+        <InteractiveContentShowcase />
+        
+        {/* Enhanced Search Section with Content Discovery Widget */}
         <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Find the Perfect AI Content for Your Needs
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Search through our comprehensive library of AI insights, case studies, and implementation guides
-            </p>
-            <EnhancedSearch2026 />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Find the Perfect AI Content for Your Needs
+              </h2>
+              <p className="text-xl text-gray-600">
+                Search through our comprehensive library of AI insights, case studies, and implementation guides
+              </p>
+            </div>
+            <ContentDiscoveryWidget />
           </div>
         </section>
         
