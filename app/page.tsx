@@ -99,6 +99,11 @@ import AI2026EnterpriseTransformationPromotionBanner from '../components/AI2026E
 import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
+// Import new promotional components for content advertising
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import SocialProofShowcase from '../components/SocialProofShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -142,6 +147,15 @@ export default function HomePage() {
         
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* REVOLUTIONARY CONTENT BANNER - NEW CONTENT ADVERTISING */}
+        <RevolutionaryContentBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscovery />
+        
+        {/* SOCIAL PROOF SHOWCASE */}
+        <SocialProofShowcase />
         
         {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER */}
         <NewContent2026UltimatePromotionBanner />
