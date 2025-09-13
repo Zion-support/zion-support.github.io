@@ -22,6 +22,8 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 
 export default function HomePage() {
   return (
@@ -36,6 +38,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
@@ -88,6 +93,13 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
         </Suspense>
+        
+        {/* AI 2025 CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AI2025ContentDiscoveryWidget />
+          </div>
+        </section>
         
         {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <section className="py-16 px-4 bg-gray-50">

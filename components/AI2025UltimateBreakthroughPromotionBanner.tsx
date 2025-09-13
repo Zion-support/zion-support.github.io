@@ -1,124 +1,134 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-const AI2025UltimateBreakthroughPromotionBanner: React.FC = () => {
+export default function AI2025UltimateBreakthroughPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const promotionalContent = [
+    {
+      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
+      subtitle: "Experience 2,500-5,000% ROI with Revolutionary AI Technologies",
+      cta: "Explore Breakthrough",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      bgGradient: "from-red-500 to-pink-500",
+      textColor: "text-white"
+    },
+    {
+      title: "⚛️ Quantum Computing Solutions",
+      subtitle: "10,000x Faster Processing with Quantum-Powered AI",
+      cta: "Discover Quantum AI",
+      link: "/quantum-computing-solutions",
+      bgGradient: "from-purple-500 to-indigo-500",
+      textColor: "text-white"
+    },
+    {
+      title: "🧠 Neural Interface Technology",
+      subtitle: "Direct Brain-Computer Interface for Enhanced Cognition",
+      cta: "Learn More",
+      link: "/neural-interface-solutions",
+      bgGradient: "from-cyan-500 to-teal-500",
+      textColor: "text-white"
+    },
+    {
+      title: "🤖 Autonomous Operations",
+      subtitle: "Self-Optimizing Business Systems with 99.9% Accuracy",
+      cta: "Start Automation",
+      link: "/automation-solutions",
+      bgGradient: "from-orange-500 to-red-500",
+      textColor: "text-white"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 overflow-hidden"
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-      <div className="absolute inset-0 opacity-30">
-        <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
-      </div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-black border-b border-gray-700">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-cyan-600/10 animate-pulse"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full mb-6"
-            >
-              🚀 NEW BREAKTHROUGH
-            </motion.div>
-            
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
-            >
-              AI 2025 Ultimate Breakthrough
-            </motion.h2>
-            
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
-            >
-              Revolutionary neural architectures and quantum-enhanced processing delivering unprecedented performance gains across all industries. Experience 10,000x faster processing with 99.9% accuracy.
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link
-                to="/ai-2025-ultimate-breakthrough"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-              >
-                Discover Breakthrough
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/20"
-              >
-                Get Early Access
-              </Link>
-            </motion.div>
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative"
-          >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Breakthrough Features</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">🧠</div>
-                  <div>
-                    <div className="text-white font-semibold">Neural Architecture Revolution</div>
-                    <div className="text-gray-300 text-sm">1000x processing power</div>
+      {/* Content */}
+      <div className="relative z-10 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Main content */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center space-x-4">
+                {/* Animated icon */}
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full flex items-center justify-center animate-spin">
+                    <span className="text-2xl">🚀</span>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">⚡</div>
-                  <div>
-                    <div className="text-white font-semibold">Quantum-Enhanced Processing</div>
-                    <div className="text-gray-300 text-sm">Exponential speed improvements</div>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">🤖</div>
-                  <div>
-                    <div className="text-white font-semibold">Autonomous Operations</div>
-                    <div className="text-gray-300 text-sm">24/7 independent operation</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-blue-400">10,000x</div>
-                  <div className="text-white text-sm">Faster</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-400">99.9%</div>
-                  <div className="text-white text-sm">Accuracy</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-purple-400">5,000%</div>
-                  <div className="text-white text-sm">ROI</div>
+                
+                {/* Text content */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg md:text-xl font-bold text-white truncate">
+                    {promotionalContent[currentSlide].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 truncate">
+                    {promotionalContent[currentSlide].subtitle}
+                  </p>
                 </div>
               </div>
             </div>
-          </motion.div>
+
+            {/* CTA Button */}
+            <div className="flex-shrink-0 ml-4">
+              <Link
+                href={promotionalContent[currentSlide].link}
+                className={`inline-flex items-center px-6 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 bg-gradient-to-r ${promotionalContent[currentSlide].bgGradient} ${promotionalContent[currentSlide].textColor} hover:shadow-lg`}
+              >
+                {promotionalContent[currentSlide].cta}
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Close button */}
+            <button
+              onClick={() => setIsVisible(false)}
+              className="flex-shrink-0 ml-4 text-gray-400 hover:text-white transition-colors"
+              aria-label="Close banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </motion.section>
-  );
-};
 
-export default AI2025UltimateBreakthroughPromotionBanner;
+      {/* Progress indicator */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
+        <div 
+          className="h-full bg-gradient-to-r from-yellow-400 to-red-500 transition-all duration-5000 ease-linear"
+          style={{ width: '100%' }}
+        />
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-2 right-4 flex space-x-1">
+        {promotionalContent.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-white' : 'bg-gray-500'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
