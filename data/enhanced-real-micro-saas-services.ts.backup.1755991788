@@ -627,10 +627,13 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     implementationDetails: 'Advanced quantum-secured IoT platform with ultra-low latency, massive scalability, and edge computing capabilities. Includes real-time processing and security monitoring.',
     launchDate: '2024-01-25',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     customers: 78,
     rating: 4.8,
     reviews: 39
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     customers: 89,
     rating: 4.6,
     reviews: 234
@@ -1247,7 +1250,10 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     customers: 95,
     rating: 4.9,
     reviews: 68
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-85fa
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

@@ -2,18 +2,24 @@
   "summary": {
     "totalChecks": 6,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     "passedChecks": 6,
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
     "timestamp": "2025-08-19T17:38:03.158Z"
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "passedChecks": 5,
     "failedChecks": 1,
     "criticalFailures": 0,
     "canBuild": true,
     "timestamp": "2025-08-19T17:47:07.698Z"
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "results": [
     {
@@ -37,12 +43,17 @@
     {
       "name": "Environment Variables",
 <<<<<<< HEAD
+      "status": "FAIL",
+      "error": "Missing environment variables: NODE_VERSION, NODE_OPTIONS",
+=======
+<<<<<<< HEAD
       "status": "PASS",
       "result": "Environment variables check completed",
 =======
       "status": "FAIL",
       "error": "Missing environment variables: NODE_VERSION, NODE_OPTIONS",
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       "critical": false
     },
     {
@@ -59,10 +70,16 @@
     }
   ],
 <<<<<<< HEAD
+  "recommendations": [
+    "Verify all required environment variables are set"
+  ]
+=======
+<<<<<<< HEAD
   "recommendations": []
 =======
   "recommendations": [
     "Verify all required environment variables are set"
   ]
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }

@@ -597,11 +597,14 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     },
     realImplementation: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     implementationDetails: 'Complete autonomous energy management system with AI optimization, IoT sensors, and comprehensive energy management tools. Includes regulatory compliance and real-time monitoring.',
     launchDate: '2024-02-15',
     customers: 89,
     rating: 4.5,
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Deployed in 200+ educational institutions worldwide, serving over 500,000 students with proven learning outcome improvements.',
     launchDate: '2024-01-10',
     customers: 234,
@@ -1065,7 +1068,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2024-01-30',
     customers: 89,
     rating: 4.9,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     reviews: 178
   }
 ];

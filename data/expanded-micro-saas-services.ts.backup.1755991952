@@ -3850,6 +3850,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'AI & Machine Learning',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['Generative AI', 'Computer Vision', 'Natural Language Processing', 'Creative AI'],
     integrations: ['Adobe Creative Suite', 'Canva', 'Figma', 'Social media platforms', 'CMS systems'],
     useCases: ['Marketing materials', 'Social media content', 'Brand assets', 'Creative projects'],
@@ -4091,6 +4093,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Carbon footprint tracking',
       'Regulatory compliance'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['3D Graphics', 'AR/VR', 'Computer Vision', '3D Modeling'],
     integrations: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
     useCases: ['Game development', 'Training simulations', 'Virtual tours', 'Product visualization'],
@@ -4549,12 +4552,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Performance monitoring',
       'Deployment tools',
       'Hardware acceleration'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d317
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '⚡',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/smart-energy-grid-ai',
     marketPosition: 'Leading smart grid AI platform with 150% annual growth',
@@ -4624,6 +4632,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Cross-platform support',
       'Monetization tools'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/edge-ai-inference',
     marketPosition: 'Advanced edge AI platform, competitive with NVIDIA TensorRT and Intel OpenVINO',
     targetAudience: 'IoT device manufacturers, edge computing companies, and AI deployment teams',
@@ -4907,12 +4916,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Performance optimization',
       'Compliance standards',
       'Integration APIs'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d317
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🌐',
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/metaverse-ai-platform',
     marketPosition: 'Leading metaverse AI platform with 250% annual growth',
@@ -5073,6 +5087,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$900M AI education market',
     growthRate: '150% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/quantum-network-security',
     marketPosition: 'Leading quantum network security platform, competitive with PQShield and ISARA',
     targetAudience: 'Government agencies, financial institutions, healthcare organizations, and critical infrastructure',
@@ -5123,7 +5138,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
     marketSize: '$28B global business intelligence market',
     growthRate: '30% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d317
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -5132,6 +5150,8 @@ export const serviceCategories = [
   'AI & Machine Learning',
   'Cloud & Infrastructure',
   'Cybersecurity',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Data Analytics & BI',
   'Cloud Infrastructure & DevOps',
@@ -5150,6 +5170,7 @@ export const serviceCategories = [
   'Education & Training',
   'Legal Technology'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Cybersecurity & Quantum',
   'Data & Analytics',
   'Business & Sales',
@@ -5177,7 +5198,10 @@ export const serviceCategories = [
   'AR/VR & Immersive Tech',
   'Quantum Computing',
   'Data & Privacy'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d317
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

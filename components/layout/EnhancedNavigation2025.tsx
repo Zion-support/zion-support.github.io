@@ -19,6 +19,19 @@ const navigationItems = [
     name: 'All Services',
     href: '/2025-innovative-services-showcase',
     icon: <Globe className="w-5 h-5" />,
+<<<<<<< HEAD
+    icon: <Rocket className="w-5 h-5" />,
+    icon: <Heart className="w-5 h-5" />,
+    icon: <Heart className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5" />,
+    icon: <Truck className="w-5 h-5" />,
+    icon: <DollarSign className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5" />,
+    icon: <Settings className="w-5 h-5" />,
+
+export default function EnhancedNavigation2025() {
+=======
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
@@ -375,6 +388,7 @@ export default function EnhancedNavigation2025() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -689,6 +703,8 @@ export default function EnhancedNavigation2025() {
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
+=======
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
@@ -696,3 +712,4 @@ export default function EnhancedNavigation2025() {
 };
 
 export default EnhancedNavigation2025;
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

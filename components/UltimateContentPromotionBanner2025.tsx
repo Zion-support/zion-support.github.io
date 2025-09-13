@@ -1,258 +1,308 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, 
-  ArrowRight, 
-  Zap, 
+  TrendingUp, 
   Brain, 
-  Rocket, 
-  Globe,
+  Zap, 
+  Target, 
+  Users, 
+  ArrowRight,
   X,
-  Play,
-  BookOpen,
-  Users,
-  TrendingUp,
-  Lightbulb
+  ChevronRight,
+  Award,
+  Rocket
 } from 'lucide-react';
 
-const UltimateContentPromotionBanner2025 = () => {
+interface ContentItem {
+  title: string;
+  description: string;
+  category: string;
+  url: string;
+  featured: boolean;
+  stats?: {
+    roi?: string;
+    impact?: string;
+    users?: string;
+  };
+}
+
+const UltimateContentPromotionBanner2025: React.FC = () => {
+  const [currentContent, setCurrentContent] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
 
-  const features = [
+  const featuredContent: ContentItem[] = [
     {
-      title: "AI Innovation Showcase",
-      description: "Explore cutting-edge AI technologies",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      title: "AI 2025: Ultimate Business Transformation Guide",
+      description: "Discover how AI is revolutionizing business operations with autonomous systems, neural consensus, and quantum-enhanced intelligence driving unprecedented growth.",
+      category: "AI Transformation",
+      url: "/blog/ai-2025-ultimate-business-transformation-complete-guide",
+      featured: true,
+      stats: {
+        roi: "300% ROI",
+        impact: "60% Cost Reduction",
+        users: "85% of Fortune 500"
+      }
     },
     {
-      title: "Success Stories",
-      description: "Real results from AI implementation",
-      icon: TrendingUp,
-      color: "from-green-500 to-emerald-500"
+      title: "Global Enterprise AI Success: $15B ROI Case Study",
+      description: "Learn how a Fortune 100 company achieved $15 billion ROI through comprehensive AI transformation in just 18 months.",
+      category: "Success Story",
+      url: "/case-studies/global-enterprise-ai-transformation-2025-15-billion-roi-success",
+      featured: true,
+      stats: {
+        roi: "$15B ROI",
+        impact: "45% Revenue Growth",
+        users: "200K+ Employees"
+      }
     },
     {
-      title: "Future Predictions",
-      description: "AI trends for 2025 and beyond",
-      icon: Lightbulb,
-      color: "from-blue-500 to-cyan-500"
+      title: "Neural Consensus Technology Revolution",
+      description: "Explore how distributed AI systems are reaching consensus across networks to drive breakthrough decision-making.",
+      category: "Innovation",
+      url: "/resources/neural-consensus-implementation-guide-2025",
+      featured: true,
+      stats: {
+        roi: "10x Faster Decisions",
+        impact: "99% Accuracy",
+        users: "1,000+ AI Agents"
+      }
     },
     {
-      title: "Interactive Tools",
-      description: "Hands-on AI demonstrations",
-      icon: Zap,
-      color: "from-orange-500 to-red-500"
+      title: "Quantum-Enhanced AI Solutions",
+      description: "Unlock exponential processing power with quantum computing amplified AI capabilities for superior business outcomes.",
+      category: "Quantum AI",
+      url: "/resources/quantum-ai-implementation-master-guide-2025",
+      featured: true,
+      stats: {
+        roi: "Exponential Speedup",
+        impact: "99.9% Accuracy",
+        users: "50-Qubit Systems"
+      }
     }
-  ];
-
-  const stats = [
-    { number: "500+", label: "AI Innovations" },
-    { number: "100+", label: "Success Stories" },
-    { number: "50+", label: "Interactive Tools" },
-    { number: "10K+", label: "Happy Users" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+
     return () => clearInterval(interval);
-  }, [features.length]);
+  }, []);
+
+  const currentItem = featuredContent[currentContent];
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+        exit={{ opacity: 0, y: -50 }}
+        className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden"
       >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-black/10">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6"
-              >
-                <Star className="w-4 h-4 mr-2" />
-                New Content Available
-              </motion.div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-white/10 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
 
-              <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl md:text-6xl font-bold mb-6"
-              >
-                Ultimate AI Content
-                <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                  Revolution 2025
-                </span>
-              </motion.h2>
+        <div className="relative z-10 container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsVisible(false)}
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-xl mb-8 opacity-90 leading-relaxed"
-              >
-                Discover the most comprehensive collection of AI innovations, success stories, and future predictions. 
-                Interactive tools, detailed case studies, and expert insights await you.
-              </motion.p>
+            {/* Main Content */}
+            <div className="flex-1 pr-8">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                  <Rocket className="w-4 h-4" />
+                  NEW CONTENT 2025
+                </div>
+                <div className="flex items-center gap-2 text-sm text-white/80">
+                  <TrendingUp className="w-4 h-4" />
+                  Trending Now
+                </div>
+              </div>
 
-              {/* Rotating Features */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="mb-8"
-              >
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentFeature}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex items-center space-x-4"
-                  >
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${features[currentFeature].color} flex items-center justify-center`}>
-                      <features[currentFeature].icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-lg font-semibold">{features[currentFeature].title}</div>
-                      <div className="text-sm opacity-80">{features[currentFeature].description}</div>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4"
-              >
-                <Link
-                  href="/ai-innovations"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center group"
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentContent}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <Play className="w-5 h-5 mr-2" />
-                  Explore Now
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-                <Link
-                  href="/ai-solutions"
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center"
-                >
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Learn More
-                </Link>
-              </motion.div>
+                  <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                    {currentItem.title}
+                  </h2>
+                  <p className="text-white/90 mb-4 text-lg leading-relaxed">
+                    {currentItem.description}
+                  </p>
+
+                  {/* Stats */}
+                  {currentItem.stats && (
+                    <div className="flex items-center gap-6 mb-4">
+                      {currentItem.stats.roi && (
+                        <div className="flex items-center gap-2">
+                          <Target className="w-5 h-5 text-green-400" />
+                          <span className="text-green-400 font-semibold">{currentItem.stats.roi}</span>
+                        </div>
+                      )}
+                      {currentItem.stats.impact && (
+                        <div className="flex items-center gap-2">
+                          <Zap className="w-5 h-5 text-yellow-400" />
+                          <span className="text-yellow-400 font-semibold">{currentItem.stats.impact}</span>
+                        </div>
+                      )}
+                      {currentItem.stats.users && (
+                        <div className="flex items-center gap-2">
+                          <Users className="w-5 h-5 text-blue-400" />
+                          <span className="text-blue-400 font-semibold">{currentItem.stats.users}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-4">
+                    <Link
+                      href={currentItem.url}
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                    >
+                      <Brain className="w-5 h-5" />
+                      Explore Now
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+
+                    <button
+                      onClick={() => setShowDetails(!showDetails)}
+                      className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                    >
+                      <span>View All Content</span>
+                      <ChevronRight className={`w-4 h-4 transition-transform ${showDetails ? 'rotate-90' : ''}`} />
+                    </button>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Content Indicators */}
+              <div className="flex items-center gap-2 mt-4">
+                {featuredContent.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentContent(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentContent 
+                        ? 'bg-white scale-125' 
+                        : 'bg-white/40 hover:bg-white/60'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
-            {/* Stats and Visual */}
-            <div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-3xl p-8"
-              >
-                <h3 className="text-2xl font-bold mb-6 text-center">Content Statistics</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  {stats.map((stat, index) => (
+            {/* Right Side Visual */}
+            <div className="hidden lg:block w-64 h-64 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-xl"></div>
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="w-32 h-32 border-2 border-white/20 rounded-full flex items-center justify-center"
+                >
+                  <motion.div
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="w-24 h-24 border-2 border-white/30 rounded-full flex items-center justify-center"
+                  >
                     <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                      className="text-center"
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="w-16 h-16 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full flex items-center justify-center"
                     >
-                      <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                      <div className="text-sm opacity-80">{stat.label}</div>
+                      <Award className="w-8 h-8 text-white" />
                     </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Floating Elements */}
-              <div className="relative mt-8">
-                <motion.div
-                  animate={{ 
-                    y: [0, -10, 0],
-                    rotate: [0, 5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center"
-                >
-                  <Rocket className="w-8 h-8 text-white" />
-                </motion.div>
-                
-                <motion.div
-                  animate={{ 
-                    y: [0, 10, 0],
-                    rotate: [0, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                  className="absolute top-8 right-0 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-xl flex items-center justify-center"
-                >
-                  <Globe className="w-6 h-6 text-white" />
-                </motion.div>
-                
-                <motion.div
-                  animate={{ 
-                    y: [0, -15, 0],
-                    rotate: [0, 10, 0]
-                  }}
-                  transition={{ 
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 2
-                  }}
-                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center"
-                >
-                  <Brain className="w-5 h-5 text-white" />
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Close Button */}
-        <button
-          onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300"
-        >
-          <X className="w-5 h-5 text-white" />
-        </button>
+          {/* Expanded Content List */}
+          <AnimatePresence>
+            {showDetails && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-6 pt-6 border-t border-white/20"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {featuredContent.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+                      onClick={() => {
+                        setCurrentContent(index);
+                        setShowDetails(false);
+                      }}
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <Star className="w-4 h-4 text-yellow-400" />
+                        <span className="text-sm font-semibold text-white/80">{item.category}</span>
+                      </div>
+                      <h3 className="text-white font-semibold mb-2 group-hover:text-white/90 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/70 text-sm mb-3 line-clamp-2">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center text-purple-300 text-sm group-hover:text-purple-200 transition-colors">
+                        <span>Read More</span>
+                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

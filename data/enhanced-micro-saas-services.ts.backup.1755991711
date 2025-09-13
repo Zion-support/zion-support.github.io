@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+export interface MicroSaasService {
+=======
+<<<<<<< HEAD
 export interface EnhancedMicroSaasService {
 =======
 export interface MicroSaasService {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-392e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +32,8 @@ export interface MicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   contactInfo: {
     mobile: string;
@@ -266,6 +272,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Regulatory compliance',
       'Scalable architecture'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 export const enhancedMicroSaasServices: MicroSaasService[] = [
@@ -466,12 +473,17 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Human handoff system',
       'Performance analytics',
       'Custom chatbot training'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-392e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🤖',
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/autonomous-systems',
     marketPosition: 'Comprehensive autonomous platform with 50% faster deployment',
@@ -620,6 +632,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/ai-customer-support',
     marketPosition: 'Competitive with Intercom ($39-99), Zendesk ($49-99), and Freshdesk ($15-79)',
     targetAudience: 'Customer service teams, e-commerce businesses, SaaS companies',
@@ -1107,11 +1120,16 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'VRTK'],
     marketSize: '$1.5B global market',
     growthRate: '35% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-392e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'quantum-machine-learning',
     name: 'Quantum Machine Learning',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tagline: 'Quantum-enhanced machine learning platform',
     price: '$799',
@@ -1181,6 +1199,7 @@ export const getEnhancedServicesByPriceRange = (min: number, max: number) => {
   });
 };
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'Quantum-enhanced AI & ML',
     price: '$399',
     period: '/month',
@@ -1241,4 +1260,7 @@ export function getServicesByPriceRange(min: number, max: number) {
     return price >= min && (max === Infinity || price <= max);
   });
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-392e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

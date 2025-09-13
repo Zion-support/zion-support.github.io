@@ -1,6 +1,8 @@
 {
   "summary": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 0,
@@ -26,6 +28,7 @@
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:36:05.933Z"
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T17:23:22.064Z"
@@ -40,5 +43,8 @@
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T17:50:49.337Z"
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }

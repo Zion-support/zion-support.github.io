@@ -2111,12 +2111,15 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     popular: true,
     icon: '⚖️',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     color: 'from-amber-500 to-orange-600',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/ai-legal-contracts',
     marketPosition: 'Leading AI legal tech solution with 95% accuracy in contract analysis',
     targetAudience: 'Law firms, corporate legal departments, contract managers, and legal professionals',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
@@ -2266,7 +2269,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     link: 'https://ziontechgroup.com/ai-climate-prediction',
     marketPosition: 'Advanced AI climate platform with 95% accuracy in extreme weather prediction',
     targetAudience: 'Government agencies, insurance companies, energy companies, and environmental organizations',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 14,
     setupTime: '3 hours',
     category: 'AI & Machine Learning',
@@ -3885,6 +3891,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     popular: true,
     icon: '🌐',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-network-security',
@@ -3894,6 +3902,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     setupTime: '2 weeks',
     category: 'Quantum Computing',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-violet-500 to-purple-600',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-metaverse',
@@ -3902,7 +3911,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     trialDays: 14,
     setupTime: '6 hours',
     category: 'AR/VR & Metaverse',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     realService: true,
     technology: ['Quantum Cryptography', 'Network Security', 'Post-Quantum Algorithms', 'Network Monitoring'],
     integrations: ['Firewalls', 'VPN solutions', 'Network monitoring tools', 'Security information systems'],
@@ -3941,6 +3953,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'AI & Machine Learning',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['Natural Language Processing', 'Speech Recognition', 'Conversational AI', 'Machine Learning'],
     integrations: ['Mobile apps', 'Web applications', 'IoT devices', 'Customer service platforms'],
     useCases: ['Customer service', 'Voice-enabled apps', 'Smart devices', 'Accessibility'],
@@ -3949,6 +3963,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
     growthRate: '45% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Quantum Computing', 'AI', 'IoT', 'Machine Learning', 'Smart Grid', 'Urban Analytics'],
     integrations: ['IoT sensors', 'Traffic systems', 'Energy grids', 'Public services', 'Citizen apps'],
     useCases: ['Traffic optimization', 'Energy management', 'Public safety', 'Environmental monitoring', 'Urban planning'],
@@ -4352,7 +4367,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Coursera', 'Udemy', 'Duolingo', 'Khan Academy'],
     marketSize: '$900M AI education market',
     growthRate: '150% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

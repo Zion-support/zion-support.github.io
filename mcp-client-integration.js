@@ -31,4 +31,8 @@ module.exports = MCPClientIntegration;
 if (require.main === module) {
   const client = new MCPClientIntegration();
   client.connect();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

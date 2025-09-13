@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -95,6 +97,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
     }
   };
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Sparkles, Atom, Brain, Rocket, Globe, Cpu, Database, Lock, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Code, BookOpen, Activity, Settings, Mail, Phone, MapPin } from 'lucide-react';
@@ -142,12 +145,17 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number; life: number }>>([]);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-de06
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   const config = variantConfigs[variant] || variantConfigs.quantum;
 
   // Enhanced particle system
   useEffect(() => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -457,6 +465,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
         />
       )}
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     if (isHovered && variant.includes('quantum')) {
       const newParticles = Array.from({ length: 20 }, (_, i) => ({
         id: i,
@@ -835,7 +844,10 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           />
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-de06
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     </motion.div>
   );
 };
