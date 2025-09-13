@@ -8,10 +8,6 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
 
 <<<<<<< HEAD
-# Crawl-delay
-Crawl-delay: 1
-=======
-<<<<<<< HEAD
 # Specific rules for major crawlers
 =======
 # Allow all crawlers
@@ -49,7 +45,6 @@ Allow: /
 User-agent: DuckDuckBot
 >>>>>>> origin/content/blog-sept12
 Allow: /
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -83,12 +78,6 @@ Sitemap: https://ziontechgroup.com/sitemap.json
 <<<<<<< HEAD
 # Allow important pages
 Allow: /
-<<<<<<< HEAD
-Allow: /about
-Allow: /contact
-Allow: /services
-Allow: /technologies
-=======
 Allow: /content-showcase
 Allow: /resources
 Allow: /blog/
@@ -104,4 +93,3 @@ Host: https://ziontechgroup.com
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d63f
 >>>>>>> origin/content/blog-sept12
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20

@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '@/data/comprehensiveServices';
+import { COMPREHENSIVE_SERVICES, PRICING_TIERS, CONTACT_INFO } from '@/data/comprehensiveServices';
+
+// Create service guarantees
+const SERVICE_GUARANTEES = [
+  "100% Satisfaction Guarantee",
+  "30-Day Money Back Guarantee",
+  "Free Revisions for 30 Days",
+  "24/7 Customer Support",
+  "Quality Assurance Guarantee"
+];
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -223,7 +232,7 @@ export default function ServiceDetailPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {SERVICE_PRICING_TIERS.map((tier) => (
+                    {PRICING_TIERS.map((tier) => (
                       <div 
                         key={tier.id}
                         className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${

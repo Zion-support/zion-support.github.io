@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "../components/ui/button";
-import Header from "../components/layout/Header";
+import { Header } from "../components/layout/Header";
 import { Badge } from "../components/ui/badge";
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag, User, Globe } from 'lucide-react';
 

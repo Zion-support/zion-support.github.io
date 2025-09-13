@@ -22,7 +22,36 @@ import {
   Award,
   Globe
 } from 'lucide-react';
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from "@/data/expandedServices";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
+
+// Create categories and subcategories from the services data
+const EXPANDED_SERVICE_CATEGORIES = [
+  { id: 'all', name: 'All Categories' },
+  { id: 'AI Development', name: 'AI Development' },
+  { id: 'Cloud Services', name: 'Cloud Services' },
+  { id: 'Cybersecurity', name: 'Cybersecurity' },
+  { id: 'Data Analytics', name: 'Data Analytics' },
+  { id: 'Digital Transformation', name: 'Digital Transformation' },
+  { id: 'Web Development', name: 'Web Development' },
+  { id: 'Mobile Development', name: 'Mobile Development' },
+  { id: 'IoT Solutions', name: 'IoT Solutions' },
+  { id: 'Blockchain', name: 'Blockchain' },
+  { id: 'Integration', name: 'Integration' }
+];
+
+const EXPANDED_SERVICE_SUBCATEGORIES = [
+  { id: 'all', name: 'All Subcategories' },
+  { id: 'Chatbots', name: 'Chatbots' },
+  { id: 'Predictive Analytics', name: 'Predictive Analytics' },
+  { id: 'Computer Vision', name: 'Computer Vision' },
+  { id: 'NLP', name: 'Natural Language Processing' },
+  { id: 'Infrastructure', name: 'Infrastructure' },
+  { id: 'Migration', name: 'Migration' },
+  { id: 'Security', name: 'Security' },
+  { id: 'Compliance', name: 'Compliance' },
+  { id: 'Data Visualization', name: 'Data Visualization' },
+  { id: 'Business Intelligence', name: 'Business Intelligence' }
+];
 
 export default function ExpandedServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');

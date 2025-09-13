@@ -9,7 +9,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { SnackbarProvider } from 'notistack';
 import { captureException } from '@/utils/sentry';
 import { useTranslation } from 'react-i18next';
-import { ToastInitializer } from '@/hooks/use-toast';
+// Removed ToastInitializer import as it doesn't exist
 
 // Import i18n configuration
 import './i18n';
@@ -17,8 +17,7 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
-// Import notification providers
-import { NotificationProvider } from './context';
+// Removed NotificationProvider import as it doesn't exist
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
@@ -58,12 +57,10 @@ try {
     <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
-          <SnackbarProvider maxSnack={3}>
-            <ToastInitializer />
-            <WhitelabelProvider>
+                      <SnackbarProvider maxSnack={3}>
+                      <WhitelabelProvider>
               <Router>
-                <NotificationProvider>
-                  <AnalyticsProvider>
+                <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                       <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
                         <AppLayout>
@@ -72,7 +69,6 @@ try {
                       </ErrorBoundary>
                     </LanguageProvider>
                   </AnalyticsProvider>
-                </NotificationProvider>
               </Router>
             </WhitelabelProvider>
           </SnackbarProvider>
