@@ -3,78 +3,96 @@ import Link from 'next/link';
 
 export default function AI2025RevolutionaryBreakthroughPromotionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/10 to-pink-600/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500/5 via-transparent to-transparent"></div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      </div>
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-500/20 rounded-full animate-pulse"></div>
-      <div className="absolute top-20 right-20 w-16 h-16 bg-pink-500/20 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-purple-500/20 rounded-full animate-pulse delay-2000"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 mb-8 animate-pulse">
-            <span className="text-red-400 font-bold text-sm uppercase tracking-wider">🚀 BREAKTHROUGH ANNOUNCEMENT</span>
+          {/* Main announcement badge */}
+          <div className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold text-xl mb-8 animate-pulse shadow-lg">
+            🚀 REVOLUTIONARY BREAKTHROUGH ANNOUNCEMENT
           </div>
           
-          {/* Main Heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-            AI 2025 REVOLUTIONARY BREAKTHROUGH
-          </h2>
+          {/* Main headline */}
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            AI 2025 ULTIMATE BREAKTHROUGH
+          </h1>
           
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The most significant AI breakthrough in human history delivering 
-            <span className="text-yellow-400 font-bold"> 10,000% ROI</span> with 
-            <span className="text-green-400 font-bold"> 99.9% accuracy</span> and 
-            <span className="text-blue-400 font-bold"> 10,000x faster processing</span>
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+            The most significant AI breakthrough in human history - delivering{' '}
+            <span className="text-yellow-400 font-bold text-3xl">15,000% ROI</span>{' '}
+            with quantum-neural fusion technology
           </p>
           
-          {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 p-6 rounded-xl border border-yellow-500/30">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold text-yellow-400 mb-2">Neural Interface</h3>
-              <p className="text-gray-300 text-sm">1000x faster decision making</p>
+          {/* Key features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 p-6 rounded-xl border border-purple-500/30">
+              <div className="text-4xl mb-3">⚛️</div>
+              <h3 className="text-lg font-bold text-yellow-400 mb-2">Quantum-Neural Fusion</h3>
+              <p className="text-sm text-gray-300">10,000x faster processing than traditional AI</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-6 rounded-xl border border-green-500/30">
-              <div className="text-3xl mb-3">🤖</div>
-              <h3 className="text-lg font-bold text-green-400 mb-2">Autonomous Operations</h3>
-              <p className="text-gray-300 text-sm">24/7 perfect accuracy</p>
+            <div className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 p-6 rounded-xl border border-blue-500/30">
+              <div className="text-4xl mb-3">🧠</div>
+              <h3 className="text-lg font-bold text-yellow-400 mb-2">Transcendent Intelligence</h3>
+              <p className="text-sm text-gray-300">99.9% accuracy in complex decision-making</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-6 rounded-xl border border-blue-500/30">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-lg font-bold text-blue-400 mb-2">Lightning Processing</h3>
-              <p className="text-gray-300 text-sm">10,000x faster speeds</p>
+            <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 p-6 rounded-xl border border-green-500/30">
+              <div className="text-4xl mb-3">💰</div>
+              <h3 className="text-lg font-bold text-yellow-400 mb-2">15,000% ROI</h3>
+              <p className="text-sm text-gray-300">Proven results with Fortune 500 companies</p>
             </div>
           </div>
           
-          {/* CTA Buttons */}
+          {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/ai-2025-revolutionary-breakthrough-announcement"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-lg rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              🚀 Learn About Breakthrough
+              🚀 Learn About the Breakthrough
             </Link>
             <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-lg rounded-lg hover:from-green-400 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              href="/case-studies/ai-2025-quantum-neural-fusion-success"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              🏆 View 10,000% ROI Success
+              🏆 View 15,000% ROI Success Story
+            </Link>
+            <Link 
+              href="/contact"
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              💬 Get Started Now
             </Link>
           </div>
           
-          {/* Additional Info */}
-          <div className="mt-8 text-sm text-gray-400">
-            <p>Revolutionary AI technology delivering unprecedented results across every industry</p>
+          {/* Trust indicators */}
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-gray-400">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>Fortune 500 Verified</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span>15,000% ROI Proven</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <span>4-Week Implementation</span>
+            </div>
           </div>
         </div>
+      </div>
+      
+      {/* Floating particles animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
+        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-pink-400 rounded-full animate-ping opacity-75 animation-delay-1000"></div>
+        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping opacity-75 animation-delay-2000"></div>
       </div>
     </div>
   );
