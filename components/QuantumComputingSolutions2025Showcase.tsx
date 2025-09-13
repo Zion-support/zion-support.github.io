@@ -1,377 +1,303 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Atom, Zap, Cpu, Target, TrendingUp, Users, Award, CheckCircle, Brain } from 'lucide-react';
+import { ArrowRight, Clock, Users, TrendingUp, Atom, Cpu, Zap, Brain, ChevronRight, Star } from 'lucide-react';
 
 const QuantumComputingSolutions2025Showcase: React.FC = () => {
-  const quantumSolutions = [
-    {
-      id: 1,
-      title: "Quantum Supremacy Achieved in Real-World Applications",
-      description: "First practical quantum computer solving complex optimization problems 100 million times faster than classical computers",
-      category: "Quantum Supremacy",
-      readTime: "12 min read",
-      views: "4.2M",
-      likes: "89K",
-      image: "/images/quantum-supremacy-2025.jpg",
-      tags: ["Quantum Supremacy", "Optimization", "Real-World", "2025"],
-      featured: true,
-      publishedDate: "2025-01-15",
-      author: "Dr. Quantum Chen",
-      authorRole: "Quantum Computing Director",
-      qubits: "1000+",
-      coherenceTime: "100ms",
-      errorRate: "0.01%"
-    },
-    {
-      id: 2,
-      title: "Error-Corrected Quantum Computers Deployed",
-      description: "Breakthrough in quantum error correction enabling fault-tolerant quantum computing for commercial applications",
-      category: "Error Correction",
-      readTime: "15 min read",
-      views: "3.8M",
-      likes: "76K",
-      image: "/images/error-corrected-quantum.jpg",
-      tags: ["Error Correction", "Fault Tolerance", "Commercial", "2025"],
-      featured: true,
-      publishedDate: "2025-01-14",
-      author: "Dr. Elena Quantum",
-      authorRole: "Quantum Error Correction Lead",
-      qubits: "500+",
-      coherenceTime: "200ms",
-      errorRate: "0.001%"
-    },
-    {
-      id: 3,
-      title: "Quantum Machine Learning Revolution",
-      description: "Quantum algorithms achieving exponential speedup in machine learning tasks, revolutionizing AI capabilities",
-      category: "Quantum ML",
-      readTime: "18 min read",
-      views: "5.1M",
-      likes: "112K",
-      image: "/images/quantum-ml-revolution.jpg",
-      tags: ["Quantum ML", "Exponential Speedup", "AI Revolution", "2025"],
-      featured: true,
-      publishedDate: "2025-01-13",
-      author: "Dr. Marcus Quantum",
-      authorRole: "Quantum AI Research Director",
-      qubits: "2000+",
-      coherenceTime: "150ms",
-      errorRate: "0.005%"
-    },
-    {
-      id: 4,
-      title: "Quantum Internet Infrastructure",
-      description: "First quantum internet network enabling secure quantum communication across global distances",
-      category: "Quantum Internet",
-      readTime: "14 min read",
-      views: "2.9M",
-      likes: "58K",
-      image: "/images/quantum-internet-2025.jpg",
-      tags: ["Quantum Internet", "Secure Communication", "Global Network", "2025"],
-      featured: false,
-      publishedDate: "2025-01-12",
-      author: "Dr. Sarah Quantum",
-      authorRole: "Quantum Networks Lead",
-      qubits: "100+",
-      coherenceTime: "50ms",
-      errorRate: "0.1%"
-    },
-    {
-      id: 5,
-      title: "Quantum Cryptography Breakthrough",
-      description: "Unbreakable quantum encryption protocols securing data transmission with perfect mathematical security",
-      category: "Quantum Security",
-      readTime: "11 min read",
-      views: "3.5M",
-      likes: "71K",
-      image: "/images/quantum-cryptography.jpg",
-      tags: ["Quantum Cryptography", "Unbreakable Security", "Data Protection", "2025"],
-      featured: false,
-      publishedDate: "2025-01-11",
-      author: "Dr. James Quantum",
-      authorRole: "Quantum Security Director",
-      qubits: "50+",
-      coherenceTime: "300ms",
-      errorRate: "0.0001%"
-    },
-    {
-      id: 6,
-      title: "Quantum Simulation of Complex Systems",
-      description: "Quantum computers simulating molecular and material systems with unprecedented accuracy and speed",
-      category: "Quantum Simulation",
-      readTime: "16 min read",
-      views: "2.7M",
-      likes: "63K",
-      image: "/images/quantum-simulation-2025.jpg",
-      tags: ["Quantum Simulation", "Molecular Systems", "Materials Science", "2025"],
-      featured: false,
-      publishedDate: "2025-01-10",
-      author: "Dr. Aisha Quantum",
-      authorRole: "Quantum Simulation Lead",
-      qubits: "1500+",
-      coherenceTime: "180ms",
-      errorRate: "0.02%"
-    }
+  const [activeTab, setActiveTab] = useState('solutions');
+
+  const contentData = {
+    solutions: [
+      {
+        id: 1,
+        title: "Quantum Machine Learning Platform 2025",
+        description: "Revolutionary quantum machine learning platform that leverages quantum computing to solve complex optimization problems 1000x faster than classical computers.",
+        category: "Quantum ML",
+        readTime: "18 min read",
+        views: "3.2M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Quantum ML", "Platform", "2025"],
+        features: ["1M+ Qubits", "99.9% Accuracy", "Real-time Processing"]
+      },
+      {
+        id: 2,
+        title: "Error-Corrected Quantum Computers",
+        description: "Breakthrough error-corrected quantum computers that maintain quantum coherence for practical applications, enabling reliable quantum computing at scale.",
+        category: "Quantum Hardware",
+        readTime: "22 min read",
+        views: "4.1M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Error Correction", "Hardware", "Reliability"],
+        features: ["Fault Tolerance", "Long Coherence", "Scalable"]
+      },
+      {
+        id: 3,
+        title: "Quantum Internet Infrastructure",
+        description: "Next-generation quantum internet infrastructure that enables secure quantum communication and distributed quantum computing across global networks.",
+        category: "Quantum Network",
+        readTime: "25 min read",
+        views: "2.8M",
+        trending: false,
+        image: "/api/placeholder/400/250",
+        tags: ["Quantum Internet", "Security", "Global"],
+        features: ["Quantum Encryption", "Global Network", "Ultra-Secure"]
+      },
+      {
+        id: 4,
+        title: "Quantum-AI Fusion Framework",
+        description: "Advanced quantum-AI fusion framework that combines quantum computing with artificial intelligence for unprecedented computational capabilities.",
+        category: "Quantum AI",
+        readTime: "20 min read",
+        views: "5.7M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Quantum AI", "Fusion", "Framework"],
+        features: ["Hybrid Computing", "AI Integration", "Advanced Algorithms"]
+      }
+    ],
+    applications: [
+      {
+        id: 1,
+        title: "Quantum Drug Discovery Platform",
+        description: "Revolutionary quantum platform for drug discovery that can simulate molecular interactions with unprecedented accuracy, accelerating pharmaceutical research.",
+        category: "Healthcare",
+        readTime: "16 min read",
+        views: "2.3M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Drug Discovery", "Healthcare", "Simulation"],
+        features: ["Molecular Simulation", "Drug Design", "Accelerated Research"]
+      },
+      {
+        id: 2,
+        title: "Quantum Financial Modeling",
+        description: "Advanced quantum financial modeling systems that can process complex financial data and market simulations with quantum speed and accuracy.",
+        category: "Finance",
+        readTime: "19 min read",
+        views: "3.9M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Finance", "Modeling", "Quantum"],
+        features: ["Risk Analysis", "Portfolio Optimization", "Real-time Trading"]
+      },
+      {
+        id: 3,
+        title: "Quantum Climate Simulation",
+        description: "Breakthrough quantum climate simulation systems that can model complex climate patterns and predict environmental changes with unprecedented detail.",
+        category: "Environment",
+        readTime: "21 min read",
+        views: "4.5M",
+        trending: false,
+        image: "/api/placeholder/400/250",
+        tags: ["Climate", "Simulation", "Environment"],
+        features: ["Climate Modeling", "Weather Prediction", "Environmental Analysis"]
+      },
+      {
+        id: 4,
+        title: "Quantum Cybersecurity Solutions",
+        description: "Ultra-secure quantum cybersecurity solutions that leverage quantum encryption and quantum key distribution for unbreakable security.",
+        category: "Security",
+        readTime: "17 min read",
+        views: "6.2M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Cybersecurity", "Encryption", "Security"],
+        features: ["Quantum Encryption", "Key Distribution", "Unbreakable Security"]
+      }
+    ],
+    technologies: [
+      {
+        id: 1,
+        title: "Quantum Supremacy Algorithms",
+        description: "Advanced quantum supremacy algorithms that demonstrate quantum advantage over classical computers in specific computational tasks.",
+        category: "Algorithms",
+        readTime: "23 min read",
+        views: "3.6M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Supremacy", "Algorithms", "Advantage"],
+        features: ["Quantum Advantage", "Optimization", "Speed"]
+      },
+      {
+        id: 2,
+        title: "Quantum Error Correction Codes",
+        description: "Revolutionary quantum error correction codes that protect quantum information from decoherence and noise, enabling reliable quantum computing.",
+        category: "Error Correction",
+        readTime: "26 min read",
+        views: "2.9M",
+        trending: false,
+        image: "/api/placeholder/400/250",
+        tags: ["Error Correction", "Codes", "Reliability"],
+        features: ["Fault Tolerance", "Noise Protection", "Stability"]
+      },
+      {
+        id: 3,
+        title: "Quantum Cloud Computing Platform",
+        description: "Scalable quantum cloud computing platform that provides access to quantum computing resources through cloud infrastructure.",
+        category: "Cloud Platform",
+        readTime: "15 min read",
+        views: "4.8M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Cloud", "Platform", "Scalable"],
+        features: ["Cloud Access", "Scalable Resources", "Global Availability"]
+      },
+      {
+        id: 4,
+        title: "Quantum Neural Networks",
+        description: "Breakthrough quantum neural networks that combine quantum computing with neural network architectures for enhanced AI capabilities.",
+        category: "Quantum AI",
+        readTime: "24 min read",
+        views: "5.1M",
+        trending: true,
+        image: "/api/placeholder/400/250",
+        tags: ["Neural Networks", "Quantum AI", "Hybrid"],
+        features: ["Quantum Neurons", "Enhanced Learning", "Hybrid Architecture"]
+      }
+    ]
+  };
+
+  const tabs = [
+    { id: 'solutions', label: 'Solutions', icon: Atom },
+    { id: 'applications', label: 'Applications', icon: Cpu },
+    { id: 'technologies', label: 'Technologies', icon: Zap }
   ];
 
-  const quantumStats = [
-    { label: "Quantum Qubits", value: "10,000+", icon: Atom },
-    { label: "Coherence Time", value: "500ms", icon: Zap },
-    { label: "Error Rate", value: "0.001%", icon: Target },
-    { label: "Global Impact", value: "5.2B+", icon: Users }
-  ];
-
-  const quantumCapabilities = [
-    {
-      title: "Exponential Speedup",
-      description: "Quantum algorithms solving problems exponentially faster than classical computers",
-      icon: Zap,
-      benefit: "1000x faster"
-    },
-    {
-      title: "Perfect Security",
-      description: "Quantum cryptography providing mathematically unbreakable encryption",
-      icon: CheckCircle,
-      benefit: "100% secure"
-    },
-    {
-      title: "Complex Simulation",
-      description: "Simulating quantum systems impossible for classical computers",
-      icon: Brain,
-      benefit: "Unlimited scale"
-    },
-    {
-      title: "Optimization Mastery",
-      description: "Solving complex optimization problems in seconds instead of years",
-      icon: Target,
-      benefit: "Real-time solutions"
-    }
-  ];
+  const currentContent = contentData[activeTab as keyof typeof contentData];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold mb-6">
-            <Atom className="w-4 h-4 mr-2" />
-            Quantum Computing Solutions 2025
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Quantum Computing Revolution
+            Quantum Computing Solutions 2025
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the future of computing with quantum solutions that deliver exponential speedup, 
-            perfect security, and unprecedented computational power for the most complex problems.
+            Discover the most advanced quantum computing solutions, applications, and technologies 
+            that will revolutionize computation in 2025 and beyond.
           </p>
         </div>
 
-        {/* Quantum Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {quantumStats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
-                <stat.icon className="w-6 h-6 text-white" />
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <Icon className="w-5 h-5 mr-2" />
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {currentContent.map((item) => (
+            <div key={item.id} className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden hover:transform hover:scale-105">
+              <div className="relative">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
+                {item.trending && (
+                  <div className="absolute top-4 left-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
+                    <Star className="w-4 h-4 mr-1" />
+                    Trending
+                  </div>
+                )}
+                <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                  {item.category}
+                </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+                
+                {/* Features */}
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {item.features.map((feature, index) => (
+                      <span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.map((tag, index) => (
+                    <span key={index} className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {item.readTime}
+                  </div>
+                  <div className="flex items-center">
+                    <Users className="w-4 h-4 mr-1" />
+                    {item.views} views
+                  </div>
+                </div>
+                
+                <Link 
+                  to={`/quantum-solutions/${item.id}`}
+                  className="group/link inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                >
+                  Explore Solution
+                  <ChevronRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Quantum Capabilities */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Quantum Computing Capabilities
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 border border-cyan-400/30">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Ready for Quantum Revolution?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quantumCapabilities.map((capability, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
-                  <capability.icon className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">{capability.title}</h4>
-                <p className="text-gray-300 text-sm mb-3">{capability.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{capability.benefit}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Featured Quantum Solutions */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
-            <Award className="w-6 h-6 mr-3 text-yellow-400" />
-            Featured Quantum Solutions
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumSolutions.filter(item => item.featured).map((item) => (
-              <div key={item.id} className="group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="relative">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                      {item.category}
-                    </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <div className="flex items-center space-x-2 text-white text-sm">
-                      <TrendingUp className="w-4 h-4" />
-                      <span>{item.views}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-gray-400">{item.readTime}</span>
-                    <div className="flex items-center space-x-1 text-yellow-400">
-                      <span className="text-sm font-semibold">{item.likes}</span>
-                      <span className="text-sm">likes</span>
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {item.description}
-                  </p>
-                  
-                  {/* Quantum Specs */}
-                  <div className="grid grid-cols-3 gap-2 mb-4 p-3 bg-white/5 rounded-lg">
-                    <div className="text-center">
-                      <div className="text-cyan-400 font-bold text-sm">{item.qubits}</div>
-                      <div className="text-gray-400 text-xs">Qubits</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-purple-400 font-bold text-sm">{item.coherenceTime}</div>
-                      <div className="text-gray-400 text-xs">Coherence</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-green-400 font-bold text-sm">{item.errorRate}</div>
-                      <div className="text-gray-400 text-xs">Error Rate</div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.map((tag, index) => (
-                      <span key={index} className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">
-                          {item.author.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="text-white text-sm font-semibold">{item.author}</div>
-                        <div className="text-gray-400 text-xs">{item.authorRole}</div>
-                      </div>
-                    </div>
-                    <Link 
-                      to={`/quantum-solutions/${item.id}`}
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                    >
-                      Explore
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* All Quantum Solutions */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
-            <Cpu className="w-6 h-6 mr-3 text-cyan-400" />
-            All Quantum Solutions
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quantumSolutions.map((item) => (
-              <div key={item.id} className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="relative">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-40 object-cover"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                      {item.category}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-400">{item.readTime}</span>
-                    <div className="flex items-center space-x-1 text-yellow-400">
-                      <span className="text-sm font-semibold">{item.likes}</span>
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-300 mb-3 line-clamp-2 text-sm">
-                    {item.description}
-                  </p>
-                  
-                  {/* Mini Quantum Specs */}
-                  <div className="flex justify-between text-xs text-gray-400 mb-3">
-                    <span>Qubits: {item.qubits}</span>
-                    <span>Error: {item.errorRate}</span>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-gray-400 text-xs">
-                      {item.publishedDate} • {item.author}
-                    </div>
-                    <Link 
-                      to={`/quantum-solutions/${item.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors"
-                    >
-                      Explore
-                      <ArrowRight className="w-3 h-3 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Experience Quantum Computing Today
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join the quantum revolution and discover how quantum computing can transform 
-              your business with exponential speedup and perfect security.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/quantum-computing"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Explore Quantum Solutions
-              </Link>
-              <Link 
-                to="/quantum-demo"
-                className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Try Quantum Demo
-              </Link>
-            </div>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the quantum computing revolution. Get early access to our quantum solutions 
+            and be part of the future of computation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/quantum-computing-solutions-2025"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              <Atom className="w-6 h-6 mr-2" />
+              Explore All Solutions
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link 
+              to="/quantum-demo"
+              className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10"
+            >
+              <Brain className="w-6 h-6 mr-2" />
+              Request Demo
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </div>
