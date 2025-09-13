@@ -1,78 +1,151 @@
-import React from 'react';
-import { Search, Globe, Target, BarChart3 } from 'lucide-react';
+'use client';
 
-const SEOEnhancer = () => {
-  const seoFeatures = [
-    {
-      icon: Search,
-      title: "Advanced Keyword Optimization",
-      description: "Strategic keyword placement and density optimization",
-      impact: "High"
-    },
-    {
-      icon: Globe,
-      title: "Meta Tags & Schema",
-      description: "Comprehensive meta tags and structured data markup",
-      impact: "High"
-    },
-    {
-      icon: Target,
-      title: "Content Optimization",
-      description: "SEO-optimized content structure and readability",
-      impact: "Medium"
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics Integration",
-      description: "Advanced tracking and performance monitoring",
-      impact: "Medium"
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+
+interface SEOEnhancerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+  keywords = "AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  canonicalUrl = "https://zion.app",
+  ogImage = "https://zion.app/images/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
+}) => {
+  useEffect(() => {
+    // Update page title
+    if (title) {
+      document.title = title;
     }
-  ];
 
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-medium mb-6">
-            <Search className="w-4 h-4 mr-2" />
-            Advanced SEO Optimization
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Dominate Search
-            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> Rankings</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our comprehensive SEO strategy ensures maximum visibility and organic traffic growth
-          </p>
-        </div>
+    // Add or update meta tags
+    const updateMetaTag = (name: string, content: string, property?: boolean) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector) as HTMLMetaElement;
+      
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seoFeatures.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                  feature.impact === 'High' ? 'bg-red-500' : 'bg-yellow-500'
-                } text-white`}>
-                  {feature.impact} Impact
-                </span>
-              </div>
-              
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {feature.title}
-              </h3>
-              
-              <p className="text-gray-300 text-sm">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+    // Basic meta tags
+    updateMetaTag('description', description);
+    updateMetaTag('keywords', keywords);
+    updateMetaTag('author', 'Zion Tech Group');
+    updateMetaTag('robots', 'index, follow');
+    updateMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+    updateMetaTag('theme-color', '#1e40af');
+
+    // Open Graph tags
+    updateMetaTag('og:title', title, true);
+    updateMetaTag('og:description', description, true);
+    updateMetaTag('og:url', canonicalUrl, true);
+    updateMetaTag('og:image', ogImage, true);
+    updateMetaTag('og:type', ogType, true);
+    updateMetaTag('og:site_name', 'Zion Tech Group', true);
+
+    // Twitter Card tags
+    updateMetaTag('twitter:card', twitterCard);
+    updateMetaTag('twitter:title', title);
+    updateMetaTag('twitter:description', description);
+    updateMetaTag('twitter:image', ogImage);
+
+    // Additional SEO tags
+    updateMetaTag('language', 'en');
+    updateMetaTag('revisit-after', '7 days');
+    updateMetaTag('distribution', 'global');
+    updateMetaTag('rating', 'general');
+
+    // Canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+
+    // Add breadcrumb structured data
+    const breadcrumbStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zion.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Solutions",
+          "item": "https://zion.app/ai-solutions"
+        }
+      ]
+    };
+
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbStructuredData);
+    document.head.appendChild(breadcrumbScript);
+
+    // Add organization structured data
+    const organizationStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://zion.app",
+      "logo": "https://zion.app/images/logo.png",
+      "description": description,
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/zion-tech-group",
+        "https://github.com/zion-tech-group"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      }
+    };
+
+    const organizationScript = document.createElement('script');
+    organizationScript.type = 'application/ld+json';
+    organizationScript.textContent = JSON.stringify(organizationStructuredData);
+    document.head.appendChild(organizationScript);
+
+  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData]);
+
+  return null; // This component doesn't render anything visible
 };
 
 export default SEOEnhancer;
