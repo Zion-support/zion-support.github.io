@@ -3,202 +3,292 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2025 Ultimate Implementation Toolkit - Complete Guide',
-  description: 'Get the complete AI 2025 implementation toolkit with step-by-step guides, templates, checklists, and real-world examples. Transform your business with proven strategies.',
-  keywords: ['AI implementation', 'AI toolkit', 'business transformation', 'AI guide', 'implementation checklist', 'AI templates'],
+  title: 'AI 2025 Ultimate Implementation Toolkit - 47 Essential Resources',
+  description: 'Complete AI implementation toolkit with 47 essential resources, templates, guides, and tools. Everything you need for successful AI transformation in 2025.',
+  keywords: ['AI toolkit', 'implementation guide', 'AI resources', 'AI templates', 'AI transformation', 'AI 2025'],
   openGraph: {
-    title: 'AI 2025 Ultimate Implementation Toolkit',
-    description: 'Complete guide to implementing AI in your business with proven strategies',
+    title: 'AI 2025 Ultimate Implementation Toolkit - 47 Essential Resources',
+    description: 'Complete AI implementation toolkit with 47 essential resources for successful transformation.',
     type: 'article',
   },
 };
 
-export default function AI2025UltimateToolkitPage() {
+export default function UltimateImplementationToolkit() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-        <div className="relative max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
-            🛠️ ESSENTIAL TOOLKIT
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI 2025 Ultimate Implementation Toolkit
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Everything you need to successfully implement AI in your business. 
-            Step-by-step guides, templates, checklists, and real-world examples 
-            from successful transformations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#download"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg shadow-lg"
-            >
-              Download Toolkit
-            </Link>
-            <Link
-              href="#preview"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 text-lg"
-            >
-              Preview Contents
-            </Link>
+      <section className="relative py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🛠️ ESSENTIAL TOOLKIT</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI 2025 Ultimate Implementation Toolkit
+            </h1>
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
+              Everything you need for successful AI transformation. <span className="font-bold text-yellow-300">47 essential resources</span> including 
+              templates, guides, checklists, and tools to accelerate your AI journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#toolkit-overview"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+              >
+                📋 View All Resources
+              </Link>
+              <Link
+                href="#download"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+              >
+                📥 Download Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* What's Included */}
-      <section id="preview" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            What's Included
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Toolkit Overview */}
+      <section id="toolkit-overview" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Complete Toolkit Overview
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive collection of resources designed to accelerate your AI implementation success.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl">
+              <div className="text-4xl mb-4">📚</div>
+              <h3 className="text-xl font-semibold mb-3">47 Resources</h3>
+              <p className="text-gray-600">
+                Comprehensive collection of guides, templates, and tools
+              </p>
+            </div>
             
-            {/* Guide 1 */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-6xl mb-6">📋</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Implementation Checklist</h3>
-              <p className="text-gray-300 mb-6">
-                Complete 150-point checklist covering every aspect of AI implementation, 
-                from initial assessment to full deployment.
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-teal-50 rounded-xl">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-semibold mb-3">Ready to Use</h3>
+              <p className="text-gray-600">
+                Pre-built templates and frameworks for immediate implementation
               </p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Pre-implementation assessment</li>
-                <li>• Technology selection criteria</li>
-                <li>• Team preparation guidelines</li>
-                <li>• Risk mitigation strategies</li>
-                <li>• Success metrics definition</li>
+            </div>
+            
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold mb-3">Proven Results</h3>
+              <p className="text-gray-600">
+                Tested methodologies with real-world success stories
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Categories */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Resource Categories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Organized by implementation phase and function for easy navigation.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Planning & Strategy */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">📋</div>
+              <h3 className="text-2xl font-semibold mb-4">Planning & Strategy</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• AI Strategy Framework</li>
+                <li>• ROI Calculator Template</li>
+                <li>• Business Case Template</li>
+                <li>• Risk Assessment Checklist</li>
+                <li>• Stakeholder Analysis Guide</li>
+                <li>• Implementation Roadmap</li>
+                <li>• Budget Planning Template</li>
+                <li>• Success Metrics Framework</li>
               </ul>
             </div>
-
-            {/* Guide 2 */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-6xl mb-6">📊</div>
-              <h3 className="text-2xl font-bold text-white mb-4">ROI Calculator</h3>
-              <p className="text-gray-300 mb-6">
-                Interactive Excel-based calculator to estimate your potential ROI 
-                and justify AI investment to stakeholders.
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Cost-benefit analysis templates</li>
-                <li>• ROI projection models</li>
-                <li>• Break-even calculations</li>
-                <li>• Risk-adjusted scenarios</li>
-                <li>• Executive presentation templates</li>
+            
+            {/* Technical Implementation */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">⚙️</div>
+              <h3 className="text-2xl font-semibold mb-4">Technical Implementation</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• AI Architecture Templates</li>
+                <li>• Data Pipeline Design Guide</li>
+                <li>• Model Selection Framework</li>
+                <li>• Integration Checklist</li>
+                <li>• Testing Protocols</li>
+                <li>• Performance Monitoring Setup</li>
+                <li>• Security Implementation Guide</li>
+                <li>• Deployment Checklist</li>
               </ul>
             </div>
-
-            {/* Guide 3 */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-6xl mb-6">🏗️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Architecture Templates</h3>
-              <p className="text-gray-300 mb-6">
-                Pre-built architecture templates for common AI use cases, 
-                ready to customize for your specific needs.
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Microservices architecture</li>
-                <li>• Data pipeline templates</li>
-                <li>• API integration patterns</li>
-                <li>• Security frameworks</li>
-                <li>• Scalability blueprints</li>
+            
+            {/* Change Management */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">👥</div>
+              <h3 className="text-2xl font-semibold mb-4">Change Management</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Change Management Plan</li>
+                <li>• Training Curriculum</li>
+                <li>• Communication Templates</li>
+                <li>• Resistance Management Guide</li>
+                <li>• Team Building Activities</li>
+                <li>• Leadership Engagement Kit</li>
+                <li>• Feedback Collection Forms</li>
+                <li>• Success Celebration Guide</li>
               </ul>
             </div>
-
-            {/* Guide 4 */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-6xl mb-6">👥</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Team Training Guide</h3>
-              <p className="text-gray-300 mb-6">
-                Comprehensive training materials to upskill your team 
-                and ensure successful AI adoption.
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• AI fundamentals training</li>
-                <li>• Tool-specific tutorials</li>
-                <li>• Change management strategies</li>
-                <li>• Best practices documentation</li>
-                <li>• Certification pathways</li>
+            
+            {/* Operations & Maintenance */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="text-2xl font-semibold mb-4">Operations & Maintenance</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Operations Playbook</li>
+                <li>• Monitoring Dashboard Templates</li>
+                <li>• Incident Response Procedures</li>
+                <li>• Performance Optimization Guide</li>
+                <li>• Maintenance Schedules</li>
+                <li>• Backup & Recovery Plans</li>
+                <li>• Documentation Templates</li>
+                <li>• Continuous Improvement Framework</li>
               </ul>
             </div>
-
-            {/* Guide 5 */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-6xl mb-6">📈</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Success Metrics Dashboard</h3>
-              <p className="text-gray-300 mb-6">
-                Pre-configured dashboards to track implementation progress 
-                and measure success across all key metrics.
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• KPI tracking templates</li>
-                <li>• Performance monitoring tools</li>
-                <li>• Progress reporting formats</li>
-                <li>• Executive summary templates</li>
-                <li>• Trend analysis frameworks</li>
+            
+            {/* Industry-Specific Guides */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🏭</div>
+              <h3 className="text-2xl font-semibold mb-4">Industry-Specific Guides</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Manufacturing AI Guide</li>
+                <li>• Financial Services Toolkit</li>
+                <li>• Healthcare Implementation</li>
+                <li>• Retail Transformation</li>
+                <li>• Supply Chain Optimization</li>
+                <li>• Customer Service AI</li>
+                <li>• Marketing Automation</li>
+                <li>• HR & Talent Management</li>
               </ul>
             </div>
-
-            {/* Guide 6 */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="text-6xl mb-6">🔧</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Troubleshooting Guide</h3>
-              <p className="text-gray-300 mb-6">
-                Common issues and solutions based on real-world implementations, 
-                helping you avoid costly mistakes.
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Common implementation pitfalls</li>
-                <li>• Performance optimization tips</li>
-                <li>• Integration challenges</li>
-                <li>• User adoption strategies</li>
-                <li>• Maintenance best practices</li>
+            
+            {/* Tools & Calculators */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🧮</div>
+              <h3 className="text-2xl font-semibold mb-4">Tools & Calculators</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• ROI Calculator</li>
+                <li>• Readiness Assessment</li>
+                <li>• Cost-Benefit Analyzer</li>
+                <li>• Timeline Estimator</li>
+                <li>• Resource Planner</li>
+                <li>• Risk Evaluator</li>
+                <li>• Performance Predictor</li>
+                <li>• Success Probability Calculator</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Real-World Success Stories
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-              <div className="text-4xl mb-4">🏢</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Fortune 500 Manufacturing</h3>
-              <p className="text-gray-300 mb-6">
-                Used this toolkit to achieve 2,500% ROI in 18 months through 
-                comprehensive AI transformation.
+      {/* Featured Resources */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Resources
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Most popular and impactful resources from our toolkit.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl">
+              <div className="text-3xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold mb-3">AI ROI Calculator</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced calculator to estimate ROI, costs, and benefits of AI implementation.
               </p>
-              <div className="bg-green-500/20 border border-green-500/50 rounded-lg p-4">
-                <div className="text-green-400 font-semibold mb-2">Results:</div>
-                <ul className="text-white space-y-1 text-sm">
-                  <li>• $62.5M in cost savings</li>
-                  <li>• 95% error reduction</li>
-                  <li>• 90% process automation</li>
-                </ul>
+              <div className="text-sm text-gray-500">
+                <div>• Customizable parameters</div>
+                <div>• Industry-specific templates</div>
+                <div>• Real-time calculations</div>
               </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-              <div className="text-4xl mb-4">🏪</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Global Retail Chain</h3>
-              <p className="text-gray-300 mb-6">
-                Implemented AI-powered inventory management using our templates, 
-                achieving 600% ROI in 12 months.
+            
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-xl">
+              <div className="text-3xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold mb-3">Implementation Roadmap</h3>
+              <p className="text-gray-600 mb-4">
+                Step-by-step roadmap with timelines, milestones, and success criteria.
               </p>
-              <div className="bg-blue-500/20 border border-blue-500/50 rounded-lg p-4">
-                <div className="text-blue-400 font-semibold mb-2">Results:</div>
-                <ul className="text-white space-y-1 text-sm">
-                  <li>• 40% inventory reduction</li>
-                  <li>• 80% stockout prevention</li>
-                  <li>• 25% revenue increase</li>
-                </ul>
+              <div className="text-sm text-gray-500">
+                <div>• 18-month timeline</div>
+                <div>• Phase-by-phase breakdown</div>
+                <div>• Milestone tracking</div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl">
+              <div className="text-3xl mb-4">📋</div>
+              <h3 className="text-xl font-semibold mb-3">Business Case Template</h3>
+              <p className="text-gray-600 mb-4">
+                Professional template for creating compelling AI business cases.
+              </p>
+              <div className="text-sm text-gray-500">
+                <div>• Executive summary format</div>
+                <div>• Financial projections</div>
+                <div>• Risk analysis framework</div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+              <div className="text-3xl mb-4">⚙️</div>
+              <h3 className="text-xl font-semibold mb-3">Technical Architecture Guide</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive guide for designing scalable AI architectures.
+              </p>
+              <div className="text-sm text-gray-500">
+                <div>• Cloud vs on-premise</div>
+                <div>• Security considerations</div>
+                <div>• Scalability patterns</div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-6 rounded-xl">
+              <div className="text-3xl mb-4">👥</div>
+              <h3 className="text-xl font-semibold mb-3">Change Management Kit</h3>
+              <p className="text-gray-600 mb-4">
+                Complete toolkit for managing organizational change during AI implementation.
+              </p>
+              <div className="text-sm text-gray-500">
+                <div>• Communication templates</div>
+                <div>• Training materials</div>
+                <div>• Resistance management</div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl">
+              <div className="text-3xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold mb-3">Success Metrics Dashboard</h3>
+              <p className="text-gray-600 mb-4">
+                Ready-to-use dashboard templates for tracking AI implementation success.
+              </p>
+              <div className="text-sm text-gray-500">
+                <div>• KPI tracking</div>
+                <div>• Visual reporting</div>
+                <div>• Automated alerts</div>
               </div>
             </div>
           </div>
@@ -206,102 +296,47 @@ export default function AI2025UltimateToolkitPage() {
       </section>
 
       {/* Download Section */}
-      <section id="download" className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Get Your Free Toolkit
+      <section id="download" className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Download Your Toolkit Today
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Download the complete AI 2025 Implementation Toolkit and start 
-            transforming your business today.
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Get instant access to all 47 resources and start your AI transformation journey immediately.
           </p>
           
-          {/* Download Form */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 max-w-2xl mx-auto">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-              <input
-                type="text"
-                placeholder="Company Name"
-                className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-              <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
-                <option value="" className="text-gray-900">Company Size</option>
-                <option value="startup" className="text-gray-900">Startup (1-10 employees)</option>
-                <option value="small" className="text-gray-900">Small (11-50 employees)</option>
-                <option value="medium" className="text-gray-900">Medium (51-200 employees)</option>
-                <option value="large" className="text-gray-900">Large (200+ employees)</option>
-              </select>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg shadow-lg"
-              >
-                Download Free Toolkit
-              </button>
-            </form>
-            <p className="text-gray-300 text-sm mt-4">
-              By downloading, you agree to receive our newsletter with AI insights and updates.
-            </p>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl max-w-2xl mx-auto mb-8">
+            <h3 className="text-2xl font-semibold mb-4">What's Included:</h3>
+            <div className="grid grid-cols-2 gap-4 text-left">
+              <div>✓ 47 Essential Resources</div>
+              <div>✓ Ready-to-Use Templates</div>
+              <div>✓ Implementation Guides</div>
+              <div>✓ Industry-Specific Tools</div>
+              <div>✓ ROI Calculators</div>
+              <div>✓ Change Management Kit</div>
+              <div>✓ Technical Architecture</div>
+              <div>✓ Success Metrics</div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Additional Resources
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/webinars/ai-2025-implementation-webinar" className="group">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/15 transition-all duration-300 border border-white/20">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔥</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Live Webinar</h3>
-                <p className="text-purple-100 mb-4">Join our expert-led implementation webinar</p>
-                <div className="text-white group-hover:text-purple-200 font-semibold">
-                  Register Now →
-                </div>
-              </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              Get Free Access
             </Link>
-
-            <Link href="/contact" className="group">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/15 transition-all duration-300 border border-white/20">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💬</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Free Consultation</h3>
-                <p className="text-purple-100 mb-4">Get personalized implementation advice</p>
-                <div className="text-white group-hover:text-purple-200 font-semibold">
-                  Schedule Call →
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/case-studies" className="group">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/15 transition-all duration-300 border border-white/20">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
-                <h3 className="text-xl font-semibold text-white mb-2">More Case Studies</h3>
-                <p className="text-purple-100 mb-4">Explore more success stories</p>
-                <div className="text-white group-hover:text-purple-200 font-semibold">
-                  View All →
-                </div>
-              </div>
+            <Link
+              href="/webinars/ai-2025-implementation-masterclass"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+            >
+              Join Masterclass
             </Link>
           </div>
+          
+          <p className="text-sm mt-6 opacity-75">
+            No credit card required • Instant download • Lifetime access
+          </p>
         </div>
       </section>
     </div>

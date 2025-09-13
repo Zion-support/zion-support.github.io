@@ -132,6 +132,7 @@ import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026Quantu
 // Import new Edge AI promotional components
 import EdgeAIRevolutionPromotionBanner from '../src/components/EdgeAIRevolutionPromotionBanner';
 import NewContentShowcaseBanner2025 from '../src/components/NewContentShowcaseBanner2025';
+import NewContent2025RevolutionaryShowcaseBanner from '../components/NewContent2025RevolutionaryShowcaseBanner';
 
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
@@ -178,6 +179,7 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 // Import new content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContent2025RevolutionaryShowcaseBanner from '../components/NewContent2025RevolutionaryShowcaseBanner';
 
 export default function HomePage() {
   return (
@@ -190,6 +192,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* ULTIMATE BREAKTHROUGH 2025 PROMOTION BANNER - FEATURED */}
         <UltimateBreakthrough2025PromotionBanner />
         
@@ -198,6 +201,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT SHOWCASE BANNER 2025 */}
         <NewContentShowcaseBanner2025 />
+        
+        {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
+        <NewContent2025RevolutionaryShowcaseBanner />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
