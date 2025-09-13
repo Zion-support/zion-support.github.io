@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Users,
-  Award,
 import { motion } from 'framer-motion';
 import { 
+  Users,
+  Award,
   TrendingUp,
   CheckCircle,
   Target,
-  Clock
+  Clock,
+  Globe
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 import { SEO } from '../components/SEO';
 
 export default function About() {
@@ -69,7 +68,11 @@ export default function About() {
   ];
 
   return (
+    <>
       <SEO 
+        title="About Zion Tech Group - Leading AI & Technology Solutions"
+        description="Learn about Zion Tech Group's mission to revolutionize technology through AI, innovation, and cutting-edge solutions."
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -224,6 +227,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

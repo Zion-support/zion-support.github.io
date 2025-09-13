@@ -159,12 +159,4 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav />}
     </>
   );
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation.tsx';
-
-export function AppHeader() {
-						<Link to="/" className="text-xl font-bold text-gray-900">
-						</Link>
-					<MainNavigation />
 }
