@@ -180,6 +180,9 @@ function Header() {
                 <Link href="/blog/ai-2025-revolutionary-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Revolutionary Breakthrough (BREAKTHROUGH)
                 </Link>
+                <Link href="/blog/ai-2025-quantum-computing-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500">
+                  ⚛️ AI 2025 Quantum Computing Breakthrough (NEW)
+                </Link>
                 <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Global Transformation Breakthrough (10,000% ROI) (NEW)
                 </Link>
@@ -195,9 +198,15 @@ function Header() {
                 <Link href="/case-studies/ai-2025-fortune-500-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🏢 Fortune 500 Transformation (1500% ROI)
                 </Link>
+                <Link href="/case-studies/ai-2025-quantum-manufacturing-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  ⚛️ Quantum Manufacturing Success (10,000% ROI) (NEW)
+                </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/resources/ai-2025-revolutionary-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   📚 Revolutionary Implementation Guide (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2025-quantum-implementation-roadmap" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
+                  ⚛️ Quantum Implementation Roadmap (NEW)
                 </Link>
                 <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🛠️ Ultimate Implementation Toolkit

@@ -19,6 +19,10 @@ const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssis
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
 
+// Import new quantum components
+import QuantumHeroSection from '../components/QuantumHeroSection';
+import QuantumContentBanner from '../components/QuantumContentBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -30,6 +34,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* QUANTUM HERO SECTION */}
+        <QuantumHeroSection />
+        
+        {/* QUANTUM CONTENT BANNER */}
+        <QuantumContentBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
