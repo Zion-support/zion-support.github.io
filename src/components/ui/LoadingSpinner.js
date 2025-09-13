@@ -1,17 +1,67 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { motion } from 'framer-motion';
-export function PageLoader({ text = "Loading...", className = "" }) {
-    return (_jsx("div", { className: `min-h-screen flex items-center justify-center ${className}`, children: _jsxs("div", { className: "text-center", children: [_jsx(motion.div, { animate: { rotate: 360 }, transition: { duration: 1, repeat: Infinity, ease: "linear" }, className: "w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full mx-auto mb-4" }), _jsx(motion.p, { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.5, repeat: Infinity, repeatType: "reverse" }, className: "text-zion-cyan text-lg font-medium", children: text })] }) }));
+import { cn } from '@/lib/utils';
+export function LoadingSpinner({ size = 'md', color = 'primary', customColor, className, text = 'Loading...', showText = false }) {
+    const sizeClasses = {
+        sm: 'w-4 h-4',
+        md: 'w-8 h-8',
+        lg: 'w-12 h-12',
+        xl: 'w-16 h-16'
+    };
+    const colorClasses = {
+        primary: 'border-zion-purple',
+        secondary: 'border-zion-cyan',
+        white: 'border-white',
+        custom: ''
+    };
+    const borderColor = customColor || colorClasses[color];
+    return (_jsxs("div", { className: cn('flex flex-col items-center justify-center gap-3', className), children: [_jsxs("div", { className: "relative", children: [_jsx(motion.div, { className: cn('border-2 border-gray-200 rounded-full', sizeClasses[size], borderColor), style: {
+                            borderTopColor: customColor || 'transparent'
+                        }, animate: {
+                            rotate: 360
+                        }, transition: {
+                            duration: 1,
+                            repeat: Infinity,
+                            ease: "linear"
+                        } }), _jsx(motion.div, { className: cn('absolute inset-0 rounded-full', sizeClasses[size]), animate: {
+                            scale: [1, 1.2, 1],
+                            opacity: [0.3, 0.1, 0.3]
+                        }, transition: {
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        } })] }), showText && (_jsx(motion.p, { className: "text-sm text-muted-foreground text-center", initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.3 }, children: text }))] }));
 }
-export function LoadingSpinner({ className = "" }) {
-    return (_jsx(motion.div, { animate: { rotate: 360 }, transition: { duration: 1, repeat: Infinity, ease: "linear" }, className: `w-6 h-6 border-2 border-zion-cyan border-t-transparent rounded-full ${className}` }));
+export function LoadingDots({ className }) {
+    return (_jsx("div", { className: cn('flex space-x-2', className), children: [0, 1, 2].map((index) => (_jsx(motion.div, { className: "w-2 h-2 bg-zion-cyan rounded-full", animate: {
+                scale: [1, 1.5, 1],
+                opacity: [0.5, 1, 0.5]
+            }, transition: {
+                duration: 1.5,
+                repeat: Infinity,
+                delay: index * 0.2
+            } }, index))) }));
 }
-export function LoadingDots({ className = "" }) {
-    return (_jsx("div", { className: `flex space-x-1 ${className}`, children: [0, 1, 2].map((i) => (_jsx(motion.div, { animate: { scale: [1, 1.2, 1] }, transition: { duration: 0.6, repeat: Infinity, delay: i * 0.2 }, className: "w-2 h-2 bg-zion-cyan rounded-full" }, i))) }));
+// Skeleton loading component
+export function Skeleton(_a) {
+    var { className } = _a, props = __rest(_a, ["className"]);
+    return (_jsx("div", Object.assign({ className: cn('animate-pulse rounded-md bg-muted', className) }, props)));
 }
-export function LoadingBar({ className = "" }) {
-    return (_jsx("div", { className: `w-full bg-zion-blue-dark rounded-full h-2 ${className}`, children: _jsx(motion.div, { className: "bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full", initial: { width: "0%" }, animate: { width: "100%" }, transition: { duration: 2, repeat: Infinity, ease: "easeInOut" } }) }));
+// Page loading component
+export function PageLoader({ text = "Loading Zion...", className = "" }) {
+    return (_jsx("div", { className: cn("min-h-screen flex items-center justify-center bg-background", className), children: _jsx(LoadingSpinner, { size: "xl", showText: true, text: text }) }));
 }
-export function LoadingPulse({ className = "" }) {
-    return (_jsx(motion.div, { animate: { scale: [1, 1.1, 1] }, transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }, className: `w-8 h-8 bg-zion-cyan rounded-full ${className}` }));
+export function LoadingPulse({ className }) {
+    return (_jsx(motion.div, { className: cn('w-4 h-4 bg-zion-purple rounded-full', className), animate: {
+            scale: [1, 1.2, 1],
+            opacity: [0.5, 1, 0.5]
+        }, transition: {
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'easeInOut'
+        } }));
+}
+// Inline loading component
+export function InlineLoader({ className }) {
+    return (_jsxs("div", { className: cn('inline-flex items-center gap-2', className), children: [_jsx(LoadingSpinner, { size: "sm" }), _jsx("span", { className: "text-sm text-muted-foreground", children: "Loading..." })] }));
 }

@@ -1,9 +1,3 @@
-export function useAppDispatch() {
-    return (() => { });
-}
-export function useAppSelector(_selector) {
-    return undefined;
-}
-export function getApiUrl() {
-    return '';
-}
+import { useDispatch, useSelector } from 'react-redux';
+export const useAppDispatch = () => useDispatch();
+export const useAppSelector = useSelector;

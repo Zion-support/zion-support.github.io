@@ -1,4 +1,3 @@
-import { jsx as _jsx } from "react/jsx-runtime";
-export function Toaster() {
-    return _jsx("div", { id: "toaster" });
-}
+export const Toaster = () => {
+    return null; // Simple placeholder for now
+};

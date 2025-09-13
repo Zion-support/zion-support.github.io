@@ -15,9 +15,6 @@ export default function QuantumAICognitivePage() {
   const contactInfo = service.contactInfo;
 
   return (
-<<<<<<< HEAD
-    <UltraAdvancedFuturisticBackground intensity="high">
-=======
     <UltraAdvancedFuturisticBackground variant="quantum-holographic">
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ee3d
       <Head>

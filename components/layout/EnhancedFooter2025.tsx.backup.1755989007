@@ -296,7 +296,6 @@ const EnhancedFooter2025: React.FC = () => {
               <button
                 onClick={scrollToTop}
                 className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
-<<<<<<< HEAD
 =======
               >
                 <span className="text-sm">Back to top</span>
@@ -304,7 +303,6 @@ const EnhancedFooter2025: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> 0f8f34f79a240b91d4992261cb0e4f4ff09ab0f5
               >
                 <span className="text-sm">Back to top</span>
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -312,7 +310,6 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
 =======
         {/* Newsletter Section */}
         <div className="text-center max-w-2xl mx-auto mb-8">
@@ -406,7 +403,6 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> 0f8f34f79a240b91d4992261cb0e4f4ff09ab0f5
       </div>
     </footer>
   );

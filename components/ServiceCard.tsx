@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Brain, Rocket, ExternalLink } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 interface ServiceCardProps {
@@ -131,89 +131,31 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isReducedMoti
         {service.description}
       </p>
 
-      {/* Features Preview */}
-      <div className="mb-4">
-        <div className="flex flex-wrap gap-2">
-          {service.features.slice(0, 3).map((feature, idx) => (
-            <span
-              key={idx}
-              className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
-            >
-              {feature}
-            </span>
-          ))}
-          {service.features.length > 3 && (
-            <button
-              onClick={toggleExpanded}
-              className="px-2 py-1 bg-cyan-600/20 text-cyan-400 text-xs rounded-full border border-cyan-500/50 hover:bg-cyan-600/30 transition-colors duration-200"
-              aria-expanded={isExpanded}
-              aria-controls={`features-${service.id}`}
-            >
-              +{service.features.length - 3} more
-            </button>
-          )}
-        </div>
-        
-        {/* Expanded Features */}
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            id={`features-${service.id}`}
-            className="mt-3 pt-3 border-t border-gray-700/50"
-          >
-            <div className="flex flex-wrap gap-2">
-              {service.features.slice(3).map((feature, idx) => (
-                <span
-                  key={idx}
-                  className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
-                >
-                  {feature}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        )}
+      {/* Service Features */}
+      <div className="space-y-2 mb-6">
+        {service.features.slice(0, 3).map((feature, idx) => (
+          <div key={idx} className="flex items-center space-x-2">
+            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" aria-hidden="true" />
+            <span className="text-sm text-gray-300">{feature}</span>
+          </div>
+        ))}
       </div>
 
-      {/* Pricing */}
-      {service.pricing && (
-        <div className="mb-4 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50">
-          <div className="text-sm text-gray-400 mb-1">Starting at</div>
-          <div className="text-xl font-bold text-white">{service.pricing}</div>
-        </div>
-      )}
-
-      {/* Action Buttons */}
-      <div className="flex items-center justify-between">
-        <Link
-          href={service.href || `/services/${service.id}`}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-          aria-label={`Learn more about ${service.name}`}
-        >
-          Learn More
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-        </Link>
-        
-        <button
-          onClick={() => window.open(service.href, '_blank')}
-          className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-all duration-300"
-          aria-label={`Open ${service.name} in new tab`}
-        >
-          <ExternalLink className="w-4 h-4" />
-        </button>
+      {/* Service Price */}
+      <div className="mb-6">
+        <span className="text-2xl font-bold text-cyan-400">
+          {service.price}
+        </span>
       </div>
 
-      {/* Hover Effect Overlay */}
-      {isHovered && !isReducedMotion && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-blue-500/5 rounded-2xl pointer-events-none"
-        />
-      )}
+      {/* CTA Button */}
+      <Link 
+        href={service.link}
+        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
+      >
+        Learn More
+        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+      </Link>
     </motion.div>
   );
 };

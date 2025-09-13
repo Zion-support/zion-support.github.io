@@ -1,9 +1,5 @@
-import React from 'react';
+import * as React from "react";
 
-interface SonnerToasterProps {
-  position?: string;
-}
-
-export function SonnerToaster({ position = 'top-right' }: SonnerToasterProps) {
-  return <div id="sonner-toaster" data-position={position} />;
-}
+export const Toaster: React.FC = () => {
+  return null; // Simple placeholder for now
+};

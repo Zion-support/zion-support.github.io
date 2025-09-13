@@ -1,196 +1,225 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, Brain, Shield, Rocket, Users, CheckCircle, ExternalLink
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedContactForm from '../components/EnhancedContactForm';
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
+import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 
-export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [currentService, setCurrentService] = useState(0);
-
+export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   const services = [
     {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence for business transformation",
-      icon: "🤖",
-      color: "from-blue-500 to-cyan-500"
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with AI-powered analytics",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      link: "https://ziontechgroup.com/ai-business-intelligence",
+      price: "$499/month",
+      features: ["AI-powered dashboards", "Predictive analytics", "Real-time insights"]
     },
-    {
-      title: "Quantum Computing",
-      description: "Next-generation quantum technology solutions",
-      icon: "⚛️",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Advanced security and threat protection",
-      icon: "🔒",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions for modern businesses",
-      icon: "☁️",
-      color: "from-orange-500 to-red-500"
+      title: "Quantum Cybersecurity",
+      description: "Future-proof security with quantum-resistant encryption and AI threat detection",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "https://ziontechgroup.com/quantum-cybersecurity",
+      price: "$799/month",
+      features: ["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"]
+      title: "AI Customer Experience",
+      description: "Deliver personalized customer experiences at scale with AI",
+      icon: Users,
+      color: "from-green-500 to-teal-500",
+      link: "https://ziontechgroup.com/ai-customer-experience",
+      price: "$399/month",
+      features: ["Customer journey mapping", "AI personalization", "Sentiment analysis"]
+      title: "Edge Computing Orchestration",
+      description: "Deploy and manage applications at the edge with intelligent orchestration",
+      icon: Network,
+      link: "https://ziontechgroup.com/edge-computing-orchestration",
+      price: "$349/month",
+      features: ["Edge node management", "IoT device management", "Real-time monitoring"]
+      title: "Space Technology Innovation",
+      description: "Accelerate space exploration with cutting-edge technology solutions",
+      icon: Rocket,
+      color: "from-violet-500 to-purple-500",
+      link: "https://ziontechgroup.com/space-technology",
+      price: "$2,499/month",
+      features: ["Satellite management", "AI mission planning", "Quantum communication"]
+      title: "Neural Interface Development",
+      description: "Build the future of human-computer interaction with neural interfaces",
+      color: "from-pink-500 to-rose-500",
+      link: "https://ziontechgroup.com/neural-interface",
+      price: "$899/month",
+      features: ["BCI development tools", "Neural signal processing", "AI pattern recognition"]
     }
   ];
-
-  useEffect(() => {
-    setIsLoaded(true);
-    const interval = setInterval(() => {
-      setCurrentService((prev) => (prev + 1) % services.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
+  const stats = [
+    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
+    { number: "50+", label: "Enterprise Clients", icon: Users },
+    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
+    { number: "24/7", label: "Support Available", icon: Clock }
+const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Head>
-        <title>Zion Tech Group - Leading Technology Solutions</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions including AI, quantum computing, cybersecurity, and cloud infrastructure." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-white">Zion Tech Group</h1>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
-                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
-                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <main className="pt-16">
-        <div className="relative overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-              <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                <div className="sm:text-center lg:text-left">
-                  <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                    <span className="block">Transform Your Business</span>
-                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                      With Next-Gen Tech
-                    </span>
-                  </h1>
-                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Zion Tech Group delivers cutting-edge technology solutions that drive innovation, 
-                    enhance security, and accelerate your digital transformation journey.
-                  </p>
-                  <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                    <div className="rounded-md shadow">
-                      <Link href="/contact" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 md:py-4 md:text-lg md:px-10">
-                        Get Started
-                      </Link>
-                    </div>
-                    <div className="mt-3 sm:mt-0 sm:ml-3">
-                      <Link href="/services" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-300 bg-blue-900/20 hover:bg-blue-900/30 md:py-4 md:text-lg md:px-10">
-                        Learn More
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </div>
-
-        {/* Services Showcase */}
-        <div className="py-12 bg-black/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                Our Core Services
-              </h2>
-              <p className="mt-4 text-lg text-gray-300">
-                Delivering innovative solutions across the technology spectrum
-              </p>
-            </div>
-            <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className={`relative p-6 rounded-lg bg-gradient-to-br ${service.color} hover:scale-105 transition-transform duration-300 cursor-pointer`}
-                  onClick={() => setCurrentService(index)}
-                >
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                  <p className="text-white/90 text-sm">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Service */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-              <div>
-                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                  {services[currentService].title}
-                </h2>
-                <p className="mt-4 text-lg text-gray-300">
-                  {services[currentService].description}
-                </p>
-                <div className="mt-8">
-                  <Link href="/services" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                    Explore Services
-                  </Link>
-                </div>
-              </div>
-              <div className="mt-8 lg:mt-0">
-                <div className="text-8xl text-center">{services[currentService].icon}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-black/40 border-t border-white/10">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
-              <p className="mt-4 text-gray-300">
-                Leading the way in technological innovation and digital transformation.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
-                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <p className="text-center text-gray-400">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
+import Home from '@/pages/Home';
+import type { GetStaticProps } from 'next';
+import * as Sentry from '@sentry/nextjs';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
+import { logWarn, logError } from '@/utils/productionLogger';
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '24/7', label: 'Support Available' },
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Expert Team Members' }
+];
+const services = [
+  {
+    title: "AI Services",
+    description: "Cutting-edge artificial intelligence solutions for modern businesses",
+    icon: Brain,
+    href: "/ai-services",
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    pricing: "Starting at $2,000/month",
+    count: "25+ AI Solutions",
+    popular: true
+  },
+    title: "IT Services",
+    description: "Comprehensive IT solutions to power your digital transformation",
+    icon: Network,
+    href: "/it-services",
+    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
+    pricing: "Starting at $1,500/month",
+    count: "30+ IT Solutions",
+    title: "Micro SaaS",
+    description: "Innovative software as a service solutions for specialized business needs",
+    icon: Cloud,
+    href: "/micro-saas",
+    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
+    pricing: "Starting at $29/month",
+    count: "45+ Products",
+  }
+const benefits = [
+    icon: CheckCircle,
+    title: "Expert Team",
+    description: "Certified professionals with years of experience"
+    icon: Star,
+    title: "Quality Assurance",
+    description: "Rigorous testing and quality control processes"
+    icon: Users,
+    title: "24/7 Support",
+    description: "Round-the-clock technical support"
+    icon: Award,
+    title: "Fast Delivery",
+    description: "Agile development with rapid deployment"
+  const { t } = useTranslation(); // Added this line
+    <Layout
+      title="Zion Tech Group - Leading AI & Technology Solutions"
+      description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
+      keywords="AI services, technology consulting, cloud solutions, digital transformation, machine learning, software development"
+    >
+      {t('test_error_button_text')}
+    </button>
   );
-}
+};
+const IndexPage: React.FC<HomePageProps> = (props) => {
+  const { t } = useTranslation();
+  const router = useRouter();
+  const showDebug = router.query.debug === 'true';
+  const showButton = process.env.NODE_ENV === 'development' || showDebug;
+    <>
+      {props.hasError && (
+        <div className="container mx-auto px-4 py-4">
+          <ErrorBanner msg={props.errorMessage || t('home_page_load_error')} />
+        </div>
+      </section>
+        {/* Stats Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Trusted by Industry Leaders
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our proven track record speaks for itself
+              </p>
+              <Link href="/services">
+                <span className="text-blue-600 hover:text-blue-700 font-semibold cursor-pointer inline-flex items-center">
+                  Learn More
+                  <ArrowRight className="ml-1 w-4 h-4" />
+                </span>
+              </Link>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <Cloud className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Cloud Solutions</h3>
+              <p className="text-gray-700 mb-6">
+                Scalable cloud infrastructure, migration services, and DevOps automation to optimize your operations.
+                <span className="text-purple-600 hover:text-purple-700 font-semibold cursor-pointer inline-flex items-center">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-white" />
+              <h3 className="text-2xl font-semibold mb-4">Digital Transformation</h3>
+                End-to-end digital transformation services to modernize your business processes and technology stack.
+                <span className="text-green-600 hover:text-green-700 font-semibold cursor-pointer inline-flex items-center">
+          </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{contact.title}</h3>
+                  <p className="text-gray-600 mb-2">{contact.description}</p>
+                  {contact.link ? (
+                    <a 
+                      href={contact.link} 
+                      className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                    >
+                      {contact.details}
+                    </a>
+                  ) : (
+                    <p className="text-gray-800 font-semibold">{contact.details}</p>
+                  )}
+                </motion.div>
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss how our innovative solutions can help you achieve your goals.
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                  Get Started
+                </Link>
+                  href="/services"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  View Services
+            </motion.div>

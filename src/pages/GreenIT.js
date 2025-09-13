@@ -1,59 +1,28 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { motion } from 'framer-motion';
-import { Leaf, Zap, Globe, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-const greenFeatures = [
-    {
-        icon: Leaf,
-        title: "Energy Efficiency",
-        description: "Reduce power consumption by up to 40% with our green IT solutions",
-        benefits: ["Lower electricity bills", "Reduced carbon footprint", "Extended hardware lifespan"]
-    },
-    {
-        icon: Zap,
-        title: "Smart Power Management",
-        description: "Intelligent power management systems that optimize energy usage",
-        benefits: ["Automated power scheduling", "Peak demand reduction", "Real-time monitoring"]
-    },
-    {
-        icon: Globe,
-        title: "Sustainable Practices",
-        description: "Implement eco-friendly IT practices across your organization",
-        benefits: ["Paperless workflows", "Remote work optimization", "Green procurement"]
-    },
-    {
-        icon: TrendingUp,
-        title: "Performance Optimization",
-        description: "Maintain high performance while reducing environmental impact",
-        benefits: ["Efficient resource utilization", "Optimized workflows", "Sustainable scaling"]
-    }
-];
-const greenStats = [
-    { number: "40%", label: "Energy Reduction" },
-    { number: "60%", label: "Carbon Footprint Decrease" },
-    { number: "25%", label: "Cost Savings" },
-    { number: "100%", label: "Green Certified" }
-];
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function GreenIT() {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
+    const greenITSolutions = [
+        {
+            title: "Energy-Efficient Hardware",
+            description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+            icon: Server,
+        },
+        {
+            title: "Optimized Cooling Systems",
+            description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
+            icon: Cloud,
+        },
+        {
+            title: "Renewable Energy Integration",
+            description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
+            icon: Leaf,
         }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        }
-    };
-    return (_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx("section", { className: "bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white py-20", children: _jsx("div", { className: "container mx-auto px-4 text-center", children: _jsxs(motion.div, { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 }, children: [_jsx(Leaf, { className: "w-20 h-20 mx-auto mb-6 text-green-300" }), _jsx("h1", { className: "text-4xl md:text-6xl font-bold mb-6", children: "Green IT Solutions" }), _jsx("p", { className: "text-xl text-green-100 max-w-3xl mx-auto mb-8", children: "Transform your IT infrastructure with sustainable, energy-efficient solutions that reduce costs and environmental impact while maintaining peak performance." }), _jsx("button", { className: "bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors duration-300", children: "Get Started" })] }) }) }), _jsx("section", { className: "py-20 bg-green-50", children: _jsx("div", { className: "container mx-auto px-4", children: _jsx(motion.div, { className: "grid grid-cols-2 md:grid-cols-4 gap-8", initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 }, children: greenStats.map((stat, index) => (_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "text-3xl md:text-4xl font-bold text-green-700 mb-2", children: stat.number }), _jsx("div", { className: "text-green-600 text-sm md:text-base", children: stat.label })] }, stat.label))) }) }) }), _jsx("section", { className: "py-20 bg-white", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsx(motion.h2, { className: "text-3xl font-bold text-center mb-16 text-gray-800", initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 }, children: "Sustainable IT Features" }), _jsx(motion.div, { className: "grid grid-cols-1 md:grid-cols-2 gap-8", variants: containerVariants, initial: "hidden", whileInView: "visible", viewport: { once: true }, children: greenFeatures.map((feature, index) => (_jsx(motion.div, { variants: itemVariants, children: _jsxs("div", { className: "bg-white border border-green-200 rounded-xl p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-green-300", children: [_jsx("div", { className: "w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6", children: _jsx(feature.icon, { className: "w-8 h-8 text-green-600" }) }), _jsx("h3", { className: "text-2xl font-bold text-gray-800 mb-4", children: feature.title }), _jsx("p", { className: "text-gray-600 mb-6 leading-relaxed", children: feature.description }), _jsx("ul", { className: "space-y-3 mb-6", children: feature.benefits.map((benefit, idx) => (_jsxs("li", { className: "flex items-center gap-3 text-gray-600", children: [_jsx(CheckCircle, { className: "w-5 h-5 text-green-500 flex-shrink-0" }), _jsx("span", { children: benefit })] }, idx))) }), _jsxs("div", { className: "flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors duration-300", children: [_jsx("span", { className: "font-medium", children: "Learn More" }), _jsx(ArrowRight, { className: "w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" })] })] }) }, feature.title))) })] }) }), _jsx("section", { className: "bg-gradient-to-r from-green-600 to-green-700 text-white py-20", children: _jsx("div", { className: "container mx-auto px-4 text-center", children: _jsxs(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 }, children: [_jsx("h2", { className: "text-3xl font-bold mb-6", children: "Ready to Go Green?" }), _jsx("p", { className: "text-xl text-green-100 mb-8 max-w-2xl mx-auto", children: "Join the sustainable IT revolution and make a positive impact on both your business and the environment." }), _jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [_jsx("button", { className: "bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors duration-300", children: "Get Green IT Assessment" }), _jsx("button", { className: "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-700 transition-colors duration-300", children: "Contact Our Team" })] })] }) }) })] }));
+    ];
+    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Green IT Solutions - Sustainable Technology", description: "Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.", keywords: "green IT, sustainable technology, eco-friendly computing, energy efficient hardware", canonical: "https://ziontechgroup.com/green-it" }), _jsx(AppHeader, {}), _jsx("main", { className: "min-h-screen bg-zion-blue pt-24 pb-20", children: _jsxs("div", { className: "container mx-auto px-4 sm:px-6 lg:px-8", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Green IT Solutions" }), _jsx("p", { className: "mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto", children: "Sustainable technology solutions that reduce environmental impact without compromising performance" })] }), _jsxs("div", { className: "mb-16", children: [_jsx("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16", children: _jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center", children: [_jsxs("div", { children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Sustainable IT for a Better Future" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-6", children: "As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure while maintaining performance and reliability." }), _jsx("p", { className: "text-zion-slate-light text-lg mb-6", children: "From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions for reducing your carbon footprint." }), _jsx("div", { className: "mt-8", children: _jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", children: "Explore Green IT Solutions" }) })] }), _jsx("div", { className: "rounded-lg overflow-hidden", children: _jsx("img", { src: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600", alt: "Green IT sustainability", className: "object-cover w-full h-full" }) })] }) }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-8", children: "Our Green IT Solutions" }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: greenITSolutions.map((solution, index) => (_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors", children: [_jsx("div", { className: "flex justify-center mb-4", children: _jsx(solution.icon, { className: "h-12 w-12 text-zion-cyan" }) }), _jsx("h3", { className: "text-white font-medium text-xl text-center mb-3", children: solution.title }), _jsx("p", { className: "text-zion-slate-light text-center", children: solution.description })] }, index))) })] }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Why Choose Green IT?" }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6", children: [_jsx("h3", { className: "text-white font-medium text-xl mb-4", children: "Environmental Benefits" }), _jsxs("ul", { className: "text-zion-slate-light space-y-2", children: [_jsx("li", { children: "\u2022 Reduced carbon footprint and greenhouse gas emissions" }), _jsx("li", { children: "\u2022 Lower energy consumption and resource utilization" }), _jsx("li", { children: "\u2022 Decreased electronic waste through better lifecycle management" }), _jsx("li", { children: "\u2022 Support for renewable energy initiatives" })] })] }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6", children: [_jsx("h3", { className: "text-white font-medium text-xl mb-4", children: "Business Benefits" }), _jsxs("ul", { className: "text-zion-slate-light space-y-2", children: [_jsx("li", { children: "\u2022 Significant cost savings on energy and cooling" }), _jsx("li", { children: "\u2022 Enhanced brand reputation and stakeholder relations" }), _jsx("li", { children: "\u2022 Compliance with emerging environmental regulations" }), _jsx("li", { children: "\u2022 Improved operational efficiency and performance" })] })] })] })] })] }), _jsxs("div", { className: "bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center", children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Ready to implement Green IT solutions?" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto", children: "Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure." }), _jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", asChild: true, children: _jsx(Link, { to: "/contact", children: "Contact Our Team" }) })] })] }) }), _jsx(Footer, {})] }));
 }
