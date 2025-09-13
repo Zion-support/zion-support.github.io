@@ -24,6 +24,7 @@ import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import AI2025ROICalculator from '../components/AI2025ROICalculator';
 
 export default function HomePage() {
   return (
@@ -38,6 +39,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* REVOLUTIONARY CONTENT PROMOTION BANNER 2025 */}
         <RevolutionaryContentPromotionBanner2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* AI 2025 ROI CALCULATOR */}
+        <AI2025ROICalculator />
         
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
