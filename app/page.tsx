@@ -180,9 +180,10 @@ import NewContent2025UltimatePromotionBanner from '../components/NewContent2025U
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
-// Import new 2026 innovation showcase and 2030 future vision banners
+// Import new 2026 innovation showcase components
 import AI2026UltimateInnovationShowcasePromotionBanner from '../components/AI2026UltimateInnovationShowcasePromotionBanner';
-import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
+import AI2030FutureVisionShowcasePromotionBanner from '../components/AI2030FutureVisionShowcasePromotionBanner';
+import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 
 // Import new ultimate innovations promotional components
 import NewContent2025UltimateInnovationsPromotionBanner from '../components/NewContent2025UltimateInnovationsPromotionBanner';
@@ -323,6 +324,19 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
         <RevolutionaryContentShowcase2025Banner />
+        
+        {/* AI 2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2026UltimateInnovationShowcasePromotionBanner />
+        
+        {/* AI 2030 FUTURE VISION SHOWCASE PROMOTION BANNER */}
+        <AI2030FutureVisionShowcasePromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <UltimateContentDiscoveryWidget2026 />
+          </div>
+        </section>
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />

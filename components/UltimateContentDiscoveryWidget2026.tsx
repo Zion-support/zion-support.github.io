@@ -21,6 +21,7 @@ import {
   ChevronDown,
   X
 } from 'lucide-react';
+import Link from 'next/link';
 
 const UltimateContentDiscoveryWidget2026 = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -168,7 +169,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore the most advanced AI innovations, automation solutions, and future technologies 
+            Explore the most advanced AI innovations, automation solutions, and future technologies
             with our intelligent content discovery system.
           </p>
         </div>
