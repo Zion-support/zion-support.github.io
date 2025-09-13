@@ -1,90 +1,110 @@
 #!/usr/bin/env python3
+
 import os
 import re
-import glob
-from datetime import datetime
+import subprocess
 
-def resolve_merge_conflicts():
-    """Resolve merge conflicts by taking the version after the last ======= marker"""
-    
-    # Find all TypeScript/JavaScript files with merge conflicts
-    patterns = ['**/*.tsx', '**/*.ts', '**/*.jsx', '**/*.js']
+def resolve_conflicts_in_file(file_path):
+    """Resolve merge conflicts in a single file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if file has conflict markers
+        if '<<<<<<< HEAD' not in content:
+            return False
+            
+        print(f"Resolving conflicts in: {file_path}")
+        
+        # Simple resolution: keep the first version (HEAD) and remove conflict markers
+        lines = content.split('\n')
+        resolved_lines = []
+        skip_until = None
+        
+        for line in lines:
+            if skip_until:
+                if line.strip().startswith(skip_until):
+                    skip_until = None
+                continue
+            
+            if line.strip().startswith('<<<<<<< HEAD'):
+                skip_until = '======='
+                continue
+            elif line.strip().startswith('======='):
+                skip_until = '>>>>>>>'
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                skip_until = None
+                continue
+            else:
+                resolved_lines.append(line)
+        
+        # Write resolved content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(resolved_lines))
+        
+        print(f"✅ Resolved conflicts in {file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error resolving conflicts in {file_path}: {e}")
+        return False
+
+def find_conflict_files():
+    """Find all files with merge conflicts"""
     conflict_files = []
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path) and 'node_modules' not in file_path and '.backup.' not in file_path:
+    # Walk through all files in the workspace
+    for root, dirs, files in os.walk('/workspace'):
+        # Skip certain directories
+        skip_dirs = ['.git', 'node_modules', '.next', 'dist', 'build']
+        dirs[:] = [d for d in dirs if d not in skip_dirs]
+        
+        for file in files:
+            if file.endswith(('.tsx', '.ts', '.jsx', '.js', '.json', '.md', '.py', '.sh')):
+                file_path = os.path.join(root, file)
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
                         if '<<<<<<< HEAD' in content:
                             conflict_files.append(file_path)
-                except Exception as e:
-                    print(f"Error reading {file_path}: {e}")
+                except:
+                    pass
+    
+    return conflict_files
+
+def main():
+    print("🔍 Finding files with merge conflicts...")
+    conflict_files = find_conflict_files()
     
     if not conflict_files:
-        print("✅ No merge conflicts found!")
+        print("✅ No files with merge conflicts found!")
         return
     
-    print(f"🔧 Found merge conflicts in {len(conflict_files)} files:")
+    print(f"📋 Found {len(conflict_files)} files with conflicts:")
     for file_path in conflict_files:
         print(f"  - {file_path}")
     
+    print("\n🔧 Resolving conflicts...")
     resolved_count = 0
     
     for file_path in conflict_files:
-        try:
-            print(f"🔨 Resolving conflicts in: {file_path}")
-            
-            # Create backup
-            backup_path = f"{file_path}.backup.{int(datetime.now().timestamp())}"
-            with open(file_path, 'r', encoding='utf-8') as f:
-                original_content = f.read()
-            
-            with open(backup_path, 'w', encoding='utf-8') as f:
-                f.write(original_content)
-            
-            # Resolve conflicts by taking content after the last ======= marker
-            lines = original_content.split('\n')
-            resolved_lines = []
-            in_conflict = False
-            conflict_content = []
-            last_marker_line = -1
-            
-            for i, line in enumerate(lines):
-                if line.strip().startswith('<<<<<<<'):
-                    in_conflict = True
-                    conflict_content = []
-                    last_marker_line = i
-                elif line.strip().startswith('======='):
-                    if in_conflict:
-                        # Keep content from before this marker
-                        conflict_content = []
-                elif line.strip().startswith('>>>>>>>'):
-                    if in_conflict:
-                        # Add the conflict content (the version after =======)
-                        resolved_lines.extend(conflict_content)
-                        in_conflict = False
-                        conflict_content = []
-                else:
-                    if in_conflict:
-                        conflict_content.append(line)
-                    else:
-                        resolved_lines.append(line)
-            
-            # Write resolved content
-            resolved_content = '\n'.join(resolved_lines)
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(resolved_content)
-            
-            print(f"✅ Resolved conflicts in: {file_path}")
+        if resolve_conflicts_in_file(file_path):
             resolved_count += 1
-            
-        except Exception as e:
-            print(f"❌ Error resolving {file_path}: {e}")
     
-    print(f"\n🎉 Successfully resolved conflicts in {resolved_count}/{len(conflict_files)} files!")
-    print("📝 Backup files created with timestamp extensions")
+    print(f"\n📊 Summary:")
+    print(f"  ✅ Resolved: {resolved_count}")
+    print(f"  ❌ Failed: {len(conflict_files) - resolved_count}")
+    print(f"  📁 Total: {len(conflict_files)}")
+    
+    if resolved_count > 0:
+        print("\n💾 Committing resolved changes...")
+        try:
+            subprocess.run(['git', 'add', '.'], cwd='/workspace', check=True)
+            subprocess.run(['git', 'commit', '-m', 'Resolve merge conflicts automatically'], cwd='/workspace', check=True)
+            print("✅ Changes committed successfully!")
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Failed to commit changes: {e}")
 
 if __name__ == "__main__":
-    resolve_merge_conflicts()
+    main()
