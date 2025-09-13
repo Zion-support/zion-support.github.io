@@ -147,6 +147,10 @@ import NewContent2025UltimateShowcase from '../components/NewContent2025Ultimate
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
 import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
+
+// Import new revolutionary content banner
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
 
@@ -180,6 +184,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 REVOLUTIONARY CONTENT BANNER */}
+        <NewContent2025RevolutionaryBanner />
+        
+        {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
+        <AI2026QuantumNeuralFusionPromotionBanner />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />
