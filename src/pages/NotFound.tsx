@@ -1,30 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotFound: React.FC = memo(() => {
+const NotFound = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white flex items-center justify-center">
       <div className="text-center">
-        <div className="text-9xl font-bold text-white mb-4">404</div>
-        <h1 className="text-4xl font-bold text-white mb-4">Page Not Found</h1>
-        <p className="text-xl text-blue-200 mb-8 max-w-md mx-auto">
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+        <h1 className="text-9xl font-bold text-blue-400 mb-4">404</h1>
+        <h2 className="text-3xl font-bold mb-4">Page Not Found</h2>
+        <p className="text-slate-300 mb-8 max-w-md mx-auto">
+          The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            to="/" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Go Home
-          </Link>
-          <Link 
-            to="/contact" 
-            className="border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Contact Support
-          </Link>
-        </div>
+        <Link 
+          to="/" 
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+        >
+          Go Home
+        </Link>
       </div>
     </div>
   );
-}
+};
+
+export default NotFound;
