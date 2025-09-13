@@ -45,10 +45,8 @@ export class AIContentGeneratorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(request)});
 
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`);

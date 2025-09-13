@@ -1,27 +1,3 @@
-
-
-
-
-
-
-
-
-}</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) )
-
-  return (<Layout> <div className="min-h-screen flex items-center justify-center" > <motion && motion.div > <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" ></div> <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p> </motion && motion.div> </div> </Layout>) ;
-  return (<Layout> <div className="min-h-screen flex items-center justify-center" > <motion && motion.div > <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" ></div> <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p> </motion && motion.div> </div> </Layout>) ;
-}return (<Layout> <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {;
-}<motion && motion.div /> </div> </div> </Layout>) ;
-}return (<> <Head> <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." /> <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> {;
-}/> > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0 && 0.5) ]" > Zion Tech Group </span> </motion && motion.h1> <motion && motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion && motion.p> <motion && motion.div > <span className="relative z-10 flex items-center" > Experience the Future <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" ></div> </button> <button > <span className="flex items-center" > Explore Services <Play className="w-7 h-7 ml-4" /> </span> </button> </motion && motion.div> {;
-}</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion && motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion && motion.div>) ) ;
-
-}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) ;
-}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) ;
-
-export default Homepage2044;export default Homepage2044;
-
-
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -260,8 +236,7 @@ const Homepage2044: React.FC = () => {
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                  }}
+                    scale: [0, 1.5, 0]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
@@ -270,8 +245,7 @@ const Homepage2044: React.FC = () => {
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
+                    top: `${Math.random() * 100}%`}}
                 />
               ))}
             </div>
@@ -290,8 +264,7 @@ const Homepage2044: React.FC = () => {
               animate={{
                 rotate: [45, 405],
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 10,
                 repeat: Infinity as any,
@@ -302,8 +275,7 @@ const Homepage2044: React.FC = () => {
               className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
               animate={{
                 scale: [1, 1.5, 1],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 8,
                 repeat: Infinity as any,
@@ -630,17 +602,3 @@ const Homepage2044: React.FC = () => {
 };
 
 export default Homepage2044;
-  return (<Layout> <div className="min - h-screen flex items - center justify - center" > <motion.div > <div className="w - 16 h - 16 border - 4 border - cyan - 500 border - t-transparent rounded - full animate - spin mx - auto mb - 4" ></div> <p className="text - cyan - 400 text - lg" >Loading Zion Tech Group...</p> </motion.div> </div> </Layout>);
-  return (<Layout> <div className="min - h-screen flex items - center justify - center" > <motion.div > <div className="w - 16 h - 16 border - 4 border - cyan - 500 border - t-transparent rounded - full animate - spin mx - auto mb - 4" ></div> <p className="text - cyan - 400 text - lg" >Loading Zion Tech Group...</p> </motion.div> </div> </Layout>);
-}return (<Layout> <section className="min - h-screen flex items - center justify - center px - 4 relative overflow - hidden" aria - labelledby="hero - heading" > left: `$ {
-}<motion.div /> </div> </div> </Layout>);
-}return (<> <Head> <title > Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." /> <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> {
-}/> > <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent drop - shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]" > Zion Tech Group </span> </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div > <span className="relative z - 10 flex items - center" > Experience the Future <ArrowRight className="w - 7 h - 7 ml - 4 group - hover:translate - x-2 transition - transform duration - 300" /> </span> <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 3xl" ></div> </button> <button > <span className="flex items - center" > Explore Services <Play className="w - 7 h - 7 ml - 4" /> </span> </button> </motion.div> {
-
-
-}</div> </div> </section> > <h2 className="text - 5xl font - bold text - white mb - 6" > Revolutionary <span className="bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent" >Features</span> </h2> <p className="text - xl text - gray - 400 max - w-3xl mx - auto" > Discover the cutting - edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w - 4 h - 4 transition - transform duration - 300" /> </a> </div> </div> </motion.div>) );
-}> <h2 className="text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center" > <button > <span className="flex items - center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition - transform duration - 300" /> </span> </button> <button > <span className="flex items - center" > Schedule Demo <Play className="w - 7 h - 7 ml - 4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
-}> <h2 className="text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center" > <button > <span className="flex items - center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition - transform duration - 300" /> </span> </button> <button > <span className="flex items - center" > Schedule Demo <Play className="w - 7 h - 7 ml - 4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
-export default Homepage2044;export default Homepage2044;
-
-

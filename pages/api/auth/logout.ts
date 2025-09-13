@@ -1,6 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { clearUserCookie } from '../../../utils/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Set-Cookie', 'web3-session=; HttpOnly; Path=/; SameSite=Lax; Max-Age=0');
-  res.status(200).json({ ok: true });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  clearUserCookie(res);
+  res.status(200).json({ success: true });
 }
