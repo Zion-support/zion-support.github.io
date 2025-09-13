@@ -100,6 +100,9 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import MobileOptimizer from '../components/MobileOptimizer';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import AnalyticsDashboard from '../components/AnalyticsDashboard';
+import SecurityEnhancer from '../components/SecurityEnhancer';
+import AdvancedMonitoring from '../components/AdvancedMonitoring';
+import ContentOptimizer from '../components/ContentOptimizer';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -3723,6 +3726,9 @@ export default function HomePage() {
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
       <MobileOptimizer />
+      <SecurityEnhancer />
+      <AdvancedMonitoring />
+      <ContentOptimizer />
     </div>
     </EnhancedErrorBoundary>
   );
