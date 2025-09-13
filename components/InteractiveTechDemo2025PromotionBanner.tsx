@@ -1,50 +1,58 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Play, 
+  Pause, 
+  RotateCcw, 
+  Settings, 
   Zap, 
-  Shield, 
-  Brain,
-  Globe,
+  Brain, 
+  Cpu, 
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  Network,
+  Shield,
   Target,
-  Award,
+  TrendingUp,
+  Users,
+  Globe,
+  Code,
+  Atom,
+  Rocket,
+  Star,
   CheckCircle,
-  PlayCircle,
+  AlertCircle,
+  Info,
+  ArrowRight,
+  Download,
+  Share2,
+  Heart,
+  MessageCircle,
   BookOpen,
   Lightbulb,
-  Code,
-  Cpu,
-  Database,
-  Network,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Lock,
-  Settings,
-  BarChart3,
-  PieChart,
-  Activity,
-  Sparkles,
-  Rocket,
-  Eye
+  X,
+  Eye,
+  MousePointer,
+  Monitor
 } from 'lucide-react';
 
 const InteractiveTechDemo2025PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [currentDemo, setCurrentDemo] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     
-    // Rotate demos every 3 seconds
+    // Auto-advance demos
     const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % 3);
+      setCurrentDemo((prev) => (prev + 1) % 4);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -52,255 +60,313 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
   const demos = [
     {
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time data visualization and insights',
-      icon: BarChart3,
-      color: 'from-purple-500 to-blue-500',
-      metrics: ['+45% Revenue', '99.8% Uptime', '2.3M Records']
+      title: "AI Consciousness Evolution",
+      subtitle: "Experience Synthetic Intelligence",
+      description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"
     },
     {
-      title: 'Automation Workflow',
-      description: 'AI-powered process automation',
-      icon: Zap,
-      color: 'from-green-500 to-teal-500',
-      metrics: ['95% Automated', '2,400 hrs Saved', '99.7% Accuracy']
+      title: "Quantum Neural Fusion",
+      subtitle: "Witness Quantum Computing Power",
+      description: "See the first successful integration of quantum computing with neural networks, achieving 1000x processing speed.",
+      icon: Atom,
+      color: "from-indigo-500 to-purple-500",
+      metrics: "1000x Speed • 99.8% Qubit Coherence"
     },
     {
-      title: 'Security Monitor',
-      description: 'Real-time threat detection',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      metrics: ['99.9% Detection', '< 2s Response', '15,420 Blocked']
+      title: "Brain-Computer Interface",
+      subtitle: "Direct Neural Communication",
+      description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.",
+      icon: Cpu,
+      color: "from-green-500 to-teal-500",
+      metrics: "99.9% Accuracy • 12ms Response Time"
+    },
+    {
+      title: "Edge AI Processing",
+      subtitle: "Real-Time Distributed Intelligence",
+      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.",
+      icon: Network,
+      color: "from-blue-500 to-cyan-500",
+      metrics: "95% Latency Reduction • 10K+ Nodes"
     }
   ];
 
   const features = [
-    { name: 'Live Demos', icon: PlayCircle, count: '12+' },
-    { name: 'Interactive', icon: Eye, count: '100%' },
-    { name: 'Real-time', icon: Activity, count: '24/7' },
-    { name: 'Tech Stack', icon: Code, count: '15+' }
+    { icon: Play, text: "Interactive Demos" },
+    { icon: Brain, text: "AI Technologies" },
+    { icon: Atom, text: "Quantum Computing" },
+    { icon: Cpu, text: "Neural Interfaces" },
+    { icon: Network, text: "Edge Processing" },
+    { icon: Rocket, text: "Future Tech" }
   ];
 
-  const techStack = [
-    { name: 'React', icon: Code },
-    { name: 'Node.js', icon: Cpu },
-    { name: 'AWS', icon: Cloud },
-    { name: 'Docker', icon: Settings }
-  ];
+  if (isDismissed) return null;
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-purple-600/20" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-      </div>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
+        >
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]" />
+          </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-white"
-          >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4 mr-2" />
-              INTERACTIVE TECH DEMOS
-            </motion.div>
-
-            {/* Main Heading */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-5xl font-bold mb-6"
-            >
-              Experience Our{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-                Technology
-              </span>
-            </motion.h2>
-
-            {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8"
-            >
-              Interact with live demos and see how our AI-powered tools can transform 
-              your business operations in real-time.
-            </motion.p>
-
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="grid grid-cols-2 gap-4 mb-8"
-            >
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3 p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                  <feature.icon className="w-5 h-5 text-purple-400" />
-                  <div>
-                    <div className="text-white font-semibold">{feature.name}</div>
-                    <div className="text-gray-300 text-sm">{feature.count}</div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* Tech Stack */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mb-8"
-            >
-              <h4 className="text-lg font-semibold text-white mb-4">Built With Modern Tech:</h4>
-              <div className="flex flex-wrap gap-3">
-                {techStack.map((tech, index) => (
-                  <div key={index} className="flex items-center space-x-2 px-3 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <tech.icon className="w-4 h-4 text-blue-400" />
-                    <span className="text-sm text-white">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link
-                href="/interactive-demo-2025"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                Try Interactive Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/demo"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                <PlayCircle className="w-5 h-5 mr-2" />
-                Watch Demo
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Content - Demo Preview */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            {/* Demo Screen */}
-            <div className="relative bg-gray-900 rounded-2xl p-6 shadow-2xl">
-              {/* Screen Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="text-white text-sm font-medium">
-                    Interactive Demo
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-xs">LIVE</span>
-                </div>
-              </div>
-
-              {/* Demo Content */}
-              <div className="bg-white rounded-lg p-6 min-h-[300px]">
-                {/* Current Demo */}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="flex items-center justify-between">
+              {/* Left Content */}
+              <div className="flex-1 pr-8">
                 <motion.div
                   key={currentDemo}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-center"
+                  className="space-y-4"
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${demos[currentDemo].color} rounded-full mb-4`}>
-                    <demos[currentDemo].icon className="w-8 h-8 text-white" />
+                  {/* Badge */}
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30">
+                    <Play className="w-4 h-4 text-blue-400 mr-2" />
+                    <span className="text-sm font-medium text-white">Interactive Demo Available</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+
+                  {/* Title */}
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {demos[currentDemo].title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
+                  </h2>
+
+                  {/* Subtitle */}
+                  <p className="text-lg text-indigo-200 font-medium">
+                    {demos[currentDemo].subtitle}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-gray-300 text-base max-w-2xl">
                     {demos[currentDemo].description}
                   </p>
-                  
+
                   {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-2">
-                    {demos[currentDemo].metrics.map((metric, index) => (
-                      <div key={index} className="p-2 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg">
-                        <div className="text-sm font-bold text-gray-900">{metric}</div>
-                      </div>
-                    ))}
+                  <div className="flex items-center text-sm text-gray-400">
+                    <TrendingUp className="w-4 h-4 mr-2" />
+                    <span>{demos[currentDemo].metrics}</span>
+                  </div>
+
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    {features.slice(0, 3).map((feature, index) => {
+                      const Icon = feature.icon;
+                      return (
+                        <div key={index} className="flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm">
+                          <Icon className="w-4 h-4 mr-2" />
+                          {feature.text}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                    <button 
+                      onClick={() => setIsPlaying(!isPlaying)}
+                      className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-medium hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group"
+                    >
+                      {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
+                      {isPlaying ? 'Pause Demo' : 'Start Demo'}
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                      <Download className="w-5 h-5 mr-2" />
+                      Download SDK
+                    </button>
                   </div>
                 </motion.div>
-
-                {/* Play Button */}
-                <div className="mt-6 text-center">
-                  <button className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors">
-                    <PlayCircle className="w-5 h-5" />
-                    <span>Play Demo</span>
-                  </button>
-                </div>
               </div>
 
-              {/* Progress Indicators */}
-              <div className="flex justify-center space-x-2 mt-4">
-                {demos.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentDemo(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentDemo ? 'bg-purple-400 w-8' : 'bg-white/30'
-                    }`}
-                  />
-                ))}
+              {/* Right Content - Interactive Demo Preview */}
+              <div className="hidden lg:block flex-shrink-0">
+                <motion.div
+                  key={currentDemo}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="relative w-80 h-48"
+                >
+                  {/* Demo Container */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-6">
+                    <div className="flex items-center mb-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${demos[currentDemo].color} flex items-center justify-center`}>
+                        {React.createElement(demos[currentDemo].icon, { className: "w-6 h-6 text-white" })}
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-white font-bold text-lg">Live Demo</h3>
+                        <p className="text-gray-300 text-sm">Interactive Experience</p>
+                      </div>
+                    </div>
+                    
+                    {/* Demo Visualization */}
+                    <div className="relative h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden border border-white/10 mb-4">
+                      {/* Animated Elements */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        {demos[currentDemo].title.includes('AI Consciousness') && (
+                          <div className="grid grid-cols-4 gap-2">
+                            {[...Array(8)].map((_, i) => (
+                              <motion.div
+                                key={i}
+                                animate={{
+                                  scale: isPlaying ? [1, 1.2, 1] : 1,
+                                  opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                                }}
+                                transition={{
+                                  duration: 2,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.1
+                                }}
+                                className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"
+                              />
+                            ))}
+                          </div>
+                        )}
+                        
+                        {demos[currentDemo].title.includes('Quantum') && (
+                          <div className="relative">
+                            {[...Array(4)].map((_, i) => (
+                              <motion.div
+                                key={i}
+                                animate={{
+                                  rotate: isPlaying ? 360 : 0,
+                                  scale: isPlaying ? [1, 1.1, 1] : 1
+                                }}
+                                transition={{
+                                  duration: 3,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.2
+                                }}
+                                className="absolute w-8 h-8 border-2 border-indigo-400 rounded-full"
+                                style={{
+                                  left: `${Math.cos(i * Math.PI / 2) * 20}px`,
+                                  top: `${Math.sin(i * Math.PI / 2) * 20}px`
+                                }}
+                              />
+                            ))}
+                          </div>
+                        )}
+                        
+                        {demos[currentDemo].title.includes('Brain-Computer') && (
+                          <div className="w-full h-16 relative">
+                            {[...Array(3)].map((_, i) => (
+                              <motion.div
+                                key={i}
+                                animate={{
+                                  scaleY: isPlaying ? [1, 2, 1] : 1,
+                                  opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                                }}
+                                transition={{
+                                  duration: 1.5,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.2
+                                }}
+                                className="absolute w-1 bg-gradient-to-t from-green-500 to-teal-500 rounded-full"
+                                style={{
+                                  left: `${30 + i * 20}%`,
+                                  height: '100%'
+                                }}
+                              />
+                            ))}
+                          </div>
+                        )}
+                        
+                        {demos[currentDemo].title.includes('Edge AI') && (
+                          <div className="grid grid-cols-3 gap-2">
+                            {[...Array(6)].map((_, i) => (
+                              <motion.div
+                                key={i}
+                                animate={{
+                                  scale: isPlaying ? [1, 1.3, 1] : 1,
+                                  opacity: isPlaying ? [0.6, 1, 0.6] : 0.8
+                                }}
+                                transition={{
+                                  duration: 2,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.1
+                                }}
+                                className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Demo Controls */}
+                    <div className="flex items-center justify-center space-x-2">
+                      <button 
+                        onClick={() => setIsPlaying(!isPlaying)}
+                        className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center hover:from-indigo-600 hover:to-purple-600 transition-all duration-300"
+                      >
+                        {isPlaying ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white ml-0.5" />}
+                      </button>
+                      <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <RotateCcw className="w-4 h-4 text-white" />
+                      </button>
+                      <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <Settings className="w-4 h-4 text-white" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Floating Elements */}
+                  <motion.div
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
+                  >
+                    <Eye className="w-6 h-6 text-white" />
+                  </motion.div>
+
+                  <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
+                  >
+                    <MousePointer className="w-5 h-5 text-white" />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
 
-            {/* Floating Elements */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
-            >
-              <Star className="w-4 h-4 text-white" />
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
-            >
-              <CheckCircle className="w-3 h-3 text-white" />
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-    </div>
+            {/* Demo Indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {demos.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentDemo(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentDemo 
+                      ? 'bg-white w-8' 
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Dismiss Button */}
+          <button
+            onClick={() => setIsDismissed(true)}
+            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
