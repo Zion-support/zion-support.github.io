@@ -21,26 +21,17 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
-import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
-import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
-import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
-
-// Import new 2025 promotional components
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-
-// Import new advanced services and tools components
-import AdvancedServicesShowcaseBanner2025 from '../components/AdvancedServicesShowcaseBanner2025';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import FeaturedContentShowcase2025 from '../components/FeaturedContentShowcase2025';
-
-// New 2026 promotional components
-import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
-import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
-import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
 
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
@@ -49,17 +40,45 @@ import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromo
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+// Import new 2025 content promotion components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+
+// Import new promotional components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import AI2025NewsletterSignup from '../components/AI2025NewsletterSignup';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
-// Import new ultimate content banners
-import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
-import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
+// New 2030+ breakthrough components
+import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
+import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
+import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
 
-// New 2025 breakthrough content banner
-import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
+// AI 2026 new content components
+import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
+// Import new breakthrough promotional components
+import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
+
+// New AI 2025 Content Promotion Banner
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+// Import new promotional banners for 2025-2026
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+// Import new AI 2025 and 2026 breakthrough banners
+import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
+import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
+0e0996fe7622d10d62be0fde7a68a
 
 export default function HomePage() {
   return (
@@ -81,6 +100,19 @@ export default function HomePage() {
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
         
+        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025NewContentPromotionBanner />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        
+        {/* AI 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <AI2026RevolutionaryContentPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
+>>>>>>> 4ae52b20131b3926821e8d8792f95afc32ca805b
+        
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
         
@@ -89,21 +121,52 @@ export default function HomePage() {
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
+        {/* AI 2025 SYNTHETIC INTELLIGENCE BREAKTHROUGH BANNER */}
+        <AI2025SyntheticIntelligenceBreakthroughBanner />
+        
+        {/* AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+        <AI2026FuturePredictionsBreakthroughBanner />
+0e0996fe7622d10d62be0fde7a68a
         
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
-        {/* INTERACTIVE CONTENT SHOWCASE */}
-        <InteractiveContentShowcase />
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
         
-        {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
-        <NewContent2025RevolutionaryBanner />
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
         
-        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
-        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        {/* LATEST CONTENT SHOWCASE 2025 */}
+        <LatestContentShowcase2025 />
         
-=======
-      <div className='min-h-screen bg-white'>
+        {/* CONTENT DISCOVERY WIDGET 2025 */}
+        <ContentDiscoveryWidget2025 />
+        
+        {/* AI 2025 NEWSLETTER SIGNUP */}
+        <div className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <AI2025NewsletterSignup />
+          </div>
+        </div>
+        
+        {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
+        <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* AI 2035 SINGULARITY PROMOTION BANNER */}
+        <AI2035SingularityPromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2030 */}
+        <UltimateContentDiscoveryWidget2030 />
+        
+        {/* AI 2026 NEW CONTENT PROMOTION BANNER */}
+        <AI2026NewContentPromotionBanner />
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW AI 2026 QUANTUM NEURAL FUSION BANNER */}
+        <AI2026QuantumNeuralFusionBanner />
+        
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
@@ -112,22 +175,23 @@ export default function HomePage() {
         
         {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
         <QuantumNeuralFusion2026PromotionBanner />
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025RevolutionaryBreakthroughPromotionBanner />
         
-        {/* ADVANCED SERVICES SHOWCASE BANNER 2025 */}
-        <AdvancedServicesShowcaseBanner2025 />
+        {/* AI 2025 INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <AI2025InteractiveContentDiscoveryWidget />
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
         
->>>>>>> 26f8d2c09d200d7c603f75b688c6b1bec94e2011
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
-        {/* ULTIMATE CONTENT REVOLUTION BANNER */}
-        <UltimateContentRevolutionBanner />
+        {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
+        <NewContent2025RevolutionaryBanner />
         
-        {/* AI 2026 BREAKTHROUGH BANNER */}
-        <AI2026BreakthroughBanner />
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
@@ -152,6 +216,9 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
         
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
@@ -160,6 +227,7 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
@@ -212,10 +280,19 @@ export default function HomePage() {
           <UltimateContentDiscovery2026 />
         </Suspense>
         
-        {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <InteractiveContentDiscoveryWidget />
+        {/* AI 2025 CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <AI2025ContentDiscoveryWidget />
+          </div>
+        </section>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading Interactive Discovery..." />}>
+              <InteractiveContentDiscoveryWidget />
+            </Suspense>
           </div>
         </section>
         
