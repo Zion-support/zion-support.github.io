@@ -93,6 +93,10 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+// New 2025 revolutionary content promotion banners
+import AI2035FutureVisionPromotionBanner from '../components/AI2035FutureVisionPromotionBanner';
+import QuantumAIBreakthrough2030PromotionBanner from '../components/QuantumAIBreakthrough2030PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -111,6 +115,12 @@ export default function HomePage() {
             <NewContentPromotionBanner2025 />
           </div>
         </div>
+
+        {/* AI 2035 FUTURE VISION PROMOTION BANNER */}
+        <AI2035FutureVisionPromotionBanner />
+
+        {/* QUANTUM AI BREAKTHROUGH 2030 PROMOTION BANNER */}
+        <QuantumAIBreakthrough2030PromotionBanner />
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
