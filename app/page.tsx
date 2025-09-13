@@ -114,7 +114,6 @@ import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner
 // Import our new promotional banners
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import QuantumAIBreakthroughPromotionBanner from '../components/QuantumAIBreakthroughPromotionBanner';
-
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
@@ -129,6 +128,10 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
 
+// Import new 2025 innovation showcase components
+import NewContent2025InnovationShowcaseBanner from '../components/NewContent2025InnovationShowcaseBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 // Import new promotional banners for 2026
 import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
@@ -145,12 +148,10 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 // Import new content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
-
 // Import new 2025 promotional components
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentDiscovery2025 from '../components/UltimateContentDiscovery2025';
 import AI2025BreakthroughShowcaseBanner from '../components/AI2025BreakthroughShowcaseBanner';
-
+import AIToolsShowcase2025 from '../components/AIToolsShowcase2025';
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -173,7 +174,6 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY 2025 */}
         <UltimateContentDiscovery2025 />
-        
         {/* LATEST CONTENT 2025 PROMOTION BANNER */}
         <LatestContent2025PromotionBanner />
         
@@ -183,6 +183,14 @@ export default function HomePage() {
         {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
         <InteractiveContentDiscovery2025 />
         
+        {/* NEW 2025 INNOVATION SHOWCASE BANNER */}
+        <NewContent2025InnovationShowcaseBanner />
+        
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* AI Tools Showcase */}
+        <AIToolsShowcase2025 />
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
@@ -257,6 +265,9 @@ export default function HomePage() {
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
         
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
