@@ -153,12 +153,15 @@ import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/
 
 // Import new 2025 ultimate content promotion banner
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
->>>>>>> cursor/create-and-deploy-new-content-4fb0
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 // Import new revolutionary content components
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
+
+// Import new 2025 promotional components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025BreakthroughShowcase from '../components/AI2025BreakthroughShowcase';
 
 export default function HomePage() {
   return (
@@ -213,6 +216,9 @@ export default function HomePage() {
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
+        {/* AI 2025 BREAKTHROUGH SHOWCASE */}
+        <AI2025BreakthroughShowcase />
+        
         {/* REVOLUTIONARY CONTENT SHOWCASE */}
         <RevolutionaryContentShowcase />
         
@@ -249,7 +255,6 @@ export default function HomePage() {
         
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
->>>>>>> cursor/create-and-deploy-new-content-4fb0
         
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
