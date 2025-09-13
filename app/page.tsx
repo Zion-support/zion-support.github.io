@@ -121,6 +121,12 @@ import AI2025LatestBreakthroughsShowcase from '../components/AI2025LatestBreakth
 import QuantumComputing2025PromotionBanner from '../components/QuantumComputing2025PromotionBanner';
 import AdvancedAutomation2025PromotionBanner from '../components/AdvancedAutomation2025PromotionBanner';
 import SuccessStories2025Showcase from '../components/SuccessStories2025Showcase';
+
+// New Revolutionary Content Components 2035+
+import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalConsciousnessBanner';
+import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
+import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
+import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -177,6 +183,26 @@ const HomePage: React.FC = () => {
               {/* New Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContentBanner />
+              </Suspense>
+
+              {/* AI 2035 Omniversal Consciousness Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2035OmniversalConsciousnessBanner />
+              </Suspense>
+
+              {/* AI 2035 Omniversal Consciousness Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2035OmniversalConsciousnessShowcase />
+              </Suspense>
+
+              {/* Neural Interface Revolution Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NeuralInterfaceRevolutionBanner />
+              </Suspense>
+
+              {/* Space Technology Solutions Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <SpaceTechnologySolutionsBanner />
               </Suspense>
 
               {/* AI 2025-2030 Comprehensive Predictions Promotion Banner */}
