@@ -143,6 +143,14 @@ import NewContentDiscoveryWidget2026 from '../components/NewContentDiscoveryWidg
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+
+// Import new revolutionary tech showcase components
+import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
+import RevolutionaryTechShowcase2025PromotionBanner from '../components/RevolutionaryTechShowcase2025PromotionBanner';
+import AIInnovationHub2025 from '../components/AIInnovationHub2025';
+import AIInnovationHub2025PromotionBanner from '../components/AIInnovationHub2025PromotionBanner';
+import FutureTechPredictions2025 from '../components/FutureTechPredictions2025';
+import FutureTechPredictions2025PromotionBanner from '../components/FutureTechPredictions2025PromotionBanner';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
 // Import new 2026 innovation showcase and 2030 future vision banners
@@ -315,6 +323,24 @@ export default function HomePage() {
         
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
         <AI2025_2026UltimateInnovationShowcase />
+        
+        {/* NEW REVOLUTIONARY TECH SHOWCASE 2025 PROMOTION BANNER */}
+        <RevolutionaryTechShowcase2025PromotionBanner />
+        
+        {/* NEW REVOLUTIONARY TECH SHOWCASE 2025 */}
+        <RevolutionaryTechShowcase2025 />
+        
+        {/* NEW AI INNOVATION HUB 2025 PROMOTION BANNER */}
+        <AIInnovationHub2025PromotionBanner />
+        
+        {/* NEW AI INNOVATION HUB 2025 */}
+        <AIInnovationHub2025 />
+        
+        {/* NEW FUTURE TECH PREDICTIONS 2025 PROMOTION BANNER */}
+        <FutureTechPredictions2025PromotionBanner />
+        
+        {/* NEW FUTURE TECH PREDICTIONS 2025 */}
+        <FutureTechPredictions2025 />
         
         {/* CONTENT RECOMMENDATION ENGINE */}
         <ContentRecommendationEngine />
