@@ -64,8 +64,15 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 
 // Import new breakthrough content promotional banners
 import AI2025UltimateBreakthroughRevolutionPromotionBanner from '../components/AI2025UltimateBreakthroughRevolutionPromotionBanner';
+import AI2026UltimatePredictionsBreakthroughPromotionBanner from '../components/AI2026UltimatePredictionsBreakthroughPromotionBanner';
+import AI2026EnterpriseTransformation50000ROIPromotionBanner from '../components/AI2026EnterpriseTransformation50000ROIPromotionBanner';
 import AI2026FuturePredictionsBreakthroughPromotionBanner from '../components/AI2026FuturePredictionsBreakthroughPromotionBanner';
 import AI2026QuantumNeuralFusionCaseStudyPromotionBanner from '../components/AI2026QuantumNeuralFusionCaseStudyPromotionBanner';
+
+// Import new content showcase components
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import TrendingTopics2026 from '../components/TrendingTopics2026';
+import SuccessMetricsDashboard2026 from '../components/SuccessMetricsDashboard2026';
 
 // Import new promotional components
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
@@ -101,6 +108,24 @@ export default function HomePage() {
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
         <NewContent2026PromotionBanner />
         <NewContentPromotionBanner2026 />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionPromotionBanner />
+        
+        {/* AI 2026 ULTIMATE PREDICTIONS BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026UltimatePredictionsBreakthroughPromotionBanner />
+        
+        {/* AI 2026 ENTERPRISE TRANSFORMATION 50000 ROI PROMOTION BANNER */}
+        <AI2026EnterpriseTransformation50000ROIPromotionBanner />
+        
+        {/* FEATURED CONTENT SHOWCASE 2026 */}
+        <FeaturedContentShowcase2026 />
+        
+        {/* TRENDING TOPICS 2026 */}
+        <TrendingTopics2026 />
+        
+        {/* SUCCESS METRICS DASHBOARD 2026 */}
+        <SuccessMetricsDashboard2026 />
         
         <AI2025UltimateBreakthroughPromotionBanner />
         
