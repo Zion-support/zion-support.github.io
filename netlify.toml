@@ -20,6 +20,10 @@
   # Force SWC to use JavaScript fallback
   SWC_BINARY_PATH = ""
   NEXT_SWC_BINARY_PATH = ""
+  # Disable SWC completely to avoid download issues
+  NEXT_SWC_DISABLED = "1"
+  # Use Terser for minification instead of SWC
+  NEXT_MINIFY = "terser"
 
 # Build settings
 [build.processing]
