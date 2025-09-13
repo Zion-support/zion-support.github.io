@@ -221,6 +221,13 @@ import AdvancedAutomationSolutions2025PromotionBanner from '../components/Advanc
 import RevolutionaryTechnologyShowcase2025 from '../components/RevolutionaryTechnologyShowcase2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// New Ultimate Content Revolution Components
+import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import AI2025UltimateContentRevolutionShowcase from '../components/AI2025UltimateContentRevolutionShowcase';
+import RevolutionaryTech2025PromotionBanner from '../components/RevolutionaryTech2025PromotionBanner';
+import UltimateContentDiscovery2025 from '../components/UltimateContentDiscovery2025';
+import ContentROICalculator2025 from '../components/ContentROICalculator2025';
+
 // New 2027 Content Components
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 import AI2025UltimateContentRevolutionShowcase from '../components/AI2025UltimateContentRevolutionShowcase';
@@ -302,6 +309,21 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* AI 2025 Ultimate Content Revolution Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateContentRevolutionBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Content Revolution Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateContentRevolutionShowcase />
+              </Suspense>
+
+              {/* Revolutionary Tech 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryTech2025PromotionBanner />
+              </Suspense>
 
               {/* AI 2025-2030 Ultimate Breakthrough Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
@@ -1071,6 +1093,16 @@ const HomePage: React.FC = () => {
 
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscovery2025 />
+              </Suspense>
+
+              {/* Ultimate Content Discovery 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentDiscovery2025 />
+              </Suspense>
+
+              {/* Content ROI Calculator 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentROICalculator2025 />
               </Suspense>
 
               {/* Lazy loaded advanced components */}
