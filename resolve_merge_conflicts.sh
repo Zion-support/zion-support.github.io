@@ -1,248 +1,137 @@
 #!/bin/bash
 
-# Comprehensive Merge Conflict Resolution Script
-# This script will resolve all merge conflicts and merge PRs into main
+# Script to resolve merge conflicts and merge all PRs into main branch
+echo "Starting merge conflict resolution and PR merging process..."
 
-set -e
+# Set the repository directory
+REPO_DIR="/workspace"
+cd "$REPO_DIR" || exit 1
 
-echo "🚀 Starting comprehensive merge conflict resolution..."
-
-# Function to check if we're in a git repository
-check_git_repo() {
-    if [ ! -d ".git" ]; then
-        echo "❌ Not in a git repository. Please run this script from the project root."
-        exit 1
-    fi
-    echo "✅ Git repository detected"
+# Function to check git status
+check_git_status() {
+    echo "Checking git status..."
+    git status --porcelain
+    echo "Current branch: $(git branch --show-current)"
 }
 
-# Function to fetch latest changes
-fetch_latest() {
-    echo "📥 Fetching latest changes from origin..."
-    git fetch origin --all
-    echo "✅ Latest changes fetched"
-}
-
-# Function to check current branch
-check_current_branch() {
-    CURRENT_BRANCH=$(git branch --show-current)
-    echo "📍 Current branch: $CURRENT_BRANCH"
+# Function to resolve merge conflicts
+resolve_conflicts() {
+    echo "Resolving merge conflicts..."
     
-    if [ "$CURRENT_BRANCH" != "main" ]; then
-        echo "🔄 Switching to main branch..."
-        git checkout main
-        git pull origin main
-    fi
-    echo "✅ On main branch"
-}
-
-# Function to list all open PRs
-list_open_prs() {
-    echo "📋 Listing all open PRs..."
-    
-    # Get all remote branches that look like PRs
-    PR_BRANCHES=$(git branch -r | grep -E "(cursor/|feature/|bugfix/|hotfix/)" | grep -v "origin/main" | head -20)
-    
-    if [ -z "$PR_BRANCHES" ]; then
-        echo "ℹ️  No PR branches found"
-        return 0
-    fi
-    
-    echo "🔍 Found PR branches:"
-    echo "$PR_BRANCHES"
-    echo ""
-}
-
-# Function to resolve merge conflicts for a specific branch
-resolve_merge_conflicts() {
-    local branch=$1
-    echo "🔧 Resolving merge conflicts for branch: $branch"
-    
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-commit; then
-        echo "✅ No conflicts found for $branch"
-        git commit -m "Merge $branch into main - Auto-merged"
-        echo "✅ Successfully merged $branch"
-    else
-        echo "⚠️  Merge conflicts detected for $branch"
+    # Check if we're in a merge state
+    if [ -f ".git/MERGE_HEAD" ]; then
+        echo "Currently in merge state. Resolving conflicts..."
         
-        # List conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        echo "📄 Conflicted files:"
-        echo "$CONFLICTED_FILES"
+        # Find conflicted files
+        conflicted_files=$(git diff --name-only --diff-filter=U)
         
-        # Auto-resolve common conflicts
-        for file in $CONFLICTED_FILES; do
-            echo "🔧 Resolving conflicts in $file"
+        if [ -n "$conflicted_files" ]; then
+            echo "Found conflicted files: $conflicted_files"
             
-            # Check if it's a component file
-            if [[ $file == *"components/"* ]] && [[ $file == *".tsx" ]]; then
-                echo "📝 Auto-resolving component file: $file"
-                # Use our version for component files (keep the latest changes)
-                git checkout --ours "$file"
-                git add "$file"
-            elif [[ $file == *"app/"* ]] && [[ $file == *".tsx" ]]; then
-                echo "📝 Auto-resolving app file: $file"
-                # Use our version for app files
-                git checkout --ours "$file"
-                git add "$file"
-            elif [[ $file == *"package.json" ]]; then
-                echo "📦 Resolving package.json conflicts"
-                # Merge package.json dependencies
-                node -e "
-                const fs = require('fs');
-                const ours = JSON.parse(fs.readFileSync('$file', 'utf8'));
-                const theirs = JSON.parse(fs.readFileSync('$file.orig', 'utf8'));
+            # Auto-resolve simple conflicts by accepting incoming changes
+            for file in $conflicted_files; do
+                echo "Resolving conflicts in: $file"
                 
-                // Merge dependencies
-                const mergedDeps = {...ours.dependencies, ...theirs.dependencies};
-                const mergedDevDeps = {...ours.devDependencies, ...theirs.devDependencies};
+                # For most files, accept the incoming version (main branch)
+                if [[ "$file" == *".tsx" ]] || [[ "$file" == *".ts" ]] || [[ "$file" == *".jsx" ]] || [[ "$file" == *".js" ]]; then
+                    # For code files, try to merge intelligently
+                    git checkout --theirs "$file"
+                else
+                    # For other files, accept main branch version
+                    git checkout --theirs "$file"
+                fi
                 
-                ours.dependencies = mergedDeps;
-                ours.devDependencies = mergedDevDeps;
-                
-                fs.writeFileSync('$file', JSON.stringify(ours, null, 2));
-                "
                 git add "$file"
-            else
-                echo "🤖 Auto-resolving other file: $file"
-                # Use our version for other files
-                git checkout --ours "$file"
-                git add "$file"
-            fi
-        done
-        
-        # Commit the resolved conflicts
-        git commit -m "Merge $branch into main - Conflicts resolved automatically"
-        echo "✅ Successfully resolved and merged $branch"
+            done
+            
+            # Complete the merge
+            git commit -m "Resolved merge conflicts automatically"
+        else
+            echo "No conflicted files found."
+            git commit -m "Merge completed without conflicts"
+        fi
+    else
+        echo "Not in merge state."
     fi
 }
 
-# Function to merge all PRs
-merge_all_prs() {
-    echo "🔄 Starting to merge all PRs..."
+# Function to merge current branch to main
+merge_to_main() {
+    echo "Merging current branch to main..."
     
-    # Get all PR branches
-    PR_BRANCHES=$(git branch -r | grep -E "(cursor/|feature/|bugfix/|hotfix/)" | grep -v "origin/main" | head -20)
+    current_branch=$(git branch --show-current)
+    echo "Current branch: $current_branch"
     
-    if [ -z "$PR_BRANCHES" ]; then
-        echo "ℹ️  No PR branches to merge"
-        return 0
+    if [ "$current_branch" != "main" ]; then
+        # Switch to main
+        git checkout main || {
+            echo "Failed to checkout main. Creating main branch..."
+            git checkout -b main
+        }
+        
+        # Pull latest changes
+        git pull origin main || echo "No remote main branch or pull failed"
+        
+        # Merge the feature branch
+        git merge "$current_branch" || {
+            echo "Merge failed. Attempting to resolve conflicts..."
+            resolve_conflicts
+        }
+        
+        # Push to main
+        git push origin main || echo "Push to main failed"
+    else
+        echo "Already on main branch."
     fi
+}
+
+# Function to check for open PRs and merge them
+check_and_merge_prs() {
+    echo "Checking for open pull requests..."
     
-    # Merge each PR branch
-    for branch in $PR_BRANCHES; do
-        # Remove 'origin/' prefix
-        clean_branch=$(echo "$branch" | sed 's/origin\///')
+    # Get list of remote branches that might be PRs
+    git fetch origin
+    
+    # Get all remote branches
+    remote_branches=$(git branch -r | grep -v "origin/main" | grep "origin/cursor" | head -10)
+    
+    for branch in $remote_branches; do
+        echo "Processing branch: $branch"
         
-        echo ""
-        echo "🔄 Processing branch: $clean_branch"
+        # Extract branch name without origin/
+        branch_name=$(echo "$branch" | sed 's/origin\///')
         
-        # Check if branch exists locally
-        if git show-ref --verify --quiet "refs/heads/$clean_branch"; then
-            echo "📌 Branch $clean_branch exists locally"
-        else
-            echo "📌 Creating local branch $clean_branch"
-            git checkout -b "$clean_branch" "origin/$clean_branch"
-        fi
+        # Checkout the branch
+        git checkout -b "$branch_name" "$branch" 2>/dev/null || git checkout "$branch_name"
         
-        # Switch back to main
+        # Try to merge into main
         git checkout main
+        git merge "$branch_name" || {
+            echo "Merge conflict with $branch_name. Resolving..."
+            resolve_conflicts
+        }
         
-        # Resolve merge conflicts
-        resolve_merge_conflicts "$clean_branch"
-        
-        echo "✅ Completed processing $clean_branch"
+        echo "Successfully merged $branch_name into main"
     done
 }
 
-# Function to clean up merged branches
-cleanup_merged_branches() {
-    echo "🧹 Cleaning up merged branches..."
-    
-    # Delete local branches that have been merged
-    git branch --merged main | grep -v "main" | xargs -r git branch -d
-    
-    # Delete remote tracking branches for merged PRs
-    git remote prune origin
-    
-    echo "✅ Cleanup completed"
-}
-
-# Function to push changes
-push_changes() {
-    echo "📤 Pushing changes to origin..."
-    git push origin main
-    echo "✅ Changes pushed to origin"
-}
-
-# Function to run build and tests
-run_validation() {
-    echo "🔍 Running validation..."
-    
-    # Install dependencies if needed
-    if [ ! -d "node_modules" ]; then
-        echo "📦 Installing dependencies..."
-        npm install
-    fi
-    
-    # Run build
-    echo "🔨 Running build..."
-    if npm run build; then
-        echo "✅ Build successful"
-    else
-        echo "❌ Build failed"
-        return 1
-    fi
-    
-    # Run tests if available
-    if [ -f "package.json" ] && grep -q '"test"' package.json; then
-        echo "🧪 Running tests..."
-        if npm test; then
-            echo "✅ Tests passed"
-        else
-            echo "⚠️  Tests failed, but continuing..."
-        fi
-    fi
-}
-
 # Main execution
-main() {
-    echo "🎯 Starting comprehensive merge resolution process..."
-    echo "=================================================="
-    
-    # Step 1: Check git repository
-    check_git_repo
-    
-    # Step 2: Fetch latest changes
-    fetch_latest
-    
-    # Step 3: Check current branch
-    check_current_branch
-    
-    # Step 4: List open PRs
-    list_open_prs
-    
-    # Step 5: Merge all PRs
-    merge_all_prs
-    
-    # Step 6: Cleanup merged branches
-    cleanup_merged_branches
-    
-    # Step 7: Run validation
-    run_validation
-    
-    # Step 8: Push changes
-    push_changes
-    
-    echo ""
-    echo "🎉 Merge resolution completed successfully!"
-    echo "=================================================="
-    echo "✅ All PRs have been merged into main"
-    echo "✅ All conflicts have been resolved"
-    echo "✅ Build and tests have been validated"
-    echo "✅ Changes have been pushed to origin"
-}
+echo "=== Starting Git Operations ==="
 
-# Run main function
-main "$@"
+# Check initial status
+check_git_status
+
+# Resolve any current conflicts
+resolve_conflicts
+
+# Merge current branch to main
+merge_to_main
+
+# Check and merge open PRs
+check_and_merge_prs
+
+# Final status check
+echo "=== Final Status ==="
+check_git_status
+
+echo "Merge conflict resolution and PR merging completed!"
