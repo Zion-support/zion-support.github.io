@@ -100,6 +100,21 @@ const Sitemap: React.FC = () => {
           description: 'Success stories and implementations'
         },
         {
+          title: 'AI 2025 Enterprise Automation Mastery',
+          href: '/blog/ai-2025-enterprise-automation-mastery-complete-guide',
+          description: 'Complete guide to achieving 2,500% ROI through strategic AI implementation'
+        },
+        {
+          title: 'Global Enterprise AI Transformation - $2B ROI',
+          href: '/case-studies/global-enterprise-ai-transformation-2025-ultimate-success-2-billion-roi',
+          description: 'How a global enterprise achieved $2 billion ROI in 18 months'
+        },
+        {
+          title: 'AI 2025 Ultimate Implementation Roadmap',
+          href: '/resources/ai-2025-ultimate-implementation-roadmap-complete-guide',
+          description: 'Step-by-step guide with timelines, checklists, and proven strategies'
+        },
+        {
           title: 'Documentation',
           href: '/documentation',
           description: 'Technical documentation and guides'
