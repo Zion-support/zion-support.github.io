@@ -162,6 +162,7 @@ import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import AI2025BreakthroughShowcase from '../components/AI2025BreakthroughShowcase';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import new content and advertising components
 import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
@@ -221,6 +222,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
         {/* AI 2025 BREAKTHROUGH SHOWCASE */}
         <AI2025BreakthroughShowcase />
