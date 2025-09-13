@@ -1,28 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Shield, Settings, Eye } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const Cookies: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Cookie Policy - Zion Tech Group</title>
-        <meta name="description" content="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your experience." />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <SEO 
+        title="Cookie Policy - Zion Tech Group"
+        description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience."
+        keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy"
+        canonical="https://ziontechgroup.com/cookies"
+      />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold mb-6">
-                Cookie
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> Policy</span>
-              </h1>
-              <p className="text-xl text-gray-300">
-                Last updated: January 1, 2024
-              </p>
-            </div>
+      <main className="min-h-screen pt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-white mb-8">Cookie Policy</h1>
             
             <div className="prose prose-invert max-w-none">
               <h2>What Are Cookies?</h2>
@@ -79,33 +73,31 @@ const Cookies: React.FC = () => {
               
               <h2>Managing Your Cookie Preferences</h2>
               <p>
-                You can control and manage cookies in various ways. Please note that removing or blocking cookies can impact your user experience and parts of our website may no longer be fully accessible.
+                You can control cookies through your browser settings. Most browsers allow you to:
               </p>
-              
-              <h2>Third-Party Cookies</h2>
-              <p>
-                Some cookies on our site are set by third-party services that appear on our pages. We do not control these cookies and you should check the relevant third-party website for more information about these.
-              </p>
-              
-              <h2>Updates to This Policy</h2>
-              <p>
-                We may update this Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last updated" date.
-              </p>
+              <ul>
+                <li>Block all cookies</li>
+                <li>Block third-party cookies</li>
+                <li>Delete existing cookies</li>
+                <li>Set cookie preferences</li>
+              </ul>
               
               <h2>Contact Us</h2>
               <p>
-                If you have any questions about this Cookie Policy, please contact us at:
+                If you have any questions about our use of cookies or this Cookie Policy, please contact us:
               </p>
-              <ul>
-                <li>Email: privacy@ziontechgroup.com</li>
-                <li>Phone: +1 (555) 123-4567</li>
-                <li>Address: 364 E Main St STE 1008, Middletown DE 19709</li>
-              </ul>
+              <div className="bg-white/20 rounded-lg p-4">
+                <p className="text-gray-300">
+                  <strong>Email:</strong> privacy@ziontechgroup.com<br />
+                  <strong>Phone:</strong> +1 (302) 464-0950<br />
+                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </main>
+    </div>
   );
 };
 

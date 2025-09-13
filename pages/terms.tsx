@@ -11,74 +11,36 @@ import {
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
 
-  const termsSections = [
-    {
-      title: 'Acceptance of Terms',
       icon: <CheckCircle className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'By accessing or using our services, you agree to be bound by these terms',
-        'If you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with notice',
-        'Continued use after changes constitutes acceptance of new terms'
-      ]
-    },
-    {
-      title: 'Service Description',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'AI and machine learning solutions',
-        'Quantum computing services',
-        'IT infrastructure and consulting',
-        'Micro SAAS applications',
-        'Business automation services',
-        'Technical support and maintenance'
-      ]
-    },
-    {
-      title: 'User Responsibilities',
       icon: <User className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'Provide accurate and complete information',
-        'Maintain security of your account credentials',
-        'Comply with applicable laws and regulations',
-        'Use services for lawful purposes only',
-        'Respect intellectual property rights'
-      ]
-    },
-    {
-      title: 'Intellectual Property',
       icon: <Lock className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Our services and content are protected by copyright',
-        'You retain rights to your own content',
-        'No transfer of intellectual property rights',
-        'License to use our services as intended',
-        'Prohibition of reverse engineering'
-      ]
-    }
-  ];
 
-  const prohibitedActivities = [
 import { motion } from 'framer-motion';
 import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
-  Globe, Calendar, Scale, Users, ArrowRight,
-  BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Terms of Service</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Please read these terms carefully before using our website or services.
-          </p>
-        </div>
-      </section>
+
+
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Terms() {
+      <Head>
+      </Head>
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.
+
+
+
+
+            <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+            </Link>
+import React from 'react';
+icon: <Globe className="w-6 h-6 text-green-400" /> 
+icon: <Users className="w-6 h-6 text-yellow-400" /> 
+content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
+icon: <Eye className="w-6 h-6 text-cyan-400" /> 
+icon: <Shield className="w-6 h-6 text-red-400" /> 
+const importantNotices = [ {
 
 import { motion } from 'framer-motion';
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
@@ -136,9 +98,291 @@ const Terms: React.FC = () => {
     }
   ];
 
-  return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+
+    icon: <Shield className="w-6 h-6 text-purple-400" />,
+export default function Terms() {
+      <Head>;
+      </Head>;
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.;
+
+            <Link href="/" className="px - 8 py - 3 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors">;
+
+            </Link>;
+
+
+
+import React from 'react';
+icon: <Globe className="w-6 h-6 text-green-400" /> 
+icon: <Users className="w-6 h-6 text-yellow-400" /> 
+content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
+icon: <Eye className="w-6 h-6 text-cyan-400" /> 
+icon: <Shield className="w-6 h-6 text-red-400" /> 
+const importantNotices = [ {
+
+icon: <CheckCircle className="w-6 h-6 text-green-400" />;
+icon: <Scale className="w-6 h-6 text-blue-400" />;
+icon: <AlertTriangle className="w-6 h-6 text-orange-400" />;
+icon: <Shield className="w-6 h-6 text-purple-400" />;
+
+
+
+
+
+
+
+    icon: <Shield className="w-6 h-6 text-purple-400" />,
+export default function Terms() {
+    <Layout>;
+      <SEO
+
+
+
+                Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.;
+export default /**
+    <Layout>;
+      <SEO;
+                Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.;
+
+
+
+
+
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+
+
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0 && 0.5 flex-shrink-0" />;
+                        <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;
+
+
+
+
+
+
+
+
+
+
+
+
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0 && 0.5 flex-shrink-0" />;
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0 && 0.5 flex-shrink-0" />;
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0 && 0.5 flex-shrink-0" />;
+                      <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 0.5 flex - shrink - 0" />;
+                      <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 0.5 flex - shrink - 0" />;
+                      <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 0.5 flex - shrink - 0" />;
+
+
+
+
+
+
+
+
+                  <FileText className="w-5 h-5 ml-2" />;
+                  <FileText className="w - 5 h - 5 ml - 2" />;
+
+    </Layout>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+
+
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0 && 0.5 flex-shrink-0" />;
+
+                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
+
+
+
+
+
+                            <CheckCircle className="w - 4 h - 4 text - green - 400 mt - 0.5 flex - shrink - 0" />;
+                            <AlertTriangle className="w - 4 h - 4 text - yellow - 400 mt - 0.5 flex - shrink - 0" />;
+    <ErrorBoundary>;
+      <SEOOptimizer />;
+      <AnalyticsTracker />;
+      <Layout>;
+
+                  <FileText className="w-6 h-6" />;
+
+
+
+
+
+                    <Scale className="w-6 h-6" />;
+                        <FileText className="w-12 h-12 text-white" />;
+                  <FileText className="w - 6 h - 6" />;
+                    <Scale className="w - 6 h - 6" />;
+                        <FileText className="w - 12 h - 12 text - white" />;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <AlertTriangle className="w-8 h-8 text-red-400" />;
+
+
+
+
+
+
+
+                  <Shield className="w-8 h-8 text-yellow-400" />;
+
+
+
+
+
+
+                  <AlertTriangle className="w - 8 h - 8 text - red - 400" />;
+                  <Shield className="w - 8 h - 8 text - yellow - 400" />;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <FileText className="w - 16 h - 16 text - cyan - 400 mx - auto mb - 6" />;
+                <Clock className="w - 4 h - 4" />;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Your privacy is important to us. Please review our Privacy Policy, which also governs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+    </Layout>
+export default Terms;
+
+              <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
+    </Layout>;
+export default Terms;
+
+
+
+
+
+
+                    <Mail className="w-5 h-5" />;
+
+
+
+
+export default TermsPage;
+
+
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
+};export default TermsPage;
+
+
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
+                    <User className="w-5 h-5" />;
+      </Layout>;
+    </ErrorBoundary>;
+export default TermsPage;
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion && motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) ;
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion && motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) ;
+};export default TermsPage;
+
+
+
+
+export default TermsPage;
+
+
+
+
+
+              <Scale className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
+    </Layout>);
+export default Terms;
+                    <Mail className="w - 5 h - 5" />;
+                    <User className="w - 5 h - 5" />;
+      </Layout>;
+    </ErrorBoundary>);
+export default TermsPage;
+}> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
+}> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
+}export default TermsPage;

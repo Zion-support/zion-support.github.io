@@ -2,20 +2,36 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function FuturisticHero() {
-  return (
-    <section className="relative pt-20 pb-16 md:pt-28 md:pb-24 text-center text-gray-100">
-      <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          <span className="gradient-text drop-shadow-neon">Zion AI Marketplace</span>
-          <span className="block mt-3 text-xl md:text-2xl font-medium text-gray-300">Autonomous, intelligent automations for teams that move fast</span>
+
+export default function FuturisticHero() {
+      <AnimatedBackground />;
+          <Link href='/partners'>;
+export default /**
+      <AnimatedBackground />;
+          <Link href='/partners'>;
+          </Link>;
+          <Link href='/services'>;
+
+
+          </Link>;
+
+export default function FuturisticHero() {
+      <AnimatedBackground />
         </h1>
         <p className="mt-6 text-gray-300/90 md:text-lg">
           Hire world-class AI talent, rent compute, and run cloud automations. All in one futuristic platform.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3">
           <Link href="/services"><a className="btn-primary">Explore Services</a></Link>
+          <Link href="/services"><a className="btn-primary">Explore Services</a></Link>
+          <Link href="/seo"><a className="btn-secondary">Localized Pages</a></Link>
           <Link href="/seo"><a className="btn-secondary">Localized Pages</a></Link>
           <Link href="/project/demo/room"><a className="btn-ghost">Start a Call</a></Link>
+          <Link href="/project/demo/room"><a className="btn-ghost">Start a Call</a></Link>
+          <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
+          <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
+          <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
+          <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
         </div>
       </div>
       <div className="mt-12 max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-left px-6">
@@ -38,4 +54,12 @@ export default function FuturisticHero() {
       </div>
     </section>
   );
-}
+
+            Integrated AI toolchain          </p > export default /**
+      <AnimatedBackground />;
+          <Link href="/partners"><a className="px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover: bg - indigo - 500">Become a Partner</a></Link>;
+          <Link href="/partners"><a className="px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover: bg - indigo - 500">Become a Partner</a></Link>;
+          <Link href="/services"><a className="px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900">Explore Services</a></Link>;
+          <Link href="/services"><a className="px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900">Explore Services</a></Link>;
+
+

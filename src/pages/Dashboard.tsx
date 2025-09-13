@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "../components/ui/button";
-import Header from "../components/Header";
+import { Header } from "../components/layout/Header";
 import { Badge } from "../components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react';
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag, User, Globe } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
   return (
@@ -75,35 +75,55 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* Recent Orders */}
-        <div className="mt-8">
-          <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-            <h2 className="text-xl font-semibold text-white mb-4">Recent Orders</h2>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg">
-                <div>
-                  <h3 className="text-white font-medium">AI Chatbot Development</h3>
-                  <p className="text-gray-400 text-sm">Order #12345</p>
-                </div>
-                <Badge variant="outline" className="border-green-500 text-green-500">
-                  Completed
-                </Badge>
-              </div>
-              <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg">
-                <div>
-                  <h3 className="text-white font-medium">Cloud Migration</h3>
-                  <p className="text-gray-400 text-sm">Order #12346</p>
-                </div>
-                <Badge variant="outline" className="border-yellow-500 text-yellow-500">
-                  In Progress
-                </Badge>
-              </div>
+        {/* User Actions */}
+        <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h2 className="text-xl font-semibold text-white mb-4">User Actions</h2>
+          <div className="flex items-center space-x-4 mb-4">
+            <Link to="/profile">
+              <User className="w-5 h-5 text-zion-cyan" />
+            </Link>
+            <Link to="/settings">
+              <Settings className="w-5 h-5 text-zion-cyan" />
+            </Link>
+            <Link to="/">
+              <Globe className="w-5 h-5 text-zion-cyan" />
+            </Link>
+          </div>
+          
+          <div className="flex items-center space-x-4 mb-4">
+            <UserCheck size={24} className="text-white"/>
+            <MessageSquare size={24} className="text-white"/>
+            <Bell size={24} className="text-zion-slate-light"/>
+          </div>
+          
+          
+          <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg">
+            <div>
+              <h3 className="text-white font-medium">Project Status</h3>
+              <p className="text-gray-400 text-sm">Current Project</p>
             </div>
+            <Badge variant="outline" className="border-green-500 text-green-500">
+              Completed
+            </Badge>
+          </div>
+        </div>
+
+        {/* Recent Orders */}
+        <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          <h2 className="text-xl font-semibold text-white mb-4">Recent Orders</h2>
+          <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg">
+            <div>
+              <h3 className="text-white font-medium">Cloud Migration</h3>
+              <p className="text-gray-400 text-sm">Order #12346</p>
+            </div>
+            <Badge variant="outline" className="border-yellow-500 text-yellow-500">
+              In Progress
+            </Badge>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Dashboard;
