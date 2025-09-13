@@ -1,0 +1,52 @@
+[2025-09-13 22:03:16] 🔄 Starting bulk processing...
+[2025-09-13 22:03:16] 📊 Batch size: 50
+[2025-09-13 22:03:16] 📊 Max conflicts per batch: 10
+[2025-09-13 22:03:16] ---
+[2025-09-13 22:03:18] 📊 Total branches to process: 2184
+[2025-09-13 22:03:18] ---
+[2025-09-13 22:03:18] 🚀 Processing batch 1 (branches 1 to 50)
+[2025-09-13 22:03:18] ---
+[2025-09-13 22:03:18] 📋 Processing branch 1: automation/workflow-auto-heal
+[2025-09-13 22:03:19] 🔄 Attempting to merge automation/workflow-auto-heal...
+[2025-09-13 22:03:23] ✅ Successfully merged automation/workflow-auto-heal
+[2025-09-13 22:03:23] ✅ Branch automation/workflow-auto-heal processed successfully
+[2025-09-13 22:03:23] 📊 Batch progress: 1 successful, 0 failed
+[2025-09-13 22:03:23] 📊 Overall progress: 1 successful, 0 failed, 0 conflicts resolved
+[2025-09-13 22:03:23] 📋 Processing branch 2: backup-main-20250912-150553
+[2025-09-13 22:03:24] 🔄 Attempting to merge backup-main-20250912-150553...
+[2025-09-13 22:03:25] ✅ Successfully merged backup-main-20250912-150553
+[2025-09-13 22:03:25] ✅ Branch backup-main-20250912-150553 processed successfully
+[2025-09-13 22:03:25] 📊 Batch progress: 2 successful, 0 failed
+[2025-09-13 22:03:25] 📊 Overall progress: 2 successful, 0 failed, 0 conflicts resolved
+[2025-09-13 22:03:25] 📋 Processing branch 3: backup-main-20250912-222302
+[2025-09-13 22:03:26] 🔄 Attempting to merge backup-main-20250912-222302...
+[2025-09-13 22:03:27] ✅ Successfully merged backup-main-20250912-222302
+[2025-09-13 22:03:28] ✅ Branch backup-main-20250912-222302 processed successfully
+[2025-09-13 22:03:28] 📊 Batch progress: 3 successful, 0 failed
+[2025-09-13 22:03:28] 📊 Overall progress: 3 successful, 0 failed, 0 conflicts resolved
+[2025-09-13 22:03:28] 📋 Processing branch 4: backup-main-20250913-014353
+[2025-09-13 22:03:29] 🔄 Attempting to merge backup-main-20250913-014353...
+[2025-09-13 22:03:30] ✅ Successfully merged backup-main-20250913-014353
+[2025-09-13 22:03:30] ✅ Branch backup-main-20250913-014353 processed successfully
+[2025-09-13 22:03:30] 📊 Batch progress: 4 successful, 0 failed
+[2025-09-13 22:03:30] 📊 Overall progress: 4 successful, 0 failed, 0 conflicts resolved
+[2025-09-13 22:03:30] 📋 Processing branch 5: backup-main-20250913-062224
+[2025-09-13 22:03:31] 🔄 Attempting to merge backup-main-20250913-062224...
+[2025-09-13 22:03:32] ✅ Successfully merged backup-main-20250913-062224
+[2025-09-13 22:03:33] ✅ Branch backup-main-20250913-062224 processed successfully
+[2025-09-13 22:03:33] 📊 Batch progress: 5 successful, 0 failed
+[2025-09-13 22:03:33] 📊 Overall progress: 5 successful, 0 failed, 0 conflicts resolved
+[2025-09-13 22:03:33] 📋 Processing branch 6: backup-main-20250913-062444
+[2025-09-13 22:03:33] 🔄 Attempting to merge backup-main-20250913-062444...
+[2025-09-13 22:03:35] ✅ Successfully merged backup-main-20250913-062444
+[2025-09-13 22:03:35] ✅ Branch backup-main-20250913-062444 processed successfully
+[2025-09-13 22:03:35] 📊 Batch progress: 6 successful, 0 failed
+[2025-09-13 22:03:35] 📊 Overall progress: 6 successful, 0 failed, 0 conflicts resolved
+[2025-09-13 22:03:35] 📋 Processing branch 7: backup-main-20250913-084930
+[2025-09-13 22:03:36] 🔄 Attempting to merge backup-main-20250913-084930...
+[2025-09-13 22:03:37] ⚠️  Merge conflicts detected in backup-main-20250913-084930, resolving...
+[2025-09-13 22:03:37] 📋 Conflicted files: app/page.tsx
+[2025-09-13 22:03:37] 🔧 Resolving conflicts in app/page.tsx for branch backup-main-20250913-084930...
+[2025-09-13 22:03:37] ⚠️  Found conflicts in app/page.tsx, resolving...
+[2025-09-13 22:03:37] 📝 Regular file, attempting to merge both versions...
+[2025-09-13 22:03:37] ✅ Resolved conflicts in app/page.tsx
