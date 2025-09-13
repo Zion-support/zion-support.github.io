@@ -1,183 +1,257 @@
 import React, { useEffect, useState } from 'react';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusVisible: boolean;
+interface AccessibilityMetrics {
+  hasAltText: boolean;
+  hasHeadings: boolean;
+  hasLandmarks: boolean;
+  hasFocusableElements: boolean;
+  contrastRatio: number;
+  fontSize: string;
 }
 
 const AccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusVisible: false
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<AccessibilityMetrics | null>(null);
+  const [isAccessible, setIsAccessible] = useState(false);
+  const [highContrastMode, setHighContrastMode] = useState(false);
 
   useEffect(() => {
-    // Apply accessibility settings to document
-    const root = document.documentElement;
-    
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-    
-    if (settings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
-    
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-    
-    if (settings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  }, [settings]);
+    // Check for accessibility issues
+    const checkAccessibility = () => {
+      const images = document.querySelectorAll('img');
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      const landmarks = document.querySelectorAll('main, nav, header, footer, aside, section, article');
+      const focusableElements = document.querySelectorAll('button, input, select, textarea, a[href]');
+      
+      const hasAltText = Array.from(images).every(img => img.alt || img.getAttribute('aria-label'));
+      const hasHeadings = headings.length > 0;
+      const hasLandmarks = landmarks.length > 0;
+      const hasFocusableElements = focusableElements.length > 0;
+      
+      // Check contrast ratio (simplified)
+      const bodyStyle = window.getComputedStyle(document.body);
+      const backgroundColor = bodyStyle.backgroundColor;
+      const color = bodyStyle.color;
+      const contrastRatio = 4.5; // Simplified - would need actual calculation
+      
+      const newMetrics: AccessibilityMetrics = {
+        hasAltText,
+        hasHeadings,
+        hasLandmarks,
+        hasFocusableElements,
+        contrastRatio,
+        fontSize: bodyStyle.fontSize,
+      };
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
-    setSettings(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
-  };
+      setMetrics(newMetrics);
+      
+      // Check overall accessibility
+      const accessible = hasAltText && hasHeadings && hasLandmarks && hasFocusableElements;
+      setIsAccessible(accessible);
+    };
 
-  return (
-    <>
-      {/* Accessibility Toggle Button */}
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 left-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-        aria-label="Toggle accessibility settings"
-        title="Accessibility Settings (A)"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-        </svg>
-      </button>
+    // Check for user's high contrast preference
+    const checkHighContrast = () => {
+      if (window.matchMedia && window.matchMedia('(prefers-contrast: high)').matches) {
+        setHighContrastMode(true);
+        document.body.classList.add('high-contrast');
+      }
+    };
 
-      {/* Accessibility Panel */}
-      {isVisible && (
-        <div className="fixed bottom-20 left-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 max-w-sm">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-semibold text-gray-900">Accessibility Settings</h3>
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-gray-600"
-              aria-label="Close accessibility settings"
-            >
-              ×
-            </button>
+    // Check for reduced motion preference
+    const checkReducedMotion = () => {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('reduced-motion');
+        // Disable animations
+        const style = document.createElement('style');
+        style.textContent = `
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    };
+
+    // Enhanced focus management
+    const enhanceFocusManagement = () => {
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #6366f1;
+          outline-offset: 2px;
+        }
+        
+        .high-contrast *:focus {
+          outline: 3px solid #ffffff;
+          outline-offset: 3px;
+        }
+        
+        .reduced-motion *:focus {
+          outline: 2px solid #6366f1;
+          outline-offset: 2px;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Skip to content link
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Add ARIA labels to interactive elements
+    const enhanceARIA = () => {
+      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+      buttons.forEach(button => {
+        if (!button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Interactive button');
+        }
+      });
+
+      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+      links.forEach(link => {
+        if (!link.textContent?.trim() && !link.querySelector('img[alt]')) {
+          link.setAttribute('aria-label', 'Link');
+        }
+      });
+    };
+
+    // Keyboard navigation enhancement
+    const enhanceKeyboardNavigation = () => {
+      document.addEventListener('keydown', (e) => {
+        // Escape key to close modals
+        if (e.key === 'Escape') {
+          const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
+          modals.forEach(modal => {
+            const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
+            if (closeButton && document.activeElement !== closeButton) {
+              (closeButton as HTMLElement).focus();
+            }
+          });
+        }
+
+        // Tab navigation enhancement
+        if (e.key === 'Tab') {
+          const focusableElements = document.querySelectorAll(
+            'button, input, select, textarea, a[href], [tabindex]:not([tabindex="-1"])'
+          );
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+          if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          } else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      });
+    };
+
+    // Screen reader announcements
+    const announceToScreenReader = (message: string) => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
+
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    };
+
+    // Initialize accessibility enhancements
+    checkAccessibility();
+    checkHighContrast();
+    checkReducedMotion();
+    enhanceFocusManagement();
+    enhanceARIA();
+    enhanceKeyboardNavigation();
+
+    // Monitor for dynamic content changes
+    const observer = new MutationObserver(() => {
+      checkAccessibility();
+      enhanceARIA();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Announce page changes to screen readers
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const announcePageChange = () => {
+        const pageTitle = document.title;
+        const announcement = `Page loaded: ${pageTitle}`;
+        
+        // Create live region for announcements
+        const liveRegion = document.createElement('div');
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        liveRegion.textContent = announcement;
+        document.body.appendChild(liveRegion);
+
+        setTimeout(() => {
+          if (document.body.contains(liveRegion)) {
+            document.body.removeChild(liveRegion);
+          }
+        }, 1000);
+      };
+
+      // Announce on page load
+      announcePageChange();
+
+      // Announce on route changes (for SPAs)
+      window.addEventListener('popstate', announcePageChange);
+      
+      return () => {
+        window.removeEventListener('popstate', announcePageChange);
+      };
+    }
+  }, []);
+
+  if (process.env.NODE_ENV === 'development' && metrics) {
+    return (
+      <div className="fixed bottom-4 left-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg text-sm max-w-xs">
+        <h3 className="font-bold mb-2">Accessibility Status</h3>
+        <div className="space-y-1">
+          <div className={metrics.hasAltText ? 'text-green-400' : 'text-red-400'}>
+            Alt Text: {metrics.hasAltText ? '✓' : '✗'}
           </div>
-          
-          <div className="space-y-3">
-            <label className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={settings.highContrast}
-                onChange={() => toggleSetting('highContrast')}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">High Contrast</span>
-            </label>
-            
-            <label className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={settings.largeText}
-                onChange={() => toggleSetting('largeText')}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Large Text</span>
-            </label>
-            
-            <label className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={settings.reducedMotion}
-                onChange={() => toggleSetting('reducedMotion')}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Reduce Motion</span>
-            </label>
-            
-            <label className="flex items-center space-x-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={settings.focusVisible}
-                onChange={() => toggleSetting('focusVisible')}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Enhanced Focus</span>
-            </label>
+          <div className={metrics.hasHeadings ? 'text-green-400' : 'text-red-400'}>
+            Headings: {metrics.hasHeadings ? '✓' : '✗'}
           </div>
-          
-          <div className="mt-3 pt-2 border-t border-gray-100">
-            <p className="text-xs text-gray-500">
-              Press 'A' key to toggle this panel
-            </p>
+          <div className={metrics.hasLandmarks ? 'text-green-400' : 'text-red-400'}>
+            Landmarks: {metrics.hasLandmarks ? '✓' : '✗'}
+          </div>
+          <div className={metrics.hasFocusableElements ? 'text-green-400' : 'text-red-400'}>
+            Focusable: {metrics.hasFocusableElements ? '✓' : '✗'}
+          </div>
+          <div className={`font-semibold ${isAccessible ? 'text-green-400' : 'text-red-400'}`}>
+            Overall: {isAccessible ? 'Accessible' : 'Issues Found'}
           </div>
         </div>
-      )}
+      </div>
+    );
+  }
 
-      {/* Keyboard Navigation Enhancement */}
-      <style jsx global>{`
-        .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
-        }
-        
-        .high-contrast * {
-          background-color: white !important;
-          color: black !important;
-          border-color: black !important;
-        }
-        
-        .high-contrast button,
-        .high-contrast a {
-          border: 2px solid black !important;
-        }
-        
-        .large-text {
-          font-size: 1.25rem !important;
-        }
-        
-        .large-text h1 {
-          font-size: 3rem !important;
-        }
-        
-        .large-text h2 {
-          font-size: 2.5rem !important;
-        }
-        
-        .large-text h3 {
-          font-size: 2rem !important;
-        }
-        
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-        
-        .focus-visible *:focus {
-          outline: 3px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
-      `}</style>
-    </>
-  );
+  return null;
 };
 
 export default AccessibilityEnhancer;

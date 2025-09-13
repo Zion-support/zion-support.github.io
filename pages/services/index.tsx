@@ -1,194 +1,440 @@
+
+
+
+
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
+import Card from '../../components/ui/Card',;
+import Card from '../../components/ui/Card',;
+import Link from 'next/link',;
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',;
+import { additionalEnhancedServices } from '../../data/additional-real-services',;
+import { extraServices } from '../../data/extra-services',;
+import { newlyAddedServices } from '../../data/newly-added-services',;
+import { curatedMarketServices } from '../../data/curated-market-services',;
+import { realMarketServices } from '../../data/real-market-services',;
+import { new2025Services } from '../../data/new-2025-services',;
+import { marketValidatedServices } from '../../data/market-validated-services',;
+import { moreRealServices2025 } from '../../data/more-real-services-2025',;
+import { realOperationalServices } from '../../data/real-operational-services',;
+import { verified2025Additions } from '../../data/verified-2025-additions',;
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025',;
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025',;
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2',;
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025',;
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions',;
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3',;
+import { realServicesQ22025 } from '../../data/real-services-q2-2025',;
+import { realServicesQ32025 } from '../../data/real-services-q3-2025',;
+import { realServicesQ42025 } from '../../data/real-services-q4-2025',;
+
+
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
+import { Brain, Cloud, Code, Shield, Smartphone, Database, Zap, Globe, Lock, BarChart3, Settings, Users } from 'lucide-react';
 
-const Services: NextPage = () => {
-  const services = [
-    {
-      id: 1,
-      title: "AI Development",
-      description: "Custom AI solutions and machine learning models tailored to your business needs",
-      icon: "🤖",
-      features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-      pricing: "Starting at $5,000/month",
-      link: "/services/ai-development"
-    },
-    {
-      id: 2,
-      title: "Cloud Architecture",
-      description: "Scalable cloud solutions and infrastructure design for modern applications",
-      icon: "☁️",
-      features: ["AWS/Azure/GCP Migration", "Microservices Architecture", "DevOps Implementation", "Cost Optimization"],
-      pricing: "Starting at $3,000/month",
-      link: "/services/cloud-services"
-    },
-    {
-      id: 3,
-      title: "Web Application Development",
-      description: "Modern, responsive web applications built with cutting-edge technologies",
-      icon: "🌐",
-      features: ["React/Next.js Development", "API Development", "Database Design", "Performance Optimization"],
-      pricing: "Starting at $2,500/month",
-      link: "/services/web-application-development"
-    },
-    {
-      id: 4,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android",
-      icon: "📱",
-      features: ["React Native Development", "iOS/Android Apps", "UI/UX Design", "App Store Optimization"],
-      pricing: "Starting at $4,000/month",
-      link: "/services/mobile-app-development"
-    },
-    {
-      id: 5,
-      title: "Blockchain Solutions",
-      description: "Decentralized applications and smart contract development",
-      icon: "🔗",
-      features: ["Smart Contracts", "DApp Development", "Tokenization", "DeFi Solutions"],
-      pricing: "Starting at $6,000/month",
-      link: "/services/blockchain"
-    },
-    {
-      id: 6,
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with advanced analytics",
-      icon: "📊",
-      features: ["Data Visualization", "Business Intelligence", "Predictive Modeling", "Real-time Analytics"],
-      pricing: "Starting at $3,500/month",
-      link: "/services/data-analytics"
-    }
-  ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+
+
+    <MainLayout 
+
+          
+                  
+                  
+                  
+                    <Link href="/contact">
+                    </Link>
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { extraServices } from '../../data/extra-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { realMarketServices } from '../../data/real-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
+import { realServicesQ22025 } from '../../data/real-services-q2-2025';
+
+
+    <UltraAdvancedFuturisticBackground>
       <Head>
-        <title>Our Services - Zion Tech Solutions | Technology Solutions Provider</title>
-        <meta name="description" content="Discover our comprehensive technology services including AI development, cloud architecture, web development, mobile apps, blockchain solutions, and data analytics." />
-        <meta name="keywords" content="AI development, cloud architecture, web development, mobile apps, blockchain, data analytics, technology services" />
-        <meta property="og:title" content="Our Services - Zion Tech Solutions" />
-        <meta property="og:description" content="Explore our full range of technology services designed to transform your business and drive innovation." />
       </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center text-white mb-20">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Our Services
-          </h1>
-          <p className="text-2xl max-w-4xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to transform your business and drive innovation
-          </p>
-        </div>
+          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service) => (
-            <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all transform hover:scale-105">
-              <div className="text-6xl mb-6 text-center">{service.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-              <p className="text-gray-200 mb-6 leading-relaxed">{service.description}</p>
-              
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold mb-3 text-white">Key Features:</h4>
-                <ul className="space-y-2">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="text-gray-300 flex items-center">
-                      <span className="text-blue-400 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
-              <div className="mb-6">
-                <div className="text-2xl font-bold text-blue-400 mb-2">{service.pricing}</div>
-                <div className="text-sm text-gray-400">Flexible pricing based on project scope</div>
-              </div>
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
 
-              <Link 
-                href={service.link}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-semibold transition-all text-center block"
-              >
-                Learn More
-              </Link>
-            </div>
-          ))}
-        </div>
 
-        {/* Process Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Development Process</h2>
+                    <UltraFuturisticServiceCard2026
+
+
+
+
+
+
+                    <UltraFuturisticServiceCard2026
+
+
+
+
+
+
+
+
+
+import type { NextPage } from 'next',
+import Head from 'next / head',
+import UltraAdvancedFuturisticBackground from '../../components / ui / UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../../components / ui / UltraAdvancedFuturisticBackground',
+import Card from '../../components / ui / Card',
+import Card from '../../components / ui / Card',
+import Link from 'next / link',
+import { enhancedRealMicroSaasServices } from '../../data / enhanced - real - micro - saas - services',
+import { additionalEnhancedServices } from '../../data / additional - real - services',
+import { extra_services } from '../../data / extra - services',
+import { newlyAddedServices } from '../../data / newly - added - services',
+import { curatedMarketServices } from '../../data / curated - market - services',
+import { realMarketServices } from '../../data / real - market - services',
+import { new2025Services } from '../../data / new - 2025 - services',
+import { marketValidatedServices } from '../../data / market - validated - services',
+import { moreRealServices2025 } from '../../data / more - real - services - 2025',
+import { realOperationalServices } from '../../data / real - operational - services',
+import { verified2025Additions } from '../../data / verified - 2025 - additions',
+import { realServicesQ12025 } from '../../data / real - services - q1 - 2025';
+import { realEnterpriseServices2025 } from '../../data / real - enterprise - services - 2025',
+import { realMarketAugmentations2025 } from '../../data / real - market - augmentations - 2025',
+import { verifiedRealServices2025Batch2 } from '../../data / verified - real - services - 2025 - batch2',
+import { additionalLiveServices2025 } from '../../data / additional - live - services - 2025',
+import { real2025Q2Additions } from '../../data / real - 2025 - q2 - additions',
+import { augmentedServicesBatch3 } from '../../data / real - augmented - services - 2025 - batch3',
+import { realServicesQ22025 } from '../../data / real - services - q2 - 2025',
+import { realServicesQ32025 } from '../../data / real - services - q3 - 2025',
+import { realServicesQ42025 } from '../../data / real - services - q4 - 2025',
+export default /**
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+      </Head>;
+          <MarketplaceFilters available_categories={available_categories} value={filters} on_change={set_filters} />;
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
+                    <UltraFuturisticServiceCard2026;
+                    <UltraFuturisticServiceCard2026;
+
+
+
+
+
+
+
+                          <UltraFuturisticServiceCard2026
+
+                          <UltraFuturisticServiceCard2026;
+
+                          <Link;
+                          </Link>;
+
+
+
+
+
+
+                          <Link
+
+
+                          </Link>
+
+
+
+
+
+
+                  <Link
+                  </Link>
+                  <Link
+                  </Link>
+      </UltraFuturisticBackground>
+
+
+
+
+
+
+                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
+
+
+
+
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
+                  </Card>
+
+
+                  <UltraFuturisticServiceCard2026
+
+
+
+
+
+
+                  <UltraFuturisticServiceCard2026
+
+
+
+
+
+
+
+
+
+                  <Link;
+                  </Link>;
+                  <Link;
+                  </Link>;
+      </UltraFuturisticBackground>;
+                  <Card key={service.id || service.name} className="p - 6 bg - black / 50 border border - gray - 700 / 60 hover:border - cyan - 500 / 50 transition - colors shadow - lg / 10">;
+                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium shadow - glow hover:shadow - glow - lg">View</Link>;
+                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium shadow - glow hover:shadow - glow - lg">View</Link>;
+                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg border border - gray - 600 text - gray - 200 hover: border - cyan - 500 / 70">Learn</Link>;
+                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg border border - gray - 600 text - gray - 200 hover: border - cyan - 500 / 70">Learn</Link>;
+                  </Card>);
+                  <UltraFuturisticServiceCard2026;
+                  <UltraFuturisticServiceCard2026;
+
+
+
+
+
+
+
+                        <UltraFuturisticServiceCard2026
+
+
+
+
+
+
+                        <Link
+
+
+
+
+                        </Link>
+
+
+
+
+
+
+
+                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
+
+
+
+
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+
+                        <UltraFuturisticServiceCard2026;
+                        <Link;
+                        </Link>;
+                      <ArrowRight className="w - 5 h - 5 text - gray - 500 group - hover:text - cyan - 400 transition - colors duration - 300" />;
+                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
+
+                        <UltraFuturisticServiceCard2026
+                        <Link
+                        </Link>
+
+                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+
+
+    </UltraAdvancedFuturisticBackground>
+    </UltraAdvancedFuturisticBackground>);
+
+      {/* Process Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a proven methodology that ensures successful project delivery and maximum value for our clients.
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">1</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Discovery</h3>
-              <p className="text-gray-200">We analyze your requirements and define project scope</p>
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Discovery</h3>
+              <p className="text-gray-600">
+                We start by understanding your business needs, goals, and technical requirements through comprehensive consultation.
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Design</h3>
-              <p className="text-gray-200">We create detailed technical specifications and architecture</p>
+              <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Planning</h3>
+              <p className="text-gray-600">
+                Our team creates detailed project plans, architecture designs, and development roadmaps tailored to your objectives.
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Development</h3>
-              <p className="text-gray-200">We build your solution using agile methodologies</p>
+              <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Development</h3>
+              <p className="text-gray-600">
+                We build your solution using agile methodologies, ensuring quality, security, and performance at every stage.
+              </p>
             </div>
+            
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Deploy</h3>
-              <p className="text-gray-200">We deploy and maintain your solution with ongoing support</p>
+              <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Deployment</h3>
+              <p className="text-gray-600">
+                We deploy your solution with comprehensive testing, monitoring, and ongoing support to ensure success.
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Why Choose Us */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Why Choose Zion Tech Solutions?</h2>
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technologies We Use</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technologies and frameworks to deliver robust, scalable, and future-proof solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Frontend</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>React.js</p>
+                <p>Vue.js</p>
+                <p>Angular</p>
+                <p>Next.js</p>
+                <p>TypeScript</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Backend</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>Node.js</p>
+                <p>Python</p>
+                <p>Java</p>
+                <p>.NET</p>
+                <p>Go</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Cloud & DevOps</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>AWS</p>
+                <p>Azure</p>
+                <p>Google Cloud</p>
+                <p>Docker</p>
+                <p>Kubernetes</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">AI & ML</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>TensorFlow</p>
+                <p>PyTorch</p>
+                <p>OpenAI</p>
+                <p>Hugging Face</p>
+                <p>Scikit-learn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine technical expertise with business acumen to deliver solutions that drive real results.
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Expert Team</h3>
-              <p className="text-gray-200">
-                Our team consists of 50+ experienced developers, designers, and engineers with expertise in the latest technologies.
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
+              <p className="text-gray-600">
+                Our team consists of experienced developers, designers, and consultants with deep expertise in their respective domains.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
-              <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Fast Delivery</h3>
-              <p className="text-gray-200">
-                We use agile methodologies and modern development practices to deliver projects on time and within budget.
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Settings className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Proven Process</h3>
+              <p className="text-gray-600">
+                We follow industry best practices and proven methodologies to ensure successful project delivery and client satisfaction.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
-              <div className="text-5xl mb-4">🛡️</div>
-              <h3 className="text-2xl font-bold mb-4 text-white">24/7 Support</h3>
-              <p className="text-gray-200">
-                Our dedicated support team is available around the clock to ensure your systems run smoothly.
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Global Perspective</h3>
+              <p className="text-gray-600">
+                We bring international best practices and diverse perspectives to every project, ensuring solutions that work globally.
               </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Let's discuss your requirements and create a custom solution that drives real business value.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
-              Get Free Consultation
+            <Link href="/contact">
             </Link>
-            <Link href="/portfolio" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
-              View Our Work
+            <Link href="/about">
             </Link>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-};
+    </MainLayout>
 
 export default Services;
+
+      <QuoteRequestModal
+
+
+      <QuoteRequestModal;
+
+
+    </UltraAdvancedFuturisticBackground>;
+      <QuoteRequestModal;
+
+

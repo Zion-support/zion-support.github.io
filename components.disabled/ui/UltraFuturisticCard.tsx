@@ -1,7 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-import { motion, AnimatePresence, Variants } from 'framer-motion';
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
 
@@ -95,9 +92,6 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
     };
   }, [interactive]);
 
-<<<<<<< HEAD
-  const cardVariants: Variants = {
-=======
   const cardVariants = {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
     initial: {
@@ -113,10 +107,6 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
       rotateX: 0,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-        delay: delay * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94]
-=======
         delay: delay * 0.1
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
       }
@@ -126,10 +116,6 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
       scale: 1.02,
       rotateX: 5,
       transition: {
-<<<<<<< HEAD
-        duration: 0.3,
-        ease: [0.25, 0.46, 0.45, 0.94]
-=======
         duration: 0.3
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
       }
@@ -143,9 +129,6 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
     }
   };
 
-<<<<<<< HEAD
-  const glowVariants: Variants = {
-=======
   const glowVariants = {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
     initial: { opacity: 0, scale: 0.8 },
@@ -153,19 +136,12 @@ const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
       opacity: 1, 
       scale: 1.2,
       transition: {
-<<<<<<< HEAD
-        duration: 0.3,
-        ease: [0.25, 0.46, 0.45, 0.94]
-=======
         duration: 0.3
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
       }
     }
   };
 
-<<<<<<< HEAD
-  const borderVariants: Variants = {
-=======
   const borderVariants = {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
     initial: { opacity: 0.3 },

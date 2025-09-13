@@ -293,8 +293,5 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   );
 };
 
-<<<<<<< HEAD
-export default UltraFuturisticBackground;
-=======
 export default UltraFuturisticBackground;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4

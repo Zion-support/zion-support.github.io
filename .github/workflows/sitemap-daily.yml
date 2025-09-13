@@ -1,35 +1,30 @@
 name: Sitemap Daily
 
 on:
-  workflow_dispatch: {}
   schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
+    - cron: "0 1 * * *"
+  push:
+    branches: [ main ]
+    paths:
+      - 'pages/**'
+      - 'public/**'
+  workflow_dispatch: {}
 
 jobs:
-  main:
-    name: Main Job
+  sitemap:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
+      - run: npm ci
+      - name: Generate sitemap
+        run: npm run sitemap
+      - name: Commit sitemap
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(seo): update sitemap.xml'
+          file_pattern: public/sitemap.xml

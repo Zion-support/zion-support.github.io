@@ -1,0 +1,116 @@
+{
+  "compilerOptions": {
+<<<<<<< HEAD
+    "target": "ES2017",
+=======
+    "target": "ES2024",
+>>>>>>> origin/backup-main-20250823-224612
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "WebWorker.Iterable"
+    ],
+    "module": "esnext",
+    "skipLibCheck": true,
+<<<<<<< HEAD
+    "importHelpers": false,
+    "noEmitHelpers": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
+    },
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+>>>>>>> origin/backup-main-20250823-224612
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "allowJs": true,
+    "incremental": true,
+    "jsx": "preserve",
+<<<<<<< HEAD
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+=======
+    "allowImportingTsExtensions": true,
+>>>>>>> origin/backup-main-20250823-224612
+    "noEmit": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+<<<<<<< HEAD
+    "strictNullChecks": true
+  },
+  "include": [
+    "src",
+    "app",
+    "components",
+    "lib",
+    "types",
+    ".next/types/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+=======
+    /* Modern TypeScript Features */
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "useUnknownInCatchVariables": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    /* Performance optimizations */
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "disableSizeLimit": true,
+    "generateCpuProfile": "profile.cpuprofile",
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "traceResolution": false,
+    /* Advanced features */
+    "allowArbitraryExtensions": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["src", "src/types/offline-shims.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+>>>>>>> origin/backup-main-20250823-224612

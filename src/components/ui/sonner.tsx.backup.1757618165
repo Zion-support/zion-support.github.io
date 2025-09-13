@@ -1,0 +1,31 @@
+import React from 'react';
+
+<<<<<<< HEAD
+interface SonnerToasterProps {
+  position?: string;
+}
+
+export function SonnerToaster({ position = 'top-right' }: SonnerToasterProps) {
+  return <div id="sonner-toaster" data-position={position} />;
+}
+=======
+interface SonnerProps {
+  children?: React.ReactNode;
+}
+
+export const Sonner: React.FC<SonnerProps> = ({ children }) => {
+  return (
+    <div className="fixed top-4 right-4 z-50">
+      {children}
+    </div>
+  );
+};
+
+export const Toaster: React.FC = () => {
+  return (
+    <div className="fixed top-4 right-4 z-50">
+      {/* Toast notifications will be rendered here */}
+    </div>
+  );
+};
+>>>>>>> origin/backup-critical-fixes-20250824-224408
