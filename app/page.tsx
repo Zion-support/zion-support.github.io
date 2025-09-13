@@ -99,6 +99,13 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+
+// Import new content showcase components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import AIInnovationHub2026 from '../components/AIInnovationHub2026';
+import AIInnovationHub2026PromotionBanner from '../components/AIInnovationHub2026PromotionBanner';
+import TechnologyTrends2026 from '../components/TechnologyTrends2026';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
 // Import enhanced monitoring and management components
@@ -690,6 +697,27 @@ export default function HomePage() {
         
         {/* Content Showcase 2026 */}
         <ContentShowcase2026 />
+        
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Ultimate Content Showcase..." />}>
+          <UltimateContentShowcase2026 />
+        </Suspense>
+        
+        {/* AI INNOVATION HUB 2026 PROMOTION BANNER */}
+        <AIInnovationHub2026PromotionBanner />
+        
+        {/* AI INNOVATION HUB 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Innovation Hub..." />}>
+          <AIInnovationHub2026 />
+        </Suspense>
+        
+        {/* TECHNOLOGY TRENDS 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Technology Trends..." />}>
+          <TechnologyTrends2026 />
+        </Suspense>
         
         {/* Enhanced Content Showcase 2026 */}
         <EnhancedContentShowcase2026 />
