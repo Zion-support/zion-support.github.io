@@ -59,6 +59,9 @@ import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryC
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new autonomous workforce promotional banner
+import AutonomousWorkforceRevolutionPromotionBanner from '../components/AutonomousWorkforceRevolutionPromotionBanner';
+
 // Import new breakthrough banners
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026BreakthroughRevolutionaryContentBanner from '../components/AI2026BreakthroughRevolutionaryContentBanner';
@@ -947,6 +950,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
+        
+        {/* NEW: AUTONOMOUS WORKFORCE REVOLUTION PROMOTION BANNER */}
+        <AutonomousWorkforceRevolutionPromotionBanner />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
