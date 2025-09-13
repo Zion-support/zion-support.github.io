@@ -465,6 +465,10 @@ import LatestContentNavigation from '../components/LatestContentNavigation';
 import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
 
+// New breakthrough promotional banners
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner from '../components/AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -4133,6 +4137,11 @@ export default function HomePage() {
       
       {/* AI TOOLS & UTILITIES SHOWCASE */}
       <AI2025ToolsUtilitiesShowcase />
+      
+      {/* NEW BREAKTHROUGH PROMOTIONAL BANNERS */}
+      <AI2025UltimateBreakthroughRevolutionBanner />
+      
+      <AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
