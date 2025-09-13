@@ -82,8 +82,6 @@ export default function DynamicServicePage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-<<<<<<< HEAD
-=======
 
 // Static export support: generate root-level pages for service slugs
 type Svc = typeof enhancedRealMicroSaasServices[number];

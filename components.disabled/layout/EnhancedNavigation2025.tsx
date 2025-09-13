@@ -31,10 +31,6 @@ const navigationItems: NavigationItem[] = [
     featured: true
   },
   {
-<<<<<<< HEAD
-    name: 'Services',
-    href: '/services',
-=======
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
@@ -103,16 +99,6 @@ const navigationItems: NavigationItem[] = [
     category: 'services',
     color: 'from-emerald-500 to-cyan-500',
     children: [
-<<<<<<< HEAD
-      { label: 'Innovative 2025 Showcase', href: '/innovative-2025-services-showcase', icon: Rocket, badge: 'New' },
-      { label: 'AI & Machine Learning', href: '/ai-services', icon: Brain, badge: 'Hot' },
-      { label: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, badge: 'New' },
-      { label: 'Cybersecurity', href: '/cybersecurity', icon: Shield, badge: 'Popular' },
-      { label: 'Cloud Infrastructure', href: '/cloud-platform', icon: Globe },
-      { label: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { label: 'Process Automation', href: '/process-automation', icon: Zap },
-      { label: 'Micro SAAS Solutions', href: '/micro-saas', icon: Zap, badge: 'Trending' }
-=======
       { name: 'AI Customer Success', href: '/ai-customer-success-platform', description: 'Churn prediction and retention' },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', description: 'AI-powered logistics' },
       { name: 'Financial Planning AI', href: '/ai-financial-planning-platform', description: 'Intelligent financial analysis' },
@@ -515,45 +501,6 @@ const EnhancedNavigation2025: React.FC = () => {
                         >
                           {item.label}
                         </Link>
-=======
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  {item.children ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                      >
-                        <div className="flex items-center space-x-2">
-                          {item.icon}
-                          <span>{item.name}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      {activeDropdown === item.name && (
-                        <div className="ml-6 mt-2 space-y-2">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.name}
-                              href={child.href}
-                              className="block px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors duration-200"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {child.name}
-                            </Link>
-                          ))}
-                        </div>
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
                       )}
                     </div>
                   ) : (

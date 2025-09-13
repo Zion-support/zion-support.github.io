@@ -1,0 +1,16 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+<<<<<<< HEAD
+export function useScrollToTop() {
+=======
+export const useScrollToTop = () => {
+>>>>>>> origin/backup-critical-fixes-20250824-224408
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/backup-critical-fixes-20250824-224408

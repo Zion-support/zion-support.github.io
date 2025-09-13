@@ -1,20 +1,18 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI Automation ROI Calculator - Free Business Impact Assessment Tool',
-  description: 'Calculate the return on investment for AI automation projects. Free interactive calculator with industry benchmarks and implementation guidance.',
-  keywords: 'AI ROI calculator, automation ROI, business automation calculator, AI investment return, automation cost savings',
-  openGraph: {
-    title: 'AI Automation ROI Calculator - Free Business Impact Assessment Tool',
-    description: 'Calculate the return on investment for AI automation projects with our free interactive calculator.',
-    type: 'website',
-  },
-};
+import SEO from "../../components/SEO";
+import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export default function AIAutomationROICalculator() {
   return (
-    <div className="min-h-screen bg-white">
+    <ErrorBoundary>
+      <SEO
+        title="AI Automation ROI Calculator - Free Business Impact Assessment Tool"
+        description="Calculate the return on investment for AI automation projects. Free interactive calculator with industry benchmarks and implementation guidance."
+        keywords="AI ROI calculator, automation ROI, business automation calculator, AI investment return, automation cost savings"
+        url="/resources/ai-automation-roi-calculator"
+      />
+      
+      <div className="min-h-screen bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="mb-8">
             <div className="inline-flex items-center bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
@@ -235,5 +233,6 @@ export default function AIAutomationROICalculator() {
           </div>
         </div>
       </div>
+    </ErrorBoundary>
   );
 }
