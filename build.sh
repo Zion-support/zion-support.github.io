@@ -5,50 +5,10 @@ echo "Starting Netlify build process..."
 
 # Check if we're in a Netlify environment
 if [ "$NETLIFY" = "true" ]; then
-  echo "Detected Netlify environment - using optimized build process..."
+  echo "Detected Netlify environment - using specialized build process..."
   
-  # Clear any corrupted cache and ensure clean state
-  echo "Clearing potential corrupted cache..."
-  rm -rf node_modules/.cache
-  rm -rf .yarn-cache
-  rm -rf node_modules
-  
-  # Clear Yarn cache to avoid corrupted find-up package issue
-  echo "Clearing Yarn cache..."
-  yarn cache clean --all
-  
-  # Clear specific problematic cache entries
-  echo "Clearing specific problematic cache entries..."
-  rm -rf ~/.yarn/cache/v6/npm-find-up-*
-  rm -rf ~/.yarn/cache/v6/npm-eslint-*
-  
-  # For Netlify, use a more conservative approach with cache clearing
-  echo "Installing dependencies with Netlify-optimized settings..."
-  
-  # Try installation with retry logic for Netlify
-  for i in {1..3}; do
-    echo "Installation attempt $i of 3..."
-    if yarn install --frozen-lockfile --network-timeout 60000 --prefer-offline --no-cache --ignore-engines --ignore-optional; then
-      echo "Dependencies installed successfully!"
-      break
-    else
-      echo "Installation failed, cleaning and retrying..."
-      rm -rf node_modules
-      yarn cache clean --all
-      rm -rf ~/.yarn/cache/v6/npm-find-up-*
-      rm -rf ~/.yarn/cache/v6/npm-eslint-*
-      if [ $i -eq 3 ]; then
-        echo "All installation attempts failed! Trying without frozen lockfile..."
-        if ! yarn install --network-timeout 60000 --prefer-offline --no-cache --ignore-engines --ignore-optional; then
-          echo "Yarn installation still failing. Trying with npm as fallback..."
-          rm -rf node_modules
-          rm -rf yarn.lock
-          npm cache clean --force
-          npm install --legacy-peer-deps --no-optional
-        fi
-      fi
-    fi
-  done
+  # Use the specialized Netlify build script
+  exec ./netlify-build.sh
   
 else
   echo "Local development environment detected - using full cleanup process..."
