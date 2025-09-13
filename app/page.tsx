@@ -273,6 +273,15 @@ export default function HomePage() {
         {/* NEW AI 2026 ULTIMATE SERVICES PROMOTION BANNER */}
         <AI2026UltimateServicesPromotionBanner />
         
+        {/* NEW AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
+        <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* NEW AI 2026 NEURAL INTERFACE REVOLUTION PROMOTION BANNER */}
+        <AI2026NeuralInterfaceRevolutionPromotionBanner />
+        
+        {/* NEW AI 2026 ADVANCED AUTOMATION MASTERY PROMOTION BANNER */}
+        <AI2026AdvancedAutomationMasteryPromotionBanner />
+        
         {/* NEW AI 2030 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
         <AI2030FuturePredictionsUltimatePromotionBanner />
         
