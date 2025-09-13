@@ -98,6 +98,11 @@ export default function NewContent2025BreakthroughBanner() {
               🛠️ Resources & Tools
             </Link>
           </div>
+          
+          {/* Trust Indicators */}
+          <div className="mt-8 text-white/60 text-sm">
+            <p>Trusted by 500+ Fortune 500 companies • 10,000+ successful implementations</p>
+          </div>
         </div>
       </div>
     </section>

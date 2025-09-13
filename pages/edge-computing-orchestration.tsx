@@ -30,14 +30,19 @@ import {
   Heart
 } from 'lucide-react';
 
-const EdgeComputingPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Edge AI Processing',
-      description: 'AI-powered edge computing for real-time decision making',
       icon: <Brain className="w-8 h-8 text-purple-500" />,
-      features: ['Local AI Inference', 'Real-time Processing', 'Low Latency'],
-      href: '/edge-ai-processing'
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+
+
+
+export default function EdgeComputingPage() {
+
+
+
     },
     {
       title: 'IoT Edge Management',
@@ -116,22 +121,44 @@ const EdgeComputingPage: React.FC = () => {
       icon: <Factory className="w-6 h-6" />
     },
     {
-      name: 'Healthcare',
-      description: 'Real-time patient monitoring and diagnostics',
       icon: <Heart className="w-6 h-6" />
-    }
-  ];
 
-  return (
     <Layout 
-      title="Edge Computing Orchestration - Zion Tech Group"
-      description="Advanced edge computing solutions for real-time processing, IoT management, and distributed intelligence"
-      canonicalUrl="https://ziontechgroup.com/edge-computing-orchestration"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+
+      <Head>
+
+
+      </Head>
+      <EnhancedNavigation />
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function EdgeComputingPage(req, res) {
+      <Head>;
+      </Head>;
+      <EnhancedNavigation />;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -147,8 +174,75 @@ const EdgeComputingPage: React.FC = () => {
                 Revolutionize your infrastructure with intelligent edge computing 
                 that brings processing power closer to your data sources.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+
+
+import Head from 'next / head';
+import {motion} from 'framer-motion';
+import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users, } from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+      <Head>;
+        />      </Head>;
+      <EnhancedNavigation />;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <Cpu className='w-8 h-8 text-white' />
+
+                <Cpu className="w-8 h-8 text-white" />
+
+
+
+                <Network className="w-8 h-8 text-white" />
+
+
+
+
+
+                <Cpu className='w-8 h-8 text-white' />;
+                <Network className='w-8 h-8 text-white' />;
+                <Database className='w-8 h-8 text-white' />;
+
+
+
+
+
+
+
+
+                      <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />;
+
+
+
+                <Cpu className='w-8 h-8 text-white' />
+                <Network className='w-8 h-8 text-white' />
+                <Database className='w-8 h-8 text-white' />
+                      <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />;
+                <Cpu className="w-8 h-8 text-white" />;
+                <Network className="w-8 h-8 text-white" />;
+                <Database className="w-8 h-8 text-white" />;
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />;
+
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
@@ -355,4 +449,13 @@ const EdgeComputingPage: React.FC = () => {
 };
 
 export default EdgeComputingPage;
+
+
+
+
+
+                      <CheckCircle className='w - 5 h - 5 text - green - 500 flex - shrink - 0' />;
+      <EnhancedFooter />;
+
+
 

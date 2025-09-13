@@ -3,6 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import NewContentPromotionBanner from './components/NewContentPromotionBanner';
+import { RevolutionaryContentBanner } from './components/RevolutionaryContentBanner';
+import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
+import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
+import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -50,6 +55,7 @@ const LoginPage = React.lazy(() => import('./pages/Login'));
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
+const ContentShowcase2025 = React.lazy(() => import('../app/content-showcase-2025/page'));
 
 // Sitemap-aligned pages
 
@@ -91,7 +97,7 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 // const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 // const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 // const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-// const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+const NewServicesShowcase2025 = React.lazy(() => import('./components/NewServicesShowcase2025'));
 
 // Comprehensive improvements components - commented out as they don't exist yet
 // const AdvancedAIServicesHub = React.lazy(() => import('./components/AdvancedAIServicesHub'));
@@ -99,11 +105,11 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 // const EnhancedSEOManager = React.lazy(() => import('./components/EnhancedSEOManager'));
 // const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/ComprehensiveImprovements2025'));
 
-// New innovative AI services - commented out as they don't exist yet
-// const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-// const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+// New innovative AI services
+const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 // const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
-// const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 // const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
 // const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
 // const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
@@ -120,6 +126,23 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 const AIRevolution2025 = React.lazy(() => import('./pages/AIRevolution2025'));
 const QuantumComputingBreakthrough = React.lazy(() => import('./pages/QuantumComputingBreakthrough'));
 const AutonomousBusinessPlatform = React.lazy(() => import('./pages/AutonomousBusinessPlatform'));
+const AutonomousBusinessPlatform2026 = React.lazy(() => import('./pages/AutonomousBusinessPlatform2026'));
+const InnovativeContentShowcase2026Page = () => <InnovativeContentShowcase2026 />;
+const InteractiveContentDiscovery2026Page = () => <InteractiveContentDiscovery2026 />;
+
+// New blog posts
+const BlogPostQuantumAI = React.lazy(() => import('./pages/BlogPostQuantumAI'));
+const BlogPostAutomationGuide = React.lazy(() => import('./pages/BlogPostAutomationGuide'));
+
+// New case studies
+const CaseStudyHealthcareAI = React.lazy(() => import('./pages/CaseStudyHealthcareAI'));
+
+// New resources
+const ResourceImplementationChecklist = React.lazy(() => import('./pages/ResourceImplementationChecklist'));
+const ResourceROICalculator = React.lazy(() => import('./pages/ResourceROICalculator'));
+
+// Content showcase hub
+const ContentShowcaseHub = React.lazy(() => import('./pages/ContentShowcaseHub'));
 
 // Comprehensive services showcase - commented out as they don't exist yet
 // const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -165,6 +188,9 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <RevolutionaryContentBanner />
+        <NewContentPromotionBanner />
+        <EnhancedContentPromotionBanner />
         <AppHeader />
         <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -203,6 +229,7 @@ function App() {
               <Route path="/white-papers" element={<WhitePapers />} />
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/content-showcase-2025" element={<ContentShowcase2025 />} />
               
               {/* New sitemap routes */}
               
@@ -236,13 +263,13 @@ function App() {
               {/* <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} /> */}
               {/* <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} /> */}
               {/* <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} /> */}
-              {/* <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} /> */}
+              <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* New innovative AI services */}
-              {/* <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} /> */}
-              {/* <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} /> */}
+              <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
               {/* <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} /> */}
-              {/* <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} /> */}
               {/* <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} /> */}
               {/* <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} /> */}
               
@@ -297,6 +324,29 @@ function App() {
               <Route path="/ai-revolution-2025" element={<AIRevolution2025 />} />
               <Route path="/quantum-computing-breakthrough" element={<QuantumComputingBreakthrough />} />
               <Route path="/autonomous-business-platform" element={<AutonomousBusinessPlatform />} />
+              <Route path="/autonomous-business-platform-2026" element={<AutonomousBusinessPlatform2026 />} />
+              <Route path="/innovative-content-showcase-2026" element={<InnovativeContentShowcase2026Page />} />
+              <Route path="/interactive-content-discovery-2026" element={<InteractiveContentDiscovery2026Page />} />
+              
+              {/* New blog post routes */}
+              <Route path="/blog/quantum-ai-breakthrough-2025" element={<BlogPostQuantumAI />} />
+              <Route path="/blog/ai-automation-enterprise-guide-2025" element={<BlogPostAutomationGuide />} />
+              
+              {/* New case study routes */}
+              <Route path="/case-studies/healthcare-ai-transformation-success" element={<CaseStudyHealthcareAI />} />
+              
+              {/* New resource routes */}
+              <Route path="/resources/ai-implementation-checklist-2025" element={<ResourceImplementationChecklist />} />
+              <Route path="/resources/ai-roi-calculator-guide-2025" element={<ResourceROICalculator />} />
+              
+              {/* Content showcase hub */}
+              <Route path="/content-showcase" element={<ContentShowcaseHub />} />
+              
+              {/* New Content Routes */}
+              <Route path="/blog/ai-2026-neural-computing-revolution" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/blog/quantum-ai-autonomous-systems-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/case-studies/enterprise-quantum-ai-transformation-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/resources/quantum-ai-implementation-master-guide-2026" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* Hybrid App Demo */}
               

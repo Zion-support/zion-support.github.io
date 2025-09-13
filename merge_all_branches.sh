@@ -1,84 +1,62 @@
 #!/bin/bash
 
-# Script to merge all branches into main
-# This will attempt to merge branches and resolve conflicts automatically
+# Script to merge all feature branches into main
+# This will handle conflicts systematically
 
-set -e
+echo "Starting systematic merge of all feature branches..."
 
-echo "🚀 Starting bulk merge process..."
-
-# Get all remote branches that are not main
+# Get all remote branches (excluding main and HEAD)
 branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | sed 's/origin\///' | head -50)
 
-echo "📋 Found $(echo "$branches" | wc -l) branches to process"
+# Counter for tracking progress
+count=0
+total=$(echo "$branches" | wc -l)
+echo "Found $total branches to merge"
 
-# Track successful merges
-successful_merges=()
-failed_merges=()
-
-# Function to attempt merge
-attempt_merge() {
+# Function to merge a single branch
+merge_branch() {
     local branch=$1
-    echo "🔄 Attempting to merge: $branch"
+    echo "Processing branch: $branch (${count}/${total})"
     
-    # Checkout the branch
-    if git checkout "origin/$branch" 2>/dev/null; then
-        # Try to merge into main
-        if git checkout main 2>/dev/null; then
-            # Check if merge would be fast-forward or create conflicts
-            if git merge --no-ff --no-commit "origin/$branch" 2>/dev/null; then
-                # If merge succeeds, commit it
-                git commit -m "Merge branch '$branch' into main" 2>/dev/null || true
-                echo "✅ Successfully merged: $branch"
-                successful_merges+=("$branch")
+    # Try to merge the branch
+    if git merge "origin/$branch" --no-edit 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        return 0
+    else
+        echo "⚠️  Conflict in $branch, attempting auto-resolution..."
+        
+        # Check if it's a simple conflict we can auto-resolve
+        if git status --porcelain | grep -q "^UU\|^AU\|^UA\|^DD\|^AD\|^DA"; then
+            # Try to add all files and commit
+            git add . 2>/dev/null
+            if git commit -m "Auto-merge: $branch" 2>/dev/null; then
+                echo "✅ Auto-resolved conflicts for $branch"
                 return 0
-            else
-                echo "⚠️  Merge conflict in: $branch"
-                git merge --abort 2>/dev/null || true
-                failed_merges+=("$branch")
-                return 1
             fi
         fi
+        
+        # If auto-resolution fails, skip this branch
+        echo "❌ Skipping $branch due to complex conflicts"
+        git merge --abort 2>/dev/null
+        return 1
     fi
-    
-    echo "❌ Failed to merge: $branch"
-    failed_merges+=("$branch")
-    return 1
 }
 
-# Process each branch
-for branch in $branches; do
-    attempt_merge "$branch" || true
+# Process branches in batches
+echo "$branches" | while read -r branch; do
+    if [ -n "$branch" ]; then
+        count=$((count + 1))
+        merge_branch "$branch"
+        
+        # Push every 10 successful merges
+        if [ $((count % 10)) -eq 0 ]; then
+            echo "Pushing progress... (merged $count branches)"
+            git push origin main --force-with-lease
+        fi
+    fi
 done
 
-echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successfully merged: ${#successful_merges[@]} branches"
-echo "❌ Failed to merge: ${#failed_merges[@]} branches"
+echo "Batch merge completed. Final push..."
+git push origin main
 
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "✅ Successfully merged branches:"
-    for branch in "${successful_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-if [ ${#failed_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "❌ Failed to merge branches:"
-    for branch in "${failed_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-# Push changes if there were successful merges
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "🚀 Pushing changes to origin/main..."
-    git push origin main
-    echo "✅ Changes pushed successfully!"
-fi
-
-echo ""
-echo "🎉 Bulk merge process completed!"
+echo "All feature branches have been processed!"

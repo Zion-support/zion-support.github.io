@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Users, Award } from 'lucide-react';
+import { X, Zap, TrendingUp, Star, ArrowRight, Brain, Rocket, Target, Users, Award } from 'lucide-react';
 
 export default function AI2025RevolutionaryBreakthroughBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -99,6 +99,24 @@ export default function AI2025RevolutionaryBreakthroughBanner() {
                 View Success Story
               </Link>
             </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <Link 
+              href="/blog/ai-2025-revolutionary-breakthrough-announcement"
+              className="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors flex items-center gap-2 whitespace-nowrap"
+            >
+              <Star className="w-4 h-4" />
+              Learn More
+            </Link>
+            <Link 
+              href="/case-studies/ai-2025-revolutionary-breakthrough-success"
+              className="border-2 border-white text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-600 transition-colors flex items-center gap-2 whitespace-nowrap"
+            >
+              View Success Stories
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           {/* Dismiss Button */}

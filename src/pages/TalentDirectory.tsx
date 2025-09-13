@@ -12,6 +12,7 @@ import { SORT_OPTIONS } from '@/data/sortOptions';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TalentProfile } from '@/types/talent';
+import { SEO } from '@/components/SEO';
 import {
   Pagination,
   PaginationContent,
@@ -149,7 +150,7 @@ export default function TalentDirectory() {
               </h2>
               <p className="text-zion-slate-light mb-6">
                 Our comprehensive talent directory is currently under development. 
-                We're building a platform to connect you with the best tech talent worldwide.
+                We&apos;re building a platform to connect you with the best tech talent worldwide.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <button className="px-6 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark font-medium rounded-lg transition-colors">
@@ -163,7 +164,7 @@ export default function TalentDirectory() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

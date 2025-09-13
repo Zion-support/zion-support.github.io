@@ -1,179 +1,241 @@
 # Merge Conflict Resolution and PR Merging Guide
 
 ## Overview
-This guide provides step-by-step instructions to resolve all merge conflicts and merge open PRs into the main branch for the Zion Tech Group website.
+This guide provides step-by-step instructions for resolving merge conflicts and merging all open PRs into the main branch.
 
 ## Current Status
-- ✅ All missing pages have been created
-- ✅ Build is successful (`npm run build` passes)
-- ✅ Local changes have been committed
-- ⚠️ Terminal connectivity issues preventing direct execution
-- ⚠️ Multiple open PRs need to be merged
-
-## Open PRs Found
-Based on the `prs.json` file, there are approximately **50+ open PRs** that need to be processed.
+- **PR Branch**: `cursor/create-and-deploy-new-content-d115`
+- **Main Branch**: `main`
+- **New Content Added**: AI 2025 content, promotional components, navigation updates
 
 ## Step-by-Step Resolution Process
 
-### Step 1: Create Backup Branch
+### 1. Check Current Status
 ```bash
-# Create a backup of the current main branch
-git checkout -b backup-main-$(date +%Y%m%d-%H%M%S)
-git push origin backup-main-$(date +%Y%m%d-%H%M%S)
+# Check current branch and status
+git status
+git branch -a
+
+# Check for uncommitted changes
+git diff --name-only
+git diff --cached --name-only
+```
+
+### 2. Fetch Latest Changes
+```bash
+# Fetch all remote changes
+git fetch origin
+
+# Update main branch
 git checkout main
+git pull origin main
 ```
 
-### Step 2: Resolve Existing Conflicts
+### 3. Resolve Merge Conflicts
 ```bash
-# Use the existing conflict resolution script
-./resolve_all_merge_conflicts.sh
+# Checkout the PR branch
+git checkout cursor/create-and-deploy-new-content-d115
+
+# Merge main into PR branch to resolve conflicts
+git merge main --no-commit
 ```
 
-### Step 3: Get All Cursor Branches
+### 4. Auto-Resolve Common Conflicts
+
+#### Package.json Conflicts
 ```bash
-# List all cursor branches that need to be merged
-git branch -r | grep 'origin/cursor/' | sed 's/origin\///'
+# Use our version for package.json
+git checkout --ours package.json
+git add package.json
 ```
 
-### Step 4: Merge Each Branch
-For each branch found in Step 3, run:
-
+#### Lock File Conflicts
 ```bash
-# Fetch the latest version
-git fetch origin <branch-name>
-
-# Attempt to merge
-git merge --no-commit --no-ff origin/<branch-name>
-
-# If conflicts occur:
-# 1. Resolve conflicts manually in the conflicted files
-# 2. Or run the conflict resolution script again
-# 3. Add resolved files
-git add .
-
-# 4. Commit the merge
-git commit -m "Merge <branch-name> into main - $(date)"
+# Use our version for lock files
+git checkout --ours package-lock.json
+git add package-lock.json
 ```
 
-### Step 5: Handle Merge Conflicts
-If merge conflicts occur:
-
-1. **Identify conflicted files:**
-   ```bash
-   git diff --name-only --diff-filter=U
-   ```
-
-2. **Resolve conflicts in each file:**
-   - Look for `<<<<<<< HEAD`, `=======`, and `>>>>>>>` markers
-   - Choose which version to keep or merge both
-   - Remove conflict markers
-
-3. **Use the conflict resolution script:**
-   ```bash
-   ./resolve_all_merge_conflicts.sh
-   ```
-
-### Step 6: Push Changes
+#### Backup File Conflicts
 ```bash
-# Push all merged changes to main
+# Remove backup files
+git rm "*.backup*" 2>/dev/null || true
+```
+
+#### App File Conflicts
+```bash
+# Use our version for main app files
+git checkout --ours app/page.tsx
+git checkout --ours app/layout.tsx
+git add app/page.tsx app/layout.tsx
+```
+
+### 5. Commit Resolution
+```bash
+# Commit the resolved conflicts
+git commit -m "Resolve merge conflicts in cursor/create-and-deploy-new-content-d115"
+```
+
+### 6. Merge into Main
+```bash
+# Switch to main
+git checkout main
+
+# Merge the PR
+git merge cursor/create-and-deploy-new-content-d115 --no-ff -m "Merge cursor/create-and-deploy-new-content-d115: Add new AI 2025 content and promotional components"
+```
+
+### 7. Push to Remote
+```bash
+# Push merged changes
 git push origin main
 ```
 
-### Step 7: Clean Up
+### 8. Clean Up
 ```bash
-# Remove backup files
-find . -name '*.backup.*' -delete
-
-# Remove any remaining conflict markers
-grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git
+# Delete the PR branch
+git branch -d cursor/create-and-deploy-new-content-d115
+git push origin --delete cursor/create-and-deploy-new-content-d115
 ```
 
-## Available Scripts
+## Automated Scripts
 
-### 1. `resolve_all_merge_conflicts.sh`
-- Automatically resolves merge conflicts in all files
-- Removes conflict markers
-- Creates backups of conflicted files
+### Script 1: Basic Merge Resolution
+```bash
+#!/bin/bash
+# Basic merge conflict resolution
+git fetch origin
+git checkout main
+git pull origin main
+git checkout cursor/create-and-deploy-new-content-d115
+git merge main --no-commit || {
+    # Auto-resolve conflicts
+    git checkout --ours package.json 2>/dev/null || true
+    git checkout --ours package-lock.json 2>/dev/null || true
+    git rm "*.backup*" 2>/dev/null || true
+    git add .
+    git commit -m "Auto-resolve merge conflicts"
+}
+git checkout main
+git merge cursor/create-and-deploy-new-content-d115 --no-ff -m "Merge PR with new content"
+git push origin main
+git branch -d cursor/create-and-deploy-new-content-d115
+```
 
-### 2. `resolve-all-conflicts-and-merge-prs.sh`
-- Comprehensive script to handle all conflicts and merges
-- Processes all cursor branches automatically
-- Creates backup branches and handles errors
+### Script 2: Comprehensive PR Processing
+```bash
+#!/bin/bash
+# Process all open PRs
+git fetch origin
+git checkout main
+git pull origin main
 
-### 3. `step-by-step-merge.sh`
-- Provides manual step-by-step instructions
-- Useful when automatic scripts fail
+# Get all PR branches
+pr_branches=$(git branch -r | grep -E "(pull|pr|feature|bugfix|cursor)" | sed 's/origin\///')
 
-## Conflict Resolution Strategy
+for branch in $pr_branches; do
+    echo "Processing $branch"
+    git checkout "$branch"
+    git merge main --no-commit || {
+        # Auto-resolve conflicts
+        git checkout --ours . 2>/dev/null || true
+        git add .
+        git commit -m "Auto-resolve conflicts in $branch"
+    }
+    git checkout main
+    git merge "$branch" --no-ff -m "Merge $branch"
+    git push origin main
+    git branch -d "$branch"
+done
+```
 
-### Critical Files (Keep Main Version)
-- `package.json`
-- `package-lock.json`
-- `next.config.js`
-- `tsconfig.json`
-- `tailwind.config.js`
+## Conflict Resolution Strategies
 
-### Regular Files (Merge Both Versions)
-- Source code files (`.tsx`, `.ts`, `.js`, `.jsx`)
-- Documentation files
-- Configuration files
+### 1. File-Specific Resolution
+- **package.json**: Always use our version
+- **Lock files**: Use our version
+- **Backup files**: Remove them
+- **App files**: Use our version
+- **Component files**: Use our version
 
-### Backup Strategy
-- Always create a backup branch before starting
-- Create backups of conflicted files before resolving
-- Use descriptive commit messages
+### 2. Content-Specific Resolution
+- **New content**: Keep all new content
+- **Navigation updates**: Keep our updates
+- **SEO improvements**: Keep our changes
+- **Component additions**: Keep new components
 
-## Expected Outcomes
+### 3. Automatic Resolution Patterns
+```bash
+# Pattern 1: Use our version
+git checkout --ours <file>
 
-### After Successful Resolution:
-- ✅ All open PRs merged into main
-- ✅ No merge conflicts remaining
-- ✅ Build passes successfully
-- ✅ All new pages and features available
-- ✅ Website functionality improved
+# Pattern 2: Remove backup files
+git rm <backup-file>
 
-### Files That Should Be Present:
-- All newly created service pages
-- Updated navigation components
-- Improved header, footer, and sidebar
-- All AI platform pages
-- White papers and webinars pages
+# Pattern 3: Merge both versions
+git checkout --theirs <file>
+git add <file>
+```
+
+## Verification Steps
+
+### 1. Check Merge Success
+```bash
+# Verify merge was successful
+git log --oneline -5
+git status
+```
+
+### 2. Verify Content
+```bash
+# Check that new content exists
+ls -la app/blog/ai-2025-enterprise-automation-revolution/
+ls -la app/case-studies/ai-2025-global-retail-transformation-success/
+ls -la app/resources/ai-2025-ultimate-implementation-toolkit/
+ls -la components/AI2025NewContentPromotionBanner.tsx
+```
+
+### 3. Test Build
+```bash
+# Test that the application builds
+npm install
+npm run build
+```
 
 ## Troubleshooting
 
-### Common Issues:
-1. **Terminal connectivity problems** - Use manual steps
-2. **Merge conflicts in critical files** - Keep main version
-3. **Build failures after merge** - Check for syntax errors
-4. **Missing dependencies** - Run `npm install` after merge
+### Common Issues
+1. **Merge conflicts in package.json**: Use our version
+2. **Lock file conflicts**: Use our version
+3. **Backup file conflicts**: Remove them
+4. **Component conflicts**: Use our version
 
-### Recovery Steps:
-1. If merge fails, use `git merge --abort`
-2. Restore from backup branch if needed
-3. Resolve conflicts manually if scripts fail
-4. Test build after each merge
+### Recovery Steps
+```bash
+# If merge fails, reset and try again
+git merge --abort
+git reset --hard HEAD
+git clean -fd
+```
 
-## Next Steps After Resolution
+## Expected Results
 
-1. **Test the build:**
-   ```bash
-   npm run build
-   ```
+After successful merge:
+- ✅ All new AI 2025 content is live
+- ✅ Promotional components are active
+- ✅ Navigation is updated
+- ✅ SEO is optimized
+- ✅ No merge conflicts remain
+- ✅ Main branch is up to date
 
-2. **Test the application:**
-   ```bash
-   npm run dev
-   ```
+## Next Steps
 
-3. **Verify all pages load correctly**
-
-4. **Check navigation and links**
-
-5. **Deploy to production**
-
-## Contact Information
-If issues persist, contact the development team or refer to the project documentation.
+1. Verify all content is accessible
+2. Test the application functionality
+3. Monitor for any issues
+4. Deploy to production if needed
+5. Update documentation
 
 ---
 
-**Note:** This guide assumes you have the necessary permissions to merge PRs and push to the main branch. Always ensure you have proper authorization before proceeding.
+**Note**: This guide assumes you have the necessary permissions to merge PRs and push to the main branch. Always backup your work before performing merge operations.

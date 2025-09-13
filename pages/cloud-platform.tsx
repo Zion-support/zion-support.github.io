@@ -78,54 +78,78 @@ const CloudPlatformPage: React.FC = () => {
       description: 'Machine learning model training and deployment',
       icon: <Brain className="w-6 h-6" />
     }
-  ];
 
-  return (
     <Layout 
-      title="Cloud Platform Services - Zion Tech Group"
-      description="Advanced cloud infrastructure, edge computing, and multi-cloud management solutions for modern businesses"
-      canonicalUrl="https://ziontechgroup.com/cloud-platform"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400 bg-clip-text text-transparent mb-6">
-                Cloud Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Enterprise-grade cloud infrastructure and platform services that scale with your business. 
-                From disaster recovery to managed databases and Kubernetes security.
-              </p>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4 bg-black/30">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
-                </motion.div>
-              ))}
+import React from 'react';
+import Head from 'next/head';
+import {;
+export default function CloudPlatformPage() {;
+      icon: <Server className='w-8 h-8 text-white' />,;
+      icon: <Database className='w-8 h-8 text-white' />,;
+      icon: <Globe className='w-8 h-8 text-white' />,;
+      icon: <Shield className='w-8 h-8 text-white' />,;
+
+
+export default function CloudPlatformPage() {
+      icon: <Server className="w-8 h-8 text-white" />,
+      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Globe className="w-8 h-8 text-white" />,
+      icon: <Shield className="w-8 h-8 text-white" />,
+
+
+
+
+export default function CloudPlatformPage() {_const _features = [
+      icon: <Server className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <Database className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <Globe className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <Shield className=&quot;w-8 h-8 text-white&quot; />,
+
+
+import Head from 'next/head',
+import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react',
+export default function CloudPlatformPage() {
+      icon: <Server className="w-8 h-8 text-white" />,
+      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Globe className="w-8 h-8 text-white" />,
+      icon: <Shield className="w-8 h-8 text-white" />,
+
+
+      <Head>
+      </Head>
+
+                <Cloud className="w-4 h-4 mr-2" />
+
+
+
+
+
+
+
+
+
+
+                        <Check className='w-4 h-4 text-blue-500' />;
+
+
+
+                        <Check className="w-4 h-4 text-blue-500" />
+
+              
+
+
+                    <Cloud className="w-24 h-24 mx-auto mb-6 text-blue-400" />
+
+
+
+                      <Globe className="w-4 h-4 mr-2" />
+
+
+
+
+              </Link>
+              </Link>
             </div>
           </div>
         </div>
@@ -225,3 +249,24 @@ const CloudPlatformPage: React.FC = () => {
 };
 
 export default CloudPlatform;
+
+
+                        <Check className="w-4 h-4 text-blue-500" />;
+                    <Cloud className='w-24 h-24 mx-auto mb-6 text-blue-400' />;
+                      <Globe className='w-4 h-4 mr-2' />                      15+ regions worldwide;
+      icon: <Server className='w - 8 h - 8 text - white' />,
+      icon: <Database className='w - 8 h - 8 text - white' />,
+      icon: <Globe className='w - 8 h - 8 text - white' />,
+      icon: <Shield className='w - 8 h - 8 text - white' />,
+      <Head>;
+      </Head>;
+                <Cloud className='w - 4 h - 4 mr - 2' />;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+                        <Check className='w - 4 h - 4 text - blue - 500' />;
+                    <Cloud className='w - 24 h - 24 mx - auto mb - 6 text - blue - 400' />;
+                      <Globe className='w - 4 h - 4 mr - 2' />                      15+ regions worldwide;
+
+
+
+
+
