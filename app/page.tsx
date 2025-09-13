@@ -40,6 +40,12 @@ import BusinessSuccessStories2025PromotionBanner from '../components/BusinessSuc
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
 
+// New revolutionary content showcase components
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import RevolutionaryContentShowcase2025PromotionBanner from '../components/RevolutionaryContentShowcase2025PromotionBanner';
+import InteractiveTechShowcase2025 from '../components/InteractiveTechShowcase2025';
+import InteractiveTechShowcase2025PromotionBanner from '../components/InteractiveTechShowcase2025PromotionBanner';
+
 // New revolutionary components
 import RevolutionaryAIContentPromotionBanner from '../components/RevolutionaryAIContentPromotionBanner';
 import RevolutionaryCaseStudiesShowcase from '../components/RevolutionaryCaseStudiesShowcase';
@@ -93,6 +99,14 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+// New 2027 content components
+import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
+import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
+import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
+import InteractiveTechDemo2027PromotionBanner from '../components/InteractiveTechDemo2027PromotionBanner';
+import BusinessSuccessStories2027 from '../components/BusinessSuccessStories2027';
+import BusinessSuccessStories2027PromotionBanner from '../components/BusinessSuccessStories2027PromotionBanner';
+
 // New 2025 Ultimate Innovation Showcase Components
 import AI2025UltimateInnovationShowcasePromotionBanner from '../components/AI2025UltimateInnovationShowcasePromotionBanner';
 
@@ -142,11 +156,23 @@ export default function HomePage() {
         {/* NEW SUCCESS STORIES 2026 PROMOTION BANNER */}
         <SuccessStoriesShowcase2026PromotionBanner />
 
+        {/* NEW REVOLUTIONARY CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <RevolutionaryContentShowcase2025PromotionBanner />
+        
+        {/* NEW INTERACTIVE TECH SHOWCASE 2025 PROMOTION BANNER */}
+        <InteractiveTechShowcase2025PromotionBanner />
+
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
         {/* NEW CONTENT SHOWCASE 2025 */}
         <NewContentShowcase2025 />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
+        
+        {/* INTERACTIVE TECH SHOWCASE 2025 */}
+        <InteractiveTechShowcase2025 />
         
         {/* BUSINESS SUCCESS STORIES 2025 PROMOTION BANNER */}
         <BusinessSuccessStories2025PromotionBanner />
@@ -204,6 +230,16 @@ export default function HomePage() {
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />
+
+        {/* NEW 2027 CONTENT PROMOTION BANNERS */}
+        <UltimateContentShowcase2027PromotionBanner />
+        <InteractiveTechDemo2027PromotionBanner />
+        <BusinessSuccessStories2027PromotionBanner />
+
+        {/* NEW 2027 CONTENT SHOWCASES */}
+        <UltimateContentShowcase2027 />
+        <InteractiveTechDemo2027 />
+        <BusinessSuccessStories2027 />
         
         {/* NEW AI 2025 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
         <AI2025UltimateInnovationShowcasePromotionBanner />
