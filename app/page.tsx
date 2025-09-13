@@ -58,12 +58,20 @@ import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
 import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
 import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
 
+// New Revolutionary Content Components
+import AI2026UltimateBreakthroughContentShowcase from '../components/AI2026UltimateBreakthroughContentShowcase';
+import RevolutionaryQuantumComputingShowcase from '../components/RevolutionaryQuantumComputingShowcase';
+import AdvancedAIAutomationShowcase from '../components/AdvancedAIAutomationShowcase';
+import DynamicContentPromotionBanner from '../components/DynamicContentPromotionBanner';
+import InteractiveContentRecommendationWidget from '../components/InteractiveContentRecommendationWidget';
+
 // Featured and Dynamic Content
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
 import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
+import EnhancedDynamicContentCarousel from '../components/EnhancedDynamicContentCarousel';
 
 // Content Discovery and Search
 import ContentDiscoverySection from '../components/ContentDiscoverySection';
@@ -123,6 +131,11 @@ const HomePage: React.FC = () => {
             />
             
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              {/* Dynamic Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <DynamicContentPromotionBanner />
+              </Suspense>
+
               {/* Hero Section */}
               <section className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -195,14 +208,29 @@ const HomePage: React.FC = () => {
                 <AI2026UltimateBreakthroughBanner />
               </Suspense>
 
+              {/* AI 2026 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2026UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* Revolutionary Quantum Computing Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryQuantumComputingShowcase />
+              </Suspense>
+
+              {/* Advanced AI Automation Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAIAutomationShowcase />
+              </Suspense>
+
               {/* Future Predictions */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2026_2030FuturePredictionsPromotionBanner />
               </Suspense>
 
-              {/* Dynamic Content Carousel */}
+              {/* Enhanced Dynamic Content Carousel */}
               <Suspense fallback={<LoadingSpinner />}>
-                <DynamicContentCarousel />
+                <EnhancedDynamicContentCarousel />
               </Suspense>
 
               {/* Content Discovery */}
@@ -213,6 +241,11 @@ const HomePage: React.FC = () => {
               {/* Interactive Content Discovery */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscovery />
+              </Suspense>
+
+              {/* Interactive Content Recommendation Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentRecommendationWidget />
               </Suspense>
 
               {/* Featured Content Showcase */}
