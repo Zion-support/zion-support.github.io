@@ -1,132 +1,213 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, TrendingUp, Users, Star } from 'lucide-react';
+import { ArrowRight, Star, BookOpen, Play, Zap, Brain, TrendingUp, Users, Clock } from 'lucide-react';
 
 export default function NewContentPromotionBanner2025() {
   return (
-    <section className="py-8 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white rounded-full animate-bounce"></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-white rounded-full animate-bounce"></div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-blue-900/50"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-            <Star className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">🔥 NEW CONTENT JUST RELEASED</span>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-4 py-2 rounded-full font-semibold text-sm mb-6">
+            <Star className="h-4 w-4" />
+            NEW CONTENT AVAILABLE
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            🚀 Revolutionary AI Content: Transform Your Business in 2025
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Discover Our Latest
+            <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+              AI Content & Resources
+            </span>
           </h2>
           
-          <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-            Discover our latest breakthrough content: Generative AI Enterprise Transformation, 
-            Global Retail Success Stories, and Complete Implementation Master Guides. 
-            Get expert insights on achieving 300% revenue growth and 85% cost reduction with AI.
+          <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
+            Explore cutting-edge AI technologies, comprehensive guides, interactive demos, 
+            and expert insights to accelerate your AI transformation journey.
           </p>
+        </div>
 
-          {/* Key Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
-              <div className="flex items-center justify-center mb-2">
-                <TrendingUp className="w-6 h-6 mr-2" />
-                <span className="text-2xl font-bold">300%</span>
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Interactive AI Demo Center */}
+          <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-indigo-400/50 transition-all duration-300 group">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Play className="h-6 w-6 text-white" />
               </div>
-              <p className="text-sm opacity-90">Revenue Growth Achieved</p>
+              <h3 className="text-lg font-bold text-white">Interactive AI Demo Center</h3>
             </div>
-            
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
-              <div className="flex items-center justify-center mb-2">
-                <Users className="w-6 h-6 mr-2" />
-                <span className="text-2xl font-bold">2,000+</span>
+            <p className="text-gray-300 text-sm mb-4">
+              Experience cutting-edge AI technologies through hands-on demonstrations of quantum computing, 
+              neural networks, and autonomous systems.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4 text-gray-300 text-xs">
+                <span className="flex items-center gap-1">
+                  <Zap className="h-3 w-3" />
+                  50+ Demos
+                </span>
+                <span className="flex items-center gap-1">
+                  <Users className="h-3 w-3" />
+                  Live Experience
+                </span>
               </div>
-              <p className="text-sm opacity-90">Stores Transformed</p>
-            </div>
-            
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
-              <div className="flex items-center justify-center mb-2">
-                <BookOpen className="w-6 h-6 mr-2" />
-                <span className="text-2xl font-bold">45+</span>
-              </div>
-              <p className="text-sm opacity-90">Countries Served</p>
+              <Link 
+                href="/ai-tools/interactive-ai-demo-center"
+                className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 text-sm inline-flex items-center gap-1"
+              >
+                Explore <ArrowRight className="h-3 w-3" />
+              </Link>
             </div>
           </div>
 
-          {/* Featured Content Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <Link
-              href="/blog/ai-2025-generative-ai-enterprise-transformation"
-              className="group bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
-            >
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-cyan-300 transition-colors">
-                Generative AI Enterprise Guide
-              </h3>
-              <p className="text-sm opacity-90 mb-3">
-                Complete guide to transforming your enterprise with generative AI
-              </p>
-              <div className="flex items-center text-cyan-300 group-hover:text-white transition-colors">
-                <span className="text-sm font-medium">Read Now</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
+          {/* Ultimate AI Resource Library */}
+          <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform">
+                <BookOpen className="h-6 w-6 text-white" />
               </div>
-            </Link>
-
-            <Link
-              href="/case-studies/ai-2025-global-retail-transformation-breakthrough"
-              className="group bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
-            >
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-300 transition-colors">
-                Global Retail Success Story
-              </h3>
-              <p className="text-sm opacity-90 mb-3">
-                How a retail giant achieved 300% revenue growth with AI
-              </p>
-              <div className="flex items-center text-purple-300 group-hover:text-white transition-colors">
-                <span className="text-sm font-medium">View Case Study</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <h3 className="text-lg font-bold text-white">Ultimate AI Resource Library</h3>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">
+              Access comprehensive whitepapers, case studies, implementation guides, 
+              video tutorials, and cutting-edge research from AI experts.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4 text-gray-300 text-xs">
+                <span className="flex items-center gap-1">
+                  <BookOpen className="h-3 w-3" />
+                  715+ Resources
+                </span>
+                <span className="flex items-center gap-1">
+                  <TrendingUp className="h-3 w-3" />
+                  500K+ Downloads
+                </span>
               </div>
-            </Link>
-
-            <Link
-              href="/resources/ai-2025-complete-implementation-master-guide"
-              className="group bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
-            >
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-pink-300 transition-colors">
-                Implementation Master Guide
-              </h3>
-              <p className="text-sm opacity-90 mb-3">
-                Step-by-step roadmap to AI implementation success
-              </p>
-              <div className="flex items-center text-pink-300 group-hover:text-white transition-colors">
-                <span className="text-sm font-medium">Download Guide</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </div>
-            </Link>
+              <Link 
+                href="/resources/ultimate-ai-resource-library"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-sm inline-flex items-center gap-1"
+              >
+                Access <ArrowRight className="h-3 w-3" />
+              </Link>
+            </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
-            >
-              <span>Get Expert Consultation</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center justify-center"
-            >
-              <span>View All Services</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+          {/* AI Implementation Mastery Guide */}
+          <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg group-hover:scale-110 transition-transform">
+                <Brain className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white">AI Implementation Mastery</h3>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">
+              Complete guide to enterprise AI transformation with proven strategies, 
+              implementation phases, and best practices for successful adoption.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4 text-gray-300 text-xs">
+                <span className="flex items-center gap-1">
+                  <Clock className="h-3 w-3" />
+                  Complete Guide
+                </span>
+                <span className="flex items-center gap-1">
+                  <Star className="h-3 w-3" />
+                  Expert Methods
+                </span>
+              </div>
+              <Link 
+                href="/guides/ai-implementation-mastery-2025"
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 text-sm inline-flex items-center gap-1"
+              >
+                Learn <ArrowRight className="h-3 w-3" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Content Links */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <Link 
+            href="/blog/ai-2025-next-generation-breakthrough"
+            className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-indigo-400/30 transition-all duration-300 group"
+          >
+            <h4 className="text-white font-semibold mb-2 group-hover:text-indigo-300 transition-colors">
+              AI 2025 Breakthroughs
+            </h4>
+            <p className="text-gray-300 text-sm">
+              Revolutionary AI technologies reshaping the future
+            </p>
+          </Link>
+
+          <Link 
+            href="/case-studies/ai-2025-global-enterprise-transformation-ultimate-success"
+            className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-purple-400/30 transition-all duration-300 group"
+          >
+            <h4 className="text-white font-semibold mb-2 group-hover:text-purple-300 transition-colors">
+              Enterprise Success Story
+            </h4>
+            <p className="text-gray-300 text-sm">
+              $2.5B revenue increase through AI transformation
+            </p>
+          </Link>
+
+          <Link 
+            href="/ai-tools"
+            className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-blue-400/30 transition-all duration-300 group"
+          >
+            <h4 className="text-white font-semibold mb-2 group-hover:text-blue-300 transition-colors">
+              AI Tools & Solutions
+            </h4>
+            <p className="text-gray-300 text-sm">
+              Comprehensive suite of AI tools and technologies
+            </p>
+          </Link>
+
+          <Link 
+            href="/resources"
+            className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-green-400/30 transition-all duration-300 group"
+          >
+            <h4 className="text-white font-semibold mb-2 group-hover:text-green-300 transition-colors">
+              All Resources
+            </h4>
+            <p className="text-gray-300 text-sm">
+              Complete library of AI resources and materials
+            </p>
+          </Link>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-md rounded-2xl p-8 border border-indigo-500/30">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Accelerate Your AI Journey?
+            </h3>
+            <p className="text-indigo-200 mb-6">
+              Join thousands of professionals who are already transforming their businesses with our 
+              comprehensive AI resources, tools, and expert guidance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+              >
+                Get Started Today <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link 
+                href="/resources"
+                className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300 inline-flex items-center gap-2"
+              >
+                Explore Resources <BookOpen className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

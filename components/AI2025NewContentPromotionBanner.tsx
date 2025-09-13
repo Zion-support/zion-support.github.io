@@ -1,126 +1,128 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-const AI2025NewContentPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
-
-  const newContent = [
-    {
-      title: "🚀 AI 2025 Next-Generation Breakthroughs",
-      description: "Discover revolutionary AI technologies delivering 5,000-15,000% ROI",
-      link: "/blog/ai-2025-next-generation-breakthroughs",
-      badge: "BREAKTHROUGH",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "🏆 Global Tech Giant Transformation: 900% ROI",
-      description: "Learn how Fortune 500 companies achieve unprecedented success",
-      link: "/case-studies/ai-2025-global-tech-giant-transformation",
-      badge: "SUCCESS STORY",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "📚 AI 2025 Ultimate Implementation Master Guide",
-      description: "Complete step-by-step guide to achieving breakthrough results",
-      link: "/resources/ai-2025-ultimate-implementation-master-guide",
-      badge: "MASTER GUIDE",
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % newContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
-  const current = newContent[currentContent];
-
+export default function AI2025NewContentPromotionBanner() {
   return (
-    <div className="relative overflow-hidden">
-      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold">NEW CONTENT</span>
-              </div>
-              <div className="hidden md:block w-px h-6 bg-gray-400"></div>
-              <div className="flex-1 min-w-0">
-                <Link 
-                  href={current.link}
-                  className="group block hover:opacity-90 transition-opacity"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0">
-                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r ${current.color} text-white`}>
-                        {current.badge}
-                      </span>
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="text-sm font-semibold truncate group-hover:text-blue-300 transition-colors">
-                        {current.title}
-                      </h3>
-                      <p className="text-xs text-gray-300 truncate">
-                        {current.description}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+    <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white opacity-5 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-white opacity-5 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white opacity-5 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-white opacity-5 rounded-full animate-pulse delay-500"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
+            <span className="text-sm font-medium">🚀 JUST PUBLISHED - JANUARY 2025</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Revolutionary AI 2025 Content
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover the future of AI with our latest predictions, breakthrough case studies, 
+            and comprehensive implementation guides. Expert insights to accelerate your transformation in 2025.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/blog/ai-2025-year-ahead-predictions"
+              className="bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              🔮 Read AI 2025 Predictions
+            </Link>
+            <Link
+              href="/case-studies/ai-2025-enterprise-transformation-breakthrough"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg backdrop-blur-sm"
+            >
+              🏆 View Success Stories
+            </Link>
+          </div>
+        </div>
+
+        {/* Featured Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Link href="/blog/ai-2025-year-ahead-predictions" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
+              <h3 className="text-lg font-semibold mb-2">AI 2025 Predictions</h3>
+              <p className="text-sm opacity-90 mb-3">15 revolutionary predictions that will transform business</p>
+              <div className="flex items-center text-xs opacity-75">
+                <span>25 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full">NEW</span>
               </div>
             </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="hidden sm:flex items-center space-x-2 text-xs text-gray-300">
-                <span>Featured Content:</span>
-                <div className="flex space-x-1">
-                  {newContent.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentContent(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentContent ? 'bg-white' : 'bg-gray-400'
-                      }`}
-                    />
-                  ))}
-                </div>
+          </Link>
+          
+          <Link href="/case-studies/ai-2025-enterprise-transformation-breakthrough" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+              <h3 className="text-lg font-semibold mb-2">Enterprise Success Story</h3>
+              <p className="text-sm opacity-90 mb-3">1,200% ROI through comprehensive AI transformation</p>
+              <div className="flex items-center text-xs opacity-75">
+                <span>18 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-blue-500 text-white px-2 py-1 rounded-full">BREAKTHROUGH</span>
               </div>
-              
-              <Link
-                href={current.link}
-                className="bg-white text-gray-900 px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Explore Now
-              </Link>
-              
-              <button
-                onClick={() => setIsVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Close banner"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
             </div>
+          </Link>
+          
+          <Link href="/resources/ai-2025-enterprise-implementation-guide" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+              <h3 className="text-lg font-semibold mb-2">Implementation Guide</h3>
+              <p className="text-sm opacity-90 mb-3">Complete roadmap with templates and tools</p>
+              <div className="flex items-center text-xs opacity-75">
+                <span>150+ pages</span>
+                <span className="mx-2">•</span>
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full">ESSENTIAL</span>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/blog/ai-2025-quantum-breakthrough" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
+              <h3 className="text-lg font-semibold mb-2">Quantum AI Revolution</h3>
+              <p className="text-sm opacity-90 mb-3">10,000x performance improvements in optimization</p>
+              <div className="flex items-center text-xs opacity-75">
+                <span>22 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-indigo-500 text-white px-2 py-1 rounded-full">REVOLUTIONARY</span>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        {/* Additional CTA */}
+        <div className="text-center mt-12">
+          <p className="text-lg opacity-90 mb-6">
+            Join 10,000+ executives who are already transforming their organizations with AI
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/resources"
+              className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors backdrop-blur-sm"
+            >
+              📋 Browse All Resources
+            </Link>
+            <Link
+              href="/webinars"
+              className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors backdrop-blur-sm"
+            >
+              🎥 Watch Webinars
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors backdrop-blur-sm"
+            >
+              💬 Get Expert Consultation
+            </Link>
           </div>
         </div>
       </div>
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute top-2 right-8 w-4 h-4 bg-purple-500 rounded-full opacity-30 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-2 left-1/4 w-6 h-6 bg-pink-500 rounded-full opacity-25 animate-pulse delay-2000"></div>
-      </div>
-    </div>
+    </section>
   );
-};
-
-export default AI2025NewContentPromotionBanner;
+}

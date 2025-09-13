@@ -1,100 +1,193 @@
+'use client';
+
 import React from 'react';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Star, 
+  Zap, 
+  TrendingUp, 
+  Users, 
+  Award,
+  ArrowRight,
+  CheckCircle,
+  Sparkles
+} from 'lucide-react';
 
-const RevolutionaryContentBanner2026: React.FC = () => {
+const RevolutionaryContentBanner2026 = () => {
+  const features = [
+    "300% ROI Guaranteed",
+    "Zero Implementation Risk",
+    "24/7 Expert Support",
+    "Future-Proof Technology"
+  ];
+
+  const stats = [
+    { number: "500+", label: "Companies Transformed" },
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "24/7", label: "Expert Support" },
+    { number: "300%", label: "Average ROI" }
+  ];
+
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-10 right-1/3 w-8 h-8 bg-white/10 rounded-full animate-pulse delay-500"></div>
-      </div>
+    <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-6 py-3 rounded-full font-bold text-lg mb-8"
+          >
+            <Sparkles className="w-5 h-5" />
+            <span>Revolutionary 2026 Technology</span>
+          </motion.div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">⚡ REVOLUTIONARY 2026 CONTENT</span>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            🚀 The Future of Technology
-            <br />
-            <span className="text-yellow-300">Starts Here</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Transform Your Business with
+            <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              Revolutionary AI
+            </span>
           </h1>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover groundbreaking AI services, quantum computing solutions, and comprehensive implementation guides 
-            that will revolutionize how you do business in 2025 and beyond.
+          
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Experience the future of business automation with our cutting-edge AI solutions. 
+            Join 500+ companies already achieving unprecedented growth and efficiency.
           </p>
 
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">🤖</div>
-              <h3 className="text-lg font-bold mb-2">AI Services 2025</h3>
-              <p className="text-sm opacity-80">Comprehensive AI solutions for automation, analytics, and cybersecurity</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold mb-2">Quantum Computing</h3>
-              <p className="text-sm opacity-80">Revolutionary quantum solutions for finance, healthcare, and research</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl mb-3">📚</div>
-              <h3 className="text-lg font-bold mb-2">Implementation Guide</h3>
-              <p className="text-sm opacity-80">Step-by-step guide to successful AI adoption in your organization</p>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full border border-white/20"
+              >
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-white font-medium">{feature}</span>
+              </motion.div>
+            ))}
           </div>
+        </motion.div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/ai-services-2025"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              className="text-center"
             >
-              🎯 Explore AI Services
-            </Link>
-            <Link
-              href="/quantum-computing-solutions"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              ⚛️ Discover Quantum
-            </Link>
-            <Link
-              href="/ai-implementation-guide-2025"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              📖 Read Guide
-            </Link>
-          </div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
+              <div className="text-gray-300 text-lg">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-300 mb-1">25+</div>
-              <div className="text-sm opacity-80">New AI Services</div>
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 max-w-4xl mx-auto">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Lead the Revolution?
+            </h3>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join the elite group of forward-thinking companies transforming their operations 
+              with our revolutionary AI technology. Limited spots available for 2026.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-yellow-300 hover:to-orange-300 transition-all duration-300 shadow-2xl"
+              >
+                <span className="flex items-center space-x-3">
+                  <span>Get Started Now</span>
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                <span className="flex items-center space-x-3">
+                  <span>Watch Demo</span>
+                  <Zap className="w-6 h-6 group-hover:animate-pulse" />
+                </span>
+              </motion.button>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-300 mb-1">6</div>
-              <div className="text-sm opacity-80">Quantum Solutions</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-300 mb-1">100%</div>
-              <div className="text-sm opacity-80">Implementation Success</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-300 mb-1">24/7</div>
-              <div className="text-sm opacity-80">Expert Support</div>
+
+            <div className="mt-8 flex items-center justify-center space-x-6 text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Award className="w-5 h-5" />
+                <span>Trusted by Fortune 500</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="w-5 h-5" />
+                <span>500+ Happy Clients</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <TrendingUp className="w-5 h-5" />
+                <span>300% Average ROI</span>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Floating Elements */}
+      <motion.div
+        animate={{ 
+          y: [0, -20, 0],
+          rotate: [0, 5, 0]
+        }}
+        transition={{ 
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-20 blur-xl"
+      />
+      
+      <motion.div
+        animate={{ 
+          y: [0, 20, 0],
+          rotate: [0, -5, 0]
+        }}
+        transition={{ 
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-xl"
+      />
     </section>
   );
 };

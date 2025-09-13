@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function EnhancedLoading({ rows = 6 }: { rows?: number }) {
+type EnhancedLoadingProps = {
+  lines?: number;
+};
+
+export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
   return (
-    <div className="space-y-3 animate-pulse">
-      {Array.from({ length: rows }).map((_, idx) => (
-        <div key={idx} className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-800" />
+    <div className="space-y-2">
+      {Array.from({ length: lines }).map((_, idx) => (
+        <div key={idx} className="skeleton h-4 rounded" />
       ))}
     </div>
   );

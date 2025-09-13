@@ -1,25 +1,15 @@
 #!/bin/bash
 
-# Resolve merge conflicts and merge PRs
-echo "Starting conflict resolution..."
+# Script to automatically resolve merge conflicts by choosing main branch version
+echo "Resolving merge conflicts by choosing main branch version..."
 
-cd /workspace
+# Get list of conflicted files
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    echo "Resolving conflict in: $file"
+    # Choose the main branch version (ours)
+    git checkout --ours "$file"
+    git add "$file"
+done
 
-echo "Resolving merge conflicts..."
-
-# Add all resolved files
-git add -A
-
-# Check if we're in a merge state
-if git status | grep -q "All conflicts fixed"; then
-    echo "All conflicts resolved, committing..."
-    git commit -m "Resolve merge conflicts and integrate Q4 content"
-else
-    echo "Still have conflicts, checking status..."
-    git status
-fi
-
-# Push changes
-git push origin main
-
-echo "Conflict resolution complete!"
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Merge PR #11887: Automate test improve and merge code - Resolved conflicts by choosing main branch version"

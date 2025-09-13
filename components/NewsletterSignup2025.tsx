@@ -1,7 +1,19 @@
-import React, { useState } from 'react';
-import { Mail, ArrowRight, CheckCircle, Zap, Star, Gift } from 'lucide-react';
+'use client';
 
-const NewsletterSignup2025: React.FC = () => {
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Send, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  TrendingUp,
+  Shield,
+  Zap
+} from 'lucide-react';
+
+const NewsletterSignup2025 = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,213 +29,124 @@ const NewsletterSignup2025: React.FC = () => {
     setIsLoading(false);
   };
 
-  const benefits = [
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Latest AI Breakthroughs",
-      description: "Get exclusive access to cutting-edge AI research and developments"
-    },
-    {
-      icon: <Star className="w-6 h-6" />,
-      title: "Expert Insights",
-      description: "Weekly insights from industry leaders and AI experts"
-    },
-    {
-      icon: <Gift className="w-6 h-6" />,
-      title: "Exclusive Resources",
-      description: "Access to premium tools, templates, and implementation guides"
-    }
-  ];
-
   if (isSubscribed) {
     return (
-      <section className="py-20 bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-            <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-black" />
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Welcome to the Future!
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              You've successfully subscribed to our newsletter. Get ready for exclusive AI insights, 
-              breakthrough updates, and premium resources delivered directly to your inbox.
+      <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white relative overflow-hidden">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <CheckCircle className="w-16 h-16 mx-auto mb-6 text-green-200" />
+            <h2 className="text-4xl font-bold mb-4">Welcome to the Future!</h2>
+            <p className="text-xl mb-8 text-green-100">
+              You're now subscribed to our exclusive 2025 AI Innovation newsletter.
             </p>
-            <div className="bg-white/5 rounded-2xl p-6 mb-8">
-              <h3 className="text-lg font-semibold text-white mb-4">What's Next?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Confirmation email sent</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>First newsletter in 24 hours</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Exclusive resources unlocked</span>
-                </div>
-              </div>
-            </div>
             <button
               onClick={() => setIsSubscribed(false)}
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300"
+              className="text-green-200 hover:text-white font-medium"
             >
               Subscribe Another Email
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
     );
   }
 
   return (
-    <section className="py-20 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Content */}
-          <div>
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-6">
-              <Mail className="w-4 h-4" />
-              NEWSLETTER SIGNUP
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Stay Ahead of the
-              <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                AI Revolution
-              </span>
+    <section className="py-20 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Join the AI Revolution 2025
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join 50,000+ industry leaders who get exclusive access to the latest AI breakthroughs, 
-              implementation guides, and cutting-edge insights delivered weekly.
+            <p className="text-xl mb-8 text-purple-100">
+              Get exclusive access to cutting-edge AI insights, breakthrough technologies, and future predictions that will transform your business.
             </p>
+            
+            {/* Features */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <Zap className="w-5 h-5 text-yellow-300" />
+                <span className="text-sm">Latest AI Trends</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Shield className="w-5 h-5 text-green-300" />
+                <span className="text-sm">Privacy First</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Users className="w-5 h-5 text-blue-300" />
+                <span className="text-sm">Expert Community</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <TrendingUp className="w-5 h-5 text-pink-300" />
+                <span className="text-sm">Growth Insights</span>
+              </div>
+            </div>
+          </motion.div>
 
-            <div className="space-y-6 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                    {benefit.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-300">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+          {/* Right Content - Signup Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div className="text-center mb-6">
+              <Star className="w-8 h-8 mx-auto mb-4 text-yellow-300" />
+              <h3 className="text-2xl font-bold mb-2">Subscribe Now</h3>
+              <p className="text-purple-100">Join 10,000+ innovators</p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h3 className="text-lg font-semibold text-white mb-4">What You'll Get:</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Weekly AI breakthrough updates</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Exclusive case studies and success stories</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Implementation guides and best practices</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Early access to new tools and resources</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Invitation to exclusive webinars and events</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Right Side - Signup Form */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Join the AI Revolution
-              </h3>
-              <p className="text-gray-300">
-                Get started with our exclusive newsletter
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
-                  Email Address
-                </label>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="email"
-                  id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-300"
                   required
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-
-              <div className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  required
-                  className="mt-1 w-4 h-4 text-blue-600 bg-white/10 border-white/20 rounded focus:ring-blue-500"
-                />
-                <label htmlFor="terms" className="text-sm text-gray-300">
-                  I agree to receive weekly newsletters and understand that I can unsubscribe at any time. 
-                  <span className="text-blue-400 hover:underline cursor-pointer"> Privacy Policy</span>
-                </label>
-              </div>
-
+              
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-3 rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
               >
                 {isLoading ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                    Subscribing...
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black"></div>
+                    <span>Subscribing...</span>
                   </>
                 ) : (
                   <>
-                    Subscribe Now
-                    <ArrowRight className="w-5 h-5" />
+                    <Send className="w-5 h-5" />
+                    <span>Join the Revolution</span>
                   </>
                 )}
               </button>
             </form>
 
-            <div className="mt-8 text-center">
-              <p className="text-sm text-gray-400 mb-4">
-                Trusted by industry leaders
-              </p>
-              <div className="flex items-center justify-center gap-8 text-gray-500">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">50K+</div>
-                  <div className="text-xs">Subscribers</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">99%</div>
-                  <div className="text-xs">Satisfaction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">24/7</div>
-                  <div className="text-xs">Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <p className="text-xs text-purple-200 text-center mt-4">
+              No spam. Unsubscribe anytime. We respect your privacy.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

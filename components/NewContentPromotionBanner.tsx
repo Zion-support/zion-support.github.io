@@ -1,41 +1,24 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
+import { ArrowRight, X, Star, Zap, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
-export default function NewContentPromotionBanner() {
+const NewContentPromotionBanner = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const promotions = [
-    {
-      id: 1,
-      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
-      description: "Experience the most revolutionary AI breakthrough in history with 2,500-5,000% ROI",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      badge: "BREAKTHROUGH",
-      color: "from-red-500 to-pink-500",
-      bgColor: "from-red-50 to-pink-50"
-    },
-    {
-      id: 2,
-      title: "⚛️ Quantum Computing Solutions 2025",
-      description: "Revolutionary quantum computing delivering breakthrough performance and quantum supremacy",
-      link: "/quantum-computing-solutions",
-      badge: "REVOLUTIONARY",
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-50 to-purple-50"
-    },
-    {
-      id: 3,
-      title: "🤖 Advanced Automation Solutions 2026-2030",
-      description: "100% autonomous operations with 5,000%+ ROI across all business processes",
-      link: "/advanced-automation-solutions-2026",
-      badge: "FUTURE",
-      color: "from-emerald-500 to-cyan-500",
-      bgColor: "from-emerald-50 to-cyan-50"
-    }
-  ];
 
   useEffect(() => {
+    // Show banner after 2 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Auto-rotate slides every 5 seconds
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
     }, 5000);
@@ -43,87 +26,121 @@ export default function NewContentPromotionBanner() {
     return () => clearInterval(interval);
   }, []);
 
+  const promotions = [
+    {
+      id: 1,
+      title: "🚀 New AI Innovation Showcase 2025",
+      description: "Discover revolutionary AI breakthroughs and cutting-edge technologies",
+      link: "/ai-innovation-showcase-2025",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-500/10 to-pink-500/10",
+      borderColor: "border-purple-500/30"
+    },
+    {
+      id: 2,
+      title: "✨ Success Stories & Case Studies",
+      description: "See how companies achieved 500%+ ROI with our AI solutions",
+      link: "/success-stories-2025",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-500/10 to-cyan-500/10",
+      borderColor: "border-blue-500/30"
+    },
+    {
+      id: 3,
+      title: "🔮 Future Technology Predictions",
+      description: "Explore AI trends and predictions for 2025-2030",
+      link: "/ai-2025-2030-ultimate-predictions",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-500/10 to-emerald-500/10",
+      borderColor: "border-green-500/30"
+    }
+  ];
+
   const currentPromotion = promotions[currentSlide];
 
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-4 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-      
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left side - Promotion content */}
-        <div className="flex-1 flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl animate-bounce">🔥</span>
-            <span className="text-sm font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
-              NEW CONTENT
-            </span>
-          </div>
-          
-          <div className="flex-1 min-w-0">
-            <Link 
-              href={currentPromotion.link}
-              className="group block hover:opacity-90 transition-opacity duration-300"
-            >
-              <div className="flex items-center space-x-3">
-                <div className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${currentPromotion.color} text-white animate-pulse`}>
-                  {currentPromotion.badge}
+    <div className="fixed top-0 left-0 right-0 z-50 p-4">
+      <div className={`max-w-6xl mx-auto bg-gradient-to-r ${currentPromotion.bgColor} backdrop-blur-sm border ${currentPromotion.borderColor} rounded-2xl shadow-2xl overflow-hidden`}>
+        <div className="relative">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            <X className="w-4 h-4 text-white" />
+          </button>
+
+          {/* Content */}
+          <div className="p-6 pr-16">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  </div>
+                  <span className="text-sm text-white/80 font-medium">NEW CONTENT</span>
                 </div>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-sm md:text-base font-bold truncate group-hover:text-yellow-300 transition-colors">
-                    {currentPromotion.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-300 truncate">
-                    {currentPromotion.description}
-                  </p>
+                
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {currentPromotion.title}
+                </h3>
+                
+                <p className="text-white/80 mb-4 max-w-2xl">
+                  {currentPromotion.description}
+                </p>
+
+                <div className="flex items-center space-x-4">
+                  <Link
+                    href={currentPromotion.link}
+                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${currentPromotion.color} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 group`}
+                  >
+                    Explore Now
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <div className="flex items-center space-x-2 text-white/60">
+                    <Zap className="w-4 h-4" />
+                    <span className="text-sm">Limited Time</span>
+                  </div>
                 </div>
               </div>
-            </Link>
-          </div>
-        </div>
 
-        {/* Right side - CTA and controls */}
-        <div className="flex items-center space-x-4">
-          {/* Slide indicators */}
-          <div className="flex space-x-1">
+              {/* Visual Element */}
+              <div className="hidden md:block ml-8">
+                <div className="relative">
+                  <div className="w-32 h-32 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-16 h-16 text-white/60" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm font-bold">!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Progress Indicators */}
+          <div className="flex justify-center space-x-2 pb-4">
             {promotions.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-yellow-400' : 'bg-gray-500'
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-
-          {/* CTA Button */}
-          <Link
-            href={currentPromotion.link}
-            className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-2 rounded-lg text-sm font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
-          >
-            Explore Now
-          </Link>
-
-          {/* Close button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white transition-colors duration-300 p-1"
-            aria-label="Close banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
       </div>
-
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-5000 ease-linear"
-           style={{ width: `${((currentSlide + 1) / promotions.length) * 100}%` }} />
     </div>
   );
-}
+};
+
+export default NewContentPromotionBanner;

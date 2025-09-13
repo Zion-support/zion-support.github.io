@@ -82,7 +82,11 @@ const TestimonialSection: React.FC = () => {
 
               {/* Content */}
               <blockquote className="text-gray-300 mb-6 leading-relaxed italic">
+<<<<<<< HEAD
+                &quot;{testimonial.content}&quot;
+=======
                 "{testimonial.content}"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
               </blockquote>
 
               {/* Author */}

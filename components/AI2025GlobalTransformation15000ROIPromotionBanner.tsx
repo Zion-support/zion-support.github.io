@@ -3,78 +3,96 @@ import Link from 'next/link';
 
 export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-r from-green-600 via-blue-600 to-purple-700 text-white py-12 overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-600/20 to-blue-600/20 animate-pulse"></div>
+        <div className="absolute top-6 left-6 w-3 h-3 bg-yellow-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-12 right-12 w-2 h-2 bg-yellow-400 rounded-full animate-bounce delay-100"></div>
+        <div className="absolute bottom-6 left-12 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-bounce delay-200"></div>
+        <div className="absolute bottom-12 right-6 w-3 h-3 bg-yellow-400 rounded-full animate-bounce delay-300"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 mb-6">
-            <span className="text-green-300 font-semibold text-sm animate-pulse">🏆 SUCCESS STORY</span>
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-2 bg-red-500 text-white text-sm font-bold rounded-full mb-6 shadow-lg animate-pulse">
+            🏆 BREAKTHROUGH SUCCESS STORY
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-200 to-emerald-200 bg-clip-text text-transparent">
-            AI 2025 Global Transformation Breakthrough
+
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            Fortune 500 Company Achieves
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mt-2">
+              15,000% ROI
+            </span>
           </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Real-world case study: How a Fortune 500 company achieved 15,000% ROI through revolutionary AI implementation across all business units.
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto leading-relaxed">
+            Discover how a global enterprise transformed their operations with our revolutionary AI solutions, 
+            achieving unprecedented results in just 6 months.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">15,000%</div>
-              <div className="text-sm text-gray-300">ROI Achieved</div>
+
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">15,000%</div>
+              <div className="text-green-100 text-sm font-semibold">ROI Achieved</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">$2.3B</div>
-              <div className="text-sm text-gray-300">Revenue Increase</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">99.9%</div>
+              <div className="text-green-100 text-sm font-semibold">Accuracy Rate</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-sm text-gray-300">Accuracy Rate</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">10,000x</div>
+              <div className="text-green-100 text-sm font-semibold">Faster Processing</div>
             </div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold mb-4 text-white">Key Results</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div className="flex justify-between">
-                <span className="text-gray-300">Initial Investment:</span>
-                <span className="text-white font-semibold">$15M</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Revenue Increase (Year 1):</span>
-                <span className="text-green-400 font-semibold">$2.3B</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Cost Savings (Year 1):</span>
-                <span className="text-green-400 font-semibold">$800M</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Net Profit Increase:</span>
-                <span className="text-green-400 font-semibold">$3.1B</span>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">$7.5B</div>
+              <div className="text-green-100 text-sm font-semibold">Annual Savings</div>
             </div>
           </div>
-          
+
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough" 
-              className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/case-studies/ai-2025-global-transformation-breakthrough"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Read Full Case Study
+              🏆 Read Full Success Story
             </Link>
             <Link 
-              href="/contact" 
-              className="bg-transparent border-2 border-white hover:bg-white hover:text-green-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg"
+              href="/contact"
+              className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Schedule Consultation
+              💬 Start Your Transformation
+            </Link>
+            <Link 
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              📚 Get Implementation Guide
             </Link>
           </div>
-          
-          <div className="mt-8 text-sm text-gray-400">
-            Learn the exact strategies and technologies that delivered these extraordinary results
+
+          {/* Trust Indicators */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-green-200 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400">✓</span>
+              <span>Fortune 500 Verified</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400">✓</span>
+              <span>6-Month Implementation</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-yellow-400">✓</span>
+              <span>Global Scale Success</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

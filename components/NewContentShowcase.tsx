@@ -1,142 +1,180 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
-const newContent = [
-  {
-    id: 1,
-    title: "AI 2025: Generative AI Enterprise Revolution",
-    description: "Discover how generative AI is revolutionizing enterprise operations with 340% ROI and 75% productivity gains.",
-    type: "Blog Post",
-    category: "Enterprise AI",
-    readTime: "25 min read",
-    image: "🤖",
-    href: "/blog/ai-2025-generative-ai-enterprise-revolution",
-    featured: true,
-    stats: {
-      roi: "340%",
-      productivity: "75%",
-      savings: "$2.3M"
-    }
-  },
-  {
-    id: 2,
-    title: "AI 2025: Autonomous Vehicles Revolution",
-    description: "Complete analysis of self-driving technology, market trends, and business opportunities in 2025.",
-    type: "Blog Post",
-    category: "Mobility Tech",
-    readTime: "22 min read",
-    image: "🚗",
-    href: "/blog/ai-2025-autonomous-vehicles-transportation",
-    featured: true,
-    stats: {
-      market: "$127B",
-      vehicles: "2.3M",
-      safety: "95%"
-    }
-  },
-  {
-    id: 3,
-    title: "AI 2025 Comprehensive Implementation Playbook",
-    description: "300-page complete guide with frameworks, templates, and actionable strategies for AI success.",
-    type: "Resource Guide",
-    category: "Implementation",
-    readTime: "300 pages",
-    image: "📚",
-    href: "/resources/ai-2025-comprehensive-implementation-playbook",
-    featured: true,
-    stats: {
-      pages: "300+",
-      templates: "30+",
-      enterprises: "500+"
-    }
-  },
-  {
-    id: 4,
-    title: "AI Transformation: Global Retail Giant Success",
-    description: "How a Fortune 100 retailer achieved 400% ROI and 60% cost reduction in just 8 months.",
-    type: "Case Study",
-    category: "Retail AI",
-    readTime: "15 min read",
-    image: "🏪",
-    href: "/case-studies/ai-transformation-global-retail-giant-2025",
-    featured: true,
-    stats: {
-      roi: "400%",
-      savings: "60%",
-      satisfaction: "85%"
-    }
-  }
-];
+interface ContentItem {
+  title: string;
+  description: string;
+  link: string;
+  badge: string;
+  icon: string;
+  gradient: string;
+  roi: string;
+  category: string;
+}
 
 export default function NewContentShowcase() {
+  const newContent: ContentItem[] = [
+    {
+      title: "AI 2025 Ultimate Revolutionary Breakthrough",
+      description: "Experience the most revolutionary AI breakthrough of 2025 with unprecedented capabilities and infinite possibilities.",
+      link: "/ai-2025-ultimate-revolutionary-breakthrough",
+      badge: "🚀 BREAKTHROUGH",
+      icon: "⚡",
+      gradient: "from-purple-600 to-blue-600",
+      roi: "10,000% ROI",
+      category: "Revolutionary AI"
+    },
+    {
+      title: "AI 2026 Ultimate Future Predictions",
+      description: "Discover the most accurate and revolutionary AI predictions for 2026, based on quantum computing analysis.",
+      link: "/blog/ai-2026-ultimate-future-predictions",
+      badge: "🔮 PREDICTIONS",
+      icon: "🔮",
+      gradient: "from-blue-600 to-purple-600",
+      roi: "∞ ROI",
+      category: "Future Technology"
+    },
+    {
+      title: "Quantum-AI Fusion Revolution",
+      description: "Complete integration of quantum computing with AI systems, achieving 100,000x processing speed improvements.",
+      link: "/quantum-ai-fusion-2026",
+      badge: "⚛️ REVOLUTIONARY",
+      icon: "⚛️",
+      gradient: "from-indigo-600 to-cyan-600",
+      roi: "15,000% ROI",
+      category: "Quantum Computing"
+    },
+    {
+      title: "Transcendent Intelligence Systems",
+      description: "AI systems achieving consciousness-level intelligence with infinite learning capabilities and self-awareness.",
+      link: "/transcendent-intelligence-2026",
+      badge: "🧠 TRANSCENDENT",
+      icon: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      roi: "∞ ROI",
+      category: "Advanced AI"
+    },
+    {
+      title: "Universal Integration Platform",
+      description: "Seamless AI integration across all platforms, systems, and dimensions with zero downtime deployment.",
+      link: "/universal-integration-platform",
+      badge: "🌌 UNIVERSAL",
+      icon: "🌌",
+      gradient: "from-green-600 to-teal-600",
+      roi: "5,000% ROI",
+      category: "Integration"
+    },
+    {
+      title: "Autonomous Operations Mastery",
+      description: "Fully autonomous decision-making systems operating with 99.99% reliability and self-healing capabilities.",
+      link: "/autonomous-operations-mastery",
+      badge: "🤖 AUTONOMOUS",
+      icon: "🤖",
+      gradient: "from-orange-600 to-red-600",
+      roi: "8,000% ROI",
+      category: "Automation"
+    }
+  ];
+
   return (
-    <section className="py-16 bg-gray-50">
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            🆕 Fresh AI Content Just Released
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            🚀 NEW REVOLUTIONARY CONTENT
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ultimate Content
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              {' '}Revolution
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead of the AI revolution with our latest insights, guides, and success stories
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Discover the most revolutionary AI content ever created. Experience breakthrough technologies, 
+            transcendent intelligence, and infinite possibilities that will reshape the future of humanity.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {newContent.map((content) => (
-            <Link key={content.id} href={content.href} className="group">
-              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-4xl">{content.image}</div>
-                    <div className="flex items-center gap-2">
-                      <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
-                        {content.type}
-                      </span>
-                      {content.featured && (
-                        <span className="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2 line-clamp-2">
-                    {content.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {content.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <span className="bg-gray-100 px-2 py-1 rounded">{content.category}</span>
-                    <span>{content.readTime}</span>
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-2 text-xs">
-                    {Object.entries(content.stats).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="font-bold text-blue-600">{value}</div>
-                        <div className="text-gray-500 capitalize">{key}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {newContent.map((item, index) => (
+            <div
+              key={index}
+              className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Badge */}
+              <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.gradient} text-white text-xs font-bold mb-4`}>
+                {item.badge}
               </div>
-            </Link>
+
+              {/* Icon */}
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors duration-300">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {item.description}
+              </p>
+
+              {/* ROI */}
+              <div className="mb-6">
+                <div className="text-2xl font-bold text-green-400 mb-1">{item.roi}</div>
+                <div className="text-sm text-gray-400">{item.category}</div>
+              </div>
+
+              {/* CTA */}
+              <Link
+                href={item.link}
+                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${item.gradient} text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full justify-center`}
+              >
+                Discover Now
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link 
-            href="/content-showcase" 
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-          >
-            View All New Content
-            <span className="text-lg">→</span>
-          </Link>
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready for the Ultimate Revolution?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of forward-thinking organizations already experiencing the revolutionary 
+              power of our ultimate AI solutions and breakthrough technologies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/revolutionary-content-showcase"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Content
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Get Started Today
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

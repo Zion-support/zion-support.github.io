@@ -474,62 +474,30 @@ export default function PricingPage() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
-          <div className="max-w-4xl mx-auto space-y-4">
-            <UltraFuturisticCard variant="quantum" className="p-6">
-              <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
-              <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
-            </UltraFuturisticCard>
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300">
+                Get answers to common questions about our pricing and services
+              </p>
+            </div>
             
-            <UltraFuturisticCard variant="holographic" className="p-6">
-              <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>
-              <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>
-            </UltraFuturisticCard>
-            
-            <UltraFuturisticCard variant="neural" className="p-6">
-              <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
-              <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
-            </UltraFuturisticCard>
-            
-            <UltraFuturisticCard variant="quantum" className="p-6">
-              <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
-              <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
-            </UltraFuturisticCard>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
+                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <UltraFuturisticCard variant="quantum" className="text-center p-6">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Phone</h3>
-              <p className="text-cyan-400 text-lg font-semibold">{contactInfo.mobile}</p>
-              <p className="text-gray-400 text-sm mt-2">Available 24/7</p>
-            </UltraFuturisticCard>
-
-            <UltraFuturisticCard variant="holographic" className="text-center p-6">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Email</h3>
-              <p className="text-purple-400 text-lg font-semibold">{contactInfo.email}</p>
-              <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
-            </UltraFuturisticCard>
-
-            <UltraFuturisticCard variant="neural" className="text-center p-6">
-              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Address</h3>
-              <p className="text-green-400 text-sm font-semibold leading-relaxed">{contactInfo.address}</p>
-              <p className="text-gray-400 text-sm mt-2">Global operations</p>
-            </UltraFuturisticCard>
-          </div>
-        </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

@@ -1,0 +1,110 @@
+import React from 'react';
+
+interface FormProps {
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+  className?: string;
+}
+
+export function Form({ children, onSubmit, className = '' }: FormProps) {
+  return (
+    <form onSubmit={onSubmit} className={className}>
+      {children}
+    </form>
+  );
+}
+
+interface FormFieldProps {
+<<<<<<< HEAD
+  children: React.ReactNode;
+  name: string;
+  control?: any;
+  render?: (props: any) => React.ReactNode;
+}
+
+export function FormField({ children, name, control, render }: FormFieldProps) {
+  if (render) {
+    return render({ field: { name } });
+  }
+  return <>{children}</>;
+}
+
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+=======
+  control: any;
+  name: string;
+  render: (props: { field: any }) => React.ReactNode;
+}
+
+export function FormField({ control, name, render }: FormFieldProps) {
+  const field = { name, value: '', onChange: () => {} };
+  return render({ field });
+>>>>>>> origin/cursor/build-fixes-clean
+}
+
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return (
+    <label className={className}>
+      {children}
+    </label>
+  );
+}
+
+<<<<<<< HEAD
+interface FormMessageProps {
+  children?: React.ReactNode;
+=======
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
+interface FormMessageProps {
+  children: React.ReactNode;
+>>>>>>> origin/cursor/build-fixes-clean
+  className?: string;
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+<<<<<<< HEAD
+  if (!children) return null;
+  return (
+    <p className={className}>
+      {children}
+    </p>
+  );
+}
+=======
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/build-fixes-clean
