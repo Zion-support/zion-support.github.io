@@ -3,296 +3,367 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Database, 
+  Bot, 
+  Code, 
+  Image, 
+  FileText, 
   BarChart3, 
-  Shield, 
-  Globe, 
-  Rocket,
-  Sparkles,
-  TrendingUp,
-  Users,
+  MessageSquare,
+  Play,
+  Pause,
+  RotateCcw,
+  Download,
+  Share2,
+  Heart,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Brain,
   Target
 } from 'lucide-react';
 
 const InteractiveAIToolsShowcase2025 = () => {
-  const [activeTool, setActiveTool] = useState(0);
+  const [activeTool, setActiveTool] = useState('code-generator');
   const [isVisible, setIsVisible] = useState(false);
+  const [isRunning, setIsRunning] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveTool((prev) => (prev + 1) % tools.length);
-    }, 4000);
-    return () => clearInterval(interval);
   }, []);
 
-  const tools = [
-    {
-      id: 1,
-      name: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms that provide real-time insights and predictive analytics for your business operations.",
-      icon: BarChart3,
-      features: ["Real-time data processing", "Predictive modeling", "Custom dashboards", "Automated reporting"],
-      color: "from-blue-500 to-purple-600",
-      stats: "98% accuracy"
-    },
-    {
-      id: 2,
-      name: "Neural Network Builder",
-      description: "Drag-and-drop interface for creating custom neural networks without coding knowledge.",
-      icon: Brain,
-      features: ["Visual network design", "Pre-trained models", "Auto-optimization", "Cloud deployment"],
-      color: "from-green-500 to-teal-600",
-      stats: "10x faster development"
-    },
-    {
-      id: 3,
-      name: "Quantum Computing Interface",
-      description: "Access quantum computing power through our intuitive interface for complex problem solving.",
-      icon: Cpu,
-      features: ["Quantum algorithms", "Hybrid computing", "Secure processing", "Scalable resources"],
-      color: "from-purple-500 to-pink-600",
-      stats: "1000x speedup"
-    },
-    {
-      id: 4,
-      name: "Smart Data Pipeline",
-      description: "Automated data ingestion, processing, and transformation with intelligent error handling.",
-      icon: Database,
-      features: ["Auto-scaling", "Real-time processing", "Data validation", "Error recovery"],
-      color: "from-orange-500 to-red-600",
-      stats: "99.9% uptime"
-    },
-    {
-      id: 5,
-      name: "AI Security Suite",
-      description: "Comprehensive security solutions powered by AI to protect your digital assets.",
-      icon: Shield,
-      features: ["Threat detection", "Behavioral analysis", "Automated response", "Compliance monitoring"],
-      color: "from-red-500 to-orange-600",
-      stats: "Zero breaches"
-    },
-    {
-      id: 6,
-      name: "Global AI Network",
-      description: "Distributed AI processing across multiple regions for optimal performance and reliability.",
-      icon: Globe,
-      features: ["Edge computing", "Load balancing", "Geographic distribution", "Low latency"],
-      color: "from-cyan-500 to-blue-600",
-      stats: "Global coverage"
+  useEffect(() => {
+    if (isRunning) {
+      const interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            setIsRunning(false);
+            return 100;
+          }
+          return prev + 2;
+        });
+      }, 100);
+      return () => clearInterval(interval);
     }
-  ];
+  }, [isRunning]);
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
+  const handleRun = () => {
+    setIsRunning(true);
+    setProgress(0);
+  };
+
+  const handleReset = () => {
+    setIsRunning(false);
+    setProgress(0);
+  };
+
+  const tools = {
+    'code-generator': {
+      title: 'AI Code Generator',
+      description: 'Generate clean, efficient code in any programming language with AI assistance.',
+      icon: Code,
+      color: 'blue',
+      features: ['Multi-language Support', 'Error Detection', 'Code Optimization', 'Documentation'],
+      demo: {
+        input: 'Create a React component for a user profile card',
+        output: `import React from 'react';
+
+const UserProfileCard = ({ user }) => {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 max-w-sm">
+      <div className="flex items-center space-x-4">
+        <img 
+          src={user.avatar} 
+          alt={user.name}
+          className="w-16 h-16 rounded-full"
+        />
+        <div>
+          <h3 className="text-lg font-semibold">{user.name}</h3>
+          <p className="text-gray-600">{user.email}</p>
+          <p className="text-sm text-gray-500">{user.role}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserProfileCard;`
+      }
+    },
+    'image-generator': {
+      title: 'AI Image Generator',
+      description: 'Create stunning images from text descriptions using advanced AI models.',
+      icon: Image,
+      color: 'purple',
+      features: ['Text-to-Image', 'Style Transfer', 'High Resolution', 'Multiple Formats'],
+      demo: {
+        input: 'A futuristic cityscape at sunset with flying cars',
+        output: 'Generated image would appear here...'
+      }
+    },
+    'content-writer': {
+      title: 'AI Content Writer',
+      description: 'Generate engaging, SEO-optimized content for blogs, articles, and marketing.',
+      icon: FileText,
+      color: 'green',
+      features: ['SEO Optimized', 'Multiple Tones', 'Plagiarism Free', 'Grammar Check'],
+      demo: {
+        input: 'Write a blog post about the benefits of AI in business',
+        output: `# The Revolutionary Benefits of AI in Modern Business
+
+Artificial Intelligence is transforming the business landscape at an unprecedented pace. Companies that embrace AI technology are seeing remarkable improvements in efficiency, productivity, and profitability.
+
+## Key Benefits of AI in Business
+
+### 1. Enhanced Productivity
+AI automates repetitive tasks, allowing employees to focus on strategic initiatives that drive growth.
+
+### 2. Improved Decision Making
+Advanced analytics and machine learning provide insights that help businesses make data-driven decisions.
+
+### 3. Cost Reduction
+By automating processes and optimizing operations, AI significantly reduces operational costs.
+
+### 4. Better Customer Experience
+AI-powered chatbots and personalization engines create more engaging customer interactions.
+
+## Conclusion
+The integration of AI in business is no longer optional—it's essential for staying competitive in today's digital economy.`
+      }
+    },
+    'data-analyzer': {
+      title: 'AI Data Analyzer',
+      description: 'Analyze complex datasets and generate actionable insights automatically.',
+      icon: BarChart3,
+      color: 'orange',
+      features: ['Pattern Recognition', 'Predictive Analytics', 'Visual Reports', 'Real-time Processing'],
+      demo: {
+        input: 'Analyze sales data for Q4 2024',
+        output: 'Sales Analysis Report:\n\n• Total Revenue: $2.4M (+15% vs Q3)\n• Top Product: AI Software Suite (35% of sales)\n• Best Performing Region: North America (42%)\n• Growth Trend: Steady 12% month-over-month\n• Recommendation: Focus on European market expansion'
+      }
+    },
+    'chat-assistant': {
+      title: 'AI Chat Assistant',
+      description: 'Intelligent conversational AI that can handle customer support and inquiries.',
+      icon: MessageSquare,
+      color: 'pink',
+      features: ['Natural Language', 'Multi-language', 'Context Aware', '24/7 Available'],
+      demo: {
+        input: 'How can I improve my website\'s loading speed?',
+        output: 'Here are several ways to improve your website\'s loading speed:\n\n1. **Optimize Images**: Compress and use modern formats like WebP\n2. **Enable Caching**: Implement browser and server-side caching\n3. **Minify Code**: Remove unnecessary characters from CSS, JS, and HTML\n4. **Use CDN**: Distribute content across multiple servers\n5. **Optimize Database**: Clean up unused data and optimize queries\n6. **Reduce HTTP Requests**: Combine files and use sprites\n7. **Enable Gzip Compression**: Compress text-based files\n\nWould you like me to elaborate on any of these techniques?'
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+  const currentTool = tools[activeTool as keyof typeof tools];
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      blue: 'from-blue-500 to-blue-600',
+      purple: 'from-purple-500 to-purple-600',
+      green: 'from-green-500 to-green-600',
+      orange: 'from-orange-500 to-orange-600',
+      pink: 'from-pink-500 to-pink-600'
+    };
+    return colors[color as keyof typeof colors] || colors.blue;
   };
 
   return (
-    <motion.div
-      className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
+    <div className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4">
+        {/* Header */}
         <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
-          variants={itemVariants}
         >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Sparkles className="w-5 h-5 text-blue-400" />
-            <span className="text-blue-300 font-medium">Interactive AI Tools 2025</span>
-          </motion.div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary AI Tools
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              for the Future
-            </span>
+          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Bot className="w-4 h-4" />
+            Interactive AI Tools Showcase 2025
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Experience AI Tools in Action
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of AI-powered tools designed to transform how you work, 
-            create, and innovate in 2025 and beyond.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Try our cutting-edge AI tools and see how they can transform your workflow. 
+            Each tool is designed to boost productivity and deliver exceptional results.
           </p>
         </motion.div>
 
-        {/* Interactive Tool Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {tools.map((tool, index) => (
-            <motion.div
-              key={tool.id}
-              className={`relative group cursor-pointer ${
-                activeTool === index ? 'scale-105 z-10' : 'hover:scale-102'
-              }`}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              onClick={() => setActiveTool(index)}
-            >
-              <div className={`relative p-8 rounded-2xl bg-gradient-to-br ${tool.color} backdrop-blur-sm border border-white/20 transition-all duration-500 ${
-                activeTool === index ? 'shadow-2xl shadow-purple-500/25' : 'shadow-lg'
-              }`}>
-                {/* Glow effect for active tool */}
-                {activeTool === index && (
-                  <motion.div
-                    className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <tool.icon className="w-12 h-12 text-white" />
-                    <span className="text-sm font-bold text-white/80 bg-white/20 px-3 py-1 rounded-full">
-                      {tool.stats}
-                    </span>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Tool Selection */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-4"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Choose a Tool</h3>
+            {Object.entries(tools).map(([key, tool]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTool(key)}
+                className={`w-full p-4 rounded-xl text-left transition-all duration-300 ${
+                  activeTool === key
+                    ? 'bg-white shadow-lg border-2 border-blue-500'
+                    : 'bg-white/50 hover:bg-white hover:shadow-md'
+                }`}
+              >
+                <div className="flex items-center gap-4">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${getColorClasses(tool.color)} flex items-center justify-center`}>
+                    <tool.icon className="w-6 h-6 text-white" />
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    {tool.name}
-                  </h3>
-                  
-                  <p className="text-white/90 mb-6 leading-relaxed">
-                    {tool.description}
-                  </p>
-                  
+                  <div>
+                    <h4 className="font-semibold text-gray-900">{tool.title}</h4>
+                    <p className="text-sm text-gray-600">{tool.description}</p>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </motion.div>
+
+          {/* Interactive Demo */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="lg:col-span-2"
+          >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              {/* Tool Header */}
+              <div className={`bg-gradient-to-r ${getColorClasses(currentTool.color)} p-6 text-white`}>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <currentTool.icon className="w-8 h-8" />
+                    <div>
+                      <h3 className="text-2xl font-bold">{currentTool.title}</h3>
+                      <p className="text-blue-100">{currentTool.description}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={handleRun}
+                      disabled={isRunning}
+                      className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2 disabled:opacity-50"
+                    >
+                      {isRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                      {isRunning ? 'Running...' : 'Run Demo'}
+                    </button>
+                    <button
+                      onClick={handleReset}
+                      className="bg-white/20 hover:bg-white/30 p-2 rounded-lg transition-colors duration-300"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Demo Content */}
+              <div className="p-6 space-y-6">
+                {/* Input Section */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Input Prompt
+                  </label>
+                  <div className="bg-gray-50 rounded-lg p-4 border">
+                    <p className="text-gray-800 font-mono text-sm">
+                      {currentTool.demo.input}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Progress Bar */}
+                {isRunning && (
                   <div className="space-y-2">
-                    {tool.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-white/80">
-                        <div className="w-2 h-2 rounded-full bg-white/60"></div>
-                        <span className="text-sm">{feature}</span>
+                    <div className="flex justify-between text-sm text-gray-600">
+                      <span>Processing...</span>
+                      <span>{progress}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <motion.div
+                        className={`h-2 rounded-full bg-gradient-to-r ${getColorClasses(currentTool.color)}`}
+                        style={{ width: `${progress}%` }}
+                        transition={{ duration: 0.1 }}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* Output Section */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    AI Output
+                  </label>
+                  <div className="bg-gray-900 rounded-lg p-4 border min-h-[200px]">
+                    <pre className="text-green-400 font-mono text-sm whitespace-pre-wrap">
+                      {progress >= 100 ? currentTool.demo.output : 'Click "Run Demo" to see AI output...'}
+                    </pre>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {currentTool.features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        {feature}
                       </div>
                     ))}
                   </div>
                 </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-wrap gap-3 pt-4 border-t">
+                  <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2">
+                    <Download className="w-4 h-4" />
+                    Download Result
+                  </button>
+                  <button className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-300 flex items-center gap-2">
+                    <Share2 className="w-4 h-4" />
+                    Share
+                  </button>
+                  <button className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-300 flex items-center gap-2">
+                    <Heart className="w-4 h-4" />
+                    Save
+                  </button>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
         </div>
 
-        {/* Interactive Demo Section */}
+        {/* Bottom CTA */}
         <motion.div
-          className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
-          variants={itemVariants}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Try Our Interactive Demo
-            </h3>
-            <p className="text-gray-300 text-lg">
-              Experience the power of our AI tools with this live demonstration
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl p-6 border border-blue-500/30">
-              <TrendingUp className="w-8 h-8 text-blue-400 mb-4" />
-              <h4 className="text-xl font-semibold text-white mb-2">Performance Metrics</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Processing Speed</span>
-                  <span className="text-green-400">+250%</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Accuracy Rate</span>
-                  <span className="text-green-400">98.7%</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Cost Reduction</span>
-                  <span className="text-green-400">-60%</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl p-6 border border-green-500/30">
-              <Users className="w-8 h-8 text-green-400 mb-4" />
-              <h4 className="text-xl font-semibold text-white mb-2">User Impact</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Active Users</span>
-                  <span className="text-green-400">50K+</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Satisfaction</span>
-                  <span className="text-green-400">4.9/5</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Time Saved</span>
-                  <span className="text-green-400">40hrs/week</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
-              <Target className="w-8 h-8 text-purple-400 mb-4" />
-              <h4 className="text-xl font-semibold text-white mb-2">Business Goals</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">ROI Increase</span>
-                  <span className="text-green-400">+300%</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Efficiency</span>
-                  <span className="text-green-400">+180%</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-300">Innovation</span>
-                  <span className="text-green-400">+400%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
-          variants={itemVariants}
         >
-          <motion.button
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            Start Your AI Journey Today
-            <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-              whileHover={{ scale: 1.1 }}
-            />
-          </motion.button>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Workflow?
+            </h3>
+            <p className="text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join thousands of professionals who are already using our AI tools to boost productivity and achieve better results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300 flex items-center justify-center gap-2">
+                Start Free Trial
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">
+                View All Tools
+              </button>
+            </div>
+          </div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

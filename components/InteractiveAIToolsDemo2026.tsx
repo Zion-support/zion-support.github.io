@@ -6,396 +6,316 @@ import {
   Play, 
   Pause, 
   RotateCcw, 
-  Zap, 
-  Brain, 
+  Settings, 
   Code, 
-  Database, 
-  Cloud,
+  Database,
+  Cpu,
+  Network,
+  BarChart3,
+  Zap,
+  Brain,
   Shield,
-  Target,
-  TrendingUp,
-  Users,
   CheckCircle,
-  AlertCircle,
-  Loader2,
-  Sparkles,
   ArrowRight,
-  ChevronDown,
-  ChevronUp
+  Star,
+  Users,
+  TrendingUp
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2026 = () => {
-  const [activeDemo, setActiveDemo] = useState('automation');
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [results, setResults] = useState([]);
-  const [showResults, setShowResults] = useState(false);
-
-  const demos = {
-    automation: {
-      title: 'AI Business Automation',
-      description: 'Watch AI automatically handle complex business processes',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-      steps: [
-        'Analyzing business requirements...',
-        'Generating automation workflows...',
-        'Implementing AI decision trees...',
-        'Testing and optimizing processes...',
-        'Deploying to production environment...',
-        'Monitoring performance metrics...'
-      ],
-      results: {
-        efficiency: '+340%',
-        timeSaved: '2,500 hours/month',
-        costReduction: '$180K annually',
-        accuracy: '99.7%'
-      }
-    },
-    analytics: {
-      title: 'Predictive Analytics',
-      description: 'See how AI predicts future trends and outcomes',
-      icon: TrendingUp,
-      color: 'from-purple-500 to-pink-500',
-      steps: [
-        'Collecting historical data...',
-        'Cleaning and preprocessing data...',
-        'Training ML models...',
-        'Validating predictions...',
-        'Generating insights...',
-        'Creating actionable reports...'
-      ],
-      results: {
-        accuracy: '94.2%',
-        predictions: '10,000+ daily',
-        insights: '50+ actionable',
-        confidence: 'High'
-      }
-    },
-    codegen: {
-      title: 'AI Code Generation',
-      description: 'Experience AI writing production-ready code',
-      icon: Code,
-      color: 'from-green-500 to-teal-500',
-      steps: [
-        'Understanding requirements...',
-        'Generating code structure...',
-        'Implementing business logic...',
-        'Adding error handling...',
-        'Writing unit tests...',
-        'Optimizing performance...'
-      ],
-      results: {
-        linesOfCode: '2,500+',
-        testCoverage: '95%',
-        bugsFound: '0',
-        performance: 'Optimized'
-      }
-    },
-    security: {
-      title: 'AI Security Analysis',
-      description: 'Watch AI detect and prevent security threats',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      steps: [
-        'Scanning system vulnerabilities...',
-        'Analyzing threat patterns...',
-        'Identifying potential risks...',
-        'Generating security recommendations...',
-        'Implementing protective measures...',
-        'Monitoring ongoing threats...'
-      ],
-      results: {
-        threatsDetected: '47',
-        vulnerabilitiesFixed: '23',
-        riskReduction: '89%',
-        uptime: '99.9%'
-      }
-    }
-  };
-
-  const currentDemo = demos[activeDemo];
 
   useEffect(() => {
-    let interval;
-    if (isRunning && progress < 100) {
+    const timer = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isRunning) {
       interval = setInterval(() => {
         setProgress(prev => {
           if (prev >= 100) {
             setIsRunning(false);
-            setShowResults(true);
-            return 100;
+            return 0;
           }
           return prev + 2;
         });
       }, 100);
     }
     return () => clearInterval(interval);
-  }, [isRunning, progress]);
+  }, [isRunning]);
 
-  const startDemo = () => {
-    setProgress(0);
-    setResults([]);
-    setShowResults(false);
+  const demos = [
+    {
+      id: 'ai-code-review',
+      title: 'AI Code Review Assistant',
+      icon: Code,
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Automated code analysis and optimization suggestions',
+      features: ['Security Scanning', 'Performance Optimization', 'Best Practices', 'Bug Detection'],
+      metrics: { efficiency: '95%', accuracy: '98%', time: '3x faster' }
+    },
+    {
+      id: 'data-analytics',
+      title: 'Intelligent Data Analytics',
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      description: 'Real-time data processing and predictive insights',
+      features: ['Real-time Processing', 'Predictive Analytics', 'Data Visualization', 'Trend Analysis'],
+      metrics: { efficiency: '90%', accuracy: '96%', time: '5x faster' }
+    },
+    {
+      id: 'infrastructure-monitoring',
+      title: 'Infrastructure Monitoring',
+      icon: Network,
+      color: 'from-purple-500 to-pink-500',
+      description: 'Comprehensive system health and performance monitoring',
+      features: ['Health Monitoring', 'Performance Tracking', 'Alert System', 'Auto-scaling'],
+      metrics: { efficiency: '99%', accuracy: '99%', time: 'Real-time' }
+    },
+    {
+      id: 'security-scanning',
+      title: 'AI Security Scanner',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      description: 'Advanced threat detection and vulnerability assessment',
+      features: ['Threat Detection', 'Vulnerability Scanning', 'Risk Assessment', 'Compliance Check'],
+      metrics: { efficiency: '97%', accuracy: '99%', time: '2x faster' }
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Alex Thompson',
+      role: 'Lead Developer',
+      company: 'TechFlow Inc.',
+      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!',
+      rating: 5
+    },
+    {
+      name: 'Maria Garcia',
+      role: 'Data Scientist',
+      company: 'DataCorp',
+      content: 'Our data processing speed increased by 500% with their analytics platform.',
+      rating: 5
+    },
+    {
+      name: 'David Kim',
+      role: 'DevOps Engineer',
+      company: 'CloudScale',
+      content: 'Infrastructure monitoring has never been this comprehensive and reliable.',
+      rating: 5
+    }
+  ];
+
+  const handleStartDemo = () => {
     setIsRunning(true);
+    setProgress(0);
   };
 
-  const resetDemo = () => {
+  const handleStopDemo = () => {
     setIsRunning(false);
     setProgress(0);
-    setResults([]);
-    setShowResults(false);
   };
 
+  const handleResetDemo = () => {
+    setIsRunning(false);
+    setProgress(0);
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
-            Interactive AI Demo 2026
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Experience AI in Action
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Interactive AI Tools Demo 2026
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Try our interactive demonstrations and see how AI transforms your business processes in real-time.
+          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            Experience the power of our cutting-edge AI tools through interactive demonstrations. 
+            See how our solutions can transform your workflow in real-time.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Demo Selection */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Choose a Demo</h3>
+        {/* Demo Selector */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+        >
+          {demos.map((demo, index) => (
+            <button
+              key={demo.id}
+              onClick={() => setActiveDemo(index)}
+              className={`p-6 rounded-xl transition-all duration-300 ${
+                activeDemo === index
+                  ? 'bg-white bg-opacity-20 scale-105 shadow-2xl'
+                  : 'bg-white bg-opacity-10 hover:bg-opacity-15'
+              }`}
+            >
+              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${demo.color} flex items-center justify-center mb-4 mx-auto`}>
+                <demo.icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">{demo.title}</h3>
+              <p className="text-sm text-blue-200">{demo.description}</p>
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Interactive Demo Area */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
+        >
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-4">
+              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${demos[activeDemo].color} flex items-center justify-center`}>
+                <demos[activeDemo].icon className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold">{demos[activeDemo].title}</h3>
+                <p className="text-blue-200">{demos[activeDemo].description}</p>
+              </div>
+            </div>
+            <div className="flex space-x-2">
+              <button
+                onClick={handleStartDemo}
+                disabled={isRunning}
+                className="p-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 rounded-lg transition-colors duration-300"
+              >
+                <Play className="w-5 h-5" />
+              </button>
+              <button
+                onClick={handleStopDemo}
+                disabled={!isRunning}
+                className="p-3 bg-red-600 hover:bg-red-700 disabled:bg-gray-600 rounded-lg transition-colors duration-300"
+              >
+                <Pause className="w-5 h-5" />
+              </button>
+              <button
+                onClick={handleResetDemo}
+                className="p-3 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors duration-300"
+              >
+                <RotateCcw className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mb-6">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-medium">Demo Progress</span>
+              <span className="text-sm text-blue-200">{progress}%</span>
+            </div>
+            <div className="w-full bg-gray-700 rounded-full h-2">
+              <motion.div
+                className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
+                style={{ width: `${progress}%` }}
+                transition={{ duration: 0.1 }}
+              />
+            </div>
+          </div>
+
+          {/* Demo Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Features */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Key Features</h4>
               <div className="space-y-3">
-                {Object.entries(demos).map(([key, demo]) => {
-                  const Icon = demo.icon;
-                  const isActive = activeDemo === key;
-                  return (
-                    <motion.button
-                      key={key}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => setActiveDemo(key)}
-                      className={`w-full p-4 rounded-xl text-left transition-all duration-300 ${
-                        isActive
-                          ? `bg-gradient-to-r ${demo.color} text-white shadow-lg`
-                          : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <Icon className="w-6 h-6" />
-                        <div>
-                          <div className="font-medium">{demo.title}</div>
-                          <div className={`text-sm ${isActive ? 'text-white/80' : 'text-gray-500'}`}>
-                            {demo.description}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.button>
-                  );
-                })}
+                {demos[activeDemo].features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-blue-200">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Metrics */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Performance Metrics</h4>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
+                  <span className="text-blue-200">Efficiency</span>
+                  <span className="font-bold text-green-400">{demos[activeDemo].metrics.efficiency}</span>
+                </div>
+                <div className="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
+                  <span className="text-blue-200">Accuracy</span>
+                  <span className="font-bold text-blue-400">{demos[activeDemo].metrics.accuracy}</span>
+                </div>
+                <div className="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
+                  <span className="text-blue-200">Speed Improvement</span>
+                  <span className="font-bold text-purple-400">{demos[activeDemo].metrics.time}</span>
+                </div>
               </div>
             </div>
           </div>
+        </motion.div>
 
-          {/* Demo Interface */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              {/* Demo Header */}
-              <div className={`bg-gradient-to-r ${currentDemo.color} p-6 text-white`}>
-                <div className="flex items-center gap-3 mb-2">
-                  <currentDemo.icon className="w-8 h-8" />
-                  <h3 className="text-2xl font-bold">{currentDemo.title}</h3>
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-12"
+        >
+          <h3 className="text-3xl font-bold text-center mb-12">
+            What Developers Are Saying
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white bg-opacity-10 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <p className="text-white/90">{currentDemo.description}</p>
+                <p className="text-blue-200 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold">{testimonial.name}</div>
+                  <div className="text-blue-300 text-sm">{testimonial.role}, {testimonial.company}</div>
+                </div>
               </div>
-
-              {/* Demo Content */}
-              <div className="p-6">
-                {/* Progress Section */}
-                <div className="mb-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-lg font-semibold text-gray-900">Process Progress</h4>
-                    <div className="flex items-center gap-2">
-                      {isRunning ? (
-                        <div className="flex items-center gap-2 text-blue-600">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          <span className="text-sm">Running...</span>
-                        </div>
-                      ) : (
-                        <span className="text-sm text-gray-500">Ready to start</span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className="w-full bg-gray-200 rounded-full h-3 mb-4">
-                    <motion.div
-                      className={`h-3 bg-gradient-to-r ${currentDemo.color} rounded-full`}
-                      style={{ width: `${progress}%` }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </div>
-                  
-                  <div className="text-right text-sm text-gray-600">{progress}% Complete</div>
-                </div>
-
-                {/* Steps Display */}
-                <div className="mb-8">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Current Step</h4>
-                  <div className="space-y-3">
-                    {currentDemo.steps.map((step, index) => {
-                      const stepProgress = (index + 1) * (100 / currentDemo.steps.length);
-                      const isCompleted = progress >= stepProgress;
-                      const isCurrent = progress >= (index * (100 / currentDemo.steps.length)) && !isCompleted;
-                      
-                      return (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ 
-                            opacity: isCompleted || isCurrent ? 1 : 0.5,
-                            x: 0
-                          }}
-                          className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 ${
-                            isCompleted 
-                              ? 'bg-green-50 border border-green-200' 
-                              : isCurrent 
-                                ? 'bg-blue-50 border border-blue-200' 
-                                : 'bg-gray-50'
-                          }`}
-                        >
-                          <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
-                            isCompleted 
-                              ? 'bg-green-500 text-white' 
-                              : isCurrent 
-                                ? 'bg-blue-500 text-white' 
-                                : 'bg-gray-300'
-                          }`}>
-                            {isCompleted ? (
-                              <CheckCircle className="w-4 h-4" />
-                            ) : isCurrent ? (
-                              <Loader2 className="w-4 h-4 animate-spin" />
-                            ) : (
-                              <span className="text-xs font-bold">{index + 1}</span>
-                            )}
-                          </div>
-                          <span className={`${
-                            isCompleted ? 'text-green-800' : isCurrent ? 'text-blue-800' : 'text-gray-600'
-                          }`}>
-                            {step}
-                          </span>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Control Buttons */}
-                <div className="flex gap-4 mb-8">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={startDemo}
-                    disabled={isRunning}
-                    className={`flex-1 py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2 ${
-                      isRunning
-                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        : `bg-gradient-to-r ${currentDemo.color} text-white hover:shadow-lg`
-                    } transition-all duration-300`}
-                  >
-                    {isRunning ? (
-                      <>
-                        <Pause className="w-5 h-5" />
-                        Running...
-                      </>
-                    ) : (
-                      <>
-                        <Play className="w-5 h-5" />
-                        Start Demo
-                      </>
-                    )}
-                  </motion.button>
-                  
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={resetDemo}
-                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-300"
-                  >
-                    <RotateCcw className="w-5 h-5" />
-                  </motion.button>
-                </div>
-
-                {/* Results Display */}
-                <AnimatePresence>
-                  {showResults && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border border-green-200"
-                    >
-                      <div className="flex items-center gap-2 mb-4">
-                        <CheckCircle className="w-6 h-6 text-green-600" />
-                        <h4 className="text-lg font-semibold text-gray-900">Demo Results</h4>
-                      </div>
-                      
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {Object.entries(currentDemo.results).map(([key, value]) => (
-                          <div key={key} className="text-center">
-                            <div className="text-2xl font-bold text-gray-900">{value}</div>
-                            <div className="text-sm text-gray-600 capitalize">
-                              {key.replace(/([A-Z])/g, ' $1').trim()}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      <div className="mt-4 text-center">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300"
-                        >
-                          Learn More About This Solution
-                          <ArrowRight className="w-4 h-4 ml-2 inline" />
-                        </motion.button>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
             <h3 className="text-3xl font-bold mb-4">
-              Ready to Implement These Solutions?
+              Ready to Experience the Future?
             </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Get started with our AI solutions and transform your business today
+            <p className="text-xl mb-8 opacity-90">
+              Start your free trial and see how our AI tools can transform your development workflow
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center">
+                <Brain className="w-5 h-5 mr-2" />
                 Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
                 Schedule Demo
               </button>
             </div>
