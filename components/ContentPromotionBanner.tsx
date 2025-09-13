@@ -1,244 +1,117 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { X, ArrowRight, Star, Calendar, Download, Play, Gift } from 'lucide-react';
 
-interface PromotionItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'case-study' | 'resource' | 'webinar' | 'blog';
-  href: string;
-  badge: string;
-  badgeColor: string;
-  icon: React.ComponentType<any>;
-  ctaText: string;
-  isNew?: boolean;
-  isLimited?: boolean;
-  expiresAt?: string;
-}
-
-interface ContentPromotionBannerProps {
-  className?: string;
-  autoRotate?: boolean;
-  rotationInterval?: number;
-}
-
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
-  className = '',
-  autoRotate = true,
-  rotationInterval = 8000
-}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function ContentPromotionBanner() {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const promotions: PromotionItem[] = [
+  const promotions = [
     {
-      id: 'ai-gtm-2025',
-      title: 'AI Go-To-Market Strategy 2025: From Zero to Traction',
-      description: 'Positioning, pricing, and distribution playbook to launch and scale AI products in 2025.',
-      type: 'blog',
-      href: '/blog/ai-2025-ai-go-to-market-strategy',
-      badge: 'JUST PUBLISHED',
-      badgeColor: 'bg-orange-100 text-orange-800',
-      icon: Star,
-      ctaText: 'Read Article',
-      isNew: true
+      id: 1,
+      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
+      description: "10,000% ROI with autonomous operations and quantum computing integration",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      badge: "BREAKTHROUGH",
+      color: "from-red-500 to-pink-500",
+      bgColor: "from-red-50 to-pink-50",
+      borderColor: "border-red-200"
     },
     {
-      id: 'case-study-1',
-      title: 'Manufacturing Giant Achieves 400% ROI',
-      description: 'See how a Fortune 500 company saved $2.3B with AI transformation',
-      type: 'case-study',
-      href: '/case-studies/ai-transformation-manufacturing-giant-2025',
-      badge: 'SUCCESS STORY',
-      badgeColor: 'bg-green-100 text-green-800',
-      icon: Star,
-      ctaText: 'View Case Study',
-      isNew: true
+      id: 2,
+      title: "🔮 AI 2026-2030 Future Predictions",
+      description: "Revolutionary predictions: quantum-neural fusion, consciousness AI, infinite ROI",
+      link: "/ai-2026-2030-future-predictions",
+      badge: "REVOLUTIONARY",
+      color: "from-cyan-500 to-purple-500",
+      bgColor: "from-cyan-50 to-purple-50",
+      borderColor: "border-cyan-200"
     },
     {
-      id: 'playbook-1',
-      title: 'Free AI Transformation Playbook 2025',
-      description: 'Download our comprehensive guide with proven frameworks and templates',
-      type: 'resource',
-      href: '/resources/ai-transformation-playbook-2025',
-      badge: 'FREE RESOURCE',
-      badgeColor: 'bg-blue-100 text-blue-800',
-      icon: Download,
-      ctaText: 'Download Now',
-      isNew: true,
-      isLimited: true
-    },
-    {
-      id: 'webinar-1',
-      title: 'AI Transformation Masterclass',
-      description: 'Join 2,500+ executives in our free live training session',
-      type: 'webinar',
-      href: '/webinars/ai-transformation-masterclass',
-      badge: 'FREE WEBINAR',
-      badgeColor: 'bg-purple-100 text-purple-800',
-      icon: Play,
-      ctaText: 'Register Free',
-      isNew: true,
-      expiresAt: '2025-01-25'
-    },
-    {
-      id: 'blog-1',
-      title: 'Generative AI Revolution 2025',
-      description: 'Explore how generative AI is transforming every industry',
-      type: 'blog',
-      href: '/blog/ai-2025-generative-ai-revolution',
-      badge: 'TRENDING',
-      badgeColor: 'bg-orange-100 text-orange-800',
-      icon: Star,
-      ctaText: 'Read Article',
-      isNew: true
+      id: 3,
+      title: "⚛️ Quantum Computing Breakthroughs 2025",
+      description: "25,000% ROI with quantum supremacy and error-corrected quantum computers",
+      link: "/quantum-computing-breakthroughs-2025",
+      badge: "QUANTUM",
+      color: "from-indigo-500 to-purple-500",
+      bgColor: "from-indigo-50 to-purple-50",
+      borderColor: "border-indigo-200"
     }
   ];
 
   useEffect(() => {
-    if (!autoRotate) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
+    }, 5000);
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % promotions.length);
-    }, rotationInterval);
-
-    return () => clearInterval(interval);
-  }, [autoRotate, rotationInterval, promotions.length]);
-
-  const currentPromotion = promotions[currentIndex];
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'case-study': return '📊';
-      case 'resource': return '📚';
-      case 'webinar': return '🎓';
-      case 'blog': return '📝';
-      default: return '📄';
-    }
-  };
-
-  const getGradientClass = (type: string) => {
-    switch (type) {
-      case 'case-study': return 'from-green-500 to-emerald-600';
-      case 'resource': return 'from-blue-500 to-indigo-600';
-      case 'webinar': return 'from-purple-500 to-violet-600';
-      case 'blog': return 'from-orange-500 to-red-600';
-      default: return 'from-gray-500 to-gray-600';
-    }
-  };
-
-  const isExpiring = currentPromotion.expiresAt && 
-    new Date(currentPromotion.expiresAt) <= new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    return () => clearInterval(timer);
+  }, [promotions.length]);
 
   if (!isVisible) return null;
 
-  return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, x: 300 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -300 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="relative"
-        >
-          <div className={`bg-gradient-to-r ${getGradientClass(currentPromotion.type)} text-white`}>
-            <div className="container mx-auto px-4 py-4">
-              <div className="flex items-center justify-between">
-                {/* Content */}
-                <div className="flex items-center space-x-4 flex-1">
-                  <div className="text-2xl">{getTypeIcon(currentPromotion.type)}</div>
-                  
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-1">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${currentPromotion.badgeColor}`}>
-                        {currentPromotion.badge}
-                      </span>
-                      {currentPromotion.isNew && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                          NEW
-                        </span>
-                      )}
-                      {currentPromotion.isLimited && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                          LIMITED
-                        </span>
-                      )}
-                      {isExpiring && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
-                          <Calendar className="w-3 h-3 mr-1" />
-                          EXPIRING SOON
-                        </span>
-                      )}
-                    </div>
-                    
-                    <h3 className="font-bold text-sm md:text-base mb-1">
-                      {currentPromotion.title}
-                    </h3>
-                    
-                    <p className="text-xs md:text-sm opacity-90">
-                      {currentPromotion.description}
-                    </p>
-                  </div>
-                </div>
+  const currentPromotion = promotions[currentSlide];
 
-                {/* Actions */}
-                <div className="flex items-center space-x-3">
-                  <Link
-                    href={currentPromotion.href}
-                    className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white font-medium rounded-lg hover:bg-white/30 transition-all duration-200 text-sm"
-                  >
-                    {currentPromotion.ctaText}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                  
-                  <button
-                    onClick={() => setIsVisible(false)}
-                    className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="Close promotion"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
-                </div>
+  return (
+    <div className="relative bg-gradient-to-r from-gray-900 to-black py-4 overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-pulse"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Close button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors p-1"
+            aria-label="Close banner"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Promotion content */}
+          <div className="flex-1 mx-4">
+            <div className="text-center">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-sm font-bold mb-2 animate-pulse">
+                🎉 NEW CONTENT AVAILABLE
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-1">
+                {currentPromotion.title}
+              </h3>
+              <p className="text-sm md:text-base text-gray-300 mb-3">
+                {currentPromotion.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-2 justify-center">
+                <Link
+                  href={currentPromotion.link}
+                  className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${currentPromotion.color} text-white rounded-lg font-semibold text-sm hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
+                >
+                  Explore Now
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <span className={`inline-flex items-center px-3 py-2 bg-gradient-to-r ${currentPromotion.bgColor} ${currentPromotion.borderColor} border rounded-lg text-sm font-semibold text-gray-800`}>
+                  {currentPromotion.badge}
+                </span>
               </div>
             </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
 
-      {/* Progress Indicator */}
-      {autoRotate && promotions.length > 1 && (
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
-          <motion.div
-            className="h-full bg-white/50"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: rotationInterval / 1000, ease: "linear" }}
-            key={currentIndex}
-          />
+          {/* Navigation dots */}
+          <div className="flex space-x-2">
+            {promotions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-white' : 'bg-gray-500'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
-      )}
-
-      {/* Navigation Dots */}
-      {autoRotate && promotions.length > 1 && (
-        <div className="absolute bottom-2 right-4 flex space-x-2">
-          {promotions.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50'
-              }`}
-              aria-label={`Go to promotion ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
+      </div>
     </div>
   );
-};
-
-export default ContentPromotionBanner;
+}
