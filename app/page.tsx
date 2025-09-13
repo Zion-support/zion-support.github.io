@@ -35,6 +35,11 @@ import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromo
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 
+// Import new 2025 content promotion components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
+import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+
 // Future Tech Promotion Components
 import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
 import QuantumAIFusionPromotionBanner from '../components/QuantumAIFusionPromotionBanner';
@@ -52,6 +57,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 CONTENT PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* LATEST CONTENT SHOWCASE 2025 */}
+        <LatestContentShowcase2025 />
+        
+        {/* CONTENT DISCOVERY WIDGET 2025 */}
+        <ContentDiscoveryWidget2025 />
+        
         {/* AI 2035 SINGULARITY PROMOTION BANNER */}
         <AI2035SingularityPromotionBanner />
         
