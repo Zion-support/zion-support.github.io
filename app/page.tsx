@@ -68,6 +68,11 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025UltimateBreakthroughRevolutionPromotionBanner from '../components/AI2025UltimateBreakthroughRevolutionPromotionBanner';
 import AI2026FuturePredictionsBreakthroughPromotionBanner from '../components/AI2026FuturePredictionsBreakthroughPromotionBanner';
 import AI2026QuantumNeuralFusionCaseStudyPromotionBanner from '../components/AI2026QuantumNeuralFusionCaseStudyPromotionBanner';
+
+// Import new promotional banners for 2026 content
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 >>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
 >>>>>>> cursor/create-and-deploy-new-content-6178
 
@@ -96,10 +101,20 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+        {/* AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+        <AI2026FuturePredictionsBreakthroughPromotionBanner />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH 2030 BANNER */}
+        <QuantumComputingBreakthrough2030PromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
         <AI2025UltimateBreakthroughRevolutionPromotionBanner />
-        
-        <AI2026FuturePredictionsBreakthroughPromotionBanner />
         
         <AI2026QuantumNeuralFusionCaseStudyPromotionBanner />
         
