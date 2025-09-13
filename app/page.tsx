@@ -93,6 +93,11 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+// New 2026 content components
+import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+import InteractiveTechDemo2026PromotionBanner from '../components/InteractiveTechDemo2026PromotionBanner';
+import SuccessStoriesShowcase2026PromotionBanner from '../components/SuccessStoriesShowcase2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -111,6 +116,15 @@ export default function HomePage() {
             <NewContentPromotionBanner2025 />
           </div>
         </div>
+
+        {/* NEW AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
+        <AIInnovationShowcase2026PromotionBanner />
+        
+        {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
+        <InteractiveTechDemo2026PromotionBanner />
+        
+        {/* NEW SUCCESS STORIES 2026 PROMOTION BANNER */}
+        <SuccessStoriesShowcase2026PromotionBanner />
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
