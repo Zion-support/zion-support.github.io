@@ -100,6 +100,14 @@ import QuantumComputingAdvancedPromotionBanner from '../components/QuantumComput
 import QuantumAIContentPromotionBanner from '../components/QuantumAIContentPromotionBanner';
 import EnhancedQuantumContentShowcase from '../components/EnhancedQuantumContentShowcase';
 
+// New 2025 AI Trends Content Components
+import AI2025TrendsContentShowcase from '../components/AI2025TrendsContentShowcase';
+import AI2025TrendsPromotionBanner from '../components/AI2025TrendsPromotionBanner';
+
+// New Comprehensive Resources Components
+import ComprehensiveResourcesShowcase from '../components/ComprehensiveResourcesShowcase';
+import ResourcesPromotionBanner from '../components/ResourcesPromotionBanner';
+
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -164,6 +172,26 @@ const HomePage: React.FC = () => {
               {/* Enhanced Quantum Content Showcase */}
               <Suspense fallback={<LoadingSpinner />}>
                 <EnhancedQuantumContentShowcase />
+              </Suspense>
+
+              {/* AI 2025 Trends Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025TrendsPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025 Trends Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025TrendsContentShowcase />
+              </Suspense>
+
+              {/* Resources Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ResourcesPromotionBanner />
+              </Suspense>
+
+              {/* Comprehensive Resources Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ComprehensiveResourcesShowcase />
               </Suspense>
 
               {/* Content Showcase Sections */}
