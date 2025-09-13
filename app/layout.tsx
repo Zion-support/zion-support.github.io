@@ -98,6 +98,9 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
+                <Link href="/blog/ai-2025-enterprise-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500">
+                  🚀 AI 2025 Enterprise Automation Revolution (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2025-next-generation-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2025 Next-Generation Breakthroughs (NEW)
                 </Link>
@@ -122,8 +125,8 @@ function Header() {
                 <Link href="/case-studies/ai-2025-revolutionary-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500">
                   🏆 Revolutionary Breakthrough Success (2000% ROI)
                 </Link>
-                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
-                  🏆 Global Enterprise Success (2000% ROI)
+                <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Enterprise Transformation Breakthrough (1200% ROI)
                 </Link>
                 <Link href="/blog/ai-2025-ultimate-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2025 Ultimate Trends & Predictions (ULTIMATE)
