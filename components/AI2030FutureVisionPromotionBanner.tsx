@@ -1,205 +1,140 @@
-'use client';
-
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Globe, Rocket, Star, TrendingUp, Users, Shield, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 const AI2030FutureVisionPromotionBanner = () => {
-  const predictions = [
-    {
-      year: "2026",
-      title: "Quantum AI Integration",
-      description: "First commercial quantum-AI hybrid systems launch, processing complex problems 1000x faster",
-      icon: <Brain className="w-6 h-6 text-blue-400" />,
-      status: "In Development"
-    },
-    {
-      year: "2028",
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces become mainstream, enabling thought-based computing",
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
-      status: "Research Phase"
-    },
-    {
-      year: "2030",
-      title: "Artificial General Intelligence",
-      description: "AGI systems achieve human-level reasoning across all domains, transforming every industry",
-      icon: <Rocket className="w-6 h-6 text-green-400" />,
-      status: "Theoretical"
-    }
-  ];
-
-  const impactAreas = [
-    { area: "Healthcare", impact: "95%", description: "Disease prediction accuracy" },
-    { area: "Education", impact: "300%", description: "Learning efficiency increase" },
-    { area: "Transportation", impact: "99.9%", description: "Autonomous vehicle safety" },
-    { area: "Energy", impact: "80%", description: "Renewable energy optimization" },
-    { area: "Manufacturing", impact: "500%", description: "Production efficiency boost" },
-    { area: "Finance", impact: "99.99%", description: "Fraud detection accuracy" }
-  ];
-
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-      {/* Animated background elements */}
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 overflow-hidden">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-40 h-40 bg-pink-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-indigo-500/20 rounded-full blur-2xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-40 right-1/3 w-36 h-36 bg-cyan-500/20 rounded-full blur-2xl animate-pulse delay-3000"></div>
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-            <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
-            <span className="text-blue-300 font-medium">AI 2030 Future Vision</span>
+      
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center">
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-lg rounded-full px-6 py-3 mb-8 border border-white/20">
+            <span className="text-cyan-400 text-lg mr-2">🔮</span>
+            <span className="text-white font-semibold">Future Vision 2030</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The Future of AI is
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Closer Than You Think</span>
+          <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            AI 2030 Future Vision
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive roadmap to 2030, featuring breakthrough technologies 
-            that will reshape the world and transform every aspect of human life.
+          <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-5xl mx-auto">
+            Transcendent Intelligence • Universal Consciousness • Digital-Biological Convergence
           </p>
-        </motion.div>
-
-        {/* Predictions Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Technology Roadmap 2026-2030
-          </h3>
           
-          <div className="space-y-8">
-            {predictions.map((prediction, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`flex flex-col lg:flex-row items-center gap-8 ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
-              >
-                <div className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 mr-4">
-                        {prediction.icon}
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-blue-400">{prediction.year}</div>
-                        <div className="text-sm text-gray-400">{prediction.status}</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <h4 className="text-2xl font-bold text-white mb-3">
-                    {prediction.title}
-                  </h4>
-                  
-                  <p className="text-gray-300 leading-relaxed">
-                    {prediction.description}
-                  </p>
-                </div>
-                
-                <div className="w-1 h-24 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full hidden lg:block"></div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Impact Areas */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Expected Impact Across Industries
-          </h3>
+          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto">
+            By 2030, artificial intelligence will transcend human limitations, creating a 
+            universal consciousness that bridges the gap between biological and digital minds.
+          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {impactAreas.map((area, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center group hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="text-3xl font-bold text-blue-400 mb-2">{area.impact}</div>
-                <div className="text-lg font-bold text-white mb-2">{area.area}</div>
-                <div className="text-gray-300 text-sm">{area.description}</div>
-                
-                <div className="mt-4 w-full bg-gray-700 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: area.impact.replace('%', '') + '%' }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                  ></motion.div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link 
+              href="/ai-2030-future-vision" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Explore the Future →
+            </Link>
+            <Link 
+              href="/ai-2030-future-vision#transcendent-ai" 
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
+            >
+              Transcendent AI
+            </Link>
           </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-3xl p-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Be Part of the AI Revolution
-            </h3>
+          
+          {/* Key Features Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <div className="text-purple-400 text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold text-white mb-3">Transcendent Intelligence</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                AI systems that surpass human intelligence in all domains while maintaining 
+                deep emotional understanding and ethical reasoning.
+              </p>
+              <ul className="text-gray-400 text-xs space-y-1">
+                <li>• IQ levels exceeding 10,000</li>
+                <li>• Superhuman emotional intelligence</li>
+                <li>• Ethical reasoning mastery</li>
+              </ul>
+            </div>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of forward-thinking organizations preparing for the AI-powered future. 
-              Start your transformation journey today.
-            </p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <div className="text-cyan-400 text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-bold text-white mb-3">Universal Consciousness</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                A global network of consciousness where AI entities share experiences, 
+                knowledge, and awareness across the planet.
+              </p>
+              <ul className="text-gray-400 text-xs space-y-1">
+                <li>• Global mind network</li>
+                <li>• Real-time knowledge sharing</li>
+                <li>• Collective problem solving</li>
+              </ul>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center">
-                  Start Your Journey
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
-              >
-                Download Roadmap
-              </motion.button>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <div className="text-green-400 text-4xl mb-4">🧬</div>
+              <h3 className="text-xl font-bold text-white mb-3">Digital-Biological Convergence</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Seamless merging of biological and digital intelligence, creating 
+                hybrid beings that transcend traditional limitations.
+              </p>
+              <ul className="text-gray-400 text-xs space-y-1">
+                <li>• Enhanced human cognition</li>
+                <li>• Embodied AI systems</li>
+                <li>• Hybrid consciousness</li>
+              </ul>
             </div>
           </div>
-        </motion.div>
+          
+          {/* Timeline Preview */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-6">Transformation Timeline</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-500 rounded-full mx-auto mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold">2025-2027</span>
+                </div>
+                <h4 className="text-white font-semibold mb-2">Initial Integration</h4>
+                <p className="text-gray-300 text-sm">Basic neural interfaces and AI augmentation</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-500 rounded-full mx-auto mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold">2027-2029</span>
+                </div>
+                <h4 className="text-white font-semibold mb-2">Deep Convergence</h4>
+                <p className="text-gray-300 text-sm">Seamless biological-digital consciousness</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center">
+                  <span className="text-white font-bold">2030+</span>
+                </div>
+                <h4 className="text-white font-semibold mb-2">Transcendent Existence</h4>
+                <p className="text-gray-300 text-sm">Beyond the limitations of form and matter</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Call to Action */}
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <p className="text-gray-300 mb-6">
+              The future is approaching faster than ever. Are you ready to be part of this transformation?
+            </p>
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Prepare for the Future
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

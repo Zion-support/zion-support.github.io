@@ -1,0 +1,374 @@
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+interface AnalyticsProps {
+  trackingId?: string;
+  enableDebug?: boolean;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ 
+  trackingId = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX',
+  enableDebug = process.env.NODE_ENV === 'development'
+}) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname,
+        debug_mode: enableDebug
+      });
+    }
+  }, [trackingId, location.pathname, enableDebug]);
+
+  useEffect(() => {
+    // Track page views
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname
+      });
+    }
+
+<<<<<<< HEAD
+    // Track custom events for important interactions
+    const trackCustomEvents = () => {
+      // Track form submissions
+      const forms = document.querySelectorAll('form');
+      forms.forEach(form => {
+        form.addEventListener('submit', () => {
+          if (window.gtag) {
+            window.gtag('event', 'form_submit', {
+              form_name: form.getAttribute('data-form-name') || 'unknown',
+              page_path: location.pathname
+            });
+          }
+        });
+      });
+
+      // Track button clicks
+      const buttons = document.querySelectorAll('button[data-analytics]');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const eventName = button.getAttribute('data-analytics');
+          const eventCategory = button.getAttribute('data-category') || 'engagement';
+          const eventLabel = button.getAttribute('data-label') || button.textContent;
+
+          if (window.gtag && eventName) {
+            window.gtag('event', eventName, {
+              event_category: eventCategory,
+              event_label: eventLabel,
+              page_path: location.pathname
+            });
+          }
+        });
+      });
+
+      // Track link clicks
+      const links = document.querySelectorAll('a[data-analytics]');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          const eventName = link.getAttribute('data-analytics');
+          const eventCategory = link.getAttribute('data-category') || 'navigation';
+          const eventLabel = link.getAttribute('data-label') || link.textContent;
+          const linkUrl = link.getAttribute('href');
+
+          if (window.gtag && eventName) {
+            window.gtag('event', eventName, {
+              event_category: eventCategory,
+              event_label: eventLabel,
+              link_url: linkUrl,
+              page_path: location.pathname
+            });
+          }
+        });
+      });
+    };
+
+    // Track scroll depth
+    const trackScrollDepth = () => {
+      let maxScroll = 0;
+      let scrollTimeout: NodeJS.Timeout;
+
+      const handleScroll = () => {
+        const scrollPercent = Math.round(
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+        );
+
+        if (scrollPercent > maxScroll) {
+          maxScroll = scrollPercent;
+
+          // Track scroll milestones
+          if ([25, 50, 75, 90].includes(maxScroll)) {
+            if (window.gtag) {
+              window.gtag('event', 'scroll_depth', {
+                scroll_percentage: maxScroll,
+                page_path: location.pathname
+              });
+            }
+          }
+        }
+
+        // Clear existing timeout
+        clearTimeout(scrollTimeout);
+
+        // Set new timeout to track scroll end
+        scrollTimeout = setTimeout(() => {
+          if (window.gtag && maxScroll > 0) {
+            window.gtag('event', 'scroll_end', {
+              final_scroll_percentage: maxScroll,
+              page_path: location.pathname
+            });
+          }
+        }, 1000);
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        clearTimeout(scrollTimeout);
+      };
+    };
+
+    // Track time on page
+    const trackTimeOnPage = () => {
+      const startTime = Date.now();
+      let timeTracked = false;
+
+      const trackTime = () => {
+        if (!timeTracked) {
+          const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+          
+          if (window.gtag) {
+            window.gtag('event', 'time_on_page', {
+              time_on_page: timeOnPage,
+              page_path: location.pathname
+            });
+          }
+          
+          timeTracked = true;
+        }
+      };
+
+      // Track when user leaves the page
+      const handleBeforeUnload = () => trackTime();
+      const handleVisibilityChange = () => {
+        if (document.hidden) trackTime();
+      };
+
+      window.addEventListener('beforeunload', handleBeforeUnload);
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      // Track after 30 seconds
+      const timeout = setTimeout(trackTime, 30000);
+
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        clearTimeout(timeout);
+        trackTime();
+      };
+    };
+
+    // Initialize tracking
+    const scrollCleanup = trackScrollDepth();
+    const timeCleanup = trackTimeOnPage();
+    trackCustomEvents();
+
+    return () => {
+      scrollCleanup();
+      timeCleanup();
+=======
+    // Track custom events
+    trackCustomEvents();
+  }, [location.pathname]);
+
+  const trackCustomEvents = () => {
+    // Track button clicks
+    const trackButtonClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        const button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        if (button) {
+          const text = button.textContent?.trim() || 'Unknown Button';
+          const href = button.getAttribute('href') || button.getAttribute('data-href') || '';
+          
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'button_click', {
+              button_text: text,
+              button_location: href,
+              page_path: location.pathname
+            });
+          }
+        }
+      }
+    };
+
+    // Track form submissions
+    const trackFormSubmit = (event: Event) => {
+      const form = event.target as HTMLFormElement;
+      if (form.tagName === 'FORM') {
+        const formName = form.getAttribute('data-form-name') || form.action || 'Unknown Form';
+        
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'form_submit', {
+            form_name: formName,
+            page_path: location.pathname
+          });
+        }
+      }
+    };
+
+    // Track link clicks
+    const trackLinkClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const link = target.tagName === 'A' ? target : target.closest('a');
+      if (link && link.href) {
+        const linkText = link.textContent?.trim() || 'Unknown Link';
+        const linkUrl = link.href;
+        
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'link_click', {
+            link_text: linkText,
+            link_url: linkUrl,
+            page_path: location.pathname
+          });
+        }
+      }
+    };
+
+    // Track scroll depth
+    let maxScroll = 0;
+    const trackScrollDepth = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        
+        // Track at 25%, 50%, 75%, and 100%
+        if ([25, 50, 75, 100].includes(maxScroll)) {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'scroll_depth', {
+              scroll_percentage: maxScroll,
+              page_path: location.pathname
+            });
+          }
+        }
+      }
+    };
+
+    // Track time on page
+    let startTime = Date.now();
+    const trackTimeOnPage = () => {
+      const timeSpent = Math.round((Date.now() - startTime) / 1000);
+      
+      // Track at 30 seconds, 1 minute, 2 minutes, and 5 minutes
+      if ([30, 60, 120, 300].includes(timeSpent)) {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'time_on_page', {
+            time_spent_seconds: timeSpent,
+            page_path: location.pathname
+          });
+        }
+      }
+    };
+
+    // Add event listeners
+    document.addEventListener('click', trackButtonClick);
+    document.addEventListener('submit', trackFormSubmit);
+    document.addEventListener('click', trackLinkClick);
+    window.addEventListener('scroll', trackScrollDepth);
+    
+    // Track time on page every 30 seconds
+    const timeInterval = setInterval(trackTimeOnPage, 30000);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('click', trackButtonClick);
+      document.removeEventListener('submit', trackFormSubmit);
+      document.removeEventListener('click', trackLinkClick);
+      window.removeEventListener('scroll', trackScrollDepth);
+      clearInterval(timeInterval);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
+    };
+  }, [location.pathname]);
+
+  // Track performance metrics
+  useEffect(() => {
+    if ('performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+<<<<<<< HEAD
+            
+            if (window.gtag) {
+              window.gtag('event', 'performance_metrics', {
+                page_load_time: Math.round(navEntry.loadEventEnd - navEntry.loadEventStart),
+                dom_content_loaded: Math.round(navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart),
+                first_paint: Math.round(navEntry.responseStart - navEntry.requestStart),
+=======
+            const loadTime = navEntry.loadEventEnd - navEntry.navigationStart;
+            
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'page_load_time', {
+                load_time_ms: Math.round(loadTime),
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
+                page_path: location.pathname
+              });
+            }
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['navigation'] });
+
+      return () => observer.disconnect();
+    }
+  }, [location.pathname]);
+
+<<<<<<< HEAD
+=======
+  // Track errors
+  useEffect(() => {
+    const trackError = (event: ErrorEvent) => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.message,
+          fatal: false,
+          page_path: location.pathname
+        });
+      }
+    };
+
+    const trackUnhandledRejection = (event: PromiseRejectionEvent) => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.reason?.message || 'Unhandled Promise Rejection',
+          fatal: false,
+          page_path: location.pathname
+        });
+      }
+    };
+
+    window.addEventListener('error', trackError);
+    window.addEventListener('unhandledrejection', trackUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', trackError);
+      window.removeEventListener('unhandledrejection', trackUnhandledRejection);
+    };
+  }, [location.pathname]);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
+  return null; // This component doesn't render anything
+};
+
+export default Analytics;

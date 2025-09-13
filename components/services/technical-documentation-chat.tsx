@@ -13,7 +13,7 @@ const TechnicalDocumentationChat: NextPage = () => {
       <main>
         <h1>TechnicalDocumentationChat</h1>
         <p>Service details coming soon...</p>
-        <Link href="/services"><a>Back to Services</a></Link>
+        <a href="/services">Back to Services</a>
       </main>
     </div>
   );

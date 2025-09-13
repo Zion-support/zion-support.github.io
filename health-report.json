@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-09-05T02:59:06.993Z",
+  "status": "unhealthy",
+  "checks": {
+    "disk": {
+      "status": "ok",
+      "details": "Disk usage: 13%",
+      "message": "Disk space is healthy"
+    },
+    "memory": {
+      "status": "ok",
+      "details": "Mem:            15Gi       1.4Gi       1.0Gi       7.5Mi        13Gi        14Gi",
+      "message": "Memory check completed"
+    },
+    "build": {
+      "status": "error",
+      "message": "Build failed"
+    },
+    "lint": {
+      "status": "error",
+      "message": "Linting failed and could not be auto-fixed"
+    },
+    "typeCheck": {
+      "status": "error",
+      "message": "Type checking failed"
+    },
+    "security": {
+      "status": "ok",
+      "message": "No security vulnerabilities found"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="en">
+=======
+<<<<<<< HEAD
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>Zion Tech Group</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a6bf
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zion Tech Group</title>
+    <meta name="description" content="Zion Tech Group — AI, automation, and enterprise technology solutions." />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+<<<<<<< HEAD
+=======
+>>>>>>> bd470cc851c14f01596f01b1e255bf59df04bd6d
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a6bf
+</html>

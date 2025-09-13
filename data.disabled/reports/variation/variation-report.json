@@ -1,6 +1,16 @@
 {
-  "timestamp": "2025-08-08T17:08:44.026Z",
+  "timestamp": "2025-08-08T17:41:51.456Z",
   "loops": {
+    "adaptive-intelligence-orchestrator.log": {
+      "restarts": 0,
+      "started": 2,
+      "loopScore": 0
+    },
+    "alignment-cron.log": {
+      "restarts": 0,
+      "started": 2,
+      "loopScore": 0
+    },
     "alignment-orchestrator.log": {
       "restarts": 0,
       "started": 0,
@@ -12,9 +22,15 @@
       "loopScore": 0
     },
     "automation-launcher.log": {
+<<<<<<< HEAD:data.disabled/reports/variation/variation-report.json
       "restarts": 3602,
       "started": 7493,
       "loopScore": 0.48071533431202457
+=======
+      "restarts": 256301,
+      "started": 512844,
+      "loopScore": 0.4997640608060151
+>>>>>>> origin/deps-maint:data/reports/variation/variation-report.json
     },
     "autonomous-automation-orchestrator.log": {
       "restarts": 0,
@@ -148,7 +164,11 @@
     },
     "lint-error-fixer.log": {
       "restarts": 0,
+<<<<<<< HEAD:data.disabled/reports/variation/variation-report.json
       "started": 4,
+=======
+      "started": 9,
+>>>>>>> origin/deps-maint:data/reports/variation/variation-report.json
       "loopScore": 0
     },
     "lint-monitor.log": {
@@ -206,7 +226,16 @@
       "started": 0,
       "loopScore": 0
     },
+<<<<<<< HEAD:data.disabled/reports/variation/variation-report.json
     "site-maintenance-orchestrator.log": {
+=======
+    "site-maintenance.log": {
+      "restarts": 0,
+      "started": 0,
+      "loopScore": 0
+    },
+    "site-promo-cron.log": {
+>>>>>>> origin/deps-maint:data/reports/variation/variation-report.json
       "restarts": 0,
       "started": 0,
       "loopScore": 0
