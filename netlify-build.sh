@@ -1,23 +1,30 @@
 #!/bin/bash
 set -e
 
-echo "Starting Netlify build process with pnpm..."
+echo "Starting Netlify build process with Yarn configuration..."
 
 # Set environment variables for Netlify
 export NODE_ENV=production
 export NETLIFY=true
+# Force use of Yarn
+export NPM_CONFIG_PACKAGE_MANAGER=yarn
 
 # Clear all caches and corrupted packages
 echo "Clearing all caches and corrupted packages..."
 rm -rf node_modules
-rm -rf .pnpm-store
+rm -rf .yarn-cache
+rm -rf pnpm-lock.yaml
+rm -rf ~/.yarn/cache/v6/npm-find-up-*
+rm -rf ~/.yarn/cache/v6/npm-glob-parent-*
+rm -rf ~/.yarn/cache/v6/npm-glob-*
+rm -rf ~/.yarn/cache/v6/npm-eslint-*
 
-# Clean pnpm cache completely
-echo "Cleaning pnpm cache..."
-pnpm store prune
+# Clean Yarn cache completely
+echo "Cleaning Yarn cache..."
+yarn cache clean
 
-# Install dependencies with pnpm
-echo "Installing dependencies with pnpm..."
+# Install dependencies with Yarn
+echo "Installing dependencies with Yarn..."
 for attempt in {1..3}; do
   echo "Installation attempt $attempt of 3..."
   
@@ -28,21 +35,21 @@ for attempt in {1..3}; do
   case $attempt in
     1)
       echo "Attempt 1: Standard installation with frozen lockfile..."
-      if pnpm install --frozen-lockfile; then
+      if yarn install --frozen-lockfile; then
         echo "Dependencies installed successfully!"
         break
       fi
       ;;
     2)
       echo "Attempt 2: Installation without frozen lockfile..."
-      if pnpm install; then
+      if yarn install; then
         echo "Dependencies installed successfully!"
         break
       fi
       ;;
     3)
       echo "Attempt 3: Installation with force flag..."
-      if pnpm install --force; then
+      if yarn install --force; then
         echo "Dependencies installed successfully!"
         break
       else
@@ -54,7 +61,7 @@ for attempt in {1..3}; do
   
   # Clean up before next attempt
   rm -rf node_modules
-  pnpm store prune
+  yarn cache clean
 done
 
 # Verify installation
@@ -66,6 +73,6 @@ fi
 
 # Build the project
 echo "Building project..."
-pnpm run build
+yarn build
 
 echo "Build completed successfully!"
