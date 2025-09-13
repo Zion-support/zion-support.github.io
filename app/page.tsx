@@ -51,6 +51,8 @@ import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictions
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
+import InnovativeContentShowcase2026 from '../components/InnovativeContentShowcase2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
 // 2027+ Content Components
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
@@ -241,6 +243,16 @@ const HomePage: React.FC = () => {
               {/* New Content Discovery Widget 2026 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <ContentDiscoveryWidget2026 />
+              </Suspense>
+
+              {/* Innovative Content Showcase 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InnovativeContentShowcase2026 />
+              </Suspense>
+
+              {/* Interactive Content Discovery 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery2026 />
               </Suspense>
 
               {/* Featured Content Showcase */}
