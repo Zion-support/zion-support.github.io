@@ -10,12 +10,13 @@
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
 
 [build.environment]
-  NODE_VERSION = "22.0.0"
+  NODE_VERSION = "24.0.0"
   NODE_OPTIONS = "--max-old-space-size=4096"
   VITE_NODE_ENV = "production"
   SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
-  YARN_CACHE_FOLDER = ".yarn-cache"
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  # Force pnpm usage
+  NPM_CONFIG_PACKAGE_MANAGER = "pnpm"
+  COREPACK_ENABLE_STRICT = "0"
 
 # Long-term caching for static assets
 [[headers]]
@@ -71,7 +72,8 @@
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
-  NODE_VERSION = "22"
+  NODE_VERSION = "24"
+  NPM_CONFIG_PACKAGE_MANAGER = "pnpm"
 
 [context.deploy-preview]
   command = "corepack enable && pnpm build"
@@ -79,11 +81,8 @@
 [context.branch-deploy]
   command = "corepack enable && pnpm build"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+# Compression is handled by Netlify automatically
+# No need for a separate compression plugin
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
