@@ -1,51 +1,68 @@
 #!/usr/bin/env node
 
-const https = require('https');
+// Simple script to check for open PRs using GitHub API
+import https from 'https';
 
-const token = process.env.GITHUB_TOKEN;
-if (!token) {
-  console.error('GITHUB_TOKEN is not set.');
-  process.exit(1);
+async function checkOpenPRs() {
+  const owner = 'Zion-Holdings';
+  const repo = 'zion.app';
+  
+  const options = {
+    hostname: 'api.github.com',
+    path: `/repos/${owner}/${repo}/pulls?state=open`,
+    method: 'GET',
+    headers: {
+      'User-Agent': 'PR-Checker',
+      'Accept': 'application/vnd.github.v3+json'
+    }
+  };
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(options, (res) => {
+      let data = '';
+      
+      res.on('data', (chunk) => {
+        data += chunk;
+      });
+      
+      res.on('end', () => {
+        try {
+          const prs = JSON.parse(data);
+          resolve(prs);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+    
+    req.on('error', (error) => {
+      reject(error);
+    });
+    
+    req.end();
+  });
 }
 
-const options = {
-  hostname: 'api.github.com',
-  path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
-  headers: {
-    Authorization: `token ${token}`,
-    'User-Agent': 'Node.js',
-    Accept: 'application/vnd.github.v3+json',
-  },
-};
-
-console.log('🔍 Checking for open pull requests...');
-const req = https.get(options, res => {
-  let data = '';
-  res.on('data', chunk => {
-    data += chunk;
-  });
-  res.on('end', () => {
-    try {
-      const prs = JSON.parse(data);
-      console.log(`Found ${prs.length} open pull requests:`);
-      prs.forEach((pr, index) => {
-        console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
-        console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
-        console.log(`   State: ${pr.state}`);
-        console.log(`   Mergeable: ${pr.mergeable}`);
-        console.log(`   URL: ${pr.html_url}`);
+async function main() {
+  try {
+    console.log('Checking for open PRs...');
+    const prs = await checkOpenPRs();
+    
+    if (prs.length === 0) {
+      console.log('✅ No open PRs found');
+    } else {
+      console.log(`📋 Found ${prs.length} open PR(s):`);
+      prs.forEach(pr => {
+        console.log(`  - PR #${pr.number}: ${pr.title}`);
+        console.log(`    State: ${pr.state}`);
+        console.log(`    Mergeable: ${pr.mergeable}`);
+        console.log(`    Has conflicts: ${pr.mergeable === false}`);
         console.log('');
       });
-      if (prs.length === 0) {
-        console.log('✅ No open pull requests found');
-      }
-    } catch (error) {
-      console.error('❌ Error parsing PR data:', error.message);
-      console.log('Raw response:', data);
     }
-  });
-});
-req.on('error', error => {
-  console.error('❌ Error checking PRs:', error.message);
-});
-req.end();
+  } catch (error) {
+    console.error('Error checking PRs:', error.message);
+  }
+}
+
+main();
