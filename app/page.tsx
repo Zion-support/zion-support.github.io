@@ -28,6 +28,11 @@ import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDis
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// New 2030+ breakthrough components
+import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
+import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
+import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -39,6 +44,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
+        <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* AI 2035 SINGULARITY PROMOTION BANNER */}
+        <AI2035SingularityPromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2030 */}
+        <UltimateContentDiscoveryWidget2030 />
+        
         {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
         <NewContent2025RevolutionaryBanner />
         
