@@ -72,6 +72,10 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 
+// Import new revolutionary content components
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
+
 // Import new promotional banners for 2026 content
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
@@ -101,6 +105,12 @@ export default function HomePage() {
         <AI2025UltimateBreakthroughPromotionBanner />
         
         <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER 2025 */}
+        <RevolutionaryContentPromotionBanner2025 />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
@@ -731,10 +741,6 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-e336
->>>>>>> cursor/create-and-deploy-new-content-6178
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
