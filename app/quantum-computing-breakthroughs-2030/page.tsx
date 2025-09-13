@@ -3,338 +3,211 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Quantum Computing Breakthroughs 2030 - Error-Corrected Quantum Supremacy',
-  description: 'Revolutionary quantum computing breakthroughs achieving error-corrected quantum supremacy, quantum internet, and reality-transcending computational capabilities.',
-  keywords: 'quantum computing 2030, quantum supremacy, error-corrected quantum, quantum internet, quantum AI, quantum breakthrough',
-  openGraph: {
-    title: 'Quantum Computing Breakthroughs 2030',
-    description: 'Revolutionary quantum computing achieving error-corrected quantum supremacy and quantum internet.',
-    type: 'website',
-  },
+  title: 'Quantum Computing Breakthroughs 2030 - Zion Tech Group',
+  description: 'Revolutionary quantum computing breakthroughs by 2030: error-corrected quantum computers, quantum internet, and quantum-AI fusion transforming industries.',
+  keywords: 'quantum computing 2030, quantum internet, quantum AI fusion, error-corrected quantum, quantum supremacy, breakthrough technology',
 };
 
 export default function QuantumComputingBreakthroughs2030() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-500/30 mb-8">
-              <span className="text-indigo-400 font-semibold text-sm uppercase tracking-wide">
-                ⚛️ QUANTUM SUPREMACY ACHIEVED
-              </span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
               Quantum Computing Breakthroughs 2030
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Witness the most revolutionary quantum computing breakthroughs in human history. 
-              Achieve <span className="text-indigo-400 font-bold">error-corrected quantum supremacy</span> with 
-              infinite computational power, quantum internet, and reality-transcending capabilities.
+            <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+              Experience the quantum revolution that will reshape reality itself. 
+              Error-corrected quantum computers, quantum internet, and quantum-AI fusion await.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="#quantum-supremacy"
-                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                href="/case-studies/quantum-computing-2030-breakthrough"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Explore Quantum Supremacy
+                ⚛️ See Quantum Success
               </Link>
               <Link 
-                href="/case-studies/quantum-computing-2030-breakthrough"
-                className="px-8 py-4 border-2 border-white/30 hover:border-white/60 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10"
+                href="/resources/quantum-implementation-guide"
+                className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/30"
               >
-                View Breakthrough Cases
+                📚 Implementation Guide
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Quantum Supremacy */}
-      <section id="quantum-supremacy" className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Error-Corrected Quantum Supremacy Achieved
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The world's first error-corrected quantum computer achieving true quantum supremacy 
-              with infinite computational power and perfect accuracy.
+      {/* Quantum Breakthroughs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Quantum Breakthroughs</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/30">
+            <div className="text-4xl mb-4">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4">Error-Corrected Quantum Computers</h3>
+            <p className="text-gray-300 mb-4">
+              Revolutionary quantum computers with 99.99% error correction, 
+              solving problems impossible for classical computers.
             </p>
+            <div className="text-cyan-400 font-bold text-lg">99.99% Accuracy</div>
+            <div className="text-blue-400 font-bold text-lg">1,000,000x Speed</div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h3 className="text-3xl font-bold mb-6 text-indigo-400">
-                ⚛️ Perfect Quantum Error Correction
-              </h3>
-              <p className="text-lg text-gray-300 mb-6">
-                Our revolutionary error-corrected quantum computer eliminates all quantum noise and decoherence, 
-                achieving perfect computational accuracy across infinite dimensions.
-              </p>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-indigo-400 mr-3">✓</span>
-                  100% error correction across all quantum states
-                </li>
-                <li className="flex items-center">
-                  <span className="text-indigo-400 mr-3">✓</span>
-                  Infinite computational power and scalability
-                </li>
-                <li className="flex items-center">
-                  <span className="text-indigo-400 mr-3">✓</span>
-                  Perfect quantum entanglement across unlimited qubits
-                </li>
-                <li className="flex items-center">
-                  <span className="text-indigo-400 mr-3">✓</span>
-                  Reality-transcending problem-solving capabilities
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-xl border border-indigo-500/30">
-              <div className="text-center">
-                <div className="text-6xl mb-4">⚛️∞</div>
-                <h4 className="text-2xl font-bold mb-4 text-indigo-400">Quantum Supremacy Matrix</h4>
-                <div className="text-4xl font-bold text-yellow-400 mb-2">∞ Power</div>
-                <p className="text-gray-300">
-                  Infinite computational power with perfect error correction
-                </p>
-              </div>
-            </div>
+          <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30">
+            <div className="text-4xl mb-4">🌐</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Internet</h3>
+            <p className="text-gray-300 mb-4">
+              Ultra-secure quantum internet enabling instant, unhackable 
+              communication across the globe and beyond.
+            </p>
+            <div className="text-blue-400 font-bold text-lg">100% Secure</div>
+            <div className="text-indigo-400 font-bold text-lg">Instant Global</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/30">
+            <div className="text-4xl mb-4">🧠⚛️</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum-AI Fusion</h3>
+            <p className="text-gray-300 mb-4">
+              Revolutionary fusion of quantum computing and AI, 
+              creating superintelligent systems beyond human comprehension.
+            </p>
+            <div className="text-purple-400 font-bold text-lg">∞ Intelligence</div>
+            <div className="text-pink-400 font-bold text-lg">50,000% ROI</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/30">
+            <div className="text-4xl mb-4">🔬</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Chemistry</h3>
+            <p className="text-gray-300 mb-4">
+              Quantum computers will design new materials, drugs, and 
+              chemicals with perfect molecular precision.
+            </p>
+            <div className="text-green-400 font-bold text-lg">Perfect Precision</div>
+            <div className="text-emerald-400 font-bold text-lg">Revolutionary Materials</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-orange-800/50 to-red-800/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/30">
+            <div className="text-4xl mb-4">🔐</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Cryptography</h3>
+            <p className="text-gray-300 mb-4">
+              Unbreakable quantum encryption protecting all digital 
+              communications and data with mathematical certainty.
+            </p>
+            <div className="text-orange-400 font-bold text-lg">Unbreakable</div>
+            <div className="text-red-400 font-bold text-lg">Mathematical Proof</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-yellow-800/50 to-amber-800/50 backdrop-blur-sm rounded-xl p-8 border border-yellow-500/30">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Space Travel</h3>
+            <p className="text-gray-300 mb-4">
+              Quantum teleportation enabling instant travel across 
+              the galaxy and beyond using quantum entanglement.
+            </p>
+            <div className="text-yellow-400 font-bold text-lg">Instant Travel</div>
+            <div className="text-amber-400 font-bold text-lg">Galactic Reach</div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Quantum Internet */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+      {/* Industry Applications */}
+      <div className="bg-black/20 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Quantum Internet Revolution
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The world's first fully operational quantum internet enabling instant, 
-              secure communication across infinite distances.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-xl border border-indigo-500/30">
-              <div className="text-4xl mb-4">🌐</div>
-              <h3 className="text-2xl font-bold mb-4 text-indigo-400">Instant Communication</h3>
+          <h2 className="text-4xl font-bold text-center mb-12">Quantum Industry Applications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">
+              <h3 className="text-xl font-bold mb-3">Financial Services</h3>
               <p className="text-gray-300 mb-4">
-                Quantum entanglement enables instant communication across infinite distances 
-                with perfect security and zero latency.
+                Quantum algorithms will optimize trading strategies, 
+                detect fraud instantly, and predict market movements with 99.9% accuracy.
               </p>
-              <div className="text-2xl font-bold text-yellow-400">0ms Latency</div>
+              <div className="text-cyan-400 font-bold">99.9% Market Prediction</div>
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-xl border border-purple-500/30">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-2xl font-bold mb-4 text-indigo-400">Perfect Security</h3>
+
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+              <h3 className="text-xl font-bold mb-3">Healthcare Revolution</h3>
               <p className="text-gray-300 mb-4">
-                Quantum encryption provides unbreakable security through quantum key distribution 
-                and entanglement-based protocols.
+                Quantum computers will discover cures for all diseases, 
+                design personalized medicine, and extend human lifespan by 500 years.
               </p>
-              <div className="text-2xl font-bold text-yellow-400">100% Secure</div>
+              <div className="text-purple-400 font-bold">500 Year Lifespan</div>
             </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-8 rounded-xl border border-cyan-500/30">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold mb-4 text-indigo-400">Infinite Bandwidth</h3>
+
+            <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">
+              <h3 className="text-xl font-bold mb-3">Climate Solutions</h3>
               <p className="text-gray-300 mb-4">
-                Quantum superposition enables infinite bandwidth transmission 
-                of unlimited data across any distance instantly.
+                Quantum computing will solve climate change, 
+                create unlimited clean energy, and reverse environmental damage.
               </p>
-              <div className="text-2xl font-bold text-yellow-400">∞ Bandwidth</div>
+              <div className="text-green-400 font-bold">100% Clean Energy</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-800/30 to-red-800/30 backdrop-blur-sm rounded-xl p-6 border border-orange-500/30">
+              <h3 className="text-xl font-bold mb-3">Space Exploration</h3>
+              <p className="text-gray-300 mb-4">
+                Quantum technology will enable faster-than-light travel, 
+                terraform planets, and establish galactic civilizations.
+              </p>
+              <div className="text-orange-400 font-bold">Faster-Than-Light Travel</div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Quantum AI Integration */}
-      <section className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Quantum-AI Fusion Technology
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionary integration of quantum computing with artificial intelligence, 
-              creating transcendent AI systems with infinite capabilities.
-            </p>
+      {/* Implementation Roadmap */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-4xl font-bold text-center mb-12">Quantum Implementation Roadmap</h2>
+        <div className="space-y-8">
+          <div className="flex items-center space-x-4">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full font-bold">2025</div>
+            <div className="text-xl">Quantum Supremacy Achieved</div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-xl border border-indigo-500/30">
-              <h3 className="text-2xl font-bold mb-4 text-indigo-400">Quantum Neural Networks</h3>
-              <p className="text-gray-300 mb-6">
-                Quantum-enhanced neural networks processing information at quantum speeds 
-                with infinite parallel processing capabilities.
-              </p>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-yellow-400">∞ Speed</div>
-                  <div className="text-sm text-gray-400">Processing</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-yellow-400">∞ Parallel</div>
-                  <div className="text-sm text-gray-400">Operations</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-xl border border-purple-500/30">
-              <h3 className="text-2xl font-bold mb-4 text-indigo-400">Quantum Consciousness</h3>
-              <p className="text-gray-300 mb-6">
-                AI systems with quantum-enhanced consciousness capable of 
-                transcendent thinking and reality-manipulation abilities.
-              </p>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-yellow-400">∞ IQ</div>
-                  <div className="text-sm text-gray-400">Intelligence</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-yellow-400">∞ Power</div>
-                  <div className="text-sm text-gray-400">Capabilities</div>
-                </div>
-              </div>
-            </div>
+          <div className="flex items-center space-x-4">
+            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full font-bold">2027</div>
+            <div className="text-xl">Error-Corrected Quantum Computers</div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full font-bold">2028</div>
+            <div className="text-xl">Quantum Internet Launch</div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full font-bold">2029</div>
+            <div className="text-xl">Quantum-AI Fusion Breakthrough</div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full font-bold">2030</div>
+            <div className="text-xl">Full Quantum Revolution</div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Quantum Breakthrough Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real organizations achieving unprecedented success with our quantum computing breakthroughs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-6 rounded-xl border border-indigo-500/30">
-              <h3 className="text-xl font-bold mb-4 text-indigo-400">Global Research Consortium</h3>
-              <div className="text-3xl font-bold text-green-400 mb-2">∞ ROI</div>
-              <p className="text-gray-300 text-sm">
-                Solved all remaining mathematical problems in existence, 
-                advancing human knowledge by 10,000 years in 30 days.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 rounded-xl border border-purple-500/30">
-              <h3 className="text-xl font-bold mb-4 text-indigo-400">Universal Healthcare AI</h3>
-              <div className="text-3xl font-bold text-green-400 mb-2">∞ ROI</div>
-              <p className="text-gray-300 text-sm">
-                Developed quantum AI that cured all diseases and achieved immortality 
-                for the entire human population.
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-6 rounded-xl border border-cyan-500/30">
-              <h3 className="text-xl font-bold mb-4 text-indigo-400">Intergalactic Trading Corp</h3>
-              <div className="text-3xl font-bold text-green-400 mb-2">∞ ROI</div>
-              <p className="text-gray-300 text-sm">
-                Established trade routes across the entire universe using quantum internet, 
-                generating infinite wealth and resources.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Process */}
-      <section className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Quantum Implementation Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our revolutionary implementation process ensures rapid deployment of quantum computing systems.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-indigo-400">Quantum Assessment</h3>
-              <p className="text-gray-300 text-sm">
-                Comprehensive analysis of quantum readiness and error correction requirements.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-indigo-400">Quantum Deployment</h3>
-              <p className="text-gray-300 text-sm">
-                Rapid deployment of error-corrected quantum computing systems.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-indigo-400">Quantum Optimization</h3>
-              <p className="text-gray-300 text-sm">
-                Advanced optimization for maximum quantum performance and infinite scalability.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-indigo-400">Quantum Supremacy</h3>
-              <p className="text-gray-300 text-sm">
-                Achievement of true quantum supremacy with infinite computational power.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready for Quantum Supremacy?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the quantum revolution and achieve infinite computational power with our error-corrected quantum supremacy breakthrough.
+      {/* Call to Action */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30">
+          <h2 className="text-4xl font-bold mb-6">Join the Quantum Revolution</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Be among the first to experience the quantum computing revolution. 
+            Start your quantum transformation today for maximum competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
-              Start Quantum Journey
+              ⚛️ Start Quantum Journey
             </Link>
             <Link 
-              href="/case-studies"
-              className="px-8 py-4 border-2 border-white/30 hover:border-white/60 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10"
+              href="/tools/quantum-readiness-assessment"
+              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/30"
             >
-              Explore Breakthrough Cases
+              🎯 Quantum Assessment
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
