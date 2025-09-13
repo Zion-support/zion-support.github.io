@@ -1,19 +1,12 @@
-import type { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-	const baseUrl = 'https://zion.tech';
-
-	return {
-		rules: [
-			{
-				userAgent: '*',
-				allow: '/',
-				// Disallow common noisy paths if any are added later
-				disallow: ['/api/', '/private/', '/admin/'],
-			},
-		],
-		sitemap: `${baseUrl}/sitemap.xml`,
-		host: baseUrl,
-	};
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/private/', '/admin/', '/api/'],
+    },
+    sitemap: 'https://ziontechgroup.com/sitemap.xml',
+  }
 }
-
