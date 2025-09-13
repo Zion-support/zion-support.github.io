@@ -8,348 +8,357 @@ import {
   RotateCcw, 
   Settings, 
   Code, 
-  Database, 
   Cpu, 
-  Network,
-  Brain,
+  Brain, 
   Zap,
+  Database,
+  Cloud,
   Shield,
-  BarChart3,
-  Eye,
-  MousePointer,
-  Keyboard,
-  Monitor,
-  Smartphone,
+  Target,
+  TrendingUp,
+  Users,
   Globe,
-  Lock,
-  CheckCircle,
-  AlertCircle,
-  Info,
   ArrowRight,
-  Download,
-  Share2,
-  Bookmark
+  CheckCircle,
+  Star,
+  Lightbulb,
+  BarChart3
 } from 'lucide-react';
 
 const InteractiveTechDemo2026 = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [selectedTech, setSelectedTech] = useState('ai');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isRunning) {
-      interval = setInterval(() => {
-        setProgress(prev => (prev + 1) % 101);
-      }, 100);
+  const techCategories = {
+    ai: {
+      name: 'Artificial Intelligence',
+      icon: <Brain className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-500',
+      demos: [
+        {
+          title: 'Neural Network Training',
+          description: 'Watch AI learn in real-time',
+          steps: [
+            'Initializing neural network...',
+            'Loading training data...',
+            'Training epoch 1/100...',
+            'Accuracy: 45%',
+            'Training epoch 25/100...',
+            'Accuracy: 78%',
+            'Training epoch 50/100...',
+            'Accuracy: 89%',
+            'Training epoch 75/100...',
+            'Accuracy: 94%',
+            'Training epoch 100/100...',
+            'Final Accuracy: 97.3%',
+            'Model ready for deployment!'
+          ]
+        },
+        {
+          title: 'Natural Language Processing',
+          description: 'AI understanding human language',
+          steps: [
+            'Processing input text...',
+            'Tokenizing words...',
+            'Analyzing sentiment...',
+            'Sentiment: Positive (85%)',
+            'Extracting entities...',
+            'Entities: [Person, Location, Organization]',
+            'Generating response...',
+            'Response generated successfully!'
+          ]
+        }
+      ]
+    },
+    automation: {
+      name: 'Automation',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-500',
+      demos: [
+        {
+          title: 'Workflow Automation',
+          description: 'Automating business processes',
+          steps: [
+            'Trigger: New customer order',
+            'Validating order data...',
+            'Checking inventory...',
+            'Inventory available',
+            'Processing payment...',
+            'Payment successful',
+            'Generating invoice...',
+            'Sending confirmation email...',
+            'Updating inventory...',
+            'Order processed successfully!'
+          ]
+        },
+        {
+          title: 'Smart Monitoring',
+          description: 'AI-powered system monitoring',
+          steps: [
+            'Scanning system health...',
+            'CPU usage: 45%',
+            'Memory usage: 67%',
+            'Network latency: 12ms',
+            'All systems normal',
+            'Predictive analysis...',
+            'No issues detected',
+            'System optimized'
+          ]
+        }
+      ]
+    },
+    quantum: {
+      name: 'Quantum Computing',
+      icon: <Cpu className="w-6 h-6" />,
+      color: 'from-green-500 to-emerald-500',
+      demos: [
+        {
+          title: 'Quantum Algorithm',
+          description: 'Solving complex problems with quantum computing',
+          steps: [
+            'Initializing quantum circuit...',
+            'Preparing qubits...',
+            'Applying quantum gates...',
+            'Entangling qubits...',
+            'Running quantum algorithm...',
+            'Measuring quantum state...',
+            'Result: 42 (quantum solution)',
+            'Classical equivalent: 2^20 operations',
+            'Quantum speedup: 1,048,576x faster!'
+          ]
+        }
+      ]
     }
-    return () => clearInterval(interval);
-  }, [isRunning]);
-
-  const demos = [
-    {
-      id: 'ai-processing',
-      title: 'AI Processing Demo',
-      icon: Brain,
-      color: 'from-purple-600 to-blue-600',
-      description: 'Watch AI algorithms process complex data in real-time',
-      features: [
-        'Real-time Data Processing',
-        'Machine Learning Inference',
-        'Pattern Recognition',
-        'Predictive Analytics',
-        'Natural Language Understanding',
-        'Computer Vision Analysis'
-      ],
-      metrics: [
-        { label: 'Processing Speed', value: '2.5ms', trend: '+15%' },
-        { label: 'Accuracy', value: '99.7%', trend: '+2.1%' },
-        { label: 'Throughput', value: '10K req/s', trend: '+25%' }
-      ]
-    },
-    {
-      id: 'quantum-simulation',
-      title: 'Quantum Simulation',
-      icon: Cpu,
-      color: 'from-cyan-600 to-teal-600',
-      description: 'Experience quantum computing power through interactive simulations',
-      features: [
-        'Quantum State Visualization',
-        'Qubit Manipulation',
-        'Quantum Entanglement',
-        'Quantum Error Correction',
-        'Quantum Algorithms',
-        'Quantum Optimization'
-      ],
-      metrics: [
-        { label: 'Qubits', value: '1024', trend: '+100%' },
-        { label: 'Coherence Time', value: '50μs', trend: '+40%' },
-        { label: 'Gate Fidelity', value: '99.9%', trend: '+5%' }
-      ]
-    },
-    {
-      id: 'automation-workflow',
-      title: 'Smart Automation',
-      icon: Zap,
-      color: 'from-orange-600 to-red-600',
-      description: 'See intelligent automation workflows in action',
-      features: [
-        'Workflow Orchestration',
-        'Intelligent Routing',
-        'Adaptive Learning',
-        'Error Handling',
-        'Resource Optimization',
-        'Performance Monitoring'
-      ],
-      metrics: [
-        { label: 'Efficiency', value: '95%', trend: '+12%' },
-        { label: 'Uptime', value: '99.9%', trend: '+0.5%' },
-        { label: 'Cost Savings', value: '60%', trend: '+8%' }
-      ]
-    },
-    {
-      id: 'data-analytics',
-      title: 'Advanced Analytics',
-      icon: BarChart3,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Explore real-time data analytics and insights',
-      features: [
-        'Real-time Dashboards',
-        'Predictive Modeling',
-        'Anomaly Detection',
-        'Trend Analysis',
-        'Custom Visualizations',
-        'Automated Reporting'
-      ],
-      metrics: [
-        { label: 'Data Points', value: '1M+', trend: '+50%' },
-        { label: 'Insights Generated', value: '500/hr', trend: '+30%' },
-        { label: 'Response Time', value: '0.1s', trend: '+20%' }
-      ]
-    }
-  ];
-
-  const handlePlayPause = () => {
-    setIsRunning(!isRunning);
   };
 
-  const handleReset = () => {
-    setIsRunning(false);
-    setProgress(0);
+  const currentDemo = techCategories[selectedTech as keyof typeof techCategories].demos[0];
+
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      setIsPlaying(false);
+    } else {
+      setIsPlaying(true);
+      startDemo();
+    }
+  };
+
+  const startDemo = () => {
+    if (currentStep < currentDemo.steps.length - 1) {
+      setTimeout(() => {
+        setCurrentStep(prev => prev + 1);
+        startDemo();
+      }, 1000);
+    } else {
+      setIsPlaying(false);
+    }
+  };
+
+  const resetDemo = () => {
+    setIsPlaying(false);
+    setCurrentStep(0);
   };
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl -z-10" />
-      
-      {/* Floating Particles */}
-      <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-      <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-bounce" />
-      <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-pink-400 rounded-full animate-ping" />
-      <div className="absolute bottom-40 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <motion.div
+          className="absolute top-0 left-0 w-full h-full"
+          animate={{
+            background: [
+              'radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)'
+            ]
+          }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
-            <Play className="w-4 h-4" />
-            Interactive Demo
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+            <Play className="w-5 h-5 text-blue-400" />
+            <span className="text-sm font-medium text-blue-300">Interactive Demo</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Experience Technology in Action
+          
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Interactive Technology
+            <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Demonstration 2026
+            </span>
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Interact with cutting-edge technologies and see real-time performance metrics as they process data and execute complex operations.
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience cutting-edge technologies in action. Watch real-time demonstrations 
+            of AI, automation, and quantum computing solutions.
           </p>
         </motion.div>
 
-        {/* Demo Selector */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {demos.map((demo, index) => {
-            const Icon = demo.icon;
-            return (
-              <button
-                key={demo.id}
-                onClick={() => setActiveDemo(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeTab === index
-                    ? `bg-gradient-to-r ${demo.color} text-white shadow-lg transform scale-105`
-                    : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-                {demo.title}
-              </button>
-            );
-          })}
-        </motion.div>
-
-        {/* Demo Container */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden"
-        >
-          <div className="grid lg:grid-cols-2 gap-8 p-8">
-            {/* Demo Controls */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">{demos[activeDemo].title}</h3>
-                <p className="text-blue-100 mb-6">{demos[activeDemo].description}</p>
-              </div>
-
-              {/* Control Panel */}
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                <h4 className="text-lg font-semibold mb-4">Demo Controls</h4>
-                <div className="flex items-center gap-4 mb-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Demo Controls */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
+          >
+            {/* Technology Selection */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Select Technology</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {Object.entries(techCategories).map(([key, tech]) => (
                   <button
-                    onClick={handlePlayPause}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                      isRunning
-                        ? 'bg-red-500 hover:bg-red-600 text-white'
-                        : 'bg-green-500 hover:bg-green-600 text-white'
+                    key={key}
+                    onClick={() => {
+                      setSelectedTech(key);
+                      resetDemo();
+                    }}
+                    className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                      selectedTech === key
+                        ? `border-transparent bg-gradient-to-r ${tech.color} text-white`
+                        : 'border-white/20 bg-white/5 text-gray-300 hover:bg-white/10'
                     }`}
                   >
-                    {isRunning ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-                    {isRunning ? 'Pause' : 'Play'}
-                  </button>
-                  <button
-                    onClick={handleReset}
-                    className="flex items-center gap-2 px-6 py-3 rounded-full font-medium bg-gray-500 hover:bg-gray-600 text-white transition-all duration-300"
-                  >
-                    <RotateCcw className="w-5 h-5" />
-                    Reset
-                  </button>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="mb-6">
-                  <div className="flex justify-between text-sm text-blue-100 mb-2">
-                    <span>Progress</span>
-                    <span>{progress}%</span>
-                  </div>
-                  <div className="w-full bg-white/10 rounded-full h-2">
-                    <motion.div
-                      className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
-                      style={{ width: `${progress}%` }}
-                      transition={{ duration: 0.1 }}
-                    />
-                  </div>
-                </div>
-
-                {/* Features List */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4">Active Features</h4>
-                  <div className="space-y-2">
-                    {demos[activeDemo].features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm text-blue-100">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Demo Visualization */}
-            <div className="relative">
-              <div className={`h-96 rounded-2xl bg-gradient-to-br ${demos[activeDemo].color} p-8 relative overflow-hidden`}>
-                {/* Animated Background */}
-                <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-                
-                {/* Demo Content */}
-                <div className="relative z-10 h-full flex flex-col items-center justify-center text-white">
-                  <div className="text-center mb-8">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                      {React.createElement(demos[activeDemo].icon, { className: "w-10 h-10" })}
+                    <div className="flex items-center gap-3">
+                      {tech.icon}
+                      <span className="font-medium">{tech.name}</span>
                     </div>
-                    <h4 className="text-2xl font-bold mb-2">{demos[activeDemo].title}</h4>
-                    <p className="text-white/80">Interactive Demo</p>
-                  </div>
-
-                  {/* Real-time Metrics */}
-                  <div className="grid grid-cols-3 gap-4 w-full">
-                    {demos[activeDemo].metrics.map((metric, index) => (
-                      <div key={index} className="bg-white/10 rounded-lg p-3 text-center">
-                        <div className="text-lg font-bold">{metric.value}</div>
-                        <div className="text-xs text-white/70 mb-1">{metric.label}</div>
-                        <div className="text-xs text-green-300 flex items-center justify-center gap-1">
-                          <TrendingUp className="w-3 h-3" />
-                          {metric.trend}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Animated Elements */}
-                {isRunning && (
-                  <>
-                    <div className="absolute top-4 right-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" />
-                    <div className="absolute bottom-4 left-4 w-2 h-2 bg-pink-400 rounded-full animate-bounce" />
-                    <div className="absolute top-1/2 left-4 w-1 h-1 bg-green-400 rounded-full animate-ping" />
-                  </>
-                )}
+                  </button>
+                ))}
               </div>
+            </div>
 
-              {/* Action Buttons */}
-              <div className="flex gap-4 mt-6">
-                <button className="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                  <Download className="w-4 h-4" />
-                  Download Demo
+            {/* Demo Info */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h4 className="text-xl font-semibold text-white mb-2">{currentDemo.title}</h4>
+              <p className="text-gray-300 mb-4">{currentDemo.description}</p>
+              
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={handlePlayPause}
+                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                >
+                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                  {isPlaying ? 'Pause' : 'Play'} Demo
                 </button>
-                <button className="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                  <Share2 className="w-4 h-4" />
-                  Share
-                </button>
-                <button className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-full transition-all duration-300">
-                  <Bookmark className="w-4 h-4" />
+                
+                <button
+                  onClick={resetDemo}
+                  className="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300"
+                >
+                  <RotateCcw className="w-5 h-5" />
+                  Reset
                 </button>
               </div>
             </div>
-          </div>
-        </motion.div>
 
-        {/* CTA Section */}
+            {/* Progress */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm font-medium text-gray-300">Progress</span>
+                <span className="text-sm text-gray-400">
+                  {currentStep + 1} / {currentDemo.steps.length}
+                </span>
+              </div>
+              <div className="w-full bg-white/10 rounded-full h-2">
+                <motion.div
+                  className="h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${((currentStep + 1) / currentDemo.steps.length) * 100}%` }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Demo Display */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm text-gray-400 ml-4">Terminal</span>
+            </div>
+            
+            <div className="font-mono text-sm space-y-2 min-h-[400px]">
+              <AnimatePresence>
+                {currentDemo.steps.slice(0, currentStep + 1).map((step, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className={`flex items-center gap-2 ${
+                      index === currentStep ? 'text-blue-400' : 'text-gray-300'
+                    }`}
+                  >
+                    <span className="text-green-400">$</span>
+                    <span>{step}</span>
+                    {index === currentStep && isPlaying && (
+                      <motion.span
+                        animate={{ opacity: [1, 0, 1] }}
+                        transition={{ duration: 1, repeat: Infinity }}
+                        className="text-blue-400"
+                      >
+                        _
+                      </motion.span>
+                    )}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Features */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 grid md:grid-cols-3 gap-8"
         >
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-            <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
-            <p className="text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get hands-on access to these revolutionary technologies and transform your business today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-                Schedule Demo
-              </button>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Play className="w-8 h-8 text-white" />
             </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Real-time Demos</h3>
+            <p className="text-gray-300">Watch technologies work in real-time with interactive demonstrations</p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Customizable</h3>
+            <p className="text-gray-300">Adjust parameters and see how different settings affect performance</p>
+          </div>
+          
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Code className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Code Examples</h3>
+            <p className="text-gray-300">Get hands-on with actual code implementations and examples</p>
           </div>
         </motion.div>
       </div>
