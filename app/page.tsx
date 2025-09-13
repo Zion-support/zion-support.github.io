@@ -14,6 +14,8 @@ import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
 import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
 import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDashboard';
 import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
+import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
+import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -3534,6 +3536,8 @@ export default function HomePage() {
       <AdvancedAIAssistant />
       <BusinessIntelligenceDashboard />
       <AdvancedSecurityMonitor />
+      <AdvancedAnalyticsEngine />
+      <AutomationWorkflowEngine />
     </div>
   );
 }
