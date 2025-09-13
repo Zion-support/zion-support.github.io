@@ -34,6 +34,8 @@ import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import AI2026QuantumNeuralRevolutionBanner from '../components/AI2026QuantumNeuralRevolutionBanner';
+import AI2030TranscendentIntelligenceBanner from '../components/AI2030TranscendentIntelligenceBanner';
 
 export default function HomePage() {
   return (
@@ -54,6 +56,12 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* AI 2026 QUANTUM-NEURAL REVOLUTION BANNER */}
+        <AI2026QuantumNeuralRevolutionBanner />
+        
+        {/* AI 2030 TRANSCENDENT INTELLIGENCE BANNER */}
+        <AI2030TranscendentIntelligenceBanner />
         
         {/* AI 2026 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2026RevolutionaryBreakthroughPromotionBanner />
