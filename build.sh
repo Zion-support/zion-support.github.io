@@ -7,9 +7,35 @@ echo "Starting Netlify build process..."
 if [ "$NETLIFY" = "true" ]; then
   echo "Detected Netlify environment - using optimized build process..."
   
-  # For Netlify, use a more conservative approach
+  # Clear any corrupted cache and ensure clean state
+  echo "Clearing potential corrupted cache..."
+  rm -rf node_modules/.cache
+  rm -rf .yarn-cache
+  rm -rf node_modules
+  
+  # Clear Yarn cache to avoid corrupted find-up package issue
+  echo "Clearing Yarn cache..."
+  yarn cache clean --all
+  
+  # For Netlify, use a more conservative approach with cache clearing
   echo "Installing dependencies with Netlify-optimized settings..."
-  yarn install --frozen-lockfile --network-timeout 60000
+  
+  # Try installation with retry logic for Netlify
+  for i in {1..3}; do
+    echo "Installation attempt $i of 3..."
+    if yarn install --frozen-lockfile --network-timeout 60000 --prefer-offline --no-cache --ignore-engines; then
+      echo "Dependencies installed successfully!"
+      break
+    else
+      echo "Installation failed, cleaning and retrying..."
+      rm -rf node_modules
+      yarn cache clean --all
+      if [ $i -eq 3 ]; then
+        echo "All installation attempts failed! Trying without frozen lockfile..."
+        yarn install --network-timeout 60000 --prefer-offline --no-cache --ignore-engines
+      fi
+    fi
+  done
   
 else
   echo "Local development environment detected - using full cleanup process..."
