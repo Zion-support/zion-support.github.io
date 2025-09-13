@@ -24,6 +24,8 @@ const InteractiveContentDiscoveryWidget = lazy(() => import('../components/Inter
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import AdvancedContentDiscoveryWidget from '../components/AdvancedContentDiscoveryWidget';
 
 export default function HomePage() {
   return (
@@ -36,6 +38,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE TRENDS BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateTrendsBreakthroughPromotionBanner />
         
@@ -95,6 +100,9 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
         </Suspense>
+        
+        {/* ADVANCED CONTENT DISCOVERY WIDGET */}
+        <AdvancedContentDiscoveryWidget />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
