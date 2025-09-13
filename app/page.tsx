@@ -44,7 +44,10 @@ import AI2025ROICalculator from '../components/AI2025ROICalculator';
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
->>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
+
+// Import new content showcase components
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
 
 export default function HomePage() {
   return (
@@ -105,6 +108,9 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 REVOLUTIONARY CONTENT BANNER */}
         <AI2025RevolutionaryContentBanner />
+        
+        {/* NEW: AI 2025 CONTENT SHOWCASE */}
+        <AI2025ContentShowcase />
         
         {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
