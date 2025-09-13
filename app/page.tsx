@@ -170,6 +170,11 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import ContentROICalculator from '../components/ContentROICalculator';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
+// New 2025 Next-Gen Components
+import AI2025NextGenContentPromotionBanner from '../components/AI2025NextGenContentPromotionBanner';
+import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
+import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
+
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -234,6 +239,11 @@ const HomePage: React.FC = () => {
               {/* AI 2025 Content Showcase Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025ContentShowcaseBanner />
+              </Suspense>
+
+              {/* AI 2025 Next-Gen Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025NextGenContentPromotionBanner />
               </Suspense>
 
               {/* Content ROI Calculator */}
@@ -477,6 +487,16 @@ const HomePage: React.FC = () => {
               {/* Interactive Content Discovery Widget */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscoveryWidget />
+              </Suspense>
+
+              {/* Revolutionary Tech Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryTechShowcase2025 />
+              </Suspense>
+
+              {/* Enhanced Content Discovery 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <EnhancedContentDiscovery2025 />
               </Suspense>
 
               {/* New Content Discovery Widget 2026 */}
