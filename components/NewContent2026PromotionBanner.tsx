@@ -1,211 +1,110 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
-const NewContent2026PromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "🚀 AI 2026 Neural Interface Revolution",
-      subtitle: "Breakthrough brain-computer interfaces achieving 95% accuracy",
-      cta: "Explore Neural Interfaces",
-      href: "/ai-2026-neural-interface-revolution",
-      color: "from-blue-600 to-indigo-600",
-      bgColor: "from-blue-50 to-indigo-100"
-    },
-    {
-      title: "⚛️ Quantum-Neural Fusion Breakthrough",
-      subtitle: "Quantum-enhanced neural networks with exponential speed",
-      cta: "Discover Quantum AI",
-      href: "/ai-2026-quantum-neural-fusion",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-50 to-pink-100"
-    },
-    {
-      title: "🧠 Advanced Deep Learning Architectures",
-      subtitle: "Next-generation models with 99.8% accuracy rates",
-      cta: "Master Deep Learning",
-      href: "/ai-2026-deep-learning-architectures",
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-50 to-emerald-100"
-    },
-    {
-      title: "🌐 Edge AI Optimization Mastery",
-      subtitle: "Deploy AI on edge devices with maximum efficiency",
-      cta: "Optimize Edge AI",
-      href: "/ai-2026-edge-ai-optimization",
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-50 to-red-100"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev: number) => (prev + 1) % slides.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
+export default function NewContent2026PromotionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 text-white">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/80 to-indigo-900/80"></div>
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `url("data:image/svg+xml,%253Csvg%20width%3D'60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-      </div>
-
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold mb-6 animate-pulse">
-            <span className="mr-2">🔥</span>
-            NEW AI 2026 CONTENT REVOLUTION
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Revolutionary AI 2026
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Content Library
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover breakthrough AI technologies, advanced neural architectures, and revolutionary methodologies 
-            that are reshaping the future of artificial intelligence. Join thousands of professionals achieving 
-            unprecedented ROI with our cutting-edge content.
-          </p>
-        </div>
-
-        {/* Rotating Content Slides */}
-        <div className="relative mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 min-h-[300px]">
-            <div className="transition-all duration-1000 ease-in-out">
-              <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">
-                  {slides[currentSlide].title}
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  {slides[currentSlide].subtitle}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    to={slides[currentSlide].href}
-                    className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${slides[currentSlide].color} text-white font-bold rounded-lg hover:opacity-90 transition-all duration-200 transform hover:scale-105`}
-                  >
-                    {slides[currentSlide].cta}
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                  <Link
-                    to="/ai-2026-content-library"
-                    className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/30 transition-all duration-200 border border-white/30"
-                  >
-                    View All Content
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">50+</div>
-            <div className="text-gray-300 text-lg">Advanced Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">15,000%</div>
-            <div className="text-gray-300 text-lg">Average ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">99.8%</div>
-            <div className="text-gray-300 text-lg">Accuracy Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">∞</div>
-            <div className="text-gray-300 text-lg">Possibilities</div>
-          </div>
-        </div>
-
-        {/* Feature Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-xl font-bold text-yellow-400 mb-3">Neural Interfaces</h3>
-            <p className="text-gray-300">
-              Direct brain-computer interfaces with 95% accuracy for seamless human-AI interaction
-            </p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-xl font-bold text-green-400 mb-3">Quantum AI</h3>
-            <p className="text-gray-300">
-              Quantum-enhanced neural networks delivering exponential computational improvements
-            </p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-            <div className="text-4xl mb-4">🌐</div>
-            <h3 className="text-xl font-bold text-blue-400 mb-3">Edge Computing</h3>
-            <p className="text-gray-300">
-              Advanced edge AI optimization for maximum efficiency and real-time processing
-            </p>
-          </div>
-        </div>
-
-        {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Master AI 2026?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution and unlock unprecedented business potential with our advanced content library. 
-              Get instant access to breakthrough technologies and proven strategies.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/ai-2026-content-access"
-                className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 transform hover:scale-105 text-lg"
-              >
-                🚀 Get Instant Access
-              </Link>
-              <Link
-                to="/ai-2026-roi-calculator"
-                className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105 text-lg"
-              >
-                🧮 Calculate Your ROI
-              </Link>
-            </div>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            🚀 NEW CONTENT 2026 - REVOLUTIONARY BREAKTHROUGHS
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary AI 2026 Content Now Available
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the most revolutionary AI content ever created. New breakthrough predictions, quantum computing solutions, and autonomous systems that will transform your business.
+          </p>
+          
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <Link 
+              href="/ai-2025-ultimate-breakthrough-revolution" 
+              className="group bg-gradient-to-br from-red-500/20 to-pink-500/20 p-6 rounded-xl border border-red-500/30 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105"
+            >
+              <div className="text-3xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-red-300">AI 2025 Ultimate Breakthrough</h3>
+              <p className="text-gray-300 text-sm mb-3">Revolutionary AI system delivering 10,000% ROI and 99.9% accuracy</p>
+              <div className="text-red-400 font-semibold text-sm">10,000% ROI • 99.9% Accuracy</div>
+            </Link>
+            
+            <Link 
+              href="/ai-2026-future-predictions-breakthrough" 
+              className="group bg-gradient-to-br from-cyan-500/20 to-purple-500/20 p-6 rounded-xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
+            >
+              <div className="text-3xl mb-4">🔮</div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-300">AI 2026 Future Predictions</h3>
+              <p className="text-gray-300 text-sm mb-3">Revolutionary predictions with quantum-neural fusion and 15,000% ROI</p>
+              <div className="text-cyan-400 font-semibold text-sm">15,000% ROI • Quantum Fusion</div>
+            </Link>
+            
+            <Link 
+              href="/quantum-computing-solutions-2026" 
+              className="group bg-gradient-to-br from-purple-500/20 to-indigo-500/20 p-6 rounded-xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"
+            >
+              <div className="text-3xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-purple-300">Quantum Computing Solutions</h3>
+              <p className="text-gray-300 text-sm mb-3">Quantum supremacy achieved with 20,000% ROI and error-corrected quantum computers</p>
+              <div className="text-purple-400 font-semibold text-sm">20,000% ROI • Quantum Supremacy</div>
+            </Link>
+          </div>
+          
+          {/* Additional Content Links */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <Link 
+              href="/case-studies/ai-2025-global-transformation-breakthrough" 
+              className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-4 rounded-lg border border-green-500/30 hover:border-green-400/50 transition-all duration-300 text-center"
+            >
+              <div className="text-2xl mb-2">🏆</div>
+              <div className="text-sm font-semibold">Global Transformation</div>
+              <div className="text-xs text-gray-300">10,000% ROI Success</div>
+            </Link>
+            
+            <Link 
+              href="/case-studies/ai-2026-quantum-neural-fusion-success" 
+              className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 p-4 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 text-center"
+            >
+              <div className="text-2xl mb-2">⚛️</div>
+              <div className="text-sm font-semibold">Quantum-Neural Fusion</div>
+              <div className="text-xs text-gray-300">15,000% ROI Success</div>
+            </Link>
+            
+            <Link 
+              href="/case-studies/quantum-ai-fusion-30000-roi" 
+              className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-4 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 text-center"
+            >
+              <div className="text-2xl mb-2">💰</div>
+              <div className="text-sm font-semibold">Financial Revolution</div>
+              <div className="text-xs text-gray-300">30,000% ROI Success</div>
+            </Link>
+            
+            <Link 
+              href="/resources/ai-2026-ultimate-implementation-master-guide" 
+              className="bg-gradient-to-r from-orange-500/20 to-red-500/20 p-4 rounded-lg border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 text-center"
+            >
+              <div className="text-2xl mb-2">📚</div>
+              <div className="text-sm font-semibold">Implementation Guide</div>
+              <div className="text-xs text-gray-300">Master Guide 2026</div>
+            </Link>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/content-showcase" 
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-300 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore All New Content
+            </Link>
+            <Link 
+              href="/webinars/ai-2026-revolutionary-breakthroughs" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Watch Breakthrough Webinar
+            </Link>
           </div>
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce"></div>
-        <div className="absolute top-40 right-20 w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-5 h-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-40 right-10 w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
     </div>
   );
-};
-
-export default NewContent2026PromotionBanner;
+}
