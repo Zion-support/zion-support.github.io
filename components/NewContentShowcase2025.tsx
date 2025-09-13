@@ -1,168 +1,146 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, TrendingUp, Users, Target, Globe } from 'lucide-react';
 
-const NewContentShowcase2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const contentSlides = [
+const NewContentShowcase2025 = () => {
+  const newContent = [
     {
       id: 1,
-      title: "AI-Powered Business Automation",
-      description: "Transform your operations with intelligent automation that learns and adapts to your business needs.",
-      features: ["Smart Workflow Automation", "Predictive Analytics", "Real-time Decision Making"],
-      icon: <Zap className="w-8 h-8 text-blue-600" />,
-      gradient: "from-blue-500 to-purple-600",
-      link: "/ai-automation-solutions"
+      title: "AI 2025 Revolutionary Breakthroughs",
+      description: "Discover the latest AI innovations transforming business operations with 2,500% ROI improvements.",
+      image: "/images/ai-2025-breakthrough.jpg",
+      category: "AI Innovation",
+      date: "2025-01-15",
+      readTime: "8 min read",
+      featured: true
     },
     {
       id: 2,
-      title: "Quantum Computing Solutions",
-      description: "Harness the power of quantum computing for complex problem-solving and optimization.",
-      features: ["Quantum Algorithms", "Advanced Encryption", "Optimization Solutions"],
-      icon: <Sparkles className="w-8 h-8 text-purple-600" />,
-      gradient: "from-purple-500 to-pink-600",
-      link: "/quantum-computing-solutions"
+      title: "Quantum Computing Solutions 2025",
+      description: "Explore quantum-powered automation solutions delivering unprecedented performance gains.",
+      image: "/images/quantum-2025.jpg",
+      category: "Quantum Technology",
+      date: "2025-01-14",
+      readTime: "12 min read",
+      featured: true
     },
     {
       id: 3,
-      title: "Enterprise AI Transformation",
-      description: "Scale your business with enterprise-grade AI solutions designed for maximum ROI.",
-      features: ["Custom AI Models", "Enterprise Integration", "24/7 Support"],
-      icon: <TrendingUp className="w-8 h-8 text-green-600" />,
-      gradient: "from-green-500 to-blue-600",
-      link: "/enterprise-ai-solutions"
+      title: "Autonomous Business Operations",
+      description: "Learn how AI-driven autonomous systems are revolutionizing enterprise workflows.",
+      image: "/images/autonomous-business.jpg",
+      category: "Business Automation",
+      date: "2025-01-13",
+      readTime: "10 min read",
+      featured: false
     },
     {
       id: 4,
-      title: "Neural Interface Technology",
-      description: "Explore the future of human-computer interaction with advanced neural interfaces.",
-      features: ["Brain-Computer Interface", "Neural Networks", "Cognitive Enhancement"],
-      icon: <Users className="w-8 h-8 text-indigo-600" />,
-      gradient: "from-indigo-500 to-purple-600",
-      link: "/neural-interface-solutions"
+      title: "Neural Interface Revolution",
+      description: "The future of human-AI interaction through advanced neural interfaces and consciousness integration.",
+      image: "/images/neural-interface.jpg",
+      category: "Neural Technology",
+      date: "2025-01-12",
+      readTime: "15 min read",
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Enterprise Transformation Guide",
+      description: "Complete roadmap for implementing AI-driven enterprise transformation with proven ROI metrics.",
+      image: "/images/enterprise-transformation.jpg",
+      category: "Implementation Guide",
+      date: "2025-01-11",
+      readTime: "20 min read",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Future Technology Predictions 2026-2030",
+      description: "Exclusive insights into upcoming technological breakthroughs and their business implications.",
+      image: "/images/future-tech.jpg",
+      category: "Future Predictions",
+      date: "2025-01-10",
+      readTime: "18 min read",
+      featured: true
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-              Revolutionary Content Hub 2025
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover cutting-edge AI solutions, quantum computing breakthroughs, and next-generation technologies 
-              that are reshaping industries worldwide.
-            </p>
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            🚀 New Content Showcase 2025
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our latest revolutionary content covering AI breakthroughs, quantum computing, 
+            and autonomous business operations transforming enterprises worldwide.
+          </p>
         </div>
 
-        {/* Content Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-3xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {newContent.map((content) => (
+            <div
+              key={content.id}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group ${
+                content.featured ? 'ring-2 ring-blue-500' : ''
+              }`}
             >
-              {contentSlides.map((slide, index) => (
-                <div key={slide.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${slide.gradient} p-12 rounded-3xl text-white relative overflow-hidden`}>
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-                    </div>
-                    
-                    <div className="relative z-10">
-                      <div className="flex items-center justify-between mb-8">
-                        <div className="flex items-center space-x-4">
-                          {slide.icon}
-                          <h3 className="text-3xl md:text-4xl font-bold">{slide.title}</h3>
-                        </div>
-                        <div className="hidden md:flex space-x-2">
-                          {contentSlides.map((_, i) => (
-                            <button
-                              key={i}
-                              onClick={() => setCurrentSlide(i)}
-                              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                i === currentSlide ? 'bg-white' : 'bg-white/50'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <p className="text-xl mb-8 text-white/90 max-w-2xl">
-                        {slide.description}
-                      </p>
-                      
-                      <div className="grid md:grid-cols-3 gap-4 mb-8">
-                        {slide.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                            <span className="text-white/90">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      <Link 
-                        href={slide.link}
-                        className="inline-flex items-center space-x-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-105"
-                      >
-                        <span>Explore Solution</span>
-                        <ArrowRight className="w-5 h-5" />
-                      </Link>
-                    </div>
+              <div className="relative">
+                <img
+                  src={content.image}
+                  alt={content.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                {content.featured && (
+                  <div className="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Featured
                   </div>
+                )}
+                <div className="absolute top-4 right-4 bg-white bg-opacity-90 px-2 py-1 rounded text-sm font-medium">
+                  {content.category}
                 </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Navigation Arrows */}
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
-          >
-            <ArrowRight className="w-6 h-6 rotate-180" />
-          </button>
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % contentSlides.length)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
-          >
-            <ArrowRight className="w-6 h-6" />
-          </button>
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { label: "Active Solutions", value: "500+", icon: <Target className="w-6 h-6" /> },
-            { label: "Global Clients", value: "10K+", icon: <Globe className="w-6 h-6" /> },
-            { label: "Success Rate", value: "99.9%", icon: <TrendingUp className="w-6 h-6" /> },
-            { label: "Innovation Index", value: "#1", icon: <Sparkles className="w-6 h-6" /> }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex justify-center mb-3 text-blue-600">
-                {stat.icon}
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              
+              <div className="p-6">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <span>{content.date}</span>
+                  <span className="mx-2">•</span>
+                  <span>{content.readTime}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {content.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {content.description}
+                </p>
+                
+                <Link
+                  href={`/content/${content.id}`}
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform"
+                >
+                  Read More
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/content-library"
+            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+          >
+            Explore All Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
