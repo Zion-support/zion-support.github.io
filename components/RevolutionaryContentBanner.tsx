@@ -1,125 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryContentBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
-
-  const featuredContent = [
-    {
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "5,000% ROI Guaranteed",
-      href: "/ai-2025-ultimate-breakthrough-revolution",
-      badge: "BREAKTHROUGH",
-      color: "from-red-500 to-pink-500",
-      bgColor: "from-red-50 to-pink-50"
-    },
-    {
-      title: "AI 2026 Quantum-Neural Fusion",
-      description: "15,000% ROI Through Quantum Computing",
-      href: "/ai-2026-quantum-neural-fusion-breakthrough",
-      badge: "QUANTUM",
-      color: "from-cyan-500 to-blue-500",
-      bgColor: "from-cyan-50 to-blue-50"
-    },
-    {
-      title: "Revolutionary Content Showcase 2025",
-      description: "Complete AI Content Library",
-      href: "/revolutionary-content-showcase-2025",
-      badge: "NEW",
-      color: "from-purple-500 to-indigo-500",
-      bgColor: "from-purple-50 to-indigo-50"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-4 px-4 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
+    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-8 px-4 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 animate-pulse"></div>
       
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex items-center justify-between">
-          {/* Left side - Announcement */}
-          <div className="flex items-center space-x-4">
-            <div className="bg-gradient-to-r from-yellow-400 to-red-500 text-black px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-              🚀 NEW CONTENT
-            </div>
-            <div className="hidden md:block">
-              <span className="text-sm text-gray-300">Revolutionary AI Content Now Available:</span>
-            </div>
+        <div className="text-center mb-8">
+          <div className="inline-block bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4 animate-bounce">
+            🚀 REVOLUTIONARY NEW CONTENT - 15,000% ROI BREAKTHROUGH
           </div>
-
-          {/* Center - Featured Content */}
-          <div className="flex-1 mx-8">
-            <div className="text-center">
-              <Link 
-                href={featuredContent[currentContent].href}
-                className={`inline-block bg-gradient-to-r ${featuredContent[currentContent].bgColor} text-gray-900 px-6 py-3 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg`}
-              >
-                <div className="flex items-center space-x-2">
-                  <span className={`bg-gradient-to-r ${featuredContent[currentContent].color} text-white px-2 py-1 rounded text-xs font-bold`}>
-                    {featuredContent[currentContent].badge}
-                  </span>
-                  <span className="font-bold">{featuredContent[currentContent].title}</span>
-                  <span className="text-sm text-gray-600">- {featuredContent[currentContent].description}</span>
-                </div>
-              </Link>
-            </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+            AI 2025 Ultimate Breakthrough Revolution
+          </h2>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-300">
+            Experience the most revolutionary AI breakthrough in human history. 
+            <span className="text-yellow-400 font-bold"> 15,000% ROI</span> through quantum-neural fusion technology and transcendent intelligence.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 p-6 rounded-xl border border-purple-500/30 text-center">
+            <div className="text-3xl font-bold text-yellow-400 mb-2">15,000% ROI</div>
+            <div className="text-sm text-gray-300">Guaranteed Return on Investment</div>
           </div>
-
-          {/* Right side - Action buttons */}
-          <div className="flex items-center space-x-2">
-            <Link 
-              href="/revolutionary-content-showcase-2025"
-              className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
-            >
-              View All Content
-            </Link>
-            <button 
-              onClick={() => setIsVisible(false)}
-              className="text-white/70 hover:text-white p-1 transition-colors"
-              aria-label="Close banner"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+          <div className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 p-6 rounded-xl border border-blue-500/30 text-center">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">99.9% Accuracy</div>
+            <div className="text-sm text-gray-300">Transcendent Intelligence</div>
+          </div>
+          <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 p-6 rounded-xl border border-green-500/30 text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">10,000x Faster</div>
+            <div className="text-sm text-gray-300">Quantum-Neural Processing</div>
           </div>
         </div>
-
-        {/* Mobile version */}
-        <div className="md:hidden mt-4 text-center">
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            href={featuredContent[currentContent].href}
-            className={`inline-block bg-gradient-to-r ${featuredContent[currentContent].bgColor} text-gray-900 px-4 py-2 rounded-lg font-bold hover:scale-105 transition-all duration-300 shadow-lg`}
+            href="/ai-2025-ultimate-breakthrough-revolution" 
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
           >
-            <div className="flex flex-col items-center space-y-1">
-              <span className={`bg-gradient-to-r ${featuredContent[currentContent].color} text-white px-2 py-1 rounded text-xs font-bold`}>
-                {featuredContent[currentContent].badge}
-              </span>
-              <span className="font-bold text-sm">{featuredContent[currentContent].title}</span>
-              <span className="text-xs text-gray-600">{featuredContent[currentContent].description}</span>
-            </div>
+            🚀 Discover the Revolution
+          </Link>
+          <Link 
+            href="/case-studies/ai-2025-ultimate-breakthrough-success" 
+            className="bg-transparent border-2 border-white hover:bg-white hover:text-purple-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 text-center"
+          >
+            📊 View Success Stories
+          </Link>
+          <Link 
+            href="/blog/ai-2025-revolutionary-trends-predictions" 
+            className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
+          >
+            🔮 Read Predictions
           </Link>
         </div>
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-        <div 
-          className="h-full bg-gradient-to-r from-yellow-400 to-red-500 transition-all duration-5000 ease-linear"
-          style={{ width: '100%' }}
-        />
+        
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-400">
+            Join thousands of companies already achieving unprecedented success with our revolutionary AI technology
+          </p>
+        </div>
       </div>
     </div>
   );
