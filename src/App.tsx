@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import NewContentPromotionBanner from './components/NewContentPromotionBanner';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -91,7 +92,7 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 // const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 // const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 // const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-// const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+const NewServicesShowcase2025 = React.lazy(() => import('./components/NewServicesShowcase2025'));
 
 // Comprehensive improvements components - commented out as they don't exist yet
 // const AdvancedAIServicesHub = React.lazy(() => import('./components/AdvancedAIServicesHub'));
@@ -99,11 +100,11 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 // const EnhancedSEOManager = React.lazy(() => import('./components/EnhancedSEOManager'));
 // const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/ComprehensiveImprovements2025'));
 
-// New innovative AI services - commented out as they don't exist yet
-// const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-// const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+// New innovative AI services
+const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 // const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
-// const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 // const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
 // const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
 // const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
@@ -165,6 +166,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <NewContentPromotionBanner />
         <AppHeader />
         <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -236,13 +238,13 @@ function App() {
               {/* <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} /> */}
               {/* <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} /> */}
               {/* <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} /> */}
-              {/* <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} /> */}
+              <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* New innovative AI services */}
-              {/* <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} /> */}
-              {/* <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} /> */}
+              <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
               {/* <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} /> */}
-              {/* <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} /> */}
               {/* <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} /> */}
               {/* <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} /> */}
               

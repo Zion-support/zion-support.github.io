@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
+import NewServicesShowcase2025 from "@/components/NewServicesShowcase2025";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -218,6 +219,9 @@ export default function Home() {
 
       {/* Services Showcase */}
       <ServicesShowcase />
+
+      {/* New Services Showcase 2025 */}
+      <NewServicesShowcase2025 />
 
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
