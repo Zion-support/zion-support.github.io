@@ -48,6 +48,7 @@ import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryC
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 
 // Import new breakthrough promotional banners
+import UltimateBreakthroughPromotionBanner from '../components/UltimateBreakthroughPromotionBanner';
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 
@@ -100,6 +101,12 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
+        
+        {/* ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <UltimateBreakthroughPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
