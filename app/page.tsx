@@ -70,6 +70,14 @@ import AI2026RevolutionaryBreakthroughAnnouncementBanner from '../components/AI2
 import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
 import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 
+// New 2026 Content Components
+import UltimateContentRevolution2026Banner from '../components/UltimateContentRevolution2026Banner';
+import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
+import RevolutionarySuccessStories2026Banner from '../components/RevolutionarySuccessStories2026Banner';
+import RevolutionarySuccessStories2026 from '../components/RevolutionarySuccessStories2026';
+import InteractiveTechShowcase2026Banner from '../components/InteractiveTechShowcase2026Banner';
+import InteractiveTechShowcase2026 from '../components/InteractiveTechShowcase2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -95,6 +103,15 @@ export default function HomePage() {
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* ULTIMATE CONTENT REVOLUTION 2026 BANNER */}
+        <UltimateContentRevolution2026Banner />
+        
+        {/* REVOLUTIONARY SUCCESS STORIES 2026 BANNER */}
+        <RevolutionarySuccessStories2026Banner />
+        
+        {/* INTERACTIVE TECH SHOWCASE 2026 BANNER */}
+        <InteractiveTechShowcase2026Banner />
         
         {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
         <NeuralConsensus2026PromotionBanner />
@@ -212,6 +229,15 @@ export default function HomePage() {
         
         {/* AI TOOLS ULTIMATE SHOWCASE 2026 */}
         <AIToolsUltimateShowcase2026 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION 2026 */}
+        <UltimateContentRevolution2026 />
+        
+        {/* REVOLUTIONARY SUCCESS STORIES 2026 */}
+        <RevolutionarySuccessStories2026 />
+        
+        {/* INTERACTIVE TECH SHOWCASE 2026 */}
+        <InteractiveTechShowcase2026 />
         
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2028PromotionBanner />
