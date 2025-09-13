@@ -97,6 +97,10 @@ import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDis
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 
+// New promotional components for 2025 content
+import NewContentShowcase2025Banner from '../components/NewContentShowcase2025Banner';
+import AI2025RevolutionaryContentPromotionBanner from '../components/AI2025RevolutionaryContentPromotionBanner';
+
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
@@ -250,6 +254,20 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - FEATURED */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 BANNER - FEATURED NEW CONTENT */}
+        <NewContentShowcase2025Banner />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <AI2025RevolutionaryContentPromotionBanner />
+        
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* ULTIMATE TECH SHOWCASE 2026 */}
+        <UltimateTechShowcase2026 />
         {/* EDGE AI REVOLUTION PROMOTION BANNER */}
         <EdgeAIRevolutionPromotionBanner />
         
