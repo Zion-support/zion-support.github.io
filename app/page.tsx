@@ -50,6 +50,11 @@ import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026Ultim
 // Import new promotional banners for 2026
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+
+// Import new content promotion banners
+import AI2025AdvancedAutomationMasteryPromotionBanner from '../components/AI2025AdvancedAutomationMasteryPromotionBanner';
+import AI2025EnterpriseSuccessPromotionBanner from '../components/AI2025EnterpriseSuccessPromotionBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 >>>>>>> cursor/create-and-deploy-new-content-21ac
 >>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
 
@@ -99,6 +104,15 @@ export default function HomePage() {
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
 >>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
+        
+        {/* NEW AI 2025 ADVANCED AUTOMATION MASTERY PROMOTION BANNER */}
+        <AI2025AdvancedAutomationMasteryPromotionBanner />
+        
+        {/* NEW AI 2025 ENTERPRISE SUCCESS PROMOTION BANNER */}
+        <AI2025EnterpriseSuccessPromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
