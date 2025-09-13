@@ -44,7 +44,10 @@ import AI2025ROICalculator from '../components/AI2025ROICalculator';
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
->>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
+
+// Import new promotional components
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
 export default function HomePage() {
   return (
@@ -57,6 +60,16 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <div className="py-12 bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InteractiveContentDiscoveryWidget />
+          </div>
+        </div>
+        
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
