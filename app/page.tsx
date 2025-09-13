@@ -182,6 +182,14 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 
+// Import new 2026 content showcase components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
+import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+import FeaturedBlogPost2026 from '../components/FeaturedBlogPost2026';
+import CaseStudyShowcase2026 from '../components/CaseStudyShowcase2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -224,6 +232,21 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+        {/* AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
+        <AIInnovationShowcase2026PromotionBanner />
+        
+        {/* AI INNOVATION SHOWCASE 2026 */}
+        <AIInnovationShowcase2026 />
+        
+        {/* FEATURED BLOG POSTS 2026 */}
+        <FeaturedBlogPost2026 />
+        
+        {/* CASE STUDY SHOWCASE 2026 */}
+        <CaseStudyShowcase2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
