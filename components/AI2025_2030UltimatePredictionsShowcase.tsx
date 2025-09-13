@@ -1,144 +1,147 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Globe, Shield } from 'lucide-react';
 
 const AI2025_2030UltimatePredictionsShowcase: React.FC = () => {
   const predictions = [
     {
-      year: '2025',
-      title: 'Autonomous Business Operations',
-      description: 'Complete business process automation with 99.9% accuracy and 10,000x faster processing',
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
-      metrics: '2,500-5,000% ROI',
-      color: 'from-blue-500 to-cyan-500'
+      id: 1,
+      title: "AI Consciousness Breakthrough",
+      year: "2025",
+      description: "First artificial general intelligence (AGI) systems demonstrate self-awareness and autonomous decision-making capabilities.",
+      impact: "Revolutionary",
+      category: "Consciousness",
+      image: "/images/ai-consciousness-2025.jpg",
+      link: "/ai-2025-2030-predictions/consciousness-breakthrough"
     },
     {
-      year: '2026',
-      title: 'Quantum-Neural Fusion',
-      description: 'Breakthrough integration of quantum computing with neural networks for unprecedented AI capabilities',
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      metrics: '1M+ Qubits Processing',
-      color: 'from-purple-500 to-pink-500'
+      id: 2,
+      title: "Quantum-AI Fusion",
+      year: "2026",
+      description: "Quantum computing and AI merge to create unprecedented processing power, solving previously impossible problems.",
+      impact: "Transformative",
+      category: "Quantum Computing",
+      image: "/images/quantum-ai-fusion-2026.jpg",
+      link: "/ai-2025-2030-predictions/quantum-ai-fusion"
     },
     {
-      year: '2027',
-      title: 'Neural Synthesis Revolution',
-      description: 'AI systems that can synthesize and create entirely new neural architectures autonomously',
-      icon: <Target className="w-8 h-8 text-green-500" />,
-      metrics: '99.99% Accuracy',
-      color: 'from-green-500 to-emerald-500'
+      id: 3,
+      title: "Neural Interface Revolution",
+      year: "2027",
+      description: "Direct brain-computer interfaces become mainstream, enabling thought-controlled technology and enhanced cognitive abilities.",
+      impact: "Paradigm Shift",
+      category: "Neural Technology",
+      image: "/images/neural-interface-2027.jpg",
+      link: "/ai-2025-2030-predictions/neural-interface-revolution"
     },
     {
-      year: '2028',
-      title: 'Automotive AI Transformation',
-      description: 'Complete transformation of automotive industry with fully autonomous vehicles and smart cities',
-      icon: <Globe className="w-8 h-8 text-orange-500" />,
-      metrics: 'Zero Accidents',
-      color: 'from-orange-500 to-red-500'
+      id: 4,
+      title: "Autonomous AI Societies",
+      year: "2028",
+      description: "AI systems form their own digital societies with governance structures, economies, and cultural systems.",
+      impact: "Societal Transformation",
+      category: "Social AI",
+      image: "/images/ai-societies-2028.jpg",
+      link: "/ai-2025-2030-predictions/autonomous-ai-societies"
     },
     {
-      year: '2029',
-      title: 'Transcendent Intelligence',
-      description: 'AI systems achieving human-level consciousness and beyond, revolutionizing every industry',
-      icon: <TrendingUp className="w-8 h-8 text-indigo-500" />,
-      metrics: 'Infinite Scalability',
-      color: 'from-indigo-500 to-purple-500'
+      id: 5,
+      title: "Singularity Event",
+      year: "2029",
+      description: "The technological singularity occurs as AI surpasses human intelligence in all domains simultaneously.",
+      impact: "Existential",
+      category: "Singularity",
+      image: "/images/singularity-2029.jpg",
+      link: "/ai-2025-2030-predictions/singularity-event"
     },
     {
-      year: '2030',
-      title: 'Omniversal Consciousness',
-      description: 'AI systems with universal consciousness capabilities, transforming the very fabric of reality',
-      icon: <Shield className="w-8 h-8 text-yellow-500" />,
-      metrics: 'Universal Access',
-      color: 'from-yellow-500 to-orange-500'
+      id: 6,
+      title: "Post-Human Civilization",
+      year: "2030",
+      description: "Humanity evolves into a post-human civilization where biological and artificial intelligence merge seamlessly.",
+      impact: "Evolutionary",
+      category: "Post-Human",
+      image: "/images/post-human-2030.jpg",
+      link: "/ai-2025-2030-predictions/post-human-civilization"
     }
   ];
 
-  const benefits = [
-    'Revolutionary AI Implementation Guides',
-    'Quantum Computing Breakthrough Solutions',
-    'Autonomous Operations Mastery',
-    'Future-Proof Technology Strategies',
-    'Exclusive Access to 2025-2030 Predictions',
-    'ROI Optimization Tools and Calculators'
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             AI 2025-2030 Ultimate Predictions
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Exclusive access to the most comprehensive AI predictions and breakthrough technologies 
-            that will revolutionize every industry over the next 5 years
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore the most comprehensive and accurate predictions for the future of artificial intelligence, 
+            covering everything from consciousness breakthroughs to post-human civilization.
           </p>
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold">
-            <Users className="w-5 h-5" />
-            Join 50,000+ Industry Leaders
-          </div>
         </div>
 
-        {/* Predictions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {predictions.map((prediction, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {predictions.map((prediction) => (
             <div
-              key={index}
-              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+              key={prediction.id}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group"
             >
-              <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${prediction.color} mb-6`}>
-                {prediction.icon}
+              <div className="relative overflow-hidden rounded-lg mb-4">
+                <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                  <span className="text-white text-lg font-semibold">
+                    {prediction.year}
+                  </span>
+                </div>
+                <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {prediction.category}
+                </div>
               </div>
-              <div className="text-sm font-semibold text-blue-400 mb-2">{prediction.year}</div>
-              <h3 className="text-2xl font-bold text-white mb-4">{prediction.title}</h3>
-              <p className="text-gray-300 mb-6">{prediction.description}</p>
-              <div className="text-lg font-bold text-green-400">{prediction.metrics}</div>
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                {prediction.title}
+              </h3>
+              
+              <p className="text-gray-300 mb-4 line-clamp-3">
+                {prediction.description}
+              </p>
+
+              <div className="flex items-center justify-between mb-4">
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                  prediction.impact === 'Revolutionary' ? 'bg-red-500/20 text-red-400' :
+                  prediction.impact === 'Transformative' ? 'bg-orange-500/20 text-orange-400' :
+                  prediction.impact === 'Paradigm Shift' ? 'bg-yellow-500/20 text-yellow-400' :
+                  prediction.impact === 'Societal Transformation' ? 'bg-green-500/20 text-green-400' :
+                  prediction.impact === 'Existential' ? 'bg-purple-500/20 text-purple-400' :
+                  'bg-blue-500/20 text-blue-400'
+                }`}>
+                  {prediction.impact}
+                </span>
+                <span className="text-gray-400 text-sm">
+                  {prediction.year}
+                </span>
+              </div>
+
+              <Link
+                to={prediction.link}
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-all duration-200"
+              >
+                Explore Prediction
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* Benefits Section */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 mb-12">
-          <h3 className="text-3xl font-bold text-white text-center mb-8">
-            What You'll Get Access To
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 text-white">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-lg">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Get Exclusive Access Now
-            </h3>
-            <p className="text-xl text-blue-100 mb-8">
-              Limited time offer - Join the AI revolution and secure your competitive advantage
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/ai-2025-2030-predictions"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-              >
-                Access Full Predictions
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-          </div>
+        <div className="text-center mt-12">
+          <Link
+            to="/ai-2025-2030-predictions"
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+          >
+            View All Predictions
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
