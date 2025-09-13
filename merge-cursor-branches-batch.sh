@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# Comprehensive script to merge all cursor branches into main
+# Batch merge script for cursor branches (processes 100 at a time)
 set -e
 
-echo "🚀 Starting comprehensive merge of all cursor branches..."
-echo "📊 Total cursor branches: $(git branch -r | grep "origin/cursor/" | wc -l)"
+echo "🚀 Starting batch merge of cursor branches..."
 echo "⏰ Started at: $(date)"
 
 # Create backup
@@ -26,11 +25,11 @@ SKIPPED_BRANCHES=0
 CONFLICT_RESOLUTIONS=0
 TOTAL_BRANCHES=0
 
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
+# Get first 100 cursor branches
+BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | head -100)
 TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
 
-echo "📊 Processing $TOTAL_BRANCHES branches..."
+echo "📊 Processing first $TOTAL_BRANCHES branches..."
 
 # Function to resolve conflicts intelligently
 resolve_conflicts() {
@@ -179,8 +178,8 @@ for branch in $BRANCHES; do
     echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
     echo "---"
     
-    # Push changes periodically to avoid losing work
-    if [ $((SUCCESSFUL_MERGES % 100)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+    # Push changes every 50 branches
+    if [ $((SUCCESSFUL_MERGES % 50)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         echo "💾 Pushing progress to remote..."
         git push origin main
     fi
@@ -192,7 +191,7 @@ git push origin main
 
 # Summary
 echo ""
-echo "🎉 Comprehensive merge process completed!"
+echo "🎉 Batch merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
@@ -207,14 +206,6 @@ echo ""
 echo "📝 Recent commits:"
 git log --oneline -20
 
-# Cleanup recommendations
 echo ""
-echo "🧹 Next steps:"
-echo "   1. Review the merged changes: git log --oneline -50"
-echo "   2. Test the application thoroughly"
-echo "   3. Check for any remaining conflicts: git status"
-echo "   4. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   5. Consider cleaning up old feature branches"
-
-echo ""
-echo "🎯 All cursor branches have been processed!"
+echo "🎯 First batch of cursor branches processed successfully!"
+echo "💡 To process more branches, run this script again or use the full merge script."
