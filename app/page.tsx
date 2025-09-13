@@ -47,6 +47,7 @@ import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner20
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
 
+<<<<<<< HEAD
 // New promotional banners and showcases
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
 import AIToolsShowcase2026 from '../components/AIToolsShowcase2026';
@@ -57,6 +58,11 @@ import AdvancedTechTrends2026 from '../components/AdvancedTechTrends2026';
 import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import UltimateContentHub2026 from '../components/UltimateContentHub2026';
+
+// New promotional banners for latest content
+import AI2026RevolutionaryBreakthroughAnnouncementBanner from '../components/AI2026RevolutionaryBreakthroughAnnouncementBanner';
+import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
+import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 
 export default function HomePage() {
   return (
@@ -69,6 +75,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT SHOWCASE 2026 BANNER */}
+        <NewContentShowcase2026Banner />
+        
+        {/* AI 2026 REVOLUTIONARY BREAKTHROUGH ANNOUNCEMENT BANNER */}
+        <AI2026RevolutionaryBreakthroughAnnouncementBanner />
+        
+        {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
+        <AI2030TranscendentIntelligencePromotionBanner />
+        
         {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
         <NeuralConsensus2026PromotionBanner />
         
