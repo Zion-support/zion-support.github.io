@@ -14,8 +14,8 @@
 ### Step 1: Execute Final Merge Script
 ```bash
 cd /workspace
-chmod +x ultimate-merge-resolver.sh
-./ultimate-merge-resolver.sh
+chmod +x final-merge-resolver.sh
+./final-merge-resolver.sh
 ```
 
 ### Step 2: Manual GitHub PR Check
@@ -118,7 +118,7 @@ chmod +x ultimate-merge-resolver.sh
 
 - **GitHub Repository**: https://github.com/Zion-Holdings/zion.app
 - **Documentation**: See MERGE_RESOLUTION_GUIDE.md
-- **Scripts**: ultimate-merge-resolver.sh for automated execution
+- **Scripts**: final-merge-resolver.sh for automated execution
 - **Backup Files**: All modified files have .backup versions
 
 ## 🎯 SUCCESS METRICS
