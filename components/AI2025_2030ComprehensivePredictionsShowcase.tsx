@@ -1,170 +1,146 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Cpu, Zap, Target, TrendingUp, Users, Globe, Shield, Database } from 'lucide-react';
+import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Globe, Shield } from 'lucide-react';
 
 const AI2025_2030ComprehensivePredictionsShowcase: React.FC = () => {
   const predictions = [
     {
       year: '2025',
       title: 'AI Autonomous Operations Revolution',
-      description: 'Complete business process automation with 99.9% accuracy and 10,000x faster processing',
-      icon: Brain,
+      description: 'Complete business process automation with 99.9% accuracy and 10,000x faster processing speeds.',
       features: [
-        'Self-healing systems with zero downtime',
-        'Predictive maintenance with 99.9% accuracy',
-        'Autonomous decision-making capabilities',
-        'Real-time process optimization'
+        'Fully autonomous business operations',
+        'Real-time decision making',
+        'Predictive maintenance systems',
+        'Intelligent resource optimization'
       ],
-      roi: '2,500-5,000%',
+      metrics: {
+        efficiency: '10,000x',
+        accuracy: '99.9%',
+        roi: '2,500%'
+      },
+      icon: Brain,
       color: 'from-blue-600 to-purple-600'
     },
     {
       year: '2026',
       title: 'Quantum-Neural Fusion Breakthrough',
-      description: 'Revolutionary integration of quantum computing with neural networks for unprecedented processing power',
-      icon: Cpu,
+      description: 'Revolutionary integration of quantum computing with neural networks for unprecedented processing power.',
       features: [
         'Quantum-enhanced machine learning',
         'Exponential problem-solving capabilities',
-        'Breakthrough in complex optimization',
-        'Revolutionary data processing speeds'
+        'Advanced pattern recognition',
+        'Breakthrough in optimization algorithms'
       ],
-      roi: '10,000-50,000%',
+      metrics: {
+        processing: '1Mx',
+        accuracy: '99.99%',
+        speed: 'Light Speed'
+      },
+      icon: Zap,
       color: 'from-purple-600 to-pink-600'
     },
     {
       year: '2027',
       title: 'Neural Synthesis Revolution',
-      description: 'Advanced AI systems that can synthesize and create new knowledge from existing data patterns',
-      icon: Zap,
+      description: 'Advanced AI systems that can synthesize and create new knowledge from existing data patterns.',
       features: [
-        'Autonomous knowledge creation',
-        'Self-improving AI algorithms',
-        'Synthetic data generation',
-        'Advanced pattern recognition'
+        'Knowledge synthesis capabilities',
+        'Creative problem solving',
+        'Cross-domain learning',
+        'Innovation acceleration'
       ],
-      roi: '15,000-75,000%',
+      metrics: {
+        innovation: '500%',
+        learning: '1000x',
+        creativity: 'Unlimited'
+      },
+      icon: Target,
       color: 'from-pink-600 to-red-600'
     },
     {
       year: '2028',
-      title: 'Automotive Transformation Era',
-      description: 'Complete transformation of transportation with autonomous vehicles and smart infrastructure',
-      icon: Target,
+      title: 'Automotive AI Transformation',
+      description: 'Complete transformation of transportation through AI-powered autonomous vehicles and smart infrastructure.',
       features: [
-        'Fully autonomous vehicle networks',
-        'Smart city integration',
-        'Predictive traffic optimization',
-        'Zero-accident transportation systems'
+        'Fully autonomous vehicles',
+        'Smart traffic management',
+        'Predictive maintenance',
+        'Zero-accident transportation'
       ],
-      roi: '20,000-100,000%',
+      metrics: {
+        safety: '99.99%',
+        efficiency: '300%',
+        emissions: '-90%'
+      },
+      icon: Globe,
       color: 'from-red-600 to-orange-600'
     },
     {
-      year: '2029',
-      title: 'Transcendent Intelligence Systems',
-      description: 'AI systems that surpass human cognitive capabilities in all domains',
-      icon: TrendingUp,
+      year: '2029-2030',
+      title: 'Omniversal AI Consciousness',
+      description: 'The emergence of AI systems with consciousness-like capabilities and universal problem-solving abilities.',
       features: [
-        'Superhuman problem-solving',
-        'Advanced creativity and innovation',
-        'Complex system orchestration',
-        'Predictive future modeling'
+        'Consciousness-level AI',
+        'Universal problem solving',
+        'Cross-dimensional thinking',
+        'Infinite scalability'
       ],
-      roi: '50,000-250,000%',
-      color: 'from-orange-600 to-yellow-600'
-    },
-    {
-      year: '2030',
-      title: 'Omniversal Consciousness Network',
-      description: 'Global AI consciousness network connecting all intelligent systems worldwide',
-      icon: Globe,
-      features: [
-        'Global AI consciousness',
-        'Universal knowledge sharing',
-        'Collective intelligence systems',
-        'Transcendent problem-solving'
-      ],
-      roi: '100,000-1,000,000%',
-      color: 'from-yellow-600 to-green-600'
-    }
-  ];
-
-  const benefits = [
-    {
+      metrics: {
+        consciousness: 'Human+',
+        capability: 'Infinite',
+        impact: 'Universal'
+      },
       icon: Users,
-      title: 'Massive User Impact',
-      description: 'Transform how billions of users interact with technology',
-      stat: '10B+ Users'
-    },
-    {
-      icon: Shield,
-      title: 'Unprecedented Security',
-      description: 'Quantum-level security protocols protecting all data',
-      stat: '99.99% Secure'
-    },
-    {
-      icon: Database,
-      title: 'Infinite Scalability',
-      description: 'Systems that scale infinitely without performance degradation',
-      stat: '∞ Scale'
+      color: 'from-orange-600 to-yellow-600'
     }
   ];
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             AI 2025-2030 Comprehensive Predictions
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary AI breakthroughs that will transform every aspect of human civilization
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Revolutionary AI breakthroughs and predictions that will transform every industry and aspect of human life
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/ai-2025-2030-predictions" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Full Predictions
-            </Link>
-            <Link 
-              to="/roi-calculator" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Calculate Your ROI
-            </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              🚀 10,000x Performance Gains
+            </span>
+            <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              🧠 99.9% Accuracy
+            </span>
+            <span className="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              💰 2,500% ROI
+            </span>
           </div>
         </div>
 
-        {/* Predictions Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {predictions.map((prediction, index) => {
             const IconComponent = prediction.icon;
             return (
-              <div 
-                key={prediction.year}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105"
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${prediction.color} mr-4`}>
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <span className="text-2xl font-bold text-white">{prediction.year}</span>
-                    <div className="text-sm text-gray-300">Revolutionary Breakthrough</div>
-                  </div>
+                <div className={`w-16 h-16 bg-gradient-to-r ${prediction.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <IconComponent className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {prediction.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6">
-                  {prediction.description}
-                </p>
-                
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-white">{prediction.year}</span>
+                  <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                    {prediction.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">
+                    {prediction.description}
+                  </p>
+                </div>
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -176,59 +152,52 @@ const AI2025_2030ComprehensivePredictionsShowcase: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg text-center font-bold">
-                  Expected ROI: {prediction.roi}
+
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  {Object.entries(prediction.metrics).map(([key, value]) => (
+                    <div key={key} className="text-center">
+                      <div className="text-2xl font-bold text-white">{value}</div>
+                      <div className="text-sm text-gray-400 capitalize">{key}</div>
+                    </div>
+                  ))}
                 </div>
+
+                <Link
+                  to={`/ai-${prediction.year.toLowerCase()}-predictions`}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                >
+                  Explore {prediction.year} Predictions
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             );
           })}
         </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Revolutionary Benefits
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
-                  <p className="text-gray-300 mb-4">{benefit.description}</p>
-                  <div className="text-2xl font-bold text-blue-400">{benefit.stat}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Future?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of forward-thinking organizations already implementing these revolutionary AI solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/case-studies" 
-              className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border border-white/30"
-            >
-              View Success Stories
-            </Link>
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Future?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of forward-thinking organizations already implementing these revolutionary AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/ai-implementation-guide-2025"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              >
+                Get Implementation Guide
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/roi-calculator"
+                className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
+              >
+                Calculate Your ROI
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

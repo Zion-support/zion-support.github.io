@@ -185,6 +185,36 @@ const HomePage: React.FC = () => {
                 <NewContentBanner />
               </Suspense>
 
+              {/* AI 2025-2030 Comprehensive Predictions Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030ComprehensivePredictionsPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025-2030 Comprehensive Predictions Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030ComprehensivePredictionsShowcase />
+              </Suspense>
+
+              {/* Quantum Computing Breakthrough Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingBreakthroughPromotionBanner2025 />
+              </Suspense>
+
+              {/* Quantum Computing Breakthrough Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingBreakthroughShowcase2025 />
+              </Suspense>
+
+              {/* Advanced Automation Solutions Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsPromotionBanner2025 />
+              </Suspense>
+
+              {/* Advanced Automation Solutions Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsShowcase2025 />
+              </Suspense>
+
               {/* AI 2035 Omniversal Consciousness Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2035OmniversalConsciousnessBanner />
