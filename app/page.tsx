@@ -26,6 +26,8 @@ import AdvancedNewsletterSignup from '../components/AdvancedNewsletterSignup';
 import AIConsciousnessEvolution2027 from '../components/AIConsciousnessEvolution2027';
 import QuantumComputingBreakthrough2027 from '../components/QuantumComputingBreakthrough2027';
 import UltimateAIAssistant2027 from '../components/UltimateAIAssistant2027';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 
 export default function HomePage() {
   return (
@@ -38,6 +40,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
@@ -96,6 +101,9 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Search..." />}>
           <AIPoweredSearch2026 />
         </Suspense>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
+        <InteractiveContentDiscovery2025 />
         
         {/* ULTIMATE CONTENT DISCOVERY 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
