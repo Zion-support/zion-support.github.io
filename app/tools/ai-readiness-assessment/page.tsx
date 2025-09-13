@@ -1,87 +1,80 @@
 'use client';
+
 import React, { useState } from 'react';
-import SEO from "../../components/SEO";
-import Card from '../../../components/ui/Card';
+import Link from 'next/link';
 
 export default function AIReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [assessmentComplete, setAssessmentComplete] = useState(false);
-  const [score, setScore] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [isComplete, setIsComplete] = useState(false);
 
   const questions = [
     {
       id: 'data_quality',
-      category: 'Data Infrastructure',
-      question: 'How would you rate your organization\'s data quality and availability?',
+      question: 'How would you rate your current data quality and availability?',
       options: [
-        { value: 1, text: 'Poor - Data is scattered and inconsistent', points: 1 },
-        { value: 2, text: 'Fair - Some data is organized but gaps exist', points: 2 },
-        { value: 3, text: 'Good - Most data is clean and accessible', points: 3 },
-        { value: 4, text: 'Excellent - Comprehensive, clean, and well-organized data', points: 4 }
+        { text: 'Poor - Limited data, inconsistent quality', value: 1 },
+        { text: 'Fair - Some data available, moderate quality', value: 2 },
+        { text: 'Good - Most data available, good quality', value: 3 },
+        { text: 'Excellent - Comprehensive data, high quality', value: 4 }
       ]
     },
     {
       id: 'technical_infrastructure',
-      category: 'Technical Infrastructure',
-      question: 'What is the state of your current technical infrastructure?',
+      question: 'What is your current technical infrastructure readiness?',
       options: [
-        { value: 1, text: 'Legacy systems with limited cloud adoption', points: 1 },
-        { value: 2, text: 'Mixed environment with some cloud services', points: 2 },
-        { value: 3, text: 'Mostly cloud-based with modern architecture', points: 3 },
-        { value: 4, text: 'Fully cloud-native with scalable architecture', points: 4 }
+        { text: 'Basic - Limited cloud infrastructure', value: 1 },
+        { text: 'Developing - Some cloud services, basic automation', value: 2 },
+        { text: 'Advanced - Good cloud infrastructure, some AI tools', value: 3 },
+        { text: 'Enterprise - Full cloud-native, AI-ready infrastructure', value: 4 }
       ]
     },
     {
-      id: 'team_capabilities',
-      category: 'Team Capabilities',
-      question: 'How would you describe your team\'s AI and data science capabilities?',
+      id: 'team_expertise',
+      question: 'How would you assess your team\'s AI and data science expertise?',
       options: [
-        { value: 1, text: 'Limited - No dedicated AI/data science team', points: 1 },
-        { value: 2, text: 'Basic - Some team members with relevant skills', points: 2 },
-        { value: 3, text: 'Intermediate - Dedicated team with good capabilities', points: 3 },
-        { value: 4, text: 'Advanced - Strong team with proven AI experience', points: 4 }
-      ]
-    },
-    {
-      id: 'leadership_support',
-      category: 'Leadership & Strategy',
-      question: 'How strong is leadership support for AI initiatives?',
-      options: [
-        { value: 1, text: 'Weak - Limited understanding and support', points: 1 },
-        { value: 2, text: 'Moderate - Some support but needs education', points: 2 },
-        { value: 3, text: 'Strong - Good support with clear vision', points: 3 },
-        { value: 4, text: 'Excellent - Strong champion with dedicated resources', points: 4 }
+        { text: 'Limited - No dedicated AI/data science team', value: 1 },
+        { text: 'Basic - Some team members with basic knowledge', value: 2 },
+        { text: 'Intermediate - Dedicated team with good skills', value: 3 },
+        { text: 'Advanced - Expert team with proven AI experience', value: 4 }
       ]
     },
     {
       id: 'budget_allocation',
-      category: 'Budget & Resources',
-      question: 'What is your budget allocation for AI initiatives?',
+      question: 'What is your planned budget allocation for AI initiatives?',
       options: [
-        { value: 1, text: 'Limited - Less than 1% of IT budget', points: 1 },
-        { value: 2, text: 'Moderate - 1-5% of IT budget', points: 2 },
-        { value: 3, text: 'Good - 5-10% of IT budget', points: 3 },
-        { value: 4, text: 'Excellent - More than 10% of IT budget', points: 4 }
+        { text: 'Under $50K annually', value: 1 },
+        { text: '$50K - $250K annually', value: 2 },
+        { text: '$250K - $1M annually', value: 3 },
+        { text: 'Over $1M annually', value: 4 }
+      ]
+    },
+    {
+      id: 'leadership_support',
+      question: 'How strong is leadership support for AI transformation?',
+      options: [
+        { text: 'Weak - Limited understanding or support', value: 1 },
+        { text: 'Moderate - Some support, but concerns about ROI', value: 2 },
+        { text: 'Strong - Clear support and understanding', value: 3 },
+        { text: 'Excellent - Full commitment and strategic priority', value: 4 }
       ]
     },
     {
       id: 'use_cases',
-      category: 'Use Cases & Applications',
-      question: 'How well-defined are your AI use cases?',
+      question: 'How many clear AI use cases have you identified?',
       options: [
-        { value: 1, text: 'Unclear - No specific use cases identified', points: 1 },
-        { value: 2, text: 'Basic - Some ideas but not well-defined', points: 2 },
-        { value: 3, text: 'Good - Clear use cases with defined goals', points: 3 },
-        { value: 4, text: 'Excellent - Comprehensive roadmap with priorities', points: 4 }
+        { text: 'None identified', value: 1 },
+        { text: '1-2 potential use cases', value: 2 },
+        { text: '3-5 clear use cases', value: 3 },
+        { text: '6+ well-defined use cases', value: 4 }
       ]
     }
   ];
 
-  const handleAnswer = (questionId, answer) => {
+  const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({
       ...prev,
-      [questionId]: answer
+      [questionId]: value
     }));
   };
 
@@ -89,8 +82,7 @@ export default function AIReadinessAssessment() {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      calculateScore();
-      setAssessmentComplete(true);
+      setIsComplete(true);
     }
   };
 
@@ -101,256 +93,287 @@ export default function AIReadinessAssessment() {
   };
 
   const calculateScore = () => {
-    let totalPoints = 0;
-    let maxPoints = 0;
-    
-    questions.forEach(question => {
-      maxPoints += 4;
-      if (answers[question.id]) {
-        totalPoints += answers[question.id].points;
-      }
-    });
-    
-    const percentage = (totalPoints / maxPoints) * 100;
-    setScore(percentage);
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const maxScore = questions.length * 4;
+    const percentage = (totalScore / maxScore) * 100;
+    return { totalScore, maxScore, percentage };
   };
 
-  const getScoreLevel = (score) => {
-    if (score >= 80) return { level: 'Advanced', color: 'text-green-600', bgColor: 'bg-green-100' };
-    if (score >= 60) return { level: 'Intermediate', color: 'text-blue-600', bgColor: 'bg-blue-100' };
-    if (score >= 40) return { level: 'Basic', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
-    return { level: 'Beginner', color: 'text-red-600', bgColor: 'bg-red-100' };
+  const getReadinessLevel = (percentage: number) => {
+    if (percentage >= 80) return { level: 'AI-Ready', color: 'green', description: 'Your organization is well-positioned for AI transformation' };
+    if (percentage >= 60) return { level: 'AI-Prepared', color: 'blue', description: 'Good foundation, some areas need attention' };
+    if (percentage >= 40) return { level: 'AI-Developing', color: 'yellow', description: 'Moderate readiness, significant preparation needed' };
+    return { level: 'AI-Planning', color: 'red', description: 'Early stage, comprehensive preparation required' };
   };
 
-  const getRecommendations = (score) => {
-    if (score >= 80) {
+  const getRecommendations = (percentage: number) => {
+    if (percentage >= 80) {
       return [
-        'Focus on advanced AI implementations and scaling',
-        'Explore cutting-edge AI technologies and automation',
-        'Consider AI governance and ethics frameworks',
-        'Plan for AI-driven business transformation'
+        'Start with pilot AI projects in high-impact areas',
+        'Scale successful pilots across the organization',
+        'Consider advanced AI technologies like quantum computing',
+        'Focus on AI governance and ethics frameworks'
       ];
-    } else if (score >= 60) {
+    } else if (percentage >= 60) {
       return [
-        'Strengthen data infrastructure and quality',
+        'Improve data quality and accessibility',
         'Invest in team training and development',
-        'Pilot AI projects with clear ROI metrics',
-        'Develop comprehensive AI strategy'
+        'Strengthen technical infrastructure',
+        'Develop clear AI use cases and ROI metrics'
       ];
-    } else if (score >= 40) {
+    } else if (percentage >= 40) {
       return [
-        'Improve data collection and organization',
-        'Build foundational technical infrastructure',
-        'Educate leadership on AI potential',
+        'Build foundational data infrastructure',
+        'Hire or train AI/data science talent',
+        'Secure leadership buy-in and budget allocation',
         'Start with simple automation projects'
       ];
     } else {
       return [
-        'Assess and improve data quality',
+        'Develop AI strategy and roadmap',
+        'Build data governance framework',
         'Invest in basic technical infrastructure',
-        'Build AI awareness and capabilities',
-        'Start with small pilot projects'
+        'Educate leadership on AI potential and requirements'
       ];
     }
   };
 
-  const currentQuestion = questions[currentStep];
-  const scoreLevel = getScoreLevel(score);
-  const recommendations = getRecommendations(score);
+  if (isComplete) {
+    const { totalScore, maxScore, percentage } = calculateScore();
+    const readiness = getReadinessLevel(percentage);
+    const recommendations = getRecommendations(percentage);
+
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Results Header */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-6">
+              🎯 ASSESSMENT COMPLETE
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Your AI Readiness
+              <span className={`bg-gradient-to-r ${
+                readiness.color === 'green' ? 'from-green-600 to-emerald-600' :
+                readiness.color === 'blue' ? 'from-blue-600 to-cyan-600' :
+                readiness.color === 'yellow' ? 'from-yellow-600 to-orange-600' :
+                'from-red-600 to-pink-600'
+              } bg-clip-text text-transparent`}>
+                {' '}{readiness.level}
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-600 mb-8">
+              {readiness.description}
+            </p>
+          </div>
+        </section>
+
+        {/* Score Display */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <div className="text-center mb-8">
+                <div className={`text-6xl font-bold mb-4 ${
+                  readiness.color === 'green' ? 'text-green-600' :
+                  readiness.color === 'blue' ? 'text-blue-600' :
+                  readiness.color === 'yellow' ? 'text-yellow-600' :
+                  'text-red-600'
+                }`}>
+                  {percentage.toFixed(0)}%
+                </div>
+                <div className="text-2xl font-semibold text-gray-900 mb-2">
+                  AI Readiness Score
+                </div>
+                <div className="text-gray-600">
+                  {totalScore} out of {maxScore} points
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="w-full bg-gray-200 rounded-full h-4 mb-8">
+                <div 
+                  className={`h-4 rounded-full transition-all duration-1000 ${
+                    readiness.color === 'green' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
+                    readiness.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' :
+                    readiness.color === 'yellow' ? 'bg-gradient-to-r from-yellow-500 to-orange-500' :
+                    'bg-gradient-to-r from-red-500 to-pink-500'
+                  }`}
+                  style={{ width: `${percentage}%` }}
+                ></div>
+              </div>
+
+              {/* Detailed Breakdown */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {questions.map((question, index) => (
+                  <div key={question.id} className="bg-gray-50 rounded-lg p-4">
+                    <div className="text-sm font-semibold text-gray-700 mb-2">
+                      {question.question}
+                    </div>
+                    <div className="flex items-center">
+                      <div className="flex-1 bg-gray-200 rounded-full h-2 mr-3">
+                        <div 
+                          className="bg-blue-500 h-2 rounded-full"
+                          style={{ width: `${(answers[question.id] || 0) * 25}%` }}
+                        ></div>
+                      </div>
+                      <div className="text-sm font-bold text-gray-900">
+                        {answers[question.id] || 0}/4
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Recommendations */}
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+              Recommended Next Steps
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {recommendations.map((recommendation, index) => (
+                <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-200">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-4">
+                      {index + 1}
+                    </div>
+                    <div className="text-gray-700 font-medium">
+                      {recommendation}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Start Your AI Journey?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Get personalized guidance and implementation support for your AI transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300"
+              >
+                Get Expert Consultation
+              </Link>
+              <Link 
+                href="/resources/ai-2025-revolutionary-implementation-guide"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                Download Implementation Guide
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <SEO
-        title="AI Readiness Assessment - Zion Tech Group"
-        description="Evaluate your organization's readiness for AI transformation with our comprehensive assessment tool. Get personalized recommendations and roadmap."
-        keywords="AI readiness, AI assessment, AI transformation, AI strategy, digital transformation, business readiness"
-        url="/tools/ai-readiness-assessment"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              🎯 AI Readiness Assessment
-            </h1>
-            <p className="text-xl">
-              Evaluate your organization's readiness for AI transformation and get personalized recommendations.
-            </p>
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
+            🎯 AI READINESS ASSESSMENT
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI Readiness
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              {' '}Assessment
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-600 mb-8">
+            Evaluate your organization's readiness for AI transformation and get personalized recommendations.
+          </p>
+          
+          <div className="bg-white rounded-lg p-4 shadow-md inline-block">
+            <div className="text-sm text-gray-600 mb-2">Progress</div>
+            <div className="flex items-center">
+              <div className="w-64 bg-gray-200 rounded-full h-2 mr-3">
+                <div 
+                  className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
+                ></div>
+              </div>
+              <div className="text-sm font-semibold text-gray-900">
+                {currentStep + 1} of {questions.length}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {!assessmentComplete ? (
-          <Card className="p-8">
-            {/* Progress Bar */}
-            <div className="mb-8">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-600">
-                  Question {currentStep + 1} of {questions.length}
-                </span>
-                <span className="text-sm font-medium text-gray-600">
-                  {Math.round(((currentStep + 1) / questions.length) * 100)}% Complete
-                </span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Question */}
-            <div className="mb-8">
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full mb-4">
-                  {currentQuestion.category}
-                </span>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  {currentQuestion.question}
-                </h2>
-              </div>
-
-              <div className="space-y-4">
-                {currentQuestion.options.map((option, index) => (
-                  <label
-                    key={index}
-                    className={`block p-4 border-2 rounded-lg cursor-pointer transition-all ${
-                      answers[currentQuestion.id]?.value === option.value
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name={currentQuestion.id}
-                      value={option.value}
-                      checked={answers[currentQuestion.id]?.value === option.value}
-                      onChange={() => handleAnswer(currentQuestion.id, option)}
-                      className="sr-only"
-                    />
-                    <div className="flex items-center">
-                      <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                        answers[currentQuestion.id]?.value === option.value
-                          ? 'border-blue-500 bg-blue-500'
-                          : 'border-gray-300'
-                      }`}>
-                        {answers[currentQuestion.id]?.value === option.value && (
-                          <div className="w-2 h-2 bg-white rounded-full m-0.5"></div>
-                        )}
-                      </div>
-                      <span className="text-gray-700">{option.text}</span>
+      {/* Question Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">
+              {questions[currentStep].question}
+            </h2>
+            
+            <div className="space-y-4">
+              {questions[currentStep].options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer(questions[currentStep].id, option.value)}
+                  className={`w-full p-4 rounded-lg border-2 text-left transition-all duration-200 ${
+                    answers[questions[currentStep].id] === option.value
+                      ? 'border-blue-500 bg-blue-50 text-blue-900'
+                      : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                  }`}
+                >
+                  <div className="flex items-center">
+                    <div className={`w-4 h-4 rounded-full border-2 mr-4 ${
+                      answers[questions[currentStep].id] === option.value
+                        ? 'border-blue-500 bg-blue-500'
+                        : 'border-gray-300'
+                    }`}>
+                      {answers[questions[currentStep].id] === option.value && (
+                        <div className="w-2 h-2 bg-white rounded-full mx-auto mt-0.5"></div>
+                      )}
                     </div>
-                  </label>
-                ))}
-              </div>
+                    <span className="font-medium">{option.text}</span>
+                  </div>
+                </button>
+              ))}
             </div>
-
-            {/* Navigation */}
-            <div className="flex justify-between">
+            
+            <div className="flex justify-between mt-8">
               <button
                 onClick={prevStep}
                 disabled={currentStep === 0}
-                className="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-400 transition-colors"
+                className="px-6 py-3 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
               >
                 Previous
               </button>
+              
               <button
                 onClick={nextStep}
-                disabled={!answers[currentQuestion.id]}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
+                disabled={!answers[questions[currentStep].id]}
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
               >
                 {currentStep === questions.length - 1 ? 'Complete Assessment' : 'Next'}
               </button>
             </div>
-          </Card>
-        ) : (
-          <div className="space-y-8">
-            {/* Results */}
-            <Card className="p-8 text-center">
-              <div className="mb-6">
-                <div className={`inline-block px-6 py-3 rounded-full text-2xl font-bold ${scoreLevel.bgColor} ${scoreLevel.color}`}>
-                  {scoreLevel.level} Level
-                </div>
-              </div>
-              
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Your AI Readiness Score: {Math.round(score)}%
-              </h2>
-              
-              <div className="w-full bg-gray-200 rounded-full h-4 mb-6">
-                <div
-                  className="bg-blue-600 h-4 rounded-full transition-all duration-1000"
-                  style={{ width: `${score}%` }}
-                ></div>
-              </div>
-              
-              <p className="text-lg text-gray-600 mb-8">
-                {score >= 80 
-                  ? "Excellent! Your organization is well-positioned for advanced AI implementations."
-                  : score >= 60
-                  ? "Good foundation! Focus on strengthening key areas for AI success."
-                  : score >= 40
-                  ? "Building momentum! Address foundational areas before scaling AI initiatives."
-                  : "Getting started! Focus on building strong foundations for AI transformation."
-                }
-              </p>
-            </Card>
-
-            {/* Recommendations */}
-            <Card className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">🎯 Personalized Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {recommendations.map((recommendation, index) => (
-                  <div key={index} className="flex items-start p-4 bg-blue-50 rounded-lg">
-                    <span className="text-blue-600 font-bold mr-3">{index + 1}.</span>
-                    <span className="text-gray-700">{recommendation}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-
-            {/* Next Steps */}
-            <Card className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Next Steps</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg">
-                  <h4 className="text-xl font-bold mb-3">📞 Get Expert Consultation</h4>
-                  <p className="mb-4">Schedule a personalized consultation with our AI experts to discuss your specific needs.</p>
-                  <a href="/contact" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Schedule Call
-                  </a>
-                </div>
-                
-                <div className="p-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg">
-                  <h4 className="text-xl font-bold mb-3">📋 Download Resources</h4>
-                  <p className="mb-4">Access our comprehensive AI implementation guides and templates.</p>
-                  <a href="/resources" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    View Resources
-                  </a>
-                </div>
-              </div>
-            </Card>
-
-            {/* Restart Assessment */}
-            <div className="text-center">
-              <button
-                onClick={() => {
-                  setCurrentStep(0);
-                  setAnswers({});
-                  setAssessmentComplete(false);
-                  setScore(0);
-                }}
-                className="px-8 py-3 bg-gray-600 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors"
-              >
-                Retake Assessment
-              </button>
-            </div>
           </div>
-        )}
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
