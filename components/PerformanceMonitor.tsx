@@ -32,7 +32,7 @@ export default function PerformanceMonitor() {
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         firstInputDelay: 0, // Would need to measure this with a different approach
         cumulativeLayoutShift: 0, // Would need to measure this with a different approach
-        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart,
+        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.fetchStart,
       };
 
       setMetrics(metrics);

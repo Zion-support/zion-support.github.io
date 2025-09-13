@@ -47,7 +47,7 @@ export default function InteractiveEngagementWidget() {
   useEffect(() => {
     // Simulate real-time data updates
     const interval = setInterval(() => {
-      setEngagementData(prev => ({
+      setEngagementData((prev: EngagementData) => ({
         visitors: prev.visitors + Math.floor(Math.random() * 3) + 1,
         timeOnSite: Math.max(0, prev.timeOnSite + (Math.random() - 0.5) * 10),
         bounceRate: Math.max(0, Math.min(100, prev.bounceRate + (Math.random() - 0.5) * 2)),
@@ -57,7 +57,7 @@ export default function InteractiveEngagementWidget() {
 
     // Rotate testimonials
     const testimonialInterval = setInterval(() => {
-      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
+      setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length);
     }, 5000);
 
     return () => {
