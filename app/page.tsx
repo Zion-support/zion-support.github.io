@@ -72,11 +72,16 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-
 // New Revolutionary Tech Components
 import NewYear2025PromotionBanner from '../src/components/NewYear2025PromotionBanner';
 import RevolutionaryTechShowcase from '../src/components/RevolutionaryTechShowcase';
 import InteractiveServiceSelector from '../src/components/InteractiveServiceSelector';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
+import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateContentDiscoveryWidget';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
