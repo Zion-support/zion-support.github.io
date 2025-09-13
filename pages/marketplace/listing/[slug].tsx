@@ -1,36 +1,79 @@
 import React from 'react';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
-import type { ProductListing } from '@/types/listings';
+import Head from 'next/head';
+import Link from 'next/link';
+import { RatingStars } from '@/components/RatingStars';
+import ProductReviews from '@/components/ProductReviews';
+import type { Product } from '@/types/product';
 
-interface ListingProps {
-  listing: ProductListing | null;
+// Alias the Prisma generated Product model type.
+type ProductModel = Product;
+// Define ProductWithReviewStats here or import from a shared types file
+// This should match the type returned by `/api/products/[productId]/details`
+export type ProductWithReviewStats = ProductModel & {
+  averageRating: number | null;
+  reviewCount: number;
+  // Adding fields to match the enriched type from the API / product card expectations
+  title?: string; // Usually mapped from product.name
+  category?: string;
+  images?: { url: string; alt?: string }[];
+  price?: number | null;
+  currency?: string;
+  tags?: string[];
+};
+
+interface RatingStarsProps {
+  value: number;
+  count?: number;
 }
 
-const MarketplaceListing: React.FC<ListingProps> = ({ listing }) => {
-  if (!listing) {
-    return <div>Listing removed</div>;
-  }
+// Using a more robust placeholder that handles null/undefined values for rating
+const RatingStarsDisplay: React.FC<RatingStarsProps> = ({ value, count }) => {
+  const ratingValue = value ?? 0; // Default to 0 if value is null
+  const roundedRating = Math.round(ratingValue);
   return (
-    <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
-      <h1>{listing.title}</h1>
-      <p>{listing.description}</p>
-    </main>
+    <div className="flex items-center">
+      {Array.from({ length: 5 }, (_, i) => (
+        <span key={i} className={i < roundedRating ? 'text-yellow-400' : 'text-gray-300'}>★</span>
+      ))}
+      <span className="ml-1 text-sm text-gray-600 dark:text-gray-400">
+        {ratingValue > 0 ? `${ratingValue.toFixed(1)}/5` : 'Not rated'}
+      </span>
+      {typeof count !== 'undefined' && (
+        <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">({count} reviews)</span>
+      )}
+    </div>
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = MARKETPLACE_LISTINGS.map(l => ({ params: { slug: l.id } }));
-  return { paths, fallback: 'blocking' };
-};
+interface ListingPageProps {
+  listing: ProductListing | null;
+}
 
-export const getStaticProps: GetStaticProps<ListingProps> = async ({ params }) => {
-  const slug = params?.slug as string;
-  const listing = MARKETPLACE_LISTINGS.find(l => l.id === slug) || null;
+const ListingPage: React.FC<ListingPageProps> = ({ listing }) => {
+  const router = useRouter();
+  
   if (!listing) {
-    return { notFound: true };
+    return <div className="max-w-3xl mx-auto py-8 px-4">Listing not found.</div>;
   }
-  return { props: { listing } };
-};
 
-export default MarketplaceListing;
+  const canonicalUrl = `/marketplace/listing/${listing.id}`;
+  const breadcrumbs = getBreadcrumbsForPath(canonicalUrl);
+  const dispatch = useDispatch<AppDispatch>();
+
+  const handleAddToCart = () => {
+    dispatch(
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
+    );
+    toast({
+      title: "Added to cart",
+      description: `${listing.title} has been added to your cart`,
+    });
+  };
+
+  return (
+    <>
+      <Head><title>marketplace/listing/[slug] - Zion App</title><meta name="description" content="marketplace/listing/[slug] page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">marketplace/listing/[slug]</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
+            ← Back to Home</a></div></div></>;
+  );
+
+export default Slug;

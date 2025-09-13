@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
@@ -25,7 +25,7 @@ export default function CompanyWorkspace() {
   }
   
   if (error || !company) {
-    return <Navigate to="/not-found" />;
+            return <Navigate to="/" />;
   }
   
   // In white-label mode, use the tenant's theme instead of the company's theme
@@ -53,6 +53,8 @@ export default function CompanyWorkspace() {
         customTheme={effectiveTheme}
       />
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
+        <CompanyDashboard company={company} />
+        <CompanyDashboard company={company}/>
         <CompanyDashboard company={company} />
       </main>
       <Footer />

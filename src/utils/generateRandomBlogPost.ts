@@ -1,37 +1,11 @@
-import { BlogPost } from "@/types/blog";
-
-const categories = [
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-];
-
-export function generateRandomBlogPost(): BlogPost {
-  const timestamp = Date.now();
-  const category = categories[Math.floor(Math.random() * categories.length)];
-
+export const generateRandomBlogPost = () => {
   return {
-    id: `auto-${timestamp}`,
-    title: `Automated Post ${new Date(timestamp).toLocaleTimeString()}`,
-    slug: `auto-${timestamp}`,
-    excerpt: "This is an automatically generated blog post.",
-    content: `<p>This placeholder content was generated on ${new Date(timestamp).toLocaleString()}.</p>`,
-    author: {
-      name: "Auto Bot",
-      title: "Content Automation",
-      avatarUrl: "https://robohash.org/autobot.png"
-    },
-    publishedDate: new Date(timestamp).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric"
-    }),
-    readTime: "3 min read",
-    category,
-    tags: [category.toLowerCase(), "automation"],
-    featuredImage: "https://images.unsplash.com/photo-1581091012184-7b3403d00985?auto=format&fit=crop&w=1200&h=630"
+    id: Math.random().toString(36).substr(2, 9),
+    title: 'Sample Blog Post',
+    excerpt: 'This is a sample blog post excerpt.',
+    content: 'This is sample blog post content.',
+    author: 'Zion Tech Group',
+    publishedAt: new Date().toISOString(),
+    tags: ['sample', 'blog']
   };
-}
+};

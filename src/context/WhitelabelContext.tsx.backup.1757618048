@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react';
+=======
+import React, { createContext, useContext, useState, useCallback } from 'react';
+
+interface WhitelabelConfig {
+  companyName: string;
+  logo: string;
+  primaryColor: string;
+  secondaryColor: string;
+  theme: 'light' | 'dark' | 'auto';
+}
+>>>>>>> origin/backup-20250824-222848
+
+interface WhitelabelContextType {
+  tenant: string;
+  setTenant: (tenant: string) => void;
+}
+
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+
+<<<<<<< HEAD
+interface WhitelabelProviderProps {
+  children: React.ReactNode;
+}
+
+export function WhitelabelProvider({ children }: WhitelabelProviderProps) {
+  const [tenant, setTenant] = useState('zion');
+=======
+export const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [config, setConfig] = useState<WhitelabelConfig>(defaultConfig);
+
+  const updateConfig = useCallback((newConfig: Partial<WhitelabelConfig>) => {
+    setConfig(prev => ({ ...prev, ...newConfig }));
+  }, []);
+
+  const resetConfig = useCallback(() => {
+    setConfig(defaultConfig);
+  }, []);
+
+  const value: WhitelabelContextType = {
+    config,
+    updateConfig,
+    resetConfig
+  };
+>>>>>>> origin/backup-20250824-222848
+
+  return (
+    <WhitelabelContext.Provider value={{ tenant, setTenant }}>
+      {children}
+    </WhitelabelContext.Provider>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/backup-20250824-222848
+
+export function useWhitelabel() {
+  const context = useContext(WhitelabelContext);
+  if (context === undefined) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/backup-20250824-222848

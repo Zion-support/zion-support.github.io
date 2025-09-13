@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
@@ -20,35 +20,36 @@ const benefits = [
     icon: <Clock className="w-8 h-8" />,
   },
   {
-    title: "Cost Reduction",
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
+    title: "Cost-Effective Solutions",
+    description: "Find competitive pricing and value-driven solutions that fit your budget without compromising on quality or performance.",
     icon: <TrendingDown className="w-8 h-8" />,
   },
 ];
 
-export function BenefitsSection() {
+export const BenefitsSection: React.FC = () => {
   return (
-    <section className="py-20 bg-zion-blue-light">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>Why Zion?</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            Experience the next generation of tech marketplace with features designed to maximize efficiency and value
-          </p>
+        <div className="text-center mb-12">
+          <GradientHeading
+            title="Why Choose Zion Tech Group?"
+            subtitle="Discover the advantages that make us the preferred choice for tech solutions"
+            className="mb-8"
+          />
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+              className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors"
             />
           ))}
         </div>
       </div>
     </section>
   );
-}
+};

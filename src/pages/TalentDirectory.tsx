@@ -1,28 +1,36 @@
-
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { FilterSidebar } from '@/components/talent/FilterSidebar';
+import { TalentResults } from '@/components/talent/TalentResults';
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
+import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
+import { useTalentDirectory } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS } from '@/data/sortOptions';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { TalentProfile } from '@/types/talent';
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
-  PaginationLink,
+  PaginationButton,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from '@/components/ui/pagination';
 
 export default function TalentDirectory() {
-  const navigate = useNavigate();
+  const router = useRouter(); // Changed from navigate
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   // Use our custom hook to manage state
   const {
     filteredTalents,
+    total,
     isLoading,
     searchTerm,
     setSearchTerm,
@@ -42,192 +50,121 @@ export default function TalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
+    error,
     isAuthenticated,
-    savedTalents,
     toggleSkill,
     toggleAvailability,
     toggleRegion,
     clearFilters,
     toggleSection,
-    handleToggleSave,
-  } = useTalentDirectory();
+  } = useTalentDirectory(currentPage, itemsPerPage);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [filteredTalents]);
+  }, [filteredTalents, total]);
 
-  const totalPages = Math.ceil(filteredTalents.length / itemsPerPage);
-  const paginatedTalents = filteredTalents.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-  
+  const totalPages = Math.ceil(total / itemsPerPage);
+  const paginatedTalents = filteredTalents;
+
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent);
     setIsHireModalOpen(true);
   };
-  
+
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
-    navigate(`/talent/${id}`);
+    router.push(`/talent/${id}`); // Changed to router.push
   };
-  
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <TalentSkeleton />
+      </div>
+    );
+  }
+
+  // Error check should come before "no results" check
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <ErrorBanner msg={error.message || "Unable to load talent profiles."} />
+      </div>
+    );
+  }
+
+  // Condition for "Talent Directory Truly Empty"
+  if (
+    // !isLoading is implied as we passed the first check
+    filteredTalents.length === 0 &&
+    !searchTerm &&
+    selectedSkills.length === 0 &&
+    selectedAvailability.length === 0 &&
+    selectedRegions.length === 0 &&
+    priceRange[0] === 50 && // Assuming these are the correct initial default values
+    priceRange[1] === 200 && // from useFilterTalents
+    experienceRange[0] === 0 && // from useFilterTalents
+    experienceRange[1] === 15 // from useFilterTalents
+  ) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center py-16">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Talent Directory Currently Empty
+          </h2>
+          <p className="text-zion-slate-light max-w-md mx-auto">
+            No talent profiles are currently available. Please check back later.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // If none of the above, render the main content with results
   return (
-    <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col space-y-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
-            <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
+    <>
+      <SEO 
+        title="Talent Directory - Zion Tech Group" 
+        description="Discover top AI experts, developers, and tech specialists in our comprehensive talent directory."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Talent Directory
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Connect with verified AI experts, developers, and tech specialists from around the world.
+              Find the perfect talent for your next project.
             </p>
           </div>
           
-          {/* Main content */}
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Sidebar - Desktop */}
-            <div className="w-full lg:w-64 shrink-0 hidden lg:block">
-              <FilterSidebar
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                selectedSkills={selectedSkills}
-                toggleSkill={toggleSkill}
-                selectedAvailability={selectedAvailability}
-                toggleAvailability={toggleAvailability}
-                selectedRegions={selectedRegions}
-                toggleRegion={toggleRegion}
-                priceRange={priceRange}
-                setPriceRange={setPriceRange}
-                experienceRange={experienceRange}
-                setExperienceRange={setExperienceRange}
-                expandedSections={expandedSections}
-                toggleSection={toggleSection}
-                sortOption={sortOption}
-                setSortOption={setSortOption}
-                clearFilters={clearFilters}
-              />
-            </div>
-            
-            {/* Mobile filter button */}
-            <div className="lg:hidden mb-4">
-              <Button
-                onClick={() => setIsMobileFilterOpen(true)}
-                variant="outline"
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
-              >
-                Filter & Sort
-              </Button>
-            </div>
-            
-            {/* Results */}
-            <TalentResults
-              talents={paginatedTalents}
-              totalCount={filteredTalents.length}
-              isLoading={isLoading}
-              viewProfile={viewProfile}
-              handleRequestHire={handleRequestHire}
-              savedTalents={savedTalents}
-              handleToggleSave={handleToggleSave}
-              isAuthenticated={isAuthenticated}
-              activeFiltersProps={{
-                selectedSkills,
-                toggleSkill,
-                selectedAvailability,
-                toggleAvailability,
-                selectedRegions,
-                toggleRegion,
-                priceRange,
-                setPriceRange,
-                experienceRange,
-                setExperienceRange,
-                clearFilters,
-              }}
-            />
-
-            {totalPages > 1 && (
-              <div className="mt-6">
-                <Pagination className="justify-center">
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.max(1, currentPage - 1));
-                        }}
-                      />
-                    </PaginationItem>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <PaginationItem key={page}>
-                        <PaginationLink
-                          href="#"
-                          isActive={page === currentPage}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCurrentPage(page);
-                          }}
-                        >
-                          {page}
-                        </PaginationLink>
-                      </PaginationItem>
-                    ))}
-                    <PaginationItem>
-                      <PaginationNext
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.min(totalPages, currentPage + 1));
-                        }}
-                      />
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our comprehensive talent directory is currently under development. 
+                We're building a platform to connect you with the best tech talent worldwide.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="px-6 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark font-medium rounded-lg transition-colors">
+                  Get Notified
+                </button>
+                <button className="px-6 py-3 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 font-medium rounded-lg transition-colors">
+                  Learn More
+                </button>
               </div>
-            )}
-            
-            {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-bold text-white">Filter & Sort</h3>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setIsMobileFilterOpen(false)}
-                      className="text-zion-slate-light h-8 w-8 p-0"
-                    >
-                      <X className="h-4 w-4" />
-                      <span className="sr-only">Close</span>
-                    </Button>
-                  </div>
-                  <FilterSidebar
-                    searchTerm={searchTerm}
-                    setSearchTerm={setSearchTerm}
-                    selectedSkills={selectedSkills}
-                    toggleSkill={toggleSkill}
-                    selectedAvailability={selectedAvailability}
-                    toggleAvailability={toggleAvailability}
-                    selectedRegions={selectedRegions}
-                    toggleRegion={toggleRegion}
-                    priceRange={priceRange}
-                    setPriceRange={setPriceRange}
-                    experienceRange={experienceRange}
-                    setExperienceRange={setExperienceRange}
-                    expandedSections={expandedSections}
-                    toggleSection={toggleSection}
-                    sortOption={sortOption}
-                    setSortOption={setSortOption}
-                    clearFilters={clearFilters}
-                    isMobileFilterOpen={isMobileFilterOpen}
-                  />
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
+    </div>
   );
-}
+};
+
+export default TalentDirectory;
