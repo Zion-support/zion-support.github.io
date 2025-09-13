@@ -41,7 +41,6 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
-
 // Import new 2025 content promotion components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -59,6 +58,10 @@ import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDis
 
 // AI 2026 new content components
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
+=======
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+>>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
+>>>>>>> origin/cursor/create-and-deploy-new-content-029c
 
 export default function HomePage() {
   return (
@@ -109,6 +112,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
         <NewContent2025RevolutionaryBanner />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
