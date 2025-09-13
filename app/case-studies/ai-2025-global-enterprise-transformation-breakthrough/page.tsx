@@ -77,6 +77,98 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
       {/* Company Overview */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Company Overview
+              </h2>
+              <div className="space-y-4 text-gray-600">
+                <p className="text-lg">
+                  <strong>Industry:</strong> Global Manufacturing & Technology
+                </p>
+                <p className="text-lg">
+                  <strong>Size:</strong> 150,000+ employees across 47 countries
+                </p>
+                <p className="text-lg">
+                  <strong>Revenue:</strong> $45+ billion annually
+                </p>
+                <p className="text-lg">
+                  <strong>Challenge:</strong> Legacy systems, manual processes, and operational inefficiencies
+                </p>
+                <p className="text-lg">
+                  <strong>Goal:</strong> Digital transformation and operational excellence
+                </p>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl">
+              <h3 className="text-2xl font-semibold mb-4">Key Metrics</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-emerald-600">1,200%</div>
+                  <div className="text-sm text-gray-600">ROI Achieved</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-emerald-600">$2.4B</div>
+                  <div className="text-sm text-gray-600">Cost Savings</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-emerald-600">67%</div>
+                  <div className="text-sm text-gray-600">Efficiency Gain</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-emerald-600">18</div>
+                  <div className="text-sm text-gray-600">Months</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Challenge Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              The Challenge
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Facing operational inefficiencies and legacy system limitations across global operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold mb-3">Data Silos</h3>
+              <p className="text-gray-600">
+                Fragmented data across 200+ systems with no unified view of operations or customer insights.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">⏱️</div>
+              <h3 className="text-xl font-semibold mb-3">Manual Processes</h3>
+              <p className="text-gray-600">
+                70% of operations relied on manual processes, causing delays and human errors.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-semibold mb-3">Global Complexity</h3>
+              <p className="text-gray-600">
+                Managing operations across 47 countries with varying regulations and processes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Section */}
+      <section id="implementation" className="py-16 bg-white">
+=======
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Company Overview
           </h2>
@@ -157,6 +249,7 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
 
       {/* Implementation Timeline */}
       <div className="py-20 bg-black/20">
+>>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Implementation Timeline
@@ -295,16 +388,25 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform Your Enterprise?
           </h2>
+<<<<<<< HEAD
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Learn how your organization can achieve similar results with our proven AI transformation methodology.
+=======
           
           <p className="text-xl text-gray-300 mb-12">
             Join this Fortune 500 company and thousands of others achieving unprecedented ROI 
             with AI 2025 Ultimate Breakthrough. Start your transformation today.
+>>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
+<<<<<<< HEAD
+              className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+=======
               className="px-12 py-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-xl rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+>>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
             >
               Start Your Transformation
             </Link>
@@ -312,7 +414,11 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
               href="/webinars/ai-2025-enterprise-transformation-demo"
               className="px-12 py-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-xl rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
+<<<<<<< HEAD
+              Download Toolkit
+=======
               Watch Enterprise Demo
+>>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
             </Link>
           </div>
           
