@@ -38,6 +38,10 @@ import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase
 import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
 import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
 
+// Neural Consensus 2026 Components
+import NeuralConsensus2026PromotionBanner from '../components/NeuralConsensus2026PromotionBanner';
+import NeuralConsensus2026Showcase from '../components/NeuralConsensus2026Showcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -49,11 +53,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
+        <NeuralConsensus2026PromotionBanner />
+        
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
+        
+        {/* NEURAL CONSENSUS 2026 SHOWCASE */}
+        <NeuralConsensus2026Showcase />
         
         {/* REVOLUTIONARY AI CONTENT PROMOTION BANNER */}
         <RevolutionaryAIContentPromotionBanner />
