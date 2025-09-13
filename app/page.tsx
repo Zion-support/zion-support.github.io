@@ -147,6 +147,10 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+
+// Import new ultimate innovations promotional components
+import NewContent2025UltimateInnovationsPromotionBanner from '../components/NewContent2025UltimateInnovationsPromotionBanner';
+import AITrends2025UltimatePredictionsPromotionBanner from '../components/AITrends2025UltimatePredictionsPromotionBanner';
 import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025UltimatePredictionsBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
@@ -293,6 +297,12 @@ export default function HomePage() {
         
         {/* NEW CONTENT ANNOUNCEMENT BANNER 2025 */}
         <NewContentAnnouncementBanner2025 />
+        
+        {/* NEW ULTIMATE INNOVATIONS PROMOTION BANNER 2025 */}
+        <NewContent2025UltimateInnovationsPromotionBanner />
+        
+        {/* AI TRENDS 2025 ULTIMATE PREDICTIONS PROMOTION BANNER */}
+        <AITrends2025UltimatePredictionsPromotionBanner />
         
         {/* New Content Promotion Banner */}
         <NewContentPromotionBanner2025 />
