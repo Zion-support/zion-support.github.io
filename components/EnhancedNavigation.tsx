@@ -29,8 +29,18 @@ const EnhancedNavigation = () => {
         { name: 'Quantum Computing', href: '/services/quantum' }
       ]
     },
+    { 
+      name: 'Content', 
+      href: '/blog',
+      dropdown: [
+        { name: 'Latest Blog Posts', href: '/blog' },
+        { name: 'AI 2025 Insights', href: '/blog/ai-2025-generative-ai-business-transformation' },
+        { name: 'Quantum Computing Guide', href: '/blog/quantum-computing-2025-business-applications' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Implementation Guides', href: '/resources' }
+      ]
+    },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];

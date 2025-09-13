@@ -4,119 +4,150 @@ import Head from 'next/head';
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  noIndex?: boolean;
+  keywords?: string;
+  url?: string;
+  image?: string;
+  type?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - AI Solutions & Enterprise Technology',
-  description = 'Leading AI solutions provider specializing in enterprise automation, machine learning, and digital transformation. Expert consulting and implementation services.',
-  keywords = ['AI', 'artificial intelligence', 'enterprise solutions', 'automation', 'machine learning', 'digital transformation'],
-  canonicalUrl,
-  ogImage = '/images/og-default.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noIndex = false,
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-
-  // Enhanced structured data
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/images/logo.png',
-    description: 'Leading AI solutions provider specializing in enterprise automation and digital transformation',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-ZION-TECH',
-      contactType: 'customer service',
-    },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
-  };
-
-  const combinedStructuredData = structuredData ? [defaultStructuredData, structuredData] : [defaultStructuredData];
-
+export default function SEOOptimizer({
+  title = "Zion Tech Group - Revolutionary AI & Quantum Computing Solutions 2025-2030",
+  description = "Transform your business with revolutionary AI 2025-2030 solutions, quantum computing breakthroughs, and autonomous operations. Guaranteed 10,000%+ ROI with transcendent intelligence systems.",
+  keywords = "AI 2025, AI 2026, quantum computing, autonomous operations, transcendent intelligence, 10000% ROI, revolutionary AI, quantum neural fusion, consciousness AI, error-corrected quantum supremacy",
+  url = "https://zion.app",
+  image = "https://zion.app/og-image.jpg",
+  type = "website"
+}: SEOOptimizerProps) {
   return (
     <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      {/* Primary Meta Tags */}
+      <title>{title}</title>
+      <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Robots */}
-      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
+      <meta property="twitter:creator" content="@ZionTechGroup" />
+      <meta property="twitter:site" content="@ZionTechGroup" />
       
       {/* Additional SEO Tags */}
-      <meta name="theme-color" content="#6366f1" />
-      <meta name="msapplication-TileColor" content="#6366f1" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="theme-color" content="#7c3aed" />
       
-      {/* Preconnect to external domains */}
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      
+      {/* Structured Data - Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://zion.app",
+            "logo": "https://zion.app/logo.png",
+            "description": description,
+            "foundingDate": "2020",
+            "founders": [
+              {
+                "@type": "Person",
+                "name": "Zion Tech Group Founders"
+              }
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-ZION-TECH",
+              "contactType": "customer service",
+              "areaServed": "US",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://twitter.com/ZionTechGroup",
+              "https://linkedin.com/company/zion-tech-group",
+              "https://github.com/Zion-Holdings"
+            ]
+          })
+        }}
+      />
+      
+      {/* Structured Data - WebSite */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Zion Tech Group",
+            "url": "https://zion.app",
+            "description": description,
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://zion.app/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
+      
+      {/* Structured Data - Service */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Revolutionary AI & Quantum Computing Solutions",
+            "description": description,
+            "provider": {
+              "@type": "Organization",
+              "name": "Zion Tech Group"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": "AI Technology Consulting",
+            "offers": {
+              "@type": "Offer",
+              "description": "AI 2025-2030 Solutions with 10,000%+ ROI Guarantee",
+              "price": "Contact for pricing",
+              "priceCurrency": "USD"
+            }
+          })
+        }}
+      />
+      
+      {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://api.github.com" />
       
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      
-      {/* Structured Data */}
-      {combinedStructuredData.map((data, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(data),
-          }}
-        />
-      ))}
-      
-      {/* Performance hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Security headers (if not set by Next.js config) */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//api.github.com" />
     </Head>
   );
-};
-
-export default SEOOptimizer;
+}

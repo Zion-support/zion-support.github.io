@@ -8,6 +8,7 @@ import { RevolutionaryContentBanner } from './components/RevolutionaryContentBan
 import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
 import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
+import { NeuralArchitecture2026PromotionBanner, NeuralArchitectureFeatureGrid } from './components/NeuralArchitecture2026PromotionBanner';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -188,6 +189,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <NeuralArchitecture2026PromotionBanner />
         <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
         <EnhancedContentPromotionBanner />

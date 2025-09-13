@@ -2,128 +2,128 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function NewContentPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   const promotions = [
     {
-      id: 1,
       title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
-      description: "Experience the most revolutionary AI breakthrough in history with 2,500-5,000% ROI",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      badge: "BREAKTHROUGH",
-      color: "from-red-500 to-pink-500",
-      bgColor: "from-red-50 to-pink-50"
+      description: "Experience the most revolutionary AI breakthrough in human history with 10,000% ROI",
+      href: "/ai-2025-ultimate-breakthrough-revolution",
+      gradient: "from-red-500 to-pink-500",
+      bgGradient: "from-red-50 to-pink-50",
+      borderColor: "border-red-200"
     },
     {
-      id: 2,
-      title: "⚛️ Quantum Computing Solutions 2025",
-      description: "Revolutionary quantum computing delivering breakthrough performance and quantum supremacy",
-      link: "/quantum-computing-solutions",
-      badge: "REVOLUTIONARY",
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-50 to-purple-50"
+      title: "⚛️ Quantum Computing Breakthroughs 2030",
+      description: "Revolutionary quantum technologies that will reshape reality itself",
+      href: "/quantum-computing-breakthroughs-2030",
+      gradient: "from-cyan-500 to-purple-500",
+      bgGradient: "from-cyan-50 to-purple-50",
+      borderColor: "border-cyan-200"
     },
     {
-      id: 3,
-      title: "🤖 Advanced Automation Solutions 2026-2030",
-      description: "100% autonomous operations with 5,000%+ ROI across all business processes",
-      link: "/advanced-automation-solutions-2026",
-      badge: "FUTURE",
-      color: "from-emerald-500 to-cyan-500",
-      bgColor: "from-emerald-50 to-cyan-50"
+      title: "🤖 AI 2026 Advanced Automation Mastery",
+      description: "Master the future of automation with 5,000% ROI and autonomous operations",
+      href: "/ai-2026-advanced-automation-mastery",
+      gradient: "from-blue-500 to-purple-500",
+      bgGradient: "from-blue-50 to-purple-50",
+      borderColor: "border-blue-200"
     }
   ];
 
   useEffect(() => {
+    setIsVisible(true);
+    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
-
-  const currentPromotion = promotions[currentSlide];
+  }, [promotions.length]);
 
   if (!isVisible) return null;
 
+  const currentPromotion = promotions[currentSlide];
+
   return (
-    <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-4 overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-black py-4">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
       
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left side - Promotion content */}
-        <div className="flex-1 flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl animate-bounce">🔥</span>
-            <span className="text-sm font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
-              NEW CONTENT
-            </span>
-          </div>
-          
-          <div className="flex-1 min-w-0">
-            <Link 
-              href={currentPromotion.link}
-              className="group block hover:opacity-90 transition-opacity duration-300"
-            >
-              <div className="flex items-center space-x-3">
-                <div className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${currentPromotion.color} text-white animate-pulse`}>
-                  {currentPromotion.badge}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-sm md:text-base font-bold truncate group-hover:text-yellow-300 transition-colors">
-                    {currentPromotion.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-300 truncate">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Left side - Promotion content */}
+          <div className="flex-1">
+            <div className="flex items-center space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></div>
+              </div>
+              <div className="flex-1">
+                <Link 
+                  href={currentPromotion.href}
+                  className="group block"
+                >
+                  <div className="flex items-center space-x-3">
+                    <span className="text-sm font-semibold text-white group-hover:text-yellow-300 transition-colors">
+                      NEW CONTENT:
+                    </span>
+                    <span className="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors">
+                      {currentPromotion.title}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mt-1">
                     {currentPromotion.description}
                   </p>
-                </div>
+                </Link>
               </div>
+            </div>
+          </div>
+
+          {/* Right side - CTA buttons */}
+          <div className="flex items-center space-x-3">
+            <Link 
+              href={currentPromotion.href}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-sm rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Now
             </Link>
+            <button 
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-white transition-colors p-1"
+              aria-label="Close banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
 
-        {/* Right side - CTA and controls */}
-        <div className="flex items-center space-x-4">
-          {/* Slide indicators */}
-          <div className="flex space-x-1">
-            {promotions.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-yellow-400' : 'bg-gray-500'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <Link
-            href={currentPromotion.link}
-            className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-2 rounded-lg text-sm font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
-          >
-            Explore Now
-          </Link>
-
-          {/* Close button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white transition-colors duration-300 p-1"
-            aria-label="Close banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        {/* Slide indicators */}
+        <div className="flex justify-center mt-3 space-x-2">
+          {promotions.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-yellow-400 w-6' 
+                  : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-5000 ease-linear"
-           style={{ width: `${((currentSlide + 1) / promotions.length) * 100}%` }} />
+      {/* Floating elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-2 left-10 w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-4 right-20 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
+        <div className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-4 right-1/3 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
+      </div>
     </div>
   );
 }
