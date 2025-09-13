@@ -34,6 +34,8 @@ import BusinessTransformation2028PromotionBanner from '../components/BusinessTra
 import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
 import UltimateContentShowcase2030PromotionBanner from '../components/UltimateContentShowcase2030PromotionBanner';
 import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
+import AIAdvancedAnalyticsDashboard2030 from '../components/AIAdvancedAnalyticsDashboard2030';
+import AIAdvancedAnalyticsDashboard2030PromotionBanner from '../components/AIAdvancedAnalyticsDashboard2030PromotionBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -325,6 +327,9 @@ export default function HomePage() {
         {/* NEW 2030 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2030PromotionBanner />
         
+        {/* NEW 2030 AI ADVANCED ANALYTICS DASHBOARD PROMOTION BANNER */}
+        <AIAdvancedAnalyticsDashboard2030PromotionBanner />
+        
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
@@ -480,6 +485,9 @@ export default function HomePage() {
         
         {/* NEW 2029 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2029 />
+        
+        {/* NEW 2030 AI ADVANCED ANALYTICS DASHBOARD */}
+        <AIAdvancedAnalyticsDashboard2030 />
         
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2028 />
