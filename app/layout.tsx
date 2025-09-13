@@ -1135,7 +1135,7 @@ function Header() {
             Services
           </Link>
           <Link 
-            href="/revolutionary-content-showcase-2026" 
+            href="/ultimate-content-showcase-2026" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
             Content Showcase
