@@ -14,7 +14,7 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 export const globalAxiosErrorHandler = (error: unknown) => {
   const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
-    showError('html-error', 'Server returned HTML instead of JSON');
+    toast.error('Server returned HTML instead of JSON');
   }
 
   const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {};
@@ -86,7 +86,8 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 
   // Only show error toast if it's a user-facing error
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
-    showApiError(error);
+    const message = typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response && typeof (error.response as { data?: unknown }).data === 'object' && (error.response as { data?: unknown }).data && 'message' in (error.response as { data?: unknown }).data ? ((error.response as { data?: unknown }).data as { message?: string }).message : 'Something went wrong';
+    toast.error(message || 'Something went wrong');
   } else {
     // Log background errors without showing toast
     logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined });
