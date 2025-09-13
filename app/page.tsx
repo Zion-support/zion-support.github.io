@@ -18,12 +18,10 @@ const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/Advanced
 const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
-const UltimateContentPromotionBanner = lazy(() => import('../components/UltimateContentPromotionBanner'));
-const InteractiveContentDiscoveryWidget = lazy(() => import('../components/InteractiveContentDiscoveryWidget'));
 
-// Import new promotional banners
-import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
-import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+// New promotional components
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
 export default function HomePage() {
   return (
@@ -36,16 +34,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW: AI 2025 ULTIMATE TRENDS BREAKTHROUGH PROMOTION BANNER */}
-        <AI2025UltimateTrendsBreakthroughPromotionBanner />
-        
-        {/* NEW: AI 2025 GLOBAL TRANSFORMATION 15000% ROI PROMOTION BANNER */}
-        <AI2025GlobalTransformation15000ROIPromotionBanner />
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
-        <Suspense fallback={<LoadingSpinner />}>
-          <UltimateContentPromotionBanner />
-        </Suspense>
+        <UltimateContentPromotionBanner />
         
         {/* AI 2026 CONTENT PROMOTION BANNER */}
         <AI2026ContentPromotionBanner />
@@ -96,12 +89,10 @@ export default function HomePage() {
           <UltimateContentDiscovery2026 />
         </Suspense>
         
-        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Suspense fallback={<LoadingSpinner size="lg" text="Loading Interactive Discovery..." />}>
-              <InteractiveContentDiscoveryWidget />
-            </Suspense>
+        {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <InteractiveContentDiscoveryWidget />
           </div>
         </section>
         
