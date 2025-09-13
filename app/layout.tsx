@@ -998,6 +998,12 @@ function Header() {
                 <Link href="/ultimate-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Ultimate Content Showcase 2026 (NEW)
                 </Link>
+                <Link href="/ai-2025-ultimate-breakthrough-content" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 AI 2025 Ultimate Breakthrough Content (JUST RELEASED)
+                </Link>
+                <Link href="/ai-tools-2025-ultimate-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500">
+                  🛠️ AI Tools 2025 Ultimate Showcase (NEW)
+                </Link>
                 <Link href="/ai-2026-ultimate-breakthrough-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2026 Ultimate Breakthrough Predictions (BREAKTHROUGH)
                 </Link>
