@@ -1,107 +1,89 @@
 import Link from 'next/link';
 
 export default function CaseStudiesPage() {
-  const caseStudies = [
-    {
-      id: 'manufacturing-automation',
-      title: 'Manufacturing Process Automation',
-      client: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      challenge: 'Complex production line with 40% manual intervention and frequent quality issues',
-      solution: 'Implemented AI-powered vision systems and autonomous quality control',
-      results: [
-        '95% reduction in quality defects',
-        '60% increase in production efficiency',
-        '40% reduction in operational costs',
-        '24/7 autonomous operation'
-      ],
-      technologies: ['Computer Vision', 'Machine Learning', 'IoT Sensors', 'Predictive Analytics'],
-      featured: true
-    },
-    {
-      id: 'financial-process-automation',
-      title: 'Financial Services Process Automation',
-      client: 'TechBank Financial',
-      industry: 'Financial Services',
-      challenge: 'Manual document processing taking 3-5 days with 15% error rate',
-      solution: 'Intelligent document processing with AI-powered decision making',
-      results: [
-        '90% reduction in processing time',
-        '99.5% accuracy in document classification',
-        '85% reduction in manual work',
-        'Real-time fraud detection'
-      ],
-      technologies: ['NLP', 'Document AI', 'RPA', 'Machine Learning'],
-      featured: true
-    },
-    {
-      id: 'healthcare-ai-diagnostics',
-      title: 'AI-Powered Healthcare Diagnostics',
-      client: 'MedTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Radiologists overwhelmed with 200+ scans daily, missing 8% of critical findings',
-      solution: 'AI diagnostic assistant with autonomous image analysis',
-      results: [
-        '95% accuracy in anomaly detection',
-        '70% reduction in diagnosis time',
-        '40% improvement in detection rate',
-        '24/7 diagnostic support'
-      ],
-      technologies: ['Computer Vision', 'Deep Learning', 'Medical AI', 'Predictive Analytics'],
-      featured: false
-    },
-    {
-      id: 'retail-inventory-optimization',
-      title: 'Retail Inventory Optimization',
-      client: 'SmartRetail Chain',
-      industry: 'Retail',
-      challenge: '$2M annual losses due to stockouts and overstock situations',
-      solution: 'AI-powered demand forecasting and autonomous inventory management',
-      results: [
-        '30% reduction in stockouts',
-        '25% decrease in excess inventory',
-        '$1.5M annual cost savings',
-        'Real-time demand prediction'
-      ],
-      technologies: ['Predictive Analytics', 'Machine Learning', 'IoT', 'Cloud Computing'],
-      featured: false
-    },
-    {
-      id: 'logistics-automation',
-      title: 'Logistics Route Optimization',
-      client: 'FastLogistics Inc',
-      industry: 'Logistics',
-      challenge: 'Inefficient delivery routes causing 25% fuel waste and delayed deliveries',
-      solution: 'AI-powered route optimization with real-time traffic analysis',
-      results: [
-        '20% reduction in fuel consumption',
-        '35% improvement in delivery times',
-        '15% increase in delivery capacity',
-        'Real-time route adaptation'
-      ],
-      technologies: ['Route Optimization', 'Real-time Analytics', 'IoT', 'Machine Learning'],
-      featured: false
-    },
-    {
-      id: 'energy-grid-automation',
-      title: 'Smart Energy Grid Management',
-      client: 'GreenEnergy Corp',
-      industry: 'Energy',
-      challenge: 'Grid instability causing 5% energy waste and frequent outages',
-      solution: 'Autonomous grid management with AI-powered load balancing',
-      results: [
-        '90% reduction in grid outages',
-        '15% improvement in energy efficiency',
-        'Real-time load balancing',
-        'Predictive maintenance alerts'
-      ],
-      technologies: ['IoT Sensors', 'Machine Learning', 'Predictive Analytics', 'Smart Grid'],
-      featured: false
-    }
-  ];
+
+  componentDidCatch(error, errorInfo) {
+
+import React from 'react';
+
+
+
+import React from 'react';
+
+
+import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default /**
+    <MainLayout;
+
+
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
+
+
+
+
+                            <Users className="w-4 h-4 mr-2" />;
+                            <ArrowRight className="w-4 h-4 ml-2" />;
+                          <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
+                                <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2" />;
+                            <Users className="w - 4 h - 4 mr - 2" />;
+                            <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                          <Building className="w - 16 h - 16 mx - auto mb - 4 opacity - 80" />;
+
+
+
+
+
+
+    </MainLayout>;
+
+import Head from 'next/head';
+
+
+export default function CaseStudiesPage() {;
+
+    <Layout>;
+      <Head>;
+
+
+
+import Head from 'next/head';
+
+
+import Head from 'next/head';
+
+
+
+
+ </Head> </section> </Layout>
+export default function CaseStudiesPage() {
+		<Layout>
+			<Head>
+			</Head>
+		</Layout>
 
   const industries = ['All', 'Manufacturing', 'Financial Services', 'Healthcare', 'Retail', 'Logistics', 'Energy'];
 
+    </MainLayout>);
+import Link from 'next / link';
+import Layout from '../components / Layout';
+import Layout from '../components / Layout';
+export default /**
   return (
     <>
       <Head>
@@ -275,3 +257,5 @@ export default function CaseStudiesPage() {
     </>
   );
 }
+
+

@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 // Extend Window interface for Google Analytics
->>>>>>> cursor/create-and-deploy-new-content-d63f
->>>>>>> origin/content/blog-sept12
 declare global {
   interface Window {
     dataLayer: any[];

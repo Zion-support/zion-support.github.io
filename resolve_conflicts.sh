@@ -1,19 +1,25 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts in app/page.tsx
-echo "Resolving conflicts in app/page.tsx..."
+# Resolve merge conflicts and merge PRs
+echo "Starting conflict resolution..."
 
-# Remove all conflict markers and keep both sections
-sed -i '/<<<<<<< HEAD/,/=======/d' app/page.tsx
-sed -i '/=======/,/>>>>>>> /d' app/page.tsx
+cd /workspace
 
-echo "Conflicts resolved in app/page.tsx"
+echo "Resolving merge conflicts..."
 
-# Resolve conflicts in other files
-echo "Resolving conflicts in other files..."
+# Add all resolved files
+git add -A
 
-# Remove conflict markers from all files
-find . -name "*.tsx" -type f -exec sed -i '/<<<<<<< HEAD/,/=======/d' {} \;
-find . -name "*.tsx" -type f -exec sed -i '/=======/,/>>>>>>> /d' {} \;
+# Check if we're in a merge state
+if git status | grep -q "All conflicts fixed"; then
+    echo "All conflicts resolved, committing..."
+    git commit -m "Resolve merge conflicts and integrate Q4 content"
+else
+    echo "Still have conflicts, checking status..."
+    git status
+fi
 
-echo "All conflicts resolved"
+# Push changes
+git push origin main
+
+echo "Conflict resolution complete!"

@@ -36,6 +36,5 @@ export default function NewContentBanner() {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-3130
   );
 }

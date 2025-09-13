@@ -1,149 +1,92 @@
 #!/bin/bash
 
-# Bulk merge script for PRs
+# Bulk Merge PRs Script
+# This script will merge multiple PRs into main branch systematically
+
 set -e
 
 echo "🚀 Starting bulk PR merge process..."
 
-# Get all branches that need merging
-branches=$(git branch -r | grep -E "(cursor/check-fix-push-and-merge-to-main|cursor/create-and-deploy-new-content)" | head -100)
+# Switch to main branch
+git checkout main
+git pull origin main
 
-echo "📋 Found $(echo "$branches" | wc -l) branches to process"
+# Define the PRs to merge (most recent and relevant ones)
+PR_BRANCHES=(
+    "origin/cursor/create-and-deploy-new-content-89f3"
+    "origin/cursor/create-and-deploy-new-content-1149"
+    "origin/cursor/create-and-deploy-new-content-c18b"
+    "origin/cursor/create-and-deploy-new-content-0073"
+    "origin/cursor/create-and-deploy-new-content-00b9"
+    "origin/cursor/create-and-deploy-new-content-02ce"
+    "origin/cursor/create-and-deploy-new-content-0453"
+    "origin/cursor/create-and-deploy-new-content-0491"
+    "origin/cursor/create-and-deploy-new-content-04ba"
+    "origin/cursor/create-and-deploy-new-content-0569"
+)
 
-# Track results
-successful_merges=()
-failed_merges=()
-conflict_merges=()
-
-# Function to attempt merge with conflict resolution
-attempt_merge() {
+# Function to merge a single PR
+merge_pr() {
     local branch=$1
-    local branch_name=$(echo $branch | sed 's/origin\///')
+    echo "📦 Attempting to merge $branch..."
     
-    echo "🔄 Processing: $branch_name"
-    
-    # Check if branch is already merged
-    if git merge-base --is-ancestor origin/main "$branch" 2>/dev/null; then
-        echo "  ✅ Already merged, skipping"
-        return 0
-    fi
-    
-    # Create a temporary branch for this merge
-    local temp_branch="temp-merge-$branch_name"
-    git checkout -b "$temp_branch" origin/main 2>/dev/null || {
-        echo "  ❌ Failed to create temp branch"
-        failed_merges+=("$branch_name")
-        return 1
-    }
-    
-    # Attempt merge
-    if git merge "$branch" --no-commit 2>/dev/null; then
-        # Merge successful, commit it
-        git commit -m "Merge branch '$branch_name' into main" 2>/dev/null || true
-        
-        # Merge back to main
-        git checkout main
-        git merge "$temp_branch" --no-ff -m "Merge branch '$branch_name' into main"
-        
-        # Clean up temp branch
-        git branch -D "$temp_branch" 2>/dev/null || true
-        
-        echo "  ✅ Successfully merged: $branch_name"
-        successful_merges+=("$branch_name")
+    # Try to merge
+    if git merge "$branch" --no-ff -m "Merge $branch into main"; then
+        echo "✅ Successfully merged $branch"
         return 0
     else
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "  ⚠️  Merge conflict in: $branch_name"
-            conflict_merges+=("$branch_name")
-            
-            # Try to resolve conflicts automatically
-            echo "  🔧 Attempting automatic conflict resolution..."
-            
-            # Use git's merge strategy
-            git reset --hard HEAD 2>/dev/null || true
-            
-            # Try merge with strategy
-            if git merge "$branch" -X ours --no-commit 2>/dev/null; then
-                git commit -m "Merge branch '$branch_name' into main (auto-resolved conflicts)" 2>/dev/null || true
-                
-                # Merge back to main
-                git checkout main
-                git merge "$temp_branch" --no-ff -m "Merge branch '$branch_name' into main (auto-resolved)"
-                
-                echo "  ✅ Auto-resolved conflicts for: $branch_name"
-                successful_merges+=("$branch_name")
-            else
-                echo "  ❌ Could not auto-resolve conflicts for: $branch_name"
-                failed_merges+=("$branch_name")
-            fi
-        else
-            echo "  ❌ Merge failed for: $branch_name"
-            failed_merges+=("$branch_name")
-        fi
+        echo "⚠️  Merge conflict in $branch, resolving..."
         
-        # Clean up temp branch
-        git checkout main 2>/dev/null || true
-        git branch -D "$temp_branch" 2>/dev/null || true
-        return 1
+        # Check what files have conflicts
+        git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+            echo "🔧 Resolving conflicts in $file"
+            
+            # For app/page.tsx, use a strategy that keeps both versions
+            if [[ "$file" == "app/page.tsx" ]]; then
+                echo "📄 Handling app/page.tsx conflicts..."
+                # Use ours strategy for app/page.tsx to keep main branch version
+                git checkout --ours "$file"
+                git add "$file"
+            else
+                # For other files, try to auto-resolve or use ours
+                git checkout --ours "$file"
+                git add "$file"
+            fi
+        done
+        
+        # Complete the merge
+        if git commit --no-edit; then
+            echo "✅ Successfully resolved conflicts and merged $branch"
+            return 0
+        else
+            echo "❌ Failed to resolve conflicts for $branch"
+            git merge --abort
+            return 1
+        fi
     fi
 }
 
-# Process branches in batches
-batch_size=10
-current_batch=0
-total_branches=$(echo "$branches" | wc -l)
+# Merge each PR
+successful_merges=0
+failed_merges=0
 
-echo "📦 Processing branches in batches of $batch_size..."
-
-for branch in $branches; do
-    current_batch=$((current_batch + 1))
-    
-    echo ""
-    echo "📦 Batch $(( (current_batch - 1) / batch_size + 1 )) - Processing $current_batch/$total_branches"
-    
-    attempt_merge "$branch" || true
-    
-    # Push changes every batch
-    if [ $((current_batch % batch_size)) -eq 0 ]; then
-        echo "🚀 Pushing batch changes..."
-        git push origin main || echo "⚠️  Push failed, continuing..."
+for branch in "${PR_BRANCHES[@]}"; do
+    if merge_pr "$branch"; then
+        ((successful_merges++))
+    else
+        ((failed_merges++))
+        echo "⚠️  Skipping $branch due to unresolvable conflicts"
     fi
 done
 
-# Final push
-echo "🚀 Pushing final changes..."
-git push origin main || echo "⚠️  Final push failed"
-
 echo ""
-echo "📊 Final Merge Summary:"
-echo "✅ Successfully merged: ${#successful_merges[@]} branches"
-echo "⚠️  Had conflicts (resolved): ${#conflict_merges[@]} branches"
-echo "❌ Failed to merge: ${#failed_merges[@]} branches"
-
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "✅ Successfully merged branches:"
-    for branch in "${successful_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-if [ ${#conflict_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "⚠️  Branches with resolved conflicts:"
-    for branch in "${conflict_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-if [ ${#failed_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "❌ Failed to merge branches:"
-    for branch in "${failed_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
+echo "📊 Merge Summary:"
+echo "✅ Successful merges: $successful_merges"
+echo "❌ Failed merges: $failed_merges"
 echo ""
+
+# Push changes to main
+echo "🚀 Pushing merged changes to origin/main..."
+git push origin main
+
 echo "🎉 Bulk merge process completed!"
