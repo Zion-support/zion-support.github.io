@@ -2,8 +2,21 @@
   functions = "netlify/functions"
 
 [build.environment]
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  # Set Node.js version
+  NODE_VERSION = "20.18.1"
+  # Set production environment
   NODE_ENV = "production"
+  # Node options for memory and legacy provider
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  # Increase timeout for dependency installation
+  NETLIFY_TIMEOUT = "600"
+  # Force use of Yarn instead of pnpm
+  NPM_CONFIG_PACKAGE_MANAGER = "yarn"
+  # Disable Next.js telemetry
+  NEXT_TELEMETRY_DISABLED = "1"
+  # Force SWC to use JavaScript fallback
+  SWC_BINARY_PATH = ""
+  NEXT_SWC_BINARY_PATH = ""
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -27,10 +27,13 @@ const nextConfig = {
 	experimental: {
 		optimizeCss: true,
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-		// Disable SWC completely
+		// Disable SWC completely for Netlify builds
 		swcMinify: false,
 		swcLoader: false,
 	},
+	
+	// SWC configuration - disabled for Netlify
+	swcMinify: false,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
