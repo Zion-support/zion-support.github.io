@@ -147,6 +147,14 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 // Import new breakthrough announcement banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+
+// Import new content showcase components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveAIToolsShowcase2025 from '../components/InteractiveAIToolsShowcase2025';
+import InteractiveAIToolsShowcase2025PromotionBanner from '../components/InteractiveAIToolsShowcase2025PromotionBanner';
+import FuturePredictionsShowcase2025 from '../components/FuturePredictionsShowcase2025';
+import FuturePredictionsShowcase2025PromotionBanner from '../components/FuturePredictionsShowcase2025PromotionBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
@@ -528,6 +536,21 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 */}
         <UltimateContentShowcase2025 />
+        
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* INTERACTIVE AI TOOLS SHOWCASE 2025 */}
+        <InteractiveAIToolsShowcase2025 />
+        
+        {/* INTERACTIVE AI TOOLS SHOWCASE 2025 PROMOTION BANNER */}
+        <InteractiveAIToolsShowcase2025PromotionBanner />
+        
+        {/* FUTURE PREDICTIONS SHOWCASE 2025 */}
+        <FuturePredictionsShowcase2025 />
+        
+        {/* FUTURE PREDICTIONS SHOWCASE 2025 PROMOTION BANNER */}
+        <FuturePredictionsShowcase2025PromotionBanner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
