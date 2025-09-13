@@ -43,6 +43,8 @@ import RevolutionaryAIInnovations2025PromotionBanner from '../components/Revolut
 import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
 import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
 import StructuredData2025 from '../components/StructuredData2025';
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 
 export default function HomePage() {
   return (
@@ -84,6 +86,11 @@ export default function HomePage() {
       
       <PerformanceOptimizer>
         <div className='min-h-screen bg-white' id="main-content">
+        {/* REVOLUTIONARY CONTENT BANNER */}
+        <div className="revolutionary-banner">
+          <RevolutionaryContentBanner />
+        </div>
+        
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
         <UltimateContentShowcase2025Banner />
         <NewContent2025UltimatePromotionBanner />
@@ -191,6 +198,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 */}
         <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT SHOWCASE */}
+        <InteractiveContentShowcase />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
