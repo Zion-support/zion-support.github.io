@@ -111,6 +111,13 @@ import UltimateContentPromotionBanner2025 from '../components/UltimateContentPro
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 import AI2025ContentRecommendationEngine from '../components/AI2025ContentRecommendationEngine';
 
+// Import new revolutionary content components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import InteractiveContentWidget from '../components/InteractiveContentWidget';
+import RevolutionaryFeatures2025 from '../components/RevolutionaryFeatures2025';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
+
 // Import new quantum consciousness and neural interface banners
 import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
 import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
@@ -3577,6 +3584,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* New Revolutionary Content Sections */}
+      <NewContentPromotionalBanner />
+      
+      <NewContentShowcase2025 />
+      
+      <InteractiveContentWidget />
+      
+      <RevolutionaryFeatures2025 />
+      
+      <SuccessStoriesShowcase />
       
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
