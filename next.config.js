@@ -6,10 +6,6 @@ const nextConfig = {
 	output: 'export',
 	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 	
-	// Disable SWC completely to avoid binary download issues
-	swcMinify: false,
-	swcLoader: false,
-	
 	// Performance optimizations
 	compiler: {
 		removeConsole: process.env.NODE_ENV === 'production',
@@ -26,14 +22,16 @@ const nextConfig = {
 	// Bundle optimization
 	experimental: {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-		// Disable SWC to avoid binary download issues
-		swcMinify: false,
-		swcLoader: false,
+		// Enable modern optimizations
+		esmExternals: true,
+		serverComponentsExternalPackages: ['sharp'],
 	},
 	
-	// SWC configuration - force JavaScript fallback
-	swcMinify: false,
-	swcLoader: false,
+	// Enable compression
+	compress: true,
+	
+	// Power optimizations
+	poweredByHeader: false,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
