@@ -7,14 +7,16 @@ import {
   Zap, 
   Brain, 
   Rocket, 
+  Star, 
   TrendingUp, 
   Users, 
   Award,
-  ArrowRight,
+  ChevronRight,
   Play,
-  Star,
-  CheckCircle,
-  Globe,
+  BookOpen,
+  Code,
+  Database,
+  Cloud,
   Shield,
   Target
 } from 'lucide-react';
@@ -27,280 +29,302 @@ const NewContentShowcase2025 = () => {
     setIsVisible(true);
   }, []);
 
-  const contentSections = [
+  const contentCategories = [
     {
-      id: 'ai-breakthroughs',
-      title: 'AI Breakthroughs 2025',
+      id: 'ai-innovations',
+      title: 'AI Innovations 2025',
       icon: Brain,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-500 to-pink-500',
       content: [
         {
+          title: 'Revolutionary AI Breakthroughs',
+          description: 'Discover the latest AI technologies transforming industries',
+          type: 'Article',
+          readTime: '8 min read',
+          featured: true,
+          tags: ['AI', 'Machine Learning', 'Innovation']
+        },
+        {
           title: 'Neural Interface Revolution',
-          description: 'Direct brain-computer interfaces enabling thought-controlled applications',
-          impact: '500% productivity increase',
-          status: 'Live Now'
+          description: 'Explore next-generation brain-computer interfaces',
+          type: 'Case Study',
+          readTime: '12 min read',
+          featured: true,
+          tags: ['Neural Interface', 'BCI', 'Future Tech']
         },
         {
           title: 'Quantum AI Fusion',
-          description: 'Quantum computing meets artificial intelligence for unprecedented processing power',
-          impact: '1000x faster computations',
-          status: 'Beta Testing'
-        },
-        {
-          title: 'Emotional AI Systems',
-          description: 'AI that understands and responds to human emotions with 99.9% accuracy',
-          impact: 'Revolutionary user experience',
-          status: 'Coming Soon'
+          description: 'Understanding quantum computing meets artificial intelligence',
+          type: 'Guide',
+          readTime: '15 min read',
+          featured: false,
+          tags: ['Quantum Computing', 'AI', 'Advanced Tech']
         }
       ]
     },
     {
       id: 'automation-solutions',
-      title: 'Advanced Automation',
+      title: 'Automation Solutions',
       icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-blue-500 to-cyan-500',
       content: [
         {
-          title: 'Autonomous Business Operations',
-          description: 'Complete business process automation with zero human intervention',
-          impact: '90% cost reduction',
-          status: 'Deployed'
+          title: 'Enterprise Automation Mastery',
+          description: 'Complete guide to automating business processes',
+          type: 'Tutorial',
+          readTime: '20 min read',
+          featured: true,
+          tags: ['Automation', 'Enterprise', 'Efficiency']
         },
         {
-          title: 'Smart Workflow Orchestration',
-          description: 'AI-powered workflow management that adapts and optimizes in real-time',
-          impact: '300% efficiency boost',
-          status: 'Live Now'
+          title: 'RPA Implementation Strategies',
+          description: 'Best practices for robotic process automation',
+          type: 'Guide',
+          readTime: '10 min read',
+          featured: false,
+          tags: ['RPA', 'Implementation', 'Strategy']
         },
         {
-          title: 'Predictive Maintenance AI',
-          description: 'Prevent equipment failures before they happen with advanced ML models',
-          impact: '99.9% uptime achieved',
-          status: 'Pilot Program'
+          title: 'Workflow Optimization',
+          description: 'Streamline your operations with smart workflows',
+          type: 'Article',
+          readTime: '6 min read',
+          featured: false,
+          tags: ['Workflow', 'Optimization', 'Productivity']
         }
       ]
     },
     {
-      id: 'quantum-computing',
-      title: 'Quantum Computing',
-      icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500',
       content: [
         {
-          title: 'Quantum Supremacy Achieved',
-          description: 'Breakthrough quantum algorithms solving previously impossible problems',
-          impact: 'Exponential speed gains',
-          status: 'Revolutionary'
+          title: 'Multi-Cloud Architecture',
+          description: 'Designing resilient cloud infrastructure',
+          type: 'Architecture',
+          readTime: '25 min read',
+          featured: true,
+          tags: ['Cloud', 'Architecture', 'Scalability']
         },
         {
-          title: 'Quantum Security Networks',
-          description: 'Unbreakable encryption using quantum key distribution',
-          impact: '100% secure communications',
-          status: 'Production Ready'
+          title: 'Edge Computing Solutions',
+          description: 'Bringing compute closer to data sources',
+          type: 'Case Study',
+          readTime: '18 min read',
+          featured: true,
+          tags: ['Edge Computing', 'IoT', 'Performance']
         },
         {
-          title: 'Quantum Machine Learning',
-          description: 'ML algorithms running on quantum processors for superior performance',
-          impact: 'Breakthrough insights',
-          status: 'Research Phase'
+          title: 'Serverless Best Practices',
+          description: 'Optimizing serverless applications for scale',
+          type: 'Guide',
+          readTime: '14 min read',
+          featured: false,
+          tags: ['Serverless', 'Best Practices', 'Scalability']
         }
       ]
     },
     {
-      id: 'future-tech',
-      title: 'Future Technologies',
-      icon: TrendingUp,
-      color: 'from-orange-600 to-red-600',
+      id: 'security-innovation',
+      title: 'Security Innovation',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
       content: [
         {
-          title: 'Holographic Interfaces',
-          description: '3D holographic displays for immersive user experiences',
-          impact: 'Next-gen interaction',
-          status: 'Prototype Ready'
+          title: 'Zero Trust Architecture',
+          description: 'Implementing comprehensive security frameworks',
+          type: 'Security',
+          readTime: '22 min read',
+          featured: true,
+          tags: ['Security', 'Zero Trust', 'Architecture']
         },
         {
-          title: 'Neural Implants',
-          description: 'Brain-computer interfaces for enhanced cognitive abilities',
-          impact: 'Human augmentation',
-          status: 'Clinical Trials'
+          title: 'AI-Powered Threat Detection',
+          description: 'Using machine learning for cybersecurity',
+          type: 'Innovation',
+          readTime: '16 min read',
+          featured: true,
+          tags: ['AI Security', 'Threat Detection', 'ML']
         },
         {
-          title: 'Time Crystal Computing',
-          description: 'Revolutionary computing using time crystals for infinite processing',
-          impact: 'Unlimited potential',
-          status: 'Theoretical'
+          title: 'Blockchain Security Patterns',
+          description: 'Securing decentralized applications',
+          type: 'Guide',
+          readTime: '12 min read',
+          featured: false,
+          tags: ['Blockchain', 'Security', 'DApps']
         }
       ]
     }
   ];
 
-  const stats = [
-    { label: 'Active Users', value: '2.5M+', icon: Users },
-    { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-    { label: 'Global Reach', value: '150+', icon: Globe },
-    { label: 'Awards Won', value: '47', icon: Award }
-  ];
+  const getContentIcon = (type: string) => {
+    switch (type) {
+      case 'Article': return BookOpen;
+      case 'Case Study': return Target;
+      case 'Guide': return Code;
+      case 'Tutorial': return Play;
+      case 'Architecture': return Database;
+      case 'Security': return Shield;
+      case 'Innovation': return Sparkles;
+      default: return BookOpen;
+    }
+  };
 
   if (!isVisible) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <div className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl -z-10" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            New Content 2025
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4 mr-2" />
+            New Content Available
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary Technology
-            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Showcase
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Our Latest
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Content Collection</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the cutting-edge technologies and innovations that are reshaping our world in 2025. 
-            From AI breakthroughs to quantum computing, explore the future today.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore cutting-edge insights, tutorials, and case studies covering the latest in AI, automation, cloud computing, and security innovation.
           </p>
         </motion.div>
 
-        {/* Stats */}
+        {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl mb-4">
-                <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {contentSections.map((section, index) => (
-            <button
-              key={section.id}
-              onClick={() => setActiveTab(index)}
-              className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-medium transition-all duration-300 ${
-                activeTab === index
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
-            >
-              <section.icon className="w-5 h-5" />
-              {section.title}
-            </button>
-          ))}
+          {contentCategories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(index)}
+                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === index
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
+                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg'
+                }`}
+              >
+                <Icon className="w-5 h-5 mr-2" />
+                {category.title}
+              </button>
+            );
+          })}
         </motion.div>
 
-        {/* Content Display */}
+        {/* Content Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className={`p-4 rounded-2xl bg-gradient-to-r ${contentSections[activeTab].color}`}>
-                <contentSections[activeTab].icon className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h3 className="text-3xl font-bold text-white">
-                  {contentSections[activeTab].title}
-                </h3>
-                <p className="text-gray-300">
-                  Explore the latest innovations in {contentSections[activeTab].title.toLowerCase()}
-                </p>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {contentSections[activeTab].content.map((item, index) => (
+            {contentCategories[activeTab].content.map((item, index) => {
+              const ContentIcon = getContentIcon(item.type);
+              return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+                    item.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
+                  }`}
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
+                  {item.featured && (
+                    <div className="absolute top-4 right-4 z-10">
+                      <div className="flex items-center px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-white text-xs font-bold rounded-full">
+                        <Star className="w-3 h-3 mr-1" />
+                        Featured
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className={`p-2 rounded-lg bg-gradient-to-r ${contentCategories[activeTab].color} bg-opacity-10`}>
+                        <ContentIcon className={`w-6 h-6 bg-gradient-to-r ${contentCategories[activeTab].color} bg-clip-text text-transparent`} />
+                      </div>
+                      <span className="ml-3 text-sm font-medium text-gray-500">{item.type}</span>
+                      <span className="ml-auto text-sm text-gray-400">{item.readTime}</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {item.title}
-                    </h4>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      item.status === 'Live Now' || item.status === 'Deployed' || item.status === 'Production Ready'
-                        ? 'bg-green-500/20 text-green-400'
-                        : item.status === 'Beta Testing' || item.status === 'Pilot Program'
-                        ? 'bg-yellow-500/20 text-yellow-400'
-                        : 'bg-blue-500/20 text-blue-400'
-                    }`}>
-                      {item.status}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 mb-4">{item.description}</p>
-                  <div className="flex items-center gap-2 text-purple-400 font-medium">
-                    <Target className="w-4 h-4" />
-                    {item.impact}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-2">
+                      {item.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {item.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <button className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg">
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Read More
+                      <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
                   </div>
                 </motion.div>
-              ))}
-            </div>
+              );
+            })}
           </motion.div>
         </AnimatePresence>
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-8 border border-purple-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of forward-thinking organizations already leveraging these revolutionary technologies. 
-              Get early access to our latest innovations.
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Stay Updated with Latest Content</h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Get notified when we publish new insights, tutorials, and case studies. Join thousands of professionals staying ahead of the curve.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
-                <Play className="w-5 h-5" />
-                Watch Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-2xl font-medium hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <Star className="w-5 h-5" />
-                Get Early Access
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              />
+              <button className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                Subscribe
               </button>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 
