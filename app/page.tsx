@@ -30,6 +30,12 @@ import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDis
 import UltimateContentShowcaseBanner from '../components/UltimateContentShowcaseBanner';
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 
+// New breakthrough content banners
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import QuantumComputingBreakthroughBanner from '../components/QuantumComputingBreakthroughBanner';
+import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePredictionsBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -41,6 +47,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH BANNER */}
+        <QuantumComputingBreakthroughBanner />
+        
+        {/* AI 2026-2030 FUTURE PREDICTIONS BANNER */}
+        <AI20262030FuturePredictionsBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
         {/* ULTIMATE CONTENT SHOWCASE BANNER */}
         <UltimateContentShowcaseBanner />
         
