@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
+<<<<<<< HEAD
+import '../styles/globals.css';
+=======
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -10,6 +13,7 @@ import { SnackbarProvider } from 'notistack';
 import { captureException } from '@/utils/sentry';
 import { useTranslation } from 'react-i18next';
 // Removed ToastInitializer import as it doesn't exist
+>>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
 
 // Import i18n configuration
 import './i18n';

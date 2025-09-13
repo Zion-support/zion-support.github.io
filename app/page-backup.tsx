@@ -79,6 +79,8 @@ import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
+<<<<<<< HEAD
+=======
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
@@ -3820,3 +3822,4 @@ export default function HomePage() {
     </EnhancedErrorBoundary>
   );
 }
+>>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445

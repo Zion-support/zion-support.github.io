@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Target, CheckCircle, BarChart3, Users, DollarSign, Award, BookOpen, Clock } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Target, CheckCircle, Clock, Users, Award, BookOpen, BarChart3, DollarSign } from 'lucide-react';
 
 export default function AI2025RevolutionaryContentShowcase() {
   const featuredContent = [
