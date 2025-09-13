@@ -1,12 +1,3 @@
-
-
-
-export default function PitchGenerator() {;
-  const [builder, setBuilder] = useState<BuilderState>({;
-
-
-
-  });  const [slides, setSlides] = useState<Slide[]>([]);
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -63,22 +54,6 @@ export default function PitchGenerator() {
   const activeSlide = slides[activeIndex];
 
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
-
-
-  const onAssetDrop = useCallback((e: React && React.DragEvent<HTMLDivElement>) => {;
-
-
-
-export const getServerSideProps: GetServerSideProps = async ctx => {
-
-
-
-
-
-
-
-
-  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {;
     e.preventDefault();
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }));
@@ -89,14 +64,32 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
     e.stopPropagation();
   };
 
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
 
+  const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
       return data;
+    } catch (e) {
+      return {};
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
-
+  const buildDeck = useCallback(async () => {
+    setLoading(true);
+    try {
+      const metrics = await autoFetchMetrics();
+      const res = await fetch('/api/admin/pitch/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operatorPrompt,
+          inputs: builder,
+          metrics})});
       const json = await res.json();
       const newSlides: Slide[] = json.slides || [];
       setSlides(newSlides);
@@ -118,8 +111,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
       const res = await fetch('/api/admin/pitch/rewrite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slide: slides[idx] }),
-      });
+        body: JSON.stringify({ slide: slides[idx] })});
       const json = await res.json();
       setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)));
     } catch (e) {
@@ -128,6 +120,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
     }
   }, [slides]);
 
+  const addSlide = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -175,23 +168,25 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)));
   };
 
-
-  const updateActiveSlide = (updates: Partial<Slide>) => {;
-
-
-
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null;
+    const { type, data } = slide.chart;
+    return (
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+          ))}
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
-
-
+                ))}
+              </div>
+            </div>
+          )}
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -199,27 +194,15 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
 
-
-              onClick={exportGoogleSlides}
-  const export_pdf = useCallback (async () => {
-      const res = await fetch ('/api / admin / pitch / export', {
-  const exportGoogleSlides = useCallback (async () => {
-      const res = await fetch ('/api / admin / pitch / export', {
-      <Head>;
-      </Head>;
-              on_click={export_pdf}
-              on_click={exportGoogleSlides}
-
-
-
-
-
-
-
-
-
-
+  return (
     <EnhancedLayout>
       <Head>
         <title>Pitch Generator - Admin</title>
@@ -265,9 +248,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
-
-
-
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -275,13 +255,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-
-
-
-
-
-
-
 
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
@@ -292,22 +265,10 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
-
-
-
-                  <SlidePreview
-
-                  <SlidePreview;
-
-
-
-
-
-
-
-
-
-
+                ))}
+              </ul>
+            </div>
+          </div>
 
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
@@ -342,16 +303,9 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
                 {renderChartPreview(activeSlide)}
               </div>
             )}
+          </div>
+        </div>
+      </div>
     </EnhancedLayout>
-
-
-
-
-
-                  <SlidePreview key={s.id} slide={s} isActive={i === activeIndex} onClick={() => setActiveIndex(i)} />;
-
-
-    </EnhancedLayout>
-                  <SlidePreview
-
-
+  );
+}

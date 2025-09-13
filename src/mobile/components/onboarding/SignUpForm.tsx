@@ -6,8 +6,7 @@ import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react';
-
+import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -20,8 +19,7 @@ export function SignUpForm() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    name: "",
-  });
+    name: ""});
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
@@ -43,7 +41,7 @@ export function SignUpForm() {
 
     const errors: { email?: string; password?: string; name?: string } = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
 
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required';
@@ -71,19 +69,10 @@ export function SignUpForm() {
       setShowVerificationMessage(false); // Reset verification message
       if (signupMode) {
         const result = await signUp(formData.email, formData.password, {
-          name: formData.name,
-        });
-
+          name: formData.name});
+        
         if (result?.error) {
-          let errorMsg: string;
-          if (typeof result.error === 'string') {
-            errorMsg = result.error;
-          } else if (typeof result.error === 'object' && result.error !== null && 'message' in result.error && typeof (result.error as { message?: unknown }).message === 'string') {
-            errorMsg = (result.error as { message: string }).message;
-          } else {
-            errorMsg = 'Signup failed. Please try again.';
-          }
-          throw new Error(errorMsg);
+          throw new Error(result.error as any); // Cast to any if type is AuthError
         }
 
         if (result?.emailVerificationRequired) {
@@ -96,23 +85,14 @@ export function SignUpForm() {
         const { error } = await login(formData.email, formData.password);
         
         if (error) {
-          let errorMsg: string;
-          if (typeof error === 'string') {
-            errorMsg = error;
-          } else if (typeof error === 'object' && error !== null && 'message' in error && typeof (error as { message?: unknown }).message === 'string') {
-            errorMsg = (error as { message: string }).message;
-          } else {
-            errorMsg = 'Login failed. Please try again.';
-          }
-          throw new Error(errorMsg);
+          throw new Error(error);
         }
         
         router.push("/mobile");
       }
-    } catch (err: unknown) {
+    } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err });
-      const message = err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.';
-      setError(message);
+      setError(err.message || 'An unexpected error occurred. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -121,9 +101,8 @@ export function SignUpForm() {
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle();
-    } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'Google login failed';
-      setError(message);
+    } catch (err: any) {
+      setError(err.message);
     }
   };
   
@@ -258,9 +237,8 @@ export function SignUpForm() {
           ? "Already have an account? "
           : "Don't have an account? "
         }
-        {/* Link directly to the login page instead of toggling form state */}
         <Link
-          to="/login"
+          href="/login"
           className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer"
         >
           Sign In

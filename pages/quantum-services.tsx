@@ -9,14 +9,12 @@ export default function QuantumServicesPage() {
     'Quantum-inspired optimization & annealing strategies',
     'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable',
     'Quantum-safe cryptography assessments and roadmaps',
-    'R&D ideation for quantum-ready workloads',
-  ];
+    'R&D ideation for quantum-ready workloads'];
 
   const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
-    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
-  ];
+    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }];
 
   return (
     <UltraAdvancedFuturisticBackground colorScheme="quantum" intensity="high">
