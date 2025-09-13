@@ -388,6 +388,13 @@ import StructuredData2025 from '../components/StructuredData2025';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+
+// Import new 2026 promotional and showcase components
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
+import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
+import RevolutionaryCaseStudiesShowcase2026 from '../components/RevolutionaryCaseStudiesShowcase2026';
+import RevolutionaryCaseStudiesShowcase2026PromotionBanner from '../components/RevolutionaryCaseStudiesShowcase2026PromotionBanner';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
 // Import new 2026 promotional components
@@ -534,8 +541,20 @@ export default function HomePage() {
         {/* NEW 2026 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
         
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
         {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
-        <InteractiveTechDemo2026PromotionBanner />
+        <InteractiveAIToolsDemo2026PromotionBanner />
+        
+        {/* INTERACTIVE AI TOOLS DEMO 2026 */}
+        <InteractiveAIToolsDemo2026 />
+        
+        {/* REVOLUTIONARY CASE STUDIES SHOWCASE 2026 PROMOTION BANNER */}
+        <RevolutionaryCaseStudiesShowcase2026PromotionBanner />
+        
+        {/* REVOLUTIONARY CASE STUDIES SHOWCASE 2026 */}
+        <RevolutionaryCaseStudiesShowcase2026 />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
