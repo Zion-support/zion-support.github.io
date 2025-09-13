@@ -1,348 +1,237 @@
-# 🚀 Intelligent PM2 Automation System
+# PM2 Automation System for Zion Tech Group
 
-A comprehensive, intelligent automation system built with PM2 that continuously monitors, optimizes, and improves your application development workflow.
+This document describes the PM2 automation system that automatically detects and fixes common project errors.
 
-## 🎯 Overview
+## Overview
 
-This PM2 automation system provides intelligent, automated processes that help developers maintain code quality, security, performance, and best practices throughout the development lifecycle. The system runs continuously in the background, providing real-time insights and automated fixes.
+The PM2 automation system consists of multiple specialized error fixers that run continuously to maintain code quality and prevent errors from accumulating.
 
-## 🔧 Core Automation Components
+## Architecture
 
-### 1. **Smart Test Runner** 🧪
-- **Intelligent Test Execution**: Automatically determines test scope based on changed files
-- **Performance Monitoring**: Tracks test execution time and identifies slow tests
-- **Coverage Analysis**: Generates comprehensive test coverage reports
-- **Smart Recommendations**: Provides actionable insights for test optimization
+### Core Components
 
-**Features:**
-- Detects changed files and runs only relevant tests
-- Supports unit, integration, and E2E tests
-- Automatic test performance analysis
-- Coverage report generation
-- Test history tracking
+1. **PM2 Ecosystem Config** (`ecosystem.config.cjs`)
+   - Manages all automation processes
+   - Configures restart policies and resource limits
+   - Handles environment-specific configurations
 
-**Usage:**
+2. **Error Fixer Scripts**
+   - `console-error-fixer.cjs` - Fixes console and logging errors (runs every 15 min)
+   - `typescript-error-fixer.cjs` - Fixes TypeScript type errors (runs every 45 min)
+   - `jsx-error-fixer.cjs` - Fixes JSX syntax errors (runs every 40 min)
+   - `comprehensive-error-fixer.cjs` - Handles multiple error types (runs every 30 min)
+   - `master-error-fixer.cjs` - Coordinates all fixers (runs every hour)
+
+3. **Supporting Scripts**
+   - `start-automation.sh` - Bootstrap script for the entire system
+   - Log rotation and monitoring
+
+## Quick Start
+
+### 1. Install Dependencies
+
 ```bash
-npm run test:smart
-# or directly
-node scripts/pm2/smart-test-runner.js
+yarn add -D pm2
 ```
 
-### 2. **Git Workflow Automator** 🔄
-- **Automated Branch Management**: Creates feature branches with consistent naming
-- **Conflict Resolution**: Automatically detects and resolves merge conflicts
-- **PR Automation**: Creates pull requests with standardized templates
-- **Branch Cleanup**: Removes old branches automatically
+### 2. Start the Automation System
 
-**Features:**
-- Smart branch naming conventions
-- Automatic merge conflict resolution
-- Pull request generation
-- Branch age monitoring and cleanup
-- Workflow recommendations
-
-**Usage:**
 ```bash
-npm run git:workflow
-# or directly
-node scripts/pm2/git-workflow-automator.js
+chmod +x start-automation.sh
+./start-automation.sh
 ```
 
-### 3. **Security Scanner** 🔒
-- **Vulnerability Detection**: Scans code for security patterns and vulnerabilities
-- **Dependency Analysis**: Monitors npm packages for known security issues
-- **Configuration Security**: Checks configuration files for security misconfigurations
-- **Environment Variable Security**: Scans for hardcoded secrets
+### 3. Monitor the System
 
-**Features:**
-- Pattern-based vulnerability detection
-- NPM audit integration
-- Configuration file security analysis
-- Environment variable scanning
-- Risk scoring and recommendations
-
-**Usage:**
 ```bash
-npm run security:scan
-# or directly
-node scripts/pm2/security-scanner.js
-```
+# View all processes
+pm2 status
 
-### 4. **Bundle Optimizer** 📦
-- **Bundle Analysis**: Comprehensive analysis of build output
-- **Code Splitting**: Implements intelligent code splitting strategies
-- **Tree Shaking**: Enables dead code elimination
-- **Performance Optimization**: Generates optimization recommendations
-
-**Features:**
-- Bundle size analysis and monitoring
-- Automatic code splitting implementation
-- Tree shaking optimization
-- Import optimization
-- Performance scoring
-
-**Usage:**
-```bash
-npm run bundle:optimize
-# or directly
-node scripts/pm2/bundle-optimizer.js
-```
-
-### 5. **Enhanced Existing Automations** ⚡
-
-#### Code Quality Monitor
-- Enhanced code analysis with more patterns
-- Better issue categorization
-- Performance impact analysis
-
-#### Performance Monitor
-- Build performance tracking
-- Bundle analysis integration
-- Performance regression detection
-
-#### Dependency Monitor
-- Enhanced security scanning
-- Update recommendations
-- Compatibility checking
-
-#### Lint Fixer & Auto-Commit
-- Intelligent fix prioritization
-- Better commit message generation
-- Conflict resolution
-
-## 🚀 Getting Started
-
-### 1. **Installation**
-```bash
-# Install PM2 globally if not already installed
-npm install -g pm2
-
-# Install project dependencies
-npm install
-```
-
-### 2. **Start All Automations**
-```bash
-# Start all PM2 automation processes
-npm run automation:setup
-
-# Check status
-npm run pm2:status
+# Monitor in real-time
+pm2 monit
 
 # View logs
-npm run pm2:logs
-```
-
-### 3. **Run Individual Automations**
-```bash
-# Run specific automation
-npm run test:smart
-npm run security:scan
-npm run bundle:optimize
-npm run git:workflow
-
-# Run full automation suite
-npm run automation:full
-```
-
-### 4. **Monitor and Manage**
-```bash
-# View PM2 monitoring interface
-npm run pm2:monit
-
-# Restart all automations
-npm run pm2:restart
-
-# Stop all automations
-npm run automation:stop
-```
-
-## 📊 Automation Schedule
-
-| Automation | Frequency | Purpose |
-|------------|-----------|---------|
-| **Smart Test Runner** | Every 2 hours | Continuous testing and quality assurance |
-| **Git Workflow** | Every 3 hours | Git operations and conflict resolution |
-| **Code Quality** | Every 12 hours | Code quality monitoring |
-| **Performance** | Every 8 hours | Performance monitoring |
-| **Lint Fixer** | Every 6 hours | Code style fixes |
-| **Auto Commit** | Every 4 hours | Automated fixes commit |
-| **Dependency Monitor** | Weekly (Sunday) | Dependency updates and security |
-| **Security Scanner** | Daily (midnight) | Security vulnerability scanning |
-| **Bundle Optimizer** | Daily (6 AM) | Bundle optimization |
-
-## 🔧 Configuration
-
-### Environment Variables
-```bash
-NODE_ENV=development
-PM2_PROCESS_NAME=<automation-name>
-```
-
-### Configuration Files
-Each automation can be configured via JSON files:
-
-- `.gitworkflow.json` - Git workflow configuration
-- `.bundle-optimizer.json` - Bundle optimization settings
-- `.security-scanner.json` - Security scanning rules
-
-### PM2 Configuration
-All automations are configured in `ecosystem.config.js` with:
-- Memory limits
-- Restart policies
-- Logging configuration
-- Cron scheduling
-
-## 📈 Monitoring and Reports
-
-### Real-time Monitoring
-```bash
-# PM2 monitoring dashboard
-npm run pm2:monit
+pm2 logs
 
 # View specific process logs
-pm2 logs <process-name>
+pm2 logs console-error-fixer
 ```
 
-### Generated Reports
-All automations generate detailed reports in `logs/pm2/`:
-- `test-report.json` - Test execution results
-- `git-workflow-report.json` - Git workflow status
-- `security-report.json` - Security scan results
-- `bundle-optimization-report.json` - Bundle analysis
+## Manual Control
 
-### Log Files
-Each automation maintains detailed logs:
-- Standard output logs
-- Error logs
-- Process-specific logs
+### Start All Automations
 
-## 🎯 Use Cases
+```bash
+pm2 start ecosystem.config.cjs
+```
 
-### Development Workflow
-1. **Continuous Testing**: Tests run automatically every 2 hours
-2. **Code Quality**: Linting and fixes applied automatically
-3. **Security**: Daily security scans catch vulnerabilities early
-4. **Performance**: Regular performance monitoring prevents regressions
+### Stop All Automations
 
-### Production Preparation
-1. **Bundle Optimization**: Daily bundle analysis and optimization
-2. **Security Hardening**: Comprehensive security scanning
-3. **Dependency Management**: Regular dependency updates and security checks
-4. **Quality Assurance**: Automated code quality improvements
+```bash
+pm2 stop all
+```
 
-### Team Collaboration
-1. **Git Automation**: Streamlined branch management and conflict resolution
-2. **Standardized Processes**: Consistent automation across team
-3. **Quality Gates**: Automated quality checks before deployment
-4. **Performance Monitoring**: Team-wide performance awareness
+### Restart All Automations
 
-## 🚨 Troubleshooting
+```bash
+pm2 restart all
+```
+
+### View Process Status
+
+```bash
+pm2 status
+```
+
+## Error Fixer Details
+
+### Console Error Fixer
+
+- **Frequency**: Every 15 minutes
+- **Purpose**: Detects and fixes console.log, console.error, etc.
+- **Logs**: `logs/console-error-fixer.log`
+
+### TypeScript Error Fixer
+
+- **Frequency**: Every 45 minutes
+- **Purpose**: Fixes TypeScript type errors, import issues, property access
+- **Logs**: `logs/typescript-error-fixer.log`
+
+### JSX Error Fixer
+
+- **Frequency**: Every 40 minutes
+- **Purpose**: Fixes JSX syntax errors, closing tags, expressions
+- **Logs**: `logs/jsx-error-fixer.log`
+
+### Comprehensive Error Fixer
+
+- **Frequency**: Every 30 minutes
+- **Purpose**: Runs multiple checks and applies auto-fixes
+- **Logs**: `logs/comprehensive-error-fixer.log`
+
+### Master Error Fixer
+
+- **Frequency**: Every hour
+- **Purpose**: Coordinates all fixers, ensures system health
+- **Logs**: `logs/master-error-fixer.log`
+
+## Log Management
+
+### Log Rotation
+
+- **Max Size**: 10MB per log file
+- **Retention**: 30 log files
+- **Compression**: Enabled
+- **Format**: YYYY-MM-DD_HH-mm-ss
+
+### Log Locations
+
+- All logs are stored in the `logs/` directory
+- Each fixer has its own log file
+- Error logs are separated for easier debugging
+
+## Configuration
+
+### Environment Variables
+
+- `NODE_ENV`: Set to 'production' for production deployments
+- `AUTOMATION_INTERVAL`: Override default intervals (in milliseconds)
+
+### PM2 Settings
+
+- **Auto-restart**: Enabled for all processes
+- **Memory limits**: 512MB for fixers, 1GB for main apps
+- **Watch mode**: Disabled (processes restart on completion)
+
+## Troubleshooting
 
 ### Common Issues
 
-#### Process Not Starting
-```bash
-# Check PM2 status
-pm2 status
+1. **PM2 not found**
 
-# View error logs
-pm2 logs <process-name> --err
+   ```bash
+   npm install -g pm2
+   ```
 
-# Restart specific process
-pm2 restart <process-name>
-```
+2. **Permission denied on startup script**
 
-#### High Memory Usage
-```bash
-# Check memory usage
-pm2 monit
+   ```bash
+   chmod +x start-automation.sh
+   ```
 
-# Restart with memory reset
-pm2 restart <process-name>
-```
+3. **Processes not starting**
 
-#### Log File Issues
-```bash
-# Ensure logs directory exists
-mkdir -p logs/pm2
+   ```bash
+   pm2 kill
+   pm2 start ecosystem.config.cjs
+   ```
 
-# Check file permissions
-chmod 755 logs/pm2
-```
+4. **Log rotation not working**
+   ```bash
+   pm2 install pm2-logrotate
+   pm2 set pm2-logrotate:max_size 10M
+   ```
 
 ### Debug Mode
-Enable debug logging by setting environment variables:
+
+To run a fixer in debug mode:
+
 ```bash
-DEBUG=* npm run automation:setup
+node scripts/automation/console-error-fixer.cjs
 ```
 
-## 🔮 Future Enhancements
+## Development
 
-### Planned Features
-- **AI-Powered Code Review**: Automated code review suggestions
-- **Performance Regression Detection**: Machine learning-based performance analysis
-- **Intelligent Deployment**: Automated deployment based on quality gates
-- **Team Analytics**: Development team performance insights
-- **Integration Hub**: Connect with external tools and services
+### Adding New Error Fixers
 
-### Extensibility
-The system is designed to be easily extensible:
-- Plugin architecture for custom automations
-- Webhook integration for external triggers
-- API endpoints for automation control
-- Custom rule engines for specific needs
+1. Create a new script in `scripts/automation/`
+2. Follow the existing pattern with a class-based structure
+3. Add the process to `ecosystem.config.cjs`
+4. Update this README
 
-## 📚 API Reference
+### Testing Fixers
 
-### Automation Manager
-```javascript
-const AutomationManager = require('./scripts/automation-manager.js');
+```bash
+# Test individual fixer
+node scripts/automation/typescript-error-fixer.cjs
 
-const manager = new AutomationManager();
-await manager.startAll();
-await manager.getStatus();
-await manager.runHealthCheck();
+# Test with PM2
+pm2 start ecosystem.config.cjs --only typescript-error-fixer
 ```
 
-### Individual Automations
-```javascript
-const SmartTestRunner = require('./scripts/pm2/smart-test-runner.js');
-const SecurityScanner = require('./scripts/pm2/security-scanner.js');
-const BundleOptimizer = require('./scripts/pm2/bundle-optimizer.js');
+## Production Deployment
 
-// Run individual automations
-const testRunner = new SmartTestRunner();
-await testRunner.run();
+### Startup Script
+
+The system automatically sets up PM2 to start on system boot:
+
+```bash
+pm2 startup
+pm2 save
 ```
 
-## 🤝 Contributing
+### Monitoring
 
-### Adding New Automations
-1. Create automation script in `scripts/pm2/`
-2. Add to `ecosystem.config.js`
-3. Update `package.json` scripts
-4. Document in this README
+- Use `pm2 monit` for real-time monitoring
+- Set up external monitoring for PM2 processes
+- Configure log aggregation for centralized logging
 
-### Customization
-- Modify configuration files for specific needs
-- Extend automation classes for custom logic
-- Add new monitoring metrics
-- Integrate with external services
+## Security Considerations
 
-## 📄 License
+- All fixers run with limited permissions
+- No external network access by default
+- Logs contain only error information, no sensitive data
+- Processes restart automatically on failures
 
-This automation system is part of the Zion.app project and follows the same licensing terms.
+## Support
 
-## 🆘 Support
+For issues with the automation system:
 
-For issues and questions:
-1. Check the troubleshooting section
-2. Review PM2 logs for errors
-3. Check automation-specific logs
-4. Review configuration files
-5. Consult PM2 documentation
+1. Check PM2 status: `pm2 status`
+2. Review logs: `pm2 logs`
+3. Restart processes: `pm2 restart all`
+4. Check system resources: `pm2 monit`
 
----
+## License
 
-**🚀 Happy Automating!** This intelligent PM2 automation system will continuously improve your development workflow, ensuring high-quality, secure, and performant applications.
+This automation system is part of the Zion Tech Group project.

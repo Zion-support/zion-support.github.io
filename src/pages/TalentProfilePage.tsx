@@ -17,8 +17,8 @@ import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 
 export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
   const router = useRouter();
+  // Get id from Next.js router query params
   const { id } = router.query as { id?: string };
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
@@ -57,8 +57,7 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   }, [error]);
 
@@ -75,8 +74,7 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
-        variant: "default",
-      });
+        variant: "default"});
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return;
     }
@@ -88,8 +86,7 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to message this talent.",
-        variant: "default",
-      });
+        variant: "default"});
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return;
     }

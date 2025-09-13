@@ -1,13 +1,6 @@
+
 module.exports = {
-  extends: [
-    "next/core-web-vitals"
-  ],
-  parser: "@typescript-eslint/parser",
-  plugins: [
-    "@typescript-eslint",
-    "react",
-    "react-hooks"
-  ],
+  extends: ['next/core-web-vitals'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -30,43 +23,8 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
-    '**/*.disabled/**',
-    '**/disabled/**',
-    '**/components.disabled/**',
-    '**/pages.disabled/**',
-    '**/types.disabled/**',
-    '**/utils.disabled/**',
-    '**/zion-os.disabled/**',
-    '**/tests.disabled/**',
-    '**/typechain-types.disabled/**',
-    '**/services.disabled.temp/**',
-    '**/src.broken/**',
-    '**/zion_academy/**',
-    '**/start-all-automations.js',
-    '**/test-*.js',
-    '**/simple-*.js',
-    '**/workbox-config.js',
-    '**/components_backup/**',
-    '**/pages_disabled/**',
-    '**/src_disabled/**',
-    '**/comprehensive-*.js',
-    '**/debug-*.js',
-    '**/extract*.js',
-    '**/fix-*.js',
-    '**/jest.setup.js',
-    '**/mcp-*.js',
-    '**/next-env.d.ts',
-    '**/public/*.js',
-    '**/run-*.js',
-    '**/script.js',
-    '**/seed.js',
-    '**/data/2025-*.ts',
-    '**/backup/**',
-    '**/auto-*.js',
-    'zion-website-analysis.json',
-    '*.backup.*',
-    '*.log',
-    '*.txt',
-    '*.md'
+    'src/',
+    'apps/'
   ]
 };
+,
