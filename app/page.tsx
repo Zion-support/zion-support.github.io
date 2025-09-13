@@ -119,6 +119,9 @@ import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner
 
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import EnhancedNewsletterSignup2026 from '../components/EnhancedNewsletterSignup2026';
@@ -134,6 +137,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
         
@@ -145,6 +151,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
