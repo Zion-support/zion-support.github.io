@@ -1,343 +1,281 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  TrendingUp, 
-  Star, 
-  Clock, 
-  Users,
-  ArrowRight,
-  BookOpen,
-  Video,
-  FileText,
-  Calculator,
-  BarChart3,
-  Lightbulb,
-  Zap,
-  Target,
-  Award
-} from 'lucide-react';
+import { Search, Filter, TrendingUp, Clock, Star, ArrowRight, X } from 'lucide-react';
 
 const UltimateContentDiscovery2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [showFilters, setShowFilters] = useState(false);
 
   const categories = [
-    { id: 'all', label: 'All Content', icon: BookOpen },
-    { id: 'ai-2025', label: 'AI 2025', icon: Brain },
-    { id: 'ai-2026', label: 'AI 2026', icon: Zap },
-    { id: 'ai-2030', label: 'AI 2030', icon: Target },
-    { id: 'case-studies', label: 'Case Studies', icon: BarChart3 },
-    { id: 'guides', label: 'Implementation Guides', icon: FileText },
-    { id: 'tools', label: 'AI Tools', icon: Calculator },
-    { id: 'webinars', label: 'Webinars', icon: Video },
-    { id: 'trends', label: 'Future Trends', icon: TrendingUp }
+    { id: 'all', name: 'All Content', count: 580 },
+    { id: 'ai-research', name: 'AI Research', count: 150 },
+    { id: 'quantum-computing', name: 'Quantum Computing', count: 75 },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', count: 120 },
+    { id: 'edge-computing', name: 'Edge Computing', count: 90 },
+    { id: 'ethics', name: 'AI Ethics', count: 60 },
+    { id: 'predictions', name: 'Future Predictions', count: 85 }
   ];
 
-  const featuredContent = [
+  const trendingContent = [
     {
       id: 1,
-      title: "AI 2031 Future Predictions: The Ultimate Breakthrough Guide",
-      description: "Discover the revolutionary AI technologies that will transform every industry by 2031. Exclusive insights from leading experts.",
-      category: "ai-2030",
-      type: "guide",
-      rating: 5,
-      views: "125K",
+      title: "Neural Synthesis Breakthroughs 2025",
+      description: "Latest advances in neural network architectures enabling human-level understanding",
+      category: "AI Research",
       readTime: "15 min",
-      isNew: true,
-      isBreakthrough: true,
-      tags: ["AI", "Future", "Breakthrough", "2031"],
-      url: "/blog/ai-2031-future-predictions"
+      views: "45.2K",
+      rating: 4.9,
+      trending: true,
+      href: "/neural-synthesis-breakthroughs-2025"
     },
     {
       id: 2,
-      title: "10,000% ROI Enterprise Success: Fortune 500 Case Study",
-      description: "How a Fortune 500 company achieved unprecedented ROI with our AI solutions. Real numbers, real results.",
-      category: "case-studies",
-      type: "case-study",
-      rating: 5,
-      views: "98K",
-      readTime: "12 min",
-      isNew: true,
-      isBreakthrough: true,
-      tags: ["ROI", "Enterprise", "Success", "Fortune 500"],
-      url: "/case-studies/ai-2031-enterprise-transformation-breakthrough"
+      title: "Quantum Supremacy in Business",
+      description: "How quantum computing is solving previously impossible optimization problems",
+      category: "Quantum Computing",
+      readTime: "20 min",
+      views: "38.7K",
+      rating: 4.8,
+      trending: true,
+      href: "/quantum-supremacy-business"
     },
     {
       id: 3,
-      title: "AI 2025 Ultimate Implementation Toolkit",
-      description: "Complete toolkit for implementing AI solutions in 2025. Includes templates, checklists, and expert guidance.",
-      category: "guides",
-      type: "toolkit",
-      rating: 5,
-      views: "87K",
+      title: "Autonomous AI Implementation Guide",
+      description: "Complete guide to building self-managing AI systems",
+      category: "Autonomous Systems",
       readTime: "25 min",
-      isNew: true,
-      tags: ["Implementation", "Toolkit", "2025", "Guide"],
-      url: "/resources/ai-2025-ultimate-implementation-toolkit"
+      views: "52.1K",
+      rating: 4.9,
+      trending: true,
+      href: "/autonomous-ai-implementation"
     },
     {
       id: 4,
-      title: "Quantum Computing Revolution: The Future of AI",
-      description: "Explore how quantum computing will revolutionize AI capabilities and what it means for your business.",
-      category: "trends",
-      type: "article",
-      rating: 5,
-      views: "76K",
+      title: "Edge AI Deployment Strategies",
+      description: "Deploy AI models at the edge for maximum performance and minimal latency",
+      category: "Edge Computing",
       readTime: "18 min",
-      isNew: false,
-      isBreakthrough: true,
-      tags: ["Quantum", "Computing", "Revolution", "Future"],
-      url: "/blog/ai-2025-quantum-machine-learning-breakthrough"
+      views: "29.3K",
+      rating: 4.7,
+      trending: false,
+      href: "/edge-ai-deployment"
     },
     {
       id: 5,
-      title: "AI ROI Calculator 2026: Measure Your Success",
-      description: "Interactive calculator to measure potential ROI from AI implementations. Get personalized projections.",
-      category: "tools",
-      type: "calculator",
-      rating: 5,
-      views: "65K",
-      readTime: "5 min",
-      isNew: true,
-      tags: ["ROI", "Calculator", "2026", "Tool"],
-      url: "/tools/ai-roi-calculator-2026"
+      title: "AI Ethics Framework 2025",
+      description: "Comprehensive framework for developing ethical AI systems",
+      category: "AI Ethics",
+      readTime: "22 min",
+      views: "24.8K",
+      rating: 4.8,
+      trending: false,
+      href: "/ai-ethics-framework-2025"
     },
     {
       id: 6,
-      title: "Future of Work: AI-Powered Teams Webinar",
-      description: "Exclusive webinar featuring industry leaders discussing the future of AI-powered teams and collaboration.",
-      category: "webinars",
-      type: "webinar",
-      rating: 5,
-      views: "45K",
-      readTime: "60 min",
-      isNew: true,
-      tags: ["Webinar", "Future", "Teams", "Collaboration"],
-      url: "/webinars/future-of-work-ai-powered-teams"
+      title: "Future of AI: 2025-2030 Predictions",
+      description: "Expert predictions on AI trends and technological breakthroughs",
+      category: "Future Predictions",
+      readTime: "30 min",
+      views: "67.5K",
+      rating: 4.9,
+      trending: true,
+      href: "/future-ai-predictions-2025-2030"
     }
   ];
 
-  const filteredContent = featuredContent.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    
+  const filteredContent = trendingContent.filter(content => {
+    const matchesSearch = content.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         content.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || 
+                           content.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'guide': return FileText;
-      case 'case-study': return BarChart3;
-      case 'toolkit': return Lightbulb;
-      case 'article': return BookOpen;
-      case 'calculator': return Calculator;
-      case 'webinar': return Video;
-      default: return BookOpen;
-    }
-  };
-
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 rounded-full px-6 py-3 mb-6">
-            <Search className="w-5 h-5" />
-            <span className="text-sm font-semibold">ULTIMATE CONTENT DISCOVERY 2025</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover Your Perfect
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              AI Content Match
-            </span>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ultimate Content Discovery
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Explore our comprehensive library of AI resources, case studies, and tools. 
-            Find exactly what you need to accelerate your AI journey.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Find the perfect AI and technology content tailored to your needs with our advanced discovery engine
           </p>
         </div>
 
-        {/* Search and Filter Section */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-12">
-          <div className="flex flex-col lg:flex-row gap-6">
+        {/* Search and Filters */}
+        <div className="mb-12">
+          <div className="flex flex-col lg:flex-row gap-4 mb-6">
             {/* Search Bar */}
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search content, topics, or keywords..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search AI content, technologies, and insights..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+              />
+            </div>
+
+            {/* Filter Button */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="inline-flex items-center px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300"
+            >
+              <Filter className="w-5 h-5 mr-2" />
+              Filters
+            </button>
+          </div>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {category.name} ({category.count})
+              </button>
+            ))}
+          </div>
+
+          {/* Advanced Filters */}
+          {showFilters && (
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-white">Advanced Filters</h3>
+                <button
+                  onClick={() => setShowFilters(false)}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Read Time</label>
+                  <select className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
+                    <option>Any Length</option>
+                    <option>Under 10 min</option>
+                    <option>10-20 min</option>
+                    <option>20-30 min</option>
+                    <option>Over 30 min</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Rating</label>
+                  <select className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
+                    <option>Any Rating</option>
+                    <option>4.5+ Stars</option>
+                    <option>4.0+ Stars</option>
+                    <option>3.5+ Stars</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
+                  <select className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
+                    <option>Most Popular</option>
+                    <option>Latest</option>
+                    <option>Highest Rated</option>
+                    <option>Most Viewed</option>
+                  </select>
+                </div>
               </div>
             </div>
-            
-            {/* Category Filter */}
-            <div className="lg:w-80">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8 pt-8 border-t border-gray-100">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">500+</div>
-              <div className="text-gray-600">Articles & Guides</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">150+</div>
-              <div className="text-gray-600">Case Studies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600">50+</div>
-              <div className="text-gray-600">AI Tools</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600">25+</div>
-              <div className="text-gray-600">Webinars</div>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
-          {filteredContent.map((item) => {
-            const TypeIcon = getTypeIcon(item.type);
-            const CategoryIcon = categories.find(cat => cat.id === item.category)?.icon || BookOpen;
-            
-            return (
-              <div 
-                key={item.id}
-                className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-lg">
-                      <TypeIcon className="w-5 h-5 text-blue-600" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((content) => (
+            <div key={content.id} className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+              {/* Content Header */}
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm font-medium rounded-full">
+                    {content.category}
+                  </span>
+                  {content.trending && (
+                    <div className="flex items-center text-orange-400 text-sm">
+                      <TrendingUp className="w-4 h-4 mr-1" />
+                      Trending
                     </div>
-                    <div className="flex items-center gap-2">
-                      <CategoryIcon className="w-4 h-4 text-gray-400" />
-                      <span className="text-sm text-gray-500 capitalize">{item.type.replace('-', ' ')}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    {item.isNew && (
-                      <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">
-                        NEW
-                      </span>
-                    )}
-                    {item.isBreakthrough && (
-                      <span className="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full">
-                        BREAKTHROUGH
-                      </span>
-                    )}
-                  </div>
+                  )}
                 </div>
-                
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
-                  {item.title}
+
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {content.title}
                 </h3>
-                
-                {/* Description */}
-                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
-                  {item.description}
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {content.description}
                 </p>
-                
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, index) => (
-                    <span 
-                      key={index}
-                      className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
+
                 {/* Stats */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span>{item.rating}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>{item.views}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
+                  <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
-                      <span>{item.readTime}</span>
+                      <span>{content.readTime}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400" />
+                      <span>{content.rating}</span>
                     </div>
                   </div>
+                  <span className="text-sm text-gray-400">{content.views} views</span>
                 </div>
-                
+
                 {/* CTA */}
-                <Link
-                  to={item.url}
-                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                <Link 
+                  to={content.href}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors group-hover:translate-x-1 transform duration-300"
                 >
-                  Explore Content
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  Read Article
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-700 rounded-3xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">
-            Can't Find What You're Looking For?
-          </h3>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our AI experts can help you find the perfect resources for your specific needs. 
-            Get personalized recommendations and exclusive access to premium content.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/contact"
-              className="group bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2"
+        {/* No Results */}
+        {filteredContent.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-semibold text-white mb-2">No content found</h3>
+            <p className="text-gray-300 mb-6">Try adjusting your search terms or filters</p>
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                setSelectedCategory('all');
+              }}
+              className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
             >
-              Get Personalized Recommendations
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            
-            <Link
-              to="/resources"
-              className="group bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30 flex items-center gap-2"
-            >
-              Browse All Resources
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+              Clear Filters
+            </button>
           </div>
-        </div>
+        )}
+
+        {/* Load More */}
+        {filteredContent.length > 0 && (
+          <div className="text-center mt-12">
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Load More Content
+            </button>
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 
