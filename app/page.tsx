@@ -386,6 +386,9 @@ export default function HomePage() {
         {/* CASE STUDY SHOWCASE 2026 */}
         <CaseStudyShowcase2026 />
         
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
+        
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
         
@@ -3737,6 +3740,9 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* NEWSLETTER SIGNUP 2026 */}
+      <NewsletterSignup2026 />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>

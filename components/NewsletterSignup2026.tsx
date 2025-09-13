@@ -1,196 +1,355 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Mail, Send, CheckCircle, Zap, TrendingUp, Users, Globe, Shield } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Mail, 
+  CheckCircle, 
+  X, 
+  Sparkles,
+  Bell,
+  TrendingUp,
+  Users,
+  Star,
+  ArrowRight,
+  Shield,
+  Zap,
+  Brain,
+  Target,
+  Lightbulb,
+  Rocket
+} from 'lucide-react';
 
 const NewsletterSignup2026 = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Simulate success
+      setIsSubscribed(true);
+      setEmail('');
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const benefits = [
     {
-      icon: <Zap className="w-6 h-6 text-blue-600" />,
-      title: "Exclusive AI Insights",
-      description: "Get early access to breakthrough AI research and industry trends"
+      icon: Brain,
+      title: 'AI Breakthrough Alerts',
+      description: 'Get notified about the latest AI breakthroughs and research'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-600" />,
-      title: "Growth Strategies",
-      description: "Proven strategies to accelerate your business growth and innovation"
+      icon: TrendingUp,
+      title: 'Trending Content',
+      description: 'Weekly digest of the most popular and trending articles'
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-600" />,
-      title: "Expert Community",
-      description: "Join our network of industry leaders and technology experts"
+      icon: Target,
+      title: 'Personalized Recommendations',
+      description: 'AI-powered content recommendations based on your interests'
     },
     {
-      icon: <Globe className="w-6 h-6 text-orange-600" />,
-      title: "Global Updates",
-      description: "Stay informed about worldwide technology developments and opportunities"
+      icon: Zap,
+      title: 'Exclusive Early Access',
+      description: 'Be the first to access new content and features'
     }
   ];
 
   const stats = [
-    { number: "50K+", label: "Subscribers" },
-    { number: "95%", label: "Open Rate" },
-    { number: "Weekly", label: "Updates" },
-    { number: "Free", label: "Forever" }
+    { number: '50K+', label: 'Subscribers' },
+    { number: '4.9/5', label: 'Rating' },
+    { number: '24/7', label: 'Updates' },
+    { number: '100%', label: 'Free' }
   ];
 
-  if (isSubscribed) {
-    return (
-      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-3xl p-12 shadow-2xl">
-            <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Welcome to the Future!
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              You've successfully joined our exclusive community. Get ready for cutting-edge insights and breakthrough technology updates.
-            </p>
-            <div className="bg-green-50 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-green-800 mb-2">
-                What's Next?
-              </h3>
-              <ul className="text-green-700 space-y-2">
-                <li>• Check your email for a welcome message</li>
-                <li>• Follow us on social media for real-time updates</li>
-                <li>• Explore our latest content and resources</li>
-                <li>• Join our community discussions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  if (!isVisible || isDismissed) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
+    >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"
+            animate={{
+              x: [0, Math.random() * 200 - 100],
+              y: [0, Math.random() * 200 - 100],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: Math.random() * 8 + 6,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Close Button */}
+        <button
+          onClick={() => setIsDismissed(true)}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">
-              <Mail className="w-4 h-4 mr-2" />
-              Newsletter 2026
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
+              <Bell className="w-4 h-4 mr-2" />
+              NEWSLETTER 2026
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Ahead of the
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Future</span>
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                AI Revolution
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join our exclusive community and get the latest insights on AI, automation, quantum computing, and emerging technologies that are shaping tomorrow.
+            
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Join 50,000+ innovators, researchers, and technology leaders who get exclusive access 
+              to the latest AI breakthroughs, automation insights, and future predictions.
             </p>
 
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 mt-1">
-                    {benefit.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-1">{benefit.title}</h3>
-                    <p className="text-sm text-gray-300">{benefit.description}</p>
-                  </div>
-                </div>
-              ))}
+              {benefits.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                    className="flex items-start space-x-3"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">{benefit.title}</h3>
+                      <p className="text-gray-400 text-sm">{benefit.description}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
-                </div>
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                  <div className="text-sm text-gray-400">{stat.label}</div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Content - Newsletter Form */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              Join Our Community
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+          >
+            <AnimatePresence mode="wait">
+              {!isSubscribed ? (
+                <motion.div
+                  key="form"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Mail className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Get Started Today
+                    </h3>
+                    <p className="text-gray-300">
+                      Enter your email to join our exclusive community
+                    </p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email address"
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    {error && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-red-400 text-sm"
+                      >
+                        {error}
+                      </motion.div>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-medium hover:from-purple-500 hover:to-pink-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    >
+                      {isLoading ? (
+                        <>
+                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                          Subscribing...
+                        </>
+                      ) : (
+                        <>
+                          <Rocket className="w-5 h-5 mr-2" />
+                          Subscribe Now
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </>
+                      )}
+                    </button>
+
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Shield className="w-4 h-4 mr-2" />
+                      <span>We respect your privacy. Unsubscribe at any time.</span>
+                    </div>
+                  </form>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Welcome to the Future! 🚀
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-6">
+                    You're now part of our exclusive community. Check your email for a confirmation 
+                    and get ready for amazing content delivered to your inbox.
+                  </p>
+
+                  <div className="bg-white/10 rounded-lg p-4 mb-6">
+                    <h4 className="text-white font-medium mb-2">What's Next?</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      <li>• Confirmation email within 5 minutes</li>
+                      <li>• First newsletter tomorrow morning</li>
+                      <li>• Access to exclusive content library</li>
+                      <li>• Invitation to our private Discord</li>
+                    </ul>
+                  </div>
+
+                  <button
+                    onClick={() => setIsSubscribed(false)}
+                    className="text-purple-400 hover:text-purple-300 text-sm font-medium"
+                  >
+                    Subscribe another email
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Join the AI Revolution Today
             </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    required
-                    className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Don't miss out on the most important technological shift of our lifetime. 
+              Be part of the community that's shaping the future.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center">
+                <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                4.9/5 rating from subscribers
               </div>
-
-              <div className="flex items-start space-x-3">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  required
-                  className="mt-1 w-4 h-4 text-blue-600 bg-white/20 border-white/30 rounded focus:ring-blue-500"
-                />
-                <label htmlFor="terms" className="text-sm text-gray-300">
-                  I agree to receive weekly updates and promotional content. I can unsubscribe at any time.
-                </label>
+              <div className="flex items-center">
+                <Users className="w-4 h-4 mr-1 text-blue-400" />
+                50,000+ active subscribers
               </div>
-
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-              >
-                {isLoading ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Subscribing...
-                  </>
-                ) : (
-                  <>
-                    Subscribe Now
-                    <Send className="w-5 h-5 ml-2" />
-                  </>
-                )}
-              </button>
-            </form>
-
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-300">
-                Join <span className="text-blue-400 font-semibold">50,000+</span> professionals who trust us for their technology insights.
-              </p>
+              <div className="flex items-center">
+                <Lightbulb className="w-4 h-4 mr-1 text-purple-400" />
+                Weekly exclusive insights
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 };
 
