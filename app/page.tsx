@@ -15,6 +15,13 @@ import QuantumComputingRevolutionBanner from '../components/QuantumComputingRevo
 import AutomationSolutionsShowcase2025 from '../components/AutomationSolutionsShowcase2025';
 import InteractiveContentDiscoveryHub from '../components/InteractiveContentDiscoveryHub';
 
+// New Ultimate Content Revolution Components
+import AI2025_2030UltimateContentRevolutionBanner from '../components/AI2025_2030UltimateContentRevolutionBanner';
+import AI2025_2030UltimateContentRevolutionShowcase from '../components/AI2025_2030UltimateContentRevolutionShowcase';
+import QuantumComputingUltimateBreakthroughBanner from '../components/QuantumComputingUltimateBreakthroughBanner';
+import AdvancedAutomationSolutionsUltimateBanner from '../components/AdvancedAutomationSolutionsUltimateBanner';
+import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
+
 // New Ultimate Content Showcase Components
 import AI2025_2030UltimatePredictionsPromotionBanner from '../components/AI2025_2030UltimatePredictionsPromotionBanner';
 import AI2025_2030UltimatePredictionsShowcase from '../components/AI2025_2030UltimatePredictionsShowcase';
@@ -346,6 +353,31 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* NEW: AI 2025-2030 Ultimate Content Revolution Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateContentRevolutionBanner />
+              </Suspense>
+
+              {/* NEW: AI 2025-2030 Ultimate Content Revolution Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateContentRevolutionShowcase />
+              </Suspense>
+
+              {/* NEW: Quantum Computing Ultimate Breakthrough Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingUltimateBreakthroughBanner />
+              </Suspense>
+
+              {/* NEW: Advanced Automation Solutions Ultimate Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsUltimateBanner />
+              </Suspense>
+
+              {/* NEW: Ultimate Content Discovery Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentDiscoveryWidget />
+              </Suspense>
 
               {/* NEW: Ultimate Content Revolution 2025 Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
