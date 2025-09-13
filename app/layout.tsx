@@ -177,6 +177,9 @@ function Header() {
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough Revolution (NEW)
                 </Link>
+                <Link href="/ai-2025-breakthrough-content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500">
+                  🚀 AI 2025 Breakthrough Content Showcase (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2025-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2025 Revolutionary Trends & Predictions (NEW)
                 </Link>
@@ -185,6 +188,12 @@ function Header() {
                 </Link>
                 <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Global Transformation Breakthrough (10,000% ROI) (NEW)
+                </Link>
+                <Link href="/blog/ai-2025-advanced-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-500">
+                  🎯 Advanced Automation Mastery (2,400% ROI) (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-automation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Enterprise Success ($180M Savings) (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2025-revolutionary-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Revolutionary Breakthrough Success (2000% ROI)
@@ -1068,15 +1077,46 @@ function Header() {
               NEW
             </span>
           </Link>
-          <Link 
-            href="/quantum-computing-solutions-2025" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
-          >
-            Quantum Computing
-            <span className="absolute -top-2 -right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-              BREAKTHROUGH
-            </span>
-          </Link>
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              Quantum Computing
+              <span className="absolute -top-2 -right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                BREAKTHROUGH
+              </span>
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/quantum-computing-solutions-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  ⚛️ Quantum Computing Solutions 2025 (BREAKTHROUGH)
+                </Link>
+                <Link href="/blog/quantum-supremacy-breakthrough-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚀 Quantum Supremacy Platform (10,000x Faster)
+                </Link>
+                <Link href="/blog/error-corrected-quantum-computers-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔧 Error-Corrected Quantum Computers (99.99% Accuracy)
+                </Link>
+                <Link href="/blog/quantum-ai-fusion-breakthrough-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧠 Quantum-AI Fusion Technology (15,000% ROI)
+                </Link>
+                <Link href="/blog/quantum-internet-infrastructure-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🌐 Quantum Internet Infrastructure (Unbreakable Security)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/tools/quantum-readiness-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🎯 Quantum Readiness Assessment (NEW)
+                </Link>
+                <Link href="/tools/quantum-roi-calculator-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 Quantum ROI Calculator (NEW)
+                </Link>
+                <Link href="/webinars/quantum-computing-breakthroughs-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Quantum Breakthroughs Webinar (NEW)
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link 
             href="/blog" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
@@ -1119,12 +1159,50 @@ function Header() {
           >
             Webinars
           </Link>
-          <Link 
-            href="/services" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
-          >
-            Services
-          </Link>
+          <div className="relative group">
+            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
+              Services
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link href="/automation-solutions-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-blue-500">
+                  🤖 Automation Solutions 2025 (REVOLUTIONARY)
+                </Link>
+                <Link href="/ai-services-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🚀 AI Services 2025 (NEW)
+                </Link>
+                <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🛠️ All Services
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/blog/intelligent-process-automation-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧠 Intelligent Process Automation (99.9% Accuracy)
+                </Link>
+                <Link href="/blog/autonomous-business-systems-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🤖 Autonomous Business Systems (24/7 Operations)
+                </Link>
+                <Link href="/blog/advanced-workflow-automation-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  ⚡ Advanced Workflow Automation (8,500% ROI)
+                </Link>
+                <Link href="/blog/predictive-maintenance-ai-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔧 Predictive Maintenance AI (99.5% Uptime)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/tools/automation-readiness-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🎯 Automation Readiness Assessment (NEW)
+                </Link>
+                <Link href="/tools/automation-roi-calculator-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🧮 Automation ROI Calculator (NEW)
+                </Link>
+                <Link href="/webinars/automation-solutions-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🔥 Automation Solutions Webinar (NEW)
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link 
             href="/revolutionary-content-showcase-2026" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
