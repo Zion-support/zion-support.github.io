@@ -521,3 +521,12 @@
 2025-09-13 22:25:07 - Resolving conflicts in zion-os.disabled/zion-os/.next/types/app/terms/page.ts for branch backup-main-final-20250913-063409
 2025-09-13 22:25:07 - Resolving conflicts in zion-os/src/app/blog/ai-deployment-blueprint-2025/page.tsx for branch backup-main-final-20250913-063409
 2025-09-13 22:25:07 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch backup-main-final-20250913-063409
+2025-09-13 22:25:15 - Merge conflicts detected in backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:15 - Resolving conflicts in components/reports/blueprints/blueprint-2025-08-17-214103.tsx for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:15 - Resolving conflicts in components/reports/playbooks/playbook-2025-08-17-214103.tsx for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:15 - Resolving conflicts in pages/index.tsx for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:15 - Resolving conflicts in public/automation/content-registry.json for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:15 - Resolving conflicts in public/reports/metadata/index.html for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:15 - Resolving conflicts in public/reports/metadata/latest.json for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:16 - Resolving conflicts in public/search/index.json for branch backup/sync-2025-08-17T21-41-06-283Z
+2025-09-13 22:25:16 - Resolving conflicts in public/sitemap.xml for branch backup/sync-2025-08-17T21-41-06-283Z
