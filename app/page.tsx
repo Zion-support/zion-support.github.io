@@ -73,6 +73,12 @@ import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025
 import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationShowcase2025PromotionBanner';
 import AITutorialsMastery2025PromotionBanner from '../components/AITutorialsMastery2025PromotionBanner';
 
+// Import new revolutionary components
+import RevolutionaryAIServices2025 from '../components/RevolutionaryAIServices2025';
+import AI2025BreakthroughAnnouncementBanner from '../components/AI2025BreakthroughAnnouncementBanner';
+import QuantumComputingShowcase2025 from '../components/QuantumComputingShowcase2025';
+import QuantumComputingPromotionBanner2025 from '../components/QuantumComputingPromotionBanner2025';
+
 // Import new 2026 promotional components
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 import UltimateBreakthroughBanner2026 from '../components/UltimateBreakthroughBanner2026';
@@ -204,6 +210,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 BREAKTHROUGH ANNOUNCEMENT BANNER */}
+        <AI2025BreakthroughAnnouncementBanner />
+        
+        {/* QUANTUM COMPUTING PROMOTION BANNER */}
+        <QuantumComputingPromotionBanner2025 />
+        
         {/* EDGE AI REVOLUTION PROMOTION BANNER */}
         <EdgeAIRevolutionPromotionBanner />
         
@@ -832,6 +844,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Revolutionary AI Services 2025 Showcase */}
+      <RevolutionaryAIServices2025 />
+      
+      {/* Quantum Computing Showcase 2025 */}
+      <QuantumComputingShowcase2025 />
       
       {/* Latest Content Promotion Banner */}
       <LatestContentPromotionBanner />
