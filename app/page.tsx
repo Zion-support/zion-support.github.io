@@ -185,6 +185,10 @@ export default function HomePage() {
         url="/"
       />
       
+      {/* NEW PROMOTIONAL BANNERS */}
+      <AI2025UltimateBreakthroughRevolutionBanner />
+      <AI2026QuantumNeuralFusionPromotionBanner />
+      
       <div className='min-h-screen bg-white'>
         {/* ULTIMATE BREAKTHROUGH 2025 PROMOTION BANNER - FEATURED */}
         <UltimateBreakthrough2025PromotionBanner />
