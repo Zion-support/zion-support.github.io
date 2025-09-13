@@ -1,37 +1,28 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 
-export interface WishlistItem {
-  id: string;
-  type: 'service' | 'product' | 'talent';
-  name: string;
-  price?: number;
-  image?: string;
-  description?: string;
+export function addToWishlist(_payload: { id: string; type: 'product'; data: ProductListing }) {
+  return { type: 'wishlist/add', payload: _payload } as const;
 }
 
-interface WishlistState {
-  items: WishlistItem[];
-  loading: boolean;
-  error: string | null;
+export function getApiUrl() {
+  return '';
 }
 
 const initialState: WishlistState = {
   items: [],
-  loading: false,
-  error: null,
 };
 
 export const getApiUrl = () => {
-  const env = import.meta?.env || process.env;
+  const env = (import.meta as any)?.env ?? process.env;
   return env.VITE_API_URL || env.API_URL || '';
 };
 
-export const loadWishlistFromDB = createAsyncThunk(
+export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
   'wishlist/loadFromDB',
   async (userId: string) => {
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);
-    if (!res.ok) throw new Error('Failed to load wishlist');
-    return await res.json();
+    if (!res.ok) throw new Error('Failed to load');
+    return (await res.json()) as WishlistItem[];
   }
 );
 
@@ -39,38 +30,22 @@ const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
   reducers: {
-    addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
+    addToWishlist(state, action: PayloadAction<WishlistItem>) {
       const exists = state.items.some(
-        item => item.id === action.payload.id && item.type === action.payload.type
+        (item) => item.id === action.payload.id && item.type === action.payload.type
       );
-      if (!exists) {
-        state.items.push(action.payload);
-      }
+      if (!exists) state.items.push(action.payload);
     },
-    removeFromWishlist: (state, action: PayloadAction<{ id: string }>) => {
-      state.items = state.items.filter(item => item.id !== action.payload.id);
-    },
-    clearWishlist: (state) => {
-      state.items = [];
+    removeFromWishlist(state, action: PayloadAction<{ id: string }>) {
+      state.items = state.items.filter((item) => item.id !== action.payload.id);
     },
   },
   extraReducers: (builder) => {
-    builder
-      .addCase(loadWishlistFromDB.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(loadWishlistFromDB.fulfilled, (state, action) => {
-        state.loading = false;
-        state.items = action.payload;
-      })
-      .addCase(loadWishlistFromDB.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message || 'Failed to load wishlist';
-      });
+    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
+      state.items = action.payload;
+    });
   },
 });
 
-export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
-export { wishlistSlice };
+export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

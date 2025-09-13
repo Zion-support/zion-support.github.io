@@ -1,36 +1,56 @@
 import React from 'react';
-;
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
-  "children": "React.ReactNode;
-"}
-;
-export function Form("props": "any) {;
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;;
-export function FormItem(props: any) {;
-  return (;
-    <div className={`space-y-2 ${className}`}>;
-    </div>;
-  );
+
+interface FormProps {
+  children: React.ReactNode;
+  [key: string]: any;
 }
-;
-interface FormLabelProps {;
-  "children": "React.ReactNode;
-  className?: string;
-  htmlFor?: string;
-;
-"}
-;
-export function FormLabel("props": "any) {;;
-export function FormField(props: any) {;
-  return (;
-    <div className={`space-y-1 ${className}`}>;
+
+export function Form({ children, ...props }: FormProps) {
+  return <div {...props}>{children}</div>;
 }
-;
-interface FormMessageProps {;
-  children?: "React.ReactNode;
+
+interface FormFieldProps {
+  control: any;
+  name: string;
+  render: (props: any) => React.ReactNode;
+}
+
+export function FormField({ control, name, render }: FormFieldProps) {
+  return <>{render({ field: { name, onChange: () => {}, value: '' } })}</>;
+}
+
+interface FormItemProps {
+  children: React.ReactNode;
   className?: string;
-;
-"}
-;
-export function FormMessage("props": "any) {;
+}
+
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return <div className={`space-y-2 ${className}`}>{children}</div>;
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return <label className={`text-sm font-medium ${className}`}>{children}</label>;
+}
+
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
+interface FormMessageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  return <p className={`text-sm text-red-500 ${className}`}>{children}</p>;
+}

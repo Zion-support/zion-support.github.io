@@ -1,3 +1,148 @@
-import Link from \'next/link\'; import { useState } from \'react\'; interface SidebarProps { isOpen: boolean; onClose: () => void} } export default function Sidebar({ isOpen,onClose }: SidebarProps) { const serviceCategories = [ { title: \'Micro SaaS Products\',href: \'/micro-saas\',count: \'120+\',description: \'Innovative software solutions\' },{ title: \'AI Services\',href: \'/ai-services\',count: \'80+\',description: \'Advanced AI solutions\' },{ title: \'IT Services\',href: \'/it-services\',count: \'80+\',description: \'Enterprise IT solutions\' } ]; const quickLinks = [ { title: \'All Services\',href: \'/services\' },{ title: \'Services Catalog\',href: \'/services-catalog\' },{ title: \'Portfolio\',href: \'/portfolio\' },{ title: \'Blog\',href: \'/blog\' },{ title: \'Pricing\',href: \'/pricing\' },{ title: \'About Us\',href: \'/about\' },{ title: \'FAQ\',href: \'/faq\' } ]; const contactInfo = [ { title: \'Contact Form\',href: \'/contact\' },{ title: \'Call: +1 302 464 0950\',href: \'tel:+13024640950\' },{ title: \'Email: kleber@ziontechgroup.com\',href: \'mailto:kleber@ziontechgroup.com\' } ]; return ( <> {} {isOpen && ( <div className=\"fixed inset-0 bg-black bg-opacity-50 z-40\" onClick={onClose} /> )} {} <aside className={`fixed top-0 right-0 h-full w-80 bg-slate-900 border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? \'translate-x-0\' : \'translate-x-full\'}`}> <div className=\"p-6 h-full overflow-y-auto\"> {} <div className=\"flex items-center justify-between mb-8\"> <h2 className=\"text-xl font-bold text-white\">Navigation</h2> <button onClick={onClose} className=\"text-white hover:text-gray-300 text-2xl\" aria-label=\"Close sidebar\" > × </button> </div> {} <div className=\"mb-8\"> <h3 className=\"text-lg font-semibold text-blue-400 mb-4\">Service Categories</h3> <div className=\"space-y-3\"> {serviceCategories.map((category) => ( <Link key={category.href} href={category.href} onClick={onClose} className=\"block p-3 bg-slate-800/50 rounded-lg border border-white/10 hover:border-blue-500/40 transition-colors\" > <div className=\"flex items-center justify-between mb-1\"> <h4 className=\"font-medium text-white\">{category.title}</h4> <span className=\"text-xs bg-blue-600 text-white px-2 py-1 rounded\">{category.count}</span> </div> <p className=\"text-sm text-slate-400\">{category.description}</p> </Link> ))} </div> </div> {} <div className=\"mb-8\"> <h3 className=\"text-lg font-semibold text-purple-400 mb-4\">Quick Links</h3> <div className=\"space-y-2\"> {quickLinks.map((link) => ( <Link key={link.href} href={link.href} onClick={onClose} className=\"block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors\" > {link.title} </Link> ))} </div> </div> {} <div className=\"mb-8\"> <h3 className=\"text-lg font-semibold text-green-400 mb-4\">Contact</h3> <div className=\"space-y-2\"> {contactInfo.map((contact,index) => ( <a key={index} href={contact.href} onClick={onClose} className=\"block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors\" > {contact.title} </a> ))} </div> </div> {} <div className=\"border-t border-white/10 pt-6\"> <div className=\"text-sm text-slate-400\"> <p className=\"mb-2\">📍 364 E Main St STE 1008</p> <p className=\"mb-2\">Middletown DE 19709</p> <p>🌐 <a href=\"https: </div> </div> </div> </aside> </> )}
-const Link from "next/link"; import { useState } from "react"; interface SidebarProps { isOpen: boolean; onClose: () => void} } export default function Sidebar({ isOpen,onClose }: SidebarProps) { const serviceCategories = [ { title: "Micro SaaS Products",href: "/micro-saas",count: "120+",description: "Innovative software solutions" },{ title: "AI Services",href: "/ai-services",count: "80+",description: "Advanced AI solutions" },{ title: "IT Services",href: "/it-services",count: "80+",description: "Enterprise IT solutions" } ]; const quickLinks = [ { title: "All Services",href: "/services" },{ title: "Services Catalog",href: "/services-catalog" },{ title: "Portfolio",href: "/portfolio" },{ title: "Blog",href: "/blog" },{ title: "Pricing",href: "/pricing" },{ title: "About Us",href: "/about" },{ title: "FAQ",href: "/faq" } ]; const contactInfo = [ { title: "Contact Form",href: "/contact" },{ title: "Call: +1 302 464 0950",href: "tel:+13024640950" },{ title: "Email: kleber@ziontechgroup.com",href: "mailto:kleber@ziontechgroup.com" } ]; return ( <> {} {isOpen && ( <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} /> )} {} <aside className={`fixed top-0 right-0 h-full w-80 bg-slate-900 border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}> <div className="p-6 h-full overflow-y-auto"> {} <div className="flex items-center justify-between mb-8"> <h2 className="text-xl font-bold text-white">Navigation</h2> <button onClick={onClose} className="text-white hover:text-gray-300 text-2xl" aria-label="Close sidebar" > </button> </div> {} <div className="mb-8"> <h3 className="text-lg font-semibold text-blue-400 mb-4">Service Categories</h3> <div className="space-y-3"> {serviceCategories.map((category) => ( <Link key={category.href} href={category.href} onClick={onClose} className="block p-3 bg-slate-800/50 rounded-lg border border-white/10 hover:border-blue-500/40 transition-colors" > <div className="flex items-center justify-between mb-1"> <h4 className="font-medium text-white">{category.title}</h4> <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">{category.count}</span> </div> <p className="text-sm text-slate-400">{category.description}</p> </Link> ))} </div> </div> {} <div className="mb-8"> <h3 className="text-lg font-semibold text-purple-400 mb-4">Quick Links</h3> <div className="space-y-2"> {quickLinks.map((link) => ( <Link key={link.href} href={link.href} onClick={onClose} className="block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors" > {link.title} </Link> ))} </div> </div> {} <div className="mb-8"> <h3 className="text-lg font-semibold text-green-400 mb-4">Contact</h3> <div className="space-y-2"> {contactInfo.map((contact,index) => ( <a key={index} href={contact.href} onClick={onClose} className="block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors" > {contact.title} </a> ))} </div> </div> {} <div className="border-t border-white/10 pt-6"> <div className="text-sm text-slate-400"> <p className="mb-2"> 364 E Main St STE 1008</p> <p className="mb-2">Middletown DE 19709</p> <p> <a href="https: </div> </div> </div> </aside> </> )}'"`'"`
-import Link from 'next/link'; import { useState } from 'react'; interface SidebarProps { isOpen: boolean; onClose: () => void} } export default function Sidebar({ isOpen,onClose }: SidebarProps) { const serviceCategories = [ { title: 'Micro SaaS Products,href: '/micro-saas,count: '120+,description: 'Innovative software solutions' },{ title: 'AI Services,href: '/ai-services,count: '80+,description: 'Advanced AI solutions' },{ title: 'IT Services,href: '/it-services,count: '80+,description: 'Enterprise IT solutions' } ]; const quickLinks = [ { title: 'All Services,href: '/services' },{ title: 'Services Catalog,href: '/services-catalog' },{ title: 'Portfolio,href: '/portfolio' },{ title: 'Blog,href: '/blog' },{ title: 'Pricing,href: '/pricing' },{ title: 'About Us,href: '/about' },{ title: 'FAQ,href: '/faq' } ]; const contactInfo = [ { title: 'Contact Form,href: '/contact' },{ title: 'Call: +1 302 464 0950,href: 'tel:+13024640950' },{ title: 'Email: kleber@ziontechgroup.com,href: 'mailto:kleber@ziontechgroup.com' } ]; return ( <> {} {isOpen && ( <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} /> )} {} <aside className={`fixed top-0 right-0 h-full w-80 bg-slate-900 border-l border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}> <div className="p-6 h-full overflow-y-auto"> {} <div className="flex items-center justify-between mb-8"> <h2 className="text-xl font-bold text-white">Navigation</h2> <button onClick={onClose} className="text-white hover:text-gray-300 text-2xl" aria-label="Close sidebar" > × </button> </div> {} <div className="mb-8"> <h3 className="text-lg font-semibold text-blue-400 mb-4">Service Categories</h3> <div className="space-y-3"> {serviceCategories.map((category) => ( <Link key={category.href} href={category.href} onClick={onClose} className="block p-3 bg-slate-800/50 rounded-lg border border-white/10 hover:border-blue-500/40 transition-colors" > <div className="flex items-center justify-between mb-1"> <h4 className="font-medium text-white">{category.title}</h4> <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">{category.count}</span> </div> <p className="text-sm text-slate-400">{category.description}</p> </Link> ))} </div> </div> {} <div className="mb-8"> <h3 className="text-lg font-semibold text-purple-400 mb-4">Quick Links</h3> <div className="space-y-2"> {quickLinks.map((link) => ( <Link key={link.href} href={link.href} onClick={onClose} className="block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors" > {link.title} </Link> ))} </div> </div> {} <div className="mb-8"> <h3 className="text-lg font-semibold text-green-400 mb-4">Contact</h3> <div className="space-y-2"> {contactInfo.map((contact,index) => ( <a key={index} href={contact.href} onClick={onClose} className="block p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded transition-colors" > {contact.title} </a> ))} </div> </div> {} <div className="border-t border-white/10 pt-6"> <div className="text-sm text-slate-400"> <p className="mb-2">📍 364 E Main St STE 1008</p> <p className="mb-2">Middletown DE 19709</p> <p>🌐 <a href="https: </div> </div> </div> </aside> </> )}
+import Link from 'next/link';
+import { useMemo } from 'react';
+
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+export default function Sidebar() {
+  const pageLinks: NavLink[] = useMemo(
+    () => [
+      { href: '/', label: 'Home' },
+      { href: '/automation', label: 'Automation' },
+      { href: '/front', label: 'Front' },
+      { href: '/main/front', label: 'Main / Front' },
+      { href: '/newsroom', label: 'Newsroom' },
+      { href: '/reports/ai-trends', label: 'Reports / AI Trends' },
+      { href: '/reports/seo', label: 'Reports / SEO' },
+      { href: '/site-health', label: 'Site Health' },
+    ],
+    []
+  );
+
+  const featureLinks: NavLink[] = useMemo(
+    () => [
+      { href: '/#features', label: 'Self‑Improving' },
+      { href: '/#features', label: 'Repo Sync' },
+      { href: '/#features', label: 'Zero Ops' },
+      { href: '/#features', label: 'Safety‑First' },
+      { href: '/#features', label: 'Scalable' },
+      { href: '/#features', label: 'Observability' },
+      { href: '/#features', label: 'Futuristic UI' },
+      { href: '/#features', label: 'Cloud Automations' },
+      { href: '/#features', label: 'Edge‑Optimized' },
+    ],
+    []
+  );
+
+  // Netlify Functions exposed under /.netlify/functions/<name>
+  const serviceNames = useMemo(
+    () => [
+      'auto-scheduler',
+      'autonomous-invention-orchestrator',
+      'broken-image-scanner',
+      'cloud_orchestrator',
+      'continuous-front-runner',
+      'continuous-orchestrator',
+      'dead-code-audit',
+      'fast-front-promoter',
+      'fast-orchestrator',
+      'feature-advertiser',
+      'features-capabilities-benefits-advertiser',
+      'media-og-and-optimize',
+      'newsroom-auto-publisher',
+      'readme-advertiser',
+      'repo-radar-and-graph',
+      'schedule-content-index',
+      'schedule-homepage',
+      'schedule-knowledge-graph',
+      'schedule-site-health',
+      'security-audit',
+      'sitemap_runner',
+      'ui-enhancer',
+      'ultrafast-front-orchestrator',
+      'ultrafast-orchestrator',
+      'front-ads-promoter',
+      'front-enhancer',
+      'front-index-futurizer',
+      'front-index-orchestrator',
+      'front-index-scheduler',
+      'front-maximizer',
+      'frontpage-enhancer',
+      'frontpage-scheduler',
+      'home-visionary-expander',
+      'homepage-advertiser-scheduler',
+      'homepage-updater-scheduler',
+      'homepage-updater',
+      'homepage_advertiser',
+      'hyper-front-index-accelerator',
+      'innovation-lab',
+      'link-and-health-scheduler',
+      'maintenance-scheduler',
+      'marketing-and-features-promo',
+      'marketing-scheduler',
+      'front-visionary-expander',
+    ],
+    []
+  );
+
+  const serviceLinks: NavLink[] = useMemo(
+    () => serviceNames.map((name) => ({ href: `/.netlify/functions/${name}`, label: name })),
+    [serviceNames]
+  );
+
+  return (
+    <aside className="fixed left-0 top-0 z-40 h-screen w-72 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
+      <div className="mb-4 px-2 text-lg font-bold tracking-wide">
+        <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Zion</span>
+        <span className="ml-2 text-white/60">Navigation</span>
+      </div>
+
+      <nav className="space-y-6">
+        <div>
+          <div className="px-2 text-xs uppercase tracking-wider text-white/50">Pages</div>
+          <ul className="mt-2 space-y-1">
+            {pageLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href}>
+                  <a className="block rounded-md px-3 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white">
+                    {link.label}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <div className="px-2 text-xs uppercase tracking-wider text-white/50">Features</div>
+          <ul className="mt-2 space-y-1">
+            {featureLinks.map((link, idx) => (
+              <li key={`${link.label}-${idx}`}>
+                <Link href={link.href}>
+                  <a className="block rounded-md px-3 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white">
+                    {link.label}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <div className="px-2 text-xs uppercase tracking-wider text-white/50">Services</div>
+          <ul className="mt-2 space-y-1">
+            {serviceLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer" className="block truncate rounded-md px-3 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </aside>
+  );
+}

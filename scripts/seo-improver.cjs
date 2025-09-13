@@ -1,93 +1,98 @@
-const fs = require("fs")
-const path = require("path")
-class SEOImprover {
+const fs = require('fs');
+const path = require('path');
+
+class SeoImprover {
   constructor() {
-    this.projectRoot = process.cwd()}
+    this.projectRoot = process.cwd();
+  }
 
-  async generateSitemap() {
-    console.log("🗺️ Generating sitemap...");
-    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-  <url>;
-    <loc>https://bolt.new.zion.app/</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>daily</changefreq>;
-    <priority>1.0</priority>;
-  </url>;
-  <url>;
-    <loc>https://bolt.new.zion.app/about</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://bolt.new.zion.app/services</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://bolt.new.zion.app/contact</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>monthly</changefreq>;
-    <priority>0.6</priority>;
-  </url>;
-</urlset>`;
-    fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml"), sitemapContent);
-    console.log("✅ Sitemap generated")}
+  generateSitemapXml() {
+    const urls = ['/', '/about', '/services', '/contact'];
+    const nowIso = new Date().toISOString();
+    const body = urls
+      .map(
+        u =>
+          `  <url>\n    <loc>https://bolt.new.zion.app${u}</loc>\n    <lastmod>${nowIso}</lastmod>\n    <changefreq>${u === '/' ? 'daily' : 'weekly'}</changefreq>\n    <priority>${u === '/' ? '1.0' : '0.8'}</priority>\n  </url>`
+      )
+      .join('\n');
 
-  async generateRobotsTxt() {
-    console.log("🤖 Generating robots.txt...");
-    const robotsContent = `User-agent: *;
-Allow: /;
-Sitemap: https://bolt.new.zion.app/sitemap.xml;
-# Block access to admin areas;
-Disallow: /admin/;
-Disallow: /api/;
-Disallow: /_next/;
-Disallow: /private/;
-# Allow access to important pages;
-Allow: /;
-Allow: /about;
-Allow: /services;
-Allow: /contact`;
-    fs.writeFileSync(path.join(this.projectRoot, "public/robots.txt"), robotsContent);
-    console.log("✅ robots.txt generated")}
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
 
-  async addMetaTags() {
-    console.log("🏷️ Adding meta tags...");
-    const metaConfig = `;
-// Meta tags configuration;
-export const metaTags = {
-  title: "Bolt.new Zion App - Advanced Web Development Solutions",;
-  description: "Professional web development services with cutting-edge technology and innovative solutions.",;
-  keywords: "web development, react, nextjs, typescript, full-stack development",;
-  author: "Zion Tech Group",;
-  viewport: "width=device-width, initial-scale=1",;
-  robots: "index, follow",;
-  og: {
-    title: "Bolt.new Zion App - Advanced Web Development Solutions",;
-    description: "Professional web development services with cutting-edge technology and innovative solutions.",;
-    type: "website",;
-    url: "https://bolt.new.zion.app",;
-    image: "https://bolt.new.zion.app/og-image.jpg"},;
-  twitter: {
-    card: "summary_large_image",;
-    title: "Bolt.new Zion App - Advanced Web Development Solutions",;
-    description: "Professional web development services with cutting-edge technology and innovative solutions.",;
-    image: "https://bolt.new.zion.app/og-image.jpg"}
+    const outDir = path.join(this.projectRoot, 'public');
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'sitemap.xml'), xml, 'utf8');
+  }
+
+  generateRobotsTxt() {
+    const lines = [
+      'User-agent: *',
+      'Allow: /',
+      'Sitemap: https://bolt.new.zion.app/sitemap.xml',
+      '# Block access to admin areas',
+      'Disallow: /admin/',
+      'Disallow: /api/',
+      'Disallow: /_next/',
+      'Disallow: /private/',
+      '# Allow access to important pages',
+      'Allow: /about',
+      'Allow: /services',
+      'Allow: /contact',
+      '',
+    ].join('\n');
+
+    const outDir = path.join(this.projectRoot, 'public');
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'robots.txt'), lines, 'utf8');
+  }
+
+  writeMetaTagsConfig() {
+    const meta = {
+      title: 'Bolt.new Zion App - Advanced Web Development Solutions',
+      description:
+        'Professional web development services with cutting-edge technology and innovative solutions.',
+      keywords:
+        'web development, react, nextjs, typescript, full-stack development',
+      author: 'Zion Tech Group',
+      viewport: 'width=device-width, initial-scale=1',
+      robots: 'index, follow',
+      og: {
+        title: 'Bolt.new Zion App - Advanced Web Development Solutions',
+        description:
+          'Professional web development services with cutting-edge technology and innovative solutions.',
+        type: 'website',
+        url: 'https://bolt.new.zion.app',
+        image: 'https://bolt.new.zion.app/og-image.jpg',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Bolt.new Zion App - Advanced Web Development Solutions',
+        description:
+          'Professional web development services with cutting-edge technology and innovative solutions.',
+        image: 'https://bolt.new.zion.app/og-image.jpg',
+      },
+    };
+
+    const outDir = path.join(this.projectRoot, 'config');
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    const file = path.join(outDir, 'meta-tags.js');
+    const contents = `// Generated by scripts/seo-improver.cjs\nmodule.exports = ${JSON.stringify(
+      meta,
+      null,
+      2
+    )}\n`;
+    fs.writeFileSync(file, contents, 'utf8');
+  }
+
+  run() {
+    this.generateSitemapXml();
+    this.generateRobotsTxt();
+    this.writeMetaTagsConfig();
+    console.log('SEO improvement completed.');
+  }
 }
-export default metaTags;
-`;
-    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js"), metaConfig);
-    console.log("✅ Meta tags configuration created")}
 
-  async run() {
-    await this.generateSitemap();
-    await this.generateRobotsTxt();
-    await this.addMetaTags();
-    console.log("✅ SEO improvement completed!")}
+if (require.main === module) {
+  new SeoImprover().run();
 }
-}
-const improver = new SEOImprover()
-improver.run().catch(console.error)
+
+module.exports = { SeoImprover };

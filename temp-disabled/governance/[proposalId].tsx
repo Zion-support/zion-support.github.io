@@ -99,7 +99,7 @@ const ProposalDetailPage: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [proposalId, router.isReady]); // Added router.isReady
+  }, [proposalId]);
 
   useEffect(() => {
     if (router.isReady && proposalId) { // Ensure router is ready and proposalId is available

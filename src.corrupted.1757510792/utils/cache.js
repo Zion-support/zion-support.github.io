@@ -1,1 +1,0 @@
-export const cache = { init: function() { } } export default cache;

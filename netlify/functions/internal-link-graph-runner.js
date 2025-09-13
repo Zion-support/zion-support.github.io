@@ -1,25 +1,18 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
+exports.handler = async function() {
+  const fs = require('fs');
+  const path = require('path');
+  const { execSync } = require('child_process');
 
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.handler = async () => {
-  const logs = [];
-  function step(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
+  function walkFiles(dir, patterns, acc = []) {
+    let entries = [];
+    try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch { return acc; }
+    for (const e of entries) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        walkFiles(full, patterns, acc);
+      } else {
+        if (patterns.some(p => p.test(e.name))) acc.push(full);
+      }
+    }
+    return acc;
   }
-
-  step('links:graph', () => runNode('automation/internal-link-graph.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') };
-};

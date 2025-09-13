@@ -119,10 +119,10 @@ This report provides a comprehensive analysis of our GitHub Actions workflow eco
 4. **Ongoing**: Monitor metrics and adjust strategies
 
 ## Success Metrics
-- **Target Health Score**: >95/100 (Current: 94.8)
-- **Target Success Rate**: >99% (Current: 98.7%)
-- **Target Execution Time**: <2 minutes average (Current: 2.3 minutes)
-- **Target Resource Utilization**: 70-80% (Current: 76.4%)
+- **Target execution time**: <8 minutes average
+- **Target success rate**: >95%
+- **Target resource utilization**: <80%
+- **Target cost reduction**: 25% by end of month
 
 ---
 

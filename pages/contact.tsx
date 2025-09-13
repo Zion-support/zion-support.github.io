@@ -1,43 +1,139 @@
-import Head from 'next/head'
+import SmartHeader from '../components/SmartHeader';
+import SmartHeader from '../components/SmartHeader';
+import SmartHeader from '../components/SmartHeader';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+import SmartFooter from '../components/SmartFooter';
+import SmartFooter from '../components/SmartFooter';
+import SmartFooter from '../components/SmartFooter';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useState } from 'react';
+
+
+
+  
+  
+  componentDidCatch(error, errorInfo) {
+  
+    
+
+
+
+import React from "react";
+import Layout from "../components/Layout";
+import Layout from "../components/Layout";
+import React from 'react';
+
+
+
+
+import Head from 'next/head';
+import { useState } from 'react';
+import { ContactInfo } from '../types';
+
+
 
 export default function Contact() {
-  return (
-    <>
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+import React from "react";
+import Layout from "../components/Layout";
+import Layout from "../components/Layout";
+export default function Contact() {
+
+
+    
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+
       <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and technology needs." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Get in touch with our team to discuss your AI and technology needs.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="bg-gray-800 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div className="bg-gray-800 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="bg-gray-800 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-}
+
+              <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
+              <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
+              <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
+              <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
+                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
+                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
+                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+import Head from 'next/head';
+      <Head>
+      </Head>
+      <ErrorBoundary level='page'>
+                  <ContactForm />
+
+
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+                  
+                  
+                  
+
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+    </Layout>;
+
+
+
+
+
+import React from './react';
+import Layout from "../components / Layout";
+import Layout from "../components / Layout";
+export default /**
+    <Layout;
+    </Layout>);
+      <Head>
+      </Head>

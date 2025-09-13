@@ -1,20 +1,16 @@
 name: Autonomous Intelligence
-'on':
+
+on:
   workflow_dispatch: {}
   schedule:
-    - cron: 0 */6 * * *
+    - cron: '*/25 * * * *'
+
 permissions:
   contents: write
-  actions: read
-  pull-requests: write
-concurrency:
-  group: autonomous-intelligence
-  cancel-in-progress: false
+
 jobs:
-  main:
-    name: Autonomous Intelligence Job
+  intelligence:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

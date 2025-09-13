@@ -4,18 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Allow important pages
-Allow: /
-Allow: /docs/
-Allow: /contact/
-Allow: /privacy/
-Allow: /terms/
-Allow: /community/
-Allow: /multiverse/
-
-# Crawl delay
-Crawl-delay: 1
-=======
 # Disallow admin and API routes
 Disallow: /admin/
 Disallow: /api/

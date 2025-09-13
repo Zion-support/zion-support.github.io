@@ -4,16 +4,50 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata = {
+  title: "Zion Tech Group - AI-Powered Enterprise Solutions & Autonomous Systems",
+  description: "Leading provider of AI-powered enterprise solutions, autonomous business systems, quantum computing, and next-generation technology services. Transform your business with cutting-edge AI technology.",
+  keywords: "AI, artificial intelligence, autonomous systems, quantum computing, enterprise solutions, business automation, AI consulting, technology services",
+  authors: [{ name: "Zion Tech Group" }],
+  openGraph: {
+    title: "Zion Tech Group - AI-Powered Enterprise Solutions",
+    description: "Leading provider of AI-powered enterprise solutions and autonomous systems",
+    url: "https://ziontechgroup.com",
+    siteName: "Zion Tech Group",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zion Tech Group - AI-Powered Enterprise Solutions",
+    description: "Leading provider of AI-powered enterprise solutions and autonomous systems",
+  },
+  robots: "index, follow",
+};
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-<<<<<<< HEAD
-  maximumScale: 1,
-  userScalable: false,
-=======};
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
+    <html lang="en">
+      <body className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+        {/* Header */}
+        <header className="sticky top-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
+              {/* Logo */}
+              <div className="flex items-center">
+                <a href="/" className="flex items-center space-x-2">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">Z</span>
+                  </div>
+                  <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                </a>
+              </div>
+
               {/* Navigation */}
               <nav className="hidden md:flex items-center space-x-8">
                 <a href="/services" className="text-gray-300 hover:text-white transition-colors">Services</a>
@@ -116,7 +150,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
             </div>
           </div>
-        </footer>      </body>
+        </footer>
+      </body>
     </html>
   );
 }

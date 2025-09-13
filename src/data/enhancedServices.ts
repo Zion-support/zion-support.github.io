@@ -1,133 +1,75 @@
-export interface ProductListing {
-  &quot;id&quot;: string;
+export interface EnhancedService {
+  id: string;
   title: string;
   description: string;
   category: string;
+  subcategory: string;
   price: number;
   currency: string;
-  tags: string[];
-  author: {
-    name: string;
-    id: string;
-  };
-  &quot;rating&quot;: number;
-  reviews: number;
-  deliveryTime: string;
+  pricingModel: string;
   features: string[];
-  image?: string;
-}
-    price: 2999,
-    currency: "$",
-    tags: ["Process Automation", "RPA", "Workflow Optimization", "AI"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group"
-    },
-    rating: 4.8,
-    reviews: 156,
-    deliveryTime: "2-4 weeks",
-    features: [
-      "AI-powered process mapping",
-      "RPA integration",
-      "Analytics dashboard",
-      "Custom workflow automation",
-      "Multi-platform support"
-    ]
-  },
-  {
-export const &quot;ENHANCED_SERVICES&quot;: ProductListing[] = [{
-    id: &quot;ai-automation-suite
-    &quot;title&quot;: &quot;AI Process Automation Suite
-    &quot;description&quot;: &quot;Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.
-    &quot;category&quot;: &quot;AI Automation
-    &quot;price&quot;: 2999,
-    &quot;currency&quot;: &quot;$
-    &quot;tags&quot;: [&quot;Process Automation &quot;RPA &quot;Workflow Optimization &quot;AI&quot;],
-    &quot;author&quot;: {
-      name: &quot;Zion Tech Group
-      &quot;id&quot;: &quot;zion-tech-group&quot;
-export const "ENHANCED_SERVICES": ProductListing[] = [{
-    id: "ai-automation-suite
-    "title": "AI Process Automation Suite
-    "description": "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.
-    "category": "AI Automation
-    "price": 2999,
-    "currency": "$
-    "tags": ["Process Automation "RPA "Workflow Optimization "AI"],
-    "author": {
-      name: "Zion Tech Group
-      "id": "zion-tech-group"
-    },
-    &quot;rating&quot;: 4.8,
-    &quot;reviews&quot;: 156,
-    &quot;deliveryTime&quot;: &quot;2-4 weeks
-    &quot;features&quot;: [&quot;AI-powered process mapping
-      &quot;RPA integration
-      &quot;Analytics dashboard
-      &quot;Custom workflow automation
-      &quot;Multi-platform support&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;micro-saas-platform
-    &quot;title&quot;: &quot;Micro SaaS Platform
-    &quot;description&quot;: &quot;Complete micro SaaS platform with user management, billing, analytics, and deployment. Perfect for launching your SaaS product quickly.
-    &quot;category&quot;: &quot;Micro SaaS
-    &quot;price&quot;: 4999,
-    &quot;currency&quot;: &quot;$
-    &quot;tags&quot;: [&quot;SaaS &quot;Platform &quot;Billing &quot;Analytics&quot;],
-    &quot;author&quot;: {
-      name: &quot;Zion Tech Group
-      &quot;id&quot;: &quot;zion-tech-group&quot;
-    },
-    &quot;rating&quot;: 4.9,
-    &quot;reviews&quot;: 89,
-    &quot;deliveryTime&quot;: &quot;4-6 weeks
-    &quot;features&quot;: [&quot;User authentication
-      &quot;Subscription billing
-      &quot;Analytics dashboard
-      &quot;API management
-      &quot;Multi-tenant architecture&quot;
-    ]
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
   };
-];
-export const SERVICE_CATEGORIES = ["AI Automation
-  "Micro SaaS
-  "Web Development
-  "Mobile Apps
-  "Cloud Solutions
-  "Cybersecurity"
-];
-    id: "micro-saas-platform",
-    title: "Micro SaaS Platform",
-    description: "Complete micro SaaS platform with user management, billing, analytics, and deployment. Perfect for launching your SaaS product quickly.",
-    category: "Micro SaaS",
-    price: 4999,
-    currency: "$",
-    tags: ["SaaS", "Platform", "Billing", "Analytics"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group"
-    },
-    rating: 4.9,
-    reviews: 89,
-    deliveryTime: "4-6 weeks",
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
+  roi: string;
+  competitors: string[];
+}
+
+export const enhancedServices: EnhancedService[] = [
+  {
+    id: "ai-powered-analytics",
+    title: "AI-Powered Business Analytics",
+    description: "Advanced analytics platform with machine learning capabilities for data-driven decision making.",
+    category: "Analytics",
+    subcategory: "Business Intelligence",
+    price: 299,
+    currency: "USD",
+    pricingModel: "per-month",
     features: [
-      "User authentication",
-      "Subscription billing",
-      "Analytics dashboard",
-      "API management",
-      "Multi-tenant architecture"
-    ]
+      "Real-time data visualization",
+      "Predictive analytics",
+      "Natural language queries",
+      "Automated insights",
+      "Custom dashboards"
+    ],
+    benefits: [
+      "Make data-driven decisions",
+      "Identify trends and patterns",
+      "Improve operational efficiency",
+      "Reduce manual reporting"
+    ],
+    useCases: [
+      "Sales performance analysis",
+      "Customer behavior insights",
+      "Operational efficiency tracking",
+      "Financial forecasting"
+    ],
+    targetAudience: ["Data analysts", "Business intelligence teams", "Executives", "Operations managers"],
+    tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning"],
+    estimatedDelivery: "4-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$299-999/month",
+    contactInfo: {
+      phone: "+1-555-0126",
+      email: "analytics@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Python", "TensorFlow", "React", "PostgreSQL"],
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI"],
+    compliance: ["GDPR", "SOC 2", "HIPAA"],
+    roi: "250% ROI within 6 months",
+    competitors: ["Tableau", "Looker", "Microsoft Power BI", "Qlik"]
   }
 ];
-
-export const SERVICE_CATEGORIES = [
-  "AI Automation",
-  "Micro SaaS",
-  "Web Development",
-  "Mobile Apps",
-  "Cloud Solutions",
-  "Cybersecurity"
-];
-    );"}"

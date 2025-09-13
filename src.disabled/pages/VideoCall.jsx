@@ -1,2 +1,0 @@
-const { roomId } = useParams () ; const navigate = useNavigate () ; const [isJoining, setIsJoining] = useState(false); const [hasJoined, setHasJoined] = useState(false); const [isVideoEnabled, setIsVideoEnabled] = useState(true); const [isMuted, setIsMuted] = useState(false); const [isScreenSharing, setIsScreenSharing] = useState(false); const [participants, setParticipants] = useState([{ id: "user - 1", name: "You", isVideoEnabled: true, isMuted: false, isScreenSharing: false}]); const handleJoinCall = () => { setIsJoining(true) ;
-}

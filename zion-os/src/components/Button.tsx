@@ -1,3 +1,5 @@
+
+
 'use client',;
 import React, { forwardRef } from 'react',;
 import Link from 'next/link',;
@@ -55,6 +57,8 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   },;
   const widthClasses = fullWidth ? 'w-full' : '',;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
+
+
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -62,59 +66,104 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+
+'use client',
+import React, { forward_ref } from 'react',
+import Link from 'next / link',
+import LoadingSpinner from './LoadingSpinner',
+interface ButtonProps {
+  children: React.ReactNode,
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost',
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  href?: string,
+  on_click?: () => void,
+  disabled?: boolean,
+  loading?: boolean,
+  icon?: React.ReactNode,
+  icon_position?: 'left' | 'right',
+  class_name?: string,
+  type?: 'button' | 'submit' | 'reset',
+  full_width?: boolean,
+
   ),;
   if (href) {;
     return (;
+
       <Link href={href} className={classes}>;
         {content}
-      </Link>;
-    );
+      </Link>);
   }
+
+
+;
+
+
+  return (;
+  return (
 ;
   return (;
     <button;
       ref={ref}
       type={type}
       className={classes}
-      onClick={onClick}
+
+      on_click={on_click}
       disabled={disabled || loading}
-      aria-label={typeof children === 'string' ? children : undefined}
+      aria - label={typeof children === 'string' ? children : undefined}
     >;
       {content}
-    </button>;
-  );
+
 }),;
 Button.displayName = 'Button',;
 export default Button,;
+
 // Specialized button variants;
-export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * PrimaryButton - Function description
+ */
+function PrimaryButton() {
   return <Button {...props} variant="primary" />;
 }
-;
-export function SecondaryButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * SecondaryButton - Function description
+ */
+function SecondaryButton() {
   return <Button {...props} variant="secondary" />;
 }
-;
-export function OutlineButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * OutlineButton - Function description
+ */
+function OutlineButton() {
   return <Button {...props} variant="outline" />;
 }
-;
-export function GhostButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * GhostButton - Function description
+ */
+function GhostButton() {
   return <Button {...props} variant="ghost" />;
 }
-;
 // Icon button variant;
+
 export function IconButton({;
   icon,;
   children,;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
+
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
+
       {children}
-    </Button>;
-  );
+    </Button>);
 }
+
+export /**
+ * FloatingActionButton - Function description
+ */
+function FloatingActionButton() {
+  return (
+
+
 ;
 // Floating action button;
 export function FloatingActionButton({;
@@ -124,13 +173,13 @@ export function FloatingActionButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
+
     <Button;
       {...props}
       icon={icon}
-      onClick={onClick}
-      className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
+      on_click={on_click}
+      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}
       size="lg";
       rounded="full";
-    />;
-  );
+    />);
 }

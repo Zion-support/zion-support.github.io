@@ -1,30 +1,65 @@
-const fs = require("fs");"const path = require("path");function fixImportsInFile(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Fix concatenated imports content = content.replace(" /import\s+([^]+);"import/g," "import $1;\nimport" );" content = content.replace(/import\s+([^]+);""/g, "import $1;\n"); content = content.replace(" /import\s+([^]+);"interface/g," "import $1;\n\ninterface" ); content = content.replace(" /import\s+([^]+);"const/g," "import $1;\n\nconst" ); content = content.replace(" /import\s+([^]+);"export/g," "import $1;\n\nexport" ); / Fix other common concatenation issues" content = content.replace(/";"interface/g, ";\n\ninterface");" content = content.replace(/";"const/g, ";\n\nconst");" content = content.replace(/";"export/g, ";\n\nexport");" content = content.replace(/";"function/g, ";\n\nfunction");" content = content.replace(/";"class/g, ";\n\nclass"); / Fix specific syntax errors in cva calls" content = content.replace(/cva\(;/g, "cva(");" content = content.replace(/variants: \s*{;/g, "variants: {");"" content = content.replace(/variant:\s*{;/g, "variant: {");"" content = content.replace(/defaultVariants:\s*{;/g, "defaultVariants: {"); / Fix missing quotes and commas content = content.replace(" /(\w+):\s*"([^"]*)"(\w+):/g,"" "$1: "$2",\n $3: " ); content = content.replace(" /(\w+):\s*"([^"]*)"(\s*})/g,"" "$1: "$2"\n $3" ); fs.writeFileSync(filePath, content);" console.log(`Fixed: ${filePath}`)} catch (error) {` console.error(`Error fixing ${filePath}:`, error.message)}}function walkDirectory(dir) { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) {" walkDirectory(filePath)} else if (file.endsWith(".tsx") | file.endsWith(".ts")) { fixImportsInFile(filePath)} }}/ Fix components directory"walkDirectory("./components");"console.log("Import fixing completed!");""`"`
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-function fixImportsInFile(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Fix concatenated imports;
-function walkDirectory(dir) {;  const files = fs.readdirSync(dir);
-  for (const file of files) {}
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-<<<<<<< HEAD
-    if (stat.isDirectory()) {}
-      walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {}
-      fixImportsInFile(filePath)};
-  };
-};
-=======
-    if (stat.isDirectory()) {;
-  walkDirectory(filePath);,
-} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {;
-  fixImportsInFile(filePath);,
-}
-  }
-}
+const glob = require('glob');
 
->>>>>>> origin/automation-fixes
-// Fix components directory;
-walkDirectory('./components');
-console.log('Import fixing completed!');
+// Find all TypeScript/JavaScript files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
+
+console.log(`Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+
+files.forEach(file => {
+  const filePath = path.join(__dirname, file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix Next.js imports
+  if (content.includes("import Link from 'next/link'")) {
+    content = content.replace("import Link from 'next/link'", "import { Link } from 'react-router-dom'");
+    modified = true;
+  }
+
+  if (content.includes("import { Link } from 'next/link'")) {
+    content = content.replace("import { Link } from 'next/link'", "import { Link } from 'react-router-dom'");
+    modified = true;
+  }
+
+  // Fix SEO imports
+  if (content.includes("import SEO from '../../../components/SEO'")) {
+    content = content.replace("import SEO from '../../../components/SEO'", "import SEO from '../../components/SEO'");
+    modified = true;
+  }
+
+  if (content.includes("import SEO from '../../components/SEO'")) {
+    content = content.replace("import SEO from '../../components/SEO'", "import SEO from '../../components/SEO'");
+    modified = true;
+  }
+
+  if (content.includes("import SEO from '../components/SEO'")) {
+    content = content.replace("import SEO from '../components/SEO'", "import SEO from '../../components/SEO'");
+    modified = true;
+  }
+
+  // Fix Next.js Image imports
+  if (content.includes("import Image from 'next/image'")) {
+    content = content.replace("import Image from 'next/image'", "import { Image } from 'react-bootstrap'");
+    modified = true;
+  }
+
+  // Fix Next.js Head imports
+  if (content.includes("import Head from 'next/head'")) {
+    content = content.replace("import Head from 'next/head'", "import { Helmet } from 'react-helmet-async'");
+    modified = true;
+  }
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Fixed imports in: ${file}`);
+    fixedCount++;
+  }
+});
+
+console.log(`\n🎉 Fixed imports in ${fixedCount} files!`);

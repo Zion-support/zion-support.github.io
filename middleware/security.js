@@ -1,12 +1,21 @@
 
+
+
+
+
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 
+
+
 export function securityMiddleware(request) {;
+
 
   const response = NextResponse.next();
   const response = NextResponse && NextResponse.next();
+
+export function securityMiddleware(request) {;
   const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
@@ -30,6 +39,12 @@ export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
 
+
+
+
+
+
+
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
@@ -40,18 +55,38 @@ export function securityHeaders(req, res, next) {
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
 
-  return response;// Security headers middleware
-export function securityHeaders(req, res, next) {
-  Object.entries({
+
 
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
-    res.setHeader(key, value);
+    res && res.setHeader(key, value);
   });
   next();
 
-}
 
+
+
+}
+// Security middleware;
+import { NextResponse } from 'next / server';
+import { getSecurityHeaders } from '../utils / security - headers';
+;
+export /**
+ * security_middleware - Function description
+ */
+function security_middleware() {
+  const response = NextResponse.next ();
+;
+  // Add security headers;
+  const headers = getSecurityHeaders ();
+  headers.for_each (({ key, value }) => {
+    response.headers.set (key, value);
+  });
+;
+  // Add HSTS header for HTTPS;
+  // Check condition
+if ( {) {
+  $2
 }
     response.headers.set (
       'Strict - Transport - Security',
@@ -76,42 +111,5 @@ function security_headers() {
   next ();
 }
 }
-}
-}
 
-}
-
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
-
-  // Add security headers
-
-// Security middleware;
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
-
-  // Add security headers;
-pr-12325
-  const headers = getSecurityHeaders();
-  headers.forEach(({ key, value }) => {
-    response.headers.set(key, value);
-  });
-
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
-  // Add HSTS header for HTTPS;
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload)
-pr-12325
-    );
-  }
-
-  return response;
 }

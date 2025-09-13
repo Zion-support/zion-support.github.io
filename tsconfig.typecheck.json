@@ -1,17 +1,33 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true,
-    "strict": true,
-    "jsx": "react-jsx",
-    "skipLibCheck": true,
-    "lib": ["dom", "es2020"],
-    "types": ["react", "react-dom", "node"],
-    "esModuleInterop": true
+    "noEmit": true
   },
-  "files": [
-    "src/AppMinimal.tsx",
-    "src/main.tsx",
-    "types/global.d.ts"
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    "out",
+    "coverage",
+    "**/*.disabled/**",
+    "**/*.bak/**",
+    "**/*.backup/**",
+    "**/backup/**",
+    "**/backups/**",
+    "**/temp*/**",
+    "**/*.broken/**",
+    "**/*.corrupted*/**",
+    "__tests__/**",
+    "tests/**",
+    "pages*/**",
+    "src_backup*/**",
+    "public-backup/**"
   ]
 }
 
