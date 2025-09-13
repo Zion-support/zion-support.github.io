@@ -71,6 +71,12 @@ import UltimateContentPromotionBanner2025 from '../components/UltimateContentPro
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
 import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
 
+// Import new content showcase components
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import AI2025InsightsPromotionBanner from '../components/AI2025InsightsPromotionBanner';
+import AI2025InsightsShowcase from '../components/AI2025InsightsShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -82,6 +88,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW AI 2025 INSIGHTS PROMOTION BANNER */}
+        <AI2025InsightsPromotionBanner />
+        
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
         
@@ -248,6 +260,12 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
         </Suspense>
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* AI 2025 INSIGHTS SHOWCASE */}
+        <AI2025InsightsShowcase />
         
         {/* AI 2025 CONTENT DISCOVERY WIDGET */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">

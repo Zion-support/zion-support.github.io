@@ -174,6 +174,12 @@ function Header() {
                 <Link href="/ai-2025-ultimate-content-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2025 Ultimate Content Revolution (REVOLUTIONARY)
                 </Link>
+                <Link href="#ultimate-content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500">
+                  🎯 Ultimate Content Showcase 2025 (NEW)
+                </Link>
+                <Link href="#ai-insights-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-500">
+                  🔮 AI 2025 Insights & Trends (EXCLUSIVE)
+                </Link>
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough Revolution (NEW)
                 </Link>
