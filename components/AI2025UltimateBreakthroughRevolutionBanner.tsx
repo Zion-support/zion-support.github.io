@@ -10,10 +10,10 @@ export default function AI2025UltimateBreakthroughRevolutionBanner() {
       
       {/* Animated particles */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
-        <div className="absolute top-20 right-20 w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 right-1/3 w-3 h-3 bg-pink-400 rounded-full animate-ping"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-pink-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-400/20 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-green-400/20 rounded-full animate-bounce"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -56,6 +56,34 @@ export default function AI2025UltimateBreakthroughRevolutionBanner() {
             </div>
           </div>
 
+          {/* Key features grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-lg font-bold text-yellow-400 mb-2">Quantum Computing Supremacy</h3>
+              <p className="text-sm text-gray-300">15,000x faster processing with infinite computational possibilities</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-lg font-bold text-cyan-400 mb-2">Neural Interface Revolution</h3>
+              <p className="text-sm text-gray-300">99.7% accuracy in thought-to-action translation</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 backdrop-blur-sm border border-green-500/30 rounded-xl p-6">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-bold text-green-400 mb-2">Autonomous Systems</h3>
+              <p className="text-sm text-gray-300">99.9% accuracy with zero human intervention</p>
+            </div>
+          </div>
+
+          {/* ROI showcase */}
+          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-xl p-8 mb-10">
+            <div className="text-5xl font-bold text-green-400 mb-2">10,000% ROI</div>
+            <div className="text-lg text-gray-300 mb-4">Average across all AI 2025 implementations</div>
+            <div className="text-sm text-gray-400">Based on 500+ successful enterprise transformations</div>
+          </div>
+
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
@@ -93,6 +121,31 @@ export default function AI2025UltimateBreakthroughRevolutionBanner() {
               <span className="text-green-400 mr-2">✓</span>
               <span>Global Scale Ready</span>
             </div>
+          </div>
+
+          {/* Additional links */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+            <Link 
+              href="/resources/ai-2025-revolutionary-implementation-guide"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              📚 Implementation Guide
+            </Link>
+            <span className="text-gray-500">•</span>
+            <Link 
+              href="/tools/ai-2025-roi-calculator"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              🧮 ROI Calculator
+            </Link>
+            <span className="text-gray-500">•</span>
+            <Link 
+              href="/webinars/ai-2025-revolutionary-breakthroughs"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              🔥 Live Webinar
+            </Link>
+          </div>
           </div>
         </div>
       </div>
