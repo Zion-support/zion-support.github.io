@@ -77,23 +77,25 @@ const Navigation: React.FC = () => {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.submenu ? (
-                  <div className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 cursor-pointer">
-                    <item.icon className="w-4 h-4" />
-                    <span className="text-sm font-medium">{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-                  {/* Dropdown */}
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-gray-900/95 backdrop-blur-xl border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    {item.submenu.map((subitem) => (
-                      <a
-                        key={subitem.name}
-                        href={subitem.href}
-                        className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200"
-                      >
-                        {subitem.name}
-                      </a>
-                    ))}
-                  </div>
+                  <>
+                    <div className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 cursor-pointer">
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm font-medium">{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                    {/* Dropdown */}
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-gray-900/95 backdrop-blur-xl border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      {item.submenu.map((subitem) => (
+                        <a
+                          key={subitem.name}
+                          href={subitem.href}
+                          className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200"
+                        >
+                          {subitem.name}
+                        </a>
+                      ))}
+                    </div>
+                  </>
                 ) : (
                   <a
                     href={item.href}
