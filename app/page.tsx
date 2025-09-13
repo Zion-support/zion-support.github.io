@@ -25,6 +25,9 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+import AI2026FuturePredictionsPromotionBanner from '../components/AI2026FuturePredictionsPromotionBanner';
+import QuantumComputing2026PromotionBanner from '../components/QuantumComputing2026PromotionBanner';
 
 export default function HomePage() {
   return (
@@ -37,6 +40,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        
+        {/* AI 2026 FUTURE PREDICTIONS PROMOTION BANNER */}
+        <AI2026FuturePredictionsPromotionBanner />
+        
+        {/* QUANTUM COMPUTING 2026 PROMOTION BANNER */}
+        <QuantumComputing2026PromotionBanner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
