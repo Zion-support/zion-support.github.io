@@ -83,10 +83,10 @@ import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePre
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
 import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
 
-// Import new promotional banners
-import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
-import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePredictionsBanner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+// Import new 2026 promotional banners
+import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import QuantumComputingBreakthrough2026PromotionBanner from '../components/QuantumComputingBreakthrough2026PromotionBanner';
+import AI2026EnterpriseTransformationPromotionBanner from '../components/AI2026EnterpriseTransformationPromotionBanner';
 
 export default function HomePage() {
   return (
@@ -99,11 +99,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2026 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026UltimateBreakthroughPromotionBanner />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH 2026 PROMOTION BANNER */}
+        <QuantumComputingBreakthrough2026PromotionBanner />
+        
+        {/* AI 2026 ENTERPRISE TRANSFORMATION PROMOTION BANNER */}
+        <AI2026EnterpriseTransformationPromotionBanner />
+        
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
-        
-        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-        <AI2025UltimateBreakthroughRevolutionBanner />
         
         {/* AI 2025 QUANTUM CONSCIOUSNESS BREAKTHROUGH BANNER */}
         <AI2025QuantumConsciousnessBreakthroughBanner />
@@ -134,9 +140,6 @@ export default function HomePage() {
         
         {/* NEW AI 2026-2030 FUTURE PREDICTIONS BANNER */}
         <AI20262030FuturePredictionsBanner />
-        
-        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
-        <UltimateContentShowcase2025 />
         
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
