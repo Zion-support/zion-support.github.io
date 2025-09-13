@@ -1,434 +1,357 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import EnhancedFooter from '../components/EnhancedFooter';
-import EnhancedContactForm from '../components/EnhancedContactForm';
-import EnhancedContactForm from '../components/EnhancedContactForm';
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud,
+  ChevronRight,
+  Users,
+  TrendingUp,
+  Award,
+  Globe
+} from 'lucide-react';
+
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    company: "TechCorp Solutions",
+    role: "CTO",
+    content: "Zion Tech Group transformed our AI infrastructure completely. Their expertise in machine learning and cloud architecture is unmatched.",
+    rating: 5
+  },
+  {
+    name: "Michael Chen",
+    company: "InnovateLab",
+    role: "Founder",
+    content: "The team delivered our quantum computing project ahead of schedule. Their technical depth and project management skills are exceptional.",
+    rating: 5
+  },
+  {
+    name: "Emily Rodriguez",
+    company: "DataFlow Inc",
+    role: "VP Engineering",
+    content: "Outstanding cybersecurity implementation. Our systems are now more secure than ever, and the team provided excellent ongoing support.",
+    rating: 5
+  }
+];
+
+// Stats data
+const stats = [
+  { number: "500+", label: "Projects Completed" },
+  { number: "99.9%", label: "Uptime Guarantee" },
+  { number: "50+", label: "Expert Engineers" },
+  { number: "24/7", label: "Support Available" }
+];
+
+// Features data
+const features = [
+  {
+    icon: <Brain className="w-8 h-8 text-white" />,
+    title: "AI & Machine Learning",
+    description: "Cutting-edge AI solutions that transform your business operations and decision-making processes.",
+    highlight: "Advanced ML Models"
+  },
+  {
+    icon: <Cloud className="w-8 h-8 text-white" />,
+    title: "Cloud Infrastructure",
+    description: "Scalable, secure, and reliable cloud solutions tailored to your specific business needs.",
+    highlight: "99.9% Uptime"
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-white" />,
+    title: "Cybersecurity",
+    description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
+    highlight: "Enterprise Grade"
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-white" />,
+    title: "Quantum Computing",
+    description: "Next-generation quantum solutions for complex computational challenges and optimization.",
+    highlight: "Future-Ready"
+  }
+];
 
 export default function HomePage() {
-import { useRouter } from 'next/router';
-import { useTranslation } from 'react-i18next';
-import Home from '@/pages/Home';
-import type { GetStaticProps } from 'next';
-import * as Sentry from '@sentry/nextjs';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import { logWarn, logError } from '@/utils/productionLogger';
-    <Layout
-const IndexPage: React.FC<HomePageProps> = (props) => {
-          <ErrorBanner msg={props.errorMessage || t('home_page_load_error')} />
-              <Link href="/services">
-                  <ArrowRight className="ml-1 w-4 h-4" />
-              </Link>
-            
-                <Cloud className="w-6 h-6 text-white" />
-                <Zap className="w-6 h-6 text-white" />
-                <Link
-                </Link>
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+  const [isLoaded, setIsLoaded] = useState(false);
 
-export default function Home() {
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
-
-
-
-
-
-import Link from 'next/link';
-import Head from 'next/head';
-import {useState, useEffect, Suspense} from 'react';
-import {useState, useEffect, Suspense} from 'react';
-import {ContactInfo, AnimationState} from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-
-import React, { useState, useEffect, Suspense } from 'react';
-import React, { useState, useEffect, Suspense } from 'react';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState, Service } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import LoadingSpinner from '../components/LoadingSpinner';
-
-export default function Home() {
-  const [animationState, setAnimationState] = useState<AnimationState>({
-
-
-      <Head>;
-
-
-      </Head>;
-      <ErrorBoundary level="page">;
-        <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>;
-        <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>;
-              <Link ;
-              </Link>;
-              <Link ;
-              </Link>;
-              <Link ;
-              </Link>;
-
-
-                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">;
-                </Link>;
-
-
-                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">;
-                </Link>;
-
-
-                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">;
-                </Link>;
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
-              </Link>;
-        </Suspense>;
-        </Suspense>;
-        {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
-
-
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import LoadingSpinner from '../components/LoadingSpinner';
-
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-export default function Home() {;
-  const [animationState, setAnimationState] = useState<AnimationState>({;
-
-
-import Link from 'next / link';
-import Head from 'next / head';
-import {useState, useEffect, Suspense} from 'react';
-import {useState, useEffect, Suspense} from 'react';
-import {ContactInfo, AnimationState} from '../types';
-import ErrorBoundary from '../components / ErrorBoundary';
-import ErrorBoundary from '../components / ErrorBoundary';
-import LoadingSpinner from '../components / LoadingSpinner';
-import LoadingSpinner from '../components / LoadingSpinner';
-import PerformanceMonitor from '../components / PerformanceMonitor';
-import PerformanceMonitor from '../components / PerformanceMonitor';
-export default /**
-
-
-
-      <Head>;
-
-
-
-
-      </Head>;
-      <ErrorBoundary level="page">;
-        <Suspense fallback={<LoadingSpinner full_screen text="Loading Zion Tech Group..." />}>;
-        <Suspense fallback={<LoadingSpinner full_screen text="Loading Zion Tech Group..." />}>;
-
-
-
-              <Link ;
-              </Link>;
-              <Link ;
-              </Link>;
-              <Link ;
-              </Link>;
-
-
-
-                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">;
-                </Link>;
-
-
-                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">;
-                </Link>;
-
-
-                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">;
-                </Link>;
-
-
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
-              </Link>;
-
-
-        </Suspense>;
-        </Suspense>;
-
-
-        {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
-
-
-
-
-      </ErrorBoundary>;
-import React from 'react';
-
-import { Button } from '@/components / ui / button';
-import { Button } from '@/components / ui / button';
-export default /**
-
-        <Button size="lg">;
-        </Button>;
-
-
-
-              <Link 
-              </Link>
-              <Link 
-              </Link>
-              <Link 
-              </Link>
-
-                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
-                </Link>
-                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
-                </Link>
-                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
-                </Link>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-              </Link>
-        </Suspense>
-        </Suspense>
-        <PerformanceMonitor 
-      </ErrorBoundary>
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
-                <Button size="lg" className="group">
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                </Button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                  <Link
-                    <ArrowRight className="w-4 h-4 ml-1" />;
-                  </Link>;
-
-
-
-
-
-
-
-
-
-
-
-
-                  <Card className="p-6 h-full">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  </Card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  <Card className="p-6 h-full">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  </Card>
-
-
-
-
-
-
-
-
-
-                  <Zap className="w-8 h-8 text-white" />
-
-                  <Shield className="w-8 h-8 text-white" />
-
-                  <Brain className="w-8 h-8 text-white" />
-
-
-                  <Card className="p-6">
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  </Card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <Link
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-
-                <Button size="lg" className="group">
-                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                </Button>
-
-
-
-                </Link>              </div>
-
-
-
-
-              <Link href="/contact" className="btn-primary">
-              </Link>
-              <Link href="/about" className="btn-secondary">
-              </Link>
-
-
-
-</Link>
+  return (
+    <>
       <Head>
+        <title>Zion Tech Group - Leading AI, Cloud & Quantum Computing Solutions</title>
+        <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI, cloud infrastructure, cybersecurity, and quantum computing solutions. Expert engineers, 24/7 support, 99.9% uptime guarantee." />
+        <meta name="keywords" content="AI solutions, machine learning, cloud computing, cybersecurity, quantum computing, enterprise software, digital transformation" />
+        <meta property="og:title" content="Zion Tech Group - Leading AI & Cloud Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI, cloud infrastructure, and quantum computing solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zion.app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-            
-              <Link 
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Navigation */}
+        <nav className="relative z-50 px-6 py-4">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+            </div>
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-white hover:text-blue-300 transition-colors">Home</Link>
+              <Link href="/services" className="text-white hover:text-blue-300 transition-colors">Services</Link>
+              <Link href="/about" className="text-white hover:text-blue-300 transition-colors">About</Link>
+              <Link href="/portfolio" className="text-white hover:text-blue-300 transition-colors">Portfolio</Link>
+              <Link href="/blog" className="text-white hover:text-blue-300 transition-colors">Blog</Link>
+              <Link href="/contact" className="text-white hover:text-blue-300 transition-colors">Contact</Link>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link href="/contact" className="px-4 py-2 text-white border border-white/20 rounded-lg hover:bg-white/10 transition-colors">
+                Get Started
               </Link>
-              <Link 
-              </Link>
-              <Link 
-              </Link>
+            </div>
+          </div>
+        </nav>
 
-                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
-                <Link href="/services" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Services</Link>
-                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
-                <Link href="/about" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">About</Link>
-                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
-                <Link href="/contact" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
-
-                      <Link href="/contact" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 md:py-4 md:text-lg md:px-10">
-                      </Link>
-                      <Link href="/services" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-300 bg-blue-900/20 hover:bg-blue-900/30 md:py-4 md:text-lg md:px-10">
-                      </Link>
-
-
-
-                  <Link href="/services" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  </Link>
-
-                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
-                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
-                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
-                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
-                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
-                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
-                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
-                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
-                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
-                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-            
-                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
+        {/* Hero Section */}
+        <section className="relative px-6 py-20 lg:py-32">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+                Transform Your Business with
+                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Cutting-Edge Technology
+                </span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Leading provider of AI solutions, cloud infrastructure, cybersecurity, and quantum computing services. 
+                Empowering businesses to thrive in the digital age.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Free Consultation
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-
-                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
+                <Link href="/portfolio" className="inline-flex items-center px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300">
+                  View Our Work
+                  <ChevronRight className="ml-2 w-5 h-5" />
                 </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
+        {/* Stats Section */}
+        <section className="px-6 py-16">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+            >
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300 text-lg">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our Core Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver comprehensive technology solutions that drive innovation and growth for businesses of all sizes.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {feature.description}
+                  </p>
+                  <div className="text-sm text-blue-400 font-medium">
+                    {feature.highlight}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Trusted by leading companies worldwide for our expertise and commitment to excellence.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div>
+                    <div className="font-semibold text-white">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      {testimonial.role}, {testimonial.company}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Join hundreds of companies that have already revolutionized their operations with our technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Your Project Today
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300">
+                  Explore Our Services
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-            
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-              </Link>
-            
-
-
-
-
-
-
-
-
+        {/* Footer */}
+        <footer className="px-6 py-12 border-t border-white/10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div>
+                <div className="flex items-center space-x-2 mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-white">Zion Tech Group</span>
+                </div>
+                <p className="text-gray-400">
+                  Leading provider of cutting-edge technology solutions for modern businesses.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-4">Services</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
+                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Infrastructure</Link></li>
+                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
+                  <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-4">Company</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+                  <li><Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</Link></li>
+                  <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+                  <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-4">Contact</h3>
+                <ul className="space-y-2">
+                  <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Get in Touch</Link></li>
+                  <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Support</Link></li>
+                  <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Consultation</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-white/10 mt-8 pt-8 text-center">
+              <p className="text-gray-400">
+                © 2024 Zion Tech Group. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+}
