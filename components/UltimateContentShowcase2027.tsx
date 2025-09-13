@@ -7,174 +7,147 @@ import {
   Zap, 
   Brain, 
   Rocket, 
-  Star, 
+  Globe, 
+  Shield, 
   TrendingUp, 
-  Users, 
-  Globe,
+  Users,
   ArrowRight,
   Play,
-  BookOpen,
-  Lightbulb,
-  Target,
-  Award,
-  ChevronRight
+  Star,
+  CheckCircle
 } from 'lucide-react';
 
 const UltimateContentShowcase2027 = () => {
-  const [activeTab, setActiveTab] = useState('ai-innovations');
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const contentCategories = [
     {
-      id: 'ai-innovations',
-      title: 'AI Innovations 2027',
+      id: 'ai-innovation',
+      title: 'AI Innovation Hub',
+      description: 'Cutting-edge artificial intelligence solutions and breakthrough technologies',
       icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Revolutionary AI breakthroughs transforming industries'
-    },
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing',
-      icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Next-generation quantum solutions for complex problems'
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        {
+          title: 'Neural Architecture Revolution',
+          description: 'Advanced neural networks that mimic human cognitive processes',
+          features: ['Self-learning algorithms', 'Emotional intelligence', 'Predictive analytics'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Quantum AI Fusion',
+          description: 'Combining quantum computing with artificial intelligence',
+          features: ['Quantum neural networks', 'Exponential processing power', 'Breakthrough problem solving'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Consciousness Simulation',
+          description: 'AI systems that exhibit consciousness-like behaviors',
+          features: ['Self-awareness algorithms', 'Creative problem solving', 'Ethical decision making'],
+          image: '/api/placeholder/400/300'
+        }
+      ]
     },
     {
       id: 'automation',
       title: 'Advanced Automation',
+      description: 'Revolutionary automation solutions for enterprise transformation',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
+      content: [
+        {
+          title: 'Autonomous Business Operations',
+          description: 'Self-managing business processes with minimal human intervention',
+          features: ['End-to-end automation', 'Intelligent decision making', 'Self-optimization'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Smart Workflow Orchestration',
+          description: 'Intelligent workflow management across all business functions',
+          features: ['Dynamic process adaptation', 'Resource optimization', 'Real-time monitoring'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Predictive Maintenance Systems',
+          description: 'AI-powered maintenance that prevents failures before they occur',
+          features: ['Anomaly detection', 'Predictive analytics', 'Automated scheduling'],
+          image: '/api/placeholder/400/300'
+        }
+      ]
+    },
+    {
+      id: 'quantum',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum computing solutions and applications',
       icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Intelligent automation systems for modern businesses'
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        {
+          title: 'Quantum Supremacy Platform',
+          description: 'Achieving computational advantages over classical computers',
+          features: ['Quantum algorithms', 'Error correction', 'Scalable architecture'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Quantum Machine Learning',
+          description: 'Machine learning algorithms running on quantum hardware',
+          features: ['Quantum neural networks', 'Quantum optimization', 'Quantum feature maps'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Quantum Cryptography',
+          description: 'Unbreakable security through quantum principles',
+          features: ['Quantum key distribution', 'Quantum random numbers', 'Post-quantum security'],
+          image: '/api/placeholder/400/300'
+        }
+      ]
     },
     {
-      id: 'future-tech',
-      title: 'Future Technologies',
-      icon: Star,
-      color: 'from-orange-600 to-red-600',
-      description: 'Cutting-edge technologies shaping tomorrow'
+      id: 'neural',
+      title: 'Neural Interfaces',
+      description: 'Direct brain-computer interfaces and neural augmentation',
+      icon: Globe,
+      color: 'from-orange-500 to-red-500',
+      content: [
+        {
+          title: 'Brain-Computer Interface',
+          description: 'Direct communication between brain and digital systems',
+          features: ['Thought-to-text', 'Neural control', 'Cognitive enhancement'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Neural Augmentation',
+          description: 'Enhancing human cognitive abilities through technology',
+          features: ['Memory enhancement', 'Learning acceleration', 'Sensory expansion'],
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Consciousness Upload',
+          description: 'Digital preservation and transfer of human consciousness',
+          features: ['Mind mapping', 'Digital immortality', 'Consciousness backup'],
+          image: '/api/placeholder/400/300'
+        }
+      ]
     }
   ];
 
-  const featuredContent = [
-    {
-      id: 1,
-      title: "AI Consciousness Evolution Platform 2027",
-      description: "Revolutionary AI system achieving near-human consciousness levels with advanced neural architectures and emotional intelligence capabilities.",
-      category: "ai-innovations",
-      image: "/api/placeholder/600/400",
-      tags: ["AI", "Consciousness", "Neural Networks", "2027"],
-      readTime: "8 min read",
-      views: "2.3M",
-      rating: 4.9,
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Quantum Neural Fusion Breakthrough",
-      description: "First successful integration of quantum computing with neural networks, achieving unprecedented processing speeds and problem-solving capabilities.",
-      category: "quantum-computing",
-      image: "/api/placeholder/600/400",
-      tags: ["Quantum", "Neural Networks", "Breakthrough", "2027"],
-      readTime: "12 min read",
-      views: "1.8M",
-      rating: 4.8,
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Autonomous Business Operations Suite",
-      description: "Complete business automation platform that can run entire operations without human intervention, adapting and optimizing in real-time.",
-      category: "automation",
-      image: "/api/placeholder/600/400",
-      tags: ["Automation", "Business", "AI", "2027"],
-      readTime: "15 min read",
-      views: "3.1M",
-      rating: 4.9,
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Neural Interface Revolution 2027",
-      description: "Direct brain-computer interface technology enabling seamless interaction between human consciousness and digital systems.",
-      category: "future-tech",
-      image: "/api/placeholder/600/400",
-      tags: ["Neural Interface", "BCI", "Future", "2027"],
-      readTime: "10 min read",
-      views: "2.7M",
-      rating: 4.7,
-      featured: true
-    },
-    {
-      id: 5,
-      title: "Synthetic Intelligence Ecosystem",
-      description: "Comprehensive AI ecosystem featuring multiple specialized intelligences working in harmony to solve complex global challenges.",
-      category: "ai-innovations",
-      image: "/api/placeholder/600/400",
-      tags: ["Synthetic Intelligence", "Ecosystem", "AI", "2027"],
-      readTime: "20 min read",
-      views: "1.9M",
-      rating: 4.8,
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Quantum-Safe Cryptography Suite",
-      description: "Advanced cryptographic solutions designed to protect against quantum computing threats, ensuring future-proof security.",
-      category: "quantum-computing",
-      image: "/api/placeholder/600/400",
-      tags: ["Cryptography", "Security", "Quantum", "2027"],
-      readTime: "14 min read",
-      views: "1.5M",
-      rating: 4.6,
-      featured: false
-    }
+  const stats = [
+    { label: 'AI Models Deployed', value: '10,000+', icon: Brain },
+    { label: 'Automation Projects', value: '5,000+', icon: Zap },
+    { label: 'Quantum Qubits', value: '1M+', icon: Rocket },
+    { label: 'Neural Connections', value: '100B+', icon: Globe }
   ];
 
-  const filteredContent = featuredContent.filter(item => 
-    activeTab === 'all' || item.category === activeTab
-  );
-
-  const featuredItems = filteredContent.filter(item => item.featured);
-  const regularItems = filteredContent.filter(item => !item.featured);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % featuredItems.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [featuredItems.length]);
+  if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30"
-            animate={{
-              x: [0, Math.random() * 1000],
-              y: [0, Math.random() * 1000],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -182,269 +155,146 @@ const UltimateContentShowcase2027 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
-            ULTIMATE CONTENT SHOWCASE 2027
+            Ultimate Content Showcase 2027
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Revolutionary
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {" "}Content
-            </span>
-            <br />
-            <span className="text-4xl md:text-6xl">Showcase</span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the most groundbreaking content, innovations, and technologies 
-            that are reshaping our world in 2027 and beyond.
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+            The Future is Here
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore revolutionary technologies that are reshaping our world. 
+            From AI consciousness to quantum computing, discover the innovations that will define the next decade.
           </p>
         </motion.div>
 
-        {/* Category Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {contentCategories.map((category) => {
-            const Icon = category.icon;
-            return (
-              <button
-                key={category.id}
-                onClick={() => setActiveTab(category.id)}
-                className={`group relative px-8 py-4 rounded-2xl transition-all duration-300 ${
-                  activeTab === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Icon className="w-5 h-5" />
-                  <span className="font-semibold">{category.title}</span>
-                </div>
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-300 group-hover:w-full"></div>
-              </button>
-            );
-          })}
-        </motion.div>
-
-        {/* Featured Content Carousel */}
-        {featuredItems.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-16"
-          >
-            <div className="relative bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-3xl p-8 backdrop-blur-sm border border-white/20">
-              <div className="flex items-center gap-3 mb-6">
-                <Award className="w-6 h-6 text-yellow-400" />
-                <h2 className="text-2xl font-bold text-white">Featured Content</h2>
-              </div>
-              
-              <div className="relative overflow-hidden rounded-2xl">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentSlide}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }}
-                    className="grid md:grid-cols-2 gap-8 items-center"
-                  >
-                    <div>
-                      <div className="flex items-center gap-2 mb-4">
-                        {featuredItems[currentSlide].tags.map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold rounded-full"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      
-                      <h3 className="text-3xl font-bold text-white mb-4">
-                        {featuredItems[currentSlide].title}
-                      </h3>
-                      
-                      <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                        {featuredItems[currentSlide].description}
-                      </p>
-                      
-                      <div className="flex items-center gap-6 mb-6">
-                        <div className="flex items-center gap-2 text-gray-300">
-                          <BookOpen className="w-4 h-4" />
-                          <span>{featuredItems[currentSlide].readTime}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-gray-300">
-                          <Users className="w-4 h-4" />
-                          <span>{featuredItems[currentSlide].views} views</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-yellow-400">
-                          <Star className="w-4 h-4 fill-current" />
-                          <span>{featuredItems[currentSlide].rating}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex gap-4">
-                        <button className="group flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                          <Play className="w-5 h-5" />
-                          Watch Now
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        <button className="flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                          <BookOpen className="w-5 h-5" />
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                    
-                    <div className="relative">
-                      <div className="aspect-video bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl overflow-hidden">
-                        <img
-                          src={featuredItems[currentSlide].image}
-                          alt={featuredItems[currentSlide].title}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
-                          >
-                            <Play className="w-8 h-8 text-white ml-1" />
-                          </motion.button>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-                
-                {/* Carousel Controls */}
-                <div className="flex justify-center gap-2 mt-6">
-                  {featuredItems.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentSlide ? 'bg-white' : 'bg-white/30'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Content Grid */}
+        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {regularItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center gap-1 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                    <span className="text-white text-sm font-semibold">{item.rating}</span>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="flex gap-2">
-                    {item.tags.slice(0, 2).map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-2 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <div className="flex items-center gap-4">
-                    <span className="flex items-center gap-1">
-                      <BookOpen className="w-3 h-3" />
-                      {item.readTime}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users className="w-3 h-3" />
-                      {item.views}
-                    </span>
-                  </div>
-                </div>
-                
-                <button className="group w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  Explore Content
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300 text-sm">{stat.label}</div>
+            </div>
           ))}
         </motion.div>
+
+        {/* Content Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-12"
+        >
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {contentCategories.map((category, index) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === index
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <category.icon className="w-5 h-5" />
+                  {category.title}
+                </div>
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Content Display */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+            className="mb-16"
+          >
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {contentCategories[activeTab].title}
+              </h3>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                {contentCategories[activeTab].description}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {contentCategories[activeTab].content.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl mb-6 flex items-center justify-center">
+                    <Play className="w-12 h-12 text-white/60 group-hover:text-white transition-colors" />
+                  </div>
+                  
+                  <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                  <p className="text-gray-300 mb-4">{item.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {item.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-4 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2 group">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center"
         >
-          <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-3xl p-12 backdrop-blur-sm border border-white/20">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Explore the Future?
-            </h2>
+          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Future?
+            </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of innovators, entrepreneurs, and visionaries who are 
-              already transforming their businesses with our cutting-edge content and solutions.
+              Join thousands of forward-thinking organizations already leveraging these revolutionary technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 px-8 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2">
                 <Rocket className="w-5 h-5" />
                 Start Your Journey
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                <Globe className="w-5 h-5" />
-                View All Content
+              <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                <Play className="w-5 h-5" />
+                Watch Demo
               </button>
             </div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
