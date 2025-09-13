@@ -147,6 +147,14 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 // Import new breakthrough announcement banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+
+// Import new 2026 ultimate content components
+import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+import UltimateTechShowcase2026Banner from '../components/UltimateTechShowcase2026Banner';
+import RevolutionaryInnovationBanner2026 from '../components/RevolutionaryInnovationBanner2026';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
@@ -204,6 +212,24 @@ export default function HomePage() {
         
         {/* NEW: AI 2026 NEURAL INTERFACES PROMOTION BANNER */}
         <AI2026NeuralInterfacesPromotionBanner />
+        
+        {/* NEW: AI 2030 FUTURE VISION PROMOTION BANNER */}
+        <AI2030FutureVisionPromotionBanner />
+        
+        {/* NEW: REVOLUTIONARY TECH BANNER 2026 */}
+        <RevolutionaryTechBanner2026 />
+        
+        {/* NEW: INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* NEW: CONTENT 2026 ULTIMATE SHOWCASE */}
+        <NewContent2026UltimateShowcase />
+        
+        {/* NEW: ULTIMATE TECH SHOWCASE 2026 BANNER */}
+        <UltimateTechShowcase2026Banner />
+        
+        {/* NEW: REVOLUTIONARY INNOVATION BANNER 2026 */}
+        <RevolutionaryInnovationBanner2026 />
         
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
