@@ -255,6 +255,7 @@ export default function AI2025GlobalTransformationBreakthrough() {
           <p className="text-xl text-gray-300 mb-8">
             Join the companies already transforming their operations with our AI 2025 breakthrough.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
