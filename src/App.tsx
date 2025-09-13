@@ -128,6 +128,20 @@ const AutonomousBusinessPlatform = React.lazy(() => import('./pages/AutonomousBu
 const InnovativeContentShowcase2026Page = () => <InnovativeContentShowcase2026 />;
 const InteractiveContentDiscovery2026Page = () => <InteractiveContentDiscovery2026 />;
 
+// New blog posts
+const BlogPostQuantumAI = React.lazy(() => import('./pages/BlogPostQuantumAI'));
+const BlogPostAutomationGuide = React.lazy(() => import('./pages/BlogPostAutomationGuide'));
+
+// New case studies
+const CaseStudyHealthcareAI = React.lazy(() => import('./pages/CaseStudyHealthcareAI'));
+
+// New resources
+const ResourceImplementationChecklist = React.lazy(() => import('./pages/ResourceImplementationChecklist'));
+const ResourceROICalculator = React.lazy(() => import('./pages/ResourceROICalculator'));
+
+// Content showcase hub
+const ContentShowcaseHub = React.lazy(() => import('./pages/ContentShowcaseHub'));
+
 // Comprehensive services showcase - commented out as they don't exist yet
 // const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -309,6 +323,20 @@ function App() {
               <Route path="/autonomous-business-platform" element={<AutonomousBusinessPlatform />} />
               <Route path="/innovative-content-showcase-2026" element={<InnovativeContentShowcase2026Page />} />
               <Route path="/interactive-content-discovery-2026" element={<InteractiveContentDiscovery2026Page />} />
+              
+              {/* New blog post routes */}
+              <Route path="/blog/quantum-ai-breakthrough-2025" element={<BlogPostQuantumAI />} />
+              <Route path="/blog/ai-automation-enterprise-guide-2025" element={<BlogPostAutomationGuide />} />
+              
+              {/* New case study routes */}
+              <Route path="/case-studies/healthcare-ai-transformation-success" element={<CaseStudyHealthcareAI />} />
+              
+              {/* New resource routes */}
+              <Route path="/resources/ai-implementation-checklist-2025" element={<ResourceImplementationChecklist />} />
+              <Route path="/resources/ai-roi-calculator-guide-2025" element={<ResourceROICalculator />} />
+              
+              {/* Content showcase hub */}
+              <Route path="/content-showcase" element={<ContentShowcaseHub />} />
               
               {/* Hybrid App Demo */}
               

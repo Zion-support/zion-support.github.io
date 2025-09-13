@@ -6,6 +6,7 @@ import NewServicesShowcase2025 from "@/components/NewServicesShowcase2025";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { NewContentPromotionBanner, FeaturedNewContentSection, SuccessMetricsPromotionBanner } from "@/components/NewContentPromotionBanner";
 import { 
   ArrowRight, 
   Brain, 
@@ -216,6 +217,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* New Content Promotion Banner */}
+      <NewContentPromotionBanner />
+
+      {/* Featured New Content Section */}
+      <FeaturedNewContentSection />
+
+      {/* Success Metrics Promotion Banner */}
+      <div className="container mx-auto px-4 py-8">
+        <SuccessMetricsPromotionBanner />
+      </div>
 
       {/* Services Showcase */}
       <ServicesShowcase />
