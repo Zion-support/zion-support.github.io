@@ -96,6 +96,7 @@ import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePre
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
 import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
 
+<<<<<<< HEAD
 // New 2030+ breakthrough components
 import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
 import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
@@ -106,6 +107,11 @@ import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromo
 
 // Import new AI 2025 content showcase banner
 import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
+
+// Import new promotional banners
+import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
+import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 export default function HomePage() {
   return (
@@ -118,21 +124,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
-        <AI2025NewContentPromotionBanner />
-=======
-        {/* NEW AI 2025 CONTENT SHOWCASE BANNER */}
-        <AI2025ContentShowcaseBanner />
-        
-        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
-        <UltimateContentShowcase2025PromotionBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-07dc
-=======
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
->>>>>>> a375e9ceec8bd937c056ad6761fbb8457e411d83
+        
+        {/* NEW AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
+        <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
         
         {/* AI 2025 QUANTUM CONSCIOUSNESS BREAKTHROUGH BANNER */}
         <AI2025QuantumConsciousnessBreakthroughBanner />
