@@ -147,6 +147,13 @@ import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
 
 // Import new promotional banners for 2026
+
+// Import new 2025-2026 content showcase components
+import FuturisticAIServices2026Showcase from '../components/FuturisticAIServices2026Showcase';
+import BusinessTransformationRevolution2025 from '../components/BusinessTransformationRevolution2025';
+import InteractiveSuccessMetrics2025 from '../components/InteractiveSuccessMetrics2025';
+import NextGenAIShowcase2026 from '../components/NextGenAIShowcase2026';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
 import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/QuantumComputingSolutions2026UltimatePromotionBanner';
@@ -391,6 +398,21 @@ export default function HomePage() {
             <AI2025ContentDiscoveryWidget />
           </div>
         </section>
+
+        {/* NEW: CONTENT PROMOTION BANNER 2025 */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW: FUTURISTIC AI SERVICES 2026 SHOWCASE */}
+        <FuturisticAIServices2026Showcase />
+        
+        {/* NEW: BUSINESS TRANSFORMATION REVOLUTION 2025 */}
+        <BusinessTransformationRevolution2025 />
+        
+        {/* NEW: INTERACTIVE SUCCESS METRICS 2025 */}
+        <InteractiveSuccessMetrics2025 />
+        
+        {/* NEW: NEXT-GEN AI SHOWCASE 2026 */}
+        <NextGenAIShowcase2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
