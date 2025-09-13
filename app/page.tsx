@@ -51,6 +51,10 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 
+// Import new ultimate content banners
+import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
+import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -107,6 +111,12 @@ export default function HomePage() {
 >>>>>>> 26f8d2c09d200d7c603f75b688c6b1bec94e2011
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION BANNER */}
+        <UltimateContentRevolutionBanner />
+        
+        {/* AI 2026 BREAKTHROUGH BANNER */}
+        <AI2026BreakthroughBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
