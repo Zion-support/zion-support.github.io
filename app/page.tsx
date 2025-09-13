@@ -176,6 +176,12 @@ import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner20
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
+// Import new 2025 ultimate content components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
 // Import new 2026 innovation showcase and 2030 future vision banners
 import AI2026UltimateInnovationShowcasePromotionBanner from '../components/AI2026UltimateInnovationShowcasePromotionBanner';
 import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
@@ -3692,6 +3698,9 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* New Ultimate Content Promotion Banner */}
+      <NewContent2025UltimatePromotionBanner />
+      
       {/* New Revolutionary Content Sections */}
       <NewContentPromotionalBanner />
       
@@ -3706,6 +3715,23 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* Ultimate Content Discovery Widget */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <UltimateContentDiscoveryWidget2025 />
+        </div>
+      </section>
+      
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewsletterSignup2025 />
+        </div>
+      </section>
+      
+      {/* Ultimate Content Showcase */}
+      <NewContent2025UltimateShowcase />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
