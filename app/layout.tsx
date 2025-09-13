@@ -184,7 +184,10 @@ function Header() {
                   🚀 AI 2025 Ultimate Content Revolution (REVOLUTIONARY)
                 </Link>
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
-                  🚀 AI 2025 Ultimate Breakthrough Revolution (NEW)
+                  🚀 AI 2025 Ultimate Breakthrough Revolution (15,000% ROI) (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-ultimate-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Ultimate Breakthrough Success (15,000% ROI) (NEW)
                 </Link>
                 <Link href="/blog/ai-2025-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2025 Revolutionary Trends & Predictions (NEW)
