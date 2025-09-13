@@ -148,15 +148,10 @@ export default function NewContent2025BreakthroughBanner() {
               className="bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm whitespace-nowrap"
             >
               🛠️ Get Toolkit
->>>>>>> origin/cursor/create-and-deploy-new-content-12a3
             </Link>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </section>
-=======
-    </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-12a3
   );
 }
