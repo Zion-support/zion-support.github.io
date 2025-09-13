@@ -163,6 +163,12 @@ import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalC
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
+
+// New 2025 Ultimate Content Components
+import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
+import AI2025UltimateBreakthroughContentShowcase from '../components/AI2025UltimateBreakthroughContentShowcase';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -219,6 +225,26 @@ const HomePage: React.FC = () => {
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
+              </Suspense>
+
+              {/* Revolutionary Content Promotion Banner 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryContentPromotionBanner2025 />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Content Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughContentBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* Interactive Content Discovery Widget 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget2025 />
               </Suspense>
 
               {/* New Content 2025 Promotion Banner */}
