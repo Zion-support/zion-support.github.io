@@ -18,6 +18,14 @@ import BusinessSolutionsShowcase2027PromotionBanner from '../components/Business
 import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
 import InteractiveTechDemo2027PromotionBanner from '../components/InteractiveTechDemo2027PromotionBanner';
 
+// Import new 2028 components
+import UltimateContentShowcase2028 from '../components/UltimateContentShowcase2028';
+import UltimateContentShowcase2028PromotionBanner from '../components/UltimateContentShowcase2028PromotionBanner';
+import BusinessSolutionsShowcase2028 from '../components/BusinessSolutionsShowcase2028';
+import BusinessSolutionsShowcase2028PromotionBanner from '../components/BusinessSolutionsShowcase2028PromotionBanner';
+import InteractiveTechDemo2028 from '../components/InteractiveTechDemo2028';
+import InteractiveTechDemo2028PromotionBanner from '../components/InteractiveTechDemo2028PromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -243,6 +251,15 @@ export default function HomePage() {
         {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2027PromotionBanner />
         
+        {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2028PromotionBanner />
+        
+        {/* NEW 2028 BUSINESS SOLUTIONS SHOWCASE PROMOTION BANNER */}
+        <BusinessSolutionsShowcase2028PromotionBanner />
+        
+        {/* NEW 2028 INTERACTIVE TECH DEMO PROMOTION BANNER */}
+        <InteractiveTechDemo2028PromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
         <AI2025UltimateContentShowcaseBanner />
         
@@ -308,6 +325,15 @@ export default function HomePage() {
         
         {/* NEW 2027 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2027 />
+        
+        {/* NEW 2028 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2028 />
+        
+        {/* NEW 2028 BUSINESS SOLUTIONS SHOWCASE */}
+        <BusinessSolutionsShowcase2028 />
+        
+        {/* NEW 2028 INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2028 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
