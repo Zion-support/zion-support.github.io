@@ -138,6 +138,10 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
 import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
 
+// Import new content promotion components
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -149,6 +153,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
         {/* AI TOOLS 2025 ULTIMATE SHOWCASE BANNER */}
         <AITools2025UltimateShowcaseBanner />
         
@@ -157,9 +164,6 @@ export default function HomePage() {
         
         {/* NEW 2025 ULTIMATE CONTENT PROMOTION BANNER */}
         <AI2025UltimateContentPromotionBanner />
-        
-        {/* AI 2025 ULTIMATE INNOVATION SHOWCASE BANNER */}
-        <AI2025UltimateInnovationShowcaseBanner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
@@ -222,6 +226,9 @@ export default function HomePage() {
         
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
         
         {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE */}
         <AI2025RevolutionaryContentShowcase />
