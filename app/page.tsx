@@ -43,6 +43,7 @@ import AI2026RevolutionaryContentShowcase from '../components/AI2026Revolutionar
 
 // New 2026 Content Components
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import NewContent2026PromotionBannerLatest from '../components/NewContent2026PromotionBanner';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
 // AI 2025 Ultimate Automation Platform
@@ -668,6 +669,11 @@ const HomePage: React.FC = () => {
               {/* New 2026 Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContent2026PromotionBanner />
+              </Suspense>
+
+              {/* New Content 2026 Promotion Banner - Latest */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2026PromotionBannerLatest />
               </Suspense>
 
               {/* AI 2028-2030 Future Predictions Promotion Banner */}
