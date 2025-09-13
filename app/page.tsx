@@ -27,6 +27,7 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 
 export default function HomePage() {
   return (
@@ -39,6 +40,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
+        <QuantumNeuralFusion2026PromotionBanner />
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
         
