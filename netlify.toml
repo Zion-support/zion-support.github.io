@@ -32,6 +32,7 @@
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
+
 [[redirects]]
   from = "/ai-financial-planning-platform"
   to = "/services/ai-financial-planning-platform/"
@@ -78,12 +79,6 @@
 
 [context.branch-deploy]
   command = "corepack enable && pnpm build"
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
