@@ -3,89 +3,42 @@
 import React from 'react';
 import Head from 'next/head';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
+interface AdvancedSEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  url: string;
   image?: string;
-  url?: string;
   type?: string;
-  author?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  author?: string;
   section?: string;
   tags?: string[];
-  structuredData?: any;
 }
 
-const AdvancedSEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Revolutionary AI Solutions & Quantum Computing Breakthroughs",
-  description = "Discover revolutionary AI solutions, quantum computing breakthroughs, and transformative automation technologies. Join the future of intelligent systems with Zion Tech Group's cutting-edge innovations.",
-  keywords = [
-    "AI solutions",
-    "quantum computing",
-    "automation",
-    "machine learning",
-    "artificial intelligence",
-    "breakthrough technology",
-    "revolutionary AI",
-    "quantum neural fusion",
-    "autonomous systems",
-    "synthetic intelligence"
-  ],
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-  type = "website",
-  author = "Zion Tech Group",
+export default function AdvancedSEO({
+  title,
+  description,
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  url,
+  image = '/images/og-default.jpg',
+  type = 'website',
   publishedTime,
   modifiedTime,
-  section = "Technology",
-  tags = ["AI", "Quantum Computing", "Automation"],
-  structuredData
-}) => {
-  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith("http") ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith("http") ? image : `https://ziontechgroup.com${image}`;
-
-  const defaultStructuredData = {
+  author = 'Zion Tech Group',
+  section = 'Technology',
+  tags = []
+}: AdvancedSEOProps) {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Revolutionary AI solutions and quantum computing breakthroughs",
-    "foundingDate": "2020",
-    "founder": {
-      "@type": "Person",
-      "name": "Zion Tech Group Team"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/zion-tech-group",
-      "https://github.com/Zion-Holdings"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-ZION-TECH",
-      "contactType": "customer service",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA"
-    }
-  };
-
-  const articleStructuredData = type === "article" ? {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": title,
+    "@type": type === 'article' ? 'Article' : 'WebSite',
+    "name": title,
     "description": description,
-    "image": fullImage,
+    "url": url,
+    "image": image,
     "author": {
-      "@type": "Person",
+      "@type": "Organization",
       "name": author
     },
     "publisher": {
@@ -93,103 +46,76 @@ const AdvancedSEO: React.FC<SEOProps> = ({
       "name": "Zion Tech Group",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ziontechgroup.com/logo.png"
+        "url": "/images/logo.png"
       }
     },
-    "datePublished": publishedTime,
-    "dateModified": modifiedTime || publishedTime,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": fullUrl
-    },
-    "articleSection": section,
-    "keywords": keywords.join(", "),
-    "wordCount": description.length
-  } : null;
+    ...(type === 'article' && {
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime,
+      "articleSection": section,
+      "keywords": tags.join(', ')
+    }),
+    ...(type === 'website' && {
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${url}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    })
+  };
 
   return (
     <Head>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(", ")} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:url" content={fullUrl} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
       
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#1a1a1a" />
-      <meta name="msapplication-TileColor" content="#1a1a1a" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#2563eb" />
+      <meta name="msapplication-TileColor" content="#2563eb" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       
-      {/* Article-specific meta tags */}
-      {type === "article" && (
-        <>
-          <meta property="article:author" content={author} />
-          <meta property="article:section" content={section} />
-          <meta property="article:published_time" content={publishedTime} />
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
+          __html: JSON.stringify(structuredData)
         }}
       />
-      
-      {articleStructuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(articleStructuredData)
-          }}
-        />
-      )}
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       
-      {/* DNS Prefetch */}
+      {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
     </Head>
   );
-};
-
-export default AdvancedSEO;
+}
