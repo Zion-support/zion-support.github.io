@@ -246,6 +246,14 @@ import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionP
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import AITrendsPredictions2026 from '../components/AITrendsPredictions2026';
+import AITrendsPredictions2026PromotionBanner from '../components/AITrendsPredictions2026PromotionBanner';
+import QuantumComputingSolutions2026 from '../components/QuantumComputingSolutions2026';
+import QuantumComputingSolutions2026PromotionBanner from '../components/QuantumComputingSolutions2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -267,11 +275,24 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 PROMOTIONAL BANNERS */}
+        <UltimateContentShowcase2026PromotionBanner />
+        <AITrendsPredictions2026PromotionBanner />
+        <QuantumComputingSolutions2026PromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
         <NewContent2025UltimateShowcase />
+        
+        {/* NEW 2026 CONTENT SECTIONS */}
+        <UltimateContentShowcase2026 />
+        <AITrendsPredictions2026 />
+        <QuantumComputingSolutions2026 />
         
         {/* REVOLUTIONARY TECH BANNER 2026 */}
         <RevolutionaryTechBanner2026 />
@@ -281,9 +302,6 @@ export default function HomePage() {
         
         {/* INTERACTIVE TECH DEMO 2025 */}
         <InteractiveTechDemo2025 />
-        
-        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
-        <NewContent2025UltimateBreakthroughBanner />
         
         {/* ULTIMATE CONTENT CAROUSEL 2025 */}
         <UltimateContentCarousel2025 />
