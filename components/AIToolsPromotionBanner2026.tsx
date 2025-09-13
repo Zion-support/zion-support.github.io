@@ -18,48 +18,75 @@ import {
   Target,
   Globe,
   X,
-  ArrowRight
+  ArrowRight,
+  Code,
+  Database,
+  Shield,
+  BarChart3,
+  MessageSquare,
+  Image,
+  FileText,
+  Search,
+  Settings,
+  Cpu,
+  Network,
+  CheckCircle
 } from 'lucide-react';
 
-const UltimateContentPromotionBanner2026 = () => {
+const AIToolsPromotionBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
-  const [currentMessage, setCurrentMessage] = useState(0);
+  const [currentTool, setCurrentTool] = useState(0);
 
-  const promotionalMessages = [
+  const featuredTools = [
     {
-      icon: Brain,
-      title: "Revolutionary AI Innovations 2026",
-      subtitle: "Discover breakthrough technologies that will reshape the future",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "bg-gradient-to-r from-purple-600/10 to-pink-600/10",
-      borderColor: "border-purple-500/30"
-    },
-    {
-      icon: Rocket,
-      title: "Future Technology Predictions",
-      subtitle: "Explore what's coming in the next decade of innovation",
+      icon: Code,
+      name: "Neural Code Generator",
+      description: "AI-powered code generation",
       color: "from-blue-600 to-cyan-600",
       bgColor: "bg-gradient-to-r from-blue-600/10 to-cyan-600/10",
       borderColor: "border-blue-500/30"
     },
     {
-      icon: Target,
-      title: "Enterprise AI Solutions",
-      subtitle: "Transform your business with cutting-edge AI technology",
+      icon: BarChart3,
+      name: "Intelligent Data Analyzer",
+      description: "Advanced analytics platform",
       color: "from-green-600 to-emerald-600",
       bgColor: "bg-gradient-to-r from-green-600/10 to-emerald-600/10",
       borderColor: "border-green-500/30"
+    },
+    {
+      icon: FileText,
+      name: "Content Creation Suite",
+      description: "Complete content generation",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "bg-gradient-to-r from-purple-600/10 to-pink-600/10",
+      borderColor: "border-purple-500/30"
+    },
+    {
+      icon: Settings,
+      name: "Smart Automation Hub",
+      description: "Workflow automation",
+      color: "from-orange-600 to-red-600",
+      bgColor: "bg-gradient-to-r from-orange-600/10 to-red-600/10",
+      borderColor: "border-orange-500/30"
     }
+  ];
+
+  const benefits = [
+    "24 AI Tools Available",
+    "50K+ Active Users",
+    "Free Trial Available",
+    "24/7 Support"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % promotionalMessages.length);
-    }, 4000);
+      setCurrentTool((prev) => (prev + 1) % featuredTools.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  const currentPromo = promotionalMessages[currentMessage];
+  const currentFeature = featuredTools[currentTool];
 
   if (!isVisible) return null;
 
@@ -73,52 +100,50 @@ const UltimateContentPromotionBanner2026 = () => {
         className="relative overflow-hidden"
       >
         {/* Main Banner */}
-        <div className={`${currentPromo.bgColor} border-b ${currentPromo.borderColor} backdrop-blur-lg`}>
+        <div className={`${currentFeature.bgColor} border-b ${currentFeature.borderColor} backdrop-blur-lg`}>
           <div className="container mx-auto px-4 py-6">
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4 flex-1">
                 <motion.div
-                  key={currentMessage}
+                  key={currentTool}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className="flex items-center gap-3"
                 >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${currentPromo.color} rounded-xl flex items-center justify-center`}>
-                    <currentPromo.icon className="w-6 h-6 text-white" />
+                  <div className={`w-12 h-12 bg-gradient-to-r ${currentFeature.color} rounded-xl flex items-center justify-center`}>
+                    <currentFeature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">
-                      {currentPromo.title}
+                      {currentFeature.name}
                     </h3>
                     <p className="text-sm text-gray-300">
-                      {currentPromo.subtitle}
+                      {currentFeature.description}
                     </p>
                   </div>
                 </motion.div>
               </div>
 
-              {/* Center Badge */}
-              <div className="hidden md:flex items-center gap-2">
-                <div className="flex items-center gap-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                  <Star className="w-3 h-3" />
-                  NEW
-                </div>
-                <div className="flex items-center gap-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                  <TrendingUp className="w-3 h-3" />
-                  TRENDING
-                </div>
+              {/* Center Benefits */}
+              <div className="hidden lg:flex items-center gap-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-sm text-gray-300">{benefit}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Right Actions */}
               <div className="flex items-center gap-3">
-                <button className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
+                <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
                   <Play className="w-4 h-4" />
-                  Explore Now
+                  Try Free
                 </button>
                 <button className="flex items-center gap-2 border border-white/30 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300">
-                  Learn More
+                  View All Tools
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 <button
@@ -133,34 +158,35 @@ const UltimateContentPromotionBanner2026 = () => {
         </div>
 
         {/* Animated Progress Bar */}
-        <div className="h-1 bg-gradient-to-r from-purple-600 to-pink-600 relative overflow-hidden">
+        <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
           <motion.div
-            key={currentMessage}
+            key={currentTool}
             initial={{ x: '-100%' }}
             animate={{ x: '100%' }}
-            transition={{ duration: 4, ease: 'linear' }}
+            transition={{ duration: 3, ease: 'linear' }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full"
+              className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
               style={{
-                left: `${20 + i * 15}%`,
+                left: `${10 + i * 10}%`,
                 top: '50%',
               }}
               animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.8, 0.2],
+                y: [0, -15, 0],
+                opacity: [0.3, 0.8, 0.3],
+                scale: [0.5, 1, 0.5],
               }}
               transition={{
-                duration: 2 + i * 0.5,
+                duration: 2 + i * 0.3,
                 repeat: Infinity,
-                delay: i * 0.3,
+                delay: i * 0.4,
               }}
             />
           ))}
@@ -170,4 +196,4 @@ const UltimateContentPromotionBanner2026 = () => {
   );
 };
 
-export default UltimateContentPromotionBanner2026;
+export default AIToolsPromotionBanner2026;

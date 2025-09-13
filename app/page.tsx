@@ -44,6 +44,11 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
 
+// New promotional banners and showcases
+import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import AIToolsShowcase2026 from '../components/AIToolsShowcase2026';
+import AIToolsPromotionBanner2026 from '../components/AIToolsPromotionBanner2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -55,6 +60,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
+        <UltimateContentPromotionBanner2026 />
+        
+        {/* AI TOOLS PROMOTION BANNER 2026 */}
+        <AIToolsPromotionBanner2026 />
+        
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
         
@@ -84,6 +95,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* AI TOOLS SHOWCASE 2026 */}
+        <AIToolsShowcase2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
