@@ -99,6 +99,7 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import MobileOptimizer from '../components/MobileOptimizer';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import AnalyticsDashboard from '../components/AnalyticsDashboard';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -3633,6 +3634,9 @@ export default function HomePage() {
 
       {/* Interactive Content Showcase */}
       <InteractiveContentShowcase />
+
+      {/* Analytics Dashboard */}
+      <AnalyticsDashboard />
 
       {/* Performance and Optimization Components */}
       <PerformanceOptimizer />
