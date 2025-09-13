@@ -1,9 +1,12 @@
 [build]
   functions = "netlify/functions"
+  command = "yarn build:netlify"
 
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NODE_ENV = "production"
+  YARN_VERSION = "1.22.22"
+  NPM_FLAGS = "--prefer-offline --no-audit --progress=false"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
