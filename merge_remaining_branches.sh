@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Script to merge all feature branches into main
-# This will handle conflicts systematically
+# Script to merge remaining feature branches into main
+# This will handle all remaining branches systematically
 
-echo "Starting systematic merge of all feature branches..."
+echo "Starting merge of remaining feature branches..."
 
-# Get all remote branches (excluding main and HEAD)
-branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | sed 's/origin\///' | head -50)
+# Get all remaining remote branches (excluding main, HEAD, and already processed)
+branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | grep -v "origin/22xuo1-codex" | grep -v "origin/74tfm8-codex" | grep -v "origin/75rlpk-codex" | grep -v "origin/7dxqey-codex" | grep -v "origin/7fnoko-codex" | grep -v "origin/7ieis8-codex" | grep -v "origin/9llxiv-codex" | grep -v "origin/9njm0n-codex" | grep -v "origin/add-new-content-and-advertising" | grep -v "origin/auto-merge-main-backup" | grep -v "origin/auto-merge-open-prs" | grep -v "origin/autobot/2025-09-05" | grep -v "origin/autobot/2025-09-06" | grep -v "origin/automation-improvements" | grep -v "origin/automation/git-sync" | sed 's/origin\///' | head -100)
 
 # Counter for tracking progress
 count=0
 total=$(echo "$branches" | wc -l)
-echo "Found $total branches to merge"
+echo "Found $total remaining branches to merge"
 
 # Function to merge a single branch
 merge_branch() {
@@ -48,15 +48,15 @@ echo "$branches" | while read -r branch; do
         count=$((count + 1))
         merge_branch "$branch"
         
-        # Push every 10 successful merges
-        if [ $((count % 10)) -eq 0 ]; then
+        # Push every 20 successful merges
+        if [ $((count % 20)) -eq 0 ]; then
             echo "Pushing progress... (merged $count branches)"
             git push origin main --force-with-lease
         fi
     fi
 done
 
-echo "Batch merge completed. Final push..."
+echo "Remaining batch merge completed. Final push..."
 git push origin main
 
-echo "All feature branches have been processed!"
+echo "All remaining feature branches have been processed!"
