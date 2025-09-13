@@ -293,6 +293,24 @@ export default function HomePage() {
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
         <AI2025_2026UltimateInnovationPromotionBanner />
         
+        {/* ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE AI TOOLS SHOWCASE 2025 PROMOTION BANNER */}
+        <InteractiveAIToolsShowcase2025PromotionBanner />
+        
+        {/* INTERACTIVE AI TOOLS SHOWCASE 2025 */}
+        <InteractiveAIToolsShowcase2025 />
+        
+        {/* BUSINESS SUCCESS STORIES SHOWCASE 2025 PROMOTION BANNER */}
+        <BusinessSuccessStoriesShowcase2025PromotionBanner />
+        
+        {/* BUSINESS SUCCESS STORIES SHOWCASE 2025 */}
+        <BusinessSuccessStoriesShowcase2025 />
+        
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <InteractiveContentDiscoveryWidget />
         
