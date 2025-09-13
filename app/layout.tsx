@@ -192,6 +192,9 @@ function Header() {
                 <Link href="/blog/ai-2025-revolutionary-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Revolutionary Breakthrough (BREAKTHROUGH)
                 </Link>
+                <Link href="/blog/ai-2025-next-generation-autonomous-systems-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500">
+                  🤖 AI 2025 Next-Gen Autonomous Systems (15,000% ROI) (NEW)
+                </Link>
                 <Link href="/blog/ai-2025-quantum-consciousness-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500">
                   ⚛️ AI 2025 Quantum Consciousness (15,000% ROI) (BREAKTHROUGH)
                 </Link>
@@ -223,11 +226,17 @@ function Header() {
                 <Link href="/resources/ai-2025-quantum-consciousness-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500">
                   📚 Quantum Consciousness Implementation Guide (BREAKTHROUGH)
                 </Link>
+                <Link href="/resources/ai-2025-autonomous-systems-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-500">
+                  📚 Autonomous Systems Master Guide (REVOLUTIONARY)
+                </Link>
                 <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🛠️ Ultimate Implementation Toolkit
                 </Link>
                 <Link href="/tools/ai-2025-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2025 ROI Calculator
+                </Link>
+                <Link href="/tools/ai-2025-autonomy-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-teal-50 border-l-4 border-green-500">
+                  🧮 AI 2025 Autonomy Calculator (NEW)
                 </Link>
                 <Link href="/webinars/ai-2025-revolutionary-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔥 Revolutionary Breakthroughs Webinar
@@ -252,6 +261,9 @@ function Header() {
                 </Link>
                 <Link href="/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   ⚛️ Quantum-Neural Fusion Revolution (15,000% ROI) (NEW)
+                </Link>
+                <Link href="/blog/ai-2025-next-generation-autonomous-systems-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500">
+                  🤖 Next-Gen Autonomous Systems (15,000% ROI) (BREAKTHROUGH)
                 </Link>
                 <Link href="/blog/ai-2026-neural-interface-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-500">
                   🧠 Neural Interface Revolution (8,500% ROI) (BREAKTHROUGH)
@@ -281,6 +293,9 @@ function Header() {
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/tools/ai-2026-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2026 ROI Calculator (NEW)
+                </Link>
+                <Link href="/tools/ai-2025-autonomy-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-teal-50 border-l-4 border-green-500">
+                  🧮 Autonomy Calculator (REVOLUTIONARY)
                 </Link>
                 <Link href="/tools/quantum-readiness-assessment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   ⚛️ Quantum Readiness Assessment (NEW)
@@ -996,6 +1011,9 @@ function Header() {
               <div className="py-2">
                 <Link href="/revolutionary-content-showcase-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Revolutionary Content Showcase 2025 (NEW)
+                </Link>
+                <Link href="/new-content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-teal-50 border-l-4 border-green-500">
+                  🆕 New Content Showcase (LATEST)
                 </Link>
                 <Link href="/blog/ai-2025-generative-ai-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Generative AI Revolution (BREAKTHROUGH)
