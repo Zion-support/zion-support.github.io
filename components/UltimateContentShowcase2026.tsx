@@ -1,28 +1,32 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  Sparkles, 
   Brain, 
   Zap, 
-  TrendingUp, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
   Users, 
-  Target, 
-  Award,
-  ChevronRight,
-  Play,
-  Star,
+  Target,
   ArrowRight,
-  Sparkles,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Network,
   Rocket,
-  Shield,
-  Globe
+  Lightbulb,
+  Award
 } from 'lucide-react';
 
 const UltimateContentShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState('breakthroughs');
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [activeTab, setActiveTab] = useState('ai-solutions');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -30,289 +34,223 @@ const UltimateContentShowcase2026 = () => {
   }, []);
 
   const contentSections = {
-    breakthroughs: {
-      title: "Revolutionary AI Breakthroughs 2026",
-      description: "Discover the most advanced AI technologies transforming industries worldwide",
+    'ai-solutions': {
+      title: 'Revolutionary AI Solutions 2026',
+      subtitle: 'Transform Your Business with Next-Generation AI',
       icon: Brain,
-      color: "from-purple-600 to-blue-600",
-      items: [
+      color: 'from-purple-600 to-blue-600',
+      content: [
         {
-          title: "Quantum-Neural Fusion AI",
-          description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power",
-          impact: "10,000x faster processing",
-          roi: "50,000% ROI",
-          category: "Quantum AI",
-          featured: true
+          title: 'Neural Interface Technology',
+          description: 'Direct brain-computer interfaces for unprecedented productivity',
+          features: ['300% faster decision making', 'Real-time data processing', 'Intuitive control systems'],
+          icon: Cpu
         },
         {
-          title: "Consciousness-Level AI Systems",
-          description: "AI systems achieving human-level consciousness and decision-making capabilities",
-          impact: "99.9% accuracy",
-          roi: "25,000% ROI",
-          category: "Consciousness AI",
-          featured: true
+          title: 'Quantum AI Processing',
+          description: 'Leverage quantum computing for complex problem solving',
+          features: ['Exponential speed improvements', 'Advanced pattern recognition', 'Predictive analytics'],
+          icon: Zap
         },
         {
-          title: "Autonomous Business Operations",
-          description: "Complete business process automation with intelligent decision-making systems",
-          impact: "100% automation",
-          roi: "15,000% ROI",
-          category: "Business AI",
-          featured: false
-        },
-        {
-          title: "Neural Interface Technology",
-          description: "Direct brain-computer interfaces for seamless human-AI collaboration",
-          impact: "Real-time processing",
-          roi: "30,000% ROI",
-          category: "Neural Tech",
-          featured: false
+          title: 'Autonomous Business Operations',
+          description: 'Self-managing systems that adapt and optimize continuously',
+          features: ['24/7 automated operations', 'Self-healing infrastructure', 'Intelligent resource allocation'],
+          icon: Network
         }
       ]
     },
-    caseStudies: {
-      title: "Success Stories & Case Studies",
-      description: "Real-world implementations delivering extraordinary results",
-      icon: Award,
-      color: "from-green-600 to-emerald-600",
-      items: [
+    'cybersecurity': {
+      title: 'Advanced Cybersecurity Suite',
+      subtitle: 'Protect Your Digital Assets with Military-Grade Security',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      content: [
         {
-          title: "Fortune 500 Manufacturing Revolution",
-          description: "Complete transformation of manufacturing operations using AI automation",
-          impact: "500% efficiency increase",
-          roi: "50,000% ROI",
-          category: "Manufacturing",
-          featured: true
+          title: 'AI-Powered Threat Detection',
+          description: 'Machine learning algorithms that predict and prevent attacks',
+          features: ['Real-time threat analysis', 'Predictive security modeling', 'Automated response systems'],
+          icon: Target
         },
         {
-          title: "Global Financial Services Breakthrough",
-          description: "Revolutionary AI implementation in financial services achieving unprecedented accuracy",
-          impact: "99.99% accuracy",
-          roi: "75,000% ROI",
-          category: "Finance",
-          featured: true
+          title: 'Zero-Trust Architecture',
+          description: 'Never trust, always verify security model',
+          features: ['Identity verification', 'Continuous monitoring', 'Least privilege access'],
+          icon: Lock
         },
         {
-          title: "Healthcare Diagnostic Revolution",
-          description: "AI-powered diagnostic systems achieving superhuman accuracy in medical diagnosis",
-          impact: "95% faster diagnosis",
-          roi: "40,000% ROI",
-          category: "Healthcare",
-          featured: false
-        },
-        {
-          title: "Retail Personalization Mastery",
-          description: "Advanced AI personalization systems transforming customer experience",
-          impact: "300% engagement increase",
-          roi: "20,000% ROI",
-          category: "Retail",
-          featured: false
+          title: 'Quantum Encryption',
+          description: 'Unbreakable encryption using quantum principles',
+          features: ['Quantum key distribution', 'Post-quantum cryptography', 'Future-proof security'],
+          icon: Award
         }
       ]
     },
-    tools: {
-      title: "Advanced AI Tools & Solutions",
-      description: "Cutting-edge tools and platforms for enterprise implementation",
-      icon: Zap,
-      color: "from-orange-600 to-red-600",
-      items: [
+    'cloud-infrastructure': {
+      title: 'Next-Gen Cloud Infrastructure',
+      subtitle: 'Scalable, Secure, and Intelligent Cloud Solutions',
+      icon: Cloud,
+      color: 'from-blue-600 to-cyan-600',
+      content: [
         {
-          title: "AI Implementation Platform",
-          description: "Complete platform for implementing AI solutions across any industry",
-          impact: "90% faster deployment",
-          roi: "35,000% ROI",
-          category: "Platform",
-          featured: true
+          title: 'Edge Computing Networks',
+          description: 'Process data closer to the source for maximum efficiency',
+          features: ['Ultra-low latency', 'Distributed processing', 'Real-time analytics'],
+          icon: Globe
         },
         {
-          title: "Quantum Computing Solutions",
-          description: "Quantum-powered AI solutions for complex problem solving",
-          impact: "Exponential speedup",
-          roi: "60,000% ROI",
-          category: "Quantum",
-          featured: true
+          title: 'Auto-Scaling Systems',
+          description: 'Intelligent resource management that adapts to demand',
+          features: ['Dynamic resource allocation', 'Cost optimization', 'Performance monitoring'],
+          icon: TrendingUp
         },
         {
-          title: "Neural Network Architectures",
-          description: "Advanced neural network designs for specific business applications",
-          impact: "10x performance",
-          roi: "25,000% ROI",
-          category: "Neural Networks",
-          featured: false
+          title: 'Hybrid Cloud Solutions',
+          description: 'Seamless integration between public and private clouds',
+          features: ['Flexible deployment', 'Data sovereignty', 'Compliance management'],
+          icon: Database
+        }
+      ]
+    },
+    'analytics': {
+      title: 'Predictive Analytics Platform',
+      subtitle: 'Turn Data into Strategic Insights and Actionable Intelligence',
+      icon: BarChart3,
+      color: 'from-green-600 to-emerald-600',
+      content: [
+        {
+          title: 'Real-Time Business Intelligence',
+          description: 'Instant insights from your data streams',
+          features: ['Live dashboards', 'Automated reporting', 'Custom metrics'],
+          icon: BarChart3
         },
         {
-          title: "Automation Workflow Engine",
-          description: "Intelligent workflow automation for complex business processes",
-          impact: "100% automation",
-          roi: "18,000% ROI",
-          category: "Automation",
-          featured: false
+          title: 'Predictive Modeling',
+          description: 'Forecast trends and outcomes with 95% accuracy',
+          features: ['Market predictions', 'Customer behavior analysis', 'Risk assessment'],
+          icon: TrendingUp
+        },
+        {
+          title: 'AI-Driven Recommendations',
+          description: 'Intelligent suggestions for business optimization',
+          features: ['Strategic planning', 'Resource optimization', 'Growth opportunities'],
+          icon: Lightbulb
         }
       ]
     }
   };
 
-  const tabs = [
-    { id: 'breakthroughs', label: 'AI Breakthroughs', icon: Brain },
-    { id: 'caseStudies', label: 'Success Stories', icon: Award },
-    { id: 'tools', label: 'AI Tools', icon: Zap }
-  ];
-
-  const currentSection = contentSections[activeTab];
+  const tabs = Object.keys(contentSections);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute top-40 right-20 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000" />
-      <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-2000" />
-
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        {/* Header */}
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
             <Sparkles className="w-4 h-4" />
-            Ultimate Content Showcase 2026
+            ULTIMATE CONTENT SHOWCASE 2026
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
-            Revolutionary AI
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Revolutionary
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> Technology</span>
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Content Revolution
-            </span>
-          </h1>
-          
+            Solutions
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Explore the most advanced AI technologies, success stories, and tools that are transforming 
-            industries and delivering unprecedented ROI across the globe.
+            Experience the future of business technology with our cutting-edge AI, cybersecurity, 
+            and cloud solutions designed to deliver unprecedented results and competitive advantage.
           </p>
         </motion.div>
 
-        {/* Navigation Tabs */}
+        {/* Tab Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {tabs.map((tab) => {
-            const Icon = tab.icon;
+            const section = contentSections[tab];
+            const Icon = section.icon;
             return (
               <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`flex items-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === tab
+                    ? `bg-gradient-to-r ${section.color} text-white shadow-2xl scale-105`
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
                 <Icon className="w-5 h-5" />
-                {tab.label}
+                {section.title}
               </button>
             );
           })}
         </motion.div>
 
-        {/* Content Section */}
+        {/* Content Display */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.5 }}
-            className="mb-16"
+            className="max-w-6xl mx-auto"
           >
-            {/* Section Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <currentSection.icon className="w-4 h-4" />
-                {currentSection.title}
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {currentSection.title}
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                {currentSection.description}
+              <h3 className="text-4xl font-bold text-white mb-4">
+                {contentSections[activeTab].title}
+              </h3>
+              <p className="text-xl text-gray-300">
+                {contentSections[activeTab].subtitle}
               </p>
             </div>
 
-            {/* Content Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {currentSection.items.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  onMouseEnter={() => setHoveredCard(index)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  className={`relative group cursor-pointer ${
-                    item.featured ? 'md:col-span-2' : ''
-                  }`}
-                >
-                  <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${currentSection.color} p-8 h-full transition-all duration-300 ${
-                    hoveredCard === index ? 'scale-105 shadow-2xl' : 'shadow-xl'
-                  }`}>
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-                    
-                    {/* Featured Badge */}
-                    {item.featured && (
-                      <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                        <Star className="w-3 h-3" />
-                        Featured
+            <div className="grid md:grid-cols-3 gap-8">
+              {contentSections[activeTab].content.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className={`p-3 rounded-xl bg-gradient-to-r ${contentSections[activeTab].color}`}>
+                        <Icon className="w-8 h-8 text-white" />
                       </div>
-                    )}
-
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium">
-                          {item.category}
-                        </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-white">{item.impact}</div>
-                          <div className="text-sm text-white/80">Impact</div>
-                        </div>
-                      </div>
-
-                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors">
+                      <h4 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
                         {item.title}
-                      </h3>
-                      
-                      <p className="text-white/90 mb-6 leading-relaxed">
-                        {item.description}
-                      </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-lg">
-                          {item.roi}
-                        </div>
-                        
-                        <div className="flex items-center gap-2 text-white group-hover:text-yellow-300 transition-colors">
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
+                      </h4>
                     </div>
-
-                    {/* Hover Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  </div>
-                </motion.div>
-              ))}
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {item.description}
+                    </p>
+                    
+                    <ul className="space-y-3">
+                      {item.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </AnimatePresence>
@@ -320,36 +258,26 @@ const UltimateContentShowcase2026 = () => {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
+          className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already achieving extraordinary results with our 
-              revolutionary AI solutions and tools.
+            <p className="text-xl text-purple-100 mb-8">
+              Join thousands of companies already experiencing 300% ROI with our revolutionary solutions.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
-              >
-                <Rocket className="w-5 h-5" />
-                Start Your Transformation
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
-              >
-                <Play className="w-5 h-5" />
-                View All Case Studies
-              </Link>
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-50 transition-all duration-300 flex items-center gap-2 group">
+                Get Free Consultation
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center gap-2 group">
+                View Case Studies
+                <Star className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </button>
             </div>
           </div>
         </motion.div>

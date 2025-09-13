@@ -32,6 +32,12 @@ import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase
 import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
 import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
 
+// New 2026 content components
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -60,6 +66,18 @@ export default function HomePage() {
         
         {/* ULTIMATE PROMOTIONAL BANNER */}
         <UltimatePromotionalBanner />
+        
+        {/* REVOLUTIONARY TECH BANNER 2026 */}
+        <RevolutionaryTechBanner2026 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
+        {/* SUCCESS STORIES SHOWCASE 2026 */}
+        <SuccessStoriesShowcase2026 />
         
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
