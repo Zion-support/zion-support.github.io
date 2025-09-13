@@ -22,6 +22,8 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import AI2025RevolutionaryContentPromotionBanner from '../components/AI2025RevolutionaryContentPromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 
 export default function HomePage() {
   return (
@@ -37,6 +39,9 @@ export default function HomePage() {
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
+        {/* AI 2025 REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <AI2025RevolutionaryContentPromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
@@ -45,6 +50,9 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />

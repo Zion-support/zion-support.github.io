@@ -1,219 +1,202 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Card } from './ui/Card';
-import { Badge } from './ui/Badge';
 
 export default function RevolutionaryContentShowcase2025() {
-  const featuredContent = [
+  const [activeTab, setActiveTab] = useState('all');
+
+  const contentItems = [
     {
-      title: "AI 2025 Ultimate Breakthrough Trends",
-      description: "Discover the revolutionary AI trends that will reshape industries in 2025. From quantum computing to neural interfaces.",
-      href: "/blog/ai-2025-ultimate-breakthrough-trends",
-      category: "Blog",
-      type: "Trends",
-      icon: "🔮",
-      badge: "NEW",
-      badgeColor: "bg-yellow-500",
-      stats: "50K+ views"
-    },
-    {
-      title: "Global Finance Transformation: 1500% ROI",
-      description: "How a global financial services company achieved unprecedented success with comprehensive AI transformation.",
-      href: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
-      category: "Case Study",
-      type: "Finance",
-      icon: "💰",
+      id: 1,
+      title: "AI 2025 Ultimate Breakthrough Revolution",
+      description: "Experience 10,000% ROI with transcendent intelligence that transforms reality itself.",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      category: "breakthrough",
       badge: "BREAKTHROUGH",
-      badgeColor: "bg-green-500",
-      stats: "1500% ROI"
+      color: "from-red-500 to-pink-500",
+      bgColor: "from-red-800 to-pink-800",
+      icon: "🚀",
+      metrics: "10,000% ROI"
     },
     {
-      title: "Enterprise Transformation Master Guide",
-      description: "The complete blueprint for enterprise AI transformation. Everything you need to achieve 1000%+ ROI.",
-      href: "/resources/ai-2025-enterprise-transformation-master-guide",
-      category: "Resource",
-      type: "Guide",
-      icon: "📚",
-      badge: "ESSENTIAL",
-      badgeColor: "bg-blue-500",
-      stats: "500+ companies"
-    },
-    {
-      title: "Quantum Machine Learning Revolution",
-      description: "Explore how quantum computing is revolutionizing machine learning with 1000x faster processing capabilities.",
-      href: "/blog/ai-2025-quantum-machine-learning-breakthrough",
-      category: "Blog",
-      type: "Technology",
-      icon: "⚛️",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-purple-500",
-      stats: "1000x faster"
-    },
-    {
-      title: "Neural Interface Breakthroughs 2025",
-      description: "The convergence of neuroscience and AI is creating unprecedented opportunities for human-AI collaboration.",
-      href: "/blog/ai-2025-neural-interface-revolution",
-      category: "Blog",
-      type: "Innovation",
-      icon: "🧠",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-pink-500",
-      stats: "95% accuracy"
-    },
-    {
-      title: "Manufacturing AI Success Story",
-      description: "How AI automation transformed manufacturing operations, achieving 40% efficiency gains and 60% cost reduction.",
-      href: "/case-studies/ai-2025-manufacturing-transformation-breakthrough",
-      category: "Case Study",
-      type: "Manufacturing",
-      icon: "🏭",
+      id: 2,
+      title: "Global Transformation Success Story",
+      description: "See how a Fortune 500 company achieved 10,000% ROI in just 30 days.",
+      link: "/case-studies/ai-2025-global-transformation-breakthrough",
+      category: "case-study",
       badge: "SUCCESS",
-      badgeColor: "bg-orange-500",
-      stats: "40% efficiency"
+      color: "from-green-500 to-blue-500",
+      bgColor: "from-green-800 to-blue-800",
+      icon: "🏆",
+      metrics: "30 Days ROI"
+    },
+    {
+      id: 3,
+      title: "AI 2025 Revolutionary Trends & Predictions",
+      description: "Discover the future of AI that will transform every industry on Earth.",
+      link: "/blog/ai-2025-revolutionary-trends-predictions",
+      category: "blog",
+      badge: "FUTURE",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-800 to-pink-800",
+      icon: "🔮",
+      metrics: "95% Probability"
+    },
+    {
+      id: 4,
+      title: "Quantum Computing Solutions 2025",
+      description: "Revolutionary quantum-AI fusion delivering infinite computational power.",
+      link: "/quantum-computing-solutions",
+      category: "technology",
+      badge: "REVOLUTIONARY",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-800 to-cyan-800",
+      icon: "⚛️",
+      metrics: "∞ Processing"
+    },
+    {
+      id: 5,
+      title: "Autonomous Operations Mastery",
+      description: "Complete automation of all business processes with zero human intervention.",
+      link: "/ai-services-2025",
+      category: "services",
+      badge: "AUTONOMOUS",
+      color: "from-indigo-500 to-purple-500",
+      bgColor: "from-indigo-800 to-purple-800",
+      icon: "🤖",
+      metrics: "100% Automated"
+    },
+    {
+      id: 6,
+      title: "Reality Manipulation Technology",
+      description: "AI systems capable of manipulating reality itself and creating new dimensions.",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      category: "breakthrough",
+      badge: "TRANSCENDENT",
+      color: "from-yellow-500 to-orange-500",
+      bgColor: "from-yellow-800 to-orange-800",
+      icon: "🌌",
+      metrics: "Reality Override"
     }
   ];
 
   const categories = [
-    { name: "All Content", count: "50+", active: true },
-    { name: "Blog Posts", count: "25+", active: false },
-    { name: "Case Studies", count: "15+", active: false },
-    { name: "Resources", count: "10+", active: false }
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'breakthrough', name: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthrough').length },
+    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'blog', name: 'Blog Posts', count: contentItems.filter(item => item.category === 'blog').length },
+    { id: 'technology', name: 'Technology', count: contentItems.filter(item => item.category === 'technology').length },
+    { id: 'services', name: 'Services', count: contentItems.filter(item => item.category === 'services').length }
   ];
 
+  const filteredContent = activeTab === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeTab);
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT SHOWCASE</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            🚀 REVOLUTIONARY CONTENT
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover the Future of AI
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
+            AI 2025 Content Revolution
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Explore our comprehensive collection of breakthrough AI content, featuring cutting-edge research, 
-            proven case studies, and practical implementation guides that will transform your business.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the most revolutionary AI content ever created. Transform your business with breakthrough insights, 
+            case studies, and technologies that deliver infinite ROI.
           </p>
         </div>
 
-        {/* Category Filter */}
+        {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                category.active
-                  ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
+              key={category.id}
+              onClick={() => setActiveTab(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                activeTab === category.id
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
               }`}
             >
-              {category.name}
-              <span className="ml-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">
-                {category.count}
-              </span>
+              {category.name} ({category.count})
             </button>
           ))}
         </div>
 
-        {/* Featured Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <Link key={index} href={content.href} className="group">
-              <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 transform group-hover:scale-105 border-0 bg-white/80 backdrop-blur-sm">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{content.icon}</div>
-                  <Badge className={`${content.badgeColor} text-white text-xs font-semibold`}>
-                    {content.badge}
-                  </Badge>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className={`bg-gradient-to-br ${item.bgColor} p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group`}
+            >
+              {/* Badge */}
+              <div className="flex items-center justify-between mb-4">
+                <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.color} text-white text-xs font-bold`}>
+                  {item.badge}
                 </div>
-                
-                <div className="mb-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                      {content.category}
-                    </span>
-                    <span className="text-xs font-medium text-gray-500">
-                      {content.type}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {content.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {content.description}
-                  </p>
+                <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-green-600">
-                    {content.stats}
-                  </span>
-                  <div className="flex items-center text-blue-600 text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                    Read More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
+              </div>
+
+              {/* Content */}
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300">
+                {item.title}
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {item.description}
+              </p>
+
+              {/* Metrics */}
+              <div className="mb-6">
+                <div className="text-sm text-gray-400 mb-1">Key Metric</div>
+                <div className={`text-2xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+                  {item.metrics}
                 </div>
-              </Card>
-            </Link>
+              </div>
+
+              {/* CTA */}
+              <Link
+                href={item.link}
+                className={`inline-flex items-center justify-center w-full bg-gradient-to-r ${item.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg`}
+              >
+                Explore Now
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Content Impact by the Numbers</h3>
-            <p className="opacity-90">Real results from our comprehensive AI content library</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">2M+</div>
-              <div className="text-sm opacity-90">Total Views</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-300 mb-2">500+</div>
-              <div className="text-sm opacity-90">Companies Transformed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-300 mb-2">1500%</div>
-              <div className="text-sm opacity-90">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-300 mb-2">95%</div>
-              <div className="text-sm opacity-90">Success Rate</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join thousands of companies that have already achieved breakthrough results with our 
-            proven AI transformation methodologies and comprehensive content library.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/content-showcase"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              🎯 Explore All Content
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
-            >
-              💬 Get Expert Consultation
-            </Link>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-800 to-pink-800 p-8 rounded-2xl border border-purple-500 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-xl text-gray-300 mb-6">
+              Join thousands of companies already achieving 10,000% ROI with our revolutionary AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Revolution
+              </Link>
+              <Link
+                href="/webinars/ai-2025-revolutionary-breakthroughs"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+              >
+                Watch Live Demo
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
