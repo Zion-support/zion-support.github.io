@@ -267,11 +267,14 @@ function Header() {
                 <Link href="/ai-2026-ultimate-breakthrough-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2026 Ultimate Breakthrough Predictions (NEW)
                 </Link>
-                <Link href="/quantum-computing-2026-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
-                  ⚛️ Quantum Computing 2026 Breakthrough (NEW)
-                </Link>
                 <Link href="/case-studies/ai-2026-global-transformation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 AI 2026 Global Transformation Success (15,000% ROI) (NEW)
+                </Link>
+                <Link href="/resources/ai-2026-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  📚 AI 2026 Ultimate Implementation Master Guide (NEW)
+                </Link>
+                <Link href="/quantum-computing-2026-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  ⚛️ Quantum Computing 2026 Breakthrough (NEW)
                 </Link>
                 <Link href="/ultimate-content-showcase-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500">
                   🎯 Ultimate Content Showcase 2026 (NEW)
