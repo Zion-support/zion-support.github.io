@@ -287,6 +287,11 @@ import UltimateContentPromotionBanner2025 from '../components/UltimateContentPro
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 import AI2025ContentRecommendationEngine from '../components/AI2025ContentRecommendationEngine';
 
+// Import new comprehensive content and tools showcase components
+import AI2025UltimateContentRevolutionPromotionBanner from '../components/AI2025UltimateContentRevolutionPromotionBanner';
+import AIToolsInteractiveShowcase2025PromotionBanner from '../components/AIToolsInteractiveShowcase2025PromotionBanner';
+import AIInsightsComprehensive2025PromotionBanner from '../components/AIInsightsComprehensive2025PromotionBanner';
+
 // Import new quantum consciousness and neural interface banners
 import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
 import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
@@ -665,6 +670,15 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER */}
+        <AI2025UltimateContentRevolutionPromotionBanner />
+        
+        {/* AI TOOLS INTERACTIVE SHOWCASE 2025 PROMOTION BANNER */}
+        <AIToolsInteractiveShowcase2025PromotionBanner />
+        
+        {/* AI INSIGHTS COMPREHENSIVE 2025 PROMOTION BANNER */}
+        <AIInsightsComprehensive2025PromotionBanner />
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
