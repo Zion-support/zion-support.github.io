@@ -3,28 +3,10 @@ import { motion } from 'framer-motion';
 import { Send, Phone, Mail, MapPin, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
-}
 
-interface ContactFormProps {
-  isReducedMotion?: boolean;
-}
 
 const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) => {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
   
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
 
@@ -40,25 +22,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.preventDefault();
     
-    if (!validateForm()) {
-      return;
-    }
 
-    setIsSubmitting(true);
     
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
       
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+  const [formData, setFormData] = useState<FormData>({
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         message: ''
       });
       
@@ -257,5 +228,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       </form>
     </motion.div>
   );
+
+export default ContactForm;
+              <LoadingSpinner size="sm" />;
+
+
+
 
 export default ContactForm;

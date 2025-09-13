@@ -1,177 +1,152 @@
 import React from 'react';
+
+
+import Head from 'next/head';
+
+import Link from 'next/link';
+import React from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+
+
+
+
+
+
+
+
+
+
+import {;
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench, Brain } from 'lucide-react';
 
 export default function ITServices() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
-  const itServices = [
-    {
-      icon: Cloud,
-      name: 'Cloud DevOps & SRE',
-      description: 'Complete cloud infrastructure management with CI/CD pipelines, infrastructure as code, and site reliability engineering.',
-      features: [
-        'CI/CD pipeline setup and optimization',
-        'Infrastructure as Code (Terraform, Pulumi)',
-        'Container orchestration (Kubernetes, Docker)',
-        'Monitoring, logging, and alerting systems',
-        'Auto-scaling and load balancing',
-        'Disaster recovery and backup strategies'
-      ],
-      pricing: '$120 – $220/hour',
-      projectPricing: '$6,000 – $30,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        '99.9% uptime guarantee',
-        'Automated deployment processes',
-        'Reduced infrastructure costs',
-        'Improved system reliability'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Shield,
-      name: 'Cybersecurity Hardening & SOC',
-      description: 'Comprehensive security solutions including zero trust architecture, endpoint detection, and security operations center setup.',
-      features: [
-        'Zero Trust security architecture',
-        'Endpoint Detection and Response (EDR)',
-        'Security Operations Center (SOC) setup',
-        'Vulnerability assessment and penetration testing',
-        'Compliance and regulatory adherence',
-        'Security awareness training programs'
-      ],
-      pricing: '$5,000 – $40,000/project',
-      projectPricing: '$2,000 – $8,000/month managed',
-      timeline: '4–12 weeks',
-      benefits: [
-        'Enhanced security posture',
-        'Reduced security incidents',
-        'Compliance with regulations',
-        '24/7 security monitoring'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Cloud,
-      name: 'Cloud Migration & Modernization',
-      description: 'Seamless migration to cloud platforms with application modernization and optimization.',
-      features: [
-        'Lift and shift migration strategies',
-        'Application containerization',
-        'Serverless architecture implementation',
-        'Data platform upgrades and migration',
-        'Legacy system modernization',
-        'Performance optimization and tuning'
-      ],
-      pricing: '$10,000 – $150,000/project',
-      projectPricing: 'Custom pricing based on complexity',
-      timeline: '3–20 weeks',
-      benefits: [
-        'Reduced infrastructure costs',
-        'Improved scalability and performance',
-        'Enhanced security and compliance',
-        'Modern technology stack adoption'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Code,
-      name: 'Enterprise Architecture Consulting',
-      description: 'Strategic technology planning, system design, and architecture optimization for enterprise-scale solutions.',
-      features: [
-        'Technology stack evaluation and selection',
-        'System architecture design and documentation',
-        'Scalability and performance planning',
-        'Integration strategy and roadmap development',
-        'Technical debt assessment and remediation',
-        'Digital transformation consulting'
-      ],
-      pricing: '$150 – $300/hour',
-      projectPricing: '$15,000 – $75,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        'Optimized technology architecture',
-        'Reduced technical debt',
-        'Improved system performance',
-        'Strategic technology roadmap'
-      ],
-      category: 'Consulting'
-    },
-    {
-      icon: Database,
-      name: 'Database Design & Optimization',
-      description: 'Database architecture, performance tuning, and migration services for optimal data management.',
-      features: [
-        'Database architecture design and implementation',
-        'Performance tuning and optimization',
-        'Data migration and consolidation',
-        'Backup and disaster recovery setup',
-        'Database security and compliance',
-        'Monitoring and maintenance automation'
-      ],
-      pricing: '$100 – $250/hour',
-      projectPricing: '$8,000 – $40,000/project',
-      timeline: '2–6 weeks',
-      benefits: [
-        'Improved database performance',
-        'Enhanced data security',
-        'Reduced maintenance overhead',
-        'Optimized storage costs'
-      ],
-      category: 'Data Management'
-    },
-    {
-      icon: LinkIcon,
-      name: 'API Development & Integration',
-      description: 'RESTful and GraphQL API development, microservices architecture, and third-party integrations.',
-      features: [
-        'RESTful and GraphQL API development',
-        'Microservices architecture implementation',
-        'Third-party service integration',
-        'API documentation and testing frameworks',
-        'API security and authentication',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$120 – $280/hour',
-      projectPricing: '$10,000 – $50,000/project',
-      timeline: '3–12 weeks',
-      benefits: [
-        'Scalable API architecture',
-        'Improved system integration',
-        'Enhanced developer experience',
-        'Reduced development time'
-      ],
-      category: 'Development'
-    },
-    {
-      icon: Smartphone,
-      name: 'Mobile App Development',
-      description: 'Native iOS/Android applications, React Native, and Flutter development for cross-platform solutions.',
-      features: [
-        'Native iOS and Android development',
-        'React Native cross-platform apps',
-        'Flutter mobile applications',
-        'UI/UX design and implementation',
-        'App store optimization and deployment',
-        'Performance optimization and testing'
-      ],
-      pricing: '$100 – $250/hour',
-      projectPricing: '$25,000 – $150,000/project',
-      timeline: '8–24 weeks',
-      benefits: [
-        'High-performance mobile applications',
-        'Cross-platform compatibility',
-        'Optimized user experience',
-        'Reduced development costs'
-      ],
-      category: 'Development'
-    },
+import { motion } from 'framer-motion';
+import {
+export default function ITServicesPage() {;
+                  <Head>;
+export default /**
+                  <Head>;
+                  </Head>;
+
+                  <Server className="h - 16 w - 16 text - green - 400 mr - 4" />;
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              </Link>
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+              </Link>
+
+import React from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+
+
+import { 
+import {
+
+
+
+import {
+
+
+
+
+import Layout from '../components/Layout'
+import Layout from '../components/Layout'
+
+
+import Layout from '../components / Layout';
+import Layout from '../components / Layout';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default function ITServices() {;
+
+
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function ITServices() {;
+
+
+
+
+
+
+
+
+
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function ITServices(req, res) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <Link
+                  <ArrowRight className="ml-2 w-4 h-4" />;
+                </Link>;
+    <Layout>
+      <Head>
+      </Head>
+      <ErrorBoundary level='page'>
     {
       icon: Globe,
       name: 'Web Application Development',
@@ -1311,129 +1286,83 @@ export default function ITServices() {
         <link rel="canonical" href={`${contact.site}/it-services`} />
       </Head>
 
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-          IT & Cloud Services
-        </h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
-          Comprehensive IT solutions from cloud migration to cybersecurity. Our expert team delivers 
-          enterprise-grade infrastructure, development, and consulting services with proven results.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
           <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
-        </div>
-      </header>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
 
-      <main className="max-w-7xl mx-auto px-4 pb-24">
-        {/* Category Filter */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
 
-        {/* Services Grid */}
-        <div className="grid gap-8">
-          {itServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h2 className="text-2xl font-bold">{service.name}</h2>
-                    <span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">
-                      {service.category}
-                    </span>
-                  </div>
-                  <p className="text-slate-300 text-lg">{service.description}</p>
-                </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-blue-400 mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">✓</span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
 
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Hourly Rate:</span>
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Project:</span>
-                    <span className="font-semibold text-purple-400">{service.projectPricing}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Timeline:</span>
-                    <span className="font-semibold text-green-400">{service.timeline}</span>
-                  </div>
-                  <div className="ml-auto flex gap-3">
                     <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
-                      Request Quote
                     </Link>
                     <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
-                      Learn More
                     </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* CTA Section */}
-        <section className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>
-            <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Our IT experts are ready to help you modernize your infrastructure, enhance security, 
-              and optimize performance. Contact us today for a free consultation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Call {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Email {contact.email}
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
-}
+      
+      <ErrorBoundary level="page">
+
+
+
+export default /**
+    <Layout>;
+      <Head>;
+      </Head>;
+      <ErrorBoundary level='page'>;
+
+
+
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
+                  <Link
+                  <ArrowRight className="w-4 h-4 ml-2" />;
+                  </Link>;
+                <Link;
+                  <ArrowRight className="ml - 2 w - 4 h - 4" />;
+                </Link>;
+                  <IconComponent className="w - 10 h - 10" />;
+<CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
+                  <Link;
+                  <ArrowRight className="w - 3 h - 3 ml - 1" />;
+                  </Link>;
+                  <IconComponent className="w - 8 h - 8 text - green - 600" />;
+                  <IconComponent className="w - 8 h - 8 text - green - 600" />;
+                  <CheckCircle className="w - 5 h - 5 text - green - 500 mr - 3 flex - shrink - 0" />;
+                  <Link;
+                  <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                  </Link>;
+
+    </Layout>
+
+
+                    
+
+                <Link 
+                </Link>
+                </Link>
+
+
+
+
+
+      </ErrorBoundary>
+
+                <Building className="w-8 h-8 text-green-600" />;
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+              </Link>;
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
+              </Link>;
+
+                  <Link href="/contact" className="px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold">;
+              </Link>;
+                  <Link href="/services" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold">;
+              </Link>;
+                <MessageSquare className="w - 8 h - 8 text - green - 600" />;
+                <Mail className="w - 8 h - 8 text - green - 600" />;
+                <Building className="w - 8 h - 8 text - green - 600" />;
+              <Link href="/contact" className="px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold">;
+              </Link>;
+              <Link href="/services" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold">;
+              </Link>;
+      </ErrorBoundary>;
+
+

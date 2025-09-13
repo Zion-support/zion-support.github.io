@@ -1,8 +1,15 @@
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
-  const features = [
-    {
+
+
+
+import FeatureCard from './components / FeatureCard',
+import FeatureCard from './components / FeatureCard',
+export default /**
+import FeatureCard from './components/FeatureCard'
+import FeatureCard from './components/FeatureCard'
+export default function HomePage() {
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
@@ -77,6 +84,21 @@ export default function HomePage() {
   ];
 
   return (
+            
+            
+
+
+
+              </Link>
+              </Link>
+
+
+
+
+              <FeatureCard
+              </Link>;
+              </Link>;
+              <FeatureCard;
     <div className="min-h-screen">
       {/* Promo Banner */}
       <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
@@ -139,13 +161,15 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
+
+
+
+
+              </Link>
+              </Link>
+              </Link>;
+              </Link>;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
@@ -193,5 +217,3 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
-}

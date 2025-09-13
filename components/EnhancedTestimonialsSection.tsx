@@ -2,78 +2,34 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
 
-const testimonials = [
-  {
-    id: 1,
-    name: 'Dr. Sarah Chen',
-    title: 'CTO, QuantumTech Solutions',
-    company: 'QuantumTech Solutions',
-    avatar: '👩‍💼',
-    rating: 5,
-    content: 'Zion Tech Group\'s Quantum AI Neural Networks platform has revolutionized our research capabilities. We\'ve achieved breakthroughs in consciousness simulation that were previously impossible. The ROI has been incredible - 10x faster research and discoveries worth millions.',
-    service: 'Quantum AI Neural Networks',
-    results: ['10x faster research', 'Breakthrough discoveries', 'Millions in value created'],
-    industry: 'Quantum Computing'
-  },
-  {
-    id: 2,
-    name: 'Michael Rodriguez',
-    title: 'VP of Engineering',
-    company: 'GlobalBank Financial',
-    avatar: '👨‍💼',
-    rating: 5,
-    content: 'The AI Autonomous Ecosystem has transformed our AI operations. We\'ve reduced operational costs by 45% while improving model performance by 28%. The self-healing infrastructure has eliminated 99% of our downtime issues.',
-    service: 'AI Autonomous Ecosystem',
-    results: ['45% cost reduction', '28% performance improvement', '99% uptime improvement'],
-    industry: 'Financial Services'
-  },
-  {
-    id: 3,
-    name: 'Dr. Emily Watson',
-    title: 'Chief Medical Officer',
-    company: 'HealthFirst Medical Group',
-    avatar: '👩‍⚕️',
-    rating: 5,
-    content: 'Zion\'s AI Healthcare Analytics Platform has been a game-changer for our hospital system. We\'ve reduced healthcare costs by 27% and improved patient outcomes by 32%. The predictive analytics have saved countless lives.',
-    service: 'AI Healthcare Analytics Platform',
-    results: ['27% cost reduction', '32% improved outcomes', 'Lives saved'],
-    industry: 'Healthcare'
-  },
-  {
-    id: 4,
-    name: 'Alex Thompson',
-    title: 'DevOps Director',
-    company: 'CloudScale Technologies',
-    avatar: '👨‍💻',
-    rating: 5,
-    content: 'The Autonomous DevOps Platform has streamlined our entire development pipeline. We\'ve reduced deployment time by 75% and infrastructure costs by 42%. The AI-powered optimization is truly revolutionary.',
-    service: 'Autonomous DevOps Platform',
-    results: ['75% faster deployments', '42% cost reduction', 'Zero downtime'],
-    industry: 'Technology'
-  },
-  {
-    id: 5,
-    name: 'Lisa Park',
-    title: 'Chief Security Officer',
-    company: 'SecureNet Defense',
-    avatar: '👩‍🔒',
-    rating: 5,
-    content: 'Zion\'s AI Cybersecurity platform has been our first line of defense. We\'ve reduced security incidents by 85% and response time by 92%. The quantum-resistant encryption gives us confidence for the future.',
-    service: 'AI Cybersecurity Threat Intelligence',
-    results: ['85% fewer incidents', '92% faster response', 'Future-proof security'],
-    industry: 'Cybersecurity'
-  },
-  {
-    id: 6,
-    name: 'David Kim',
-    title: 'Space Operations Manager',
-    company: 'AsteroidMining Corp',
-    avatar: '👨‍🚀',
-    rating: 5,
-    content: 'The Space Resource Intelligence platform has identified resources worth over $2 billion. We\'ve optimized our space operations by 350% and discovered new mining opportunities that were previously invisible.',
-    service: 'Space Resource Intelligence',
-    results: ['$2B+ resources identified', '350% operation optimization', 'New discoveries'],
-    industry: 'Space Technology'
+
+
+
+
+
+
+import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <Quote className="w-8 h-8" />;
+
+
+
+
+
   }
 ];
 
@@ -174,11 +130,16 @@ export default function EnhancedTestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
+                <Quote className='w - 8 h - 8' />;
+                <Quote className="w - 8 h - 8" />;
+
+
+
+
+
+
+
+
             >
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 text-cyan-400/20 text-4xl">
@@ -218,40 +179,23 @@ export default function EnhancedTestimonialsSection() {
                   </div>
                 </div>
 
-                {/* Author Info */}
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-2xl">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-white/70">{testimonial.title}</div>
-                    <div className="text-xs text-white/50">{testimonial.company}</div>
-                    <div className="text-xs text-cyan-400">{testimonial.industry}</div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-            </motion.div>
-          ))}
-        </div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Join Our Success Stories
-            </h3>
-            <p className="text-xl text-white/70 mb-8">
-              Ready to transform your business with the same revolutionary technology that&apos;s helping our customers achieve extraordinary results?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -272,8 +216,8 @@ export default function EnhancedTestimonialsSection() {
               <p>Contact: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> | <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
+export default EnhancedTestimonialsSection);
+export default EnhancedTestimonialsSection;
+
+
+
