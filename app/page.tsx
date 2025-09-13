@@ -111,8 +111,6 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
-<<<<<<< HEAD
-=======
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
@@ -148,8 +146,10 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentDiscovery2025 from '../components/UltimateContentDiscovery2025';
 import AI2025BreakthroughShowcaseBanner from '../components/AI2025BreakthroughShowcaseBanner';
-
->>>>>>> cursor/create-and-deploy-new-content-c58b
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+import LatestContent2025PromotionBanner from '../components/LatestContent2025PromotionBanner';
+import AI2025_2026TechnologyShowcase from '../components/AI2025_2026TechnologyShowcase';
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -161,8 +161,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-=======
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -267,7 +265,6 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
         <RevolutionaryContentDiscoveryWidget2026 />
->>>>>>> 4ae52b20131b3926821e8d8792f95afc32ca805b
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
@@ -277,6 +274,16 @@ export default function HomePage() {
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
+        
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* LATEST CONTENT 2025 PROMOTION BANNER */}
+        <LatestContent2025PromotionBanner />
+        
+        {/* AI 2025-2026 TECHNOLOGY SHOWCASE */}
+        <AI2025_2026TechnologyShowcase />
+        
         {/* AI 2025 SYNTHETIC INTELLIGENCE BREAKTHROUGH BANNER */}
         <AI2025SyntheticIntelligenceBreakthroughBanner />
         
