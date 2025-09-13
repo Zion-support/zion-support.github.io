@@ -100,6 +100,8 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 // Import new AI 2025 and 2026 breakthrough banners
 import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
 import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
+import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
 
 export default function HomePage() {
   return (
@@ -112,6 +114,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH CONTENT BANNER */}
+        <AI2025UltimateBreakthroughContentBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 BANNER */}
+        <UltimateContentShowcase2025Banner />
+        
         {/* NEW 2025 BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025BreakthroughBanner />
         
