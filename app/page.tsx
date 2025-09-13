@@ -6,6 +6,9 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -2935,6 +2938,20 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+
+      {/* NEW ULTIMATE CONTENT SHOWCASE 2025 */}
+      <UltimateContentShowcase2025 />
+
+      {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+      <InteractiveContentDiscoveryWidget2025 />
+
+      {/* NEW ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+      <UltimateContentPromotionBanner2025 />
+
+      {/* NEW NEWSLETTER SIGNUP 2025 */}
+      <NewsletterSignup2025 />
+        </div>
+      </PerformanceOptimizer>
+    </ErrorBoundary>
   );
 }
