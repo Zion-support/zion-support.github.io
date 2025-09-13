@@ -134,6 +134,10 @@ import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new showcase banners
+import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
+import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -145,8 +149,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI TOOLS 2025 ULTIMATE SHOWCASE BANNER */}
+        <AITools2025UltimateShowcaseBanner />
+        
+        {/* AI 2025 ULTIMATE INNOVATION SHOWCASE BANNER */}
+        <AI2025UltimateInnovationShowcaseBanner />
+        
         {/* NEW 2025 ULTIMATE CONTENT PROMOTION BANNER */}
         <AI2025UltimateContentPromotionBanner />
+        
+        {/* AI 2025 ULTIMATE INNOVATION SHOWCASE BANNER */}
+        <AI2025UltimateInnovationShowcaseBanner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
@@ -233,7 +246,6 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
         <RevolutionaryContentDiscoveryWidget2026 />
->>>>>>> 4ae52b20131b3926821e8d8792f95afc32ca805b
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
