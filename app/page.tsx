@@ -99,6 +99,12 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+
+// Import new content showcase and promotion components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
 // Import enhanced monitoring and management components
@@ -257,6 +263,18 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
         <RevolutionaryContentShowcase2025Banner />
