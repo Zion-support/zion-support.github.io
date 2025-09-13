@@ -4,12 +4,12 @@
   status = 200
 
 [build]
-  command = "rm -rf node_modules .yarn-cache && yarn cache clean && yarn install --frozen-lockfile --network-timeout 100000 --no-cache && yarn build"
+  command = "./netlify-build.sh"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "24.0.0"
+  NODE_VERSION = "20.18.0"
   NODE_OPTIONS = "--max-old-space-size=4096"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
@@ -17,6 +17,8 @@
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
   YARN_NETWORK_TIMEOUT = "100000"
   YARN_NETWORK_CONCURRENCY = "1"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_OPTIONAL = "true"
 
 # Long-term caching for static assets
 [[headers]]
@@ -72,7 +74,7 @@
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
-  NODE_VERSION = "24"
+  NODE_VERSION = "20"
 
 [context.deploy-preview]
   command = "yarn build"
