@@ -35,7 +35,9 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
-    { name: 'Latest Content', href: '/blog/ai-2025-future-of-work-revolution', icon: '✨', isNew: true, isHot: true },
+    { name: 'AI Breakthroughs', href: '/ai-2025-breakthrough-announcement', icon: '🧠', isNew: true, isHot: true },
+    { name: 'Revolutionary AI Services', href: '/services/revolutionary-ai-services', icon: '⚡', isNew: true, isHot: true },
+    { name: 'Latest Content', href: '/blog/ai-2025-future-of-work-revolution', icon: '✨', isNew: true },
     { name: 'Case Studies', href: '/case-studies/ai-transformation-global-tech-giant-2025', icon: '📈', isNew: true },
     { name: 'Free Resources', href: '/resources/ai-2025-complete-implementation-master-guide', icon: '📚', isNew: true },
     { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },

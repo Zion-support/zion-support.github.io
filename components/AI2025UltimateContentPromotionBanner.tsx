@@ -1,119 +1,149 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
+import { ArrowRight, X, Brain, Zap, Rocket, Star, TrendingUp, Users } from 'lucide-react';
 import Link from 'next/link';
 
-const AI2025UltimateContentPromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
+export default function AI2025UltimateContentPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const featuredContent = [
+  const promotions = [
     {
-      title: "AI 2025 Ultimate Breakthrough Success",
-      description: "5000% ROI Case Study - Revolutionary AI Implementation",
-      link: "/case-studies/ai-2025-ultimate-breakthrough-success",
-      badge: "BREAKTHROUGH",
-      color: "from-red-500 to-pink-500",
-      icon: "🚀"
+      title: "AI Innovation Showcase 2025",
+      description: "Discover revolutionary AI breakthroughs and interactive demonstrations",
+      link: "/ai-innovation-showcase-2025",
+      icon: Brain,
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-900/20 to-pink-900/20"
     },
     {
-      title: "AI 2026 Quantum-Neural Fusion",
-      description: "15,000% ROI - Revolutionary Quantum Computing Breakthrough",
-      link: "/blog/ai-2026-quantum-neural-fusion-breakthrough",
-      badge: "REVOLUTIONARY",
-      color: "from-purple-500 to-blue-500",
-      icon: "⚛️"
+      title: "Ultimate AI Tools Collection",
+      description: "Complete toolkit of AI-powered solutions for every industry",
+      link: "/ai-tools-ultimate-showcase-2025",
+      icon: Zap,
+      color: "from-blue-600 to-cyan-600",
+      bgColor: "from-blue-900/20 to-cyan-900/20"
     },
     {
-      title: "AI 2035 Matter Creation",
-      description: "Infinite ROI - Transcendent Consciousness Breakthrough",
-      link: "/blog/ai-2035-matter-creation",
-      badge: "TRANSCENDENT",
-      color: "from-purple-500 to-pink-500",
-      icon: "⚛️"
+      title: "2030 Future Predictions",
+      description: "Comprehensive technology forecasts and breakthrough predictions",
+      link: "/ai-2030-future-predictions-ultimate",
+      icon: Rocket,
+      color: "from-indigo-600 to-purple-600",
+      bgColor: "from-indigo-900/20 to-purple-900/20"
     }
   ];
 
   useEffect(() => {
-    setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   if (!isVisible) return null;
 
-  const current = featuredContent[currentContent];
+  const currentPromotion = promotions[currentSlide];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl animate-pulse">🔥</span>
-              <span className="font-bold text-lg">NEW BREAKTHROUGH CONTENT</span>
-            </div>
-            <div className="hidden md:block w-px h-6 bg-white/30"></div>
-            <div className="hidden md:flex items-center space-x-2">
-              <span className="text-sm opacity-90">Featured:</span>
-              <span className="text-sm font-semibold">{current.icon} {current.title}</span>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <div className="hidden sm:block">
-              <span className="text-sm opacity-90">ROI Achieved:</span>
-              <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs font-bold rounded">
-                {currentContent === 0 ? "5000%" : currentContent === 1 ? "15,000%" : "∞"}
-              </span>
-            </div>
-            <Link 
-              href={current.link}
-              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Now
-            </Link>
-            <button 
-              onClick={() => setIsVisible(false)}
-              className="text-white/70 hover:text-white transition-colors"
-              aria-label="Close banner"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        
-        {/* Mobile Content */}
-        <div className="md:hidden mt-3 pt-3 border-t border-white/20">
+    <div className="relative overflow-hidden">
+      {/* Animated Background */}
+      <div className={`absolute inset-0 bg-gradient-to-r ${currentPromotion.bgColor} opacity-50`}>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      </div>
+
+      <div className="relative z-10 bg-gradient-to-r from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <div>
-              <div className="flex items-center space-x-2 mb-1">
-                <span className="text-lg">{current.icon}</span>
-                <span className="text-sm font-semibold">{current.title}</span>
+            {/* Content */}
+            <div className="flex items-center gap-6 flex-1">
+              {/* Icon */}
+              <div className={`p-3 bg-gradient-to-r ${currentPromotion.color} rounded-xl shadow-lg`}>
+                <currentPromotion.icon className="w-8 h-8 text-white" />
               </div>
-              <p className="text-xs opacity-90">{current.description}</p>
-            </div>
-            <div className="text-right">
-              <div className="text-xs opacity-90 mb-1">ROI:</div>
-              <div className="px-2 py-1 bg-green-500 text-white text-xs font-bold rounded">
-                {currentContent === 0 ? "5000%" : currentContent === 1 ? "15,000%" : "∞"}
+
+              {/* Text Content */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                    <Star className="w-4 h-4" />
+                    NEW CONTENT
+                  </span>
+                  <span className="text-sm text-gray-400">2025 Ultimate Collection</span>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-1">
+                  {currentPromotion.title}
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  {currentPromotion.description}
+                </p>
+              </div>
+
+              {/* Stats */}
+              <div className="hidden lg:flex items-center gap-6 text-sm">
+                <div className="text-center">
+                  <div className="flex items-center gap-1 text-green-400 font-bold">
+                    <TrendingUp className="w-4 h-4" />
+                    <span>+500%</span>
+                  </div>
+                  <div className="text-gray-400">Engagement</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center gap-1 text-blue-400 font-bold">
+                    <Users className="w-4 h-4" />
+                    <span>50K+</span>
+                  </div>
+                  <div className="text-gray-400">Users</div>
+                </div>
               </div>
             </div>
+
+            {/* Action Buttons */}
+            <div className="flex items-center gap-4">
+              <Link 
+                href={currentPromotion.link}
+                className={`bg-gradient-to-r ${currentPromotion.color} text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105`}
+              >
+                Explore Now
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              
+              <button 
+                onClick={() => setIsVisible(false)}
+                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center gap-2 mt-4">
+            {promotions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? `bg-gradient-to-r ${currentPromotion.color} w-8` 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-        <div className="absolute top-8 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-4 left-1/2 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce"></div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-4 right-4 z-20">
+        <div className="flex gap-2">
+          <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-100"></div>
+          <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse delay-200"></div>
+        </div>
       </div>
     </div>
   );
-};
-
-export default AI2025UltimateContentPromotionBanner;
+}
