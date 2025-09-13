@@ -2,33 +2,46 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Users, TrendingUp, Shield, Globe, Brain } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Users, TrendingUp, Award, Globe, Shield } from 'lucide-react';
 
 const NewContent2025UltimateShowcase = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-blue-600" />,
-      title: "AI-Powered Intelligence",
-      description: "Revolutionary AI systems that learn and adapt in real-time",
-      stats: "99.9% Accuracy"
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: "AI-Powered Automation",
+      description: "Revolutionary AI systems that automate complex business processes with 99.9% accuracy",
+      stats: "500% ROI Increase"
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-600" />,
-      title: "Lightning Fast Processing",
-      description: "Process millions of operations in milliseconds",
-      stats: "10x Faster"
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      title: "Enterprise Solutions",
+      description: "Scalable solutions for Fortune 500 companies with proven track record",
+      stats: "10,000+ Clients"
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-600" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with end-to-end encryption",
-      stats: "100% Secure"
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: "Performance Optimization",
+      description: "Advanced analytics and monitoring for maximum efficiency and growth",
+      stats: "300% Performance Boost"
     },
     {
-      icon: <Globe className="w-8 h-8 text-purple-600" />,
-      title: "Global Scale",
-      description: "Deploy anywhere in the world with instant scaling",
-      stats: "200+ Countries"
+      icon: <Award className="w-8 h-8 text-purple-500" />,
+      title: "Industry Recognition",
+      description: "Award-winning technology recognized by leading industry experts",
+      stats: "50+ Awards"
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-cyan-500" />,
+      title: "Global Reach",
+      description: "Serving clients across 150+ countries with localized support",
+      stats: "150+ Countries"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: "Security First",
+      description: "Enterprise-grade security with SOC 2 compliance and encryption",
+      stats: "99.99% Uptime"
     }
   ];
 
@@ -36,138 +49,161 @@ const NewContent2025UltimateShowcase = () => {
     {
       name: "Sarah Johnson",
       role: "CTO, TechCorp",
-      content: "This platform transformed our entire infrastructure. The ROI was immediate and continues to grow.",
+      content: "This platform transformed our entire operation. The AI automation increased our efficiency by 500%.",
       rating: 5
     },
     {
       name: "Michael Chen",
-      role: "CEO, InnovateLab",
-      content: "The AI capabilities are beyond anything we've seen. It's like having a team of experts working 24/7.",
+      role: "CEO, InnovateLabs",
+      content: "The best investment we've made. ROI was visible within the first month of implementation.",
       rating: 5
     },
     {
       name: "Emily Rodriguez",
-      role: "VP Engineering, DataFlow",
-      content: "Implementation was seamless. We were up and running in days, not months.",
+      role: "VP Operations, GlobalTech",
+      content: "Revolutionary technology that exceeded all our expectations. Highly recommended!",
       rating: 5
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 rounded-full text-blue-300 text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            NEW: Ultimate 2025 Showcase
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+            <Star className="w-5 h-5 text-yellow-400 mr-2" />
+            <span className="text-sm font-medium text-blue-200">2025 Ultimate Showcase</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            The Future of Technology
-            <br />
-            <span className="text-3xl md:text-5xl">Starts Here</span>
-          </h2>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Revolutionary AI Solutions
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              for the Future
+            </span>
+          </h1>
+          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the most advanced AI and automation solutions that are reshaping industries worldwide. 
-            Join thousands of companies already transforming their operations.
+            Experience the next generation of AI-powered automation, analytics, and enterprise solutions 
+            that are transforming industries worldwide.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services" 
+            <Link
+              href="/ai-2025-ultimate-breakthrough"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore Solutions
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
-              Get Started Today
+              Get Started
             </Link>
           </div>
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+        >
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-              <div className="mb-4">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              className="group relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="flex items-center mb-4">
                 {feature.icon}
+                <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
-              <div className="text-2xl font-bold text-blue-400">{feature.stats}</div>
-            </div>
+              <div className="text-sm font-medium text-blue-400">{feature.stats}</div>
+            </motion.div>
           ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-20">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-blue-400 mb-2">50,000+</div>
-              <div className="text-gray-300">Active Users</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">$2.5B</div>
-              <div className="text-gray-300">Cost Savings</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">150+</div>
-              <div className="text-gray-300">Countries</div>
-            </div>
-          </div>
-        </div>
+        </motion.div>
 
         {/* Testimonials */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            What Our Clients Say
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex mb-4">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
+              >
+                <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <div className="font-semibold">{testimonial.name}</div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12">
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-12"
+        >
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the revolution and see why industry leaders choose our solutions for their most critical operations.
+            Join thousands of companies already using our revolutionary AI solutions 
+            to achieve unprecedented growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/demo" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            <Link
+              href="/ai-2025-ultimate-breakthrough"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              <Users className="mr-2 w-5 h-5" />
+              Start Your Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
               Schedule Demo
             </Link>
-            <Link 
-              href="/pricing" 
-              className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-300 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
-            >
-              <TrendingUp className="mr-2 w-5 h-5" />
-              View Pricing
-            </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

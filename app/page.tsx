@@ -156,6 +156,26 @@ import InteractiveCaseStudies2025PromotionBanner from '../components/Interactive
 import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
 import InteractiveAIDemo2025PromotionBanner from '../components/InteractiveAIDemo2025PromotionBanner';
 import StructuredData2025 from '../components/StructuredData2025';
+
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+
+// Import new 2025 ultimate content components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
+// Import new 2026 innovation showcase and 2030 future vision banners
+import AI2026UltimateInnovationShowcasePromotionBanner from '../components/AI2026UltimateInnovationShowcasePromotionBanner';
+import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
+
+// Import new ultimate innovations promotional components
+import NewContent2025UltimateInnovationsPromotionBanner from '../components/NewContent2025UltimateInnovationsPromotionBanner';
+import AITrends2025UltimatePredictionsPromotionBanner from '../components/AITrends2025UltimatePredictionsPromotionBanner';
 import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025UltimatePredictionsBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
@@ -3613,9 +3633,54 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* New Ultimate Content Promotion Banner */}
+      <NewContent2025UltimatePromotionBanner />
+      
+      {/* New Revolutionary Content Sections */}
+      <NewContentPromotionalBanner />
+      
+      <NewContentShowcase2025 />
+      
+      <InteractiveContentWidget />
+      
+      <RevolutionaryFeatures2025 />
+      
+      <SuccessStoriesShowcase />
+      
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* Ultimate Content Discovery Widget */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <UltimateContentDiscoveryWidget2025 />
+        </div>
+      </section>
+      
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewsletterSignup2025 />
+        </div>
+      </section>
+      
+      {/* Ultimate Content Showcase */}
+      <NewContent2025UltimateShowcase />
+      
+      {/* Ultimate Content Discovery Widget */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <UltimateContentDiscoveryWidget2025 />
+        </div>
+      </section>
+      
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewsletterSignup2025 />
+        </div>
+      </section>
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
