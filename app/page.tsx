@@ -22,6 +22,10 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 
 export default function HomePage() {
   return (
