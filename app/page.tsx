@@ -83,6 +83,11 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import AI2025InsightsPromotionBanner from '../components/AI2025InsightsPromotionBanner';
 import AI2025InsightsShowcase from '../components/AI2025InsightsShowcase';
 
+// Import new ultimate breakthrough promotional components
+import UltimateBreakthroughPromotionBanner from '../components/UltimateBreakthroughPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import DynamicContentShowcase from '../components/DynamicContentShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -94,6 +99,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <UltimateBreakthroughPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
+        {/* DYNAMIC CONTENT SHOWCASE */}
+        <DynamicContentShowcase />
+        
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <UltimateContentShowcase2025PromotionBanner />
         
