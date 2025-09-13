@@ -14,6 +14,12 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
 
+// New Advanced Content Components
+import AdvancedContentShowcase2025 from '../components/AdvancedContentShowcase2025';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import LatestContentPromotionBanner2025 from '../components/LatestContentPromotionBanner2025';
+import ContentRecommendationWidget2025 from '../components/ContentRecommendationWidget2025';
+
 // 2025 Content Components
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
@@ -151,6 +157,11 @@ const HomePage: React.FC = () => {
                 </div>
               </section>
 
+              {/* Latest Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <LatestContentPromotionBanner2025 />
+              </Suspense>
+
               {/* New Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContentBanner />
@@ -283,6 +294,21 @@ const HomePage: React.FC = () => {
               {/* Enhanced Content Showcase */}
               <Suspense fallback={<LoadingSpinner />}>
                 <EnhancedContentShowcase />
+              </Suspense>
+
+              {/* Advanced Content Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedContentShowcase2025 />
+              </Suspense>
+
+              {/* Interactive Content Discovery */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery2025 />
+              </Suspense>
+
+              {/* Content Recommendation Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentRecommendationWidget2025 />
               </Suspense>
 
               {/* AI 2025 Revolutionary Breakthrough */}
