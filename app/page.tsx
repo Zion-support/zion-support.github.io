@@ -29,6 +29,10 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
+// New 2026 promotional components
+import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
+import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+
 // New 2025 content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 
@@ -124,6 +128,14 @@ import InteractiveContentDiscovery2026PromotionBanner from '../components/Intera
 import BusinessSuccessStoriesShowcase2026 from '../components/BusinessSuccessStoriesShowcase2026';
 import BusinessSuccessStoriesShowcase2026PromotionBanner from '../components/BusinessSuccessStoriesShowcase2026PromotionBanner';
 
+// New Ultimate Content Revolution 2026 Components
+import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
+import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
+
+// New AI Innovation Showcase 2026 Components
+import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
+import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -156,6 +168,12 @@ export default function HomePage() {
 
         {/* QUANTUM AI BREAKTHROUGH 2030 PROMOTION BANNER */}
         <QuantumAIBreakthrough2030PromotionBanner />
+
+        {/* ULTIMATE CONTENT REVOLUTION 2026 PROMOTION BANNER */}
+        <UltimateContentRevolution2026PromotionBanner />
+
+        {/* AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
+        <AIInnovationShowcase2026PromotionBanner />
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
@@ -204,6 +222,12 @@ export default function HomePage() {
         
         {/* NEW BUSINESS SUCCESS STORIES SHOWCASE 2026 */}
         <BusinessSuccessStoriesShowcase2026 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION 2026 */}
+        <UltimateContentRevolution2026 />
+        
+        {/* AI INNOVATION SHOWCASE 2026 */}
+        <AIInnovationShowcase2026 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
@@ -444,7 +468,6 @@ export default function HomePage() {
         
         {/* NEW 2028 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2028 />
->>>>>>> c6dc1de5686a3a067733e3c32b5736dfae0a575c
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
