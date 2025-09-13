@@ -1,247 +1,207 @@
 import React from 'react';
-import SEO from '../../components/SEO';
-import EnhancedServiceShowcase2025 from '../../components/EnhancedServiceShowcase2025';
-import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Users, Rocket, Star, TrendingUp, Shield } from 'lucide-react';
+import { Metadata } from 'next';
+import { ArrowRight, Brain, Zap, Target, Users, TrendingUp, Star, CheckCircle } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Innovation Showcase 2025 - Revolutionary Breakthroughs | Zion Tech Group',
+  description: 'Discover the latest AI innovations and breakthroughs in 2025. Explore cutting-edge technologies, quantum computing solutions, and advanced automation systems.',
+  keywords: 'AI innovation, artificial intelligence, quantum computing, automation, breakthrough technology, 2025',
+};
 
 export default function AIInnovationShowcase2025() {
   return (
-    <>
-      <SEO
-        title="AI Innovation Showcase 2025 - Zion Tech Group"
-        description="Discover our cutting-edge AI innovations and revolutionary technologies that are transforming industries in 2025. Explore autonomous systems, quantum AI, and next-generation solutions."
-        keywords="AI innovation 2025, artificial intelligence showcase, autonomous systems, quantum AI, AI transformation, cutting-edge technology"
-        url="/ai-innovation-showcase-2025"
-      />
-      
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 animate-pulse">
-                <Brain className="w-4 h-4 mr-2" />
-                AI INNOVATION SHOWCASE 2025
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                The Future of
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent block">
-                  AI is Here
-                </span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the most advanced AI innovations of 2025. From autonomous systems to quantum-enhanced intelligence, 
-                we're revolutionizing how businesses operate and compete in the digital age.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="#services"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center group"
-                >
-                  Explore Innovations
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                
-                <Link 
-                  href="/contact"
-                  className="bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center"
-                >
-                  Schedule Demo
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Innovation Stats */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">500+</div>
-                <div className="text-gray-600 text-sm">AI Innovations</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">150+</div>
-                <div className="text-gray-600 text-sm">Enterprise Clients</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">99.9%</div>
-                <div className="text-gray-600 text-sm">Uptime Guarantee</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-600 mb-2">24/7</div>
-                <div className="text-gray-600 text-sm">AI Support</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Innovations */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Revolutionary AI Innovations
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our breakthrough technologies are setting new standards for artificial intelligence and transforming industries worldwide.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Autonomous AI Systems</h3>
-                <p className="text-gray-600 mb-4">
-                  Self-evolving AI systems with 99.9% reliability and autonomous decision-making capabilities.
-                </p>
-                <div className="flex items-center text-sm text-purple-600 font-semibold">
-                  <TrendingUp className="w-4 h-4 mr-1" />
-                  +1200% ROI
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum AI Processing</h3>
-                <p className="text-gray-600 mb-4">
-                  Quantum-enhanced algorithms delivering 1000x performance improvements for complex computations.
-                </p>
-                <div className="flex items-center text-sm text-blue-600 font-semibold">
-                  <TrendingUp className="w-4 h-4 mr-1" />
-                  +1000x Speed
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Agent Orchestration</h3>
-                <p className="text-gray-600 mb-4">
-                  Intelligent multi-agent coordination systems for enterprise-scale AI deployments.
-                </p>
-                <div className="flex items-center text-sm text-green-600 font-semibold">
-                  <TrendingUp className="w-4 h-4 mr-1" />
-                  +500% Efficiency
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Edge AI Computing</h3>
-                <p className="text-gray-600 mb-4">
-                  Ultra-fast edge computing solutions with real-time processing and minimal latency.
-                </p>
-                <div className="flex items-center text-sm text-orange-600 font-semibold">
-                  <TrendingUp className="w-4 h-4 mr-1" />
-                  +90% Speed
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced Services Showcase */}
-        <section id="services">
-          <EnhancedServiceShowcase2025 />
-        </section>
-
-        {/* Technology Comparison */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Our AI vs Traditional Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See how our revolutionary AI innovations compare to traditional solutions in the market.
-              </p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
-                <thead className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left font-semibold">Feature</th>
-                    <th className="px-6 py-4 text-center font-semibold">Traditional AI</th>
-                    <th className="px-6 py-4 text-center font-semibold">Our AI Innovation</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-6 py-4 font-medium text-gray-900">Processing Speed</td>
-                    <td className="px-6 py-4 text-center text-gray-600">Standard</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-semibold">1000x Faster</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium text-gray-900">Autonomy Level</td>
-                    <td className="px-6 py-4 text-center text-gray-600">Semi-Automated</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-semibold">Fully Autonomous</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium text-gray-900">Reliability</td>
-                    <td className="px-6 py-4 text-center text-gray-600">95-98%</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-semibold">99.9%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium text-gray-900">Scalability</td>
-                    <td className="px-6 py-4 text-center text-gray-600">Limited</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-semibold">Unlimited</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium text-gray-900">ROI Potential</td>
-                    <td className="px-6 py-4 text-center text-gray-600">100-200%</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-semibold">500-1200%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Don't let your competitors get ahead. Be among the first to experience revolutionary AI technology that will transform your business.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Innovation
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {' '}Showcase 2025
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Experience the future of artificial intelligence with our revolutionary breakthroughs, 
+              quantum computing solutions, and next-generation automation technologies.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center group"
-              >
-                Schedule Demo
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              
-              <Link 
-                href="/services"
-                className="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center"
-              >
-                View All Services
-              </Link>
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Explore Innovations
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                Watch Demo
+              </button>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Key Innovations Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+            Revolutionary AI Breakthroughs
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Quantum AI Fusion */}
+            <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-500 p-3 rounded-lg">
+                  <Brain className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white ml-4">Quantum AI Fusion</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Revolutionary quantum computing integration with artificial intelligence, 
+                delivering unprecedented processing power and problem-solving capabilities.
+              </p>
+              <div className="flex items-center text-blue-400 font-semibold">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
+
+            {/* Neural Interface Revolution */}
+            <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-500 p-3 rounded-lg">
+                  <Zap className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white ml-4">Neural Interface</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Direct brain-computer interfaces enabling seamless communication between 
+                human consciousness and AI systems for enhanced cognitive capabilities.
+              </p>
+              <div className="flex items-center text-purple-400 font-semibold">
+                Explore Now <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
+
+            {/* Autonomous Operations */}
+            <div className="bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-green-500 p-3 rounded-lg">
+                  <Target className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white ml-4">Autonomous Operations</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Self-managing AI systems that operate independently, making intelligent 
+                decisions and adapting to complex business environments in real-time.
+              </p>
+              <div className="flex items-center text-green-400 font-semibold">
+                Discover More <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+            Impact by the Numbers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-blue-400 mb-4">500+</div>
+              <div className="text-xl text-gray-300">AI Models Deployed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-purple-400 mb-4">99.9%</div>
+              <div className="text-xl text-gray-300">Accuracy Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-green-400 mb-4">10x</div>
+              <div className="text-xl text-gray-300">Performance Boost</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-pink-400 mb-4">24/7</div>
+              <div className="text-xl text-gray-300">Autonomous Operation</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Showcase */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+            Advanced Capabilities
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-8">Next-Generation AI Features</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-2">Quantum-Enhanced Processing</h4>
+                    <p className="text-gray-300">Leverage quantum computing for exponentially faster AI computations and complex problem solving.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-2">Consciousness Integration</h4>
+                    <p className="text-gray-300">Direct neural interfaces enabling seamless human-AI collaboration and enhanced cognitive abilities.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-2">Autonomous Decision Making</h4>
+                    <p className="text-gray-300">Self-managing AI systems that operate independently with human-level decision-making capabilities.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-2">Real-time Adaptation</h4>
+                    <p className="text-gray-300">Dynamic learning and adaptation to changing environments and requirements in real-time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20">
+              <div className="text-center">
+                <div className="text-6xl mb-4">🚀</div>
+                <h4 className="text-2xl font-bold text-white mb-4">Experience the Future</h4>
+                <p className="text-gray-300 mb-6">
+                  Join thousands of organizations already transforming their operations with our revolutionary AI technologies.
+                </p>
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  Start Your Journey
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Ready to Transform Your Future?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the AI revolution and unlock unprecedented possibilities for your organization. 
+            Our cutting-edge technologies are ready to accelerate your success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+              Get Started Today
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -1,90 +1,84 @@
-import React from 'react';
+'use client';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, Mail, Phone } from 'lucide-react';
-class ErrorBoundary extends Component<Props, State> {
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        componentStack: errorInfo.componentStack,
-    
-  
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+import React, { ReactNode, useState, useEffect } from 'react';
 
-              <AlertTriangle className="w-full h-full" />
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface ErrorState {
+  hasError: boolean;
+  error?: Error;
+}
+
+export default function ErrorBoundary({ children, fallback }: Props) {
+  const [errorState, setErrorState] = useState<ErrorState>({ hasError: false });
+
+  useEffect(() => {
+    const handleError = (error: ErrorEvent) => {
+      setErrorState({ hasError: true, error: error.error });
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      setErrorState({ hasError: true, error: event.reason });
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, []);
+
+  if (errorState.hasError) {
+    if (fallback) {
+      return <>{fallback}</>;
+    }
+
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+        <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+          <div className="text-6xl mb-4">⚠️</div>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            Something went wrong
+          </h1>
+          <p className="text-gray-600 mb-6">
+            We're sorry, but something unexpected happened. Please try refreshing the page.
+          </p>
+          
+          <div className="space-y-3">
+            <button
+              onClick={() => window.location.reload()}
+              className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Refresh Page
+            </button>
             
-                      {this.state.errorInfo.componentStack}
-                <RefreshCw className="w-5 h-5 inline mr-2" />
-                <Home className="w-5 h-5 inline mr-2" />
-              
-                  <Mail className="w-4 h-4 inline mr-2" />
-                  <Phone className="w-4 h-4 inline mr-2" />
+            <button
+              onClick={() => window.history.back()}
+              className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            >
+              Go Back
+            </button>
+          </div>
 
+          {process.env.NODE_ENV === 'development' && errorState.error && (
+            <details className="mt-6 text-left">
+              <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                Error Details (Development)
+              </summary>
+              <pre className="mt-2 text-xs bg-gray-100 p-2 rounded overflow-auto">
+                {errorState.error.toString()}
+              </pre>
+            </details>
+          )}
+        </div>
+      </div>
+    );
+  }
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-
-
-
-
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-
-
-
-
-
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-
-class ErrorBoundary extends Component<Props, State> {;
-
-
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-
-
-
-
-
-                        {this.state.errorInfo.componentStack}
-class ErrorBoundary extends Component<Props, State> {
-
-
-
-
-
-
-
-                  {this.state.errorInfo?.componentStack}
-
-
-
-
-
-
-                  {this && this.state.errorInfo?.componentStack}
-
-
-
-
-
-export default ErrorBoundary;
-
-
+  return <>{children}</>;
+}

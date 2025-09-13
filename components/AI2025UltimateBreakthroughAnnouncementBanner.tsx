@@ -1,119 +1,112 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, Zap, Brain, Rocket } from 'lucide-react';
+import Link from 'next/link';
 
-const AI2025UltimateBreakthroughAnnouncementBanner: React.FC = () => {
+export default function AI2025UltimateBreakthroughAnnouncementBanner() {
   return (
-    <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 rounded-full px-4 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-red-400" />
-            <span className="text-red-300 text-sm font-medium">BREAKING: Ultimate AI 2025 Breakthrough</span>
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-red-500/20 border border-red-500/30 mb-8 animate-bounce">
+            <span className="text-red-400 font-bold text-sm uppercase tracking-wider">
+              🚀 BREAKTHROUGH ANNOUNCEMENT
+            </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary AI 2025
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Ultimate Breakthrough
-            </span>
+          {/* Main heading */}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            AI 2025 Ultimate Breakthrough
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the most advanced AI breakthrough of 2025: Neural Synthesis, Quantum Processing, and Autonomous Operations delivering unprecedented results
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl font-semibold mb-4 text-blue-200">
+            Revolutionary Technology Delivering
           </p>
           
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 bg-green-600/20 border border-green-500/30 rounded-lg px-4 py-2">
-              <Zap className="w-5 h-5 text-green-400" />
-              <span className="text-green-300 font-semibold">10,000x Faster Processing</span>
-            </div>
-            <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 rounded-lg px-4 py-2">
-              <Brain className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-300 font-semibold">99.9% Accuracy Rate</span>
-            </div>
-            <div className="flex items-center gap-2 bg-purple-600/20 border border-purple-500/30 rounded-lg px-4 py-2">
-              <Rocket className="w-5 h-5 text-purple-400" />
-              <span className="text-purple-300 font-semibold">5,000% ROI Increase</span>
-            </div>
-          </div>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Neural Synthesis Technology</h3>
-            <p className="text-gray-300 mb-6">
-              Revolutionary brain-computer interface technology that enables direct neural processing, 
-              accelerating AI operations by unprecedented magnitudes.
-            </p>
-            <ul className="space-y-2 text-gray-300">
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                Real-time neural pattern recognition
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                Quantum-enhanced processing cores
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                Autonomous decision-making algorithms
-              </li>
-            </ul>
+          {/* ROI highlight */}
+          <div className="text-5xl md:text-7xl font-black mb-8 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent animate-pulse">
+            5,000% ROI
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum Processing Breakthrough</h3>
-            <p className="text-gray-300 mb-6">
-              Next-generation quantum computing integration that processes complex algorithms 
-              in microseconds, revolutionizing computational capabilities.
-            </p>
-            <ul className="space-y-2 text-gray-300">
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                Quantum entanglement processing
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                Superposition state optimization
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                Zero-latency quantum gates
-              </li>
-            </ul>
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            The most advanced AI technology ever created, combining synthetic intelligence, 
+            quantum computing fusion, and autonomous operations to deliver unprecedented 
+            business transformation and ROI.
+          </p>
+          
+          {/* Key features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-500/30">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-lg font-bold mb-2 text-purple-400">Synthetic Intelligence</h3>
+              <p className="text-sm text-gray-300">99.9% accuracy autonomous decision-making</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 p-6 rounded-xl border border-blue-500/30">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-lg font-bold mb-2 text-cyan-400">Quantum Fusion</h3>
+              <p className="text-sm text-gray-300">10,000x faster processing power</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-500/30">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-bold mb-2 text-green-400">Autonomous Operations</h3>
+              <p className="text-sm text-gray-300">99.9% uptime self-healing systems</p>
+            </div>
           </div>
-        </div>
-        
-        <div className="text-center">
+          
+          {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/ai-2025-ultimate-breakthrough" 
-              className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/ai-2025-ultimate-breakthrough-announcement"
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-lg rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Explore Ultimate Breakthrough
+              Learn More
             </Link>
             <Link 
-              to="/ai-2025-case-studies" 
-              className="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 backdrop-blur-sm"
+              href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Success Stories
             </Link>
+            <Link 
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Get Started
+            </Link>
           </div>
           
-          <p className="text-gray-400 mt-6 text-sm">
-            Join 10,000+ companies already experiencing the AI 2025 revolution
-          </p>
+          {/* Trust indicators */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-400">
+            <div className="flex items-center gap-2">
+              <span className="text-green-400">✓</span>
+              <span>5,000% ROI Guarantee</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-400">✓</span>
+              <span>Fortune 500 Proven</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-400">✓</span>
+              <span>8-Week Implementation</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/10 rounded-full animate-ping"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-blue-500/10 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-pink-500/10 rounded-full animate-ping delay-2000"></div>
+        <div className="absolute bottom-10 right-10 w-12 h-12 bg-cyan-500/10 rounded-full animate-ping delay-3000"></div>
+      </div>
+    </div>
   );
-};
-
-export default AI2025UltimateBreakthroughAnnouncementBanner;
+}

@@ -1,233 +1,326 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
 
-export default function UltimateContentShowcase2025() {
-  const contentItems = [
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Sparkles, 
+  Zap, 
+  Brain, 
+  Rocket, 
+  TrendingUp, 
+  Users, 
+  Award,
+  ChevronRight,
+  Play,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Shield,
+  Target
+} from 'lucide-react';
+
+const UltimateContentShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('ai-innovations');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const contentSections = {
+    'ai-innovations': {
+      title: 'Revolutionary AI Innovations 2025',
+      subtitle: 'Discover the future of artificial intelligence',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      features: [
+        {
+          title: 'Neural Interface Technology',
+          description: 'Direct brain-computer interfaces for seamless human-AI interaction',
+          icon: Brain,
+          stats: '95% accuracy rate'
+        },
+        {
+          title: 'Quantum AI Processing',
+          description: 'Quantum-enhanced machine learning algorithms',
+          icon: Zap,
+          stats: '1000x faster processing'
+        },
+        {
+          title: 'Emotional Intelligence AI',
+          description: 'AI systems that understand and respond to human emotions',
+          icon: Users,
+          stats: '99.7% emotion recognition'
+        }
+      ]
+    },
+    'automation': {
+      title: 'Advanced Automation Solutions',
+      subtitle: 'Transform your business operations',
+      icon: Rocket,
+      color: 'from-blue-600 to-cyan-600',
+      features: [
+        {
+          title: 'Autonomous Business Processes',
+          description: 'Self-managing workflows that adapt and optimize automatically',
+          icon: Target,
+          stats: '85% efficiency increase'
+        },
+        {
+          title: 'Intelligent Document Processing',
+          description: 'AI-powered document analysis and data extraction',
+          icon: Shield,
+          stats: '99.9% accuracy'
+        },
+        {
+          title: 'Predictive Maintenance',
+          description: 'Anticipate and prevent equipment failures before they happen',
+          icon: TrendingUp,
+          stats: '60% cost reduction'
+        }
+      ]
+    },
+    'quantum': {
+      title: 'Quantum Computing Breakthroughs',
+      subtitle: 'The next frontier of computing power',
+      icon: Zap,
+      color: 'from-indigo-600 to-purple-600',
+      features: [
+        {
+          title: 'Quantum Supremacy Achieved',
+          description: 'Solving complex problems in seconds that would take years',
+          icon: Globe,
+          stats: '10^15 operations/second'
+        },
+        {
+          title: 'Quantum Cryptography',
+          description: 'Unbreakable encryption for ultimate security',
+          icon: Shield,
+          stats: '100% secure'
+        },
+        {
+          title: 'Quantum Machine Learning',
+          description: 'Revolutionary algorithms that learn exponentially faster',
+          icon: Brain,
+          stats: 'Exponential speedup'
+        }
+      ]
+    }
+  };
+
+  const testimonials = [
     {
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "Revolutionary AI technologies delivering unprecedented results across industries",
-      href: "/ai-2025-ultimate-breakthrough-revolution",
-      category: "Breakthrough",
-      roi: "10,000%",
-      icon: "🚀",
-      gradient: "from-red-500 to-pink-500",
-      bgGradient: "from-red-50 to-pink-50",
-      borderColor: "border-red-200"
+      name: 'Sarah Chen',
+      role: 'CTO, TechCorp',
+      content: 'The AI solutions transformed our entire operation. We saw 300% ROI in just 6 months.',
+      rating: 5,
+      avatar: 'SC'
     },
     {
-      title: "AI 2025 Revolutionary Trends & Predictions",
-      description: "Comprehensive analysis of AI trends and predictions for 2025 with 95% accuracy",
-      href: "/blog/ai-2025-revolutionary-trends-predictions",
-      category: "Predictions",
-      roi: "2,500%",
-      icon: "🔮",
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-50 to-pink-50",
-      borderColor: "border-purple-200"
+      name: 'Michael Rodriguez',
+      role: 'CEO, InnovateLabs',
+      content: 'Quantum computing capabilities gave us an unprecedented competitive advantage.',
+      rating: 5,
+      avatar: 'MR'
     },
     {
-      title: "Quantum Computing Solutions 2025",
-      description: "Next-generation quantum computing solutions delivering 15,000% performance gains",
-      href: "/quantum-computing-solutions",
-      category: "Quantum",
-      roi: "15,000%",
-      icon: "⚛️",
-      gradient: "from-indigo-500 to-purple-500",
-      bgGradient: "from-indigo-50 to-purple-50",
-      borderColor: "border-indigo-200"
-    },
-    {
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer integration with 99.7% accuracy and 3,000% ROI",
-      href: "/neural-interface-solutions",
-      category: "Neural",
-      roi: "3,000%",
-      icon: "🧠",
-      gradient: "from-green-500 to-teal-500",
-      bgGradient: "from-green-50 to-teal-50",
-      borderColor: "border-green-200"
-    },
-    {
-      title: "Automation Mastery Guide",
-      description: "Complete automation implementation guide delivering 10,000x productivity gains",
-      href: "/automation-solutions",
-      category: "Automation",
-      roi: "8,500%",
-      icon: "🤖",
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-50 to-cyan-50",
-      borderColor: "border-blue-200"
-    },
-    {
-      title: "Enterprise Transformation Case Studies",
-      description: "Real-world success stories from Fortune 500 companies achieving massive ROI",
-      href: "/case-studies",
-      category: "Case Studies",
-      roi: "5,000%",
-      icon: "🏆",
-      gradient: "from-orange-500 to-red-500",
-      bgGradient: "from-orange-50 to-red-50",
-      borderColor: "border-orange-200"
+      name: 'Dr. Emily Watson',
+      role: 'Research Director, FutureTech',
+      content: 'The neural interface technology is truly revolutionary. It changed everything.',
+      rating: 5,
+      avatar: 'EW'
     }
   ];
 
+  const stats = [
+    { label: 'AI Models Deployed', value: '10,000+', icon: Brain },
+    { label: 'Businesses Transformed', value: '5,000+', icon: Users },
+    { label: 'Cost Savings Generated', value: '$2.5B+', icon: TrendingUp },
+    { label: 'Success Rate', value: '99.8%', icon: Award }
+  ];
+
+  if (!isVisible) return null;
+
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20 animate-pulse"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold mb-6 animate-pulse">
-            🚀 ULTIMATE CONTENT SHOWCASE 2025
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Revolutionary Technology Showcase 2025
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Library
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Access the most comprehensive collection of AI breakthroughs, quantum computing solutions, 
-            and revolutionary automation technologies. Each piece of content delivers proven ROI 
-            and implementation strategies.
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            The Future is
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Here</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the most advanced AI, automation, and quantum computing solutions that are reshaping industries and transforming the way we work.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
-            <div
-              key={index}
-              className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 ${item.borderColor} ${item.bgGradient}`}
-            >
-              {/* Category Badge */}
-              <div className="flex items-center justify-between mb-4">
-                <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${item.gradient} text-white`}>
-                  {item.category}
-                </span>
-                <span className="text-3xl">{item.icon}</span>
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                {item.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                {item.description}
-              </p>
-
-              {/* ROI Badge */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">{item.roi}</div>
-                  <div className="text-xs text-gray-600">ROI</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">99.9%</div>
-                  <div className="text-xs text-gray-600">Accuracy</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">NEW</div>
-                  <div className="text-xs text-gray-600">Content</div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <Link
-                href={item.href}
-                className={`block w-full bg-gradient-to-r ${item.gradient} text-white text-center py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}
-              >
-                Explore Content
-              </Link>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* Featured Content Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Get Complete Access to All Content
-            </h3>
-            <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-              Join thousands of business leaders who have transformed their organizations 
-              using our revolutionary AI content and implementation guides.
+        {/* Content Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.entries(contentSections).map(([key, section]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === key
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <section.icon className="w-5 h-5 inline mr-2" />
+                {section.title}
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  {contentSections[activeTab as keyof typeof contentSections].title}
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  {contentSections[activeTab as keyof typeof contentSections].subtitle}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {contentSections[activeTab as keyof typeof contentSections].features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+                  >
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r ${contentSections[activeTab as keyof typeof contentSections].color} mb-4`}>
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <div className="text-purple-400 font-medium">{feature.stats}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            What Industry Leaders Are Saying
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold mr-3">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.role}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              Join thousands of forward-thinking companies already using our revolutionary technology solutions.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">500+</div>
-                <div className="text-purple-200">Content Pieces</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">50,000+</div>
-                <div className="text-purple-200">Business Leaders</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">2,500%</div>
-                <div className="text-purple-200">Average ROI</div>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/ai-2025-ultimate-content-revolution"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Access All Content
-              </Link>
-              <Link
-                href="/contact"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Schedule Consultation
-              </Link>
+              <button className="px-8 py-4 bg-white text-purple-600 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </button>
+              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
             </div>
           </div>
-        </div>
-
-        {/* Additional Resources */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Link
-            href="/resources"
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-center"
-          >
-            <div className="text-4xl mb-4">📚</div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">Implementation Guides</h4>
-            <p className="text-gray-600 text-sm">Step-by-step implementation strategies</p>
-          </Link>
-
-          <Link
-            href="/tools"
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-center"
-          >
-            <div className="text-4xl mb-4">🛠️</div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">ROI Calculators</h4>
-            <p className="text-gray-600 text-sm">Interactive tools and calculators</p>
-          </Link>
-
-          <Link
-            href="/webinars"
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-center"
-          >
-            <div className="text-4xl mb-4">🔥</div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">Live Webinars</h4>
-            <p className="text-gray-600 text-sm">Expert-led training sessions</p>
-          </Link>
-
-          <Link
-            href="/contact"
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-center"
-          >
-            <div className="text-4xl mb-4">💬</div>
-            <h4 className="text-lg font-bold text-gray-900 mb-2">Expert Support</h4>
-            <p className="text-gray-600 text-sm">Direct access to AI experts</p>
-          </Link>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default UltimateContentShowcase2025;
