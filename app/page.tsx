@@ -147,6 +147,12 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 // Import new breakthrough announcement banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+
+// Import new 2025 content showcase and interactive demo components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
+import InteractiveAIDemo2025PromotionBanner from '../components/InteractiveAIDemo2025PromotionBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
@@ -220,6 +226,12 @@ export default function HomePage() {
         {/* NEW: AI 2026 QUANTUM BREAKTHROUGH PROMOTION BANNER */}
         <AI2026QuantumBreakthroughPromotionBanner />
         
+        {/* NEW: ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW: INTERACTIVE AI DEMO 2025 PROMOTION BANNER */}
+        <InteractiveAIDemo2025PromotionBanner />
+        
         {/* NEW: AI 2026 NEURAL INTERFACES PROMOTION BANNER */}
         <AI2026NeuralInterfacesPromotionBanner />
         
@@ -255,6 +267,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW: ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* NEW: INTERACTIVE AI DEMO 2025 */}
+        <InteractiveAIDemo2025 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
