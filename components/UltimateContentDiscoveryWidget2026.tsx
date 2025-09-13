@@ -1,4 +1,5 @@
-'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -49,7 +50,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'relevance', name: 'Most Relevant', icon: Search }
   ];
 
-  const contentItems = [
+  const featuredContent = [
     {
       id: 1,
       title: 'AI 2026-2030 Ultimate Predictions',
@@ -468,4 +469,16 @@ const UltimateContentDiscoveryWidget2026 = () => {
   );
 };
 
-export default UltimateContentDiscoveryWidget2026;
+      {/* CTA */}
+      <div className="mt-8 text-center">
+        <Link
+          href="/contact"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          <span className="mr-2">🚀</span>
+          Get Started with AI
+        </Link>
+      </div>
+    </div>
+  );
+}

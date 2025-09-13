@@ -1,365 +1,232 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import { ArrowRight, Brain, Zap, Shield, Globe, Users, TrendingUp, Star } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Innovation Showcase 2026 - Revolutionary Breakthroughs | Zion Tech Group',
+  description: 'Discover the most advanced AI innovations of 2026. Explore cutting-edge artificial intelligence solutions, quantum computing breakthroughs, and revolutionary automation technologies.',
+  keywords: 'AI innovation 2026, artificial intelligence, quantum computing, automation, breakthrough technology, Zion Tech Group',
+  openGraph: {
+    title: 'AI Innovation Showcase 2026 - Revolutionary Breakthroughs',
+    description: 'Explore the future of AI with our comprehensive showcase of 2026 innovations',
+    type: 'website',
+  },
+};
+
+const innovations = [
+  {
+    id: 1,
+    title: "Quantum-Neural Fusion Architecture",
+    description: "Revolutionary AI system combining quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
+    features: ["1000x faster processing", "Quantum error correction", "Neural pattern recognition", "Real-time adaptation"],
+    icon: Brain,
+    color: "from-purple-500 to-pink-500",
+    status: "Available Now"
+  },
+  {
+    id: 2,
+    title: "Autonomous Business Intelligence",
+    description: "Self-evolving AI system that automatically optimizes business processes, predicts market trends, and makes strategic decisions without human intervention.",
+    features: ["Predictive analytics", "Process optimization", "Market forecasting", "Strategic planning"],
+    icon: TrendingUp,
+    color: "from-blue-500 to-cyan-500",
+    status: "Beta Testing"
+  },
+  {
+    id: 3,
+    title: "Consciousness-Level AI Assistant",
+    description: "Advanced AI with near-human consciousness capabilities, capable of complex reasoning, emotional understanding, and creative problem-solving.",
+    features: ["Emotional intelligence", "Creative thinking", "Complex reasoning", "Human-like interaction"],
+    icon: Users,
+    color: "from-green-500 to-emerald-500",
+    status: "In Development"
+  },
+  {
+    id: 4,
+    title: "Universal Language Processing",
+    description: "Breakthrough AI that can understand, translate, and generate content in any human language with perfect accuracy and cultural context.",
+    features: ["All languages supported", "Cultural context", "Real-time translation", "Content generation"],
+    icon: Globe,
+    color: "from-orange-500 to-red-500",
+    status: "Available Now"
+  },
+  {
+    id: 5,
+    title: "Cybersecurity AI Guardian",
+    description: "Advanced AI security system that provides real-time threat detection, automated response, and predictive security measures.",
+    features: ["Real-time monitoring", "Threat prediction", "Automated response", "Zero-day protection"],
+    icon: Shield,
+    color: "from-red-500 to-pink-500",
+    status: "Available Now"
+  },
+  {
+    id: 6,
+    title: "Hyper-Automation Platform",
+    description: "Complete automation solution that can automate any business process, from simple tasks to complex workflows, with minimal human intervention.",
+    features: ["Process automation", "Workflow optimization", "Task scheduling", "Performance monitoring"],
+    icon: Zap,
+    color: "from-yellow-500 to-orange-500",
+    status: "Beta Testing"
+  }
+];
+
+const testimonials = [
+  {
+    name: "Dr. Sarah Chen",
+    role: "CTO, TechCorp",
+    content: "The quantum-neural fusion architecture has revolutionized our data processing capabilities. We've seen a 1000% improvement in performance.",
+    rating: 5
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "CEO, InnovateLabs",
+    content: "The autonomous business intelligence system has transformed our decision-making process. It's like having a team of expert analysts working 24/7.",
+    rating: 5
+  },
+  {
+    name: "Dr. Emily Watson",
+    role: "Research Director, AI Institute",
+    content: "The consciousness-level AI assistant is the most advanced AI system I've ever worked with. It's truly revolutionary.",
+    rating: 5
+  }
+];
+
+const stats = [
+  { label: "AI Models Deployed", value: "10,000+", icon: Brain },
+  { label: "Processing Speed", value: "1000x Faster", icon: Zap },
+  { label: "Global Clients", value: "500+", icon: Globe },
+  { label: "Success Rate", value: "99.9%", icon: Star }
+];
 
 export default function AIInnovationShowcase2026() {
-  const [selectedInnovation, setSelectedInnovation] = useState(0);
-
-  const innovations = [
-    {
-      title: "Quantum AI Processing",
-      description: "Revolutionary quantum computing integration with AI for 1000x faster processing",
-      category: "Computing",
-      impact: "Breakthrough",
-      icon: "⚛️",
-      features: [
-        "Quantum neural networks",
-        "Quantum machine learning algorithms", 
-        "Quantum optimization techniques",
-        "Quantum cryptography integration"
-      ],
-      benefits: [
-        "1000x faster processing speeds",
-        "Exponential problem-solving capabilities",
-        "Unbreakable security protocols",
-        "Revolutionary optimization results"
-      ],
-      applications: ["Drug discovery", "Financial modeling", "Climate research", "Cryptography"],
-      timeline: "Q2 2026",
-      status: "In Development"
-    },
-    {
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer interfaces enabling thought-controlled AI systems",
-      category: "Human-AI Interaction",
-      impact: "Transformative",
-      icon: "🧠",
-      features: [
-        "Non-invasive neural reading",
-        "Thought-to-text conversion",
-        "AI-assisted cognitive enhancement",
-        "Emotional state recognition"
-      ],
-      benefits: [
-        "Hands-free AI interaction",
-        "Enhanced cognitive abilities",
-        "Accessibility improvements",
-        "Real-time mental health monitoring"
-      ],
-      applications: ["Healthcare", "Accessibility", "Gaming", "Education"],
-      timeline: "Q4 2026",
-      status: "Research Phase"
-    },
-    {
-      title: "Autonomous AI Agents",
-      description: "Self-evolving AI agents capable of independent decision-making and learning",
-      category: "Autonomous Systems",
-      impact: "Revolutionary",
-      icon: "🤖",
-      features: [
-        "Self-modifying code capabilities",
-        "Independent goal setting",
-        "Cross-domain knowledge transfer",
-        "Ethical decision-making frameworks"
-      ],
-      benefits: [
-        "True AI autonomy",
-        "Continuous self-improvement",
-        "Complex problem-solving",
-        "Reduced human intervention needs"
-      ],
-      applications: ["Space exploration", "Scientific research", "Emergency response", "Business automation"],
-      timeline: "Q3 2026",
-      status: "Prototype Ready"
-    },
-    {
-      title: "Molecular AI Computing",
-      description: "DNA-based computing systems with AI for unprecedented data processing",
-      category: "Biocomputing",
-      impact: "Breakthrough",
-      icon: "🧬",
-      features: [
-        "DNA storage systems",
-        "Molecular logic gates",
-        "Biological neural networks",
-        "Self-replicating algorithms"
-      ],
-      benefits: [
-        "Massive data storage capacity",
-        "Energy-efficient processing",
-        "Self-healing systems",
-        "Biological integration"
-      ],
-      applications: ["Data archiving", "Medical diagnostics", "Environmental monitoring", "Biological research"],
-      timeline: "Q1 2027",
-      status: "Concept Phase"
-    }
-  ];
-
-  const breakthroughMetrics = [
-    { metric: "Processing Speed", improvement: "1000x", icon: "⚡" },
-    { metric: "Data Storage", improvement: "1M TB", icon: "💾" },
-    { metric: "Energy Efficiency", improvement: "99%", icon: "🔋" },
-    { metric: "Accuracy Rate", improvement: "99.9%", icon: "🎯" }
-  ];
-
-  const innovationCategories = [
-    { id: 'all', name: 'All Innovations', icon: '🌐', count: innovations.length },
-    { id: 'Computing', name: 'Computing', icon: '💻', count: innovations.filter(i => i.category === 'Computing').length },
-    { id: 'Human-AI Interaction', name: 'Human-AI', icon: '🧠', count: innovations.filter(i => i.category === 'Human-AI Interaction').length },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: innovations.filter(i => i.category === 'Autonomous Systems').length },
-    { id: 'Biocomputing', name: 'Biocomputing', icon: '🧬', count: innovations.filter(i => i.category === 'Biocomputing').length }
-  ];
-
-  const currentInnovation = innovations[selectedInnovation];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium animate-pulse">🚀 BREAKTHROUGH INNOVATIONS - 2026</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              🧠 AI Innovation Showcase 2026
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Innovation Showcase
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                2026
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
-              Discover the revolutionary AI innovations that will reshape our world. 
-              From quantum computing to neural interfaces - the future is here.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover the most revolutionary AI breakthroughs that are reshaping the future of technology, business, and human interaction.
             </p>
-            
-            {/* Innovation Metrics */}
-            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {breakthroughMetrics.map((metric, index) => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
-                  <div className="text-4xl mb-2">{metric.icon}</div>
-                  <div className="text-2xl font-bold mb-1">{metric.improvement}</div>
-                  <div className="text-sm opacity-90">{metric.metric}</div>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2">
+                Explore Innovations
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+                Watch Demo
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Innovation Categories */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🌟 Innovation Categories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore breakthrough innovations across different AI domains
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-5 gap-6">
-            {innovationCategories.map((category) => (
-              <div key={category.id} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="text-4xl mb-3">{category.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{category.name}</h3>
-                <div className="text-sm text-gray-600">{category.count} Innovations</div>
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Innovation Showcase */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🔬 Featured Innovation
+      {/* Innovations Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary AI Innovations
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Deep dive into our most groundbreaking AI innovation
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our cutting-edge AI solutions that are transforming industries and pushing the boundaries of what's possible.
             </p>
           </div>
-          
-          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
-            <div className="grid lg:grid-cols-2 gap-0">
-              {/* Innovation Details */}
-              <div className="p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-6xl">{currentInnovation.icon}</div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full font-semibold">
-                        {currentInnovation.category}
-                      </span>
-                      <span className={`text-sm px-3 py-1 rounded-full font-semibold ${
-                        currentInnovation.impact === 'Breakthrough' 
-                          ? 'bg-red-100 text-red-800'
-                          : currentInnovation.impact === 'Transformative'
-                          ? 'bg-blue-100 text-blue-800'
-                          : 'bg-green-100 text-green-800'
-                      }`}>
-                        {currentInnovation.impact}
-                      </span>
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">{currentInnovation.title}</h3>
-                    <p className="text-gray-600 text-lg">{currentInnovation.description}</p>
-                  </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {innovations.map((innovation) => (
+              <div key={innovation.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <div className={`w-16 h-16 bg-gradient-to-r ${innovation.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <innovation.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <div className="mb-4">
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                    innovation.status === 'Available Now' ? 'bg-green-500/20 text-green-400' :
+                    innovation.status === 'Beta Testing' ? 'bg-yellow-500/20 text-yellow-400' :
+                    'bg-blue-500/20 text-blue-400'
+                  }`}>
+                    {innovation.status}
+                  </span>
                 </div>
 
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {currentInnovation.features.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {innovation.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6">
+                  {innovation.description}
+                </p>
 
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {currentInnovation.benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                          <span>{benefit}</span>
-                        </div>
-                      ))}
+                <div className="space-y-2 mb-6">
+                  {innovation.features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-300">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                      <span className="text-sm">{feature}</span>
                     </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Applications:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {currentInnovation.applications.map((app, index) => (
-                        <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                          {app}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                  ))}
                 </div>
+
+                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                  Learn More
+                </button>
               </div>
-
-              {/* Innovation Visual/Stats */}
-              <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-12 text-white">
-                <div className="h-full flex flex-col justify-center">
-                  <div className="text-center mb-8">
-                    <div className="text-8xl mb-4">{currentInnovation.icon}</div>
-                    <h3 className="text-2xl font-bold mb-2">{currentInnovation.title}</h3>
-                    <p className="text-purple-100">{currentInnovation.description}</p>
-                  </div>
-
-                  <div className="space-y-6">
-                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-                      <h4 className="text-lg font-semibold mb-3">Development Status</h4>
-                      <div className="flex items-center gap-3">
-                        <div className={`w-3 h-3 rounded-full ${
-                          currentInnovation.status === 'In Development' ? 'bg-yellow-400' :
-                          currentInnovation.status === 'Prototype Ready' ? 'bg-green-400' :
-                          currentInnovation.status === 'Research Phase' ? 'bg-blue-400' :
-                          'bg-gray-400'
-                        }`}></div>
-                        <span>{currentInnovation.status}</span>
-                      </div>
-                    </div>
-
-                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-                      <h4 className="text-lg font-semibold mb-3">Expected Timeline</h4>
-                      <div className="text-2xl font-bold">{currentInnovation.timeline}</div>
-                    </div>
-
-                    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-                      <h4 className="text-lg font-semibold mb-3">Impact Level</h4>
-                      <div className="text-2xl font-bold">{currentInnovation.impact}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Innovation Navigation */}
-          <div className="flex justify-center gap-4 mt-8">
-            {innovations.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedInnovation(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  selectedInnovation === index ? 'bg-purple-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* All Innovations Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              🚀 All Breakthrough Innovations
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Industry Leaders Say
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore all our revolutionary AI innovations and their potential impact
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hear from the experts who are already experiencing the power of our AI innovations.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {innovations.map((innovation, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-shadow">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-5xl">{innovation.icon}</div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
-                        {innovation.category}
-                      </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        innovation.impact === 'Breakthrough' 
-                          ? 'bg-red-100 text-red-800'
-                          : innovation.impact === 'Transformative'
-                          ? 'bg-blue-100 text-blue-800'
-                          : 'bg-green-100 text-green-800'
-                      }`}>
-                        {innovation.impact}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{innovation.title}</h3>
-                    <p className="text-gray-600">{innovation.description}</p>
-                  </div>
-                </div>
 
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {innovation.features.slice(0, 2).map((feature, idx) => (
-                        <span key={idx} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
-                          {feature}
-                        </span>
-                      ))}
-                      {innovation.features.length > 2 && (
-                        <span className="text-gray-400 text-xs">+{innovation.features.length - 2} more</span>
-                      )}
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">
-                    Timeline: {innovation.timeline}
-                  </div>
-                  <button
-                    onClick={() => setSelectedInnovation(index)}
-                    className="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-sm"
-                  >
-                    Learn More
-                  </button>
+                
+                <p className="text-gray-300 mb-6 italic">
+                  "{testimonial.content}"
+                </p>
+                
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-gray-400 text-sm">{testimonial.role}</div>
                 </div>
               </div>
             ))}
@@ -368,27 +235,24 @@ export default function AIInnovationShowcase2026() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Be Part of the AI Revolution
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join us in shaping the future with breakthrough AI innovations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg"
-            >
-              🚀 Partner With Us
-            </Link>
-            <Link
-              to="/ai-interactive-learning-hub"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors text-lg"
-            >
-              🎓 Learn More
-            </Link>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Join thousands of companies already using our AI innovations to revolutionize their operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
           </div>
         </div>
       </section>
