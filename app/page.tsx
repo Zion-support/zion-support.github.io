@@ -163,6 +163,9 @@ import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromo
 // Import new breakthrough promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+
+// Import new content showcase banner
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 // Import new promotional banners for 2025-2026
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
@@ -963,6 +966,11 @@ export default function HomePage() {
           </div>
         </section>
         
+        {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
+          <InteractiveContentDiscoveryWidget2025 />
+        </Suspense>
+        
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
           <RevolutionaryContentRecommendationEngine2026 />
@@ -1149,6 +1157,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* New Content 2025 Ultimate Showcase Banner */}
+      <NewContent2025UltimateShowcaseBanner />
       
       {/* Latest Content Promotion Banner */}
       <LatestContentPromotionBanner />
