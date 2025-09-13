@@ -97,6 +97,14 @@ import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDis
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 
+// New 2025 content showcase components
+import AI2025TrendsInnovationShowcase from '../components/AI2025TrendsInnovationShowcase';
+import AI2025TrendsInnovationPromotionBanner from '../components/AI2025TrendsInnovationPromotionBanner';
+import AI2025SuccessStoriesShowcase from '../components/AI2025SuccessStoriesShowcase';
+import AI2025SuccessStoriesPromotionBanner from '../components/AI2025SuccessStoriesPromotionBanner';
+import AI2025ToolsUtilitiesShowcase from '../components/AI2025ToolsUtilitiesShowcase';
+import AI2025ToolsUtilitiesPromotionBanner from '../components/AI2025ToolsUtilitiesPromotionBanner';
+
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
@@ -3717,6 +3725,24 @@ export default function HomePage() {
           <NewsletterSignup2025 />
         </div>
       </section>
+
+      {/* NEW AI TRENDS & INNOVATION PROMOTION BANNER */}
+      <AI2025TrendsInnovationPromotionBanner />
+      
+      {/* AI TRENDS & INNOVATION SHOWCASE */}
+      <AI2025TrendsInnovationShowcase />
+      
+      {/* AI SUCCESS STORIES PROMOTION BANNER */}
+      <AI2025SuccessStoriesPromotionBanner />
+      
+      {/* AI SUCCESS STORIES SHOWCASE */}
+      <AI2025SuccessStoriesShowcase />
+      
+      {/* AI TOOLS & UTILITIES PROMOTION BANNER */}
+      <AI2025ToolsUtilitiesPromotionBanner />
+      
+      {/* AI TOOLS & UTILITIES SHOWCASE */}
+      <AI2025ToolsUtilitiesShowcase />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
