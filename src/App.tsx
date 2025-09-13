@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import NewContentPromotionBanner from './components/NewContentPromotionBanner';
+import { NewContentPromotionBanner } from './components/NewContentPromotionBanner';
 import { RevolutionaryContentBanner } from './components/RevolutionaryContentBanner';
 import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';

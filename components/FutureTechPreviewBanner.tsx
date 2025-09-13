@@ -36,7 +36,7 @@ const FutureTechPreviewBanner: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M50 50m-50 0a50 50 0 1 1 100 0a50 50 0 1 1 -100 0"/%3E%3C/g%3E%3C/svg%3E')]"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
       
       <div className="relative max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
