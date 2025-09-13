@@ -63,9 +63,19 @@ import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import UltimateContentHub2026 from '../components/UltimateContentHub2026';
 
+// New breakthrough components
+import AI2026UltimateBreakthroughBanner from '../components/AI2026UltimateBreakthroughBanner';
+import AdvancedContentOptimization2026 from '../components/AdvancedContentOptimization2026';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* AI 2026 Ultimate Breakthrough Banner */}
+      <AI2026UltimateBreakthroughBanner />
+      
+      {/* Advanced Content Optimization 2026 */}
+      <AdvancedContentOptimization2026 />
+      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
