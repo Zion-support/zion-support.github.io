@@ -24,6 +24,7 @@ import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
+import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import NewContentShowcase2026 from '../components/NewContentShowcase2026';
@@ -212,6 +213,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
+        
+        {/* COMPREHENSIVE SOLUTIONS BANNER 2025 */}
+        <ComprehensiveSolutionsBanner2025 />
         
         {/* NEW SERVICES SHOWCASE 2025 */}
         <NewServicesShowcase2025 />
