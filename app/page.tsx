@@ -147,6 +147,15 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+
+// Import new interactive components
+import AIToolsShowcase2025 from '../components/AIToolsShowcase2025';
+import AIToolsShowcase2025PromotionBanner from '../components/AIToolsShowcase2025PromotionBanner';
+import InteractiveCaseStudies2025 from '../components/InteractiveCaseStudies2025';
+import InteractiveCaseStudies2025PromotionBanner from '../components/InteractiveCaseStudies2025PromotionBanner';
+import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
+import InteractiveAIDemo2025PromotionBanner from '../components/InteractiveAIDemo2025PromotionBanner';
+import StructuredData2025 from '../components/StructuredData2025';
 import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025UltimatePredictionsBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
@@ -202,6 +211,16 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* Structured Data */}
+      <StructuredData2025 type="Organization" data={{}} />
+      <StructuredData2025 type="WebSite" data={{}} />
+      <StructuredData2025 type="Article" data={{
+        title: "AI Tools Showcase 2025: Revolutionary Solutions for Modern Businesses",
+        description: "Discover the latest AI tools and technologies transforming industries in 2025",
+        datePublished: "2025-01-15",
+        dateModified: "2025-01-15"
+      }} />
       
       <div className='min-h-screen bg-white'>
         {/* EDGE AI REVOLUTION PROMOTION BANNER */}
@@ -297,8 +316,24 @@ export default function HomePage() {
         {/* New Content Promotion Banner */}
         <NewContentPromotionBanner2025 />
         
+        {/* AI TOOLS SHOWCASE PROMOTION BANNER */}
+        <AIToolsShowcase2025PromotionBanner />
+        
         {/* AI Tools Showcase */}
         <AIToolsShowcase2025 />
+        
+        {/* INTERACTIVE CASE STUDIES PROMOTION BANNER */}
+        <InteractiveCaseStudies2025PromotionBanner />
+        
+        {/* Interactive Case Studies */}
+        <InteractiveCaseStudies2025 />
+        
+        {/* INTERACTIVE AI DEMO PROMOTION BANNER */}
+        <InteractiveAIDemo2025PromotionBanner />
+        
+        {/* Interactive AI Demo */}
+        <InteractiveAIDemo2025 />
+        
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
