@@ -1,50 +1,99 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function AI2025UltimateBreakthroughPromotionBanner() {
+const AI2025UltimateBreakthroughPromotionBanner = () => {
   return (
-    <div className="relative bg-gradient-to-r from-red-900 via-purple-900 to-blue-900 text-white py-4 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-purple-600/20 to-blue-600/20 animate-pulse"></div>
+    <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-blue-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/2 right-1/3 w-32 h-32 bg-indigo-500/10 rounded-full animate-bounce"></div>
+      </div>
       
-      {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center space-x-4 mb-4 md:mb-0">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl animate-bounce">🚀</span>
-              <span className="font-bold text-lg">BREAKTHROUGH ANNOUNCEMENT</span>
+        <div className="text-center">
+          {/* Main headline */}
+          <div className="inline-flex items-center bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full px-6 py-2 mb-6 animate-pulse">
+            <span className="text-sm font-bold">🚀 BREAKTHROUGH ANNOUNCEMENT</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+              AI 2025 ULTIMATE
+            </span>
+            <br />
+            <span className="text-white">
+              BREAKTHROUGH
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+            The most revolutionary AI breakthrough in history - delivering{' '}
+            <span className="text-yellow-400 font-bold">2,500-5,000% ROI</span> with{' '}
+            <span className="text-green-400 font-bold">99.9% accuracy</span> and{' '}
+            <span className="text-purple-400 font-bold">10,000x faster processing</span>
+          </p>
+          
+          {/* Key metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">5,000%</div>
+              <div className="text-sm text-blue-100">ROI Potential</div>
             </div>
-            <div className="hidden md:block w-px h-6 bg-white/30"></div>
-            <div className="text-sm md:text-base">
-              <span className="text-yellow-400 font-bold">AI 2025 Ultimate Revolution</span> - 
-              <span className="text-green-400 font-bold"> 10,000% ROI</span> Guaranteed
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-sm text-blue-100">Accuracy Rate</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-purple-400 mb-2">10,000x</div>
+              <div className="text-sm text-blue-100">Faster Processing</div>
             </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          {/* Call to action buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution"
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-2 px-6 rounded-full text-sm transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/blog/ai-2025-ultimate-breakthrough-announcement"
+              className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Learn More
+              🚀 Read Full Breakthrough
             </Link>
             <Link 
-              href="/contact"
-              className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-2 px-6 rounded-full text-sm transition-all duration-300 hover:bg-white/10"
+              href="/case-studies/ai-2025-global-transformation-breakthrough-10000-roi"
+              className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Get Access
+              🏆 See 10,000% ROI Case Study
             </Link>
+            <Link 
+              href="/resources/ai-2025-ultimate-implementation-master-guide"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              📚 Implementation Guide
+            </Link>
+          </div>
+          
+          {/* Urgency message */}
+          <div className="bg-gradient-to-r from-red-600/20 to-pink-600/20 border border-red-500/30 rounded-lg p-4 max-w-2xl mx-auto">
+            <p className="text-lg font-semibold text-red-100 mb-2">
+              ⚠️ LIMITED AVAILABILITY
+            </p>
+            <p className="text-sm text-blue-100">
+              This breakthrough technology is available to only <span className="font-bold text-yellow-400">100 organizations</span> in 2025. 
+              Demand is unprecedented - contact us immediately for priority access.
+            </p>
           </div>
         </div>
       </div>
       
-      {/* Animated elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-2 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
-        <div className="absolute top-3 right-1/3 w-1 h-1 bg-red-400 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-2 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce"></div>
-      </div>
-    </div>
+      {/* Floating elements */}
+      <div className="absolute top-10 left-10 text-4xl animate-bounce">🚀</div>
+      <div className="absolute top-20 right-20 text-3xl animate-pulse">⚡</div>
+      <div className="absolute bottom-20 left-20 text-4xl animate-bounce">🌟</div>
+      <div className="absolute bottom-10 right-10 text-3xl animate-pulse">💎</div>
+    </section>
   );
-}
+};
+
+export default AI2025UltimateBreakthroughPromotionBanner;

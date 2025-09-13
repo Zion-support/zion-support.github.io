@@ -32,6 +32,7 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import FeaturedContentShowcase2025 from '../components/FeaturedContentShowcase2025';
 
 // New 2026 promotional components
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
@@ -48,7 +49,13 @@ export default function HomePage() {
         url="/"
       />
       
-      <div className='min-h-screen bg-white'>
+        <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* FEATURED CONTENT SHOWCASE 2025 */}
+        <FeaturedContentShowcase2025 />
+        
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
         
