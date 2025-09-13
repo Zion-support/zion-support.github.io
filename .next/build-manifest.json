@@ -1,41 +1,31 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-42372ed130431b0a.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
+  "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/SBZhFZkgM0cqy3fqwYkRB/_buildManifest.js",
+    "static/SBZhFZkgM0cqy3fqwYkRB/_ssgManifest.js"
   ],
-  "rootMainFiles": [],
+  "rootMainFiles": [
+    "static/chunks/webpack-6c495439c09249f7.js",
+    "static/chunks/74ccb0aa-a53120ae10abb1ad.js",
+    "static/chunks/309-58405cb3a399f83c.js",
+    "static/chunks/main-app-bf4ed54ec144f677.js"
+  ],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-6c495439c09249f7.js",
+      "static/chunks/framework-6e06c675866dc992.js",
+      "static/chunks/main-1729adfc1d3d4310.js",
+      "static/chunks/pages/_app-35223393a3abcbbb.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
-    ],
-    "/contact": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/contact.js"
-    ],
-    "/zion-tech-group": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/zion-tech-group.js"
+      "static/chunks/webpack-6c495439c09249f7.js",
+      "static/chunks/framework-6e06c675866dc992.js",
+      "static/chunks/main-1729adfc1d3d4310.js",
+      "static/chunks/pages/_error-1e70908895bf0f49.js"
     ]
   },
   "ampFirstPages": []
