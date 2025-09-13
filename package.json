@@ -210,7 +210,7 @@
     "jsdom": "^24.0.0",
     "ansi-styles": "^5.2.0",
     "@testing-library/dom": "^9.3.4",
-    "find-up": "^5.0.0"
+    "find-up": "^4.1.0"
   },
   "overrides": {
     "@humanwhocodes/object-schema": "1.0.0",
@@ -219,6 +219,6 @@
     "rimraf": "^5.0.5",
     "ansi-styles": "^5.2.0",
     "@testing-library/dom": "^9.3.4",
-    "find-up": "^5.0.0"
+    "find-up": "^4.1.0"
   }
 }
