@@ -30,11 +30,12 @@ const EnhancedNavigation: React.FC = () => {
     },
     {
       label: 'Content',
-      href: '/content-showcase',
+      href: '/ai-2025-content-hub',
       icon: '📚',
       isNew: true,
-      badge: 'Revolutionary 2026',
+      badge: 'Revolutionary 2025',
       dropdown: [
+        { label: 'Content Hub', href: '/ai-2025-content-hub', isNew: true, isHot: true },
         { label: 'AI 2025-2030 Predictions', href: '/ai-2025-2030-predictions', isNew: true, isHot: true },
         { label: 'Quantum Computing 2025', href: '/quantum-computing-2025', isNew: true, isHot: true },
         { label: 'Automation Solutions 2025', href: '/automation-solutions-2025', isNew: true, isHot: true },
@@ -44,6 +45,7 @@ const EnhancedNavigation: React.FC = () => {
         { label: 'Revolutionary Resources 2026', href: '/revolutionary-resources-2026', isNew: true, isHot: true },
         { label: 'All Content', href: '/content-showcase', isNew: true },
         { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
+        { label: 'Autonomous Business Systems', href: '/case-studies/autonomous-business-systems-2025', isNew: true, isHot: true },
         { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
         { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
