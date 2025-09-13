@@ -26,7 +26,6 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
-import ContentAnalytics from '../components/ContentAnalytics';
 
 export default function HomePage() {
   return (
@@ -268,9 +267,6 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Analytics..." />}>
           <AdvancedAnalyticsDashboard2026 />
         </Suspense>
-        
-        {/* Content Analytics - Development Only */}
-        <ContentAnalytics pageId="homepage" pageTitle="Zion Tech Group - Revolutionary AI & Quantum Computing Solutions" />
       </div>
     </ErrorBoundary>
   );
