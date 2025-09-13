@@ -22,6 +22,7 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
@@ -45,6 +46,11 @@ import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
+// New 2030+ breakthrough components
+import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
+import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
+import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -56,6 +62,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
+        <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* AI 2035 SINGULARITY PROMOTION BANNER */}
+        <AI2035SingularityPromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2030 */}
+        <UltimateContentDiscoveryWidget2030 />
+        
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
@@ -70,6 +85,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
+        
+        {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
+        <NewContent2025RevolutionaryBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
