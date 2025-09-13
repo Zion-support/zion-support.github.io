@@ -1,190 +1,239 @@
 import React from 'react';
-import { ArrowRightIcon, ChartBarIcon, UsersIcon, TrendingUpIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import { ArrowRightIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 const CaseStudyShowcase2025 = () => {
   const caseStudies = [
     {
       id: 1,
-      company: "TechStart Inc.",
-      industry: "SaaS",
-      challenge: "Content creation bottleneck limiting growth",
-      solution: "AI-powered content generation platform",
+      company: "TechCorp Global",
+      industry: "Manufacturing",
+      title: "AI-Powered Supply Chain Optimization",
+      challenge: "Manual supply chain processes causing 30% inefficiency and $2M annual losses",
+      solution: "Implemented AI-driven demand forecasting and automated inventory management",
       results: [
-        "500% increase in content production",
-        "95% reduction in content creation time",
-        "300% improvement in SEO rankings",
-        "$2M additional revenue generated"
+        "40% reduction in inventory costs",
+        "60% improvement in delivery times",
+        "$3.2M annual savings",
+        "99.5% order accuracy"
       ],
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop&crop=center",
-      testimonial: "The AI content platform transformed our marketing strategy completely. We went from struggling to create 10 pieces of content per month to producing 200+ high-quality pieces.",
-      author: "Sarah Johnson",
-      position: "CMO, TechStart Inc."
+      timeline: "6 months",
+      roi: "320%",
+      featured: true
     },
     {
       id: 2,
-      company: "E-commerce Plus",
-      industry: "Retail",
-      challenge: "Product descriptions at scale",
-      solution: "Automated product content generation",
+      company: "FinanceFlow Inc",
+      industry: "Financial Services",
+      title: "Quantum-Enhanced Risk Analysis",
+      challenge: "Traditional risk models failing to predict market volatility accurately",
+      solution: "Deployed quantum computing algorithms for real-time risk assessment",
       results: [
-        "10,000+ product descriptions created",
-        "85% improvement in conversion rates",
-        "60% reduction in content costs",
-        "200% increase in organic traffic"
+        "85% improvement in risk prediction accuracy",
+        "50% faster transaction processing",
+        "Zero false positives in fraud detection",
+        "200% increase in client satisfaction"
       ],
-      logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop&crop=center",
-      testimonial: "We were able to scale our product catalog from 500 to 10,000+ products in just 3 months. The AI-generated descriptions are more compelling than our previous manual ones.",
-      author: "Michael Chen",
-      position: "Head of Marketing, E-commerce Plus"
+      timeline: "4 months",
+      roi: "450%",
+      featured: false
     },
     {
       id: 3,
       company: "HealthTech Solutions",
       industry: "Healthcare",
-      challenge: "Complex technical documentation",
-      solution: "AI-powered technical writing assistant",
+      title: "Neural Interface Patient Monitoring",
+      challenge: "Manual patient monitoring leading to delayed interventions and poor outcomes",
+      solution: "Implemented neural interface technology for real-time patient data analysis",
       results: [
-        "90% faster documentation creation",
-        "50% reduction in review cycles",
-        "95% accuracy in technical content",
-        "40% improvement in user adoption"
+        "70% reduction in critical event response time",
+        "90% improvement in early warning detection",
+        "40% decrease in patient readmission rates",
+        "95% patient satisfaction score"
       ],
-      logo: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=100&h=100&fit=crop&crop=center",
-      testimonial: "Our technical documentation was always a bottleneck. Now we can create comprehensive, accurate docs in a fraction of the time, and our users love the clarity.",
-      author: "Dr. Emily Rodriguez",
-      position: "CTO, HealthTech Solutions"
+      timeline: "8 months",
+      roi: "280%",
+      featured: false
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-semibold mb-6">
-            <ChartBarIcon className="w-4 h-4 mr-2" />
-            SUCCESS STORIES 2025
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 mb-6">
+            <CheckCircleIcon className="w-5 h-5 mr-2" />
+            <span className="text-sm font-semibold">SUCCESS STORIES</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Real Results from
-            <span className="block bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Proven Results with
+            <span className="block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
               Real Companies
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how businesses across industries are transforming their content strategies and achieving remarkable results with our AI-powered solutions.
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            See how leading companies across industries have transformed their operations and achieved remarkable results with our AI solutions.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Case Studies Grid */}
-        <div className="space-y-16">
-          {caseStudies.map((study, index) => (
-            <div key={study.id} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-              {/* Content */}
-              <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <div className="flex items-center mb-6">
-                  <img
-                    src={study.logo}
-                    alt={study.company}
-                    className="w-16 h-16 rounded-xl mr-4"
-                  />
+        {/* Featured Case Study */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-16"
+        >
+          {(() => {
+            const featured = caseStudies.find(study => study.featured);
+            return (
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{study.company}</h3>
-                    <p className="text-gray-600">{study.industry} • Case Study</p>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge:</h4>
-                  <p className="text-gray-600 mb-4">{study.challenge}</p>
-                  
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution:</h4>
-                  <p className="text-gray-600">{study.solution}</p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Results:</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {study.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center text-green-600">
-                        <TrendingUpIcon className="w-5 h-5 mr-2 flex-shrink-0" />
-                        <span className="font-semibold">{result}</span>
+                    <div className="flex items-center space-x-4 mb-6">
+                      <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        FEATURED CASE STUDY
+                      </span>
+                      <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium">
+                        {featured.industry}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-3xl font-bold text-white mb-4">
+                      {featured.title}
+                    </h3>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-gray-300 mb-2">Challenge:</h4>
+                      <p className="text-gray-400 mb-4">{featured.challenge}</p>
+                      
+                      <h4 className="text-lg font-semibold text-gray-300 mb-2">Solution:</h4>
+                      <p className="text-gray-400">{featured.solution}</p>
+                    </div>
+                    
+                    <div className="flex items-center space-x-6 text-sm text-gray-300">
+                      <div className="flex items-center">
+                        <ClockIcon className="w-4 h-4 mr-2" />
+                        Timeline: {featured.timeline}
                       </div>
-                    ))}
+                      <div className="flex items-center">
+                        <ChartBarIcon className="w-4 h-4 mr-2" />
+                        ROI: {featured.roi}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-4">Key Results:</h4>
+                    <div className="space-y-3">
+                      {featured.results.map((result, index) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                          <span className="text-gray-300">{result}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <button className="mt-6 inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300">
+                      Read Full Case Study
+                      <ArrowRightIcon className="w-4 h-4 ml-2" />
+                    </button>
                   </div>
                 </div>
+              </div>
+            );
+          })()}
+        </motion.div>
 
-                <blockquote className="bg-white rounded-2xl p-6 shadow-lg mb-6">
-                  <p className="text-gray-700 italic mb-4">"{study.testimonial}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {study.author.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">{study.author}</div>
-                      <div className="text-gray-600 text-sm">{study.position}</div>
-                    </div>
+        {/* Other Case Studies */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {caseStudies.filter(study => !study.featured).map((study, index) => (
+            <motion.div
+              key={study.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+            >
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                  {study.industry}
+                </span>
+                <span className="text-green-400 text-sm font-semibold">
+                  ROI: {study.roi}
+                </span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3">
+                {study.title}
+              </h3>
+              
+              <p className="text-gray-400 mb-4 text-sm">
+                {study.challenge}
+              </p>
+              
+              <div className="space-y-2 mb-4">
+                {study.results.slice(0, 2).map((result, idx) => (
+                  <div key={idx} className="flex items-center space-x-2">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300 text-sm">{result}</span>
                   </div>
-                </blockquote>
-
-                <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 flex items-center">
-                  Read Full Case Study
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                ))}
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-4 text-xs text-gray-400">
+                  <div className="flex items-center">
+                    <ClockIcon className="w-3 h-3 mr-1" />
+                    {study.timeline}
+                  </div>
+                  <div className="flex items-center">
+                    <CurrencyDollarIcon className="w-3 h-3 mr-1" />
+                    {study.roi} ROI
+                  </div>
+                </div>
+                
+                <button className="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
+                  Learn More
+                  <ArrowRightIcon className="w-3 h-3 ml-1" />
                 </button>
               </div>
-
-              {/* Visual */}
-              <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                <div className="bg-white rounded-3xl shadow-2xl p-8">
-                  <div className="text-center mb-8">
-                    <h4 className="text-2xl font-bold text-gray-900 mb-2">Key Metrics</h4>
-                    <p className="text-gray-600">Performance improvements achieved</p>
-                  </div>
-
-                  <div className="space-y-6">
-                    {study.results.slice(0, 3).map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center justify-between p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl">
-                        <div className="flex items-center">
-                          <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mr-4">
-                            <ChartBarIcon className="w-6 h-6 text-white" />
-                          </div>
-                          <div>
-                            <div className="font-semibold text-gray-900">{result.split(' ')[0]}</div>
-                            <div className="text-gray-600 text-sm">{result.split(' ').slice(1).join(' ')}</div>
-                          </div>
-                        </div>
-                        <div className="text-green-600 font-bold text-lg">
-                          +{Math.floor(Math.random() * 300) + 100}%
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Create Your Success Story?
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Achieve Similar Results?
             </h3>
-            <p className="text-white/90 mb-6 text-lg">
-              Join hundreds of companies already transforming their content strategy with AI
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join hundreds of companies that have transformed their operations with our AI solutions. Let's discuss how we can help your business.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
-                Start Your Free Trial
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300">
+                Start Your Success Story
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-green-600 transition-all duration-200">
-                Schedule Consultation
+              <button className="px-8 py-4 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30">
+                View All Case Studies
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

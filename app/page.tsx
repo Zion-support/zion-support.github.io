@@ -156,6 +156,13 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 
+// Import new 2025 content showcase components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
+import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
+import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -169,6 +176,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
+        
+        {/* NEWSLETTER SIGNUP 2026 */}
+        <NewsletterSignup2026 />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />
