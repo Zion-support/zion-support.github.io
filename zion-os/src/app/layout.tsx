@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
->>>>>>> origin/content/blog-sept12
 
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
@@ -13,7 +12,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
->>>>>>> origin/content/blog-sept12
         <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -33,7 +31,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   </a>
                   <a href="/blog" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Blog
->>>>>>> origin/content/blog-sept12
                   </a>
                   <a href="/multiverse/launch" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Launch
@@ -92,7 +89,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
->>>>>>> origin/content/blog-sept12
                 </ul>
               </div>
             </div>

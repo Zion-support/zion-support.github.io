@@ -1,6 +1,22 @@
 export default function BlogIndexPage() {
   const posts = [
     {
+      slug: "introducing-zion-os",
+      title: "Introducing Zion OS: Launch AI-Powered Digital Economies",
+      excerpt:
+        "An overview of the Zion OS platform and how it helps you deploy sovereign digital economies with AI at the core.",
+      date: "2025-09-12",
+      tag: "Announcement",
+    },
+    {
+      slug: "ai-marketplaces-blueprint",
+      title: "Blueprint: Building AI-Powered Marketplaces",
+      excerpt:
+        "Key architecture patterns, services, and deployment strategies for launching resilient AI marketplaces.",
+      date: "2025-09-12",
+      tag: "Guide",
+    },
+    {
       slug: "ai-deployment-blueprint-2025",
       title: "AI Deployment Blueprint: Launch Faster in 2025",
       excerpt:
@@ -26,7 +42,7 @@ export default function BlogIndexPage() {
     },
     {
       slug: "ai-governance-playbook",
-      title: "AI Governance Playbook: Guardrails That Don’t Slow You Down",
+      title: "AI Governance Playbook: Guardrails That Don't Slow You Down",
       excerpt:
         "A lightweight framework for model risk, data privacy, and human-in-the-loop approvals.",
       date: "2025-09-12",
@@ -51,34 +67,27 @@ export default function BlogIndexPage() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 py-20 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl font-bold text-white mb-4">Insights & Updates</h1>
-          <p className="text-blue-100 text-lg">
-            Practical guides, pricing notes, and implementation tips from Zion OS.
-          </p>
-        </div>
-      </header>
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6">Blog</h1>
+        <p className="text-white/70 mb-10">
+          Insights, announcements, and guides from the Zion OS team.
+        </p>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-6">
           {posts.map((post) => (
             <a
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors"
+              className="block p-6 rounded-xl border border-white/10 hover:border-white/30 transition-colors bg-zinc-900/40"
             >
-              <div className="text-xs uppercase tracking-wide text-white/60 mb-2">{post.tag}</div>
-              <h2 className="text-2xl font-semibold mb-3 group-hover:underline underline-offset-4">
-                {post.title}
-              </h2>
-              <p className="text-white/70 mb-4">{post.excerpt}</p>
-              <div className="text-white/50 text-sm">{new Date(post.date).toLocaleDateString()}</div>
+              <div className="text-sm text-white/50 mb-2">{post.date} • {post.tag}</div>
+              <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
+              <p className="text-white/70">{post.excerpt}</p>
             </a>
           ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 }
