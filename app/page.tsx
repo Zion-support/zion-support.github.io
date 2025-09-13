@@ -27,6 +27,9 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import AI2025BreakthroughContentPromotionBanner from '../components/AI2025BreakthroughContentPromotionBanner';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 
 export default function HomePage() {
   return (
@@ -41,6 +44,15 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
+        
+        {/* AI 2025 BREAKTHROUGH CONTENT PROMOTION BANNER */}
+        <AI2025BreakthroughContentPromotionBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
+        <UltimateContentRevolutionBanner2025 />
         
         {/* BREAKTHROUGH CONTENT HIGHLIGHT SECTION */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
