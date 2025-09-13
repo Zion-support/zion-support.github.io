@@ -88,6 +88,9 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import AI2025InsightsPromotionBanner from '../components/AI2025InsightsPromotionBanner';
 import AI2025InsightsShowcase from '../components/AI2025InsightsShowcase';
 
+// Import new AI 2025 content showcase banner
+import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -99,6 +102,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 CONTENT SHOWCASE BANNER */}
+        <AI2025ContentShowcaseBanner />
+        
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <UltimateContentShowcase2025PromotionBanner />
         
