@@ -18,6 +18,9 @@ const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/Advanced
 const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
+const AdvancedAnalyticsDashboard = lazy(() => import('../components/AdvancedAnalyticsDashboard'));
+const SecurityMonitoringSystem = lazy(() => import('../components/SecurityMonitoringSystem'));
+const MobileExperienceOptimizer = lazy(() => import('../components/MobileExperienceOptimizer'));
 
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
@@ -3559,6 +3562,21 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* Advanced Analytics and Monitoring */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading analytics..." />}>
+        <AdvancedAnalyticsDashboard />
+      </Suspense>
+      
+      {/* Security Monitoring System */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading security..." />}>
+        <SecurityMonitoringSystem />
+      </Suspense>
+      
+      {/* Mobile Experience Optimizer */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading mobile optimization..." />}>
+        <MobileExperienceOptimizer />
+      </Suspense>
     </div>
   );
 }
