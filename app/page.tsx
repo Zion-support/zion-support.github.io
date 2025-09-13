@@ -49,6 +49,10 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 
+// Import new 2025 promotional components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025BreakthroughShowcase from '../components/AI2025BreakthroughShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -65,6 +69,49 @@ export default function HomePage() {
         
         {/* NEW: CONTENT DISCOVERY WIDGET */}
         <ContentDiscoveryWidget />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* AI 2025 BREAKTHROUGH SHOWCASE */}
+        <AI2025BreakthroughShowcase />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE */}
+        <RevolutionaryContentShowcase />
+        
+        {/* ULTIMATE CONTENT REVOLUTION 2025 BANNER */}
+        <UltimateContentRevolution2025Banner />
+        
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER */}
+        <AI2025UltimateContentRevolutionPromotionBanner />
+        
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+        <AI2026FuturePredictionsBreakthroughBanner />
+        
+        {/* NEW QUANTUM COMPUTING BREAKTHROUGHS 2030 BANNER */}
+        <QuantumComputingBreakthroughs2030Banner />
+        
+        {/* NEW 2026 CONTENT PROMOTIONAL BANNER */}
+        <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <NewContent2026PromotionalBanner />
+          </div>
+        </div>
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
+        <UltimateContentShowcase2025Banner />
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEW ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2025 />
         
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
