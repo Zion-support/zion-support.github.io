@@ -6,6 +6,8 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import ContentShowcaseBanner from '../components/ContentShowcaseBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
@@ -1373,6 +1375,12 @@ export default function RootLayout({
               
               {/* New Content Banner */}
               <NewContentBanner />
+              
+              {/* Revolutionary Content Banner */}
+              <RevolutionaryContentBanner />
+              
+              {/* Content Showcase Banner */}
+              <ContentShowcaseBanner />
               
               {/* Main Content */}
               <main id="main-content" className="min-h-screen">

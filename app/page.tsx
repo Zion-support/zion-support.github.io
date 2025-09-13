@@ -30,6 +30,7 @@ import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDis
 import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import RevolutionaryPromoSection from '../components/RevolutionaryPromoSection';
 
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
@@ -77,7 +78,9 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
->>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
+        
+        {/* REVOLUTIONARY PROMOTIONAL SECTION */}
+        <RevolutionaryPromoSection />
         
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
