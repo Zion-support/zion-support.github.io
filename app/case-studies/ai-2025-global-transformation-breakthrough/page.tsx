@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2025 Global Transformation Breakthrough - 10,000% ROI Case Study',
-  description: 'Discover how a Fortune 500 company achieved 10,000% ROI in just 30 days with our revolutionary AI 2025 breakthrough technology.',
+  description: 'Discover how a Fortune 500 company achieved 10,000% ROI with our AI 2025 breakthrough. Complete transformation story with detailed results and implementation insights.',
   keywords: ['AI 2025', 'Case Study', '10,000% ROI', 'Global Transformation', 'Fortune 500', 'Breakthrough Success'],
 };
 
