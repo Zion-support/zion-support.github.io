@@ -36,6 +36,9 @@ import InteractiveContentShowcase from '../components/InteractiveContentShowcase
 // Import new 2027 promotional components
 import AI2027UltimatePredictionsBanner from '../components/AI2027UltimatePredictionsBanner';
 
+// Import new AI 2025 Revolutionary Banner
+import AI2025RevolutionaryBanner from '../components/AI2025RevolutionaryBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -47,6 +50,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 REVOLUTIONARY BANNER - ULTIMATE BREAKTHROUGH */}
+        <AI2025RevolutionaryBanner />
+        
         {/* NEW AI 2027 ULTIMATE PREDICTIONS BANNER */}
         <AI2027UltimatePredictionsBanner />
         

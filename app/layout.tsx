@@ -202,7 +202,7 @@ function Header() {
                   🏢 Fortune 500 Transformation (1500% ROI)
                 </Link>
                 <Link href="/case-studies/ai-2025-quantum-manufacturing-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
-                  ⚛️ Quantum Manufacturing Success (10,000% ROI) (NEW)
+                  ⚛️ Quantum Manufacturing Success (15,000% ROI) (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/resources/ai-2025-revolutionary-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
