@@ -148,6 +148,10 @@ import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new content promotion components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+
 // Import new showcase banners
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
 import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
@@ -200,6 +204,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* AI 2025 BREAKTHROUGH SHOWCASE BANNER */}
         <AI2025BreakthroughShowcaseBanner />
