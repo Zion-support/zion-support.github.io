@@ -63,6 +63,13 @@ import AI2028AutomotiveTransformationPromotionBanner from '../components/AI2028A
 // Future Technologies Showcase
 import FutureTechnologiesShowcaseBanner from '../components/FutureTechnologiesShowcaseBanner';
 
+// New Content Components 2025
+import AIInsightsTrends2025 from '../components/AIInsightsTrends2025';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+import TechnologyShowcase2025 from '../components/TechnologyShowcase2025';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import ComprehensiveContentDiscovery2025 from '../components/ComprehensiveContentDiscovery2025';
+
 // Featured and Dynamic Content
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -242,6 +249,11 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* New Content Promotion Banner 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContentPromotionBanner2025 />
+              </Suspense>
 
               {/* AI 2025 Ultimate Content Revolution Banner */}
               <Suspense fallback={<LoadingSpinner />}>
@@ -611,6 +623,11 @@ const HomePage: React.FC = () => {
                 <ComprehensiveResourcesShowcase />
               </Suspense>
 
+              {/* AI Insights & Trends 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AIInsightsTrends2025 />
+              </Suspense>
+
               {/* Content Showcase Sections */}
               <Suspense fallback={<LoadingSpinner />}>
                 <ContentShowcase 
@@ -787,6 +804,11 @@ const HomePage: React.FC = () => {
                 <TechnologyStack />
               </Suspense>
 
+              {/* Success Stories Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <SuccessStoriesShowcase2025 />
+              </Suspense>
+
               {/* Ultimate Content Showcase 2025 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <UltimateContentShowcase2025 />
@@ -802,9 +824,19 @@ const HomePage: React.FC = () => {
                 <TechnologyBreakthroughBanner2025 />
               </Suspense>
 
+              {/* Technology Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <TechnologyShowcase2025 />
+              </Suspense>
+
               {/* Enhanced Newsletter Signup */}
               <Suspense fallback={<LoadingSpinner />}>
                 <EnhancedNewsletterSignup />
+              </Suspense>
+
+              {/* Comprehensive Content Discovery 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ComprehensiveContentDiscovery2025 />
               </Suspense>
 
               {/* Lazy loaded advanced components */}
