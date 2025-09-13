@@ -148,6 +148,12 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new 2025-2026 innovation showcase components
+import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
+import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import ComprehensiveAIServicesShowcase2025 from '../components/ComprehensiveAIServicesShowcase2025';
+
 // Import new AI tools interactive demo components
 import AIToolsInteractiveDemo2025 from '../components/AIToolsInteractiveDemo2025';
 import AIToolsInteractiveDemo2025PromotionBanner from '../components/AIToolsInteractiveDemo2025PromotionBanner';
@@ -3692,6 +3698,18 @@ export default function HomePage() {
 
       {/* NEW BUSINESS TRANSFORMATION 2028 SHOWCASE */}
       <BusinessTransformation2028Showcase />
+
+      {/* NEW AI 2025-2026 INNOVATION SHOWCASE PROMOTION BANNER */}
+      <AI2025_2026UltimateInnovationPromotionBanner />
+
+      {/* NEW AI 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
+      <AI2025_2026UltimateInnovationShowcase />
+
+      {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+      <InteractiveContentDiscoveryWidget2025 />
+
+      {/* NEW COMPREHENSIVE AI SERVICES SHOWCASE 2025 */}
+      <ComprehensiveAIServicesShowcase2025 />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
