@@ -161,6 +161,18 @@ import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalC
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
+
+// New Ultimate Breakthrough Content Components
+import AI2025_2030UltimateBreakthroughPromotionBanner from '../components/AI2025_2030UltimateBreakthroughPromotionBanner';
+import AI2025_2030UltimateBreakthroughContentShowcase from '../components/AI2025_2030UltimateBreakthroughContentShowcase';
+
+// Quantum Computing Revolutionary Breakthrough Components
+import QuantumComputingRevolutionaryBreakthroughPromotionBanner from '../components/QuantumComputingRevolutionaryBreakthroughPromotionBanner';
+import QuantumComputingRevolutionaryBreakthroughShowcase from '../components/QuantumComputingRevolutionaryBreakthroughShowcase';
+
+// Advanced Automation Solutions Ultimate Components
+import AdvancedAutomationSolutionsUltimatePromotionBanner from '../components/AdvancedAutomationSolutionsUltimatePromotionBanner';
+import AdvancedAutomationSolutionsUltimateShowcase from '../components/AdvancedAutomationSolutionsUltimateShowcase';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -312,6 +324,36 @@ const HomePage: React.FC = () => {
               {/* Space Technology Solutions Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <SpaceTechnologySolutionsBanner />
+              </Suspense>
+
+              {/* AI 2025-2030 Ultimate Breakthrough Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateBreakthroughPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025-2030 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* Quantum Computing Revolutionary Breakthrough Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingRevolutionaryBreakthroughPromotionBanner />
+              </Suspense>
+
+              {/* Quantum Computing Revolutionary Breakthrough Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingRevolutionaryBreakthroughShowcase />
+              </Suspense>
+
+              {/* Advanced Automation Solutions Ultimate Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsUltimatePromotionBanner />
+              </Suspense>
+
+              {/* Advanced Automation Solutions Ultimate Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsUltimateShowcase />
               </Suspense>
 
               {/* AI 2025-2030 Comprehensive Predictions Promotion Banner */}
