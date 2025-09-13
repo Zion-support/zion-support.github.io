@@ -47,6 +47,12 @@ import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner20
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
 
+// Ultimate Content Showcase 2026 Components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import AIToolsUltimateShowcase2026 from '../components/AIToolsUltimateShowcase2026';
+import AIToolsUltimateShowcase2026PromotionBanner from '../components/AIToolsUltimateShowcase2026PromotionBanner';
+
 <<<<<<< HEAD
 // New promotional banners and showcases
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
@@ -75,6 +81,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+        {/* AI TOOLS ULTIMATE SHOWCASE 2026 PROMOTION BANNER */}
+        <AIToolsUltimateShowcase2026PromotionBanner />
+        
         {/* NEW CONTENT SHOWCASE 2026 BANNER */}
         <NewContentShowcase2026Banner />
         
@@ -194,6 +206,12 @@ export default function HomePage() {
         
         {/* NEW 2025 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2025 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* AI TOOLS ULTIMATE SHOWCASE 2026 */}
+        <AIToolsUltimateShowcase2026 />
         
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2028PromotionBanner />
