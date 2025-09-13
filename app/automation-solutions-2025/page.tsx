@@ -1,394 +1,247 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import EnhancedErrorBoundary from '../../components/EnhancedErrorBoundary';
-import LoadingSpinner from '../../components/LoadingSpinner';
-import PerformanceMonitor from '../../components/PerformanceMonitor';
-import AccessibilityEnhancer from '../../components/AccessibilityEnhancer';
-import AdvancedAutomationSolutionsShowcase2025 from '../../components/AdvancedAutomationSolutionsShowcase2025';
-import { Card } from '../../components/ui/Card';
-import { ArrowRight, Bot, Zap, Target, TrendingUp, Shield, Cpu, Globe, Brain, CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
+import { motion } from 'framer-motion';
+import { Cog, Brain, Target, Shield, Clock, Users, TrendingUp, ArrowRight, Zap } from 'lucide-react';
+import Link from 'next/link';
 
-const AutomationSolutions2025Page: React.FC = () => {
-  const solutions = [
-    {
-      title: 'Autonomous Business Operations',
-      description: 'Complete end-to-end business process automation with 99.9% accuracy and 10,000x efficiency gains',
-      features: [
-        'End-to-End Process Automation',
-        'Intelligent Decision Making',
-        'Real-time Process Optimization',
-        'Autonomous Error Correction'
-      ],
-      metrics: {
-        efficiency: '10,000x',
-        accuracy: '99.9%',
-        cost: '90%',
-        time: '95%'
-      },
-      icon: Bot,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'AI-Powered Workflow Automation',
-      description: 'Intelligent workflow management with predictive analytics and autonomous optimization',
-      features: [
-        'Predictive Workflow Analytics',
-        'Autonomous Task Assignment',
-        'Dynamic Process Optimization',
-        'Intelligent Resource Allocation'
-      ],
-      metrics: {
-        productivity: '500%',
-        accuracy: '99.7%',
-        speed: '1,000x',
-        quality: '98%'
-      },
-      icon: Zap,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Enterprise Integration Platform',
-      description: 'Seamless integration of all enterprise systems with autonomous data synchronization',
-      features: [
-        'Universal System Integration',
-        'Autonomous Data Synchronization',
-        'Real-time API Management',
-        'Intelligent Error Handling'
-      ],
-      metrics: {
-        integration: '100%',
-        sync: 'Real-time',
-        errors: '0.01%',
-        uptime: '99.99%'
-      },
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Predictive Analytics Engine',
-      description: 'Advanced predictive analytics with machine learning for business intelligence and forecasting',
-      features: [
-        'Advanced Machine Learning',
-        'Predictive Business Intelligence',
-        'Real-time Forecasting',
-        'Autonomous Insights Generation'
-      ],
-      metrics: {
-        predictions: '95%',
-        insights: 'Real-time',
-        accuracy: '99.5%',
-        roi: '2,500%'
-      },
-      icon: Brain,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+export const metadata: Metadata = {
+  title: 'Advanced Automation Solutions 2025 - Intelligent Process Automation',
+  description: 'Intelligent automation systems delivering 95% efficiency gains, 24/7 autonomous operation, and 99.9% uptime guarantees.',
+  keywords: 'Automation Solutions, Intelligent Process Automation, Autonomous Systems, Predictive Maintenance, AI Automation, Business Automation',
+};
 
-  const industries = [
-    {
-      name: 'Manufacturing',
-      description: 'Complete production line automation and quality control',
-      benefits: ['Production Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Management'],
-      roi: '3,000%',
-      icon: Cpu
-    },
-    {
-      name: 'Financial Services',
-      description: 'Automated trading, risk management, and compliance monitoring',
-      benefits: ['Algorithmic Trading', 'Risk Assessment', 'Compliance Monitoring', 'Fraud Detection'],
-      roi: '5,000%',
-      icon: Shield
-    },
-    {
-      name: 'Healthcare',
-      description: 'Patient care automation and medical process optimization',
-      benefits: ['Patient Management', 'Medical Records', 'Treatment Planning', 'Resource Optimization'],
-      roi: '4,000%',
-      icon: Target
-    },
-    {
-      name: 'Retail',
-      description: 'Inventory management and customer experience automation',
-      benefits: ['Inventory Optimization', 'Customer Service', 'Demand Forecasting', 'Personalization'],
-      roi: '2,500%',
-      icon: TrendingUp
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: 'Autonomous Decision Making',
-      description: 'AI systems that make complex business decisions without human intervention',
-      features: ['Real-time Analysis', 'Risk Assessment', 'Strategic Planning', 'Resource Allocation']
-    },
-    {
-      title: 'Intelligent Process Optimization',
-      description: 'Continuous optimization of business processes using machine learning',
-      features: ['Process Analysis', 'Efficiency Optimization', 'Cost Reduction', 'Quality Improvement']
-    },
-    {
-      title: 'Predictive Maintenance',
-      description: 'Proactive maintenance scheduling to prevent equipment failures',
-      features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Uptime Maximization']
-    },
-    {
-      title: 'Dynamic Resource Allocation',
-      description: 'Intelligent allocation of resources based on real-time demand and capacity',
-      features: ['Demand Analysis', 'Capacity Planning', 'Resource Optimization', 'Cost Management']
-    }
-  ];
-
-  const benefits = [
-    {
-      title: 'Massive Efficiency Gains',
-      description: 'Achieve up to 10,000x efficiency improvements in business processes',
-      icon: Zap,
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'Perfect Accuracy',
-      description: 'Maintain 99.9% accuracy in all automated operations and decisions',
-      icon: Target,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Significant Cost Savings',
-      description: 'Reduce operational costs by up to 90% through intelligent automation',
-      icon: TrendingUp,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: '24/7 Operations',
-      description: 'Run autonomous operations around the clock without human intervention',
-      icon: Globe,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
+const AutomationSolutions2025: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <EnhancedErrorBoundary>
-        <PerformanceMonitor>
-          <AccessibilityEnhancer>
-            <SEO 
-              title="Advanced Automation Solutions 2025 | Zion Tech Group"
-              description="Transform your business with revolutionary automation solutions that deliver unprecedented efficiency, accuracy, and ROI through intelligent process automation with up to 5,000% ROI."
-              keywords="automation solutions, business process automation, AI automation, workflow automation, enterprise automation, predictive analytics, autonomous operations, 10,000x efficiency, 99.9% accuracy, 5,000% ROI"
-            />
-            
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-              {/* Hero Section */}
-              <section className="relative overflow-hidden py-20">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-teal-600/20"></div>
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                      Advanced Automation Solutions 2025
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                      Transform your business with revolutionary automation solutions that deliver 
-                      unprecedented efficiency, accuracy, and ROI through intelligent process automation.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                      <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-6 py-3 rounded-full font-semibold text-lg">
-                        🤖 10,000x Efficiency
-                      </span>
-                      <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold text-lg">
-                        🎯 99.9% Accuracy
-                      </span>
-                      <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-3 rounded-full font-semibold text-lg">
-                        💰 5,000% ROI
-                      </span>
-                    </div>
-                  </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-green-400 to-teal-500 rounded-full mb-8"
+            >
+              <Cog className="w-12 h-12 text-white" />
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-5xl md:text-7xl font-bold text-white mb-8"
+            >
+              Advanced Automation Solutions 2025
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+            >
+              Intelligent process automation with self-learning algorithms, autonomous decision-making, 
+              and predictive maintenance systems that revolutionize operational efficiency.
+            </motion.p>
+
+            {/* Automation Metrics */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center justify-center w-12 h-12 bg-green-500 rounded-full mb-4 mx-auto">
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-              </section>
+                <div className="text-3xl font-bold text-white mb-2">95%</div>
+                <div className="text-sm text-gray-300">Efficiency Gain</div>
+              </div>
 
-              {/* Solutions Section */}
-              <section className="py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-                    Revolutionary Automation Solutions
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {solutions.map((solution, index) => (
-                      <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
-                        <div className="p-8">
-                          <div className="flex items-center mb-6">
-                            <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-full flex items-center justify-center mr-4`}>
-                              <solution.icon className="w-8 h-8 text-white" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-white">
-                              {solution.title}
-                            </h3>
-                          </div>
-                          
-                          <p className="text-gray-300 mb-6 text-lg">
-                            {solution.description}
-                          </p>
-
-                          <div className="mb-6">
-                            <h4 className="text-lg font-semibold text-green-300 mb-3">Key Features:</h4>
-                            <ul className="space-y-2">
-                              {solution.features.map((feature, idx) => (
-                                <li key={idx} className="text-gray-300 flex items-center">
-                                  <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          <div className="grid grid-cols-2 gap-4">
-                            {Object.entries(solution.metrics).map(([key, value], idx) => (
-                              <div key={idx} className="text-center bg-gray-700/50 rounded-lg p-3">
-                                <div className="text-lg font-bold text-green-400">{value}</div>
-                                <div className="text-xs text-gray-400 capitalize">{key}</div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </Card>
-                    ))}
-                  </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center justify-center w-12 h-12 bg-teal-500 rounded-full mb-4 mx-auto">
+                  <Clock className="w-6 h-6 text-white" />
                 </div>
-              </section>
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-sm text-gray-300">Autonomous Operation</div>
+              </div>
 
-              {/* Benefits Section */}
-              <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-                    Revolutionary Benefits
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {benefits.map((benefit, index) => (
-                      <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
-                        <div className="p-6 text-center">
-                          <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                            <benefit.icon className="w-8 h-8 text-white" />
-                          </div>
-                          <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                          <p className="text-gray-300">{benefit.description}</p>
-                        </div>
-                      </Card>
-                    ))}
-                  </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center justify-center w-12 h-12 bg-cyan-500 rounded-full mb-4 mx-auto">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
-              </section>
+                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-sm text-gray-300">Uptime Guarantee</div>
+              </div>
 
-              {/* Industry Applications */}
-              <section className="py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-                    Industry Applications
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {industries.map((industry, index) => (
-                      <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
-                        <div className="p-6">
-                          <div className="flex items-center mb-4">
-                            <industry.icon className="w-8 h-8 text-blue-400 mr-3" />
-                            <h4 className="text-xl font-bold text-white">{industry.name}</h4>
-                          </div>
-                          <p className="text-gray-300 mb-4 text-sm">{industry.description}</p>
-                          
-                          <div className="mb-4">
-                            <h5 className="text-sm font-semibold text-blue-300 mb-2">Key Benefits:</h5>
-                            <ul className="space-y-1">
-                              {industry.benefits.map((benefit, idx) => (
-                                <li key={idx} className="text-xs text-gray-300 flex items-center">
-                                  <Target className="w-3 h-3 text-blue-400 mr-2" />
-                                  {benefit}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-blue-400 mb-1">{industry.roi}</div>
-                            <div className="text-xs text-gray-400">Average ROI</div>
-                          </div>
-                        </div>
-                      </Card>
-                    ))}
-                  </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center justify-center w-12 h-12 bg-emerald-500 rounded-full mb-4 mx-auto">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
-              </section>
+                <div className="text-3xl font-bold text-white mb-2">50K+</div>
+                <div className="text-sm text-gray-300">Processes Automated</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-              {/* Advanced Capabilities */}
-              <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-                    Advanced Capabilities
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {capabilities.map((capability, index) => (
-                      <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
-                        <div className="p-6">
-                          <h4 className="text-xl font-bold text-white mb-3">{capability.title}</h4>
-                          <p className="text-gray-300 mb-4">{capability.description}</p>
-                          
-                          <div>
-                            <h5 className="text-sm font-semibold text-purple-300 mb-2">Features:</h5>
-                            <ul className="space-y-1">
-                              {capability.features.map((feature, idx) => (
-                                <li key={idx} className="text-sm text-gray-300 flex items-center">
-                                  <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
-              </section>
+      {/* Automation Solutions */}
+      <section className="py-20 bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Automation Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Next-generation automation technologies that transform business operations 
+              through intelligent process automation and autonomous decision-making.
+            </p>
+          </div>
 
-              {/* Comprehensive Showcase */}
-              <AdvancedAutomationSolutionsShowcase2025 />
-
-              {/* Call to Action */}
-              <section className="py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    Ready to Automate Your Future?
-                  </h2>
-                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    Transform your business with advanced automation solutions that deliver 
-                    unprecedented efficiency, accuracy, and ROI through intelligent process automation.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:from-green-600 hover:to-teal-600 flex items-center justify-center group"
-                    >
-                      Get Started Today
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/case-studies"
-                      className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center group"
-                    >
-                      View Success Stories
-                      <TrendingUp className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              </section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Intelligent Process Automation */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl mb-6">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Intelligent Process Automation</h3>
+              <p className="text-gray-300 mb-6">
+                Self-learning automation systems that adapt and optimize processes in real-time, 
+                eliminating manual intervention and maximizing efficiency.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Self-optimizing workflows</li>
+                <li>• Adaptive process learning</li>
+                <li>• Intelligent exception handling</li>
+              </ul>
             </div>
-          </AccessibilityEnhancer>
-        </PerformanceMonitor>
-      </EnhancedErrorBoundary>
-    </ErrorBoundary>
+
+            {/* Autonomous Decision Systems */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-xl mb-6">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Autonomous Decision Systems</h3>
+              <p className="text-gray-300 mb-6">
+                AI-powered decision engines that make complex business decisions autonomously, 
+                with full audit trails and continuous learning capabilities.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Real-time risk assessment</li>
+                <li>• Predictive analytics integration</li>
+                <li>• Self-improving algorithms</li>
+              </ul>
+            </div>
+
+            {/* Predictive Maintenance AI */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Predictive Maintenance AI</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced predictive analytics that anticipate equipment failures before they occur, 
+                reducing downtime and maintenance costs by up to 80%.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• IoT sensor integration</li>
+                <li>• Machine learning predictions</li>
+                <li>• Automated maintenance scheduling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 via-gray-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-world success stories from organizations that have transformed 
+              their operations with advanced automation solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+              <div className="text-5xl font-bold text-green-400 mb-4">$2.5M</div>
+              <div className="text-xl text-gray-300 mb-4">Average Cost Savings</div>
+              <p className="text-gray-400">
+                Organizations save an average of $2.5M annually through 
+                intelligent process automation and predictive maintenance.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+              <div className="text-5xl font-bold text-teal-400 mb-4">3.2x</div>
+              <div className="text-xl text-gray-300 mb-4">ROI Increase</div>
+              <p className="text-gray-400">
+                Average return on investment increases by 3.2x within 
+                the first year of implementing automation solutions.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-4">87%</div>
+              <div className="text-xl text-gray-300 mb-4">Faster Implementation</div>
+              <p className="text-gray-400">
+                Automation solutions deploy 87% faster than traditional 
+                process improvement initiatives.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-6">Transform Your Operations</h3>
+              <p className="text-gray-300 mb-8 text-lg">
+                Join thousands of organizations already achieving breakthrough results 
+                with advanced automation solutions. Our comprehensive approach ensures 
+                maximum impact and sustainable transformation.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center text-green-400">
+                  <Zap className="w-5 h-5 mr-3" />
+                  <span>Rapid deployment and implementation</span>
+                </div>
+                <div className="flex items-center text-blue-400">
+                  <Brain className="w-5 h-5 mr-3" />
+                  <span>Continuous learning and optimization</span>
+                </div>
+                <div className="flex items-center text-purple-400">
+                  <Target className="w-5 h-5 mr-3" />
+                  <span>Scalable and future-proof architecture</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Start Your Automation Journey</h3>
+              <p className="text-white/90 mb-6">
+                Transform your operations with next-generation automation solutions 
+                that deliver measurable results from day one.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center bg-white text-green-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Automation Assessment
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default AutomationSolutions2025Page;
+export default AutomationSolutions2025;
