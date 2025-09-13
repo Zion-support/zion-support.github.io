@@ -100,32 +100,24 @@ export default function AI2025AdvancedAutomationMastery() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Phase 1: Foundation (Weeks 1-4)</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 font-semibold">1</span>
-                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">1</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">AI Readiness Assessment</h4>
-                    <p className="text-gray-600">Evaluate current infrastructure and identify automation opportunities.</p>
+                    <p className="text-gray-600">Evaluate your current infrastructure and identify automation opportunities.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 font-semibold">2</span>
-                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">2</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Data Architecture Setup</h4>
-                    <p className="text-gray-600">Build robust data pipelines for AI processing and analysis.</p>
+                    <p className="text-gray-600">Build robust data pipelines and storage systems for AI processing.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 font-semibold">3</span>
-                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">3</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Team Training</h4>
-                    <p className="text-gray-600">Train your team on advanced AI automation concepts and tools.</p>
+                    <p className="text-gray-600">Train your team on advanced AI concepts and automation tools.</p>
                   </div>
                 </div>
               </div>
@@ -135,29 +127,21 @@ export default function AI2025AdvancedAutomationMastery() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Phase 2: Implementation (Weeks 5-12)</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-semibold">4</span>
-                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-semibold">4</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Pilot Program Launch</h4>
                     <p className="text-gray-600">Start with high-impact, low-risk automation projects.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-semibold">5</span>
-                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-semibold">5</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Advanced AI Integration</h4>
-                    <p className="text-gray-600">Deploy cutting-edge AI models and neural networks.</p>
+                    <p className="text-gray-600">Deploy cutting-edge AI models and automation frameworks.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-semibold">6</span>
-                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-semibold">6</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Performance Optimization</h4>
                     <p className="text-gray-600">Fine-tune systems for maximum efficiency and accuracy.</p>
@@ -177,7 +161,7 @@ export default function AI2025AdvancedAutomationMastery() {
               Real-World Success Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how leading organizations achieved remarkable results with our automation methodologies.
+              See how leading companies achieved remarkable results with our automation methodologies.
             </p>
           </div>
 
@@ -189,47 +173,49 @@ export default function AI2025AdvancedAutomationMastery() {
               </div>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">ROI Achieved:</span>
+                  <span className="text-gray-600">ROI Improvement:</span>
                   <span className="font-semibold text-green-600">2,400%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Time Saved:</span>
-                  <span className="font-semibold text-blue-600">85%</span>
+                  <span className="text-gray-600">Cost Savings:</span>
+                  <span className="font-semibold text-green-600">$180M annually</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Cost Reduction:</span>
-                  <span className="font-semibold text-purple-600">$50M annually</span>
+                  <span className="text-gray-600">Efficiency Gain:</span>
+                  <span className="font-semibold text-green-600">95%</span>
                 </div>
               </div>
               <p className="text-gray-600">
                 "The advanced automation implementation transformed our entire production line. 
-                We achieved efficiency gains we never thought possible." - CTO
+                We achieved unprecedented efficiency while maintaining perfect quality standards."
               </p>
+              <p className="text-sm text-gray-500 mt-2">- CTO, Global Manufacturing Leader</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-4">
                 <div className="text-2xl mr-3">🏦</div>
-                <h3 className="text-xl font-semibold text-gray-900">Global Financial Services</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Financial Services Giant</h3>
               </div>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">ROI Achieved:</span>
+                  <span className="text-gray-600">ROI Improvement:</span>
                   <span className="font-semibold text-green-600">3,200%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Processing Speed:</span>
-                  <span className="font-semibold text-blue-600">15x faster</span>
+                  <span className="font-semibold text-green-600">15x faster</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Error Reduction:</span>
-                  <span className="font-semibold text-purple-600">99.8%</span>
+                  <span className="font-semibold text-green-600">99.8%</span>
                 </div>
               </div>
               <p className="text-gray-600">
-                "Our transaction processing capabilities have been revolutionized. 
-                The accuracy and speed improvements are game-changing." - VP of Operations
+                "Our transaction processing capabilities increased exponentially. 
+                The automation mastery program delivered results beyond our expectations."
               </p>
+              <p className="text-sm text-gray-500 mt-2">- Head of Technology, Major Bank</p>
             </div>
           </div>
         </div>
@@ -241,8 +227,8 @@ export default function AI2025AdvancedAutomationMastery() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Master Advanced AI Automation?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Join 500+ organizations already achieving breakthrough results with our proven methodologies.
+          <p className="text-xl mb-8">
+            Join 500+ companies already achieving breakthrough results with our proven methodologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
