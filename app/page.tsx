@@ -167,6 +167,12 @@ import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalC
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
+
+// New Ultimate Breakthrough Components
+import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
+import AI2025UltimateBreakthroughContentShowcase from '../components/AI2025UltimateBreakthroughContentShowcase';
+import QuantumNeuralFusion2025PromotionBanner from '../components/QuantumNeuralFusion2025PromotionBanner';
+import AutonomousAI2025Showcase from '../components/AutonomousAI2025Showcase';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -223,6 +229,26 @@ const HomePage: React.FC = () => {
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Announcement Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughAnnouncementBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* Quantum Neural Fusion 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumNeuralFusion2025PromotionBanner />
+              </Suspense>
+
+              {/* Autonomous AI 2025 Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AutonomousAI2025Showcase />
               </Suspense>
 
               {/* New 2025 Enterprise Content Promotion Banner */}
