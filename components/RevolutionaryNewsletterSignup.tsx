@@ -19,149 +19,108 @@ export default function RevolutionaryNewsletterSignup() {
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-900 to-emerald-900 text-white py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="text-6xl mb-6">🎉</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Welcome to the Revolution!</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            You're now part of the AI revolution. Get ready for exclusive breakthrough content, 
-            success stories, and implementation guides delivered directly to your inbox.
-          </p>
-          <div className="bg-gradient-to-r from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-500/30 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold mb-4">What's Next?</h3>
-            <ul className="text-left space-y-2 text-gray-300">
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Exclusive AI breakthrough announcements
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Case studies with 10,000%+ ROI results
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Implementation guides and best practices
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Early access to revolutionary features
-              </li>
-            </ul>
-          </div>
+      <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 text-center">
+        <div className="text-6xl mb-4">🎉</div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Welcome to the Revolution!</h3>
+        <p className="text-gray-600 mb-6">
+          You're now part of the AI revolution. Get ready for exclusive breakthrough content, 
+          early access to revolutionary features, and insider success stories.
+        </p>
+        <div className="bg-white p-4 rounded-lg border border-green-200">
+          <h4 className="font-semibold text-gray-900 mb-2">What's Next?</h4>
+          <ul className="text-sm text-gray-600 space-y-1">
+            <li>• Weekly breakthrough updates</li>
+            <li>• Exclusive ROI success stories</li>
+            <li>• Early access to new features</li>
+            <li>• Revolutionary implementation guides</li>
+          </ul>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Content */}
-          <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-500/20 border border-yellow-500/30 mb-6">
-              <span className="text-yellow-400 font-semibold text-sm">📧 EXCLUSIVE CONTENT</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Join the AI Revolution
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get exclusive access to breakthrough AI content, success stories, and implementation guides 
-              that deliver unprecedented ROI and transformation.
-            </p>
-            
-            {/* Benefits */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center">
-                <span className="text-green-400 mr-4 text-xl">🚀</span>
-                <span className="text-gray-300">Exclusive AI breakthrough announcements</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-blue-400 mr-4 text-xl">📈</span>
-                <span className="text-gray-300">Case studies with 10,000%+ ROI results</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-purple-400 mr-4 text-xl">📚</span>
-                <span className="text-gray-300">Implementation guides and best practices</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-yellow-400 mr-4 text-xl">⚡</span>
-                <span className="text-gray-300">Early access to revolutionary features</span>
-              </div>
-            </div>
-          </div>
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 rounded-xl p-8 text-white">
+      <div className="max-w-2xl mx-auto text-center">
+        <div className="text-6xl mb-6">🚀</div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Join the AI Revolution
+        </h2>
+        <p className="text-xl text-gray-200 mb-8">
+          Get exclusive access to revolutionary AI breakthroughs, success stories, 
+          and implementation guides that deliver massive ROI.
+        </p>
 
-          {/* Right side - Signup form */}
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-xl border border-gray-700/50">
-            <h3 className="text-2xl font-bold mb-6 text-center">Get Started Today</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold py-3 px-6 rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isLoading ? (
-                  <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-2"></div>
-                    Joining Revolution...
-                  </div>
-                ) : (
-                  'Join the Revolution 🚀'
-                )}
-              </button>
-            </form>
-            
-            <p className="text-xs text-gray-400 text-center mt-4">
-              By subscribing, you agree to receive exclusive AI breakthrough content. 
-              Unsubscribe at any time.
-            </p>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
+          <h3 className="text-xl font-semibold mb-4">What You'll Get:</h3>
+          <div className="grid md:grid-cols-2 gap-4 text-left">
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-200">Exclusive breakthrough content</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-200">Real ROI success stories</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-200">Early access to new features</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-gray-200">Implementation guides</span>
+            </div>
           </div>
         </div>
 
-        {/* Social sharing */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-6">Share the Revolution</h3>
-          <div className="flex justify-center space-x-4">
-            <a
-              href="https://twitter.com/intent/tweet?text=Join%20the%20AI%20Revolution%20with%20Zion%20Tech%20Group%20-%2010,000%%20ROI%20guaranteed!&url=https://zion.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors"
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email address"
+              required
+              className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-purple-500 focus:outline-none"
+            />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Share on Twitter
-            </a>
-            <a
-              href="https://www.linkedin.com/sharing/share-offsite/?url=https://zion.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
-            >
-              Share on LinkedIn
-            </a>
-            <a
-              href="https://www.facebook.com/sharer/sharer.php?u=https://zion.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Share on Facebook
-            </a>
+              {isLoading ? (
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  <span>Joining...</span>
+                </div>
+              ) : (
+                'Join Revolution'
+              )}
+            </button>
+          </div>
+          
+          <p className="text-sm text-gray-300">
+            Join 10,000+ companies already experiencing the AI revolution. 
+            No spam, just revolutionary content.
+          </p>
+        </form>
+
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div>
+            <div className="text-2xl font-bold text-yellow-400">10,000+</div>
+            <div className="text-sm text-gray-300">Companies</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-green-400">15,000%</div>
+            <div className="text-sm text-gray-300">Max ROI</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-blue-400">99.9%</div>
+            <div className="text-sm text-gray-300">Accuracy</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-purple-400">24/7</div>
+            <div className="text-sm text-gray-300">Autonomous</div>
           </div>
         </div>
       </div>

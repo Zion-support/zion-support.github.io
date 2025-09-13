@@ -158,5 +158,173 @@ export const CASE_STUDIES = [
         duration: '10 weeks',
         investment: '$449/month',
         roi: '400% in first year'
+    },
+    {
+        id: '9',
+        title: 'Fortune 500 Company Achieves $2 Billion ROI with Quantum AI Autonomous Operations',
+        company: 'Global Enterprise Solutions',
+        industry: 'Enterprise',
+        challenge: 'Manual operations and decision-making processes were limiting scalability and profitability',
+        solution: 'Quantum AI Fusion Platform with Autonomous Operations',
+        results: [
+            '$2 billion ROI within 18 months',
+            '95% autonomous operation capability',
+            '1000% improvement in decision-making speed',
+            '80% reduction in operational costs',
+            '500% increase in revenue growth'
+        ],
+        testimonial: 'The quantum AI autonomous operations platform has completely transformed our business. We\'ve achieved unprecedented levels of efficiency and profitability that we never thought possible. This is the future of enterprise operations.',
+        author: 'Dr. Sarah Williams, CEO',
+        image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=400',
+        duration: '16 weeks',
+        investment: '$12,999/month',
+        roi: '2000% in 18 months'
+    },
+    {
+        id: '10',
+        title: 'Healthcare System Achieves 98% Accuracy in AI-Powered Diagnosis',
+        company: 'Advanced Medical Systems',
+        industry: 'Healthcare',
+        challenge: 'High diagnostic errors and lengthy diagnosis times were affecting patient outcomes',
+        solution: 'Next-Generation Neural Architecture with Quantum Enhancement',
+        results: [
+            '98% accuracy in early disease detection',
+            '90% reduction in diagnosis time',
+            '75% decrease in diagnostic errors',
+            '60% improvement in patient outcomes',
+            '40% reduction in healthcare costs'
+        ],
+        testimonial: 'The neural architecture system has revolutionized our diagnostic capabilities. We can now detect diseases earlier and more accurately than ever before, leading to better patient outcomes and significant cost savings.',
+        author: 'Dr. Michael Chen, Chief Medical Officer',
+        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=400',
+        duration: '12 weeks',
+        investment: '$7,999/month',
+        roi: '800% in first year'
+    },
+    {
+        id: '11',
+        title: 'Financial Trading Firm Increases Performance by 300% with Quantum AI',
+        company: 'Quantum Capital Partners',
+        industry: 'Financial Services',
+        challenge: 'Traditional trading algorithms were not competitive in volatile markets',
+        solution: 'Quantum AI Fusion Trading Platform',
+        results: [
+            '300% improvement in trading performance',
+            '95% accuracy in market predictions',
+            '80% reduction in risk exposure',
+            '200% increase in portfolio returns',
+            '99.9% uptime in trading operations'
+        ],
+        testimonial: 'The quantum AI trading platform has given us an unprecedented competitive advantage. We\'re now making decisions in milliseconds with quantum-enhanced accuracy that our competitors simply can\'t match.',
+        author: 'James Rodriguez, Chief Investment Officer',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400',
+        duration: '8 weeks',
+        investment: '$15,999/month',
+        roi: '1200% in first year'
+    },
+    {
+        id: '12',
+        title: 'Manufacturing Company Achieves 95% Autonomous Production',
+        company: 'Smart Manufacturing Corp',
+        industry: 'Manufacturing',
+        challenge: 'Manual production processes and quality control were causing inefficiencies and defects',
+        solution: 'Autonomous Manufacturing Operations Platform',
+        results: [
+            '95% autonomous production capability',
+            '99% reduction in quality defects',
+            '70% improvement in production efficiency',
+            '85% reduction in operational costs',
+            '24/7 autonomous operation'
+        ],
+        testimonial: 'Our manufacturing facility now runs almost entirely autonomously. The AI systems make real-time decisions, optimize processes, and maintain quality standards that exceed human capabilities. It\'s like having a super-intelligent operations manager that never sleeps.',
+        author: 'Lisa Johnson, VP of Operations',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=400',
+        duration: '14 weeks',
+        investment: '$9,999/month',
+        roi: '900% in first year'
+    },
+    {
+        id: '13',
+        title: 'E-commerce Giant Increases Content Production by 1000% with AI',
+        company: 'MegaRetail Global',
+        industry: 'E-commerce',
+        challenge: 'Content creation bottlenecks were limiting marketing reach and customer engagement',
+        solution: 'Enterprise AI Content Generation Platform with Autonomous Operations',
+        results: [
+            '1000% increase in content production',
+            '400% improvement in engagement rates',
+            '600% increase in organic traffic',
+            '300% improvement in conversion rates',
+            '90% reduction in content creation costs'
+        ],
+        testimonial: 'The AI content generation platform has completely transformed our marketing capabilities. We\'re now producing more high-quality content in a week than we used to produce in a month, and the results speak for themselves.',
+        author: 'David Kim, Chief Marketing Officer',
+        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=400',
+        duration: '6 weeks',
+        investment: '$2,999/month',
+        roi: '1000% in first year'
+    },
+    {
+        id: '14',
+        title: 'Cybersecurity Firm Achieves 99.9% Threat Prevention with AI',
+        company: 'SecureDefense Technologies',
+        industry: 'Cybersecurity',
+        challenge: 'Sophisticated cyber threats were bypassing traditional security measures',
+        solution: 'AI-Powered Advanced Threat Detection with Quantum Resistance',
+        results: [
+            '99.9% threat prevention rate',
+            '10x faster threat detection',
+            '95% reduction in false positives',
+            '80% improvement in incident response time',
+            '100% quantum-resistant security'
+        ],
+        testimonial: 'The AI threat detection system has made our security posture virtually impenetrable. We\'re now preventing threats before they even attempt to breach our systems, and our clients have complete confidence in our security capabilities.',
+        author: 'Alex Security, Chief Technology Officer',
+        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&h=400',
+        duration: '10 weeks',
+        investment: '$899/month',
+        roi: '600% in first year'
+    },
+    {
+        id: '15',
+        title: 'Cloud Provider Reduces Costs by 80% with Autonomous Infrastructure',
+        company: 'CloudScale Solutions',
+        industry: 'Cloud Computing',
+        challenge: 'Manual infrastructure management was causing high costs and inefficiencies',
+        solution: 'Autonomous Cloud Infrastructure Management Platform',
+        results: [
+            '80% reduction in infrastructure costs',
+            '95% improvement in resource utilization',
+            '99.9% uptime achievement',
+            '90% faster deployment times',
+            '100% autonomous scaling'
+        ],
+        testimonial: 'Our cloud infrastructure now manages itself. The AI systems continuously optimize resources, predict demand, and scale automatically. We\'ve achieved cost savings and performance improvements that seemed impossible before.',
+        author: 'Jennifer Liu, Chief Cloud Architect',
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=400',
+        duration: '8 weeks',
+        investment: '$599/month',
+        roi: '700% in first year'
+    },
+    {
+        id: '16',
+        title: 'Research Institution Accelerates Drug Discovery by 1000%',
+        company: 'Quantum Research Labs',
+        industry: 'Pharmaceuticals',
+        challenge: 'Traditional drug discovery processes were taking 10+ years and costing billions',
+        solution: 'Quantum AI Drug Discovery Platform',
+        results: [
+            '1000% acceleration in drug discovery',
+            '95% accuracy in molecular simulation',
+            '80% reduction in development costs',
+            '90% improvement in success rates',
+            '5-year reduction in time-to-market'
+        ],
+        testimonial: 'The quantum AI drug discovery platform has revolutionized our research capabilities. We\'re now discovering and validating new drugs in months instead of years, with accuracy levels that exceed traditional methods.',
+        author: 'Dr. Quantum Researcher, Chief Scientific Officer',
+        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&h=400',
+        duration: '20 weeks',
+        investment: '$25,999/month',
+        roi: '1500% in first year'
     }
 ];

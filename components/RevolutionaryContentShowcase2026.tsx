@@ -1,378 +1,463 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Rocket, 
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Target,
-  TrendingUp,
-  Users,
-  Star,
+  Star, 
+  TrendingUp, 
+  Clock, 
+  Users, 
+  Heart, 
+  Bookmark, 
+  Share2, 
+  Play, 
+  Download,
   ArrowRight,
-  CheckCircle,
+  Sparkles,
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  Award,
+  Globe,
   Lightbulb,
-  Cogs,
-  Activity
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
-const RevolutionaryContentShowcase2026: React.FC = () => {
-  const revolutionaryContent = [
+const RevolutionaryContentShowcase2026 = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [favorites, setFavorites] = useState(new Set());
+  const [bookmarks, setBookmarks] = useState(new Set());
+
+  const featuredContent = [
     {
-      id: 'ai-consciousness-2026',
-      title: 'AI Consciousness Revolution 2026',
-      description: 'Breakthrough in artificial general intelligence achieving human-level consciousness and reasoning capabilities.',
-      category: 'AI Breakthrough',
-      price: '$2,999/month',
-      marketPrice: '$5,000-15,000/month',
-      features: [
-        'Human-level reasoning and consciousness',
-        'Autonomous decision making',
-        'Emotional intelligence integration',
-        'Real-time learning and adaptation'
-      ],
-      benefits: [
-        'Achieve AGI capabilities',
-        'Reduce human oversight by 90%',
-        'Increase productivity by 500%',
-        'Revolutionary business transformation'
-      ],
-      icon: Brain,
-      gradient: 'from-purple-600 to-pink-600',
-      link: '/ai-consciousness-2026',
-      new: true,
-      featured: true
+      id: 1,
+      title: 'AI 2026-2030 Ultimate Predictions',
+      description: 'Comprehensive analysis of revolutionary AI breakthroughs that will reshape our world over the next five years. From neural interfaces to consciousness integration.',
+      category: 'AI Predictions',
+      type: 'Interactive Showcase',
+      duration: '15 min',
+      views: 12500,
+      likes: 892,
+      rating: 4.9,
+      thumbnail: '/api/placeholder/800/400',
+      featured: true,
+      tags: ['AI', 'Predictions', 'Future', 'Technology', 'Revolutionary'],
+      author: 'AI Research Team',
+      publishedAt: '2025-01-15',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      id: 'quantum-ai-fusion-2026',
-      title: 'Quantum-AI Fusion Platform 2026',
-      description: 'Revolutionary fusion of quantum computing and artificial intelligence for unprecedented processing power.',
+      id: 2,
+      title: 'Quantum Neural Fusion: The Next Breakthrough',
+      description: 'Deep dive into how quantum computing and neural networks will merge to create unprecedented AI capabilities that solve previously impossible problems.',
       category: 'Quantum Computing',
-      price: '$4,999/month',
-      marketPrice: '$10,000-25,000/month',
-      features: [
-        'Quantum neural networks',
-        'Exponential processing speed',
-        'Quantum machine learning algorithms',
-        'Breakthrough optimization capabilities'
-      ],
-      benefits: [
-        'Process data 10,000x faster',
-        'Solve impossible problems',
-        'Achieve quantum supremacy',
-        'Revolutionary computational power'
-      ],
-      icon: Zap,
-      gradient: 'from-blue-600 to-cyan-600',
-      link: '/quantum-ai-fusion-2026',
-      new: true,
-      featured: true
+      type: 'Video Series',
+      duration: '22 min',
+      views: 8900,
+      likes: 654,
+      rating: 4.8,
+      thumbnail: '/api/placeholder/800/400',
+      featured: true,
+      tags: ['Quantum', 'Neural Networks', 'AI', 'Computing', 'Breakthrough'],
+      author: 'Quantum AI Lab',
+      publishedAt: '2025-01-14',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      id: 'autonomous-business-ecosystem',
-      title: 'Autonomous Business Ecosystem 2026',
-      description: 'Complete business automation with AI-driven decision making and autonomous operations.',
-      category: 'Business Automation',
-      price: '$1,999/month',
-      marketPrice: '$3,000-8,000/month',
-      features: [
-        'Autonomous business operations',
-        'AI-driven strategic planning',
-        'Self-optimizing processes',
-        'Predictive business intelligence'
-      ],
-      benefits: [
-        'Reduce operational costs by 70%',
-        'Increase efficiency by 400%',
-        'Autonomous growth optimization',
-        'Complete business transformation'
-      ],
-      icon: Cogs,
-      gradient: 'from-green-600 to-emerald-600',
-      link: '/autonomous-business-ecosystem-2026',
-      new: true,
-      featured: true
+      id: 3,
+      title: 'Autonomous Business Operations 2026',
+      description: 'Complete guide to implementing fully autonomous business systems and processes that eliminate human intervention in routine operations.',
+      category: 'Automation',
+      type: 'Comprehensive Guide',
+      duration: '30 min',
+      views: 15600,
+      likes: 1203,
+      rating: 4.9,
+      thumbnail: '/api/placeholder/800/400',
+      featured: true,
+      tags: ['Automation', 'Business', 'Operations', 'AI', 'Autonomous'],
+      author: 'Business AI Institute',
+      publishedAt: '2025-01-13',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      id: 'neural-interface-revolution',
-      title: 'Neural Interface Revolution 2026',
-      description: 'Direct brain-computer interface technology for seamless human-AI interaction.',
-      category: 'Neural Technology',
-      price: '$3,499/month',
-      marketPrice: '$5,000-12,000/month',
-      features: [
-        'Direct neural communication',
-        'Thought-controlled interfaces',
-        'Enhanced cognitive capabilities',
-        'Seamless human-AI integration'
-      ],
-      benefits: [
-        'Control systems with thoughts',
-        'Enhance cognitive abilities',
-        'Revolutionary human-AI symbiosis',
-        'Breakthrough interaction methods'
-      ],
-      icon: Network,
-      gradient: 'from-indigo-600 to-purple-600',
-      link: '/neural-interface-revolution-2026',
-      new: true,
-      featured: true
+      id: 4,
+      title: 'Neural Interface Implementation Tutorial',
+      description: 'Step-by-step tutorial for building and implementing neural interface technologies that enable direct brain-computer communication.',
+      category: 'Tutorials',
+      type: 'Interactive Tutorial',
+      duration: '45 min',
+      views: 6700,
+      likes: 445,
+      rating: 4.7,
+      thumbnail: '/api/placeholder/800/400',
+      featured: false,
+      tags: ['Tutorial', 'Neural Interface', 'Implementation', 'Technology'],
+      author: 'NeuroTech Academy',
+      publishedAt: '2025-01-12',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      id: 'space-technology-platform',
-      title: 'Space Technology Platform 2026',
-      description: 'Advanced space technology solutions for commercial space operations and exploration.',
-      category: 'Space Technology',
-      price: '$5,999/month',
-      marketPrice: '$10,000-30,000/month',
-      features: [
-        'Commercial space operations',
-        'Satellite constellation management',
-        'Space resource optimization',
-        'Interplanetary communication systems'
-      ],
-      benefits: [
-        'Access space economy opportunities',
-        'Optimize space operations',
-        'Revolutionary space technology',
-        'Future-ready space solutions'
-      ],
-      icon: Rocket,
-      gradient: 'from-orange-600 to-red-600',
-      link: '/space-technology-platform-2026',
-      new: true,
-      featured: true
-    },
-    {
-      id: 'cybersecurity-ai-defense',
-      title: 'AI-Powered Cybersecurity Defense 2026',
-      description: 'Next-generation cybersecurity with AI-driven threat detection and autonomous defense.',
-      category: 'Cybersecurity',
-      price: '$2,499/month',
-      marketPrice: '$4,000-10,000/month',
-      features: [
-        'AI threat detection',
-        'Autonomous defense systems',
-        'Predictive security analytics',
-        'Zero-trust architecture'
-      ],
-      benefits: [
-        'Detect threats 100x faster',
-        'Reduce security breaches by 95%',
-        'Autonomous security operations',
-        'Revolutionary protection'
-      ],
-      icon: Shield,
-      gradient: 'from-red-600 to-pink-600',
-      link: '/cybersecurity-ai-defense-2026',
-      new: true,
-      featured: true
+      id: 5,
+      title: 'Consciousness Integration: The Future of AI',
+      description: 'Exploring how AI systems will develop forms of consciousness and what it means for humanity, ethics, and the future of intelligence.',
+      category: 'AI Philosophy',
+      type: 'Deep Dive Article',
+      duration: '25 min',
+      views: 11200,
+      likes: 891,
+      rating: 4.8,
+      thumbnail: '/api/placeholder/800/400',
+      featured: true,
+      tags: ['Consciousness', 'AI', 'Future', 'Philosophy', 'Ethics'],
+      author: 'Consciousness Research Group',
+      publishedAt: '2025-01-10',
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+  const categories = [
+    { id: 'all', name: 'All Content', count: 156, icon: Globe },
+    { id: 'ai-predictions', name: 'AI Predictions', count: 42, icon: Brain },
+    { id: 'quantum-computing', name: 'Quantum Computing', count: 28, icon: Zap },
+    { id: 'automation', name: 'Automation', count: 35, icon: Rocket },
+    { id: 'tutorials', name: 'Tutorials', count: 31, icon: Play },
+    { id: 'case-studies', name: 'Case Studies', count: 20, icon: Target }
+  ];
+
+  const stats = [
+    { label: 'Total Content', value: '500+', icon: Globe },
+    { label: 'Active Users', value: '50K+', icon: Users },
+    { label: 'Content Views', value: '2M+', icon: TrendingUp },
+    { label: 'Average Rating', value: '4.8', icon: Star }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const toggleFavorite = (id) => {
+    setFavorites(prev => {
+      const newFavorites = new Set(prev);
+      if (newFavorites.has(id)) {
+        newFavorites.delete(id);
+      } else {
+        newFavorites.add(id);
       }
-    }
+      return newFavorites;
+    });
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
+  const toggleBookmark = (id) => {
+    setBookmarks(prev => {
+      const newBookmarks = new Set(prev);
+      if (newBookmarks.has(id)) {
+        newBookmarks.delete(id);
+      } else {
+        newBookmarks.add(id);
       }
-    }
+      return newBookmarks;
+    });
+  };
+
+  const nextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % featuredContent.length);
+  };
+
+  const prevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length);
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-6">
+              <Sparkles className="w-4 h-4 text-yellow-400" />
+              <span>REVOLUTIONARY CONTENT 2026</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Revolutionary Content
+            </h1>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
+              Showcase 2026
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Discover the most groundbreaking AI and technology content that will shape the future
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-6 mb-12">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center min-w-[150px]"
+                >
+                  <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-400" />
+                  <div className="text-3xl font-bold text-white">{stat.value}</div>
+                  <div className="text-sm text-gray-300">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Featured Content Carousel */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            Revolutionary Content 2026
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary Technology
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Breakthroughs 2026
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover the most advanced technology solutions that will revolutionize your business in 2026. 
-            From AI consciousness to quantum computing, explore the future of technology today.
+          <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            Featured Content
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            The most revolutionary and impactful content that's changing how we think about AI and technology
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-              Up to 10,000x Performance
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-              99.9% Accuracy
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-              Revolutionary ROI
-            </div>
-          </div>
         </motion.div>
 
-        {/* Content Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {revolutionaryContent.map((content, index) => {
-            const IconComponent = content.icon;
-            return (
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <AnimatePresence mode="wait">
               <motion.div
-                key={content.id}
-                variants={itemVariants}
-                className="group relative"
+                key={activeSlide}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden"
               >
-                <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
-                  {/* New Badge */}
-                  {content.new && (
-                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      NEW
+                <div className="grid lg:grid-cols-2 gap-8">
+                  {/* Content Image */}
+                  <div className="relative h-80 lg:h-96">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${featuredContent[activeSlide].color} bg-opacity-20`} />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className={`w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r ${featuredContent[activeSlide].color} flex items-center justify-center`}>
+                          <Brain className="w-12 h-12 text-white" />
+                        </div>
+                        <div className="text-2xl font-bold text-white mb-2">
+                          {featuredContent[activeSlide].type}
+                        </div>
+                      </div>
                     </div>
-                  )}
-
-                  {/* Featured Badge */}
-                  {content.featured && (
-                    <div className="absolute -top-3 -left-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      FEATURED
+                    
+                    {/* Featured Badge */}
+                    {featuredContent[activeSlide].featured && (
+                      <div className="absolute top-6 left-6 px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm font-bold rounded-full flex items-center gap-2">
+                        <Award className="w-4 h-4" />
+                        Featured
+                      </div>
+                    )}
+                    
+                    {/* Action Buttons */}
+                    <div className="absolute top-6 right-6 flex gap-2">
+                      <button
+                        onClick={() => toggleFavorite(featuredContent[activeSlide].id)}
+                        className={`p-3 rounded-full backdrop-blur-sm transition-all duration-300 ${
+                          favorites.has(featuredContent[activeSlide].id) 
+                            ? 'bg-red-500/80 text-white' 
+                            : 'bg-white/20 text-white hover:bg-white/30'
+                        }`}
+                      >
+                        <Heart className={`w-5 h-5 ${favorites.has(featuredContent[activeSlide].id) ? 'fill-current' : ''}`} />
+                      </button>
+                      <button
+                        onClick={() => toggleBookmark(featuredContent[activeSlide].id)}
+                        className={`p-3 rounded-full backdrop-blur-sm transition-all duration-300 ${
+                          bookmarks.has(featuredContent[activeSlide].id) 
+                            ? 'bg-blue-500/80 text-white' 
+                            : 'bg-white/20 text-white hover:bg-white/30'
+                        }`}
+                      >
+                        <Bookmark className={`w-5 h-5 ${bookmarks.has(featuredContent[activeSlide].id) ? 'fill-current' : ''}`} />
+                      </button>
                     </div>
-                  )}
-
-                  {/* Icon */}
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${content.gradient} mb-6`}>
-                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
 
-                  {/* Category */}
-                  <div className="text-sm text-cyan-400 font-medium mb-2">
-                    {content.category}
-                  </div>
+                  {/* Content Details */}
+                  <div className="p-8 lg:p-12">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm font-medium rounded-full">
+                        {featuredContent[activeSlide].category}
+                      </span>
+                      <div className="flex items-center gap-1 text-yellow-400">
+                        <Star className="w-4 h-4 fill-current" />
+                        <span className="text-sm font-medium">{featuredContent[activeSlide].rating}</span>
+                      </div>
+                    </div>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {content.title}
-                  </h3>
+                    <h4 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                      {featuredContent[activeSlide].title}
+                    </h4>
 
-                  {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {content.description}
-                  </p>
+                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                      {featuredContent[activeSlide].description}
+                    </p>
 
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {content.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
-                          {feature}
-                        </li>
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {featuredContent[activeSlide].tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-white/10 text-white text-sm rounded-full"
+                        >
+                          {tag}
+                        </span>
                       ))}
-                    </ul>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {content.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Pricing */}
-                  <div className="mb-6 p-4 bg-gradient-to-r from-slate-800 to-slate-700 rounded-xl">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-bold text-white">{content.price}</span>
-                      <span className="text-sm text-gray-400 line-through">{content.marketPrice}</span>
                     </div>
-                    <div className="text-sm text-green-400 font-medium">
-                      Save up to 70% vs market rate
+
+                    {/* Stats */}
+                    <div className="flex items-center gap-6 mb-8 text-sm text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4" />
+                        <span>{featuredContent[activeSlide].views.toLocaleString()} views</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Heart className="w-4 h-4" />
+                        <span>{featuredContent[activeSlide].likes} likes</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        <span>{featuredContent[activeSlide].duration}</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <button className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
+                        <Play className="w-5 h-5" />
+                        {featuredContent[activeSlide].type.includes('Video') ? 'Watch Now' : 'Explore Content'}
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                      
+                      <button className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                        <Share2 className="w-4 h-4" />
+                        Share
+                      </button>
+                      
+                      <button className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                        <Download className="w-4 h-4" />
+                        Download
+                      </button>
                     </div>
                   </div>
-
-                  {/* CTA Button */}
-                  <Link
-                    to={content.link}
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${content.gradient} text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group-hover:scale-105`}
-                  >
-                    Explore Solution
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
                 </div>
               </motion.div>
-            );
-          })}
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation Controls */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all duration-300"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 gap-2">
+            {featuredContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === activeSlide ? 'bg-purple-500 w-8' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Categories Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+            Content Categories
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore content organized by topic and expertise level
+          </p>
         </motion.div>
 
-        {/* Bottom CTA */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300 cursor-pointer group"
+            >
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <category.icon className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">{category.name}</h4>
+              <p className="text-2xl font-bold text-purple-400">{category.count}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-12"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our revolutionary technology solutions to achieve unprecedented growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 inline-flex items-center justify-center"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
-              >
-                View Success Stories
-                <Users className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
+          <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            Ready to Explore?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of innovators, researchers, and technology enthusiasts who are already exploring the future of AI and technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center gap-2">
+              Start Exploring
+              <ArrowRight className="w-5 h-5" />
+            </button>
+            <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+              <Lightbulb className="w-5 h-5" />
+              Get Recommendations
+            </button>
           </div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

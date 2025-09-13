@@ -1,96 +1,74 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Brain, Rocket } from 'lucide-react';
+import Link from 'next/link';
 
 const AI2026UltimateContentRevolutionBanner: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-20">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white py-16">
       <div className="absolute inset-0 bg-black/20"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-cyan-500/30"></div>
       
       {/* Animated background elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse"></div>
-      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/20 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-ping"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-purple-600/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            AI 2026 Ultimate Content Revolution
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-cyan-300/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-300/20 rounded-full animate-ping"></div>
+        <div className="absolute bottom-10 right-1/3 w-24 h-24 bg-blue-300/10 rounded-full animate-pulse"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4">
+        <div className="text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
+            🚀 NEW: Revolutionary AI Content Hub 2026
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The Ultimate AI Content Revolution
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              is Here in 2026
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+            AI 2026 Ultimate Content Revolution
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the most comprehensive collection of AI breakthroughs, quantum computing innovations, 
-            and revolutionary automation solutions that will transform your business in 2026 and beyond.
+          <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-4xl mx-auto leading-relaxed">
+            Discover the most comprehensive collection of revolutionary AI technologies, quantum breakthroughs, and future predictions that will reshape the world
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-              <Brain className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">AI Breakthroughs</h3>
-            <p className="text-gray-300 text-sm">Revolutionary AI technologies and implementations</p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <span className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+              ⚛️ Quantum AI Fusion
+            </span>
+            <span className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+              🧠 Neural Interfaces
+            </span>
+            <span className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+              🌟 AI Consciousness
+            </span>
+            <span className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+              🔮 Future Predictions
+            </span>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
-            <p className="text-gray-300 text-sm">Next-generation quantum solutions and applications</p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
-              <Rocket className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Automation</h3>
-            <p className="text-gray-300 text-sm">Advanced automation and autonomous systems</p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Future Tech</h3>
-            <p className="text-gray-300 text-sm">Cutting-edge technologies and predictions</p>
-          </div>
-        </div>
 
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/ai-2026-ultimate-content-revolution"
-              className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link 
+              href="/ai-2026-ultimate-content-revolution" 
+              className="group inline-flex items-center px-8 py-4 bg-white text-purple-600 font-bold text-lg rounded-full hover:bg-cyan-50 transition-all duration-300 hover:scale-105 shadow-xl"
             >
-              Explore Ultimate Content
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Explore Revolutionary Content
+              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
-            <Link
-              to="/ai-2026-content-showcase"
-              className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-white/30"
+            
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 shadow-xl"
             >
-              View All Content
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Get Started Today
             </Link>
           </div>
-          
-          <p className="text-gray-400 text-sm mt-6">
-            Join 50,000+ professionals already transforming their businesses with our content
-          </p>
+
+          <div className="mt-8 text-sm text-cyan-200">
+            <p>Join 10,000+ organizations already transforming with our AI solutions</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

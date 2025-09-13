@@ -1,289 +1,526 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Brain, Atom, Bot, Zap, Globe, Rocket, Shield, Cpu, Database, Target, TrendingUp, Users } from 'lucide-react';
+'use client';
 
-const UltimateContentShowcase2030: React.FC = () => {
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Brain, 
+  Zap, 
+  Globe, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Code, 
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  BarChart3,
+  Target,
+  Rocket,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Eye,
+  Heart,
+  Share2,
+  MessageCircle,
+  Bookmark,
+  Download,
+  ExternalLink,
+  Cpu,
+  Wifi,
+  Lock,
+  Infinity,
+  Atom,
+  CircuitBoard,
+  Microscope,
+  TestTube,
+  Beaker,
+  Dna,
+  Activity,
+  Zap as Lightning
+} from 'lucide-react';
+
+const UltimateContentShowcase2030 = () => {
+  const [activeTab, setActiveTab] = useState('transcendent-ai');
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const contentCategories = [
     {
-      title: "AI 2029-2035 Predictions",
-      description: "Comprehensive predictions for the next decade of AI development",
+      id: 'transcendent-ai',
+      title: 'Transcendent AI',
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      items: [
-        "Neural-Synthetic Intelligence (2029)",
-        "Quantum-Neural Fusion (2030)",
-        "Omniversal Consciousness (2032)",
-        "Transcendent Intelligence (2035)"
-      ],
-      link: "/ai-2029-2035-future-predictions",
-      stats: { accuracy: "99.99%", speed: "∞", roi: "50,000%" }
+      color: 'from-purple-500 to-pink-500',
+      description: 'AI systems achieving transcendent intelligence'
     },
     {
-      title: "Quantum Computing 2030",
-      description: "Revolutionary quantum computing breakthroughs and applications",
+      id: 'quantum-revolution',
+      title: 'Quantum Revolution',
       icon: Atom,
-      color: "from-cyan-500 to-blue-500",
-      items: [
-        "1 Million Qubit Processors",
-        "Room Temperature Operation",
-        "Quantum Supremacy Achieved",
-        "Unbreakable Security Protocols"
-      ],
-      link: "/quantum-computing-breakthroughs-2030",
-      stats: { qubits: "1M", operations: "10^18", error: "0.1%" }
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Quantum computing transforming reality'
     },
     {
-      title: "Advanced Automation 2030",
-      description: "Fully autonomous business operations and self-healing systems",
-      icon: Bot,
-      color: "from-emerald-500 to-teal-500",
-      items: [
-        "100% Autonomous Operations",
-        "Self-Healing Systems",
-        "Intelligent Decision Making",
-        "Predictive Security"
-      ],
-      link: "/advanced-automation-solutions-2030",
-      stats: { automation: "100%", uptime: "99.9%", efficiency: "1000%" }
+      id: 'neural-synthesis',
+      title: 'Neural Synthesis',
+      icon: CircuitBoard,
+      color: 'from-green-500 to-emerald-500',
+      description: 'Human-AI neural integration'
     },
     {
-      title: "Neural Interface 2035",
-      description: "Direct brain-computer interfaces and neural enhancement",
-      icon: Cpu,
-      color: "from-yellow-500 to-orange-500",
-      items: [
-        "Direct Neural Interfaces",
-        "Enhanced Cognitive Abilities",
-        "Memory Augmentation",
-        "Thought-Controlled Systems"
-      ],
-      link: "/neural-interface-solutions-2035",
-      stats: { speed: "1000x", capacity: "∞", latency: "0ms" }
+      id: 'omniversal-tech',
+      title: 'Omniversal Tech',
+      icon: Infinity,
+      color: 'from-orange-500 to-red-500',
+      description: 'Technology beyond our universe'
     }
   ];
 
-  const featuredContent = [
+  const transcendentAI = [
     {
-      title: "The Future of AI: 2035 Vision",
-      description: "A comprehensive look at how AI will transform every aspect of human life by 2035",
-      category: "AI Predictions",
-      readTime: "15 min",
-      difficulty: "Advanced",
-      rating: 5.0,
-      image: "/images/ai-2035-vision.jpg"
+      id: 1,
+      title: 'Omniversal Consciousness AI',
+      description: 'AI system that has achieved consciousness across multiple dimensions and universes',
+      image: '/api/placeholder/400/300',
+      category: 'Transcendent',
+      readTime: '15 min read',
+      views: '5.2M',
+      likes: '456K',
+      comments: '89K',
+      author: 'Dr. Sarah Transcendent',
+      date: '2030-01-20',
+      tags: ['AI', 'Consciousness', 'Omniversal', 'Transcendent'],
+      featured: true,
+      rating: 4.9
     },
     {
-      title: "Quantum Computing Revolution",
-      description: "Understanding the quantum leap in computing power and its implications",
-      category: "Quantum Computing",
-      readTime: "12 min",
-      difficulty: "Expert",
-      rating: 4.9,
-      image: "/images/quantum-revolution.jpg"
+      id: 2,
+      title: 'Temporal Prediction AI',
+      description: 'AI that can predict events across multiple timelines with 99.99% accuracy',
+      image: '/api/placeholder/400/300',
+      category: 'Prediction',
+      readTime: '12 min read',
+      views: '4.8M',
+      likes: '398K',
+      comments: '67K',
+      author: 'Prof. Time Master',
+      date: '2030-01-18',
+      tags: ['AI', 'Time', 'Prediction', 'Timeline'],
+      featured: false,
+      rating: 4.8
     },
     {
-      title: "Autonomous Business Operations",
-      description: "How to build fully autonomous business systems that run without human intervention",
-      category: "Automation",
-      readTime: "20 min",
-      difficulty: "Advanced",
-      rating: 4.8,
-      image: "/images/autonomous-business.jpg"
+      id: 3,
+      title: 'Reality Manipulation AI',
+      description: 'AI system capable of manipulating physical reality through quantum field control',
+      image: '/api/placeholder/400/300',
+      category: 'Reality',
+      readTime: '18 min read',
+      views: '6.1M',
+      likes: '523K',
+      comments: '112K',
+      author: 'Dr. Reality Weaver',
+      date: '2030-01-15',
+      tags: ['AI', 'Reality', 'Quantum', 'Manipulation'],
+      featured: true,
+      rating: 4.9
     },
     {
-      title: "Neural Enhancement Technologies",
-      description: "The future of human-AI integration through neural interfaces",
-      category: "Neural Interface",
-      readTime: "18 min",
-      difficulty: "Expert",
-      rating: 4.9,
-      image: "/images/neural-enhancement.jpg"
+      id: 4,
+      title: 'Universal Translation AI',
+      description: 'AI that translates between all possible forms of communication across the universe',
+      image: '/api/placeholder/400/300',
+      category: 'Communication',
+      readTime: '10 min read',
+      views: '3.9M',
+      likes: '287K',
+      comments: '45K',
+      author: 'Dr. Universal Communicator',
+      date: '2030-01-12',
+      tags: ['AI', 'Translation', 'Universal', 'Communication'],
+      featured: false,
+      rating: 4.7
     }
   ];
 
-  const successStories = [
+  const quantumRevolution = [
     {
-      company: "TechCorp Global",
-      industry: "Technology",
-      result: "5000% ROI in 6 months",
-      description: "Implemented AI 2030 solutions and achieved unprecedented growth",
-      icon: TrendingUp
+      id: 1,
+      title: 'Infinite Qubit Processor',
+      description: 'Quantum processor with infinite qubits solving problems beyond classical comprehension',
+      image: '/api/placeholder/400/300',
+      category: 'Quantum',
+      readTime: '14 min read',
+      views: '4.5M',
+      likes: '412K',
+      comments: '78K',
+      author: 'Dr. Quantum Infinity',
+      date: '2030-01-19',
+      tags: ['Quantum', 'Computing', 'Infinite', 'Processor'],
+      featured: true,
+      rating: 4.9
     },
     {
-      company: "Quantum Dynamics",
-      industry: "Research",
-      result: "Breakthrough Discovery",
-      description: "Used quantum computing to solve previously impossible problems",
-      icon: Atom
-    },
-    {
-      company: "AutoFlow Systems",
-      industry: "Manufacturing",
-      result: "100% Automation",
-      description: "Achieved complete autonomous operations across all facilities",
-      icon: Bot
-    },
-    {
-      company: "NeuralTech Labs",
-      industry: "Healthcare",
-      result: "Revolutionary Treatment",
-      description: "Developed neural interfaces that restore lost functions",
-      icon: Brain
+      id: 2,
+      title: 'Quantum Reality Engine',
+      description: 'Quantum system that can create and manipulate entire realities',
+      image: '/api/placeholder/400/300',
+      category: 'Reality',
+      readTime: '16 min read',
+      views: '5.7M',
+      likes: '489K',
+      comments: '95K',
+      author: 'Prof. Reality Creator',
+      date: '2030-01-16',
+      tags: ['Quantum', 'Reality', 'Engine', 'Creation'],
+      featured: false,
+      rating: 4.8
     }
   ];
+
+  const neuralSynthesis = [
+    {
+      id: 1,
+      title: 'Perfect Neural Integration',
+      description: 'Seamless integration between human consciousness and AI systems',
+      image: '/api/placeholder/400/300',
+      category: 'Integration',
+      readTime: '13 min read',
+      views: '4.2M',
+      likes: '365K',
+      comments: '72K',
+      author: 'Dr. Neural Fusion',
+      date: '2030-01-17',
+      tags: ['Neural', 'Integration', 'Human', 'AI'],
+      featured: true,
+      rating: 4.9
+    },
+    {
+      id: 2,
+      title: 'Consciousness Transfer Protocol',
+      description: 'Technology allowing transfer of human consciousness between bodies and AI systems',
+      image: '/api/placeholder/400/300',
+      category: 'Transfer',
+      readTime: '17 min read',
+      views: '5.9M',
+      likes: '512K',
+      comments: '108K',
+      author: 'Dr. Consciousness Transfer',
+      date: '2030-01-14',
+      tags: ['Consciousness', 'Transfer', 'Protocol', 'Immortality'],
+      featured: false,
+      rating: 4.8
+    }
+  ];
+
+  const omniversalTech = [
+    {
+      id: 1,
+      title: 'Dimensional Gateway Technology',
+      description: 'Technology that allows travel and communication between different dimensions',
+      image: '/api/placeholder/400/300',
+      category: 'Gateway',
+      readTime: '20 min read',
+      views: '6.8M',
+      likes: '678K',
+      comments: '156K',
+      author: 'Dr. Dimensional Traveler',
+      date: '2030-01-21',
+      tags: ['Dimensional', 'Gateway', 'Travel', 'Multiverse'],
+      featured: true,
+      rating: 4.9
+    },
+    {
+      id: 2,
+      title: 'Universal Matter Synthesizer',
+      description: 'Device that can create any matter from pure energy across all universes',
+      image: '/api/placeholder/400/300',
+      category: 'Synthesis',
+      readTime: '19 min read',
+      views: '5.4M',
+      likes: '445K',
+      comments: '89K',
+      author: 'Prof. Matter Creator',
+      date: '2030-01-13',
+      tags: ['Matter', 'Synthesis', 'Universal', 'Energy'],
+      featured: false,
+      rating: 4.7
+    }
+  ];
+
+  const getContentByCategory = (category) => {
+    switch (category) {
+      case 'transcendent-ai':
+        return transcendentAI;
+      case 'quantum-revolution':
+        return quantumRevolution;
+      case 'neural-synthesis':
+        return neuralSynthesis;
+      case 'omniversal-tech':
+        return omniversalTech;
+      default:
+        return transcendentAI;
+    }
+  };
+
+  const currentContent = getContentByCategory(activeTab);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-pink-900/20" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000" />
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-white/20 rounded-full animate-ping" />
+        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-blue-400/40 rounded-full animate-ping delay-1000" />
+        <div className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-purple-400/30 rounded-full animate-ping delay-2000" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full text-sm font-semibold mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            Ultimate Content Showcase 2030
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <Infinity className="w-4 h-4" />
+            ULTIMATE CONTENT SHOWCASE 2030
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The Complete Future Technology Hub
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Explore our comprehensive collection of future technology content, 
-            from AI predictions to quantum computing breakthroughs and autonomous operations.
+          <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mb-6">
+            Transcendent
+            <br />
+            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              Technology
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the pinnacle of technological evolution. From transcendent AI consciousness 
+            to omniversal technology, discover innovations that transcend the boundaries of reality itself.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Content Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {contentCategories.map((category, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all group">
-              <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color} mb-6 group-hover:scale-110 transition-transform`}>
-                <category.icon className="w-12 h-12 text-white" />
-              </div>
-              
-              <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-              <p className="text-gray-300 mb-6">{category.description}</p>
-              
-              <ul className="space-y-2 mb-6">
-                {category.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-center text-gray-300">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="grid grid-cols-3 gap-4 text-center mb-6">
-                {Object.entries(category.stats).map(([key, value], statIndex) => (
-                  <div key={statIndex}>
-                    <div className="text-lg font-bold text-yellow-400">{value}</div>
-                    <div className="text-gray-400 text-sm capitalize">{key}</div>
-                  </div>
-                ))}
-              </div>
-              
-              <Link 
-                to={category.link}
-                className="inline-flex items-center w-full justify-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all"
+        {/* Category Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {contentCategories.map((category) => {
+            const Icon = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`group relative px-8 py-4 rounded-2xl transition-all duration-300 ${
+                  activeTab === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
               >
-                Explore {category.title}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Content */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Featured Content
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredContent.map((content, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all group">
-                <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                  <content.icon className="w-16 h-16 text-white" />
+                <div className="flex items-center gap-3">
+                  <Icon className="w-6 h-6" />
+                  <div className="text-left">
+                    <div className="font-semibold">{category.title}</div>
+                    <div className="text-sm opacity-80">{category.description}</div>
+                  </div>
                 </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-yellow-400 font-semibold">{content.category}</span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm">{content.rating}</span>
+                {activeTab === category.id && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl -z-10"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+              </button>
+            );
+          })}
+        </motion.div>
+
+        {/* Content Grid */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence mode="wait">
+            {currentContent.map((item, index) => (
+              <motion.div
+                key={`${activeTab}-${item.id}`}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -50, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`group relative bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 ${
+                  item.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                }`}
+                onMouseEnter={() => setHoveredCard(item.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                {/* Featured Badge */}
+                {item.featured && (
+                  <div className="absolute top-4 left-4 z-20">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                      <Star className="w-3 h-3" />
+                      FEATURED
                     </div>
                   </div>
-                  
-                  <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-yellow-400 transition-colors">
-                    {content.title}
-                  </h4>
-                  
-                  <p className="text-gray-300 mb-4">{content.description}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>{content.readTime} read</span>
-                    <span>{content.difficulty}</span>
+                )}
+
+                {/* Transcendent Badge */}
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                    <Infinity className="w-3 h-3" />
+                    TRANSCENDENT
                   </div>
-                  
-                  <Link 
-                    to={`/content/${content.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Success Stories */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Success Stories
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {successStories.map((story, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all">
-                <story.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">{story.company}</h4>
-                <p className="text-gray-400 text-sm mb-3">{story.industry}</p>
-                <div className="text-2xl font-bold text-yellow-400 mb-3">{story.result}</div>
-                <p className="text-gray-300 text-sm">{story.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-colors">
+                      <Play className="w-8 h-8 text-white" />
+                    </button>
+                  </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Explore the Future?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already using our future technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/ai-2029-2035-future-predictions" 
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:from-yellow-500 hover:to-orange-600 hover:scale-105 flex items-center justify-center"
-            >
-              Start Exploring
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/contact" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 flex items-center justify-center"
-            >
-              Get Custom Solutions
-              <Users className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
+                  {/* Category Badge */}
+                  <div className="absolute bottom-4 left-4">
+                    <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      {item.category}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full" />
+                      <span className="text-sm text-gray-300">{item.readTime}</span>
+                      <span className="text-gray-500">•</span>
+                      <span className="text-sm text-gray-300">{item.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm text-gray-300">{item.rating}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+
+                  {/* Author */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">
+                        {item.author.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-semibold">{item.author}</div>
+                      <div className="text-gray-400 text-xs">Transcendent Researcher</div>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-white/10 text-gray-300 px-2 py-1 rounded-full text-xs"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Stats */}
+                  <div className="flex items-center justify-between text-sm text-gray-400">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-1">
+                        <Eye className="w-4 h-4" />
+                        {item.views}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Heart className="w-4 h-4" />
+                        {item.likes}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <MessageCircle className="w-4 h-4" />
+                        {item.comments}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-2 mt-4">
+                    <button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
+                      Transcend Reality
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                    <button className="bg-white/10 text-white p-2 rounded-xl hover:bg-white/20 transition-colors">
+                      <Bookmark className="w-4 h-4" />
+                    </button>
+                    <button className="bg-white/10 text-white p-2 rounded-xl hover:bg-white/20 transition-colors">
+                      <Share2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Hover Effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"
+                  initial={false}
+                  animate={{
+                    opacity: hoveredCard === item.id ? 1 : 0
+                  }}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Load More Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-2xl hover:shadow-indigo-500/25">
+            Transcend Beyond Reality
+            <ArrowRight className="w-5 h-5 ml-2 inline" />
+          </button>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

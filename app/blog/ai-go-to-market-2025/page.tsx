@@ -95,7 +95,6 @@ export default function AIGoToMarket2025() {
 
         {/* Article Content */}
         <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Nail The ICP And Job-To-Be-Done</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
             Great GTM starts with focus. Define one ideal customer profile and a single job-to-be-done.

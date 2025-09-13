@@ -1,276 +1,364 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import { 
+  Brain, 
+  Zap, 
+  Globe, 
+  Rocket, 
+  Star, 
+  Clock, 
+  TrendingUp, 
+  Users,
+  Filter,
+  Search,
+  Grid,
+  List,
+  ChevronDown,
+  ExternalLink
+} from 'lucide-react';
 
 export default function ContentShowcase() {
-  const contentCategories = [
+  const contentItems = [
     {
-      title: "AI 2025 Breakthrough Content",
-      description: "Revolutionary AI content and implementation guides for 2025",
-      icon: "🚀",
-      color: "from-blue-500 to-purple-600",
-      content: [
-        {
-          title: "AI 2025 Advanced Automation Mastery",
-          description: "Complete guide to implementing revolutionary AI automation systems that deliver 2000%+ ROI",
-          href: "/blog/ai-2025-advanced-automation-mastery",
-          type: "Implementation Guide",
-          badge: "BREAKTHROUGH"
-        },
-        {
-          title: "Enterprise Transformation Breakthrough",
-          description: "How a Fortune 500 company achieved 3000% ROI through revolutionary AI implementation",
-          href: "/case-studies/ai-2025-enterprise-transformation-breakthrough",
-          type: "Success Story",
-          badge: "NEW"
-        },
-        {
-          title: "AI 2025 Revolutionary Trends",
-          description: "Comprehensive analysis of AI trends that will transform every industry in 2025",
-          href: "/blog/ai-2025-revolutionary-trends-predictions",
-          type: "Trends Analysis",
-          badge: "HOT"
-        }
-      ]
+      id: 1,
+      title: 'Multimodal AI Revolution: Beyond Text and Images',
+      description: 'Explore how AI systems are integrating vision, audio, and text processing to create more intelligent and context-aware applications.',
+      category: 'AI Research',
+      readTime: '12 min read',
+      views: '2.3k',
+      likes: '187',
+      featured: true,
+      href: '/ai-2026-multimodal-revolution',
+      tags: ['AI', 'Multimodal', 'Machine Learning'],
+      publishDate: '2026-01-15'
     },
     {
-      title: "Quantum Computing Solutions",
-      description: "Next-generation quantum computing implementations and breakthroughs",
-      icon: "⚛️",
-      color: "from-purple-500 to-pink-600",
-      content: [
-        {
-          title: "Quantum Computing 2025",
-          description: "Revolutionary quantum computing solutions delivering unprecedented processing power",
-          href: "/quantum-computing-solutions-2025",
-          type: "Technology Guide",
-          badge: "REVOLUTIONARY"
-        },
-        {
-          title: "Quantum-AI Fusion",
-          description: "Breakthrough integration of quantum computing with artificial intelligence",
-          href: "/blog/quantum-ai-fusion-2025",
-          type: "Innovation",
-          badge: "FUTURE"
-        }
-      ]
+      id: 2,
+      title: 'Neural Architecture Search: Automating AI Design',
+      description: 'Discover how automated neural architecture search is revolutionizing AI model development and optimization.',
+      category: 'AI Engineering',
+      readTime: '8 min read',
+      views: '1.8k',
+      likes: '142',
+      featured: false,
+      href: '/ai-2026-neural-architecture-search',
+      tags: ['AI', 'Neural Networks', 'Automation'],
+      publishDate: '2026-01-12'
     },
     {
-      title: "Neural Interface Technology",
-      description: "Breakthrough neural interface technologies and applications",
-      icon: "🧠",
-      color: "from-green-500 to-blue-600",
-      content: [
-        {
-          title: "Neural Interface Revolution",
-          description: "Transform human-computer interaction with breakthrough neural technologies",
-          href: "/blog/neural-interface-revolution-2025",
-          type: "Technology",
-          badge: "BREAKTHROUGH"
-        },
-        {
-          title: "Brain-Computer Integration",
-          description: "Complete guide to implementing brain-computer interfaces in enterprise environments",
-          href: "/resources/brain-computer-integration-guide",
-          type: "Implementation",
-          badge: "NEW"
-        }
-      ]
+      id: 3,
+      title: 'AI Consciousness: The Next Frontier',
+      description: 'Dive deep into the philosophical and technical aspects of AI consciousness and self-awareness.',
+      category: 'AI Philosophy',
+      readTime: '15 min read',
+      views: '3.1k',
+      likes: '256',
+      featured: true,
+      href: '/ai-2026-consciousness-frontier',
+      tags: ['AI', 'Consciousness', 'Philosophy'],
+      publishDate: '2026-01-10'
     },
     {
-      title: "Autonomous Systems",
-      description: "Self-managing AI systems and autonomous operations",
-      icon: "🤖",
-      color: "from-orange-500 to-red-600",
-      content: [
-        {
-          title: "Autonomous Systems Mastery",
-          description: "Complete framework for implementing self-managing AI systems",
-          href: "/resources/autonomous-systems-mastery-guide",
-          type: "Framework",
-          badge: "ESSENTIAL"
-        },
-        {
-          title: "Self-Healing AI Systems",
-          description: "AI systems that detect and fix issues automatically without human intervention",
-          href: "/blog/self-healing-ai-systems-2025",
-          type: "Innovation",
-          badge: "REVOLUTIONARY"
-        }
-      ]
+      id: 4,
+      title: 'Quantum AI: The Future of Computing',
+      description: 'Learn how quantum computing is revolutionizing AI algorithms and problem-solving capabilities.',
+      category: 'Quantum AI',
+      readTime: '10 min read',
+      views: '1.9k',
+      likes: '134',
+      featured: true,
+      href: '/quantum-ai-2026-future',
+      tags: ['Quantum', 'AI', 'Computing'],
+      publishDate: '2026-01-08'
+    },
+    {
+      id: 5,
+      title: 'Green AI: Sustainable Technology Solutions',
+      description: 'Discover how AI is being used to create more sustainable and environmentally friendly technologies.',
+      category: 'Green Tech',
+      readTime: '9 min read',
+      views: '2.1k',
+      likes: '178',
+      featured: true,
+      href: '/green-ai-sustainability-2026',
+      tags: ['Sustainability', 'AI', 'Green Tech'],
+      publishDate: '2026-01-05'
+    },
+    {
+      id: 6,
+      title: 'Autonomous Business Operations 2026',
+      description: 'Explore how businesses are implementing fully autonomous operations using advanced AI and robotics.',
+      category: 'Business Automation',
+      readTime: '13 min read',
+      views: '2.7k',
+      likes: '201',
+      featured: true,
+      href: '/autonomous-business-ops-2026',
+      tags: ['Automation', 'Business', 'AI'],
+      publishDate: '2026-01-03'
+    },
+    {
+      id: 7,
+      title: 'Quantum Machine Learning Algorithms',
+      description: 'Explore the latest quantum machine learning algorithms and their practical applications.',
+      category: 'Quantum ML',
+      readTime: '14 min read',
+      views: '1.2k',
+      likes: '98',
+      featured: false,
+      href: '/quantum-ml-algorithms-2026',
+      tags: ['Quantum', 'Machine Learning', 'Algorithms'],
+      publishDate: '2026-01-01'
+    },
+    {
+      id: 8,
+      title: 'Carbon-Neutral AI Infrastructure',
+      description: 'Learn about building carbon-neutral AI infrastructure and sustainable computing practices.',
+      category: 'Sustainability',
+      readTime: '11 min read',
+      views: '1.5k',
+      likes: '123',
+      featured: false,
+      href: '/carbon-neutral-ai-infrastructure',
+      tags: ['Sustainability', 'Infrastructure', 'AI'],
+      publishDate: '2025-12-28'
+    },
+    {
+      id: 9,
+      title: 'Intelligent Process Automation',
+      description: 'Master the art of intelligent process automation with cutting-edge AI technologies.',
+      category: 'Process Automation',
+      readTime: '7 min read',
+      views: '1.6k',
+      likes: '145',
+      featured: false,
+      href: '/intelligent-process-automation-2026',
+      tags: ['Automation', 'Process', 'AI'],
+      publishDate: '2025-12-25'
     }
   ];
 
+  const categories = [
+    'All',
+    'AI Research',
+    'AI Engineering',
+    'AI Philosophy',
+    'Quantum AI',
+    'Green Tech',
+    'Business Automation',
+    'Quantum ML',
+    'Sustainability',
+    'Process Automation'
+  ];
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI Research':
+      case 'AI Engineering':
+      case 'AI Philosophy':
+        return Brain;
+      case 'Quantum AI':
+      case 'Quantum ML':
+        return Zap;
+      case 'Green Tech':
+      case 'Sustainability':
+        return Globe;
+      case 'Business Automation':
+      case 'Process Automation':
+        return Rocket;
+      default:
+        return Star;
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI Research':
+      case 'AI Engineering':
+      case 'AI Philosophy':
+        return 'from-purple-500 to-pink-500';
+      case 'Quantum AI':
+      case 'Quantum ML':
+        return 'from-blue-500 to-cyan-500';
+      case 'Green Tech':
+      case 'Sustainability':
+        return 'from-green-500 to-emerald-500';
+      case 'Business Automation':
+      case 'Process Automation':
+        return 'from-orange-500 to-red-500';
+      default:
+        return 'from-gray-500 to-gray-600';
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="Content Showcase - Revolutionary AI Resources & Implementation Guides"
-        description="Explore our comprehensive library of AI content, case studies, implementation guides, and breakthrough technologies. Transform your business with proven AI frameworks and strategies."
-        keywords="AI content, implementation guides, case studies, AI resources, business transformation, AI frameworks, technology guides"
-        url="/content-showcase"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-bold text-blue-800">🚀 COMPREHENSIVE CONTENT LIBRARY</span>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content Showcase
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Discover our comprehensive library of breakthrough AI content, implementation guides, 
-            case studies, and cutting-edge technologies that are transforming businesses worldwide.
-          </p>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
-              <div className="text-gray-600">Articles & Guides</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">50+</div>
-              <div className="text-gray-600">Case Studies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">25+</div>
-              <div className="text-gray-600">Implementation Frameworks</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">500K+</div>
-              <div className="text-gray-600">Monthly Readers</div>
-            </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Content Showcase
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our comprehensive library of AI insights, case studies, 
+              and implementation guides. Stay ahead with cutting-edge content.
+            </p>
           </div>
         </div>
+      </header>
 
-        {/* Content Categories */}
-        <div className="space-y-16">
-          {contentCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              {/* Category Header */}
-              <div className={`bg-gradient-to-r ${category.color} p-8 text-white`}>
-                <div className="flex items-center mb-4">
-                  <span className="text-4xl mr-4">{category.icon}</span>
-                  <div>
-                    <h2 className="text-3xl font-bold">{category.title}</h2>
-                    <p className="text-lg opacity-90">{category.description}</p>
-                  </div>
-                </div>
-              </div>
+      {/* Filters and Search */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search content..."
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+            </div>
 
-              {/* Content Grid */}
-              <div className="p-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.content.map((item, itemIndex) => (
-                    <Link
-                      key={itemIndex}
-                      href={item.href}
-                      className="group bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-                    >
-                      <div className="flex items-start justify-between mb-4">
-                        <span className="text-sm text-blue-600 font-semibold">{item.type}</span>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">
-                          {item.badge}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">
-                        {item.description}
-                      </p>
-                      <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
-                        <span>Read More</span>
-                        <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </Link>
+            {/* Category Filter */}
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Filter className="w-5 h-5 text-gray-500" />
+                <select className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                  {categories.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
                   ))}
-                </div>
+                </select>
               </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Featured Content */}
-        <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">🌟 Featured Content</h2>
-            <p className="text-lg text-gray-600">
-              Our most popular and impactful content that's transforming businesses worldwide
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link
-              href="/blog/ai-2025-advanced-automation-mastery"
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced Automation Mastery</h3>
-              <p className="text-gray-600 mb-4">Complete guide to implementing revolutionary AI automation systems</p>
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">BREAKTHROUGH</span>
-                <span className="text-sm text-gray-500">50K+ views</span>
+              {/* View Toggle */}
+              <div className="flex border border-gray-300 rounded-lg">
+                <button className="p-2 bg-purple-600 text-white rounded-l-lg">
+                  <Grid className="w-4 h-4" />
+                </button>
+                <button className="p-2 text-gray-600 hover:bg-gray-50 rounded-r-lg">
+                  <List className="w-4 h-4" />
+                </button>
               </div>
-            </Link>
-            
-            <Link
-              href="/case-studies/ai-2025-enterprise-transformation-breakthrough"
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="text-4xl mb-4">🏆</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Enterprise Transformation</h3>
-              <p className="text-gray-600 mb-4">How a Fortune 500 company achieved 3000% ROI</p>
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">SUCCESS</span>
-                <span className="text-sm text-gray-500">75K+ views</span>
-              </div>
-            </Link>
-            
-            <Link
-              href="/quantum-computing-solutions-2025"
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing 2025</h3>
-              <p className="text-gray-600 mb-4">Revolutionary quantum computing solutions and implementations</p>
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">FUTURE</span>
-                <span className="text-sm text-gray-500">30K+ views</span>
-              </div>
-            </Link>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-lg mb-6 opacity-90">
-              Join thousands of companies already achieving breakthrough results with our proven AI frameworks. 
-              Get access to all our content and start your transformation today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Custom Consultation
-              </Link>
-              <Link
-                href="/resources"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Browse All Resources
-              </Link>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Content Grid */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contentItems.map((item) => {
+            const Icon = getCategoryIcon(item.category);
+            const colorClass = getCategoryColor(item.category);
+            
+            return (
+              <Link
+                key={item.id}
+                href={item.href}
+                className="group bg-white rounded-xl border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="p-6">
+                  {/* Category and Featured Badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <div className={`p-2 rounded-lg bg-gradient-to-r ${colorClass} text-white`}>
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <span className="ml-3 text-sm font-medium text-gray-600">
+                        {item.category}
+                      </span>
+                    </div>
+                    {item.featured && (
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        FEATURED
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors line-clamp-2">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Stats and Meta */}
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {item.readTime}
+                      </div>
+                      <div className="flex items-center">
+                        <TrendingUp className="w-4 h-4 mr-1" />
+                        {item.views}
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {item.likes}
+                      </div>
+                    </div>
+                    <div className="flex items-center text-purple-600 font-semibold group-hover:translate-x-1 transform duration-300">
+                      Read More
+                      <ExternalLink className="w-4 h-4 ml-1" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Load More */}
+        <div className="text-center mt-12">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+            Load More Content
+          </button>
+        </div>
+      </main>
+
+      {/* Newsletter Signup */}
+      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Stay Updated with Latest Content
+          </h2>
+          <p className="text-xl opacity-90 mb-8">
+            Get notified when we publish new articles, case studies, and implementation guides.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none"
+            />
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
