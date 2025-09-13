@@ -35,11 +35,14 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
-    { name: 'Latest Content', href: '/blog/ai-2025-future-of-work-revolution', icon: '✨', isNew: true, isHot: true },
-    { name: 'Case Studies', href: '/case-studies/ai-transformation-global-tech-giant-2025', icon: '📈', isNew: true },
-    { name: 'Free Resources', href: '/resources/ai-2025-complete-implementation-master-guide', icon: '📚', isNew: true },
+    { name: 'New Trends 2025', href: '/blog/ai-2025-revolutionary-trends-comprehensive-analysis', icon: '🚀', isNew: true, isHot: true },
+    { name: 'Quantum Breakthrough', href: '/case-studies/ai-2025-quantum-breakthrough-50000-roi', icon: '⚡', isNew: true, isHot: true },
+    { name: 'AI Masterclass', href: '/tutorials/ai-implementation-step-by-step-masterclass', icon: '🎓', isNew: true },
+    { name: 'Ultimate Toolkit', href: '/resources/ai-2025-ultimate-implementation-toolkit', icon: '🛠️', isNew: true },
     { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
-    { name: 'All Case Studies', href: '/case-studies', icon: '📊' },
+    { name: 'Case Studies', href: '/case-studies', icon: '📊' },
+    { name: 'Tutorials', href: '/tutorials', icon: '🎯' },
+    { name: 'Resources', href: '/resources', icon: '📚' },
     { name: 'Services', href: '/services', icon: '🚀' },
     { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Contact', href: '/contact', icon: '📞' }

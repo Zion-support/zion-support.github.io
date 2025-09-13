@@ -125,6 +125,10 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
+// Import new content promotion components
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -136,6 +140,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
         
@@ -177,6 +184,9 @@ export default function HomePage() {
         
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
         
         {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE */}
         <AI2025RevolutionaryContentShowcase />
