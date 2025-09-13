@@ -17,6 +17,7 @@
   YARN_CACHE_FOLDER = ".yarn-cache"
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
 
+
 # Long-term caching for static assets
 [[headers]]
   for = "/css/*"
@@ -78,12 +79,6 @@
 
 [context.branch-deploy]
   command = "yarn build"
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
@@ -356,6 +351,7 @@
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
-# Skip Husky for CI builds
+# Skip Husky for CI builds and enable compression
 [build.processing]
   skip_processing = false
+  compress = true
