@@ -93,6 +93,15 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+// New 2025 Ultimate Innovation Showcase Components
+import AI2025UltimateInnovationShowcasePromotionBanner from '../components/AI2025UltimateInnovationShowcasePromotionBanner';
+
+// New 2030 Future Vision Components
+import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
+
+// New Quantum AI Revolution 2035 Components
+import QuantumAIRevolution2035PromotionBanner from '../components/QuantumAIRevolution2035PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -162,6 +171,15 @@ export default function HomePage() {
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* NEW AI 2025 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2025UltimateInnovationShowcasePromotionBanner />
+        
+        {/* NEW AI 2030 FUTURE VISION PROMOTION BANNER */}
+        <AI2030FutureVisionPromotionBanner />
+        
+        {/* NEW QUANTUM AI REVOLUTION 2035 PROMOTION BANNER */}
+        <QuantumAIRevolution2035PromotionBanner />
         
         {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
         <NeuralConsensus2026PromotionBanner />
