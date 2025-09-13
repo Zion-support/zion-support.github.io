@@ -38,6 +38,12 @@ import QuantumComputing2026UltimateShowcase from '../components/QuantumComputing
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
 import AdvancedAutomationSolutions2026UltimateShowcase from '../components/AdvancedAutomationSolutions2026UltimateShowcase';
 
+// NEW: Cutting-Edge 2030 Technology Components
+import AI2030NeuralInterfaceRevolutionBanner from '../components/AI2030NeuralInterfaceRevolutionBanner';
+import SpaceTechnologyOffWorldBanner from '../components/SpaceTechnologyOffWorldBanner';
+import QuantumAIFusionBreakthroughBanner from '../components/QuantumAIFusionBreakthroughBanner';
+import AdvancedInteractiveExperienceHub from '../components/AdvancedInteractiveExperienceHub';
+
 // New Ultimate Content Showcase Components
 import AI2025_2030UltimatePredictionsPromotionBanner from '../components/AI2025_2030UltimatePredictionsPromotionBanner';
 import AI2025_2030UltimatePredictionsShowcase from '../components/AI2025_2030UltimatePredictionsShowcase';
@@ -395,6 +401,26 @@ const HomePage: React.FC = () => {
               {/* NEW: Enhanced Interactive Content Discovery Widget */}
               <Suspense fallback={<LoadingSpinner />}>
                 <EnhancedInteractiveContentDiscoveryWidget />
+              </Suspense>
+
+              {/* NEW: AI 2030 Neural Interface Revolution Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2030NeuralInterfaceRevolutionBanner />
+              </Suspense>
+
+              {/* NEW: Space Technology Off-World Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <SpaceTechnologyOffWorldBanner />
+              </Suspense>
+
+              {/* NEW: Quantum AI Fusion Breakthrough Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumAIFusionBreakthroughBanner />
+              </Suspense>
+
+              {/* NEW: Advanced Interactive Experience Hub */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedInteractiveExperienceHub />
               </Suspense>
 
               {/* NEW: Quantum Computing Solutions Showcase 2025 */}

@@ -1,10 +1,11 @@
 import React from 'react';
-export function SupportChatbot() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
+import { Navigate } from 'react-router-dom';
+
+interface ProtectedRouteProps {
+  children: React.ReactNode;
+  isAuthenticated: boolean;
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+
+export function ProtectedRoute({ children, isAuthenticated }: ProtectedRouteProps) {
+  return isAuthenticated ? <>{children}</> : <Navigate to="/login" replace />;
+}
