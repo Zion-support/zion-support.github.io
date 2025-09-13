@@ -122,6 +122,11 @@ import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDis
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 
+// Import new content revolution banners
+import AI2025ContentRevolutionBreakthroughBanner from '../components/AI2025ContentRevolutionBreakthroughBanner';
+import AI2025ContentRevolution5000ROIBanner from '../components/AI2025ContentRevolution5000ROIBanner';
+import AI2025RevolutionaryTrendsBanner from '../components/AI2025RevolutionaryTrendsBanner';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import RevolutionaryTechShowcase2026Banner from '../components/RevolutionaryTechShowcase2026Banner';
@@ -359,6 +364,11 @@ export default function HomePage() {
         <UltimateContentShowcase2026PromotionBanner />
         <AITrendsPredictions2026PromotionBanner />
         <QuantumComputingSolutions2026PromotionBanner />
+        
+        {/* NEW CONTENT REVOLUTION BREAKTHROUGH BANNERS */}
+        <AI2025ContentRevolutionBreakthroughBanner />
+        <AI2025ContentRevolution5000ROIBanner />
+        <AI2025RevolutionaryTrendsBanner />
         
         {/* NEW 2025 REVOLUTIONARY INNOVATIONS PROMOTION BANNER */}
         <RevolutionaryAIInnovations2025PromotionBanner />
