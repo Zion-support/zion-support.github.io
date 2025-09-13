@@ -1,258 +1,267 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import { 
-  ArrowRight, 
-  Sparkles, 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp,
-  BookOpen,
-  Users,
-  Award,
-  Rocket
-} from 'lucide-react';
+  BookOpenIcon, 
+  ChartBarIcon, 
+  LightBulbIcon,
+  ArrowRightIcon,
+  CalendarIcon,
+  EyeIcon,
+  ClockIcon
+} from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
-export default function LatestContentShowcase2025() {
-  const newContentItems = [
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  type: 'blog' | 'case-study' | 'resource';
+  url: string;
+  featured: boolean;
+  publishDate: string;
+  readTime: string;
+  views: number;
+  category: string;
+  imageUrl?: string;
+}
+
+const LatestContentShowcase2025: React.FC = () => {
+  const contentItems: ContentItem[] = [
     {
-      id: 1,
-      title: "AI Revolution 2025: The Future of Business Automation",
-      description: "Discover how AI is transforming enterprise operations with cutting-edge autonomous systems and quantum computing integration.",
-      category: "AI & Automation",
-      readTime: "8 min read",
+      id: '1',
+      title: 'AI 2025: The Enterprise Automation Revolution',
+      description: 'Discover how AI is transforming enterprise operations in 2025. Learn about the latest breakthroughs, implementation strategies, and real-world success stories from industry leaders.',
+      type: 'blog',
+      url: '/blog/ai-2025-enterprise-automation-revolution',
       featured: true,
-      link: "/blog/ai-2026-neural-computing-revolution",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      publishDate: '2025-01-15',
+      readTime: '12 min read',
+      views: 2847,
+      category: 'AI & Automation',
+      imageUrl: '/images/ai-automation-hero.jpg'
     },
     {
-      id: 2,
-      title: "Quantum Computing Breakthrough: Real-World Applications",
-      description: "Explore the latest quantum computing innovations and how they're revolutionizing industries from finance to healthcare.",
-      category: "Quantum Computing",
-      readTime: "12 min read",
+      id: '2',
+      title: 'Global Manufacturing AI Transformation Success Story',
+      description: 'See how a Fortune 500 manufacturer achieved 40% cost reduction and 60% efficiency improvement through strategic AI implementation. Complete case study with metrics and lessons learned.',
+      type: 'case-study',
+      url: '/case-studies/global-manufacturing-ai-transformation-2025',
       featured: true,
-      link: "/blog/quantum-ai-autonomous-systems-2026",
-      icon: Zap,
-      color: "from-blue-500 to-cyan-500"
+      publishDate: '2025-01-12',
+      readTime: '15 min read',
+      views: 1923,
+      category: 'Manufacturing',
+      imageUrl: '/images/manufacturing-transformation.jpg'
     },
     {
-      id: 3,
-      title: "Enterprise AI Transformation: Success Stories",
-      description: "Real case studies of companies that achieved 300% productivity gains through AI implementation.",
-      category: "Case Studies",
-      readTime: "6 min read",
-      featured: false,
-      link: "/case-studies/enterprise-quantum-ai-transformation-2026",
-      icon: Award,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      id: 4,
-      title: "Autonomous Business Platform: Complete Implementation Guide",
-      description: "Step-by-step guide to implementing autonomous business systems with ROI calculations and best practices.",
-      category: "Implementation Guide",
-      readTime: "15 min read",
-      featured: false,
-      link: "/resources/quantum-ai-implementation-master-guide-2026",
-      icon: Rocket,
-      color: "from-orange-500 to-red-500"
+      id: '3',
+      title: 'AI Implementation Roadmap 2025',
+      description: 'Your complete guide to digital transformation. Step-by-step roadmap for successful AI adoption in your organization, including readiness assessment and best practices.',
+      type: 'resource',
+      url: '/resources/ai-implementation-roadmap-2025',
+      featured: true,
+      publishDate: '2025-01-10',
+      readTime: '20 min read',
+      views: 3567,
+      category: 'Implementation Guide',
+      imageUrl: '/images/ai-roadmap-guide.jpg'
     }
   ];
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return <BookOpenIcon className="w-6 h-6" />;
+      case 'case-study':
+        return <ChartBarIcon className="w-6 h-6" />;
+      case 'resource':
+        return <LightBulbIcon className="w-6 h-6" />;
+      default:
+        return <BookOpenIcon className="w-6 h-6" />;
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-blue-500 text-white';
+      case 'case-study':
+        return 'bg-green-500 text-white';
+      case 'resource':
+        return 'bg-purple-500 text-white';
+      default:
+        return 'bg-blue-500 text-white';
+    }
+  };
+
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'Blog Post';
+      case 'case-study':
+        return 'Case Study';
+      case 'resource':
+        return 'Resource Guide';
+      default:
+        return 'Content';
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+        staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      y: 0,
       opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: "easeOut"
       }
     }
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <motion.div 
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3 mb-6">
-            <Sparkles className="h-5 w-5 text-purple-400" />
-            <span className="text-purple-300 font-medium">Latest Content 2025</span>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <BookOpenIcon className="w-5 h-5" />
+            <span>Latest Content</span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Discover Our Latest
-            <span className="block bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Revolutionary Content
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Stay Ahead with Our Latest
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Insights</span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Stay ahead with cutting-edge insights, case studies, and implementation guides 
-            from the forefront of AI and quantum computing innovation.
+            Discover cutting-edge AI strategies, real-world success stories, and actionable implementation guides 
+            from our team of experts.
           </p>
         </motion.div>
 
         {/* Content Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12"
+        <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {newContentItems.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <motion.div
-                key={item.id}
-                variants={itemVariants}
-                className={`group relative ${
-                  item.featured ? 'md:col-span-1' : ''
-                }`}
-              >
-                <Link to={item.link} className="block">
-                  <div className="relative h-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10">
-                    {/* Featured Badge */}
-                    {item.featured && (
-                      <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        Featured
-                      </div>
-                    )}
+          {contentItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              variants={itemVariants}
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+            >
+              {/* Featured Badge */}
+              {item.featured && (
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                    Featured
+                  </span>
+                </div>
+              )}
 
-                    {/* Category Badge */}
-                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2 mb-6">
-                      <IconComponent className={`h-4 w-4 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`} />
-                      <span className="text-purple-300 text-sm font-medium">{item.category}</span>
+              {/* Content Type Badge */}
+              <div className="absolute top-4 right-4 z-10">
+                <span className={`${getTypeColor(item.type)} px-3 py-1 rounded-full text-xs font-semibold flex items-center space-x-1`}>
+                  {getTypeIcon(item.type)}
+                  <span>{getTypeLabel(item.type)}</span>
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                {/* Category */}
+                <div className="flex items-center space-x-2 mb-3">
+                  <span className="text-blue-400 text-sm font-medium">{item.category}</span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  {item.description}
+                </p>
+
+                {/* Meta Information */}
+                <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-1">
+                      <CalendarIcon className="w-4 h-4" />
+                      <span>{new Date(item.publishDate).toLocaleDateString()}</span>
                     </div>
-
-                    {/* Content */}
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
-                      {item.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {item.description}
-                    </p>
-
-                    {/* Footer */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
-                        <span className="flex items-center gap-1">
-                          <BookOpen className="h-4 w-4" />
-                          {item.readTime}
-                        </span>
-                      </div>
-                      
-                      <div className="flex items-center text-purple-400 group-hover:text-cyan-400 transition-colors">
-                        <span className="text-sm font-medium mr-2">Read More</span>
-                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
+                    <div className="flex items-center space-x-1">
+                      <ClockIcon className="w-4 h-4" />
+                      <span>{item.readTime}</span>
                     </div>
-
-                    {/* Hover Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
+                  <div className="flex items-center space-x-1">
+                    <EyeIcon className="w-4 h-4" />
+                    <span>{item.views.toLocaleString()}</span>
+                  </div>
+                </div>
+
+                {/* Read More Button */}
+                <Link
+                  to={item.url}
+                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-white transition-colors duration-200 group/btn"
+                >
+                  <span className="font-semibold">Read More</span>
+                  <ArrowRightIcon className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
                 </Link>
-              </motion.div>
-            );
-          })}
+              </div>
+
+              {/* Hover Effect Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-blue-500/10 group-hover:via-purple-500/10 group-hover:to-pink-500/10 transition-all duration-300 pointer-events-none" />
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        {/* View All Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
         >
-          <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of companies already leveraging our AI and quantum computing solutions 
-              to achieve unprecedented growth and efficiency.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
-              >
-                <Link to="/content-showcase">
-                  Explore All Content
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              
-              <Button 
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <Link to="/contact">
-                  Get Custom Solution
-                  <Sparkles className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
+          <Link
+            to="/resources"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>View All Resources</span>
+            <ArrowRightIcon className="w-5 h-5" />
+          </Link>
         </motion.div>
+      </div>
 
-        {/* Stats */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">50+</div>
-            <div className="text-gray-300">New Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">25+</div>
-            <div className="text-gray-300">Case Studies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">15+</div>
-            <div className="text-gray-300">Implementation Guides</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10K+</div>
-            <div className="text-gray-300">Monthly Readers</div>
-          </div>
-        </motion.div>
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-pink-500/10 rounded-full blur-3xl" />
       </div>
     </section>
   );
-}
+};
+
+export default LatestContentShowcase2025;
