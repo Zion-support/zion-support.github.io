@@ -49,6 +49,10 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 
+// Import new promotional components
+import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
+import EnhancedContentDiscoveryWidget from '../components/EnhancedContentDiscoveryWidget';
+
 // Import new revolutionary content components
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -209,6 +213,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
+        
+        {/* NEW CONTENT PROMOTIONAL BANNER */}
+        <NewContentPromotionalBanner />
+        
+        {/* ENHANCED CONTENT DISCOVERY WIDGET */}
+        <EnhancedContentDiscoveryWidget />
         
         {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
         <UltimateBreakthroughBanner2026 />
