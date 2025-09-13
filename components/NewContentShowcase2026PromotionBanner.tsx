@@ -7,14 +7,11 @@ import {
   ArrowRight, 
   Star, 
   Zap, 
-  Brain, 
-  Rocket,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
+  Brain,
+  X,
   CheckCircle,
-  X
+  TrendingUp,
+  Award
 } from 'lucide-react';
 
 const NewContentShowcase2026PromotionBanner = () => {
@@ -22,162 +19,192 @@ const NewContentShowcase2026PromotionBanner = () => {
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true), 500);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
+  const features = [
+    'Revolutionary AI Technologies',
+    'Advanced Automation Solutions',
+    'Cloud Infrastructure Excellence',
+    'Enterprise Security & Compliance'
+  ];
 
-  if (isDismissed) return null;
+  const stats = [
+    { label: '500+', value: 'Projects' },
+    { label: '99%', value: 'Satisfaction' },
+    { label: '300%', value: 'ROI' }
+  ];
+
+  if (!isVisible || isDismissed) return null;
 
   return (
     <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white overflow-hidden"
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/20 rounded-full blur-2xl -z-10" />
-          
-          {/* Floating Elements */}
-          <div className="absolute top-4 left-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" />
-          <div className="absolute top-8 right-8 w-2 h-2 bg-pink-400 rounded-full animate-bounce" />
-          <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping" />
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 transform rotate-12 scale-150"></div>
+        </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              {/* Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>New Content 2026</span>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                </motion.div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-white rounded-full opacity-20"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0.2, 0.8, 0.2],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
 
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-3xl md:text-4xl font-bold mb-4"
-                >
-                  Revolutionary Technology Showcase
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-lg md:text-xl opacity-90 mb-6 max-w-2xl"
-                >
-                  Discover cutting-edge AI breakthroughs, quantum computing innovations, and next-generation technologies that are reshaping industries.
-                </motion.p>
-
-                {/* Features Grid */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
-                >
-                  {[
-                    { icon: Brain, label: 'AI Breakthroughs', color: 'text-blue-300' },
-                    { icon: Zap, label: 'Quantum Computing', color: 'text-purple-300' },
-                    { icon: Rocket, label: 'Smart Automation', color: 'text-pink-300' },
-                    { icon: TrendingUp, label: 'Future Tech', color: 'text-green-300' }
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                      <span className="text-sm font-medium">{feature.label}</span>
-                    </div>
-                  ))}
-                </motion.div>
-
-                {/* Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    <span>10,000+ Companies</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4" />
-                    <span>99.8% Success Rate</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>24/7 Support</span>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* CTA Section */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-between">
+            {/* Left Content */}
+            <div className="flex-1">
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex items-center space-x-3 mb-4"
+              >
+                <Sparkles className="w-6 h-6 text-yellow-300" />
+                <span className="text-sm font-medium bg-yellow-300 text-blue-900 px-3 py-1 rounded-full">
+                  NEW 2026 CONTENT
+                </span>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-2xl md:text-3xl font-bold mb-3"
+              >
+                🚀 Revolutionary Content Showcase 2026
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg opacity-90 mb-6 max-w-2xl"
+              >
+                Discover cutting-edge AI innovations, advanced automation solutions, and enterprise-grade infrastructure that will transform your business in 2026.
+              </motion.p>
+
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
+              >
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-300 flex-shrink-0" />
+                    <span className="text-sm opacity-90">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="flex space-x-6 mb-6"
+              >
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">{stat.label}</div>
+                    <div className="text-sm opacity-80">{stat.value}</div>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="flex flex-col sm:flex-row gap-4 items-center"
+                className="flex flex-col sm:flex-row gap-4"
               >
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  Explore Now
-                  <ArrowRight className="w-5 h-5" />
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
+                  <Brain className="w-5 h-5 mr-2" />
+                  Explore Content
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-                  Learn More
+                <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center group">
+                  <Zap className="w-5 h-5 mr-2" />
+                  Get Started
                 </button>
               </motion.div>
             </div>
 
-            {/* Bottom Features */}
+            {/* Right Content - Icons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-8 pt-6 border-t border-white/20"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="hidden lg:flex items-center space-x-4"
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">Free Consultation</span>
-                </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">No Setup Fees</span>
-                </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">30-Day Money Back</span>
-                </div>
-              </div>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <Brain className="w-8 h-8 text-yellow-300" />
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <Zap className="w-6 h-6 text-green-300" />
+              </motion.div>
+              <motion.div
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="w-14 h-14 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <Award className="w-7 h-7 text-pink-300" />
+              </motion.div>
             </motion.div>
           </div>
+        </div>
 
-          {/* Dismiss Button */}
-          <button
-            onClick={handleDismiss}
-            className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </motion.div>
-      )}
+        {/* Dismiss Button */}
+        <button
+          onClick={() => setIsDismissed(true)}
+          className="absolute top-4 right-4 p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors duration-300"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Pulse Effect */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0"
+          animate={{ opacity: [0, 0.1, 0] }}
+          transition={{ duration: 3, repeat: Infinity }}
+        />
+      </motion.div>
     </AnimatePresence>
   );
 };

@@ -197,6 +197,14 @@ import UltimateContentHub2026PromotionBanner from '../components/UltimateContent
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import AI2025UltimateContentShowcaseBanner from '../components/AI2025UltimateContentShowcaseBanner';
 
+// Import new 2026 content components
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentShowcase2026PromotionBanner from '../components/NewContentShowcase2026PromotionBanner';
+import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
+import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
+import RevolutionaryCaseStudiesShowcase2026 from '../components/RevolutionaryCaseStudiesShowcase2026';
+import RevolutionaryCaseStudiesShowcase2026PromotionBanner from '../components/RevolutionaryCaseStudiesShowcase2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -232,6 +240,12 @@ export default function HomePage() {
         {/* NEW: CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <NewContentShowcase2026PromotionBanner />
         
+        {/* NEW: INTERACTIVE AI TOOLS DEMO 2026 PROMOTION BANNER */}
+        <InteractiveAIToolsDemo2026PromotionBanner />
+        
+        {/* NEW: REVOLUTIONARY CASE STUDIES SHOWCASE 2026 PROMOTION BANNER */}
+        <RevolutionaryCaseStudiesShowcase2026PromotionBanner />
+        
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
         
@@ -258,6 +272,12 @@ export default function HomePage() {
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
+        
+        {/* NEW INTERACTIVE AI TOOLS DEMO 2026 */}
+        <InteractiveAIToolsDemo2026 />
+        
+        {/* NEW REVOLUTIONARY CASE STUDIES SHOWCASE 2026 */}
+        <RevolutionaryCaseStudiesShowcase2026 />
         
         {/* INTERACTIVE TECH DEMO 2026 */}
         <InteractiveTechDemo2026 />
