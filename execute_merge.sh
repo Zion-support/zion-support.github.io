@@ -1,49 +1,31 @@
 #!/bin/bash
 
-echo "🚀 Executing comprehensive merge solution..."
+# Execute Merge Script
+# This script will execute the merge resolution process
 
-cd /workspace
+echo "🚀 EXECUTE MERGE - Starting Merge Resolution Process..."
 
-echo "📊 Current git status:"
-git status
+# Make scripts executable
+chmod +x master_merge_resolver.sh
+chmod +x github_pr_merger.py
 
-echo ""
-echo "🔧 Phase 1: Adding all resolved files..."
-git add .
+# Check if we're in the right directory
+if [ ! -f "master_merge_resolver.sh" ]; then
+    echo "❌ Scripts not found. Please run from the correct directory."
+    exit 1
+fi
 
-echo ""
-echo "🍒 Phase 2: Completing cherry-pick..."
-git cherry-pick --continue
+echo "📍 Current directory: $(pwd)"
+echo "📋 Available scripts:"
+ls -la *.sh *.py 2>/dev/null || echo "No scripts found"
 
-echo ""
-echo "📊 Status after cherry-pick:"
-git status
+# Execute the master merge resolver
+echo "🔄 Executing Master Merge Resolver..."
+./master_merge_resolver.sh
 
-echo ""
-echo "🔄 Phase 3: Switching to main branch..."
-git checkout main
+# Execute the GitHub PR merger
+echo "🔄 Executing GitHub PR Merger..."
+python3 github_pr_merger.py
 
-echo ""
-echo "📥 Phase 4: Pulling latest changes..."
-git pull origin main
-
-echo ""
-echo "🔀 Phase 5: Merging improvements branch..."
-git merge clean-merge-with-main
-
-echo ""
-echo "📦 Phase 6: Installing dependencies..."
-npm install
-
-echo ""
-echo "🏗️ Phase 7: Building application..."
-npm run build
-
-echo ""
-echo "🚀 Phase 8: Pushing to main..."
-git push origin main
-
-echo ""
-echo "🎉 Merge completed successfully!"
-echo "📊 Final git status:"
-git status
+echo "🎉 Merge resolution process completed!"
+echo "📋 Check the log files for details."
