@@ -7,8 +7,6 @@
       "es6",
       "es2017"
     ],
-<<<<<<< HEAD
-=======
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -24,61 +22,7 @@
       {
         "name": "next"
       }
-=======
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-<<<<<<< HEAD
->>>>>>> origin/content/blog-sept12
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "node_modules/@types/react/index.d.ts"
-  ],
-  "exclude": [
-<<<<<<< HEAD
-=======
-    "node_modules"
-=======
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -87,21 +31,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
->>>>>>> origin/content/blog-sept12
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d63f
->>>>>>> origin/content/blog-sept12
+    "node_modules"
   ]
 }

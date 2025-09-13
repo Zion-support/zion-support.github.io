@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { 
   CheckCircle, 
   Star, 
@@ -15,12 +15,38 @@ import {
   ArrowUpRight,
   DollarSign,
   Clock,
-  Users,
-  TrendingUp,
-  Award,
-  Zap as Lightning
+  BarChart3,
+  Circle
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+// Mock data for services
+const COMPREHENSIVE_SERVICES = [
+  {
+    id: 1,
+    name: "AI Development",
+    category: "ai",
+    description: "Custom AI solutions",
+    price: 5000
+  }
+];
+
+const SUBSCRIPTION_TIERS = [
+  {
+    name: "Basic",
+    price: 99
+  }
+];
+
+const SERVICE_CATEGORIES = [
+  {
+    id: "ai",
+    name: "AI Services"
+  }
+];
 
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

@@ -27,6 +27,9 @@ const DigitalTransformation: React.FC = () => {
       title: "Technology Strategy",
       description: "Develop a comprehensive roadmap for your digital transformation journey",
       features: ["Technology Assessment", "Roadmap Planning", "Vendor Selection", "Implementation Strategy"],
+      icon: "⚡"
+    },
+    {
       title: "Business Process Optimization",
       description: "Streamline operations and improve efficiency through digital workflows",
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
@@ -220,7 +223,7 @@ const DigitalTransformation: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how digital transformation can drive your business forward
+              Let&apos;s discuss how digital transformation can drive your business forward
             </p>
             <Link
               to="/contact"

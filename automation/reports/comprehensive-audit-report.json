@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-08-17T21:08:42.418Z",
-=======
-  "timestamp": "2025-08-17T21:20:35.997Z",
->>>>>>> origin/content/blog-sept12
+  "timestamp": "2025-08-17T21:39:40.538Z",
   "systems": {
     "workflow-health": {
       "score": 75,

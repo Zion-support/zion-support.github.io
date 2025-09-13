@@ -2,8 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock, Tag, Star, Sparkles } from 'lucide-react';
 
-interface EnhancedContentBannerProps {
-=======
+interface BannerItem {
+  title: string;
+  description: string;
+  href: string;
   icon?: string;
   readTime?: string;
   isNew?: boolean;
@@ -11,7 +13,6 @@ interface EnhancedContentBannerProps {
 }
 
 interface EnhancedContentBannerProps {
->>>>>>> cursor/create-and-deploy-new-content-47dd
   title: string;
   subtitle: string;
   items: BannerItem[];
@@ -78,11 +79,6 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
         return {
           gradient: 'from-blue-600 to-purple-600',
           solid: 'bg-blue-600',
-<<<<<<< HEAD
-          outline: 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
-          accent: 'bg-blue-100 text-blue-800',
-          icon: 'text-blue-600'
-=======
           outline: 'border-blue-600 text-blue-600',
           accent: 'text-blue-100',
           hover: 'hover:from-blue-700 hover:to-purple-700'
@@ -198,138 +194,9 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
             </Link>
           </div>
         </div>
-
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {content.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm opacity-90 mb-3">{item.description}</p>
-                <div className="flex items-center justify-between text-xs opacity-75">
-                  <span className="bg-white bg-opacity-20 px-2 py-1 rounded">
-                    {item.category}
-                  </span>
-                  <span>{item.readTime} read</span>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {items.slice(0, 6).map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className={`${
-                variant === 'outline' 
-                  ? 'bg-white border border-gray-200' 
-                  : 'bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20'
-              } p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300`}>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                    variant === 'outline' ? colors.accent : 'bg-white bg-opacity-20'
-                  }`}>
-                    {item.category}
-                  </span>
-                  {item.isNew && (
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                      variant === 'outline' 
-                        ? 'bg-green-100 text-green-800' 
-                        : 'bg-green-500 bg-opacity-20'
-                    }`}>
-                      New
-                    </span>
-                  )}
-                  {item.isTrending && (
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                      variant === 'outline'
-                        ? 'bg-orange-100 text-orange-800'
-                        : 'bg-orange-500 bg-opacity-20'
-                    }`}>
-                      Trending
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className="text-lg font-semibold mb-2 group-hover:underline">
-                  {item.title}
-                </h3>
-                
-                <p className="text-sm opacity-90 mb-3 line-clamp-2">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center text-xs opacity-75">
-                  {item.readTime && <span>{item.readTime}</span>}
-                  <span className="mx-2">•</span>
-                  <span>Read More →</span>
-                  <span>{item.readTime}</span>
-                  <div className="flex items-center gap-2">
-                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs">
-                      {item.category}
-                    </span>
-                    {item.isNew && (
-                      <span className="bg-green-500 text-white px-2 py-1 rounded text-xs">
-                        New
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {showViewAll && (
-          <div className="text-center mt-12">
-            <Link 
-              href="/content-showcase" 
-              className="inline-flex items-center gap-2 bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-30 transition-colors text-lg"
-            >
-              View All Content
-              <span>→</span>
-            </Link>
-        {/* Additional Content Preview */}
-        {items.length > 6 && (
-          <div className="text-center">
-            <div className="inline-flex items-center gap-4 text-sm opacity-75 mb-4">
-              <span>+{items.length - 6} more articles</span>
-              <span>•</span>
-              <span>Updated daily</span>
-              <span>•</span>
-              <span>Expert insights</span>
-            </div>
-          </div>
-        )}
-
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold mb-2">50+</div>
-            <div className="text-sm opacity-75">New Articles</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold mb-2">25K+</div>
-            <div className="text-sm opacity-75">Monthly Readers</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold mb-2">95%</div>
-            <div className="text-sm opacity-75">Satisfaction Rate</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold mb-2">24/7</div>
-            <div className="text-sm opacity-75">Fresh Content</div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-47dd
-          </div>
-        )}
       </div>
     </section>
   );
-}
 };
 
-<<<<<<< HEAD
 export default EnhancedContentBanner;
-=======
-export default EnhancedContentBanner;
->>>>>>> cursor/create-and-deploy-new-content-47dd

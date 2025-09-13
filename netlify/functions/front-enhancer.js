@@ -7,17 +7,6 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-<<<<<<< HEAD
-exports.config = {
-  schedule: '*/20 * * * *', // every 20 minutes
-};
-
-exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-=======
 exports.config = { schedule: '0 3 * * *' };
 
 exports.handler = async () => {
@@ -32,13 +21,6 @@ exports.handler = async () => {
     return status;
   }
 
-<<<<<<< HEAD
-  // Update the front page auto-generated section
-  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
-
-  // Attempt to sync changes back to main (best-effort)
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-=======
   step('orphans:find', 'automation/orphan-pages-finder.cjs');
   step('git:sync', 'automation/advanced-git-sync.cjs');
 >>>>>>> origin/content/blog-sept12

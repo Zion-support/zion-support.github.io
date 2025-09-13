@@ -1,9 +1,22 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import type { ReactNode } from 'react';
-import { useRouter } from 'next/router';
+import { useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import { pageview, event as gtagEvent } from '@/lib/gtag';
+// Simple gtag implementation
+const pageview = (url: string) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+      page_path: url,
+    });
+  }
+};
+
+const gtagEvent = (action: string, parameters?: any) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', action, parameters);
+  }
+};
 
 // Analytics event types
 export type AnalyticsEventType = 
@@ -54,7 +67,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   const [pageViews, setPageViews] = useState(0);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
-  const router = useRouter();
+  const location = useLocation();
   const { user } = useAuth();
 
   // Track page views when location changes

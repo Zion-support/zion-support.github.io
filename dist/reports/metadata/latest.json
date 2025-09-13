@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2025-08-17T21:28:01.087Z",
-  "pagesScanned": 8549,
+  "generatedAt": "2025-08-17T21:21:01.102Z",
+  "pagesScanned": 8535,
   "items": [
     {
       "route": "/404",
@@ -7991,16 +7991,6 @@
     },
     {
       "route": "/reports/blueprints/blueprint-2025-08-17-211102",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-17-212102",
       "missing": [
         "og:image"
       ],
@@ -18090,16 +18080,6 @@
     },
     {
       "route": "/reports/cases/case-2025-08-17-211102",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Case Study — Cloud Improving",
-        "description": "Case Study — Cloud Improving — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/cases/case-2025-08-17-212102",
       "missing": [
         "og:image"
       ],
@@ -28669,16 +28649,6 @@
       }
     },
     {
-      "route": "/reports/guides/guide-2025-08-17-212102",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Guide — Cloud Improving Implementation",
-        "description": "Guide — Cloud Improving Implementation — auto-suggested description"
-      }
-    },
-    {
       "route": "/reports/innovations/insight-2025-08-15-0211",
       "missing": [
         "og:image"
@@ -33405,6 +33375,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-17-2120",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Guide: FinOps for AI",
+        "description": "Guide: FinOps for AI — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-17T00-00",
       "missing": [
         "og:image"
@@ -34692,16 +34672,6 @@
       "suggestion": {
         "title": "Innovation Insight — 2025-08-17 21-11",
         "description": "Innovation Insight — 2025-08-17 21-11 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/innovations/insight-2025-08-17T21-21",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Innovation Insight — 2025-08-17 21-21",
-        "description": "Innovation Insight — 2025-08-17 21-21 — auto-suggested description"
       }
     },
     {
@@ -49784,16 +49754,6 @@
       }
     },
     {
-      "route": "/reports/patterns/pattern-2025-08-17-212102",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Pattern — Automation Trends 2025",
-        "description": "Pattern — Automation Trends 2025 — auto-suggested description"
-      }
-    },
-    {
       "route": "/reports/playbooks/playbook-2025-08-15-021207",
       "missing": [
         "og:image"
@@ -57307,16 +57267,6 @@
       }
     },
     {
-      "route": "/reports/playbooks/playbook-2025-08-17-212103",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"
-      }
-    },
-    {
       "route": "/reports/tutorials/",
       "missing": [
         "og:image"
@@ -62340,6 +62290,7 @@
       "route": "/reports/updates/ultra-1755575055798-on4err",
       "missing": [
         "og:image"
+>>>>>>> origin/content/blog-sept12
       ],
       "suggestion": {
         "title": "Autonomous Update — 2025-08-17 18:07",
@@ -62362,8 +62313,8 @@
         "og:image"
       ],
       "suggestion": {
-        "title": "Autonomous Update — 2025-08-13 19:45",
-        "description": "Autonomous Update — 2025-08-13 19:45 — auto-suggested description"
+        "title": "Autonomous Update — 2025-08-17 18:09",
+        "description": "Autonomous Update — 2025-08-17 18:09 — auto-suggested description"
       }
     },
     {
@@ -62389,14 +62340,81 @@
     {
       "route": "/reports/updates/update-2025-08-17-1812",
       "missing": [
-        "og:title",
-        "og:description",
-        "og:image",
-        "twitter:card"
+        "og:image"
       ],
       "suggestion": {
         "title": "Autonomous Update — 2025-08-17 18:12",
         "description": "Autonomous Update — 2025-08-17 18:12 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1813",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:13",
+        "description": "Autonomous Update — 2025-08-17 18:13 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1814",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:14",
+        "description": "Autonomous Update — 2025-08-17 18:14 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1815",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:15",
+        "description": "Autonomous Update — 2025-08-17 18:15 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1816",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:16",
+        "description": "Autonomous Update — 2025-08-17 18:16 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1817",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:17",
+        "description": "Autonomous Update — 2025-08-17 18:17 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1818",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:18",
+        "description": "Autonomous Update — 2025-08-17 18:18 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-1819",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-17 18:19",
+        "description": "Autonomous Update — 2025-08-17 18:19 — auto-suggested description"
       }
     },
     {
@@ -62412,84 +62430,14 @@
     {
       "route": "/reports/updates/update-2025-08-17-1821",
       "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:21",
-        "description": "Autonomous Update — 2025-08-17 18:21 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1822",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:22",
-        "description": "Autonomous Update — 2025-08-17 18:22 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1823",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:23",
-        "description": "Autonomous Update — 2025-08-17 18:23 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1824",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:24",
-        "description": "Autonomous Update — 2025-08-17 18:24 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1825",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:25",
-        "description": "Autonomous Update — 2025-08-17 18:25 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1826",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:26",
-        "description": "Autonomous Update — 2025-08-17 18:26 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1827",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:27",
-        "description": "Autonomous Update — 2025-08-17 18:27 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17-1828",
-      "missing": [
         "og:title",
         "og:description",
         "og:image",
         "twitter:card"
       ],
       "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 18:28",
-        "description": "Autonomous Update — 2025-08-17 18:28 — auto-suggested description"
+        "title": "Autonomous Update — 2025-08-17 18:21",
+        "description": "Autonomous Update — 2025-08-17 18:21 — auto-suggested description"
       }
     },
     {
@@ -62660,6 +62608,16 @@
       "suggestion": {
         "title": "Autonomous Playbook — AI Service Design (2025-08-17 21:10 UTC)",
         "description": "Autonomous Playbook — AI Service Design (2025-08-17 21:10 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-17-2120",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Capability Map — AI Service Design (2025-08-17 21:20 UTC)",
+        "description": "Autonomous Capability Map — AI Service Design (2025-08-17 21:20 UTC) — auto-suggested description"
       }
     },
     {
@@ -63950,16 +63908,6 @@
       "suggestion": {
         "title": "Autonomous Update — 2025-08-17 21-11",
         "description": "Autonomous Update — 2025-08-17 21-11 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-17T21-21",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-17 21-21",
-        "description": "Autonomous Update — 2025-08-17 21-21 — auto-suggested description"
       }
     },
     {

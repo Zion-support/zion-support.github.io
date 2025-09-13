@@ -1,10 +1,5 @@
-<<<<<<<< HEAD:src.broken/pages/TranslationManager.tsx.backup.1756001042.backup.1757660787
-<<<<<<< HEAD
-
-========
->>>>>>>> origin/content/blog-sept12:src/pages/TranslationManager.tsx
 import React, { useState, useEffect } from 'react';
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -385,14 +380,5 @@ export default function TranslationManager() {
         </Card>
       </main>
     </>
-=======
-import React from 'react';
-export function TranslationManager() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

@@ -2,10 +2,39 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, 
-  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite,
+
+import {
+
+
+  
+  
+  componentDidCatch(error, errorInfo) {
+  
+    
+import React, { useState, useEffect } from 'react';
+import Layout from './layout / Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import Link from 'next/link';
+
+import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
+
+import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+
+
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+// Enhanced loading component with quantum effects;
+
+import {
+
+
+import Link from 'next/link';import {
+
+
+
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
 } from 'lucide-react';
 import Link from 'next/link';
@@ -17,7 +46,6 @@ import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-s
 
 // Enhanced loading component with quantum effects
 const QuantumLoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
     {/* Quantum particle effects */}
     <div className="absolute inset-0">
       {[...Array(100)].map((_, i) => (
@@ -41,13 +69,22 @@ const QuantumLoadingFallback = () => (
           }}
         />
       ))}
-    </div>
     
+
+
+
+
+
     {/* Quantum loading animation */}
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
+
+
+
+
+
       className="text-center relative z-10"
     >
       <div className="relative">
@@ -76,17 +113,16 @@ const QuantumLoadingFallback = () => (
       </div>
       <motion.h1 
         className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent"
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 3, repeat: Infinity }}
-      >
-        Zion Tech Group 2046
-      </motion.h1>
+
+
+
       <p className="text-xl text-gray-300 mb-3">Quantum AI • Neural Interfaces • Space Technology</p>
       <p className="text-lg text-gray-400">Preparing your revolutionary digital transformation journey</p>
       
       {/* Quantum progress bar */}
       <div className="mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2">
         <motion.div
+
           className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
@@ -118,8 +154,78 @@ const Homepage2046: React.FC = () => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const observer = new (window as any).IntersectionObserver(
         (entries: any[]) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
+
+
+
+            <Brain className='w - 16 h - 16 text - white' />;
+            <Brain className="w - 16 h - 16 text - white" />;
+
+
+
+
+
+    return <QuantumLoadingFallback />;
+
+
+
+
+
+
+
+    return <QuantumLoadingFallback />;
+
+    <Layout>;
+
+
+
+    <Layout>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return <QuantumLoadingFallback />;
+    <Layout>;
+    <Layout>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <Link href='/services'>                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12";
+                <Link href='/services'>;
+
+
+
+    return <QuantumLoadingFallback />
+
+
+
+          
               setActiveSection(entry.target.id);
             }
           });
@@ -151,21 +257,16 @@ const Homepage2046: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
 
-  return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
-        {/* Enhanced animated background */}
-        <div className="absolute inset-0">
-          {/* Quantum grid effect */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
           
+    <Layout>
+
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30"
+
               animate={{
                 x: [0, Math.random() * 100 - 50],
                 y: [0, Math.random() * 100 - 50],
@@ -174,19 +275,12 @@ const Homepage2046: React.FC = () => {
               transition={{
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              style={{
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-              }}
-            />
+
           ))}
         </div>
 
         {/* Hero Section */}
-        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
-          <div className="text-center max-w-6xl mx-auto">
+
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -198,29 +292,15 @@ const Homepage2046: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
               >
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-              </motion.h1>
               
-              <motion.p 
-                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1 }}
-              >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>, 
-                <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
-                <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
-              </motion.p>
               
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+                <Link href='/services'>                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
               >
                 <Link href="/services">
+                <Link href='/services'>
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
@@ -270,10 +350,22 @@ const Homepage2046: React.FC = () => {
           </div>
         </section>
 
+                  <Phone className='w-6 h-6 text-cyan-400 mb-2' />;
+                  <Mail className='w-6 h-6 text-purple-400 mb-2' />;
+                  <MapPin className='w-6 h-6 text-cyan-400 mb-2' />;
+                  <MapPin className="w-6 h-6 text-cyan-400 mb-2" />;
+
+
+
         {/* Services Showcase Section */}
         <section id="services" className="relative z-10 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
+
+
+
+
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -290,29 +382,40 @@ const Homepage2046: React.FC = () => {
               </p>
             </motion.div>
 
+
+
+
+
+
             {/* Search and Filter */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
+
+
+                  <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+
               className="mb-12"
             >
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <div className="relative flex-1 max-w-md">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+
+
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg"
-                  />
-                </div>
                 
-                <div className="flex gap-2">
-                  {categories.map((category) => (
-                    <button
+
+
+
+
+
+
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
@@ -327,6 +430,11 @@ const Homepage2046: React.FC = () => {
                 </div>
               </div>
             </motion.div>
+
+
+
+
+
 
             {/* Services Grid */}
             <motion.div
@@ -343,8 +451,11 @@ const Homepage2046: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="group"
+
+
+
+
+
                 >
                   <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">
                     <div className="flex items-start justify-between mb-4">
@@ -357,6 +468,8 @@ const Homepage2046: React.FC = () => {
                         </span>
                         <div className="flex items-center gap-1 mt-1">
                           {[...Array(5)].map((_, i) => (
+
+
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -370,6 +483,9 @@ const Homepage2046: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
+                        <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
+
 
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.name}
@@ -386,6 +502,13 @@ const Homepage2046: React.FC = () => {
                       </div>
                     </div>
 
+
+                        <DollarSign className='w-4 h-4' />                        <span>{service && service.price}</span>;
+                        <DollarSign className="w-4 h-4" />;
+                            <CheckCircle className='w-3 h-3 text-cyan-400 mt-0 && 0.5 flex-shrink-0' />                            <span>{feature}</span>                    <div className="space-y-2 mb-6">;
+                            <CheckCircle className="w-3 h-3 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
+
+
                     <div className="space-y-2 mb-6">
                       <h4 className="text-sm font-semibold text-white">Key Features:</h4>
                       <ul className="space-y-1">
@@ -394,6 +517,7 @@ const Homepage2046: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-cyan-400 mt-0.5 flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
+
                         ))}
                       </ul>
                     </div>
@@ -425,6 +549,57 @@ const Homepage2046: React.FC = () => {
               ))}
             </motion.div>
 
+
+                    <div className='flex items-center justify-between'>                      <Link href={service && service.link}>;
+                      <Link href={service && service.link}>;
+                          Learn More <ArrowUpRight className='w-4 h-4' />;
+                      </Link>;
+                          <Users className='w-3 h-3' />;
+                          <Clock className='w-3 h-3' />                          <span>{service && service.launchDate}</span>                        >;
+                          Learn More <ArrowUpRight className="w-4 h-4" />;
+                      </Link>;
+                          <Users className="w-3 h-3" />;
+                          <Clock className="w-3 h-3" />;
+                <Link href='/services'>                className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 12";
+                <Link href='/services'>;
+                    Explore Services <ArrowRight className='w - 5 h - 5' />;
+                </Link>;
+                <Link href='/contact'>;
+                    Get Started <Rocket className='w - 5 h - 5' />                  </motion.button>                  <motion.button;
+                    Explore Services <ArrowRight className="w - 5 h - 5" />;
+                </Link>;
+                <Link href="/contact">;
+                    Get Started <Rocket className="w - 5 h - 5" />;
+                </Link>;
+                  <Phone className='w - 6 h - 6 text - cyan - 400 mb - 2' />;
+                  <Mail className='w - 6 h - 6 text - purple - 400 mb - 2' />;
+                  <MapPin className='w - 6 h - 6 text - cyan - 400 mb - 2' />;
+                  <MapPin className="w - 6 h - 6 text - cyan - 400 mb - 2" />;
+                  <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
+                  <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+                        <Brain className='w - 6 h - 6 text - white' />;
+                        <Brain className="w - 6 h - 6 text - white" />;
+                            <Star;
+                        <DollarSign className='w - 4 h - 4' />                        <span>{service.price}</span>;
+                        <DollarSign className="w - 4 h - 4" />;
+                            <CheckCircle className='w - 3 h - 3 text - cyan - 400 mt - 0.5 flex - shrink - 0' />                            <span>{feature}</span>                    <div className="space - y-2 mb - 6">;
+                            <CheckCircle className="w - 3 h - 3 text - cyan - 400 mt - 0.5 flex - shrink - 0" />;
+                    <div className='flex items - center justify - between'>                      <Link href={service.link}>;
+                      <Link href={service.link}>;
+                          Learn More <ArrowUpRight className='w - 4 h - 4' />;
+                      </Link>;
+                          <Users className='w - 3 h - 3' />;
+                          <Clock className='w - 3 h - 3' />                          <span>{service.launch_date}</span>                        >;
+                          Learn More <ArrowUpRight className="w - 4 h - 4" />;
+                      </Link>;
+                          <Users className="w - 3 h - 3" />;
+                          <Clock className="w - 3 h - 3" />;
+
+
+
+
+
+
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -443,30 +618,39 @@ const Homepage2046: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact">
                     <motion.button
-                      whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                    >
-                      Get Started Today
-                    </motion.button>
                   </Link>
                   <Link href="/services">
-                    <motion.button
-                      whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
-                      whileTap={{ scale: 0.95 }}
-                      className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                    >
-                      View All Services
-                    </motion.button>
                   </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
     </Layout>
-  );
-};
 
 export default Homepage2046;
+
+
+                  </Link>;
+                  <Link href='/services'>            >;
+                  <Link href="/contact">;
+                  </Link>;
+                  <Link href='/services'>;
+
+
+                  </Link>;
+    </Layout>;
+
+
+export default Homepage2046;  );
+export default Homepage2046;
+
+
+                  <Link href='/contact'>;
+                  </Link>;
+                  <Link href='/services'>            >;
+                  <Link href="/contact">;
+                  </Link>;
+                  <Link href='/services'>;
+                  </Link>;
+    </Layout>);
+export default Homepage2046);
+export default Homepage2046;
+
+
+

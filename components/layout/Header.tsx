@@ -1,28 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import Button from '../ui/Button';
-
-const Header: React.FC = () => {
-  const navigation = [
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
-  return (
-    <header className="bg-white/5 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-fuchsia-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-=======
 import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown, Zap, Globe, Shield } from 'lucide-react';
 
@@ -30,13 +7,13 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -59,6 +36,13 @@ export default function Header() {
     { name: 'Micro SaaS Services', href: '/micro-saas-services', description: 'Professional business solutions' },
   ];
 
+  const solutionsDropdown = [
+    { name: 'Enterprise Solutions', href: '/enterprise', description: 'Custom solutions for large organizations' },
+    { name: 'Startup Acceleration', href: '/startup-acceleration', description: 'Rapid development and scaling' },
+    { name: 'Digital Transformation', href: '/digital-transformation', description: 'Modernize your business processes' },
+    { name: 'AI Implementation', href: '/ai-implementation', description: 'Strategic AI adoption and integration' },
+  ];
+
   const isActive = (href: string) => router.pathname === href;
 
   return (
@@ -79,270 +63,165 @@ export default function Header() {
           {/* Enhanced Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/25">
-                <span className="text-white font-bold text-xl">Z</span>
+              <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/25">
+                <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10" />
-              {/* Animated border */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const servicesRef = useRef<HTMLDivElement>(null);
-
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development', description: 'Custom AI solutions and ML models' },
-    { name: 'Cloud Architecture', href: '/services/cloud-services', description: 'Scalable cloud infrastructure' },
-    { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence & insights' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain', description: 'Decentralized applications' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms', description: 'Connected device solutions' },
-    { name: 'Web Development', href: '/services/web-development', description: 'Modern web applications' },
-  ];
-
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
-        setIsServicesOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Handle escape key
-  useEffect(() => {
-    const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsServicesOpen(false);
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('keydown', handleEscapeKey);
-    return () => document.removeEventListener('keydown', handleEscapeKey);
-  }, []);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10" role="banner">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" aria-label="Zion Tech Group - Homepage">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            <div className="flex flex-col">
+              <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+                Zion
+              </span>
+              <span className="text-xs text-gray-400 font-medium">Tech Group</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-            <Link 
-              href="/" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
-              aria-label="Home page"
-            >
-              Home
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group" ref={servicesRef}>
-              <button 
-                className="flex items-center text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    setIsServicesOpen(!isServicesOpen);
-                  }
-                }}
-                aria-expanded={isServicesOpen}
-                aria-haspopup="true"
-                aria-label="Services menu"
-              >
-                <span>Services</span>
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-              </button>
-              
-              {isServicesOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-xl py-2 animate-in fade-in-0 zoom-in-95 duration-200"
-                  role="menu"
-                  aria-label="Services submenu"
-                >
-                  {services.map((service, index) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-3 text-white hover:bg-gray-800 transition-colors focus:outline-none focus:bg-gray-800"
-                      role="menuitem"
-                      tabIndex={isServicesOpen ? 0 : -1}
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      <div className="font-medium">{service.name}</div>
-                      <div className="text-sm text-gray-400 mt-1">{service.description}</div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                {item.hasDropdown ? (
+                  <button
+                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    onMouseEnter={() => item.name === 'Product' && setIsProductDropdownOpen(true)}
+                    onMouseLeave={() => item.name === 'Product' && setIsProductDropdownOpen(false)}
+                  >
+                    <span>{item.name}</span>
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`transition-colors duration-200 py-2 ${
+                      isActive(item.href)
+                        ? 'text-white border-b-2 border-blue-500'
+                        : 'text-gray-300 hover:text-white'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
 
-            <Link 
-              href="/about" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
-              aria-label="About us page"
+                {/* Product Dropdown */}
+                {item.name === 'Product' && isProductDropdownOpen && (
+                  <div
+                    className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl shadow-black/50 p-6"
+                    onMouseEnter={() => setIsProductDropdownOpen(true)}
+                    onMouseLeave={() => setIsProductDropdownOpen(false)}
+                  >
+                    <div className="space-y-4">
+                      {productDropdown.map((product) => (
+                        <Link
+                          key={product.name}
+                          href={product.href}
+                          className="block p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                        >
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mt-1">
+                              <Zap className="w-4 h-4 text-blue-400" />
+                            </div>
+                            <div>
+                              <h3 className="text-white font-semibold group-hover:text-blue-300 transition-colors">
+                                {product.name}
+                              </h3>
+                              <p className="text-gray-400 text-sm mt-1">{product.description}</p>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/login"
+              className="text-gray-300 hover:text-white transition-colors duration-200 px-4 py-2"
             >
-              About
+              Sign In
             </Link>
-            <Link 
-              href="/contact" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
-              aria-label="Contact us page"
-            >
-              Contact
-            </Link>
-            
-            {/* CTA Button */}
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
-              aria-label="Get started with your project"
+            <Link
+              href="/signup"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg shadow-blue-500/25"
             >
               Get Started
             </Link>
-          </nav>
+          </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded-md p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={isMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+            className="lg:hidden text-gray-300 hover:text-white transition-colors duration-200"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            )}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav 
-            id="mobile-menu"
-            className="md:hidden bg-gray-900 border-t border-gray-700 py-4 animate-in slide-in-from-top-5 duration-200"
-            role="navigation"
-            aria-label="Mobile navigation"
-          >
-            <div className="flex flex-col space-y-2">
-              <Link 
-                href="/" 
-                className="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label="Home page"
-              >
-                Home
-              </Link>
-              
-              {/* Mobile Services */}
-              <div className="px-4 py-2">
-                <div className="text-white font-medium mb-2">Services</div>
-                <div className="pl-4 space-y-1">
-                  {services.map((service) => (
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-white/20 shadow-2xl">
+            <div className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.hasDropdown ? (
+                    <div>
+                      <button
+                        className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                        onClick={() => setIsProductDropdownOpen(!isProductDropdownOpen)}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                      {isProductDropdownOpen && (
+                        <div className="ml-4 mt-2 space-y-2">
+                          {productDropdown.map((product) => (
+                            <Link
+                              key={product.name}
+                              href={product.href}
+                              className="block text-gray-400 hover:text-white transition-colors duration-200 py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {product.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
                     <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block text-gray-300 hover:text-white hover:bg-gray-800 px-2 py-1 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                      onClick={() => setIsMenuOpen(false)}
+                      href={item.href}
+                      className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {service.name}
+                      {item.name}
                     </Link>
-                  ))}
+                  )}
                 </div>
-              </div>
-              
-              <Link 
-                href="/about" 
-                className="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label="About us page"
-              >
-                About
-              </Link>
-              <Link 
-                href="/contact" 
-                className="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                onClick={() => setIsMenuOpen(false)}
-                aria-label="Contact us page"
-              >
-                Contact
-              </Link>
-              
-              {/* Mobile CTA */}
-              <div className="px-4 pt-2">
-                <Link 
-                  href="/contact" 
-                  className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                  onClick={() => setIsMenuOpen(false)}
-                  aria-label="Get started with your project"
+              ))}
+              <div className="pt-4 border-t border-white/20 space-y-3">
+                <Link
+                  href="/login"
+                  className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  className="block bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Get Started
                 </Link>
               </div>
             </div>
-          </nav>
-        )}
-=======
->>>>>>> origin/content/blog-sept12
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white/80 hover:text-white transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button href="/contact" variant="primary" size="sm">
-              Get Started
-            </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-white/80 hover:text-white transition-colors duration-200">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+        )}
       </div>
     </header>
   );
-};
-
-<<<<<<< HEAD
-export default Header;
-=======
-export default Header;
->>>>>>> origin/content/blog-sept12
+}

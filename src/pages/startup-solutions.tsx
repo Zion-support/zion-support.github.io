@@ -168,7 +168,7 @@ export default function StartupSolutions() {
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
                 Turn your startup idea into reality with our comprehensive technology solutions. 
-                From MVP development to enterprise scaling, we've got you covered.
+                From MVP development to enterprise scaling, we&apos;ve got you covered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
@@ -348,7 +348,7 @@ export default function StartupSolutions() {
               What Our Startup Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what startup founders have to say 
+              Don&apos;t just take our word for it. Here&apos;s what startup founders have to say 
               about working with Zion Tech Group.
             </p>
           </div>
@@ -371,7 +371,7 @@ export default function StartupSolutions() {
                     <p className="text-gray-400 text-sm">{testimonial.role} at {testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4 leading-relaxed">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="flex items-center">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -395,7 +395,7 @@ export default function StartupSolutions() {
               Ready to Launch Your Startup?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's turn your startup idea into reality. Get started with a free consultation 
+              Let&apos;s turn your startup idea into reality. Get started with a free consultation 
               and discover how we can accelerate your journey to success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

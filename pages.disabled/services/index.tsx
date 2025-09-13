@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
-=======
 import React from 'react';
 import SEO from '../../components/SEO';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -29,9 +24,6 @@ import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-<<<<<<< HEAD
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-=======
 import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { realMarketServicesExtended } from '../../data/real-market-services-extended';
@@ -161,8 +153,6 @@ export default function ServicesIndexPage() {
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
       realServicesQ32025 as unknown[],
-<<<<<<< HEAD
-=======
       realQ4Services2025 as unknown[],
       real2025Q4Additions as unknown[],
       real2026Q1Additions as unknown[],
@@ -185,46 +175,13 @@ export default function ServicesIndexPage() {
       real2031AIServicesAdditions as unknown[],
       professionalServices as unknown[],
       real2032ServiceExpansions as unknown[],
-<<<<<<< HEAD
-      real2026Q2VerifiedAdditions as unknown[]
-=======
       realServicesQ42025 as unknown[]
-=======
-      realServicesQ42025 as unknown[]
-=======
-      real2035Q1Additions as unknown[],
-      real2035Q2Additions as unknown[]
->>>>>>> origin/content/blog-sept12
     );
     return acc;
   }, {} as Record<string, Service[]>);
 
 
 
-<<<<<<< HEAD
-
-
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
-      </Head>
-      <div className="relative">
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
-          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((service) => (
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-              ))}
-            </div>
-=======
 
   const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -602,18 +559,6 @@ export default function ServicesIndexPage() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-  );
-}
-
-      <QuoteRequestModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
-      />
-    </div>
-=======
 >>>>>>> origin/content/blog-sept12
   );
 }

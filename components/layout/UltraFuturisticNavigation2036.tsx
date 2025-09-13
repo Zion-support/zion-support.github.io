@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-=======
 import React, { useState, useEffect, useRef, useCallback } from 'react';
->>>>>>> origin/content/blog-sept12
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, ArrowRight,
@@ -12,94 +7,11 @@ import {
   Grid, FileText, Code, Video
 } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-
-// Custom ShoppingBag icon component
-const ShoppingBag = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-  </svg>
-);
-
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-}
-
-function normalizeHref(href: string): string {
-  if (!href) return href;
-  if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
-  }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
-}
-
-const navigationItems: NavigationItem[] = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Complete technology solutions',
-    badge: 'Main',
-    category: 'services',
-    children: [
-      { 
-        name: 'All Services', 
-        href: '/services', 
-        description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Ultimate 2036 Showcase', 
-        href: '/ultimate-2036-futuristic-services-showcase', 
-        description: 'Latest futuristic services',
-        icon: <Sparkles className="w-4 h-4" />,
-        featured: true,
-        badge: 'NEW'
-      },
-      { 
-        name: '2038 Futuristic Services', 
-        href: '/ultimate-2038-futuristic-services-showcase', 
-        description: 'Ultimate 2038 futuristic services showcase',
-        icon: <Sparkles className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: '2025 Innovative Services', 
-        href: '/comprehensive-2025-innovative-services-showcase', 
-        description: 'Cutting-edge innovative services showcase',
-        icon: <Star className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: '2026 Services Showcase', 
-        href: '/ultimate-2026-services-showcase', 
-        description: 'Ultimate showcase of our 2026 services',
-        icon: <Star className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Innovative 2036 Services', 
-        href: '/innovative-2036-services-showcase', 
-        description: 'Revolutionary micro SAAS solutions',
-=======
 import EnhancedSearch from '../EnhancedSearch';
 
         name: '2036 Innovative Services', 
         href: '/2036-innovative-services-showcase', 
         description: 'Cutting-edge 2036 services showcase',
->>>>>>> origin/content/blog-sept12
         icon: <Star className="w-4 h-4" />,
         featured: true
       },
@@ -108,36 +20,22 @@ import EnhancedSearch from '../EnhancedSearch';
         href: '/services?category=ai', 
         description: 'Advanced AI solutions',
         icon: <Play className="w-4 h-4" />
-      },
-      { 
         name: 'Quantum Technology', 
         href: '/services?category=quantum', 
         description: 'Quantum computing solutions',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
         name: 'Space Technology', 
         href: '/space-technology', 
         description: 'Space exploration solutions',
         icon: <Rocket className="w-4 h-4" />
-      },
-      { 
         name: 'IT Solutions', 
         href: '/it-services', 
         description: 'Enterprise IT infrastructure',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
         name: 'Innovative 2025 Services', 
         href: '/innovative-2025-services-showcase', 
         description: 'Cutting-edge 2025 innovations',
-        icon: <Star className="w-4 h-4" />,
         featured: true,
         badge: 'New'
       }
@@ -151,115 +49,72 @@ import EnhancedSearch from '../EnhancedSearch';
     badge: 'Featured',
     category: 'showcase',
     children: [
-      { 
         name: 'Innovative 2027 Services', 
         href: '/innovative-2027-services-showcase', 
         description: 'Cutting-edge 2027 services showcase',
-        icon: <Star className="w-4 h-4" />,
-        featured: true,
         badge: 'NEW'
-      },
-      { 
         name: 'Services Showcase', 
         href: '/comprehensive-services-showcase-2025', 
         description: 'Complete services overview',
         icon: <Calculator className="w-4 h-4" />,
-        featured: true
-      },
-      { 
         name: 'Innovative 2037 Services', 
         href: '/innovative-2037-services-showcase', 
         description: 'Cutting-edge 2037 services',
         icon: <Sparkles className="w-4 h-4" />,
-        featured: true
-      },
-      { 
         name: 'Pricing Plans', 
         href: '/pricing', 
         description: 'Service pricing information',
-        icon: <Play className="w-4 h-4" />
-      },
-      { 
         name: '2026 Pricing', 
         href: '/pricing-2036', 
         description: 'Competitive pricing for 2036',
         icon: <DollarSign className="w-4 h-4" />,
-        featured: true
-      },
-      { 
         name: 'Market Pricing', 
         href: '/market-pricing', 
         description: 'Market price references',
         icon: <Star className="w-4 h-4" />
-      },
-      { 
         name: '2026 Services', 
         href: '/ultimate-2026-services-showcase', 
         description: 'Latest 2026 services',
-        icon: <Star className="w-4 h-4" />
-      },
-      { 
         name: '2035 Futuristic', 
         href: '/ultimate-2035-futuristic-services-showcase', 
         description: 'Future-ready services',
-        icon: <Star className="w-4 h-4" />
-      }
-    ]
-  },
-  {
     name: 'Company',
     href: '/about',
     icon: <Building className="w-5 h-5" />,
     description: 'About Zion Tech Group',
     category: 'company',
-    children: [
-      { 
         name: 'About Us', 
         href: '/about', 
         description: 'Our story and mission',
         icon: <Users className="w-4 h-4" />,
-        featured: true
-      },
       {
         name: 'Leadership',
         href: '/leadership',
         description: 'Meet our team',
-        icon: <Star className="w-4 h-4" />
-      },
-      {
         name: 'Careers',
         href: '/careers',
         description: 'Join our team',
-        icon: <Play className="w-4 h-4" />
-      }
-    ]
   }
 ];
-
 interface UltraFuturisticNavigation2036Props {
   onMenuToggle: () => void;
   'aria-expanded': boolean;
 }
-
 export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expanded': ariaExpanded }: UltraFuturisticNavigation2036Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null></string>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLElement></HTMLElement>(null);
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
         setIsOpen(false);
-      }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [activeDropdown]);
-
   // Handle keyboard navigation
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Escape') {
@@ -267,12 +122,9 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
       setMobileMenuOpen(false);
     }
   }, []);
-
-  useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
-
   // Enhanced dropdown animation variants
   const dropdownVariants = {
     hidden: { 
@@ -287,10 +139,7 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
       transition: {
         duration: 0.2,
         ease: "easeOut" as const
-      }
-    }
   };
-
   return (
     <nav 
       ref={navRef}
@@ -325,7 +174,6 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
               </span>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8"></div>
             {navigationItems.map((item) => (
@@ -359,7 +207,6 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                     />
                   )}
                 </button>
-
                 {/* Desktop Dropdown */}
                 {item.children && (
                   <AnimatePresence></AnimatePresence>
@@ -399,7 +246,6 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                                       {child.description}
                                     </p>
                                   )}
-                                </div>
                                 <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                               </Link>
                             ))}
@@ -409,24 +255,17 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                     )}
                   </AnimatePresence>
                 )}
-              </div>
             ))}
           </div>
-
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4"></div>
             <Link href="/contact"></Link>
               <button className="px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-all duration-200"></button>
                 Contact
               </button>
-            </Link>
             <Link href="/get-started"></Link>
               <button className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"></button>
                 Get Started
-              </button>
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
@@ -438,17 +277,14 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence></AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden overflow-y-auto"
-          ></motion>
             <div className="p-6"></div>
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8"></div>
@@ -456,20 +292,13 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg"></div>
                   <span className="text-white font-bold text-lg">ZionTech Group</span>
                 </div>
-                <button
                   onClick={() =></button> setMobileMenuOpen(false)}
                   className="p-2 text-white hover:text-cyan-400 transition-colors"
                   aria-label="Close mobile menu"
-                >
                   <X className="w-6 h-6" />
-                </button>
-              </div>
-
               {/* Mobile Search */}
               <div className="mb-6"></div>
                 <EnhancedSearch />
-              </div>
-
               {/* Mobile Navigation Items */}
               <div className="space-y-4"></div>
                 {navigationItems.map((item) => (
@@ -490,7 +319,6 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                       </div>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                     </button>
-
                     {/* Mobile Dropdown */}
                     <AnimatePresence></AnimatePresence>
                       {activeDropdown === item.name && (
@@ -514,15 +342,8 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                               )}
                             </Link>
                           ))}
-                        </div>
-                      </div>
                     </motion.div>
-                  )}
                 </AnimatePresence>
-              </div>
-            ))}
-          </div>
-
               {/* Mobile CTA */}
               <div className="mt-8 pt-6 border-t border-white/10"></div>
                 <Link href="/contact" onClick={() =></Link> setMobileMenuOpen(false)}>
@@ -533,25 +354,8 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
                 <Link href="/get-started" onClick={() =></Link> setMobileMenuOpen(false)}>
                   <button className="w-full px-4 py-3 text-sm font-medium bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"></button>
                     Get Started
-                  </button>
-                </Link>
-              </div>
             </div>
-          </motion.div>
         )}
       </AnimatePresence>
     </nav>
   );
-<<<<<<< HEAD
-};
-
-export default UltraFuturisticNavigation2036;
-=======
-=======
-const UltraFuturisticNavigation2036: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticNavigation2036 temporarily disabled</div>;
-};
-
-export default UltraFuturisticNavigation2036;
->>>>>>> origin/content/blog-sept12

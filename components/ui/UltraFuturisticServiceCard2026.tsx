@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const UltraFuturisticServiceCard2026: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticServiceCard2026 temporarily disabled</div>;
-=======
 import React, { useState, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Crown, Building, Rocket } from 'lucide-react';
@@ -21,12 +14,9 @@ interface Service {
   category: string;
   icon?: string;
 }
-
 interface UltraFuturisticServiceCard2026Props {
   service: Service;
   variant?: 'ai' | 'quantum' | 'automation' | 'space' | 'enterprise';
-}
-
 const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Props> = ({
   service,
   variant = 'default',
@@ -34,7 +24,6 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
   onClick
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
   // Get variant-specific styles
   const variantStyles = useMemo(() => {
     if (variant === 'premium') {
@@ -49,16 +38,12 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
     }
     
     if (variant === 'enterprise') {
-      return {
         container: 'border-purple-400/50 bg-gradient-to-br from-purple-900/20 to-pink-900/20',
         icon: <Building className="w-5 h-5 text-purple-400" />,
         badge: 'bg-gradient-to-r from-purple-500 to-pink-600',
         button: 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700',
         text: 'text-purple-50',
         accent: 'bg-purple-400'
-      };
-    }
-    
     // Default variant
     return {
       container: 'border-gray-600/50 bg-gradient-to-br from-gray-800/20 to-gray-700/20',
@@ -69,15 +54,12 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       accent: 'bg-cyan-400'
     };
   }, [variant]);
-
   const handleCardClick = useCallback(() => {
     if (onClick) {
       onClick();
     } else {
       setIsExpanded(!isExpanded);
-    }
   }, [onClick, isExpanded]);
-
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai':
@@ -94,9 +76,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
         return <TrendingUp className="w-5 h-5" />;
       default:
         return <Award className="w-5 h-5" />;
-    }
   };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -123,7 +103,6 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
           </div>
         </motion.div>
       )}
-
       {/* Main Card */}
       <motion.div
         animate={{
@@ -137,8 +116,6 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
         </div>
-      )}
-
         {/* Content */}
         <div className="relative p-6">
           {/* Header */}
@@ -150,27 +127,17 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
               <div>
                 <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
                 <p className="text-sm text-gray-300">{service.tagline}</p>
-              </div>
             </div>
             <div className="flex items-center space-x-1 text-yellow-400">
               {getCategoryIcon(service.category)}
-            </div>
-          </div>
-
           {/* Description */}
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
           {/* Price */}
           <div className="mb-6">
             <div className="flex items-baseline space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">/{service.period}</span>
-            </div>
-          </div>
-        </div>
-
           {/* Features */}
-          <div className="mb-6">
             <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
             <div className="space-y-2">
               {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
@@ -185,7 +152,6 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
                   <span>{feature}</span>
                 </motion.div>
               ))}
-            </div>
             
             {/* Show More/Less */}
             {service.features.length > 3 && (
@@ -197,16 +163,11 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
                 className="mt-3 text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-200 flex items-center space-x-1"
               >
                 <span>{isExpanded ? 'Show Less' : `Show ${service.features.length - 3} More`}</span>
-                <motion.div
                   animate={{ rotate: isExpanded ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
-                >
                   <ArrowRight className="w-3 h-3" />
-                </motion.div>
               </button>
             )}
-          </div>
-
           {/* CTA Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -216,17 +177,12 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
             <span>Get Started</span>
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
           </motion.button>
-        </div>
-
         {/* Hover Effects */}
-        <motion.div
           className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           initial={false}
         />
       </div>
     </motion.div>
   );
->>>>>>> origin/content/blog-sept12
 };
-
 export default UltraFuturisticServiceCard2026;

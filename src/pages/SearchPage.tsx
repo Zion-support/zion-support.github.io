@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { useLocation, useNavigate } from 'react-router-dom';
+// import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
+// import { generateSearchSuggestions } from "@/data/marketplaceData";
+// import { SearchSuggestion } from "@/types/search";
+// import {logErrorToProduction} from '@/utils/productionLogger';
 import { Loader2 } from 'lucide-react';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger
-} from "@/components/ui/tabs";
+} from "../components/ui/tabs";
 
 
 interface SearchResult {
@@ -42,18 +42,20 @@ function highlight(text: string, term: string) {
 }
 
 export default function SearchPage() {
-  const router = useRouter();
-  const initial = (router.query.q as string) || "";
+  const location = useLocation();
+  const navigate = useNavigate();
+  const searchParams = new URLSearchParams(location.search);
+  const initial = searchParams.get('q') || "";
   const [query, setQuery] = useState(initial);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
+  // const suggestions: SearchSuggestion[] = generateSearchSuggestions();
 
   // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
+  useEffect(() => {
     setResults([]);
     setLoading(false);
-  });
+  }, [location.pathname]);
 
   const productResults = results.filter(
     r => r.type === 'product' || r.type === 'service'
@@ -154,7 +156,7 @@ export default function SearchPage() {
           </div>
         )}
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className="text-zion-slate-light">No results found for "{query}".</p>
+          <p className="text-zion-slate-light">No results found for &quot;{query}&quot;.</p>
         )}
         {!loading && marketplaceResults.length > 0 && (
           <Tabs defaultValue="products" className="space-y-4">
