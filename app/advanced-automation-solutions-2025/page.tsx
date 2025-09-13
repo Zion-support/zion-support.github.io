@@ -1,16 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import SEO from '../../../components/SEO';
-=======
 import { Metadata } from 'next';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Advanced Automation Solutions 2025 - Zion Tech Group',
   description: 'Revolutionary automation solutions for 2025. Intelligent process automation, autonomous systems, and AI-powered workflows achieving 5,000% ROI.',
   keywords: 'automation solutions, intelligent process automation, autonomous systems, AI workflows, 2025, business automation',
 };
->>>>>>> origin/feature/revolutionary-ai-2025-content
 
 export default function AdvancedAutomationSolutions2025() {
   return (
@@ -27,7 +24,6 @@ export default function AdvancedAutomationSolutions2025() {
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               🤖 Advanced Automation Solutions 2025
             </h1>
@@ -47,14 +43,7 @@ export default function AdvancedAutomationSolutions2025() {
               >
                 View Automation Success Stories
               </Link>
-=======
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-              Advanced Automation Solutions 2025
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your business with intelligent automation that works 24/7. 
-              Autonomous systems, AI-powered workflows, and intelligent process automation.
-            </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="#automation-solutions" 

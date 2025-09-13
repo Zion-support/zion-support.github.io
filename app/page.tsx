@@ -277,7 +277,7 @@ export default function HomePage() {
         
         {/* AI Tools Showcase */}
         <AIToolsShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-1d24
+        
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
