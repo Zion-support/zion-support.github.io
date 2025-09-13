@@ -489,6 +489,12 @@ import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025Revolu
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner from '../components/AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner';
 
+// New 2026 content showcase components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import InteractiveContentDiscovery2026PromotionBanner from '../components/InteractiveContentDiscovery2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -4266,6 +4272,18 @@ export default function HomePage() {
       <AI2025UltimateBreakthroughRevolutionBanner />
       
       <AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner />
+
+      {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+      <UltimateContentShowcase2026PromotionBanner />
+      
+      {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+      <UltimateContentShowcase2026 />
+      
+      {/* INTERACTIVE CONTENT DISCOVERY 2026 PROMOTION BANNER */}
+      <InteractiveContentDiscovery2026PromotionBanner />
+      
+      {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+      <InteractiveContentDiscovery2026 />
 
       {/* NEW CONTENT PROMOTION BANNER */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
