@@ -45,6 +45,12 @@ import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
+// Import new content showcase components
+import AI2025BreakthroughShowcase from '../components/AI2025BreakthroughShowcase';
+import AI2026_2030FuturePredictionsShowcase from '../components/AI2026_2030FuturePredictionsShowcase';
+import HighROICaseStudiesShowcase from '../components/HighROICaseStudiesShowcase';
+import UltimateContentRevolutionBanner2026 from '../components/UltimateContentRevolutionBanner2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -64,6 +70,18 @@ export default function HomePage() {
         
         {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
         <QuantumNeuralFusion2026PromotionBanner />
+        
+        {/* ULTIMATE CONTENT REVOLUTION BANNER 2026 */}
+        <UltimateContentRevolutionBanner2026 />
+        
+        {/* AI 2025 BREAKTHROUGH SHOWCASE */}
+        <AI2025BreakthroughShowcase />
+        
+        {/* AI 2026-2030 FUTURE PREDICTIONS SHOWCASE */}
+        <AI2026_2030FuturePredictionsShowcase />
+        
+        {/* HIGH ROI CASE STUDIES SHOWCASE */}
+        <HighROICaseStudiesShowcase />
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
