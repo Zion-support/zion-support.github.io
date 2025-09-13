@@ -1,97 +1,97 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Sparkles, Rocket, Target, Award, Zap } from 'lucide-react';
 
 const RevolutionaryTechBanner2025 = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
+    <section className="relative py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* Main headline */}
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-white/20 text-white mb-8">
+            <Sparkles className="w-5 h-5 mr-2" />
+            <span className="font-semibold">Revolutionary Technology 2025</span>
+          </div>
+
+          {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary Tech
-            </span>
-            <br />
-            <span className="text-white">
-              2025
+            The Future of
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Technology is Here
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our groundbreaking AI, quantum computing, 
-            and autonomous systems delivering unprecedented business transformation.
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Experience breakthrough innovations in AI, quantum computing, and automation that are reshaping entire industries and creating unprecedented opportunities.
           </p>
 
-          {/* Key features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Features */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-white mb-2">AI Revolution</h3>
-              <p className="text-gray-300">2,500% ROI improvements with autonomous AI systems</p>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white mb-4">
+                <Rocket className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Lightning Fast</h3>
+              <p className="text-gray-300">10x faster processing with quantum acceleration</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-xl font-bold text-white mb-2">Quantum Supremacy</h3>
-              <p className="text-gray-300">Error-corrected quantum computers transforming industries</p>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white mb-4">
+                <Target className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Precision AI</h3>
+              <p className="text-gray-300">99.9% accuracy in complex decision making</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold text-white mb-2">Neural Interfaces</h3>
-              <p className="text-gray-300">Conscious AI integration for next-gen human-AI collaboration</p>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-teal-500 text-white mb-4">
+                <Award className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Industry Leading</h3>
+              <p className="text-gray-300">Award-winning solutions trusted by Fortune 500</p>
             </div>
           </div>
 
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/ai-automation"
-              className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link 
+              href="/ai-solutions"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-bold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
-              <span className="mr-2">🚀</span>
-              Explore AI Solutions
+              <Zap className="w-6 h-6 mr-3" />
+              Explore Solutions
+              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            <Link
-              href="/content/revolutionary-tech-2025"
-              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+            <Link 
+              href="/demo"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-full font-bold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
             >
-              <span className="mr-2">📚</span>
-              Read Our Research
+              Watch Demo
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">10,000x</div>
-              <div className="text-gray-300">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-400 mb-2">$15B</div>
-              <div className="text-gray-300">ROI Generated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
-              <div className="text-gray-300">Enterprise Clients</div>
+          {/* Trust Indicators */}
+          <div className="mt-16 pt-8 border-t border-white/20">
+            <p className="text-gray-400 mb-6">Trusted by industry leaders</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              <div className="text-2xl font-bold text-white">Microsoft</div>
+              <div className="text-2xl font-bold text-white">Google</div>
+              <div className="text-2xl font-bold text-white">Amazon</div>
+              <div className="text-2xl font-bold text-white">Tesla</div>
+              <div className="text-2xl font-bold text-white">OpenAI</div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Floating elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 border border-blue-400 rounded-full animate-spin opacity-30" style={{ animationDuration: '20s' }}></div>
-      <div className="absolute bottom-10 right-10 w-16 h-16 border border-purple-400 rounded-full animate-spin opacity-30" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
     </section>
   );
 };
