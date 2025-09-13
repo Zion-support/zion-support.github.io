@@ -48,6 +48,7 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
 // Import new promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
@@ -59,19 +60,6 @@ import AnimatedContentShowcase from '../components/AnimatedContentShowcase';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
-// New 2030+ breakthrough components
-import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
-import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
-import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
-
-// AI 2026 new content components
-import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-
-// Import new breakthrough promotional components
-import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
-import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
-
 // Import new quantum consciousness and neural interface banners
 import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
 import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
@@ -81,10 +69,20 @@ import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromo
 // Import new promotional banners for 2025-2026
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
-import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 // Import new AI 2025 and 2026 breakthrough banners
 import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
 import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
+
+// New 2030+ breakthrough components
+import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
+import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
+import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
+
+// AI 2026 new content components
+import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
+
+// Import new AI 2025 content showcase banner
+import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
 
 export default function HomePage() {
   return (
@@ -97,8 +95,16 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
+=======
+        {/* NEW AI 2025 CONTENT SHOWCASE BANNER */}
+        <AI2025ContentShowcaseBanner />
+        
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-07dc
         
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
