@@ -1,41 +1,10 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function() {
+  const { execSync } = require('child_process');
   try {
-    console.log('ai-trends-radar-runner function triggered');
-    
-    // AI trends radar simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'AI trends radar runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ai-trends-radar-runner',
-        source: event.source || 'unknown',
-        trends: {
-          status: 'scanning',
-          patterns: 0,
-          lastScan: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in ai-trends-radar-runner:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ai-trends-radar-runner'
-      })
-    };
+    execSync('node scripts/ai-trends-radar.js', { stdio: 'inherit' });
+    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(ai): refresh AI trends radar [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
+    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'ai-trends-radar-runner' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
 };

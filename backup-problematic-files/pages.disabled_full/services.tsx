@@ -1,4 +1,43 @@
 
+import React from 'react';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award,
+  Mail,
+  Calendar,
+  Settings,
+  Eye,
+  MessageSquare,
+  Palette,
+  Bot,
+  Cpu,
+  Link2,
+  Wifi,
+  HardDrive,
+  Monitor,
+  Activity,
+  Terminal,
+  CreditCard,
+  Smartphone
+} from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
 export default function Services() {;
 	const title = 'Services — Zion Tech Group';
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
@@ -27,7 +66,10 @@ export default function Services() {;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
 					<div className='grid gap-6 lg:grid-cols-2'>;
 						{/* AI Autonomous Systems */}
-
+						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300'>;
+							<div className='flex items-center gap-x-3 mb-6'>;
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors'>;
+									<Brain className='h-7 w-7 text-white' />;
 								</div>;
 								<div>;
 									<h2 className='text-xl font-semibold text-gray-900'>AI Autonomous Systems</h2>;
@@ -54,7 +96,10 @@ export default function Services() {;
 									<CheckCircle className='h-4 w-4 text-blue-600' />;
 									<span className='text-sm text-gray-700'>Intelligent process automation</span>;
 								</li>;
-
+							</ul>;
+							<div className='flex items-center justify-between'>;
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>;
+									<Clock className='h-4 w-4' />;
 									<span>2-4 weeks delivery</span>;
 								</div>;
 								<Link
@@ -224,6 +269,10 @@ export default function Services() {;
 							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>;
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 								<div>;
+									<p className='text-blue-800 text-sm mb-2'>Contact us for a free consultation:</p>;
+									<div className='space-y-1 text-sm'>;
+										<p className='text-blue-700'><strong>Phone:</strong> <a href='tel:+13024640950' className='hover:underline'>+1 302 464 0950</a></p>;
+										<p className='text-blue-700'><strong>Email:</strong> <a href='mailto:kleber@ziontechgroup && ziontechgroup.com' className='hover:underline'>kleber@ziontechgroup && ziontechgroup.com</a></p>;
 									</div>;
 								</div>;
 								<div>;
@@ -232,8 +281,10 @@ export default function Services() {;
 								</div>;
 							</div>;
 						</div>;
-
-
+						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>;
+							<div className='bg-blue-50 p-4 rounded-lg'>;
+								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>;
+								<p className='text-blue-700'>Advanced AI solutions from computer vision to generative content creation</p>;
 							</div>;
 							<div className='bg-green-50 p-4 rounded-lg'>;
 								<h3 className='font-semibold text-green-900 mb-2'>IT Infrastructure</h3>;
@@ -1455,4 +1506,3 @@ export default function Services() {;
 		</Layout>
 	);
 }
-

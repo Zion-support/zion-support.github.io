@@ -1,5 +1,0 @@
-
-
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes

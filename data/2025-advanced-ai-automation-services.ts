@@ -19,19 +19,15 @@ export interface AdvancedAIAutomationService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
-  contactInfo: {
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
   {
@@ -59,30 +55,12 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     marketSize: '$8.2B AI development tools market', growthRate: '25% annual growth',
     variant: 'ai-code-enterprise',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-    real_implementation: true,
-    implementation_details: 'AI - powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';
-    launch_date: '2024 - 10 - 01';
-    customers: 89;
-    rating: 4.8,
-    reviews: 38;
-
-];
-;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    }
-];
-;
-  }
-];
-  }
 ;
     realImplementation: true
     implementationDetails:
@@ -268,11 +246,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     }
     realImplementation: true
     implementationDetails:
-      'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 38
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
     launchDate: '2024-10-01',
     customers: 89,
@@ -291,8 +264,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.8
 
     reviews: 38
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -557,4 +528,3 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 38;
   }
 ];
-;

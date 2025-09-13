@@ -1,7 +1,8 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const CloudNativeArchitectureBestPracticesChat = () => {
+
+const CloudNativeArchitectureBestPracticesChat: NextPage = () => {
   return (
     <div>
       <Head>
@@ -12,10 +13,10 @@ const CloudNativeArchitectureBestPracticesChat = () => {
       <main>
         <h1>CloudNativeArchitectureBestPracticesChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  )
-},
+  );
+};
 
-export default CloudNativeArchitectureBestPracticesChat,
+export default CloudNativeArchitectureBestPracticesChat;

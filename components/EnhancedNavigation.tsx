@@ -1,0 +1,365 @@
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Star, Zap, BookOpen, 
+  FileText, Award, TrendingUp, Download
+} from 'lucide-react';
+
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigationItems = [
+    {
+      label: 'Home',
+      href: '/',
+      icon: '🏠'
+    },
+    {
+      label: 'Services',
+      href: '/services',
+      icon: '🚀',
+      dropdown: [
+        { label: 'AI Services', href: '/services/ai-services', isNew: true },
+        { label: 'Micro SaaS', href: '/services/micro-saas' },
+        { label: 'Edge Computing', href: '/services/edge-computing' },
+        { label: 'IT Services', href: '/services/it-services' }
+      ]
+    },
+    {
+      label: 'Content',
+      href: '/ai-2025-content-hub',
+      icon: '📚',
+      isNew: true,
+      badge: 'Revolutionary 2025',
+      dropdown: [
+        { label: 'Content Hub', href: '/ai-2025-content-hub', isNew: true, isHot: true },
+        { label: 'AI 2025-2030 Predictions', href: '/ai-2025-2030-predictions', isNew: true, isHot: true },
+        { label: 'Quantum Computing 2025', href: '/quantum-computing-2025', isNew: true, isHot: true },
+        { label: 'Automation Solutions 2025', href: '/automation-solutions-2025', isNew: true, isHot: true },
+        { label: 'AI Innovation Hub 2026', href: '/ai-innovation-hub-2026', isNew: true, isHot: true },
+        { label: 'Technology Showcase 2026', href: '/revolutionary-technology-showcase-2026', isNew: true, isHot: true },
+        { label: 'AI Mastery Academy 2026', href: '/ai-mastery-academy-2026', isNew: true, isHot: true },
+        { label: 'Revolutionary Resources 2026', href: '/revolutionary-resources-2026', isNew: true, isHot: true },
+        { label: 'All Content', href: '/content-showcase', isNew: true },
+        { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
+        { label: 'Autonomous Business Systems', href: '/case-studies/autonomous-business-systems-2025', isNew: true, isHot: true },
+        { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
+        { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
+        { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
+        { label: 'Future Technologies 2030-2035 Showcase', href: '/future-technologies-2030-2035-showcase', isNew: true, isHot: true },
+        { label: 'AI Innovation Hub 2025', href: '/ai-innovation-hub-2025', isNew: true, isHot: true },
+        { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
+        { label: 'Enterprise Implementation Mastery', href: '/resources/ai-2025-enterprise-implementation-mastery', isNew: true, isHot: true },
+        { label: 'AI Automation Implementation Toolkit', href: '/resources/ai-automation-implementation-toolkit-2025', isNew: true, isHot: true },
+        { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
+        { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
+        { label: 'Blog Articles', href: '/blog', isNew: true },
+        { label: 'Case Studies', href: '/case-studies', isNew: true },
+        { label: 'Resources', href: '/resources', isNew: true },
+        { label: 'Tools', href: '/tools' }
+      ]
+    },
+    {
+      label: 'About',
+      href: '/about',
+      icon: '👥'
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
+      icon: '📞'
+    }
+  ];
+
+  const featuredContent = [
+    {
+      title: "AI 2025 Ultimate Automation Platform",
+      description: "Revolutionary platform for autonomous business operations",
+      href: "/ai-2025-ultimate-automation-platform",
+      icon: "🚀",
+      isNew: true
+    },
+    {
+      title: "Future Technologies 2030-2035 Showcase",
+      description: "Revolutionary AI breakthroughs and singularity achievements",
+      href: "/future-technologies-2030-2035-showcase",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "AI Innovation Hub 2025",
+      description: "Ultimate destination for revolutionary AI breakthroughs",
+      href: "/ai-innovation-hub-2025",
+      icon: "🚀",
+      isNew: true
+    },
+    {
+      title: "AI 2025-2030 Predictions",
+      description: "Complete roadmap of revolutionary AI breakthroughs",
+      href: "/ai-2025-2030-predictions",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "Quantum Computing 2025",
+      description: "Revolutionary quantum technologies and breakthroughs",
+      href: "/quantum-computing-2025",
+      icon: "⚛️",
+      isNew: true
+    },
+    {
+      title: "Automation Solutions 2025",
+      description: "Advanced automation with 2,500%+ ROI",
+      href: "/automation-solutions-2025",
+      icon: "🤖",
+      isNew: true
+    },
+    {
+      title: "AI Implementation Mastery Guide 2026",
+      description: "Complete roadmap to 15,000x performance improvements",
+      href: "/resources/ai-implementation-mastery-2026",
+      icon: "📚",
+      isNew: true
+    },
+    {
+      title: "Enterprise Implementation Mastery",
+      description: "Complete guide to successful AI implementation in enterprise environments",
+      href: "/resources/ai-2025-enterprise-implementation-mastery",
+      icon: "🏢",
+      isNew: true
+    },
+    {
+      title: "AI Automation Implementation Toolkit",
+      description: "Everything you need to implement AI automation successfully",
+      href: "/resources/ai-automation-implementation-toolkit-2025",
+      icon: "🛠️",
+      isNew: true
+    },
+    {
+      title: "Quantum-AI Breakthrough Case Study",
+      description: "Fortune 500 company achieves $2.3B in savings",
+      href: "/case-studies/quantum-ai-breakthrough-enterprise-transformation",
+      icon: "💼",
+      isNew: true
+    },
+    {
+      title: "AI ROI Calculator 2026",
+      description: "Calculate your AI investment returns",
+      href: "/tools/ai-roi-calculator-2026",
+      icon: "📊",
+      isNew: true
+    },
+    {
+      title: "AI Innovation Hub 2026",
+      description: "Revolutionary AI breakthroughs and innovations",
+      href: "/ai-innovation-hub-2026",
+      icon: "🚀",
+      isNew: true
+    }
+  ];
+
+  return (
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.label} className="relative group">
+                <Link
+                  href={item.href}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  onMouseEnter={() => setActiveDropdown(item.label)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.label}</span>
+                  {item.isNew && (
+                    <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full ml-1">
+                      NEW
+                    </span>
+                  )}
+                  {item.badge && (
+                    <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full ml-1">
+                      {item.badge}
+                    </span>
+                  )}
+                  {item.dropdown && (
+                    <ChevronDown className="w-4 h-4" />
+                  )}
+                </Link>
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                        onMouseEnter={() => setActiveDropdown(item.label)}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                      >
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.label}
+                            href={dropdownItem.href}
+                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                          >
+                            <div className="flex items-center space-x-2">
+                              <span>{dropdownItem.label}</span>
+                              {dropdownItem.isNew && (
+                                <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                                  NEW
+                                </span>
+                              )}
+                            </div>
+                            {dropdownItem.isNew && (
+                              <Star className="w-4 h-4 text-yellow-500" />
+                            )}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href="/mega-content-showcase"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <span className="flex items-center space-x-2">
+                <span>🔥 New Content</span>
+                <TrendingUp className="w-4 h-4" />
+              </span>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden border-t border-gray-200"
+            >
+              <div className="py-4 space-y-2">
+                {navigationItems.map((item) => (
+                  <div key={item.label}>
+                    <Link
+                      href={item.href}
+                      className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors rounded-lg"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="flex items-center space-x-2">
+                        <span>{item.icon}</span>
+                        <span>{item.label}</span>
+                        {item.isNew && (
+                          <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                            NEW
+                          </span>
+                        )}
+                        {item.badge && (
+                          <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      {item.dropdown && (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </Link>
+                    
+                    {/* Mobile Dropdown */}
+                    {item.dropdown && (
+                      <div className="ml-4 space-y-1">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.label}
+                            href={dropdownItem.href}
+                            className="flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors rounded-lg"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <span>{dropdownItem.label}</span>
+                            {dropdownItem.isNew && (
+                              <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                                NEW
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+                
+                {/* Mobile CTA */}
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/mega-content-showcase"
+                    className="flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>🔥 New Content</span>
+                    <TrendingUp className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Featured Content Banner */}
+      <div className="bg-gradient-to-r from-green-50 to-blue-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Zap className="w-4 h-4 text-green-600" />
+              <span className="text-sm font-medium text-gray-900">
+                🔥 Revolutionary Content: AI 2025-2030 Predictions, Quantum Computing & Automation Solutions!
+              </span>
+            </div>
+            <Link
+              href="/mega-content-showcase"
+              className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center space-x-1"
+            >
+              <span>Explore Now</span>
+              <ChevronDown className="w-3 h-3 rotate-[-90deg]" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default EnhancedNavigation;

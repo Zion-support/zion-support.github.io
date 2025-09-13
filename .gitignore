@@ -1,14 +1,20 @@
 .next
 node_modules
 .DS_Store
-.env
-.env.local
-.env.*.local
+.env*
+.next/
+tsconfig.tsbuildinfo
+dist/
+out/
 
-tsconfig.tsbuildinfo
-core
-
-# ignore build artifacts and crash dumps
-tsconfig.tsbuildinfo
-core
-tsconfig.tsbuildinfo
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
+<<<<<<< HEAD
+dist/
+.next/
+yarn.lock
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738

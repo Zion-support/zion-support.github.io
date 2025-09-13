@@ -1,14 +1,69 @@
-import { useState,useEffect } from \'react\'; export default function ThemeToggle(): any { const [isDark,setIsDark] = useState(true); useEffect(() => { if (typeof window !== \'undefined\') { const savedTheme = localStorage.getItem(\'theme\'); if (savedTheme) { setIsDark(savedTheme === \'dark\')} },[]); useEffect(() => { if (typeof window !== \'undefined\') { if (isDark) { document.documentElement.classList.add(\'dark\'); localStorage.setItem(\'theme\',\'dark\')} else { document.documentElement.classList.remove(\'dark\'); localStorage.setItem(\'theme\',\'light\')} },[isDark]); const toggleTheme = () => {; setIsDark(!isDark)}; return ( <button onClick={toggleTheme} className=\"p-2 rounded-lg bg-slate-800/50 hover: bg-slate-700/50 transition-colors\",aria-label={isDark ? \'Switch to light mode\' : \'Switch to dark mode\'} > {isDark ? ( <svg className=\"h-5 w-5 text-yellow-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z\" /> </svg> ) : ( <svg className=\"h-5 w-5 text-slate-300\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"> <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z\" /> </svg> )} </button> )}
-const { useState,useEffect } from "react"; export default function ThemeToggle(): any { const [isDark,setIsDark] = useState(true); useEffect(() => { if (typeof window !== "undefined") { const savedTheme = localStorage.getItem("theme"); if (savedTheme) { setIsDark(savedTheme === "dark")} },[]); useEffect(() => { if (typeof window !== "undefined") { if (isDark) { document.documentElement.classList.add("dark"); localStorage.setItem("theme","dark")} else { document.documentElement.classList.remove("dark"); localStorage.setItem("theme","light")} },[isDark]); const toggleTheme = () => {; setIsDark(!isDark)}; return ( <button onClick={toggleTheme} className="p-2 rounded-lg bg-slate-800/50 hover: bg-slate-700/50 transition-colors",aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"} > {isDark ? ( <svg className="h-5 w-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /> </svg> ) : ( <svg className="h-5 w-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /> </svg> )} </button> )}'"'"
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Sun, Moon, Monitor } from 'lucide-react';
+
 interface ThemeToggleProps {
-  // Add props here as needed
+  currentTheme: 'dark' | 'light';
+  onThemeChange: (theme: 'dark' | 'light') => void;
 }
-export default function ThemeToggle({ }: ThemeToggleProps) {
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
+  const themes = [
+    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
+    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
+  ] as const;
+
   return (
-    <div>
-      <h1>ThemeToggle</h1>
-      <p>This component is currently under development.</p>
+    <div className="fixed top-32 right-6 z-50">
+      <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
+        <div className="flex flex-col gap-2">
+          {themes.map((theme) => {
+            const Icon = theme.icon;
+            const isActive = currentTheme === theme.id;
+            
+            return (
+              <motion.button
+                key={theme.id}
+                onClick={() => onThemeChange(theme.id)}
+                className={`relative p-3 rounded-xl transition-all duration-300 ${
+                  isActive 
+                    ? 'bg-gradient-to-br ' + theme.color + ' text-white shadow-lg' 
+                    : 'text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                title={theme.label}
+                aria-label={`Switch to ${theme.label}`}
+              >
+                <Icon className="w-5 h-5" />
+                
+                {/* Active indicator */}
+                {isActive && (
+                  <motion.div
+                    className="absolute inset-0 rounded-xl border-2 border-white/30"
+                    layoutId="activeTheme"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+              </motion.button>
+            );
+          })}
+        </div>
+      </div>
+      
+      {/* Theme indicator */}
+      <motion.div
+        className="mt-3 text-center"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <span className="text-xs text-gray-400 font-medium">
+          {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
+        </span>
+      </motion.div>
     </div>
   );
-}
+};
+
+export default ThemeToggle;

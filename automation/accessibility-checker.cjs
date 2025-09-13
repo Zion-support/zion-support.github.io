@@ -1,132 +1,66 @@
-        
-      }
-    }},
-  {
-    "name": Keyboard Navigation Check,
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs;
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let interactiveElements = 0;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          const buttons = (content.match(/<button[^>]*>/g) || []).length;
-</button>
-          const links = (content.match(/<a[^>]*>/g) || []).length;
-</a>
-          const inputs = (content.match(/<input[^>]*>/g) || []).length;
-          interactiveElements += buttons + links + inputs;
-        });
+class AccessibilityChecker {
+  constructor() {
+    this.logsDir = path.join(__dirname, '../logs');
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
 
-        
-      }
-    }},
-  {
-    "name": 'ARIA Labels Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let ariaElements = 0;
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const line = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(line);
+    fs.appendFileSync(
+      path.join(this.logsDir, 'accessibility-checker.log'),
+      line + '\n'
+    );
+  }
 
-        pages.forEach(page => {
-          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
-        });
+  run(command, description) {
+    try {
+      this.log(`Running: ${description}`);
+      execSync(command, { stdio: 'pipe', encoding: 'utf8' });
+      this.log(`Done: ${description}`);
+      return { success: true };
+    } catch (e) {
+      this.log(`Failed: ${description} -> ${e.message}`, 'error');
+      return { success: false, error: e.message };
+    }
+  }
 
-        
-      }
-    }},
-  {
-    "name": 'Focus Management Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let focusElements = 0;
+  async runAll() {
+    const results = [];
+    // Best-effort checks; tolerate missing scripts
+    results.push(
+      this.run('npm run -s test:accessibility', 'Accessibility tests')
+    );
+    results.push(this.run('npm run -s lint', 'ESLint (includes a11y rules)'));
+    return results;
+  }
 
-        pages.forEach(page => {
-          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
-            .length;
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'Screen Reader Support Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let srElements = 0;
-
-        pages.forEach(page => {
-          srElements += (
-            content.match(/role=|aria-label=|aria-describedby=/g) || []
-          ).length;
-        });
-
-        
-      }
-    }},
-];
-
-// Run accessibility checks
-let successCount = 0;
-let totalCount = a11yChecks.length;
-
-for (const check of a11yChecks) {
-  try {
-    
-    check.action();
-    
-    successCount++;
-  } catch (error) {
-    
+  writeReport(results) {
+    const summary = {
+      checksRun: results.length,
+      successfulChecks: results.filter(r => r.success).length,
+      failedChecks: results.filter(r => !r.success).length,
+    };
+    const report = { timestamp: new Date().toISOString(), results, summary };
+    const out = path.join(
+      this.logsDir,
+      `accessibility-report-${Date.now()}.json`
+    );
+    fs.writeFileSync(out, JSON.stringify(report, null, 2));
+    this.log(`Report saved: ${out}`);
   }
 }
 
-
-
-
-// Generate accessibility report
-  "timestamp": new Date().toISOString(),
-  "checks": a11yChecks.map(check => ({
-    name: check.name,
-    "status": 'completed'})),
-  "summary": {
-    total: totalCount,
-    "successful": successCount,
-    "failed": totalCount - successCount}};
-
-const reportsDir = path.join(process.cwd(), 'automation-reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });
-}
-
-const reportFile = path.join(
-  reportsDir,
-  `accessibility-report-${Date.now()}.json`
-);
-fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-console.log('♿ Accessibility Checker Starting...\n')
-    "name"
-    "name"
-    "name"
-    "name"
-    "name"
-    "status"
+(async () => {
+  const checker = new AccessibilityChecker();
+  const results = await checker.runAll();
+  checker.writeReport(results);
+})();

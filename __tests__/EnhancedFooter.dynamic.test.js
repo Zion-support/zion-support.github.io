@@ -1,8 +1,0 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import @testing-library/jest-dom';
-import EnhancedFooterdynamic from "../components/EnhancedFooter.dynamic";
-
-    render(<EnhancedFooterdynamic />);
-    expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()})';
-    render(<EnhancedFooterdynamic />);
-    // Add styling tests if needed})});

@@ -1,0 +1,10 @@
+.next
+node_modules
+.DS_Store
+.env*
+.next/
+tsconfig.tsbuildinfo
+<<<<<<< HEAD
+=======
+dist/
+>>>>>>> origin/backup-critical-fixes-20250824-224408

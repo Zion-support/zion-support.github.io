@@ -1,35 +1,45 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useCallback } from 'react';
 
-const defaultConfig = {
-	companyName: 'Zion Tech Group',
-	logo: '/logo.svg',
-	primaryColor: '#1e40af',
-	secondaryColor: '#7c3aed',
-	domain: 'https://ziontechgroup.com',
-	isWhitelabel: false,
-	contactInfo: {
-		phone: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-	},
+interface WhitelabelContextType {
+  isWhitelabel: boolean;
+  brandName: string;
+  brandLogo: string;
+  primaryColor: string;
+}
+
+const defaultWhitelabelContext: WhitelabelContextType = {
+  isWhitelabel: false,
+  brandName: 'Zion Tech Group',
+  brandLogo: '/logo.png',
+  primaryColor: '#3B82F6'
 };
 
-const WhitelabelContext = createContext(defaultConfig);
-export const useWhitelabel = () => useContext(WhitelabelContext);
+const WhitelabelContext = createContext<WhitelabelContextType>(defaultWhitelabelContext);
 
-export function WhitelabelProvider({ children, config = {} }) {
-	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } };
-	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
+export const useWhitelabel = () => {
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
+};
+
+interface WhitelabelProviderProps {
+  children: ReactNode;
+  value?: Partial<WhitelabelContextType>;
 }
 
 export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
   children, 
-  config = {} 
+  value = {} 
 }) => {
-  const mergedConfig = { ...defaultConfig, ...config };
+  const contextValue = {
+    ...defaultWhitelabelContext,
+    ...value
+  };
 
   return (
-    <WhitelabelContext.Provider value={mergedConfig}>
+    <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
   );

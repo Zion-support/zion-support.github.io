@@ -1,4 +1,0 @@
-});
-    expect(input).toBeInTheDocument();
-  });
-});

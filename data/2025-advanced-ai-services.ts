@@ -6,32 +6,6 @@ export const advancedAIServices2025 = [
   {
 
 
-export const advancedAIServices2025 = [
-      'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
-      'Natural language query processing'
-      'AI-powered data visualization'
-      'Predictive analytics and forecasting'
-      'Automated report generation'
-      'Real-time data monitoring'
-      'Integration with 100+ data sources'
-      'Custom AI model training'
-      'Advanced security and compliance'
-    ]
-export const advancedAIServices2025 = [;
-  {
-    id: 'ai - powered - business - intelligence - suite',
-    name: 'BusinessIntelligence AI Pro',
-    description:;
-      'Advanced AI - powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
-      'Natural language query processing',
-      'AI - powered data visualization',
-      'Predictive analytics and forecasting',
-      'Automated report generation',
-      'Real - time data monitoring',
-      'Integration with 100+ data sources',
-      'Custom AI model training',
-      'Advanced security and compliance',
-    ],
     pricing: {
       starter: {
         price: 199
@@ -77,25 +51,58 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration',
   },
-    targetAudience:
-      'Business analysts, data scientists, executives, enterprise businesses'
-    competitiveAdvantage:
-      'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration'
-  }
   {
-    id: 'intelligent-customer-analytics-platform'
-    name: 'CustomerAnalytics AI'
-    description:
-      'AI-powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.'
-    features: [
-      'Customer behavior prediction'
-      'Personalization engine'
-      'Churn risk analysis'
-      'Customer segmentation'
-      'Real-time analytics'
-      'Integration with CRM systems'
-      'Advanced reporting and dashboards'
-      'Custom AI model training'
+    id: 'intelligent - customer - analytics - platform',
+    name: 'CustomerAnalytics AI',
+    description:;
+      'AI - powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.',
+    features: [;
+      'Customer behavior prediction',
+      'Personalization engine',
+      'Churn risk analysis',
+      'Customer segmentation',
+      'Real - time analytics',
+      'Integration with CRM systems',
+      'Advanced reporting and dashboards',
+      'Custom AI model training',
+    ],
+    pricing: {
+      starter: {
+        price: 149,
+        period: 'month',
+        features: [;
+          'Up to 10, 000 customers',
+          'Basic analytics',
+          'Standard reports',
+        ],
+      },
+      professional: {
+        price: 399,
+        period: 'month',
+        features: [;
+          'Up to 100, 000 customers',
+          'Advanced AI',
+          'Custom models',
+          'Real - time insights',
+        ],
+      },
+      enterprise: {
+        price: 999,
+        period: 'month',
+        features: [;
+
+          'Unlimited customers',
+          'Custom AI training',
+          'White - label solution',
+          'Dedicated support',
+        ],
+      },
+    },
+    category: 'Customer Analytics',
+    tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
+
+    website: 'https://ziontechgroup.com / customer - analytics - ai',
+
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -165,6 +172,13 @@ export const advancedAIServices2025 = [;
     },
 
       'Advanced AI fraud detection with 99 && 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
+    market_size: '$12.4B',
+    target_audience:;
+      'Banks, financial institutions, insurance companies, fintech startups',
+    competitive_advantage:;
+      'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
+
+  },
   {
 
     id: 'intelligent - supply - chain - optimization',
@@ -603,51 +617,10 @@ export const advancedAIServices2025 = [;
     website: 'https://ziontechgroup.com / cybersecurity - ai',
 
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-
-
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },;
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$173.5B'
-
-      'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-
-    };
-    marketSize: '$173 && 173.5B',
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
-
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    targetAudience:
-      'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
-    competitiveAdvantage:
-    };
-    marketSize: '$173 && 173.5B',
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
-
-
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
 
 
-    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
     market_size: '$173.5B',
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
@@ -868,17 +841,13 @@ export const advancedAIServices2025 = [;
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-    }
-    market_size: '$173.5B',
-    target_audience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitive_advantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
+
+
+
   }
 ];
 ;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
-
 export const advancedAIServices2025 = [;
   {;
     id: 'ai-powered-business-intelligence-suite',;

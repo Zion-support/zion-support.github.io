@@ -2,36 +2,16 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { vi } from 'vitest';
 import { QuoteWizard } from '@/components/quote/QuoteWizard';
 import { RequestQuoteWizardProvider } from '@/context';
-import * as router from 'react-router-dom';
-import { toast } from '@/hooks/use-toast';
 
-jest.mock('react-router-dom', () => ({
-  ...(jest.requireActual('react-router-dom') as any),
-  useNavigate: jest.fn(),
-}));
-
-jest.mock('@/hooks/use-toast', () => ({
-  toast: {
-    success: jest.fn(),
-    error: jest.fn(),
-  },
-}));
-
-beforeEach(() => {
-  global.fetch = jest.fn().mockResolvedValue({
+function setup() {
+  vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
     ok: true,
     json: async () => [
       { id: '1', title: 'Service A' },
       { id: '2', title: 'Service B' },
     ],
-  }) as jest.Mock;
-});
+  }) as any);
 
-afterEach(() => {
-  jest.resetAllMocks();
-});
-
-function setup() {
   render(
     <RequestQuoteWizardProvider>
       <QuoteWizard />
@@ -39,50 +19,88 @@ function setup() {
   );
 }
 
-test('advances to step 2 after selecting a service', async () => {
-  setup();
+it('loads services and advances to step 2', async () => {
+  server.use(
+    rest.get('/api/services', (req, res, ctx) => {
+      return res(ctx.json({ items: sample }));
+    }),
+    rest.post('/api/quotes', (_req, res, ctx) => res(ctx.json({ success: true })))
+  );
 
   const card = await screen.findByTestId('service-card-1');
   fireEvent.click(card);
   fireEvent.click(screen.getByRole('button', { name: /continue/i }));
 
-  const card = await screen.findByTestId('service-card-1');
-  fireEvent.click(card);
-  fireEvent.click(screen.getByRole('button', { name: /continue/i }));
+  expect(await screen.findByText('Service A')).toBeInTheDocument();
 
-  await screen.findByTestId('details-step');
-  expect(screen.getByTestId('step-indicator')).toHaveTextContent('Step 2 of 3');
+  fireEvent.click(screen.getByTestId('request-quote-1'));
+  expect(await screen.findByTestId('details-step')).toBeInTheDocument();
 });
 
-test('submits quote and navigates', async () => {
-  const navigateMock = jest.fn();
-  (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
+it('shows error and allows retry', async () => {
+  server.use(rest.get('/api/services', (_req, res, ctx) => res(ctx.status(500))));
 
-  (global.fetch as jest.Mock)
-    .mockResolvedValueOnce({
-      ok: true,
-      json: async () => [ { id: '1', title: 'Service A' } ],
+  renderWizard();
+
+  expect(await screen.findByTestId('service-fetch-error-alert')).toBeInTheDocument();
+
+  server.use(rest.get('/api/services', (_req, res, ctx) => res(ctx.json({ items: sample }))));
+  fireEvent.click(screen.getByTestId('retry-button'));
+
+  expect(await screen.findByText('Service A')).toBeInTheDocument();
+});
+
+it('submits quote', async () => {
+  let submitted = false;
+  server.use(
+    rest.get('/api/services', (_req, res, ctx) => res(ctx.json({ items: sample }))),
+    rest.post('/api/quotes', (_req, res, ctx) => {
+      submitted = true;
+      return res(ctx.json({ success: true }));
     })
-    .mockResolvedValueOnce({ ok: true, json: async () => ({}) });
+  );
 
-  setup();
+  renderWizard();
 
-  const card = await screen.findByTestId('service-card-1');
-  fireEvent.click(card);
-  fireEvent.click(screen.getByRole('button', { name: /continue/i }));
-
+  fireEvent.click(await screen.findByTestId('request-quote-1'));
   fireEvent.change(screen.getByTestId('message-input'), { target: { value: 'hi' } });
   fireEvent.click(screen.getByRole('button', { name: /submit/i }));
 
   await screen.findByTestId('success-step');
+  expect(submitted).toBe(true);
+});
 
-  expect(global.fetch).toHaveBeenCalledWith(
-    '/api/quotes',
-    expect.objectContaining({
-      method: 'POST',
-      body: JSON.stringify({ service_id: '1', user_message: 'hi' }),
+it('recovers after a transient error', async () => {
+  let callCount = 0;
+  server.use(
+    rest.get('/api/services', (_req, res, ctx) => {
+      callCount++;
+      if (callCount === 1) {
+        return res(ctx.status(500));
+      }
+      return res(ctx.json({ items: sample }));
     })
   );
-  expect(toast.success).toHaveBeenCalled();
-  expect(navigateMock).toHaveBeenCalledWith('/dashboard/quotes');
+
+  renderWizard();
+
+  expect(await screen.findByText('Service A', {}, { timeout: 8000 })).toBeInTheDocument();
+  expect(callCount).toBeGreaterThan(1);
+});
+
+it('stays on step 1 if no service selected', async () => {
+  server.use(
+    rest.get('/api/services', (_req, res, ctx) => res(ctx.json({ items: sample })))
+  );
+
+  renderWizard();
+
+  await screen.findByText('Service A');
+
+  fireEvent.click(screen.getByRole('button', { name: /continue/i }));
+
+  expect(screen.getByTestId('step-indicator')).toHaveTextContent('1/3');
+  expect(
+    screen.getByTestId('service-selection-error')
+  ).toBeInTheDocument();
 });

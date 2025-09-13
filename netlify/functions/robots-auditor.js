@@ -1,42 +1,29 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('robots-auditor function triggered');
-    
-    // Robots auditing simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Robots auditor executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'robots-auditor',
-        source: event.source || 'unknown',
-        audit: {
-          status: 'active',
-          robotsFiles: 0,
-          issuesFound: 0,
-          lastAudit: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in robots-auditor:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'robots-auditor'
-      })
-    };
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.config = {
+  schedule: '0 */6 * * *',
+};
+
+exports.handler = async () => {
+  const logs = [];
+  function step(name, rel, args = []) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = runNode(rel, args);
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
   }
+
+  step('robots:audit', 'automation/robots-auditor.cjs');
+  step('git:sync', 'automation/advanced-git-sync.cjs');
+
+  return { statusCode: 200, body: logs.join('\n') };
 };

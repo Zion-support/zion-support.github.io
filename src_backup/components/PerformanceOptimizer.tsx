@@ -1,2 +1,0 @@
-            if (target.dataset.src) {'';
-'`'

@@ -1,41 +1,17 @@
-exports.handler = async function(event, context, callback) {
+exports.config = { schedule: '0 */2 * * *' };
+
+exports.handler = async () => {
+  const { execSync } = require('child_process');
+  const run = (cmd) => execSync(cmd, { stdio: 'inherit', shell: true });
   try {
-    console.log('security-audit-runner function triggered');
-    
-    // Security audit simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Security audit runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'security-audit-runner',
-        source: event.source || 'unknown',
-        audit: {
-          status: 'active',
-          vulnerabilities: 0,
-          lastAudit: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in security-audit-runner:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'security-audit-runner'
-      })
-    };
+    run('node automation/security-audit.cjs || true');
+    run('git config user.name "zion-bot"');
+    run('git config user.email "bot@zion.app"');
+    run('git add -A');
+    run('git commit -m "chore(security): automated security audit artifacts [skip ci]" || true');
+    run('git push origin main || true');
+    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'security-audit-runner' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
 };

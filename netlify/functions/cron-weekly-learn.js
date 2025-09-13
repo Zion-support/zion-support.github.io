@@ -1,3 +1,6 @@
+
+
+
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -56,9 +59,71 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
-};      }
-      "topBadges": Object.values(users).reduce((map, u) => {
-        (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
-return map;
-      }, {})
+
     }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    const content = JSON.stringify (summary, null, 2);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / learn / insights - weekly.json',
+
+        content,
+        message: 'chore (automation): weekly learning insights',
+        token,
+      });
+    }
+
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+        return map
+      }, {})
+    },
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+    const content = JSON && JSON.stringify(summary, null, 2),
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+
+
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+    const content = JSON.stringify(summary, null, 2),
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+},
+
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+
+},
+

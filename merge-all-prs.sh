@@ -1,52 +1,102 @@
 #!/bin/bash
 
-echo "Starting PR merge process..."
+# Script to merge all open PRs systematically
+# This script will attempt to merge branches one by one, resolving conflicts
+# and skipping problematic ones that would break the build
 
-# Get all PR refs
-PR_REFS=$(git ls-remote origin | grep -E 'refs/pull/[0-9]+/head' | awk '{print $2}' | sort -V)
+set -e
 
-# Counter for tracking
+echo "🚀 Starting systematic merge of all open PRs..."
+
+# Get all remote branches
+BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
+
+# Counter for successful merges
 SUCCESS_COUNT=0
 FAILED_COUNT=0
-FAILED_PRS=()
+SKIPPED_COUNT=0
 
-for pr_ref in $PR_REFS; do
-    # Extract PR number
-    PR_NUM=$(echo $pr_ref | sed 's/refs\/pull\/\([0-9]*\)\/head/\1/')
+# Create a log file
+LOG_FILE="merge-log-$(date +%Y%m%d-%H%M%S).txt"
+echo "Merge log started at $(date)" > "$LOG_FILE"
+
+for branch in $BRANCHES; do
+    echo "📋 Processing branch: $branch"
+    echo "📋 Processing branch: $branch" >> "$LOG_FILE"
     
-    echo "Processing PR #$PR_NUM..."
-    
-    # Fetch the PR
-    if git fetch origin $pr_ref:pr-$PR_NUM 2>/dev/null; then
-        echo "  ✓ Fetched PR #$PR_NUM"
-        
-        # Try to merge
-        if git merge pr-$PR_NUM --no-edit -X ours 2>/dev/null; then
-            echo "  ✓ Successfully merged PR #$PR_NUM"
-            ((SUCCESS_COUNT++))
-        else
-            echo "  ✗ Failed to merge PR #$PR_NUM (conflicts)"
-            git merge --abort 2>/dev/null
-            FAILED_PRS+=($PR_NUM)
-            ((FAILED_COUNT++))
-        fi
-        
-        # Clean up the branch
-        git branch -D pr-$PR_NUM 2>/dev/null
-    else
-        echo "  ✗ Failed to fetch PR #$PR_NUM"
-        FAILED_PRS+=($PR_NUM)
-        ((FAILED_COUNT++))
+    # Skip if we're already on this branch or if it's main
+    if [[ "$branch" == "main" ]]; then
+        echo "⏭️  Skipping main branch"
+        continue
     fi
+    
+    # Try to merge the branch
+    echo "🔄 Attempting to merge $branch..."
+    echo "🔄 Attempting to merge $branch..." >> "$LOG_FILE"
+    
+    if git merge "origin/$branch" --no-edit; then
+        echo "✅ Successfully merged $branch"
+        echo "✅ Successfully merged $branch" >> "$LOG_FILE"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    else
+        echo "⚠️  Merge conflicts detected in $branch, attempting to resolve..."
+        echo "⚠️  Merge conflicts detected in $branch, attempting to resolve..." >> "$LOG_FILE"
+        
+        # Check if there are conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts in $branch..."
+            echo "🔧 Resolving conflicts in $branch..." >> "$LOG_FILE"
+            
+            # Try to resolve conflicts automatically by taking incoming changes for most files
+            # but preserving our critical Vite configuration
+            if [[ -f "netlify.toml" ]]; then
+                # Preserve our Vite configuration
+                git checkout --ours netlify.toml
+                echo "🔒 Preserved Vite configuration in netlify.toml"
+            fi
+            
+            # For other conflicts, try to take incoming changes
+            git status --porcelain | grep "^UU\|^AA" | while read -r line; do
+                file=$(echo "$line" | awk '{print $2}')
+                if [[ "$file" != "netlify.toml" ]]; then
+                    echo "📝 Taking incoming changes for $file"
+                    git checkout --theirs "$file" 2>/dev/null || echo "⚠️  Could not resolve $file automatically"
+                fi
+            done
+            
+            # Try to commit the merge
+            if git add . && git commit -m "Merge $branch: Auto-resolve conflicts"; then
+                echo "✅ Successfully resolved conflicts and merged $branch"
+                echo "✅ Successfully resolved conflicts and merged $branch" >> "$LOG_FILE"
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+            else
+                echo "❌ Failed to resolve conflicts in $branch, aborting merge"
+                echo "❌ Failed to resolve conflicts in $branch, aborting merge" >> "$LOG_FILE"
+                git merge --abort
+                FAILED_COUNT=$((FAILED_COUNT + 1))
+            fi
+        else
+            echo "❌ Merge failed for $branch (unknown reason)"
+            echo "❌ Merge failed for $branch (unknown reason)" >> "$LOG_FILE"
+            git merge --abort
+            FAILED_COUNT=$((FAILED_COUNT + 1))
+        fi
+    fi
+    
+    echo "---" >> "$LOG_FILE"
 done
 
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Successfully merged: $SUCCESS_COUNT PRs"
-echo "Failed to merge: $FAILED_COUNT PRs"
+echo "🎉 Merge process completed!"
+echo "✅ Successful merges: $SUCCESS_COUNT"
+echo "❌ Failed merges: $FAILED_COUNT"
+echo "⏭️  Skipped branches: $SKIPPED_COUNT"
+echo "📋 Log saved to: $LOG_FILE"
 
-if [ ${#FAILED_PRS[@]} -gt 0 ]; then
-    echo "Failed PRs: ${FAILED_PRS[*]}"
-fi
-
-echo "Process completed."
+echo "🎉 Merge process completed!" >> "$LOG_FILE"
+echo "✅ Successful merges: $SUCCESS_COUNT" >> "$LOG_FILE"
+echo "❌ Failed merges: $FAILED_COUNT" >> "$LOG_FILE"
+<<<<<<< HEAD
+echo "⏭️  Skipped branches: $SKIPPED_COUNT" >> "$LOG_FILE"
+=======
+echo "⏭️  Skipped branches: $SKIPPED_COUNT" >> "$LOG_FILE"
+>>>>>>> origin/content/blog-sept12

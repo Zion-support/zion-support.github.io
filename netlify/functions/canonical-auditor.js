@@ -1,42 +1,31 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('canonical-auditor function triggered');
-    
-    // Canonical auditing simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Canonical auditor executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'canonical-auditor',
-        source: event.source || 'unknown',
-        auditing: {
-          status: 'active',
-          pagesAudited: 0,
-          issuesFound: 0,
-          lastAudit: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in canonical-auditor:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'canonical-auditor'
-      })
-    };
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.config = {
+  schedule: '*/60 * * * *',
+};
+>>>>>>> origin/content/blog-sept12
+
+exports.handler = async () => {
+  const logs = [];
+  function step(name, rel, args = []) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = runNode(rel, args);
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
   }
+
+  step('canonical:audit', 'automation/canonical-auditor.cjs');
+>>>>>>> origin/content/blog-sept12
+  step('git:sync', 'automation/advanced-git-sync.cjs');
+
+  return { statusCode: 200, body: logs.join('\n') };
 };

@@ -282,7 +282,6 @@ export interface SpaceColonization2029Service {
       'Multi - source energy harvesting',
       'AI - powered energy optimization',
 
-
       'Advanced energy storage',
       'Power distribution systems',
       'Energy efficiency monitoring',
@@ -394,11 +393,9 @@ export interface SpaceColonization2029Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -435,22 +432,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 
       website: 'https://ziontechgroup.com';
     }
-    real_implementation: true,
-    implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
-    launch_date: '2029 - 03 - 01';
-    customers: 18;
-    rating: 4.8,
-    reviews: 52;
-
-];
-;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    }
-];
-;
-  }
-];
 ;
     realImplementation: true
     implementationDetails:
@@ -527,6 +508,19 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '600% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Advanced space mining platform with autonomous operations, AI-powered resource detection, robotic equipment management, and comprehensive safety monitoring. Includes resource processing and optimization.'
+    launchDate: '2029-02-01'
+    customers: 12
+    rating: 4.7
+    reviews: 34
+  }
   // Space Architecture & Energy Services
   {
     id: 'space-habitat-design-platform'
@@ -537,6 +531,22 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     description:
       'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.'
     features: [
+      'AI-powered habitat design'
+      'Environmental simulation tools'
+      'Material optimization AI'
+      'Life support integration'
+      'Sustainable design systems'
+      '3D modeling and visualization'
+      'Structural analysis tools'
+      'Resource efficiency optimization'
+      'Modular design systems'
+      'Habitat expansion planning'
+    ]
+    popular: false
+    icon: '🏠'
+    color: 'from-green-600 to-teal-600'
+    textColor: 'text-green-400'
+    link: 'https://ziontechgroup.com/space-habitat-design-platform'
     marketPosition:
       'First space habitat design platform. Comparable to architectural design platforms ($40K+/month) but specialized in space environments.'
     targetAudience:
@@ -579,18 +589,44 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Advanced space habitat design platform with AI-powered design tools, environmental simulation, material optimization, and comprehensive planning capabilities. Includes 3D modeling and structural analysis.'
+    launchDate: '2029-02-15'
+    customers: 25
+    rating: 4.6
+    reviews: 67
+  }
   {
-      'Advanced energy storage',
-      'Power distribution systems',
-      'Energy efficiency monitoring',
-      'Renewable space energy',
-      'Power grid management',
-      'Energy demand forecasting',
-      'Storage optimization',
-      'Backup power systems',
-    ],
-    popular: true,
-    icon: '⚡',
+    id: 'space-energy-harvesting-platform'
+    name: 'Space Energy Harvesting Platform'
+    tagline: 'Harvest energy from space sources and celestial bodies'
+    price: '$55,999'
+    period: '/month'
+    description:
+      'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.'
+    features: [
+      'Multi-source energy harvesting'
+      'AI-powered energy optimization'
+      'Advanced energy storage'
+      'Power distribution systems'
+      'Energy efficiency monitoring'
+      'Renewable space energy'
+      'Power grid management'
+      'Energy demand forecasting'
+      'Storage optimization'
+      'Backup power systems'
+    ]
+    popular: true
+    icon: '⚡'
+    color: 'from-purple-600 to-pink-600'
+    textColor: 'text-purple-400'
+    link: 'https://ziontechgroup.com/space-energy-harvesting-platform'
     marketPosition:
       'First space energy harvesting platform. Comparable to renewable energy platforms ($50K+/month) but specialized in space applications.'
     targetAudience:
@@ -640,12 +676,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
-    launchDate: '2029-03-01'
-    customers: 18
-    rating: 4.8
-    reviews: 52
-  }
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
@@ -664,15 +694,13 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.8
 
     reviews: 52
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpaceColonization2029Service {;
   id: string,;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,,
+  period: string,;
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -707,64 +735,6 @@ export interface SpaceColonization2029Service {;
   rating: number,;
   reviews: number;
 }
-
-export const spaceColonization2029Services: SpaceColonization2029Service[] = [
-  // Space Colonization & Mining Services
-  {
-
-import { ServiceVariant } from '../types/service-variants',;
-export interface SpaceColonization2029Service {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,,
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true,
-    implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
-    launch_date: '2029 - 03 - 01';
-    customers: 18;
-    rating: 4.8,
-    reviews: 52;
-
-];
 ;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   // Space Colonization & Mining Services;
@@ -773,8 +743,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Mars Colonization Automation Platform',;
     tagline: 'Automate Mars colonization process with AI and robotics',;
     price: '$99,999',;
-    period: '/month',,
-  description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',;
+    period: '/month',;
+    description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',;
     features: [;
       'Autonomous habitat constructionAI-powered resource managementLife support system automationColony expansion planningRobotic workforce managementEnvironmental monitoring AISupply chain automationEmergency response systems',;
       'Colony health monitoringSustainable development AI';
@@ -816,8 +786,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Interplanetary Communication Network',;
     tagline: 'Real-time solar system communication network',;
     price: '$75,999',;
-    period: '/month',,
-  description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',;
+    period: '/month',;
+    description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',;
     features: [;
       'Real-time interplanetary communicationQuantum communication protocolsAI-powered routing optimizationMulti-planet network managementSatellite constellation controlCommunication security protocolsBandwidth optimizationNetwork redundancy systems',;
       'Real-time monitoringEmergency communication channels';
@@ -859,8 +829,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Space Mining Automation Platform',;
     tagline: 'Automate asteroid and lunar mining operations',;
     price: '$65,999',;
-    period: '/month',,
-  description: 'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',;
+    period: '/month',;
+    description: 'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',;
     features: [;
       'Autonomous mining operationsAI-powered resource detectionRobotic mining equipmentResource processing automationSupply chain managementQuality control systemsSafety monitoring AIEnvironmental impact assessment',;
       'Resource optimizationMining fleet management';
@@ -903,8 +873,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Space Habitat Design Platform',;
     tagline: 'Design space habitats for any planet or environment',;
     price: '$45,999',;
-    period: '/month',,
-  description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',;
+    period: '/month',;
+    description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',;
     features: [;
       'AI-powered habitat designEnvironmental simulation toolsMaterial optimization AILife support integrationSustainable design systems3D modeling and visualizationStructural analysis toolsResource efficiency optimization',;
       'Modular design systemsHabitat expansion planning';
@@ -946,8 +916,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     name: 'Space Energy Harvesting Platform',;
     tagline: 'Harvest energy from space sources and celestial bodies',;
     price: '$55,999',;
-    period: '/month',,
-  description: 'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',;
+    period: '/month',;
+    description: 'Revolutionary platform that harvests energy from various space sources including solar radiation, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',;
     features: [;
       'Multi-source energy harvestingAI-powered energy optimizationAdvanced energy storagePower distribution systemsEnergy efficiency monitoringRenewable space energyPower grid managementEnergy demand forecasting',;
       'Storage optimizationBackup power systems';

@@ -1,3 +1,0 @@
-
-  'low', averageResponseTime: 0, falsePositiveRate: 0 }) const [isMonitoring, setIsMonitoring] = useState(false) const [isComplianceChecking, setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()'
-

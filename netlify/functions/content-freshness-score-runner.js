@@ -1,42 +1,29 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('content-freshness-score-runner function triggered');
-    
-    // Content freshness score simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Content freshness score runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'content-freshness-score-runner',
-        source: event.source || 'unknown',
-        scoring: {
-          status: 'active',
-          pagesScored: 0,
-          averageScore: 0,
-          lastScore: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in content-freshness-score-runner:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'content-freshness-score-runner'
-      })
-    };
-  }
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relativePath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relativePath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.config = { schedule: '*/10 * * * *' };
+
+>>>>>>> origin/content/blog-sept12
+exports.handler = async () => {
+  const logs = [];
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
+  };
+
+  step('content:freshness-score', () => runNode('automation/content-freshness-score.cjs'));
+>>>>>>> origin/content/blog-sept12
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };

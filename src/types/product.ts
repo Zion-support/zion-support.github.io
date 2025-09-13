@@ -1,7 +1,5 @@
 export interface Product {
-  id: string | number; // Allow string or number for flexibility
+  id: string;
   name: string;
-  price: number;
-  description?: string;
-  imageUrl?: string;
+  description?: string | null;
 }

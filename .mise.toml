@@ -1,7 +1,5 @@
-[settings]
-# Disable compiling or installing Python via mise during Netlify builds
-python.compile = false
-
 [tools]
-# Force using the system Python provided by the Netlify build image
-python = "system"
+node = "20"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]

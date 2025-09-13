@@ -1,41 +1,15 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function() {
+  const { execSync } = require('child_process');
   try {
-    console.log('ai-changelog-runner function triggered');
-    
-    // AI changelog generation simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'AI changelog runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ai-changelog-runner',
-        source: event.source || 'unknown',
-        changelog: {
-          status: 'generated',
-          entries: 0,
-          lastGenerated: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in ai-changelog-runner:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ai-changelog-runner'
-      })
-    };
+    execSync('node automation/ai-changelog-generator.cjs || true', { stdio: 'inherit', shell: true });
+    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "docs(changelog): refresh AI changelog [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
+    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'ai-changelog-runner' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
+};
+
+exports.config = {
+  // Run every 3 hours
+  schedule: '0 */3 * * *',
 };
