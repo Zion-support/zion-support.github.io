@@ -80,6 +80,9 @@ import QuantumComputingBreakthrough2030PromotionBanner from '../components/Quant
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
 
+// New Content 2026 Promotion Banner
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+
 // New AI Innovation Showcase 2026 Components
 import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
 import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
@@ -96,6 +99,7 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
+        <NewContent2026PromotionBanner />
         <NewContentPromotionBanner2026 />
         
         <AI2025UltimateBreakthroughPromotionBanner />
