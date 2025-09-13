@@ -106,7 +106,6 @@ fi
 
 # Build the project
 echo "Building project..."
-
 # Try different build approaches
 build_success=false
 
@@ -127,21 +126,29 @@ if [ "$build_success" = false ]; then
   export NEXT_TELEMETRY_DISABLED=1
   export NEXT_FORCE_SWC=1
   export NEXT_SWC_DISABLE=1
+  export NEXT_PRIVATE_SKIP_SWC_DOWNLOAD=1
   
   if yarn run build; then
     echo "SWC fallback build successful!"
     build_success=true
   else
-    echo "SWC fallback build failed, trying with legacy provider..."
+    echo "SWC fallback build failed, trying with fallback command..."
+    # Use the fallback build command
+    if yarn run build:fallback; then
+      echo "Fallback build successful!"
+      build_success=true
+    else
+      echo "Fallback build failed, trying with legacy provider..."
+    fi
   fi
 fi
 
 # Approach 3: Build with legacy OpenSSL provider
 if [ "$build_success" = false ]; then
   echo "Attempting build with legacy OpenSSL provider..."
-  export NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider"
+  export NODE_OPTIONS="--max-old-space-size=8192 --openssl-legacy-provider"
   
-  if yarn run build; then
+  if yarn run build:fallback; then
     echo "Legacy provider build successful!"
     build_success=true
   else

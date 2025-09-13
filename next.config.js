@@ -24,6 +24,8 @@ const nextConfig = {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
 		optimizeCss: true,
 		forceSwcTransforms: true,
+		// Disable SWC if there are issues
+		swcMinify: true,
 	},
 	
 	// SWC configuration
