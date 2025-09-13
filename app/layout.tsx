@@ -202,6 +202,9 @@ function Header() {
                 <Link href="/blog/ai-2025-ultimate-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough (5,000% ROI) (BREAKTHROUGH)
                 </Link>
+                <Link href="/blog/ai-2025-ultimate-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500">
+                  🚀 AI 2025 Ultimate Automation Revolution (15,000% ROI) (NEW)
+                </Link>
                 <Link href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Synthetic Intelligence Transformation (50,000% ROI) (BREAKTHROUGH)
                 </Link>
@@ -213,6 +216,9 @@ function Header() {
                 </Link>
                 <Link href="/case-studies/ai-2025-revolutionary-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Revolutionary Breakthrough Success (2000% ROI)
+                </Link>
+                <Link href="/case-studies/ai-2025-ultimate-automation-revolution-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Ultimate Automation Revolution Success (15,000% ROI) (NEW)
                 </Link>
                 <Link href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🏆 Global Enterprise Success (2000% ROI)
@@ -238,6 +244,9 @@ function Header() {
 >>>>>>> cursor/create-and-deploy-new-content-b354
                 <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🛠️ Ultimate Implementation Toolkit
+                </Link>
+                <Link href="/resources/ai-2025-automation-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 AI 2025 Automation Implementation Guide (NEW)
                 </Link>
                 <Link href="/tools/ai-2025-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2025 ROI Calculator
