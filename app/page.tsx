@@ -66,6 +66,10 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
+// Import new AI 2025 and 2026 breakthrough banners
+import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
+import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -77,6 +81,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 SYNTHETIC INTELLIGENCE BREAKTHROUGH BANNER */}
+        <AI2025SyntheticIntelligenceBreakthroughBanner />
+        
+        {/* AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+        <AI2026FuturePredictionsBreakthroughBanner />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
