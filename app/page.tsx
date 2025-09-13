@@ -101,6 +101,10 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
 import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
 
+// Import new AI 2026 Neural Consciousness components
+import AI2026NeuralConsciousnessBreakthroughPromotionBanner from '../components/AI2026NeuralConsciousnessBreakthroughPromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -114,6 +118,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW 2025 BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025BreakthroughBanner />
+        
+        {/* AI 2026 NEURAL CONSCIOUSNESS BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026NeuralConsciousnessBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT 2026 SHOWCASE */}
+        <NewContent2026Showcase />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
