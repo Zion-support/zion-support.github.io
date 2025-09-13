@@ -1,340 +1,332 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Cpu, Zap, Target, TrendingUp, Users, Shield, Database, Globe, Brain, Settings, BarChart3 } from 'lucide-react';
+import { Card } from './ui/Card';
+import { ArrowRight, Bot, Zap, Target, TrendingUp, Shield, Cpu, Globe, Brain } from 'lucide-react';
 
 const AdvancedAutomationSolutionsShowcase2025: React.FC = () => {
   const solutions = [
     {
       title: 'Autonomous Business Operations',
-      description: 'Complete end-to-end business process automation with self-healing capabilities',
+      description: 'Complete end-to-end business process automation with 99.9% accuracy and 10,000x efficiency gains',
+      features: [
+        'End-to-End Process Automation',
+        'Intelligent Decision Making',
+        'Real-time Process Optimization',
+        'Autonomous Error Correction'
+      ],
+      metrics: {
+        efficiency: '10,000x',
+        accuracy: '99.9%',
+        cost: '90%',
+        time: '95%'
+      },
       icon: Bot,
-      category: 'Core Automation',
-      features: [
-        'Self-healing business processes',
-        'Autonomous decision making',
-        'Real-time process optimization',
-        'Zero-touch operations'
-      ],
-      benefits: [
-        '99.9% uptime guarantee',
-        '90% cost reduction',
-        '10x faster execution',
-        'Zero human intervention'
-      ],
-      roi: '2,500-5,000%',
-      timeline: 'Q1 2025'
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Intelligent Process Mining',
-      description: 'AI-powered analysis and optimization of existing business processes',
-      icon: BarChart3,
-      category: 'Process Intelligence',
+      title: 'AI-Powered Workflow Automation',
+      description: 'Intelligent workflow management with predictive analytics and autonomous optimization',
       features: [
-        'Automated process discovery',
-        'Bottleneck identification',
-        'Optimization recommendations',
-        'Performance monitoring'
+        'Predictive Workflow Analytics',
+        'Autonomous Task Assignment',
+        'Dynamic Process Optimization',
+        'Intelligent Resource Allocation'
       ],
-      benefits: [
-        '50% efficiency improvement',
-        '30% cost reduction',
-        'Real-time insights',
-        'Predictive maintenance'
-      ],
-      roi: '1,000-3,000%',
-      timeline: 'Q2 2025'
+      metrics: {
+        productivity: '500%',
+        accuracy: '99.7%',
+        speed: '1,000x',
+        quality: '98%'
+      },
+      icon: Zap,
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Cognitive Automation Platform',
-      description: 'Advanced AI platform that mimics human cognitive processes for complex tasks',
+      title: 'Enterprise Integration Platform',
+      description: 'Seamless integration of all enterprise systems with autonomous data synchronization',
+      features: [
+        'Universal System Integration',
+        'Autonomous Data Synchronization',
+        'Real-time API Management',
+        'Intelligent Error Handling'
+      ],
+      metrics: {
+        integration: '100%',
+        sync: 'Real-time',
+        errors: '0.01%',
+        uptime: '99.99%'
+      },
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Predictive Analytics Engine',
+      description: 'Advanced predictive analytics with machine learning for business intelligence and forecasting',
+      features: [
+        'Advanced Machine Learning',
+        'Predictive Business Intelligence',
+        'Real-time Forecasting',
+        'Autonomous Insights Generation'
+      ],
+      metrics: {
+        predictions: '95%',
+        insights: 'Real-time',
+        accuracy: '99.5%',
+        roi: '2,500%'
+      },
       icon: Brain,
-      category: 'Cognitive AI',
-      features: [
-        'Natural language processing',
-        'Computer vision capabilities',
-        'Decision tree automation',
-        'Learning and adaptation'
-      ],
-      benefits: [
-        'Human-level accuracy',
-        'Continuous learning',
-        'Multi-language support',
-        'Contextual understanding'
-      ],
-      roi: '3,000-7,500%',
-      timeline: 'Q3 2025'
-    },
-    {
-      title: 'Hyperautomation Ecosystem',
-      description: 'Comprehensive automation platform integrating all business functions',
-      icon: Settings,
-      category: 'Enterprise Solution',
-      features: [
-        'End-to-end automation',
-        'Multi-system integration',
-        'Scalable architecture',
-        'Cloud-native deployment'
-      ],
-      benefits: [
-        'Complete digital transformation',
-        'Unified automation platform',
-        'Infinite scalability',
-        'Global deployment'
-      ],
-      roi: '5,000-15,000%',
-      timeline: 'Q4 2025'
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const industries = [
     {
       name: 'Manufacturing',
-      icon: Cpu,
-      automation: '85%',
-      savings: '$2.5M annually',
-      processes: ['Production planning', 'Quality control', 'Supply chain', 'Maintenance']
+      description: 'Complete production line automation and quality control',
+      benefits: ['Production Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Management'],
+      roi: '3,000%',
+      icon: Cpu
+    },
+    {
+      name: 'Financial Services',
+      description: 'Automated trading, risk management, and compliance monitoring',
+      benefits: ['Algorithmic Trading', 'Risk Assessment', 'Compliance Monitoring', 'Fraud Detection'],
+      roi: '5,000%',
+      icon: Shield
     },
     {
       name: 'Healthcare',
-      icon: Shield,
-      automation: '75%',
-      savings: '$1.8M annually',
-      processes: ['Patient scheduling', 'Medical records', 'Billing', 'Diagnostics']
-    },
-    {
-      name: 'Finance',
-      icon: TrendingUp,
-      automation: '90%',
-      savings: '$3.2M annually',
-      processes: ['Risk assessment', 'Fraud detection', 'Compliance', 'Trading']
+      description: 'Patient care automation and medical process optimization',
+      benefits: ['Patient Management', 'Medical Records', 'Treatment Planning', 'Resource Optimization'],
+      roi: '4,000%',
+      icon: Target
     },
     {
       name: 'Retail',
-      icon: Users,
-      automation: '80%',
-      savings: '$1.5M annually',
-      processes: ['Inventory management', 'Customer service', 'Order processing', 'Analytics']
-    },
-    {
-      name: 'Logistics',
-      icon: Globe,
-      automation: '88%',
-      savings: '$2.1M annually',
-      processes: ['Route optimization', 'Warehouse management', 'Delivery tracking', 'Fleet management']
-    },
-    {
-      name: 'Energy',
-      icon: Zap,
-      automation: '82%',
-      savings: '$2.8M annually',
-      processes: ['Grid management', 'Predictive maintenance', 'Energy trading', 'Monitoring']
+      description: 'Inventory management and customer experience automation',
+      benefits: ['Inventory Optimization', 'Customer Service', 'Demand Forecasting', 'Personalization'],
+      roi: '2,500%',
+      icon: TrendingUp
     }
   ];
 
-  const benefits = [
+  const capabilities = [
     {
-      icon: Target,
-      title: 'Precision Automation',
-      description: '99.9% accuracy in all automated processes',
-      stat: '99.9%'
+      title: 'Autonomous Decision Making',
+      description: 'AI systems that make complex business decisions without human intervention',
+      features: ['Real-time Analysis', 'Risk Assessment', 'Strategic Planning', 'Resource Allocation']
     },
     {
-      icon: TrendingUp,
-      title: 'Massive ROI',
-      description: 'Average ROI of 2,500-15,000%',
-      stat: '2,500%+'
+      title: 'Intelligent Process Optimization',
+      description: 'Continuous optimization of business processes using machine learning',
+      features: ['Process Analysis', 'Efficiency Optimization', 'Cost Reduction', 'Quality Improvement']
     },
     {
-      icon: Users,
-      title: 'Global Impact',
-      description: 'Transform operations for millions of users',
-      stat: '10M+ Users'
+      title: 'Predictive Maintenance',
+      description: 'Proactive maintenance scheduling to prevent equipment failures',
+      features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Uptime Maximization']
     },
     {
-      icon: Database,
-      title: 'Infinite Scale',
-      description: 'Process unlimited data and transactions',
-      stat: '∞ Scale'
+      title: 'Dynamic Resource Allocation',
+      description: 'Intelligent allocation of resources based on real-time demand and capacity',
+      features: ['Demand Analysis', 'Capacity Planning', 'Resource Optimization', 'Cost Management']
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Advanced Automation Solutions 2025
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary automation technologies that transform every aspect of business operations with unprecedented efficiency and ROI
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Transform your business with revolutionary automation solutions that deliver 
+            unprecedented efficiency, accuracy, and ROI through intelligent process automation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/automation-solutions-2025" 
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Automation Solutions
-            </Link>
-            <Link 
-              to="/automation-roi-calculator" 
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Calculate Automation ROI
-            </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-6 py-2 rounded-full font-semibold">
+              🤖 10,000x Efficiency
+            </span>
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white px-6 py-2 rounded-full font-semibold">
+              🎯 99.9% Accuracy
+            </span>
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-2 rounded-full font-semibold">
+              💰 5,000% ROI
+            </span>
           </div>
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {solutions.map((solution, index) => {
-            const IconComponent = solution.icon;
-            return (
-              <div 
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105"
-              >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {solutions.map((solution, index) => (
+            <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+              <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-4 rounded-xl mr-4">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-full flex items-center justify-center mr-4`}>
+                    <solution.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                        {solution.category}
-                      </span>
-                      <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        {solution.timeline}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">
-                      {solution.title}
-                    </h3>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white">
+                    {solution.title}
+                  </h3>
                 </div>
                 
                 <p className="text-gray-300 mb-6 text-lg">
                   {solution.description}
                 </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-green-300 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <ArrowRight className="w-4 h-4 text-green-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  {Object.entries(solution.metrics).map(([key, value], idx) => (
+                    <div key={idx} className="text-center bg-gray-700/50 rounded-lg p-3">
+                      <div className="text-lg font-bold text-green-400">{value}</div>
+                      <div className="text-xs text-gray-400 capitalize">{key}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Industry Applications */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
+            Industry Applications
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
+              <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <industry.icon className="w-8 h-8 text-blue-400 mr-3" />
+                    <h4 className="text-xl font-bold text-white">{industry.name}</h4>
                   </div>
+                  <p className="text-gray-300 mb-4 text-sm">{industry.description}</p>
                   
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {solution.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
+                  <div className="mb-4">
+                    <h5 className="text-sm font-semibold text-blue-300 mb-2">Key Benefits:</h5>
+                    <ul className="space-y-1">
+                      {industry.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-xs text-gray-300 flex items-center">
+                          <Target className="w-3 h-3 text-blue-400 mr-2" />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
-                
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg text-center font-bold">
-                  Expected ROI: {solution.roi}
-                </div>
-              </div>
-            );
-          })}
-        </div>
 
-        {/* Industry Impact */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Transformation
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry, index) => {
-              const IconComponent = industry.icon;
-              return (
-                <div key={index} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                      <IconComponent className="w-5 h-5 text-white" />
-                    </div>
-                    <h4 className="text-xl font-bold text-white">{industry.name}</h4>
-                  </div>
-                  <div className="mb-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300">Automation Level:</span>
-                      <span className="text-blue-400 font-bold">{industry.automation}</span>
-                    </div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300">Annual Savings:</span>
-                      <span className="text-green-400 font-bold">{industry.savings}</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h5 className="text-sm font-semibold text-white mb-2">Automated Processes:</h5>
-                    <div className="flex flex-wrap gap-1">
-                      {industry.processes.map((process, processIndex) => (
-                        <span key={processIndex} className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">
-                          {process}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400 mb-1">{industry.roi}</div>
+                    <div className="text-xs text-gray-400">Average ROI</div>
                   </div>
                 </div>
-              );
-            })}
+              </Card>
+            ))}
           </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+        {/* Advanced Capabilities */}
+        <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Revolutionary Automation Benefits
+            Advanced Capabilities
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+              <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-white mb-3">{capability.title}</h4>
+                  <p className="text-gray-300 mb-4">{capability.description}</p>
+                  
+                  <div>
+                    <h5 className="text-sm font-semibold text-purple-300 mb-2">Features:</h5>
+                    <ul className="space-y-1">
+                      {capability.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-gray-300 flex items-center">
+                          <ArrowRight className="w-3 h-3 text-purple-400 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
-                  <p className="text-gray-300 mb-4">{benefit.description}</p>
-                  <div className="text-2xl font-bold text-blue-400">{benefit.stat}</div>
                 </div>
-              );
-            })}
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Technology Stack */}
+        <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 mb-16">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">
+            Automation Technology Stack
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Bot className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">AI Automation</h4>
+              <p className="text-xs text-gray-400">Intelligent process automation</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">Workflow Engine</h4>
+              <p className="text-xs text-gray-400">Advanced workflow management</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">Machine Learning</h4>
+              <p className="text-xs text-gray-400">Predictive analytics engine</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">Integration Hub</h4>
+              <p className="text-xs text-gray-400">Universal system integration</p>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl p-12 border border-white/20">
-          <h3 className="text-3xl font-bold text-white mb-6">
+        <div className="text-center">
+          <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Automate Your Future?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already transforming their operations with our revolutionary automation solutions
+            Transform your business with advanced automation solutions that deliver 
+            unprecedented efficiency, accuracy, and ROI through intelligent process automation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/automation-solutions-2025" 
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            <Link
+              to="/automation-solutions-2025"
+              className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:from-green-600 hover:to-teal-600 flex items-center justify-center group"
             >
               Explore Automation Solutions
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              to="/contact" 
-              className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border border-white/30"
+            <Link
+              to="/case-studies"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center group"
             >
-              Get Automation Consultation
+              View Success Stories
+              <TrendingUp className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
         </div>

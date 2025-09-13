@@ -1,162 +1,100 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Atom, Zap, Shield, Cpu, Clock, TrendingUp, Target, Users } from 'lucide-react';
+import { ArrowRight, Cpu, Zap, Shield, Globe, Brain, Target, TrendingUp } from 'lucide-react';
 
 const QuantumComputingBreakthroughPromotionBanner2025: React.FC = () => {
-  const highlights = [
-    {
-      icon: Atom,
-      title: 'Quantum Supremacy',
-      description: '10^15x faster than classical computers',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Zap,
-      title: 'Quantum-Neural Fusion',
-      description: 'Revolutionary AI integration',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Unbreakable Security',
-      description: 'Quantum cryptography revolution',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Cpu,
-      title: '1,000+ Qubits',
-      description: 'Commercial quantum processors',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const stats = [
-    { value: '10^15x', label: 'Processing Speed' },
-    { value: '99.9%', label: 'Accuracy Rate' },
-    { value: '∞', label: 'Data Capacity' },
-    { value: '2025', label: 'Breakthrough Year' }
-  ];
-
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-indigo-500/30 rounded-full animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-purple-500/30 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-500/30 rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-cyan-500/30 rounded-full animate-pulse delay-3000"></div>
-        </div>
+    <section className="py-16 bg-gradient-to-r from-blue-900 via-cyan-900 to-blue-900 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"></div>
+        <div className="absolute top-32 right-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-6">
-            <Clock className="w-4 h-4 mr-2" />
-            BREAKTHROUGH: Quantum Computing 2025
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Computing
-            <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Breakthrough 2025
-            </span>
+        <div className="text-center">
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            ⚡ Quantum Computing Breakthroughs 2025
           </h2>
           
+          {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary quantum technologies that will make classical computing obsolete. 
-            Experience 10^15x faster processing and unbreakable security.
+            Experience the future of computing with revolutionary quantum breakthroughs that deliver 
+            unprecedented processing power, security, and intelligence capabilities.
           </p>
-        </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-sm text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+          {/* Key Highlights */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold text-lg">
+              ⚡ 50,000x Faster Processing
+            </span>
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-3 rounded-full font-semibold text-lg">
+              🛡️ Unbreakable Security
+            </span>
+            <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-6 py-3 rounded-full font-semibold text-lg">
+              🎯 99.97% Accuracy
+            </span>
+          </div>
 
-        {/* Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {highlights.map((highlight, index) => {
-            const IconComponent = highlight.icon;
-            return (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className={`bg-gradient-to-r ${highlight.color} w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <IconComponent className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2 text-center">{highlight.title}</h3>
-                <p className="text-gray-300 text-center text-sm">{highlight.description}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Key Features */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
-            Revolutionary Quantum Features
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-white mb-2">Exponential Speed</h4>
-              <p className="text-gray-300">
-                Solve problems in seconds that would take classical computers millennia
-              </p>
+          {/* Technology Icons */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-4 py-2">
+              <Cpu className="w-5 h-5 text-blue-400" />
+              <span className="text-white font-medium">Quantum Processors</span>
             </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-white mb-2">Unbreakable Security</h4>
-              <p className="text-gray-300">
-                Quantum cryptography that makes current security systems obsolete
-              </p>
+            <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-4 py-2">
+              <Brain className="w-5 h-5 text-purple-400" />
+              <span className="text-white font-medium">Neural Integration</span>
             </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-green-500 to-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-white mb-2">Global Impact</h4>
-              <p className="text-gray-300">
-                Transform every industry and aspect of human civilization
-              </p>
+            <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-4 py-2">
+              <Shield className="w-5 h-5 text-green-400" />
+              <span className="text-white font-medium">Quantum Security</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-4 py-2">
+              <Globe className="w-5 h-5 text-orange-400" />
+              <span className="text-white font-medium">Global Network</span>
             </div>
           </div>
-        </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Don't Get Left Behind in the Quantum Revolution
-            </h3>
-            <p className="text-lg text-gray-300 mb-6">
-              Get exclusive access to quantum computing solutions, implementation guides, and ROI calculations
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/quantum-computing-solutions"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all hover:from-blue-600 hover:to-cyan-600 hover:scale-105 flex items-center justify-center group"
+            >
+              Explore Quantum Solutions
+              <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/case-studies"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all hover:from-purple-700 hover:to-pink-700 hover:scale-105 flex items-center justify-center group"
+            >
+              View Success Stories
+              <TrendingUp className="w-6 h-6 ml-2 group-hover:scale-110 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Additional Info */}
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 text-sm">
+              Join the quantum computing revolution and transform your business with unprecedented processing power
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/quantum-computing-2025" 
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-              >
-                Explore Quantum Solutions
-                <Target className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/quantum-roi-calculator" 
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border border-white/30"
-              >
-                Calculate Quantum ROI
-              </Link>
+            <div className="flex justify-center items-center mt-4 space-x-8 text-gray-300">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">50,000x</div>
+                <div className="text-xs">Faster Processing</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">99.97%</div>
+                <div className="text-xs">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">100%</div>
+                <div className="text-xs">Security</div>
+              </div>
             </div>
           </div>
         </div>
