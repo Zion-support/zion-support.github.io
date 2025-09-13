@@ -44,6 +44,10 @@ import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromo
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
+
+// Import new revolutionary content components
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 // Import new 2025 content promotion components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
@@ -191,7 +195,38 @@ export default function HomePage() {
         url="/"
       />
       
-      <div className='min-h-screen bg-white'>
+      <SEOEnhancer
+        title="Zion Tech Group - AI & Technology Solutions"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
+        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
+        canonicalUrl="https://zion.app"
+        ogImage="https://zion.app/images/og-image.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://zion.app",
+          "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zion.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+      
+      <AnalyticsIntegration
+        trackingId="G-XXXXXXXXXX"
+        enableHeatmaps={true}
+        enableUserTracking={true}
+        enablePerformanceTracking={true}
+      />
+      
+      <MobileOptimizer>
+        <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT BANNER */}
+        <RevolutionaryContentBanner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
         
@@ -212,6 +247,11 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET */}
+        <div className="py-16 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+          <ContentDiscoveryWidget />
+        </div>
         
         {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
         <UltimateBreakthroughBanner2026 />
