@@ -9,6 +9,11 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
+// Import new breakthrough promotional banners
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
+import QuantumComputingBreakthroughs2030Banner from '../components/QuantumComputingBreakthroughs2030Banner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -4116,6 +4121,15 @@ export default function HomePage() {
       
       {/* New Revolutionary Content Sections */}
       <NewContentPromotionalBanner />
+      
+      {/* AI 2025 Ultimate Breakthrough Revolution Banner */}
+      <AI2025UltimateBreakthroughRevolutionBanner />
+      
+      {/* AI 2026 Future Predictions Breakthrough Banner */}
+      <AI2026FuturePredictionsBreakthroughBanner />
+      
+      {/* Quantum Computing Breakthroughs 2030 Banner */}
+      <QuantumComputingBreakthroughs2030Banner />
       
       {/* Ultimate Content Revolution 2025 */}
       <UltimateContentRevolution2025 />
