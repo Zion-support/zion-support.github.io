@@ -148,6 +148,11 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new revolutionary content promotional banners
+import AI2027UltimateInnovationRevolutionPromotionBanner from '../components/AI2027UltimateInnovationRevolutionPromotionBanner';
+import QuantumConsciousnessBreakthrough2030PromotionBanner from '../components/QuantumConsciousnessBreakthrough2030PromotionBanner';
+import AutonomousBusinessEcosystem2028PromotionBanner from '../components/AutonomousBusinessEcosystem2028PromotionBanner';
+
 // Import new 2025-2026 innovation showcase components
 import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
 import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
@@ -260,6 +265,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW REVOLUTIONARY CONTENT PROMOTION BANNERS - FEATURED */}
+        <AI2027UltimateInnovationRevolutionPromotionBanner />
+        <QuantumConsciousnessBreakthrough2030PromotionBanner />
+        <AutonomousBusinessEcosystem2028PromotionBanner />
+
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
