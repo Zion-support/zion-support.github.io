@@ -86,6 +86,11 @@ import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025Interac
 import ContentManagementSystem from '../components/ContentManagementSystem';
 import UserFeedbackSystem from '../components/UserFeedbackSystem';
 
+// Import new content components
+import AI2025_2026TechnologyShowcase from '../components/AI2025_2026TechnologyShowcase';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import LatestContent2025PromotionBanner from '../components/LatestContent2025PromotionBanner';
+
 // Import new content showcase and recommendation components
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
@@ -169,6 +174,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* LATEST CONTENT 2025 PROMOTION BANNER */}
+        <LatestContent2025PromotionBanner />
+        
+        {/* AI 2025-2026 TECHNOLOGY SHOWCASE */}
+        <AI2025_2026TechnologyShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
+        <InteractiveContentDiscovery2025 />
+        
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
