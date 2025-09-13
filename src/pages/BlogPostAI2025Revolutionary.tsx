@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 
 const BlogPostAI2025Revolutionary: React.FC = () => {
   return (

@@ -6,6 +6,7 @@ package-lock.json
 out/
 build/
 dist/
+.yarn-cache/
 
 # Environment variables
 .env
