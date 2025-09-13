@@ -61,6 +61,11 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
+// Import new breakthrough content promotional banners
+import AI2025UltimateBreakthroughRevolutionPromotionBanner from '../components/AI2025UltimateBreakthroughRevolutionPromotionBanner';
+import AI2026FuturePredictionsBreakthroughPromotionBanner from '../components/AI2026FuturePredictionsBreakthroughPromotionBanner';
+import AI2026QuantumNeuralFusionCaseStudyPromotionBanner from '../components/AI2026QuantumNeuralFusionCaseStudyPromotionBanner';
 >>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
 
 // New Ultimate Content Revolution 2026 Components
@@ -82,6 +87,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
+        <AI2025UltimateBreakthroughRevolutionPromotionBanner />
+        
+        <AI2026FuturePredictionsBreakthroughPromotionBanner />
+        
+        <AI2026QuantumNeuralFusionCaseStudyPromotionBanner />
+        
         {/* AI 2026 NEW CONTENT PROMOTION BANNER */}
         <AI2026NewContentPromotionBanner />
         
