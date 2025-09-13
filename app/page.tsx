@@ -148,10 +148,17 @@ import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+<<<<<<< HEAD
 // Import new revolutionary content components
 import UltimateBreakthrough2025PromotionBanner from '../components/UltimateBreakthrough2025PromotionBanner';
 import QuantumAIFusion2025PromotionBanner from '../components/QuantumAIFusion2025PromotionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+=======
+// Import new promotional components for 2025
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+>>>>>>> cursor/create-and-deploy-new-content-f5c7
 
 // Import new showcase banners
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
@@ -195,7 +202,12 @@ export default function HomePage() {
         {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
         <UltimateBreakthroughBanner2026 />
         
-<<<<<<< HEAD
+        {/* NEW 2025 ULTIMATE CONTENT PROMOTION BANNER */}
+        <NewContent2025UltimatePromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
+        <UltimateContentDiscoveryWidget2025 />
+        
         {/* REVOLUTIONARY TECH 2026 PROMOTION BANNER */}
         <RevolutionaryTech2026PromotionBanner />
         
@@ -207,10 +219,9 @@ export default function HomePage() {
         
         {/* ULTIMATE SERVICES SHOWCASE 2026 */}
         <UltimateServicesShowcase2026 />
-=======
+        
         {/* QUANTUM AI BREAKTHROUGH PROMOTION BANNER - FEATURED */}
         <QuantumAIBreakthroughPromotionBanner />
->>>>>>> 84abbe37eaea3973c485f4c07dea40e54eef9222
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
