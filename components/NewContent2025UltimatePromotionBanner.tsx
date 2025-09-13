@@ -1,87 +1,105 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function NewContent2025UltimatePromotionBanner() {
+const NewContent2025UltimatePromotionBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentContent, setCurrentContent] = useState(0);
+
+  const newContentItems = [
+    {
+      title: "AI Innovations 2025 Ultimate",
+      description: "Revolutionary breakthroughs in artificial intelligence",
+      link: "/ai-innovations-2025-ultimate",
+      icon: "🧠",
+      gradient: "from-blue-500 to-purple-600"
+    },
+    {
+      title: "AI Tools Ultimate Showcase",
+      description: "Comprehensive collection of revolutionary AI tools",
+      link: "/ai-tools-ultimate-showcase-2025",
+      icon: "⚡",
+      gradient: "from-cyan-500 to-blue-600"
+    },
+    {
+      title: "AI Success Stories 2025",
+      description: "Real results from organizations using our AI solutions",
+      link: "/ai-success-stories-2025",
+      icon: "🏆",
+      gradient: "from-emerald-500 to-teal-600"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % newContentItems.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      </div>
-      
-      <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="flex-1 mb-6 lg:mb-0">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white text-sm font-semibold mb-4">
-              🚀 NEW CONTENT REVOLUTION
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI 2025 Ultimate Content Strategy
-            </h2>
-            
-            <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-              Master revolutionary content marketing with quantum intelligence, autonomous content generation, 
-              and neural optimization delivering <span className="text-yellow-400 font-bold">5,000% ROI</span>.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 mb-6">
-              <div className="flex items-center text-green-400">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                <span className="text-sm font-semibold">Complete Toolkit</span>
-              </div>
-              <div className="flex items-center text-blue-400">
-                <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                <span className="text-sm font-semibold">Case Studies</span>
-              </div>
-              <div className="flex items-center text-purple-400">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                <span className="text-sm font-semibold">Implementation Guide</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2025-ultimate-content-strategy"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Strategy
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              
-              <Link 
-                href="/case-studies/ai-2025-content-revolution-success"
-                className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              >
-                View Success Story
-              </Link>
-            </div>
+    <div className={`fixed top-4 right-4 z-50 transition-all duration-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+      <div className="bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-lg border border-slate-600/30 rounded-2xl p-6 shadow-2xl max-w-sm">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center">
+            <div className="text-2xl mr-2">✨</div>
+            <h3 className="text-lg font-bold text-white">New Content 2025</h3>
           </div>
-          
-          <div className="flex-shrink-0 lg:ml-8">
-            <div className="relative">
-              <div className="w-64 h-64 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">📈</div>
-                  <div className="text-2xl font-bold text-white">5,000%</div>
-                  <div className="text-sm text-gray-300">ROI Guaranteed</div>
+          <button 
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div className="relative overflow-hidden rounded-xl">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentContent * 100}%)` }}
+          >
+            {newContentItems.map((item, index) => (
+              <div key={index} className="w-full flex-shrink-0">
+                <div className={`bg-gradient-to-r ${item.gradient} p-4 rounded-xl text-white`}>
+                  <div className="flex items-center mb-3">
+                    <div className="text-2xl mr-3">{item.icon}</div>
+                    <div>
+                      <h4 className="font-bold text-sm">{item.title}</h4>
+                      <p className="text-xs opacity-90">{item.description}</p>
+                    </div>
+                  </div>
+                  <Link 
+                    href={item.link}
+                    className="inline-block bg-white/20 hover:bg-white/30 text-white text-xs font-semibold px-3 py-1 rounded-lg transition-all duration-200"
+                  >
+                    Explore Now →
+                  </Link>
                 </div>
               </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">
-                <span className="text-black font-bold">✨</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center animate-pulse">
-                <span className="text-white text-xs">🚀</span>
-              </div>
-            </div>
+            ))}
           </div>
+        </div>
+
+        <div className="flex justify-center mt-4 space-x-2">
+          {newContentItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentContent(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                index === currentContent ? 'bg-white' : 'bg-gray-500'
+              }`}
+            />
+          ))}
+        </div>
+
+        <div className="mt-4 text-center">
+          <p className="text-xs text-gray-400">
+            Discover the latest AI innovations and success stories
+          </p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default NewContent2025UltimatePromotionBanner;
