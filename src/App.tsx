@@ -9,6 +9,9 @@ import InnovativeContentShowcase2026 from './components/InnovativeContentShowcas
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
 import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
 import { NeuralArchitecture2026PromotionBanner, NeuralArchitectureFeatureGrid } from './components/NeuralArchitecture2026PromotionBanner';
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
+import RevolutionaryServicesPromotion2025 from './components/RevolutionaryServicesPromotion2025';
+import HomepageContentPromotion2025 from './components/HomepageContentPromotion2025';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -134,9 +137,11 @@ const InteractiveContentDiscovery2026Page = () => <InteractiveContentDiscovery20
 // New blog posts
 const BlogPostQuantumAI = React.lazy(() => import('./pages/BlogPostQuantumAI'));
 const BlogPostAutomationGuide = React.lazy(() => import('./pages/BlogPostAutomationGuide'));
+const BlogPostAITrends2025 = React.lazy(() => import('./pages/BlogPostAITrends2025'));
 
 // New case studies
 const CaseStudyHealthcareAI = React.lazy(() => import('./pages/CaseStudyHealthcareAI'));
+const CaseStudyEnterpriseAITransformation = React.lazy(() => import('./pages/CaseStudyEnterpriseAITransformation'));
 
 // New resources
 const ResourceImplementationChecklist = React.lazy(() => import('./pages/ResourceImplementationChecklist'));
@@ -193,6 +198,9 @@ function App() {
         <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
         <EnhancedContentPromotionBanner />
+        <LatestContentShowcase2025 />
+        <RevolutionaryServicesPromotion2025 />
+        <HomepageContentPromotion2025 />
         <AppHeader />
         <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -333,9 +341,11 @@ function App() {
               {/* New blog post routes */}
               <Route path="/blog/quantum-ai-breakthrough-2025" element={<BlogPostQuantumAI />} />
               <Route path="/blog/ai-automation-enterprise-guide-2025" element={<BlogPostAutomationGuide />} />
+              <Route path="/blog/ai-trends-2025" element={<BlogPostAITrends2025 />} />
               
               {/* New case study routes */}
               <Route path="/case-studies/healthcare-ai-transformation-success" element={<CaseStudyHealthcareAI />} />
+              <Route path="/case-studies/enterprise-ai-transformation-300-percent-gains" element={<CaseStudyEnterpriseAITransformation />} />
               
               {/* New resource routes */}
               <Route path="/resources/ai-implementation-checklist-2025" element={<ResourceImplementationChecklist />} />
