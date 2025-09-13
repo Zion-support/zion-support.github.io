@@ -26,9 +26,9 @@ export default function MainFrontIndex() {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/og-image.png" />
       </Head>
-      {/* Scroll progress bar */}
-      <motion.div style={{ scaleX: progressX }} className="fixed inset-x-0 top-0 z-40 h-0.5 origin-left bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400" />
-      {/* Animated Background */}
+
+
+
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {/* Aurora orbs */}
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
@@ -41,21 +41,6 @@ export default function MainFrontIndex() {
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
           <div className="twinkle-field absolute inset-0" />
         </div>
-        <div className="absolute inset-0 bg-aurora opacity-[0.18]" />
-        {/* Extra futuristic layers */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-30">
-          <div className="absolute h-[52rem] w-[52rem] rounded-full border border-cyan-400/10 animate-[spin_60s_linear_infinite]" />
-          <div className="absolute h-[36rem] w-[36rem] rounded-full border border-fuchsia-400/10 animate-[spin_80s_linear_infinite] [animation-direction:reverse]" />
-          <div className="absolute h-[24rem] w-[24rem] rounded-full border border-violet-400/10 animate-[spin_100s_linear_infinite]" />
-        </div>
-        <div className="absolute inset-0 mix-blend-soft-light opacity-[0.07] scanlines" />
-        {/* Neural mesh lines */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_-10%,rgba(34,211,238,0.08),transparent),radial-gradient(600px_400px_at_110%_10%,rgba(168,85,247,0.08),transparent)]" />
-        <div className="pointer-events-none absolute inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />
-        {/* Futuristic beams layers */}
-        <div className="absolute inset-0 beams-layer beams-45" />
-        <div className="absolute inset-0 beams-layer beams--45" />
-        <div className="pointer-events-none absolute inset-0 beams opacity-[0.06]" />
       </div>
 
       {/* Header */}
@@ -64,23 +49,48 @@ export default function MainFrontIndex() {
           <div className="text-2xl font-bold tracking-wide">
             <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
           </div>
-          <div className="hidden items-center gap-6 md:flex">
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>
             <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>
             <Link href="#command-center"><a className="text-white/80 hover:text-white">Command</a></Link>
+            <Link href="#command-center"><a className="text-white/80 hover:text-white">Command</a></Link>
+            <Link href="#features"><a className="text-white/80 hover:text-white">Features</a></Link>
             <Link href="#features"><a className="text-white/80 hover:text-white">Features</a></Link>
             <Link href="#feature-map"><a className="text-white/80 hover:text-white">Map</a></Link>
+            <Link href="#feature-map"><a className="text-white/80 hover:text-white">Map</a></Link>
+            <Link href="#suites"><a className="text-white/80 hover:text-white">Suites</a></Link>
             <Link href="#suites"><a className="text-white/80 hover:text-white">Suites</a></Link>
             <Link href="#capabilities"><a className="text-white/80 hover:text-white">Capabilities</a></Link>
+            <Link href="#capabilities"><a className="text-white/80 hover:text-white">Capabilities</a></Link>
+            <Link href="#use-cases"><a className="text-white/80 hover:text-white">Use Cases</a></Link>
             <Link href="#use-cases"><a className="text-white/80 hover:text-white">Use Cases</a></Link>
             <Link href="#pillars"><a className="text-white/80 hover:text-white">Pillars</a></Link>
+            <Link href="#pillars"><a className="text-white/80 hover:text-white">Pillars</a></Link>
+            <Link href="#benefits"><a className="text-white/80 hover:text-white">Benefits</a></Link>
             <Link href="#benefits"><a className="text-white/80 hover:text-white">Benefits</a></Link>
             <Link href="#templates"><a className="text-white/80 hover:text-white">Templates</a></Link>
+            <Link href="#templates"><a className="text-white/80 hover:text-white">Templates</a></Link>
+            <Link href="#demos"><a className="text-white/80 hover:text-white">Demos</a></Link>
             <Link href="#demos"><a className="text-white/80 hover:text-white">Demos</a></Link>
             <Link href="#highlights"><a className="text-white/80 hover:text-white">Highlights</a></Link>
+            <Link href="#highlights"><a className="text-white/80 hover:text-white">Highlights</a></Link>
+            <Link href="#cases"><a className="text-white/80 hover:text-white">Cases</a></Link>
             <Link href="#cases"><a className="text-white/80 hover:text-white">Cases</a></Link>
             <Link href="#reports"><a className="text-white/80 hover:text-white">Reports</a></Link>
+            <Link href="#reports"><a className="text-white/80 hover:text-white">Reports</a></Link>
+            <Link href="#roadmap"><a className="text-white/80 hover:text-white">Docs</a></Link>
             <Link href="#roadmap"><a className="text-white/80 hover:text-white">Docs</a></Link>
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</Link></Link>
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</Link></Link>
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
+            <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
+            <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
+
+
           </div>
           <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md:hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu</button>
         </nav>
@@ -140,16 +150,36 @@ export default function MainFrontIndex() {
         )}
       </header>
 
-      {/* Hero */}
-      <div role="main" className="relative z-10">
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
-        >
-          <div className="text-center">
-            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
+
+import {motion} from 'framer-motion';
+export default function FrontLanding() {;
+      <Head>;
+      </Head>;
+            <Link href='/'>;
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+export default /**
+      <Head>;
+      </Head>;
+            <Link href='/'>;
+            </Link>;
+
+
+
+
+            <Link href='/'>;
+            </Link>;
+            <Link href='/automation'>;
+            </Link>;
+            <Link href='/newsroom'>;
+            </Link>;
+            <Link href='/contact'>;
+            </Link>          </div>;
+              <Link href='/automation'>;
+              </Link>;
+
+
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
               Front systems hub — tailored view of our autonomous capabilities
             </div>
@@ -180,11 +210,9 @@ export default function MainFrontIndex() {
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
-              ].map(([k,v]) => (
-                <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
-                  <div className="text-lg font-bold text-white">{k}</div>
-                  <div className="text-xs text-white/70">{v}</div>
-                </div>
+
+
+
               ))}
             </div>
 
@@ -333,25 +361,12 @@ export default function MainFrontIndex() {
         <aside className="fixed left-4 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
           <nav aria-label="Quick section navigation" className="space-y-2">
             {[
-              ['#command-center', 'Command'],
-              ['#feature-map', 'Map'],
-              ['#engines', 'Engines'],
-              ['#suites', 'Suites'],
-              ['#capabilities', 'Capabilities'],
-              ['#use-cases', 'Use Cases'],
-              ['#pillars', 'Pillars'],
-              ['#benefits', 'Benefits'],
-              ['#templates', 'Templates'],
-              ['#demos', 'Demos'],
-              ['#highlights', 'Highlights'],
-              ['#cases', 'Cases'],
-              ['#reports', 'Reports'],
-              ['#guardrails', 'Guardrails'],
-              ['#roadmap', 'Docs'],
-            ].map(([href, label]) => (
-              <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
-                {label}
-              </a>
+
+
+
+
+
+
             ))}
           </nav>
         </aside>
@@ -369,37 +384,6 @@ export default function MainFrontIndex() {
 
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">We run outside GitHub Actions using scheduled cloud functions and orchestrators. Explore the engines below.</p>
 
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <a
-              href="/.netlify/functions/front-enhancer"
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"
-            >
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Netlify Scheduled Functions</div>
-              <p className="mt-1 text-sm text-white/75">Cron-like cloud jobs that run every 20 minutes to enhance the front experience.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">View logs via Netlify →</div>
-            </a>
-            <a
-              href="https://github.com/Zion-Holdings/zion.app/tree/main/automation"
-              target="_blank" rel="noopener"
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
-            >
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Local Orchestrators</div>
-              <p className="mt-1 text-sm text-white/75">Node-based orchestrators that can run on any scheduler or platform.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Browse orchestration scripts ↗</div>
-            </a>
-            <a
-              href="/automation"
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
-            >
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Autonomous Cloud Orchestrator</div>
-              <p className="mt-1 text-sm text-white/75">End-to-end agents launching factories and syncing safe diffs to main.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Open Automation Hub →</div>
-            </a>
-          </div>
-        </motion.section>
 
         {/* Command Center */}
         <section id="command-center" className="mx-auto max-w-7xl px-6 pb-14">
@@ -1170,25 +1154,61 @@ export default function MainFrontIndex() {
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
-              'Higher velocity with automated maintenance',
-              'Reduced costs via zero‑ops and automated QA',
-              'Consistent design language and UX quality',
-              'Transparent artifacts and live workflow logs',
-              'Faster experiment velocity with measurable impact',
-              'Improved search visibility via continuous SEO',
-              'Happier users thanks to performance & a11y wins',
-              'Lower operational risk through guardrails',
-              'Improved discoverability via deep indexing and SEO',
-              'Happier engineers with less toil and more creation',
-              'Confident shipping through automated guardrails',
-              'Predictable quality gates and SLOs upheld automatically',
-              'Auditability for compliance with full traceability',
-              'Happier teams: less toil, more product value',
-              'Automated dependency upgrades and security scans',
-              'Clear analytics and downloadable artifacts for every run',
-              'Composable factories accelerate new initiatives',
-            ].map((b) => (
-              <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
+
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+export default function FrontLanding(req, res) {
+      <Head>;
+      </Head>;
+            <Link href="/"><a className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</a></Link>;
+            <Link href="/"><a className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</a></Link>;
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>;
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>;
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>;
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>;
+            <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</a></Link>;
+            <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</a></Link>;
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</a></Link>;
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</a></Link>;
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>;
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+export default function FrontLanding(req, res) {
+      <Head>;
+      </Head>;
+            <Link href="/"><a className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</a></Link>;
+            <Link href="/"><a className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</a></Link>;
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>;
+            <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>;
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>;
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>;
+            <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</a></Link>;
+            <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</a></Link>;
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</a></Link>;
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</a></Link>;
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>;
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>;
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>
               </div>
@@ -1385,24 +1405,16 @@ export default function MainFrontIndex() {
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
+              <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
-            </div>
-          </div>
-        </motion.section>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
 
-        {/* AUTO-GENERATED: FRONT_FUTURIZER_START */}
 
-        <section id="front-futurizer" className="mx-auto max-w-7xl px-6 pb-20">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore More — Features, Capabilities, Benefits</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick portal to the most impactful areas across Zion. Every tile and list item links to a live hub, report, or doc.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-              <div className="text-lg font-semibold">Features</div>
-              <ul className="mt-3 space-y-2">
-            <li className="flex items-start gap-2">
-              <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />
-              <span className="text-sm text-white/80">Self‑improving autonomous agents</span>
-            </li>
+              <Link href='/services'>;
+              </Link>;
+              <Link href='/automation'>;
+              </Link>            </div>;
+            <Link href='/services / ai - seo - auditor'>;
 
             <li className="flex items-start gap-2">
               <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />
@@ -1530,12 +1542,25 @@ export default function MainFrontIndex() {
               <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
             </a>
 
-            <a key="Live Pipelines" href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-base font-semibold">Live Pipelines</div>
-              <div className="mt-1 text-sm text-white/75">Observe CI pipelines, logs, and artifacts</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
+
+
+
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
           </div>
         </section>
 {/* AUTO-GENERATED: FRONT_FUTURIZER_END */}
@@ -1682,6 +1707,10 @@ export default function MainFrontIndex() {
   <div className="text-base font-semibold">Automation Hub</div>
   <div className="mt-1 text-sm text-white/75">Live agents & workflows</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <Link href="/2025-advanced-services-showcase"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">2025 Advanced Services Showcase</div>
+  <div className="mt-1 text-sm text-white/75">Explore more</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
               <Link href="/2025-comprehensive-pricing"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">2025 Comprehensive Pricing</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
@@ -1694,6 +1723,10 @@ export default function MainFrontIndex() {
   <div className="text-base font-semibold">2025 Innovative Services Showcase</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <Link href="/2026-innovative-services-showcase"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">2026 Innovative Services Showcase</div>
+  <div className="mt-1 text-sm text-white/75">Explore more</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
               <Link href="/2026-services-showcase-enhanced"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">2026 Services Showcase Enhanced</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
@@ -1702,28 +1735,20 @@ export default function MainFrontIndex() {
   <div className="text-base font-semibold">2026 Ultimate Services Showcase</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-              <Link href="/2037-futuristic-services-showcase"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">2037 Futuristic Services Showcase</div>
+              <Link href="/2028-services-showcase"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">2028 Services Showcase</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-              <Link href="/2037-innovative-services-showcase"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">2037 Innovative Services Showcase</div>
+              <Link href="/2029-comprehensive-pricing"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">2029 Comprehensive Pricing</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-              <Link href="/403"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">403</div>
+              <Link href="/2029-innovative-services-showcase"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">2029 Innovative Services Showcase</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-              <Link href="/404"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">404</div>
-  <div className="mt-1 text-sm text-white/75">Explore more</div>
-  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-              <Link href="/500"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">500</div>
-  <div className="mt-1 text-sm text-white/75">Explore more</div>
-  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-              <Link href="/ProductsList"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">ProductsList</div>
+              <Link href="/2034-innovations"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">2034 Innovations</div>
   <div className="mt-1 text-sm text-white/75">Explore more</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
   </div>
@@ -1772,5 +1797,23 @@ export default function MainFrontIndex() {
         </button>
       )}
     </div>
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>;
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>;
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>;
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>;
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>;
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>;
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>;
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>;
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>;
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>;
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>;
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>;
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>;
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>;
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>;
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>;
   );
 }
+
+

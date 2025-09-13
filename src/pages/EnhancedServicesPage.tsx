@@ -23,12 +23,29 @@ import {
   Monitor,
   Eye,
   DollarSign,
-  CheckCircle
+  CheckCircle,
+  ExternalLink,
+  Play
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function EnhancedServicesPage() {
-    <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <SEO 
+        title="Enhanced Services - Zion Tech Group"
+        description="Discover our comprehensive range of enhanced technology services and solutions."
+      />
+      
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white mb-4">Enhanced Services</h1>
+          <p className="text-zion-slate-light text-lg">Comprehensive technology solutions for your business</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {ENHANCED_SERVICES.map((service, index) => (
+            <Card key={index} className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
       <div className="relative">
         <img 
           src={service.image} 
@@ -132,5 +149,9 @@ export default function EnhancedServicesPage() {
         </div>
       </CardContent>
     </Card>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

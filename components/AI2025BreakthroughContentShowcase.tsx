@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
 
 const AI2025BreakthroughContentShowcase: React.FC = () => {
@@ -195,7 +195,7 @@ const AI2025BreakthroughContentShowcase: React.FC = () => {
                       </div>
                     </div>
                     <Link 
-                      to={`/breakthroughs/${item.id}`}
+                      href={`/breakthroughs/${item.id}`}
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                     >
                       Read More
@@ -247,7 +247,7 @@ const AI2025BreakthroughContentShowcase: React.FC = () => {
                       {item.publishedDate} • {item.author}
                     </div>
                     <Link 
-                      to={`/breakthroughs/${item.id}`}
+                      href={`/breakthroughs/${item.id}`}
                       className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors"
                     >
                       Read

@@ -1,6 +1,22 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import type { ReactNode } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
+// Simple localStorage wrapper
+const safeStorage = {
+  getItem: (key: string) => {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  },
+  setItem: (key: string, value: string) => {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      // Ignore storage errors
+    }
+  }
+};
 import Cookies from 'js-cookie';
 import { useTranslation } from 'react-i18next';
 import { toast } from '../components/ui/use-toast';
@@ -18,8 +34,6 @@ const supportedLanguages = [
   { code: 'en-US' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
   { code: 'es-ES' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
 ];
-
-const supportedLanguages = SUPPORTED_LANGUAGES;
 
 const defaultLanguageContext: LanguageContextType = {
   currentLanguage: 'en-US',

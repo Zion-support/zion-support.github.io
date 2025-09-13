@@ -30,6 +30,20 @@ import Link from 'next/link';
           </div>
         </section>
 
+import SEO from '../components / SEO';
+import SEO from '../components / SEO';
+import Link from 'next / link';
+export default /**
+      <SEO;
+
+
+                desc: 'Team dashboards, API access, and exportable reports.',;
+
+            <Link
+            </Link>;
+
+
+export default function RAGEvaluationLabPage() {
 	return (
 		<>
 			<SEO title={title} description={description} />
@@ -46,5 +60,7 @@ import Link from 'next/link';
 				</div>
 			</section>
 		</>
-	);
-}
+
+                desc: 'Team dashboards, API access, and exportable reports.',
+
+
