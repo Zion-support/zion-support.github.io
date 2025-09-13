@@ -42,6 +42,10 @@ import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 import AI2035SingularityBreakthrough from '../components/AI2035SingularityBreakthrough';
 import AI2040OmniversalConsciousness from '../components/AI2040OmniversalConsciousness';
 
+// New 2025 Ultimate Breakthrough components
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -53,6 +57,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
+        <UltimateContentDiscoveryWidget2025 />
+        
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
         
