@@ -34,12 +34,20 @@ import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
 
-// Import new ultimate breakthrough components
-import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
-import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
+// Future Tech Promotion Components
+import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
+import QuantumAIFusionPromotionBanner from '../components/QuantumAIFusionPromotionBanner';
+import NeuralInterfaceRevolutionPromotionBanner from '../components/NeuralInterfaceRevolutionPromotionBanner';
+import FutureTechContentDiscoveryWidget from '../components/FutureTechContentDiscoveryWidget';
+
+// New promotional components
+import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
+import ContentPromotion from '../components/ContentPromotion';
+
+// New 2026 promotional components
+import QuantumAIFusion2026PromotionBanner from '../components/QuantumAIFusion2026PromotionBanner';
+import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 
 export default function HomePage() {
   return (
@@ -52,11 +60,30 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW CONTENT 2025 PROMOTION BANNER */}
-        <NewContent2025PromotionBanner />
+        {/* NEW PROMOTIONAL BANNERS */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <BreakthroughBanner />
+          <QuantumBanner />
+          <ContentShowcaseBanner />
+          <SuccessStoryBanner />
+        </div>
         
-        {/* AI 2025 CONTENT SHOWCASE BANNER */}
-        <AI2025ContentShowcaseBanner />
+        {/* CONTENT PROMOTION SECTION */}
+        <div className="max-w-7xl mx-auto px-4">
+          <ContentPromotion />
+        </div>
+        
+        {/* AI 2035 SINGULARITY PROMOTION BANNER */}
+        <AI2035SingularityPromotionBanner />
+        
+        {/* QUANTUM AI FUSION 2030 PROMOTION BANNER */}
+        <QuantumAIFusionPromotionBanner />
+        
+        {/* NEURAL INTERFACE REVOLUTION 2035 PROMOTION BANNER */}
+        <NeuralInterfaceRevolutionPromotionBanner />
+        
+        {/* FUTURE TECH CONTENT DISCOVERY WIDGET */}
+        <FutureTechContentDiscoveryWidget />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
@@ -66,9 +93,6 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
-        
-        {/* ULTIMATE CONTENT DISCOVERY WIDGET */}
-        <UltimateContentDiscoveryWidget />
         
         {/* AI 2026 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2026RevolutionaryBreakthroughPromotionBanner />
@@ -84,6 +108,12 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
+        
+        {/* QUANTUM AI FUSION 2026 PROMOTION BANNER */}
+        <QuantumAIFusion2026PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
