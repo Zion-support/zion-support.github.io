@@ -38,9 +38,12 @@ import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase
 import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
 import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
 
+// Neural Consensus 2026 Components
+import NeuralConsensus2026PromotionBanner from '../components/NeuralConsensus2026PromotionBanner';
+import NeuralConsensus2026Showcase from '../components/NeuralConsensus2026Showcase';
+
 // New 2026 content components
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
 
@@ -55,11 +58,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
+        <NeuralConsensus2026PromotionBanner />
+        
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
+        
+        {/* NEURAL CONSENSUS 2026 SHOWCASE */}
+        <NeuralConsensus2026Showcase />
         
         {/* REVOLUTIONARY AI CONTENT PROMOTION BANNER */}
         <RevolutionaryAIContentPromotionBanner />
