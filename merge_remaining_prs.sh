@@ -1,94 +1,110 @@
 #!/bin/bash
 
-# Merge remaining PRs locally
+# Script to merge remaining PRs by number
 set -e
 
-echo "🚀 Starting merge of remaining PRs..."
+echo "🚀 Starting PR merge process by number..."
 
-# Get list of remaining PRs
-remaining_prs=(16191 16195 16209 16227 16246 16251 16252)
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
 
-successful_merges=0
-failed_merges=0
+# List of PR numbers to merge (from the API response)
+PR_NUMBERS=(16299 16298 16291)
 
-for pr_number in "${remaining_prs[@]}"; do
+count=0
+total=${#PR_NUMBERS[@]}
+
+for pr_number in "${PR_NUMBERS[@]}"; do
+    count=$((count + 1))
+    
     echo ""
-    echo "🔄 Processing PR #$pr_number..."
+    echo "🔄 Processing PR #$pr_number ($count/$total)"
     
-    # Get PR details to find the branch name
-    pr_data=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
-    head_ref=$(echo "$pr_data" | grep '"ref":' | head -1 | sed 's/.*"ref": "\([^"]*\)".*/\1/')
+    # Get PR details
+    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
+    BRANCH_NAME=$(echo "$PR_DETAILS" | grep -o '"head":{[^}]*"ref":"[^"]*"' | grep -o '"[^"]*"$' | tr -d '"')
     
-    if [ -z "$head_ref" ]; then
-        echo "❌ Could not get branch name for PR #$pr_number"
-        ((failed_merges++))
+    if [ -z "$BRANCH_NAME" ]; then
+        echo "⚠️  Could not extract branch name for PR #$pr_number, skipping..."
         continue
     fi
     
-    echo "   Branch: $head_ref"
+    echo "📝 Branch: $BRANCH_NAME"
     
-    # Fetch the branch
-    if ! git fetch origin "$head_ref" 2>/dev/null; then
-        echo "❌ Could not fetch branch $head_ref for PR #$pr_number"
-        ((failed_merges++))
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
+        echo "⚠️  Branch origin/$BRANCH_NAME does not exist, skipping..."
         continue
     fi
     
-    # Attempt to merge
-    if git merge "origin/$head_ref" --no-ff -m "Merge PR #$pr_number: $head_ref"; then
+    # Try to merge
+    echo "🔀 Attempting to merge origin/$BRANCH_NAME..."
+    if git merge "origin/$BRANCH_NAME" --no-ff -m "Merge PR #$pr_number: $BRANCH_NAME"; then
         echo "✅ Successfully merged PR #$pr_number"
-        ((successful_merges++))
-    else
-        echo "⚠️  Merge conflict in PR #$pr_number, attempting resolution..."
         
-        # Try to resolve conflicts automatically
-        conflicted_files=$(git diff --name-only --diff-filter=U)
+        # Push the changes
+        echo "📤 Pushing changes..."
+        git push origin main
         
-        if [ -n "$conflicted_files" ]; then
-            echo "🔧 Resolving conflicts in: $conflicted_files"
+        # Close the PR via API
+        echo "🔒 Closing PR #$pr_number..."
+        curl -X PATCH \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number" \
+            -d '{"state":"closed"}' || echo "⚠️  Could not close PR #$pr_number via API"
             
-            resolved=0
+    else
+        echo "⚠️  Merge conflict in PR #$pr_number, attempting to resolve..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts automatically..."
+            
+            # List conflicted files
+            conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
+            
             for file in $conflicted_files; do
-                # Try different resolution strategies
-                if git checkout --ours "$file" 2>/dev/null || git checkout --theirs "$file" 2>/dev/null; then
-                    git add "$file"
-                    echo "✅ Resolved conflicts in $file"
-                    resolved=1
-                fi
+                echo "  Resolving conflict in: $file"
+                
+                # Accept the current version (ours) for most conflicts
+                git checkout --ours "$file" || true
+                git add "$file" || true
             done
             
-            # Complete the merge
-            if [ $resolved -eq 1 ] && git commit --no-edit 2>/dev/null; then
-                echo "✅ Successfully resolved conflicts for PR #$pr_number"
-                ((successful_merges++))
+            # Commit the resolution
+            if git commit -m "Resolve merge conflicts for PR #$pr_number"; then
+                echo "✅ Conflicts resolved for PR #$pr_number"
+                git push origin main
+                
+                # Close the PR
+                curl -X PATCH \
+                    -H "Accept: application/vnd.github.v3+json" \
+                    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number" \
+                    -d '{"state":"closed"}' || echo "⚠️  Could not close PR #$pr_number via API"
             else
                 echo "❌ Failed to resolve conflicts for PR #$pr_number"
-                git merge --abort 2>/dev/null || true
-                ((failed_merges++))
+                git merge --abort
             fi
         else
-            echo "❌ No conflicted files found, aborting merge for PR #$pr_number"
-            git merge --abort 2>/dev/null || true
-            ((failed_merges++))
+            echo "❌ Failed to merge PR #$pr_number for unknown reason"
+            git merge --abort
         fi
     fi
+    
+    echo "⏳ Waiting 2 seconds before next PR..."
+    sleep 2
 done
 
 echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
+echo "🎉 PR merge process completed!"
+echo "📊 Processed $count PRs"
 
-# Push all successful merges
-if [ $successful_merges -gt 0 ]; then
-    echo ""
-    echo "📤 Pushing merged changes to main..."
-    if git push origin main; then
-        echo "✅ Successfully pushed changes to main"
-    else
-        echo "❌ Failed to push changes to main"
-    fi
-fi
+# Final status check
+echo ""
+echo "📋 Final git status:"
+git status
 
 echo ""
-echo "🏁 PR merge process completed!"
+echo "🌿 Recent commits:"
+git log --oneline -5
