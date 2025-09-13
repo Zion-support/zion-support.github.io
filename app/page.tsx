@@ -169,6 +169,12 @@ import AISuccessStoriesShowcase from '../components/AISuccessStoriesShowcase';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new 2026 content showcase and interactive demo components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
+import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
