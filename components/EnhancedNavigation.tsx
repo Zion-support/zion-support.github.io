@@ -45,6 +45,8 @@ const EnhancedNavigation: React.FC = () => {
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
         { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
         { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
+        { label: 'Enterprise Implementation Mastery', href: '/resources/ai-2025-enterprise-implementation-mastery', isNew: true, isHot: true },
+        { label: 'AI Automation Implementation Toolkit', href: '/resources/ai-automation-implementation-toolkit-2025', isNew: true, isHot: true },
         { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
         { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
         { label: 'Blog Articles', href: '/blog', isNew: true },
@@ -78,6 +80,20 @@ const EnhancedNavigation: React.FC = () => {
       description: "Complete roadmap to 15,000x performance improvements",
       href: "/resources/ai-implementation-mastery-2026",
       icon: "📚",
+      isNew: true
+    },
+    {
+      title: "Enterprise Implementation Mastery",
+      description: "Complete guide to successful AI implementation in enterprise environments",
+      href: "/resources/ai-2025-enterprise-implementation-mastery",
+      icon: "🏢",
+      isNew: true
+    },
+    {
+      title: "AI Automation Implementation Toolkit",
+      description: "Everything you need to implement AI automation successfully",
+      href: "/resources/ai-automation-implementation-toolkit-2025",
+      icon: "🛠️",
       isNew: true
     },
     {
