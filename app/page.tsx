@@ -246,6 +246,14 @@ import SuccessStories2025Showcase from '../components/SuccessStories2025Showcase
 import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 
+// New 2025 Ultimate Content Components
+import AI2025_2030UltimateBreakthroughShowcase from '../components/AI2025_2030UltimateBreakthroughShowcase';
+import QuantumComputing2025UltimatePromotionBanner from '../components/QuantumComputing2025UltimatePromotionBanner';
+import AdvancedAutomationSolutions2025UltimateShowcase from '../components/AdvancedAutomationSolutions2025UltimateShowcase';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
+import NewsletterSignupAndSocialSharing2025 from '../components/NewsletterSignupAndSocialSharing2025';
+
 // Lazy loaded components for performance
 const LazyAdvancedComponents = lazy(() => import('../components/LazyAdvancedComponents'));
 
@@ -320,6 +328,21 @@ const HomePage: React.FC = () => {
               {/* AI 2025 Ultimate Breakthrough Content Showcase */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* NEW: AI 2025-2030 Ultimate Breakthrough Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateBreakthroughShowcase />
+              </Suspense>
+
+              {/* NEW: Quantum Computing 2025 Ultimate Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputing2025UltimatePromotionBanner />
+              </Suspense>
+
+              {/* NEW: Advanced Automation Solutions 2025 Ultimate Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutions2025UltimateShowcase />
               </Suspense>
 
               {/* Quantum Computing Solutions 2025 Promotion Banner */}
@@ -824,6 +847,16 @@ const HomePage: React.FC = () => {
                 <InteractiveContentDiscoveryWidget2025 />
               </Suspense>
 
+              {/* NEW: Enhanced Interactive Content Discovery Widget 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget2025 />
+              </Suspense>
+
+              {/* NEW: Dynamic Content Carousel 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <DynamicContentCarousel2025 />
+              </Suspense>
+
               {/* Interactive Content Discovery */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscovery2025 />
@@ -999,6 +1032,11 @@ const HomePage: React.FC = () => {
               {/* Enhanced Newsletter Signup */}
               <Suspense fallback={<LoadingSpinner />}>
                 <EnhancedNewsletterSignup />
+              </Suspense>
+
+              {/* NEW: Newsletter Signup and Social Sharing 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewsletterSignupAndSocialSharing2025 />
               </Suspense>
 
               {/* Comprehensive Content Discovery 2025 */}
