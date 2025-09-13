@@ -1,262 +1,254 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const AI2025InteractiveContentDiscoveryWidget = () => {
+export default function AI2025InteractiveContentDiscoveryWidget() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const contentCategories = [
-    { id: 'all', label: 'All Content', icon: '🌟', color: 'from-purple-500 to-pink-500' },
-    { id: 'breakthroughs', label: 'Breakthroughs', icon: '🚀', color: 'from-red-500 to-orange-500' },
-    { id: 'case-studies', label: 'Case Studies', icon: '🏆', color: 'from-green-500 to-emerald-500' },
-    { id: 'guides', label: 'Implementation Guides', icon: '📚', color: 'from-blue-500 to-cyan-500' },
-    { id: 'tools', label: 'AI Tools', icon: '🛠️', color: 'from-indigo-500 to-purple-500' },
-    { id: 'webinars', label: 'Webinars', icon: '🔥', color: 'from-yellow-500 to-orange-500' }
-  ];
+  const [selectedROI, setSelectedROI] = useState('all');
 
   const contentItems = [
     {
       id: 1,
-      title: 'AI 2025 Neural Quantum Fusion Breakthrough',
-      description: 'Revolutionary AI combining quantum computing with neural networks for unprecedented processing power',
-      category: 'breakthroughs',
-      roi: '15,000%',
-      difficulty: 'Advanced',
-      readTime: '8 min',
+      title: "AI 2025 Revolutionary Breakthrough Announcement",
+      type: "blog",
+      category: "breakthrough",
+      roi: "2500-5000%",
+      description: "Discover the revolutionary AI breakthrough transforming businesses worldwide",
+      url: "/blog/ai-2025-revolutionary-breakthrough-announcement",
       featured: true,
-      url: '/blog/ai-2025-neural-quantum-fusion-breakthrough'
+      tags: ["BREAKTHROUGH", "NEW"]
     },
     {
       id: 2,
-      title: 'Fortune 500 Quantum AI Transformation Success',
-      description: 'How a Fortune 500 company achieved 15,000% ROI using our quantum AI solutions',
-      category: 'case-studies',
-      roi: '15,000%',
-      difficulty: 'Expert',
-      readTime: '12 min',
+      title: "Global Transformation Case Study - 10,000% ROI",
+      type: "case-study",
+      category: "success-story",
+      roi: "10000%",
+      description: "How a Fortune 500 company achieved unprecedented ROI",
+      url: "/case-studies/ai-2025-global-transformation-breakthrough",
       featured: true,
-      url: '/case-studies/ai-2025-fortune-500-quantum-transformation'
+      tags: ["SUCCESS STORY", "ROI"]
     },
     {
       id: 3,
-      title: 'Ultimate AI Implementation Master Guide 2025',
-      description: 'Complete step-by-step guide to implementing revolutionary AI in your organization',
-      category: 'guides',
-      roi: '∞',
-      difficulty: 'All Levels',
-      readTime: '45 min',
+      title: "AI 2025 Revolutionary Implementation Guide",
+      type: "resource",
+      category: "guide",
+      roi: "2500-5000%",
+      description: "Complete blueprint for achieving breakthrough results",
+      url: "/resources/ai-2025-revolutionary-implementation-guide",
       featured: true,
-      url: '/resources/ai-2025-ultimate-implementation-master-guide'
+      tags: ["GUIDE", "ESSENTIAL"]
     },
     {
       id: 4,
-      title: 'AI 2025 ROI Calculator - Quantum Edition',
-      description: 'Calculate your potential ROI with our advanced quantum AI ROI calculator',
-      category: 'tools',
-      roi: '∞',
-      difficulty: 'Beginner',
-      readTime: '5 min',
+      title: "Fortune 500 Transformation Success",
+      type: "case-study",
+      category: "success-story",
+      roi: "1500%",
+      description: "Enterprise transformation delivering massive ROI",
+      url: "/case-studies/ai-2025-fortune-500-transformation-breakthrough",
       featured: false,
-      url: '/tools/ai-2025-quantum-roi-calculator'
+      tags: ["ENTERPRISE"]
     },
     {
       id: 5,
-      title: 'Revolutionary Breakthroughs Webinar Series',
-      description: 'Live webinar series featuring the latest AI breakthroughs and their applications',
-      category: 'webinars',
-      roi: '∞',
-      difficulty: 'All Levels',
-      readTime: '60 min',
-      featured: true,
-      url: '/webinars/ai-2025-revolutionary-breakthroughs'
+      title: "AI 2025 Ultimate Trends & Predictions",
+      type: "blog",
+      category: "insights",
+      roi: "2500%",
+      description: "Comprehensive analysis of AI trends and future predictions",
+      url: "/blog/ai-2025-ultimate-trends-predictions",
+      featured: false,
+      tags: ["TRENDS"]
     },
     {
       id: 6,
-      title: 'Quantum Consciousness AI Implementation',
-      description: 'Step-by-step guide to implementing quantum consciousness AI in your systems',
-      category: 'guides',
-      roi: '∞',
-      difficulty: 'Expert',
-      readTime: '20 min',
+      title: "Global Retail Transformation Success",
+      type: "case-study",
+      category: "success-story",
+      roi: "600%",
+      description: "Retail automation delivering significant ROI",
+      url: "/case-studies/ai-2025-global-retail-transformation-success",
       featured: false,
-      url: '/resources/quantum-consciousness-ai-implementation-guide'
-    },
-    {
-      id: 7,
-      title: 'Reality Manipulation AI Case Study',
-      description: 'How a tech giant used reality manipulation AI to achieve infinite ROI',
-      category: 'case-studies',
-      roi: '∞',
-      difficulty: 'Advanced',
-      readTime: '15 min',
-      featured: true,
-      url: '/case-studies/ai-2025-reality-manipulation-success'
-    },
-    {
-      id: 8,
-      title: 'Time-Space AI Prediction Tool',
-      description: 'Advanced tool for predicting and optimizing future outcomes using time-space AI',
-      category: 'tools',
-      roi: '∞',
-      difficulty: 'Advanced',
-      readTime: '10 min',
-      featured: false,
-      url: '/tools/ai-2025-time-space-prediction-tool'
+      tags: ["RETAIL"]
     }
   ];
 
   const filteredContent = contentItems.filter(item => {
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
+    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
+    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%', ''));
+    return categoryMatch && roiMatch;
   });
 
-  const getDifficultyColor = (difficulty) => {
-    switch (difficulty) {
-      case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'All Levels': return 'bg-blue-100 text-blue-800';
-      case 'Advanced': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'breakthrough': return 'from-red-500 to-pink-500';
+      case 'success-story': return 'from-green-500 to-emerald-500';
+      case 'guide': return 'from-purple-500 to-indigo-500';
+      case 'insights': return 'from-blue-500 to-cyan-500';
+      default: return 'from-gray-500 to-slate-500';
     }
   };
 
+  const getROIColor = (roi: string) => {
+    if (roi.includes('10000')) return 'text-green-600 bg-green-50 border-green-200';
+    if (roi.includes('5000')) return 'text-blue-600 bg-blue-50 border-blue-200';
+    if (roi.includes('2500')) return 'text-purple-600 bg-purple-50 border-purple-200';
+    return 'text-gray-600 bg-gray-50 border-gray-200';
+  };
+
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-            🔍 Interactive Content Discovery
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-6 animate-pulse">
+            🔍 AI-POWERED CONTENT DISCOVERY
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Your Perfect AI Content
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Discover the most revolutionary AI content tailored to your needs
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Use our intelligent content discovery system to find the most relevant AI insights, 
+            case studies, and implementation guides for your specific needs and ROI goals.
           </p>
         </div>
 
-        {/* Search and Filter Controls */}
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4 mb-6">
-            <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Search for AI breakthroughs, guides, tools..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
+        {/* Filters */}
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <div className="flex flex-wrap gap-6 items-center">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Content Type</label>
+              <select 
+                value={selectedCategory} 
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              >
+                <option value="all">All Content</option>
+                <option value="breakthrough">Breakthrough Announcements</option>
+                <option value="success-story">Success Stories</option>
+                <option value="guide">Implementation Guides</option>
+                <option value="insights">Insights & Trends</option>
+              </select>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {contentCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category.icon} {category.label}
-                </button>
-              ))}
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Expected ROI</label>
+              <select 
+                value={selectedROI} 
+                onChange={(e) => setSelectedROI(e.target.value)}
+                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              >
+                <option value="all">Any ROI</option>
+                <option value="600%">600%+ ROI</option>
+                <option value="1500%">1500%+ ROI</option>
+                <option value="2500%">2500%+ ROI</option>
+                <option value="5000%">5000%+ ROI</option>
+                <option value="10000%">10000%+ ROI</option>
+              </select>
+            </div>
+            <div className="ml-auto">
+              <button 
+                onClick={() => { setSelectedCategory('all'); setSelectedROI('all'); }}
+                className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                Clear Filters
+              </button>
             </div>
           </div>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
-            <div
-              key={item.id}
-              className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 ${
-                item.featured ? 'ring-2 ring-yellow-500/50' : ''
-              }`}
-            >
+            <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              {/* Featured Badge */}
               {item.featured && (
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold">
-                    ⭐ FEATURED
-                  </span>
-                  <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
-                    🚀 BREAKTHROUGH
-                  </span>
+                <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 text-center">
+                  ⭐ FEATURED CONTENT
                 </div>
               )}
               
-              <h3 className="text-xl font-bold mb-3 text-white hover:text-yellow-300 transition-colors">
-                <Link href={item.url}>{item.title}</Link>
-              </h3>
-              
-              <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                {item.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(item.difficulty)}`}>
-                  {item.difficulty}
-                </span>
-                <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                  {item.readTime}
-                </span>
-                <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                  {item.roi} ROI
-                </span>
+              <div className="p-6">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.map((tag, index) => (
+                    <span key={index} className="text-xs font-semibold px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Category Badge */}
+                <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${getCategoryColor(item.category)} text-white text-xs font-semibold rounded-full mb-4`}>
+                  {item.type === 'blog' ? '📝 Blog' : item.type === 'case-study' ? '📊 Case Study' : '📚 Resource'}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+
+                {/* ROI Badge */}
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold mb-4 border ${getROIColor(item.roi)}`}>
+                  💰 {item.roi} ROI
+                </div>
+
+                {/* CTA Button */}
+                <Link 
+                  href={item.url}
+                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  {item.type === 'blog' ? 'Read Article' : item.type === 'case-study' ? 'View Case Study' : 'Access Guide'}
+                </Link>
               </div>
-              
-              <Link
-                href={item.url}
-                className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105"
-              >
-                Explore Now →
-              </Link>
             </div>
           ))}
         </div>
 
+        {/* No Results */}
         {filteredContent.length === 0 && (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-300">No content found</h3>
-            <p className="text-gray-400 mb-6">Try adjusting your search terms or category filters</p>
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-              }}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">No Content Found</h3>
+            <p className="text-gray-600 mb-6">Try adjusting your filters to find more content.</p>
+            <button 
+              onClick={() => { setSelectedCategory('all'); setSelectedROI('all'); }}
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
-              Reset Filters
+              Show All Content
             </button>
           </div>
         )}
 
-        {/* Call to Action */}
-        <div className="mt-12 text-center bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-8 border border-purple-500/30">
-          <h3 className="text-3xl font-bold mb-4 text-yellow-300">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl text-gray-300 mb-6">
-            Join thousands of enterprises already experiencing infinite ROI with our revolutionary AI solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution"
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105"
-            >
-              🚀 Start Your Revolution
-            </Link>
-            <Link 
-              href="/contact"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105"
-            >
-              💬 Get Expert Consultation
-            </Link>
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-purple-800 mb-4">Can't Find What You're Looking For?</h3>
+            <p className="text-purple-700 mb-6">
+              Our AI experts can help you find the perfect content for your specific needs and goals.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/contact"
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Get Personalized Recommendations
+              </Link>
+              <Link 
+                href="/blog"
+                className="bg-white border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+              >
+                Browse All Content
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default AI2025InteractiveContentDiscoveryWidget;
+}
