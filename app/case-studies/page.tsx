@@ -5,6 +5,8 @@ import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Target, CheckCircle, 
 export default function CaseStudies() {
   const caseStudies = [
     {
+<<<<<<< HEAD
+=======
       id: 1,
       title: "AI 2025 Global Enterprise Transformation",
       company: "Fortune 100 Global Manufacturing",
@@ -22,6 +24,7 @@ export default function CaseStudies() {
       image: "/api/placeholder/600/400"
     },
     {
+>>>>>>> cursor/create-and-deploy-new-content-e336
       id: 'manufacturing-giant',
       title: 'Global Manufacturing Transformation',
       company: 'Fortune 500 Manufacturing Company',
