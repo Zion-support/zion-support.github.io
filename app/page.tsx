@@ -13,6 +13,12 @@ import ContentShowcase, { featuredContent, trendingContent, latestContent } from
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import NewContentBanner from '../components/NewContentBanner';
 import NewContentShowcase from '../components/NewContentShowcase';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import LatestContentPromotionBanner from '../components/LatestContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import HeroPromotionBanner from '../components/HeroPromotionBanner';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import InteractiveROICalculator from '../components/InteractiveROICalculator';
 
 // 2025 Content Components
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
@@ -174,9 +180,24 @@ const HomePage: React.FC = () => {
                 </div>
               </section>
 
+              {/* Hero Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <HeroPromotionBanner />
+              </Suspense>
+
               {/* New Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContentBanner />
+              </Suspense>
+
+              {/* Latest Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <LatestContentPromotionBanner />
+              </Suspense>
+
+              {/* New Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContentPromotionBanner />
               </Suspense>
 
               {/* AI 2025-2030 Comprehensive Predictions Promotion Banner */}
@@ -373,6 +394,16 @@ const HomePage: React.FC = () => {
                 <EnhancedContentShowcase />
               </Suspense>
 
+              {/* Interactive Content Discovery Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget />
+              </Suspense>
+
+              {/* Interactive ROI Calculator */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveROICalculator />
+              </Suspense>
+
               {/* AI 2025 Revolutionary Breakthrough */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025RevolutionaryBreakthroughBanner />
@@ -489,14 +520,9 @@ const HomePage: React.FC = () => {
                 <TechnologyBreakthroughBanner2025 />
               </Suspense>
 
-              {/* Interactive Content Discovery */}
+              {/* Enhanced Newsletter Signup */}
               <Suspense fallback={<LoadingSpinner />}>
-                <InteractiveContentDiscovery2025 />
-              </Suspense>
-
-              {/* Newsletter Signup */}
-              <Suspense fallback={<LoadingSpinner />}>
-                <NewsletterSignup2025 />
+                <EnhancedNewsletterSignup />
               </Suspense>
 
               {/* Lazy loaded advanced components */}
