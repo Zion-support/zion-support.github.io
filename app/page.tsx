@@ -48,6 +48,10 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+
+// New revolutionary content components
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
@@ -93,6 +97,12 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEW REVOLUTIONARY CONTENT BANNER */}
+        <RevolutionaryContentBanner />
+        
+        {/* CONTENT DISCOVERY WIDGET */}
+        <ContentDiscoveryWidget />
         
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
