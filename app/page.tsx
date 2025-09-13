@@ -29,6 +29,11 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+
+// New content promotion components
+import ContentPromotionBanner from '../components/ContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import NewsletterSignupWithPreviews from '../components/NewsletterSignupWithPreviews';
 <<<<<<< HEAD
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
@@ -107,6 +112,9 @@ export default function HomePage() {
         
         {/* AI 2025 SYNTHETIC INTELLIGENCE TRANSFORMATION BANNER */}
         <AI2025SyntheticIntelligenceTransformationBanner />
+        
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <ContentPromotionBanner />
         
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
@@ -294,6 +302,9 @@ export default function HomePage() {
             </Suspense>
           </div>
         </section>
+
+        {/* NEW INTERACTIVE CONTENT DISCOVERY */}
+        <InteractiveContentDiscovery />
         
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
@@ -2870,6 +2881,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* NEWSLETTER SIGNUP WITH CONTENT PREVIEWS */}
+      <NewsletterSignupWithPreviews />
 
       {/* Featured Content Showcase */}
       <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
