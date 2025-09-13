@@ -27,6 +27,8 @@ import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025Ultim
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import ContentAnalytics from '../components/ContentAnalytics';
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
+import UltimateContentShowcaseBanner2025 from '../components/UltimateContentShowcaseBanner2025';
 
 export default function HomePage() {
   return (
@@ -103,6 +105,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* NEW REVOLUTIONARY CONTENT PROMOTION */}
+        <RevolutionaryContentPromotionBanner2025 />
 
         {/* OPTIMIZED CONTENT DISCOVERY - Single Interactive Widget */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
@@ -229,6 +234,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcaseBanner2025 />
 
         {/* CTA SECTION */}
         <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">
