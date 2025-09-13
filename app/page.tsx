@@ -276,6 +276,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Structured Data for SEO */}
+        <StructuredData2025 />
+        
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
@@ -300,8 +303,8 @@ export default function HomePage() {
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2025PromotionBanner />
         
-        {/* NEW 2025 BUSINESS TRANSFORMATION PROMOTION BANNER */}
-        <BusinessTransformationShowcase2025PromotionBanner />
+        {/* NEW 2025 AI INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AIInnovationShowcase2025PromotionBanner />
         
         {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2025PromotionBanner />
@@ -315,6 +318,9 @@ export default function HomePage() {
         {/* NEW TECHNOLOGY TRENDS SHOWCASE 2025 PROMOTION BANNER */}
         <TechnologyTrendsShowcase2025PromotionBanner />
         
+        {/* NEW 2025 BUSINESS TRANSFORMATION PROMOTION BANNER */}
+        <BusinessTransformationShowcase2025PromotionBanner />
+        
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2025 />
         
@@ -326,9 +332,6 @@ export default function HomePage() {
         
         {/* NEW TECHNOLOGY TRENDS SHOWCASE 2025 */}
         <TechnologyTrendsShowcase2025 />
-        
-        {/* NEW 2025 AI INNOVATION SHOWCASE PROMOTION BANNER */}
-        <AIInnovationShowcase2025PromotionBanner />
         
         {/* NEW 2025 AI INNOVATION SHOWCASE */}
         <AIInnovationShowcase2025 />
